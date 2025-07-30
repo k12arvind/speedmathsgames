@@ -20,7 +20,7 @@ export default function SetupPage() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        selectedTopics: topics.map(t => ({ name: t, weight: 1 })),
+        selectedTopics: topics,
         timeLimitSec,
         difficulty
       })
