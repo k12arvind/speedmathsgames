@@ -41,11 +41,11 @@ export function generateMultiplication(rules: Rules = {}, rng: () => number = Ma
   
   return { 
     topic: 'multiplication', 
-    difficulty, 
+    difficulty: difficulty as 'easy'|'medium'|'hard', 
     prompt, 
     payload: { 
       operands: [a, b], 
-      correctAnswer: { kind: 'number', value: correct, validation: 'exact' } 
+      correctAnswer: { kind: 'number' as const, value: correct, validation: 'exact' } 
     } 
   };
 }

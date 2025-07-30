@@ -30,11 +30,11 @@ export function generateDecimals(rules: Rules = {}, validation: Validation = { m
 
   return {
     topic: 'decimals',
-    difficulty: 'medium',
+    difficulty: 'medium' as const,
     prompt,
     payload: {
       operands: [a, op, b],
-      correctAnswer: { kind: 'number', value: correct, dp, validation: validation.mode || 'exact' }
+      correctAnswer: { kind: 'number' as const, value: correct, dp, validation: validation.mode || 'exact' }
     }
   };
 }

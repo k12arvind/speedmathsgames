@@ -61,12 +61,12 @@ export function generateBodmas(rules: Rules = {}, rng: () => number = Math.rando
 
   return { 
     topic: 'bodmas', 
-    difficulty, 
+    difficulty: difficulty as 'easy'|'medium'|'hard', 
     prompt, 
     payload: { 
       operands: [a, b, c, d], 
       correctAnswer: { 
-        kind: 'number', 
+        kind: 'number' as const, 
         value: result.toString(), 
         validation: 'exact' 
       },

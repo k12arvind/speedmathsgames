@@ -31,5 +31,5 @@ export function generateAddition(rules: Rules = {}, rng: () => number = Math.ran
 
   const prompt = `${A} + ${B} = ?`;
   const correct = (A + B).toString();
-  return { topic: 'addition', difficulty: 'medium', prompt, payload: { operands:[A,B], correctAnswer: { kind: 'number', value: correct, validation: 'exact' } } };
+  return { topic: 'addition', difficulty: 'medium' as const, prompt, payload: { operands:[A,B], correctAnswer: { kind: 'number' as const, value: correct, validation: 'exact' } } };
 }

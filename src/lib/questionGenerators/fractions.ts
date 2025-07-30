@@ -76,12 +76,12 @@ export function generateFractions(rules: Rules = {}, rng: () => number = Math.ra
   
   return { 
     topic: 'fractions', 
-    difficulty, 
+    difficulty: difficulty as 'easy'|'medium'|'hard', 
     prompt, 
     payload: { 
       operands: [n1, d1, n2, d2], 
       correctAnswer: { 
-        kind: 'fraction', 
+        kind: 'fraction' as const, 
         value: correct, 
         requireLowestTerms: true,
         validation: 'fraction' 
