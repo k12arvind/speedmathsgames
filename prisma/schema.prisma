@@ -1,0 +1,128 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(uuid())
+  username      String   @unique
+  displayName   String?
+  email         String?  @unique
+  oauthProvider String?
+  oauthSub      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  sessions      GameSession[]
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  role      String
+  createdAt DateTime @default(now())
+}
+
+model GamePreset {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  config      Json
+  createdBy   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TopicConfig {
+  id          String   @id @default(uuid())
+  topic       String
+  isActive    Boolean  @default(true)
+  rules       Json
+  validation  Json
+  version     Int      @default(1)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model GameSession {
+  id             String   @id @default(uuid())
+  userId         String
+  startedAt      DateTime @default(now())
+  endedAt        DateTime?
+  timeLimitSec   Int
+  config         Json
+  totalQuestions Int      @default(0)
+  answeredCount  Int      @default(0)
+  correctCount   Int      @default(0)
+  skippedCount   Int      @default(0)
+  score          Int      @default(0)
+  avgTimeMs      Int      @default(0)
+  status         String   @default("active")
+
+  questions  QuestionInstance[]
+  responses  UserResponse[]
+  user       User             @relation(fields: [userId], references: [id])
+}
+
+model QuestionInstance {
+  id             String   @id @default(uuid())
+  sessionId      String
+  indexInSession Int
+  topic          String
+  difficulty     String
+  prompt         String
+  payload        Json
+  createdAt      DateTime @default(now())
+
+  session GameSession @relation(fields: [sessionId], references: [id])
+
+  @@index([sessionId, indexInSession])
+}
+
+model UserResponse {
+  id               String   @id @default(uuid())
+  sessionId        String
+  questionId       String
+  answeredAt       DateTime @default(now())
+  timeTakenMs      Int
+  userAnswer       String
+  normalizedAnswer String?
+  isCorrect        Boolean
+  wasSkipped       Boolean  @default(false)
+
+  session   GameSession      @relation(fields: [sessionId], references: [id])
+  question  QuestionInstance @relation(fields: [questionId], references: [id])
+
+  @@index([sessionId, questionId])
+}
+
+model UserTopicStats {
+  id            String   @id @default(uuid())
+  userId        String
+  topic         String
+  gamesPlayed   Int      @default(0)
+  totalAnswered Int      @default(0)
+  totalCorrect  Int      @default(0)
+  avgTimeMs     Int      @default(0)
+  last7Days     Json
+  updatedAt     DateTime @updatedAt
+}
+
+model Leaderboard {
+  id         String   @id @default(uuid())
+  scope      String   // daily | weekly | alltime
+  topic      String   // overall or topic name
+  entries    Json
+  validFrom  DateTime
+  validTo    DateTime
+  computedAt DateTime @default(now())
+}
+
+model AppSetting {
+  key       String   @id
+  val       Json
+  updatedAt DateTime @updatedAt
+}
