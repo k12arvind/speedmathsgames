@@ -78,6 +78,7 @@ model QuestionInstance {
   createdAt      DateTime @default(now())
 
   session GameSession @relation(fields: [sessionId], references: [id])
+  responses UserResponse[]
 
   @@index([sessionId, indexInSession])
 }
