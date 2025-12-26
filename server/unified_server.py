@@ -370,18 +370,30 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             user_id = query_params.get('user_id', ['daughter'])[0]
             tests = self.assessment_db.get_all_tests(user_id)
             total_tests = len(tests)
+
+            # Calculate stats from tests
             if total_tests > 0:
                 avg_score = sum(t['score'] for t in tests) / total_tests
+                total_correct = sum(t['correct_answers'] or 0 for t in tests)
+                total_questions = sum(t['total_questions'] or 0 for t in tests)
+                accuracy = (total_correct / total_questions * 100) if total_questions > 0 else 0
             else:
                 avg_score = 0
+                accuracy = 0
+                total_questions = 0
 
             questions_attempted = self.assessment_db.get_total_questions_attempted(user_id)
             mastery_breakdown = self.assessment_db.get_mastery_breakdown(user_id)
 
+            # Return in format expected by frontend
             self.send_json({
-                'total_tests': total_tests,
-                'average_score': round(avg_score, 1),
-                'total_questions_attempted': questions_attempted,
+                'overall_stats': {
+                    'total_tests': total_tests,
+                    'average_score': round(avg_score, 1),
+                    'total_questions': questions_attempted,
+                    'accuracy': round(accuracy, 1)
+                },
+                'category_performance': [],  # Can be populated later
                 'mastery_breakdown': mastery_breakdown
             })
 
