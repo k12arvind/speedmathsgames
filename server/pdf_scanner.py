@@ -113,19 +113,11 @@ class PDFScanner:
             """, (source_date,))
             topic_count = cursor.fetchone()['topic_count']
 
-            # Get revision stats for this PDF's topics
+            # Get topic count and categories
             cursor.execute("""
-                SELECT
-                    COUNT(DISTINCT t.topic_id) as total_topics,
-                    COUNT(DISTINCT rs.topic_id) as revised_topics,
-                    MAX(rs.last_revised) as last_revised,
-                    SUM(COALESCE(rs.revision_count, 0)) as total_revisions
-                FROM topics t
-                LEFT JOIN revision_schedule rs ON t.topic_id = rs.topic_id
-                WHERE t.source_date = ?
+                SELECT COUNT(*) as total_topics FROM topics WHERE source_date = ?
             """, (source_date,))
-
-            stats = cursor.fetchone()
+            total_topics = cursor.fetchone()['total_topics'] or topic_count or 0
 
             # Get categories
             cursor.execute("""
@@ -133,16 +125,64 @@ class PDFScanner:
             """, (source_date,))
             categories = [row['category'] for row in cursor.fetchall()]
 
-            # Calculate revision count per topic
-            total_topics = stats['total_topics'] or topic_count or 0
-            total_revisions = stats['total_revisions'] or 0
-            avg_revision_count = total_revisions // max(total_topics, 1) if total_topics > 0 else 0
+            # Track file modification-based revisions
+            # Check if we have tracked this PDF before
+            cursor.execute("""
+                SELECT last_modified, file_edit_count FROM pdfs WHERE filename = ?
+            """, (pdf_file.name,))
+            pdf_record = cursor.fetchone()
 
-            # Calculate days since last revision
+            file_edit_count = 0
+            if pdf_record:
+                # Compare stored modification time with current
+                stored_mtime = pdf_record['last_modified']
+                if stored_mtime != last_modified:
+                    # File was edited! Increment count
+                    file_edit_count = (pdf_record['file_edit_count'] or 0) + 1
+                    # Update the database
+                    cursor.execute("""
+                        UPDATE pdfs
+                        SET last_modified = ?, file_edit_count = ?, updated_at = CURRENT_TIMESTAMP
+                        WHERE filename = ?
+                    """, (last_modified, file_edit_count, pdf_file.name))
+                    conn.commit()
+                else:
+                    file_edit_count = pdf_record['file_edit_count'] or 0
+            else:
+                # First time seeing this PDF, insert it
+                cursor.execute("""
+                    INSERT INTO pdfs (filename, filepath, source_type, source_name, date_published,
+                                     date_added, total_topics, last_modified, file_edit_count)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)
+                """, (pdf_file.name, str(pdf_file), source_type, source_name,
+                      date_match or file_date, datetime.now().isoformat(),
+                      total_topics, last_modified))
+                conn.commit()
+
+            # Get assessment attempts count for this PDF
+            # Need to query assessment database
+            assessment_attempts = 0
+            try:
+                assessment_conn = sqlite3.connect(Path(__file__).parent.parent / "assessment.db")
+                assessment_cursor = assessment_conn.cursor()
+                assessment_cursor.execute("""
+                    SELECT COUNT(DISTINCT qa.session_id) as attempt_count
+                    FROM question_attempts qa
+                    JOIN test_sessions ts ON qa.session_id = ts.session_id
+                    WHERE ts.source_date = ? OR ts.pdf_id = ?
+                """, (source_date, source_date))
+                result = assessment_cursor.fetchone()
+                if result:
+                    assessment_attempts = result[0] or 0
+                assessment_conn.close()
+            except:
+                # Assessment database might not exist yet
+                pass
+
+            # Days since last file edit
             days_since_revision = None
-            if stats['last_revised']:
-                last_rev = datetime.fromisoformat(stats['last_revised'])
-                days_since_revision = (datetime.now() - last_rev).days
+            file_mtime = datetime.fromtimestamp(stat.st_mtime)
+            days_since_revision = (datetime.now() - file_mtime).days if file_edit_count > 0 else None
 
             pdf_data = {
                 'pdf_id': source_date,
@@ -152,12 +192,13 @@ class PDFScanner:
                 'source_name': source_name,
                 'date_published': date_match or file_date,
                 'total_topics': total_topics,
-                'revised_topics': stats['revised_topics'] or 0,
+                'revised_topics': 0,  # Not used anymore
                 'categories': categories,
                 'categories_list': categories,
-                'revision_count': avg_revision_count,
-                'total_revisions': total_revisions,
-                'last_revised': stats['last_revised'],
+                'revision_count': file_edit_count,  # Now tracks file edits
+                'total_revisions': file_edit_count,  # Same as revision_count
+                'assessment_attempts': assessment_attempts,  # NEW: Test attempts
+                'last_revised': last_modified if file_edit_count > 0 else None,
                 'last_modified': last_modified,
                 'file_size_kb': round(file_size_kb, 2),
                 'days_since_revision': days_since_revision,
