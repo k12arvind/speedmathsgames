@@ -73,14 +73,26 @@
     <form id="processing-form">
         <div class="form-group">
             <label for="pdf-path">PDF Path (full path):</label>
-            <input type="text" id="pdf-path" required
-                   placeholder="/Users/arvind/Desktop/saanvi/weeklyGKCareerLauncher/example.pdf">
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="pdf-path" required
+                       placeholder="/Users/arvind/Desktop/saanvi/weeklyGKCareerLauncher/example.pdf"
+                       style="flex: 1;">
+                <button type="button" id="browse-pdfs" style="width: auto; padding: 8px 16px;">
+                    Browse PDFs
+                </button>
+            </div>
+            <small style="color: #666; margin-top: 5px; display: block;">
+                💡 Tip: Use absolute path (starting with /Users/arvind/)
+            </small>
         </div>
 
         <div class="form-group">
             <label for="pdf-filename">PDF Filename:</label>
             <input type="text" id="pdf-filename" required
                    placeholder="example.pdf">
+            <small style="color: #666; margin-top: 5px; display: block;">
+                💡 Auto-filled from path above
+            </small>
         </div>
 
         <div class="form-group">
@@ -170,6 +182,111 @@
                 resultDiv.innerHTML = `<div class="result error"><strong>Error:</strong> ${error.message}</div>`;
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Start Processing';
+            }
+        });
+
+        // Auto-fill filename from path
+        document.getElementById('pdf-path').addEventListener('input', (e) => {
+            const path = e.target.value;
+            const filename = path.split('/').pop();
+            if (filename) {
+                document.getElementById('pdf-filename').value = filename;
+            }
+        });
+
+        // Browse PDFs button - show modal with available PDFs
+        document.getElementById('browse-pdfs').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/api/pdfs/all');
+                const data = await response.json();
+
+                if (data.pdfs && data.pdfs.length > 0) {
+                    // Create modal to show PDF list
+                    let modal = document.createElement('div');
+                    modal.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0,0,0,0.5);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 1000;
+                    `;
+
+                    let content = document.createElement('div');
+                    content.style.cssText = `
+                        background: white;
+                        padding: 30px;
+                        border-radius: 12px;
+                        max-width: 800px;
+                        max-height: 600px;
+                        overflow-y: auto;
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+                    `;
+
+                    content.innerHTML = `
+                        <h2 style="margin-bottom: 20px;">Select a PDF</h2>
+                        <div id="pdf-list"></div>
+                        <button id="close-modal" style="margin-top: 20px; background: #ccc;">Close</button>
+                    `;
+
+                    modal.appendChild(content);
+                    document.body.appendChild(modal);
+
+                    // Populate PDF list
+                    const pdfList = content.querySelector('#pdf-list');
+                    data.pdfs.forEach(pdf => {
+                        const item = document.createElement('div');
+                        item.style.cssText = `
+                            padding: 15px;
+                            margin-bottom: 10px;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            transition: all 0.2s;
+                        `;
+
+                        // Map source_name and display info
+                        const sourceDisplay = pdf.source_name || 'unknown';
+                        const dateDisplay = pdf.date_published || pdf.pdf_id || '';
+                        const sizeDisplay = pdf.file_size_kb ? `${Math.round(pdf.file_size_kb)} KB` : '';
+
+                        item.innerHTML = `
+                            <strong>${pdf.filename}</strong><br>
+                            <small style="color: #666;">${sourceDisplay} • ${dateDisplay} • ${sizeDisplay}</small>
+                        `;
+                        item.onmouseover = () => item.style.background = '#f0f0f0';
+                        item.onmouseout = () => item.style.background = 'white';
+                        item.onclick = () => {
+                            document.getElementById('pdf-path').value = pdf.filepath;
+                            document.getElementById('pdf-filename').value = pdf.filename;
+                            document.getElementById('pdf-id').value = pdf.pdf_id || pdf.date_published || '';
+                            document.getElementById('pdf-path').dispatchEvent(new Event('input'));
+                            document.body.removeChild(modal);
+                        };
+                        pdfList.appendChild(item);
+                    });
+
+                    // Close button
+                    content.querySelector('#close-modal').onclick = () => {
+                        document.body.removeChild(modal);
+                    };
+
+                    // Close on backdrop click
+                    modal.onclick = (e) => {
+                        if (e.target === modal) {
+                            document.body.removeChild(modal);
+                        }
+                    };
+                } else {
+                    alert('No PDFs found. Please enter path manually.');
+                }
+            } catch (error) {
+                alert('Could not load PDF list. Please enter path manually.');
+                console.error('Error loading PDFs:', error);
             }
         });
 
