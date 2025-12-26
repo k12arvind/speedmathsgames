@@ -121,7 +121,8 @@ def count_cards_in_json(json_path: Path) -> int:
         import json
         with open(json_path) as f:
             data = json.load(f)
-            return len(data.get('flashcards', []))
+            # Try both 'cards' and 'flashcards' keys for compatibility
+            return len(data.get('cards', data.get('flashcards', [])))
     except Exception:
         return 0
 
