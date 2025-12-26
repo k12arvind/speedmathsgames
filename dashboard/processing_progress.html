@@ -406,7 +406,9 @@
 
         // Update status from API
         function updateStatus() {
-            fetch(`/api/processing/${jobId}/status`)
+            // URL-encode the job ID to handle special characters like []
+            const encodedJobId = encodeURIComponent(jobId);
+            fetch(`/api/processing/${encodedJobId}/status`)
                 .then(res => res.json())
                 .then(data => {
                     // Update PDF title
@@ -460,7 +462,9 @@
             const logContainer = document.getElementById('log-container');
             logContainer.innerHTML = ''; // Clear initial message
 
-            eventSource = new EventSource(`/api/processing/${jobId}/logs`);
+            // URL-encode the job ID to handle special characters like []
+            const encodedJobId = encodeURIComponent(jobId);
+            eventSource = new EventSource(`/api/processing/${encodedJobId}/logs`);
 
             eventSource.onmessage = function(event) {
                 const log = JSON.parse(event.data);
