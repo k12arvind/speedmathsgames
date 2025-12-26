@@ -24,8 +24,8 @@ echo ""
 # Check if running with authentication or not
 if [ "$1" = "--no-auth" ]; then
     echo "⚠️  Starting WITHOUT authentication"
-    python3 server/unified_server.py --port 8001 --no-auth
+    python3 -u server/unified_server.py --port 8001 --no-auth
 else
     echo "🔒 Starting WITH Google OAuth authentication"
-    python3 server/unified_server.py --port 8001
+    python3 -u server/unified_server.py --port 8001
 fi
