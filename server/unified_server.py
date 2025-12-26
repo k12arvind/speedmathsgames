@@ -55,6 +55,9 @@ from math_module.math_db import MathDatabase
 # Import PDF scanner for GK dashboard
 from server.pdf_scanner import PDFScanner
 
+# Import processing jobs database for progress tracking
+from server.processing_jobs_db import ProcessingJobsDB
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -67,6 +70,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     anthropic = None
     math_db = None
     pdf_scanner = None
+    processing_db = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -322,6 +326,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Analytics API endpoints
             elif path.startswith('/api/analytics/'):
                 self.handle_analytics_get(path, query_params)
+            # Processing API endpoints
+            elif path.startswith('/api/processing/'):
+                self.handle_processing_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -346,6 +353,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 self.handle_gk_api_post(path, data)
             elif path.startswith('/api/revise/'):
                 self.handle_gk_dashboard_post(path, data)
+            # Processing API endpoints
+            elif path.startswith('/api/processing/'):
+                self.handle_processing_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -1136,6 +1146,175 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             return {}
 
     # ============================================================
+    # PDF PROCESSING API METHODS
+    # ============================================================
+
+    def handle_processing_get(self, path: str, query_params: dict):
+        """Handle processing API GET requests."""
+        # Get job status
+        if path.startswith('/api/processing/') and '/status' in path:
+            # Extract job_id from path: /api/processing/{job_id}/status
+            job_id = path.split('/')[3]
+            job = self.processing_db.get_job(job_id)
+
+            if not job:
+                self.send_json({'error': 'Job not found'})
+                return
+
+            self.send_json(job)
+
+        # Stream logs via Server-Sent Events
+        elif path.startswith('/api/processing/') and '/logs' in path:
+            # Extract job_id from path: /api/processing/{job_id}/logs
+            job_id = path.split('/')[3]
+            job = self.processing_db.get_job(job_id)
+
+            if not job:
+                self.send_response(404)
+                self.end_headers()
+                return
+
+            # Send SSE headers
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/event-stream')
+            self.send_header('Cache-Control', 'no-cache')
+            self.send_header('Connection', 'keep-alive')
+            self.end_headers()
+
+            # Stream log file
+            log_file = Path(job['log_file'])
+            if not log_file.exists():
+                # Log file doesn't exist yet, send initial message
+                event_data = json.dumps({
+                    'timestamp': datetime.now().strftime('%H:%M:%S'),
+                    'level': 'INFO',
+                    'message': 'Waiting for processing to start...'
+                })
+                self.wfile.write(f"data: {event_data}\n\n".encode())
+                self.wfile.flush()
+                return
+
+            # Read and stream log file
+            import time
+            last_position = 0
+
+            # Read up to 30 seconds or until job completes
+            for _ in range(30):
+                try:
+                    with open(log_file, 'r') as f:
+                        f.seek(last_position)
+                        lines = f.readlines()
+                        last_position = f.tell()
+
+                        for line in lines:
+                            # Parse log line: timestamp | level | message
+                            parts = line.strip().split(' | ', 2)
+                            if len(parts) == 3:
+                                timestamp_str, level, message = parts
+                                event_data = json.dumps({
+                                    'timestamp': timestamp_str,
+                                    'level': level,
+                                    'message': message
+                                })
+                                self.wfile.write(f"data: {event_data}\n\n".encode())
+                                self.wfile.flush()
+
+                    # Check if job is complete
+                    updated_job = self.processing_db.get_job(job_id)
+                    if updated_job and updated_job['status'] in ['completed', 'failed']:
+                        break
+
+                    time.sleep(1)
+
+                except Exception as e:
+                    print(f"Error streaming logs: {e}")
+                    break
+
+        # List all jobs
+        elif path == '/api/processing/jobs':
+            limit = int(query_params.get('limit', ['20'])[0])
+            jobs = self.processing_db.get_recent_jobs(limit)
+            self.send_json({'jobs': jobs})
+
+        else:
+            self.send_json({'error': 'Processing endpoint not found'})
+
+    def handle_processing_post(self, path: str, data: dict):
+        """Handle processing API POST requests."""
+        import subprocess
+        import threading
+
+        # Start processing job
+        if path == '/api/processing/start':
+            pdf_id = data.get('pdf_id')
+            pdf_path = data.get('pdf_path')
+            pdf_filename = data.get('pdf_filename')
+            source = data.get('source', 'career_launcher')
+            week = data.get('week')
+            pages_per_chunk = data.get('pages_per_chunk', 10)
+
+            if not pdf_path or not pdf_filename:
+                self.send_json({'error': 'Missing required parameters'})
+                return
+
+            # Determine number of chunks needed
+            pdf_path_obj = Path(pdf_path)
+            if not pdf_path_obj.exists():
+                self.send_json({'error': f'PDF file not found: {pdf_path}'})
+                return
+
+            # Import the process_pdf_with_progress module to use its functions
+            import sys
+            sys.path.insert(0, str(Path(__file__).parent))
+            from process_pdf_with_progress import extract_text_length, split_pdf_by_pages
+
+            text_length = extract_text_length(pdf_path_obj)
+            total_chunks = 1
+
+            if text_length > 40000:
+                # Calculate number of chunks
+                import fitz
+                doc = fitz.open(str(pdf_path_obj))
+                total_pages = len(doc)
+                doc.close()
+                total_chunks = (total_pages + pages_per_chunk - 1) // pages_per_chunk
+
+            # Create job in database
+            job_id = self.processing_db.create_job(
+                pdf_id=pdf_id,
+                pdf_filename=pdf_filename,
+                pdf_path=pdf_path,
+                source=source,
+                week=week,
+                total_chunks=total_chunks
+            )
+
+            # Start processing in background thread
+            def run_processing():
+                try:
+                    # Run the processing script
+                    script_path = Path(__file__).parent / 'process_pdf_with_progress.py'
+                    subprocess.run(
+                        ['python3', str(script_path), job_id],
+                        check=True
+                    )
+                except Exception as e:
+                    print(f"Processing error: {e}")
+                    self.processing_db.mark_failed(job_id, str(e))
+
+            thread = threading.Thread(target=run_processing, daemon=True)
+            thread.start()
+
+            self.send_json({
+                'job_id': job_id,
+                'status': 'queued',
+                'message': 'Processing started'
+            })
+
+        else:
+            self.send_json({'error': 'Processing endpoint not found'})
+
+    # ============================================================
     # UTILITY METHODS
     # ============================================================
 
@@ -1164,6 +1343,10 @@ def main():
     UnifiedHandler.math_db = MathDatabase(str(math_db_path))
 
     UnifiedHandler.pdf_scanner = PDFScanner()
+
+    # Initialize processing jobs database
+    UnifiedHandler.processing_db = ProcessingJobsDB()
+    print("✅ Processing jobs database initialized")
 
     # Initialize Anthropic client
     api_key = os.environ.get("ANTHROPIC_API_KEY")
