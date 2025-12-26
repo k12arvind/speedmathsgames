@@ -772,6 +772,7 @@
                             <th onclick="sortTable('source_type')">Type</th>
                             <th onclick="sortTable('total_topics')">Topics</th>
                             <th onclick="sortTable('revision_count')">Revisions</th>
+                            <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
                             <th onclick="sortTable('days_since_revision')">Last Revised</th>
                             <th>Status</th>
                             <th>Actions</th>
@@ -793,6 +794,11 @@
                                       revisionCount >= 3 ? 'medium' :
                                       revisionCount >= 1 ? 'low' : 'none';
 
+            const assessmentAttempts = pdf.assessment_attempts || 0;
+            const attemptsBadgeClass = assessmentAttempts >= 5 ? 'high' :
+                                      assessmentAttempts >= 2 ? 'medium' :
+                                      assessmentAttempts >= 1 ? 'low' : 'none';
+
             const lastRevised = pdf.days_since_revision !== null
                 ? pdf.days_since_revision === 0
                     ? 'Today'
@@ -810,6 +816,7 @@
                     <td><span class="badge badge-${pdf.source_type}">${pdf.source_type}</span></td>
                     <td>${pdf.total_topics}</td>
                     <td><span class="badge badge-count ${revisionBadgeClass}">×${revisionCount}</span></td>
+                    <td><span class="badge badge-count ${attemptsBadgeClass}">${assessmentAttempts}×</span></td>
                     <td>${lastRevised}</td>
                     <td>${statusBadge}</td>
                     <td>
@@ -950,7 +957,7 @@
 
                 if (data.pdf) {
                     const pdf = data.pdf;
-                    alert(`PDF Details:\n\nFilename: ${pdf.filename}\nDate: ${pdf.date_published}\nTopics: ${pdf.total_topics}\nRevisions: ${pdf.revision_count}\nCategories: ${pdf.categories_list.join(', ') || 'None'}`);
+                    alert(`PDF Details:\n\nFilename: ${pdf.filename}\nDate: ${pdf.date_published}\nTopics: ${pdf.total_topics}\nRevisions: ${pdf.revision_count}\nTest Attempts: ${pdf.assessment_attempts || 0}\nCategories: ${pdf.categories_list.join(', ') || 'None'}`);
                 }
             } catch (error) {
                 console.error('Error:', error);

@@ -163,7 +163,7 @@ class PDFScanner:
             # Need to query assessment database
             assessment_attempts = 0
             try:
-                assessment_conn = sqlite3.connect(Path(__file__).parent.parent / "assessment.db")
+                assessment_conn = sqlite3.connect(Path(__file__).parent / "assessment_tracker.db")
                 assessment_cursor = assessment_conn.cursor()
                 assessment_cursor.execute("""
                     SELECT COUNT(DISTINCT qa.session_id) as attempt_count

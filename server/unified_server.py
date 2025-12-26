@@ -525,20 +525,24 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Submit answer logic
             session_id = data.get('session_id')
             note_id = data.get('note_id')
-            selected_answer = data.get('selected_answer')
+            question_text = data.get('question', '')
+            user_answer = data.get('user_answer', '')
             correct_answer = data.get('correct_answer')
-            is_correct = data.get('is_correct', False)
-            time_taken = data.get('time_taken', 0)
             category = data.get('category', '')
+            time_taken = data.get('time_taken', 0)
 
-            self.assessment_db.record_answer(
+            # Calculate is_correct
+            is_correct = (user_answer.strip() == correct_answer.strip())
+
+            self.assessment_db.record_question_attempt(
                 session_id=session_id,
-                note_id=note_id,
-                selected_answer=selected_answer,
+                anki_note_id=note_id,
+                question_text=question_text,
                 correct_answer=correct_answer,
+                user_answer=user_answer,
+                category=category,
                 is_correct=is_correct,
-                time_taken=time_taken,
-                category=category
+                time_taken=time_taken
             )
 
             self.send_json({'success': True})
@@ -775,8 +779,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         import sqlite3
         from datetime import datetime, timedelta
 
-        # Get current user (default to 'user1' if no auth)
-        user_id = 'user1'
+        # Get current user (default to 'daughter' if no auth)
+        user_id = query_params.get('user_id', ['daughter'])[0] if 'user_id' in query_params else 'daughter'
 
         if path == '/api/analytics/daily':
             # Get daily statistics for last 30 days from question_attempts
