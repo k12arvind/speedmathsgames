@@ -1151,10 +1151,12 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
     def handle_processing_get(self, path: str, query_params: dict):
         """Handle processing API GET requests."""
+        from urllib.parse import unquote
+
         # Get job status
         if path.startswith('/api/processing/') and '/status' in path:
             # Extract job_id from path: /api/processing/{job_id}/status
-            job_id = path.split('/')[3]
+            job_id = unquote(path.split('/')[3])
             job = self.processing_db.get_job(job_id)
 
             if not job:
@@ -1166,7 +1168,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         # Stream logs via Server-Sent Events
         elif path.startswith('/api/processing/') and '/logs' in path:
             # Extract job_id from path: /api/processing/{job_id}/logs
-            job_id = path.split('/')[3]
+            job_id = unquote(path.split('/')[3])
             job = self.processing_db.get_job(job_id)
 
             if not job:
