@@ -46,9 +46,9 @@ Two-machine setup with MacBook Pro as **development/source** and Mac Mini as **p
 ├── auth/                      # Google OAuth
 │   ├── google_auth.py
 │   └── user_db.py
-├── math/                      # Math practice
-│   ├── math_api.py
-│   └── math_db.py
+├── math_module/               # Math practice
+│   ├── math_db.py
+│   └── math_tracker.db
 ├── logs/                      # Server logs
 ├── start_server.sh            # Server startup script
 └── .git/                      # Version control (MacBook only)
@@ -130,8 +130,8 @@ Managed by: `launchctl` (always running)
 - Tables: `test_sessions`, `question_attempts`, `question_performance`
 - Purpose: Assessment tests and analytics
 
-### 3. Math Tracker (`math/math_tracker.db`)
-- Location: `~/clat_preparation/math/`
+### 3. Math Tracker (`math_module/math_tracker.db`)
+- Location: `~/clat_preparation/math_module/`
 - Tables: `questions`, `user_progress`, `sessions`
 - Purpose: Math practice tracking
 

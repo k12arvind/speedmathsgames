@@ -8,6 +8,19 @@ echo "Starting CLAT Preparation Server..."
 echo "Server directory: $(pwd)"
 echo ""
 
+# Activate virtual environment
+if [ ! -d "venv" ]; then
+    echo "❌ Virtual environment not found. Please create it first:"
+    echo "   python3 -m venv venv"
+    echo "   source venv/bin/activate"
+    echo "   pip install -r requirements.txt"
+    exit 1
+fi
+
+source venv/bin/activate
+echo "✅ Virtual environment activated"
+echo ""
+
 # Check if running with authentication or not
 if [ "$1" = "--no-auth" ]; then
     echo "⚠️  Starting WITHOUT authentication"

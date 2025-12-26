@@ -39,8 +39,8 @@ echo ""
 
 # 3. Sync Math module
 echo -e "${YELLOW}Step 3: Syncing math module...${NC}"
-rsync -avz ~/clat_preparation/math/*.py \
-    mac-mini:~/clat_preparation/math/
+rsync -avz ~/clat_preparation/math_module/*.py \
+    mac-mini:~/clat_preparation/math_module/
 echo -e "${GREEN}✓ Math module synced${NC}"
 echo ""
 

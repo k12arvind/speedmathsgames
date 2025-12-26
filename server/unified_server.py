@@ -50,7 +50,7 @@ from server.anki_connector import AnkiConnector
 from anthropic import Anthropic
 
 # Import math database
-from math.math_db import MathDatabase
+from math_module.math_db import MathDatabase
 
 # Import PDF scanner for GK dashboard
 from server.pdf_scanner import PDFScanner
@@ -1144,7 +1144,7 @@ def main():
     UnifiedHandler.assessment_db = AssessmentDatabase()
     UnifiedHandler.anki = AnkiConnector()
 
-    math_db_path = Path(__file__).parent.parent / 'math' / 'math_tracker.db'
+    math_db_path = Path(__file__).parent.parent / 'math_module' / 'math_tracker.db'
     UnifiedHandler.math_db = MathDatabase(str(math_db_path))
 
     UnifiedHandler.pdf_scanner = PDFScanner()
