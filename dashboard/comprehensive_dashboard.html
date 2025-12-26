@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CLAT GK">
+    <title>CLAT GK Revision Dashboard - Comprehensive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #3b82f6;
+            --purple: #8b5cf6;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .exam-countdown {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        /* Statistics Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary);
+        }
+
+        .stat-card.daily {
+            border-left-color: var(--info);
+        }
+
+        .stat-card.weekly {
+            border-left-color: var(--purple);
+        }
+
+        .stat-card.never {
+            border-left-color: var(--danger);
+        }
+
+        .stat-card.completion {
+            border-left-color: var(--success);
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* Filters */
+        .filters-section {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .filter-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--gray-300);
+            background: white;
+            color: var(--gray-700);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-600);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .tab:hover {
+            color: var(--primary);
+        }
+
+        .tab.active {
+            color: var(--primary);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .tab-badge {
+            display: inline-block;
+            background: var(--gray-200);
+            color: var(--gray-700);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 6px;
+        }
+
+        .tab.active .tab-badge {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Table Styles */
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .table-header {
+            padding: 16px 20px;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .table-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .table-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-icon {
+            padding: 8px;
+            background: white;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-icon:hover {
+            background: var(--gray-50);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: var(--gray-50);
+        }
+
+        th {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-700);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--gray-200);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        th:hover {
+            background: var(--gray-100);
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+
+        tr:hover td {
+            background: var(--gray-50);
+        }
+
+        .pdf-name {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-daily {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-weekly {
+            background: #ede9fe;
+            color: #6b21a8;
+        }
+
+        .badge-count {
+            background: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .badge-count.high {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-count.medium {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-count.low {
+            background: #fed7aa;
+            color: #92400e;
+        }
+
+        .badge-count.none {
+            background: var(--gray-200);
+            color: var(--gray-600);
+        }
+
+        .badge-status {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-not-processed {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .badge-processed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .category-tag {
+            background: var(--gray-100);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: var(--gray-600);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-300);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--gray-500);
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray-500);
+        }
+
+        .spinner {
+            border: 3px solid var(--gray-200);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Refresh Button */
+        .refresh-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
+            z-index: 90;
+        }
+
+        .refresh-btn:hover {
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .table-container {
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 800px;
+            }
+
+            .tabs {
+                overflow-x: auto;
+            }
+
+            .tab {
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🎓 CLAT GK Revision Dashboard</h1>
+            <div class="header-nav">
+                <a href="pdf_dashboard.html" class="nav-btn">📚 PDF Manager</a>
+                <a href="assessment.html" class="nav-btn">📝 Take Test</a>
+                <a href="analytics.html" class="nav-btn">📊 Analytics</a>
+                <div class="exam-countdown" id="countdown">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-pdfs">0</div>
+                <div class="stat-label">Total PDFs</div>
+            </div>
+            <div class="stat-card daily">
+                <div class="stat-value" id="daily-pdfs">0</div>
+                <div class="stat-label">Daily PDFs</div>
+            </div>
+            <div class="stat-card weekly">
+                <div class="stat-value" id="weekly-pdfs">0</div>
+                <div class="stat-label">Weekly PDFs</div>
+            </div>
+            <div class="stat-card never">
+                <div class="stat-value" id="never-revised">0</div>
+                <div class="stat-label">Never Revised</div>
+            </div>
+            <div class="stat-card completion">
+                <div class="stat-value" id="completion-rate">0%</div>
+                <div class="stat-label">Completion Rate</div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-section">
+            <div class="filter-row">
+                <span class="filter-label">📅 Not touched in:</span>
+                <button class="filter-btn" data-filter="untouched" data-weeks="1">1 Week</button>
+                <button class="filter-btn" data-filter="untouched" data-weeks="2">2 Weeks</button>
+                <button class="filter-btn" data-filter="untouched" data-weeks="3">3 Weeks</button>
+                <button class="filter-btn" data-filter="untouched" data-weeks="4">4 Weeks</button>
+                <button class="filter-btn active" data-filter="all">Show All</button>
+            </div>
+            <div class="filter-row">
+                <span class="filter-label">🔄 Revision count:</span>
+                <button class="filter-btn" data-filter="revision-count" data-count="0">0×</button>
+                <button class="filter-btn" data-filter="revision-count" data-count="1">1×</button>
+                <button class="filter-btn" data-filter="revision-count" data-count="2">2×</button>
+                <button class="filter-btn" data-filter="revision-count" data-count="3">3×</button>
+                <button class="filter-btn" data-filter="revision-count" data-count="4">4×</button>
+                <button class="filter-btn" data-filter="revision-count" data-count="5">5×</button>
+                <button class="filter-btn" data-filter="revision-count" data-count="6+">6+×</button>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="daily">
+                📰 Daily
+                <span class="tab-badge" id="daily-count">0</span>
+            </button>
+            <button class="tab" data-tab="weekly-legaledge">
+                📚 Weekly (LegalEdge)
+                <span class="tab-badge" id="weekly-le-count">0</span>
+            </button>
+            <button class="tab" data-tab="weekly-careerlauncher">
+                📖 Weekly (Career Launcher)
+                <span class="tab-badge" id="weekly-cl-count">0</span>
+            </button>
+            <button class="tab" data-tab="all">
+                📊 All PDFs
+                <span class="tab-badge" id="all-count">0</span>
+            </button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="daily-tab" class="tab-content active">
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">Daily Current Affairs - LegalEdge</div>
+                    <div class="table-actions">
+                        <button class="btn-icon" onclick="refreshData()" title="Refresh">↻</button>
+                    </div>
+                </div>
+                <div id="daily-table"></div>
+            </div>
+        </div>
+
+        <div id="weekly-legaledge-tab" class="tab-content">
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">Weekly Current Affairs - LegalEdge</div>
+                    <div class="table-actions">
+                        <button class="btn-icon" onclick="refreshData()" title="Refresh">↻</button>
+                    </div>
+                </div>
+                <div id="weekly-legaledge-table"></div>
+            </div>
+        </div>
+
+        <div id="weekly-careerlauncher-tab" class="tab-content">
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">Weekly Current Affairs - Career Launcher</div>
+                    <div class="table-actions">
+                        <button class="btn-icon" onclick="refreshData()" title="Refresh">↻</button>
+                    </div>
+                </div>
+                <div id="weekly-careerlauncher-table"></div>
+            </div>
+        </div>
+
+        <div id="all-tab" class="tab-content">
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">All PDFs</div>
+                    <div class="table-actions">
+                        <button class="btn-icon" onclick="refreshData()" title="Refresh">↻</button>
+                    </div>
+                </div>
+                <div id="all-table"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refresh Button -->
+    <button class="refresh-btn" onclick="refreshData()" title="Refresh">↻</button>
+
+    <script>
+        // Configuration
+        const API_BASE = window.location.origin;;
+
+        // Global state
+        let dashboardData = null;
+        let currentFilter = 'all';
+        let sortColumn = 'date_published';
+        let sortDirection = 'desc';
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadDashboardData();
+            setupEventListeners();
+            updateCountdown();
+            setInterval(updateCountdown, 60000);
+        });
+
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                const response = await fetch(`${API_BASE}/api/dashboard`);
+                dashboardData = await response.json();
+
+                updateStatistics();
+                updateTabCounts();
+                renderAllTables();
+            } catch (error) {
+                console.error('Failed to load dashboard:', error);
+                showError('Failed to load data. Please refresh.');
+            }
+        }
+
+        // Update statistics
+        function updateStatistics() {
+            const stats = dashboardData.statistics;
+            document.getElementById('total-pdfs').textContent = stats.total_pdfs;
+            document.getElementById('daily-pdfs').textContent = stats.daily_pdfs;
+            document.getElementById('weekly-pdfs').textContent = stats.weekly_pdfs;
+            document.getElementById('never-revised').textContent = stats.never_revised;
+            document.getElementById('completion-rate').textContent = stats.completion_rate + '%';
+        }
+
+        // Update tab counts
+        function updateTabCounts() {
+            document.getElementById('daily-count').textContent = dashboardData.pdfs.daily.length;
+            document.getElementById('weekly-le-count').textContent = dashboardData.pdfs.weekly.legaledge.length;
+            document.getElementById('weekly-cl-count').textContent = dashboardData.pdfs.weekly.career_launcher.length;
+
+            const allCount = dashboardData.pdfs.daily.length +
+                           dashboardData.pdfs.weekly.legaledge.length +
+                           dashboardData.pdfs.weekly.career_launcher.length;
+            document.getElementById('all-count').textContent = allCount;
+        }
+
+        // Update countdown
+        function updateCountdown() {
+            const examDate = new Date('2026-12-06');
+            const now = new Date();
+            const days = Math.floor((examDate - now) / (1000 * 60 * 60 * 24));
+            document.getElementById('countdown').textContent = `${days} days to CLAT 2026`;
+        }
+
+        // Render all tables
+        function renderAllTables() {
+            renderTable('daily-table', dashboardData.pdfs.daily);
+            renderTable('weekly-legaledge-table', dashboardData.pdfs.weekly.legaledge);
+            renderTable('weekly-careerlauncher-table', dashboardData.pdfs.weekly.career_launcher);
+
+            const allPdfs = [
+                ...dashboardData.pdfs.daily,
+                ...dashboardData.pdfs.weekly.legaledge,
+                ...dashboardData.pdfs.weekly.career_launcher
+            ];
+            renderTable('all-table', allPdfs);
+        }
+
+        // Render table
+        function renderTable(containerId, pdfs) {
+            const container = document.getElementById(containerId);
+
+            if (pdfs.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📭</div>
+                        <div>No PDFs found</div>
+                    </div>
+                `;
+                return;
+            }
+
+            const tableHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('filename')">PDF Name</th>
+                            <th onclick="sortTable('date_published')">Date</th>
+                            <th onclick="sortTable('source_type')">Type</th>
+                            <th onclick="sortTable('total_topics')">Topics</th>
+                            <th onclick="sortTable('revision_count')">Revisions</th>
+                            <th onclick="sortTable('days_since_revision')">Last Revised</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${pdfs.map(pdf => createTableRow(pdf)).join('')}
+                    </tbody>
+                </table>
+            `;
+
+            container.innerHTML = tableHTML;
+        }
+
+        // Create table row
+        function createTableRow(pdf) {
+            const revisionCount = pdf.revision_count || 0;
+            const revisionBadgeClass = revisionCount >= 6 ? 'high' :
+                                      revisionCount >= 3 ? 'medium' :
+                                      revisionCount >= 1 ? 'low' : 'none';
+
+            const lastRevised = pdf.days_since_revision !== null
+                ? pdf.days_since_revision === 0
+                    ? 'Today'
+                    : `${pdf.days_since_revision}d ago`
+                : 'Never';
+
+            const statusBadge = pdf.exists_in_db
+                ? '<span class="badge-status badge-processed">✓ Processed</span>'
+                : '<span class="badge-status badge-not-processed">⚠ Not Processed</span>';
+
+            return `
+                <tr>
+                    <td class="pdf-name">${pdf.filename}</td>
+                    <td>${formatDate(pdf.date_published)}</td>
+                    <td><span class="badge badge-${pdf.source_type}">${pdf.source_type}</span></td>
+                    <td>${pdf.total_topics}</td>
+                    <td><span class="badge badge-count ${revisionBadgeClass}">×${revisionCount}</span></td>
+                    <td>${lastRevised}</td>
+                    <td>${statusBadge}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')" ${!pdf.exists_in_db ? 'disabled' : ''}>
+                                📝 Test
+                            </button>
+                            <button class="btn btn-success" onclick="markRevised('${pdf.pdf_id}')" ${!pdf.exists_in_db ? 'disabled' : ''}>
+                                ✓ Revised
+                            </button>
+                            <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}')">
+                                Details
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // Format date
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Tab switching
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabName = this.dataset.tab;
+                    switchTab(tabName);
+                });
+            });
+
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    this.parentElement.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterType = this.dataset.filter;
+
+                    if (filterType === 'all') {
+                        await loadDashboardData();
+                    } else if (filterType === 'untouched') {
+                        const weeks = this.dataset.weeks;
+                        await filterByUntouched(weeks);
+                    } else if (filterType === 'revision-count') {
+                        const count = this.dataset.count;
+                        await filterByRevisionCount(count);
+                    }
+                });
+            });
+        }
+
+        // Switch tab
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+        }
+
+        // Filter by untouched duration
+        async function filterByUntouched(weeks) {
+            try {
+                const response = await fetch(`${API_BASE}/api/filter/untouched?weeks=${weeks}`);
+                const data = await response.json();
+
+                // Update all tab with filtered results
+                renderTable('all-table', data.pdfs);
+                switchTab('all');
+            } catch (error) {
+                console.error('Filter error:', error);
+            }
+        }
+
+        // Filter by revision count
+        async function filterByRevisionCount(count) {
+            try {
+                let url;
+                if (count === '6+') {
+                    url = `${API_BASE}/api/filter/revision-count?min=6`;
+                } else {
+                    const num = parseInt(count);
+                    url = `${API_BASE}/api/filter/revision-count?min=${num}&max=${num}`;
+                }
+
+                const response = await fetch(url);
+                const data = await response.json();
+
+                renderTable('all-table', data.pdfs);
+                switchTab('all');
+            } catch (error) {
+                console.error('Filter error:', error);
+            }
+        }
+
+        // Mark as revised
+        async function markRevised(pdfId) {
+            if (!confirm('Mark all topics in this PDF as revised?')) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/api/revise/${pdfId}`, {
+                    method: 'POST'
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    alert(`✅ Marked as revised! ${data.topics_updated} topics updated.`);
+                    await loadDashboardData();
+                } else {
+                    alert(`Error: ${data.error}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to mark as revised.');
+            }
+        }
+
+        // Take test - Navigate to assessment with PDF pre-selected
+        function takeTest(pdfId, filename) {
+            // Pass PDF details via URL parameters
+            window.location.href = `assessment.html?pdf_id=${encodeURIComponent(pdfId)}&filename=${encodeURIComponent(filename)}`;
+        }
+
+        // View details
+        async function viewDetails(pdfId) {
+            try {
+                const response = await fetch(`${API_BASE}/api/pdf/${pdfId}`);
+                const data = await response.json();
+
+                if (data.pdf) {
+                    const pdf = data.pdf;
+                    alert(`PDF Details:\n\nFilename: ${pdf.filename}\nDate: ${pdf.date_published}\nTopics: ${pdf.total_topics}\nRevisions: ${pdf.revision_count}\nCategories: ${pdf.categories_list.join(', ') || 'None'}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Refresh data
+        async function refreshData() {
+            await loadDashboardData();
+        }
+
+        // Sort table
+        function sortTable(column) {
+            // Implement sorting logic
+            console.log('Sort by:', column);
+        }
+
+        // Show error
+        function showError(message) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>

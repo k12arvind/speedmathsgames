@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK PDF Manager</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .summary-value {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .summary-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f9fafb;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #e5e7eb;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        td {
+            padding: 16px;
+            color: #1f2937;
+            font-size: 14px;
+        }
+
+        .pdf-filename {
+            font-weight: 500;
+            color: #111827;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .badge-daily { background: #dbeafe; color: #1e40af; }
+        .badge-weekly { background: #fef3c7; color: #92400e; }
+        .badge-processed { background: #d1fae5; color: #065f46; }
+        .badge-unprocessed { background: #fee2e2; color: #991b1b; }
+
+        .progress-container {
+            width: 100%;
+            background: #e5e7eb;
+            border-radius: 8px;
+            height: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .progress-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12px;
+            font-weight: 600;
+            color: #374151;
+            z-index: 1;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-process {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-process:hover {
+            background: #5568d3;
+        }
+
+        .btn-process:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+        }
+
+        .btn-view {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-view:hover {
+            background: #059669;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(102, 126, 234, 0.3);
+            border-radius: 50%;
+            border-top-color: #667eea;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .status-text {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .btn-refresh {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-refresh:hover {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <div>
+                    <a href="/comprehensive_dashboard.html" class="back-btn">← Back to Dashboard</a>
+                </div>
+                <div>
+                    <button class="btn-refresh" onclick="refreshPdfs()">
+                        🔄 Refresh
+                    </button>
+                </div>
+            </div>
+            <h1>📚 GK PDF Manager</h1>
+            <p style="color: #6b7280; margin-top: 10px;">Manage, process, and track all GK PDF files</p>
+
+            <div class="stats-summary">
+                <div class="summary-card">
+                    <div class="summary-value" id="total-pdfs">0</div>
+                    <div class="summary-label">Total PDFs</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="processed-pdfs">0</div>
+                    <div class="summary-label">Processed</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="total-mcqs">0</div>
+                    <div class="summary-label">Total Topics</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value" id="total-cards">0</div>
+                    <div class="summary-label">Anki Cards</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All PDFs</button>
+                <button class="filter-btn" data-filter="unprocessed">Unprocessed</button>
+                <button class="filter-btn" data-filter="processed">Processed</button>
+                <button class="filter-btn" data-filter="daily">Daily</button>
+                <button class="filter-btn" data-filter="weekly">Weekly</button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <div class="spinner"></div>
+            <p style="margin-top: 20px;">Loading PDFs...</p>
+        </div>
+
+        <div id="table-container" class="table-container" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Topics</th>
+                        <th>Size</th>
+                        <th>Progress</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="pdf-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const API = window.location.origin;
+        let allPdfs = [];
+        let currentFilter = 'all';
+        let processingPdfs = {}; // Track processing status
+
+        // Load processing state from localStorage on page load
+        function loadProcessingState() {
+            const stored = localStorage.getItem('processingPdfs');
+            if (stored) {
+                try {
+                    processingPdfs = JSON.parse(stored);
+                    // Remove old entries (older than 30 minutes)
+                    const now = Date.now();
+                    Object.keys(processingPdfs).forEach(pdfId => {
+                        if (now - processingPdfs[pdfId].startTime > 30 * 60 * 1000) {
+                            delete processingPdfs[pdfId];
+                        }
+                    });
+                    saveProcessingState();
+                } catch (e) {
+                    processingPdfs = {};
+                }
+            }
+        }
+
+        // Save processing state to localStorage
+        function saveProcessingState() {
+            localStorage.setItem('processingPdfs', JSON.stringify(processingPdfs));
+        }
+
+        window.onload = () => {
+            loadProcessingState();
+            loadPdfs();
+
+            // Restart polling for any PDFs that are still processing
+            Object.keys(processingPdfs).forEach(pdfId => {
+                if (!processingPdfs[pdfId].pollInterval) {
+                    startPollingStatus(pdfId);
+                }
+            });
+        };
+
+        async function loadPdfs() {
+            try {
+                const response = await fetch(`${API}/api/dashboard`);
+                const data = await response.json();
+
+                // Combine daily and weekly PDFs
+                const weeklyPdfs = [];
+                if (data.pdfs.weekly) {
+                    if (data.pdfs.weekly.legaledge) {
+                        weeklyPdfs.push(...data.pdfs.weekly.legaledge);
+                    }
+                    if (data.pdfs.weekly.career_launcher) {
+                        weeklyPdfs.push(...data.pdfs.weekly.career_launcher);
+                    }
+                }
+
+                allPdfs = [
+                    ...(data.pdfs.daily || []),
+                    ...weeklyPdfs
+                ];
+
+                updateSummaryStats();
+
+                // Check if any processing PDFs are now complete or stale
+                const now = Date.now();
+                Object.keys(processingPdfs).forEach(pdfId => {
+                    const pdf = allPdfs.find(p => p.pdf_id === pdfId);
+                    const processTime = processingPdfs[pdfId].startTime;
+                    const elapsed = now - processTime;
+
+                    if (pdf && pdf.total_topics > 0) {
+                        // PDF is now processed, remove from processing list
+                        delete processingPdfs[pdfId];
+                    } else if (elapsed > 5 * 60 * 1000) {
+                        // Processing has been running for > 5 minutes, likely stale
+                        console.warn(`Clearing stale processing state for ${pdfId} (elapsed: ${Math.floor(elapsed / 60000)}m)`);
+                        delete processingPdfs[pdfId];
+                    }
+                });
+                saveProcessingState();
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('table-container').style.display = 'block';
+
+                renderTable(allPdfs);
+            } catch (error) {
+                console.error('Error loading PDFs:', error);
+                document.getElementById('loading').innerHTML =
+                    '<p style="color: #ef4444;">❌ Failed to load PDFs. Please try again.</p>' +
+                    '<button class="btn btn-process" onclick="loadPdfs()" style="margin-top: 20px;">Retry</button>';
+            }
+        }
+
+        function updateSummaryStats() {
+            const totalPdfs = allPdfs.length;
+            const processedPdfs = allPdfs.filter(p => p.total_topics > 0).length;
+            const totalMcqs = allPdfs.reduce((sum, p) => sum + (p.total_topics || 0), 0);
+            const totalCards = totalMcqs; // Approximate
+
+            document.getElementById('total-pdfs').textContent = totalPdfs;
+            document.getElementById('processed-pdfs').textContent = processedPdfs;
+            document.getElementById('total-mcqs').textContent = totalMcqs;
+            document.getElementById('total-cards').textContent = totalCards;
+        }
+
+        function renderTable(pdfs) {
+            const tbody = document.getElementById('pdf-table-body');
+
+            // Filter PDFs
+            let filteredPdfs = pdfs;
+            if (currentFilter === 'unprocessed') {
+                filteredPdfs = pdfs.filter(p => !p.total_topics || p.total_topics === 0);
+            } else if (currentFilter === 'processed') {
+                filteredPdfs = pdfs.filter(p => p.total_topics > 0);
+            } else if (currentFilter === 'daily') {
+                filteredPdfs = pdfs.filter(p => p.source_type === 'daily');
+            } else if (currentFilter === 'weekly') {
+                filteredPdfs = pdfs.filter(p => p.source_type === 'weekly');
+            }
+
+            if (filteredPdfs.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="7" style="text-align: center; padding: 40px; color: #6b7280;">
+                            No PDFs match the current filter
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = filteredPdfs.map(pdf => createTableRow(pdf)).join('');
+        }
+
+        function createTableRow(pdf) {
+            const isProcessed = pdf.total_topics > 0;
+            const isProcessing = processingPdfs[pdf.pdf_id];
+
+            const typeBadge = `<span class="badge badge-${pdf.source_type}">${pdf.source_type}</span>`;
+
+            let statusBadge, progressHtml, actionBtn;
+
+            if (isProcessing) {
+                const progress = isProcessing.progress || 0;
+                statusBadge = '<span class="badge" style="background: #fef3c7; color: #92400e;">Processing</span>';
+                progressHtml = `
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: ${progress}%;">
+                            ${progress}%
+                        </div>
+                    </div>
+                    <div class="status-text">${isProcessing.status || 'Processing...'}</div>
+                `;
+                actionBtn = '<button class="btn btn-process" disabled>Processing...</button>';
+            } else if (isProcessed) {
+                statusBadge = '<span class="badge badge-processed">Processed</span>';
+                progressHtml = `
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 100%;">
+                            100%
+                        </div>
+                    </div>
+                    <div class="status-text">Completed</div>
+                `;
+                actionBtn = `<button class="btn btn-view" onclick="viewAssessment('${pdf.pdf_id}')">📊 View</button>`;
+            } else {
+                statusBadge = '<span class="badge badge-unprocessed">Unprocessed</span>';
+                progressHtml = `
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 0%;">
+                        </div>
+                        <div class="progress-text">Not started</div>
+                    </div>
+                `;
+                actionBtn = `<button class="btn btn-process" onclick="processPdf('${pdf.pdf_id}', '${pdf.filepath}', '${pdf.source_name}')">📄 Process</button>`;
+            }
+
+            return `
+                <tr data-pdf-id="${pdf.pdf_id}">
+                    <td>
+                        <div class="pdf-filename" title="${pdf.filename}">${pdf.filename}</div>
+                    </td>
+                    <td>${typeBadge}</td>
+                    <td>${statusBadge}</td>
+                    <td style="text-align: center;">${pdf.total_topics || 0}</td>
+                    <td>${Math.round(pdf.file_size_kb || 0)}KB</td>
+                    <td style="min-width: 200px;">${progressHtml}</td>
+                    <td>${actionBtn}</td>
+                </tr>
+            `;
+        }
+
+        async function processPdf(pdfId, filepath, sourceName) {
+            const confirmed = confirm(
+                'Process this PDF?\n\n' +
+                'This will:\n' +
+                '1. Analyze and chunk if large\n' +
+                '2. Generate MCQ questions\n' +
+                '3. Create Anki flashcards\n' +
+                '4. Import to database\n\n' +
+                'This may take 5-15 minutes.'
+            );
+
+            if (!confirmed) return;
+
+            // Mark as processing
+            processingPdfs[pdfId] = {
+                progress: 10,
+                status: 'Starting...',
+                startTime: Date.now()
+            };
+            saveProcessingState();
+            renderTable(allPdfs);
+
+            try {
+                const response = await fetch(`${API}/api/gk/process-pdf`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        pdf_id: pdfId,
+                        filepath: filepath,
+                        source_name: sourceName
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Mark as processing and start polling for actual status
+                    startPollingStatus(pdfId);
+                } else {
+                    alert('❌ Failed to start processing: ' + (result.error || 'Unknown error'));
+                    delete processingPdfs[pdfId];
+                    renderTable(allPdfs);
+                }
+            } catch (error) {
+                console.error('Error processing PDF:', error);
+                alert('Failed to process PDF. Please check the console for errors.');
+                delete processingPdfs[pdfId];
+                renderTable(allPdfs);
+            }
+        }
+
+        function startPollingStatus(pdfId) {
+            // Poll every 10 seconds to check actual status
+            const pollInterval = setInterval(async () => {
+                try {
+                    // Fetch latest PDF data
+                    const response = await fetch(`${API}/api/dashboard`);
+                    const data = await response.json();
+
+                    // Combine daily and weekly PDFs
+                    const weeklyPdfs = [];
+                    if (data.pdfs.weekly) {
+                        if (data.pdfs.weekly.legaledge) {
+                            weeklyPdfs.push(...data.pdfs.weekly.legaledge);
+                        }
+                        if (data.pdfs.weekly.career_launcher) {
+                            weeklyPdfs.push(...data.pdfs.weekly.career_launcher);
+                        }
+                    }
+
+                    const currentPdfs = [
+                        ...(data.pdfs.daily || []),
+                        ...weeklyPdfs
+                    ];
+
+                    // Find the PDF being processed
+                    const pdf = currentPdfs.find(p => p.pdf_id === pdfId);
+
+                    if (pdf && pdf.total_topics > 0) {
+                        // Processing is complete!
+                        clearInterval(pollInterval);
+                        delete processingPdfs[pdfId];
+                        saveProcessingState();
+
+                        // Update the full list and re-render
+                        allPdfs = currentPdfs;
+                        updateSummaryStats();
+                        renderTable(allPdfs);
+
+                        // Show success notification
+                        alert(`✅ Processing complete!\n\n${pdf.filename}\n\nGenerated ${pdf.total_topics} topics/questions`);
+                    } else {
+                        // Still processing - try to get real status
+                        try {
+                            const statusResponse = await fetch(`${API}/api/gk/processing-status`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ pdf_id: pdfId })
+                            });
+                            const statusData = await statusResponse.json();
+
+                            if (statusData.success && statusData.status) {
+                                // Show real status from processing script
+                                processingPdfs[pdfId].status = statusData.status.status;
+                                processingPdfs[pdfId].progress = statusData.status.progress || 50;
+                            } else {
+                                // No status file available - check if processing is stale
+                                const elapsed = Math.floor((Date.now() - processingPdfs[pdfId].startTime) / 1000);
+                                const minutes = Math.floor(elapsed / 60);
+                                const seconds = elapsed % 60;
+
+                                // If no status file after 2 minutes, processing likely failed or never started
+                                if (elapsed > 120) {
+                                    console.warn(`No status file found after ${minutes}m - clearing stale processing state for ${pdfId}`);
+                                    clearInterval(pollInterval);
+                                    delete processingPdfs[pdfId];
+                                    saveProcessingState();
+                                    renderTable(allPdfs);
+                                    alert(`⚠️ Processing timed out\n\nNo status updates received for ${pdf ? pdf.filename : pdfId}.\n\nThe processing may have failed. Please try again.`);
+                                    return;
+                                }
+
+                                processingPdfs[pdfId].status = `Processing for ${minutes}m ${seconds}s...`;
+                                processingPdfs[pdfId].progress = 50;
+                            }
+                        } catch (statusError) {
+                            // If status API fails, show elapsed time
+                            const elapsed = Math.floor((Date.now() - processingPdfs[pdfId].startTime) / 1000);
+                            const minutes = Math.floor(elapsed / 60);
+                            const seconds = elapsed % 60;
+                            processingPdfs[pdfId].status = `Processing for ${minutes}m ${seconds}s...`;
+                            processingPdfs[pdfId].progress = 50;
+                        }
+
+                        saveProcessingState();
+                        renderTable(allPdfs);
+                    }
+                } catch (error) {
+                    console.error('Error polling status:', error);
+                }
+            }, 10000); // Check every 10 seconds
+
+            // Store interval ID so we can clear it later
+            processingPdfs[pdfId].pollInterval = pollInterval;
+        }
+
+        function viewAssessment(pdfId) {
+            window.location.href = `/assessment.html?pdf_id=${pdfId}`;
+        }
+
+        function refreshPdfs() {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('table-container').style.display = 'none';
+            loadPdfs();
+        }
+
+        // Add button to manually clear stuck processing states
+        function clearProcessingStates() {
+            if (confirm('Clear all processing states? This will reset progress bars.')) {
+                processingPdfs = {};
+                saveProcessingState();
+                renderTable(allPdfs);
+            }
+        }
+
+        // Filter button handlers
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                renderTable(allPdfs);
+            });
+        });
+    </script>
+</body>
+</html>

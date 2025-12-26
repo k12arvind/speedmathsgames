@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CLAT GK Revision">
+    <title>CLAT GK Revision Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+            padding-bottom: 80px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .exam-countdown {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin-top: 5px;
+        }
+
+        .section {
+            margin: 0 20px 25px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .section-badge {
+            background: var(--danger);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .pdf-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .pdf-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pdf-card:active {
+            transform: scale(0.98);
+        }
+
+        .pdf-card.overdue {
+            border-left-color: var(--danger);
+        }
+
+        .pdf-card.due-soon {
+            border-left-color: var(--warning);
+        }
+
+        .pdf-card.unrevised {
+            border-left-color: var(--gray-300);
+            opacity: 0.85;
+        }
+
+        .pdf-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .pdf-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            font-size: 12px;
+            color: var(--gray-600);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background: var(--gray-100);
+            border-radius: 6px;
+            font-size: 11px;
+            color: var(--gray-700);
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .priority-badge {
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .priority-high {
+            background: var(--danger);
+            color: white;
+        }
+
+        .priority-medium {
+            background: var(--warning);
+            color: white;
+        }
+
+        .priority-low {
+            background: var(--success);
+            color: white;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            padding: 20px 20px 10px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .fab:active {
+            transform: scale(0.9);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray-600);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--gray-900);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray-600);
+        }
+
+        .spinner {
+            border: 3px solid var(--gray-200);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .filter-bar {
+            padding: 0 20px 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-box {
+            flex: 1;
+            padding: 10px 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        @media (max-width: 640px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 CLAT GK Revision Tracker</h1>
+        <div class="exam-countdown">
+            <span id="days-to-exam">...</span> days to CLAT 2026
+        </div>
+    </div>
+
+    <div class="stats-grid" id="stats-grid">
+        <div class="stat-card">
+            <span class="stat-value" id="stat-total-pdfs">0</span>
+            <span class="stat-label">Total PDFs</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value" id="stat-due">0</span>
+            <span class="stat-label">Due Today</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value" id="stat-unrevised">0</span>
+            <span class="stat-label">Never Revised</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value" id="stat-rate">0%</span>
+            <span class="stat-label">Completion</span>
+        </div>
+    </div>
+
+    <div class="tabs" id="tabs">
+        <div class="tab active" data-tab="due">Due for Revision</div>
+        <div class="tab" data-tab="unrevised">Not Started</div>
+        <div class="tab" data-tab="categories">By Category</div>
+        <div class="tab" data-tab="recent">Recently Revised</div>
+    </div>
+
+    <div class="filter-bar">
+        <input type="text" class="search-box" id="search-box" placeholder="Search PDFs...">
+    </div>
+
+    <div class="section" id="pdf-list-section">
+        <div class="section-header">
+            <div class="section-title" id="section-title">Due for Revision</div>
+            <div class="section-badge" id="section-badge">0</div>
+        </div>
+        <div class="pdf-list" id="pdf-list">
+            <div class="loading">
+                <div class="spinner"></div>
+                <div>Loading your PDFs...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fab" onclick="refreshData()">
+        ↻
+    </div>
+
+    <div class="modal" id="pdf-modal">
+        <div class="modal-content">
+            <div class="modal-header" id="modal-title"></div>
+            <div id="modal-body"></div>
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="markAsRevised()">✓ Mark Revised</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_URL = 'http://localhost:8000'; // Local server URL
+        const EXAM_DATE = new Date('2026-12-06');
+
+        // State
+        let currentTab = 'due';
+        let allPDFs = [];
+        let selectedPDF = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            setupTabSwitching();
+            setupSearch();
+            calculateExamCountdown();
+            loadData();
+
+            // Refresh every 5 minutes
+            setInterval(loadData, 5 * 60 * 1000);
+        });
+
+        function calculateExamCountdown() {
+            const now = new Date();
+            const diffTime = EXAM_DATE - now;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            document.getElementById('days-to-exam').textContent = diffDays;
+        }
+
+        function setupTabSwitching() {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    currentTab = tab.dataset.tab;
+                    renderPDFs();
+                });
+            });
+        }
+
+        function setupSearch() {
+            document.getElementById('search-box').addEventListener('input', (e) => {
+                renderPDFs(e.target.value);
+            });
+        }
+
+        async function loadData() {
+            try {
+                // In a real implementation, this would fetch from the Python API
+                // For now, we'll load from localStorage or a JSON file
+
+                const response = await fetch(`${API_URL}/api/dashboard`);
+                if (!response.ok) {
+                    // Fallback to mock data
+                    loadMockData();
+                    return;
+                }
+
+                const data = await response.json();
+                updateDashboard(data);
+            } catch (error) {
+                console.log('API not available, using mock data');
+                loadMockData();
+            }
+        }
+
+        function loadMockData() {
+            // Mock data for testing
+            const mockData = {
+                statistics: {
+                    total_pdfs: 45,
+                    due_for_revision: 8,
+                    never_revised: 12,
+                    revision_rate: 65
+                },
+                due_pdfs: generateMockPDFs('due', 8),
+                unrevised_pdfs: generateMockPDFs('unrevised', 12),
+                categories: {
+                    'National': 15,
+                    'International': 12,
+                    'Economy': 8,
+                    'Environment': 6,
+                    'Sports': 4
+                }
+            };
+
+            updateDashboard(mockData);
+        }
+
+        function generateMockPDFs(type, count) {
+            const pdfs = [];
+            const categories = ['National', 'International', 'Economy', 'Environment', 'Sports', 'Awards'];
+            const sources = ['legaledge', 'toprankers', 'career_launcher'];
+
+            for (let i = 0; i < count; i++) {
+                const daysAgo = Math.floor(Math.random() * 30);
+                const date = new Date();
+                date.setDate(date.getDate() - daysAgo);
+
+                pdfs.push({
+                    pdf_id: i + 1,
+                    filename: `current_affairs_${date.toISOString().split('T')[0]}.pdf`,
+                    source_name: sources[Math.floor(Math.random() * sources.length)],
+                    date_published: date.toISOString().split('T')[0],
+                    total_topics: Math.floor(Math.random() * 50) + 20,
+                    categories: JSON.stringify([
+                        categories[Math.floor(Math.random() * categories.length)],
+                        categories[Math.floor(Math.random() * categories.length)]
+                    ]),
+                    revision_count: type === 'unrevised' ? 0 : Math.floor(Math.random() * 5) + 1,
+                    next_review: type === 'due' ? new Date().toISOString() : null,
+                    priority: Math.floor(Math.random() * 10) + 1,
+                    filepath: `/path/to/${sources[i % sources.length]}/file.pdf`
+                });
+            }
+
+            return pdfs;
+        }
+
+        function updateDashboard(data) {
+            // Update statistics
+            document.getElementById('stat-total-pdfs').textContent = data.statistics.total_pdfs;
+            document.getElementById('stat-due').textContent = data.statistics.due_for_revision;
+            document.getElementById('stat-unrevised').textContent = data.statistics.never_revised;
+            document.getElementById('stat-rate').textContent = data.statistics.revision_rate + '%';
+
+            // Store PDFs
+            allPDFs = {
+                due: data.due_pdfs || [],
+                unrevised: data.unrevised_pdfs || [],
+                categories: data.categories || {}
+            };
+
+            // Render current tab
+            renderPDFs();
+        }
+
+        function renderPDFs(searchQuery = '') {
+            const container = document.getElementById('pdf-list');
+            let pdfs = [];
+            let title = '';
+
+            // Get PDFs based on current tab
+            switch(currentTab) {
+                case 'due':
+                    pdfs = allPDFs.due || [];
+                    title = 'Due for Revision';
+                    break;
+                case 'unrevised':
+                    pdfs = allPDFs.unrevised || [];
+                    title = 'Not Started';
+                    break;
+                case 'categories':
+                    renderCategories();
+                    return;
+                case 'recent':
+                    pdfs = []; // Would fetch recently revised
+                    title = 'Recently Revised';
+                    break;
+            }
+
+            // Filter by search
+            if (searchQuery) {
+                pdfs = pdfs.filter(pdf =>
+                    pdf.filename.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    pdf.categories.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+            }
+
+            // Update header
+            document.getElementById('section-title').textContent = title;
+            document.getElementById('section-badge').textContent = pdfs.length;
+
+            // Render PDFs
+            if (pdfs.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">✨</div>
+                        <div>No PDFs to show</div>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = pdfs.map(pdf => renderPDFCard(pdf)).join('');
+
+            // Add click handlers
+            document.querySelectorAll('.pdf-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const pdfId = parseInt(card.dataset.pdfId);
+                    showPDFDetails(pdfs.find(p => p.pdf_id === pdfId));
+                });
+            });
+        }
+
+        function renderPDFCard(pdf) {
+            const categories = JSON.parse(pdf.categories || '[]');
+            const isOverdue = pdf.priority >= 8;
+            const isDueSoon = pdf.priority >= 6 && pdf.priority < 8;
+            const isUnrevised = pdf.revision_count === 0;
+
+            let cardClass = 'pdf-card';
+            if (isOverdue) cardClass += ' overdue';
+            else if (isDueSoon) cardClass += ' due-soon';
+            else if (isUnrevised) cardClass += ' unrevised';
+
+            const priorityBadge = pdf.priority >= 8 ? 'priority-high' :
+                                 pdf.priority >= 6 ? 'priority-medium' : 'priority-low';
+
+            const daysAgo = Math.floor((new Date() - new Date(pdf.date_published)) / (1000 * 60 * 60 * 24));
+
+            return `
+                <div class="${cardClass}" data-pdf-id="${pdf.pdf_id}">
+                    <div class="pdf-title">${pdf.filename}</div>
+                    <div class="pdf-meta">
+                        <div class="meta-item">
+                            📅 ${daysAgo} days ago
+                        </div>
+                        <div class="meta-item">
+                            📚 ${pdf.total_topics} topics
+                        </div>
+                        ${pdf.revision_count > 0 ? `
+                        <div class="meta-item">
+                            ✅ ${pdf.revision_count}x revised
+                        </div>
+                        ` : ''}
+                        <span class="priority-badge ${priorityBadge}">
+                            ${pdf.priority >= 8 ? 'High Priority' : pdf.priority >= 6 ? 'Medium' : 'Low'}
+                        </span>
+                    </div>
+                    <div style="margin-top: 8px;">
+                        ${categories.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCategories() {
+            const container = document.getElementById('pdf-list');
+            const categories = allPDFs.categories || {};
+
+            document.getElementById('section-title').textContent = 'By Category';
+            document.getElementById('section-badge').textContent = Object.keys(categories).length;
+
+            if (Object.keys(categories).length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📂</div>
+                        <div>No categories found</div>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = Object.entries(categories)
+                .sort((a, b) => b[1] - a[1])
+                .map(([cat, count]) => `
+                    <div class="pdf-card">
+                        <div class="pdf-title">${cat}</div>
+                        <div class="pdf-meta">
+                            <div class="meta-item">📚 ${count} PDFs</div>
+                        </div>
+                    </div>
+                `).join('');
+        }
+
+        function showPDFDetails(pdf) {
+            selectedPDF = pdf;
+            const categories = JSON.parse(pdf.categories || '[]');
+
+            document.getElementById('modal-title').textContent = pdf.filename;
+            document.getElementById('modal-body').innerHTML = `
+                <div style="margin-bottom: 16px;">
+                    <strong>Source:</strong> ${pdf.source_name}<br>
+                    <strong>Published:</strong> ${pdf.date_published}<br>
+                    <strong>Topics:</strong> ${pdf.total_topics}<br>
+                    <strong>Revisions:</strong> ${pdf.revision_count || 0}<br>
+                    ${pdf.next_review ? `<strong>Next Review:</strong> ${pdf.next_review.split('T')[0]}<br>` : ''}
+                </div>
+                <div>
+                    <strong>Categories:</strong><br>
+                    ${categories.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
+                </div>
+            `;
+
+            document.getElementById('pdf-modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('pdf-modal').classList.remove('active');
+            selectedPDF = null;
+        }
+
+        async function markAsRevised() {
+            if (!selectedPDF) return;
+
+            try {
+                const response = await fetch(`${API_URL}/api/revise/${selectedPDF.pdf_id}`, {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    alert('✅ Marked as revised!');
+                    closeModal();
+                    loadData();
+                } else {
+                    throw new Error('Failed to mark as revised');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                // For demo, just close modal
+                alert('✅ Marked as revised! (Demo mode)');
+                closeModal();
+                // Refresh after short delay
+                setTimeout(loadData, 500);
+            }
+        }
+
+        function refreshData() {
+            loadData();
+
+            // Visual feedback
+            const fab = document.querySelector('.fab');
+            fab.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                fab.style.transform = 'rotate(0deg)';
+            }, 500);
+        }
+
+        // Service Worker for PWA capabilities
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(err => {
+                console.log('Service Worker registration failed:', err);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+
+# Database files
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# PDFs (data, not code)
+pdfs/
+*.pdf
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.envrc
+
+# Processing status (temporary files)
+processing_status/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Backup files
+*.backup*
+*.bak
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

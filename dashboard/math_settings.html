@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Practice Settings - Speed Math Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .settings-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .topics-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .topic-option {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .topic-option:hover {
+            background: #f3f4f6;
+            border-color: #667eea;
+        }
+
+        .topic-option.selected {
+            background: #eef2ff;
+            border-color: #667eea;
+        }
+
+        .checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #d1d5db;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .topic-option.selected .checkbox {
+            background: #667eea;
+            border-color: #667eea;
+        }
+
+        .checkbox::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            display: none;
+        }
+
+        .topic-option.selected .checkbox::after {
+            display: block;
+        }
+
+        .topic-info {
+            flex-grow: 1;
+        }
+
+        .topic-name {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .topic-description {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .question-count {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .count-option {
+            flex: 1;
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .count-option:hover {
+            background: #f3f4f6;
+            border-color: #667eea;
+        }
+
+        .count-option.selected {
+            background: #eef2ff;
+            border-color: #667eea;
+        }
+
+        .count-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .count-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 35px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .info-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .info-box-title {
+            font-weight: 600;
+            color: #0369a1;
+            margin-bottom: 8px;
+        }
+
+        .info-box-text {
+            font-size: 14px;
+            color: #075985;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .settings-card {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .question-count {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="settings-card">
+            <div class="header">
+                <h1>🧮 Math Practice Setup</h1>
+                <p>Choose your topics and get started!</p>
+            </div>
+
+            <div class="error-message" id="error-message"></div>
+
+            <div class="section">
+                <div class="section-title">
+                    📚 Select Topics
+                </div>
+                <div class="section-subtitle">
+                    Choose one or more topics to practice
+                </div>
+                <div class="topics-grid" id="topics-grid">
+                    <div class="topic-option" data-topic="arithmetic" onclick="toggleTopic('arithmetic')">
+                        <div class="checkbox"></div>
+                        <div class="topic-info">
+                            <div class="topic-name">Arithmetic</div>
+                            <div class="topic-description">Addition, Subtraction, Multiplication, Division</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-option" data-topic="fractions" onclick="toggleTopic('fractions')">
+                        <div class="checkbox"></div>
+                        <div class="topic-info">
+                            <div class="topic-name">Fractions</div>
+                            <div class="topic-description">Operations with fractions</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-option" data-topic="decimals" onclick="toggleTopic('decimals')">
+                        <div class="checkbox"></div>
+                        <div class="topic-info">
+                            <div class="topic-name">Decimals</div>
+                            <div class="topic-description">Decimal calculations</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-option" data-topic="equations" onclick="toggleTopic('equations')">
+                        <div class="checkbox"></div>
+                        <div class="topic-info">
+                            <div class="topic-name">Equations</div>
+                            <div class="topic-description">Simple algebraic equations</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-option" data-topic="profit_loss" onclick="toggleTopic('profit_loss')">
+                        <div class="checkbox"></div>
+                        <div class="topic-info">
+                            <div class="topic-name">Profit & Loss</div>
+                            <div class="topic-description">Word problems on profit and loss</div>
+                        </div>
+                    </div>
+
+                    <div class="topic-option" data-topic="bodmas" onclick="toggleTopic('bodmas')">
+                        <div class="checkbox"></div>
+                        <div class="topic-info">
+                            <div class="topic-name">BODMAS</div>
+                            <div class="topic-description">Order of operations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    🎯 Number of Questions
+                </div>
+                <div class="section-subtitle">
+                    How many questions do you want to practice?
+                </div>
+                <div class="question-count">
+                    <div class="count-option" data-count="10" onclick="selectCount(10)">
+                        <div class="count-number">10</div>
+                        <div class="count-label">Quick</div>
+                    </div>
+                    <div class="count-option selected" data-count="20" onclick="selectCount(20)">
+                        <div class="count-number">20</div>
+                        <div class="count-label">Standard</div>
+                    </div>
+                    <div class="count-option" data-count="30" onclick="selectCount(30)">
+                        <div class="count-number">30</div>
+                        <div class="count-label">Challenge</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title">💡 Tip</div>
+                <div class="info-box-text">
+                    Focus on speed and accuracy! Your time for each question will be tracked to help you improve.
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+                    ← Back
+                </button>
+                <button class="btn btn-primary" id="start-btn" onclick="startPractice()" disabled>
+                    Start Practice
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedTopics = [];
+        let selectedCount = 20;
+
+        function toggleTopic(topic) {
+            const option = document.querySelector(`.topic-option[data-topic="${topic}"]`);
+
+            if (selectedTopics.includes(topic)) {
+                // Remove topic
+                selectedTopics = selectedTopics.filter(t => t !== topic);
+                option.classList.remove('selected');
+            } else {
+                // Add topic
+                selectedTopics.push(topic);
+                option.classList.add('selected');
+            }
+
+            updateStartButton();
+        }
+
+        function selectCount(count) {
+            // Remove previous selection
+            document.querySelectorAll('.count-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+
+            // Add new selection
+            document.querySelector(`.count-option[data-count="${count}"]`).classList.add('selected');
+            selectedCount = count;
+
+            updateStartButton();
+        }
+
+        function updateStartButton() {
+            const startBtn = document.getElementById('start-btn');
+            startBtn.disabled = selectedTopics.length === 0;
+        }
+
+        function showError(message) {
+            const errorEl = document.getElementById('error-message');
+            errorEl.textContent = message;
+            errorEl.style.display = 'block';
+            setTimeout(() => {
+                errorEl.style.display = 'none';
+            }, 5000);
+        }
+
+        function startPractice() {
+            if (selectedTopics.length === 0) {
+                showError('Please select at least one topic');
+                return;
+            }
+
+            // Build URL with parameters
+            const params = new URLSearchParams({
+                topics: selectedTopics.join(','),
+                count: selectedCount,
+                user_id: 'daughter'
+            });
+
+            window.location.href = `math_practice.html?${params.toString()}`;
+        }
+
+        // Auto-select arithmetic by default
+        window.onload = () => {
+            toggleTopic('arithmetic');
+        };
+    </script>
+</body>
+</html>

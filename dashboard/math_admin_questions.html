@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Questions Admin - Generate Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 28px;
+        }
+
+        .back-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-btn:hover {
+            background: #5568d3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .generator-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .generate-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .generate-btn:hover {
+            background: #5568d3;
+        }
+
+        .generate-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .progress {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .progress.active {
+            display: block;
+        }
+
+        .progress-text {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e1e8ed;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #667eea;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .log {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .log-item {
+            padding: 5px;
+            border-left: 3px solid #667eea;
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        .log-item.success {
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        .log-item.error {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .results-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .results-card.active {
+            display: block;
+        }
+
+        .results-summary {
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .results-summary h3 {
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Generate Math Questions with AI</h1>
+            <a href="/index.html" class="back-btn">← Back to Home</a>
+        </div>
+
+        <div class="stats-grid" id="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Questions</div>
+                <div class="stat-value" id="total-questions">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Topics Covered</div>
+                <div class="stat-value" id="total-topics">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Last Generated</div>
+                <div class="stat-value" style="font-size: 18px;" id="last-generated">Never</div>
+            </div>
+        </div>
+
+        <div class="generator-card">
+            <h2 style="margin-bottom: 20px;">Generate New Questions</h2>
+
+            <div class="form-group">
+                <label>Topic</label>
+                <select id="topic">
+                    <option value="arithmetic">Arithmetic (Addition, Subtraction, Multiplication, Division)</option>
+                    <option value="algebra">Algebra (Equations, Variables, Expressions)</option>
+                    <option value="geometry">Geometry (Shapes, Areas, Perimeters)</option>
+                    <option value="fractions">Fractions (Addition, Subtraction, Multiplication, Division)</option>
+                    <option value="decimals">Decimals (Operations with decimals)</option>
+                    <option value="percentages">Percentages (Percentage calculations)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Difficulty</label>
+                <select id="difficulty">
+                    <option value="easy">Easy - Basic concepts</option>
+                    <option value="medium">Medium - Intermediate level</option>
+                    <option value="hard">Hard - Advanced problems</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Number of Questions</label>
+                <input type="number" id="count" min="5" max="50" value="10" />
+            </div>
+
+            <button class="generate-btn" id="generate-btn" onclick="generateQuestions()">
+                🚀 Generate Questions with Claude AI
+            </button>
+
+            <div class="progress" id="progress">
+                <div class="progress-text" id="progress-text">Generating questions...</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="log" id="log"></div>
+            </div>
+        </div>
+
+        <div class="results-card" id="results-card">
+            <h2>✅ Generation Complete!</h2>
+            <div class="results-summary" id="results-summary"></div>
+            <button class="generate-btn" onclick="resetForm()">Generate More Questions</button>
+        </div>
+    </div>
+
+    <script>
+        const API = window.location.origin;
+
+        // Load stats on page load
+        loadStats();
+
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API}/api/math/stats`);
+                const data = await response.json();
+
+                document.getElementById('total-questions').textContent = data.total_questions || 0;
+                document.getElementById('total-topics').textContent = data.topics_count || 0;
+                document.getElementById('last-generated').textContent = data.last_generated || 'Never';
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+
+        async function generateQuestions() {
+            const topic = document.getElementById('topic').value;
+            const difficulty = document.getElementById('difficulty').value;
+            const count = parseInt(document.getElementById('count').value);
+
+            // Validate
+            if (count < 5 || count > 50) {
+                alert('Please enter a number between 5 and 50');
+                return;
+            }
+
+            // Show progress
+            document.getElementById('generate-btn').disabled = true;
+            document.getElementById('progress').classList.add('active');
+            document.getElementById('results-card').classList.remove('active');
+            document.getElementById('log').innerHTML = '';
+
+            logMessage(`Requesting ${count} ${difficulty} ${topic} questions from Claude AI...`, 'info');
+
+            try {
+                const response = await fetch(`${API}/api/math/generate`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ topic, difficulty, count })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    logMessage(`Error: ${data.error}`, 'error');
+                    document.getElementById('generate-btn').disabled = false;
+                    return;
+                }
+
+                // Update progress
+                document.getElementById('progress-fill').style.width = '100%';
+                logMessage(`✅ Successfully generated ${data.inserted} questions!`, 'success');
+
+                // Show results
+                setTimeout(() => {
+                    document.getElementById('progress').classList.remove('active');
+                    showResults(data);
+                    loadStats();
+                }, 1000);
+
+            } catch (error) {
+                logMessage(`Error: ${error.message}`, 'error');
+                document.getElementById('generate-btn').disabled = false;
+            }
+        }
+
+        function logMessage(message, type = 'info') {
+            const log = document.getElementById('log');
+            const item = document.createElement('div');
+            item.className = `log-item ${type}`;
+            item.textContent = message;
+            log.appendChild(item);
+            log.scrollTop = log.scrollHeight;
+        }
+
+        function showResults(data) {
+            const summary = document.getElementById('results-summary');
+            summary.innerHTML = `
+                <h3>🎉 ${data.inserted} Questions Added!</h3>
+                <p><strong>Topic:</strong> ${data.topic}</p>
+                <p><strong>Difficulty:</strong> ${data.difficulty}</p>
+                <p><strong>Total questions in database:</strong> ${data.total_questions}</p>
+            `;
+            document.getElementById('results-card').classList.add('active');
+        }
+
+        function resetForm() {
+            document.getElementById('generate-btn').disabled = false;
+            document.getElementById('results-card').classList.remove('active');
+            document.getElementById('progress-fill').style.width = '0%';
+        }
+    </script>
+</body>
+</html>

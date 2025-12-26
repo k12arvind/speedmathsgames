@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Math Games - CLAT Preparation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .module-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .module-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .module-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .module-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .module-features li {
+            font-size: 14px;
+            color: #666;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .module-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .module-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .module-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .module-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .admin-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .admin-link a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .admin-link a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .modules {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .module-card {
+                padding: 30px;
+            }
+
+            .module-icon {
+                font-size: 48px;
+            }
+
+            .module-title {
+                font-size: 24px;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .loading-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f3f4f6;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div>Loading stats...</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>🎓 CLAT Preparation Hub</h1>
+            <p>Accelerate your learning with focused practice modules</p>
+        </div>
+
+        <div class="modules">
+            <!-- GK Module -->
+            <a href="comprehensive_dashboard.html" class="module-card">
+                <div class="module-icon">📚</div>
+                <div class="module-title">GK Practice</div>
+                <div class="module-description">
+                    Master General Knowledge with flashcards and MCQ tests from weekly PDF compendiums.
+                </div>
+                <ul class="module-features">
+                    <li>Automated flashcard generation</li>
+                    <li>MCQ assessments with instant feedback</li>
+                    <li>Weak topics identification</li>
+                    <li>Performance analytics</li>
+                    <li>8 categorized decks</li>
+                </ul>
+                <div class="module-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="gk-cards">-</div>
+                        <div class="stat-label">Total Cards</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="gk-accuracy">-%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                </div>
+                <button class="module-cta">
+                    Open GK Module →
+                </button>
+            </a>
+
+            <!-- Math Module -->
+            <a href="math_settings.html" class="module-card">
+                <div class="module-icon">🧮</div>
+                <div class="module-title">Math Speed Games</div>
+                <div class="module-description">
+                    Improve calculation speed with timed practice across 6 math topics.
+                </div>
+                <ul class="module-features">
+                    <li>6 math topics (Arithmetic to BODMAS)</li>
+                    <li>Per-question time tracking</li>
+                    <li>Difficulty levels (Easy/Medium/Hard)</li>
+                    <li>Topic-wise performance analysis</li>
+                    <li>10/20/30 question sessions</li>
+                </ul>
+                <div class="module-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="math-sessions">-</div>
+                        <div class="stat-label">Sessions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="math-avgtime">-s</div>
+                        <div class="stat-label">Avg Time</div>
+                    </div>
+                </div>
+                <button class="module-cta">
+                    Start Math Practice →
+                </button>
+            </a>
+        </div>
+
+        <div class="admin-link">
+            <a href="math_admin.html">⚙️ Admin Settings</a>
+        </div>
+
+        <div class="footer">
+            <p>speedmathsgames.com • Built for CLAT Excellence</p>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const MATH_API = window.location.origin;;
+        const ASSESSMENT_API = window.location.origin;;
+
+        async function loadStats() {
+            // Wait for auth check first
+            const user = await checkAuth(true);
+            if (!user) return;
+
+            const userId = user.user_id;
+
+            // Show loading
+            document.getElementById('loading-overlay').style.display = 'flex';
+
+            try {
+                // Load Math stats
+                const mathResponse = await fetch(`${MATH_API}/api/math/performance/overall?user_id=${userId}`);
+                const mathData = await mathResponse.json();
+                const mathPerf = mathData.performance;
+
+                document.getElementById('math-sessions').textContent = mathPerf.total_sessions || 0;
+                const avgTime = mathPerf.average_time || 0;
+                document.getElementById('math-avgtime').textContent = avgTime > 0 ? avgTime.toFixed(1) + 's' : '-';
+
+                // Load GK stats (if assessment API is available)
+                try {
+                    const gkResponse = await fetch(`${ASSESSMENT_API}/api/assessment/performance/summary?user_id=${userId}`);
+                    const gkData = await gkResponse.json();
+
+                    if (gkData.performance) {
+                        const gkPerf = gkData.performance;
+                        document.getElementById('gk-cards').textContent = gkPerf.total_questions || 0;
+                        const accuracy = gkPerf.accuracy || 0;
+                        document.getElementById('gk-accuracy').textContent = accuracy > 0 ? accuracy.toFixed(0) + '%' : '-';
+                    }
+                } catch (error) {
+                    console.log('GK stats not available:', error);
+                    document.getElementById('gk-cards').textContent = '-';
+                    document.getElementById('gk-accuracy').textContent = '-';
+                }
+
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            } finally {
+                // Hide loading
+                document.getElementById('loading-overlay').style.display = 'none';
+            }
+        }
+
+        // Load stats on page load
+        window.onload = loadStats;
+    </script>
+</body>
+</html>

@@ -1,0 +1,1220 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+unified_server.py
+
+Unified HTTP server that combines:
+- Dashboard HTML serving (with optional Google OAuth)
+- Assessment API endpoints
+- Math API endpoints
+- GK Dashboard API endpoints
+
+Single server on port 8001 for everything.
+"""
+
+from http.server import SimpleHTTPRequestHandler, HTTPServer
+from http.cookies import SimpleCookie
+from urllib.parse import urlparse, parse_qs
+import argparse
+import os
+import sys
+import json
+from pathlib import Path
+from datetime import datetime
+import traceback
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent / '.env'
+    load_dotenv(dotenv_path=env_path)
+except ImportError:
+    print("Warning: python-dotenv not installed. Environment variables must be set manually.")
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent))
+
+# Import authentication (optional)
+try:
+    from auth.google_auth import GoogleAuth
+    from auth.user_db import UserDatabase
+    AUTH_AVAILABLE = True
+except ImportError:
+    AUTH_AVAILABLE = False
+
+# Import API handlers
+from assessment_database import AssessmentDatabase
+from anki_connector import AnkiConnector
+from anthropic import Anthropic
+
+# Import math database
+sys.path.insert(0, str(Path(__file__).parent / 'math'))
+from math_db import MathDatabase
+
+# Import PDF scanner for GK dashboard
+from pdf_scanner import PDFScanner
+
+
+class UnifiedHandler(SimpleHTTPRequestHandler):
+    """Unified HTTP handler with all APIs and authentication."""
+
+    # Shared instances (set by server initialization)
+    google_auth = None
+    user_db = None
+    assessment_db = None
+    anki = None
+    anthropic = None
+    math_db = None
+    pdf_scanner = None
+
+    # Public pages that don't require authentication
+    PUBLIC_PAGES = [
+        '/login.html',
+        '/privacy_policy.html',
+        '/auth/login',
+        '/auth/google/callback',
+        '/auth/logout'
+    ]
+
+    def __init__(self, *args, **kwargs):
+        # Set the directory to serve files from (dashboard folder)
+        dashboard_dir = Path(__file__).parent / 'dashboard'
+        super().__init__(*args, directory=str(dashboard_dir), **kwargs)
+
+    def end_headers(self):
+        """Add CORS headers to all responses."""
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        super().end_headers()
+
+    def do_OPTIONS(self):
+        """Handle OPTIONS requests for CORS preflight."""
+        self.send_response(200)
+        self.end_headers()
+
+    def do_GET(self):
+        """Handle GET requests."""
+        parsed_path = urlparse(self.path)
+        path = parsed_path.path
+        query_params = parse_qs(parsed_path.query)
+
+        # Authentication endpoints
+        if path == '/auth/login':
+            self.handle_login()
+            return
+        elif path == '/auth/google/callback':
+            self.handle_google_callback()
+            return
+        elif path == '/auth/logout':
+            self.handle_logout()
+            return
+        elif path == '/auth/user':
+            self.handle_get_user()
+            return
+
+        # API endpoints
+        if path.startswith('/api/'):
+            self.handle_api_get(path, query_params)
+            return
+
+        # Check authentication for protected pages (if auth is enabled)
+        if self.google_auth and not self.is_public_page(path):
+            user = self.get_current_user()
+            if not user:
+                self.send_response(302)
+                self.send_header('Location', '/login.html')
+                self.end_headers()
+                return
+
+        # Serve static files
+        super().do_GET()
+
+    def do_POST(self):
+        """Handle POST requests."""
+        parsed_path = urlparse(self.path)
+        path = parsed_path.path
+
+        # Read request body
+        content_length = int(self.headers.get('Content-Length', 0))
+        body = self.rfile.read(content_length).decode('utf-8')
+        data = json.loads(body) if body else {}
+
+        # API endpoints
+        if path.startswith('/api/'):
+            self.handle_api_post(path, data)
+            return
+
+        # Default response
+        self.send_response(404)
+        self.end_headers()
+
+    # ============================================================
+    # AUTHENTICATION METHODS
+    # ============================================================
+
+    def is_public_page(self, path: str) -> bool:
+        """Check if page is public (doesn't require auth)."""
+        if path == '/' or path == '':
+            return False
+
+        for public_path in self.PUBLIC_PAGES:
+            if path == public_path or path.startswith(public_path):
+                return True
+
+        if path.endswith(('.css', '.js', '.png', '.jpg', '.ico', '.svg')):
+            return True
+
+        return False
+
+    def get_current_user(self):
+        """Get current user from session cookie."""
+        if not self.user_db:
+            return None
+
+        cookie_header = self.headers.get('Cookie')
+        if not cookie_header:
+            return None
+
+        cookies = SimpleCookie(cookie_header)
+        if 'session_token' not in cookies:
+            return None
+
+        session_token = cookies['session_token'].value
+        session = self.user_db.get_session(session_token)
+        if not session:
+            return None
+
+        return {
+            'user_id': session['user_id'],
+            'email': session['email'],
+            'name': session['name'],
+            'picture': session['picture'],
+            'role': session['role']
+        }
+
+    def handle_login(self):
+        """Initiate Google OAuth login flow."""
+        if not self.google_auth:
+            self.send_error(500, "Authentication not configured")
+            return
+
+        try:
+            auth_url, state = self.google_auth.get_authorization_url()
+            self.send_response(302)
+            self.send_header('Location', auth_url)
+            self.send_header('Set-Cookie', f'oauth_state={state}; Path=/; HttpOnly; Max-Age=600')
+            self.end_headers()
+        except Exception as e:
+            self.send_error(500, f"Login error: {str(e)}")
+
+    def handle_google_callback(self):
+        """Handle Google OAuth callback."""
+        if not self.google_auth:
+            self.send_error(500, "Authentication not configured")
+            return
+
+        try:
+            parsed_path = urlparse(self.path)
+            params = parse_qs(parsed_path.query)
+
+            code = params.get('code', [None])[0]
+            state = params.get('state', [None])[0]
+
+            if not code or not state:
+                self.send_error(400, "Missing code or state")
+                return
+
+            cookie_header = self.headers.get('Cookie')
+            if cookie_header:
+                cookies = SimpleCookie(cookie_header)
+                stored_state = cookies.get('oauth_state')
+                if not stored_state or stored_state.value != state:
+                    self.send_error(400, "Invalid state parameter")
+                    return
+
+            user_info, credentials = self.google_auth.exchange_code_for_token(code, state)
+
+            user_id = self.user_db.create_or_update_user(
+                google_id=user_info['google_id'],
+                email=user_info['email'],
+                name=user_info.get('name'),
+                picture=user_info.get('picture')
+            )
+
+            session_token = GoogleAuth.generate_session_token()
+            self.user_db.create_session(user_id, session_token, expires_in_days=30)
+
+            self.send_response(302)
+            self.send_header('Location', '/index.html')
+            self.send_header('Set-Cookie', f'session_token={session_token}; Path=/; HttpOnly; Max-Age=2592000')
+            self.send_header('Set-Cookie', 'oauth_state=; Path=/; Max-Age=0')
+            self.end_headers()
+
+            print(f"✅ User logged in: {user_info['email']}")
+
+        except Exception as e:
+            print(f"❌ OAuth callback error: {str(e)}")
+            self.send_error(500, f"Authentication error: {str(e)}")
+
+    def handle_logout(self):
+        """Handle logout - clear session."""
+        if not self.user_db:
+            self.send_response(302)
+            self.send_header('Location', '/login.html')
+            self.end_headers()
+            return
+
+        try:
+            cookie_header = self.headers.get('Cookie')
+            if cookie_header:
+                cookies = SimpleCookie(cookie_header)
+                if 'session_token' in cookies:
+                    session_token = cookies['session_token'].value
+                    self.user_db.delete_session(session_token)
+
+            self.send_response(302)
+            self.send_header('Location', '/login.html')
+            self.send_header('Set-Cookie', 'session_token=; Path=/; Max-Age=0')
+            self.end_headers()
+        except Exception as e:
+            self.send_error(500, f"Logout error: {str(e)}")
+
+    def handle_get_user(self):
+        """Get current user info (API endpoint)."""
+        user = self.get_current_user()
+
+        if not user:
+            self.send_response(401)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps({'error': 'Not authenticated'}).encode())
+            return
+
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps(user).encode())
+
+    # ============================================================
+    # API ROUTING
+    # ============================================================
+
+    def handle_api_get(self, path: str, query_params: dict):
+        """Route GET API requests."""
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+
+        try:
+            # Assessment API endpoints
+            if path.startswith('/api/assessment/'):
+                self.handle_assessment_get(path, query_params)
+            # Math API endpoints
+            elif path.startswith('/api/math/'):
+                self.handle_math_get(path, query_params)
+            # GK Dashboard API endpoints
+            elif path.startswith('/api/dashboard') or path.startswith('/api/pdfs/') or \
+                 path.startswith('/api/filter/') or path.startswith('/api/stats') or \
+                 path.startswith('/api/pdf/'):
+                self.handle_gk_dashboard_get(path, query_params)
+            # Analytics API endpoints
+            elif path.startswith('/api/analytics/'):
+                self.handle_analytics_get(path, query_params)
+            else:
+                self.send_json({'error': 'Not Found'})
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
+    def handle_api_post(self, path: str, data: dict):
+        """Route POST API requests."""
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+
+        try:
+            # Assessment API endpoints
+            if path.startswith('/api/assessment/'):
+                self.handle_assessment_post(path, data)
+            # Math API endpoints
+            elif path.startswith('/api/math/'):
+                self.handle_math_post(path, data)
+            # GK Dashboard API endpoints
+            # GK PDF Processing API endpoints
+            elif path.startswith('/api/gk/'):
+                self.handle_gk_api_post(path, data)
+            elif path.startswith('/api/revise/'):
+                self.handle_gk_dashboard_post(path, data)
+            else:
+                self.send_json({'error': 'Not Found'})
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
+    # ============================================================
+    # ASSESSMENT API METHODS
+    # ============================================================
+
+    def handle_assessment_get(self, path: str, query_params: dict):
+        """Handle assessment API GET requests."""
+        # Import from assessment_api.py logic
+        if path == '/api/assessment/check-anki':
+            available = self.anki.test_connection()
+            self.send_json({'available': available})
+
+        elif path == '/api/assessment/categories':
+            categories = self.anki.get_deck_names()
+            self.send_json({'categories': categories})
+
+        elif path == '/api/assessment/performance/summary':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            tests = self.assessment_db.get_all_tests(user_id)
+            total_tests = len(tests)
+            if total_tests > 0:
+                avg_score = sum(t['score'] for t in tests) / total_tests
+            else:
+                avg_score = 0
+
+            questions_attempted = self.assessment_db.get_total_questions_attempted(user_id)
+            mastery_breakdown = self.assessment_db.get_mastery_breakdown(user_id)
+
+            self.send_json({
+                'total_tests': total_tests,
+                'average_score': round(avg_score, 1),
+                'total_questions_attempted': questions_attempted,
+                'mastery_breakdown': mastery_breakdown
+            })
+
+        elif path == '/api/assessment/performance/weak-questions':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            weak = self.assessment_db.get_weak_questions(user_id, limit=10)
+            self.send_json({'weak_questions': weak})
+
+        else:
+            self.send_json({'error': 'Assessment endpoint not found'})
+
+    def handle_assessment_post(self, path: str, data: dict):
+        """Handle assessment API POST requests."""
+        if path == '/api/assessment/session/create':
+            # Create test session - full implementation from assessment_api.py
+            user_id = data.get('user_id', 'daughter')
+            # Support both single PDF (backward compat) and multiple PDFs
+            pdf_ids = data.get('pdf_ids', [])
+            if not pdf_ids:
+                # Backward compatibility: single pdf_id
+                single_pdf_id = data.get('pdf_id')
+                if single_pdf_id:
+                    pdf_ids = [single_pdf_id]
+
+            if not pdf_ids:
+                self.send_json({'error': 'No PDF selected'})
+                return
+
+            # Keep original variables for single PDF backward compatibility
+            pdf_id = pdf_ids[0] if len(pdf_ids) == 1 else 'combined'
+            pdf_id = data.get('pdf_id')
+            pdf_filename = data.get('pdf_filename', '')
+            source_date = data.get('source_date', pdf_id)
+            session_type = data.get('session_type', 'full')
+
+            # Handle weak topics test
+            if session_type == 'weak':
+                weak_note_ids = self.assessment_db.get_weak_questions(user_id, limit=20)
+
+                if not weak_note_ids:
+                    self.send_json({
+                        'error': 'No weak topics found. Take some tests first to identify weak areas!'
+                    })
+                    return
+
+                # Get questions from Anki for weak note IDs
+                note_ids = [str(q['anki_note_id']) for q in weak_note_ids]
+                questions = self.anki.get_questions_by_note_ids(note_ids)
+
+                if not questions:
+                    self.send_json({'error': 'Could not load weak topic questions from Anki.'})
+                    return
+
+                pdf_id = 'weak_topics'
+                pdf_filename = 'Weak Topics Practice'
+                source_date = 'weak_topics'
+            else:
+                # Get questions for this PDF
+                # Get questions from all selected PDFs
+                all_questions = []
+                for pdf_source in pdf_ids:
+                    pdf_questions = self.anki.get_questions_for_pdf(pdf_source)
+                    if pdf_questions:
+                        all_questions.extend(pdf_questions)
+                
+                questions = all_questions
+
+                if not questions:
+                    self.send_json({
+                        'error': 'No questions found for this PDF. Make sure it has been processed and cards are in Anki.'
+                    })
+                    return
+
+                # Set pdf_id and pdf_filename if not provided
+                if not pdf_id:
+                    pdf_id = source_date
+                if not pdf_filename:
+                    if len(pdf_ids) > 1:
+                        pdf_filename = f'Combined Test ({len(pdf_ids)} PDFs)'
+                    else:
+                        pdf_filename = f'Daily GK - {source_date}'
+
+            # Create session
+            session_id = self.assessment_db.create_test_session(
+                user_id=user_id,
+                pdf_id=pdf_id,
+                pdf_filename=pdf_filename,
+                source_date=source_date,
+                session_type=session_type,
+                total_questions=len(questions)
+            )
+
+            # Load or generate choices for ALL questions
+            questions_to_generate = []
+
+            for i, question in enumerate(questions):
+                # Try to load from database first
+                stored_choices = self._get_stored_mcq_choices(question['note_id'])
+
+                if stored_choices:
+                    # Use stored choices (instant!)
+                    question['choices'] = stored_choices['choices']
+                    question['correct_index'] = stored_choices['correct_index']
+                else:
+                    # Mark for generation
+                    questions_to_generate.append((i, question))
+
+            # Generate choices for questions that don't have them yet
+            if questions_to_generate:
+                batch_size = 10
+
+                for batch_start in range(0, len(questions_to_generate), batch_size):
+                    batch_end = min(batch_start + batch_size, len(questions_to_generate))
+                    batch_items = questions_to_generate[batch_start:batch_end]
+                    batch_questions = [item[1] for item in batch_items]
+
+                    batch_results = self._generate_mcq_choices_batch(batch_questions)
+
+                    for local_idx, (global_idx, question) in enumerate(batch_items):
+                        if local_idx in batch_results:
+                            choices_data = batch_results[local_idx]
+                            questions[global_idx]['choices'] = choices_data['choices']
+                            questions[global_idx]['correct_index'] = choices_data['correct_index']
+
+                            # Store in database for future use
+                            self._store_mcq_choices(question['note_id'], choices_data)
+                        else:
+                            # Fallback
+                            questions[global_idx]['choices'] = [questions[global_idx]['answer']]
+                            questions[global_idx]['correct_index'] = 0
+
+            # Return all questions
+            self.send_json({
+                'success': True,
+                'session_id': session_id,
+                'questions': questions,
+                'total_questions': len(questions)
+            })
+
+        elif path == '/api/assessment/answer/submit':
+            # Submit answer logic
+            session_id = data.get('session_id')
+            note_id = data.get('note_id')
+            selected_answer = data.get('selected_answer')
+            correct_answer = data.get('correct_answer')
+            is_correct = data.get('is_correct', False)
+            time_taken = data.get('time_taken', 0)
+            category = data.get('category', '')
+
+            self.assessment_db.record_answer(
+                session_id=session_id,
+                note_id=note_id,
+                selected_answer=selected_answer,
+                correct_answer=correct_answer,
+                is_correct=is_correct,
+                time_taken=time_taken,
+                category=category
+            )
+
+            self.send_json({'success': True})
+
+        else:
+            self.send_json({'error': 'Assessment endpoint not found'})
+
+    # ============================================================
+    # MATH API METHODS
+    # ============================================================
+
+    def handle_math_get(self, path: str, query_params: dict):
+        """Handle math API GET requests."""
+        if path == '/api/math/settings':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            settings = {}
+            for topic in ['arithmetic', 'fractions', 'decimals', 'equations', 'profit_loss', 'bodmas']:
+                setting = self.math_db.get_topic_setting(user_id, topic)
+                if setting:
+                    settings[topic] = setting
+            self.send_json({'settings': settings})
+
+        elif path == '/api/math/performance/overall':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            perf = self.math_db.get_overall_performance(user_id)
+            self.send_json({'performance': perf})
+
+        elif path == '/api/math/performance/topics':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            topics = self.math_db.get_topic_performance(user_id)
+            self.send_json({'topics': topics})
+
+        elif path == '/api/math/stats':
+            stats = self.math_db.get_database_stats()
+            self.send_json(stats)
+
+        else:
+            self.send_json({'error': 'Math endpoint not found'})
+
+    def handle_math_post(self, path: str, data: dict):
+        """Handle math API POST requests."""
+        if path == '/api/math/session/create':
+            user_id = data.get('user_id', 'daughter')
+            topics = data.get('topics', [])
+            total_questions = data.get('total_questions', 10)
+
+            questions = []
+            for topic in topics:
+                setting = self.math_db.get_topic_setting(user_id, topic)
+                difficulty = setting['difficulty'] if setting else 'medium'
+                qs = self.math_db.get_questions([topic], difficulty, limit=total_questions // len(topics))
+                questions.extend(qs)
+
+            import random
+            random.shuffle(questions)
+            questions = questions[:total_questions]
+
+            session_id = self.math_db.create_session(user_id, topics, total_questions)
+
+            self.send_json({
+                'session_id': session_id,
+                'questions': questions,
+                'total_questions': len(questions)
+            })
+
+        elif path == '/api/math/answer/submit':
+            session_id = data.get('session_id')
+            question_id = data.get('question_id')
+            selected_choice = data.get('selected_choice')
+            is_correct = data.get('is_correct', False)
+            time_taken = data.get('time_taken_seconds', 0)
+            topic = data.get('topic', '')
+
+            self.math_db.record_answer(session_id, question_id, selected_choice, is_correct, time_taken)
+
+            user_id = data.get('user_id', 'daughter')
+            self.math_db.update_topic_performance(user_id, topic, is_correct, time_taken)
+
+            self.send_json({'success': True})
+
+        elif path == '/api/math/session/complete':
+            session_id = data.get('session_id')
+            score = data.get('score', 0)
+            self.math_db.complete_session(session_id, score)
+            self.send_json({'success': True})
+
+        elif path == '/api/math/settings/update':
+            user_id = data.get('user_id', 'daughter')
+            topic = data.get('topic')
+            enabled = data.get('enabled', True)
+            difficulty = data.get('difficulty', 'medium')
+
+            self.math_db.update_topic_setting(user_id, topic, enabled, difficulty)
+            self.send_json({'success': True})
+
+        elif path == '/api/math/generate':
+            topic = data.get('topic')
+            difficulty = data.get('difficulty')
+            count = data.get('count', 10)
+
+            try:
+                import anthropic
+                import os
+                import json
+                from datetime import datetime
+
+                client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+
+                prompt = f"Generate {count} {difficulty} difficulty {topic} math questions for middle/high school students. For each question provide: question_text, correct_answer, choice_a, choice_b, choice_c, choice_d, correct_choice (A/B/C/D), explanation. Return ONLY a JSON array of question objects, no markdown or extra text."
+
+                message = client.messages.create(
+                    model="claude-opus-4-20250514",
+                    max_tokens=4096,
+                    messages=[{"role": "user", "content": prompt}]
+                )
+
+                response_text = message.content[0].text
+
+                # Clean markdown if present
+                if "```json" in response_text:
+                    response_text = response_text.split("```json")[1].split("```")[0].strip()
+                elif "```" in response_text:
+                    response_text = response_text.split("```")[1].split("```")[0].strip()
+
+                questions = json.loads(response_text)
+
+                cursor = self.math_db.conn.cursor()
+                now = datetime.utcnow().isoformat()
+                inserted = 0
+
+                for q in questions:
+                    sql = "INSERT INTO math_questions (topic, difficulty, question_text, correct_answer, choice_a, choice_b, choice_c, choice_d, correct_choice, explanation, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                    cursor.execute(sql, (topic, difficulty, q["question_text"], q["correct_answer"], q["choice_a"], q["choice_b"], q["choice_c"], q["choice_d"], q["correct_choice"], q["explanation"], now))
+                    inserted += 1
+
+                self.math_db.conn.commit()
+                cursor.execute("SELECT COUNT(*) as total FROM math_questions")
+                total_questions = cursor.fetchone()["total"]
+
+                self.send_json({"success": True, "inserted": inserted, "topic": topic, "difficulty": difficulty, "total_questions": total_questions})
+            except Exception as e:
+                self.send_json({"error": str(e)})
+
+        else:
+            self.send_json({'error': 'Math endpoint not found'})
+
+    # ============================================================
+    # GK DASHBOARD API METHODS
+    # ============================================================
+
+    def handle_gk_dashboard_get(self, path: str, query_params: dict):
+        """Handle GK dashboard API GET requests."""
+        if path == '/api/dashboard':
+            # Get comprehensive dashboard data
+            scan_results = self.pdf_scanner.scan_all_folders()
+            stats = self.pdf_scanner.get_statistics()
+
+            # Organize into segregated structure
+            data = {
+                'pdfs': scan_results,
+                'statistics': stats
+            }
+            self.send_json(data)
+
+        elif path == '/api/pdfs/all':
+            # Get all PDFs from scan
+            scan_results = self.pdf_scanner.scan_all_folders()
+            all_pdfs = []
+            all_pdfs.extend(scan_results.get('daily', []))
+            if 'weekly' in scan_results:
+                all_pdfs.extend(scan_results['weekly'].get('legaledge', []))
+                all_pdfs.extend(scan_results['weekly'].get('career_launcher', []))
+            self.send_json({'pdfs': all_pdfs})
+
+        elif path == '/api/pdfs/daily':
+            scan_results = self.pdf_scanner.scan_all_folders()
+            self.send_json({'pdfs': scan_results.get('daily', [])})
+
+        elif path == '/api/pdfs/weekly':
+            scan_results = self.pdf_scanner.scan_all_folders()
+            weekly_pdfs = []
+            if 'weekly' in scan_results:
+                weekly_pdfs.extend(scan_results['weekly'].get('legaledge', []))
+                weekly_pdfs.extend(scan_results['weekly'].get('career_launcher', []))
+            self.send_json({'pdfs': weekly_pdfs})
+
+        elif path == '/api/stats':
+            stats = self.pdf_scanner.get_statistics()
+            self.send_json(stats)
+
+        elif path.startswith('/api/pdf/'):
+            pdf_id = path.split('/')[-1]
+            # Find PDF in scan results
+            scan_results = self.pdf_scanner.scan_all_folders()
+            pdf = None
+            all_pdfs = []
+            all_pdfs.extend(scan_results.get('daily', []))
+            if 'weekly' in scan_results:
+                all_pdfs.extend(scan_results['weekly'].get('legaledge', []))
+                all_pdfs.extend(scan_results['weekly'].get('career_launcher', []))
+
+            for p in all_pdfs:
+                if p.get('pdf_id') == pdf_id:
+                    pdf = p
+                    break
+
+            self.send_json(pdf if pdf else {'error': 'PDF not found'})
+
+        elif path == '/api/filter/untouched':
+            weeks = int(query_params.get('weeks', [4])[0])
+            pdfs = self.pdf_scanner.filter_by_untouched_weeks(weeks)
+            self.send_json({'pdfs': pdfs})
+
+        elif path == '/api/filter/revision-count':
+            min_count = int(query_params.get('min', [0])[0])
+            max_count = int(query_params.get('max', [999])[0])
+            pdfs = self.pdf_scanner.filter_by_revision_count(min_count, max_count)
+            self.send_json({'pdfs': pdfs})
+
+        else:
+            self.send_json({'error': 'GK dashboard endpoint not found'})
+
+    def handle_gk_dashboard_post(self, path: str, data: dict):
+        """Handle GK dashboard API POST requests."""
+        if path.startswith('/api/revise/'):
+            pdf_id = path.split('/')[-1]
+            # Mark as revised logic
+            self.send_json({'success': True, 'pdf_id': pdf_id})
+        else:
+            self.send_json({'error': 'GK dashboard endpoint not found'})
+
+    def handle_analytics_get(self, path: str, query_params: dict):
+        """Handle analytics API GET requests."""
+        import sqlite3
+        from datetime import datetime, timedelta
+
+        # Get current user (default to 'user1' if no auth)
+        user_id = 'user1'
+
+        if path == '/api/analytics/daily':
+            # Get daily statistics for last 30 days
+            conn = sqlite3.connect(self.assessment_db.db_path)
+            cursor = conn.cursor()
+
+            # Query to aggregate data by date
+            cursor.execute("""
+                SELECT
+                    DATE(started_at) as practice_date,
+                    SUM(total_questions) as total_questions,
+                    SUM(correct_answers) as correct_answers,
+                    SUM(wrong_answers) as wrong_answers,
+                    SUM(skipped_answers) as skipped_answers,
+                    SUM(time_taken_seconds) as time_spent,
+                    ROUND(AVG(score_percentage), 1) as avg_score
+                FROM test_sessions
+                WHERE user_id = ?
+                  AND status = 'completed'
+                  AND started_at >= date('now', '-30 days')
+                GROUP BY DATE(started_at)
+                ORDER BY practice_date DESC
+            """, (user_id,))
+
+            rows = cursor.fetchall()
+            conn.close()
+
+            daily_stats = []
+            for row in rows:
+                total_qs = row[1] or 0
+                correct = row[2] or 0
+                accuracy = round((correct / total_qs * 100) if total_qs > 0 else 0, 1)
+
+                daily_stats.append({
+                    'date': row[0],
+                    'total_questions': total_qs,
+                    'correct_answers': correct,
+                    'wrong_answers': row[3] or 0,
+                    'skipped_answers': row[4] or 0,
+                    'time_spent': row[5] or 0,
+                    'accuracy': accuracy
+                })
+
+            self.send_json({'daily_stats': daily_stats})
+
+        elif path == '/api/analytics/categories':
+            # Get category performance
+            conn = sqlite3.connect(self.assessment_db.db_path)
+            cursor = conn.cursor()
+
+            cursor.execute("""
+                SELECT
+                    category,
+                    total_questions,
+                    correct_answers,
+                    wrong_answers,
+                    accuracy_percentage,
+                    last_practiced_at
+                FROM category_performance
+                WHERE user_id = ?
+                ORDER BY total_questions DESC
+            """, (user_id,))
+
+            rows = cursor.fetchall()
+            conn.close()
+
+            categories = []
+            for row in rows:
+                categories.append({
+                    'category': row[0],
+                    'total_questions': row[1],
+                    'correct_answers': row[2],
+                    'wrong_answers': row[3],
+                    'accuracy_percentage': row[4],
+                    'last_practiced_at': row[5]
+                })
+
+            self.send_json({'categories': categories})
+
+        else:
+            self.send_json({'error': 'Analytics endpoint not found'})
+
+    def handle_gk_api_post(self, path: str, data: dict):
+        """Handle GK PDF processing API POST requests."""
+        if path == '/api/gk/process-pdf':
+            import threading
+            import subprocess
+            from pathlib import Path
+
+            pdf_id = data.get('pdf_id')
+            filepath = data.get('filepath')
+            source_name = data.get('source_name')
+
+            if not all([pdf_id, filepath, source_name]):
+                self.send_json({
+                    'success': False,
+                    'error': 'Missing required parameters: pdf_id, filepath, source_name'
+                })
+                return
+
+            # Check if file exists
+            if not Path(filepath).exists():
+                self.send_json({
+                    'success': False,
+                    'error': f'PDF file not found: {filepath}'
+                })
+                return
+
+            # Process in background thread
+            def process_in_background():
+                try:
+                    script_path = Path.home() / 'clat_preparation' / 'process_pdf_with_tracking.py'
+                    venv_python = Path.home() / 'Desktop' / 'anki_automation' / 'venv' / 'bin' / 'python3'
+
+                    # Use venv python if available, otherwise system python
+                    python_exe = str(venv_python) if venv_python.exists() else 'python3'
+
+                    result = subprocess.run(
+                        [python_exe, str(script_path), filepath, source_name, pdf_id],
+                        capture_output=True,
+                        text=True,
+                        timeout=1800  # 30 minute timeout
+                    )
+
+                    if result.returncode == 0:
+                        print(f"✅ Successfully processed {pdf_id}")
+                        print(result.stdout)
+                    else:
+                        print(f"❌ Error processing {pdf_id}")
+                        print(result.stderr)
+
+                except Exception as e:
+                    print(f"❌ Exception processing {pdf_id}: {e}")
+
+            # Start background thread
+            thread = threading.Thread(target=process_in_background, daemon=True)
+            thread.start()
+
+            self.send_json({
+                'success': True,
+                'message': f'PDF processing started for {pdf_id}',
+                'pdf_id': pdf_id
+            })
+
+        elif path == '/api/gk/processing-status':
+            from pathlib import Path
+            import json
+
+            pdf_id = data.get('pdf_id')
+            if not pdf_id:
+                self.send_json({'error': 'pdf_id required'})
+                return
+
+            # Check for status file
+            status_dir = Path.home() / "clat_preparation" / "processing_status"
+            status_file = status_dir / f"{pdf_id}.json"
+
+            if status_file.exists():
+                try:
+                    with open(status_file, 'r') as f:
+                        status_data = json.load(f)
+                    self.send_json({'success': True, 'status': status_data})
+                except Exception as e:
+                    self.send_json({'error': str(e)})
+            else:
+                self.send_json({'success': False, 'message': 'No status available'})
+
+        else:
+            self.send_json({'error': 'GK API endpoint not found'})
+
+    # ============================================================
+    # MCQ GENERATION HELPER METHODS
+    # ============================================================
+
+    def _get_stored_mcq_choices(self, note_id: str) -> dict:
+        """Get stored MCQ choices from database cache."""
+        try:
+            import sqlite3
+            db_path = Path(__file__).parent / 'revision_tracker.db'
+            conn = sqlite3.connect(str(db_path))
+            cursor = conn.cursor()
+
+            cursor.execute("""
+                SELECT choices, correct_index
+                FROM mcq_cache
+                WHERE note_id = ?
+            """, (str(note_id),))
+
+            row = cursor.fetchone()
+            conn.close()
+
+            if row:
+                choices_json, correct_index = row
+                return {
+                    'choices': json.loads(choices_json),
+                    'correct_index': correct_index
+                }
+            return None
+        except Exception as e:
+            print(f"Error loading cached choices: {e}")
+            return None
+
+    def _store_mcq_choices(self, note_id: str, choices_data: dict, pdf_source: str = None):
+        """Store MCQ choices in database cache."""
+        try:
+            import sqlite3
+            db_path = Path(__file__).parent / 'revision_tracker.db'
+            conn = sqlite3.connect(str(db_path))
+            cursor = conn.cursor()
+
+            choices_json = json.dumps(choices_data['choices'])
+            correct_index = choices_data['correct_index']
+            created_at = datetime.now().isoformat()
+
+            cursor.execute("""
+                INSERT OR REPLACE INTO mcq_cache (note_id, choices, correct_index, created_at, pdf_source)
+                VALUES (?, ?, ?, ?, ?)
+            """, (str(note_id), choices_json, correct_index, created_at, pdf_source))
+
+            conn.commit()
+            conn.close()
+        except Exception as e:
+            print(f"Error storing cached choices: {e}")
+
+    def _generate_mcq_choices_batch(self, questions: list) -> dict:
+        """Generate MCQ choices for a batch of questions using Claude API."""
+        if not self.anthropic:
+            print("⚠️  Anthropic API not configured - skipping choice generation")
+            return {}
+
+        # Prepare batch prompt
+        questions_text = []
+        for i, q in enumerate(questions):
+            questions_text.append(f"""[Question {i+1}]
+Question: {q['question']}
+Correct Answer: {q['answer']}
+Category: {q['category']}
+""")
+
+        prompt = f"""You are an expert at creating multiple choice questions for CLAT (Common Law Admission Test) General Knowledge preparation.
+
+Given the following questions with their correct answers, generate 3 plausible but INCORRECT answer choices (distractors) for each question.
+
+Guidelines:
+- Distractors should be plausible but clearly wrong
+- Use similar format/structure as correct answer
+- For names: use other real people in similar roles
+- For numbers: use nearby numbers or related statistics
+- For dates: use nearby dates or related events
+- For places: use other locations in same category
+
+Questions:
+
+{chr(10).join(questions_text)}
+
+For each question, provide exactly 3 distractors, one per line. Use this format:
+
+[Question 1]
+<distractor 1>
+<distractor 2>
+<distractor 3>
+
+[Question 2]
+<distractor 1>
+<distractor 2>
+<distractor 3>
+
+...and so on for all questions.
+
+IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
+
+        try:
+            # Call Claude API
+            message = self.anthropic.messages.create(
+                model="claude-3-5-haiku-20241022",
+                max_tokens=4000,
+                temperature=1.0,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+
+            response_text = message.content[0].text
+
+            # Parse response
+            results = {}
+            current_question_idx = None
+            current_distractors = []
+
+            for line in response_text.strip().split('\n'):
+                line = line.strip()
+
+                if line.startswith('[Question '):
+                    # Save previous question
+                    if current_question_idx is not None and len(current_distractors) == 3:
+                        question = questions[current_question_idx]
+                        all_choices = [question['answer']] + current_distractors
+
+                        # Shuffle choices
+                        import random
+                        correct_answer = question['answer']
+                        random.shuffle(all_choices)
+                        correct_index = all_choices.index(correct_answer)
+
+                        results[current_question_idx] = {
+                            'choices': all_choices,
+                            'correct_index': correct_index
+                        }
+
+                    # Start new question
+                    try:
+                        q_num = int(line.split('[Question ')[1].split(']')[0])
+                        current_question_idx = q_num - 1
+                        current_distractors = []
+                    except:
+                        pass
+
+                elif line and not line.startswith('[') and current_question_idx is not None:
+                    current_distractors.append(line)
+
+            # Save last question
+            if current_question_idx is not None and len(current_distractors) == 3:
+                question = questions[current_question_idx]
+                all_choices = [question['answer']] + current_distractors
+
+                # Shuffle choices
+                import random
+                correct_answer = question['answer']
+                random.shuffle(all_choices)
+                correct_index = all_choices.index(correct_answer)
+
+                results[current_question_idx] = {
+                    'choices': all_choices,
+                    'correct_index': correct_index
+                }
+
+            return results
+
+        except Exception as e:
+            print(f"❌ Error generating choices: {e}")
+            return {}
+
+    # ============================================================
+    # UTILITY METHODS
+    # ============================================================
+
+    def send_json(self, data: dict):
+        """Send JSON response."""
+        self.wfile.write(json.dumps(data).encode())
+
+    def log_message(self, format, *args):
+        """Custom logging format."""
+        print(f"[{self.log_date_time_string()}] {format % args}")
+
+
+def main():
+    """Start the unified server."""
+    parser = argparse.ArgumentParser(description='Unified CLAT Preparation Server')
+    parser.add_argument('--port', type=int, default=8001, help='Port to run on (default: 8001)')
+    parser.add_argument('--no-auth', action='store_true', help='Disable authentication (dev mode)')
+    args = parser.parse_args()
+
+    # Initialize databases
+    print("Initializing databases...")
+    UnifiedHandler.assessment_db = AssessmentDatabase()
+    UnifiedHandler.anki = AnkiConnector()
+
+    math_db_path = Path(__file__).parent / 'math' / 'math_tracker.db'
+    UnifiedHandler.math_db = MathDatabase(str(math_db_path))
+
+    UnifiedHandler.pdf_scanner = PDFScanner()
+
+    # Initialize Anthropic client
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if api_key:
+        UnifiedHandler.anthropic = Anthropic(api_key=api_key)
+        print("✅ Anthropic API initialized")
+    else:
+        print("⚠️  Anthropic API key not set")
+
+    # Initialize authentication (unless disabled)
+    auth_enabled = False
+    if not args.no_auth and AUTH_AVAILABLE:
+        try:
+            UnifiedHandler.google_auth = GoogleAuth()
+            UnifiedHandler.user_db = UserDatabase()
+            auth_enabled = True
+            print("✅ Authentication enabled")
+        except ValueError as e:
+            print(f"⚠️  Authentication disabled: {e}")
+            print("   Set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET to enable auth")
+    elif args.no_auth:
+        print("⚠️  Authentication disabled (dev mode)")
+    elif not AUTH_AVAILABLE:
+        print("⚠️  Authentication modules not available")
+
+    # If auth is disabled, make all pages public
+    if not auth_enabled:
+        UnifiedHandler.PUBLIC_PAGES = ['*']
+
+    # Start server
+    server_address = ('', args.port)
+    httpd = HTTPServer(server_address, UnifiedHandler)
+
+    print("\n" + "="*70)
+    print("          🎓 CLAT Preparation - Unified Server")
+    print("="*70)
+    print(f"\n🚀 Server running on: http://localhost:{args.port}")
+    print(f"📁 Serving from: {Path(__file__).parent / 'dashboard'}")
+    print(f"🔐 Authentication: {'Enabled' if auth_enabled else 'Disabled'}")
+    print(f"\n📡 All APIs unified on port {args.port}:")
+    print(f"   • Dashboard HTML pages")
+    print(f"   • Assessment API (/api/assessment/*)")
+    print(f"   • Math API (/api/math/*)")
+    print(f"   • GK Dashboard API (/api/dashboard, /api/pdfs/*)")
+    if auth_enabled:
+        print(f"   • Authentication (/auth/*)")
+
+    print(f"\n🌐 Access Points:")
+    if auth_enabled:
+        print(f"   Login:             http://localhost:{args.port}/login.html")
+    print(f"   Main Landing:      http://localhost:{args.port}/index.html")
+    print(f"   GK Dashboard:      http://localhost:{args.port}/comprehensive_dashboard.html")
+    print(f"   Assessment:        http://localhost:{args.port}/assessment.html")
+    print(f"   Analytics:         http://localhost:{args.port}/analytics.html")
+    print(f"   Math Settings:     http://localhost:{args.port}/math_settings.html")
+    print(f"   Math Practice:     http://localhost:{args.port}/math_practice.html")
+    print(f"   Math Admin:        http://localhost:{args.port}/math_admin.html")
+    print(f"   Math Analytics:    http://localhost:{args.port}/math_analytics.html")
+
+    print(f"\n⌨️  Press Ctrl+C to stop the server")
+    print("="*70 + "\n")
+
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        print("\n\n✅ Server stopped.")
+
+
+if __name__ == '__main__':
+    main()
