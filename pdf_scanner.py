@@ -20,8 +20,8 @@ import json
 class PDFScanner:
     """Scans PDF folders and syncs with database."""
 
-    # Define folder locations
-    BASE_PATH = Path.home() / "Desktop" / "saanvi"
+    # Define folder locations - same structure on both MacBook Pro and Mac Mini
+    BASE_PATH = Path.home() / "saanvi"
 
     FOLDERS = {
         'legaledge_daily': {

@@ -46,14 +46,16 @@ Two-machine setup with MacBook Pro as **development/source** and Mac Mini as **p
 
 ### PDF Location (Both Machines)
 ```
-~/Desktop/saanvi/
+~/saanvi/
 ├── Legaledgedailygk/          # Daily current affairs PDFs
 │   └── current_affairs_2025_december_*.pdf
-└── LegalEdgeweeklyGK/         # Weekly current affairs PDFs
-    └── weekly-current-affairs-*.pdf
+├── LegalEdgeweeklyGK/         # Weekly current affairs PDFs
+│   └── weekly-current-affairs-*.pdf
+└── weeklyGKCareerLauncher/    # Weekly GK from Career Launcher
+    └── 5070_Manthan2.0*.pdf
 ```
 
-**Note:** Desktop permissions on Mac Mini may restrict direct access. If needed, PDFs are also synced to `~/clat_preparation/pdfs/` as a fallback.
+**Note:** This folder can be shared on iCloud Drive for iPad access. Both machines use identical structure to avoid confusion.
 
 ## Version Control
 
@@ -184,9 +186,10 @@ Results displayed + Analytics updated
 - Only logs and databases change on Mac Mini
 
 ### 3. Folder Structure Consistency
-- **NEVER** change `~/Desktop/saanvi/` paths
+- **NEVER** change `~/saanvi/` paths
 - `pdf_scanner.py` expects this exact structure
 - Both machines must have identical structure
+- This folder is in home directory (not Desktop) to avoid permission issues
 
 ### 4. Database Independence
 - Databases are **NOT** synced
@@ -214,10 +217,10 @@ cd ~/Desktop/anki_automation
 source venv/bin/activate
 source ~/.zshrc
 ./automate_html.sh https://www.toprankers.com/current-affairs-[date]
-# PDF automatically saved to ~/Desktop/saanvi/Legaledgedailygk/
-# Then sync
+# PDF automatically saved to ~/saanvi/Legaledgedailygk/
+# Then sync PDFs to Mac Mini
 cd ~/clat_preparation
-./sync_to_mac_mini.sh
+./auto_sync_pdfs.sh
 ```
 
 ### Restart Mac Mini Server
@@ -242,10 +245,11 @@ curl https://speedmathsgames.com/api/dashboard
 ## Troubleshooting
 
 ### PDFs Not Showing
-1. Check PDFs exist: `ls ~/Desktop/saanvi/Legaledgedailygk/`
+1. Check PDFs exist: `ls ~/saanvi/Legaledgedailygk/`
 2. Check scanner paths: `grep BASE_PATH ~/clat_preparation/pdf_scanner.py`
-3. Sync: `./sync_to_mac_mini.sh`
-4. Restart server on Mac Mini
+3. Sync: `./auto_sync_pdfs.sh`
+4. Test scanner: `python3 ~/clat_preparation/pdf_scanner.py`
+5. Restart server on Mac Mini if needed
 
 ### Code Changes Not Reflecting
 1. Check you synced: `./sync_to_mac_mini.sh`
@@ -257,10 +261,11 @@ curl https://speedmathsgames.com/api/dashboard
 2. Verify OAuth credentials set
 3. Server must run WITHOUT `--no-auth` flag
 
-### Desktop Permission Issues
-- Mac Mini Desktop may have restricted permissions
-- Fallback: PDFs also synced to `~/clat_preparation/pdfs/`
-- Update scanner if needed
+### Folder Structure Clarification
+- **ALWAYS** use `~/saanvi/` (home directory, not Desktop)
+- Desktop has permission issues on Mac Mini
+- Same structure on both machines avoids confusion
+- Folder can be shared on iCloud for iPad access
 
 ## Environment Variables
 
@@ -295,7 +300,8 @@ GOOGLE_REDIRECT_URI=https://speedmathsgames.com/auth/callback
 ## Maintenance
 
 ### Daily
-- Run `./sync_to_mac_mini.sh` after adding new PDFs
+- Download new PDFs from LegalEdge to `~/saanvi/` folders
+- Run `./auto_sync_pdfs.sh` to sync to Mac Mini
 
 ### Weekly
 - Commit code changes: `git add . && git commit -m "..."`

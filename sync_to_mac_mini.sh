@@ -38,22 +38,27 @@ rsync -avz ~/clat_preparation/math/*.py \
 echo -e "${GREEN}✓ Math module synced${NC}"
 echo ""
 
-# 4. Sync PDFs (from MacBook's original location to Mac Mini)
+# 4. Sync PDFs (same folder structure on both machines: ~/saanvi/)
 echo -e "${YELLOW}Step 4: Syncing PDF files...${NC}"
+
+# Ensure directories exist on Mac Mini
+ssh mac-mini "mkdir -p ~/saanvi/Legaledgedailygk ~/saanvi/LegalEdgeweeklyGK ~/saanvi/weeklyGKCareerLauncher" 2>/dev/null
 
 # Daily PDFs
 echo "  → Daily PDFs..."
-rsync -avz --ignore-existing ~/Desktop/saanvi/Legaledgedailygk/ \
-    mac-mini:~/Desktop/saanvi/Legaledgedailygk/ 2>/dev/null || {
-    echo -e "${RED}  ⚠ Warning: Could not sync daily PDFs (permission issue)${NC}"
-}
+rsync -avz --ignore-existing ~/saanvi/Legaledgedailygk/ \
+    mac-mini:~/saanvi/Legaledgedailygk/
 
-# Weekly PDFs
-echo "  → Weekly PDFs..."
-rsync -avz --ignore-existing ~/Desktop/saanvi/LegalEdgeweeklyGK/ \
-    mac-mini:~/Desktop/saanvi/LegalEdgeweeklyGK/ 2>/dev/null || {
-    echo -e "${RED}  ⚠ Warning: Could not sync weekly PDFs (permission issue)${NC}"
-}
+# Weekly PDFs (LegalEdge)
+echo "  → Weekly PDFs (LegalEdge)..."
+rsync -avz --ignore-existing ~/saanvi/LegalEdgeweeklyGK/ \
+    mac-mini:~/saanvi/LegalEdgeweeklyGK/
+
+# Weekly PDFs (Career Launcher)
+echo "  → Weekly PDFs (Career Launcher)..."
+rsync -avz --ignore-existing ~/saanvi/weeklyGKCareerLauncher/ \
+    mac-mini:~/saanvi/weeklyGKCareerLauncher/
+
 echo -e "${GREEN}✓ PDFs synced (new files only)${NC}"
 echo ""
 
