@@ -412,6 +412,57 @@ class AssessmentDatabase:
 
         return [dict(row) for row in cursor.fetchall()]
 
+    def get_all_tests(self, user_id: str) -> List[Dict]:
+        """Get all test sessions for a user."""
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT
+                session_id,
+                pdf_id,
+                pdf_filename,
+                session_type,
+                total_questions,
+                correct_answers,
+                wrong_answers,
+                skipped_answers,
+                score_percentage as score,
+                time_taken_seconds,
+                started_at,
+                completed_at,
+                status
+            FROM test_sessions
+            WHERE user_id = ?
+            ORDER BY started_at DESC
+        """, (user_id,))
+
+        return [dict(row) for row in cursor.fetchall()]
+
+    def get_total_questions_attempted(self, user_id: str) -> int:
+        """Get total number of questions attempted by a user."""
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT COUNT(*) as total FROM question_attempts qa
+            JOIN test_sessions ts ON qa.session_id = ts.session_id
+            WHERE ts.user_id = ?
+        """, (user_id,))
+
+        result = cursor.fetchone()
+        return result['total'] if result else 0
+
+    def get_mastery_breakdown(self, user_id: str) -> Dict:
+        """Get mastery level breakdown for a user."""
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT mastery_level, COUNT(*) as count
+            FROM question_performance
+            GROUP BY mastery_level
+        """)
+
+        return {row['mastery_level']: row['count'] for row in cursor.fetchall()}
+
     def close(self):
         """Close database connection."""
         self.conn.close()
