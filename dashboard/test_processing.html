@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test PDF Processing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .error {
+            background: #fee;
+            color: #c00;
+        }
+
+        .success {
+            background: #efe;
+            color: #060;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test PDF Processing with Progress</h1>
+    <p>This page allows you to test the new PDF processing system with real-time progress tracking.</p>
+
+    <form id="processing-form">
+        <div class="form-group">
+            <label for="pdf-path">PDF Path (full path):</label>
+            <input type="text" id="pdf-path" required
+                   placeholder="/Users/arvind/Desktop/saanvi/weeklyGKCareerLauncher/example.pdf">
+        </div>
+
+        <div class="form-group">
+            <label for="pdf-filename">PDF Filename:</label>
+            <input type="text" id="pdf-filename" required
+                   placeholder="example.pdf">
+        </div>
+
+        <div class="form-group">
+            <label for="pdf-id">PDF ID (date format):</label>
+            <input type="text" id="pdf-id" required
+                   placeholder="2025-12-26">
+        </div>
+
+        <div class="form-group">
+            <label for="source">Source:</label>
+            <select id="source">
+                <option value="career_launcher">Career Launcher</option>
+                <option value="legaledge">LegalEdge</option>
+                <option value="manthan">Manthan</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="week">Week Tag:</label>
+            <input type="text" id="week" required
+                   placeholder="2025_Dec_W4">
+        </div>
+
+        <div class="form-group">
+            <label for="pages-per-chunk">Pages per Chunk:</label>
+            <input type="number" id="pages-per-chunk" value="10" min="5" max="20">
+        </div>
+
+        <button type="submit" id="submit-btn">Start Processing</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('processing-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const resultDiv = document.getElementById('result');
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Starting...';
+            resultDiv.innerHTML = '';
+
+            const data = {
+                pdf_path: document.getElementById('pdf-path').value,
+                pdf_filename: document.getElementById('pdf-filename').value,
+                pdf_id: document.getElementById('pdf-id').value,
+                source: document.getElementById('source').value,
+                week: document.getElementById('week').value,
+                pages_per_chunk: parseInt(document.getElementById('pages-per-chunk').value)
+            };
+
+            try {
+                const response = await fetch('/api/processing/start', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.error) {
+                    resultDiv.innerHTML = `<div class="result error"><strong>Error:</strong> ${result.error}</div>`;
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Start Processing';
+                } else {
+                    resultDiv.innerHTML = `
+                        <div class="result success">
+                            <strong>Processing Started!</strong><br>
+                            Job ID: ${result.job_id}<br><br>
+                            <a href="processing_progress.html?job_id=${result.job_id}"
+                               style="background: #667eea; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block;">
+                                → View Progress
+                            </a>
+                        </div>
+                    `;
+
+                    // Auto-redirect after 2 seconds
+                    setTimeout(() => {
+                        window.location.href = `processing_progress.html?job_id=${result.job_id}`;
+                    }, 2000);
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error"><strong>Error:</strong> ${error.message}</div>`;
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Start Processing';
+            }
+        });
+
+        // Auto-fill example values for testing
+        window.addEventListener('load', () => {
+            // Set current date as PDF ID
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('pdf-id').value = today;
+
+            // Auto-generate week tag
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.toLocaleString('en-US', { month: 'short' });
+            const weekNum = Math.ceil(now.getDate() / 7);
+            document.getElementById('week').value = `${year}_${month}_W${weekNum}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Processing Progress</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .progress-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .pdf-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            max-width: 60%;
+        }
+
+        .status-badge {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge.queued {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-badge.processing {
+            background: #dbeafe;
+            color: #1e40af;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .status-badge.completed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-badge.failed {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 40px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            text-align: center;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .info-value.highlight {
+            color: #10b981;
+        }
+
+        .log-section {
+            margin-top: 25px;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .log-header h3 {
+            font-size: 16px;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .auto-scroll-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .auto-scroll-toggle input {
+            cursor: pointer;
+        }
+
+        .log-container {
+            max-height: 400px;
+            overflow-y: auto;
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .log-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .log-container::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        .log-container::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+
+        .log-entry {
+            margin: 5px 0;
+            padding: 3px 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .log-entry .timestamp {
+            color: #94a3b8;
+            margin-right: 10px;
+        }
+
+        .log-entry.INFO {
+            color: #22d3ee;
+        }
+
+        .log-entry.SUCCESS {
+            color: #34d399;
+            font-weight: 600;
+        }
+
+        .log-entry.ERROR {
+            color: #f87171;
+            font-weight: 600;
+        }
+
+        .log-entry.WARNING {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+
+        .log-entry .message {
+            margin-left: 5px;
+        }
+
+        .empty-log {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid #e5e7eb;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .error-message::before {
+            content: '⚠️';
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 PDF Processing Progress</h1>
+            <p>Real-time monitoring of flashcard generation</p>
+        </div>
+
+        <div class="progress-card">
+            <div class="progress-header">
+                <div class="pdf-title" id="pdf-title">Loading...</div>
+                <span id="status-badge" class="status-badge queued">Queued</span>
+            </div>
+
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar" style="width: 0%">
+                    <span id="progress-text">0%</span>
+                </div>
+            </div>
+
+            <div class="progress-info">
+                <div class="info-item">
+                    <div class="info-label">Current Step</div>
+                    <div class="info-value" id="current-step">Initializing...</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Cards Generated</div>
+                    <div class="info-value highlight" id="cards-count">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Time Elapsed</div>
+                    <div class="info-value" id="time-elapsed">0s</div>
+                </div>
+            </div>
+
+            <div class="log-section">
+                <div class="log-header">
+                    <h3>📋 Live Logs</h3>
+                    <div class="auto-scroll-toggle">
+                        <input type="checkbox" id="auto-scroll" checked>
+                        <label for="auto-scroll">Auto-scroll</label>
+                    </div>
+                </div>
+                <div id="log-container" class="log-container">
+                    <div class="empty-log">
+                        <div class="spinner"></div>
+                        Waiting for processing to start...
+                    </div>
+                </div>
+            </div>
+
+            <div id="error-container"></div>
+        </div>
+
+        <a href="comprehensive_dashboard.html" class="back-button">
+            ← Back to Dashboard
+        </a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = urlParams.get('job_id');
+
+        if (!jobId) {
+            document.body.innerHTML = '<div style="text-align: center; padding: 50px;"><h1>Error: No job ID provided</h1></div>';
+        }
+
+        let startTime = null;
+        let statusInterval = null;
+        let eventSource = null;
+
+        // Format time elapsed
+        function formatTime(seconds) {
+            if (seconds < 60) return `${seconds}s`;
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins}m ${secs}s`;
+        }
+
+        // Update status from API
+        function updateStatus() {
+            fetch(`/api/processing/${jobId}/status`)
+                .then(res => res.json())
+                .then(data => {
+                    // Update PDF title
+                    document.getElementById('pdf-title').textContent = data.pdf_filename || 'Processing PDF';
+
+                    // Update progress
+                    const progress = data.progress_percentage || 0;
+                    document.getElementById('progress-bar').style.width = progress + '%';
+                    document.getElementById('progress-text').textContent = progress + '%';
+
+                    // Update status badge
+                    const badge = document.getElementById('status-badge');
+                    badge.textContent = data.status.toUpperCase();
+                    badge.className = 'status-badge ' + data.status;
+
+                    // Update current step
+                    document.getElementById('current-step').textContent =
+                        data.current_step || 'Processing...';
+
+                    // Update cards count
+                    document.getElementById('cards-count').textContent = data.total_cards || 0;
+
+                    // Update time elapsed
+                    if (!startTime && data.started_at) {
+                        startTime = new Date(data.started_at);
+                    }
+                    if (startTime) {
+                        const elapsed = Math.floor((new Date() - startTime) / 1000);
+                        document.getElementById('time-elapsed').textContent = formatTime(elapsed);
+                    }
+
+                    // Stop polling if completed or failed
+                    if (data.status === 'completed' || data.status === 'failed') {
+                        clearInterval(statusInterval);
+                        if (eventSource) {
+                            eventSource.close();
+                        }
+
+                        if (data.status === 'failed' && data.error_message) {
+                            showError(data.error_message);
+                        }
+                    }
+                })
+                .catch(err => {
+                    console.error('Error fetching status:', err);
+                });
+        }
+
+        // Stream logs via Server-Sent Events
+        function streamLogs() {
+            const logContainer = document.getElementById('log-container');
+            logContainer.innerHTML = ''; // Clear initial message
+
+            eventSource = new EventSource(`/api/processing/${jobId}/logs`);
+
+            eventSource.onmessage = function(event) {
+                const log = JSON.parse(event.data);
+
+                const entry = document.createElement('div');
+                entry.className = 'log-entry ' + log.level;
+
+                const timestamp = document.createElement('span');
+                timestamp.className = 'timestamp';
+                timestamp.textContent = `[${log.timestamp}]`;
+
+                const message = document.createElement('span');
+                message.className = 'message';
+                message.textContent = log.message;
+
+                entry.appendChild(timestamp);
+                entry.appendChild(message);
+                logContainer.appendChild(entry);
+
+                // Auto-scroll if enabled
+                const autoScroll = document.getElementById('auto-scroll');
+                if (autoScroll && autoScroll.checked) {
+                    logContainer.scrollTop = logContainer.scrollHeight;
+                }
+            };
+
+            eventSource.onerror = function(err) {
+                console.error('EventSource error:', err);
+                // Will automatically try to reconnect
+            };
+        }
+
+        // Show error message
+        function showError(message) {
+            const errorContainer = document.getElementById('error-container');
+            errorContainer.innerHTML = `
+                <div class="error-message">
+                    <div>
+                        <strong>Processing Failed</strong><br>
+                        ${message}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize
+        updateStatus(); // Initial call
+        statusInterval = setInterval(updateStatus, 2000); // Poll every 2 seconds
+        streamLogs(); // Start log streaming
+    </script>
+</body>
+</html>
