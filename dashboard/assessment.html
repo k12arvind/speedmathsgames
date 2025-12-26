@@ -827,7 +827,7 @@
             if (pdfId && filename) {
                 // Find and select the PDF card
                 selectedPdfs = [pdfId];  // Backward compatibility
-                console.log('Set selectedPdf to:', selectedPdf);
+                console.log('Set selectedPdfs to:', selectedPdfs);
 
                 // Update header subtitle
                 document.getElementById('header-subtitle').textContent = `Testing: ${filename}`;
@@ -934,7 +934,7 @@
         async function startTest() {
             console.log('');
             console.log('=== START TEST CLICKED ===');
-            console.log('selectedPdf:', selectedPdf);
+            console.log('selectedPdfs:', selectedPdfs);
             console.log('selectedTestType:', selectedTestType);
 
             const startBtn = document.getElementById('start-btn');
@@ -946,6 +946,10 @@
                 alert('Please select a PDF first');
                 return;
             }
+
+            // Get the first selected PDF (backward compatibility)
+            const selectedPdf = selectedPdfs[0];
+            console.log('Using PDF ID:', selectedPdf);
 
             console.log('Switching to test screen...');
             showScreen('test-screen');

@@ -102,6 +102,9 @@ class PDFScanner:
             file_size_kb = stat.st_size / 1024
             last_modified = datetime.fromtimestamp(stat.st_mtime).isoformat()
 
+            # For date_published, use extracted date or file creation date
+            file_date = datetime.fromtimestamp(stat.st_ctime).strftime('%Y-%m-%d')
+
             # Check if this PDF's topics are in database
             source_date = date_match if date_match else pdf_file.stem
 
@@ -147,7 +150,7 @@ class PDFScanner:
                 'filepath': str(pdf_file),
                 'source_type': source_type,
                 'source_name': source_name,
-                'date_published': date_match or source_date,
+                'date_published': date_match or file_date,
                 'total_topics': total_topics,
                 'revised_topics': stats['revised_topics'] or 0,
                 'categories': categories,
