@@ -8,11 +8,16 @@ venv/
 env/
 *.egg-info/
 
-# Database files
-*.db
-*.db-journal
+# Database files - KEEP production databases in Git for sync
+# *.db
+# *.db-journal
 *.sqlite
 *.sqlite3
+
+# Exclude database journal/temp files
+*.db-journal
+*.db-shm
+*.db-wal
 
 # PDFs (data, not code)
 pdfs/
