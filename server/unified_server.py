@@ -779,25 +779,25 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         user_id = 'user1'
 
         if path == '/api/analytics/daily':
-            # Get daily statistics for last 30 days
+            # Get daily statistics for last 30 days from question_attempts
+            # This includes ALL attempts, even from incomplete tests
             conn = sqlite3.connect(self.assessment_db.db_path)
             cursor = conn.cursor()
 
-            # Query to aggregate data by date
+            # Query to aggregate data by date from question_attempts
             cursor.execute("""
                 SELECT
-                    DATE(started_at) as practice_date,
-                    SUM(total_questions) as total_questions,
-                    SUM(correct_answers) as correct_answers,
-                    SUM(wrong_answers) as wrong_answers,
-                    SUM(skipped_answers) as skipped_answers,
-                    SUM(time_taken_seconds) as time_spent,
-                    ROUND(AVG(score_percentage), 1) as avg_score
-                FROM test_sessions
-                WHERE user_id = ?
-                  AND status = 'completed'
-                  AND started_at >= date('now', '-30 days')
-                GROUP BY DATE(started_at)
+                    DATE(qa.answered_at) as practice_date,
+                    COUNT(*) as total_questions,
+                    SUM(qa.is_correct) as correct_answers,
+                    SUM(CASE WHEN qa.is_correct = 0 AND qa.user_answer IS NOT NULL THEN 1 ELSE 0 END) as wrong_answers,
+                    SUM(CASE WHEN qa.user_answer IS NULL THEN 1 ELSE 0 END) as skipped_answers,
+                    SUM(qa.time_taken_seconds) as time_spent
+                FROM question_attempts qa
+                JOIN test_sessions ts ON qa.session_id = ts.session_id
+                WHERE ts.user_id = ?
+                  AND qa.answered_at >= date('now', '-30 days')
+                GROUP BY DATE(qa.answered_at)
                 ORDER BY practice_date DESC
             """, (user_id,))
 
