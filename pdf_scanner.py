@@ -5,7 +5,7 @@
 pdf_scanner.py
 
 Scans multiple PDF folders and builds a unified view for the dashboard.
-Works with actual PDF files in ~/Desktop/saanvi/ folders.
+Works with actual PDF files in ~/saanvi/ folders.
 """
 
 import os

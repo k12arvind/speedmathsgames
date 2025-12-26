@@ -10,7 +10,7 @@ Two-machine setup with MacBook Pro as **development/source** and Mac Mini as **p
 - **Primary development machine**
 - **Source of truth** for all code and data
 - Git repository maintained here
-- PDFs stored here: `~/Desktop/saanvi/`
+- PDFs stored here: `~/saanvi/` (synced to iCloud)
 - Testing server: `http://localhost:8001`
 
 ### Mac Mini (Production)
@@ -26,7 +26,7 @@ Two-machine setup with MacBook Pro as **development/source** and Mac Mini as **p
 ~/clat_preparation/
 ├── unified_server.py          # Main HTTP server
 ├── assessment_database.py     # Assessment/test logic
-├── pdf_scanner.py             # Scans PDFs from ~/Desktop/saanvi/
+├── pdf_scanner.py             # Scans PDFs from ~/saanvi/
 ├── anki_connector.py          # Anki integration
 ├── auth/                      # Google OAuth
 │   ├── google_auth.py
@@ -138,7 +138,7 @@ TopRankers URL
     ↓
 MacBook Pro: generate_clean_pdf_final.py
     ↓
-PDF saved: ~/Desktop/saanvi/Legaledgedailygk/
+PDF saved: ~/saanvi/Legaledgedailygk/
     ↓
 MacBook Pro: automate_html.sh
     ↓
