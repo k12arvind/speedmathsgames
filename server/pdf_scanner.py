@@ -43,7 +43,8 @@ class PDFScanner:
 
     def __init__(self, db_path: Optional[Path] = None):
         if db_path is None:
-            db_path = Path(__file__).parent / "revision_tracker.db"
+            # Database is in parent directory (clat_preparation/)
+            db_path = Path(__file__).parent.parent / "revision_tracker.db"
         self.db_path = db_path
 
     def scan_all_folders(self) -> Dict:

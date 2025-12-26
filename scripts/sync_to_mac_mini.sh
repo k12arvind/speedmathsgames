@@ -15,16 +15,22 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-# 1. Sync Python code (version controlled)
-echo -e "${YELLOW}Step 1: Syncing Python code...${NC}"
+# 1. Sync all code directories
+echo -e "${YELLOW}Step 1: Syncing code directories...${NC}"
 rsync -avz --exclude='__pycache__' --exclude='*.pyc' --exclude='.git' \
-    --exclude='venv' --exclude='*.db' --exclude='logs' \
-    ~/clat_preparation/*.py \
-    mac-mini:~/clat_preparation/
+    --exclude='venv' --exclude='*.db' --exclude='logs' --exclude='processing_status' \
+    ~/clat_preparation/server/ \
+    mac-mini:~/clat_preparation/server/
+rsync -avz ~/clat_preparation/pdf_generation/ \
+    mac-mini:~/clat_preparation/pdf_generation/
+rsync -avz ~/clat_preparation/utils/ \
+    mac-mini:~/clat_preparation/utils/
+rsync -avz ~/clat_preparation/scripts/ \
+    mac-mini:~/clat_preparation/scripts/
 echo -e "${GREEN}✓ Code synced${NC}"
 echo ""
 
-# 2. Sync HTML/CSS/JS (dashboard files)
+# 2. Sync dashboard
 echo -e "${YELLOW}Step 2: Syncing dashboard files...${NC}"
 rsync -avz ~/clat_preparation/dashboard/ \
     mac-mini:~/clat_preparation/dashboard/
@@ -84,7 +90,9 @@ echo -e "${GREEN}✅ Sync complete!${NC}"
 echo "======================================================================"
 echo ""
 echo "📝 What was synced:"
-echo "   • Python code (*.py files)"
+echo "   • Server code (server/)"
+echo "   • PDF generation (pdf_generation/)"
+echo "   • Scripts (scripts/)"
 echo "   • Dashboard files (HTML/CSS/JS)"
 echo "   • Math module"
 echo "   • New PDF files (existing files preserved)"

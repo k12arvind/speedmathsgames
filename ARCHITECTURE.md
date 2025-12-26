@@ -24,23 +24,33 @@ Two-machine setup with MacBook Pro as **development/source** and Mac Mini as **p
 ### Code Location (Both Machines)
 ```
 ~/clat_preparation/
-├── unified_server.py          # Main HTTP server
-├── assessment_database.py     # Assessment/test logic
-├── pdf_scanner.py             # Scans PDFs from ~/saanvi/
-├── anki_connector.py          # Anki integration
-├── auth/                      # Google OAuth
-│   ├── google_auth.py
-│   └── user_db.py
+├── server/                    # Server components
+│   ├── unified_server.py      # Main HTTP server
+│   ├── assessment_database.py # Assessment/test logic
+│   ├── pdf_scanner.py         # Scans PDFs from ~/saanvi/
+│   └── anki_connector.py      # Anki integration
+├── pdf_generation/            # PDF processing
+│   ├── generate_clean_pdf_final.py  # PDF generator
+│   ├── extract_html.py        # HTML extractor
+│   └── automate_html.sh       # Automation script
+├── scripts/                   # Utility scripts
+│   ├── auto_sync_pdfs.sh      # Daily PDF sync
+│   ├── sync_to_mac_mini.sh    # Full code sync
+│   └── backup_databases.sh    # Database backup
 ├── dashboard/                 # HTML/CSS/JS files
 │   ├── index.html
 │   ├── comprehensive_dashboard.html
 │   ├── assessment.html
 │   ├── pdf_dashboard.html
 │   └── daily_analytics.html
+├── auth/                      # Google OAuth
+│   ├── google_auth.py
+│   └── user_db.py
 ├── math/                      # Math practice
 │   ├── math_api.py
 │   └── math_db.py
 ├── logs/                      # Server logs
+├── start_server.sh            # Server startup script
 └── .git/                      # Version control (MacBook only)
 ```
 
@@ -213,14 +223,13 @@ git commit -m "Add feature"
 ### Add New Daily PDF
 ```bash
 # On MacBook Pro
-cd ~/Desktop/anki_automation
+cd ~/clat_preparation
 source venv/bin/activate
 source ~/.zshrc
-./automate_html.sh https://www.toprankers.com/current-affairs-[date]
+./pdf_generation/automate_html.sh https://www.toprankers.com/current-affairs-[date]
 # PDF automatically saved to ~/saanvi/Legaledgedailygk/
 # Then sync PDFs to Mac Mini
-cd ~/clat_preparation
-./auto_sync_pdfs.sh
+./scripts/auto_sync_pdfs.sh
 ```
 
 ### Restart Mac Mini Server
@@ -246,9 +255,9 @@ curl https://speedmathsgames.com/api/dashboard
 
 ### PDFs Not Showing
 1. Check PDFs exist: `ls ~/saanvi/Legaledgedailygk/`
-2. Check scanner paths: `grep BASE_PATH ~/clat_preparation/pdf_scanner.py`
-3. Sync: `./auto_sync_pdfs.sh`
-4. Test scanner: `python3 ~/clat_preparation/pdf_scanner.py`
+2. Check scanner paths: `grep BASE_PATH ~/clat_preparation/server/pdf_scanner.py`
+3. Sync: `cd ~/clat_preparation && ./scripts/auto_sync_pdfs.sh`
+4. Test scanner: `python3 ~/clat_preparation/server/pdf_scanner.py`
 5. Restart server on Mac Mini if needed
 
 ### Code Changes Not Reflecting
@@ -300,8 +309,8 @@ GOOGLE_REDIRECT_URI=https://speedmathsgames.com/auth/callback
 ## Maintenance
 
 ### Daily
-- Download new PDFs from LegalEdge to `~/saanvi/` folders
-- Run `./auto_sync_pdfs.sh` to sync to Mac Mini
+- Process TopRankers daily current affairs: `cd ~/clat_preparation && ./pdf_generation/automate_html.sh [URL]`
+- Sync to Mac Mini: `./scripts/auto_sync_pdfs.sh`
 
 ### Weekly
 - Commit code changes: `git add . && git commit -m "..."`

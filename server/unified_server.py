@@ -27,13 +27,14 @@ import traceback
 # Load environment variables from .env file
 try:
     from dotenv import load_dotenv
-    env_path = Path(__file__).parent / '.env'
+    # .env is in parent directory (clat_preparation/)
+    env_path = Path(__file__).parent.parent / '.env'
     load_dotenv(dotenv_path=env_path)
 except ImportError:
     print("Warning: python-dotenv not installed. Environment variables must be set manually.")
 
 # Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # Import authentication (optional)
 try:
@@ -43,17 +44,16 @@ try:
 except ImportError:
     AUTH_AVAILABLE = False
 
-# Import API handlers
-from assessment_database import AssessmentDatabase
-from anki_connector import AnkiConnector
+# Import API handlers (from server directory)
+from server.assessment_database import AssessmentDatabase
+from server.anki_connector import AnkiConnector
 from anthropic import Anthropic
 
 # Import math database
-sys.path.insert(0, str(Path(__file__).parent / 'math'))
-from math_db import MathDatabase
+from math.math_db import MathDatabase
 
 # Import PDF scanner for GK dashboard
-from pdf_scanner import PDFScanner
+from server.pdf_scanner import PDFScanner
 
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
@@ -79,7 +79,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def __init__(self, *args, **kwargs):
         # Set the directory to serve files from (dashboard folder)
-        dashboard_dir = Path(__file__).parent / 'dashboard'
+        dashboard_dir = Path(__file__).parent.parent / 'dashboard'
         super().__init__(*args, directory=str(dashboard_dir), **kwargs)
 
     def end_headers(self):
@@ -955,7 +955,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         """Get stored MCQ choices from database cache."""
         try:
             import sqlite3
-            db_path = Path(__file__).parent / 'revision_tracker.db'
+            db_path = Path(__file__).parent.parent / 'revision_tracker.db'
             conn = sqlite3.connect(str(db_path))
             cursor = conn.cursor()
 
@@ -983,7 +983,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         """Store MCQ choices in database cache."""
         try:
             import sqlite3
-            db_path = Path(__file__).parent / 'revision_tracker.db'
+            db_path = Path(__file__).parent.parent / 'revision_tracker.db'
             conn = sqlite3.connect(str(db_path))
             cursor = conn.cursor()
 
@@ -1144,7 +1144,7 @@ def main():
     UnifiedHandler.assessment_db = AssessmentDatabase()
     UnifiedHandler.anki = AnkiConnector()
 
-    math_db_path = Path(__file__).parent / 'math' / 'math_tracker.db'
+    math_db_path = Path(__file__).parent.parent / 'math' / 'math_tracker.db'
     UnifiedHandler.math_db = MathDatabase(str(math_db_path))
 
     UnifiedHandler.pdf_scanner = PDFScanner()
@@ -1185,7 +1185,7 @@ def main():
     print("          🎓 CLAT Preparation - Unified Server")
     print("="*70)
     print(f"\n🚀 Server running on: http://localhost:{args.port}")
-    print(f"📁 Serving from: {Path(__file__).parent / 'dashboard'}")
+    print(f"📁 Serving from: {Path(__file__).parent.parent / 'dashboard'}")
     print(f"🔐 Authentication: {'Enabled' if auth_enabled else 'Disabled'}")
     print(f"\n📡 All APIs unified on port {args.port}:")
     print(f"   • Dashboard HTML pages")
