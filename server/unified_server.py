@@ -118,6 +118,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             self.handle_get_user()
             return
 
+        # Special handling for SSE endpoints (must be before handle_api_get)
+        if path.startswith('/api/processing/') and '/logs' in path:
+            from urllib.parse import unquote
+            self.handle_processing_logs_sse(path)
+            return
+
         # API endpoints
         if path.startswith('/api/'):
             self.handle_api_get(path, query_params)
@@ -1149,6 +1155,78 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
     # PDF PROCESSING API METHODS
     # ============================================================
 
+    def handle_processing_logs_sse(self, path: str):
+        """Handle SSE log streaming for processing jobs."""
+        from urllib.parse import unquote
+        import time
+
+        # Extract job_id from path: /api/processing/{job_id}/logs
+        job_id = unquote(path.split('/')[3])
+        job = self.processing_db.get_job(job_id)
+
+        if not job:
+            self.send_response(404)
+            self.send_header('Content-Type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(b'Job not found')
+            return
+
+        # Send SSE headers
+        self.send_response(200)
+        self.send_header('Content-Type', 'text/event-stream')
+        self.send_header('Cache-Control', 'no-cache')
+        self.send_header('Connection', 'keep-alive')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+
+        # Stream log file
+        log_file = Path(job['log_file'])
+        if not log_file.exists():
+            # Log file doesn't exist yet, send initial message
+            event_data = json.dumps({
+                'timestamp': datetime.now().strftime('%H:%M:%S'),
+                'level': 'INFO',
+                'message': 'Waiting for processing to start...'
+            })
+            self.wfile.write(f"data: {event_data}\n\n".encode())
+            self.wfile.flush()
+            return
+
+        # Read and stream log file
+        last_position = 0
+
+        # Read up to 30 seconds or until job completes
+        for _ in range(30):
+            try:
+                with open(log_file, 'r') as f:
+                    f.seek(last_position)
+                    lines = f.readlines()
+                    last_position = f.tell()
+
+                    for line in lines:
+                        # Parse log line: timestamp | level | message
+                        parts = line.strip().split(' | ', 2)
+                        if len(parts) == 3:
+                            timestamp_str, level, message = parts
+                            event_data = json.dumps({
+                                'timestamp': timestamp_str,
+                                'level': level,
+                                'message': message
+                            })
+                            self.wfile.write(f"data: {event_data}\n\n".encode())
+                            self.wfile.flush()
+
+                # Check if job is complete
+                updated_job = self.processing_db.get_job(job_id)
+                if updated_job and updated_job['status'] in ['completed', 'failed']:
+                    break
+
+                time.sleep(1)
+
+            except Exception as e:
+                print(f"Error streaming logs: {e}")
+                break
+
     def handle_processing_get(self, path: str, query_params: dict):
         """Handle processing API GET requests."""
         from urllib.parse import unquote
@@ -1164,73 +1242,6 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 return
 
             self.send_json(job)
-
-        # Stream logs via Server-Sent Events
-        elif path.startswith('/api/processing/') and '/logs' in path:
-            # Extract job_id from path: /api/processing/{job_id}/logs
-            job_id = unquote(path.split('/')[3])
-            job = self.processing_db.get_job(job_id)
-
-            if not job:
-                self.send_response(404)
-                self.end_headers()
-                return
-
-            # Send SSE headers
-            self.send_response(200)
-            self.send_header('Content-Type', 'text/event-stream')
-            self.send_header('Cache-Control', 'no-cache')
-            self.send_header('Connection', 'keep-alive')
-            self.end_headers()
-
-            # Stream log file
-            log_file = Path(job['log_file'])
-            if not log_file.exists():
-                # Log file doesn't exist yet, send initial message
-                event_data = json.dumps({
-                    'timestamp': datetime.now().strftime('%H:%M:%S'),
-                    'level': 'INFO',
-                    'message': 'Waiting for processing to start...'
-                })
-                self.wfile.write(f"data: {event_data}\n\n".encode())
-                self.wfile.flush()
-                return
-
-            # Read and stream log file
-            import time
-            last_position = 0
-
-            # Read up to 30 seconds or until job completes
-            for _ in range(30):
-                try:
-                    with open(log_file, 'r') as f:
-                        f.seek(last_position)
-                        lines = f.readlines()
-                        last_position = f.tell()
-
-                        for line in lines:
-                            # Parse log line: timestamp | level | message
-                            parts = line.strip().split(' | ', 2)
-                            if len(parts) == 3:
-                                timestamp_str, level, message = parts
-                                event_data = json.dumps({
-                                    'timestamp': timestamp_str,
-                                    'level': level,
-                                    'message': message
-                                })
-                                self.wfile.write(f"data: {event_data}\n\n".encode())
-                                self.wfile.flush()
-
-                    # Check if job is complete
-                    updated_job = self.processing_db.get_job(job_id)
-                    if updated_job and updated_job['status'] in ['completed', 'failed']:
-                        break
-
-                    time.sleep(1)
-
-                except Exception as e:
-                    print(f"Error streaming logs: {e}")
-                    break
 
         # List all jobs
         elif path == '/api/processing/jobs':
