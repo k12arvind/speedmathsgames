@@ -311,6 +311,9 @@ def process_pdf_with_progress(job_id: str):
             # Process single file without splitting
             logger.info("Processing PDF directly (no splitting needed)...")
 
+            # Update progress: starting
+            db.update_progress(job_id, 0, "Generating flashcards with Claude AI...")
+
             env = os.environ.copy()
             if 'ANTHROPIC_API_KEY' not in env:
                 try:
@@ -326,18 +329,24 @@ def process_pdf_with_progress(job_id: str):
                     logger.warning(f"Could not load API key: {e}")
 
             # Generate flashcards
+            logger.info("Generating flashcards with Claude AI...")
+            db.update_progress(job_id, 0, "Calling Claude API (this may take 60-90 seconds)...")
             cmd = ["python3", "generate_flashcards.py", str(pdf_path), source, week]
             subprocess.run(cmd, check=True, cwd=str(automation_dir), env=env)
 
+            # Count cards generated
+            json_path = automation_dir / "inbox" / "week_cards.json"
+            cards_count = count_cards_in_json(json_path)
+            logger.success(f"Generated {cards_count} flashcards")
+
             # Import to Anki
+            logger.info("Importing to Anki...")
+            db.update_progress(job_id, 0, f"Importing {cards_count} cards to Anki...", cards_count)
             import_cmd = ["python3", "import_to_anki.py", "inbox/week_cards.json"]
             subprocess.run(import_cmd, check=True, cwd=str(automation_dir), env=env)
 
-            json_path = automation_dir / "inbox" / "week_cards.json"
-            cards_count = count_cards_in_json(json_path)
-
             db.update_progress(job_id, 1, "Processing complete", cards_count)
-            logger.success(f"Processing complete: {cards_count} cards generated")
+            logger.success(f"Processing complete: {cards_count} cards imported to Anki")
 
         # Mark as completed
         db.mark_completed(job_id)
