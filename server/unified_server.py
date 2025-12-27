@@ -15,7 +15,7 @@ Single server on port 8001 for everything.
 
 from http.server import SimpleHTTPRequestHandler, HTTPServer, ThreadingHTTPServer
 from http.cookies import SimpleCookie
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, unquote
 import argparse
 import os
 import sys
@@ -204,6 +204,28 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             return True
 
         return False
+
+    def correct_pdf_path(self, db_path: str) -> str:
+        """
+        Correct PDF path for current machine.
+        Database may have /Users/arvind/ but Mac Mini has /Users/arvindkumar/
+        """
+        import os
+        from pathlib import Path
+
+        # If path exists as-is, use it
+        if os.path.exists(db_path):
+            return db_path
+
+        # Try replacing username
+        current_user = os.path.expanduser('~').split('/')[-1]
+        corrected = db_path.replace('/Users/arvind/', f'/Users/{current_user}/')
+
+        if os.path.exists(corrected):
+            return corrected
+
+        # Return original path if nothing works
+        return db_path
 
     def get_current_user(self):
         """Get current user from session cookie."""
@@ -1910,13 +1932,19 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             if '/check/' in path:
                 pdf_id = unquote(path.split('/check/')[-1])
 
-                # Find PDF path
-                pdf_info = self.pdf_scanner.get_pdf_by_id(pdf_id)
-                if not pdf_info:
+                # Find PDF path from database
+                db_path = Path.home() / 'clat_preparation' / 'revision_tracker.db'
+                conn = sqlite3.connect(str(db_path))
+                cursor = conn.cursor()
+                cursor.execute("SELECT filepath FROM pdfs WHERE filename = ?", (pdf_id,))
+                result = cursor.fetchone()
+                conn.close()
+
+                if not result:
                     self.send_json({'error': 'PDF not found'})
                     return
 
-                pdf_path = pdf_info.get('filepath')
+                pdf_path = self.correct_pdf_path(result[0])
                 needs_processing = self.pdf_spacing_processor.needs_processing(pdf_path)
                 output_path = self.pdf_spacing_processor.get_output_path(pdf_path)
 
@@ -1953,13 +1981,19 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                     self.send_json({'error': 'Missing pdf_id'})
                     return
 
-                # Find PDF path
-                pdf_info = self.pdf_scanner.get_pdf_by_id(pdf_id)
-                if not pdf_info:
+                # Find PDF path from database
+                db_path = Path.home() / 'clat_preparation' / 'revision_tracker.db'
+                conn = sqlite3.connect(str(db_path))
+                cursor = conn.cursor()
+                cursor.execute("SELECT filepath FROM pdfs WHERE filename = ?", (pdf_id,))
+                result = cursor.fetchone()
+                conn.close()
+
+                if not result:
                     self.send_json({'error': 'PDF not found'})
                     return
 
-                pdf_path = pdf_info.get('filepath')
+                pdf_path = self.correct_pdf_path(result[0])
 
                 # Process PDF
                 result = self.pdf_spacing_processor.process_pdf(pdf_path)

@@ -72,7 +72,10 @@ class PdfSpacingProcessor:
             page_width = 595  # A4 width in points
             page_height = 842  # A4 height in points
 
-            for page_num in range(len(doc)):
+            # Store page count before closing
+            total_pages = len(doc)
+
+            for page_num in range(total_pages):
                 page = doc[page_num]
 
                 # Extract text with layout preserved
@@ -95,8 +98,8 @@ class PdfSpacingProcessor:
                 'status': 'success',
                 'input_path': input_path,
                 'output_path': output_path,
-                'pages': len(doc),
-                'message': f'Successfully processed {len(doc)} pages'
+                'pages': total_pages,
+                'message': f'Successfully processed {total_pages} pages'
             }
 
         except Exception as e:
