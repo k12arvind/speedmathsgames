@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Prevent browser caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>CLAT GK Assessment</title>
     <style>
         * {
@@ -991,7 +995,7 @@
                                             ${pdf.assessment_attempts || 0}×
                                         </td>
                                         <td>
-                                            <span class="pdf-status ${pdf.exists_in_db ? 'processed' : 'not-processed'}">
+                                            <span class="pdf-status" id="status-${pdf.pdf_id}">
                                                 ${pdf.exists_in_db ? '✓ Processed' : '⚠ Not Processed'}
                                             </span>
                                         </td>
@@ -1001,10 +1005,46 @@
                         </table>
                     </div>
                 `;
+
+                // Check assessment status for each PDF
+                data.pdfs.forEach(pdf => {
+                    checkAssessmentStatusForPDF(pdf);
+                });
             } catch (error) {
                 console.error('Failed to load PDFs:', error);
                 document.getElementById('pdf-list').innerHTML =
                     '<div class="error-message">Failed to load PDFs. Please refresh the page.</div>';
+            }
+        }
+
+        // Check assessment status and update badge
+        async function checkAssessmentStatusForPDF(pdf) {
+            try {
+                // Add timestamp to prevent caching
+                const cacheBuster = `?_=${Date.now()}`;
+                const response = await fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(pdf.filename)}${cacheBuster}`);
+                const status = await response.json();
+
+                const statusElement = document.getElementById(`status-${pdf.pdf_id}`);
+                if (!statusElement) return;
+
+                // Update status badge based on old OR new system
+                if (pdf.exists_in_db || status.all_complete) {
+                    statusElement.className = 'pdf-status processed';
+                    if (status.total_cards > 0) {
+                        statusElement.innerHTML = `✓ Processed (${status.total_cards} cards)`;
+                    } else {
+                        statusElement.innerHTML = '✓ Processed';
+                    }
+                } else if (status.has_assessments) {
+                    statusElement.className = 'pdf-status in-progress';
+                    statusElement.innerHTML = `⏳ Creating... (${status.completed_chunks}/${status.total_chunks})`;
+                } else {
+                    statusElement.className = 'pdf-status not-processed';
+                    statusElement.innerHTML = '⚠ Not Processed';
+                }
+            } catch (error) {
+                console.error(`Failed to check assessment status for ${pdf.filename}:`, error);
             }
         }
 

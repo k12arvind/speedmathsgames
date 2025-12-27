@@ -65,6 +65,9 @@ from server.annotation_manager import AnnotationManager
 # Import PDF chunker for PDF splitting
 from server.pdf_chunker import PdfChunker
 
+# Import assessment jobs database for assessment creation tracking
+from server.assessment_jobs_db import AssessmentJobsDB
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -80,6 +83,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     processing_db = None
     annotation_manager = None
     pdf_chunker = None
+    assessment_jobs_db = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -96,10 +100,14 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(dashboard_dir), **kwargs)
 
     def end_headers(self):
-        """Add CORS headers to all responses."""
+        """Add CORS headers and cache-busting headers to all responses."""
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        # Cache-busting headers to prevent browser caching issues
+        self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+        self.send_header('Pragma', 'no-cache')
+        self.send_header('Expires', '0')
         super().end_headers()
 
     def do_OPTIONS(self):
@@ -340,11 +348,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Math API endpoints
             elif path.startswith('/api/math/'):
                 self.handle_math_get(path, query_params)
-            # GK Dashboard API endpoints
+            # GK Dashboard API endpoints (including assessment status)
             elif path.startswith('/api/dashboard') or path.startswith('/api/pdfs/') or \
                  path.startswith('/api/filter/') or path.startswith('/api/stats') or \
                  path.startswith('/api/pdf/') or path.startswith('/api/chunks/') or \
-                 path.startswith('/api/large-files'):
+                 path.startswith('/api/large-files') or path.startswith('/api/assessment-status/') or \
+                 path.startswith('/api/assessment-progress/'):
                 self.handle_gk_dashboard_get(path, query_params)
             # Analytics API endpoints
             elif path.startswith('/api/analytics/'):
@@ -388,6 +397,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # PDF Chunking API endpoints
             elif path.startswith('/api/pdf/chunk'):
                 self.handle_pdf_chunk_post(path, data)
+            # Assessment Creation API endpoints
+            elif path.startswith('/api/create-assessment'):
+                self.handle_assessment_creation_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -908,7 +920,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             if filepath and Path(filepath).exists():
                 page_count = PdfChunker.get_pdf_page_count(filepath)
                 pdf['page_count'] = page_count
-                pdf['needs_chunking'] = page_count > 10
+                # Red marking and chunking should both be >13 pages
+                pdf['needs_chunking'] = page_count > 13
                 pdf['can_chunk'] = page_count > 13
             else:
                 pdf['page_count'] = 0
@@ -1029,6 +1042,19 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Get all large archived files
             large_files = self._scan_large_files()
             self.send_json({'large_files': large_files})
+
+        # Assessment creation status endpoints
+        elif path.startswith('/api/assessment-progress/'):
+            # GET /api/assessment-progress/{job_id}
+            from urllib.parse import unquote
+            job_id = unquote(path.split('/')[-1])
+            self.handle_assessment_progress_get(job_id)
+
+        elif path.startswith('/api/assessment-status/'):
+            # GET /api/assessment-status/{pdf_id}
+            from urllib.parse import unquote
+            pdf_id = unquote(path.split('/')[-1])
+            self.handle_assessment_status_get(pdf_id)
 
         else:
             self.send_json({'error': 'GK dashboard endpoint not found'})
@@ -1926,6 +1952,137 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
     # UTILITY METHODS
     # ============================================================
 
+    # ============================================================
+    # ASSESSMENT CREATION API METHODS
+    # ============================================================
+
+    def handle_assessment_creation_post(self, path: str, data: dict):
+        """Handle POST /api/create-assessment - Start assessment creation for a PDF."""
+        import subprocess
+
+        pdf_id = data.get('pdf_id')
+        source = data.get('source')
+        week = data.get('week')
+
+        if not pdf_id or not source or not week:
+            self.send_json({'error': 'Missing required parameters: pdf_id, source, week'})
+            return
+
+        try:
+            # Get chunks for this PDF (or treat as single chunk if not chunked)
+            conn = sqlite3.connect(str(Path.home() / 'clat_preparation' / 'revision_tracker.db'), check_same_thread=False)
+            cursor = conn.cursor()
+
+            # Check if PDF is chunked
+            cursor.execute("""
+                SELECT COUNT(*) FROM pdf_chunks WHERE parent_pdf_id = ?
+            """, (pdf_id,))
+
+            chunk_count = cursor.fetchone()[0]
+
+            if chunk_count == 0:
+                # Not chunked - treat as 1 chunk
+                chunk_count = 1
+
+            conn.close()
+
+            # Create job in database
+            job_id = self.assessment_jobs_db.create_job(pdf_id, chunk_count)
+
+            # Launch background processor
+            processor_path = Path(__file__).parent / 'assessment_processor.py'
+            # Use venv python to ensure dependencies are available
+            venv_python = Path(__file__).parent.parent / 'venv_clat' / 'bin' / 'python3'
+            python_exe = str(venv_python) if venv_python.exists() else sys.executable
+
+            # Start subprocess in background with output to log file
+            log_file = open(f'/tmp/assessment_job_{job_id[:8]}.log', 'w')
+            subprocess.Popen([
+                python_exe,
+                str(processor_path),
+                job_id,
+                pdf_id,
+                source,
+                week
+            ], stdout=log_file, stderr=log_file)
+
+            self.send_json({
+                'job_id': job_id,
+                'status': 'started',
+                'message': 'Assessment creation started',
+                'total_chunks': chunk_count
+            })
+
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
+    def handle_assessment_progress_get(self, job_id: str):
+        """Handle GET /api/assessment-progress/{job_id} - Get current progress."""
+        try:
+            status = self.assessment_jobs_db.get_status(job_id)
+
+            if not status:
+                self.send_json({'error': 'Job not found'})
+                return
+
+            self.send_json(status)
+
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
+    def handle_assessment_status_get(self, pdf_id: str):
+        """Handle GET /api/assessment-status/{pdf_id} - Check if assessments exist."""
+        try:
+            conn = sqlite3.connect(str(Path.home() / 'clat_preparation' / 'revision_tracker.db'), check_same_thread=False)
+            cursor = conn.cursor()
+
+            # Check if PDF has chunks
+            cursor.execute("""
+                SELECT
+                    COUNT(*) as total_chunks,
+                    SUM(CASE WHEN assessment_created = 1 THEN 1 ELSE 0 END) as completed_chunks,
+                    SUM(assessment_card_count) as total_cards
+                FROM pdf_chunks
+                WHERE parent_pdf_id = ?
+            """, (pdf_id,))
+
+            result = cursor.fetchone()
+
+            if result and result[0] > 0:
+                # PDF is chunked
+                total_chunks, completed_chunks, total_cards = result
+                has_assessments = completed_chunks > 0
+                all_complete = completed_chunks == total_chunks
+            else:
+                # PDF is not chunked - check if any assessment jobs exist
+                cursor.execute("""
+                    SELECT COUNT(*), SUM(total_cards)
+                    FROM assessment_jobs
+                    WHERE parent_pdf_id = ? AND status = 'completed'
+                """, (pdf_id,))
+
+                job_result = cursor.fetchone()
+                completed_jobs = job_result[0] if job_result else 0
+                total_cards = job_result[1] if job_result and job_result[1] else 0
+
+                has_assessments = completed_jobs > 0
+                all_complete = completed_jobs > 0
+                total_chunks = 1
+                completed_chunks = 1 if all_complete else 0
+
+            conn.close()
+
+            self.send_json({
+                'has_assessments': has_assessments,
+                'all_complete': all_complete,
+                'completed_chunks': completed_chunks or 0,
+                'total_chunks': total_chunks or 0,
+                'total_cards': total_cards or 0
+            })
+
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
     def send_json(self, data: dict):
         """Send JSON response."""
         self.wfile.write(json.dumps(data).encode())
@@ -1963,6 +2120,10 @@ def main():
     # Initialize PDF chunker
     UnifiedHandler.pdf_chunker = PdfChunker()
     print("✅ PDF chunker initialized")
+
+    # Initialize assessment jobs database
+    UnifiedHandler.assessment_jobs_db = AssessmentJobsDB()
+    print("✅ Assessment jobs database initialized")
 
     # Initialize Anthropic client
     api_key = os.environ.get("ANTHROPIC_API_KEY")

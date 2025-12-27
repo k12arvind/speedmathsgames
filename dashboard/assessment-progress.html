@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Prevent browser caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Assessment Creation Progress</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .progress-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .progress-bar-container {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 40px;
+            position: relative;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #4caf50 0%, #8bc34a 100%);
+            height: 100%;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .log-container {
+            font-family: 'Courier New', monospace;
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 20px;
+            border-radius: 10px;
+            height: 500px;
+            overflow-y: auto;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .log-entry {
+            margin-bottom: 8px;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .log-info { color: #00bfff; }
+        .log-success { color: #00ff00; }
+        .log-warning { color: #ffaa00; }
+        .log-error { color: #ff4444; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .status-queued { background: #ffc107; color: #000; }
+        .status-processing { background: #2196F3; color: #fff; }
+        .status-completed { background: #4caf50; color: #fff; }
+        .status-failed { background: #f44336; color: #fff; }
+
+        .back-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="text-center mb-4">
+            <a href="comprehensive_dashboard.html" class="btn back-btn">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">
+                    📝 Creating Assessments
+                </h2>
+
+                <!-- Status Badge -->
+                <div class="text-center mb-4">
+                    <span class="status-badge status-queued" id="statusBadge">Starting...</span>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="statProgress">0%</div>
+                        <div class="stat-label">Progress</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statCards">0</div>
+                        <div class="stat-label">Cards Created</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statChunk">0/0</div>
+                        <div class="stat-label">Current Chunk</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statBatch">0/0</div>
+                        <div class="stat-label">Current Batch</div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-bar-container mb-4">
+                    <div class="progress-fill" id="progressFill" style="width: 0%">
+                        <span id="progressText">0%</span>
+                    </div>
+                </div>
+
+                <!-- Current Status Message -->
+                <div class="alert alert-info" id="currentStatus">
+                    Initializing assessment creation...
+                </div>
+
+                <!-- Progress Log -->
+                <h5 class="mb-3">📋 Progress Log</h5>
+                <div class="log-container" id="logContainer">
+                    <div class="log-entry">Waiting for progress updates...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Force browser to never cache this page
+        if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+            window.location.reload(true);
+        }
+
+        const API_BASE = 'http://localhost:8001';
+
+        // Get job ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = urlParams.get('job_id');
+
+        if (!jobId) {
+            alert('No job ID provided');
+            window.location.href = 'comprehensive_dashboard.html';
+        }
+
+        let logLines = [];
+        let lastMessage = '';
+        let pollCount = 0;
+
+        function addLogLine(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logClass = `log-${type}`;
+            logLines.push(`<div class="log-entry ${logClass}">[${timestamp}] ${message}</div>`);
+
+            // Keep only last 100 lines
+            if (logLines.length > 100) {
+                logLines.shift();
+            }
+
+            document.getElementById('logContainer').innerHTML = logLines.join('');
+
+            // Auto-scroll to bottom
+            const log = document.getElementById('logContainer');
+            log.scrollTop = log.scrollHeight;
+        }
+
+        function updateStats(status) {
+            // Update progress
+            const progress = status.progress_percentage || 0;
+            document.getElementById('statProgress').innerText = progress + '%';
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').innerText = progress + '%';
+
+            // Update cards
+            document.getElementById('statCards').innerText = status.total_cards || 0;
+
+            // Update chunk
+            const currentChunk = status.current_chunk || 0;
+            const totalChunks = status.total_chunks || 0;
+            document.getElementById('statChunk').innerText = `${currentChunk}/${totalChunks}`;
+
+            // Update batch
+            const currentBatch = status.current_batch || 0;
+            const totalBatches = status.total_batches || 0;
+            document.getElementById('statBatch').innerText = `${currentBatch}/${totalBatches}`;
+
+            // Update status badge
+            const statusBadge = document.getElementById('statusBadge');
+            const statusText = (status.status || 'queued').toUpperCase();
+            statusBadge.innerText = statusText;
+            statusBadge.className = `status-badge status-${status.status || 'queued'}`;
+
+            // Update current status message
+            if (status.status_message) {
+                document.getElementById('currentStatus').innerText = status.status_message;
+            }
+
+            // Add to log if message changed
+            if (status.status_message && status.status_message !== lastMessage) {
+                let logType = 'info';
+                if (status.status_message.includes('✅')) logType = 'success';
+                else if (status.status_message.includes('⚠️')) logType = 'warning';
+                else if (status.status_message.includes('❌')) logType = 'error';
+                else if (status.status_message.includes('🎉')) logType = 'success';
+
+                addLogLine(status.status_message, logType);
+                lastMessage = status.status_message;
+            }
+        }
+
+        async function pollProgress() {
+            try {
+                const response = await fetch(`${API_BASE}/api/assessment-progress/${jobId}`);
+                const status = await response.json();
+
+                if (status.error) {
+                    addLogLine(`Error: ${status.error}`, 'error');
+                    clearInterval(pollInterval);
+                    return;
+                }
+
+                updateStats(status);
+
+                // Check if complete or failed
+                if (status.status === 'completed') {
+                    addLogLine(`🎉 Assessment creation complete! Generated ${status.total_cards} flashcards`, 'success');
+                    clearInterval(pollInterval);
+
+                    // Show completion actions after 2 seconds
+                    setTimeout(() => {
+                        document.getElementById('currentStatus').innerHTML = `
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="comprehensive_dashboard.html" class="btn btn-primary">
+                                    ← Back to Dashboard
+                                </a>
+                                <a href="assessment.html" class="btn btn-success">
+                                    📝 Take Test
+                                </a>
+                            </div>
+                        `;
+                    }, 2000);
+
+                } else if (status.status === 'failed') {
+                    const errorMsg = status.error_message || 'Unknown error';
+                    addLogLine(`❌ Assessment creation failed: ${errorMsg}`, 'error');
+                    clearInterval(pollInterval);
+
+                    setTimeout(() => {
+                        document.getElementById('currentStatus').innerHTML = `
+                            <div class="alert alert-danger">
+                                <strong>Failed:</strong> ${errorMsg}
+                                <div class="mt-3">
+                                    <a href="comprehensive_dashboard.html" class="btn btn-primary">
+                                        ← Back to Dashboard
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                    }, 1000);
+                }
+
+                pollCount++;
+
+            } catch (error) {
+                console.error('Polling error:', error);
+                addLogLine(`Connection error: ${error.message}`, 'error');
+
+                // Stop after too many errors
+                if (pollCount > 5 && pollCount % 10 === 0) {
+                    addLogLine('⚠️  Multiple connection errors. Please check if server is running.', 'warning');
+                }
+            }
+        }
+
+        // Start polling
+        addLogLine('Starting assessment creation...', 'info');
+        pollProgress(); // Initial call
+        const pollInterval = setInterval(pollProgress, 2000); // Poll every 2 seconds
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            clearInterval(pollInterval);
+        });
+    </script>
+</body>
+</html>

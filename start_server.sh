@@ -1,31 +1,24 @@
 #!/bin/bash
-# Start CLAT Preparation Server
-# This script launches the unified server from the reorganized structure
 
-cd "$(dirname "$0")"
+# Start unified server with venv
 
-echo "Starting CLAT Preparation Server..."
-echo "Server directory: $(pwd)"
-echo ""
+cd /Users/arvind/clat_preparation
 
-# Activate virtual environment
-if [ ! -d "venv" ]; then
-    echo "❌ Virtual environment not found. Please create it first:"
-    echo "   python3 -m venv venv"
-    echo "   source venv/bin/activate"
-    echo "   pip install -r requirements.txt"
-    exit 1
-fi
+# Kill any existing server process
+lsof -ti:8001 | xargs kill -9 2>/dev/null
 
-source venv/bin/activate
-echo "✅ Virtual environment activated"
-echo ""
+# Activate venv and start server
+source venv_clat/bin/activate
+nohup python3 server/unified_server.py > /tmp/server.log 2>&1 &
 
-# Check if running with authentication or not
-if [ "$1" = "--no-auth" ]; then
-    echo "⚠️  Starting WITHOUT authentication"
-    python3 -u server/unified_server.py --port 8001 --no-auth
+sleep 2
+
+# Check if server started
+if curl -s http://localhost:8001/api/test >/dev/null 2>&1; then
+    echo "✅ Server started successfully on http://localhost:8001"
+    echo "📋 Logs: tail -f /tmp/server.log"
 else
-    echo "🔒 Starting WITH Google OAuth authentication"
-    python3 -u server/unified_server.py --port 8001
+    echo "❌ Server failed to start. Check logs:"
+    tail -20 /tmp/server.log
+    exit 1
 fi

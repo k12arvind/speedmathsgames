@@ -6,6 +6,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CLAT GK">
+    <!-- Prevent browser caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>CLAT GK Revision Dashboard - Comprehensive</title>
     <style>
         * {
@@ -1000,6 +1004,32 @@
                 </button>
             `;
 
+            // Create Assessment button (check status asynchronously)
+            const assessmentButtonId = `assessment-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
+            const testButtonId = `test-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
+
+            const assessmentButton = `
+                <button id="${assessmentButtonId}" class="btn btn-warning"
+                        onclick="createAssessment('${pdf.filename}', '${pdf.source}', '${pdf.week}')"
+                        style="background: #ff9800; color: white;">
+                    📝 Create Assessment
+                </button>
+            `;
+
+            const testButton = `
+                <button id="${testButtonId}" class="btn btn-primary"
+                        onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')"
+                        disabled style="opacity: 0.5; cursor: not-allowed;">
+                    📝 Test
+                </button>
+            `;
+
+            // Store button info for later status check (after DOM is ready)
+            // We'll check status after the HTML is inserted into the DOM
+            setTimeout(() => {
+                checkAssessmentStatus(pdf.filename, assessmentButtonId, testButtonId, canChunk, pdf.exists_in_db);
+            }, 0);
+
             return `
                 <tr>
                     <td class="${pdfNameClass}" style="${pdfNameStyle}">${pdf.filename}${pageInfo}</td>
@@ -1013,9 +1043,8 @@
                     <td>
                         <div class="action-buttons">
                             ${chunkButton}
-                            <button class="btn btn-primary" onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')" ${!pdf.exists_in_db ? 'disabled' : ''}>
-                                📝 Test
-                            </button>
+                            ${assessmentButton}
+                            ${testButton}
                             <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background: #3b82f6;">
                                 📄 View PDF
                             </button>
@@ -1158,6 +1187,111 @@
 
             // Redirect to PDF chunker with pre-filled filepath
             window.location.href = `pdf-chunker.html?filepath=${encodeURIComponent(filepath)}`;
+        }
+
+        // Check assessment status for a PDF
+        async function checkAssessmentStatus(pdfId, assessmentButtonId, testButtonId, needsChunking, existsInDb) {
+            try {
+                // Add timestamp to prevent caching
+                const cacheBuster = `?_=${Date.now()}`;
+                const response = await fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(pdfId)}${cacheBuster}`);
+                const status = await response.json();
+
+                const assessmentButton = document.getElementById(assessmentButtonId);
+                const testButton = document.getElementById(testButtonId);
+
+                if (!assessmentButton || !testButton) return;
+
+                // Logic:
+                // 1. If needs chunking (chunk button active) -> Both buttons disabled
+                // 2. If existsInDb=true (Processed) OR assessments complete -> Create Assessment disabled, Test enabled
+                // 3. If assessments in progress -> Both disabled
+                // 4. If no assessments and not chunking needed -> Create Assessment enabled, Test disabled
+
+                if (needsChunking) {
+                    // Chunk button is active - disable both
+                    assessmentButton.disabled = true;
+                    assessmentButton.style.background = '#9e9e9e';
+                    assessmentButton.style.cursor = 'not-allowed';
+                    assessmentButton.style.opacity = '0.5';
+                    assessmentButton.innerText = '📝 Create Assessment';
+
+                    testButton.disabled = true;
+                    testButton.style.opacity = '0.5';
+                    testButton.style.cursor = 'not-allowed';
+                } else if (existsInDb || status.all_complete) {
+                    // Assessments exist (Processed status) or assessment complete - disable Create Assessment, enable Test
+                    if (status.total_cards > 0) {
+                        assessmentButton.innerText = `✅ Assessments (${status.total_cards} cards)`;
+                    } else {
+                        assessmentButton.innerText = `✅ Assessments Created`;
+                    }
+                    assessmentButton.disabled = true;
+                    assessmentButton.style.background = '#9e9e9e';
+                    assessmentButton.style.cursor = 'not-allowed';
+                    assessmentButton.style.opacity = '0.6';
+
+                    testButton.disabled = false;
+                    testButton.style.opacity = '1';
+                    testButton.style.cursor = 'pointer';
+                } else if (status.has_assessments) {
+                    // Partial assessment - both disabled
+                    assessmentButton.innerText = `⏳ Creating... (${status.completed_chunks}/${status.total_chunks})`;
+                    assessmentButton.disabled = true;
+                    assessmentButton.style.background = '#9e9e9e';
+                    assessmentButton.style.cursor = 'not-allowed';
+                    assessmentButton.style.opacity = '0.6';
+
+                    testButton.disabled = true;
+                    testButton.style.opacity = '0.5';
+                    testButton.style.cursor = 'not-allowed';
+                } else {
+                    // No assessments and no chunking needed - Create Assessment enabled, Test disabled
+                    assessmentButton.disabled = false;
+                    assessmentButton.style.background = '#ff9800';
+                    assessmentButton.style.cursor = 'pointer';
+                    assessmentButton.style.opacity = '1';
+
+                    testButton.disabled = true;
+                    testButton.style.opacity = '0.5';
+                    testButton.style.cursor = 'not-allowed';
+                }
+            } catch (error) {
+                console.error('Failed to check assessment status:', error);
+            }
+        }
+
+        // Create assessment for a PDF
+        async function createAssessment(pdfId, source, week) {
+            if (!confirm(`Create assessments for "${pdfId}"?\n\nThis will:\n1. Process the PDF topic-by-topic\n2. Generate flashcards using Claude AI\n3. Import cards to Anki\n\nThis may take 5-15 minutes.`)) {
+                return;
+            }
+
+            try {
+                // Start assessment creation
+                const response = await fetch(`${API_BASE}/api/create-assessment`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        pdf_id: pdfId,
+                        source: source,
+                        week: week
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.error) {
+                    alert(`Failed to start assessment creation: ${result.error}`);
+                    return;
+                }
+
+                // Open progress page
+                window.location.href = `assessment-progress.html?job_id=${result.job_id}`;
+
+            } catch (error) {
+                alert(`Error starting assessment creation: ${error.message}`);
+            }
         }
 
         // View details
