@@ -236,6 +236,16 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def get_current_user(self):
         """Get current user from session cookie."""
+        # If auth is disabled (dev mode), return a default user
+        if self.PUBLIC_PAGES == ['*']:
+            return {
+                'user_id': 'saanvi',
+                'email': 'saanvi@speedmathsgames.com',
+                'name': 'Saanvi',
+                'picture': None,
+                'role': 'admin'
+            }
+        
         if not self.user_db:
             return None
 
