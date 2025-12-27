@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Analysis - CLAT Preparation</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-input: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #334155;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-yellow: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-pink: #ec4899;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 { font-size: 20px; font-weight: 700; color: white; }
+
+        .header-nav {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            padding: 8px 14px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover { background: rgba(255,255,255,0.3); }
+
+        /* Container */
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Stats Cards */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: transparent;
+            color: var(--text-secondary);
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--accent-yellow);
+            color: var(--bg-dark);
+        }
+
+        .tab-btn:hover:not(.active) { background: var(--bg-card); }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Form Styles */
+        .form-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .form-group { display: flex; flex-direction: column; gap: 4px; }
+
+        .form-group label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 10px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-yellow);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 60px; }
+
+        /* Section Entry - Compact Grid */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .section-card {
+            background: var(--bg-input);
+            border-radius: 8px;
+            padding: 12px;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .section-card.english { border-color: #3B82F6; }
+        .section-card.current-affairs { border-color: #8B5CF6; }
+        .section-card.legal { border-color: #10B981; }
+        .section-card.logical { border-color: #F59E0B; }
+        .section-card.quant { border-color: #EF4444; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .section-inputs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+        }
+
+        .mini-input {
+            padding: 6px 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-size: 12px;
+            width: 100%;
+        }
+
+        .mini-input::placeholder { color: var(--text-muted); font-size: 10px; }
+
+        .section-feedback {
+            margin-top: 8px;
+        }
+
+        .section-feedback textarea {
+            width: 100%;
+            padding: 6px 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-size: 11px;
+            resize: none;
+            height: 40px;
+        }
+
+        /* Totals Summary */
+        .totals-summary {
+            margin-top: 20px;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-radius: 10px;
+            border: 1px solid var(--accent-yellow);
+        }
+
+        .totals-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--accent-yellow);
+        }
+
+        .totals-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .total-item {
+            text-align: center;
+            padding: 12px;
+            background: var(--bg-card);
+            border-radius: 8px;
+        }
+
+        .total-item.total-score {
+            background: linear-gradient(135deg, var(--accent-yellow) 0%, #d97706 100%);
+        }
+
+        .total-item.total-score .total-value,
+        .total-item.total-score .total-label,
+        .total-item.total-score .total-sub {
+            color: var(--bg-dark) !important;
+        }
+
+        .total-value {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .total-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .total-sub {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Reflection Section */
+        .reflection-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .reflection-box {
+            background: var(--bg-input);
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .reflection-box h4 {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .reflection-box textarea {
+            width: 100%;
+            height: 80px;
+            padding: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 13px;
+            resize: none;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent-yellow);
+            color: var(--bg-dark);
+        }
+
+        .btn-primary:hover { background: #e09000; }
+
+        .btn-secondary {
+            background: var(--bg-input);
+            color: var(--text-primary);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            margin-top: 16px;
+        }
+
+        /* Table View */
+        .table-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .mock-count-selector {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .mock-count-selector label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .mock-count-selector select {
+            padding: 6px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 13px;
+        }
+
+        /* Compact Analysis Table */
+        .analysis-table-container {
+            overflow-x: auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+        }
+
+        .analysis-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        .analysis-table th, .analysis-table td {
+            padding: 8px 10px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .analysis-table th {
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 10px;
+            position: sticky;
+            top: 0;
+        }
+
+        .analysis-table tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+        .analysis-table .mock-name {
+            text-align: left;
+            font-weight: 600;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .analysis-table .score-cell {
+            font-weight: 600;
+        }
+
+        .analysis-table .section-header-cell {
+            background: var(--bg-dark);
+            font-size: 11px;
+        }
+
+        .score-good { color: var(--accent-green); }
+        .score-avg { color: var(--accent-yellow); }
+        .score-bad { color: var(--accent-red); }
+
+        .feeling-emoji { font-size: 16px; }
+
+        .action-btn {
+            padding: 4px 8px;
+            background: var(--bg-input);
+            border: none;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .action-btn:hover { background: var(--accent-yellow); color: var(--bg-dark); }
+        .action-btn.delete:hover { background: var(--accent-red); color: white; }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            background: var(--accent-green);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .toast.show { opacity: 1; transform: translateY(0); }
+        .toast.error { background: var(--accent-red); }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sections-grid { grid-template-columns: repeat(3, 1fr); }
+            .stats-row { grid-template-columns: repeat(3, 1fr); }
+            .totals-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .sections-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .totals-grid { grid-template-columns: repeat(2, 1fr); }
+            .reflection-row { grid-template-columns: 1fr; }
+            .header-nav { display: none; }
+            .total-value { font-size: 22px; }
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid var(--bg-input);
+            border-top-color: var(--accent-yellow);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 12px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Expandable Row */
+        .expandable-content {
+            display: none;
+            padding: 12px 16px;
+            background: var(--bg-input);
+        }
+
+        .expandable-content.show { display: block; }
+
+        .feedback-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .feedback-item {
+            font-size: 11px;
+        }
+
+        .feedback-item strong {
+            display: block;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .reflection-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .reflection-item {
+            font-size: 11px;
+        }
+
+        .reflection-item strong {
+            color: var(--accent-yellow);
+            display: block;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>📊 Mock Analysis Dashboard</h1>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-btn">🏠 Home</a>
+                <a href="comprehensive_dashboard.html" class="nav-btn">📚 GK Practice</a>
+                <a href="diary.html" class="nav-btn">📔 Daily Diary</a>
+                <a href="math_settings.html" class="nav-btn">🧮 Math</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Stats Row -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-value" id="stat-total" style="color: var(--accent-yellow)">-</div>
+                <div class="stat-label">Total Mocks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-avg" style="color: var(--accent-blue)">-</div>
+                <div class="stat-label">Avg Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-best" style="color: var(--accent-green)">-</div>
+                <div class="stat-label">Best Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-accuracy" style="color: var(--accent-purple)">-</div>
+                <div class="stat-label">Avg Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-trend" style="color: var(--accent-yellow)">-</div>
+                <div class="stat-label">Trend</div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('table')">📋 View Mocks</button>
+            <button class="tab-btn" onclick="switchTab('entry')">➕ Log New Mock</button>
+        </div>
+
+        <!-- Table View Tab -->
+        <div class="tab-content active" id="tab-table">
+            <div class="table-controls">
+                <div class="mock-count-selector">
+                    <label>Show last</label>
+                    <select id="mockCount" onchange="loadMocksTable()">
+                        <option value="7">7 mocks</option>
+                        <option value="14">14 mocks</option>
+                        <option value="21">21 mocks</option>
+                        <option value="28">28 mocks</option>
+                        <option value="50">50 mocks</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="switchTab('entry')">➕ Log New Mock</button>
+            </div>
+
+            <div class="analysis-table-container">
+                <table class="analysis-table" id="mocksTable">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" style="width: 80px;">Date</th>
+                            <th rowspan="2" style="min-width: 120px;">Mock Name</th>
+                            <th colspan="3" class="section-header-cell" style="background: #3B82F6; color: white;">📖 English</th>
+                            <th colspan="3" class="section-header-cell" style="background: #8B5CF6; color: white;">📰 CA/GK</th>
+                            <th colspan="3" class="section-header-cell" style="background: #10B981; color: white;">⚖️ Legal</th>
+                            <th colspan="3" class="section-header-cell" style="background: #F59E0B; color: white;">🧩 Logical</th>
+                            <th colspan="3" class="section-header-cell" style="background: #EF4444; color: white;">🔢 Quant</th>
+                            <th rowspan="2">Total</th>
+                            <th rowspan="2">%</th>
+                            <th rowspan="2">😊</th>
+                            <th rowspan="2" style="width: 60px;">Actions</th>
+                        </tr>
+                        <tr>
+                            <th>A</th><th>C</th><th>Sc</th>
+                            <th>A</th><th>C</th><th>Sc</th>
+                            <th>A</th><th>C</th><th>Sc</th>
+                            <th>A</th><th>C</th><th>Sc</th>
+                            <th>A</th><th>C</th><th>Sc</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mocksTableBody">
+                        <tr><td colspan="22" class="loading"><div class="loading-spinner"></div>Loading mocks...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Entry Form Tab -->
+        <div class="tab-content" id="tab-entry">
+            <form id="mockForm" onsubmit="saveMock(event)">
+                <!-- Basic Info -->
+                <div class="form-card">
+                    <div class="form-title">📝 Mock Details</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Mock Name *</label>
+                            <input type="text" id="mockName" placeholder="e.g., CL Full Mock 5" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Source</label>
+                            <select id="mockSource">
+                                <option value="">Select source...</option>
+                                <option value="Career Launcher">Career Launcher</option>
+                                <option value="Legal Edge">Legal Edge</option>
+                                <option value="Unacademy">Unacademy</option>
+                                <option value="Self-made">Self-made</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Date *</label>
+                            <input type="date" id="mockDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Total Questions</label>
+                            <input type="number" id="totalQuestions" placeholder="150" value="150" min="1" oninput="updateTotalQuestionsDisplay()">
+                        </div>
+                        <div class="form-group">
+                            <label>Time Taken (min)</label>
+                            <input type="number" id="timeTaken" placeholder="120">
+                        </div>
+                        <div class="form-group">
+                            <label>Difficulty (1-5)</label>
+                            <select id="difficulty">
+                                <option value="">Rate difficulty...</option>
+                                <option value="1">1 - Very Easy</option>
+                                <option value="2">2 - Easy</option>
+                                <option value="3">3 - Moderate</option>
+                                <option value="4">4 - Hard</option>
+                                <option value="5">5 - Very Hard</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Overall Feeling</label>
+                            <select id="feeling">
+                                <option value="">How did it go?</option>
+                                <option value="confident">😄 Confident</option>
+                                <option value="average">😐 Average</option>
+                                <option value="struggled">😟 Struggled</option>
+                                <option value="disaster">😫 Disaster</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section-wise Entry -->
+                <div class="form-card">
+                    <div class="form-title">📊 Section-wise Performance</div>
+                    <div class="sections-grid" id="sectionsGrid">
+                        <!-- Sections will be dynamically generated -->
+                    </div>
+                    
+                    <!-- Auto-calculated Totals -->
+                    <div class="totals-summary" id="totalsSummary">
+                        <div class="totals-title">📈 Auto-Calculated Totals</div>
+                        <div class="totals-grid">
+                            <div class="total-item">
+                                <div class="total-value" id="totalAttempted">0</div>
+                                <div class="total-label">Attempted</div>
+                                <div class="total-sub" id="totalAttemptedMax">/150</div>
+                            </div>
+                            <div class="total-item">
+                                <div class="total-value" id="totalCorrect" style="color: var(--accent-green);">0</div>
+                                <div class="total-label">Correct</div>
+                            </div>
+                            <div class="total-item">
+                                <div class="total-value" id="totalIncorrect" style="color: var(--accent-red);">0</div>
+                                <div class="total-label">Incorrect</div>
+                            </div>
+                            <div class="total-item total-score">
+                                <div class="total-value" id="totalScore" style="color: var(--accent-yellow);">0</div>
+                                <div class="total-label">Final Score</div>
+                                <div class="total-sub" id="totalScoreMax">/150</div>
+                            </div>
+                            <div class="total-item">
+                                <div class="total-value" id="totalAccuracy" style="color: var(--accent-purple);">0%</div>
+                                <div class="total-label">Accuracy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Self Reflection -->
+                <div class="form-card">
+                    <div class="form-title">💭 Self Reflection</div>
+                    <div class="reflection-row">
+                        <div class="reflection-box">
+                            <h4>✅ What Went Well</h4>
+                            <textarea id="whatWentWell" placeholder="Things you did well in this mock..."></textarea>
+                        </div>
+                        <div class="reflection-box">
+                            <h4>🔧 Areas to Improve</h4>
+                            <textarea id="areasToImprove" placeholder="What needs more work..."></textarea>
+                        </div>
+                        <div class="reflection-box">
+                            <h4>💡 Key Learnings</h4>
+                            <textarea id="keyLearnings" placeholder="Important takeaways from this mock..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear Form</button>
+                    <button type="submit" class="btn btn-primary">💾 Save Mock</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        const API_BASE = '/api/mocks';
+        let sectionConfig = [];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
+            document.getElementById('mockDate').value = new Date().toISOString().split('T')[0];
+            await loadSectionConfig();
+            await loadStats();
+            await loadMocksTable();
+        });
+
+        // Tab Switching
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.tab-btn[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(`tab-${tab}`).classList.add('active');
+        }
+
+        // Load Section Config
+        async function loadSectionConfig() {
+            try {
+                const response = await fetch(`${API_BASE}/config`);
+                const data = await response.json();
+                sectionConfig = data.sections || [];
+                renderSectionInputs();
+            } catch (e) {
+                console.error('Error loading config:', e);
+                // Use default sections
+                sectionConfig = [
+                    {section_name: 'English', default_questions: 28, default_max_score: 28, color: '#3B82F6', icon: '📖'},
+                    {section_name: 'Current Affairs', default_questions: 35, default_max_score: 35, color: '#8B5CF6', icon: '📰'},
+                    {section_name: 'Legal Reasoning', default_questions: 35, default_max_score: 35, color: '#10B981', icon: '⚖️'},
+                    {section_name: 'Logical Reasoning', default_questions: 28, default_max_score: 28, color: '#F59E0B', icon: '🧩'},
+                    {section_name: 'Quantitative', default_questions: 14, default_max_score: 14, color: '#EF4444', icon: '🔢'}
+                ];
+                renderSectionInputs();
+            }
+        }
+
+        // Render Section Inputs
+        function renderSectionInputs() {
+            const grid = document.getElementById('sectionsGrid');
+            const classMap = {
+                'English': 'english',
+                'Current Affairs': 'current-affairs',
+                'Legal Reasoning': 'legal',
+                'Logical Reasoning': 'logical',
+                'Quantitative': 'quant'
+            };
+
+            grid.innerHTML = sectionConfig.map((s, i) => `
+                <div class="section-card ${classMap[s.section_name] || ''}">
+                    <div class="section-header">
+                        <span>${s.icon || '📝'}</span>
+                        <span>${s.section_name}</span>
+                    </div>
+                    <div class="section-inputs">
+                        <input type="number" class="mini-input section-input" id="sec${i}_attempted" placeholder="Attempted" min="0" oninput="calculateTotals()">
+                        <input type="number" class="mini-input section-input" id="sec${i}_correct" placeholder="Correct" min="0" oninput="calculateTotals()">
+                        <input type="number" class="mini-input section-input" id="sec${i}_incorrect" placeholder="Incorrect" min="0" oninput="calculateTotals()">
+                        <input type="number" class="mini-input section-input" id="sec${i}_score" placeholder="Score" step="0.25" oninput="calculateTotals()">
+                        <input type="number" class="mini-input" id="sec${i}_time" placeholder="Time (min)" min="0" style="grid-column: span 2;">
+                    </div>
+                    <div class="section-feedback">
+                        <textarea id="sec${i}_feedback" placeholder="Section notes..."></textarea>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Initial calculation
+            calculateTotals();
+        }
+
+        // Update total questions display
+        function updateTotalQuestionsDisplay() {
+            const totalQ = parseInt(document.getElementById('totalQuestions').value) || 150;
+            document.getElementById('totalAttemptedMax').textContent = '/' + totalQ;
+            document.getElementById('totalScoreMax').textContent = '/' + totalQ;
+        }
+
+        // Auto-calculate totals from section data
+        function calculateTotals() {
+            let totalAttempted = 0;
+            let totalCorrect = 0;
+            let totalIncorrect = 0;
+            let totalScore = 0;
+            let hasScoreInput = false;
+
+            sectionConfig.forEach((s, i) => {
+                const attempted = parseInt(document.getElementById(`sec${i}_attempted`)?.value) || 0;
+                const correct = parseInt(document.getElementById(`sec${i}_correct`)?.value) || 0;
+                const incorrect = parseInt(document.getElementById(`sec${i}_incorrect`)?.value) || 0;
+                const scoreInput = document.getElementById(`sec${i}_score`)?.value;
+                
+                totalAttempted += attempted;
+                totalCorrect += correct;
+                totalIncorrect += incorrect;
+                
+                // If score is entered, use it; otherwise calculate from correct/incorrect
+                if (scoreInput !== '' && !isNaN(parseFloat(scoreInput))) {
+                    totalScore += parseFloat(scoreInput);
+                    hasScoreInput = true;
+                } else {
+                    // CLAT scoring: +1 for correct, -0.25 for incorrect
+                    totalScore += correct - (0.25 * incorrect);
+                }
+            });
+
+            // Update UI
+            document.getElementById('totalAttempted').textContent = totalAttempted;
+            document.getElementById('totalCorrect').textContent = totalCorrect;
+            document.getElementById('totalIncorrect').textContent = totalIncorrect;
+            document.getElementById('totalScore').textContent = totalScore.toFixed(totalScore % 1 === 0 ? 0 : 2);
+            
+            // Calculate accuracy
+            const accuracy = totalAttempted > 0 ? (totalCorrect / totalAttempted * 100) : 0;
+            document.getElementById('totalAccuracy').textContent = accuracy.toFixed(1) + '%';
+            
+            // Update max display
+            updateTotalQuestionsDisplay();
+        }
+
+        // Load Stats
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_BASE}/stats`);
+                const data = await response.json();
+                const stats = data.stats || {};
+
+                document.getElementById('stat-total').textContent = stats.total_mocks || 0;
+                document.getElementById('stat-avg').textContent = stats.average_score ? stats.average_score.toFixed(1) : '-';
+                document.getElementById('stat-best').textContent = stats.best_score || '-';
+                document.getElementById('stat-accuracy').textContent = stats.avg_accuracy ? stats.avg_accuracy.toFixed(0) + '%' : '-';
+                
+                const trendEmoji = {'up': '📈', 'down': '📉', 'stable': '➡️'};
+                document.getElementById('stat-trend').textContent = trendEmoji[stats.trend] || '-';
+            } catch (e) {
+                console.error('Error loading stats:', e);
+            }
+        }
+
+        // Load Mocks Table
+        async function loadMocksTable() {
+            const limit = document.getElementById('mockCount').value;
+            const tbody = document.getElementById('mocksTableBody');
+            tbody.innerHTML = '<tr><td colspan="22" class="loading"><div class="loading-spinner"></div>Loading...</td></tr>';
+
+            try {
+                const response = await fetch(`${API_BASE}/table?limit=${limit}`);
+                const data = await response.json();
+                const mocks = data.mocks || [];
+
+                if (mocks.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="22" style="text-align:center; padding:40px; color:var(--text-muted);">No mocks logged yet. Click "Log New Mock" to start tracking!</td></tr>';
+                    return;
+                }
+
+                const feelingEmoji = {'confident': '😄', 'average': '😐', 'struggled': '😟', 'disaster': '😫'};
+                const sectionOrder = ['English', 'Current Affairs', 'Legal Reasoning', 'Logical Reasoning', 'Quantitative'];
+
+                tbody.innerHTML = mocks.map(mock => {
+                    // Create section map for easy lookup
+                    const sectionMap = {};
+                    (mock.sections || []).forEach(s => sectionMap[s.section_name] = s);
+
+                    const sectionCells = sectionOrder.map(name => {
+                        const s = sectionMap[name] || {};
+                        return `
+                            <td>${s.questions_attempted || '-'}</td>
+                            <td>${s.questions_correct || '-'}</td>
+                            <td class="score-cell">${s.section_score != null ? s.section_score : '-'}</td>
+                        `;
+                    }).join('');
+
+                    const scoreClass = mock.score_percentage >= 70 ? 'score-good' : mock.score_percentage >= 50 ? 'score-avg' : 'score-bad';
+                    const dateStr = new Date(mock.mock_date + 'T00:00:00').toLocaleDateString('en-IN', {day: '2-digit', month: 'short'});
+
+                    return `
+                        <tr data-mock-id="${mock.mock_id}">
+                            <td>${dateStr}</td>
+                            <td class="mock-name" title="${mock.mock_name}">${mock.mock_name}</td>
+                            ${sectionCells}
+                            <td class="score-cell ${scoreClass}">${mock.total_score || '-'}</td>
+                            <td class="${scoreClass}">${mock.score_percentage || '-'}%</td>
+                            <td class="feeling-emoji">${feelingEmoji[mock.overall_feeling] || '-'}</td>
+                            <td>
+                                <button class="action-btn" onclick="viewMock(${mock.mock_id})" title="View Details">👁️</button>
+                                <button class="action-btn delete" onclick="deleteMock(${mock.mock_id})" title="Delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr class="expandable-row" id="expand-${mock.mock_id}">
+                            <td colspan="22">
+                                <div class="expandable-content" id="content-${mock.mock_id}"></div>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+
+            } catch (e) {
+                console.error('Error loading mocks:', e);
+                tbody.innerHTML = '<tr><td colspan="22" style="text-align:center; padding:40px; color:var(--accent-red);">Error loading mocks. Please try again.</td></tr>';
+            }
+        }
+
+        // View Mock Details
+        async function viewMock(mockId) {
+            const content = document.getElementById(`content-${mockId}`);
+            
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/${mockId}`);
+                const data = await response.json();
+                const mock = data.mock;
+
+                if (!mock) {
+                    showToast('Mock not found', true);
+                    return;
+                }
+
+                const sectionOrder = ['English', 'Current Affairs', 'Legal Reasoning', 'Logical Reasoning', 'Quantitative'];
+                const sectionMap = {};
+                (mock.sections || []).forEach(s => sectionMap[s.section_name] = s);
+
+                const feedbackHtml = sectionOrder.map(name => {
+                    const s = sectionMap[name] || {};
+                    return `
+                        <div class="feedback-item">
+                            <strong>${name}</strong>
+                            ${s.section_feedback || '<span style="color:var(--text-muted)">No notes</span>'}
+                        </div>
+                    `;
+                }).join('');
+
+                content.innerHTML = `
+                    <div class="feedback-grid">${feedbackHtml}</div>
+                    <div class="reflection-summary">
+                        <div class="reflection-item">
+                            <strong>✅ What Went Well</strong>
+                            ${mock.what_went_well || '<span style="color:var(--text-muted)">-</span>'}
+                        </div>
+                        <div class="reflection-item">
+                            <strong>🔧 Areas to Improve</strong>
+                            ${mock.areas_to_improve || '<span style="color:var(--text-muted)">-</span>'}
+                        </div>
+                        <div class="reflection-item">
+                            <strong>💡 Key Learnings</strong>
+                            ${mock.key_learnings || '<span style="color:var(--text-muted)">-</span>'}
+                        </div>
+                    </div>
+                `;
+
+                content.classList.add('show');
+
+            } catch (e) {
+                console.error('Error loading mock details:', e);
+                showToast('Error loading details', true);
+            }
+        }
+
+        // Save Mock
+        async function saveMock(event) {
+            event.preventDefault();
+
+            const totalQuestions = parseInt(document.getElementById('totalQuestions').value) || 150;
+            
+            const mockData = {
+                mock_name: document.getElementById('mockName').value,
+                mock_source: document.getElementById('mockSource').value,
+                mock_date: document.getElementById('mockDate').value,
+                total_questions: totalQuestions,
+                max_score: totalQuestions,  // Max score equals total questions for CLAT
+                time_taken_minutes: parseInt(document.getElementById('timeTaken').value) || null,
+                difficulty_rating: parseInt(document.getElementById('difficulty').value) || null,
+                overall_feeling: document.getElementById('feeling').value,
+                what_went_well: document.getElementById('whatWentWell').value,
+                areas_to_improve: document.getElementById('areasToImprove').value,
+                key_learnings: document.getElementById('keyLearnings').value,
+                sections: []
+            };
+
+            // Collect section data
+            sectionConfig.forEach((s, i) => {
+                const attempted = parseInt(document.getElementById(`sec${i}_attempted`).value) || 0;
+                const correct = parseInt(document.getElementById(`sec${i}_correct`).value) || 0;
+                const incorrect = parseInt(document.getElementById(`sec${i}_incorrect`).value) || 0;
+                const score = parseFloat(document.getElementById(`sec${i}_score`).value);
+                const time = parseInt(document.getElementById(`sec${i}_time`).value) || 0;
+                const feedback = document.getElementById(`sec${i}_feedback`).value;
+
+                // Calculate score if not provided (correct - 0.25*incorrect for CLAT)
+                const calculatedScore = !isNaN(score) ? score : (correct - 0.25 * incorrect);
+
+                mockData.sections.push({
+                    section_name: s.section_name,
+                    section_order: i + 1,
+                    questions_total: s.default_questions,
+                    questions_attempted: attempted,
+                    questions_correct: correct,
+                    questions_incorrect: incorrect,
+                    questions_unattempted: s.default_questions - attempted,
+                    section_score: calculatedScore,
+                    max_section_score: s.default_max_score,
+                    time_taken_minutes: time,
+                    section_feedback: feedback
+                });
+            });
+
+            try {
+                const response = await fetch(API_BASE, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(mockData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showToast('Mock saved successfully!');
+                    clearForm();
+                    switchTab('table');
+                    await loadStats();
+                    await loadMocksTable();
+                } else {
+                    showToast(result.error || 'Failed to save mock', true);
+                }
+            } catch (e) {
+                console.error('Error saving mock:', e);
+                showToast('Error saving mock', true);
+            }
+        }
+
+        // Delete Mock
+        async function deleteMock(mockId) {
+            if (!confirm('Are you sure you want to delete this mock?')) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/${mockId}`, {method: 'DELETE'});
+                const result = await response.json();
+
+                if (result.success) {
+                    showToast('Mock deleted');
+                    await loadStats();
+                    await loadMocksTable();
+                } else {
+                    showToast(result.error || 'Failed to delete', true);
+                }
+            } catch (e) {
+                console.error('Error deleting mock:', e);
+                showToast('Error deleting mock', true);
+            }
+        }
+
+        // Clear Form
+        function clearForm() {
+            document.getElementById('mockForm').reset();
+            document.getElementById('mockDate').value = new Date().toISOString().split('T')[0];
+            document.getElementById('totalQuestions').value = 150;
+            calculateTotals(); // Reset totals display
+        }
+
+        // Toast
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast' + (isError ? ' error' : '');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+    </script>
+</body>
+</html>
+

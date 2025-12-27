@@ -71,6 +71,12 @@ from server.assessment_jobs_db import AssessmentJobsDB
 # Import PDF spacing processor for automatic spacing
 from server.pdf_spacing_processor import PdfSpacingProcessor
 
+# Import diary database for daily diary feature
+from server.diary_db import DiaryDatabase
+
+# Import mock database for mock analysis feature
+from server.mock_db import MockDatabase
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -87,6 +93,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     annotation_manager = None
     pdf_chunker = None
     assessment_jobs_db = None
+    diary_db = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -392,6 +399,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # PDF Spacing API endpoints
             elif path.startswith('/api/pdf-spacing/'):
                 self.handle_pdf_spacing_get(path, query_params)
+            # Diary API endpoints
+            elif path.startswith('/api/diary/'):
+                self.handle_diary_get(path, query_params)
+            # Mock Analysis API endpoints
+            elif path.startswith('/api/mocks'):
+                self.handle_mocks_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -431,6 +444,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Assessment Creation API endpoints
             elif path.startswith('/api/create-assessment'):
                 self.handle_assessment_creation_post(path, data)
+            # Diary API endpoints
+            elif path.startswith('/api/diary/'):
+                self.handle_diary_post(path, data)
+            # Mock Analysis API endpoints
+            elif path.startswith('/api/mocks'):
+                self.handle_mocks_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -474,6 +493,70 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     self.send_header('Access-Control-Allow-Origin', '*')
                     self.end_headers()
                     self.send_json({'error': 'Invalid annotation ID'})
+            # DELETE /api/diary/entries/{date}
+            elif path.startswith('/api/diary/entries/'):
+                parts = path.split('/')
+                if len(parts) == 5:
+                    entry_date = parts[4]
+                    user_id = 'saanvi'  # Default user
+                    
+                    success = self.diary_db.delete_entry(entry_date, user_id)
+                    
+                    if success:
+                        self.send_response(200)
+                        self.send_header('Content-Type', 'application/json')
+                        self.send_header('Access-Control-Allow-Origin', '*')
+                        self.end_headers()
+                        self.send_json({
+                            'success': True,
+                            'message': f'Entry for {entry_date} deleted successfully'
+                        })
+                    else:
+                        self.send_response(404)
+                        self.send_header('Content-Type', 'application/json')
+                        self.send_header('Access-Control-Allow-Origin', '*')
+                        self.end_headers()
+                        self.send_json({'error': 'Entry not found'})
+                else:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.send_header('Access-Control-Allow-Origin', '*')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid date format'})
+            # DELETE /api/mocks/{id}
+            elif path.startswith('/api/mocks/'):
+                parts = path.split('/')
+                if len(parts) == 4:
+                    try:
+                        mock_id = int(parts[3])
+                        user_id = 'saanvi'
+                        
+                        success = self.mock_db.delete_mock(mock_id, user_id)
+                        
+                        if success:
+                            self.send_response(200)
+                            self.send_header('Content-Type', 'application/json')
+                            self.send_header('Access-Control-Allow-Origin', '*')
+                            self.end_headers()
+                            self.send_json({'success': True, 'message': 'Mock deleted'})
+                        else:
+                            self.send_response(404)
+                            self.send_header('Content-Type', 'application/json')
+                            self.send_header('Access-Control-Allow-Origin', '*')
+                            self.end_headers()
+                            self.send_json({'error': 'Mock not found'})
+                    except ValueError:
+                        self.send_response(400)
+                        self.send_header('Content-Type', 'application/json')
+                        self.send_header('Access-Control-Allow-Origin', '*')
+                        self.end_headers()
+                        self.send_json({'error': 'Invalid mock ID'})
+                else:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.send_header('Access-Control-Allow-Origin', '*')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid path'})
             else:
                 self.send_response(404)
                 self.send_header('Content-Type', 'application/json')
@@ -2214,6 +2297,317 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         except Exception as e:
             self.send_json({'error': str(e), 'trace': traceback.format_exc()})
 
+    # ============================================================
+    # DIARY API METHODS
+    # ============================================================
+
+    def handle_diary_get(self, path: str, query_params: dict):
+        """Handle diary API GET requests."""
+        user_id = query_params.get('user_id', ['saanvi'])[0]
+
+        # GET /api/diary/entries - List entries
+        if path == '/api/diary/entries':
+            start_date = query_params.get('start_date', [None])[0]
+            end_date = query_params.get('end_date', [None])[0]
+            limit = int(query_params.get('limit', ['30'])[0])
+
+            entries = self.diary_db.get_entries(
+                user_id=user_id,
+                start_date=start_date,
+                end_date=end_date,
+                limit=limit
+            )
+            self.send_json({'entries': entries})
+
+        # GET /api/diary/entries/{date} - Get single entry
+        elif path.startswith('/api/diary/entries/'):
+            entry_date = path.split('/')[-1]
+            entry = self.diary_db.get_entry(entry_date, user_id)
+            if entry:
+                self.send_json({'entry': entry})
+            else:
+                self.send_json({'entry': None, 'message': 'No entry for this date'})
+
+        # GET /api/diary/subjects - Get master subject list
+        elif path == '/api/diary/subjects':
+            active_only = query_params.get('active_only', ['true'])[0].lower() == 'true'
+            subjects = self.diary_db.get_all_subjects(active_only)
+            self.send_json({'subjects': subjects})
+
+        # GET /api/diary/streaks - Get all subject streaks
+        elif path == '/api/diary/streaks':
+            streaks = self.diary_db.get_streaks(user_id)
+            self.send_json({'streaks': streaks})
+
+        # GET /api/diary/neglected - Get neglected subjects
+        elif path == '/api/diary/neglected':
+            days = int(query_params.get('days', ['3'])[0])
+            neglected = self.diary_db.get_neglected_subjects(user_id, days)
+            self.send_json({'neglected': neglected})
+
+        # GET /api/diary/reminders - Get smart reminders
+        elif path == '/api/diary/reminders':
+            reminders = self.diary_db.generate_reminders(user_id)
+            self.send_json({'reminders': reminders})
+
+        # GET /api/diary/weekly-summary - Get weekly summary
+        elif path == '/api/diary/weekly-summary':
+            weeks_back = int(query_params.get('weeks_back', ['0'])[0])
+            summary = self.diary_db.get_weekly_summary(user_id, weeks_back)
+            self.send_json({'summary': summary})
+
+        # GET /api/diary/analytics - Get overall analytics
+        elif path == '/api/diary/analytics':
+            days = int(query_params.get('days', ['30'])[0])
+            analytics = self.diary_db.get_analytics(user_id, days)
+            self.send_json({'analytics': analytics})
+
+        # GET /api/diary/weekly-snapshot - Get detailed weekly snapshot
+        elif path == '/api/diary/weekly-snapshot':
+            weeks_back = int(query_params.get('weeks_back', ['0'])[0])
+            snapshot = self.diary_db.get_weekly_snapshot(user_id, weeks_back)
+            self.send_json({'snapshot': snapshot})
+
+        # GET /api/diary/date-range - Get analytics for custom date range
+        elif path == '/api/diary/date-range':
+            start_date = query_params.get('start_date', [None])[0]
+            end_date = query_params.get('end_date', [None])[0]
+            days = query_params.get('days', [None])[0]
+            
+            analytics = self.diary_db.get_date_range_analytics(
+                user_id=user_id,
+                start_date=start_date,
+                end_date=end_date,
+                days=int(days) if days else None
+            )
+            self.send_json({'analytics': analytics})
+
+        else:
+            self.send_json({'error': 'Unknown diary endpoint'})
+
+    def handle_diary_post(self, path: str, data: dict):
+        """Handle diary API POST requests."""
+        user_id = data.get('user_id', 'saanvi')
+
+        # POST /api/diary/entries - Create or update entry
+        if path == '/api/diary/entries':
+            entry_date = data.get('entry_date')
+            if not entry_date:
+                self.send_json({'error': 'entry_date is required'})
+                return
+
+            entry_id = self.diary_db.create_or_update_entry(
+                entry_date=entry_date,
+                user_id=user_id,
+                journal_text=data.get('journal_text'),
+                mood=data.get('mood'),
+                energy_level=data.get('energy_level'),
+                total_study_hours=data.get('total_study_hours'),
+                start_time=data.get('start_time'),
+                end_time=data.get('end_time'),
+                daily_goal=data.get('daily_goal'),
+                goal_achieved=data.get('goal_achieved')
+            )
+
+            self.send_json({
+                'success': True,
+                'entry_id': entry_id,
+                'message': f'Entry for {entry_date} saved'
+            })
+
+        # POST /api/diary/entries/{date}/subjects - Add subject to entry
+        elif '/subjects' in path and path.startswith('/api/diary/entries/'):
+            # Extract date from path: /api/diary/entries/2025-12-27/subjects
+            parts = path.split('/')
+            entry_date = parts[4]
+
+            # Get or create entry for this date
+            entry = self.diary_db.get_entry(entry_date, user_id)
+            if not entry:
+                entry_id = self.diary_db.create_or_update_entry(entry_date, user_id)
+            else:
+                entry_id = entry['entry_id']
+
+            subject_name = data.get('subject_name')
+            if not subject_name:
+                self.send_json({'error': 'subject_name is required'})
+                return
+
+            subject_id = self.diary_db.add_subject_to_entry(
+                entry_id=entry_id,
+                subject_name=subject_name,
+                time_spent_minutes=data.get('time_spent_minutes', 0),
+                topics_covered=data.get('topics_covered'),
+                confidence_level=data.get('confidence_level'),
+                difficulty_faced=data.get('difficulty_faced'),
+                pdf_ids=data.get('pdf_ids'),
+                anki_cards_reviewed=data.get('anki_cards_reviewed', 0)
+            )
+
+            self.send_json({
+                'success': True,
+                'subject_id': subject_id,
+                'message': f'{subject_name} logged for {entry_date}'
+            })
+
+        # POST /api/diary/subjects - Add new subject to master list
+        elif path == '/api/diary/subjects':
+            subject_name = data.get('subject_name')
+            if not subject_name:
+                self.send_json({'error': 'subject_name is required'})
+                return
+
+            try:
+                subject_id = self.diary_db.add_subject(
+                    subject_name=subject_name,
+                    category=data.get('category', 'other'),
+                    color=data.get('color', '#6B7280'),
+                    icon=data.get('icon', '📚'),
+                    target_hours_weekly=data.get('target_hours_weekly', 5)
+                )
+
+                self.send_json({
+                    'success': True,
+                    'subject_id': subject_id,
+                    'message': f'Subject {subject_name} added'
+                })
+            except Exception as e:
+                self.send_json({'error': f'Failed to add subject: {e}'})
+
+        # POST /api/diary/subjects/{id} - Update subject settings
+        elif path.startswith('/api/diary/subjects/') and not path.endswith('/subjects'):
+            subject_id = int(path.split('/')[-1])
+
+            success = self.diary_db.update_subject(
+                subject_id=subject_id,
+                **{k: v for k, v in data.items() if k != 'user_id'}
+            )
+
+            if success:
+                self.send_json({'success': True, 'message': 'Subject updated'})
+            else:
+                self.send_json({'error': 'Subject not found or no changes made'})
+
+        # POST /api/diary/reminders/{id}/dismiss - Dismiss a reminder
+        elif '/dismiss' in path:
+            parts = path.split('/')
+            reminder_id = int(parts[-2])
+
+            success = self.diary_db.dismiss_reminder(reminder_id)
+            self.send_json({
+                'success': success,
+                'message': 'Reminder dismissed' if success else 'Reminder not found'
+            })
+
+        # POST /api/diary/auto-log - Auto-log from external trigger
+        elif path == '/api/diary/auto-log':
+            date = data.get('date', datetime.now().strftime('%Y-%m-%d'))
+            subject_name = data.get('subject_name')
+
+            if not subject_name:
+                self.send_json({'error': 'subject_name is required'})
+                return
+
+            success = self.diary_db.auto_log_subject(
+                user_id=user_id,
+                date=date,
+                subject_name=subject_name,
+                pdf_id=data.get('pdf_id'),
+                minutes=data.get('minutes', 0),
+                anki_cards=data.get('anki_cards', 0)
+            )
+
+            self.send_json({
+                'success': success,
+                'message': f'Auto-logged {subject_name} for {date}'
+            })
+
+        else:
+            self.send_json({'error': 'Unknown diary endpoint'})
+
+    # ============================================================
+    # MOCK ANALYSIS API HANDLERS
+    # ============================================================
+
+    def handle_mocks_get(self, path: str, query_params: dict):
+        """Handle mock analysis API GET requests."""
+        user_id = query_params.get('user_id', ['saanvi'])[0]
+
+        # GET /api/mocks/stats - Overall statistics
+        if path == '/api/mocks/stats':
+            stats = self.mock_db.get_stats(user_id)
+            self.send_json({'stats': stats})
+
+        # GET /api/mocks/config - Get section configuration
+        elif path == '/api/mocks/config':
+            config = self.mock_db.get_section_config()
+            self.send_json({'sections': config})
+
+        # GET /api/mocks/list - Get list of mocks
+        elif path == '/api/mocks/list':
+            limit = int(query_params.get('limit', ['50'])[0])
+            offset = int(query_params.get('offset', ['0'])[0])
+            mocks = self.mock_db.get_mocks(user_id, limit, offset)
+            self.send_json({'mocks': mocks})
+
+        # GET /api/mocks/table - Get mocks with sections for table view
+        elif path == '/api/mocks/table':
+            limit = int(query_params.get('limit', ['7'])[0])
+            mocks = self.mock_db.get_mocks_with_sections(user_id, limit)
+            self.send_json({'mocks': mocks})
+
+        # GET /api/mocks/trends - Get section-wise trends
+        elif path == '/api/mocks/trends':
+            limit = int(query_params.get('limit', ['10'])[0])
+            trends = self.mock_db.get_section_trends(user_id, limit)
+            self.send_json({'trends': trends})
+
+        # GET /api/mocks/{id} - Get single mock with sections
+        elif path.startswith('/api/mocks/') and path != '/api/mocks/':
+            try:
+                mock_id = int(path.split('/')[-1])
+                mock = self.mock_db.get_mock(mock_id, user_id)
+                if mock:
+                    self.send_json({'mock': mock})
+                else:
+                    self.send_json({'error': 'Mock not found'})
+            except ValueError:
+                self.send_json({'error': 'Invalid mock ID'})
+
+        else:
+            self.send_json({'error': 'Unknown mocks endpoint'})
+
+    def handle_mocks_post(self, path: str, data: dict):
+        """Handle mock analysis API POST requests."""
+        user_id = data.get('user_id', 'saanvi')
+
+        # POST /api/mocks - Create new mock
+        if path == '/api/mocks':
+            try:
+                mock_id = self.mock_db.create_mock(data, user_id)
+                self.send_json({
+                    'success': True,
+                    'mock_id': mock_id,
+                    'message': 'Mock created successfully'
+                })
+            except Exception as e:
+                self.send_json({'error': f'Failed to create mock: {str(e)}'})
+
+        # POST /api/mocks/{id} - Update mock
+        elif path.startswith('/api/mocks/') and path != '/api/mocks/':
+            try:
+                mock_id = int(path.split('/')[-1])
+                success = self.mock_db.update_mock(mock_id, data, user_id)
+                if success:
+                    self.send_json({'success': True, 'message': 'Mock updated'})
+                else:
+                    self.send_json({'error': 'Mock not found or no changes made'})
+            except ValueError:
+                self.send_json({'error': 'Invalid mock ID'})
+
+        else:
+            self.send_json({'error': 'Unknown mocks endpoint'})
+
     def send_json(self, data: dict):
         """Send JSON response."""
         self.wfile.write(json.dumps(data).encode())
@@ -2255,6 +2649,14 @@ def main():
     # Initialize assessment jobs database
     UnifiedHandler.assessment_jobs_db = AssessmentJobsDB()
     print("✅ Assessment jobs database initialized")
+
+    # Initialize diary database
+    UnifiedHandler.diary_db = DiaryDatabase()
+    print("✅ Diary database initialized")
+    
+    # Initialize mock database
+    UnifiedHandler.mock_db = MockDatabase()
+    print("✅ Mock database initialized")
 
     # Initialize Anthropic client
     api_key = os.environ.get("ANTHROPIC_API_KEY")
@@ -2299,6 +2701,7 @@ def main():
     print(f"   • Assessment API (/api/assessment/*)")
     print(f"   • Math API (/api/math/*)")
     print(f"   • GK Dashboard API (/api/dashboard, /api/pdfs/*)")
+    print(f"   • Diary API (/api/diary/*)")
     if auth_enabled:
         print(f"   • Authentication (/auth/*)")
 
@@ -2313,6 +2716,7 @@ def main():
     print(f"   Math Practice:     http://localhost:{args.port}/math_practice.html")
     print(f"   Math Admin:        http://localhost:{args.port}/math_admin.html")
     print(f"   Math Analytics:    http://localhost:{args.port}/math_analytics.html")
+    print(f"   Daily Diary:       http://localhost:{args.port}/diary.html")
 
     print(f"\n⌨️  Press Ctrl+C to stop the server")
     print("="*70 + "\n")

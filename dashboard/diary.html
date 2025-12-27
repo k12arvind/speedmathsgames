@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Study Diary">
+    <title>Daily Study Diary - CLAT Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-purple: #a78bfa;
+            --accent-blue: #60a5fa;
+            --accent-green: #34d399;
+            --accent-yellow: #fbbf24;
+            --accent-red: #f87171;
+            --accent-pink: #f472b6;
+            --border-color: #475569;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a2e 100%);
+            min-height: 100vh;
+            color: var(--text-primary);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a78bfa 100%);
+            padding: 24px 20px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        /* Date Navigation */
+        .date-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 24px;
+            background: var(--bg-secondary);
+            padding: 16px 24px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .date-nav button {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .date-nav button:hover {
+            background: var(--accent-purple);
+            border-color: var(--accent-purple);
+        }
+
+        .current-date {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .date-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 24px;
+        }
+
+        @media (max-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        /* Journal Entry Form */
+        .journal-section {
+            margin-bottom: 24px;
+        }
+
+        .journal-textarea {
+            width: 100%;
+            min-height: 120px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 15px;
+            line-height: 1.6;
+            resize: vertical;
+        }
+
+        .journal-textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .journal-textarea:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+        }
+
+        /* Form Row */
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 14px;
+            color: var(--text-primary);
+            font-size: 15px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+        }
+
+        /* Mood Selector */
+        .mood-selector {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mood-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            background: var(--bg-card);
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mood-btn:hover {
+            transform: scale(1.1);
+            border-color: var(--accent-purple);
+        }
+
+        .mood-btn.selected {
+            border-color: var(--accent-purple);
+            background: rgba(167, 139, 250, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* Energy Slider */
+        .energy-slider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .energy-slider input[type="range"] {
+            flex: 1;
+            height: 8px;
+            -webkit-appearance: none;
+            background: var(--bg-card);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .energy-slider input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            background: var(--accent-purple);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .energy-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-purple);
+            min-width: 30px;
+            text-align: center;
+        }
+
+        /* Subjects Studied */
+        .subjects-section {
+            margin-top: 24px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .subject-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .subject-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateX(4px);
+        }
+
+        .subject-card.active {
+            border-color: var(--accent-green);
+            background: rgba(52, 211, 153, 0.1);
+        }
+
+        .subject-icon {
+            font-size: 28px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .subject-info {
+            flex: 1;
+        }
+
+        .subject-name {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .subject-time {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .subject-input {
+            width: 80px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 10px;
+            color: var(--text-primary);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Right Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Reminders Card */
+        .reminder-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            background: var(--bg-card);
+            border-radius: 10px;
+            border-left: 3px solid;
+            margin-bottom: 10px;
+        }
+
+        .reminder-item.high {
+            border-left-color: var(--accent-red);
+            background: rgba(248, 113, 113, 0.1);
+        }
+
+        .reminder-item.medium {
+            border-left-color: var(--accent-yellow);
+            background: rgba(251, 191, 36, 0.1);
+        }
+
+        .reminder-item.low {
+            border-left-color: var(--accent-blue);
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .reminder-icon {
+            font-size: 20px;
+        }
+
+        .reminder-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Streak Card */
+        .streak-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--bg-card);
+            border-radius: 10px;
+            margin-bottom: 8px;
+        }
+
+        .streak-icon {
+            font-size: 22px;
+        }
+
+        .streak-info {
+            flex: 1;
+        }
+
+        .streak-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .streak-days {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .streak-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .streak-badge.active {
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--accent-green);
+        }
+
+        .streak-badge.warning {
+            background: rgba(251, 191, 36, 0.2);
+            color: var(--accent-yellow);
+        }
+
+        .streak-badge.danger {
+            background: rgba(248, 113, 113, 0.2);
+            color: var(--accent-red);
+        }
+
+        /* Weekly Summary */
+        .summary-stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .summary-stat:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .summary-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-purple);
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-purple), #8b5cf6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(167, 139, 250, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-purple);
+        }
+
+        /* Goal Checkbox */
+        .goal-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-top: 16px;
+        }
+
+        .goal-checkbox {
+            width: 24px;
+            height: 24px;
+            accent-color: var(--accent-green);
+            cursor: pointer;
+        }
+
+        .goal-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 15px;
+        }
+
+        .goal-input:focus {
+            outline: none;
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-purple);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 16px 24px;
+            background: var(--accent-green);
+            color: white;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.error {
+            background: var(--accent-red);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        /* Subject Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.9);
+            transition: all 0.3s;
+        }
+
+        .modal-overlay.show .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .current-date {
+                font-size: 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .mood-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>📔 Daily Study Diary</h1>
+            <nav class="header-nav">
+                <button class="nav-btn" onclick="openWeeklySnapshot()" style="background: #ec4899; border-color: #db2777;">📅 Weekly Snapshot</button>
+                <button class="nav-btn" onclick="openDateRangeAnalytics()" style="background: #f59e0b; border-color: #d97706;">📊 Custom Analytics</button>
+                <a href="index.html" class="nav-btn">🏠 Home</a>
+                <a href="comprehensive_dashboard.html" class="nav-btn">📚 GK Practice</a>
+                <a href="math_settings.html" class="nav-btn" style="background: #8b5cf6; border-color: #7c3aed;">🧮 Math Practice</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Date Navigation -->
+        <div class="date-nav">
+            <button onclick="changeDate(-1)" title="Previous Day">←</button>
+            <div>
+                <div class="current-date" id="currentDate">Loading...</div>
+                <div class="date-subtitle" id="dateSubtitle"></div>
+            </div>
+            <button onclick="changeDate(1)" title="Next Day">→</button>
+            <button onclick="goToToday()" style="margin-left: 20px; width: auto; padding: 0 16px;">Today</button>
+        </div>
+
+        <div class="main-grid">
+            <!-- Left Column - Journal Entry -->
+            <div class="left-column">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>✍️ Today's Journal</h2>
+                        <span id="saveStatus" style="font-size: 13px; color: var(--text-secondary);"></span>
+                    </div>
+                    <div class="card-body">
+                        <!-- Journal Text -->
+                        <div class="journal-section">
+                            <textarea 
+                                class="journal-textarea" 
+                                id="journalText"
+                                placeholder="What did you study today? How did it go? Any challenges or wins to note?"
+                            ></textarea>
+                        </div>
+
+                        <!-- Mood & Energy -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Mood</label>
+                                <div class="mood-selector" id="moodSelector">
+                                    <button class="mood-btn" data-mood="great" title="Great">😄</button>
+                                    <button class="mood-btn" data-mood="good" title="Good">🙂</button>
+                                    <button class="mood-btn" data-mood="okay" title="Okay">😐</button>
+                                    <button class="mood-btn" data-mood="tired" title="Tired">😴</button>
+                                    <button class="mood-btn" data-mood="stressed" title="Stressed">😫</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Energy Level</label>
+                                <div class="energy-slider">
+                                    <input type="range" id="energyLevel" min="1" max="5" value="3">
+                                    <span class="energy-value" id="energyValue">3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Study Hours -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Study Hours</label>
+                                <input type="number" id="studyHours" min="0" max="16" step="0.5" placeholder="0">
+                            </div>
+                            <div class="form-group">
+                                <label>Start Time</label>
+                                <input type="time" id="startTime">
+                            </div>
+                            <div class="form-group">
+                                <label>End Time</label>
+                                <input type="time" id="endTime">
+                            </div>
+                        </div>
+
+                        <!-- Daily Goal -->
+                        <div class="goal-section">
+                            <input type="checkbox" class="goal-checkbox" id="goalAchieved">
+                            <input 
+                                type="text" 
+                                class="goal-input" 
+                                id="dailyGoal"
+                                placeholder="What's your goal for today?"
+                            >
+                        </div>
+
+                        <!-- Subjects Studied -->
+                        <div class="subjects-section">
+                            <h3 style="margin-bottom: 16px; font-size: 16px; color: var(--text-secondary);">
+                                📚 Subjects Studied
+                            </h3>
+                            <div class="subjects-grid" id="subjectsGrid">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Save Button -->
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" onclick="saveEntry()">
+                                💾 Save Entry
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Sidebar -->
+            <div class="sidebar">
+                <!-- Smart Reminders -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>⏰ Reminders</h2>
+                    </div>
+                    <div class="card-body" id="remindersContainer">
+                        <div class="loading">
+                            <div class="loading-spinner"></div>
+                            Loading reminders...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Streaks -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🔥 Streaks</h2>
+                    </div>
+                    <div class="card-body" id="streaksContainer">
+                        <div class="loading">
+                            <div class="loading-spinner"></div>
+                            Loading streaks...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Summary -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📊 This Week</h2>
+                    </div>
+                    <div class="card-body" id="weeklySummary">
+                        <div class="loading">
+                            <div class="loading-spinner"></div>
+                            Loading summary...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subject Detail Modal -->
+    <div class="modal-overlay" id="subjectModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalSubjectName">Subject Details</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label>Time Spent (minutes)</label>
+                    <input type="number" id="modalTimeSpent" min="0" max="480" value="30">
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label>Topics Covered</label>
+                    <input type="text" id="modalTopics" placeholder="e.g., Constitutional Law, Writs">
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label>Confidence Level (1-5)</label>
+                    <div class="energy-slider">
+                        <input type="range" id="modalConfidence" min="1" max="5" value="3">
+                        <span class="energy-value" id="modalConfidenceValue">3</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Difficulties Faced</label>
+                    <textarea 
+                        class="journal-textarea" 
+                        id="modalDifficulty"
+                        style="min-height: 80px;"
+                        placeholder="Any challenges or areas to revisit?"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveSubject()">Save Subject</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weekly Snapshot Modal -->
+    <div class="modal-overlay" id="weeklySnapshotModal">
+        <div class="modal" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3>📅 Weekly Snapshot</h3>
+                <button class="modal-close" onclick="closeWeeklySnapshot()">&times;</button>
+            </div>
+            <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+                <!-- Week Navigation -->
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 24px;">
+                    <button class="btn btn-secondary" onclick="changeWeek(-1)" style="padding: 8px 16px;">← Previous Week</button>
+                    <div style="text-align: center;">
+                        <div id="snapshotWeekTitle" style="font-size: 18px; font-weight: 700;"></div>
+                        <div id="snapshotWeekDates" style="font-size: 13px; color: var(--text-secondary);"></div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="changeWeek(1)" style="padding: 8px 16px;">Next Week →</button>
+                </div>
+
+                <!-- Week Summary Stats -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px;">
+                    <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                        <div id="snapshotTotalHours" style="font-size: 28px; font-weight: 700; color: var(--accent-purple);">0</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Total Hours</div>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                        <div id="snapshotDaysStudied" style="font-size: 28px; font-weight: 700; color: var(--accent-green);">0</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Days Studied</div>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                        <div id="snapshotGoals" style="font-size: 28px; font-weight: 700; color: var(--accent-yellow);">0</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Goals Met</div>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                        <div id="snapshotAvgHours" style="font-size: 28px; font-weight: 700; color: var(--accent-blue);">0</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Avg/Day</div>
+                    </div>
+                </div>
+
+                <!-- Day-by-Day Breakdown -->
+                <h4 style="margin-bottom: 12px; color: var(--text-secondary);">📆 Day by Day</h4>
+                <div id="snapshotDaysContainer" style="margin-bottom: 24px;"></div>
+
+                <!-- Subject Totals -->
+                <h4 style="margin-bottom: 12px; color: var(--text-secondary);">📚 Subject Totals</h4>
+                <div id="snapshotSubjectsContainer"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeWeeklySnapshot()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Date Range Analytics Modal -->
+    <div class="modal-overlay" id="dateRangeModal">
+        <div class="modal" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3>📊 Custom Analytics</h3>
+                <button class="modal-close" onclick="closeDateRangeModal()">&times;</button>
+            </div>
+            <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+                <!-- Date Range Selector -->
+                <div style="display: flex; gap: 16px; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label>Quick Select</label>
+                        <select id="dateRangeQuick" onchange="quickSelectDateRange()" style="width: 100%; padding: 10px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary);">
+                            <option value="7">Last 7 days</option>
+                            <option value="14">Last 14 days</option>
+                            <option value="30" selected>Last 30 days</option>
+                            <option value="60">Last 60 days</option>
+                            <option value="90">Last 90 days</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label>Start Date</label>
+                        <input type="date" id="dateRangeStart" style="width: 100%;">
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 150px;">
+                        <label>End Date</label>
+                        <input type="date" id="dateRangeEnd" style="width: 100%;">
+                    </div>
+                    <button class="btn btn-primary" onclick="loadDateRangeAnalytics()" style="padding: 10px 20px;">Apply</button>
+                </div>
+
+                <!-- Analytics Content -->
+                <div id="dateRangeContent">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                        Select a date range to view analytics
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeDateRangeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // State
+        let currentDate = new Date();
+        let subjects = [];
+        let currentEntry = null;
+        let selectedMood = null;
+        let activeSubject = null;
+
+        // API Base URL
+        const API_BASE = '/api/diary';
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeMoodSelector();
+            initializeSliders();
+            loadSubjects();
+            loadDate(currentDate);
+            loadReminders();
+            loadStreaks();
+            loadWeeklySummary();
+        });
+
+        // Date Navigation
+        function changeDate(delta) {
+            currentDate.setDate(currentDate.getDate() + delta);
+            loadDate(currentDate);
+        }
+
+        function goToToday() {
+            currentDate = new Date();
+            loadDate(currentDate);
+        }
+
+        function formatDate(date) {
+            return date.toISOString().split('T')[0];
+        }
+
+        function formatDisplayDate(date) {
+            const options = { weekday: 'long', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        function loadDate(date) {
+            const dateStr = formatDate(date);
+            document.getElementById('currentDate').textContent = formatDisplayDate(date);
+            
+            const today = new Date();
+            if (formatDate(date) === formatDate(today)) {
+                document.getElementById('dateSubtitle').textContent = 'Today';
+            } else {
+                const diffDays = Math.round((today - date) / (1000 * 60 * 60 * 24));
+                if (diffDays === 1) {
+                    document.getElementById('dateSubtitle').textContent = 'Yesterday';
+                } else if (diffDays === -1) {
+                    document.getElementById('dateSubtitle').textContent = 'Tomorrow';
+                } else if (diffDays > 0) {
+                    document.getElementById('dateSubtitle').textContent = `${diffDays} days ago`;
+                } else {
+                    document.getElementById('dateSubtitle').textContent = `In ${-diffDays} days`;
+                }
+            }
+
+            loadEntry(dateStr);
+        }
+
+        // Load Entry
+        async function loadEntry(dateStr) {
+            try {
+                const response = await fetch(`${API_BASE}/entries/${dateStr}`);
+                const data = await response.json();
+                
+                currentEntry = data.entry;
+                
+                if (currentEntry) {
+                    document.getElementById('journalText').value = currentEntry.journal_text || '';
+                    document.getElementById('studyHours').value = currentEntry.total_study_hours || '';
+                    document.getElementById('startTime').value = currentEntry.start_time || '';
+                    document.getElementById('endTime').value = currentEntry.end_time || '';
+                    document.getElementById('dailyGoal').value = currentEntry.daily_goal || '';
+                    document.getElementById('goalAchieved').checked = currentEntry.goal_achieved;
+                    document.getElementById('energyLevel').value = currentEntry.energy_level || 3;
+                    document.getElementById('energyValue').textContent = currentEntry.energy_level || 3;
+                    
+                    // Set mood
+                    selectedMood = currentEntry.mood;
+                    updateMoodButtons();
+                    
+                    // Update subjects
+                    updateSubjectsFromEntry();
+                } else {
+                    // Clear form for new entry
+                    clearForm();
+                }
+            } catch (error) {
+                console.error('Error loading entry:', error);
+                clearForm();
+            }
+        }
+
+        function clearForm() {
+            document.getElementById('journalText').value = '';
+            document.getElementById('studyHours').value = '';
+            document.getElementById('startTime').value = '';
+            document.getElementById('endTime').value = '';
+            document.getElementById('dailyGoal').value = '';
+            document.getElementById('goalAchieved').checked = false;
+            document.getElementById('energyLevel').value = 3;
+            document.getElementById('energyValue').textContent = '3';
+            selectedMood = null;
+            updateMoodButtons();
+            currentEntry = null;
+            renderSubjects();
+        }
+
+        // Mood Selector
+        function initializeMoodSelector() {
+            document.querySelectorAll('.mood-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    selectedMood = btn.dataset.mood;
+                    updateMoodButtons();
+                });
+            });
+        }
+
+        function updateMoodButtons() {
+            document.querySelectorAll('.mood-btn').forEach(btn => {
+                btn.classList.toggle('selected', btn.dataset.mood === selectedMood);
+            });
+        }
+
+        // Sliders
+        function initializeSliders() {
+            document.getElementById('energyLevel').addEventListener('input', (e) => {
+                document.getElementById('energyValue').textContent = e.target.value;
+            });
+
+            document.getElementById('modalConfidence').addEventListener('input', (e) => {
+                document.getElementById('modalConfidenceValue').textContent = e.target.value;
+            });
+        }
+
+        // Load Subjects
+        async function loadSubjects() {
+            try {
+                const response = await fetch(`${API_BASE}/subjects`);
+                const data = await response.json();
+                subjects = data.subjects || [];
+                renderSubjects();
+            } catch (error) {
+                console.error('Error loading subjects:', error);
+            }
+        }
+
+        function renderSubjects() {
+            const grid = document.getElementById('subjectsGrid');
+            
+            if (subjects.length === 0) {
+                grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">📚</div>No subjects configured</div>';
+                return;
+            }
+
+            grid.innerHTML = subjects.map(subject => {
+                const entrySubject = currentEntry?.subjects?.find(s => s.subject_name === subject.subject_name);
+                const isActive = entrySubject && entrySubject.time_spent_minutes > 0;
+                const timeSpent = entrySubject?.time_spent_minutes || 0;
+
+                return `
+                    <div class="subject-card ${isActive ? 'active' : ''}" 
+                         onclick="openSubjectModal('${subject.subject_name}')"
+                         style="--subject-color: ${subject.color}">
+                        <div class="subject-icon" style="background: ${subject.color}20;">
+                            ${subject.icon}
+                        </div>
+                        <div class="subject-info">
+                            <div class="subject-name">${subject.subject_name}</div>
+                            <div class="subject-time">
+                                ${isActive ? `${timeSpent} min studied` : 'Tap to log'}
+                            </div>
+                        </div>
+                        ${isActive ? '<span style="color: var(--accent-green);">✓</span>' : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateSubjectsFromEntry() {
+            renderSubjects();
+        }
+
+        // Subject Modal
+        function openSubjectModal(subjectName) {
+            activeSubject = subjects.find(s => s.subject_name === subjectName);
+            if (!activeSubject) return;
+
+            document.getElementById('modalSubjectName').textContent = `${activeSubject.icon} ${activeSubject.subject_name}`;
+            
+            // Check if there's existing data
+            const entrySubject = currentEntry?.subjects?.find(s => s.subject_name === subjectName);
+            
+            document.getElementById('modalTimeSpent').value = entrySubject?.time_spent_minutes || 30;
+            document.getElementById('modalTopics').value = entrySubject?.topics_covered?.join(', ') || '';
+            document.getElementById('modalConfidence').value = entrySubject?.confidence_level || 3;
+            document.getElementById('modalConfidenceValue').textContent = entrySubject?.confidence_level || 3;
+            document.getElementById('modalDifficulty').value = entrySubject?.difficulty_faced || '';
+
+            document.getElementById('subjectModal').classList.add('show');
+        }
+
+        function closeModal() {
+            document.getElementById('subjectModal').classList.remove('show');
+            activeSubject = null;
+        }
+
+        async function saveSubject() {
+            if (!activeSubject) return;
+
+            const dateStr = formatDate(currentDate);
+            const timeSpent = parseInt(document.getElementById('modalTimeSpent').value) || 0;
+            const topics = document.getElementById('modalTopics').value
+                .split(',')
+                .map(t => t.trim())
+                .filter(t => t);
+            const confidence = parseInt(document.getElementById('modalConfidence').value);
+            const difficulty = document.getElementById('modalDifficulty').value;
+
+            try {
+                const response = await fetch(`${API_BASE}/entries/${dateStr}/subjects`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        subject_name: activeSubject.subject_name,
+                        time_spent_minutes: timeSpent,
+                        topics_covered: topics.length > 0 ? topics : null,
+                        confidence_level: confidence,
+                        difficulty_faced: difficulty || null
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    showToast(`${activeSubject.subject_name} logged!`);
+                    closeModal();
+                    loadEntry(dateStr);
+                    loadStreaks();
+                } else {
+                    showToast(data.error || 'Failed to save', true);
+                }
+            } catch (error) {
+                console.error('Error saving subject:', error);
+                showToast('Failed to save subject', true);
+            }
+        }
+
+        // Save Entry
+        async function saveEntry() {
+            const dateStr = formatDate(currentDate);
+            
+            const entryData = {
+                entry_date: dateStr,
+                journal_text: document.getElementById('journalText').value || null,
+                mood: selectedMood,
+                energy_level: parseInt(document.getElementById('energyLevel').value),
+                total_study_hours: parseFloat(document.getElementById('studyHours').value) || null,
+                start_time: document.getElementById('startTime').value || null,
+                end_time: document.getElementById('endTime').value || null,
+                daily_goal: document.getElementById('dailyGoal').value || null,
+                goal_achieved: document.getElementById('goalAchieved').checked
+            };
+
+            try {
+                document.getElementById('saveStatus').textContent = 'Saving...';
+                
+                const response = await fetch(`${API_BASE}/entries`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(entryData)
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    document.getElementById('saveStatus').textContent = 'Saved ✓';
+                    showToast('Entry saved successfully!');
+                    loadEntry(dateStr);
+                    loadWeeklySummary();
+                    setTimeout(() => {
+                        document.getElementById('saveStatus').textContent = '';
+                    }, 3000);
+                } else {
+                    document.getElementById('saveStatus').textContent = 'Error';
+                    showToast(data.error || 'Failed to save', true);
+                }
+            } catch (error) {
+                console.error('Error saving entry:', error);
+                document.getElementById('saveStatus').textContent = 'Error';
+                showToast('Failed to save entry', true);
+            }
+        }
+
+        // Load Reminders
+        async function loadReminders() {
+            try {
+                const response = await fetch(`${API_BASE}/reminders`);
+                const data = await response.json();
+                
+                const container = document.getElementById('remindersContainer');
+                const reminders = data.reminders || [];
+
+                if (reminders.length === 0) {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">🎉</div>
+                            <p>No reminders - great job staying on track!</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = reminders.slice(0, 5).map(r => `
+                    <div class="reminder-item ${r.priority}">
+                        <span class="reminder-icon">${r.icon}</span>
+                        <span class="reminder-text">${r.message}</span>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error loading reminders:', error);
+                document.getElementById('remindersContainer').innerHTML = 
+                    '<div class="empty-state">Failed to load reminders</div>';
+            }
+        }
+
+        // Load Streaks
+        async function loadStreaks() {
+            try {
+                const response = await fetch(`${API_BASE}/streaks`);
+                const data = await response.json();
+                
+                const container = document.getElementById('streaksContainer');
+                const streaks = data.streaks || [];
+
+                if (streaks.length === 0) {
+                    container.innerHTML = '<div class="empty-state">No streak data yet</div>';
+                    return;
+                }
+
+                container.innerHTML = streaks.map(s => {
+                    let badgeClass = 'danger';
+                    let badgeText = 'Never';
+                    
+                    if (s.days_since_practice === 0) {
+                        badgeClass = 'active';
+                        badgeText = `${s.current_streak}🔥`;
+                    } else if (s.days_since_practice < 3) {
+                        badgeClass = 'active';
+                        badgeText = `${s.current_streak}🔥`;
+                    } else if (s.days_since_practice < 7) {
+                        badgeClass = 'warning';
+                        badgeText = `${s.days_since_practice}d`;
+                    } else if (s.days_since_practice < 999) {
+                        badgeText = `${s.days_since_practice}d`;
+                    }
+
+                    return `
+                        <div class="streak-item">
+                            <span class="streak-icon">${s.icon}</span>
+                            <div class="streak-info">
+                                <div class="streak-name">${s.subject_name}</div>
+                                <div class="streak-days">${s.this_week_minutes} min this week</div>
+                            </div>
+                            <span class="streak-badge ${badgeClass}">${badgeText}</span>
+                        </div>
+                    `;
+                }).join('');
+
+            } catch (error) {
+                console.error('Error loading streaks:', error);
+                document.getElementById('streaksContainer').innerHTML = 
+                    '<div class="empty-state">Failed to load streaks</div>';
+            }
+        }
+
+        // Load Weekly Summary
+        async function loadWeeklySummary() {
+            try {
+                const response = await fetch(`${API_BASE}/weekly-summary`);
+                const data = await response.json();
+                
+                const container = document.getElementById('weeklySummary');
+                const summary = data.summary || {};
+
+                container.innerHTML = `
+                    <div class="summary-stat">
+                        <span class="summary-label">Total Hours</span>
+                        <span class="summary-value">${summary.total_hours || 0}h</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="summary-label">Days Studied</span>
+                        <span class="summary-value">${summary.days_studied || 0}/7</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="summary-label">Goals Achieved</span>
+                        <span class="summary-value">${summary.goals_achieved || 0}/${summary.goals_total || 0}</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="summary-label">Avg Hours/Day</span>
+                        <span class="summary-value">${summary.average_hours_per_day || 0}h</span>
+                    </div>
+                `;
+
+            } catch (error) {
+                console.error('Error loading weekly summary:', error);
+                document.getElementById('weeklySummary').innerHTML = 
+                    '<div class="empty-state">Failed to load summary</div>';
+            }
+        }
+
+        // Toast
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.toggle('error', isError);
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // ============================================================
+        // WEEKLY SNAPSHOT
+        // ============================================================
+        
+        let snapshotWeeksBack = 0;
+
+        function openWeeklySnapshot() {
+            snapshotWeeksBack = 0;
+            document.getElementById('weeklySnapshotModal').classList.add('show');
+            loadWeeklySnapshot();
+        }
+
+        function closeWeeklySnapshot() {
+            document.getElementById('weeklySnapshotModal').classList.remove('show');
+        }
+
+        function changeWeek(delta) {
+            snapshotWeeksBack -= delta;  // Minus because going back increases weeksBack
+            if (snapshotWeeksBack < 0) snapshotWeeksBack = 0;
+            loadWeeklySnapshot();
+        }
+
+        async function loadWeeklySnapshot() {
+            try {
+                const response = await fetch(`${API_BASE}/weekly-snapshot?weeks_back=${snapshotWeeksBack}`);
+                const data = await response.json();
+                const snapshot = data.snapshot;
+
+                if (!snapshot) {
+                    showToast('Failed to load snapshot', true);
+                    return;
+                }
+
+                // Update title
+                const weekTitle = snapshotWeeksBack === 0 ? 'This Week' : 
+                    snapshotWeeksBack === 1 ? 'Last Week' : `${snapshotWeeksBack} Weeks Ago`;
+                document.getElementById('snapshotWeekTitle').textContent = `Week ${snapshot.week_number} - ${weekTitle}`;
+                document.getElementById('snapshotWeekDates').textContent = 
+                    `${formatDateShort(snapshot.week_start)} - ${formatDateShort(snapshot.week_end)}`;
+
+                // Update summary stats
+                document.getElementById('snapshotTotalHours').textContent = snapshot.summary.total_hours + 'h';
+                document.getElementById('snapshotDaysStudied').textContent = snapshot.summary.days_studied + '/7';
+                document.getElementById('snapshotGoals').textContent = 
+                    `${snapshot.summary.goals_achieved}/${snapshot.summary.goals_set || 0}`;
+                document.getElementById('snapshotAvgHours').textContent = 
+                    snapshot.summary.avg_hours_per_study_day + 'h';
+
+                // Render day-by-day with subjective remarks
+                const daysContainer = document.getElementById('snapshotDaysContainer');
+                daysContainer.innerHTML = snapshot.days.map(day => {
+                    const moodEmoji = {'great': '😄', 'good': '🙂', 'okay': '😐', 'tired': '😴', 'stressed': '😫'}[day.mood] || '';
+                    const confidenceLabels = {1: '😟 Low', 2: '😐 Okay', 3: '🙂 Good', 4: '😊 High', 5: '🔥 Very High'};
+                    
+                    // Build subject remarks HTML with emphasis on subjective notes
+                    const subjectsHtml = day.subjects.length > 0 
+                        ? day.subjects.map(s => {
+                            const topics = Array.isArray(s.topics_covered) ? s.topics_covered : [];
+                            const topicsHtml = topics.length > 0 
+                                ? `<div style="color: var(--accent-blue); font-size: 12px; margin-top: 2px;">📝 ${topics.join(', ')}</div>`
+                                : '';
+                            const difficultyHtml = s.difficulty_faced 
+                                ? `<div style="color: var(--accent-yellow); font-size: 12px; margin-top: 2px;">⚠️ ${s.difficulty_faced}</div>`
+                                : '';
+                            const confidenceHtml = s.confidence_level 
+                                ? `<span style="font-size: 11px; color: var(--text-secondary);">${confidenceLabels[s.confidence_level] || s.confidence_level}</span>`
+                                : '';
+                            
+                            return `
+                                <div style="background: var(--bg-secondary); padding: 8px 10px; border-radius: 6px; margin-bottom: 6px; border-left: 3px solid ${s.subject_name === 'CLAT GK' ? 'var(--accent-purple)' : s.subject_name.includes('Math') ? 'var(--accent-blue)' : 'var(--accent-green)'};">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <span style="font-weight: 600; font-size: 13px;">${s.subject_name}</span>
+                                        <span style="font-size: 11px; color: var(--text-muted);">${s.time_spent_minutes}min ${confidenceHtml}</span>
+                                    </div>
+                                    ${topicsHtml}
+                                    ${difficultyHtml}
+                                </div>
+                            `;
+                        }).join('')
+                        : '<span style="color: var(--text-muted); font-size: 13px;">No subjects logged</span>';
+                    
+                    // Journal text if any
+                    const journalHtml = day.journal_text 
+                        ? `<div style="margin-top: 8px; padding: 8px; background: var(--bg-secondary); border-radius: 6px; font-style: italic; font-size: 13px; color: var(--text-secondary);">💭 "${day.journal_text}"</div>`
+                        : '';
+                    
+                    return `
+                        <div style="padding: 14px; background: ${day.studied ? 'var(--bg-card)' : 'transparent'}; border-radius: 12px; margin-bottom: 10px; border: 1px solid ${day.studied ? 'var(--accent-green)' : 'var(--border-color)'};">
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: ${day.studied ? '10px' : '0'};">
+                                <div style="width: 70px; flex-shrink: 0;">
+                                    <div style="font-weight: 700; font-size: 14px;">${day.day_name.slice(0, 3)}</div>
+                                    <div style="font-size: 12px; color: var(--text-secondary);">${formatDateShort(day.date)}</div>
+                                </div>
+                                <div style="flex: 1; display: flex; align-items: center; gap: 8px;">
+                                    ${day.studied ? `
+                                        <span style="font-weight: 600; color: var(--accent-green);">${day.hours || 0}h</span>
+                                        ${moodEmoji ? `<span>${moodEmoji}</span>` : ''}
+                                        ${day.goal_achieved ? '<span style="color: var(--accent-yellow);">🎯</span>' : ''}
+                                    ` : `
+                                        <span style="color: var(--text-muted);">No entry</span>
+                                    `}
+                                </div>
+                                <div style="font-size: 20px;">${day.studied ? '✓' : '−'}</div>
+                            </div>
+                            ${day.studied ? `
+                                <div style="margin-left: 82px;">
+                                    ${subjectsHtml}
+                                    ${journalHtml}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }).join('');
+
+                // Render subject totals with subjective remarks summary
+                const subjectsContainer = document.getElementById('snapshotSubjectsContainer');
+                const confidenceLabels = {1: '😟 Low', 2: '😐 Okay', 3: '🙂 Good', 4: '😊 High', 5: '🔥 Very High'};
+                
+                subjectsContainer.innerHTML = snapshot.subject_totals.filter(s => s.total_hours > 0 || s.all_topics?.length > 0).map(s => {
+                    const progressWidth = Math.min(s.target_percent, 100);
+                    const progressColor = s.target_met ? 'var(--accent-green)' : 
+                        s.target_percent >= 50 ? 'var(--accent-yellow)' : 'var(--accent-red)';
+                    
+                    // Topics covered this week
+                    const topicsHtml = s.all_topics && s.all_topics.length > 0 
+                        ? `<div style="margin-top: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 8px;">
+                            <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 6px;">📝 Topics Covered:</div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                                ${s.all_topics.map(t => `<span style="background: var(--accent-blue); color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px;">${t}</span>`).join('')}
+                            </div>
+                        </div>`
+                        : '';
+                    
+                    // Difficulties faced this week
+                    const difficultiesHtml = s.difficulties && s.difficulties.length > 0 
+                        ? `<div style="margin-top: 8px; padding: 10px; background: rgba(245, 158, 11, 0.1); border-radius: 8px; border-left: 3px solid var(--accent-yellow);">
+                            <div style="font-size: 12px; color: var(--accent-yellow); margin-bottom: 6px;">⚠️ Difficulties Noted:</div>
+                            ${s.difficulties.map(d => `<div style="font-size: 12px; color: var(--text-primary); margin-bottom: 4px;">• <span style="color: var(--text-muted);">${formatDateShort(d.date)}:</span> ${d.text}</div>`).join('')}
+                        </div>`
+                        : '';
+                    
+                    // Average confidence
+                    const avgConfHtml = s.avg_confidence 
+                        ? `<span style="margin-left: 8px; font-size: 12px;">${confidenceLabels[Math.round(s.avg_confidence)] || ''}</span>`
+                        : '';
+                    
+                    return `
+                        <div style="padding: 16px; background: var(--bg-card); border-radius: 12px; margin-bottom: 12px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-size: 28px;">${s.icon}</span>
+                                <div style="flex: 1;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                        <span style="font-weight: 700; font-size: 16px;">${s.subject_name}${avgConfHtml}</span>
+                                        <span style="color: ${progressColor}; font-weight: 600;">
+                                            ${s.total_hours}h / ${s.target_hours_weekly}h
+                                        </span>
+                                    </div>
+                                    <div style="background: var(--bg-secondary); height: 6px; border-radius: 3px; overflow: hidden;">
+                                        <div style="background: ${progressColor}; height: 100%; width: ${progressWidth}%; transition: width 0.3s;"></div>
+                                    </div>
+                                    <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">
+                                        ${s.days_practiced} days practiced • ${s.target_percent}% of target
+                                    </div>
+                                </div>
+                            </div>
+                            ${topicsHtml}
+                            ${difficultiesHtml}
+                        </div>
+                    `;
+                }).join('') || '<div style="color: var(--text-muted); text-align: center; padding: 20px;">No subjects studied this week</div>';
+
+            } catch (error) {
+                console.error('Error loading weekly snapshot:', error);
+                showToast('Failed to load weekly snapshot', true);
+            }
+        }
+
+        function formatDateShort(dateStr) {
+            const date = new Date(dateStr + 'T00:00:00');
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        }
+
+        // ============================================================
+        // DATE RANGE ANALYTICS
+        // ============================================================
+
+        function openDateRangeAnalytics() {
+            document.getElementById('dateRangeModal').classList.add('show');
+            
+            // Set default dates
+            const today = new Date();
+            const thirtyDaysAgo = new Date(today);
+            thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+            
+            document.getElementById('dateRangeEnd').value = formatDate(today);
+            document.getElementById('dateRangeStart').value = formatDate(thirtyDaysAgo);
+            document.getElementById('dateRangeQuick').value = '30';
+            
+            loadDateRangeAnalytics();
+        }
+
+        function closeDateRangeModal() {
+            document.getElementById('dateRangeModal').classList.remove('show');
+        }
+
+        function quickSelectDateRange() {
+            const value = document.getElementById('dateRangeQuick').value;
+            if (value === 'custom') return;
+            
+            const days = parseInt(value);
+            const today = new Date();
+            const startDate = new Date(today);
+            startDate.setDate(startDate.getDate() - days);
+            
+            document.getElementById('dateRangeEnd').value = formatDate(today);
+            document.getElementById('dateRangeStart').value = formatDate(startDate);
+            
+            loadDateRangeAnalytics();
+        }
+
+        async function loadDateRangeAnalytics() {
+            const startDate = document.getElementById('dateRangeStart').value;
+            const endDate = document.getElementById('dateRangeEnd').value;
+            
+            if (!startDate || !endDate) {
+                showToast('Please select a date range', true);
+                return;
+            }
+
+            const container = document.getElementById('dateRangeContent');
+            container.innerHTML = `
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    Loading analytics...
+                </div>
+            `;
+
+            try {
+                const response = await fetch(`${API_BASE}/date-range?start_date=${startDate}&end_date=${endDate}`);
+                const data = await response.json();
+                const analytics = data.analytics;
+
+                if (!analytics) {
+                    container.innerHTML = '<div class="empty-state">Failed to load analytics</div>';
+                    return;
+                }
+
+                const range = analytics.date_range;
+                const overall = analytics.overall;
+
+                container.innerHTML = `
+                    <!-- Date Range Info -->
+                    <div style="text-align: center; margin-bottom: 20px; padding: 12px; background: var(--bg-card); border-radius: 10px;">
+                        <span style="font-size: 16px; font-weight: 600;">
+                            📅 ${formatDateShort(range.start)} - ${formatDateShort(range.end)}
+                        </span>
+                        <span style="color: var(--text-secondary); margin-left: 12px;">(${range.total_days} days)</span>
+                    </div>
+
+                    <!-- Overall Stats Grid -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;">
+                        <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 32px; font-weight: 700; color: var(--accent-purple);">${overall.total_hours}h</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Total Study Time</div>
+                        </div>
+                        <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 32px; font-weight: 700; color: var(--accent-green);">${overall.total_entries}</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Days with Entries</div>
+                        </div>
+                        <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 32px; font-weight: 700; color: var(--accent-blue);">${overall.avg_hours_per_study_day}h</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Avg per Study Day</div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;">
+                        <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent-yellow);">${overall.goals_achieved}/${overall.goals_set}</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Goals Achieved</div>
+                        </div>
+                        <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent-pink);">${overall.study_rate}%</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Study Rate</div>
+                        </div>
+                        <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 24px; font-weight: 700; color: var(--accent-purple);">${overall.avg_hours_per_day}h</div>
+                            <div style="font-size: 13px; color: var(--text-secondary);">Avg per Calendar Day</div>
+                        </div>
+                    </div>
+
+                    <!-- Subject Breakdown -->
+                    <h4 style="margin-bottom: 12px; color: var(--text-secondary);">📚 Subject-wise Breakdown</h4>
+                    <div style="margin-bottom: 24px;">
+                        ${analytics.subjects.map(s => {
+                            const progressWidth = Math.min(s.target_percent, 100);
+                            const progressColor = s.target_percent >= 100 ? 'var(--accent-green)' : 
+                                s.target_percent >= 50 ? 'var(--accent-yellow)' : 'var(--accent-red)';
+                            
+                            return `
+                                <div style="display: flex; align-items: center; gap: 12px; padding: 14px; background: var(--bg-card); border-radius: 10px; margin-bottom: 8px;">
+                                    <span style="font-size: 28px;">${s.icon}</span>
+                                    <div style="flex: 1;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                                            <div>
+                                                <span style="font-weight: 600;">${s.subject_name}</span>
+                                                <span style="font-size: 12px; color: var(--text-secondary); margin-left: 8px;">${s.category}</span>
+                                            </div>
+                                            <span style="color: ${progressColor}; font-weight: 700; font-size: 18px;">
+                                                ${s.total_hours}h
+                                            </span>
+                                        </div>
+                                        <div style="background: var(--bg-secondary); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+                                            <div style="background: ${progressColor}; height: 100%; width: ${progressWidth}%; transition: width 0.3s;"></div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary);">
+                                            <span>${s.days_practiced} days practiced</span>
+                                            <span>${s.target_percent}% of ${s.expected_hours}h target</span>
+                                        </div>
+                                        ${s.avg_confidence ? `<div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Avg confidence: ${s.avg_confidence}/5 • ${s.total_cards || 0} Anki cards</div>` : ''}
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    <!-- Category Breakdown -->
+                    <h4 style="margin-bottom: 12px; color: var(--text-secondary);">📊 By Category</h4>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px;">
+                        ${Object.entries(analytics.category_breakdown).map(([cat, hours]) => {
+                            const label = cat === 'clat_core' ? 'CLAT Core' : cat === 'clat_gk' ? 'CLAT GK' : 'Other';
+                            const color = cat === 'clat_core' ? 'var(--accent-blue)' : cat === 'clat_gk' ? 'var(--accent-purple)' : 'var(--accent-green)';
+                            return `
+                                <div style="background: var(--bg-card); padding: 16px; border-radius: 12px; text-align: center; border-left: 4px solid ${color};">
+                                    <div style="font-size: 24px; font-weight: 700; color: ${color};">${hours}h</div>
+                                    <div style="font-size: 13px; color: var(--text-secondary);">${label}</div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+
+                    <!-- Mood Distribution -->
+                    ${Object.keys(analytics.mood_distribution).length > 0 ? `
+                        <h4 style="margin-bottom: 12px; color: var(--text-secondary);">😊 Mood Distribution</h4>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;">
+                            ${Object.entries(analytics.mood_distribution).map(([mood, count]) => {
+                                const emoji = {'great': '😄', 'good': '🙂', 'okay': '😐', 'tired': '😴', 'stressed': '😫'}[mood] || mood;
+                                return `
+                                    <div style="background: var(--bg-card); padding: 12px 20px; border-radius: 10px; text-align: center;">
+                                        <span style="font-size: 24px;">${emoji}</span>
+                                        <div style="font-size: 18px; font-weight: 700; margin-top: 4px;">${count}</div>
+                                        <div style="font-size: 11px; color: var(--text-secondary);">${mood}</div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    ` : ''}
+                `;
+
+            } catch (error) {
+                console.error('Error loading date range analytics:', error);
+                container.innerHTML = '<div class="empty-state">Failed to load analytics</div>';
+            }
+        }
+    </script>
+</body>
+</html>
+

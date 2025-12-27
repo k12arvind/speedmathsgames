@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speed Math Games - CLAT Preparation</title>
+    <title>CLAT Preparation Hub</title>
     <style>
         * {
             margin: 0;
@@ -12,90 +12,96 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
-            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .hero {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             color: white;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 36px;
+            margin-bottom: 8px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 16px;
             opacity: 0.95;
         }
 
         .modules {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
         }
 
         .module-card {
             background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
             transition: all 0.3s;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
 
         .module-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
         }
 
         .module-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
+            font-size: 36px;
+            flex-shrink: 0;
         }
 
         .module-title {
-            font-size: 28px;
+            font-size: 16px;
             font-weight: 700;
             color: #1f2937;
-            margin-bottom: 15px;
+            line-height: 1.2;
         }
 
         .module-description {
-            font-size: 16px;
+            font-size: 13px;
             color: #666;
-            line-height: 1.6;
-            margin-bottom: 25px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            flex: 1;
         }
 
         .module-features {
             list-style: none;
-            margin-bottom: 25px;
+            margin-bottom: 12px;
+            font-size: 12px;
         }
 
         .module-features li {
-            font-size: 14px;
             color: #666;
-            padding: 8px 0;
-            padding-left: 25px;
+            padding: 3px 0;
+            padding-left: 18px;
             position: relative;
         }
 
@@ -105,35 +111,16 @@
             left: 0;
             color: #10b981;
             font-weight: bold;
-            font-size: 16px;
-        }
-
-        .module-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 14px 30px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.2s;
-            border: none;
-            width: 100%;
-            text-align: center;
-        }
-
-        .module-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            font-size: 12px;
         }
 
         .module-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-            padding-top: 20px;
+            gap: 8px;
+            padding-top: 12px;
             border-top: 1px solid #e5e7eb;
+            margin-bottom: 12px;
         }
 
         .stat-item {
@@ -141,28 +128,63 @@
         }
 
         .stat-value {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             color: #667eea;
         }
 
         .stat-label {
-            font-size: 12px;
-            color: #666;
-            margin-top: 4px;
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
         }
+
+        .module-cta {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.2s;
+            border: none;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .module-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Card accent colors */
+        .card-gk { border-top: 4px solid #667eea; }
+        .card-math { border-top: 4px solid #8b5cf6; }
+        .card-diary { border-top: 4px solid #ec4899; }
+        .card-mock { border-top: 4px solid #f59e0b; }
+
+        .card-gk .stat-value { color: #667eea; }
+        .card-math .stat-value { color: #8b5cf6; }
+        .card-diary .stat-value { color: #ec4899; }
+        .card-mock .stat-value { color: #f59e0b; }
+
+        .card-math .module-cta { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
+        .card-diary .module-cta { background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); }
+        .card-mock .module-cta { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
 
         .admin-link {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .admin-link a {
             color: white;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             opacity: 0.8;
             transition: opacity 0.2s;
+            margin: 0 12px;
         }
 
         .admin-link a:hover {
@@ -170,39 +192,28 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .modules {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .module-card {
-                padding: 30px;
-            }
-
-            .module-icon {
-                font-size: 48px;
-            }
-
-            .module-title {
-                font-size: 24px;
-            }
-        }
-
         .footer {
             text-align: center;
             color: white;
-            margin-top: 40px;
+            margin-top: 20px;
             opacity: 0.9;
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .modules {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .modules {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .module-card { padding: 16px; }
         }
 
         .loading-overlay {
@@ -220,19 +231,19 @@
 
         .loading-content {
             background: white;
-            padding: 30px;
+            padding: 24px;
             border-radius: 12px;
             text-align: center;
         }
 
         .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid #f3f4f6;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #f3f4f6;
             border-top-color: #667eea;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
+            margin: 0 auto 12px;
         }
 
         @keyframes spin {
@@ -244,7 +255,7 @@
     <div class="loading-overlay" id="loading-overlay">
         <div class="loading-content">
             <div class="loading-spinner"></div>
-            <div>Loading stats...</div>
+            <div>Loading...</div>
         </div>
     </div>
 
@@ -256,47 +267,45 @@
 
         <div class="modules">
             <!-- GK Module -->
-            <a href="comprehensive_dashboard.html" class="module-card">
-                <div class="module-icon">📚</div>
-                <div class="module-title">GK Practice</div>
+            <a href="comprehensive_dashboard.html" class="module-card card-gk">
+                <div class="module-header">
+                    <div class="module-icon">📚</div>
+                    <div class="module-title">GK Practice</div>
+                </div>
                 <div class="module-description">
                     Master General Knowledge with flashcards and MCQ tests from weekly PDF compendiums.
                 </div>
                 <ul class="module-features">
                     <li>Automated flashcard generation</li>
-                    <li>MCQ assessments with instant feedback</li>
-                    <li>Weak topics identification</li>
-                    <li>Performance analytics</li>
+                    <li>MCQ assessments with feedback</li>
                     <li>8 categorized decks</li>
                 </ul>
                 <div class="module-stats">
                     <div class="stat-item">
                         <div class="stat-value" id="gk-cards">-</div>
-                        <div class="stat-label">Total Cards</div>
+                        <div class="stat-label">Cards</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-value" id="gk-accuracy">-%</div>
                         <div class="stat-label">Accuracy</div>
                     </div>
                 </div>
-                <button class="module-cta">
-                    Open GK Module →
-                </button>
+                <button class="module-cta">Open GK →</button>
             </a>
 
             <!-- Math Module -->
-            <a href="math_settings.html" class="module-card">
-                <div class="module-icon">🧮</div>
-                <div class="module-title">Math Speed Games</div>
+            <a href="math_settings.html" class="module-card card-math">
+                <div class="module-header">
+                    <div class="module-icon">🧮</div>
+                    <div class="module-title">Math Speed Games</div>
+                </div>
                 <div class="module-description">
                     Improve calculation speed with timed practice across 6 math topics.
                 </div>
                 <ul class="module-features">
-                    <li>6 math topics (Arithmetic to BODMAS)</li>
+                    <li>6 topics (Arithmetic to BODMAS)</li>
                     <li>Per-question time tracking</li>
-                    <li>Difficulty levels (Easy/Medium/Hard)</li>
-                    <li>Topic-wise performance analysis</li>
-                    <li>10/20/30 question sessions</li>
+                    <li>3 difficulty levels</li>
                 </ul>
                 <div class="module-stats">
                     <div class="stat-item">
@@ -308,14 +317,67 @@
                         <div class="stat-label">Avg Time</div>
                     </div>
                 </div>
-                <button class="module-cta">
-                    Start Math Practice →
-                </button>
+                <button class="module-cta">Start Math →</button>
+            </a>
+
+            <!-- Daily Diary Module -->
+            <a href="diary.html" class="module-card card-diary">
+                <div class="module-header">
+                    <div class="module-icon">📔</div>
+                    <div class="module-title">Daily Study Diary</div>
+                </div>
+                <div class="module-description">
+                    Track daily preparation, set goals, and get reminders for neglected subjects.
+                </div>
+                <ul class="module-features">
+                    <li>Daily journal & mood tracking</li>
+                    <li>Subject-wise time logging</li>
+                    <li>Weekly snapshots & analytics</li>
+                </ul>
+                <div class="module-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="diary-streak">-</div>
+                        <div class="stat-label">Streak</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="diary-hours">-h</div>
+                        <div class="stat-label">This Week</div>
+                    </div>
+                </div>
+                <button class="module-cta">Open Diary →</button>
+            </a>
+
+            <!-- Mock Analysis Module -->
+            <a href="mock_analysis.html" class="module-card card-mock">
+                <div class="module-header">
+                    <div class="module-icon">📊</div>
+                    <div class="module-title">Mock Analysis</div>
+                </div>
+                <div class="module-description">
+                    Track mock test scores, analyze section-wise performance, and identify areas to improve.
+                </div>
+                <ul class="module-features">
+                    <li>Section-wise score tracking</li>
+                    <li>Self-reflection & feedback</li>
+                    <li>Performance trends & analytics</li>
+                </ul>
+                <div class="module-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="mock-count">-</div>
+                        <div class="stat-label">Mocks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="mock-avg">-</div>
+                        <div class="stat-label">Avg Score</div>
+                    </div>
+                </div>
+                <button class="module-cta">Analyze Mocks →</button>
             </a>
         </div>
 
         <div class="admin-link">
             <a href="math_admin.html">⚙️ Admin Settings</a>
+            <a href="analytics.html">📈 Detailed Analytics</a>
         </div>
 
         <div class="footer">
@@ -325,55 +387,73 @@
 
     <script src="auth.js"></script>
     <script>
-        const MATH_API = window.location.origin;;
-        const ASSESSMENT_API = window.location.origin;;
+        const API_BASE = window.location.origin;
 
         async function loadStats() {
-            // Wait for auth check first
             const user = await checkAuth(true);
             if (!user) return;
 
             const userId = user.user_id;
-
-            // Show loading
             document.getElementById('loading-overlay').style.display = 'flex';
 
             try {
                 // Load Math stats
-                const mathResponse = await fetch(`${MATH_API}/api/math/performance/overall?user_id=${userId}`);
+                const mathResponse = await fetch(`${API_BASE}/api/math/performance/overall?user_id=${userId}`);
                 const mathData = await mathResponse.json();
                 const mathPerf = mathData.performance;
-
                 document.getElementById('math-sessions').textContent = mathPerf.total_sessions || 0;
                 const avgTime = mathPerf.average_time || 0;
                 document.getElementById('math-avgtime').textContent = avgTime > 0 ? avgTime.toFixed(1) + 's' : '-';
 
-                // Load GK stats (if assessment API is available)
+                // Load GK stats
                 try {
-                    const gkResponse = await fetch(`${ASSESSMENT_API}/api/assessment/performance/summary?user_id=${userId}`);
+                    const gkResponse = await fetch(`${API_BASE}/api/assessment/performance/summary?user_id=${userId}`);
                     const gkData = await gkResponse.json();
-
                     if (gkData.performance) {
-                        const gkPerf = gkData.performance;
-                        document.getElementById('gk-cards').textContent = gkPerf.total_questions || 0;
-                        const accuracy = gkPerf.accuracy || 0;
+                        document.getElementById('gk-cards').textContent = gkData.performance.total_questions || 0;
+                        const accuracy = gkData.performance.accuracy || 0;
                         document.getElementById('gk-accuracy').textContent = accuracy > 0 ? accuracy.toFixed(0) + '%' : '-';
                     }
-                } catch (error) {
-                    console.log('GK stats not available:', error);
-                    document.getElementById('gk-cards').textContent = '-';
-                    document.getElementById('gk-accuracy').textContent = '-';
+                } catch (e) {
+                    console.log('GK stats not available');
+                }
+
+                // Load Diary stats
+                try {
+                    const diaryResponse = await fetch(`${API_BASE}/api/diary/streaks`);
+                    const diaryData = await diaryResponse.json();
+                    if (diaryData.streaks) {
+                        document.getElementById('diary-streak').textContent = diaryData.streaks.current_streak || 0;
+                    }
+                    const weeklyResponse = await fetch(`${API_BASE}/api/diary/weekly-snapshot?weeks_back=0`);
+                    const weeklyData = await weeklyResponse.json();
+                    if (weeklyData.snapshot) {
+                        document.getElementById('diary-hours').textContent = (weeklyData.snapshot.summary?.total_hours || 0) + 'h';
+                    }
+                } catch (e) {
+                    console.log('Diary stats not available');
+                }
+
+                // Load Mock stats
+                try {
+                    const mockResponse = await fetch(`${API_BASE}/api/mocks/stats`);
+                    const mockData = await mockResponse.json();
+                    if (mockData.stats) {
+                        document.getElementById('mock-count').textContent = mockData.stats.total_mocks || 0;
+                        const avgScore = mockData.stats.average_score;
+                        document.getElementById('mock-avg').textContent = avgScore ? avgScore.toFixed(0) : '-';
+                    }
+                } catch (e) {
+                    console.log('Mock stats not available');
                 }
 
             } catch (error) {
                 console.error('Error loading stats:', error);
             } finally {
-                // Hide loading
                 document.getElementById('loading-overlay').style.display = 'none';
             }
         }
 
-        // Load stats on page load
         window.onload = loadStats;
     </script>
 </body>
