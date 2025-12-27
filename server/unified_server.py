@@ -68,6 +68,9 @@ from server.pdf_chunker import PdfChunker
 # Import assessment jobs database for assessment creation tracking
 from server.assessment_jobs_db import AssessmentJobsDB
 
+# Import PDF spacing processor for automatic spacing
+from server.pdf_spacing_processor import PdfSpacingProcessor
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -364,6 +367,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Annotation API endpoints
             elif path.startswith('/api/annotations/'):
                 self.handle_annotation_get(path, query_params)
+            # PDF Spacing API endpoints
+            elif path.startswith('/api/pdf-spacing/'):
+                self.handle_pdf_spacing_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -394,6 +400,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Annotation API endpoints
             elif path.startswith('/api/annotations/'):
                 self.handle_annotation_post(path, data)
+            # PDF Spacing API endpoints
+            elif path.startswith('/api/pdf-spacing/'):
+                self.handle_pdf_spacing_post(path, data)
             # PDF Chunking API endpoints
             elif path.startswith('/api/pdf/chunk'):
                 self.handle_pdf_chunk_post(path, data)
@@ -1882,6 +1891,94 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
             else:
                 self.send_json({'error': 'Annotation endpoint not found'})
+
+        except Exception as e:
+            self.send_json({
+                'error': str(e),
+                'trace': traceback.format_exc()
+            })
+
+    def handle_pdf_spacing_get(self, path: str, query_params: dict):
+        """Handle PDF spacing API GET requests."""
+        try:
+            # Initialize PDF spacing processor
+            if not hasattr(self, 'pdf_spacing_processor'):
+                self.pdf_spacing_processor = PdfSpacingProcessor()
+
+            # GET /api/pdf-spacing/check/{pdf_id}
+            # Check if PDF needs spacing
+            if '/check/' in path:
+                pdf_id = unquote(path.split('/check/')[-1])
+
+                # Find PDF path
+                pdf_info = self.pdf_scanner.get_pdf_by_id(pdf_id)
+                if not pdf_info:
+                    self.send_json({'error': 'PDF not found'})
+                    return
+
+                pdf_path = pdf_info.get('filepath')
+                needs_processing = self.pdf_spacing_processor.needs_processing(pdf_path)
+                output_path = self.pdf_spacing_processor.get_output_path(pdf_path)
+
+                self.send_json({
+                    'pdf_id': pdf_id,
+                    'needs_processing': needs_processing,
+                    'input_path': pdf_path,
+                    'output_path': output_path,
+                    'spaced_exists': Path(output_path).exists()
+                })
+
+            else:
+                self.send_json({'error': 'PDF spacing endpoint not found'})
+
+        except Exception as e:
+            self.send_json({
+                'error': str(e),
+                'trace': traceback.format_exc()
+            })
+
+    def handle_pdf_spacing_post(self, path: str, data: dict):
+        """Handle PDF spacing API POST requests."""
+        try:
+            # Initialize PDF spacing processor
+            if not hasattr(self, 'pdf_spacing_processor'):
+                self.pdf_spacing_processor = PdfSpacingProcessor()
+
+            # POST /api/pdf-spacing/process
+            # Process a single PDF
+            if path == '/api/pdf-spacing/process':
+                pdf_id = data.get('pdf_id')
+
+                if not pdf_id:
+                    self.send_json({'error': 'Missing pdf_id'})
+                    return
+
+                # Find PDF path
+                pdf_info = self.pdf_scanner.get_pdf_by_id(pdf_id)
+                if not pdf_info:
+                    self.send_json({'error': 'PDF not found'})
+                    return
+
+                pdf_path = pdf_info.get('filepath')
+
+                # Process PDF
+                result = self.pdf_spacing_processor.process_pdf(pdf_path)
+                self.send_json(result)
+
+            # POST /api/pdf-spacing/process-folder
+            # Process all PDFs in a folder
+            elif path == '/api/pdf-spacing/process-folder':
+                folder_path = data.get('folder_path')
+
+                if not folder_path:
+                    self.send_json({'error': 'Missing folder_path'})
+                    return
+
+                result = self.pdf_spacing_processor.process_folder(folder_path)
+                self.send_json(result)
+
+            else:
+                self.send_json({'error': 'PDF spacing endpoint not found'})
 
         except Exception as e:
             self.send_json({
