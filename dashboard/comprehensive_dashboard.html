@@ -1023,37 +1023,51 @@
                 ? '<span class="badge-status badge-processed">✓ Processed</span>'
                 : '<span class="badge-status badge-not-processed">⚠ Not Processed</span>';
 
-            // Check if PDF needs chunking (>10 pages = red indicator)
+            // Check if PDF needs chunking (>13 pages = red indicator)
             const pageCount = pdf.page_count || 0;
             const needsChunking = pdf.needs_chunking || false;
             const canChunk = pdf.can_chunk || false;
-            const pdfNameClass = needsChunking ? 'pdf-name' : 'pdf-name';
             const pdfNameStyle = needsChunking ? 'color: #ef4444; font-weight: 600;' : '';
             const pageInfo = pageCount > 0 ? ` <span style="font-size: 11px; color: #666;">(${pageCount} pages)</span>` : '';
 
-            // Chunk button (enabled for >13 pages, grayed otherwise)
+            // ========================================
+            // BUSINESS RULE: Button States Based on PDF Size and Status
+            // ========================================
+            // Rule 1: Large PDF (>13 pages) -> ONLY Chunk button active, ALL others disabled
+            // Rule 2: Small PDF (≤13 pages) -> Chunk greyed, Create Assessment active if not processed
+            // Rule 3: After Create Assessment -> Create Assessment greyed, Test active
+            // Rule 4: Revised button -> GREEN only when PDF has been modified (revision_count > 0)
+            // ========================================
+
+            // Chunk button (ACTIVE only for >13 pages, greyed otherwise)
             const chunkButton = `
                 <button class="btn ${canChunk ? 'btn-warning' : 'btn-secondary'}"
                         onclick="${canChunk ? `chunkPdf('${pdf.filepath}', '${pdf.filename}')` : 'return false'}"
                         ${!canChunk ? 'disabled' : ''}
                         style="${canChunk ? 'background: #f59e0b; color: white;' : 'opacity: 0.5; cursor: not-allowed;'}"
-                        title="${canChunk ? 'Chunk this PDF' : 'PDF has ≤13 pages'}">
+                        title="${canChunk ? 'Chunk this large PDF (>13 pages)' : 'PDF has ≤13 pages - no chunking needed'}">
                     ✂️ Chunk
                 </button>
             `;
 
-            // Create Assessment button (check status asynchronously)
+            // Button IDs for async status check
             const assessmentButtonId = `assessment-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
             const testButtonId = `test-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
+            const revisedButtonId = `revised-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
 
+            // Create Assessment button
+            // Initially DISABLED if needsChunking, otherwise will be checked by async function
             const assessmentButton = `
                 <button id="${assessmentButtonId}" class="btn btn-warning"
                         onclick="createAssessment('${pdf.filename}', '${pdf.source}', '${pdf.week}')"
-                        style="background: #ff9800; color: white;">
+                        ${needsChunking ? 'disabled' : ''}
+                        style="${needsChunking ? 'background: #9e9e9e; opacity: 0.5; cursor: not-allowed;' : 'background: #ff9800; color: white;'}">
                     📝 Create Assessment
                 </button>
             `;
 
+            // Test button (DISABLED by default, enabled after assessment created)
+            // Also DISABLED if needsChunking
             const testButton = `
                 <button id="${testButtonId}" class="btn btn-primary"
                         onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')"
@@ -1062,15 +1076,49 @@
                 </button>
             `;
 
-            // Store button info for later status check (after DOM is ready)
-            // We'll check status after the HTML is inserted into the DOM
+            // Revised button:
+            // - DISABLED when needsChunking (>13 pages)
+            // - DISABLED when not processed (exists_in_db = false)
+            // - GREEN checkmark when revision_count > 0 (PDF has been modified)
+            // - Normal state otherwise
+            const isRevised = revisionCount > 0;
+            const canRevise = !needsChunking && pdf.exists_in_db;
+            
+            let revisedButtonStyle = '';
+            let revisedButtonContent = '✓ Revised';
+            
+            if (needsChunking) {
+                // Large PDF - button disabled
+                revisedButtonStyle = 'background: #9e9e9e; opacity: 0.5; cursor: not-allowed;';
+            } else if (!pdf.exists_in_db) {
+                // Not processed - button disabled
+                revisedButtonStyle = 'background: #9e9e9e; opacity: 0.5; cursor: not-allowed;';
+            } else if (isRevised) {
+                // PDF has been revised - show GREEN checkmark
+                revisedButtonStyle = 'background: #10b981; color: white;';
+                revisedButtonContent = '✓ Revised';
+            } else {
+                // Processed but not yet revised - normal state
+                revisedButtonStyle = 'background: #10b981; color: white;';
+            }
+
+            const revisedButton = `
+                <button id="${revisedButtonId}" class="btn btn-success"
+                        onclick="markRevised('${pdf.pdf_id}')"
+                        ${!canRevise ? 'disabled' : ''}
+                        style="${revisedButtonStyle}">
+                    ${revisedButtonContent}
+                </button>
+            `;
+
+            // Async check for assessment status (after DOM is ready)
             setTimeout(() => {
-                checkAssessmentStatus(pdf.filename, assessmentButtonId, testButtonId, canChunk, pdf.exists_in_db);
+                checkAssessmentStatus(pdf.filename, assessmentButtonId, testButtonId, needsChunking, pdf.exists_in_db);
             }, 0);
 
             return `
                 <tr>
-                    <td class="${pdfNameClass}" style="${pdfNameStyle}">${pdf.filename}${pageInfo}</td>
+                    <td class="pdf-name" style="${pdfNameStyle}">${pdf.filename}${pageInfo}</td>
                     <td>${formatDate(pdf.date_published)}</td>
                     <td><span class="badge badge-${pdf.source_type}">${pdf.source_type}</span></td>
                     <td>${pdf.total_topics}</td>
@@ -1086,9 +1134,7 @@
                             <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background: #3b82f6;">
                                 📄 View PDF
                             </button>
-                            <button class="btn btn-success" onclick="markRevised('${pdf.pdf_id}')" ${!pdf.exists_in_db ? 'disabled' : ''}>
-                                ✓ Revised
-                            </button>
+                            ${revisedButton}
                             <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}')">
                                 Details
                             </button>
@@ -1248,6 +1294,14 @@
         }
 
         // Check assessment status for a PDF
+        // ========================================
+        // BUSINESS RULE: Button States After Async Check
+        // ========================================
+        // Rule 1: If needsChunking (>13 pages) -> Create Assessment & Test DISABLED
+        // Rule 2: If processed (existsInDb) or all assessments complete -> Create Assessment GREYED, Test ACTIVE
+        // Rule 3: If assessments in progress -> Both DISABLED with progress indicator
+        // Rule 4: If no assessments and ≤13 pages -> Create Assessment ACTIVE, Test DISABLED
+        // ========================================
         async function checkAssessmentStatus(pdfId, assessmentButtonId, testButtonId, needsChunking, existsInDb) {
             try {
                 // Add timestamp to prevent caching
@@ -1260,14 +1314,8 @@
 
                 if (!assessmentButton || !testButton) return;
 
-                // Logic:
-                // 1. If needs chunking (chunk button active) -> Both buttons disabled
-                // 2. If existsInDb=true (Processed) OR assessments complete -> Create Assessment disabled, Test enabled
-                // 3. If assessments in progress -> Both disabled
-                // 4. If no assessments and not chunking needed -> Create Assessment enabled, Test disabled
-
                 if (needsChunking) {
-                    // Chunk button is active - disable both
+                    // RULE 1: Large PDF (>13 pages) - Chunk button is active, disable Create Assessment & Test
                     assessmentButton.disabled = true;
                     assessmentButton.style.background = '#9e9e9e';
                     assessmentButton.style.cursor = 'not-allowed';
@@ -1278,11 +1326,11 @@
                     testButton.style.opacity = '0.5';
                     testButton.style.cursor = 'not-allowed';
                 } else if (existsInDb || status.all_complete) {
-                    // Assessments exist (Processed status) or assessment complete - disable Create Assessment, enable Test
+                    // RULE 2: Processed - Create Assessment GREYED, Test ACTIVE
                     if (status.total_cards > 0) {
-                        assessmentButton.innerText = `✅ Assessments (${status.total_cards} cards)`;
+                        assessmentButton.innerText = `✅ ${status.total_cards} cards`;
                     } else {
-                        assessmentButton.innerText = `✅ Assessments Created`;
+                        assessmentButton.innerText = `✅ Created`;
                     }
                     assessmentButton.disabled = true;
                     assessmentButton.style.background = '#9e9e9e';
@@ -1292,9 +1340,10 @@
                     testButton.disabled = false;
                     testButton.style.opacity = '1';
                     testButton.style.cursor = 'pointer';
+                    testButton.style.background = '#3b82f6';
                 } else if (status.has_assessments) {
-                    // Partial assessment - both disabled
-                    assessmentButton.innerText = `⏳ Creating... (${status.completed_chunks}/${status.total_chunks})`;
+                    // RULE 3: Assessment in progress - both disabled with progress
+                    assessmentButton.innerText = `⏳ ${status.completed_chunks}/${status.total_chunks}`;
                     assessmentButton.disabled = true;
                     assessmentButton.style.background = '#9e9e9e';
                     assessmentButton.style.cursor = 'not-allowed';
@@ -1304,11 +1353,13 @@
                     testButton.style.opacity = '0.5';
                     testButton.style.cursor = 'not-allowed';
                 } else {
-                    // No assessments and no chunking needed - Create Assessment enabled, Test disabled
+                    // RULE 4: Not processed, ≤13 pages - Create Assessment ACTIVE, Test disabled
                     assessmentButton.disabled = false;
-                    assessmentButton.style.background = '#ff9800';
+                    assessmentButton.style.background = '#10b981';
+                    assessmentButton.style.color = 'white';
                     assessmentButton.style.cursor = 'pointer';
                     assessmentButton.style.opacity = '1';
+                    assessmentButton.innerText = '📝 Create Assessment';
 
                     testButton.disabled = true;
                     testButton.style.opacity = '0.5';
