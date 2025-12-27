@@ -1,0 +1,396 @@
+# CLAT GK Preparation System - Cursor AI Rules
+
+## Project Overview
+This is a CLAT (Common Law Admission Test) exam preparation system that:
+- Processes daily and weekly current affairs PDFs
+- Generates Anki flashcards using Claude AI (Anthropic API)
+- Provides web-based dashboard for PDF management
+- Handles large PDFs through intelligent chunking
+- Runs on two machines: MacBook Pro (dev) and Mac Mini (production)
+
+## Tech Stack
+- **Backend:** Python 3.9, Flask (port 8001)
+- **AI:** Anthropic Claude API (Sonnet 4.5)
+- **Database:** SQLite (revision_tracker.db, assessment_tracker.db)
+- **Frontend:** HTML/CSS/JavaScript, Bootstrap 5
+- **PDF Processing:** PyMuPDF (fitz), ReportLab
+- **Flashcards:** Anki with AnkiConnect
+
+## Critical File Structure
+
+### PDFs Storage (NEVER modify these locations)
+```
+~/saanvi/
+├── Legaledgedailygk/        # Daily current affairs PDFs
+├── LegalEdgeweeklyGK/       # Weekly PDFs (LegalEdge)
+└── weeklyGKCareerLauncher/  # Weekly PDFs (Career Launcher)
+```
+
+### Project Structure
+```
+~/clat_preparation/
+├── server/                   # Backend Python modules
+│   ├── unified_server.py    # Main Flask API server
+│   ├── pdf_chunker.py       # PDF splitting (>20 pages → 8-10 page chunks)
+│   ├── assessment_processor.py  # Background flashcard generation
+│   ├── pdf_scanner.py       # PDF folder scanner
+│   └── assessment_jobs_db.py    # Job tracking
+├── dashboard/               # Frontend HTML/JS pages
+├── toprankers/             # TopRankers automation scripts
+│   ├── automate_html.sh    # Main automation script
+│   ├── extract_html.py     # HTML extraction
+│   └── generate_clean_pdf_final.py  # PDF generation
+├── venv_clat/              # Shared Python virtual environment
+├── revision_tracker.db     # Main database
+└── assessment_tracker.db   # Assessment tracking
+```
+
+## Code Style & Standards
+
+### Python
+- Follow PEP 8 style guide
+- Use type hints for function parameters and returns
+- Docstrings for all public functions (Google style)
+- Prefer `Path` from `pathlib` over string paths
+- Always use `Path.home()` for user home directory (cross-machine compatibility)
+
+### Database
+- SQLite with explicit schemas
+- Use migrations for schema changes
+- Always use parameterized queries (prevent SQL injection)
+- Connection pattern: context managers or explicit close()
+
+### API Endpoints
+- RESTful conventions
+- JSON responses
+- Proper HTTP status codes (200, 400, 404, 500)
+- CORS disabled (local use only)
+
+## Critical Deployment Rules
+
+### NEVER Sync Directly to Mac Mini
+- ❌ NEVER use rsync/scp directly to Mac Mini
+- ❌ NEVER run commands on Mac Mini without user approval
+- ✅ ONLY deploy via Git after user confirmation
+- ✅ Test on MacBook Pro first
+
+### Deployment Workflow
+1. Develop and test on MacBook Pro (username: arvind)
+2. Wait for user approval
+3. Commit to Git
+4. User manually pulls on Mac Mini (username: arvindkumar)
+
+### Cross-Machine Compatibility
+- MacBook Pro: `/Users/arvind/...`
+- Mac Mini: `/Users/arvindkumar/...`
+- Always use `Path.home()` or `os.path.expanduser('~')`
+- Code includes automatic path correction in `unified_server.py`
+
+## Key Workflows
+
+### TopRankers Daily Automation
+```bash
+cd ~/clat_preparation/toprankers
+source ~/.zshrc  # Loads ANTHROPIC_API_KEY
+./automate_html.sh https://www.toprankers.com/current-affairs-DD-MONTH-YYYY
+```
+**Output:**
+- PDF → ~/saanvi/Legaledgedailygk/current_affairs_YYYY_month_DD.pdf
+- Anki cards → Imported to CLAT GK decks
+
+### Start Development Server
+```bash
+cd ~/clat_preparation
+source venv_clat/bin/activate
+python server/unified_server.py
+# Server: http://localhost:8001
+```
+
+### Chunk Large PDF
+```bash
+cd ~/clat_preparation
+source venv_clat/bin/activate
+python server/pdf_chunker.py <pdf_path>
+# Creates: original_part1.pdf, original_part2.pdf, etc.
+```
+
+### Create Assessment (Flashcards)
+- Use dashboard: http://localhost:8001/comprehensive_dashboard.html
+- Click "Create Assessment" button on any PDF
+- Background processing with real-time progress
+- Processes 2-3 topics at a time for continuous feedback
+
+## Database Schema Highlights
+
+### revision_tracker.db
+- **pdfs** - All PDF metadata
+- **pdf_chunks** - Chunked PDF parts (when original >20 pages)
+- **topics** - Extracted topics from PDFs
+
+### assessment_tracker.db
+- **assessment_jobs** - Background job tracking
+- **processed_topics** - Deduplicated topics (SHA256 hash)
+- **test_sessions** - User test attempts
+- **question_attempts** - Individual Q&A tracking
+
+## Security & API Keys
+
+### Environment Variables
+```bash
+# API key stored in ~/.zshrc
+export ANTHROPIC_API_KEY='sk-ant-...'
+```
+
+### Never Commit
+- `.env` files
+- `*.db` files (databases)
+- API keys or secrets
+- Virtual environment folders
+
+### AnkiConnect
+- Port: 8765 (local only)
+- Must be running for card import
+- Code: 2055492159
+
+## Common Patterns
+
+### PDF Path Resolution
+```python
+from pathlib import Path
+
+# ✅ Correct - works on both machines
+pdf_path = Path.home() / "saanvi" / "Legaledgedailygk" / filename
+
+# ❌ Wrong - hardcoded username
+pdf_path = Path("/Users/arvind/saanvi/...")
+```
+
+### Database Connection
+```python
+import sqlite3
+
+# ✅ Correct - with context manager
+with sqlite3.connect(db_path) as conn:
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM pdfs")
+    # Auto-commits and closes
+```
+
+### API Error Handling
+```python
+@app.route('/api/endpoint')
+def endpoint():
+    try:
+        # logic here
+        return jsonify({'success': True, 'data': result}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+```
+
+## Assessment Creation System
+
+### Topic-Level Batching
+- Processes 2-3 topics at a time (not entire chunk)
+- Provides progress updates every 10-15 seconds
+- Prevents silent 60-90 second stalls
+- Uses SHA256 hashing for duplicate detection
+
+### Progress Tracking
+- Real-time updates via `/api/assessment-progress/<job_id>`
+- Frontend polls every 2 seconds
+- Shows: current chunk, batch, topic titles, card count
+
+## Testing Guidelines
+
+### Before Deployment
+1. Test on MacBook Pro first
+2. Verify all API endpoints respond
+3. Check database integrity
+4. Test TopRankers automation
+5. Verify PDF chunking works
+6. Test assessment creation end-to-end
+
+### Common Test Commands
+```bash
+# Test imports
+python -c "import server.unified_server; print('✅ OK')"
+
+# Test database
+sqlite3 revision_tracker.db "SELECT COUNT(*) FROM pdfs;"
+
+# Test TopRankers scripts
+cd toprankers && python -c "import extract_html; print('✅ OK')"
+
+# Test API server
+curl http://localhost:8001/api/test
+```
+
+## Performance Considerations
+
+### Large PDFs
+- Chunk if >20 pages (prevents OOM)
+- Process 8-10 pages per chunk
+- Parallel processing possible but not implemented
+
+### API Rate Limits
+- Anthropic API: Standard rate limits apply
+- Add delays between batch requests if needed
+- Current: No explicit rate limiting
+
+### Database
+- SQLite is fine for single-user, local use
+- Regular VACUUM for optimization
+- Indexes on frequently queried columns
+
+## Troubleshooting
+
+### Server Won't Start
+- Check if port 8001 is in use: `lsof -ti:8001`
+- Kill existing: `lsof -ti:8001 | xargs kill -9`
+
+### Anki Import Fails
+1. Ensure Anki is running
+2. Check AnkiConnect installed (code: 2055492159)
+3. Close any dialog boxes in Anki
+
+### API Key Issues
+```bash
+# Check if key is set
+echo $ANTHROPIC_API_KEY
+
+# Reload environment
+source ~/.zshrc
+```
+
+### TopRankers Extraction Fails
+- URL format: `https://www.toprankers.com/current-affairs-DD-MONTH-YYYY`
+- Page might not be published yet (future dates)
+- Check BeautifulSoup is installed
+
+## AI-Specific Instructions
+
+### When Editing Code
+- Always read the entire file first
+- Preserve existing patterns and style
+- Add comments for complex logic
+- Update docstrings if function signature changes
+- Test changes mentally before suggesting
+
+### When Asked About Architecture
+- Reference PROJECT_HANDOFF.md for full details
+- Explain two-machine deployment model
+- Highlight cross-machine compatibility requirements
+
+### When Debugging
+- Check server logs: `/tmp/server.log`
+- Look at database state: `sqlite3 *.db`
+- Verify API keys are set
+- Check file permissions
+
+## Recent Changes (December 2025)
+
+### Project Consolidation
+- Moved TopRankers scripts from `~/Desktop/anki_automation/` to `~/clat_preparation/toprankers/`
+- Created shared virtual environment (`venv_clat`)
+- All code now in single project folder
+- Old location deprecated
+
+### PDF Spacing Feature
+- Attempted to add spacing for iPad annotation
+- Feature abandoned - lost formatting
+- All `*_s.pdf` files removed
+- Original PDFs unchanged
+
+## Documentation Files
+- `PROJECT_HANDOFF.md` - Complete system documentation (9,500+ lines)
+- `CONSOLIDATION_SUMMARY.md` - Recent migration details
+- `toprankers/README.md` - TopRankers automation guide
+- `ARCHITECTURE.md` - System architecture details
+
+## GK Dashboard Business Rules (comprehensive_dashboard.html)
+
+### CRITICAL: PDF Processing Workflow
+
+**This is the most complex page in the system. Always refer to these rules when modifying.**
+
+#### Page Threshold Rule
+- **≤13 pages**: Small PDF - does NOT need chunking
+- **>13 pages**: Large PDF - MUST be chunked before processing
+
+#### Button States & Workflow
+
+| PDF Size | Chunk Button | Create Assessment | Test | Revised | Status |
+|----------|--------------|-------------------|------|---------|--------|
+| >13 pages (not chunked) | **ACTIVE** | Disabled | Disabled | Disabled | Not Processed |
+| >13 pages (after chunking) | Removed from list | - | - | - | Moved to "Large Files" |
+| ≤13 pages (not processed) | Greyed/Disabled | **ACTIVE** | Disabled | Disabled | Not Processed |
+| ≤13 pages (processed) | Greyed | Greyed | **ACTIVE** | Depends | Processed |
+| Any (revised) | - | - | - | **GREEN ✓** | Processed |
+
+#### Detailed Rules
+
+1. **Large PDFs (>13 pages)**: 
+   - Displayed in **RED font** to indicate action needed
+   - ONLY the Chunk button is active
+   - All other buttons (Create Assessment, Test, Revised) are DISABLED
+   - Status shows "Not Processed"
+
+2. **Chunking Process**:
+   - Click Chunk → Splits into smaller PDFs (≤13 pages each)
+   - Original large PDF is REMOVED from main list
+   - Original moves to "Large Files" folder view only
+   - Chunked parts appear in main list (e.g., `filename_part1.pdf`, `filename_part2.pdf`)
+
+3. **Small PDFs (≤13 pages)**:
+   - Chunk button is GREYED (not needed)
+   - Create Assessment button is ACTIVE
+   - Status shows "Not Processed" until assessment is created
+
+4. **After Create Assessment**:
+   - Questions are generated via Claude AI
+   - Cards are sent to Anki
+   - Status changes to "Processed"
+   - Create Assessment button becomes GREYED
+   - Test button becomes ACTIVE
+
+5. **Revised Button**:
+   - Shows GREEN checkmark (✓) only when user has:
+     - Opened the PDF
+     - Modified/annotated it
+     - Saved the changes
+   - Otherwise remains unchecked
+
+6. **Columns Explained**:
+   - **TOPICS**: Number of topics extracted from PDF
+   - **REVISIONS**: Number of times PDF has been revised/modified
+   - **TEST ATTEMPTS**: Number of times questions from this PDF were attempted
+   - **LAST REVISED**: When the PDF was last modified
+   - **STATUS**: "Not Processed" or "Processed"
+   - **Details**: Shows modification history and timestamps
+
+#### Visual Indicators
+- **Red font**: PDF >13 pages, needs chunking
+- **Green Revised button**: PDF has been revised
+- **Greyed button**: Action not available/not needed
+- **Active button**: Action available
+
+#### State Transitions
+```
+Large PDF (>13 pages)
+    │
+    ▼ [Click Chunk]
+Chunked PDFs (≤13 pages each) + Original moved to "Large Files"
+    │
+    ▼ [Click Create Assessment]
+Processed PDF (cards in Anki)
+    │
+    ▼ [User revises PDF]
+Revised PDF (green checkmark)
+```
+
+## When in Doubt
+1. Read PROJECT_HANDOFF.md first
+2. Check existing code patterns
+3. Test on MacBook Pro before suggesting Mac Mini changes
+4. Ask user for clarification on ambiguous requirements
+5. Preserve existing functionality unless explicitly asked to change
