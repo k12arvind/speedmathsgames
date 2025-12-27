@@ -1468,7 +1468,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         conn.close()
 
         if result:
-            filepath = Path(result[0])
+            filepath = Path(self.correct_pdf_path(result[0]))
             # Verify file actually exists before using database path
             if not filepath.exists():
                 filepath = None  # Force fallback to chunked_pdfs check
