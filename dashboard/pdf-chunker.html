@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Chunker - CLAT Preparation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 20px;
+        }
+
+        .progress-log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        .progress-log .log-entry {
+            margin-bottom: 5px;
+            padding: 3px 0;
+        }
+
+        .progress-log .log-progress {
+            color: #0d6efd;
+        }
+
+        .progress-log .log-info {
+            color: #6c757d;
+        }
+
+        .progress-log .log-success {
+            color: #198754;
+            font-weight: bold;
+        }
+
+        .progress-log .log-error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .chunk-result {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: white;
+        }
+
+        .chunk-result .chunk-number {
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status-idle {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .status-processing {
+            background: #cfe2ff;
+            color: #084298;
+        }
+
+        .status-complete {
+            background: #d1e7dd;
+            color: #0f5132;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #842029;
+        }
+
+        .btn-chunk {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn-chunk:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-chunk:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mb-4">
+            <div class="mb-3">
+                <a href="comprehensive_dashboard.html" class="btn btn-light">
+                    ← Back to Dashboard
+                </a>
+            </div>
+            <h1 class="text-white">📄 PDF Chunker</h1>
+            <p class="text-white">Split large PDFs into smaller chunks for easier processing</p>
+        </div>
+
+        <!-- Configuration Card -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">⚙️ Chunking Configuration</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="pdfSelect" class="form-label">Select PDF File</label>
+                        <select class="form-select" id="pdfSelect" size="8" style="font-family: monospace; font-size: 12px;">
+                            <option value="">Loading PDFs...</option>
+                        </select>
+                        <small class="text-muted">Select from available PDFs in your folders (showing file path)</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Or Enter Custom Path</label>
+                        <input type="text" class="form-control" id="customPath"
+                               placeholder="/path/to/your/file.pdf">
+                        <small class="text-muted">Alternatively, enter a full file path manually</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="outputDir" class="form-label">Output Directory</label>
+                        <input type="text" class="form-control" id="outputDir"
+                               value="/tmp/chunked_pdfs">
+                        <small class="text-muted">Where to save the chunked PDF files</small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="sourceFilter" class="form-label">Filter by Source</label>
+                        <select class="form-select" id="sourceFilter">
+                            <option value="">All Sources</option>
+                            <option value="legaledge">Legal Edge</option>
+                            <option value="career_launcher">Career Launcher</option>
+                            <option value="manthan">Manthan</option>
+                            <option value="toprankers">Top Rankers</option>
+                        </select>
+                        <small class="text-muted">Filter PDFs by source</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="maxPages" class="form-label">Max Pages per Chunk</label>
+                        <input type="number" class="form-control" id="maxPages" value="10" min="1" max="100">
+                        <small class="text-muted">Number of pages in each chunk (default: 10)</small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="namingPattern" class="form-label">Naming Pattern</label>
+                        <input type="text" class="form-control" id="namingPattern"
+                               value="{basename}_part{num}">
+                        <small class="text-muted">Use {basename} for original name, {num} for chunk number</small>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button id="startChunking" class="btn btn-chunk">
+                        <span id="btnText">🚀 Start Chunking</span>
+                        <span id="btnSpinner" class="spinner-border spinner-border-sm ms-2 d-none"></span>
+                    </button>
+                    <span id="statusBadge" class="status-badge status-idle ms-3">Idle</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Card -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">📊 Progress</h5>
+            </div>
+            <div class="card-body">
+                <div class="progress mb-3" style="height: 25px;">
+                    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated"
+                         role="progressbar" style="width: 0%">0%</div>
+                </div>
+                <div id="progressLog" class="progress-log">
+                    <div class="log-entry log-info">Ready to chunk PDF files...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Card -->
+        <div id="resultsCard" class="card d-none">
+            <div class="card-header">
+                <h5 class="mb-0">✅ Chunked Files</h5>
+            </div>
+            <div class="card-body">
+                <div id="resultsContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = 'http://localhost:8001';
+
+        let isProcessing = false;
+        let originalPdfPath = '';
+
+        const elements = {
+            pdfSelect: document.getElementById('pdfSelect'),
+            customPath: document.getElementById('customPath'),
+            outputDir: document.getElementById('outputDir'),
+            maxPages: document.getElementById('maxPages'),
+            namingPattern: document.getElementById('namingPattern'),
+            startBtn: document.getElementById('startChunking'),
+            btnText: document.getElementById('btnText'),
+            btnSpinner: document.getElementById('btnSpinner'),
+            statusBadge: document.getElementById('statusBadge'),
+            progressBar: document.getElementById('progressBar'),
+            progressLog: document.getElementById('progressLog'),
+            resultsCard: document.getElementById('resultsCard'),
+            resultsContainer: document.getElementById('resultsContainer'),
+            sourceFilter: document.getElementById('sourceFilter')
+        };
+
+        let availablePdfs = [];
+
+        // Load available PDFs on page load
+        async function loadAvailablePdfs() {
+            try {
+                const response = await fetch(`${API_BASE}/api/pdfs/all`);
+                const data = await response.json();
+                availablePdfs = data.pdfs || [];
+
+                populatePdfList();
+                addLogEntry(`Loaded ${availablePdfs.length} PDFs from database`, 'info');
+            } catch (error) {
+                console.error('Failed to load PDFs:', error);
+                elements.pdfSelect.innerHTML = '<option value="">Error loading PDFs</option>';
+                addLogEntry('Failed to load PDFs from database', 'error');
+            }
+        }
+
+        // Populate PDF dropdown with filtering
+        function populatePdfList() {
+            const sourceFilter = elements.sourceFilter.value.toLowerCase();
+
+            const filteredPdfs = availablePdfs.filter(pdf => {
+                if (!sourceFilter) return true;
+                return pdf.source && pdf.source.toLowerCase() === sourceFilter;
+            });
+
+            elements.pdfSelect.innerHTML = '';
+
+            if (filteredPdfs.length === 0) {
+                elements.pdfSelect.innerHTML = '<option value="">No PDFs found</option>';
+                return;
+            }
+
+            filteredPdfs.forEach(pdf => {
+                const option = document.createElement('option');
+                option.value = pdf.filepath;
+                // Show source, date, and filename
+                const displayText = `[${pdf.source || 'unknown'}] ${pdf.filename}`;
+                option.textContent = displayText;
+                option.title = pdf.filepath; // Show full path on hover
+                elements.pdfSelect.appendChild(option);
+            });
+        }
+
+        // Filter handler
+        elements.sourceFilter.addEventListener('change', populatePdfList);
+
+        // Log entry helper
+        function addLogEntry(message, type = 'info') {
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            elements.progressLog.appendChild(entry);
+            elements.progressLog.scrollTop = elements.progressLog.scrollHeight;
+        }
+
+        // Update progress bar
+        function updateProgress(percent) {
+            elements.progressBar.style.width = `${percent}%`;
+            elements.progressBar.textContent = `${percent}%`;
+        }
+
+        // Update status badge
+        function updateStatus(status) {
+            elements.statusBadge.className = `status-badge status-${status}`;
+            const statusText = {
+                'idle': 'Idle',
+                'processing': 'Processing...',
+                'complete': 'Complete',
+                'error': 'Error'
+            };
+            elements.statusBadge.textContent = statusText[status];
+        }
+
+        // Display chunk results
+        function displayChunkResult(chunk) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'chunk-result';
+            resultDiv.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <span class="chunk-number">${chunk.chunk_number}</span>
+                    <div class="ms-3 flex-grow-1">
+                        <strong>${chunk.filename}</strong>
+                        <div class="text-muted small">
+                            Pages ${chunk.start_page}-${chunk.end_page}
+                            (${chunk.total_pages} pages, ${chunk.size_kb} KB)
+                        </div>
+                        <div class="text-muted small">
+                            ${chunk.path}
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-outline-primary me-2" onclick="viewPdfInBrowser('${chunk.path}')">
+                            👁️ View
+                        </button>
+                        <span class="badge bg-success">Created</span>
+                    </div>
+                </div>
+            `;
+            elements.resultsContainer.appendChild(resultDiv);
+            elements.resultsCard.classList.remove('d-none');
+        }
+
+        // View PDF in browser (opens in new tab)
+        function viewPdfInBrowser(pdfPath) {
+            // Extract just the filename from the path
+            const filename = pdfPath.split('/').pop();
+
+            // Open PDF viewer in new tab
+            const viewerUrl = `/pdf-viewer.html?pdf_id=${encodeURIComponent(filename)}`;
+            window.open(viewerUrl, '_blank');
+        }
+
+        // Start chunking process
+        async function startChunking() {
+            if (isProcessing) return;
+
+            // Get PDF path from either dropdown or custom input
+            let pdfPath = elements.pdfSelect.value.trim();
+            if (!pdfPath) {
+                pdfPath = elements.customPath.value.trim();
+            }
+
+            const outputDir = elements.outputDir.value.trim();
+            const maxPages = parseInt(elements.maxPages.value);
+            const namingPattern = elements.namingPattern.value.trim();
+
+            if (!pdfPath || !outputDir) {
+                alert('Please select a PDF or enter a custom path, and specify output directory');
+                return;
+            }
+
+            // Store original PDF path for viewing
+            originalPdfPath = pdfPath;
+
+            // Reset UI
+            isProcessing = true;
+            elements.startBtn.disabled = true;
+            elements.btnSpinner.classList.remove('d-none');
+            elements.progressLog.innerHTML = '';
+            elements.resultsContainer.innerHTML = '';
+            elements.resultsCard.classList.add('d-none');
+            updateProgress(0);
+            updateStatus('processing');
+
+            addLogEntry('Starting PDF chunking...', 'info');
+            addLogEntry(`Input: ${pdfPath}`, 'info');
+            addLogEntry(`Output: ${outputDir}`, 'info');
+            addLogEntry(`Max pages per chunk: ${maxPages}`, 'info');
+
+            try {
+                // Make chunking request with streaming
+                const response = await fetch(`${API_BASE}/api/pdf/chunk`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        pdf_path: pdfPath,
+                        output_directory: outputDir,
+                        max_pages_per_chunk: maxPages,
+                        naming_pattern: namingPattern
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                // Read streaming response
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+
+                while (true) {
+                    const {value, done} = await reader.read();
+                    if (done) break;
+
+                    // Decode and parse Server-Sent Events
+                    const chunk = decoder.decode(value);
+                    const lines = chunk.split('\n');
+
+                    for (const line of lines) {
+                        if (line.startsWith('data: ')) {
+                            const data = JSON.parse(line.substring(6));
+                            handleUpdate(data);
+                        }
+                    }
+                }
+
+            } catch (error) {
+                addLogEntry(`Error: ${error.message}`, 'error');
+                updateStatus('error');
+            } finally {
+                isProcessing = false;
+                elements.startBtn.disabled = false;
+                elements.btnSpinner.classList.add('d-none');
+            }
+        }
+
+        // Handle streaming updates
+        function handleUpdate(update) {
+            switch (update.type) {
+                case 'progress':
+                    addLogEntry(update.message, 'progress');
+                    if (update.percent_complete !== undefined) {
+                        updateProgress(update.percent_complete);
+                    }
+                    break;
+
+                case 'info':
+                    addLogEntry(update.message, 'info');
+                    break;
+
+                case 'chunk_created':
+                    addLogEntry(`Created: ${update.filename} (${update.total_pages} pages)`, 'success');
+                    displayChunkResult(update);
+                    break;
+
+                case 'complete':
+                    addLogEntry(update.message, 'success');
+                    updateProgress(100);
+                    updateStatus('complete');
+                    addLogEntry(`✅ All done! Created ${update.total_chunks} chunks`, 'success');
+
+                    // Add summary and action buttons at the top of results
+                    const summaryDiv = document.createElement('div');
+                    summaryDiv.className = 'alert alert-success mb-3';
+
+                    const originalFilename = originalPdfPath ? originalPdfPath.split('/').pop() : 'Unknown';
+                    const movedTo = update.original_moved_to || 'large_files folder';
+
+                    summaryDiv.innerHTML = `
+                        <div class="d-flex flex-column gap-3">
+                            <div>
+                                <h6 class="alert-heading mb-2">✅ Chunking Complete!</h6>
+                                <p class="mb-2">
+                                    <strong>Original file:</strong> ${originalFilename}<br>
+                                    <strong>Moved to:</strong> ${movedTo}<br>
+                                    <strong>Chunks created:</strong> ${update.total_chunks}
+                                </p>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="comprehensive_dashboard.html" class="btn btn-primary">
+                                    ← Back to Dashboard
+                                </a>
+                                <a href="comprehensive_dashboard.html#large-files" class="btn btn-outline-secondary">
+                                    📦 View Large Files Tab
+                                </a>
+                                <button class="btn btn-outline-info" onclick="window.location.reload()">
+                                    ✂️ Chunk Another PDF
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    elements.resultsContainer.insertBefore(summaryDiv, elements.resultsContainer.firstChild);
+                    break;
+
+                case 'error':
+                    addLogEntry(`Error: ${update.message}`, 'error');
+                    updateStatus('error');
+                    break;
+            }
+        }
+
+        // Event listener
+        elements.startBtn.addEventListener('click', startChunking);
+
+        // Check for auto-start mode (filepath in URL)
+        function checkAutoStart() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filepath = urlParams.get('filepath');
+
+            if (filepath) {
+                // Auto-start mode: hide configuration form and start immediately
+                addLogEntry('Auto-start mode detected', 'info');
+                addLogEntry(`File: ${filepath}`, 'info');
+
+                // Hide the configuration card
+                document.querySelector('.card').style.display = 'none';
+
+                // Set the filepath and start chunking
+                elements.customPath.value = filepath;
+                originalPdfPath = filepath;
+
+                // Start chunking after a brief delay
+                setTimeout(() => {
+                    startChunking();
+                }, 500);
+            } else {
+                // Normal mode: load PDFs
+                addLogEntry('PDF Chunker ready. Loading available PDFs...', 'info');
+                loadAvailablePdfs();
+            }
+        }
+
+        // Initialize
+        checkAutoStart();
+    </script>
+</body>
+</html>

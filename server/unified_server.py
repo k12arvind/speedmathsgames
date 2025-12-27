@@ -13,13 +13,14 @@ Unified HTTP server that combines:
 Single server on port 8001 for everything.
 """
 
-from http.server import SimpleHTTPRequestHandler, HTTPServer
+from http.server import SimpleHTTPRequestHandler, HTTPServer, ThreadingHTTPServer
 from http.cookies import SimpleCookie
 from urllib.parse import urlparse, parse_qs
 import argparse
 import os
 import sys
 import json
+import sqlite3
 from pathlib import Path
 from datetime import datetime
 import traceback
@@ -58,6 +59,12 @@ from server.pdf_scanner import PDFScanner
 # Import processing jobs database for progress tracking
 from server.processing_jobs_db import ProcessingJobsDB
 
+# Import annotation manager for PDF annotation feature
+from server.annotation_manager import AnnotationManager
+
+# Import PDF chunker for PDF splitting
+from server.pdf_chunker import PdfChunker
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -71,6 +78,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     math_db = None
     pdf_scanner = None
     processing_db = None
+    annotation_manager = None
+    pdf_chunker = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -122,6 +131,13 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         if path.startswith('/api/processing/') and '/logs' in path:
             from urllib.parse import unquote
             self.handle_processing_logs_sse(path)
+            return
+
+        # PDF serving endpoint (must be before general API handling)
+        if path.startswith('/api/pdf/serve/'):
+            from urllib.parse import unquote
+            pdf_id = unquote(path.split('/')[-1])
+            self.handle_pdf_serve(pdf_id)
             return
 
         # API endpoints
@@ -327,7 +343,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # GK Dashboard API endpoints
             elif path.startswith('/api/dashboard') or path.startswith('/api/pdfs/') or \
                  path.startswith('/api/filter/') or path.startswith('/api/stats') or \
-                 path.startswith('/api/pdf/'):
+                 path.startswith('/api/pdf/') or path.startswith('/api/chunks/') or \
+                 path.startswith('/api/large-files'):
                 self.handle_gk_dashboard_get(path, query_params)
             # Analytics API endpoints
             elif path.startswith('/api/analytics/'):
@@ -335,6 +352,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Processing API endpoints
             elif path.startswith('/api/processing/'):
                 self.handle_processing_get(path, query_params)
+            # Annotation API endpoints
+            elif path.startswith('/api/annotations/'):
+                self.handle_annotation_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -362,9 +382,67 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Processing API endpoints
             elif path.startswith('/api/processing/'):
                 self.handle_processing_post(path, data)
+            # Annotation API endpoints
+            elif path.startswith('/api/annotations/'):
+                self.handle_annotation_post(path, data)
+            # PDF Chunking API endpoints
+            elif path.startswith('/api/pdf/chunk'):
+                self.handle_pdf_chunk_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
+    def do_DELETE(self):
+        """Handle DELETE requests."""
+        try:
+            path = self.path.split('?')[0]
+
+            # DELETE /api/annotations/{annotation_id}
+            if path.startswith('/api/annotations/'):
+                parts = path.split('/')
+                if len(parts) == 4:
+                    annotation_id = parts[3]
+
+                    success = self.annotation_manager.delete_annotation(
+                        annotation_id=int(annotation_id),
+                        deleted_by='system',
+                        hard_delete=False  # Soft delete by default
+                    )
+
+                    if success:
+                        self.send_response(200)
+                        self.send_header('Content-Type', 'application/json')
+                        self.send_header('Access-Control-Allow-Origin', '*')
+                        self.end_headers()
+                        self.send_json({
+                            'success': True,
+                            'message': 'Annotation deleted successfully'
+                        })
+                    else:
+                        self.send_response(404)
+                        self.send_header('Content-Type', 'application/json')
+                        self.send_header('Access-Control-Allow-Origin', '*')
+                        self.end_headers()
+                        self.send_json({'error': 'Annotation not found'})
+                else:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.send_header('Access-Control-Allow-Origin', '*')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid annotation ID'})
+            else:
+                self.send_response(404)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.send_json({'error': 'Not Found'})
+
+        except Exception as e:
+            self.send_response(500)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.end_headers()
             self.send_json({'error': str(e), 'trace': traceback.format_exc()})
 
     # ============================================================
@@ -721,6 +799,151 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     # GK DASHBOARD API METHODS
     # ============================================================
 
+    def get_all_chunks(self):
+        """Get all chunked PDFs from database."""
+        import sqlite3
+        from pathlib import Path
+
+        db_path = Path.home() / 'clat_preparation' / 'revision_tracker.db'
+        conn = sqlite3.connect(str(db_path))
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+
+        try:
+            cursor.execute("""
+                SELECT
+                    parent_pdf_id,
+                    chunk_filename,
+                    chunk_path,
+                    chunk_number,
+                    start_page,
+                    end_page,
+                    total_pages,
+                    file_size_kb,
+                    original_file_path,
+                    original_file_deleted,
+                    deletion_timestamp,
+                    overlap_enabled,
+                    max_pages_per_chunk,
+                    created_at
+                FROM pdf_chunks
+                ORDER BY parent_pdf_id, chunk_number
+            """)
+
+            chunks = [dict(row) for row in cursor.fetchall()]
+
+            # Group chunks by parent PDF
+            grouped_chunks = {}
+            for chunk in chunks:
+                parent = chunk['parent_pdf_id']
+                if parent not in grouped_chunks:
+                    grouped_chunks[parent] = {
+                        'parent_pdf': parent,
+                        'original_deleted': chunk['original_file_deleted'],
+                        'deletion_timestamp': chunk['deletion_timestamp'],
+                        'overlap_enabled': chunk['overlap_enabled'],
+                        'chunks': []
+                    }
+                grouped_chunks[parent]['chunks'].append(chunk)
+
+            return list(grouped_chunks.values())
+
+        finally:
+            conn.close()
+
+    def _filter_and_add_chunks(self, pdfs_list):
+        """Filter out chunked originals and add chunked files from database."""
+        import sqlite3
+        from pathlib import Path
+
+        db_path = Path.home() / 'clat_preparation' / 'revision_tracker.db'
+        conn = sqlite3.connect(str(db_path))
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+
+        try:
+            # Get list of PDFs marked as chunked (to filter out)
+            cursor.execute("SELECT filename FROM pdfs WHERE is_chunked = 1")
+            chunked_originals = {row['filename'] for row in cursor.fetchall()}
+
+            # Filter out chunked originals
+            filtered_pdfs = [pdf for pdf in pdfs_list if pdf.get('filename') not in chunked_originals]
+
+            # Get all chunk files from pdfs table
+            cursor.execute("""
+                SELECT filename, filepath, source, date_published, source_type, parent_pdf
+                FROM pdfs
+                WHERE is_chunk = 1
+            """)
+
+            chunks = cursor.fetchall()
+
+            # Add chunks to the filtered list
+            for chunk in chunks:
+                filtered_pdfs.append({
+                    'filename': chunk['filename'],
+                    'filepath': chunk['filepath'],
+                    'source': chunk['source'],
+                    'date_published': chunk['date_published'],
+                    'source_type': chunk['source_type'],
+                    'pdf_id': chunk['filename'],
+                    'exists_in_db': True,
+                    'is_chunk': True,
+                    'parent_pdf': chunk['parent_pdf']
+                })
+
+            return filtered_pdfs
+        finally:
+            conn.close()
+
+    def _add_page_counts(self, pdfs_list):
+        """Add page count information to PDF list."""
+        from pathlib import Path
+        import sys
+        sys.path.insert(0, str(Path(__file__).parent))
+        from pdf_chunker import PdfChunker
+
+        for pdf in pdfs_list:
+            filepath = pdf.get('filepath')
+            if filepath and Path(filepath).exists():
+                page_count = PdfChunker.get_pdf_page_count(filepath)
+                pdf['page_count'] = page_count
+                pdf['needs_chunking'] = page_count > 10
+                pdf['can_chunk'] = page_count > 13
+            else:
+                pdf['page_count'] = 0
+                pdf['needs_chunking'] = False
+                pdf['can_chunk'] = False
+
+        return pdfs_list
+
+    def _scan_large_files(self):
+        """Scan large_files folder for archived PDFs."""
+        from pathlib import Path
+        import sys
+        sys.path.insert(0, str(Path(__file__).parent))
+        from pdf_chunker import PdfChunker
+
+        large_files_dir = Path.home() / 'Desktop' / 'saanvi' / 'large_files'
+        if not large_files_dir.exists():
+            return []
+
+        large_files = []
+        for pdf_path in large_files_dir.glob('*.pdf'):
+            page_count = PdfChunker.get_pdf_page_count(str(pdf_path))
+            large_files.append({
+                'filename': pdf_path.name,
+                'filepath': str(pdf_path),
+                'pdf_id': pdf_path.name,
+                'page_count': page_count,
+                'size_mb': round(pdf_path.stat().st_size / (1024 * 1024), 2),
+                'modified': pdf_path.stat().st_mtime
+            })
+
+        # Sort by modified time descending
+        large_files.sort(key=lambda x: x['modified'], reverse=True)
+        return large_files
+
     def handle_gk_dashboard_get(self, path: str, query_params: dict):
         """Handle GK dashboard API GET requests."""
         if path == '/api/dashboard':
@@ -728,10 +951,17 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             scan_results = self.pdf_scanner.scan_all_folders()
             stats = self.pdf_scanner.get_statistics()
 
+            # Add page counts to all PDFs
+            scan_results['daily'] = self._add_page_counts(scan_results.get('daily', []))
+            if 'weekly' in scan_results:
+                scan_results['weekly']['legaledge'] = self._add_page_counts(scan_results['weekly'].get('legaledge', []))
+                scan_results['weekly']['career_launcher'] = self._add_page_counts(scan_results['weekly'].get('career_launcher', []))
+
             # Organize into segregated structure
             data = {
                 'pdfs': scan_results,
-                'statistics': stats
+                'statistics': stats,
+                'large_files': self._scan_large_files()
             }
             self.send_json(data)
 
@@ -790,6 +1020,16 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             pdfs = self.pdf_scanner.filter_by_revision_count(min_count, max_count)
             self.send_json({'pdfs': pdfs})
 
+        elif path == '/api/chunks/all':
+            # Get all chunked PDFs from database
+            chunks = self.get_all_chunks()
+            self.send_json({'chunks': chunks})
+
+        elif path == '/api/large-files':
+            # Get all large archived files
+            large_files = self._scan_large_files()
+            self.send_json({'large_files': large_files})
+
         else:
             self.send_json({'error': 'GK dashboard endpoint not found'})
 
@@ -813,7 +1053,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         if path == '/api/analytics/daily':
             # Get daily statistics for last 30 days from question_attempts
             # This includes ALL attempts, even from incomplete tests
-            conn = sqlite3.connect(self.assessment_db.db_path)
+            conn = sqlite3.connect(self.assessment_db.db_path, check_same_thread=False)
             cursor = conn.cursor()
 
             # Query to aggregate data by date from question_attempts
@@ -856,7 +1096,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
         elif path == '/api/analytics/categories':
             # Get category performance
-            conn = sqlite3.connect(self.assessment_db.db_path)
+            conn = sqlite3.connect(self.assessment_db.db_path, check_same_thread=False)
             cursor = conn.cursor()
 
             cursor.execute("""
@@ -1152,6 +1392,68 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             return {}
 
     # ============================================================
+    # PDF VIEWER & ANNOTATION METHODS
+    # ============================================================
+
+    def handle_pdf_serve(self, pdf_id: str):
+        """Serve PDF file for viewing in browser."""
+        import os
+        from pathlib import Path
+
+        filepath = None
+
+        # First, try to find PDF in database
+        db_path = Path.home() / 'clat_preparation' / 'revision_tracker.db'
+        conn = sqlite3.connect(str(db_path))
+        cursor = conn.cursor()
+        cursor.execute("SELECT filepath FROM pdfs WHERE filename = ?", (pdf_id,))
+        result = cursor.fetchone()
+        conn.close()
+
+        if result:
+            filepath = Path(result[0])
+            # Verify file actually exists before using database path
+            if not filepath.exists():
+                filepath = None  # Force fallback to chunked_pdfs check
+
+        if not filepath:
+            # If not in database, check if it's a chunked PDF in /tmp/chunked_pdfs
+            chunked_path = Path('/tmp/chunked_pdfs') / pdf_id
+            if chunked_path.exists():
+                filepath = chunked_path
+            else:
+                # Also check common PDF directories
+                for base_dir in [
+                    Path.home() / 'saanvi' / 'Legaledgedailygk',
+                    Path.home() / 'saanvi' / 'LegalEdgeweeklyGK',
+                    Path.home() / 'saanvi' / 'weeklyGKCareerLauncher',
+                    Path.home() / 'Desktop' / 'saanvi' / 'Legaledgedailygk',
+                    Path.home() / 'Desktop' / 'saanvi' / 'legaledgegk'
+                ]:
+                    potential_path = base_dir / pdf_id
+                    if potential_path.exists():
+                        filepath = potential_path
+                        break
+
+        if not filepath or not filepath.exists():
+            self.send_response(404)
+            self.send_header('Content-Type', 'text/plain')
+            self.end_headers()
+            error_msg = f'PDF not found: {pdf_id}\nSearched in database and common directories'
+            self.wfile.write(error_msg.encode())
+            return
+
+        # Serve PDF file
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/pdf')
+        self.send_header('Content-Disposition', f'inline; filename="{filepath.name}"')
+        self.send_header('Access-Control-Allow-Origin', '*')  # For CORS
+        self.end_headers()
+
+        with open(filepath, 'rb') as f:
+            self.wfile.write(f.read())
+
+    # ============================================================
     # PDF PROCESSING API METHODS
     # ============================================================
 
@@ -1328,6 +1630,299 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             self.send_json({'error': 'Processing endpoint not found'})
 
     # ============================================================
+    # ANNOTATION API METHODS
+    # ============================================================
+
+    def handle_annotation_get(self, path: str, query_params: dict):
+        """Handle annotation API GET requests."""
+        from urllib.parse import unquote
+
+        if not self.annotation_manager:
+            self.send_json({'error': 'Annotation manager not initialized'})
+            return
+
+        try:
+            # GET /api/annotations/{pdf_id}
+            # Get all annotations for a PDF (optionally filtered by page)
+            if path.startswith('/api/annotations/') and path.count('/') == 3:
+                pdf_id = unquote(path.split('/')[-1])
+                page_number = query_params.get('page', [None])[0]
+
+                if page_number:
+                    page_number = int(page_number)
+
+                annotations = self.annotation_manager.get_annotations(
+                    pdf_id=pdf_id,
+                    page_number=page_number
+                )
+
+                self.send_json({
+                    'pdf_id': pdf_id,
+                    'annotations': annotations,
+                    'count': len(annotations)
+                })
+
+            # GET /api/annotations/{pdf_id}/stats
+            # Get statistics for a PDF
+            elif path.endswith('/stats'):
+                pdf_id = unquote(path.split('/')[-2])
+                stats = self.annotation_manager.get_pdf_stats(pdf_id)
+
+                if not stats:
+                    self.send_json({'error': 'PDF not found'})
+                else:
+                    self.send_json(stats)
+
+            # GET /api/annotations/{pdf_id}/history
+            # Get revision history for a PDF
+            elif path.endswith('/history'):
+                pdf_id = unquote(path.split('/')[-2])
+                limit = query_params.get('limit', [10])[0]
+
+                history = self.annotation_manager.get_revision_history(
+                    pdf_id=pdf_id,
+                    limit=int(limit)
+                )
+
+                self.send_json({
+                    'pdf_id': pdf_id,
+                    'revisions': history,
+                    'count': len(history)
+                })
+
+            # GET /api/annotations/{pdf_id}/details
+            # Get comprehensive details for a PDF (stats + history + access log)
+            elif path.endswith('/details'):
+                pdf_id = unquote(path.split('/')[-2])
+
+                # Get stats
+                stats = self.annotation_manager.get_pdf_stats(pdf_id)
+
+                # Get revision history (last 20 records)
+                history = self.annotation_manager.get_revision_history(
+                    pdf_id=pdf_id,
+                    limit=20
+                )
+
+                # Get access log (last 50 accesses)
+                conn = sqlite3.connect(str(Path.home() / 'clat_preparation' / 'revision_tracker.db'), check_same_thread=False)
+                conn.row_factory = sqlite3.Row
+                cursor = conn.cursor()
+
+                cursor.execute("""
+                    SELECT log_id, user_id, access_type, timestamp, duration_seconds
+                    FROM pdf_access_log
+                    WHERE pdf_id = ?
+                    ORDER BY timestamp DESC
+                    LIMIT 50
+                """, (pdf_id,))
+
+                access_log = [dict(row) for row in cursor.fetchall()]
+                conn.close()
+
+                self.send_json({
+                    'pdf_id': pdf_id,
+                    'stats': stats,
+                    'revision_history': history,
+                    'access_log': access_log,
+                    'summary': {
+                        'total_annotations': stats.get('annotation_count', 0) if stats else 0,
+                        'total_edits': stats.get('edit_count', 0) if stats else 0,
+                        'total_accesses': stats.get('access_count', 0) if stats else 0,
+                        'last_accessed': stats.get('last_accessed') if stats else None,
+                        'revision_count': len(history),
+                        'access_count': len(access_log)
+                    }
+                })
+
+            else:
+                self.send_json({'error': 'Annotation endpoint not found'})
+
+        except Exception as e:
+            self.send_json({
+                'error': str(e),
+                'trace': traceback.format_exc()
+            })
+
+    def handle_annotation_post(self, path: str, data: dict):
+        """Handle annotation API POST requests."""
+        from urllib.parse import unquote
+
+        if not self.annotation_manager:
+            self.send_json({'error': 'Annotation manager not initialized'})
+            return
+
+        try:
+            # POST /api/annotations/save
+            # Save a new annotation
+            if path == '/api/annotations/save':
+                pdf_id = data.get('pdf_id')
+                page_number = data.get('page_number')
+                annotation_type = data.get('annotation_type')
+                annotation_data = data.get('annotation_data')
+
+                if not all([pdf_id, page_number, annotation_type, annotation_data]):
+                    self.send_json({
+                        'error': 'Missing required fields',
+                        'required': ['pdf_id', 'page_number', 'annotation_type', 'annotation_data']
+                    })
+                    return
+
+                annotation_id = self.annotation_manager.save_annotation(
+                    pdf_id=pdf_id,
+                    page_number=int(page_number),
+                    annotation_type=annotation_type,
+                    annotation_data=annotation_data,
+                    created_by=data.get('created_by', 'system')
+                )
+
+                self.send_json({
+                    'success': True,
+                    'annotation_id': annotation_id,
+                    'message': 'Annotation saved successfully'
+                })
+
+            # POST /api/annotations/update
+            # Update an existing annotation
+            elif path == '/api/annotations/update':
+                annotation_id = data.get('annotation_id')
+                annotation_data = data.get('annotation_data')
+
+                if not annotation_id or not annotation_data:
+                    self.send_json({
+                        'error': 'Missing required fields',
+                        'required': ['annotation_id', 'annotation_data']
+                    })
+                    return
+
+                success = self.annotation_manager.update_annotation(
+                    annotation_id=int(annotation_id),
+                    annotation_data=annotation_data,
+                    updated_by=data.get('updated_by', 'system')
+                )
+
+                if success:
+                    self.send_json({
+                        'success': True,
+                        'message': 'Annotation updated successfully'
+                    })
+                else:
+                    self.send_json({'error': 'Annotation not found'})
+
+            # POST /api/annotations/delete
+            # Delete an annotation
+            elif path == '/api/annotations/delete':
+                annotation_id = data.get('annotation_id')
+                hard_delete = data.get('hard_delete', False)
+
+                if not annotation_id:
+                    self.send_json({
+                        'error': 'Missing required field: annotation_id'
+                    })
+                    return
+
+                success = self.annotation_manager.delete_annotation(
+                    annotation_id=int(annotation_id),
+                    deleted_by=data.get('deleted_by', 'system'),
+                    hard_delete=hard_delete
+                )
+
+                if success:
+                    self.send_json({
+                        'success': True,
+                        'message': 'Annotation deleted successfully'
+                    })
+                else:
+                    self.send_json({'error': 'Annotation not found'})
+
+            # POST /api/annotations/{pdf_id}/access
+            # Log PDF access
+            elif path.endswith('/access'):
+                pdf_id = unquote(path.split('/')[-2])
+                access_type = data.get('access_type', 'view')
+                duration_seconds = data.get('duration_seconds')
+
+                self.annotation_manager.log_access(
+                    pdf_id=pdf_id,
+                    access_type=access_type,
+                    user_id=data.get('user_id', 'system'),
+                    duration_seconds=duration_seconds
+                )
+
+                self.send_json({
+                    'success': True,
+                    'message': 'Access logged successfully'
+                })
+
+            else:
+                self.send_json({'error': 'Annotation endpoint not found'})
+
+        except Exception as e:
+            self.send_json({
+                'error': str(e),
+                'trace': traceback.format_exc()
+            })
+
+    def handle_pdf_chunk_post(self, path: str, data: dict):
+        """Handle PDF chunking API POST requests with streaming."""
+        if not self.pdf_chunker:
+            self.send_json({'error': 'PDF chunker not initialized'})
+            return
+
+        try:
+            # POST /api/pdf/chunk
+            # Chunk a PDF with streaming progress
+            if path == '/api/pdf/chunk':
+                pdf_path = data.get('pdf_path')
+                output_dir = data.get('output_directory')
+                max_pages = data.get('max_pages_per_chunk', 10)
+                naming_pattern = data.get('naming_pattern', '{basename}_part{num}')
+
+                if not pdf_path or not output_dir:
+                    self.send_json({
+                        'error': 'Missing required fields',
+                        'required': ['pdf_path', 'output_directory']
+                    })
+                    return
+
+                # Send headers for Server-Sent Events
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/event-stream')
+                self.send_header('Cache-Control', 'no-cache')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+
+                # Stream progress updates
+                try:
+                    for update in self.pdf_chunker.chunk_pdf(
+                        pdf_path,
+                        output_dir,
+                        max_pages,
+                        naming_pattern
+                    ):
+                        # Send as Server-Sent Event
+                        event_data = json.dumps(update)
+                        self.wfile.write(f"data: {event_data}\n\n".encode())
+                        self.wfile.flush()
+                except Exception as e:
+                    error_update = {
+                        'type': 'error',
+                        'message': str(e),
+                        'trace': traceback.format_exc()
+                    }
+                    self.wfile.write(f"data: {json.dumps(error_update)}\n\n".encode())
+                    self.wfile.flush()
+
+            else:
+                self.send_json({'error': 'PDF chunking endpoint not found'})
+
+        except Exception as e:
+            self.send_json({
+                'error': str(e),
+                'trace': traceback.format_exc()
+            })
+
+    # ============================================================
     # UTILITY METHODS
     # ============================================================
 
@@ -1361,6 +1956,14 @@ def main():
     UnifiedHandler.processing_db = ProcessingJobsDB()
     print("✅ Processing jobs database initialized")
 
+    # Initialize annotation manager
+    UnifiedHandler.annotation_manager = AnnotationManager()
+    print("✅ Annotation manager initialized")
+
+    # Initialize PDF chunker
+    UnifiedHandler.pdf_chunker = PdfChunker()
+    print("✅ PDF chunker initialized")
+
     # Initialize Anthropic client
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if api_key:
@@ -1389,9 +1992,9 @@ def main():
     if not auth_enabled:
         UnifiedHandler.PUBLIC_PAGES = ['*']
 
-    # Start server
+    # Start server (use ThreadingHTTPServer for concurrent requests)
     server_address = ('', args.port)
-    httpd = HTTPServer(server_address, UnifiedHandler)
+    httpd = ThreadingHTTPServer(server_address, UnifiedHandler)
 
     print("\n" + "="*70)
     print("          🎓 CLAT Preparation - Unified Server")

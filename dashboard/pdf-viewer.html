@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer & Annotator - CLAT Preparation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        #pdf-container {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 220px;
+            bottom: 60px;
+            overflow: auto;
+            background: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            /* Prevent scroll during drawing */
+            overscroll-behavior: contain;
+            transition: right 0.3s ease;
+        }
+
+        #pdf-container.sidebar-collapsed {
+            right: 0;
+        }
+
+        #pdf-container.drawing {
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        #pdf-container.drawing canvas {
+            pointer-events: auto;
+        }
+
+        .page-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            background: white;
+        }
+
+        .annotation-toolbar {
+            position: fixed;
+            top: 80px;
+            right: 10px;
+            bottom: 70px;
+            width: 220px;
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .annotation-toolbar.collapsed {
+            transform: translateX(240px);
+        }
+
+        .sidebar-toggle {
+            position: fixed;
+            top: 50%;
+            right: 230px;
+            transform: translateY(-50%);
+            background: white;
+            border: 1px solid #ddd;
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+            padding: 10px 6px;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: -2px 0 4px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+        }
+
+        .sidebar-toggle.collapsed {
+            right: 10px;
+        }
+
+        .sidebar-toggle:hover {
+            background: #f0f0f0;
+        }
+
+        .annotation-toolbar h5 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .annotation-toolbar .btn {
+            width: 100%;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            font-size: 13px;
+            padding: 8px 12px;
+        }
+
+        .annotation-toolbar .btn:hover {
+            opacity: 1;
+        }
+
+        .annotation-toolbar .btn.active {
+            opacity: 1;
+            font-weight: bold;
+            border-width: 2px;
+        }
+
+        .color-picker-group {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .color-picker-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .color-option {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.active {
+            border-color: #000;
+            transform: scale(1.15);
+        }
+
+        .thickness-selector {
+            margin-top: 10px;
+        }
+
+        .thickness-selector label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .thickness-selector input {
+            width: 100%;
+        }
+
+        .thickness-preview {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 11px;
+            color: #888;
+        }
+
+        .zoom-controls {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .zoom-controls button {
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .zoom-level {
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .loading-overlay .spinner {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .error-message {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c00;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 id="pdf-title">Loading PDF...</h2>
+            <button class="back-btn" onclick="window.location.href='comprehensive_dashboard.html'">
+                ← Back to Dashboard
+            </button>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="padding: 0;">
+        <!-- Sidebar Toggle Button -->
+        <button class="sidebar-toggle" id="sidebar-toggle" title="Toggle Toolbar">
+            ◀
+        </button>
+
+        <div class="annotation-toolbar" id="annotation-toolbar">
+            <h5>Annotation Tools</h5>
+            <button class="btn btn-sm btn-warning" id="btn-highlight">
+                🖍️ Highlight
+            </button>
+            <button class="btn btn-sm btn-primary" id="btn-underline">
+                📏 Underline
+            </button>
+            <button class="btn btn-sm btn-success" id="btn-shape">
+                ⭕ Circle
+            </button>
+            <button class="btn btn-sm btn-info" id="btn-pen">
+                ✏️ Pen
+            </button>
+            <button class="btn btn-sm btn-dark" id="btn-erase">
+                🗑️ Erase
+            </button>
+
+            <!-- Color Picker -->
+            <div class="color-picker-group" id="color-picker" style="display:none;">
+                <label>Color</label>
+                <div class="color-options">
+                    <div class="color-option active" data-color="#FFFF00" style="background: #FFFF00;" title="Yellow"></div>
+                    <div class="color-option" data-color="#00FF00" style="background: #00FF00;" title="Green"></div>
+                    <div class="color-option" data-color="#00FFFF" style="background: #00FFFF;" title="Cyan"></div>
+                    <div class="color-option" data-color="#FF69B4" style="background: #FF69B4;" title="Pink"></div>
+                    <div class="color-option" data-color="#FFA500" style="background: #FFA500;" title="Orange"></div>
+                    <div class="color-option" data-color="#FF0000" style="background: #FF0000;" title="Red"></div>
+                </div>
+            </div>
+
+            <!-- Pen Thickness Selector -->
+            <div class="thickness-selector" id="thickness-selector" style="display:none;">
+                <label>Pen Thickness</label>
+                <input type="range" id="pen-thickness" min="1" max="10" value="2" class="form-range">
+                <div class="thickness-preview">
+                    <span id="thickness-value">2</span>px
+                </div>
+            </div>
+
+            <hr>
+            <button class="btn btn-sm btn-danger" id="btn-save">
+                💾 Save
+            </button>
+            <button class="btn btn-sm btn-secondary" id="btn-export">
+                📥 Export PDF
+            </button>
+        </div>
+
+        <div id="pdf-container">
+            <div style="text-align: center; padding: 50px; color: #666;">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading PDF viewer...</p>
+            </div>
+        </div>
+
+        <div class="zoom-controls">
+            <button class="btn btn-sm btn-outline-secondary" id="zoom-out" title="Zoom Out">−</button>
+            <span class="zoom-level" id="zoom-level">100%</span>
+            <button class="btn btn-sm btn-outline-secondary" id="zoom-in" title="Zoom In">+</button>
+        </div>
+    </div>
+
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="spinner">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3">Saving annotations...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+    <script type="module">
+        // Get PDF ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfId = urlParams.get('pdf_id');
+
+        if (!pdfId) {
+            document.getElementById('pdf-container').innerHTML = `
+                <div class="error-message">
+                    <strong>Error:</strong> No PDF ID provided.
+                    <a href="comprehensive_dashboard.html">Return to dashboard</a>
+                </div>
+            `;
+            throw new Error('No PDF ID provided');
+        }
+
+        // Update title
+        document.getElementById('pdf-title').textContent = `Viewing: ${decodeURIComponent(pdfId)}`;
+
+        // PDF.js setup
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+
+        // State management
+        let pdfDoc = null;
+        let totalPages = 0;
+        let scale = 1.5;
+        let annotations = {}; // Store annotations by page
+        let currentTool = null;
+        let isDrawing = false;
+        let startX, startY;
+        let currentColor = '#FFFF00'; // Default yellow for highlight
+        let penThickness = 2; // Default pen thickness
+        let eraseMode = false;
+
+        async function initializePdfViewer() {
+            try {
+                // Load PDF from server
+                const pdfUrl = `/api/pdf/serve/${encodeURIComponent(pdfId)}`;
+                const loadingTask = pdfjsLib.getDocument(pdfUrl);
+                pdfDoc = await loadingTask.promise;
+                totalPages = pdfDoc.numPages;
+
+                // Load existing annotations
+                await loadAnnotations();
+
+                // Render all pages (continuous view)
+                renderAllPages();
+
+                // Log access
+                await fetch(`/api/annotations/${encodeURIComponent(pdfId)}/access`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({access_type: 'view'})
+                });
+
+            } catch (error) {
+                console.error('Error loading PDF:', error);
+                document.getElementById('pdf-container').innerHTML = `
+                    <div class="error-message">
+                        <strong>Error loading PDF:</strong> ${error.message}
+                        <br><br>
+                        <a href="comprehensive_dashboard.html">Return to dashboard</a>
+                    </div>
+                `;
+            }
+        }
+
+        async function loadAnnotations() {
+            try {
+                const response = await fetch(`/api/annotations/${encodeURIComponent(pdfId)}`);
+                const data = await response.json();
+
+                // Group annotations by page
+                annotations = {};
+                for (const ann of data.annotations) {
+                    if (!annotations[ann.page_number]) {
+                        annotations[ann.page_number] = [];
+                    }
+                    annotations[ann.page_number].push(ann);
+                }
+            } catch (error) {
+                console.warn('Could not load annotations:', error);
+            }
+        }
+
+        async function renderAllPages() {
+            const container = document.getElementById('pdf-container');
+            container.innerHTML = '';
+
+            // Render all pages in sequence
+            for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+                await renderPage(pageNum, container);
+            }
+
+            // Update zoom level display
+            updateZoomDisplay();
+        }
+
+        async function renderPage(pageNum, container) {
+            const page = await pdfDoc.getPage(pageNum);
+            const viewport = page.getViewport({ scale });
+
+            // Create canvas for PDF
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            // Render PDF page
+            await page.render({ canvasContext: context, viewport }).promise;
+
+            // Create overlay canvas for annotations
+            const overlayCanvas = document.createElement('canvas');
+            overlayCanvas.width = canvas.width;
+            overlayCanvas.height = canvas.height;
+            overlayCanvas.style.position = 'absolute';
+            overlayCanvas.style.top = '0';
+            overlayCanvas.style.left = '0';
+            overlayCanvas.style.cursor = 'crosshair';
+            overlayCanvas.dataset.pageNumber = pageNum;
+
+            // Wrapper div for positioning
+            const wrapper = document.createElement('div');
+            wrapper.className = 'page-wrapper';
+            wrapper.style.position = 'relative';
+            wrapper.style.display = 'inline-block';
+            wrapper.appendChild(canvas);
+            wrapper.appendChild(overlayCanvas);
+
+            // Add page number label
+            const pageLabel = document.createElement('div');
+            pageLabel.style.cssText = 'position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;';
+            pageLabel.textContent = `Page ${pageNum} of ${totalPages}`;
+            wrapper.appendChild(pageLabel);
+
+            container.appendChild(wrapper);
+
+            // Draw existing annotations
+            drawAnnotations(overlayCanvas, pageNum);
+
+            // Add interaction handlers
+            setupAnnotationHandlers(overlayCanvas, pageNum);
+        }
+
+        function drawAnnotations(canvas, pageNum) {
+            const ctx = canvas.getContext('2d');
+            const pageAnnotations = annotations[pageNum] || [];
+
+            for (const ann of pageAnnotations) {
+                const data = ann.annotation_data;
+
+                switch (ann.annotation_type) {
+                    case 'highlight':
+                        // Use saved color and opacity or defaults
+                        const highlightColor = data.color || '#FFFF00';
+                        const highlightOpacity = data.opacity || 0.3;
+                        ctx.fillStyle = hexToRgba(highlightColor, highlightOpacity);
+                        ctx.fillRect(data.x, data.y, data.width, data.height);
+                        break;
+                    case 'underline':
+                        ctx.strokeStyle = data.color || 'red';
+                        ctx.lineWidth = data.thickness || 2;
+                        ctx.beginPath();
+                        ctx.moveTo(data.x1, data.y1);
+                        ctx.lineTo(data.x2, data.y2);
+                        ctx.stroke();
+                        break;
+                    case 'shape':
+                        ctx.strokeStyle = data.color || 'blue';
+                        ctx.lineWidth = data.thickness || 2;
+                        ctx.beginPath();
+                        ctx.arc(data.x, data.y, data.radius, 0, 2 * Math.PI);
+                        ctx.stroke();
+                        break;
+                    case 'pen':
+                        ctx.strokeStyle = data.color || 'black';
+                        ctx.lineWidth = data.thickness || 2;
+                        ctx.beginPath();
+                        ctx.moveTo(data.points[0].x, data.points[0].y);
+                        for (let i = 1; i < data.points.length; i++) {
+                            ctx.lineTo(data.points[i].x, data.points[i].y);
+                        }
+                        ctx.stroke();
+                        break;
+                }
+            }
+        }
+
+        // Helper function to convert hex to rgba
+        function hexToRgba(hex, alpha) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        function setupAnnotationHandlers(canvas, pageNum) {
+            let penPoints = [];
+            const container = document.getElementById('pdf-container');
+
+            canvas.addEventListener('mousedown', async (e) => {
+                if (!currentTool) return;
+
+                const rect = canvas.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const clickY = e.clientY - rect.top;
+
+                // Erase mode: detect and delete clicked annotation
+                if (eraseMode) {
+                    const pageAnnotations = annotations[pageNum] || [];
+
+                    // Find annotation at click position
+                    for (let i = pageAnnotations.length - 1; i >= 0; i--) {
+                        const ann = pageAnnotations[i];
+                        const data = ann.annotation_data;
+                        let hit = false;
+
+                        switch (ann.annotation_type) {
+                            case 'highlight':
+                                hit = (clickX >= data.x && clickX <= data.x + data.width &&
+                                       clickY >= data.y && clickY <= data.y + data.height);
+                                break;
+                            case 'pen':
+                                // Check if click is near any point in the pen stroke
+                                for (const pt of data.points) {
+                                    const distance = Math.sqrt(Math.pow(clickX - pt.x, 2) + Math.pow(clickY - pt.y, 2));
+                                    if (distance < 10) {
+                                        hit = true;
+                                        break;
+                                    }
+                                }
+                                break;
+                            case 'shape':
+                                const distance = Math.sqrt(Math.pow(clickX - data.x, 2) + Math.pow(clickY - data.y, 2));
+                                hit = (Math.abs(distance - data.radius) < 10);
+                                break;
+                            case 'underline':
+                                // Check if click is near the line
+                                const lineDist = pointToLineDistance(clickX, clickY, data.x1, data.y1, data.x2, data.y2);
+                                hit = (lineDist < 10);
+                                break;
+                        }
+
+                        if (hit) {
+                            // Delete annotation
+                            await deleteAnnotation(ann.annotation_id);
+                            // Remove from local array
+                            pageAnnotations.splice(i, 1);
+                            // Re-render page
+                            const ctx = canvas.getContext('2d');
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            drawAnnotations(canvas, pageNum);
+                            e.preventDefault();
+                            return;
+                        }
+                    }
+                    e.preventDefault();
+                    return;
+                }
+
+                // Normal drawing mode
+                isDrawing = true;
+                // Prevent scrolling while drawing
+                container.classList.add('drawing');
+
+                startX = clickX;
+                startY = clickY;
+
+                if (currentTool === 'pen') {
+                    penPoints = [{ x: startX, y: startY }];
+                }
+
+                e.preventDefault();
+            });
+
+            canvas.addEventListener('mousemove', (e) => {
+                if (!isDrawing || !currentTool) return;
+
+                const rect = canvas.getBoundingClientRect();
+                const currentX = e.clientX - rect.left;
+                const currentY = e.clientY - rect.top;
+                const ctx = canvas.getContext('2d');
+
+                if (currentTool === 'pen') {
+                    penPoints.push({ x: currentX, y: currentY });
+
+                    // Draw temporary line with current color and thickness
+                    ctx.strokeStyle = currentColor;
+                    ctx.lineWidth = penThickness;
+                    ctx.beginPath();
+                    ctx.moveTo(penPoints[penPoints.length - 2].x, penPoints[penPoints.length - 2].y);
+                    ctx.lineTo(currentX, currentY);
+                    ctx.stroke();
+                } else {
+                    // Clear and redraw for preview (highlight, underline, shape)
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    drawAnnotations(canvas, pageNum);
+
+                    // Draw preview
+                    if (currentTool === 'highlight') {
+                        // Use penThickness as opacity (1-10 mapped to 0.1-1.0)
+                        const opacity = penThickness / 10;
+                        ctx.fillStyle = hexToRgba(currentColor, opacity);
+                        ctx.fillRect(
+                            Math.min(startX, currentX),
+                            Math.min(startY, currentY),
+                            Math.abs(currentX - startX),
+                            Math.abs(currentY - startY)
+                        );
+                    } else if (currentTool === 'underline') {
+                        ctx.strokeStyle = currentColor;
+                        ctx.lineWidth = penThickness;
+                        ctx.beginPath();
+                        ctx.moveTo(startX, startY);
+                        ctx.lineTo(currentX, currentY);
+                        ctx.stroke();
+                    } else if (currentTool === 'shape') {
+                        const radius = Math.sqrt(Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2));
+                        ctx.strokeStyle = currentColor;
+                        ctx.lineWidth = penThickness;
+                        ctx.beginPath();
+                        ctx.arc(startX, startY, radius, 0, 2 * Math.PI);
+                        ctx.stroke();
+                    }
+                }
+
+                e.preventDefault();
+            });
+
+            canvas.addEventListener('mouseup', async (e) => {
+                if (!isDrawing || !currentTool) return;
+
+                // Re-enable scrolling
+                container.classList.remove('drawing');
+
+                const rect = canvas.getBoundingClientRect();
+                const endX = e.clientX - rect.left;
+                const endY = e.clientY - rect.top;
+
+                let annotationData = null;
+
+                switch (currentTool) {
+                    case 'highlight':
+                        annotationData = {
+                            x: Math.min(startX, endX),
+                            y: Math.min(startY, endY),
+                            width: Math.abs(endX - startX),
+                            height: Math.abs(endY - startY),
+                            color: currentColor,
+                            opacity: penThickness / 10  // Store as 0.1-1.0
+                        };
+                        break;
+                    case 'underline':
+                        annotationData = {
+                            x1: startX, y1: startY, x2: endX, y2: endY,
+                            color: currentColor,
+                            thickness: penThickness
+                        };
+                        break;
+                    case 'shape':
+                        const radius = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+                        annotationData = {
+                            x: startX, y: startY, radius,
+                            color: currentColor,
+                            thickness: penThickness
+                        };
+                        break;
+                    case 'pen':
+                        annotationData = {
+                            points: penPoints,
+                            color: currentColor,
+                            thickness: penThickness
+                        };
+                        break;
+                }
+
+                if (annotationData) {
+                    await saveAnnotation(pageNum, currentTool, annotationData);
+                    // Redraw annotations after saving
+                    const ctx = canvas.getContext('2d');
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    drawAnnotations(canvas, pageNum);
+                }
+
+                isDrawing = false;
+                penPoints = [];
+                e.preventDefault();
+            });
+
+            // Touch support for iPad
+            canvas.addEventListener('touchstart', (e) => {
+                if (!currentTool) return;
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent('mousedown', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+                e.preventDefault();
+            });
+
+            canvas.addEventListener('touchmove', (e) => {
+                if (!currentTool) return;
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent('mousemove', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+                e.preventDefault();
+            });
+
+            canvas.addEventListener('touchend', (e) => {
+                if (!currentTool) return;
+                const mouseEvent = new MouseEvent('mouseup', {});
+                canvas.dispatchEvent(mouseEvent);
+                e.preventDefault();
+            });
+        }
+
+        async function saveAnnotation(pageNum, type, data) {
+            try {
+                const response = await fetch('/api/annotations/save', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        pdf_id: pdfId,
+                        page_number: pageNum,
+                        annotation_type: type,
+                        annotation_data: data
+                    })
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    // Add to local cache
+                    if (!annotations[pageNum]) {
+                        annotations[pageNum] = [];
+                    }
+                    annotations[pageNum].push({
+                        annotation_id: result.annotation_id,
+                        annotation_type: type,
+                        annotation_data: data
+                    });
+
+                    console.log('Annotation saved successfully');
+                }
+            } catch (error) {
+                console.error('Failed to save annotation:', error);
+                alert('Failed to save annotation');
+            }
+        }
+
+        async function deleteAnnotation(annotationId) {
+            try {
+                const response = await fetch(`/api/annotations/${annotationId}`, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    console.log('Annotation deleted successfully');
+                } else {
+                    throw new Error(result.error || 'Failed to delete annotation');
+                }
+            } catch (error) {
+                console.error('Failed to delete annotation:', error);
+                alert('Failed to delete annotation');
+            }
+        }
+
+        // Helper function: Calculate distance from point to line segment
+        function pointToLineDistance(px, py, x1, y1, x2, y2) {
+            const A = px - x1;
+            const B = py - y1;
+            const C = x2 - x1;
+            const D = y2 - y1;
+
+            const dot = A * C + B * D;
+            const lenSq = C * C + D * D;
+            let param = -1;
+
+            if (lenSq !== 0) {
+                param = dot / lenSq;
+            }
+
+            let xx, yy;
+
+            if (param < 0) {
+                xx = x1;
+                yy = y1;
+            } else if (param > 1) {
+                xx = x2;
+                yy = y2;
+            } else {
+                xx = x1 + param * C;
+                yy = y1 + param * D;
+            }
+
+            const dx = px - xx;
+            const dy = py - yy;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        // Zoom controls
+        function updateZoomDisplay() {
+            document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+        }
+
+        document.getElementById('zoom-in').addEventListener('click', () => {
+            scale = Math.min(scale + 0.25, 3.0);
+            renderAllPages();
+        });
+
+        document.getElementById('zoom-out').addEventListener('click', () => {
+            scale = Math.max(scale - 0.25, 0.5);
+            renderAllPages();
+        });
+
+        // Toolbar button handlers
+        function setActiveTool(toolName) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.annotation-toolbar .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Toggle tool
+            if (currentTool === toolName) {
+                currentTool = null;
+                // Hide all controls when tool is deselected
+                document.getElementById('color-picker').style.display = 'none';
+                document.getElementById('thickness-selector').style.display = 'none';
+                eraseMode = false;
+            } else {
+                currentTool = toolName;
+                eraseMode = (toolName === 'erase');
+
+                // Add active class to selected tool
+                document.getElementById(`btn-${toolName}`).classList.add('active');
+
+                // Show/hide color picker based on tool (all drawing tools get color)
+                if (toolName === 'highlight' || toolName === 'pen' || toolName === 'underline' || toolName === 'shape') {
+                    document.getElementById('color-picker').style.display = 'block';
+                } else {
+                    document.getElementById('color-picker').style.display = 'none';
+                }
+
+                // Show/hide thickness selector based on tool (all except highlight get thickness)
+                if (toolName === 'pen' || toolName === 'shape' || toolName === 'underline' || toolName === 'highlight') {
+                    document.getElementById('thickness-selector').style.display = 'block';
+                    // Update label based on tool
+                    const label = document.querySelector('#thickness-selector label');
+                    if (toolName === 'highlight') {
+                        label.textContent = 'Highlight Opacity';
+                    } else {
+                        label.textContent = 'Line Thickness';
+                    }
+                } else {
+                    document.getElementById('thickness-selector').style.display = 'none';
+                }
+            }
+        }
+
+        document.getElementById('btn-highlight').addEventListener('click', () => {
+            setActiveTool('highlight');
+        });
+
+        document.getElementById('btn-underline').addEventListener('click', () => {
+            setActiveTool('underline');
+        });
+
+        document.getElementById('btn-shape').addEventListener('click', () => {
+            setActiveTool('shape');
+        });
+
+        document.getElementById('btn-pen').addEventListener('click', () => {
+            setActiveTool('pen');
+        });
+
+        document.getElementById('btn-erase').addEventListener('click', () => {
+            setActiveTool('erase');
+        });
+
+        // Color picker event handlers
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                // Remove active class from all color options
+                document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('active'));
+                // Add active class to clicked option
+                e.target.classList.add('active');
+                // Update current color
+                currentColor = e.target.dataset.color;
+            });
+        });
+
+        // Thickness slider event handler
+        document.getElementById('pen-thickness').addEventListener('input', (e) => {
+            penThickness = parseInt(e.target.value);
+            document.getElementById('thickness-value').textContent = penThickness;
+        });
+
+        document.getElementById('btn-save').addEventListener('click', async () => {
+            document.getElementById('loading').style.display = 'flex';
+
+            // Annotations are already saved in real-time
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                alert('All annotations saved successfully!');
+            }, 500);
+        });
+
+        document.getElementById('btn-export').addEventListener('click', () => {
+            alert('Export functionality will be enabled in Phase 3 (export features)');
+        });
+
+        // Sidebar toggle functionality
+        let sidebarCollapsed = false;
+        document.getElementById('sidebar-toggle').addEventListener('click', () => {
+            sidebarCollapsed = !sidebarCollapsed;
+            const toolbar = document.getElementById('annotation-toolbar');
+            const container = document.getElementById('pdf-container');
+            const toggleBtn = document.getElementById('sidebar-toggle');
+
+            if (sidebarCollapsed) {
+                toolbar.classList.add('collapsed');
+                container.classList.add('sidebar-collapsed');
+                toggleBtn.classList.add('collapsed');
+                toggleBtn.textContent = '▶';
+            } else {
+                toolbar.classList.remove('collapsed');
+                container.classList.remove('sidebar-collapsed');
+                toggleBtn.classList.remove('collapsed');
+                toggleBtn.textContent = '◀';
+            }
+        });
+
+        // Initialize
+        initializePdfViewer();
+    </script>
+</body>
+</html>

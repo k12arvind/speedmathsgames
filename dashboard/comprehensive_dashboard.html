@@ -544,6 +544,7 @@
             <h1>🎓 CLAT GK Revision Dashboard</h1>
             <div class="header-nav">
                 <a href="pdf_dashboard.html" class="nav-btn">📚 PDF Manager</a>
+                <a href="pdf-chunker.html" class="nav-btn">✂️ PDF Chunker</a>
                 <a href="assessment.html" class="nav-btn">📝 Take Test</a>
                 <a href="analytics.html" class="nav-btn">📊 Analytics</a>
                 <a href="/index.html" class="nav-btn" style="background: #8b5cf6; border-color: #7c3aed;">🔢 Switch to Math</a>
@@ -617,6 +618,10 @@
                 📊 All PDFs
                 <span class="tab-badge" id="all-count">0</span>
             </button>
+            <button class="tab" data-tab="large-files">
+                📦 Large Files
+                <span class="tab-badge" id="large-files-count">0</span>
+            </button>
         </div>
 
         <!-- Tab Contents -->
@@ -667,6 +672,18 @@
                 <div id="all-table"></div>
             </div>
         </div>
+
+        <div id="large-files-tab" class="tab-content">
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">📦 Large Files (Archived)</div>
+                    <div class="table-actions">
+                        <button class="btn-icon" onclick="refreshData()" title="Refresh">↻</button>
+                    </div>
+                </div>
+                <div id="large-files-table"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Refresh Button -->
@@ -688,6 +705,12 @@
             setupEventListeners();
             updateCountdown();
             setInterval(updateCountdown, 60000);
+
+            // Check for hash in URL to switch tab
+            const hash = window.location.hash.substring(1); // Remove '#'
+            if (hash) {
+                switchTab(hash);
+            }
         });
 
         // Load dashboard data
@@ -695,6 +718,11 @@
             try {
                 const response = await fetch(`${API_BASE}/api/dashboard`);
                 dashboardData = await response.json();
+
+                // Also load chunked PDFs
+                const chunksResponse = await fetch(`${API_BASE}/api/chunks/all`);
+                const chunksData = await chunksResponse.json();
+                dashboardData.chunks = chunksData.chunks || [];
 
                 updateStatistics();
                 updateTabCounts();
@@ -725,6 +753,10 @@
                            dashboardData.pdfs.weekly.legaledge.length +
                            dashboardData.pdfs.weekly.career_launcher.length;
             document.getElementById('all-count').textContent = allCount;
+
+            // Update large files count
+            const largeFilesCount = dashboardData.large_files ? dashboardData.large_files.length : 0;
+            document.getElementById('large-files-count').textContent = largeFilesCount;
         }
 
         // Update countdown
@@ -747,6 +779,11 @@
                 ...dashboardData.pdfs.weekly.career_launcher
             ];
             renderTable('all-table', allPdfs);
+
+            // Render large files table
+            if (dashboardData.large_files) {
+                renderLargeFilesTable('large-files-table', dashboardData.large_files);
+            }
         }
 
         // Render table
@@ -787,6 +824,141 @@
             container.innerHTML = tableHTML;
         }
 
+        // Render chunked PDFs table
+        function renderChunkedTable(containerId, chunkedPdfs) {
+            const container = document.getElementById(containerId);
+
+            if (!chunkedPdfs || chunkedPdfs.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📭</div>
+                        <div>No chunked PDFs found</div>
+                        <small style="margin-top: 10px; display: block; color: #666;">
+                            Use the <a href="pdf-chunker.html" style="color: #667eea;">PDF Chunker</a> to split large PDFs
+                        </small>
+                    </div>
+                `;
+                return;
+            }
+
+            const tableHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parent PDF</th>
+                            <th># Chunks</th>
+                            <th>Overlap</th>
+                            <th>Original Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${chunkedPdfs.map(item => createChunkedRow(item)).join('')}
+                    </tbody>
+                </table>
+            `;
+
+            container.innerHTML = tableHTML;
+        }
+
+        // Create chunked PDF row
+        function createChunkedRow(item) {
+            const overlapBadge = item.overlap_enabled
+                ? '<span class="badge" style="background: #10b981; color: white;">✓ Yes</span>'
+                : '<span class="badge" style="background: #6b7280; color: white;">× No</span>';
+
+            const originalStatus = item.original_deleted
+                ? `<span class="badge" style="background: #ef4444; color: white;">🗑️ Deleted</span><br><small style="color: #666;">${new Date(item.deletion_timestamp).toLocaleDateString()}</small>`
+                : '<span class="badge" style="background: #10b981; color: white;">✓ Available</span>';
+
+            // Generate list of chunk links
+            const chunkLinks = item.chunks.map(chunk => `
+                <button class="btn btn-info" onclick="viewPdf('${chunk.chunk_filename}')"
+                        style="background: #3b82f6; font-size: 11px; padding: 4px 8px; margin: 2px;">
+                    Part ${chunk.chunk_number} (p${chunk.start_page}-${chunk.end_page})
+                </button>
+            `).join('');
+
+            return `
+                <tr>
+                    <td class="pdf-name" style="max-width: 300px; overflow: hidden; text-overflow: ellipsis;">
+                        ${item.parent_pdf}
+                        <div style="margin-top: 8px;">
+                            ${chunkLinks}
+                        </div>
+                    </td>
+                    <td><span class="badge badge-count high">×${item.chunks.length}</span></td>
+                    <td>${overlapBadge}</td>
+                    <td>${originalStatus}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" onclick="showChunkDetails('${item.parent_pdf}')" style="font-size: 11px;">
+                                Details
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // Render large files table
+        function renderLargeFilesTable(containerId, largeFiles) {
+            const container = document.getElementById(containerId);
+
+            if (!largeFiles || largeFiles.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📦</div>
+                        <div>No archived large files</div>
+                        <small style="margin-top: 10px; display: block; color: #666;">
+                            Large PDFs will be moved here after chunking
+                        </small>
+                    </div>
+                `;
+                return;
+            }
+
+            const tableHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Filename</th>
+                            <th>Pages</th>
+                            <th>Size</th>
+                            <th>Archived Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${largeFiles.map(file => createLargeFileRow(file)).join('')}
+                    </tbody>
+                </table>
+            `;
+
+            container.innerHTML = tableHTML;
+        }
+
+        // Create large file row
+        function createLargeFileRow(file) {
+            const archivedDate = new Date(file.modified * 1000).toLocaleDateString();
+
+            return `
+                <tr>
+                    <td class="pdf-name">${file.filename}</td>
+                    <td><span class="badge" style="background: #6b7280; color: white;">${file.page_count} pages</span></td>
+                    <td>${file.size_mb} MB</td>
+                    <td>${archivedDate}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-info" onclick="viewPdf('${file.filename}')" style="background: #3b82f6;">
+                                📄 View PDF
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }
+
         // Create table row
         function createTableRow(pdf) {
             const revisionCount = pdf.revision_count || 0;
@@ -809,9 +981,28 @@
                 ? '<span class="badge-status badge-processed">✓ Processed</span>'
                 : '<span class="badge-status badge-not-processed">⚠ Not Processed</span>';
 
+            // Check if PDF needs chunking (>10 pages = red indicator)
+            const pageCount = pdf.page_count || 0;
+            const needsChunking = pdf.needs_chunking || false;
+            const canChunk = pdf.can_chunk || false;
+            const pdfNameClass = needsChunking ? 'pdf-name' : 'pdf-name';
+            const pdfNameStyle = needsChunking ? 'color: #ef4444; font-weight: 600;' : '';
+            const pageInfo = pageCount > 0 ? ` <span style="font-size: 11px; color: #666;">(${pageCount} pages)</span>` : '';
+
+            // Chunk button (enabled for >13 pages, grayed otherwise)
+            const chunkButton = `
+                <button class="btn ${canChunk ? 'btn-warning' : 'btn-secondary'}"
+                        onclick="${canChunk ? `chunkPdf('${pdf.filepath}', '${pdf.filename}')` : 'return false'}"
+                        ${!canChunk ? 'disabled' : ''}
+                        style="${canChunk ? 'background: #f59e0b; color: white;' : 'opacity: 0.5; cursor: not-allowed;'}"
+                        title="${canChunk ? 'Chunk this PDF' : 'PDF has ≤13 pages'}">
+                    ✂️ Chunk
+                </button>
+            `;
+
             return `
                 <tr>
-                    <td class="pdf-name">${pdf.filename}</td>
+                    <td class="${pdfNameClass}" style="${pdfNameStyle}">${pdf.filename}${pageInfo}</td>
                     <td>${formatDate(pdf.date_published)}</td>
                     <td><span class="badge badge-${pdf.source_type}">${pdf.source_type}</span></td>
                     <td>${pdf.total_topics}</td>
@@ -821,8 +1012,12 @@
                     <td>${statusBadge}</td>
                     <td>
                         <div class="action-buttons">
+                            ${chunkButton}
                             <button class="btn btn-primary" onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')" ${!pdf.exists_in_db ? 'disabled' : ''}>
                                 📝 Test
+                            </button>
+                            <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background: #3b82f6;">
+                                📄 View PDF
                             </button>
                             <button class="btn btn-success" onclick="markRevised('${pdf.pdf_id}')" ${!pdf.exists_in_db ? 'disabled' : ''}>
                                 ✓ Revised
@@ -949,19 +1144,208 @@
             window.location.href = `assessment.html?pdf_id=${encodeURIComponent(pdfId)}&filename=${encodeURIComponent(filename)}`;
         }
 
+        // View PDF - Open PDF viewer with annotation capabilities
+        function viewPdf(pdfId) {
+            // Open PDF viewer in new tab
+            window.open(`pdf-viewer.html?pdf_id=${encodeURIComponent(pdfId)}`, '_blank');
+        }
+
+        // Chunk PDF - Open PDF chunker with pre-filled filepath
+        async function chunkPdf(filepath, filename) {
+            if (!confirm(`Chunk "${filename}"?\n\nThis will:\n1. Split the PDF into smaller chunks\n2. Move original to large_files folder\n3. Replace with chunks in the same location`)) {
+                return;
+            }
+
+            // Redirect to PDF chunker with pre-filled filepath
+            window.location.href = `pdf-chunker.html?filepath=${encodeURIComponent(filepath)}`;
+        }
+
         // View details
         async function viewDetails(pdfId) {
             try {
-                const response = await fetch(`${API_BASE}/api/pdf/${pdfId}`);
-                const data = await response.json();
+                // Fetch PDF metadata
+                const pdfResponse = await fetch(`${API_BASE}/api/pdf/${pdfId}`);
+                const pdfData = await pdfResponse.json();
 
-                if (data.pdf) {
-                    const pdf = data.pdf;
-                    alert(`PDF Details:\n\nFilename: ${pdf.filename}\nDate: ${pdf.date_published}\nTopics: ${pdf.total_topics}\nRevisions: ${pdf.revision_count}\nTest Attempts: ${pdf.assessment_attempts || 0}\nCategories: ${pdf.categories_list.join(', ') || 'None'}`);
+                // Fetch annotation details
+                const detailsResponse = await fetch(`${API_BASE}/api/annotations/${encodeURIComponent(pdfId)}/details`);
+                const details = await detailsResponse.json();
+
+                if (pdfData.pdf) {
+                    const pdf = pdfData.pdf;
+                    const summary = details.summary || {};
+                    const revisionHistory = details.revision_history || [];
+                    const accessLog = details.access_log || [];
+
+                    // Build details modal content
+                    let modalContent = `
+                        <div style="max-height: 70vh; overflow-y: auto;">
+                            <h4 class="mb-3">${pdf.filename}</h4>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>PDF Information</h6>
+                                    <table class="table table-sm">
+                                        <tr><td><strong>Date Published:</strong></td><td>${pdf.date_published}</td></tr>
+                                        <tr><td><strong>Source:</strong></td><td>${pdf.source_name}</td></tr>
+                                        <tr><td><strong>Type:</strong></td><td>${pdf.source_type}</td></tr>
+                                        <tr><td><strong>File Size:</strong></td><td>${pdf.file_size_kb.toFixed(2)} KB</td></tr>
+                                        <tr><td><strong>Total Topics:</strong></td><td>${pdf.total_topics || 0}</td></tr>
+                                        <tr><td><strong>Categories:</strong></td><td>${pdf.categories_list.join(', ') || 'None'}</td></tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Activity Summary</h6>
+                                    <table class="table table-sm">
+                                        <tr><td><strong>Revisions:</strong></td><td>${pdf.revision_count || 0}</td></tr>
+                                        <tr><td><strong>Test Attempts:</strong></td><td>${pdf.assessment_attempts || 0}</td></tr>
+                                        <tr><td><strong>Annotations:</strong></td><td>${summary.total_annotations || 0}</td></tr>
+                                        <tr><td><strong>Total Edits:</strong></td><td>${summary.total_edits || 0}</td></tr>
+                                        <tr><td><strong>Times Accessed:</strong></td><td>${summary.total_accesses || 0}</td></tr>
+                                        <tr><td><strong>Last Accessed:</strong></td><td>${summary.last_accessed ? new Date(summary.last_accessed).toLocaleString() : 'Never'}</td></tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <h6 class="mt-3">Recent Revision History</h6>
+                            ${revisionHistory.length > 0 ? `
+                                <table class="table table-sm table-striped">
+                                    <thead><tr><th>#</th><th>Type</th><th>Summary</th><th>When</th></tr></thead>
+                                    <tbody>
+                                        ${revisionHistory.slice(0, 10).map(rev => `
+                                            <tr>
+                                                <td>${rev.revision_number}</td>
+                                                <td><span class="badge bg-info">${rev.revision_type}</span></td>
+                                                <td>${rev.change_summary}</td>
+                                                <td>${new Date(rev.timestamp).toLocaleString()}</td>
+                                            </tr>
+                                        `).join('')}
+                                    </tbody>
+                                </table>
+                            ` : '<p class="text-muted">No revision history available</p>'}
+
+                            <h6 class="mt-3">Recent Access Log</h6>
+                            ${accessLog.length > 0 ? `
+                                <table class="table table-sm table-striped">
+                                    <thead><tr><th>Access Type</th><th>User</th><th>When</th><th>Duration</th></tr></thead>
+                                    <tbody>
+                                        ${accessLog.slice(0, 10).map(log => `
+                                            <tr>
+                                                <td><span class="badge bg-secondary">${log.access_type}</span></td>
+                                                <td>${log.user_id}</td>
+                                                <td>${new Date(log.timestamp).toLocaleString()}</td>
+                                                <td>${log.duration_seconds ? log.duration_seconds + 's' : '-'}</td>
+                                            </tr>
+                                        `).join('')}
+                                    </tbody>
+                                </table>
+                            ` : '<p class="text-muted">No access log available</p>'}
+                        </div>
+                    `;
+
+                    // Show in Bootstrap modal
+                    showModal('PDF Details', modalContent);
                 }
             } catch (error) {
-                console.error('Error:', error);
+                console.error('Error loading PDF details:', error);
+                alert('Failed to load PDF details. See console for details.');
             }
+        }
+
+        // Show chunk details
+        function showChunkDetails(parentPdfId) {
+            const chunkGroup = dashboardData.chunks.find(c => c.parent_pdf === parentPdfId);
+            if (!chunkGroup) {
+                alert('Chunk details not found');
+                return;
+            }
+
+            let modalContent = `
+                <div style="max-height: 70vh; overflow-y: auto;">
+                    <h4 class="mb-3">${parentPdfId}</h4>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <strong>Total Chunks:</strong> ${chunkGroup.chunks.length}
+                        </div>
+                        <div class="col-md-6">
+                            <strong>Overlap Enabled:</strong> ${chunkGroup.overlap_enabled ? 'Yes' : 'No'}
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <strong>Original File Status:</strong>
+                            ${chunkGroup.original_deleted
+                                ? `<span style="color: #ef4444;">🗑️ Deleted on ${new Date(chunkGroup.deletion_timestamp).toLocaleDateString()}</span>`
+                                : '<span style="color: #10b981;">✓ Available</span>'}
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4 mb-3">Chunks</h5>
+                    <table class="table table-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th>Chunk #</th>
+                                <th>Filename</th>
+                                <th>Pages</th>
+                                <th>Size</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${chunkGroup.chunks.map(chunk => `
+                                <tr>
+                                    <td>${chunk.chunk_number}</td>
+                                    <td style="font-family: monospace; font-size: 11px;">${chunk.chunk_filename}</td>
+                                    <td>${chunk.start_page}-${chunk.end_page} (${chunk.total_pages} pages)</td>
+                                    <td>${chunk.file_size_kb} KB</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" onclick="viewPdf('${chunk.chunk_filename}')">
+                                            View
+                                        </button>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            showModal('Chunked PDF Details', modalContent);
+        }
+
+        function showModal(title, content) {
+            // Create modal if it doesn't exist
+            let modal = document.getElementById('detailsModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'detailsModal';
+                modal.className = 'modal fade';
+                modal.innerHTML = `
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="detailsModalTitle"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body" id="detailsModalBody"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            }
+
+            // Update content
+            document.getElementById('detailsModalTitle').textContent = title;
+            document.getElementById('detailsModalBody').innerHTML = content;
+
+            // Show modal
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
         }
 
         // Refresh data
