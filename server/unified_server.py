@@ -384,7 +384,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         """Route GET API requests."""
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
+        # CORS headers added automatically in end_headers()
         self.end_headers()
 
         try:
@@ -428,9 +428,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         """Route POST API requests."""
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        # CORS headers added automatically in end_headers()
         self.end_headers()
 
         try:
@@ -495,7 +493,6 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     if success:
                         self.send_response(200)
                         self.send_header('Content-Type', 'application/json')
-                        self.send_header('Access-Control-Allow-Origin', '*')
                         self.end_headers()
                         self.send_json({
                             'success': True,
@@ -504,13 +501,11 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     else:
                         self.send_response(404)
                         self.send_header('Content-Type', 'application/json')
-                        self.send_header('Access-Control-Allow-Origin', '*')
                         self.end_headers()
                         self.send_json({'error': 'Annotation not found'})
                 else:
                     self.send_response(400)
                     self.send_header('Content-Type', 'application/json')
-                    self.send_header('Access-Control-Allow-Origin', '*')
                     self.end_headers()
                     self.send_json({'error': 'Invalid annotation ID'})
             # DELETE /api/diary/entries/{date}
@@ -525,7 +520,6 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     if success:
                         self.send_response(200)
                         self.send_header('Content-Type', 'application/json')
-                        self.send_header('Access-Control-Allow-Origin', '*')
                         self.end_headers()
                         self.send_json({
                             'success': True,
@@ -534,13 +528,11 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     else:
                         self.send_response(404)
                         self.send_header('Content-Type', 'application/json')
-                        self.send_header('Access-Control-Allow-Origin', '*')
                         self.end_headers()
                         self.send_json({'error': 'Entry not found'})
                 else:
                     self.send_response(400)
                     self.send_header('Content-Type', 'application/json')
-                    self.send_header('Access-Control-Allow-Origin', '*')
                     self.end_headers()
                     self.send_json({'error': 'Invalid date format'})
             # DELETE /api/mocks/{id}
@@ -556,38 +548,32 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                         if success:
                             self.send_response(200)
                             self.send_header('Content-Type', 'application/json')
-                            self.send_header('Access-Control-Allow-Origin', '*')
                             self.end_headers()
                             self.send_json({'success': True, 'message': 'Mock deleted'})
                         else:
                             self.send_response(404)
                             self.send_header('Content-Type', 'application/json')
-                            self.send_header('Access-Control-Allow-Origin', '*')
                             self.end_headers()
                             self.send_json({'error': 'Mock not found'})
                     except ValueError:
                         self.send_response(400)
                         self.send_header('Content-Type', 'application/json')
-                        self.send_header('Access-Control-Allow-Origin', '*')
                         self.end_headers()
                         self.send_json({'error': 'Invalid mock ID'})
                 else:
                     self.send_response(400)
                     self.send_header('Content-Type', 'application/json')
-                    self.send_header('Access-Control-Allow-Origin', '*')
                     self.end_headers()
                     self.send_json({'error': 'Invalid path'})
             else:
                 self.send_response(404)
                 self.send_header('Content-Type', 'application/json')
-                self.send_header('Access-Control-Allow-Origin', '*')
                 self.end_headers()
                 self.send_json({'error': 'Not Found'})
 
         except Exception as e:
             self.send_response(500)
             self.send_header('Content-Type', 'application/json')
-            self.send_header('Access-Control-Allow-Origin', '*')
             self.end_headers()
             self.send_json({'error': str(e), 'trace': traceback.format_exc()})
 
@@ -1853,7 +1839,6 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         self.send_response(200)
         self.send_header('Content-Type', 'application/pdf')
         self.send_header('Content-Disposition', f'inline; filename="{filepath.name}"')
-        self.send_header('Access-Control-Allow-Origin', '*')  # For CORS
         self.end_headers()
 
         with open(filepath, 'rb') as f:
@@ -1884,7 +1869,6 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         self.send_header('Content-Type', 'text/event-stream')
         self.send_header('Cache-Control', 'no-cache')
         self.send_header('Connection', 'keep-alive')
-        self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
         # Stream log file
@@ -2395,7 +2379,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 self.send_response(200)
                 self.send_header('Content-Type', 'text/event-stream')
                 self.send_header('Cache-Control', 'no-cache')
-                self.send_header('Access-Control-Allow-Origin', '*')
+                # CORS headers added automatically in end_headers()
                 self.end_headers()
 
                 # Stream progress updates
