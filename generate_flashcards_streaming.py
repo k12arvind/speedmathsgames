@@ -11,7 +11,14 @@ This enables continuous progress updates instead of blocking 60-90 seconds.
 import json
 import os
 import re
+from pathlib import Path
 from typing import Dict, List, Any, Callable, Optional
+
+# Load environment variables from .env file
+from dotenv import load_dotenv
+env_path = Path(__file__).parent / '.env'
+load_dotenv(env_path)
+
 from anthropic import Anthropic
 
 

@@ -13,6 +13,11 @@ from pathlib import Path
 from typing import Dict, List
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+# Load environment variables from .env file BEFORE importing anthropic
+from dotenv import load_dotenv
+env_path = Path(__file__).parent.parent / '.env'
+load_dotenv(env_path)
+
 import anthropic
 
 from server.topic_extractor import TopicExtractor
