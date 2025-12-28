@@ -2,6 +2,10 @@
 """
 PDF Chunker
 Splits large PDFs into smaller chunks with progress tracking.
+
+CROSS-MACHINE COMPATIBILITY:
+- Uses relative paths (relative to home directory) for database storage
+- This allows the same database to work on both MacBook Pro and Mac Mini
 """
 
 import PyPDF2
@@ -11,6 +15,7 @@ import json
 import sqlite3
 from datetime import datetime
 import shutil
+from server.pdf_scanner import path_to_relative, relative_to_absolute
 
 
 class PdfChunker:
@@ -223,6 +228,10 @@ class PdfChunker:
         conn = sqlite3.connect(self.db_path, check_same_thread=False)
         cursor = conn.cursor()
 
+        # Convert paths to relative for cross-machine compatibility
+        relative_chunk_path = path_to_relative(chunk_info['path'])
+        relative_original_path = path_to_relative(original_file_path) if original_file_path else None
+
         try:
             cursor.execute("""
                 INSERT INTO pdf_chunks
@@ -233,13 +242,13 @@ class PdfChunker:
             """, (
                 parent_pdf_id,
                 chunk_info['filename'],
-                chunk_info['path'],
+                relative_chunk_path,
                 chunk_info['chunk_number'],
                 chunk_info['start_page'],
                 chunk_info['end_page'],
                 chunk_info['total_pages'],
                 chunk_info['size_kb'],
-                original_file_path,
+                relative_original_path,
                 1 if overlap_enabled else 0,
                 max_pages
             ))
@@ -257,14 +266,14 @@ class PdfChunker:
             if original_metadata:
                 source_name, date_published, source_type = original_metadata
 
-                # Insert chunk into pdfs table
+                # Insert chunk into pdfs table (using relative path)
                 cursor.execute("""
                     INSERT OR IGNORE INTO pdfs
                     (filename, filepath, source_name, date_published, source_type, is_chunk, parent_pdf, date_added)
                     VALUES (?, ?, ?, ?, ?, 1, ?, datetime('now'))
                 """, (
                     chunk_info['filename'],
-                    chunk_info['path'],
+                    relative_chunk_path,  # Use relative path for cross-machine compatibility
                     source_name,
                     date_published,
                     source_type,

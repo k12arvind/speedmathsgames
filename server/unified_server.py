@@ -53,8 +53,8 @@ from anthropic import Anthropic
 # Import math database
 from math_module.math_db import MathDatabase
 
-# Import PDF scanner for GK dashboard
-from server.pdf_scanner import PDFScanner
+# Import PDF scanner for GK dashboard (includes cross-machine path helpers)
+from server.pdf_scanner import PDFScanner, relative_to_absolute, path_to_relative
 
 # Import processing jobs database for progress tracking
 from server.processing_jobs_db import ProcessingJobsDB
@@ -218,23 +218,21 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     def correct_pdf_path(self, db_path: str) -> str:
         """
         Correct PDF path for current machine.
-        Database may have /Users/arvind/ but Mac Mini has /Users/arvindkumar/
+        Uses relative_to_absolute() for cross-machine compatibility.
+        Handles both:
+        - Old absolute paths (/Users/arvind/saanvi/...)
+        - New relative paths (saanvi/...)
         """
         import os
-        from pathlib import Path
-
-        # If path exists as-is, use it
-        if os.path.exists(db_path):
-            return db_path
-
-        # Try replacing username
-        current_user = os.path.expanduser('~').split('/')[-1]
-        corrected = db_path.replace('/Users/arvind/', f'/Users/{current_user}/')
-
+        
+        # Use the cross-machine path helper
+        corrected = relative_to_absolute(db_path)
+        
+        # Verify it exists
         if os.path.exists(corrected):
             return corrected
-
-        # Return original path if nothing works
+        
+        # Return original if expansion doesn't help
         return db_path
 
     def get_current_user(self):

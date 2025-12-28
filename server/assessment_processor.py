@@ -24,6 +24,7 @@ from server.topic_extractor import TopicExtractor
 from server.assessment_jobs_db import AssessmentJobsDB
 from server.pdf_chunker import PdfChunker
 from server.questions_db import QuestionsDatabase
+from server.pdf_scanner import relative_to_absolute  # Cross-machine path compatibility
 from generate_flashcards_streaming import generate_flashcards_for_topics
 from import_to_anki import add_note_to_anki, ensure_decks_exist, check_anki_connect
 
@@ -211,10 +212,12 @@ No markdown, no explanation - just the JSON array."""
 
                 if pdf:
                     # Create pseudo-chunk for non-chunked PDF
+                    # Expand relative path to absolute for current machine
+                    absolute_path = relative_to_absolute(pdf['filepath'])
                     chunks = [{
                         'chunk_id': 0,
                         'chunk_filename': pdf['filename'],
-                        'chunk_path': pdf['filepath'],
+                        'chunk_path': absolute_path,
                         'chunk_number': 1,
                         'parent_pdf_id': parent_pdf_id
                     }]

@@ -6,6 +6,11 @@ pdf_scanner.py
 
 Scans multiple PDF folders and builds a unified view for the dashboard.
 Works with actual PDF files in ~/saanvi/ folders.
+
+CROSS-MACHINE COMPATIBILITY:
+- Paths are stored RELATIVE to home directory (e.g., "saanvi/Legaledgedailygk/file.pdf")
+- This allows the same database to work on both MacBook Pro (/Users/arvind) 
+  and Mac Mini (/Users/arvindkumar) without path conflicts.
 """
 
 import os
@@ -15,6 +20,46 @@ from datetime import datetime
 import re
 from typing import List, Dict, Optional
 import json
+
+
+def path_to_relative(absolute_path: str) -> str:
+    """
+    Convert absolute path to relative path (relative to home directory).
+    
+    Example: /Users/arvind/saanvi/file.pdf -> saanvi/file.pdf
+    """
+    path = Path(absolute_path)
+    home = Path.home()
+    try:
+        return str(path.relative_to(home))
+    except ValueError:
+        # Path is not relative to home, return as-is
+        return str(path)
+
+
+def relative_to_absolute(relative_path: str) -> str:
+    """
+    Convert relative path back to absolute path (using current home directory).
+    
+    Example: saanvi/file.pdf -> /Users/arvindkumar/saanvi/file.pdf (on Mac Mini)
+             saanvi/file.pdf -> /Users/arvind/saanvi/file.pdf (on MacBook Pro)
+    """
+    if not relative_path:
+        return relative_path
+    
+    # If already absolute, fix any wrong username
+    if relative_path.startswith('/'):
+        path = Path(relative_path)
+        # Extract the relative part after /Users/*/
+        parts = path.parts
+        if len(parts) > 2 and parts[0] == '/' and parts[1] == 'Users':
+            # Skip /Users/username and rebuild with current home
+            relative_parts = parts[3:]  # Everything after /Users/username/
+            return str(Path.home().joinpath(*relative_parts))
+        return relative_path
+    
+    # Relative path - expand with current home
+    return str(Path.home() / relative_path)
 
 
 class PDFScanner:
@@ -150,11 +195,13 @@ class PDFScanner:
                     file_edit_count = pdf_record['file_edit_count'] or 0
             else:
                 # First time seeing this PDF, insert it
+                # Store RELATIVE path for cross-machine compatibility
+                relative_filepath = path_to_relative(str(pdf_file))
                 cursor.execute("""
                     INSERT INTO pdfs (filename, filepath, source_type, source_name, date_published,
                                      date_added, total_topics, last_modified, file_edit_count)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)
-                """, (pdf_file.name, str(pdf_file), source_type, source_name,
+                """, (pdf_file.name, relative_filepath, source_type, source_name,
                       date_match or file_date, datetime.now().isoformat(),
                       total_topics, last_modified))
                 conn.commit()
