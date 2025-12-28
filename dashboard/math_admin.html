@@ -2,20 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Math Admin Settings - Speed Math Games</title>
+    <link rel="stylesheet" href="shared-styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--bg-primary);
             min-height: 100vh;
             padding: 20px;
+            color: var(--text-primary);
         }
 
         .container {
@@ -24,36 +20,39 @@
         }
 
         .header {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 16px;
             margin-bottom: 20px;
         }
 
         .header h1 {
-            font-size: 28px;
-            color: #1f2937;
-            margin-bottom: 8px;
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 6px;
         }
 
         .header p {
-            color: #666;
-            font-size: 16px;
+            color: var(--text-secondary);
+            font-size: 14px;
         }
 
         .admin-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 16px;
             margin-bottom: 20px;
         }
 
         .section-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1f2937;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
             margin-bottom: 20px;
             display: flex;
             align-items: center;
@@ -66,22 +65,26 @@
         }
 
         .settings-table th {
-            background: #f9fafb;
+            background: var(--bg-secondary);
             padding: 12px;
             text-align: left;
             font-weight: 600;
-            color: #1f2937;
-            border-bottom: 2px solid #e5e7eb;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .settings-table td {
-            padding: 15px 12px;
-            border-bottom: 1px solid #e5e7eb;
+            padding: 14px 12px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
         }
 
         .topic-name {
-            font-weight: 500;
-            color: #1f2937;
+            font-weight: 600;
+            color: var(--text-primary);
         }
 
         .toggle-switch {
@@ -104,7 +107,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #d1d5db;
+            background-color: var(--bg-input);
+            border: 1px solid var(--border-color);
             transition: .3s;
             border-radius: 26px;
         }
@@ -115,141 +119,183 @@
             height: 20px;
             width: 20px;
             left: 3px;
-            bottom: 3px;
-            background-color: white;
+            bottom: 2px;
+            background-color: var(--text-muted);
             transition: .3s;
             border-radius: 50%;
         }
 
         input:checked + .slider {
-            background-color: #10b981;
+            background-color: var(--accent-success);
+            border-color: var(--accent-success);
         }
 
         input:checked + .slider:before {
             transform: translateX(24px);
+            background-color: white;
         }
 
         .difficulty-select {
             padding: 8px 12px;
-            border: 2px solid #e5e7eb;
-            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             font-size: 14px;
-            background: white;
+            background: var(--bg-input);
+            color: var(--text-primary);
             cursor: pointer;
             transition: all 0.2s;
         }
 
         .difficulty-select:hover {
-            border-color: #667eea;
+            border-color: var(--accent-primary);
         }
 
         .difficulty-select:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
         }
 
         .stat-badge {
             display: inline-block;
             padding: 4px 10px;
             border-radius: 12px;
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 12px;
+            font-weight: 600;
         }
 
         .stat-badge.good {
-            background: #d1fae5;
-            color: #065f46;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
         }
 
         .stat-badge.warning {
-            background: #fef3c7;
-            color: #92400e;
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
         }
 
         .stat-badge.bad {
-            background: #fee2e2;
-            color: #991b1b;
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
         }
 
         .actions {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .btn {
             padding: 12px 24px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            min-height: 44px;
         }
 
         .btn-primary {
-            background: #667eea;
+            background: var(--gradient-primary);
             color: white;
         }
 
         .btn-primary:hover {
-            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
         }
 
         .btn-secondary {
-            background: #f3f4f6;
-            color: #667eea;
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
         }
 
         .btn-secondary:hover {
-            background: #e5e7eb;
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
         }
 
         .success-message {
-            background: #d1fae5;
-            color: #065f46;
-            padding: 12px;
-            border-radius: 8px;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 12px 16px;
+            border-radius: 10px;
             margin-bottom: 20px;
             display: none;
         }
 
         .performance-overview {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
         }
 
         .performance-card {
-            background: #f9fafb;
-            padding: 20px;
-            border-radius: 8px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: 12px;
             text-align: center;
+            border-top: 3px solid var(--accent-primary);
         }
 
         .performance-label {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 8px;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .performance-value {
-            font-size: 28px;
-            font-weight: bold;
-            color: #667eea;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
         }
 
         .loading {
             text-align: center;
             padding: 40px;
-            color: #666;
+            color: var(--text-secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 10px 18px;
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
         }
 
         @media (max-width: 768px) {
             .settings-table {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .settings-table th,
@@ -262,243 +308,228 @@
             }
 
             .admin-card {
-                padding: 20px;
+                padding: 16px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">← Home</a>
+            <a href="math_settings.html" class="nav-link">🧮 Math Practice</a>
+            <a href="math_analytics.html" class="nav-link">📊 Analytics</a>
+        </div>
+
         <div class="header">
             <h1>⚙️ Admin Settings</h1>
             <p>Configure topic difficulty levels and manage math practice settings</p>
         </div>
 
-        <div class="success-message" id="success-message">
-            Settings saved successfully!
+        <div class="success-message" id="successMessage">
+            ✅ Settings saved successfully!
         </div>
 
         <div class="admin-card">
-            <div class="section-title">
-                📊 Overall Performance
-            </div>
-            <div id="performance-loading" class="loading">
-                Loading performance data...
-            </div>
-            <div id="performance-overview" class="performance-overview" style="display: none;">
-                <!-- Performance cards will be inserted here -->
+            <h2 class="section-title">📊 Overall Performance</h2>
+            <div class="performance-overview" id="performanceOverview">
+                <div class="performance-card">
+                    <div class="performance-label">Total Sessions</div>
+                    <div class="performance-value" id="totalSessions">-</div>
+                </div>
+                <div class="performance-card">
+                    <div class="performance-label">Total Questions</div>
+                    <div class="performance-value" id="totalQuestions">-</div>
+                </div>
+                <div class="performance-card">
+                    <div class="performance-label">Overall Accuracy</div>
+                    <div class="performance-value" id="overallAccuracy">-</div>
+                </div>
+                <div class="performance-card">
+                    <div class="performance-label">Avg Time</div>
+                    <div class="performance-value" id="avgTime">-</div>
+                </div>
             </div>
         </div>
 
         <div class="admin-card">
-            <div class="section-title">
-                🎯 Topic Configuration
-            </div>
-
+            <h2 class="section-title">🎯 Topic Configuration</h2>
             <table class="settings-table">
                 <thead>
                     <tr>
                         <th>Topic</th>
-                        <th style="text-align: center;">Enabled</th>
+                        <th>Enabled</th>
                         <th>Difficulty</th>
                         <th>Performance</th>
                     </tr>
                 </thead>
-                <tbody id="settings-table-body">
+                <tbody id="topicsTableBody">
                     <tr>
                         <td colspan="4" class="loading">Loading settings...</td>
                     </tr>
                 </tbody>
             </table>
-
+            
             <div class="actions">
-                <button class="btn btn-primary" onclick="saveSettings()">
-                    Save Changes
-                </button>
-                <button class="btn btn-secondary" onclick="window.location.reload()">
-                    Cancel
-                </button>
-                <button class="btn btn-secondary" onclick="window.location.href='index.html'">
-                    ← Back to Home
-                </button>
+                <button class="btn btn-primary" onclick="saveSettings()">Save Changes</button>
+                <button class="btn btn-secondary" onclick="resetToDefaults()">Cancel</button>
+                <a href="index.html" class="btn btn-secondary">← Back to Home</a>
             </div>
         </div>
     </div>
 
     <script>
-        const MATH_API = window.location.origin;;
-        const USER_ID = 'admin';
+        const API_BASE = window.location.origin;
+        let settings = {};
 
-        let settings = [];
-        let topicPerformance = {};
+        const topics = [
+            { id: 'arithmetic', name: 'Arithmetic', icon: '➕' },
+            { id: 'percentages', name: 'Percentages', icon: '💯' },
+            { id: 'ratios', name: 'Ratios & Proportions', icon: '⚖️' },
+            { id: 'time_work', name: 'Time & Work', icon: '⏱️' },
+            { id: 'averages', name: 'Averages', icon: '📊' },
+            { id: 'bodmas', name: 'BODMAS', icon: '🔢' }
+        ];
 
-        async function loadData() {
+        async function loadSettings() {
             try {
-                // Load settings
-                const settingsResponse = await fetch(`${MATH_API}/api/math/settings?user_id=${USER_ID}`);
-                const settingsData = await settingsResponse.json();
-                settings = settingsData.settings;
-
-                // Load performance
-                const perfResponse = await fetch(`${MATH_API}/api/math/performance/topics?user_id=daughter`);
-                const perfData = await perfResponse.json();
-                perfData.topics.forEach(topic => {
-                    topicPerformance[topic.topic] = topic;
-                });
-
-                // Load overall performance
-                const overallResponse = await fetch(`${MATH_API}/api/math/performance/overall?user_id=daughter`);
-                const overallData = await overallResponse.json();
-
-                renderPerformanceOverview(overallData.performance);
-                renderSettings();
-
+                const response = await fetch(`${API_BASE}/api/math/admin/settings`);
+                if (!response.ok) {
+                    throw new Error('Failed to load settings');
+                }
+                settings = await response.json();
+                renderTopicsTable();
+                loadPerformanceData();
             } catch (error) {
-                console.error('Error loading data:', error);
-                alert('Failed to load settings. Please try again.');
+                console.error('Error loading settings:', error);
+                // Show default settings even if API fails
+                settings = {
+                    topics: {}
+                };
+                topics.forEach(topic => {
+                    settings.topics[topic.id] = {
+                        enabled: true,
+                        difficulty: 'medium'
+                    };
+                });
+                renderTopicsTable();
+                document.getElementById('totalSessions').textContent = '0';
+                document.getElementById('totalQuestions').textContent = '0';
+                document.getElementById('overallAccuracy').textContent = '-';
+                document.getElementById('avgTime').textContent = '-';
             }
         }
 
-        function renderPerformanceOverview(performance) {
-            const container = document.getElementById('performance-overview');
-            const loading = document.getElementById('performance-loading');
-
-            loading.style.display = 'none';
-            container.style.display = 'grid';
-
-            container.innerHTML = `
-                <div class="performance-card">
-                    <div class="performance-label">Total Sessions</div>
-                    <div class="performance-value">${performance.total_sessions || 0}</div>
-                </div>
-                <div class="performance-card">
-                    <div class="performance-label">Total Questions</div>
-                    <div class="performance-value">${performance.total_questions || 0}</div>
-                </div>
-                <div class="performance-card">
-                    <div class="performance-label">Overall Accuracy</div>
-                    <div class="performance-value">${(performance.accuracy || 0).toFixed(1)}%</div>
-                </div>
-                <div class="performance-card">
-                    <div class="performance-label">Avg Time</div>
-                    <div class="performance-value">${(performance.average_time || 0).toFixed(1)}s</div>
-                </div>
-            `;
+        async function loadPerformanceData() {
+            try {
+                const response = await fetch(`${API_BASE}/api/math/analytics?user_id=daughter`);
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('totalSessions').textContent = data.total_sessions || 0;
+                    document.getElementById('totalQuestions').textContent = data.total_questions || 0;
+                    document.getElementById('overallAccuracy').textContent = 
+                        data.overall_accuracy ? `${data.overall_accuracy.toFixed(1)}%` : '-';
+                    document.getElementById('avgTime').textContent = 
+                        data.avg_time ? `${data.avg_time.toFixed(1)}s` : '-';
+                }
+            } catch (error) {
+                console.error('Error loading performance:', error);
+            }
         }
 
-        function renderSettings() {
-            const tbody = document.getElementById('settings-table-body');
-            tbody.innerHTML = '';
-
-            const topics = [
-                { key: 'arithmetic', name: 'Arithmetic', desc: 'Add, Sub, Mul, Div' },
-                { key: 'fractions', name: 'Fractions', desc: 'Fraction operations' },
-                { key: 'decimals', name: 'Decimals', desc: 'Decimal calculations' },
-                { key: 'equations', name: 'Equations', desc: 'Simple equations' },
-                { key: 'profit_loss', name: 'Profit & Loss', desc: 'Word problems' },
-                { key: 'bodmas', name: 'BODMAS', desc: 'Order of operations' }
-            ];
-
-            topics.forEach(topic => {
-                const setting = settings.find(s => s.topic === topic.key);
-                const perf = topicPerformance[topic.key];
-
-                const row = document.createElement('tr');
-
-                // Performance badge
-                let perfBadge = '<span class="stat-badge">No data</span>';
-                if (perf) {
-                    const accuracy = perf.accuracy || 0;
-                    const avgTime = (perf.average_time_per_question || 0).toFixed(1);
-                    const badgeClass = accuracy >= 80 ? 'good' : accuracy >= 60 ? 'warning' : 'bad';
-                    perfBadge = `<span class="stat-badge ${badgeClass}">${accuracy.toFixed(0)}% • ${avgTime}s</span>`;
-                }
-
-                row.innerHTML = `
-                    <td>
-                        <div class="topic-name">${topic.name}</div>
-                        <div style="font-size: 13px; color: #666; margin-top: 4px;">${topic.desc}</div>
-                    </td>
-                    <td style="text-align: center;">
-                        <label class="toggle-switch">
-                            <input type="checkbox" data-topic="${topic.key}" data-setting="enabled"
-                                ${setting && setting.enabled ? 'checked' : ''}>
-                            <span class="slider"></span>
-                        </label>
-                    </td>
-                    <td>
-                        <select class="difficulty-select" data-topic="${topic.key}" data-setting="difficulty">
-                            <option value="easy" ${setting && setting.difficulty === 'easy' ? 'selected' : ''}>Easy</option>
-                            <option value="medium" ${setting && setting.difficulty === 'medium' ? 'selected' : ''}>Medium</option>
-                            <option value="hard" ${setting && setting.difficulty === 'hard' ? 'selected' : ''}>Hard</option>
-                        </select>
-                    </td>
-                    <td>${perfBadge}</td>
+        function renderTopicsTable() {
+            const tbody = document.getElementById('topicsTableBody');
+            tbody.innerHTML = topics.map(topic => {
+                const topicSettings = settings.topics?.[topic.id] || { enabled: true, difficulty: 'medium' };
+                const performance = settings.performance?.[topic.id];
+                
+                return `
+                    <tr>
+                        <td class="topic-name">${topic.icon} ${topic.name}</td>
+                        <td>
+                            <label class="toggle-switch">
+                                <input type="checkbox" 
+                                       id="enabled-${topic.id}" 
+                                       ${topicSettings.enabled ? 'checked' : ''}>
+                                <span class="slider"></span>
+                            </label>
+                        </td>
+                        <td>
+                            <select class="difficulty-select" id="difficulty-${topic.id}">
+                                <option value="easy" ${topicSettings.difficulty === 'easy' ? 'selected' : ''}>Easy</option>
+                                <option value="medium" ${topicSettings.difficulty === 'medium' ? 'selected' : ''}>Medium</option>
+                                <option value="hard" ${topicSettings.difficulty === 'hard' ? 'selected' : ''}>Hard</option>
+                            </select>
+                        </td>
+                        <td>
+                            ${renderPerformanceBadge(performance)}
+                        </td>
+                    </tr>
                 `;
+            }).join('');
+        }
 
-                tbody.appendChild(row);
-            });
+        function renderPerformanceBadge(performance) {
+            if (!performance || !performance.accuracy) {
+                return '<span class="stat-badge">No data</span>';
+            }
+            
+            const accuracy = performance.accuracy;
+            let className = 'bad';
+            if (accuracy >= 80) className = 'good';
+            else if (accuracy >= 60) className = 'warning';
+            
+            return `<span class="stat-badge ${className}">${accuracy.toFixed(0)}% (${performance.total || 0} Q)</span>`;
         }
 
         async function saveSettings() {
-            const updates = [];
+            const newSettings = {
+                topics: {}
+            };
 
-            // Collect all settings from form
-            document.querySelectorAll('[data-topic]').forEach(element => {
-                const topic = element.dataset.topic;
-                const setting = element.dataset.setting;
-
-                const existing = updates.find(u => u.topic === topic);
-
-                if (setting === 'enabled') {
-                    const enabled = element.checked;
-                    if (existing) {
-                        existing.enabled = enabled;
-                    } else {
-                        updates.push({ topic, enabled });
-                    }
-                } else if (setting === 'difficulty') {
-                    const difficulty = element.value;
-                    if (existing) {
-                        existing.difficulty = difficulty;
-                    } else {
-                        updates.push({ topic, difficulty });
-                    }
-                }
+            topics.forEach(topic => {
+                newSettings.topics[topic.id] = {
+                    enabled: document.getElementById(`enabled-${topic.id}`).checked,
+                    difficulty: document.getElementById(`difficulty-${topic.id}`).value
+                };
             });
 
-            // Save each setting
             try {
-                for (const update of updates) {
-                    await fetch(`${MATH_API}/api/math/settings/update`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            user_id: USER_ID,
-                            topic: update.topic,
-                            enabled: update.enabled,
-                            difficulty: update.difficulty
-                        })
-                    });
+                const response = await fetch(`${API_BASE}/api/math/admin/settings`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(newSettings)
+                });
+
+                if (response.ok) {
+                    settings = newSettings;
+                    const successMsg = document.getElementById('successMessage');
+                    successMsg.style.display = 'block';
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                    }, 3000);
+                } else {
+                    alert('Failed to save settings');
                 }
-
-                // Show success message
-                const successEl = document.getElementById('success-message');
-                successEl.style.display = 'block';
-                setTimeout(() => {
-                    successEl.style.display = 'none';
-                }, 3000);
-
-                console.log('Settings saved successfully');
-
             } catch (error) {
                 console.error('Error saving settings:', error);
-                alert('Failed to save settings. Please try again.');
+                alert('Failed to save settings');
             }
         }
 
-        // Load data on page load
-        window.onload = loadData;
+        function resetToDefaults() {
+            if (confirm('Reset all settings to defaults?')) {
+                topics.forEach(topic => {
+                    document.getElementById(`enabled-${topic.id}`).checked = true;
+                    document.getElementById(`difficulty-${topic.id}`).value = 'medium';
+                });
+            }
+        }
+
+        // Load settings on page load
+        loadSettings();
     </script>
 </body>
 </html>
