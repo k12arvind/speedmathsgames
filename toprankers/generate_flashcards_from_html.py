@@ -1,0 +1,363 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+generate_flashcards_from_html.py
+
+Generates Anki flashcards from TopRankers HTML current affairs pages.
+Supports both URLs and local HTML files.
+"""
+
+import json
+import os
+import re
+import sys
+from pathlib import Path
+from typing import Dict, List, Any
+from anthropic import Anthropic
+
+# Import HTML extraction
+from extract_html import extract_html_to_text, extract_date_from_url
+
+
+# Configuration
+OUTPUT_PATH = Path.home() / "Desktop" / "anki_automation" / "inbox" / "daily_cards.json"
+SOURCE = "toprankers"
+
+# Deck definitions (same as PDF version)
+DECKS = [
+    "CLAT GK::Awards / Sports / Defence",
+    "CLAT GK::Economy & Business",
+    "CLAT GK::Environment & Science",
+    "CLAT GK::Government Schemes & Reports",
+    "CLAT GK::International Affairs",
+    "CLAT GK::Polity & Constitution",
+    "CLAT GK::Static GK",
+    "CLAT GK::Supreme Court / High Court Judgements",
+]
+
+TOPIC_TAGS = [
+    "Awards_Sports_Defence",
+    "Economy_Business",
+    "Environment_Science",
+    "Government_Schemes_Reports",
+    "International_Affairs",
+    "Polity_Constitution",
+    "Static_GK",
+    "Supreme_Court_High_Court",
+]
+
+
+FLASHCARD_PROMPT = """You are generating Anki flashcards for CLAT GK from daily current affairs content.
+Output ONLY valid JSON in this exact schema:
+
+{{
+  "source": "{source}",
+  "week": "{week}",
+  "cards": [
+    {{
+      "deck": "CLAT GK::Awards / Sports / Defence",
+      "front": "What is the question?",
+      "back": "Concise answer.",
+      "tags": ["source:{source}", "week:{week}", "topic:Awards_Sports_Defence", "sid:{source}_{week}_0001"]
+    }}
+  ]
+}}
+
+Constraints:
+
+1. deck must be one of:
+   - CLAT GK::Awards / Sports / Defence
+   - CLAT GK::Economy & Business
+   - CLAT GK::Environment & Science
+   - CLAT GK::Government Schemes & Reports
+   - CLAT GK::International Affairs
+   - CLAT GK::Polity & Constitution
+   - CLAT GK::Static GK
+   - CLAT GK::Supreme Court / High Court Judgements
+
+2. Create 30-80 cards total (prioritize factual, testable points from current affairs).
+
+3. front must be a single clear question (Who/What/When/Where format).
+
+4. back must be concise and unambiguous (1–2 lines).
+
+5. tags must include EXACTLY these formats (NO spaces in tags):
+   - source:{source}
+   - week:{week}
+   - topic:<OneOf: Awards_Sports_Defence, Economy_Business, Environment_Science, Government_Schemes_Reports, International_Affairs, Polity_Constitution, Static_GK, Supreme_Court_High_Court>
+   - sid:{source}_{week}_#### (zero-padded 4-digit unique number starting from 0001, use lowercase for source and week in sid)
+
+6. Return JSON only, no commentary, no markdown code blocks.
+
+7. Focus on:
+   - Names of people, organizations, schemes
+   - Dates and locations
+   - Numbers, budgets, rankings
+   - Key facts that can be tested in CLAT
+
+Current Affairs Content:
+{content}
+"""
+
+
+def validate_card(card: Dict[str, Any], card_idx: int) -> List[str]:
+    """Validate a single card and return list of errors."""
+    errors = []
+
+    # Check required keys
+    required_keys = ["deck", "front", "back", "tags"]
+    for key in required_keys:
+        if key not in card:
+            errors.append(f"Card {card_idx}: Missing required key '{key}'")
+
+    # Validate deck
+    if "deck" in card and card["deck"] not in DECKS:
+        errors.append(f"Card {card_idx}: Invalid deck '{card['deck']}'")
+
+    # Validate front and back are non-empty strings
+    if "front" in card and (not isinstance(card["front"], str) or not card["front"].strip()):
+        errors.append(f"Card {card_idx}: 'front' must be a non-empty string")
+
+    if "back" in card and (not isinstance(card["back"], str) or not card["back"].strip()):
+        errors.append(f"Card {card_idx}: 'back' must be a non-empty string")
+
+    # Validate tags
+    if "tags" in card:
+        if not isinstance(card["tags"], list):
+            errors.append(f"Card {card_idx}: 'tags' must be a list")
+        else:
+            tags = card["tags"]
+
+            # Check for spaces in tags
+            for tag in tags:
+                if " " in tag:
+                    errors.append(f"Card {card_idx}: Tag '{tag}' contains spaces")
+
+            # Check required tag formats
+            has_source = any(tag.startswith("source:") for tag in tags)
+            has_week = any(tag.startswith("week:") for tag in tags)
+            has_topic = any(tag.startswith("topic:") for tag in tags)
+            has_sid = any(tag.startswith("sid:") for tag in tags)
+
+            if not has_source:
+                errors.append(f"Card {card_idx}: Missing 'source:' tag")
+            if not has_week:
+                errors.append(f"Card {card_idx}: Missing 'week:' tag")
+            if not has_topic:
+                errors.append(f"Card {card_idx}: Missing 'topic:' tag")
+            if not has_sid:
+                errors.append(f"Card {card_idx}: Missing 'sid:' tag")
+
+            # Validate topic tag value
+            topic_tags = [tag for tag in tags if tag.startswith("topic:")]
+            if topic_tags:
+                topic_value = topic_tags[0].split(":", 1)[1]
+                if topic_value not in TOPIC_TAGS:
+                    errors.append(f"Card {card_idx}: Invalid topic tag value '{topic_value}'")
+
+    return errors
+
+
+def validate_output(data: Dict[str, Any], source: str, week: str) -> List[str]:
+    """Validate the entire JSON output and return list of errors."""
+    errors = []
+
+    # Check top-level structure
+    if "source" not in data:
+        errors.append("Missing top-level key 'source'")
+    elif data["source"] != source:
+        errors.append(f"'source' should be '{source}', got '{data['source']}'")
+
+    if "week" not in data:
+        errors.append("Missing top-level key 'week'")
+    elif data["week"] != week:
+        errors.append(f"'week' should be '{week}', got '{data['week']}'")
+
+    if "cards" not in data:
+        errors.append("Missing top-level key 'cards'")
+        return errors
+
+    cards = data["cards"]
+    if not isinstance(cards, list):
+        errors.append("'cards' must be a list")
+        return errors
+
+    # Check card count (more lenient for daily HTML)
+    if len(cards) < 10:
+        errors.append(f"Too few cards: {len(cards)} (minimum 10)")
+    elif len(cards) > 150:
+        errors.append(f"Too many cards: {len(cards)} (maximum 150)")
+
+    # Validate each card
+    for idx, card in enumerate(cards, start=1):
+        errors.extend(validate_card(card, idx))
+
+    return errors
+
+
+def generate_flashcards_from_html(url_or_file: str, source: str = None, week: str = None) -> Dict[str, Any]:
+    """Generate flashcards from HTML content using Claude API."""
+
+    # Use defaults if not provided
+    if source is None:
+        source = SOURCE
+
+    # Extract date from URL if it's a URL and week not provided
+    if week is None:
+        if url_or_file.startswith('http://') or url_or_file.startswith('https://'):
+            week = extract_date_from_url(url_or_file)
+        else:
+            # Use filename for date
+            filename = Path(url_or_file).stem
+            date_match = re.search(r'(\d{4})[_-](\w+)[_-](\d+)', filename)
+            if date_match:
+                year, month, day = date_match.groups()
+                week = f"{year}_{month}_D{int(day):02d}"
+            else:
+                from datetime import datetime
+                now = datetime.now()
+                week = f"{now.year}_{now.strftime('%b')}_D{now.day:02d}"
+
+    # Check for API key
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "ANTHROPIC_API_KEY environment variable not set.\n"
+            "Please set it with: export ANTHROPIC_API_KEY='your-api-key'"
+        )
+
+    # Extract HTML content
+    print(f"📄 Extracting content from HTML...")
+    content = extract_html_to_text(url_or_file)
+    print(f"✅ Extracted {len(content)} characters")
+
+    # Create prompt
+    prompt = FLASHCARD_PROMPT.format(content=content, source=source, week=week)
+
+    print("\n🤖 Generating flashcards with Claude...")
+    print("   (This may take 1-2 minutes)\n")
+
+    # Call Claude API
+    client = Anthropic(api_key=api_key)
+    message = client.messages.create(
+        model="claude-sonnet-4-5-20250929",
+        max_tokens=16000,
+        temperature=1,
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+    )
+
+    # Extract response
+    response_text = message.content[0].text
+
+    # Remove markdown code blocks if present
+    if response_text.startswith('```'):
+        response_text = re.sub(r'^```(?:json)?\s*\n?', '', response_text)
+        response_text = re.sub(r'\n?```\s*$', '', response_text)
+
+    # Clean up the response text
+    response_text = response_text.strip()
+
+    # Parse JSON
+    try:
+        data = json.loads(response_text)
+    except json.JSONDecodeError as e:
+        print(f"❌ Failed to parse JSON response: {e}")
+        print("\nResponse preview (first 1000 chars):")
+        print(response_text[:1000])
+        print("\n\nLast 500 chars:")
+        print(response_text[-500:])
+
+        # Try to save the raw response for debugging
+        debug_path = OUTPUT_PATH.parent / "debug_html_response.txt"
+        with open(debug_path, "w", encoding="utf-8") as f:
+            f.write(response_text)
+        print(f"\n💾 Saved full response to: {debug_path}")
+        raise
+
+    return data
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python generate_flashcards_from_html.py <url_or_file> [source] [week]")
+        print("\nExamples:")
+        print("  python generate_flashcards_from_html.py https://www.toprankers.com/current-affairs-19th-december-2025")
+        print("  python generate_flashcards_from_html.py inbox/page.html toprankers 2025_Dec_D19")
+        sys.exit(1)
+
+    url_or_file = sys.argv[1]
+
+    # Get source and week from command line or use defaults/auto-detect
+    source = sys.argv[2] if len(sys.argv) > 2 else SOURCE
+    week = sys.argv[3] if len(sys.argv) > 3 else None
+
+    print("=" * 60)
+    print("CLAT GK Flashcard Generator (HTML)")
+    print("=" * 60)
+
+    # Generate flashcards
+    try:
+        data = generate_flashcards_from_html(url_or_file, source, week)
+    except Exception as e:
+        print(f"\n❌ Error generating flashcards: {e}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)
+
+    # Validate output
+    print(f"✅ Generated {len(data.get('cards', []))} cards")
+    print("\n🔍 Validating output...")
+
+    errors = validate_output(data, source, data.get('week', week))
+    if errors:
+        print(f"\n⚠️  Found {len(errors)} validation errors:\n")
+        for error in errors[:10]:
+            print(f"   • {error}")
+        if len(errors) > 10:
+            print(f"   ... and {len(errors) - 10} more errors")
+        print("\n❌ Validation failed. Please review and fix.")
+        sys.exit(1)
+
+    print("✅ All validations passed!")
+
+    # Save output
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    print(f"\n✅ Saved {len(data['cards'])} flashcards to:")
+    print(f"   {OUTPUT_PATH}")
+
+    # Print summary
+    print("\n" + "=" * 60)
+    print("SUMMARY")
+    print("=" * 60)
+    print(f"Source:      {data['source']}")
+    print(f"Week:        {data['week']}")
+    print(f"Total cards: {len(data['cards'])}")
+
+    # Deck breakdown
+    deck_counts = {}
+    for card in data["cards"]:
+        deck = card["deck"]
+        deck_counts[deck] = deck_counts.get(deck, 0) + 1
+
+    print("\nCards per deck:")
+    for deck in DECKS:
+        count = deck_counts.get(deck, 0)
+        if count > 0:
+            print(f"  • {deck}: {count}")
+
+    print("\n✅ Done!")
+    print("\n💡 Next step: Import to Anki with:")
+    print(f"   python import_to_anki.py {OUTPUT_PATH}")
+
+
+if __name__ == "__main__":
+    main()

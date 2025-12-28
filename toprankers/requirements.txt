@@ -1,0 +1,24 @@
+# Core dependencies for CLAT GK Anki automation
+
+# PDF processing
+PyMuPDF>=1.24.0
+
+# AI card generation
+anthropic>=0.39.0
+
+# Anki integration
+requests>=2.31.0
+
+# HTML processing (for TopRankers current affairs)
+beautifulsoup4>=4.12.0
+
+# PDF generation (for clean PDF exports)
+reportlab>=4.0.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Google OAuth authentication
+google-auth>=2.25.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0

@@ -446,6 +446,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 self.handle_gk_api_post(path, data)
             elif path.startswith('/api/revise/'):
                 self.handle_gk_dashboard_post(path, data)
+            # PDF creation and sync endpoints
+            elif path in ['/api/create-pdf-from-url', '/api/sync-pdfs']:
+                self.handle_gk_dashboard_post(path, data)
             # Processing API endpoints
             elif path.startswith('/api/processing/'):
                 self.handle_processing_post(path, data)
@@ -1234,8 +1237,121 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             pdf_id = path.split('/')[-1]
             # Mark as revised logic
             self.send_json({'success': True, 'pdf_id': pdf_id})
+        
+        elif path == '/api/create-pdf-from-url':
+            # Create PDF from TopRankers URL
+            url = data.get('url', '')
+            if not url:
+                self.send_json({'error': 'URL is required'}, 400)
+                return
+            
+            try:
+                result = self._create_pdf_from_url(url)
+                self.send_json(result)
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
+        elif path == '/api/sync-pdfs':
+            # Bidirectional sync with Mac Mini
+            try:
+                result = self._sync_pdfs_bidirectional()
+                self.send_json(result)
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
         else:
             self.send_json({'error': 'GK dashboard endpoint not found'})
+    
+    def _create_pdf_from_url(self, url: str) -> dict:
+        """Create PDF from TopRankers URL."""
+        import subprocess
+        import re
+        
+        # Validate URL
+        if 'toprankers.com' not in url:
+            raise ValueError('Only TopRankers URLs are supported')
+        
+        # Extract date from URL for filename
+        date_match = re.search(r'(\d+)(?:st|nd|rd|th)?-(\w+)-(\d{4})', url)
+        if date_match:
+            day, month, year = date_match.groups()
+            filename = f"current_affairs_{year}_{month.lower()}_{day}.pdf"
+        else:
+            from datetime import datetime
+            filename = f"current_affairs_{datetime.now().strftime('%Y_%m_%d')}.pdf"
+        
+        output_path = Path.home() / "saanvi" / "Legaledgedailygk" / filename
+        
+        # Check if already exists
+        if output_path.exists():
+            return {
+                'success': True,
+                'message': 'PDF already exists',
+                'filename': filename,
+                'path': str(output_path),
+                'already_existed': True
+            }
+        
+        # Run the PDF generation script
+        script_path = Path(__file__).parent.parent / 'toprankers' / 'generate_clean_pdf_final.py'
+        
+        result = subprocess.run(
+            [sys.executable, str(script_path), url, str(output_path)],
+            capture_output=True,
+            text=True,
+            cwd=str(script_path.parent),
+            timeout=60
+        )
+        
+        if result.returncode != 0:
+            raise RuntimeError(f"PDF generation failed: {result.stderr}")
+        
+        if not output_path.exists():
+            raise RuntimeError("PDF was not created")
+        
+        return {
+            'success': True,
+            'message': 'PDF created successfully',
+            'filename': filename,
+            'path': str(output_path),
+            'size_kb': output_path.stat().st_size / 1024
+        }
+    
+    def _sync_pdfs_bidirectional(self) -> dict:
+        """Bidirectional sync of ~/saanvi folders with Mac Mini."""
+        import subprocess
+        
+        folders = ['Legaledgedailygk', 'LegalEdgeweeklyGK', 'weeklyGKCareerLauncher']
+        results = {'synced': [], 'errors': []}
+        
+        for folder in folders:
+            local_path = Path.home() / 'saanvi' / folder
+            remote_path = f'mac-mini:~/saanvi/{folder}/'
+            
+            try:
+                # Sync local → remote (newer files only)
+                subprocess.run(
+                    ['rsync', '-avzu', f'{local_path}/', remote_path],
+                    capture_output=True,
+                    timeout=60
+                )
+                
+                # Sync remote → local (newer files only)
+                subprocess.run(
+                    ['rsync', '-avzu', remote_path, f'{local_path}/'],
+                    capture_output=True,
+                    timeout=60
+                )
+                
+                results['synced'].append(folder)
+            except Exception as e:
+                results['errors'].append({'folder': folder, 'error': str(e)})
+        
+        return {
+            'success': len(results['errors']) == 0,
+            'message': f"Synced {len(results['synced'])} folders",
+            'details': results
+        }
 
     def handle_analytics_get(self, path: str, query_params: dict):
         """Handle analytics API GET requests."""

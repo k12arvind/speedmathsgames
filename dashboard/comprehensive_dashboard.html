@@ -622,6 +622,35 @@
             </div>
         </div>
 
+        <!-- Quick Tools Section -->
+        <div class="tools-section" style="margin-bottom: 20px; padding: 15px; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 12px; border: 1px solid #e2e8f0;">
+            <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <label style="font-size: 12px; color: #64748b; font-weight: 600; display: block; margin-bottom: 5px;">📰 Create PDF from TopRankers URL</label>
+                    <div style="display: flex; gap: 8px;">
+                        <input type="text" id="toprankers-url" placeholder="https://www.toprankers.com/current-affairs-25th-december-2025" 
+                               style="flex: 1; padding: 10px 12px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 13px; outline: none; transition: border-color 0.2s;"
+                               onfocus="this.style.borderColor='#667eea'" onblur="this.style.borderColor='#cbd5e1'">
+                        <button onclick="createPdfFromUrl()" id="create-pdf-btn"
+                                style="padding: 10px 20px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; white-space: nowrap; transition: transform 0.2s, box-shadow 0.2s;"
+                                onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(16,185,129,0.4)'"
+                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            📄 Create PDF
+                        </button>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="syncPdfs()" id="sync-btn"
+                            style="padding: 10px 20px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; white-space: nowrap; transition: transform 0.2s, box-shadow 0.2s;"
+                            onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(59,130,246,0.4)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            🔄 Sync with Server
+                    </button>
+                </div>
+            </div>
+            <div id="tool-status" style="margin-top: 10px; font-size: 12px; color: #64748b; display: none;"></div>
+        </div>
+
         <!-- Filters -->
         <div class="filters-section">
             <div class="filter-row">
@@ -1729,6 +1758,102 @@
         // Show error
         function showError(message) {
             alert(message);
+        }
+
+        // Create PDF from TopRankers URL
+        async function createPdfFromUrl() {
+            const urlInput = document.getElementById('toprankers-url');
+            const btn = document.getElementById('create-pdf-btn');
+            const statusDiv = document.getElementById('tool-status');
+            
+            const url = urlInput.value.trim();
+            if (!url) {
+                alert('Please enter a TopRankers URL');
+                return;
+            }
+            
+            if (!url.includes('toprankers.com')) {
+                alert('Please enter a valid TopRankers URL');
+                return;
+            }
+            
+            // Show loading state
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Creating...';
+            statusDiv.style.display = 'block';
+            statusDiv.innerHTML = '📄 Fetching content from TopRankers and generating PDF...';
+            statusDiv.style.color = '#3b82f6';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/create-pdf-from-url`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    if (result.already_existed) {
+                        statusDiv.innerHTML = `⚠️ PDF already exists: <strong>${result.filename}</strong>`;
+                        statusDiv.style.color = '#f59e0b';
+                    } else {
+                        statusDiv.innerHTML = `✅ PDF created: <strong>${result.filename}</strong> (${result.size_kb?.toFixed(1)} KB)`;
+                        statusDiv.style.color = '#10b981';
+                        urlInput.value = '';
+                        // Refresh dashboard
+                        await loadDashboardData();
+                    }
+                } else {
+                    statusDiv.innerHTML = `❌ Error: ${result.error}`;
+                    statusDiv.style.color = '#ef4444';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `❌ Error: ${error.message}`;
+                statusDiv.style.color = '#ef4444';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '📄 Create PDF';
+            }
+        }
+
+        // Sync PDFs bidirectionally with Mac Mini
+        async function syncPdfs() {
+            const btn = document.getElementById('sync-btn');
+            const statusDiv = document.getElementById('tool-status');
+            
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Syncing...';
+            statusDiv.style.display = 'block';
+            statusDiv.innerHTML = '🔄 Syncing PDFs with server (bidirectional)...';
+            statusDiv.style.color = '#3b82f6';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/sync-pdfs`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({})
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    statusDiv.innerHTML = `✅ ${result.message} - Folders: ${result.details?.synced?.join(', ') || 'all'}`;
+                    statusDiv.style.color = '#10b981';
+                    // Refresh dashboard
+                    await loadDashboardData();
+                } else {
+                    const errors = result.details?.errors?.map(e => e.folder).join(', ') || 'unknown';
+                    statusDiv.innerHTML = `⚠️ Partial sync. Errors in: ${errors}`;
+                    statusDiv.style.color = '#f59e0b';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `❌ Sync failed: ${error.message}`;
+                statusDiv.style.color = '#ef4444';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '🔄 Sync with Server';
+            }
         }
     </script>
     <!-- Bootstrap JS -->
