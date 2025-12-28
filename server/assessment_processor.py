@@ -519,7 +519,7 @@ No markdown, no explanation - just the JSON array."""
 
                         self.progress_callback(
                             job_id,
-                            f'✅ Batch {batch_idx} complete: {imported_count} cards imported (Total: {total_cards_overall})'
+                            f'✅ Batch {batch_idx} complete: {saved_count} cards saved (Total: {total_cards_overall})'
                         )
 
                         # Calculate progress percentage
