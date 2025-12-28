@@ -13,75 +13,56 @@
     <title>CLAT GK Revision Dashboard - Comprehensive</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared-styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --info: #3b82f6;
-            --purple: #8b5cf6;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-400: #9ca3af;
-            --gray-500: #6b7280;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --gray-900: #111827;
-        }
-
+        /* Override shared styles for GK-specific theming */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: #f5f7fa;
-            min-height: 100vh;
+            background: var(--bg-primary);
+            color: var(--text-primary);
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
             color: white;
-            padding: 24px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 16px 20px;
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .header-content {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .header h1 {
-            font-size: 24px;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .header-nav {
             display: flex;
-            gap: 12px;
+            gap: 8px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .nav-btn {
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.15);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 6px;
-            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
@@ -89,83 +70,123 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            min-height: 40px;
         }
 
         .nav-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
         }
 
         .exam-countdown {
-            font-size: 14px;
-            opacity: 0.95;
+            font-size: 13px;
+            background: rgba(0,0,0,0.2);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 600;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 24px 20px;
+            padding: 20px;
         }
 
         /* Statistics Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         .stat-card {
-            background: white;
-            padding: 20px;
+            background: var(--bg-card);
+            padding: 16px;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
         }
 
-        .stat-card.daily {
-            border-left-color: var(--info);
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-blue);
         }
 
-        .stat-card.weekly {
-            border-left-color: var(--purple);
-        }
-
-        .stat-card.never {
-            border-left-color: var(--danger);
-        }
-
-        .stat-card.completion {
-            border-left-color: var(--success);
-        }
+        .stat-card.daily::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .stat-card.weekly::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .stat-card.never::before { background: linear-gradient(90deg, #ef4444, #f87171); }
+        .stat-card.completion::before { background: linear-gradient(90deg, #10b981, #34d399); }
 
         .stat-value {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--gray-900);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            color: var(--text-primary);
             margin-bottom: 4px;
         }
 
         .stat-label {
-            font-size: 13px;
-            color: var(--gray-600);
-            font-weight: 500;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .tools-section label {
+            color: var(--text-secondary);
+        }
+
+        .tools-section input {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 8px;
+            padding: 10px 14px;
+        }
+
+        .tools-section input:focus {
+            border-color: var(--accent-primary);
+            outline: none;
         }
 
         /* Filters */
         .filters-section {
-            background: white;
-            padding: 20px;
+            background: var(--bg-card);
+            padding: 16px;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
         }
 
         .filter-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             margin-bottom: 12px;
+            align-items: center;
         }
 
         .filter-row:last-child {
@@ -175,86 +196,85 @@
         .filter-label {
             font-size: 13px;
             font-weight: 600;
-            color: var(--gray-700);
+            color: var(--text-secondary);
             margin-right: 8px;
-            display: flex;
-            align-items: center;
         }
 
         .filter-btn {
-            padding: 8px 16px;
-            border: 2px solid var(--gray-300);
-            background: white;
-            color: var(--gray-700);
-            border-radius: 6px;
+            padding: 8px 14px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border-radius: 8px;
             font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            min-height: 40px;
         }
 
         .filter-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
+            border-color: var(--accent-primary);
+            color: var(--text-primary);
         }
 
         .filter-btn.active {
-            background: var(--primary);
+            background: var(--gradient-primary);
             color: white;
-            border-color: var(--primary);
+            border-color: transparent;
         }
 
         /* Tabs */
         .tabs {
             display: flex;
-            gap: 8px;
+            gap: 4px;
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--gray-200);
+            background: var(--bg-card);
+            padding: 4px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
+        .tabs::-webkit-scrollbar { display: none; }
+
         .tab {
-            padding: 12px 24px;
-            background: none;
+            padding: 10px 20px;
+            background: transparent;
             border: none;
-            font-size: 15px;
+            border-radius: 8px;
+            font-size: 14px;
             font-weight: 600;
-            color: var(--gray-600);
+            color: var(--text-secondary);
             cursor: pointer;
-            position: relative;
-            transition: color 0.2s;
+            transition: all 0.2s;
+            white-space: nowrap;
+            min-height: 44px;
         }
 
         .tab:hover {
-            color: var(--primary);
+            color: var(--text-primary);
+            background: var(--bg-card-hover);
         }
 
         .tab.active {
-            color: var(--primary);
-        }
-
-        .tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--primary);
+            background: var(--gradient-primary);
+            color: white;
         }
 
         .tab-badge {
             display: inline-block;
-            background: var(--gray-200);
-            color: var(--gray-700);
+            background: rgba(255,255,255,0.2);
+            color: inherit;
             padding: 2px 8px;
-            border-radius: 12px;
+            border-radius: 10px;
             font-size: 12px;
             margin-left: 6px;
         }
 
         .tab.active .tab-badge {
-            background: var(--primary);
-            color: white;
+            background: rgba(255,255,255,0.3);
         }
 
         /* Tab Content */
@@ -268,25 +288,25 @@
 
         /* Table Styles */
         .table-container {
-            background: white;
+            background: var(--bg-card);
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
             overflow: hidden;
         }
 
         .table-header {
-            padding: 16px 20px;
-            background: var(--gray-50);
-            border-bottom: 1px solid var(--gray-200);
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .table-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--gray-900);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
         }
 
         .table-actions {
@@ -296,15 +316,18 @@
 
         .btn-icon {
             padding: 8px;
-            background: white;
-            border: 1px solid var(--gray-300);
-            border-radius: 6px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 8px;
             cursor: pointer;
             font-size: 14px;
+            transition: all 0.2s;
         }
 
         .btn-icon:hover {
-            background: var(--gray-50);
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
         }
 
         table {
@@ -313,100 +336,102 @@
         }
 
         thead {
-            background: var(--gray-50);
+            background: var(--bg-secondary);
         }
 
         th {
-            padding: 12px 16px;
+            padding: 12px 14px;
             text-align: left;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--gray-700);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 1px solid var(--gray-200);
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border-color);
             cursor: pointer;
             user-select: none;
+            white-space: nowrap;
         }
 
         th:hover {
-            background: var(--gray-100);
+            background: var(--bg-card-hover);
         }
 
         td {
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--gray-100);
-            font-size: 14px;
-            color: var(--gray-700);
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--text-secondary);
         }
 
         tr:hover td {
-            background: var(--gray-50);
+            background: var(--bg-card-hover);
         }
 
         .pdf-name {
             font-weight: 600;
-            color: var(--gray-900);
+            color: var(--text-primary);
         }
 
         .badge {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 12px;
+            border-radius: 20px;
+            font-size: 11px;
             font-weight: 600;
         }
 
         .badge-daily {
-            background: #dbeafe;
-            color: #1e40af;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
         }
 
         .badge-weekly {
-            background: #ede9fe;
-            color: #6b21a8;
+            background: rgba(139, 92, 246, 0.2);
+            color: #a78bfa;
         }
 
         .badge-count {
-            background: var(--gray-200);
-            color: var(--gray-700);
+            background: var(--bg-input);
+            color: var(--text-secondary);
         }
 
         .badge-count.high {
-            background: #d1fae5;
-            color: #065f46;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
         }
 
         .badge-count.medium {
-            background: #dbeafe;
-            color: #1e40af;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
         }
 
         .badge-count.low {
-            background: #fed7aa;
-            color: #92400e;
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
         }
 
         .badge-count.none {
-            background: var(--gray-200);
-            color: var(--gray-600);
+            background: var(--bg-input);
+            color: var(--text-muted);
         }
 
         .badge-status {
             padding: 4px 10px;
-            border-radius: 12px;
+            border-radius: 20px;
             font-size: 11px;
             font-weight: 600;
         }
 
         .badge-not-processed {
-            background: #fee2e2;
-            color: #991b1b;
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
         }
 
         .badge-processed {
-            background: #d1fae5;
-            color: #065f46;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
         }
 
         .categories {
@@ -416,59 +441,68 @@
         }
 
         .category-tag {
-            background: var(--gray-100);
+            background: var(--bg-input);
             padding: 2px 8px;
             border-radius: 4px;
-            font-size: 11px;
-            color: var(--gray-600);
+            font-size: 10px;
+            color: var(--text-muted);
         }
 
         .action-buttons {
             display: flex;
             gap: 6px;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 6px 12px;
+            padding: 8px 12px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 12px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            min-height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
         }
 
         .btn-primary {
-            background: var(--primary);
+            background: var(--gradient-primary);
             color: white;
         }
 
         .btn-primary:hover {
-            background: var(--primary-dark);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+            transform: translateY(-1px);
         }
 
         .btn-secondary {
-            background: var(--gray-200);
-            color: var(--gray-700);
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
         }
 
         .btn-secondary:hover {
-            background: var(--gray-300);
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
         }
 
         .btn-success {
-            background: var(--success);
+            background: var(--gradient-green);
             color: white;
         }
 
         .btn-success:hover {
-            background: #059669;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
 
         .empty-state {
             text-align: center;
             padding: 60px 20px;
-            color: var(--gray-500);
+            color: var(--text-muted);
         }
 
         .empty-icon {
@@ -479,16 +513,16 @@
         .loading {
             text-align: center;
             padding: 40px;
-            color: var(--gray-500);
+            color: var(--text-muted);
         }
 
         .spinner {
-            border: 3px solid var(--gray-200);
-            border-top: 3px solid var(--primary);
+            border: 3px solid var(--bg-input);
+            border-top: 3px solid var(--accent-primary);
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            animation: spin 1s linear infinite;
+            animation: spin 0.8s linear infinite;
             margin: 0 auto 16px;
         }
 
@@ -504,95 +538,108 @@
             right: 24px;
             width: 56px;
             height: 56px;
-            background: var(--primary);
+            background: var(--gradient-primary);
             color: white;
             border: none;
             border-radius: 50%;
             font-size: 24px;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
             transition: all 0.3s;
             z-index: 90;
         }
 
         .refresh-btn:hover {
             transform: scale(1.1) rotate(90deg);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 30px rgba(124, 58, 237, 0.5);
         }
 
-        /* Responsive */
+        /* iPad Responsive - Horizontal Scroll for Tables */
         @media (max-width: 1024px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-nav {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 8px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .table-wrapper {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border-radius: 12px;
             }
 
             .table-container {
-                overflow-x: scroll !important;
-                overflow-y: visible !important;
-                -webkit-overflow-scrolling: touch;
-                position: relative;
-                width: 100%;
-                background: #fffbf0;
-                border: 3px dashed #ff6b35;
-                border-radius: 8px;
-                padding: 8px;
+                overflow: visible;
             }
 
-            /* Add VERY prominent scroll indicator */
-            .table-container::before {
-                content: '👉 SWIPE LEFT 👉';
-                position: sticky;
-                left: 0;
-                top: 0;
-                z-index: 100;
-                background: linear-gradient(135deg, #ff6b35 0%, #f44336 100%);
-                color: white;
-                padding: 12px 20px;
-                border-radius: 8px;
-                font-size: 16px;
-                font-weight: 900;
-                text-align: center;
+            /* Swipe indicator for iPad */
+            .table-wrapper::before {
+                content: '← Swipe to see more →';
                 display: block;
-                width: calc(100% - 40px);
-                margin: 0 auto 12px;
-                box-shadow: 0 4px 12px rgba(255, 107, 53, 0.5);
-                animation: bounce 1s infinite;
-                letter-spacing: 2px;
-            }
-
-            @keyframes bounce {
-                0%, 100% { transform: translateX(0); }
-                50% { transform: translateX(10px); }
+                text-align: center;
+                padding: 8px;
+                background: rgba(124, 58, 237, 0.1);
+                color: var(--accent-primary);
+                font-size: 12px;
+                font-weight: 600;
+                border-radius: 8px 8px 0 0;
             }
 
             table {
-                min-width: 1400px !important;
-                display: table !important;
-                background: white;
+                min-width: 1200px;
             }
+        }
 
-            .tabs {
-                overflow-x: auto;
-            }
+        /* Modal Styling */
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
 
-            .tab {
-                white-space: nowrap;
-            }
+        .modal-header {
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .modal-header .modal-title {
+            color: var(--text-primary);
+        }
+
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+
+        .modal-body {
+            background: var(--bg-card);
+            color: var(--text-secondary);
+        }
+
+        .modal-footer {
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            border-radius: 0 0 16px 16px;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="header-content">
-            <h1>🎓 CLAT GK Revision Dashboard</h1>
+            <h1>📚 GK Dashboard</h1>
             <div class="header-nav">
-                <a href="diary.html" class="nav-btn" style="background: #ec4899; border-color: #db2777;">📔 Daily Diary</a>
-                <a href="pdf_dashboard.html" class="nav-btn">📚 PDF Manager</a>
-                <a href="pdf-chunker.html" class="nav-btn">✂️ PDF Chunker</a>
-                <a href="assessment.html" class="nav-btn">📝 Take Test</a>
-                <a href="analytics.html" class="nav-btn">📊 Analytics</a>
-                <a href="/index.html" class="nav-btn" style="background: #8b5cf6; border-color: #7c3aed;">🔢 Switch to Math</a>
-                <div class="exam-countdown" id="countdown">Loading...</div>
+                <a href="/index.html" class="nav-btn">🏠 Home</a>
+                <a href="diary.html" class="nav-btn" style="background: rgba(236,72,153,0.3);">📔 Diary</a>
+                <a href="mock_analysis.html" class="nav-btn" style="background: rgba(249,115,22,0.3);">📊 Mocks</a>
+                <a href="assessment.html" class="nav-btn" style="background: rgba(16,185,129,0.3);">📝 Test</a>
+                <div class="exam-countdown" id="countdown">⏰ Loading...</div>
             </div>
         </div>
     </div>
@@ -623,32 +670,26 @@
         </div>
 
         <!-- Quick Tools Section -->
-        <div class="tools-section" style="margin-bottom: 20px; padding: 15px; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 12px; border: 1px solid #e2e8f0;">
-            <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <label style="font-size: 12px; color: #64748b; font-weight: 600; display: block; margin-bottom: 5px;">📰 Create PDF from TopRankers URL</label>
+        <div class="tools-section">
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px;">
+                    <label style="font-size: 11px; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">📰 Create PDF from TopRankers URL</label>
                     <div style="display: flex; gap: 8px;">
-                        <input type="text" id="toprankers-url" placeholder="https://www.toprankers.com/current-affairs-25th-december-2025" 
-                               style="flex: 1; padding: 10px 12px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 13px; outline: none; transition: border-color 0.2s;"
-                               onfocus="this.style.borderColor='#667eea'" onblur="this.style.borderColor='#cbd5e1'">
-                        <button onclick="createPdfFromUrl()" id="create-pdf-btn"
-                                style="padding: 10px 20px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; white-space: nowrap; transition: transform 0.2s, box-shadow 0.2s;"
-                                onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(16,185,129,0.4)'"
-                                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            📄 Create PDF
+                        <input type="text" id="toprankers-url" placeholder="https://www.toprankers.com/current-affairs-..." 
+                               style="flex: 1; padding: 10px 14px; background: var(--bg-input); border: 1px solid var(--border-color); border-radius: 8px; font-size: 13px; color: var(--text-primary); outline: none; transition: border-color 0.2s;"
+                               onfocus="this.style.borderColor='var(--accent-primary)'" onblur="this.style.borderColor='var(--border-color)'">
+                        <button onclick="createPdfFromUrl()" id="create-pdf-btn" class="btn btn-success">
+                            📄 Create
                         </button>
                     </div>
                 </div>
-                <div style="display: flex; gap: 10px;">
-                    <button onclick="syncPdfs()" id="sync-btn"
-                            style="padding: 10px 20px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; white-space: nowrap; transition: transform 0.2s, box-shadow 0.2s;"
-                            onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 12px rgba(59,130,246,0.4)'"
-                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            🔄 Sync with Server
+                <div style="display: flex; gap: 8px; align-items: flex-end;">
+                    <button onclick="syncPdfs()" id="sync-btn" class="btn btn-primary">
+                        🔄 Sync
                     </button>
                 </div>
             </div>
-            <div id="tool-status" style="margin-top: 10px; font-size: 12px; color: #64748b; display: none;"></div>
+            <div id="tool-status" style="margin-top: 10px; font-size: 12px; color: var(--text-muted); display: none; padding: 8px 12px; background: var(--bg-input); border-radius: 8px;"></div>
         </div>
 
         <!-- Filters -->
