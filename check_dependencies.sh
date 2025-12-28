@@ -3,7 +3,8 @@
 echo "=== Checking Python Dependencies ==="
 echo
 
-cd /Users/arvind/clat_preparation
+# Works on both MacBook Pro and Mac Mini
+cd "$(dirname "$0")" || cd ~/clat_preparation
 source venv_clat/bin/activate
 
 deps=("anthropic" "requests" "PyPDF2" "PyMuPDF")

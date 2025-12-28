@@ -13,7 +13,7 @@
 #
 # To set up automatic sync (every 30 minutes), add to crontab:
 #   crontab -e
-#   */30 * * * * /Users/arvind/clat_preparation/scripts/auto_sync_pdfs_bidirectional.sh --quiet >> /tmp/pdf_sync.log 2>&1
+#   */30 * * * * $HOME/clat_preparation/scripts/auto_sync_pdfs_bidirectional.sh --quiet >> /tmp/pdf_sync.log 2>&1
 #
 
 set -e

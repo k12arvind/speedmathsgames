@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Start unified server with venv
+# Works on both MacBook Pro and Mac Mini
 
-cd /Users/arvind/clat_preparation
+cd "$(dirname "$0")" || cd ~/clat_preparation
 
 # Kill any existing server process
 lsof -ti:8001 | xargs kill -9 2>/dev/null
