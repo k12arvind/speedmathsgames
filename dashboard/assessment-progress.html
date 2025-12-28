@@ -207,6 +207,7 @@
         let logLines = [];
         let lastMessage = '';
         let pollCount = 0;
+        let pdfFilename = '';  // Store PDF filename for Take Test link
 
         function addLogLine(message, type = 'info') {
             const timestamp = new Date().toLocaleTimeString();
@@ -281,6 +282,11 @@
                 }
 
                 updateStats(status);
+                
+                // Store PDF filename for Take Test link
+                if (status.parent_pdf_id) {
+                    pdfFilename = status.parent_pdf_id;
+                }
 
                 // Check if complete or failed
                 if (status.status === 'completed') {
@@ -289,12 +295,17 @@
 
                     // Show completion actions after 2 seconds
                     setTimeout(() => {
+                        // Build Take Test URL with PDF filename
+                        const testUrl = pdfFilename 
+                            ? `assessment.html?pdf_id=${encodeURIComponent(pdfFilename)}&filename=${encodeURIComponent(pdfFilename)}`
+                            : 'assessment.html';
+                        
                         document.getElementById('currentStatus').innerHTML = `
                             <div class="d-flex justify-content-center gap-3">
                                 <a href="comprehensive_dashboard.html" class="btn btn-primary">
                                     ← Back to Dashboard
                                 </a>
-                                <a href="assessment.html" class="btn btn-success">
+                                <a href="${testUrl}" class="btn btn-success">
                                     📝 Take Test
                                 </a>
                             </div>

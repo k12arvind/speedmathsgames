@@ -68,7 +68,14 @@ Constraints:
    - CLAT GK::Static GK
    - CLAT GK::Supreme Court / High Court Judgements
 
-2. Create 15-30 cards for this batch (quality over quantity - focus on factual, testable points).
+2. Create AS MANY cards as needed to cover EVERY factual point in the topics. For CLAT exam prep, DO NOT miss any:
+   - Names (people, organizations, places)
+   - Dates (when events happened)
+   - Numbers (statistics, rankings, amounts)
+   - What/Who/Where/When/Why facts
+   - Key terms and definitions
+   - Relationships between entities
+   Aim for 8-15 cards PER TOPIC to ensure comprehensive coverage. More is better than missing facts.
 
 3. front must be a single clear question.
 
@@ -171,7 +178,7 @@ def validate_batch_output(data: Dict[str, Any], source: str, week: str) -> List[
     if len(cards) < 5:
         errors.append(f"Too few cards: {len(cards)} (minimum 5 for a batch)")
     elif len(cards) > 40:
-        errors.append(f"Too many cards: {len(cards)} (maximum 40 for a batch)")
+        errors.append(f"Too many cards: {len(cards)} (maximum 100 for a batch)")
 
     # Validate each card
     for idx, card in enumerate(cards, start=1):
@@ -237,7 +244,7 @@ def generate_flashcards_for_topics(
     client = Anthropic(api_key=api_key)
     message = client.messages.create(
         model="claude-sonnet-4-5-20250929",
-        max_tokens=8000,  # Reduced since processing smaller batches
+        max_tokens=16000,  # Increased for comprehensive question coverage
         temperature=1,
         messages=[
             {

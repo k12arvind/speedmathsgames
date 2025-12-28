@@ -4,16 +4,21 @@ Assessment Processor
 Orchestrates topic-by-topic assessment creation with continuous progress updates.
 """
 
+import os
 import sys
 import json
 import sqlite3
+import random
 from pathlib import Path
 from typing import Dict, List
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+import anthropic
+
 from server.topic_extractor import TopicExtractor
 from server.assessment_jobs_db import AssessmentJobsDB
 from server.pdf_chunker import PdfChunker
+from server.questions_db import QuestionsDatabase
 from generate_flashcards_streaming import generate_flashcards_for_topics
 from import_to_anki import add_note_to_anki, ensure_decks_exist, check_anki_connect
 
@@ -30,6 +35,151 @@ class AssessmentProcessor:
         self.topic_extractor = TopicExtractor(db_path)
         self.jobs_db = AssessmentJobsDB(db_path)
         self.pdf_chunker = PdfChunker(db_path)
+        self.questions_db = QuestionsDatabase(db_path)  # Local questions storage
+        
+        # Initialize Anthropic client for MCQ generation
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        self.anthropic_client = anthropic.Anthropic(api_key=api_key) if api_key else None
+
+    def generate_mcq_choices_for_questions(self, pdf_filename: str, job_id: str = None) -> int:
+        """
+        Generate MCQ choices for all questions of a PDF that don't have choices yet.
+        
+        This is called DURING assessment creation to ensure tests are instant.
+        
+        Returns: Number of choices generated
+        """
+        if not self.anthropic_client:
+            if self.progress_callback and job_id:
+                self.progress_callback(job_id, "⚠️ Skipping MCQ generation (no API key)")
+            return 0
+        
+        # Get questions without choices for this PDF
+        conn = self.questions_db._get_connection()
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT q.question_id, q.question_text, q.answer_text
+            FROM questions q
+            WHERE q.pdf_filename = ?
+            AND q.question_id NOT IN (SELECT question_id FROM question_choices)
+            ORDER BY q.question_id
+        """, (pdf_filename,))
+        
+        questions = []
+        for row in cursor.fetchall():
+            questions.append({
+                'question_id': row['question_id'],
+                'question': row['question_text'],
+                'answer': row['answer_text']
+            })
+        conn.close()
+        
+        if not questions:
+            return 0
+        
+        if self.progress_callback and job_id:
+            self.progress_callback(job_id, f"🎯 Generating MCQ choices for {len(questions)} questions...")
+        
+        # Process in batches
+        batch_size = 10
+        generated = 0
+        
+        for batch_start in range(0, len(questions), batch_size):
+            batch_end = min(batch_start + batch_size, len(questions))
+            batch = questions[batch_start:batch_end]
+            
+            try:
+                results = self._generate_choices_batch(batch)
+                
+                # Save results
+                for local_idx, choices_data in results.items():
+                    question = batch[local_idx]
+                    saved = self.questions_db.save_mcq_choices(
+                        question_id=question['question_id'],
+                        choices=choices_data['choices'],
+                        correct_index=choices_data['correct_index']
+                    )
+                    if saved:
+                        generated += 1
+                
+                if self.progress_callback and job_id:
+                    self.progress_callback(
+                        job_id, 
+                        f"   Generated choices: {generated}/{len(questions)}"
+                    )
+                    
+            except Exception as e:
+                print(f"Error generating choices batch: {e}")
+        
+        return generated
+
+    def _generate_choices_batch(self, questions: list) -> dict:
+        """Generate MCQ choices for a batch of questions using Claude API."""
+        
+        questions_text = []
+        for i, q in enumerate(questions):
+            questions_text.append(f"""[Question {i+1}]
+Question: {q['question']}
+Correct Answer: {q['answer']}
+""")
+
+        prompt = f"""You are an expert at creating multiple choice questions for CLAT (Common Law Admission Test) General Knowledge preparation.
+
+Given the following questions with their correct answers, generate 3 plausible but INCORRECT answer choices (distractors) for each question.
+
+Guidelines:
+- Distractors should be plausible but clearly wrong
+- Use similar format/structure as correct answer
+- For names: use other real people in similar roles
+- For numbers: use nearby numbers or related statistics
+- For dates: use nearby dates or related events
+- For places: use other locations in same category
+
+Questions:
+{''.join(questions_text)}
+
+Return ONLY a JSON array with one object per question:
+[
+  {{"question_index": 1, "distractors": ["wrong1", "wrong2", "wrong3"]}},
+  ...
+]
+
+No markdown, no explanation - just the JSON array."""
+
+        message = self.anthropic_client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=4096,
+            messages=[{"role": "user", "content": prompt}]
+        )
+
+        response_text = message.content[0].text.strip()
+        
+        # Clean markdown if present
+        if response_text.startswith('```'):
+            lines = response_text.split('\n')
+            response_text = '\n'.join(lines[1:-1] if lines[-1] == '```' else lines[1:])
+        
+        results = json.loads(response_text)
+        
+        # Process results
+        output = {}
+        for item in results:
+            idx = item.get('question_index', 0) - 1  # Convert to 0-indexed
+            if 0 <= idx < len(questions):
+                distractors = item.get('distractors', [])
+                if len(distractors) >= 3:
+                    correct_answer = questions[idx]['answer']
+                    choices = distractors[:3] + [correct_answer]
+                    random.shuffle(choices)
+                    correct_index = choices.index(correct_answer)
+                    
+                    output[idx] = {
+                        'choices': choices,
+                        'correct_index': correct_index
+                    }
+        
+        return output
 
     def get_chunks_for_pdf(self, parent_pdf_id: str) -> List[Dict]:
         """
@@ -289,13 +439,45 @@ class AssessmentProcessor:
                         cards = result.get('cards', [])
                         batch_card_count = len(cards)
 
-                        # Import to Anki
+                        # STEP 1: Save to local database (SOURCE OF TRUTH)
+                        self.progress_callback(
+                            job_id,
+                            f'Saving {batch_card_count} cards to database...'
+                        )
+
+                        saved_count = self.questions_db.add_questions_batch(
+                            pdf_filename=parent_pdf_id,
+                            questions=cards,
+                            source_name=source,
+                            week_tag=week
+                        )
+                        
+                        self.progress_callback(
+                            job_id,
+                            f'✅ Saved {saved_count} cards to database'
+                        )
+
+                        # STEP 2: Generate MCQ choices for instant tests
+                        self.progress_callback(
+                            job_id,
+                            f'🎯 Generating MCQ choices for test...'
+                        )
+                        
+                        mcq_generated = self.generate_mcq_choices_for_questions(parent_pdf_id, job_id)
+                        
+                        if mcq_generated > 0:
+                            self.progress_callback(
+                                job_id,
+                                f'✅ Generated {mcq_generated} MCQ choices'
+                            )
+
+                        # STEP 3: Also import to Anki (for flashcard practice, optional)
                         self.progress_callback(
                             job_id,
                             f'Importing {batch_card_count} cards to Anki...'
                         )
 
-                        imported_count = 0
+                        anki_imported = 0
                         for card in cards:
                             try:
                                 add_note_to_anki(
@@ -304,12 +486,20 @@ class AssessmentProcessor:
                                     card['back'],
                                     card['tags']
                                 )
-                                imported_count += 1
+                                anki_imported += 1
                             except Exception as e:
-                                print(f"Warning: Failed to import card: {e}")
+                                # Anki import is optional - don't fail if it doesn't work
+                                print(f"Warning: Failed to import card to Anki: {e}")
 
-                        chunk_cards_total += imported_count
-                        total_cards_overall += imported_count
+                        if anki_imported > 0:
+                            self.progress_callback(
+                                job_id,
+                                f'✅ Also imported {anki_imported} cards to Anki'
+                            )
+
+                        # Use saved_count as the authoritative count
+                        chunk_cards_total += saved_count
+                        total_cards_overall += saved_count
                         global_sid += batch_card_count
 
                         # Mark topics as processed

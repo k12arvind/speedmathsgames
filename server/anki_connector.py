@@ -57,38 +57,70 @@ class AnkiConnector:
         return self._request("findNotes", {"query": query})
 
     def get_notes_by_source_date(self, source_date: str) -> List[int]:
-        """Get notes for a specific source date (PDF)."""
-        # Try multiple tag formats:
-        # 1. Daily format: week:2025_Dec_D19 (from source_date: 2025-12-19)
+        """Get notes for a specific source date (PDF) or PDF filename."""
+        # Try multiple search strategies:
+        # 1. Daily date format: week:2025_Dec_D19 (from source_date: 2025-12-19)
         # 2. Weekly format: week:2025_Dec_W1 (from source_date: 2025_Dec_W1)
-        # 3. Direct source tag: source:2025-12-19 (fallback)
+        # 3. Direct source tag: source:2025-12-19
+        # 4. PDF filename tag: source:{filename}
+        # 5. Search by Source field content
 
-        # Convert date format: 2025-12-19 → 2025_Dec_D19
-        if "-" in source_date:
+        # Strategy 1: Convert date format 2025-12-19 → 2025_Dec_D19
+        if "-" in source_date and len(source_date.split("-")) == 3:
             parts = source_date.split("-")
-            if len(parts) == 3:
-                year, month, day = parts
-                month_abbr = {
-                    "01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr",
-                    "05": "May", "06": "Jun", "07": "Jul", "08": "Aug",
-                    "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"
-                }.get(month, month)
-                week_tag = f"{year}_{month_abbr}_D{int(day)}"
-                query = f"tag:week:{week_tag}"
-                result = self._request("findNotes", {"query": query})
-                if result:
-                    return result
+            year, month, day = parts
+            month_abbr = {
+                "01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr",
+                "05": "May", "06": "Jun", "07": "Jul", "08": "Aug",
+                "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec"
+            }.get(month, month)
+            week_tag = f"{year}_{month_abbr}_D{int(day)}"
+            query = f"tag:week:{week_tag}"
+            result = self._request("findNotes", {"query": query})
+            if result:
+                return result
 
-        # Try weekly format (source_date might already be in week format)
-        if "W" in source_date:
+        # Strategy 2: Weekly format (source_date might already be in week format)
+        if "W" in source_date or "WEEK" in source_date.upper():
             query = f"tag:week:{source_date}"
             result = self._request("findNotes", {"query": query})
             if result:
                 return result
 
-        # Fallback to direct source tag
+        # Strategy 3: Direct source tag
         query = f"tag:source:{source_date}"
-        return self._request("findNotes", {"query": query})
+        result = self._request("findNotes", {"query": query})
+        if result:
+            return result
+
+        # Strategy 4: Try with .pdf extension removed
+        clean_name = source_date.replace('.pdf', '').replace('.PDF', '')
+        query = f"tag:source:{clean_name}"
+        result = self._request("findNotes", {"query": query})
+        if result:
+            return result
+
+        # Strategy 5: Search by Source field content (for any PDF filename)
+        # This handles cases where cards have the PDF name in the Source field
+        query = f'"Source:{source_date}"'
+        result = self._request("findNotes", {"query": query})
+        if result:
+            return result
+        
+        # Strategy 6: Partial match on Source field (without extension)
+        query = f'"Source:*{clean_name}*"'
+        result = self._request("findNotes", {"query": query})
+        if result:
+            return result
+
+        # Strategy 7: Search in CLAT deck for any notes containing this filename
+        # Use wildcard search on source field
+        query = f'deck:CLAT* "Source:*{clean_name[:30]}*"'
+        result = self._request("findNotes", {"query": query})
+        if result:
+            return result
+
+        return []
 
     def get_note_info(self, note_ids: List[int]) -> List[Dict]:
         """Get detailed information about notes."""

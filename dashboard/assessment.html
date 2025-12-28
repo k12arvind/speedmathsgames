@@ -798,8 +798,9 @@
 
     <script>
         // Configuration
-        const DASHBOARD_API = window.location.origin;;
-        const ASSESSMENT_API = window.location.origin;;
+        const API_BASE = window.location.origin;
+        const DASHBOARD_API = window.location.origin;
+        const ASSESSMENT_API = window.location.origin;
         const USER_ID = 'daughter';
 
         // State
@@ -901,7 +902,7 @@
         });
 
         // Handle URL parameters (for direct PDF selection from dashboard)
-        function handleUrlParameters() {
+        async function handleUrlParameters() {
             console.log('=== HANDLING URL PARAMETERS ===');
             const urlParams = new URLSearchParams(window.location.search);
             const pdfId = urlParams.get('pdf_id');
@@ -911,26 +912,51 @@
             console.log('URL filename:', filename);
 
             if (pdfId && filename) {
-                // Select the PDF
-                selectedPdfs = [pdfId];
-                console.log('Set selectedPdfs to:', selectedPdfs);
-
                 // Update header subtitle
                 document.getElementById('header-subtitle').textContent = `Testing: ${filename}`;
 
-                // Find and check the checkbox
-                setTimeout(() => {
-                    const checkbox = document.querySelector(`.pdf-checkbox[data-pdf-id="${pdfId}"]`);
-                    if (checkbox && !checkbox.disabled) {
-                        checkbox.checked = true;
-                        checkbox.closest('tr').classList.add('selected');
-                        console.log('Selected row for:', pdfId);
+                // Check ACTUAL assessment status via API (don't rely on checkbox state)
+                try {
+                    const cacheBuster = `?_=${Date.now()}`;
+                    const response = await fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(filename)}${cacheBuster}`);
+                    const status = await response.json();
+                    
+                    console.log('Assessment status for URL PDF:', status);
+                    
+                    const hasQuestions = status.total_cards > 0;
+                    
+                    if (hasQuestions) {
+                        // PDF has questions - select it using FILENAME (that's how questions are stored)
+                        selectedPdfs = [filename];
+                        console.log('PDF has questions, selecting by filename:', filename);
+                        
+                        // Wait for table to render then check the checkbox
+                        setTimeout(() => {
+                            // Find checkbox by filename attribute
+                            const checkbox = document.querySelector(`.pdf-checkbox[data-filename="${filename}"]`);
+                            if (checkbox) {
+                                checkbox.disabled = false;
+                                checkbox.checked = true;
+                                const row = checkbox.closest('tr');
+                                if (row) {
+                                    row.classList.remove('disabled');
+                                    row.classList.add('selected');
+                                }
+                            }
+                            updateSelectionUI();
+                        }, 500);
+                    } else {
+                        // PDF has no questions
+                        console.log('PDF has no questions:', filename);
+                        selectedPdfs = [];
+                        alert(`"${filename}" has not been processed yet.\n\nPlease:\n1. Go back to dashboard\n2. Click "Create Assessment" for this PDF\n3. Then come back to take the test`);
+                        updateSelectionUI();
                     }
-
-                    // Update UI
+                } catch (error) {
+                    console.error('Failed to check URL PDF status:', error);
+                    selectedPdfs = [];
                     updateSelectionUI();
-                    console.log('Enabled start button');
-                }, 100);
+                }
             } else {
                 console.log('No URL parameters found');
             }
@@ -979,24 +1005,24 @@
                             </thead>
                             <tbody>
                                 ${data.pdfs.map(pdf => `
-                                    <tr class="${!pdf.exists_in_db ? 'disabled' : ''}"
-                                        onclick="${pdf.exists_in_db ? `togglePdfRow(this, '${pdf.pdf_id}')` : ''}">
+                                    <tr class="disabled" data-pdf-id="${pdf.pdf_id}" data-filename="${pdf.filename}">
                                         <td onclick="event.stopPropagation();">
                                             <input type="checkbox"
                                                    class="pdf-checkbox"
                                                    data-pdf-id="${pdf.pdf_id}"
-                                                   ${!pdf.exists_in_db ? 'disabled' : ''}
-                                                   onchange="handleCheckboxChange('${pdf.pdf_id}', this)">
+                                                   data-filename="${pdf.filename}"
+                                                   disabled
+                                                   onchange="handleCheckboxChange('${pdf.filename}', this)">
                                         </td>
                                         <td class="pdf-filename" title="${pdf.filename}">${pdf.filename}</td>
                                         <td class="pdf-date">${formatDate(pdf.date_published)}</td>
-                                        <td class="pdf-topics">${pdf.total_topics}</td>
+                                        <td class="pdf-topics" id="questions-${pdf.pdf_id}">${pdf.local_questions_count || 0}</td>
                                         <td class="pdf-attempts" style="text-align: center; font-weight: 600; color: ${pdf.assessment_attempts > 0 ? '#10b981' : '#6b7280'};">
                                             ${pdf.assessment_attempts || 0}×
                                         </td>
                                         <td>
                                             <span class="pdf-status" id="status-${pdf.pdf_id}">
-                                                ${pdf.exists_in_db ? '✓ Processed' : '⚠ Not Processed'}
+                                                ${pdf.local_questions_count > 0 ? `✓ ${pdf.local_questions_count} cards` : '⏳ Checking...'}
                                             </span>
                                         </td>
                                     </tr>
@@ -1026,19 +1052,53 @@
                 const status = await response.json();
 
                 const statusElement = document.getElementById(`status-${pdf.pdf_id}`);
+                const questionsElement = document.getElementById(`questions-${pdf.pdf_id}`);
+                const checkbox = document.querySelector(`.pdf-checkbox[data-pdf-id="${pdf.pdf_id}"]`);
+                const row = checkbox ? checkbox.closest('tr') : null;
+                
                 if (!statusElement) return;
 
-                // Update status badge based on old OR new system
-                if (pdf.exists_in_db || status.all_complete) {
-                    statusElement.className = 'pdf-status processed';
-                    if (status.total_cards > 0) {
-                        statusElement.innerHTML = `✓ Processed (${status.total_cards} cards)`;
+                // Determine if PDF can be tested (has questions)
+                const hasQuestions = status.total_cards > 0;
+                const isProcessed = hasQuestions || (status.all_complete && pdf.exists_in_db);
+
+                // Update Questions column with actual card count
+                if (questionsElement && status.total_cards > 0) {
+                    questionsElement.textContent = status.total_cards;
+                }
+
+                // Update checkbox enabled/disabled state based on actual questions
+                if (checkbox) {
+                    if (hasQuestions) {
+                        // Has questions - enable checkbox
+                        checkbox.disabled = false;
+                        if (row) {
+                            row.classList.remove('disabled');
+                            row.onclick = () => togglePdfRow(row, pdf.filename);  // Use filename!
+                        }
                     } else {
-                        statusElement.innerHTML = '✓ Processed';
+                        // No questions - disable checkbox
+                        checkbox.disabled = true;
+                        checkbox.checked = false;
+                        if (row) {
+                            row.classList.add('disabled');
+                            row.onclick = null;
+                        }
+                        // Remove from selectedPdfs if was selected
+                        if (selectedPdfs.includes(pdf.filename)) {
+                            selectedPdfs = selectedPdfs.filter(id => id !== pdf.filename);
+                            updateSelectionUI();
+                        }
                     }
+                }
+
+                // Update status badge
+                if (hasQuestions) {
+                    statusElement.className = 'pdf-status processed';
+                    statusElement.innerHTML = `✓ ${status.total_cards} cards`;
                 } else if (status.has_assessments) {
                     statusElement.className = 'pdf-status in-progress';
-                    statusElement.innerHTML = `⏳ Creating... (${status.completed_chunks}/${status.total_chunks})`;
+                    statusElement.innerHTML = `⏳ ${status.completed_chunks}/${status.total_chunks}`;
                 } else {
                     statusElement.className = 'pdf-status not-processed';
                     statusElement.innerHTML = '⚠ Not Processed';
@@ -1083,8 +1143,9 @@
             const checkboxes = document.querySelectorAll('.pdf-checkbox:not(#select-all):not(:disabled)');
             checkboxes.forEach(checkbox => {
                 checkbox.checked = selectAllCheckbox.checked;
-                const pdfId = checkbox.getAttribute('data-pdf-id');
-                handleCheckboxChange(pdfId, checkbox);
+                // Use filename (stored in data-filename attribute) for selections
+                const filename = checkbox.getAttribute('data-filename');
+                handleCheckboxChange(filename, checkbox);
             });
         }
 
@@ -1141,9 +1202,9 @@
                 return;
             }
 
-            // Get the first selected PDF (backward compatibility)
+            // Get the first selected PDF filename (questions are stored by filename)
             const selectedPdf = selectedPdfs[0];
-            console.log('Using PDF ID:', selectedPdf);
+            console.log('Using PDF filename:', selectedPdf);
 
             console.log('Switching to test screen...');
             showScreen('test-screen');

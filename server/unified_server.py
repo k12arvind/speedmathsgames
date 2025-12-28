@@ -77,6 +77,9 @@ from server.diary_db import DiaryDatabase
 # Import mock database for mock analysis feature
 from server.mock_db import MockDatabase
 
+# Import questions database for local question storage (source of truth for tests)
+from server.questions_db import QuestionsDatabase
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -381,6 +384,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         """Route GET API requests."""
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
         try:
@@ -424,6 +428,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         """Route POST API requests."""
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         self.end_headers()
 
         try:
@@ -681,11 +688,17 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 pdf_filename = 'Weak Topics Practice'
                 source_date = 'weak_topics'
             else:
-                # Get questions for this PDF
-                # Get questions from all selected PDFs
+                # Get questions for this PDF from LOCAL DATABASE (source of truth)
+                # No dependency on AnkiConnect!
                 all_questions = []
                 for pdf_source in pdf_ids:
-                    pdf_questions = self.anki.get_questions_for_pdf(pdf_source)
+                    # Try exact filename match first
+                    pdf_questions = self.questions_db.get_questions_for_pdf(pdf_source)
+                    
+                    # Try with .pdf extension if not found
+                    if not pdf_questions and not pdf_source.endswith('.pdf'):
+                        pdf_questions = self.questions_db.get_questions_for_pdf(pdf_source + '.pdf')
+                    
                     if pdf_questions:
                         all_questions.extend(pdf_questions)
                 
@@ -693,7 +706,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
                 if not questions:
                     self.send_json({
-                        'error': 'No questions found for this PDF. Make sure it has been processed and cards are in Anki.'
+                        'error': 'No questions found for this PDF. Make sure it has been processed (Create Assessment).'
                     })
                     return
 
@@ -1033,14 +1046,19 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             conn.close()
 
     def _add_page_counts(self, pdfs_list):
-        """Add page count information to PDF list."""
+        """Add page count and local question count to PDF list."""
         from pathlib import Path
         import sys
         sys.path.insert(0, str(Path(__file__).parent))
         from pdf_chunker import PdfChunker
 
+        # Get all question counts from local DB in one query (efficient)
+        local_question_counts = self.questions_db.get_all_pdf_question_counts()
+
         for pdf in pdfs_list:
             filepath = pdf.get('filepath')
+            filename = pdf.get('filename', '')
+            
             if filepath and Path(filepath).exists():
                 page_count = PdfChunker.get_pdf_page_count(filepath)
                 pdf['page_count'] = page_count
@@ -1051,6 +1069,14 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 pdf['page_count'] = 0
                 pdf['needs_chunking'] = False
                 pdf['can_chunk'] = False
+
+            # Add local question count (from questions table - source of truth)
+            pdf['local_questions'] = local_question_counts.get(filename, 0)
+            
+            # Also check without .pdf extension
+            if pdf['local_questions'] == 0:
+                name_without_ext = filename.replace('.pdf', '').replace('.PDF', '')
+                pdf['local_questions'] = local_question_counts.get(name_without_ext + '.pdf', 0)
 
         return pdfs_list
 
@@ -1123,6 +1149,25 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 weekly_pdfs.extend(scan_results['weekly'].get('legaledge', []))
                 weekly_pdfs.extend(scan_results['weekly'].get('career_launcher', []))
             self.send_json({'pdfs': weekly_pdfs})
+
+        elif path == '/api/questions/counts':
+            # Get all question counts from LOCAL database (source of truth)
+            counts = self.questions_db.get_all_pdf_question_counts()
+            self.send_json({
+                'counts': counts,
+                'total_pdfs': len(counts),
+                'total_questions': sum(counts.values())
+            })
+
+        elif path == '/api/questions/stats':
+            # Get detailed stats from local questions database
+            counts = self.questions_db.get_all_pdf_question_counts()
+            self.send_json({
+                'pdf_counts': counts,
+                'total_pdfs': len(counts),
+                'total_questions': sum(counts.values()),
+                'source': 'local_database'
+            })
 
         elif path == '/api/stats':
             stats = self.pdf_scanner.get_statistics()
@@ -1373,9 +1418,91 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     # MCQ GENERATION HELPER METHODS
     # ============================================================
 
-    def _get_stored_mcq_choices(self, note_id: str) -> dict:
-        """Get stored MCQ choices from database cache."""
+    def _get_pdf_source_and_week(self, pdf_filename: str) -> tuple:
+        """Get the source_name and week for a PDF from the database.
+        
+        Cards are tagged with source_name (like 'career_launcher') and week (like '2025_Dec_W2').
+        We need BOTH to find the exact cards for a specific PDF.
+        
+        Returns: (source_name, week_value) tuple, or (None, None) if not found
+        """
         try:
+            import sqlite3
+            import re
+            db_path = Path(__file__).parent.parent / 'revision_tracker.db'
+            conn = sqlite3.connect(str(db_path))
+            cursor = conn.cursor()
+            
+            # Try exact filename match first
+            cursor.execute("""
+                SELECT source_name, filename, date_published FROM pdfs WHERE filename = ?
+            """, (pdf_filename,))
+            
+            row = cursor.fetchone()
+            
+            # Try without .pdf extension
+            if not row:
+                clean_name = pdf_filename.replace('.pdf', '').replace('.PDF', '')
+                cursor.execute("""
+                    SELECT source_name, filename, date_published FROM pdfs WHERE filename LIKE ?
+                """, (f"%{clean_name}%",))
+                row = cursor.fetchone()
+            
+            conn.close()
+            
+            if row:
+                source_name, filename, date_published = row
+                
+                # Extract week from filename
+                # Pattern: WEEK-2 or WEEK_2 or WEEK2
+                week_match = re.search(r'WEEK[_-]?(\d+)', filename, re.IGNORECASE)
+                
+                if week_match:
+                    # Get year and month from filename
+                    date_match = re.search(r'(\d{4})[_-]?([A-Za-z]+)', filename, re.IGNORECASE) or \
+                                 re.search(r'([A-Za-z]+)[_-]?(\d{4})', filename, re.IGNORECASE)
+                    
+                    if date_match:
+                        g1, g2 = date_match.groups()
+                        year = g1 if len(g1) == 4 else g2
+                        month = g2 if len(g1) == 4 else g1
+                        month_cap = month[:3].capitalize()
+                        week_value = f"{year}_{month_cap}_W{week_match.group(1)}"
+                        return (source_name, week_value)
+                
+                # For daily files, use date format: 2025_Dec_D19
+                if date_published:
+                    try:
+                        from datetime import datetime
+                        date = datetime.strptime(date_published, '%Y-%m-%d')
+                        months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                        week_value = f"{date.year}_{months[date.month-1]}_D{date.day}"
+                        return (source_name, week_value)
+                    except:
+                        pass
+                
+                return (source_name, None)
+            
+            return (None, None)
+            
+        except Exception as e:
+            print(f"Error getting source/week for {pdf_filename}: {e}")
+            return (None, None)
+
+    def _get_stored_mcq_choices(self, note_id: str) -> dict:
+        """Get stored MCQ choices from database.
+        
+        Checks both:
+        1. question_choices table (new - for local questions)
+        2. mcq_cache table (legacy - for Anki questions)
+        """
+        try:
+            # First try the new question_choices table
+            choices = self.questions_db.get_mcq_choices(int(note_id))
+            if choices:
+                return choices
+
+            # Fallback to legacy mcq_cache table
             import sqlite3
             db_path = Path(__file__).parent.parent / 'revision_tracker.db'
             conn = sqlite3.connect(str(db_path))
@@ -1402,8 +1529,21 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             return None
 
     def _store_mcq_choices(self, note_id: str, choices_data: dict, pdf_source: str = None):
-        """Store MCQ choices in database cache."""
+        """Store MCQ choices in database.
+        
+        Saves to both:
+        1. question_choices table (new - for local questions)
+        2. mcq_cache table (legacy - for backwards compatibility)
+        """
         try:
+            # Save to new question_choices table
+            self.questions_db.save_mcq_choices(
+                question_id=int(note_id),
+                choices=choices_data['choices'],
+                correct_index=choices_data['correct_index']
+            )
+
+            # Also save to legacy mcq_cache table for backwards compatibility
             import sqlite3
             db_path = Path(__file__).parent.parent / 'revision_tracker.db'
             conn = sqlite3.connect(str(db_path))
@@ -2255,8 +2395,30 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             self.send_json({'error': str(e), 'trace': traceback.format_exc()})
 
     def handle_assessment_status_get(self, pdf_id: str):
-        """Handle GET /api/assessment-status/{pdf_id} - Check if assessments exist."""
+        """Handle GET /api/assessment-status/{pdf_id} - Check if assessments exist.
+        
+        Uses LOCAL questions database as source of truth (not Anki).
+        """
         try:
+            # PRIMARY: Check local questions database (source of truth)
+            total_cards = self.questions_db.get_question_count_for_pdf(pdf_id)
+            
+            # Also try with .pdf extension
+            if total_cards == 0 and not pdf_id.endswith('.pdf'):
+                total_cards = self.questions_db.get_question_count_for_pdf(pdf_id + '.pdf')
+            
+            if total_cards > 0:
+                # PDF has questions in local database
+                self.send_json({
+                    'has_assessments': True,
+                    'all_complete': True,
+                    'completed_chunks': 1,
+                    'total_chunks': 1,
+                    'total_cards': total_cards
+                })
+                return
+
+            # FALLBACK: Check legacy data (pdf_chunks, assessment_jobs)
             conn = sqlite3.connect(str(Path.home() / 'clat_preparation' / 'revision_tracker.db'), check_same_thread=False)
             cursor = conn.cursor()
 
@@ -2667,6 +2829,10 @@ def main():
     # Initialize mock database
     UnifiedHandler.mock_db = MockDatabase()
     print("✅ Mock database initialized")
+
+    # Initialize questions database (local storage - source of truth for tests)
+    UnifiedHandler.questions_db = QuestionsDatabase()
+    print("✅ Questions database initialized")
 
     # Initialize Anthropic client
     api_key = os.environ.get("ANTHROPIC_API_KEY")

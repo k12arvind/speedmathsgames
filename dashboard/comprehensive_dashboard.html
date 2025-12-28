@@ -11,6 +11,8 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>CLAT GK Revision Dashboard - Comprehensive</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -811,6 +813,9 @@
 
         // Render all tables
         function renderAllTables() {
+            // Reset row counter before rendering all tables
+            rowIdCounter = 0;
+            
             renderTable('daily-table', dashboardData.pdfs.daily);
             renderTable('weekly-legaledge-table', dashboardData.pdfs.weekly.legaledge);
             renderTable('weekly-careerlauncher-table', dashboardData.pdfs.weekly.career_launcher);
@@ -1001,8 +1006,14 @@
             `;
         }
 
+        // Global counter for unique row IDs (resets on each table render)
+        let rowIdCounter = 0;
+
         // Create table row
         function createTableRow(pdf) {
+            // Generate unique row ID to avoid duplicate ID conflicts across tabs
+            const rowId = ++rowIdCounter;
+            
             const revisionCount = pdf.revision_count || 0;
             const revisionBadgeClass = revisionCount >= 6 ? 'high' :
                                       revisionCount >= 3 ? 'medium' :
@@ -1019,10 +1030,6 @@
                     : `${pdf.days_since_revision}d ago`
                 : 'Never';
 
-            const statusBadge = pdf.exists_in_db
-                ? '<span class="badge-status badge-processed">✓ Processed</span>'
-                : '<span class="badge-status badge-not-processed">⚠ Not Processed</span>';
-
             // Check if PDF needs chunking (>13 pages = red indicator)
             const pageCount = pdf.page_count || 0;
             const needsChunking = pdf.needs_chunking || false;
@@ -1035,7 +1042,7 @@
             // ========================================
             // Rule 1: Large PDF (>13 pages) -> ONLY Chunk button active, ALL others disabled
             // Rule 2: Small PDF (≤13 pages) -> Chunk greyed, Create Assessment active if not processed
-            // Rule 3: After Create Assessment -> Create Assessment greyed, Test active
+            // Rule 3: After Create Assessment -> Create Assessment greyed, Test active, Status = Processed
             // Rule 4: Revised button -> GREEN only when PDF has been modified (revision_count > 0)
             // ========================================
 
@@ -1050,24 +1057,26 @@
                 </button>
             `;
 
-            // Button IDs for async status check
-            const assessmentButtonId = `assessment-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
-            const testButtonId = `test-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
-            const revisedButtonId = `revised-btn-${pdf.filename.replace(/[^a-zA-Z0-9]/g, '_')}`;
+            // UNIQUE Button IDs for async status check (include rowId to avoid duplicates)
+            const assessmentButtonId = `assessment-btn-${rowId}`;
+            const testButtonId = `test-btn-${rowId}`;
+            const revisedButtonId = `revised-btn-${rowId}`;
+            const statusBadgeId = `status-badge-${rowId}`;
 
-            // Create Assessment button
-            // Initially DISABLED if needsChunking, otherwise will be checked by async function
+            // Create Assessment button - Initially shows loading state, will be updated by async check
+            // NOTE: source_name is "career_launcher" or "legaledge", week is derived from filename or date
+            const sourceName = pdf.source_name || 'unknown';
+            const weekValue = extractWeekFromFilename(pdf.filename, pdf.date_published);
             const assessmentButton = `
                 <button id="${assessmentButtonId}" class="btn btn-warning"
-                        onclick="createAssessment('${pdf.filename}', '${pdf.source}', '${pdf.week}')"
+                        onclick="createAssessment('${pdf.filename}', '${sourceName}', '${weekValue}')"
                         ${needsChunking ? 'disabled' : ''}
                         style="${needsChunking ? 'background: #9e9e9e; opacity: 0.5; cursor: not-allowed;' : 'background: #ff9800; color: white;'}">
-                    📝 Create Assessment
+                    ${needsChunking ? '📝 Create Assessment' : '⏳ Loading...'}
                 </button>
             `;
 
             // Test button (DISABLED by default, enabled after assessment created)
-            // Also DISABLED if needsChunking
             const testButton = `
                 <button id="${testButtonId}" class="btn btn-primary"
                         onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')"
@@ -1076,44 +1085,43 @@
                 </button>
             `;
 
-            // Revised button:
-            // - DISABLED when needsChunking (>13 pages)
-            // - DISABLED when not processed (exists_in_db = false)
-            // - GREEN checkmark when revision_count > 0 (PDF has been modified)
-            // - Normal state otherwise
-            const isRevised = revisionCount > 0;
-            const canRevise = !needsChunking && pdf.exists_in_db;
-            
-            let revisedButtonStyle = '';
-            let revisedButtonContent = '✓ Revised';
-            
-            if (needsChunking) {
-                // Large PDF - button disabled
-                revisedButtonStyle = 'background: #9e9e9e; opacity: 0.5; cursor: not-allowed;';
-            } else if (!pdf.exists_in_db) {
-                // Not processed - button disabled
-                revisedButtonStyle = 'background: #9e9e9e; opacity: 0.5; cursor: not-allowed;';
-            } else if (isRevised) {
-                // PDF has been revised - show GREEN checkmark
-                revisedButtonStyle = 'background: #10b981; color: white;';
-                revisedButtonContent = '✓ Revised';
-            } else {
-                // Processed but not yet revised - normal state
-                revisedButtonStyle = 'background: #10b981; color: white;';
-            }
-
+            // Revised button - initial state, will be updated by async check
             const revisedButton = `
                 <button id="${revisedButtonId}" class="btn btn-success"
                         onclick="markRevised('${pdf.pdf_id}')"
-                        ${!canRevise ? 'disabled' : ''}
-                        style="${revisedButtonStyle}">
-                    ${revisedButtonContent}
+                        disabled
+                        style="background: #9e9e9e; opacity: 0.5; cursor: not-allowed;">
+                    ✓ Revised
                 </button>
             `;
 
+            // Get local question count (from questions table - source of truth)
+            const localQuestions = pdf.local_questions || 0;
+            
+            // Status badge - show immediately if local questions exist, otherwise async check
+            let statusBadge;
+            if (localQuestions > 0) {
+                // PDF has questions in local DB - processed!
+                statusBadge = `<span id="${statusBadgeId}" class="badge-status badge-processed">✓ Processed (${localQuestions} Qs)</span>`;
+            } else {
+                statusBadge = `<span id="${statusBadgeId}" class="badge-status badge-not-processed">⏳ Checking...</span>`;
+            }
+
             // Async check for assessment status (after DOM is ready)
+            // This will update buttons and status if local_questions was 0
             setTimeout(() => {
-                checkAssessmentStatus(pdf.filename, assessmentButtonId, testButtonId, needsChunking, pdf.exists_in_db);
+                checkAssessmentStatus(
+                    pdf.filename, 
+                    assessmentButtonId, 
+                    testButtonId, 
+                    revisedButtonId,
+                    statusBadgeId,
+                    needsChunking, 
+                    pdf.exists_in_db,
+                    revisionCount,
+                    pdf.pdf_id,
+                    localQuestions  // Pass local question count
+                );
             }, 0);
 
             return `
@@ -1135,13 +1143,44 @@
                                 📄 View PDF
                             </button>
                             ${revisedButton}
-                            <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}')">
+                            <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')">
                                 Details
                             </button>
                         </div>
                     </td>
                 </tr>
             `;
+        }
+
+        // Extract week identifier from filename or date for card tagging
+        // Cards are tagged with week:{week_value} like "2025_Dec_W2" or "2025_Dec_D19"
+        function extractWeekFromFilename(filename, datePublished) {
+            // Try to extract WEEK-X pattern (for weekly files)
+            const weekMatch = filename.match(/WEEK[_-]?(\d+)/i);
+            if (weekMatch) {
+                // Get month and year from filename or date
+                const dateMatch = filename.match(/(\d{4})[_-]?([A-Za-z]+)/i) || 
+                                  filename.match(/([A-Za-z]+)[_-]?(\d{4})/i);
+                if (dateMatch) {
+                    const year = dateMatch[1].length === 4 ? dateMatch[1] : dateMatch[2];
+                    const month = dateMatch[1].length === 4 ? dateMatch[2].slice(0, 3) : dateMatch[1].slice(0, 3);
+                    const monthCap = month.charAt(0).toUpperCase() + month.slice(1).toLowerCase();
+                    return `${year}_${monthCap}_W${weekMatch[1]}`;
+                }
+            }
+            
+            // For daily files, use date format: 2025_Dec_D19
+            if (datePublished) {
+                const date = new Date(datePublished);
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                const year = date.getFullYear();
+                const month = months[date.getMonth()];
+                const day = date.getDate();
+                return `${year}_${month}_D${day}`;
+            }
+            
+            // Fallback to filename stem
+            return filename.replace('.pdf', '').replace('.PDF', '');
         }
 
         // Format date
@@ -1297,38 +1336,67 @@
         // ========================================
         // BUSINESS RULE: Button States After Async Check
         // ========================================
-        // Rule 1: If needsChunking (>13 pages) -> Create Assessment & Test DISABLED
-        // Rule 2: If processed (existsInDb) or all assessments complete -> Create Assessment GREYED, Test ACTIVE
+        // Rule 1: If needsChunking (>13 pages) -> ALL buttons DISABLED except Chunk
+        // Rule 2: If cards exist (total_cards > 0) -> Status = Processed, Create Assessment GREYED, Test & Revised ACTIVE
         // Rule 3: If assessments in progress -> Both DISABLED with progress indicator
-        // Rule 4: If no assessments and ≤13 pages -> Create Assessment ACTIVE, Test DISABLED
+        // Rule 4: If no assessments and ≤13 pages -> Create Assessment ACTIVE, Test & Revised DISABLED
+        // Rule 5: Revised button GREEN only if revisionCount > 0
         // ========================================
-        async function checkAssessmentStatus(pdfId, assessmentButtonId, testButtonId, needsChunking, existsInDb) {
+        async function checkAssessmentStatus(pdfId, assessmentButtonId, testButtonId, revisedButtonId, statusBadgeId, needsChunking, existsInDb, revisionCount, pdfDbId, localQuestions = 0) {
             try {
-                // Add timestamp to prevent caching
-                const cacheBuster = `?_=${Date.now()}`;
-                const response = await fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(pdfId)}${cacheBuster}`);
-                const status = await response.json();
-
                 const assessmentButton = document.getElementById(assessmentButtonId);
                 const testButton = document.getElementById(testButtonId);
+                const revisedButton = document.getElementById(revisedButtonId);
+                const statusBadge = document.getElementById(statusBadgeId);
 
-                if (!assessmentButton || !testButton) return;
+                if (!assessmentButton || !testButton || !revisedButton || !statusBadge) return;
+
+                // Use localQuestions if available (already fetched from server)
+                // Otherwise fetch from API (for legacy data or detailed status)
+                let totalCards = localQuestions;
+                
+                if (localQuestions === 0) {
+                    // Add timestamp to prevent caching
+                    const cacheBuster = `?_=${Date.now()}`;
+                    const response = await fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(pdfId)}${cacheBuster}`);
+                    const status = await response.json();
+                    totalCards = status.total_cards || 0;
+                }
+
+                // Determine if PDF is processed (has cards in local DB)
+                const hasCards = totalCards > 0;
+                const isProcessed = hasCards;
 
                 if (needsChunking) {
-                    // RULE 1: Large PDF (>13 pages) - Chunk button is active, disable Create Assessment & Test
+                    // RULE 1: Large PDF (>13 pages) - ONLY Chunk button active
+                    // Create Assessment - disabled
                     assessmentButton.disabled = true;
                     assessmentButton.style.background = '#9e9e9e';
                     assessmentButton.style.cursor = 'not-allowed';
                     assessmentButton.style.opacity = '0.5';
                     assessmentButton.innerText = '📝 Create Assessment';
 
+                    // Test - disabled
                     testButton.disabled = true;
                     testButton.style.opacity = '0.5';
                     testButton.style.cursor = 'not-allowed';
-                } else if (existsInDb || status.all_complete) {
-                    // RULE 2: Processed - Create Assessment GREYED, Test ACTIVE
-                    if (status.total_cards > 0) {
-                        assessmentButton.innerText = `✅ ${status.total_cards} cards`;
+
+                    // Revised - disabled
+                    revisedButton.disabled = true;
+                    revisedButton.style.background = '#9e9e9e';
+                    revisedButton.style.opacity = '0.5';
+                    revisedButton.style.cursor = 'not-allowed';
+
+                    // Status - Not Processed
+                    statusBadge.className = 'badge-status badge-not-processed';
+                    statusBadge.innerText = '⚠ Not Processed';
+
+                } else if (isProcessed) {
+                    // RULE 2: Has cards or processed - Create Assessment GREYED, Test & Revised ACTIVE
+                    
+                    // Create Assessment - show card count, disabled
+                    if (hasCards) {
+                        assessmentButton.innerText = `✅ ${totalCards} cards`;
                     } else {
                         assessmentButton.innerText = `✅ Created`;
                     }
@@ -1337,23 +1405,52 @@
                     assessmentButton.style.cursor = 'not-allowed';
                     assessmentButton.style.opacity = '0.6';
 
+                    // Test - ACTIVE
                     testButton.disabled = false;
                     testButton.style.opacity = '1';
                     testButton.style.cursor = 'pointer';
                     testButton.style.background = '#3b82f6';
+
+                    // Revised - ACTIVE, GREEN if revisionCount > 0
+                    revisedButton.disabled = false;
+                    revisedButton.style.cursor = 'pointer';
+                    revisedButton.style.opacity = '1';
+                    if (revisionCount > 0) {
+                        revisedButton.style.background = '#10b981';
+                        revisedButton.style.color = 'white';
+                        revisedButton.innerText = '✓ Revised';
+                    } else {
+                        revisedButton.style.background = '#6b7280';
+                        revisedButton.style.color = 'white';
+                        revisedButton.innerText = '✓ Revised';
+                    }
+
+                    // Status - PROCESSED
+                    statusBadge.className = 'badge-status badge-processed';
+                    statusBadge.innerText = '✓ Processed';
+
                 } else if (status.has_assessments) {
-                    // RULE 3: Assessment in progress - both disabled with progress
+                    // RULE 3: Assessment in progress - show progress
                     assessmentButton.innerText = `⏳ ${status.completed_chunks}/${status.total_chunks}`;
                     assessmentButton.disabled = true;
-                    assessmentButton.style.background = '#9e9e9e';
+                    assessmentButton.style.background = '#f59e0b';
                     assessmentButton.style.cursor = 'not-allowed';
-                    assessmentButton.style.opacity = '0.6';
+                    assessmentButton.style.opacity = '0.8';
 
                     testButton.disabled = true;
                     testButton.style.opacity = '0.5';
                     testButton.style.cursor = 'not-allowed';
+
+                    revisedButton.disabled = true;
+                    revisedButton.style.background = '#9e9e9e';
+                    revisedButton.style.opacity = '0.5';
+                    revisedButton.style.cursor = 'not-allowed';
+
+                    statusBadge.className = 'badge-status badge-not-processed';
+                    statusBadge.innerText = '⏳ In Progress';
+
                 } else {
-                    // RULE 4: Not processed, ≤13 pages - Create Assessment ACTIVE, Test disabled
+                    // RULE 4: Not processed, ≤13 pages - Create Assessment ACTIVE, others disabled
                     assessmentButton.disabled = false;
                     assessmentButton.style.background = '#10b981';
                     assessmentButton.style.color = 'white';
@@ -1364,9 +1461,23 @@
                     testButton.disabled = true;
                     testButton.style.opacity = '0.5';
                     testButton.style.cursor = 'not-allowed';
+
+                    revisedButton.disabled = true;
+                    revisedButton.style.background = '#9e9e9e';
+                    revisedButton.style.opacity = '0.5';
+                    revisedButton.style.cursor = 'not-allowed';
+
+                    statusBadge.className = 'badge-status badge-not-processed';
+                    statusBadge.innerText = '⚠ Not Processed';
                 }
             } catch (error) {
                 console.error('Failed to check assessment status:', error);
+                // On error, show safe defaults
+                const statusBadge = document.getElementById(statusBadgeId);
+                if (statusBadge) {
+                    statusBadge.className = 'badge-status badge-not-processed';
+                    statusBadge.innerText = '⚠ Unknown';
+                }
             }
         }
 
@@ -1403,95 +1514,108 @@
             }
         }
 
-        // View details
-        async function viewDetails(pdfId) {
+        // View details - now accepts both pdfId and filename
+        async function viewDetails(pdfId, filename) {
             try {
-                // Fetch PDF metadata
-                const pdfResponse = await fetch(`${API_BASE}/api/pdf/${pdfId}`);
+                // Try to fetch PDF metadata from database
+                const pdfResponse = await fetch(`${API_BASE}/api/pdf/${encodeURIComponent(pdfId)}`);
                 const pdfData = await pdfResponse.json();
 
+                // Try to fetch assessment status to show card count
+                const assessmentResponse = await fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(filename || pdfId)}`);
+                const assessmentStatus = await assessmentResponse.json();
+
                 // Fetch annotation details
-                const detailsResponse = await fetch(`${API_BASE}/api/annotations/${encodeURIComponent(pdfId)}/details`);
-                const details = await detailsResponse.json();
-
-                if (pdfData.pdf) {
-                    const pdf = pdfData.pdf;
-                    const summary = details.summary || {};
-                    const revisionHistory = details.revision_history || [];
-                    const accessLog = details.access_log || [];
-
-                    // Build details modal content
-                    let modalContent = `
-                        <div style="max-height: 70vh; overflow-y: auto;">
-                            <h4 class="mb-3">${pdf.filename}</h4>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h6>PDF Information</h6>
-                                    <table class="table table-sm">
-                                        <tr><td><strong>Date Published:</strong></td><td>${pdf.date_published}</td></tr>
-                                        <tr><td><strong>Source:</strong></td><td>${pdf.source_name}</td></tr>
-                                        <tr><td><strong>Type:</strong></td><td>${pdf.source_type}</td></tr>
-                                        <tr><td><strong>File Size:</strong></td><td>${pdf.file_size_kb.toFixed(2)} KB</td></tr>
-                                        <tr><td><strong>Total Topics:</strong></td><td>${pdf.total_topics || 0}</td></tr>
-                                        <tr><td><strong>Categories:</strong></td><td>${pdf.categories_list.join(', ') || 'None'}</td></tr>
-                                    </table>
-                                </div>
-                                <div class="col-md-6">
-                                    <h6>Activity Summary</h6>
-                                    <table class="table table-sm">
-                                        <tr><td><strong>Revisions:</strong></td><td>${pdf.revision_count || 0}</td></tr>
-                                        <tr><td><strong>Test Attempts:</strong></td><td>${pdf.assessment_attempts || 0}</td></tr>
-                                        <tr><td><strong>Annotations:</strong></td><td>${summary.total_annotations || 0}</td></tr>
-                                        <tr><td><strong>Total Edits:</strong></td><td>${summary.total_edits || 0}</td></tr>
-                                        <tr><td><strong>Times Accessed:</strong></td><td>${summary.total_accesses || 0}</td></tr>
-                                        <tr><td><strong>Last Accessed:</strong></td><td>${summary.last_accessed ? new Date(summary.last_accessed).toLocaleString() : 'Never'}</td></tr>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <h6 class="mt-3">Recent Revision History</h6>
-                            ${revisionHistory.length > 0 ? `
-                                <table class="table table-sm table-striped">
-                                    <thead><tr><th>#</th><th>Type</th><th>Summary</th><th>When</th></tr></thead>
-                                    <tbody>
-                                        ${revisionHistory.slice(0, 10).map(rev => `
-                                            <tr>
-                                                <td>${rev.revision_number}</td>
-                                                <td><span class="badge bg-info">${rev.revision_type}</span></td>
-                                                <td>${rev.change_summary}</td>
-                                                <td>${new Date(rev.timestamp).toLocaleString()}</td>
-                                            </tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
-                            ` : '<p class="text-muted">No revision history available</p>'}
-
-                            <h6 class="mt-3">Recent Access Log</h6>
-                            ${accessLog.length > 0 ? `
-                                <table class="table table-sm table-striped">
-                                    <thead><tr><th>Access Type</th><th>User</th><th>When</th><th>Duration</th></tr></thead>
-                                    <tbody>
-                                        ${accessLog.slice(0, 10).map(log => `
-                                            <tr>
-                                                <td><span class="badge bg-secondary">${log.access_type}</span></td>
-                                                <td>${log.user_id}</td>
-                                                <td>${new Date(log.timestamp).toLocaleString()}</td>
-                                                <td>${log.duration_seconds ? log.duration_seconds + 's' : '-'}</td>
-                                            </tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
-                            ` : '<p class="text-muted">No access log available</p>'}
-                        </div>
-                    `;
-
-                    // Show in Bootstrap modal
-                    showModal('PDF Details', modalContent);
+                let details = { summary: {}, revision_history: [], access_log: [] };
+                try {
+                    const detailsResponse = await fetch(`${API_BASE}/api/annotations/${encodeURIComponent(pdfId)}/details`);
+                    if (detailsResponse.ok) {
+                        details = await detailsResponse.json();
+                    }
+                } catch (e) {
+                    console.log('Annotation details not available');
                 }
+
+                const summary = details.summary || {};
+                const revisionHistory = details.revision_history || [];
+                const accessLog = details.access_log || [];
+                const displayName = filename || pdfId;
+
+                // BUSINESS RULE: If total_cards > 0, the PDF IS processed
+                const hasCards = assessmentStatus.total_cards > 0;
+                const isProcessed = hasCards || (pdfData.pdf && assessmentStatus.all_complete);
+
+                // Build status badge
+                const statusBadge = isProcessed 
+                    ? `<div class="alert alert-success"><strong>✓ Processed</strong> - ${assessmentStatus.total_cards || 0} flashcards generated</div>`
+                    : `<div class="alert alert-warning"><strong>⚠️ Not Yet Processed</strong> - Click "Create Assessment" to process this PDF and generate flashcards.</div>`;
+
+                let modalContent = `
+                    <div style="max-height: 70vh; overflow-y: auto;">
+                        <h4 class="mb-3">${displayName}</h4>
+                        
+                        ${statusBadge}
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>PDF Information</h6>
+                                <table class="table table-sm">
+                                    ${pdfData.pdf ? `
+                                        <tr><td><strong>Date Published:</strong></td><td>${pdfData.pdf.date_published || 'N/A'}</td></tr>
+                                        <tr><td><strong>Source:</strong></td><td>${pdfData.pdf.source_name || 'N/A'}</td></tr>
+                                        <tr><td><strong>Type:</strong></td><td>${pdfData.pdf.source_type || 'N/A'}</td></tr>
+                                        <tr><td><strong>File Size:</strong></td><td>${pdfData.pdf.file_size_kb ? pdfData.pdf.file_size_kb.toFixed(2) + ' KB' : 'N/A'}</td></tr>
+                                        <tr><td><strong>Total Topics:</strong></td><td>${pdfData.pdf.total_topics || 0}</td></tr>
+                                    ` : `
+                                        <tr><td colspan="2" class="text-muted">PDF metadata not in database</td></tr>
+                                    `}
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Assessment Status</h6>
+                                <table class="table table-sm">
+                                    <tr><td><strong>Flashcards:</strong></td><td><strong style="color: ${hasCards ? '#10b981' : '#6b7280'}">${assessmentStatus.total_cards || 0} cards</strong></td></tr>
+                                    <tr><td><strong>Status:</strong></td><td>${isProcessed ? '✓ Complete' : '⏳ Pending'}</td></tr>
+                                    ${pdfData.pdf ? `
+                                        <tr><td><strong>Revisions:</strong></td><td>${pdfData.pdf.revision_count || 0}</td></tr>
+                                        <tr><td><strong>Test Attempts:</strong></td><td>${pdfData.pdf.assessment_attempts || 0}</td></tr>
+                                    ` : ''}
+                                </table>
+                            </div>
+                        </div>
+
+                        ${revisionHistory.length > 0 ? `
+                            <h6 class="mt-3">Recent Revision History</h6>
+                            <table class="table table-sm table-striped">
+                                <thead><tr><th>#</th><th>Type</th><th>Summary</th><th>When</th></tr></thead>
+                                <tbody>
+                                    ${revisionHistory.slice(0, 5).map(rev => `
+                                        <tr>
+                                            <td>${rev.revision_number}</td>
+                                            <td><span class="badge bg-info">${rev.revision_type}</span></td>
+                                            <td>${rev.change_summary}</td>
+                                            <td>${new Date(rev.timestamp).toLocaleString()}</td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        ` : ''}
+                    </div>
+                `;
+
+                // Show in Bootstrap modal
+                showModal('PDF Details', modalContent);
+
             } catch (error) {
                 console.error('Error loading PDF details:', error);
-                alert('Failed to load PDF details. See console for details.');
+                const displayName = filename || pdfId;
+                showModal('PDF Details', `
+                    <div class="alert alert-danger">
+                        <strong>Error loading details</strong><br>
+                        Could not load details for "${displayName}".<br>
+                        <small class="text-muted">${error.message}</small>
+                    </div>
+                `);
             }
         }
 
@@ -1607,5 +1731,7 @@
             alert(message);
         }
     </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

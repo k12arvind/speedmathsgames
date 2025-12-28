@@ -247,7 +247,7 @@ class PdfChunker:
             # Also add chunk to main pdfs table so it appears in weekly/daily tabs
             # First, get metadata from original PDF if it exists
             cursor.execute("""
-                SELECT source, date_published, source_type
+                SELECT source_name, date_published, source_type
                 FROM pdfs
                 WHERE filename = ?
             """, (parent_pdf_id,))
@@ -255,17 +255,17 @@ class PdfChunker:
             original_metadata = cursor.fetchone()
 
             if original_metadata:
-                source, date_published, source_type = original_metadata
+                source_name, date_published, source_type = original_metadata
 
                 # Insert chunk into pdfs table
                 cursor.execute("""
                     INSERT OR IGNORE INTO pdfs
-                    (filename, filepath, source, date_published, source_type, is_chunk, parent_pdf)
-                    VALUES (?, ?, ?, ?, ?, 1, ?)
+                    (filename, filepath, source_name, date_published, source_type, is_chunk, parent_pdf, date_added)
+                    VALUES (?, ?, ?, ?, ?, 1, ?, datetime('now'))
                 """, (
                     chunk_info['filename'],
                     chunk_info['path'],
-                    source,
+                    source_name,
                     date_published,
                     source_type,
                     parent_pdf_id
