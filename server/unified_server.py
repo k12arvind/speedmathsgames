@@ -2878,8 +2878,12 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         else:
             self.send_json({'error': 'Unknown mocks endpoint'})
 
-    def send_json(self, data: dict):
-        """Send JSON response."""
+    def send_json(self, data: dict, status_code: int = 200):
+        """Send JSON response with optional status code."""
+        if status_code != 200:
+            self.send_response(status_code)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
         self.wfile.write(json.dumps(data).encode())
 
     def log_message(self, format, *args):
