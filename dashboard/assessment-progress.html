@@ -234,7 +234,7 @@
             window.location.reload(true);
         }
 
-        const API_BASE = 'http://localhost:8001';
+        const API_BASE = window.location.origin;
 
         // Get job ID from URL
         const urlParams = new URLSearchParams(window.location.search);
