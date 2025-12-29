@@ -307,6 +307,50 @@ source ~/.zshrc
 - `toprankers/README.md` - TopRankers automation guide
 - `ARCHITECTURE.md` - System architecture details
 
+## Critical Deployment Lessons (December 2025)
+
+### 1. Virtual Environment Path Issue
+**Problem:** When `venv_clat/` is synced from MacBook Pro to Mac Mini via git, the shebang paths break:
+```
+bad interpreter: /Users/arvind/clat_preparation/venv_clat/bin/python3: no such file or directory
+```
+**Solution:** ALWAYS recreate venv on Mac Mini after deployment:
+```bash
+cd ~/clat_preparation
+rm -rf venv_clat
+python3 -m venv venv_clat
+~/clat_preparation/venv_clat/bin/pip install anthropic requests PyPDF2 PyMuPDF python-dotenv beautifulsoup4 reportlab Pillow google-auth google-auth-oauthlib google-auth-httplib2
+```
+
+### 2. API_BASE in Frontend Files
+**Problem:** Hardcoded `const API_BASE = 'http://localhost:8001'` breaks when accessed via `speedmathsgames.com`
+**Solution:** ALWAYS use dynamic origin:
+```javascript
+const API_BASE = window.location.origin;  // ✅ Correct
+const API_BASE = 'http://localhost:8001'; // ❌ Wrong - breaks in production
+```
+**Files to check:** `assessment-progress.html`, `pdf-chunker.html`, any new dashboard files
+
+### 3. Database Paths Must Be Relative
+**Problem:** Absolute paths like `/Users/arvind/saanvi/file.pdf` break on Mac Mini (`/Users/arvindkumar/`)
+**Solution:** Store paths as relative in database: `saanvi/Legaledgedailygk/file.pdf`
+- Use `pdf_scanner.path_to_relative()` when saving
+- Use `pdf_scanner.relative_to_absolute()` when reading
+- Run `scripts/fix_database_paths.py` if absolute paths sneak in
+
+### 4. Required Python Packages for PDF Features
+For "Create PDF from URL" feature to work, Mac Mini needs:
+- `reportlab` - PDF generation
+- `Pillow` - Image handling (required by reportlab)
+- `beautifulsoup4` - HTML parsing
+
+### 5. Server Restart Command (Mac Mini)
+```bash
+pkill -f unified_server.py 2>/dev/null || true
+sleep 2
+nohup ~/clat_preparation/venv_clat/bin/python ~/clat_preparation/server/unified_server.py > /tmp/server.log 2>&1 &
+```
+
 ## GK Dashboard Business Rules (comprehensive_dashboard.html)
 
 ### CRITICAL: PDF Processing Workflow
