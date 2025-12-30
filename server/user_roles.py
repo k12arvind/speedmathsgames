@@ -22,6 +22,7 @@ FAMILY_MEMBERS = {
         'role': 'admin',
         'can_view_all_users': True,
         'can_edit_settings': True,
+        'can_access_private_modules': True,  # Finance & Health modules
     },
     
     # Wife
@@ -31,6 +32,7 @@ FAMILY_MEMBERS = {
         'role': 'parent',
         'can_view_all_users': True,  # Parents can see children's data
         'can_edit_settings': True,
+        'can_access_private_modules': True,  # Finance & Health modules
     },
     
     # Daughter 1
@@ -40,6 +42,7 @@ FAMILY_MEMBERS = {
         'role': 'child',
         'can_view_all_users': False,
         'can_edit_settings': True,  # Can edit own math settings
+        'can_access_private_modules': False,  # NO access to Finance & Health
     },
     
     # Daughter 2
@@ -49,6 +52,7 @@ FAMILY_MEMBERS = {
         'role': 'child',
         'can_view_all_users': False,
         'can_edit_settings': True,  # Can edit own math settings
+        'can_access_private_modules': False,  # NO access to Finance & Health
     },
 }
 
@@ -105,6 +109,15 @@ def is_parent(email: str) -> bool:
     """Check if user is a parent (admin or parent role)."""
     role = get_user_role(email)
     return role in ['admin', 'parent']
+
+
+def can_access_private_modules(email: str) -> bool:
+    """
+    Check if user can access private modules (Finance & Health).
+    Only Arvind and Deepa have access.
+    """
+    profile = get_user_profile(email)
+    return profile.get('can_access_private_modules', False) if profile else False
 
 
 def get_viewable_user_ids(email: str) -> List[str]:

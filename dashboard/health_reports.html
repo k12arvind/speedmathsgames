@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Reports - Health & Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --primary: #0d9488;
+            --primary-light: #14b8a6;
+            --accent: #8b5cf6;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #134e4a 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            background: rgba(13, 148, 136, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand { font-weight: 700; color: var(--text-primary) !important; }
+        .nav-link { color: rgba(255,255,255,0.8) !important; }
+        .nav-link:hover, .nav-link.active { color: var(--text-primary) !important; }
+        
+        .main-content { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .page-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        
+        .user-toggle {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.25rem;
+            border-radius: 10px;
+        }
+        .user-toggle-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+        .user-toggle-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary-custom {
+            background: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: white;
+        }
+        .btn-primary-custom:hover { background: var(--primary-light); color: white; }
+        
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .report-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--primary);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .report-card:hover { background: rgba(255,255,255,0.06); }
+        .report-card.selected { border-left-color: var(--accent); background: rgba(139, 92, 246, 0.1); }
+        
+        .report-date { font-weight: 600; }
+        .report-meta { font-size: 0.875rem; color: var(--text-secondary); }
+        
+        .param-category {
+            margin-bottom: 1.5rem;
+        }
+        .param-category-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .param-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.25rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .param-row:hover { background: rgba(255,255,255,0.05); }
+        .param-row.abnormal { background: rgba(239, 68, 68, 0.1); }
+        .param-row.abnormal .param-value { color: #fca5a5; }
+        
+        .param-name { font-size: 0.9rem; }
+        .param-value { font-weight: 600; }
+        .param-unit { font-size: 0.75rem; color: var(--text-secondary); margin-left: 0.25rem; }
+        .param-range { font-size: 0.75rem; color: var(--text-secondary); }
+        
+        .chart-container {
+            position: relative;
+            height: 250px;
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+        }
+        .modal-header { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .modal-footer { border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-primary);
+            border-radius: 8px;
+        }
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--primary-light);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25);
+        }
+        .form-label { color: var(--text-secondary); font-size: 0.875rem; }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+        .empty-state i { font-size: 3rem; margin-bottom: 1rem; }
+        
+        .upload-zone {
+            border: 2px dashed rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .upload-zone:hover { border-color: var(--primary); }
+        .upload-zone.dragover { border-color: var(--primary); background: rgba(13, 148, 136, 0.1); }
+        
+        @media (max-width: 768px) {
+            .main-content { padding: 1rem; }
+            .page-header { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="health_dashboard.html">
+                <i class="bi bi-heart-pulse me-2"></i>Health & Fitness
+            </a>
+            <div class="navbar-nav ms-auto flex-row gap-3">
+                <a class="nav-link" href="health_dashboard.html"><i class="bi bi-speedometer2"></i></a>
+                <a class="nav-link" href="health_workout.html"><i class="bi bi-activity"></i></a>
+                <a class="nav-link" href="health_weight.html"><i class="bi bi-speedometer"></i></a>
+                <a class="nav-link active" href="health_reports.html"><i class="bi bi-file-medical"></i></a>
+                <a class="nav-link" href="index.html"><i class="bi bi-house"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title"><i class="bi bi-file-medical me-2"></i>Blood Reports</h1>
+            <div class="d-flex gap-2 align-items-center">
+                <div class="user-toggle">
+                    <button class="user-toggle-btn active" data-user="arvind" onclick="switchUser('arvind')">Arvind</button>
+                    <button class="user-toggle-btn" data-user="deepa" onclick="switchUser('deepa')">Deepa</button>
+                </div>
+                <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                    <i class="bi bi-upload me-1"></i>Upload Report
+                </button>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            <!-- Reports List -->
+            <div class="col-md-4">
+                <div class="section-card">
+                    <div class="section-title">
+                        <i class="bi bi-folder2-open"></i>Reports
+                    </div>
+                    <div id="reportsList">
+                        <div class="empty-state">
+                            <div class="spinner-border text-secondary" role="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parameters View -->
+            <div class="col-md-8">
+                <div class="section-card">
+                    <div class="section-title">
+                        <i class="bi bi-clipboard2-pulse"></i>Parameters
+                        <span id="selectedReportDate" class="text-secondary ms-2" style="font-weight: normal;"></span>
+                    </div>
+                    <div id="parametersView">
+                        <div class="empty-state">
+                            <i class="bi bi-hand-index"></i>
+                            <p>Select a report to view parameters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trend Chart -->
+                <div class="section-card" id="trendSection" style="display: none;">
+                    <div class="section-title">
+                        <i class="bi bi-graph-up"></i>
+                        <span id="trendParamName">Parameter Trend</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div class="modal fade" id="uploadModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Upload Blood Report</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="uploadForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Report Date *</label>
+                            <input type="date" class="form-control" id="reportDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Lab Name</label>
+                            <input type="text" class="form-control" id="labName" value="Healthians">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Report Type</label>
+                            <select class="form-select" id="reportType">
+                                <option value="full_body">Full Body Checkup</option>
+                                <option value="lipid">Lipid Profile</option>
+                                <option value="thyroid">Thyroid Panel</option>
+                                <option value="diabetes">Diabetes Panel</option>
+                                <option value="liver">Liver Function</option>
+                                <option value="kidney">Kidney Function</option>
+                                <option value="vitamins">Vitamins Panel</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">PDF File Path *</label>
+                            <input type="text" class="form-control" id="pdfPath" required 
+                                placeholder="/Users/arvind/Downloads/report.pdf">
+                            <small class="text-secondary">Enter the full path to the PDF file on your computer</small>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Notes</label>
+                            <textarea class="form-control" id="reportNotes" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary-custom">
+                            <i class="bi bi-magic me-1"></i>Upload & Extract
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let currentUser = 'arvind';
+        let selectedReportId = null;
+        let trendChart = null;
+
+        function switchUser(user) {
+            currentUser = user;
+            document.querySelectorAll('.user-toggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.user === user);
+            });
+            loadReports();
+            selectedReportId = null;
+            document.getElementById('parametersView').innerHTML = `
+                <div class="empty-state">
+                    <i class="bi bi-hand-index"></i>
+                    <p>Select a report to view parameters</p>
+                </div>
+            `;
+            document.getElementById('trendSection').style.display = 'none';
+        }
+
+        async function loadReports() {
+            try {
+                const response = await fetch(`${API_BASE}/api/health/reports?user_id=${currentUser}`);
+                const result = await response.json();
+                
+                const container = document.getElementById('reportsList');
+                
+                if (result.success && result.data.length > 0) {
+                    container.innerHTML = result.data.map(report => `
+                        <div class="report-card ${selectedReportId === report.id ? 'selected' : ''}" 
+                             onclick="selectReport(${report.id})">
+                            <div class="report-date">${new Date(report.report_date).toLocaleDateString('en-IN', { 
+                                day: 'numeric', month: 'short', year: 'numeric' 
+                            })}</div>
+                            <div class="report-meta">${report.lab_name || 'Unknown Lab'}</div>
+                            <div class="report-meta">${report.report_type || 'Report'}</div>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <i class="bi bi-file-medical"></i>
+                            <p>No reports yet</p>
+                            <button class="btn btn-primary-custom btn-sm" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                Upload Report
+                            </button>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading reports:', error);
+            }
+        }
+
+        async function selectReport(reportId) {
+            selectedReportId = reportId;
+            
+            // Update selection UI
+            document.querySelectorAll('.report-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/health/reports/${reportId}`);
+                const result = await response.json();
+                
+                if (result.success && result.data) {
+                    const report = result.data;
+                    document.getElementById('selectedReportDate').textContent = 
+                        `- ${new Date(report.report_date).toLocaleDateString('en-IN')}`;
+                    
+                    if (report.parameters && report.parameters.length > 0) {
+                        displayParameters(report.parameters);
+                    } else {
+                        document.getElementById('parametersView').innerHTML = `
+                            <div class="empty-state">
+                                <i class="bi bi-exclamation-circle"></i>
+                                <p>No parameters extracted from this report</p>
+                            </div>
+                        `;
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading report:', error);
+            }
+        }
+
+        function displayParameters(parameters) {
+            // Group by category
+            const grouped = {};
+            parameters.forEach(p => {
+                const category = p.parameter_category || 'other';
+                if (!grouped[category]) grouped[category] = [];
+                grouped[category].push(p);
+            });
+            
+            const categoryOrder = ['hematology', 'diabetes', 'lipid', 'liver', 'kidney', 'thyroid', 'vitamins', 'other'];
+            const categoryNames = {
+                hematology: 'Hematology',
+                diabetes: 'Diabetes',
+                lipid: 'Lipid Profile',
+                liver: 'Liver Function',
+                kidney: 'Kidney Function',
+                thyroid: 'Thyroid',
+                vitamins: 'Vitamins & Minerals',
+                other: 'Other'
+            };
+            
+            let html = '';
+            categoryOrder.forEach(category => {
+                if (grouped[category]) {
+                    html += `
+                        <div class="param-category">
+                            <div class="param-category-title">${categoryNames[category]}</div>
+                            ${grouped[category].map(p => `
+                                <div class="param-row ${p.is_abnormal ? 'abnormal' : ''}" 
+                                     onclick="showTrend('${p.parameter_name}')">
+                                    <div>
+                                        <span class="param-name">${p.parameter_name}</span>
+                                        ${p.is_abnormal ? '<i class="bi bi-exclamation-triangle-fill text-warning ms-1"></i>' : ''}
+                                    </div>
+                                    <div class="text-end">
+                                        <span class="param-value">${p.value}</span>
+                                        <span class="param-unit">${p.unit || ''}</span>
+                                        ${p.reference_min || p.reference_max ? 
+                                            `<div class="param-range">(${p.reference_min || '?'} - ${p.reference_max || '?'})</div>` : ''}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+            });
+            
+            document.getElementById('parametersView').innerHTML = html;
+        }
+
+        async function showTrend(parameterName) {
+            document.getElementById('trendSection').style.display = 'block';
+            document.getElementById('trendParamName').textContent = parameterName + ' Trend';
+            
+            try {
+                const response = await fetch(
+                    `${API_BASE}/api/health/parameters/${encodeURIComponent(parameterName)}?user_id=${currentUser}`
+                );
+                const result = await response.json();
+                
+                if (result.success && result.data.length > 0) {
+                    updateTrendChart(result.data, parameterName);
+                }
+            } catch (error) {
+                console.error('Error loading trend:', error);
+            }
+        }
+
+        function updateTrendChart(data, paramName) {
+            const ctx = document.getElementById('trendChart').getContext('2d');
+            
+            const sorted = [...data].sort((a, b) => new Date(a.recorded_date) - new Date(b.recorded_date));
+            const labels = sorted.map(d => new Date(d.recorded_date).toLocaleDateString('en-IN', { 
+                month: 'short', year: '2-digit' 
+            }));
+            const values = sorted.map(d => d.value);
+            
+            // Get reference ranges
+            const refMin = sorted[0]?.reference_min;
+            const refMax = sorted[0]?.reference_max;
+            
+            if (trendChart) {
+                trendChart.destroy();
+            }
+            
+            const datasets = [{
+                label: paramName,
+                data: values,
+                borderColor: '#14b8a6',
+                backgroundColor: 'rgba(20, 184, 166, 0.1)',
+                fill: true,
+                tension: 0.3,
+                pointRadius: 5,
+                pointHoverRadius: 7
+            }];
+            
+            // Add reference lines if available
+            if (refMin !== null && refMin !== undefined) {
+                datasets.push({
+                    label: 'Min Reference',
+                    data: Array(values.length).fill(refMin),
+                    borderColor: '#fca5a5',
+                    borderDash: [5, 5],
+                    pointRadius: 0,
+                    fill: false
+                });
+            }
+            if (refMax !== null && refMax !== undefined) {
+                datasets.push({
+                    label: 'Max Reference',
+                    data: Array(values.length).fill(refMax),
+                    borderColor: '#fca5a5',
+                    borderDash: [5, 5],
+                    pointRadius: 0,
+                    fill: false
+                });
+            }
+            
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: { labels, datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#94a3b8' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        y: {
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Upload form
+        document.getElementById('uploadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const btn = this.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Extracting...';
+            
+            const data = {
+                user_id: currentUser,
+                report_date: document.getElementById('reportDate').value,
+                lab_name: document.getElementById('labName').value,
+                report_type: document.getElementById('reportType').value,
+                pdf_path: document.getElementById('pdfPath').value,
+                notes: document.getElementById('reportNotes').value
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/health/reports/upload`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    bootstrap.Modal.getInstance(document.getElementById('uploadModal')).hide();
+                    document.getElementById('uploadForm').reset();
+                    alert(`Report uploaded! Extracted ${result.parameters_extracted} parameters.`);
+                    loadReports();
+                } else {
+                    alert('Error: ' + (result.error || 'Failed to upload report'));
+                }
+            } catch (error) {
+                console.error('Error uploading report:', error);
+                alert('Error uploading report');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-magic me-1"></i>Upload & Extract';
+            }
+        });
+
+        // Set default date to today
+        document.getElementById('reportDate').value = new Date().toISOString().split('T')[0];
+
+        document.addEventListener('DOMContentLoaded', loadReports);
+    </script>
+</body>
+</html>
+

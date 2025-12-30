@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks - Personal Finance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root { --primary: #1a365d; --bg-dark: #0f172a; --bg-card: #1e293b; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --accent: #38a169; --danger: #e53e3e; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%); color: var(--text-primary); min-height: 100vh; }
+        .navbar { background: rgba(26, 54, 93, 0.95) !important; }
+        .navbar-brand { font-weight: 700; color: var(--text-primary) !important; }
+        .nav-link { color: var(--text-secondary) !important; }
+        .nav-link:hover, .nav-link.active { color: var(--text-primary) !important; }
+        .main-content { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+        .page-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        .btn-primary-custom { background: var(--primary); border: none; padding: 0.5rem 1rem; border-radius: 8px; color: white; }
+        .btn-outline-custom { background: transparent; border: 1px solid var(--text-secondary); color: var(--text-secondary); padding: 0.5rem 1rem; border-radius: 8px; }
+        .summary-card { background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .summary-label { color: rgba(255,255,255,0.7); font-size: 0.875rem; }
+        .summary-value { font-size: 1.75rem; font-weight: 700; }
+        .positive { color: #68d391; }
+        .negative { color: #fc8181; }
+        .section-card { background: var(--bg-card); border-radius: 16px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 1.5rem; }
+        .section-title { font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem; }
+        .stock-table { width: 100%; }
+        .stock-table th { color: var(--text-secondary); font-weight: 500; font-size: 0.875rem; padding: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .stock-table td { padding: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .stock-table tr:hover { background: rgba(255,255,255,0.02); }
+        .modal-content { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; }
+        .modal-header { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .form-control, .form-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); border-radius: 8px; }
+        .form-control:focus, .form-select:focus { background: rgba(255,255,255,0.08); border-color: #2c5282; color: var(--text-primary); }
+        .form-label { color: var(--text-secondary); font-size: 0.875rem; }
+        .empty-state { text-align: center; padding: 3rem; color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="finance_dashboard.html"><i class="bi bi-wallet2 me-2"></i>Personal Finance</a>
+            <div class="navbar-nav ms-auto flex-row gap-3">
+                <a class="nav-link" href="finance_dashboard.html"><i class="bi bi-speedometer2"></i></a>
+                <a class="nav-link" href="finance_accounts.html"><i class="bi bi-bank"></i></a>
+                <a class="nav-link" href="finance_assets.html"><i class="bi bi-gem"></i></a>
+                <a class="nav-link active" href="finance_stocks.html"><i class="bi bi-graph-up-arrow"></i></a>
+                <a class="nav-link" href="index.html"><i class="bi bi-house"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title"><i class="bi bi-graph-up-arrow me-2"></i>Stock Portfolio</h1>
+            <div class="d-flex gap-2 flex-wrap">
+                <button class="btn btn-success" onclick="syncFromMStock()" id="syncBtn">
+                    <i class="bi bi-cloud-download me-1"></i>Sync from m.Stock
+                </button>
+                <button class="btn btn-outline-custom" onclick="refreshPrices()">
+                    <i class="bi bi-arrow-clockwise me-1"></i>Refresh Prices
+                </button>
+                <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addStockModal">
+                    <i class="bi bi-plus-lg me-1"></i>Add Stock
+                </button>
+            </div>
+        </div>
+        
+        <!-- Sync Status Banner -->
+        <div id="syncStatus" class="alert mb-3" style="display: none;"></div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <div class="summary-card">
+                    <div class="summary-label">Total Value</div>
+                    <div class="summary-value" id="totalValue">₹0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="summary-card">
+                    <div class="summary-label">Total Invested</div>
+                    <div class="summary-value" id="totalInvested">₹0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="summary-card">
+                    <div class="summary-label">Total P&L</div>
+                    <div class="summary-value" id="totalPnL">₹0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <div class="section-title">Holdings</div>
+            <div id="stocksTable">
+                <div class="empty-state"><div class="spinner-border text-secondary"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Stock Modal -->
+    <div class="modal fade" id="addStockModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Stock</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="stockForm">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Symbol *</label>
+                                <input type="text" class="form-control" id="symbol" required placeholder="e.g., RELIANCE">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="companyName" placeholder="Reliance Industries">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Quantity *</label>
+                                <input type="number" class="form-control" id="stockQuantity" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Avg Buy Price *</label>
+                                <input type="number" class="form-control" id="avgPrice" step="0.01" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Current Price</label>
+                                <input type="number" class="form-control" id="currentPrice" step="0.01">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Owner</label>
+                                <select class="form-select" id="stockOwner">
+                                    <option value="arvind">Arvind</option>
+                                    <option value="deepa">Deepa</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary-custom">Add Stock</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+
+        function formatCurrency(amount) {
+            if (!amount) return '₹0';
+            if (Math.abs(amount) >= 10000000) return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+            if (Math.abs(amount) >= 100000) return '₹' + (amount / 100000).toFixed(2) + ' L';
+            return '₹' + amount.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        }
+
+        async function loadStocks() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/stocks`);
+                const result = await response.json();
+                const container = document.getElementById('stocksTable');
+                
+                if (result.success && result.data.length > 0) {
+                    const stocks = result.data;
+                    let totalValue = 0, totalInvested = 0, totalPnL = 0;
+                    
+                    stocks.forEach(s => {
+                        totalValue += s.current_value || 0;
+                        totalInvested += (s.quantity || 0) * (s.avg_buy_price || 0);
+                        totalPnL += s.profit_loss || 0;
+                    });
+                    
+                    document.getElementById('totalValue').textContent = formatCurrency(totalValue);
+                    document.getElementById('totalInvested').textContent = formatCurrency(totalInvested);
+                    const pnlEl = document.getElementById('totalPnL');
+                    pnlEl.textContent = (totalPnL >= 0 ? '+' : '') + formatCurrency(totalPnL);
+                    pnlEl.className = 'summary-value ' + (totalPnL >= 0 ? 'positive' : 'negative');
+                    
+                    container.innerHTML = `
+                        <table class="stock-table">
+                            <thead>
+                                <tr>
+                                    <th>Stock</th>
+                                    <th class="text-end">Qty</th>
+                                    <th class="text-end">Avg Price</th>
+                                    <th class="text-end">Current</th>
+                                    <th class="text-end">Value</th>
+                                    <th class="text-end">P&L</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${stocks.map(s => {
+                                    const pnlClass = (s.profit_loss || 0) >= 0 ? 'positive' : 'negative';
+                                    const pnlSign = (s.profit_loss || 0) >= 0 ? '+' : '';
+                                    return `
+                                        <tr>
+                                            <td>
+                                                <div style="font-weight: 600;">${s.symbol}</div>
+                                                <small class="text-secondary">${s.company_name || s.exchange || 'NSE'}</small>
+                                            </td>
+                                            <td class="text-end">${s.quantity}</td>
+                                            <td class="text-end">₹${(s.avg_buy_price || 0).toFixed(2)}</td>
+                                            <td class="text-end">₹${(s.current_price || 0).toFixed(2)}</td>
+                                            <td class="text-end">${formatCurrency(s.current_value)}</td>
+                                            <td class="text-end ${pnlClass}">
+                                                ${pnlSign}${formatCurrency(s.profit_loss)}<br>
+                                                <small>(${pnlSign}${(s.profit_loss_percent || 0).toFixed(1)}%)</small>
+                                            </td>
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                } else {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <i class="bi bi-graph-up" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3">No Stocks Yet</h5>
+                            <p>Add your first stock holding</p>
+                            <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addStockModal">Add Stock</button>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        async function syncFromMStock() {
+            const btn = document.getElementById('syncBtn');
+            const status = document.getElementById('syncStatus');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Syncing...';
+            status.style.display = 'block';
+            status.className = 'alert alert-info mb-3';
+            status.innerHTML = '<i class="bi bi-cloud-download me-1"></i>Connecting to m.Stock...';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/mstock/sync`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const result = await response.json();
+                
+                if (result.success) {
+                    status.className = 'alert alert-success mb-3';
+                    status.innerHTML = `<i class="bi bi-check-circle me-1"></i>
+                        Synced ${result.synced} stocks from m.Stock! 
+                        <strong>Total Value: ₹${(result.total_value/10000000).toFixed(2)} Cr</strong>
+                        (${result.total_pnl >= 0 ? '+' : ''}₹${(result.total_pnl/100000).toFixed(2)} L)`;
+                    loadStocks();
+                    
+                    // Store last sync time
+                    localStorage.setItem('lastMStockSync', new Date().toISOString());
+                } else {
+                    status.className = 'alert alert-danger mb-3';
+                    status.innerHTML = `<i class="bi bi-exclamation-triangle me-1"></i>Sync failed: ${result.error || result.message}`;
+                }
+            } catch (error) {
+                status.className = 'alert alert-danger mb-3';
+                status.innerHTML = `<i class="bi bi-exclamation-triangle me-1"></i>Error: ${error.message}`;
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-cloud-download me-1"></i>Sync from m.Stock';
+            }
+        }
+
+        async function refreshPrices() {
+            const btn = event.target;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/stocks/refresh-prices`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const result = await response.json();
+                if (result.success) {
+                    alert(`Updated ${result.updated} stocks`);
+                    loadStocks();
+                }
+            } catch (error) {
+                alert('Error refreshing prices');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-arrow-clockwise me-1"></i>Refresh Prices';
+            }
+        }
+
+        document.getElementById('stockForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = {
+                symbol: document.getElementById('symbol').value.toUpperCase(),
+                company_name: document.getElementById('companyName').value,
+                quantity: parseInt(document.getElementById('stockQuantity').value),
+                avg_buy_price: parseFloat(document.getElementById('avgPrice').value),
+                current_price: document.getElementById('currentPrice').value ? parseFloat(document.getElementById('currentPrice').value) : null,
+                owner: document.getElementById('stockOwner').value
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/stocks`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (result.success || result.id) {
+                    bootstrap.Modal.getInstance(document.getElementById('addStockModal')).hide();
+                    document.getElementById('stockForm').reset();
+                    loadStocks();
+                }
+            } catch (error) {
+                alert('Error adding stock');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadStocks();
+            
+            // Auto-sync from m.Stock if not synced today
+            const lastSync = localStorage.getItem('lastMStockSync');
+            const today = new Date().toDateString();
+            const lastSyncDate = lastSync ? new Date(lastSync).toDateString() : null;
+            
+            if (lastSyncDate !== today) {
+                // Auto-sync in background
+                syncFromMStock();
+            } else {
+                // Show last sync time
+                const status = document.getElementById('syncStatus');
+                status.style.display = 'block';
+                status.className = 'alert alert-light mb-3';
+                status.innerHTML = `<i class="bi bi-info-circle me-1"></i>Last synced: ${new Date(lastSync).toLocaleString()}`;
+                setTimeout(() => { status.style.display = 'none'; }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>
+

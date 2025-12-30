@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Accounts - Personal Finance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #38a169;
+            --danger: #e53e3e;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            background: rgba(26, 54, 93, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar-brand { font-weight: 700; color: var(--text-primary) !important; }
+        .nav-link { color: var(--text-secondary) !important; }
+        .nav-link:hover, .nav-link.active { color: var(--text-primary) !important; }
+        
+        .main-content { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .page-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        
+        .btn-primary-custom {
+            background: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: white;
+        }
+        .btn-primary-custom:hover { background: var(--primary-light); color: white; }
+        
+        .account-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.2s;
+        }
+        .account-card:hover { transform: translateY(-2px); }
+        
+        .account-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        
+        .account-name { font-size: 1.25rem; font-weight: 600; }
+        .account-bank { color: var(--text-secondary); font-size: 0.875rem; }
+        
+        .account-balance { font-size: 1.5rem; font-weight: 700; text-align: right; }
+        
+        .badge-type {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .badge-savings { background: rgba(56, 161, 105, 0.2); color: #68d391; }
+        .badge-fd { background: rgba(159, 122, 234, 0.2); color: #b794f4; }
+        .badge-current { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+        .badge-rd { background: rgba(237, 137, 54, 0.2); color: #f6ad55; }
+        
+        .account-meta { font-size: 0.875rem; color: var(--text-secondary); }
+        
+        .account-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+        
+        .btn-sm-custom {
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            border: 1px solid var(--text-secondary);
+            background: transparent;
+            color: var(--text-secondary);
+        }
+        .btn-sm-custom:hover { border-color: var(--text-primary); color: var(--text-primary); }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+        }
+        .modal-header { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .modal-footer { border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-primary);
+            border-radius: 8px;
+        }
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--primary-light);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.25);
+        }
+        .form-label { color: var(--text-secondary); font-size: 0.875rem; }
+        
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+        .empty-state i { font-size: 4rem; margin-bottom: 1rem; }
+        
+        .total-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .total-label { color: rgba(255,255,255,0.7); font-size: 0.875rem; }
+        .total-value { font-size: 2rem; font-weight: 700; }
+        
+        @media (max-width: 768px) {
+            .main-content { padding: 1rem; }
+            .page-header { flex-direction: column; gap: 1rem; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="finance_dashboard.html">
+                <i class="bi bi-wallet2 me-2"></i>Personal Finance
+            </a>
+            <div class="navbar-nav ms-auto flex-row gap-3">
+                <a class="nav-link" href="finance_dashboard.html"><i class="bi bi-speedometer2"></i></a>
+                <a class="nav-link active" href="finance_accounts.html"><i class="bi bi-bank"></i></a>
+                <a class="nav-link" href="finance_assets.html"><i class="bi bi-gem"></i></a>
+                <a class="nav-link" href="finance_stocks.html"><i class="bi bi-graph-up-arrow"></i></a>
+                <a class="nav-link" href="index.html"><i class="bi bi-house"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title"><i class="bi bi-bank me-2"></i>Bank Accounts</h1>
+            <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addAccountModal">
+                <i class="bi bi-plus-lg me-1"></i>Add Account
+            </button>
+        </div>
+
+        <div class="total-card">
+            <div class="total-label">Total Balance</div>
+            <div class="total-value" id="totalBalance">₹0</div>
+        </div>
+
+        <div id="accountsList">
+            <div class="empty-state">
+                <div class="spinner-border text-secondary" role="status"></div>
+                <p class="mt-2">Loading accounts...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Account Modal -->
+    <div class="modal fade" id="addAccountModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Add Bank Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="accountForm">
+                    <div class="modal-body">
+                        <input type="hidden" id="accountId">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Account Name *</label>
+                                <input type="text" class="form-control" id="accountName" required placeholder="e.g., HDFC Savings">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Bank Name *</label>
+                                <input type="text" class="form-control" id="bankName" required placeholder="e.g., HDFC Bank">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Account Type *</label>
+                                <select class="form-select" id="accountType" required>
+                                    <option value="savings">Savings</option>
+                                    <option value="current">Current</option>
+                                    <option value="fd">Fixed Deposit</option>
+                                    <option value="rd">Recurring Deposit</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Account Number (last 4)</label>
+                                <input type="text" class="form-control" id="accountNumber" maxlength="4" placeholder="XXXX">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Current Balance *</label>
+                                <input type="number" class="form-control" id="currentBalance" step="0.01" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Owner</label>
+                                <select class="form-select" id="owner">
+                                    <option value="arvind">Arvind</option>
+                                    <option value="deepa">Deepa</option>
+                                    <option value="joint">Joint</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6" id="interestRateGroup">
+                                <label class="form-label">Interest Rate (%)</label>
+                                <input type="number" class="form-control" id="interestRate" step="0.01">
+                            </div>
+                            <div class="col-md-6" id="maturityDateGroup">
+                                <label class="form-label">Maturity Date</label>
+                                <input type="date" class="form-control" id="maturityDate">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Notes</label>
+                                <textarea class="form-control" id="notes" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm-custom" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary-custom">Save Account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update Balance Modal -->
+    <div class="modal fade" id="updateBalanceModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Balance</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="updateBalanceForm">
+                    <div class="modal-body">
+                        <input type="hidden" id="updateAccountId">
+                        <div class="mb-3">
+                            <label class="form-label">New Balance</label>
+                            <input type="number" class="form-control" id="newBalance" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary-custom">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+
+        function formatCurrency(amount) {
+            if (amount === null || amount === undefined) return '₹0';
+            const absAmount = Math.abs(amount);
+            if (absAmount >= 10000000) return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+            if (absAmount >= 100000) return '₹' + (amount / 100000).toFixed(2) + ' L';
+            return '₹' + amount.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        }
+
+        async function loadAccounts() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/accounts`);
+                const result = await response.json();
+                
+                const container = document.getElementById('accountsList');
+                
+                if (result.success && result.data.length > 0) {
+                    const total = result.data.reduce((sum, acc) => sum + (acc.current_balance || 0), 0);
+                    document.getElementById('totalBalance').textContent = formatCurrency(total);
+                    
+                    // Group by owner
+                    const grouped = {};
+                    result.data.forEach(acc => {
+                        const owner = acc.owner || 'other';
+                        if (!grouped[owner]) grouped[owner] = [];
+                        grouped[owner].push(acc);
+                    });
+                    
+                    let html = '';
+                    for (const [owner, accounts] of Object.entries(grouped)) {
+                        html += `<h5 class="text-secondary mb-3 mt-4">${owner.charAt(0).toUpperCase() + owner.slice(1)}'s Accounts</h5>`;
+                        accounts.forEach(acc => {
+                            html += `
+                                <div class="account-card">
+                                    <div class="account-header">
+                                        <div>
+                                            <div class="account-name">${acc.account_name}</div>
+                                            <div class="account-bank">${acc.bank_name} ${acc.account_number ? '••••' + acc.account_number : ''}</div>
+                                        </div>
+                                        <div>
+                                            <span class="badge-type badge-${acc.account_type}">${acc.account_type.toUpperCase()}</span>
+                                            <div class="account-balance">${formatCurrency(acc.current_balance)}</div>
+                                        </div>
+                                    </div>
+                                    ${acc.interest_rate ? `<div class="account-meta">Interest: ${acc.interest_rate}%</div>` : ''}
+                                    ${acc.maturity_date ? `<div class="account-meta">Matures: ${new Date(acc.maturity_date).toLocaleDateString('en-IN')}</div>` : ''}
+                                    ${acc.notes ? `<div class="account-meta mt-1">${acc.notes}</div>` : ''}
+                                    <div class="account-actions">
+                                        <button class="btn btn-sm-custom" onclick="showUpdateBalance(${acc.id}, ${acc.current_balance})">
+                                            <i class="bi bi-pencil me-1"></i>Update Balance
+                                        </button>
+                                        <button class="btn btn-sm-custom" onclick="editAccount(${acc.id})">
+                                            <i class="bi bi-gear me-1"></i>Edit
+                                        </button>
+                                        <button class="btn btn-sm-custom" onclick="deleteAccount(${acc.id})">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    }
+                    container.innerHTML = html;
+                } else {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <i class="bi bi-bank"></i>
+                            <h5>No Bank Accounts Yet</h5>
+                            <p>Add your first bank account to start tracking your finances</p>
+                            <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addAccountModal">
+                                <i class="bi bi-plus-lg me-1"></i>Add Account
+                            </button>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading accounts:', error);
+            }
+        }
+
+        // Toggle FD/RD fields
+        document.getElementById('accountType').addEventListener('change', function() {
+            const showExtra = ['fd', 'rd'].includes(this.value);
+            document.getElementById('interestRateGroup').style.display = showExtra ? 'block' : 'none';
+            document.getElementById('maturityDateGroup').style.display = showExtra ? 'block' : 'none';
+        });
+
+        // Add/Edit account form
+        document.getElementById('accountForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const accountId = document.getElementById('accountId').value;
+            const data = {
+                account_name: document.getElementById('accountName').value,
+                bank_name: document.getElementById('bankName').value,
+                account_type: document.getElementById('accountType').value,
+                account_number: document.getElementById('accountNumber').value,
+                current_balance: parseFloat(document.getElementById('currentBalance').value),
+                owner: document.getElementById('owner').value,
+                interest_rate: document.getElementById('interestRate').value ? parseFloat(document.getElementById('interestRate').value) : null,
+                maturity_date: document.getElementById('maturityDate').value || null,
+                notes: document.getElementById('notes').value
+            };
+            
+            try {
+                const url = accountId 
+                    ? `${API_BASE}/api/finance/accounts/${accountId}`
+                    : `${API_BASE}/api/finance/accounts`;
+                    
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success || result.id) {
+                    bootstrap.Modal.getInstance(document.getElementById('addAccountModal')).hide();
+                    document.getElementById('accountForm').reset();
+                    document.getElementById('accountId').value = '';
+                    loadAccounts();
+                } else {
+                    alert('Error: ' + (result.error || 'Failed to save account'));
+                }
+            } catch (error) {
+                console.error('Error saving account:', error);
+                alert('Error saving account');
+            }
+        });
+
+        function showUpdateBalance(accountId, currentBalance) {
+            document.getElementById('updateAccountId').value = accountId;
+            document.getElementById('newBalance').value = currentBalance;
+            new bootstrap.Modal(document.getElementById('updateBalanceModal')).show();
+        }
+
+        document.getElementById('updateBalanceForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const accountId = document.getElementById('updateAccountId').value;
+            const balance = parseFloat(document.getElementById('newBalance').value);
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/accounts/${accountId}/update-balance`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ balance })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    bootstrap.Modal.getInstance(document.getElementById('updateBalanceModal')).hide();
+                    loadAccounts();
+                } else {
+                    alert('Error: ' + (result.error || 'Failed to update balance'));
+                }
+            } catch (error) {
+                console.error('Error updating balance:', error);
+            }
+        });
+
+        async function editAccount(accountId) {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/accounts/${accountId}`);
+                const result = await response.json();
+                
+                if (result.success && result.data) {
+                    const acc = result.data;
+                    document.getElementById('accountId').value = acc.id;
+                    document.getElementById('accountName').value = acc.account_name;
+                    document.getElementById('bankName').value = acc.bank_name;
+                    document.getElementById('accountType').value = acc.account_type;
+                    document.getElementById('accountNumber').value = acc.account_number || '';
+                    document.getElementById('currentBalance').value = acc.current_balance;
+                    document.getElementById('owner').value = acc.owner;
+                    document.getElementById('interestRate').value = acc.interest_rate || '';
+                    document.getElementById('maturityDate').value = acc.maturity_date || '';
+                    document.getElementById('notes').value = acc.notes || '';
+                    
+                    document.getElementById('modalTitle').textContent = 'Edit Bank Account';
+                    document.getElementById('accountType').dispatchEvent(new Event('change'));
+                    
+                    new bootstrap.Modal(document.getElementById('addAccountModal')).show();
+                }
+            } catch (error) {
+                console.error('Error loading account:', error);
+            }
+        }
+
+        async function deleteAccount(accountId) {
+            if (!confirm('Are you sure you want to delete this account?')) return;
+            
+            // Note: Would need to add DELETE endpoint - for now just alert
+            alert('Delete functionality to be implemented');
+        }
+
+        // Check for action param (from quick add)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('action') === 'add') {
+            document.addEventListener('DOMContentLoaded', () => {
+                new bootstrap.Modal(document.getElementById('addAccountModal')).show();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadAccounts);
+    </script>
+</body>
+</html>
+

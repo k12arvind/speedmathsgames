@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Fitness - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --primary: #0d9488;
+            --primary-light: #14b8a6;
+            --accent: #8b5cf6;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #134e4a 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background: rgba(13, 148, 136, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--text-primary) !important;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-primary) !important;
+        }
+        
+        .main-content {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .user-toggle {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.25rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .user-toggle-btn {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .user-toggle-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .user-toggle-btn:hover:not(.active) {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .stat-card .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-card .label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-card .value {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+        
+        .stat-card .sub-value {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+        
+        .icon-teal { background: rgba(20, 184, 166, 0.2); color: #5eead4; }
+        .icon-purple { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; }
+        .icon-orange { background: rgba(249, 115, 22, 0.2); color: #fdba74; }
+        .icon-blue { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+        .icon-red { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+        .icon-green { background: rgba(34, 197, 94, 0.2); color: #86efac; }
+        
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary-custom {
+            background: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .btn-primary-custom:hover {
+            background: var(--primary-light);
+            color: white;
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .btn-outline-custom:hover {
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+        }
+        
+        .workout-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .workout-type {
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        
+        .workout-meta {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 200px;
+        }
+        
+        .progress-ring {
+            width: 120px;
+            height: 120px;
+        }
+        
+        .health-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .health-indicator .name {
+            flex: 1;
+        }
+        
+        .health-indicator .value {
+            font-weight: 600;
+        }
+        
+        .health-indicator.abnormal {
+            border-left: 3px solid var(--danger);
+        }
+        
+        .health-indicator.normal {
+            border-left: 3px solid #22c55e;
+        }
+        
+        .quick-action-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            z-index: 100;
+        }
+        
+        .quick-action-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.5);
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-primary);
+            border-radius: 8px;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--primary-light);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25);
+        }
+        
+        .form-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .workout-type-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .badge-gym { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; }
+        .badge-cardio { background: rgba(249, 115, 22, 0.2); color: #fdba74; }
+        .badge-yoga { background: rgba(20, 184, 166, 0.2); color: #5eead4; }
+        
+        .loading-spinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .stat-card .value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-heart-pulse me-2"></i>Health & Fitness
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="health_dashboard.html">
+                            <i class="bi bi-speedometer2 me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="health_workout.html">
+                            <i class="bi bi-activity me-1"></i>Workouts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="health_weight.html">
+                            <i class="bi bi-speedometer me-1"></i>Weight
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="health_diet.html">
+                            <i class="bi bi-egg-fried me-1"></i>Diet
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="health_reports.html">
+                            <i class="bi bi-file-medical me-1"></i>Reports
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="finance_dashboard.html">
+                            <i class="bi bi-wallet2 me-1"></i>Finance
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house me-1"></i>Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- User Toggle -->
+        <div class="user-toggle">
+            <button class="user-toggle-btn active" data-user="arvind" onclick="switchUser('arvind')">
+                <i class="bi bi-person me-1"></i>Arvind
+            </button>
+            <button class="user-toggle-btn" data-user="deepa" onclick="switchUser('deepa')">
+                <i class="bi bi-person me-1"></i>Deepa
+            </button>
+            <button class="user-toggle-btn" data-user="both" onclick="switchUser('both')">
+                <i class="bi bi-people me-1"></i>Both
+            </button>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="row g-3 mb-4" id="statsGrid">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="stat-card">
+                    <div class="icon icon-teal"><i class="bi bi-speedometer"></i></div>
+                    <div class="label">Current Weight</div>
+                    <div class="value" id="currentWeight">--</div>
+                    <div class="sub-value" id="targetWeight">Target: --</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="stat-card">
+                    <div class="icon icon-purple"><i class="bi bi-activity"></i></div>
+                    <div class="label">Workouts This Week</div>
+                    <div class="value" id="weekWorkouts">0</div>
+                    <div class="sub-value" id="weekMinutes">0 minutes</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="stat-card">
+                    <div class="icon icon-orange"><i class="bi bi-calendar-check"></i></div>
+                    <div class="label">This Month</div>
+                    <div class="value" id="monthWorkouts">0</div>
+                    <div class="sub-value">workouts</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="stat-card">
+                    <div class="icon icon-blue"><i class="bi bi-file-medical"></i></div>
+                    <div class="label">Last Report</div>
+                    <div class="value" id="lastReport">--</div>
+                    <div class="sub-value" id="reportDate">--</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="stat-card">
+                    <div class="icon icon-red"><i class="bi bi-exclamation-triangle"></i></div>
+                    <div class="label">Abnormal Values</div>
+                    <div class="value" id="abnormalCount">0</div>
+                    <div class="sub-value">parameters</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="stat-card">
+                    <div class="icon icon-green"><i class="bi bi-bullseye"></i></div>
+                    <div class="label">Active Goals</div>
+                    <div class="value" id="activeGoals">0</div>
+                    <div class="sub-value">in progress</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts & Activity Row -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="section-title">
+                        <i class="bi bi-graph-down"></i>Weight Trend
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="weightChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="section-title mb-0">
+                            <i class="bi bi-activity"></i>Recent Workouts
+                        </div>
+                        <a href="health_workout.html" class="btn btn-outline-custom btn-sm">View All</a>
+                    </div>
+                    <div id="recentWorkouts">
+                        <div class="loading-spinner">
+                            <div class="spinner-border text-secondary" role="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Parameters -->
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="section-title mb-0">
+                            <i class="bi bi-heart-pulse"></i>Key Health Indicators
+                        </div>
+                        <a href="health_reports.html" class="btn btn-outline-custom btn-sm">View All</a>
+                    </div>
+                    <div id="healthIndicators">
+                        <div class="loading-spinner">
+                            <div class="spinner-border text-secondary" role="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="section-title">
+                        <i class="bi bi-bar-chart"></i>Workout Distribution
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="workoutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Action Button -->
+    <button class="quick-action-btn" data-bs-toggle="modal" data-bs-target="#quickLogModal">
+        <i class="bi bi-plus"></i>
+    </button>
+
+    <!-- Quick Log Modal -->
+    <div class="modal fade" id="quickLogModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick Log</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs mb-3" id="quickLogTabs">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#weightTab">Weight</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#workoutTab">Workout</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="weightTab">
+                            <form id="weightForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Weight (kg)</label>
+                                    <input type="number" class="form-control" id="weightInput" step="0.1" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Notes (optional)</label>
+                                    <input type="text" class="form-control" id="weightNotes" placeholder="Morning, after workout, etc.">
+                                </div>
+                                <button type="submit" class="btn btn-primary-custom w-100">Log Weight</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="workoutTab">
+                            <form id="workoutForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Workout Type</label>
+                                    <select class="form-select" id="workoutType" required>
+                                        <option value="gym">Gym</option>
+                                        <option value="cardio">Cardio</option>
+                                        <option value="yoga">Yoga</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Duration (minutes)</label>
+                                    <input type="number" class="form-control" id="workoutDuration" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Notes (optional)</label>
+                                    <textarea class="form-control" id="workoutNotes" rows="2" placeholder="Exercises, how you felt, etc."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary-custom w-100">Log Workout</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let currentUser = 'arvind';
+        let weightChart = null;
+        let workoutChart = null;
+
+        // Switch user view
+        function switchUser(user) {
+            currentUser = user;
+            
+            // Update toggle buttons
+            document.querySelectorAll('.user-toggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.user === user);
+            });
+            
+            // Reload data
+            loadDashboard();
+        }
+
+        // Load dashboard data
+        async function loadDashboard() {
+            if (currentUser === 'both') {
+                loadBothDashboards();
+            } else {
+                loadUserDashboard(currentUser);
+            }
+        }
+
+        async function loadUserDashboard(userId) {
+            try {
+                const response = await fetch(`${API_BASE}/api/health/dashboard?user_id=${userId}`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    const data = result.data;
+                    
+                    // Update stats
+                    document.getElementById('currentWeight').textContent = 
+                        data.latest_weight ? `${data.latest_weight.weight} kg` : '--';
+                    document.getElementById('targetWeight').textContent = 
+                        data.profile?.target_weight ? `Target: ${data.profile.target_weight} kg` : 'Target: --';
+                    document.getElementById('weekWorkouts').textContent = data.workouts_this_week || 0;
+                    document.getElementById('weekMinutes').textContent = 
+                        `${data.workout_minutes_this_week || 0} minutes`;
+                    document.getElementById('monthWorkouts').textContent = data.workouts_this_month || 0;
+                    document.getElementById('abnormalCount').textContent = data.abnormal_parameters || 0;
+                    document.getElementById('activeGoals').textContent = data.active_goals || 0;
+                    
+                    // Last report
+                    if (data.latest_blood_report) {
+                        document.getElementById('lastReport').textContent = 
+                            data.latest_blood_report.lab_name || 'Report';
+                        document.getElementById('reportDate').textContent = 
+                            new Date(data.latest_blood_report.report_date).toLocaleDateString('en-IN');
+                    } else {
+                        document.getElementById('lastReport').textContent = '--';
+                        document.getElementById('reportDate').textContent = 'No reports';
+                    }
+                    
+                    // Update weight chart
+                    if (data.weight_trend && data.weight_trend.length > 0) {
+                        updateWeightChart(data.weight_trend);
+                    }
+                }
+                
+                // Load workouts
+                loadRecentWorkouts(userId);
+                
+                // Load health indicators
+                loadHealthIndicators(userId);
+                
+                // Load workout distribution
+                loadWorkoutDistribution(userId);
+                
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+            }
+        }
+
+        async function loadBothDashboards() {
+            try {
+                const response = await fetch(`${API_BASE}/api/health/dashboard/both`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Show combined stats or side by side
+                    const arvind = result.data.arvind;
+                    const deepa = result.data.deepa;
+                    
+                    // For now, show Arvind's data with indicator
+                    document.getElementById('currentWeight').textContent = 
+                        `A: ${arvind.latest_weight?.weight || '--'} / D: ${deepa.latest_weight?.weight || '--'}`;
+                    document.getElementById('weekWorkouts').textContent = 
+                        (arvind.workouts_this_week || 0) + (deepa.workouts_this_week || 0);
+                    document.getElementById('monthWorkouts').textContent = 
+                        (arvind.workouts_this_month || 0) + (deepa.workouts_this_month || 0);
+                }
+                
+                loadRecentWorkouts(null); // Load all
+                
+            } catch (error) {
+                console.error('Error loading both dashboards:', error);
+            }
+        }
+
+        // Load recent workouts
+        async function loadRecentWorkouts(userId) {
+            try {
+                const url = userId 
+                    ? `${API_BASE}/api/health/workouts?user_id=${userId}&days=7`
+                    : `${API_BASE}/api/health/workouts?days=7`;
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                const container = document.getElementById('recentWorkouts');
+                
+                if (result.success && result.data.length > 0) {
+                    const recent = result.data.slice(0, 5);
+                    container.innerHTML = recent.map(w => `
+                        <div class="workout-card">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="workout-type-badge badge-${w.workout_type}">${w.workout_type}</span>
+                                    <span class="workout-meta ms-2">${w.duration_minutes || 0} min</span>
+                                </div>
+                                <small class="text-secondary">${new Date(w.workout_date).toLocaleDateString('en-IN')}</small>
+                            </div>
+                            ${w.notes ? `<div class="workout-meta mt-2">${w.notes}</div>` : ''}
+                            ${currentUser === 'both' ? `<small class="text-secondary">${w.user_id}</small>` : ''}
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = `
+                        <div class="text-center text-secondary py-4">
+                            <i class="bi bi-activity" style="font-size: 2rem;"></i>
+                            <p class="mt-2 mb-0">No recent workouts</p>
+                            <button class="btn btn-primary-custom btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#quickLogModal">
+                                Log Workout
+                            </button>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading workouts:', error);
+            }
+        }
+
+        // Load health indicators
+        async function loadHealthIndicators(userId) {
+            try {
+                const response = await fetch(`${API_BASE}/api/health/parameters?user_id=${userId}`);
+                const result = await response.json();
+                
+                const container = document.getElementById('healthIndicators');
+                
+                if (result.success && result.data.length > 0) {
+                    // Show key parameters
+                    const keyParams = ['Hemoglobin', 'Total Cholesterol', 'Fasting Blood Sugar', 'HbA1c', 'TSH', 'Vitamin D'];
+                    const filtered = result.data.filter(p => keyParams.includes(p.parameter_name));
+                    
+                    if (filtered.length > 0) {
+                        container.innerHTML = filtered.map(p => `
+                            <div class="health-indicator ${p.is_abnormal ? 'abnormal' : 'normal'}">
+                                <div class="name">${p.parameter_name}</div>
+                                <div class="value">${p.value} ${p.unit || ''}</div>
+                            </div>
+                        `).join('');
+                    } else {
+                        container.innerHTML = `
+                            <div class="text-center text-secondary py-3">
+                                <p class="mb-0">No blood test data yet</p>
+                            </div>
+                        `;
+                    }
+                } else {
+                    container.innerHTML = `
+                        <div class="text-center text-secondary py-4">
+                            <i class="bi bi-file-medical" style="font-size: 2rem;"></i>
+                            <p class="mt-2 mb-0">Upload a blood report to see health indicators</p>
+                            <a href="health_reports.html" class="btn btn-primary-custom btn-sm mt-2">Upload Report</a>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading health indicators:', error);
+            }
+        }
+
+        // Load workout distribution
+        async function loadWorkoutDistribution(userId) {
+            try {
+                const url = userId 
+                    ? `${API_BASE}/api/health/workouts?user_id=${userId}&days=30`
+                    : `${API_BASE}/api/health/workouts?days=30`;
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                if (result.success && result.data.length > 0) {
+                    const distribution = {};
+                    result.data.forEach(w => {
+                        distribution[w.workout_type] = (distribution[w.workout_type] || 0) + 1;
+                    });
+                    updateWorkoutChart(distribution);
+                }
+            } catch (error) {
+                console.error('Error loading workout distribution:', error);
+            }
+        }
+
+        // Update weight chart
+        function updateWeightChart(data) {
+            const ctx = document.getElementById('weightChart').getContext('2d');
+            
+            const sorted = [...data].sort((a, b) => new Date(a.recorded_at) - new Date(b.recorded_at));
+            const labels = sorted.map(d => new Date(d.recorded_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }));
+            const values = sorted.map(d => d.weight);
+            
+            if (weightChart) {
+                weightChart.destroy();
+            }
+            
+            weightChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Weight (kg)',
+                        data: values,
+                        borderColor: '#14b8a6',
+                        backgroundColor: 'rgba(20, 184, 166, 0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        y: {
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update workout chart
+        function updateWorkoutChart(distribution) {
+            const ctx = document.getElementById('workoutChart').getContext('2d');
+            
+            const colors = {
+                gym: '#c4b5fd',
+                cardio: '#fdba74',
+                yoga: '#5eead4'
+            };
+            
+            const labels = Object.keys(distribution);
+            const values = Object.values(distribution);
+            const bgColors = labels.map(l => colors[l] || '#94a3b8');
+            
+            if (workoutChart) {
+                workoutChart.destroy();
+            }
+            
+            workoutChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels.map(l => l.charAt(0).toUpperCase() + l.slice(1)),
+                    datasets: [{
+                        data: values,
+                        backgroundColor: bgColors,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: { color: '#94a3b8', usePointStyle: true }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+
+        // Log weight
+        document.getElementById('weightForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const weight = document.getElementById('weightInput').value;
+            const notes = document.getElementById('weightNotes').value;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/health/weight`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        user_id: currentUser === 'both' ? 'arvind' : currentUser,
+                        weight: parseFloat(weight),
+                        notes: notes
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    bootstrap.Modal.getInstance(document.getElementById('quickLogModal')).hide();
+                    document.getElementById('weightForm').reset();
+                    loadDashboard();
+                } else {
+                    alert('Error: ' + (result.error || 'Failed to log weight'));
+                }
+            } catch (error) {
+                console.error('Error logging weight:', error);
+                alert('Error logging weight');
+            }
+        });
+
+        // Log workout
+        document.getElementById('workoutForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const type = document.getElementById('workoutType').value;
+            const duration = document.getElementById('workoutDuration').value;
+            const notes = document.getElementById('workoutNotes').value;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/health/workouts`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        user_id: currentUser === 'both' ? 'arvind' : currentUser,
+                        workout_type: type,
+                        duration_minutes: parseInt(duration),
+                        notes: notes,
+                        workout_date: new Date().toISOString().split('T')[0]
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    bootstrap.Modal.getInstance(document.getElementById('quickLogModal')).hide();
+                    document.getElementById('workoutForm').reset();
+                    loadDashboard();
+                } else {
+                    alert('Error: ' + (result.error || 'Failed to log workout'));
+                }
+            } catch (error) {
+                console.error('Error logging workout:', error);
+                alert('Error logging workout');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboard();
+        });
+    </script>
+</body>
+</html>
+

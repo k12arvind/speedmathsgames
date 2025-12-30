@@ -84,8 +84,15 @@ from server.questions_db import QuestionsDatabase
 from server.user_roles import (
     get_user_profile, get_user_id_from_email, get_user_role,
     can_view_all_users, can_edit_settings, is_admin, is_parent,
-    get_viewable_user_ids, get_children, CHILD_USER_IDS, ALL_USER_IDS
+    get_viewable_user_ids, get_children, CHILD_USER_IDS, ALL_USER_IDS,
+    can_access_private_modules
 )
+
+# Import finance and health database modules (private modules for parents only)
+from server.finance_db import FinanceDatabase
+from server.health_db import HealthDatabase
+from server.mstock_client import MStockClient, FreeMarketData, parse_mstock_csv_export
+from server.blood_report_parser import BloodReportParser
 
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
@@ -104,6 +111,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     pdf_chunker = None
     assessment_jobs_db = None
     diary_db = None
+    mock_db = None
+    questions_db = None
+    finance_db = None
+    health_db = None
+    mstock_client = None
+    blood_report_parser = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -448,6 +461,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Admin API endpoints (family dashboard)
             elif path.startswith('/api/admin/'):
                 self.handle_admin_get(path, query_params)
+            # Finance API endpoints (private - parents only)
+            elif path.startswith('/api/finance/'):
+                self.handle_finance_get(path, query_params)
+            # Health API endpoints (private - parents only)
+            elif path.startswith('/api/health/'):
+                self.handle_health_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -500,6 +519,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Admin API endpoints
             elif path.startswith('/api/admin/'):
                 self.handle_admin_post(path, data)
+            # Finance API endpoints (private - parents only)
+            elif path.startswith('/api/finance/'):
+                self.handle_finance_post(path, data)
+            # Health API endpoints (private - parents only)
+            elif path.startswith('/api/health/'):
+                self.handle_health_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -3135,6 +3160,492 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         else:
             self.send_json({'error': 'Unknown admin endpoint'})
 
+    # ============================================================
+    # FINANCE API METHODS (Private - Parents Only)
+    # ============================================================
+
+    def _check_private_access(self) -> bool:
+        """Check if current user can access private modules (Finance/Health)."""
+        user = self.get_current_user()
+        if self.PUBLIC_PAGES == ['*']:
+            # In dev mode, check if we can simulate parent access
+            return True  # Allow in dev mode
+        
+        if not user:
+            self.send_json({'error': 'Authentication required'}, 401)
+            return False
+        
+        email = user.get('email', '')
+        if not can_access_private_modules(email):
+            self.send_json({'error': 'Access denied. This module is restricted.'}, 403)
+            return False
+        
+        return True
+
+    def _get_current_owner(self) -> str:
+        """Get current user's owner ID for finance/health data."""
+        user = self.get_current_user()
+        if user:
+            return user.get('user_id', 'arvind')
+        return 'arvind'  # Default in dev mode
+
+    def handle_finance_get(self, path: str, query_params: dict):
+        """Handle finance API GET requests."""
+        if not self._check_private_access():
+            return
+        
+        owner = query_params.get('owner', [None])[0]
+        
+        # GET /api/finance/dashboard - Get financial summary
+        if path == '/api/finance/dashboard':
+            summary = self.finance_db.get_dashboard_summary()
+            self.send_json({'success': True, 'data': summary})
+        
+        # GET /api/finance/accounts - List bank accounts
+        elif path == '/api/finance/accounts':
+            accounts = self.finance_db.get_accounts(owner)
+            self.send_json({'success': True, 'data': accounts})
+        
+        # GET /api/finance/accounts/{id} - Get specific account
+        elif path.startswith('/api/finance/accounts/'):
+            account_id = int(path.split('/')[-1])
+            account = self.finance_db.get_account(account_id)
+            if account:
+                history = self.finance_db.get_balance_history(account_id)
+                account['history'] = history
+                self.send_json({'success': True, 'data': account})
+            else:
+                self.send_json({'error': 'Account not found'}, 404)
+        
+        # GET /api/finance/assets - List assets
+        elif path == '/api/finance/assets':
+            asset_type = query_params.get('type', [None])[0]
+            assets = self.finance_db.get_assets(owner, asset_type)
+            self.send_json({'success': True, 'data': assets})
+        
+        # GET /api/finance/assets/{id} - Get specific asset
+        elif path.startswith('/api/finance/assets/'):
+            asset_id = int(path.split('/')[-1])
+            asset = self.finance_db.get_asset(asset_id)
+            if asset:
+                self.send_json({'success': True, 'data': asset})
+            else:
+                self.send_json({'error': 'Asset not found'}, 404)
+        
+        # GET /api/finance/stocks - List stock holdings
+        elif path == '/api/finance/stocks':
+            stocks = self.finance_db.get_stock_holdings(owner)
+            self.send_json({'success': True, 'data': stocks})
+        
+        # GET /api/finance/stocks/watchlist - Get watchlist
+        elif path == '/api/finance/stocks/watchlist':
+            added_by = query_params.get('added_by', [None])[0]
+            watchlist = self.finance_db.get_watchlist(added_by)
+            self.send_json({'success': True, 'data': watchlist})
+        
+        # GET /api/finance/liabilities - List liabilities
+        elif path == '/api/finance/liabilities':
+            liabilities = self.finance_db.get_liabilities(owner)
+            self.send_json({'success': True, 'data': liabilities})
+        
+        # GET /api/finance/liabilities/{id} - Get specific liability
+        elif path.startswith('/api/finance/liabilities/') and '/payments' not in path:
+            liability_id = int(path.split('/')[-1])
+            liability = self.finance_db.get_liability(liability_id)
+            if liability:
+                payments = self.finance_db.get_liability_payments(liability_id)
+                liability['payments'] = payments
+                self.send_json({'success': True, 'data': liability})
+            else:
+                self.send_json({'error': 'Liability not found'}, 404)
+        
+        # GET /api/finance/net-worth-history - Get historical net worth
+        elif path == '/api/finance/net-worth-history':
+            months = int(query_params.get('months', ['12'])[0])
+            history = self.finance_db.get_net_worth_history(months)
+            self.send_json({'success': True, 'data': history})
+        
+        # GET /api/finance/mstock/config - Get MStock config status
+        elif path == '/api/finance/mstock/config':
+            config = self.finance_db.get_mstock_config()
+            # Don't expose actual API key
+            if config:
+                config['api_key'] = '***' if config.get('api_key') else None
+            self.send_json({'success': True, 'data': config})
+        
+        else:
+            self.send_json({'error': 'Unknown finance endpoint'})
+
+    def handle_finance_post(self, path: str, data: dict):
+        """Handle finance API POST requests."""
+        if not self._check_private_access():
+            return
+        
+        current_owner = self._get_current_owner()
+        
+        # POST /api/finance/accounts - Add bank account
+        if path == '/api/finance/accounts':
+            data['owner'] = data.get('owner', current_owner)
+            account_id = self.finance_db.add_account(data)
+            self.send_json({'success': True, 'id': account_id})
+        
+        # POST /api/finance/accounts/{id}/update-balance - Update balance
+        elif '/update-balance' in path:
+            account_id = int(path.split('/')[-2])
+            balance = data.get('balance')
+            if balance is not None:
+                self.finance_db.update_account_balance(account_id, float(balance))
+                self.send_json({'success': True})
+            else:
+                self.send_json({'error': 'Balance required'}, 400)
+        
+        # POST /api/finance/assets - Add asset
+        elif path == '/api/finance/assets':
+            data['owner'] = data.get('owner', current_owner)
+            asset_id = self.finance_db.add_asset(data)
+            self.send_json({'success': True, 'id': asset_id})
+        
+        # POST /api/finance/assets/{id}/update-value - Update asset value
+        elif '/update-value' in path:
+            asset_id = int(path.split('/')[-2])
+            value = data.get('value')
+            if value is not None:
+                self.finance_db.update_asset_value(asset_id, float(value))
+                self.send_json({'success': True})
+            else:
+                self.send_json({'error': 'Value required'}, 400)
+        
+        # POST /api/finance/stocks - Add stock holding
+        elif path == '/api/finance/stocks':
+            data['owner'] = data.get('owner', current_owner)
+            stock_id = self.finance_db.add_stock_holding(data)
+            self.send_json({'success': True, 'id': stock_id})
+        
+        # POST /api/finance/stocks/refresh-prices - Refresh stock prices
+        elif path == '/api/finance/stocks/refresh-prices':
+            stocks = self.finance_db.get_stock_holdings()
+            symbols = [s['symbol'] for s in stocks if s.get('symbol')]
+            
+            if symbols:
+                # Try MStock API first, fallback to free data
+                config = self.finance_db.get_mstock_config()
+                if config and config.get('access_token'):
+                    client = MStockClient(config.get('api_key'), config.get('client_id'))
+                    client.set_access_token(config['access_token'])
+                    prices = client.get_multiple_quotes(symbols)
+                else:
+                    free_data = FreeMarketData()
+                    prices = free_data.get_multiple_quotes(symbols)
+                
+                updated = self.finance_db.update_stock_prices(prices)
+                self.send_json({'success': True, 'updated': updated, 'prices': prices})
+            else:
+                self.send_json({'success': True, 'updated': 0, 'message': 'No stocks to update'})
+        
+        # POST /api/finance/stocks/watchlist - Add to watchlist
+        elif path == '/api/finance/stocks/watchlist':
+            data['added_by'] = data.get('added_by', current_owner)
+            item_id = self.finance_db.add_to_watchlist(data)
+            self.send_json({'success': True, 'id': item_id})
+        
+        # POST /api/finance/liabilities - Add liability
+        elif path == '/api/finance/liabilities':
+            data['owner'] = data.get('owner', current_owner)
+            liability_id = self.finance_db.add_liability(data)
+            self.send_json({'success': True, 'id': liability_id})
+        
+        # POST /api/finance/liabilities/{id}/payment - Record payment
+        elif '/payment' in path:
+            liability_id = int(path.split('/')[-2])
+            payment_id = self.finance_db.record_liability_payment(liability_id, data)
+            self.send_json({'success': True, 'id': payment_id})
+        
+        # POST /api/finance/net-worth-snapshot - Take snapshot
+        elif path == '/api/finance/net-worth-snapshot':
+            snapshot_id = self.finance_db.take_net_worth_snapshot()
+            self.send_json({'success': True, 'id': snapshot_id})
+        
+        # POST /api/finance/mstock/config - Save MStock config
+        elif path == '/api/finance/mstock/config':
+            self.finance_db.save_mstock_config(data)
+            self.send_json({'success': True})
+        
+        # POST /api/finance/mstock/sync - Sync portfolio from MStock
+        elif path == '/api/finance/mstock/sync':
+            try:
+                # Use the shared MStockClient instance
+                if not self.mstock_client.is_configured():
+                    self.send_json({'error': 'MStock API not configured. Please add credentials.'}, 400)
+                    return
+                
+                # Authenticate and get holdings
+                auth_result = self.mstock_client.authenticate()
+                if auth_result.get('status') != 'success':
+                    self.send_json({'error': f"Authentication failed: {auth_result.get('message')}"}, 400)
+                    return
+                
+                holdings_result = self.mstock_client.get_holdings()
+                if holdings_result.get('status') != 'success':
+                    self.send_json({'error': f"Failed to get holdings: {holdings_result.get('message')}"}, 400)
+                    return
+                
+                holdings = holdings_result.get('data', [])
+                owner = data.get('owner', current_owner)
+                
+                synced = 0
+                total_value = 0
+                total_pnl = 0
+                
+                for h in holdings:
+                    stock_data = {
+                        'symbol': h['tradingsymbol'],
+                        'exchange': h.get('exchange', 'NSE'),
+                        'company_name': h.get('tradingsymbol'),  # API doesn't provide company name
+                        'quantity': h['quantity'],
+                        'avg_buy_price': h['average_price'],
+                        'current_price': h['last_price'],
+                        'mstock_isin': h.get('isin'),
+                        'owner': owner,
+                    }
+                    
+                    # Upsert stock (update if exists, insert if new)
+                    self.finance_db.upsert_stock_from_mstock(stock_data)
+                    
+                    synced += 1
+                    total_value += h['quantity'] * h['last_price']
+                    total_pnl += h.get('pnl', 0)
+                
+                self.send_json({
+                    'success': True, 
+                    'synced': synced,
+                    'total_value': total_value,
+                    'total_pnl': total_pnl,
+                    'user': auth_result['data'].get('user_name')
+                })
+                
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
+        # POST /api/finance/import-csv - Import from CSV export
+        elif path == '/api/finance/import-csv':
+            csv_path = data.get('csv_path')
+            owner = data.get('owner', current_owner)
+            
+            if not csv_path:
+                self.send_json({'error': 'csv_path required'}, 400)
+                return
+            
+            try:
+                holdings = parse_mstock_csv_export(csv_path, owner)
+                imported = 0
+                for holding in holdings:
+                    self.finance_db.upsert_stock_from_mstock(holding)
+                    imported += 1
+                self.send_json({'success': True, 'imported': imported})
+            except Exception as e:
+                self.send_json({'error': str(e)}, 400)
+        
+        else:
+            self.send_json({'error': 'Unknown finance endpoint'})
+
+    # ============================================================
+    # HEALTH API METHODS (Private - Parents Only)
+    # ============================================================
+
+    def handle_health_get(self, path: str, query_params: dict):
+        """Handle health API GET requests."""
+        if not self._check_private_access():
+            return
+        
+        user_id = query_params.get('user_id', [None])[0]
+        current_user = self._get_current_owner()
+        
+        # GET /api/health/dashboard - Get health summary
+        if path == '/api/health/dashboard':
+            target_user = user_id or current_user
+            summary = self.health_db.get_dashboard_summary(target_user)
+            self.send_json({'success': True, 'data': summary})
+        
+        # GET /api/health/dashboard/both - Get summary for both users
+        elif path == '/api/health/dashboard/both':
+            arvind_summary = self.health_db.get_dashboard_summary('arvind')
+            deepa_summary = self.health_db.get_dashboard_summary('deepa')
+            self.send_json({
+                'success': True, 
+                'data': {'arvind': arvind_summary, 'deepa': deepa_summary}
+            })
+        
+        # GET /api/health/profile - Get user profile
+        elif path == '/api/health/profile':
+            target_user = user_id or current_user
+            profile = self.health_db.get_profile(target_user)
+            self.send_json({'success': True, 'data': profile})
+        
+        # GET /api/health/weight - Get weight log
+        elif path == '/api/health/weight':
+            days = int(query_params.get('days', ['90'])[0])
+            if user_id:
+                weights = self.health_db.get_weight_log(user_id, days)
+                self.send_json({'success': True, 'data': weights})
+            else:
+                weights = self.health_db.get_all_weight_logs(days)
+                self.send_json({'success': True, 'data': weights})
+        
+        # GET /api/health/workouts - Get workouts
+        elif path == '/api/health/workouts':
+            days = int(query_params.get('days', ['30'])[0])
+            workouts = self.health_db.get_workouts(user_id, days)
+            self.send_json({'success': True, 'data': workouts})
+        
+        # GET /api/health/workouts/{id} - Get specific workout
+        elif path.startswith('/api/health/workouts/') and path.count('/') == 4:
+            workout_id = int(path.split('/')[-1])
+            workout = self.health_db.get_workout(workout_id)
+            if workout:
+                self.send_json({'success': True, 'data': workout})
+            else:
+                self.send_json({'error': 'Workout not found'}, 404)
+        
+        # GET /api/health/workouts/templates - Get workout templates
+        elif path == '/api/health/workouts/templates':
+            templates = self.health_db.get_workout_templates(user_id)
+            self.send_json({'success': True, 'data': templates})
+        
+        # GET /api/health/diet - Get diet log
+        elif path == '/api/health/diet':
+            days = int(query_params.get('days', ['7'])[0])
+            diet = self.health_db.get_diet_log(user_id, days)
+            self.send_json({'success': True, 'data': diet})
+        
+        # GET /api/health/reports - Get blood reports
+        elif path == '/api/health/reports':
+            reports = self.health_db.get_blood_reports(user_id)
+            self.send_json({'success': True, 'data': reports})
+        
+        # GET /api/health/reports/{id} - Get specific report with parameters
+        elif path.startswith('/api/health/reports/'):
+            report_id = int(path.split('/')[-1])
+            report = self.health_db.get_blood_report(report_id)
+            if report:
+                self.send_json({'success': True, 'data': report})
+            else:
+                self.send_json({'error': 'Report not found'}, 404)
+        
+        # GET /api/health/parameters - Get latest parameters for user
+        elif path == '/api/health/parameters':
+            target_user = user_id or current_user
+            params = self.health_db.get_all_parameters_latest(target_user)
+            self.send_json({'success': True, 'data': params})
+        
+        # GET /api/health/parameters/{name} - Get parameter history
+        elif path.startswith('/api/health/parameters/'):
+            param_name = path.split('/')[-1].replace('%20', ' ')
+            target_user = user_id or current_user
+            months = int(query_params.get('months', ['24'])[0])
+            history = self.health_db.get_parameter_history(target_user, param_name, months)
+            self.send_json({'success': True, 'data': history})
+        
+        # GET /api/health/parameter-reference - Get reference ranges
+        elif path == '/api/health/parameter-reference':
+            refs = self.health_db.get_parameter_reference()
+            self.send_json({'success': True, 'data': refs})
+        
+        # GET /api/health/goals - Get health goals
+        elif path == '/api/health/goals':
+            status = query_params.get('status', ['active'])[0]
+            goals = self.health_db.get_goals(user_id, status)
+            self.send_json({'success': True, 'data': goals})
+        
+        else:
+            self.send_json({'error': 'Unknown health endpoint'})
+
+    def handle_health_post(self, path: str, data: dict):
+        """Handle health API POST requests."""
+        if not self._check_private_access():
+            return
+        
+        current_user = self._get_current_owner()
+        user_id = data.get('user_id', current_user)
+        
+        # POST /api/health/profile - Save profile
+        if path == '/api/health/profile':
+            self.health_db.save_profile(user_id, data)
+            self.send_json({'success': True})
+        
+        # POST /api/health/weight - Log weight
+        elif path == '/api/health/weight':
+            weight = data.get('weight')
+            if weight is None:
+                self.send_json({'error': 'Weight required'}, 400)
+                return
+            entry_id = self.health_db.log_weight(user_id, float(weight), data)
+            self.send_json({'success': True, 'id': entry_id})
+        
+        # POST /api/health/workouts - Log workout
+        elif path == '/api/health/workouts':
+            data['user_id'] = user_id
+            workout_id = self.health_db.log_workout(user_id, data)
+            self.send_json({'success': True, 'id': workout_id})
+        
+        # POST /api/health/workouts/templates - Save workout template
+        elif path == '/api/health/workouts/templates':
+            template_id = self.health_db.save_workout_template(user_id, data)
+            self.send_json({'success': True, 'id': template_id})
+        
+        # POST /api/health/diet - Log meal
+        elif path == '/api/health/diet':
+            meal_id = self.health_db.log_meal(user_id, data)
+            self.send_json({'success': True, 'id': meal_id})
+        
+        # POST /api/health/reports/upload - Upload blood report PDF
+        elif path == '/api/health/reports/upload':
+            pdf_path = data.get('pdf_path')
+            report_date = data.get('report_date')
+            
+            if not pdf_path or not report_date:
+                self.send_json({'error': 'pdf_path and report_date required'}, 400)
+                return
+            
+            # Parse the PDF
+            parser = BloodReportParser()
+            result = parser.parse_report(pdf_path)
+            
+            if not result.get('success'):
+                self.send_json({'error': result.get('error', 'Failed to parse PDF')}, 400)
+                return
+            
+            # Store report
+            report_data = {
+                'report_date': report_date,
+                'lab_name': result.get('lab_name', 'Healthians'),
+                'report_type': data.get('report_type', 'full_body'),
+                'pdf_path': pdf_path,
+                'pdf_filename': result.get('pdf_filename'),
+                'extracted_data': result,
+                'notes': data.get('notes')
+            }
+            report_id = self.health_db.add_blood_report(user_id, report_data)
+            
+            # Store extracted parameters
+            if result.get('parameters'):
+                self.health_db.add_blood_parameters(
+                    report_id, user_id, report_date, result['parameters']
+                )
+            
+            self.send_json({
+                'success': True, 
+                'id': report_id,
+                'parameters_extracted': len(result.get('parameters', []))
+            })
+        
+        # POST /api/health/goals - Add goal
+        elif path == '/api/health/goals':
+            goal_id = self.health_db.add_goal(user_id, data)
+            self.send_json({'success': True, 'id': goal_id})
+        
+        else:
+            self.send_json({'error': 'Unknown health endpoint'})
+
     def send_json(self, data: dict, status_code: int = 200):
         """Send JSON response with optional status code."""
         if status_code != 200:
@@ -3192,6 +3703,21 @@ def main():
     # Initialize questions database (local storage - source of truth for tests)
     UnifiedHandler.questions_db = QuestionsDatabase()
     print("✅ Questions database initialized")
+
+    # Initialize finance database (private module)
+    UnifiedHandler.finance_db = FinanceDatabase()
+    print("✅ Finance database initialized")
+
+    # Initialize health database (private module)
+    UnifiedHandler.health_db = HealthDatabase()
+    print("✅ Health database initialized")
+    
+    # Initialize MStock client for portfolio sync
+    UnifiedHandler.mstock_client = MStockClient()
+    if UnifiedHandler.mstock_client.is_configured():
+        print("✅ MStock client initialized (API configured)")
+    else:
+        print("⚠️  MStock client initialized (credentials not configured)")
 
     # Initialize Anthropic client
     api_key = os.environ.get("ANTHROPIC_API_KEY")

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #38a169;
+            --danger: #e53e3e;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background: rgba(26, 54, 93, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--text-primary) !important;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary) !important;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-primary) !important;
+        }
+        
+        .main-content {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .stat-card .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-card .label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-card .value {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+        
+        .stat-card .change {
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        
+        .positive { color: var(--accent); }
+        .negative { color: var(--danger); }
+        
+        .icon-blue { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+        .icon-green { background: rgba(56, 161, 105, 0.2); color: #68d391; }
+        .icon-purple { background: rgba(159, 122, 234, 0.2); color: #b794f4; }
+        .icon-orange { background: rgba(237, 137, 54, 0.2); color: #f6ad55; }
+        .icon-red { background: rgba(229, 62, 62, 0.2); color: #fc8181; }
+        
+        .section-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary-custom {
+            background: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .btn-primary-custom:hover {
+            background: var(--primary-light);
+            color: white;
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .btn-outline-custom:hover {
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+        }
+        
+        .data-table {
+            width: 100%;
+        }
+        
+        .data-table th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            text-align: left;
+        }
+        
+        .data-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+        }
+        
+        .data-table tr:hover {
+            background: rgba(255,255,255,0.02);
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 250px;
+        }
+        
+        .quick-add-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(26, 54, 93, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            z-index: 100;
+        }
+        
+        .quick-add-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(26, 54, 93, 0.5);
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-primary);
+            border-radius: 8px;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--primary-light);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.25);
+        }
+        
+        .form-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-type {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .badge-savings { background: rgba(56, 161, 105, 0.2); color: #68d391; }
+        .badge-fd { background: rgba(159, 122, 234, 0.2); color: #b794f4; }
+        .badge-current { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+        
+        .loading-spinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .stat-card .value {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-wallet2 me-2"></i>Personal Finance
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="finance_dashboard.html">
+                            <i class="bi bi-speedometer2 me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finance_accounts.html">
+                            <i class="bi bi-bank me-1"></i>Accounts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finance_assets.html">
+                            <i class="bi bi-gem me-1"></i>Assets
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finance_stocks.html">
+                            <i class="bi bi-graph-up-arrow me-1"></i>Stocks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="finance_liabilities.html">
+                            <i class="bi bi-credit-card me-1"></i>Liabilities
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="health_dashboard.html">
+                            <i class="bi bi-heart-pulse me-1"></i>Health
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house me-1"></i>Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Net Worth Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="stat-card" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <div class="label" style="color: rgba(255,255,255,0.7);">Total Net Worth</div>
+                            <div class="value" id="netWorth">₹0</div>
+                            <div class="change" id="netWorthChange">
+                                <span class="positive">↑ Loading...</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-light btn-sm" onclick="takeSnapshot()">
+                                <i class="bi bi-camera me-1"></i>Snapshot
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="icon icon-blue"><i class="bi bi-bank"></i></div>
+                    <div class="label">Bank Accounts</div>
+                    <div class="value" id="totalBank">₹0</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="icon icon-purple"><i class="bi bi-gem"></i></div>
+                    <div class="label">Assets</div>
+                    <div class="value" id="totalAssets">₹0</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="icon icon-green"><i class="bi bi-graph-up"></i></div>
+                    <div class="label">Stocks</div>
+                    <div class="value" id="totalStocks">₹0</div>
+                    <div class="change" id="stockPnL"></div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="icon icon-red"><i class="bi bi-credit-card-2-back"></i></div>
+                    <div class="label">Liabilities</div>
+                    <div class="value" id="totalLiabilities">₹0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="section-title">
+                        <i class="bi bi-pie-chart"></i>Asset Allocation
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="allocationChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="section-title">
+                        <i class="bi bi-graph-up"></i>Net Worth Trend
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="section-title mb-0">
+                            <i class="bi bi-bank"></i>Bank Accounts
+                        </div>
+                        <a href="finance_accounts.html" class="btn btn-outline-custom btn-sm">View All</a>
+                    </div>
+                    <div id="accountsList">
+                        <div class="loading-spinner">
+                            <div class="spinner-border text-secondary" role="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="section-title mb-0">
+                            <i class="bi bi-graph-up-arrow"></i>Top Stocks
+                        </div>
+                        <a href="finance_stocks.html" class="btn btn-outline-custom btn-sm">View All</a>
+                    </div>
+                    <div id="stocksList">
+                        <div class="loading-spinner">
+                            <div class="spinner-border text-secondary" role="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Add Button -->
+    <button class="quick-add-btn" data-bs-toggle="modal" data-bs-target="#quickAddModal">
+        <i class="bi bi-plus"></i>
+    </button>
+
+    <!-- Quick Add Modal -->
+    <div class="modal fade" id="quickAddModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quick Add</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-grid gap-2">
+                        <a href="finance_accounts.html?action=add" class="btn btn-outline-custom">
+                            <i class="bi bi-bank me-2"></i>Add Bank Account
+                        </a>
+                        <a href="finance_assets.html?action=add" class="btn btn-outline-custom">
+                            <i class="bi bi-gem me-2"></i>Add Asset
+                        </a>
+                        <a href="finance_stocks.html?action=add" class="btn btn-outline-custom">
+                            <i class="bi bi-graph-up me-2"></i>Add Stock
+                        </a>
+                        <a href="finance_liabilities.html?action=add" class="btn btn-outline-custom">
+                            <i class="bi bi-credit-card me-2"></i>Add Liability
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let allocationChart = null;
+        let trendChart = null;
+
+        // Format currency
+        function formatCurrency(amount) {
+            if (amount === null || amount === undefined) return '₹0';
+            const absAmount = Math.abs(amount);
+            if (absAmount >= 10000000) {
+                return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+            } else if (absAmount >= 100000) {
+                return '₹' + (amount / 100000).toFixed(2) + ' L';
+            } else {
+                return '₹' + amount.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+            }
+        }
+
+        // Load dashboard data
+        async function loadDashboard() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/dashboard`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    const data = result.data;
+                    
+                    // Update stat cards
+                    document.getElementById('netWorth').textContent = formatCurrency(data.net_worth);
+                    document.getElementById('totalBank').textContent = formatCurrency(data.total_bank_balance);
+                    document.getElementById('totalAssets').textContent = formatCurrency(data.total_assets);
+                    document.getElementById('totalStocks').textContent = formatCurrency(data.total_stocks);
+                    document.getElementById('totalLiabilities').textContent = formatCurrency(data.total_liabilities);
+                    
+                    // Stock P&L
+                    const pnl = data.stock_pnl || 0;
+                    const pnlEl = document.getElementById('stockPnL');
+                    if (pnl >= 0) {
+                        pnlEl.innerHTML = `<span class="positive">↑ ${formatCurrency(pnl)} profit</span>`;
+                    } else {
+                        pnlEl.innerHTML = `<span class="negative">↓ ${formatCurrency(Math.abs(pnl))} loss</span>`;
+                    }
+                    
+                    // Update allocation chart
+                    updateAllocationChart(data.allocation);
+                }
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+            }
+        }
+
+        // Load accounts list
+        async function loadAccounts() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/accounts`);
+                const result = await response.json();
+                
+                const container = document.getElementById('accountsList');
+                
+                if (result.success && result.data.length > 0) {
+                    const top5 = result.data.slice(0, 5);
+                    container.innerHTML = `
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Type</th>
+                                    <th class="text-end">Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${top5.map(acc => `
+                                    <tr>
+                                        <td>
+                                            <div>${acc.account_name}</div>
+                                            <small class="text-secondary">${acc.bank_name}</small>
+                                        </td>
+                                        <td><span class="badge-type badge-${acc.account_type}">${acc.account_type.toUpperCase()}</span></td>
+                                        <td class="text-end">${formatCurrency(acc.current_balance)}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                } else {
+                    container.innerHTML = `
+                        <div class="text-center text-secondary py-4">
+                            <i class="bi bi-bank" style="font-size: 2rem;"></i>
+                            <p class="mt-2 mb-0">No accounts yet</p>
+                            <a href="finance_accounts.html?action=add" class="btn btn-primary-custom btn-sm mt-2">Add Account</a>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading accounts:', error);
+            }
+        }
+
+        // Load stocks list
+        async function loadStocks() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/stocks`);
+                const result = await response.json();
+                
+                const container = document.getElementById('stocksList');
+                
+                if (result.success && result.data.length > 0) {
+                    // Sort by current value desc
+                    const sorted = result.data.sort((a, b) => (b.current_value || 0) - (a.current_value || 0));
+                    const top5 = sorted.slice(0, 5);
+                    
+                    container.innerHTML = `
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Stock</th>
+                                    <th class="text-end">Value</th>
+                                    <th class="text-end">P&L</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${top5.map(stock => {
+                                    const pnlClass = (stock.profit_loss || 0) >= 0 ? 'positive' : 'negative';
+                                    const pnlSign = (stock.profit_loss || 0) >= 0 ? '+' : '';
+                                    return `
+                                        <tr>
+                                            <td>
+                                                <div>${stock.symbol}</div>
+                                                <small class="text-secondary">${stock.quantity} shares</small>
+                                            </td>
+                                            <td class="text-end">${formatCurrency(stock.current_value)}</td>
+                                            <td class="text-end">
+                                                <span class="${pnlClass}">
+                                                    ${pnlSign}${formatCurrency(stock.profit_loss)}
+                                                    <br>
+                                                    <small>(${pnlSign}${(stock.profit_loss_percent || 0).toFixed(1)}%)</small>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                } else {
+                    container.innerHTML = `
+                        <div class="text-center text-secondary py-4">
+                            <i class="bi bi-graph-up" style="font-size: 2rem;"></i>
+                            <p class="mt-2 mb-0">No stocks yet</p>
+                            <a href="finance_stocks.html?action=add" class="btn btn-primary-custom btn-sm mt-2">Add Stock</a>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading stocks:', error);
+            }
+        }
+
+        // Load net worth history
+        async function loadNetWorthHistory() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/net-worth-history?months=12`);
+                const result = await response.json();
+                
+                if (result.success && result.data.length > 0) {
+                    const data = result.data.reverse(); // Oldest first
+                    updateTrendChart(data);
+                    
+                    // Calculate change from oldest to newest
+                    if (data.length >= 2) {
+                        const oldest = data[0].net_worth || 0;
+                        const newest = data[data.length - 1].net_worth || 0;
+                        const change = newest - oldest;
+                        const changePercent = oldest > 0 ? (change / oldest * 100) : 0;
+                        
+                        const changeEl = document.getElementById('netWorthChange');
+                        if (change >= 0) {
+                            changeEl.innerHTML = `<span class="positive">↑ ${formatCurrency(change)} (${changePercent.toFixed(1)}%) from first snapshot</span>`;
+                        } else {
+                            changeEl.innerHTML = `<span class="negative">↓ ${formatCurrency(Math.abs(change))} (${Math.abs(changePercent).toFixed(1)}%) from first snapshot</span>`;
+                        }
+                    }
+                } else {
+                    document.getElementById('netWorthChange').innerHTML = '<span class="text-secondary">No historical data yet</span>';
+                }
+            } catch (error) {
+                console.error('Error loading history:', error);
+            }
+        }
+
+        // Update allocation chart
+        function updateAllocationChart(allocation) {
+            const ctx = document.getElementById('allocationChart').getContext('2d');
+            
+            // Filter out zero/negative values and liabilities
+            const labels = [];
+            const values = [];
+            const colors = {
+                'Bank Accounts': '#60a5fa',
+                'Assets': '#b794f4',
+                'Stocks': '#68d391'
+            };
+            const bgColors = [];
+            
+            for (const [key, value] of Object.entries(allocation)) {
+                if (value > 0 && key !== 'Liabilities') {
+                    labels.push(key);
+                    values.push(value);
+                    bgColors.push(colors[key] || '#94a3b8');
+                }
+            }
+            
+            if (allocationChart) {
+                allocationChart.destroy();
+            }
+            
+            allocationChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: values,
+                        backgroundColor: bgColors,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#94a3b8',
+                                padding: 15,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + formatCurrency(context.raw);
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+
+        // Update trend chart
+        function updateTrendChart(data) {
+            const ctx = document.getElementById('trendChart').getContext('2d');
+            
+            const labels = data.map(d => {
+                const date = new Date(d.snapshot_date);
+                return date.toLocaleDateString('en-IN', { month: 'short', year: '2-digit' });
+            });
+            const values = data.map(d => d.net_worth || 0);
+            
+            if (trendChart) {
+                trendChart.destroy();
+            }
+            
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Net Worth',
+                        data: values,
+                        borderColor: '#60a5fa',
+                        backgroundColor: 'rgba(96, 165, 250, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return formatCurrency(context.raw);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(255,255,255,0.05)'
+                            },
+                            ticks: {
+                                color: '#94a3b8'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(255,255,255,0.05)'
+                            },
+                            ticks: {
+                                color: '#94a3b8',
+                                callback: function(value) {
+                                    return formatCurrency(value);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Take net worth snapshot
+        async function takeSnapshot() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/net-worth-snapshot`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert('Net worth snapshot saved!');
+                    loadNetWorthHistory();
+                } else {
+                    alert('Error: ' + (result.error || 'Failed to save snapshot'));
+                }
+            } catch (error) {
+                console.error('Error taking snapshot:', error);
+                alert('Error taking snapshot');
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboard();
+            loadAccounts();
+            loadStocks();
+            loadNetWorthHistory();
+        });
+    </script>
+</body>
+</html>
+

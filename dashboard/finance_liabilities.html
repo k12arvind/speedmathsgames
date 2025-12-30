@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liabilities - Personal Finance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root { --primary: #1a365d; --bg-dark: #0f172a; --bg-card: #1e293b; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --danger: #e53e3e; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%); color: var(--text-primary); min-height: 100vh; }
+        .navbar { background: rgba(26, 54, 93, 0.95) !important; }
+        .navbar-brand { font-weight: 700; color: var(--text-primary) !important; }
+        .nav-link { color: var(--text-secondary) !important; }
+        .nav-link:hover, .nav-link.active { color: var(--text-primary) !important; }
+        .main-content { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+        .page-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        .btn-primary-custom { background: var(--primary); border: none; padding: 0.5rem 1rem; border-radius: 8px; color: white; }
+        .total-card { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; }
+        .total-label { color: rgba(255,255,255,0.7); font-size: 0.875rem; }
+        .total-value { font-size: 2rem; font-weight: 700; }
+        .liability-card { background: var(--bg-card); border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; border-left: 4px solid var(--danger); }
+        .liability-name { font-size: 1.25rem; font-weight: 600; }
+        .liability-meta { font-size: 0.875rem; color: var(--text-secondary); }
+        .liability-balance { font-size: 1.5rem; font-weight: 700; color: #fca5a5; }
+        .modal-content { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; }
+        .modal-header { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .form-control, .form-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); border-radius: 8px; }
+        .form-control:focus, .form-select:focus { background: rgba(255,255,255,0.08); border-color: #2c5282; color: var(--text-primary); }
+        .form-label { color: var(--text-secondary); font-size: 0.875rem; }
+        .empty-state { text-align: center; padding: 3rem; color: var(--text-secondary); }
+        .badge-type { padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="finance_dashboard.html"><i class="bi bi-wallet2 me-2"></i>Personal Finance</a>
+            <div class="navbar-nav ms-auto flex-row gap-3">
+                <a class="nav-link" href="finance_dashboard.html"><i class="bi bi-speedometer2"></i></a>
+                <a class="nav-link" href="finance_accounts.html"><i class="bi bi-bank"></i></a>
+                <a class="nav-link" href="finance_assets.html"><i class="bi bi-gem"></i></a>
+                <a class="nav-link" href="finance_stocks.html"><i class="bi bi-graph-up-arrow"></i></a>
+                <a class="nav-link" href="index.html"><i class="bi bi-house"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title"><i class="bi bi-credit-card-2-back me-2"></i>Liabilities</h1>
+            <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addLiabilityModal">
+                <i class="bi bi-plus-lg me-1"></i>Add Liability
+            </button>
+        </div>
+
+        <div class="total-card">
+            <div class="total-label">Total Outstanding</div>
+            <div class="total-value" id="totalLiabilities">₹0</div>
+        </div>
+
+        <div id="liabilitiesList">
+            <div class="empty-state"><div class="spinner-border text-secondary"></div></div>
+        </div>
+    </div>
+
+    <!-- Add Liability Modal -->
+    <div class="modal fade" id="addLiabilityModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Liability</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="liabilityForm">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Type *</label>
+                                <select class="form-select" id="liabilityType" required>
+                                    <option value="home_loan">Home Loan</option>
+                                    <option value="car_loan">Car Loan</option>
+                                    <option value="personal_loan">Personal Loan</option>
+                                    <option value="credit_card">Credit Card</option>
+                                    <option value="education_loan">Education Loan</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Name *</label>
+                                <input type="text" class="form-control" id="liabilityName" required placeholder="e.g., HDFC Home Loan">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Lender</label>
+                                <input type="text" class="form-control" id="lender" placeholder="Bank/Institution">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Principal Amount</label>
+                                <input type="number" class="form-control" id="principal" step="0.01">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Outstanding Balance *</label>
+                                <input type="number" class="form-control" id="outstanding" step="0.01" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Interest Rate (%)</label>
+                                <input type="number" class="form-control" id="interestRate" step="0.01">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">EMI Amount</label>
+                                <input type="number" class="form-control" id="emi" step="0.01">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Owner</label>
+                                <select class="form-select" id="liabilityOwner">
+                                    <option value="arvind">Arvind</option>
+                                    <option value="deepa">Deepa</option>
+                                    <option value="joint">Joint</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Notes</label>
+                                <textarea class="form-control" id="liabilityNotes" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary-custom">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+
+        function formatCurrency(amount) {
+            if (!amount) return '₹0';
+            if (Math.abs(amount) >= 10000000) return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+            if (Math.abs(amount) >= 100000) return '₹' + (amount / 100000).toFixed(2) + ' L';
+            return '₹' + amount.toLocaleString('en-IN');
+        }
+
+        async function loadLiabilities() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/liabilities`);
+                const result = await response.json();
+                const container = document.getElementById('liabilitiesList');
+                
+                if (result.success && result.data.length > 0) {
+                    const total = result.data.reduce((sum, l) => sum + (l.outstanding_balance || 0), 0);
+                    document.getElementById('totalLiabilities').textContent = formatCurrency(total);
+                    
+                    const typeNames = { home_loan: 'Home Loan', car_loan: 'Car Loan', personal_loan: 'Personal Loan', credit_card: 'Credit Card', education_loan: 'Education Loan', other: 'Other' };
+                    
+                    container.innerHTML = result.data.map(l => `
+                        <div class="liability-card">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <span class="badge-type">${typeNames[l.liability_type] || l.liability_type}</span>
+                                    <div class="liability-name mt-2">${l.name}</div>
+                                    <div class="liability-meta">${l.lender || ''} • ${l.owner}</div>
+                                    ${l.interest_rate ? `<div class="liability-meta">Interest: ${l.interest_rate}%</div>` : ''}
+                                    ${l.emi_amount ? `<div class="liability-meta">EMI: ${formatCurrency(l.emi_amount)}</div>` : ''}
+                                </div>
+                                <div class="text-end">
+                                    <div class="liability-balance">${formatCurrency(l.outstanding_balance)}</div>
+                                    ${l.principal_amount ? `<div class="liability-meta">of ${formatCurrency(l.principal_amount)}</div>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <i class="bi bi-emoji-smile" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3">No Liabilities!</h5>
+                            <p>Great! You have no recorded liabilities</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        document.getElementById('liabilityForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = {
+                liability_type: document.getElementById('liabilityType').value,
+                name: document.getElementById('liabilityName').value,
+                lender: document.getElementById('lender').value,
+                principal_amount: document.getElementById('principal').value ? parseFloat(document.getElementById('principal').value) : null,
+                outstanding_balance: parseFloat(document.getElementById('outstanding').value),
+                interest_rate: document.getElementById('interestRate').value ? parseFloat(document.getElementById('interestRate').value) : null,
+                emi_amount: document.getElementById('emi').value ? parseFloat(document.getElementById('emi').value) : null,
+                owner: document.getElementById('liabilityOwner').value,
+                notes: document.getElementById('liabilityNotes').value
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/liabilities`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (result.success || result.id) {
+                    bootstrap.Modal.getInstance(document.getElementById('addLiabilityModal')).hide();
+                    document.getElementById('liabilityForm').reset();
+                    loadLiabilities();
+                }
+            } catch (error) {
+                alert('Error adding liability');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', loadLiabilities);
+    </script>
+</body>
+</html>
+

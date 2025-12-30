@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets - Personal Finance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root { --primary: #1a365d; --bg-dark: #0f172a; --bg-card: #1e293b; --text-primary: #f1f5f9; --text-secondary: #94a3b8; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%); color: var(--text-primary); min-height: 100vh; }
+        .navbar { background: rgba(26, 54, 93, 0.95) !important; }
+        .navbar-brand { font-weight: 700; color: var(--text-primary) !important; }
+        .nav-link { color: var(--text-secondary) !important; }
+        .nav-link:hover, .nav-link.active { color: var(--text-primary) !important; }
+        .main-content { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+        .page-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        .btn-primary-custom { background: var(--primary); border: none; padding: 0.5rem 1rem; border-radius: 8px; color: white; }
+        .section-card { background: var(--bg-card); border-radius: 16px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 1.5rem; }
+        .section-title { font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem; }
+        .asset-card { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 1rem; margin-bottom: 0.75rem; }
+        .asset-name { font-weight: 600; }
+        .asset-meta { font-size: 0.875rem; color: var(--text-secondary); }
+        .asset-value { font-size: 1.25rem; font-weight: 700; text-align: right; }
+        .modal-content { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; }
+        .modal-header { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .form-control, .form-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); border-radius: 8px; }
+        .form-control:focus, .form-select:focus { background: rgba(255,255,255,0.08); border-color: #2c5282; color: var(--text-primary); }
+        .form-label { color: var(--text-secondary); font-size: 0.875rem; }
+        .empty-state { text-align: center; padding: 3rem; color: var(--text-secondary); }
+        .badge-type { padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; }
+        .badge-real_estate { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+        .badge-gold { background: rgba(234, 179, 8, 0.2); color: #fde047; }
+        .badge-mutual_fund { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; }
+        .badge-ppf { background: rgba(20, 184, 166, 0.2); color: #5eead4; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="finance_dashboard.html"><i class="bi bi-wallet2 me-2"></i>Personal Finance</a>
+            <div class="navbar-nav ms-auto flex-row gap-3">
+                <a class="nav-link" href="finance_dashboard.html"><i class="bi bi-speedometer2"></i></a>
+                <a class="nav-link" href="finance_accounts.html"><i class="bi bi-bank"></i></a>
+                <a class="nav-link active" href="finance_assets.html"><i class="bi bi-gem"></i></a>
+                <a class="nav-link" href="finance_stocks.html"><i class="bi bi-graph-up-arrow"></i></a>
+                <a class="nav-link" href="index.html"><i class="bi bi-house"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="page-header">
+            <h1 class="page-title"><i class="bi bi-gem me-2"></i>Assets</h1>
+            <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addAssetModal">
+                <i class="bi bi-plus-lg me-1"></i>Add Asset
+            </button>
+        </div>
+
+        <div id="assetsList">
+            <div class="empty-state"><div class="spinner-border text-secondary"></div></div>
+        </div>
+    </div>
+
+    <!-- Add Asset Modal -->
+    <div class="modal fade" id="addAssetModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Asset</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="assetForm">
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Asset Type *</label>
+                                <select class="form-select" id="assetType" required>
+                                    <option value="real_estate">Real Estate</option>
+                                    <option value="gold">Gold</option>
+                                    <option value="silver">Silver</option>
+                                    <option value="mutual_fund">Mutual Fund</option>
+                                    <option value="ppf">PPF</option>
+                                    <option value="epf">EPF</option>
+                                    <option value="nps">NPS</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Name *</label>
+                                <input type="text" class="form-control" id="assetName" required placeholder="e.g., Gold Chain, Flat in Mumbai">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Purchase Price</label>
+                                <input type="number" class="form-control" id="purchasePrice" step="0.01">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Current Value *</label>
+                                <input type="number" class="form-control" id="currentValue" step="0.01" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Quantity (grams/units)</label>
+                                <input type="number" class="form-control" id="quantity" step="0.01">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Owner</label>
+                                <select class="form-select" id="assetOwner">
+                                    <option value="arvind">Arvind</option>
+                                    <option value="deepa">Deepa</option>
+                                    <option value="joint">Joint</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Location / Details</label>
+                                <input type="text" class="form-control" id="location" placeholder="Bank locker, Address, etc.">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Notes</label>
+                                <textarea class="form-control" id="assetNotes" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary-custom">Save Asset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+
+        function formatCurrency(amount) {
+            if (!amount) return '₹0';
+            if (Math.abs(amount) >= 10000000) return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+            if (Math.abs(amount) >= 100000) return '₹' + (amount / 100000).toFixed(2) + ' L';
+            return '₹' + amount.toLocaleString('en-IN');
+        }
+
+        async function loadAssets() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/assets`);
+                const result = await response.json();
+                const container = document.getElementById('assetsList');
+                
+                if (result.success && result.data.length > 0) {
+                    const grouped = {};
+                    result.data.forEach(a => {
+                        if (!grouped[a.asset_type]) grouped[a.asset_type] = [];
+                        grouped[a.asset_type].push(a);
+                    });
+                    
+                    const typeNames = { real_estate: 'Real Estate', gold: 'Gold', silver: 'Silver', mutual_fund: 'Mutual Funds', ppf: 'PPF', epf: 'EPF', nps: 'NPS', other: 'Other' };
+                    
+                    let html = '';
+                    for (const [type, assets] of Object.entries(grouped)) {
+                        const total = assets.reduce((sum, a) => sum + (a.current_value || 0), 0);
+                        html += `
+                            <div class="section-card">
+                                <div class="section-title d-flex justify-content-between">
+                                    <span>${typeNames[type] || type}</span>
+                                    <span class="text-secondary">${formatCurrency(total)}</span>
+                                </div>
+                                ${assets.map(a => `
+                                    <div class="asset-card d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="asset-name">${a.name}</div>
+                                            <div class="asset-meta">${a.owner} ${a.location ? '• ' + a.location : ''}</div>
+                                            ${a.quantity ? `<div class="asset-meta">${a.quantity} ${type === 'gold' || type === 'silver' ? 'grams' : 'units'}</div>` : ''}
+                                        </div>
+                                        <div class="asset-value">${formatCurrency(a.current_value)}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        `;
+                    }
+                    container.innerHTML = html;
+                } else {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <i class="bi bi-gem" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3">No Assets Yet</h5>
+                            <p>Add your first asset to start tracking</p>
+                            <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#addAssetModal">Add Asset</button>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        document.getElementById('assetForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = {
+                asset_type: document.getElementById('assetType').value,
+                name: document.getElementById('assetName').value,
+                purchase_price: document.getElementById('purchasePrice').value ? parseFloat(document.getElementById('purchasePrice').value) : null,
+                current_value: parseFloat(document.getElementById('currentValue').value),
+                quantity: document.getElementById('quantity').value ? parseFloat(document.getElementById('quantity').value) : null,
+                owner: document.getElementById('assetOwner').value,
+                location: document.getElementById('location').value,
+                notes: document.getElementById('assetNotes').value
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/assets`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (result.success || result.id) {
+                    bootstrap.Modal.getInstance(document.getElementById('addAssetModal')).hide();
+                    document.getElementById('assetForm').reset();
+                    loadAssets();
+                } else {
+                    alert('Error: ' + (result.error || 'Failed'));
+                }
+            } catch (error) {
+                alert('Error saving asset');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', loadAssets);
+    </script>
+</body>
+</html>
+
