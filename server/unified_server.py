@@ -300,7 +300,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 'picture': session.get('picture'),
                 'role': profile['role'],
                 'can_view_all_users': profile['can_view_all_users'],
-                'can_edit_settings': profile['can_edit_settings']
+                'can_edit_settings': profile['can_edit_settings'],
+                'can_access_private_modules': profile.get('can_access_private_modules', False)
             }
         else:
             # Unregistered user - use email prefix as user_id
