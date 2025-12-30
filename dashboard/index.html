@@ -149,11 +149,15 @@
         .card-math::before { background: var(--gradient-primary); }
         .card-diary::before { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); }
         .card-mock::before { background: var(--gradient-orange); }
+        .card-finance::before { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .card-health::before { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
 
         .card-gk:hover { --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2); }
         .card-math:hover { --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.2); }
         .card-diary:hover { --shadow-glow: 0 0 40px rgba(236, 72, 153, 0.2); }
         .card-mock:hover { --shadow-glow: 0 0 40px rgba(249, 115, 22, 0.2); }
+        .card-finance:hover { --shadow-glow: 0 0 40px rgba(16, 185, 129, 0.2); }
+        .card-health:hover { --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.2); }
 
         .module-header {
             display: flex;
@@ -235,6 +239,8 @@
         .card-math .stat-value { color: var(--accent-primary); }
         .card-diary .stat-value { color: var(--accent-pink); }
         .card-mock .stat-value { color: var(--accent-orange); }
+        .card-finance .stat-value { color: #10b981; }
+        .card-health .stat-value { color: #06b6d4; }
 
         .stat-label {
             font-size: 0.6875rem;
@@ -264,6 +270,8 @@
         .card-math .module-cta { background: var(--gradient-primary); }
         .card-diary .module-cta { background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); }
         .card-mock .module-cta { background: var(--gradient-orange); }
+        .card-finance .module-cta { background: linear-gradient(135deg, #10b981 0%, #047857 100%); }
+        .card-health .module-cta { background: linear-gradient(135deg, #06b6d4 0%, #0e7490 100%); }
 
         .module-cta:hover {
             transform: translateY(-2px);
@@ -513,6 +521,70 @@
                 Analyze Mocks <span class="arrow">→</span>
             </button>
         </a>
+
+        <!-- Personal Finance Module (Private - Parents Only) -->
+        <a href="finance_dashboard.html" class="module-card card-finance private-module" id="finance-module" style="display: none;">
+            <div class="module-header">
+                <div class="module-icon">💰</div>
+                <div>
+                    <div class="module-title">Personal Finance</div>
+                    <div class="module-subtitle">Wealth Management</div>
+                </div>
+            </div>
+            <div class="module-description">
+                Track bank accounts, stock portfolio, assets, and recurring bills with m.Stock integration.
+            </div>
+            <ul class="module-features">
+                <li>m.Stock portfolio sync</li>
+                <li>Bill reminders & tracking</li>
+                <li>Net worth analytics</li>
+            </ul>
+            <div class="module-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="finance-networth">-</div>
+                    <div class="stat-label">Net Worth</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="finance-bills">-</div>
+                    <div class="stat-label">Active Bills</div>
+                </div>
+            </div>
+            <button class="module-cta">
+                Open Finance <span class="arrow">→</span>
+            </button>
+        </a>
+
+        <!-- Health Tracker Module (Private - Parents Only) -->
+        <a href="health_dashboard.html" class="module-card card-health private-module" id="health-module" style="display: none;">
+            <div class="module-header">
+                <div class="module-icon">🏋️</div>
+                <div>
+                    <div class="module-title">Health & Fitness</div>
+                    <div class="module-subtitle">Wellness Tracking</div>
+                </div>
+            </div>
+            <div class="module-description">
+                Track workouts, weight, diet, and blood test reports with OCR extraction.
+            </div>
+            <ul class="module-features">
+                <li>Workout & weight logging</li>
+                <li>Blood report analysis</li>
+                <li>Health trend tracking</li>
+            </ul>
+            <div class="module-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="health-workouts">-</div>
+                    <div class="stat-label">Workouts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="health-reports">-</div>
+                    <div class="stat-label">Blood Reports</div>
+                </div>
+            </div>
+            <button class="module-cta">
+                Open Health <span class="arrow">→</span>
+            </button>
+        </a>
     </div>
 
     <div class="footer-links">
@@ -618,6 +690,48 @@
                     }
                 } catch (e) {
                     console.log('Mock stats not available');
+                }
+
+                // Show private modules for parents (Arvind & Deepa only)
+                if (user.can_access_private_modules) {
+                    document.getElementById('finance-module').style.display = 'flex';
+                    document.getElementById('health-module').style.display = 'flex';
+                    
+                    // Load Finance stats
+                    try {
+                        const financeResponse = await fetch(`${API_BASE}/api/finance/dashboard`);
+                        const financeData = await financeResponse.json();
+                        if (financeData.data) {
+                            const netWorth = financeData.data.net_worth || 0;
+                            if (netWorth >= 10000000) {
+                                document.getElementById('finance-networth').textContent = '₹' + (netWorth / 10000000).toFixed(1) + 'Cr';
+                            } else if (netWorth >= 100000) {
+                                document.getElementById('finance-networth').textContent = '₹' + (netWorth / 100000).toFixed(1) + 'L';
+                            } else {
+                                document.getElementById('finance-networth').textContent = '₹' + Math.round(netWorth).toLocaleString();
+                            }
+                        }
+                        
+                        const billsResponse = await fetch(`${API_BASE}/api/finance/bills`);
+                        const billsData = await billsResponse.json();
+                        if (billsData.data) {
+                            document.getElementById('finance-bills').textContent = billsData.data.length || 0;
+                        }
+                    } catch (e) {
+                        console.log('Finance stats not available');
+                    }
+                    
+                    // Load Health stats
+                    try {
+                        const healthResponse = await fetch(`${API_BASE}/api/health/dashboard`);
+                        const healthData = await healthResponse.json();
+                        if (healthData.data) {
+                            document.getElementById('health-workouts').textContent = healthData.data.total_workouts || 0;
+                            document.getElementById('health-reports').textContent = healthData.data.total_reports || 0;
+                        }
+                    } catch (e) {
+                        console.log('Health stats not available');
+                    }
                 }
 
             } catch (error) {
