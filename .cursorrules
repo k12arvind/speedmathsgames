@@ -74,11 +74,28 @@ This is a CLAT (Common Law Admission Test) exam preparation system that:
 - ✅ CAN run git pull on Mac Mini
 - ✅ CAN check server logs on Mac Mini
 
+### Network Configuration
+| Device | IP Address | Username | Notes |
+|--------|------------|----------|-------|
+| **MacBook Pro** | `192.168.18.3` | `arvind` | Development machine |
+| **Mac Mini** | `192.168.18.4` | `arvindkumar` | Production server |
+
 ### Mac Mini Connection Details
-- **Hostname:** macmini.local (or use IP if hostname doesn't resolve)
+- **IP Address:** 192.168.18.4
+- **Hostname:** macmini.local (fallback, may not resolve)
+- **SSH Config Alias:** `mac-mini` (preferred - use `ssh mac-mini`)
 - **Username:** arvindkumar
 - **Project Path:** ~/clat_preparation
 - **Server Log:** /tmp/server.log
+- **Production URL:** http://speedmathsgames.com
+
+### SSH Config (already configured in ~/.ssh/config)
+```
+Host mac-mini
+    HostName 192.168.18.4
+    User arvindkumar
+    IdentityFile ~/.ssh/id_rsa
+```
 
 ### Deployment Workflow (Automated)
 1. Develop on MacBook Pro (username: arvind)
@@ -89,8 +106,8 @@ This is a CLAT (Common Law Admission Test) exam preparation system that:
 
 ### Server Restart Commands (Mac Mini)
 ```bash
-# SSH to Mac Mini
-ssh arvindkumar@macmini.local
+# SSH to Mac Mini (use configured alias)
+ssh mac-mini
 
 # Pull latest changes
 cd ~/clat_preparation && git pull
@@ -101,7 +118,14 @@ sleep 2
 nohup ~/clat_preparation/venv_clat/bin/python ~/clat_preparation/server/unified_server.py > /tmp/server.log 2>&1 &
 
 # Verify
-sleep 3 && curl -s http://localhost:8001/api/test
+sleep 3 && curl -s http://localhost:8001/api/stats
+```
+
+### One-Line Deployment Command
+```bash
+# From MacBook Pro - commit, push, and deploy to Mac Mini
+cd ~/clat_preparation && git add -A && git commit -m "Update" && git push && \
+ssh mac-mini "cd ~/clat_preparation && git pull && pkill -f unified_server.py; sleep 2; nohup ~/clat_preparation/venv_clat/bin/python ~/clat_preparation/server/unified_server.py > /tmp/server.log 2>&1 &"
 ```
 
 ### Cross-Machine Compatibility
@@ -455,6 +479,39 @@ Processed PDF (cards in Anki)
     ▼ [User revises PDF]
 Revised PDF (green checkmark)
 ```
+
+## Multi-User Family System (December 2025)
+
+### User Roles (defined in server/user_roles.py)
+| Email | User ID | Name | Role | Permissions |
+|-------|---------|------|------|-------------|
+| `k12arvind@gmail.com` | arvind | Arvind | admin | View all, edit all settings |
+| `deepay2019@gmail.com` | deepa | Deepa | parent | View all, edit all settings |
+| `20saanvi12@gmail.com` | saanvi | Saanvi | child | Own data only |
+| `20navya12@gmail.com` | navya | Navya | child | Own data only |
+
+### Admin/Parent Features
+- **Family Dashboard:** `/family_dashboard.html` - Overview of all children's data
+- **Admin API Endpoints:**
+  - `GET /api/admin/family` - List all family members
+  - `GET /api/admin/children` - List children with summary stats
+  - `GET /api/admin/diary/all` - All children's diary entries
+  - `GET /api/admin/diary/{user_id}` - Specific child's diary
+  - `GET /api/admin/math/all` - All children's math performance
+  - `GET /api/admin/settings/{user_id}` - Get child's math settings
+  - `POST /api/admin/settings/{user_id}` - Update child's math settings
+
+### Per-User Data Isolation
+- All user-specific data is keyed by `user_id`
+- Diary entries, math scores, assessments are per-user
+- Math topic settings (enabled/disabled, difficulty) are per-user
+- Children can only see their own data
+
+### Authentication Flow
+1. User logs in via Google OAuth
+2. Email is matched to `USER_ROLES` in `server/user_roles.py`
+3. Role determines which pages/features are visible
+4. Dynamic user_id flows through all API calls
 
 ## When in Doubt
 1. Read PROJECT_HANDOFF.md first
