@@ -328,6 +328,84 @@
             background-clip: text;
         }
 
+        /* User Indicator */
+        #user-indicator {
+            position: fixed;
+            top: var(--space-md);
+            right: var(--space-md);
+            display: none;
+            align-items: center;
+            gap: var(--space-sm);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xs) var(--space-sm) var(--space-xs) var(--space-xs);
+            z-index: 1000;
+            font-size: 0.875rem;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: white;
+        }
+
+        .user-name {
+            color: var(--text-primary);
+            font-weight: 500;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .logout-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--accent-danger);
+        }
+
+        .login-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-xs) var(--space-sm);
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            #user-indicator {
+                top: auto;
+                bottom: var(--space-md);
+                right: var(--space-md);
+            }
+            
+            .user-name {
+                display: none;
+            }
+        }
+
         /* Loading Overlay */
         .loading-overlay {
             position: fixed;
@@ -365,6 +443,9 @@
     </style>
 </head>
 <body>
+    <!-- User Indicator (top right corner) -->
+    <div id="user-indicator"></div>
+
     <div class="loading-overlay" id="loading-overlay">
         <div class="loading-content">
             <div class="loading-spinner"></div>
