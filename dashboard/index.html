@@ -516,6 +516,7 @@
     </div>
 
     <div class="footer-links">
+        <a href="family_dashboard.html" class="footer-link" id="admin-link" style="display: none;">👨‍👩‍👧‍👧 Family Dashboard</a>
         <a href="math_admin.html" class="footer-link">⚙️ Admin Settings</a>
         <a href="analytics.html" class="footer-link">📈 Detailed Analytics</a>
         <a href="assessment-progress.html" class="footer-link">🔄 Processing Status</a>
@@ -558,6 +559,11 @@
 
             const userId = user.user_id;
             document.getElementById('loading-overlay').style.display = 'flex';
+            
+            // Show admin link for admin/parent users
+            if (user.can_view_all_users || user.role === 'admin' || user.role === 'parent') {
+                document.getElementById('admin-link').style.display = 'flex';
+            }
 
             try {
                 // Load Math stats

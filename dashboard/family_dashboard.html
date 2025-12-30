@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Family Dashboard - Admin</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        /* Page Layout */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-lg);
+        }
+
+        /* Header */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        .dashboard-title {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .dashboard-title h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .admin-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Date Display */
+        .date-display {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Family Overview Cards */
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        .member-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .member-card.saanvi::before { background: linear-gradient(135deg, #ec4899, #f472b6); }
+        .member-card.navya::before { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+
+        .member-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .member-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .member-card.saanvi .member-avatar { background: linear-gradient(135deg, #ec4899, #be185d); }
+        .member-card.navya .member-avatar { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+
+        .member-info h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .member-info .role {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: var(--space-md);
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+
+        /* Today's Activity */
+        .today-activity {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+        }
+
+        .activity-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .activity-content {
+            font-size: 0.9rem;
+        }
+
+        .no-activity {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 4px 0;
+        }
+
+        .activity-icon {
+            font-size: 1rem;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .quick-btn {
+            flex: 1;
+            padding: var(--space-sm) var(--space-md);
+            border: 1px solid var(--border-color);
+            background: transparent;
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .quick-btn:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+            border-color: var(--border-accent);
+        }
+
+        /* Diary Section */
+        .section-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        /* Tab Buttons */
+        .tab-buttons {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .tab-btn {
+            padding: var(--space-sm) var(--space-md);
+            border: 1px solid var(--border-color);
+            background: transparent;
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .tab-btn.active {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: white;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: var(--bg-hover);
+        }
+
+        /* Diary Entries List */
+        .diary-entries {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .diary-entry {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            border-left: 3px solid var(--border-color);
+        }
+
+        .diary-entry.saanvi { border-left-color: #ec4899; }
+        .diary-entry.navya { border-left-color: #3b82f6; }
+
+        .diary-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-sm);
+        }
+
+        .diary-entry-user {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .user-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .user-dot.saanvi { background: #ec4899; }
+        .user-dot.navya { background: #3b82f6; }
+
+        .diary-entry-date {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .diary-entry-content {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .diary-entry-subjects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-sm);
+        }
+
+        .subject-tag {
+            background: var(--bg-card);
+            padding: 2px 8px;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Math Settings Section */
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .user-settings-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+        }
+
+        .user-settings-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .settings-table {
+            width: 100%;
+        }
+
+        .settings-table th,
+        .settings-table td {
+            padding: var(--space-sm);
+            text-align: left;
+        }
+
+        .settings-table th {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            transition: all var(--transition-fast);
+        }
+
+        .toggle-slider::before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 2px;
+            bottom: 2px;
+            background: var(--text-secondary);
+            border-radius: 50%;
+            transition: all var(--transition-fast);
+        }
+
+        .toggle-switch input:checked + .toggle-slider {
+            background: var(--accent-success);
+            border-color: var(--accent-success);
+        }
+
+        .toggle-switch input:checked + .toggle-slider::before {
+            transform: translateX(20px);
+            background: white;
+        }
+
+        .difficulty-select {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 4px 8px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        /* Save Button */
+        .save-settings-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: var(--space-md);
+            transition: all var(--transition-fast);
+        }
+
+        .save-settings-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .family-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .settings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <div class="dashboard-header">
+            <div class="dashboard-title">
+                <h1>👨‍👩‍👧‍👧 Family Dashboard</h1>
+                <span class="admin-badge">Admin</span>
+            </div>
+            <div class="date-display" id="current-date"></div>
+        </div>
+
+        <!-- Family Overview -->
+        <div class="family-grid" id="family-grid">
+            <div class="loading">Loading family data...</div>
+        </div>
+
+        <!-- Diary Entries Section -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2 class="section-title">📔 Recent Diary Entries</h2>
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-filter="all">All</button>
+                    <button class="tab-btn" data-filter="saanvi">Saanvi</button>
+                    <button class="tab-btn" data-filter="navya">Navya</button>
+                </div>
+            </div>
+            <div class="diary-entries" id="diary-entries">
+                <div class="loading">Loading diary entries...</div>
+            </div>
+        </div>
+
+        <!-- Math Settings Section -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2 class="section-title">🧮 Math Topic Settings</h2>
+            </div>
+            <div class="settings-grid" id="settings-grid">
+                <div class="loading">Loading settings...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        
+        // Format date for display
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-IN', { 
+                weekday: 'short', 
+                day: 'numeric', 
+                month: 'short' 
+            });
+        }
+
+        // Load family overview cards
+        async function loadFamilyOverview() {
+            try {
+                const response = await fetch(`${API_BASE}/api/admin/children`);
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('family-grid').innerHTML = `
+                        <div class="loading" style="color: var(--accent-danger);">
+                            ${data.error}
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Also get today's activity
+                const activityResponse = await fetch(`${API_BASE}/api/admin/activity/today`);
+                const activityData = await activityResponse.json();
+                
+                const activityMap = {};
+                if (activityData.activity) {
+                    activityData.activity.forEach(a => {
+                        activityMap[a.user_id] = a;
+                    });
+                }
+
+                let html = '';
+                data.children.forEach(child => {
+                    const activity = activityMap[child.user_id];
+                    const initial = child.name.charAt(0);
+                    
+                    let activityHtml = '';
+                    if (activity && activity.has_diary_entry) {
+                        const diary = activity.diary_summary;
+                        activityHtml = `
+                            <div class="activity-content">
+                                ${diary.mood ? `<div class="activity-item"><span class="activity-icon">😊</span> Mood: ${diary.mood}</div>` : ''}
+                                ${diary.total_hours ? `<div class="activity-item"><span class="activity-icon">⏱️</span> ${diary.total_hours}h studied</div>` : ''}
+                                ${diary.subjects && diary.subjects.length > 0 ? `
+                                    <div class="activity-item">
+                                        <span class="activity-icon">📚</span> 
+                                        ${diary.subjects.map(s => s.subject_name).join(', ')}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    } else {
+                        activityHtml = '<div class="no-activity">No diary entry today</div>';
+                    }
+
+                    html += `
+                        <div class="member-card ${child.user_id}">
+                            <div class="member-header">
+                                <div class="member-avatar">${initial}</div>
+                                <div class="member-info">
+                                    <h3>${child.name}</h3>
+                                    <div class="role">Daughter</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stats-grid">
+                                <div class="stat-box">
+                                    <div class="stat-value">${child.diary_entries_this_week}</div>
+                                    <div class="stat-label">Diary (7d)</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">${child.math_sessions}</div>
+                                    <div class="stat-label">Math Sessions</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">${child.math_accuracy ? child.math_accuracy.toFixed(0) + '%' : '-'}</div>
+                                    <div class="stat-label">Math Accuracy</div>
+                                </div>
+                            </div>
+                            
+                            <div class="today-activity">
+                                <div class="activity-header">
+                                    <span>📅</span> Today's Activity
+                                </div>
+                                ${activityHtml}
+                            </div>
+                            
+                            <div class="quick-actions">
+                                <button class="quick-btn" onclick="viewDiary('${child.user_id}')">📔 Diary</button>
+                                <button class="quick-btn" onclick="viewMath('${child.user_id}')">📊 Math Stats</button>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                document.getElementById('family-grid').innerHTML = html;
+            } catch (error) {
+                console.error('Error loading family overview:', error);
+                document.getElementById('family-grid').innerHTML = `
+                    <div class="loading" style="color: var(--accent-danger);">
+                        Failed to load family data
+                    </div>
+                `;
+            }
+        }
+
+        // Load diary entries
+        async function loadDiaryEntries(filter = 'all') {
+            try {
+                const response = await fetch(`${API_BASE}/api/admin/diary/all?limit=20`);
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('diary-entries').innerHTML = `
+                        <div class="loading" style="color: var(--accent-danger);">${data.error}</div>
+                    `;
+                    return;
+                }
+
+                let entries = data.entries || [];
+                
+                // Apply filter
+                if (filter !== 'all') {
+                    entries = entries.filter(e => e.user_id === filter);
+                }
+
+                if (entries.length === 0) {
+                    document.getElementById('diary-entries').innerHTML = `
+                        <div class="loading">No diary entries found</div>
+                    `;
+                    return;
+                }
+
+                let html = '';
+                entries.forEach(entry => {
+                    const subjectsHtml = entry.subjects && entry.subjects.length > 0 
+                        ? `<div class="diary-entry-subjects">
+                            ${entry.subjects.map(s => `<span class="subject-tag">${s.subject_name} (${s.time_spent_minutes || 0}min)</span>`).join('')}
+                           </div>`
+                        : '';
+
+                    html += `
+                        <div class="diary-entry ${entry.user_id}">
+                            <div class="diary-entry-header">
+                                <div class="diary-entry-user">
+                                    <span class="user-dot ${entry.user_id}"></span>
+                                    <strong>${entry.user_name || entry.user_id}</strong>
+                                    ${entry.mood ? `<span style="margin-left: 8px;">${getMoodEmoji(entry.mood)}</span>` : ''}
+                                </div>
+                                <div class="diary-entry-date">${formatDate(entry.entry_date)}</div>
+                            </div>
+                            <div class="diary-entry-content">
+                                ${entry.journal_text || '<em>No journal entry</em>'}
+                            </div>
+                            ${subjectsHtml}
+                            ${entry.total_study_hours ? `<div style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted);">📚 ${entry.total_study_hours}h total study time</div>` : ''}
+                        </div>
+                    `;
+                });
+                
+                document.getElementById('diary-entries').innerHTML = html;
+            } catch (error) {
+                console.error('Error loading diary entries:', error);
+            }
+        }
+
+        function getMoodEmoji(mood) {
+            const moods = {
+                'great': '😄',
+                'good': '🙂',
+                'okay': '😐',
+                'tired': '😴',
+                'stressed': '😰'
+            };
+            return moods[mood] || '';
+        }
+
+        // Load math settings
+        async function loadMathSettings() {
+            const users = ['saanvi', 'navya'];
+            const topics = [
+                { id: 'arithmetic', name: 'Arithmetic', icon: '➕' },
+                { id: 'percentages', name: 'Percentages', icon: '💯' },
+                { id: 'ratios', name: 'Ratios', icon: '⚖️' },
+                { id: 'time_work', name: 'Time & Work', icon: '⏱️' },
+                { id: 'averages', name: 'Averages', icon: '📊' },
+                { id: 'bodmas', name: 'BODMAS', icon: '🔢' }
+            ];
+
+            let html = '';
+            
+            for (const userId of users) {
+                try {
+                    const response = await fetch(`${API_BASE}/api/admin/settings/${userId}`);
+                    const data = await response.json();
+                    const settings = data.settings || {};
+                    
+                    const userName = userId.charAt(0).toUpperCase() + userId.slice(1);
+                    
+                    html += `
+                        <div class="user-settings-card" data-user="${userId}">
+                            <div class="user-settings-header">
+                                <span class="user-dot ${userId}"></span>
+                                <strong>${userName}'s Topics</strong>
+                            </div>
+                            <table class="settings-table">
+                                <thead>
+                                    <tr>
+                                        <th>Topic</th>
+                                        <th>Enabled</th>
+                                        <th>Difficulty</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                    `;
+                    
+                    topics.forEach(topic => {
+                        const setting = settings[topic.id] || { enabled: true, difficulty: 'medium' };
+                        html += `
+                            <tr>
+                                <td>${topic.icon} ${topic.name}</td>
+                                <td>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" 
+                                            data-user="${userId}" 
+                                            data-topic="${topic.id}"
+                                            ${setting.enabled ? 'checked' : ''}>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <select class="difficulty-select" 
+                                        data-user="${userId}" 
+                                        data-topic="${topic.id}">
+                                        <option value="easy" ${setting.difficulty === 'easy' ? 'selected' : ''}>Easy</option>
+                                        <option value="medium" ${setting.difficulty === 'medium' ? 'selected' : ''}>Medium</option>
+                                        <option value="hard" ${setting.difficulty === 'hard' ? 'selected' : ''}>Hard</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    
+                    html += `
+                                </tbody>
+                            </table>
+                            <button class="save-settings-btn" onclick="saveSettings('${userId}')">
+                                💾 Save ${userName}'s Settings
+                            </button>
+                        </div>
+                    `;
+                } catch (error) {
+                    console.error(`Error loading settings for ${userId}:`, error);
+                }
+            }
+            
+            document.getElementById('settings-grid').innerHTML = html;
+        }
+
+        // Save settings for a user
+        async function saveSettings(userId) {
+            const card = document.querySelector(`.user-settings-card[data-user="${userId}"]`);
+            const topics = {};
+            
+            card.querySelectorAll('input[type="checkbox"]').forEach(input => {
+                const topic = input.dataset.topic;
+                const select = card.querySelector(`select[data-topic="${topic}"]`);
+                topics[topic] = {
+                    enabled: input.checked,
+                    difficulty: select.value
+                };
+            });
+
+            try {
+                const response = await fetch(`${API_BASE}/api/admin/settings/${userId}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ topics })
+                });
+                
+                const data = await response.json();
+                if (data.success) {
+                    alert(`Settings saved for ${userId}!`);
+                } else {
+                    alert(`Error: ${data.error}`);
+                }
+            } catch (error) {
+                console.error('Error saving settings:', error);
+                alert('Failed to save settings');
+            }
+        }
+
+        // View diary for specific user
+        function viewDiary(userId) {
+            // Filter diary entries
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.filter === userId) {
+                    btn.classList.add('active');
+                }
+            });
+            loadDiaryEntries(userId);
+            
+            // Scroll to diary section
+            document.querySelector('.diary-entries').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // View math stats for specific user
+        function viewMath(userId) {
+            // Scroll to settings section for now
+            document.getElementById('settings-grid').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Tab button handlers
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                loadDiaryEntries(btn.dataset.filter);
+            });
+        });
+
+        // Set current date
+        function setCurrentDate() {
+            const now = new Date();
+            const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+            document.getElementById('current-date').textContent = now.toLocaleDateString('en-IN', options);
+        }
+
+        // Initialize
+        setCurrentDate();
+        loadFamilyOverview();
+        loadDiaryEntries();
+        loadMathSettings();
+    </script>
+</body>
+</html>
+

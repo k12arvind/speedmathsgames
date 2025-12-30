@@ -80,6 +80,13 @@ from server.mock_db import MockDatabase
 # Import questions database for local question storage (source of truth for tests)
 from server.questions_db import QuestionsDatabase
 
+# Import user roles configuration for family member management
+from server.user_roles import (
+    get_user_profile, get_user_id_from_email, get_user_role,
+    can_view_all_users, can_edit_settings, is_admin, is_parent,
+    get_viewable_user_ids, get_children, CHILD_USER_IDS, ALL_USER_IDS
+)
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -236,15 +243,17 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         return db_path
 
     def get_current_user(self):
-        """Get current user from session cookie."""
+        """Get current user from session cookie with family role support."""
         # If auth is disabled (dev mode), return a default user
         if self.PUBLIC_PAGES == ['*']:
             return {
                 'user_id': 'saanvi',
-                'email': 'saanvi@speedmathsgames.com',
+                'email': '20saanvi12@gmail.com',
                 'name': 'Saanvi',
                 'picture': None,
-                'role': 'admin'
+                'role': 'child',
+                'can_view_all_users': False,
+                'can_edit_settings': False
             }
         
         if not self.user_db:
@@ -263,13 +272,32 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         if not session:
             return None
 
-        return {
-            'user_id': session['user_id'],
-            'email': session['email'],
-            'name': session['name'],
-            'picture': session['picture'],
-            'role': session['role']
-        }
+        email = session['email']
+        
+        # Get user profile from family configuration
+        profile = get_user_profile(email)
+        
+        if profile:
+            return {
+                'user_id': profile['user_id'],
+                'email': email,
+                'name': profile['name'],
+                'picture': session.get('picture'),
+                'role': profile['role'],
+                'can_view_all_users': profile['can_view_all_users'],
+                'can_edit_settings': profile['can_edit_settings']
+            }
+        else:
+            # Unregistered user - use email prefix as user_id
+            return {
+                'user_id': get_user_id_from_email(email),
+                'email': email,
+                'name': session.get('name', email.split('@')[0]),
+                'picture': session.get('picture'),
+                'role': 'guest',
+                'can_view_all_users': False,
+                'can_edit_settings': False
+            }
 
     def handle_login(self):
         """Initiate Google OAuth login flow."""
@@ -417,6 +445,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Mock Analysis API endpoints
             elif path.startswith('/api/mocks'):
                 self.handle_mocks_get(path, query_params)
+            # Admin API endpoints (family dashboard)
+            elif path.startswith('/api/admin/'):
+                self.handle_admin_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -466,6 +497,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Mock Analysis API endpoints
             elif path.startswith('/api/mocks'):
                 self.handle_mocks_post(path, data)
+            # Admin API endpoints
+            elif path.startswith('/api/admin/'):
+                self.handle_admin_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -2877,6 +2911,229 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
         else:
             self.send_json({'error': 'Unknown mocks endpoint'})
+
+    # ============================================================
+    # ADMIN API HANDLERS (Family Dashboard)
+    # ============================================================
+
+    def handle_admin_get(self, path: str, query_params: dict):
+        """Handle admin API GET requests for family dashboard."""
+        # Verify admin/parent access
+        user = self.get_current_user()
+        
+        # In dev mode (no auth), allow access
+        if self.PUBLIC_PAGES != ['*']:
+            if not user or not user.get('can_view_all_users', False):
+                self.send_json({'error': 'Access denied. Admin or parent role required.'})
+                return
+
+        # GET /api/admin/family - Get all family members info
+        if path == '/api/admin/family':
+            from server.user_roles import get_all_family_members
+            family = get_all_family_members()
+            members = []
+            for email, profile in family.items():
+                members.append({
+                    'user_id': profile['user_id'],
+                    'name': profile['name'],
+                    'email': email,
+                    'role': profile['role']
+                })
+            self.send_json({'members': members})
+
+        # GET /api/admin/children - Get children list with summary stats
+        elif path == '/api/admin/children':
+            children_data = []
+            for child in get_children():
+                user_id = child['user_id']
+                
+                # Get diary summary
+                diary_entries = self.diary_db.get_entries(user_id=user_id, limit=7)
+                total_diary_entries = len(diary_entries)
+                
+                # Get math summary
+                math_perf = self.math_db.get_overall_performance(user_id)
+                
+                # Get GK summary
+                gk_tests = self.assessment_db.get_all_tests(user_id)
+                
+                children_data.append({
+                    'user_id': user_id,
+                    'name': child['name'],
+                    'email': child['email'],
+                    'diary_entries_this_week': total_diary_entries,
+                    'math_sessions': math_perf.get('total_sessions', 0),
+                    'math_accuracy': math_perf.get('accuracy', 0),
+                    'gk_tests': len(gk_tests)
+                })
+            
+            self.send_json({'children': children_data})
+
+        # GET /api/admin/diary/all - Get all family diary entries
+        elif path == '/api/admin/diary/all':
+            start_date = query_params.get('start_date', [None])[0]
+            end_date = query_params.get('end_date', [None])[0]
+            limit = int(query_params.get('limit', ['30'])[0])
+            
+            all_entries = []
+            for user_id in CHILD_USER_IDS:
+                entries = self.diary_db.get_entries(
+                    user_id=user_id,
+                    start_date=start_date,
+                    end_date=end_date,
+                    limit=limit
+                )
+                for entry in entries:
+                    entry['user_id'] = user_id
+                    # Add user name
+                    for child in get_children():
+                        if child['user_id'] == user_id:
+                            entry['user_name'] = child['name']
+                            break
+                all_entries.extend(entries)
+            
+            # Sort by date descending
+            all_entries.sort(key=lambda x: x.get('entry_date', ''), reverse=True)
+            
+            self.send_json({'entries': all_entries})
+
+        # GET /api/admin/diary/{user_id} - Get specific child's diary entries
+        elif path.startswith('/api/admin/diary/') and not path.endswith('/all'):
+            target_user_id = path.split('/')[-1]
+            
+            # Verify target user is a child
+            if target_user_id not in ALL_USER_IDS:
+                self.send_json({'error': f'User {target_user_id} not found'})
+                return
+            
+            start_date = query_params.get('start_date', [None])[0]
+            end_date = query_params.get('end_date', [None])[0]
+            limit = int(query_params.get('limit', ['30'])[0])
+            
+            entries = self.diary_db.get_entries(
+                user_id=target_user_id,
+                start_date=start_date,
+                end_date=end_date,
+                limit=limit
+            )
+            
+            self.send_json({'entries': entries, 'user_id': target_user_id})
+
+        # GET /api/admin/math/all - Get math performance for all children
+        elif path == '/api/admin/math/all':
+            all_performance = []
+            for user_id in CHILD_USER_IDS:
+                perf = self.math_db.get_overall_performance(user_id)
+                topics = self.math_db.get_topic_performance(user_id)
+                
+                # Get user name
+                user_name = user_id
+                for child in get_children():
+                    if child['user_id'] == user_id:
+                        user_name = child['name']
+                        break
+                
+                all_performance.append({
+                    'user_id': user_id,
+                    'user_name': user_name,
+                    'overall': perf,
+                    'topics': topics
+                })
+            
+            self.send_json({'performance': all_performance})
+
+        # GET /api/admin/math/{user_id} - Get specific child's math performance
+        elif path.startswith('/api/admin/math/') and not path.endswith('/all'):
+            target_user_id = path.split('/')[-1]
+            
+            perf = self.math_db.get_overall_performance(target_user_id)
+            topics = self.math_db.get_topic_performance(target_user_id)
+            history = self.math_db.get_session_history(target_user_id, limit=10)
+            
+            self.send_json({
+                'user_id': target_user_id,
+                'overall': perf,
+                'topics': topics,
+                'history': history
+            })
+
+        # GET /api/admin/settings/{user_id} - Get math settings for specific user
+        elif path.startswith('/api/admin/settings/'):
+            target_user_id = path.split('/')[-1]
+            
+            settings = {}
+            for topic in ['arithmetic', 'percentages', 'ratios', 'time_work', 'averages', 'bodmas']:
+                setting = self.math_db.get_topic_setting(target_user_id, topic)
+                if setting:
+                    settings[topic] = setting
+                else:
+                    # Default settings
+                    settings[topic] = {'enabled': True, 'difficulty': 'medium'}
+            
+            self.send_json({'user_id': target_user_id, 'settings': settings})
+
+        # GET /api/admin/activity/today - Get today's activity for all children
+        elif path == '/api/admin/activity/today':
+            today = datetime.now().strftime('%Y-%m-%d')
+            activity = []
+            
+            for user_id in CHILD_USER_IDS:
+                # Get user name
+                user_name = user_id
+                for child in get_children():
+                    if child['user_id'] == user_id:
+                        user_name = child['name']
+                        break
+                
+                # Get today's diary entry
+                diary_entry = self.diary_db.get_entry(today, user_id)
+                
+                # Get today's math sessions (approximate from overall stats change)
+                math_perf = self.math_db.get_overall_performance(user_id)
+                
+                activity.append({
+                    'user_id': user_id,
+                    'user_name': user_name,
+                    'date': today,
+                    'has_diary_entry': diary_entry is not None,
+                    'diary_summary': {
+                        'mood': diary_entry.get('mood') if diary_entry else None,
+                        'total_hours': diary_entry.get('total_study_hours', 0) if diary_entry else 0,
+                        'subjects': diary_entry.get('subjects', []) if diary_entry else []
+                    } if diary_entry else None,
+                    'math_total_sessions': math_perf.get('total_sessions', 0),
+                    'math_total_questions': math_perf.get('total_questions', 0)
+                })
+            
+            self.send_json({'date': today, 'activity': activity})
+
+        else:
+            self.send_json({'error': 'Unknown admin endpoint'})
+
+    def handle_admin_post(self, path: str, data: dict):
+        """Handle admin API POST requests."""
+        # Verify admin/parent access
+        user = self.get_current_user()
+        
+        if self.PUBLIC_PAGES != ['*']:
+            if not user or not user.get('can_edit_settings', False):
+                self.send_json({'error': 'Access denied. Admin role required.'})
+                return
+
+        # POST /api/admin/settings/{user_id} - Update math settings for specific user
+        if path.startswith('/api/admin/settings/'):
+            target_user_id = path.split('/')[-1]
+            topics = data.get('topics', {})
+            
+            for topic, settings in topics.items():
+                enabled = settings.get('enabled', True)
+                difficulty = settings.get('difficulty', 'medium')
+                self.math_db.update_setting(target_user_id, topic, enabled, difficulty)
+            
+            self.send_json({'success': True, 'message': f'Settings updated for {target_user_id}'})
+
+        else:
+            self.send_json({'error': 'Unknown admin endpoint'})
 
     def send_json(self, data: dict, status_code: int = 200):
         """Send JSON response with optional status code."""

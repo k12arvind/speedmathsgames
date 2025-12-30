@@ -394,8 +394,22 @@
     </div>
 
     <script>
-        const MATH_API = window.location.origin;;
-        const USER_ID = 'daughter';
+        const MATH_API = window.location.origin;
+        let USER_ID = 'daughter';  // Default, will be updated from auth
+
+        async function initAndLoad() {
+            // Get user from auth
+            try {
+                const response = await fetch(`${MATH_API}/auth/user`);
+                if (response.ok) {
+                    const user = await response.json();
+                    USER_ID = user.user_id || 'daughter';
+                }
+            } catch (e) {
+                console.log('Auth not available, using default user');
+            }
+            loadAnalytics();
+        }
 
         async function loadAnalytics() {
             try {
@@ -547,7 +561,7 @@
         }
 
         // Load analytics on page load
-        window.onload = loadAnalytics;
+        window.onload = initAndLoad;
     </script>
 </body>
 </html>

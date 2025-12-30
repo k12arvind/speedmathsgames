@@ -805,7 +805,21 @@
         const API_BASE = window.location.origin;
         const DASHBOARD_API = window.location.origin;
         const ASSESSMENT_API = window.location.origin;
-        const USER_ID = 'daughter';
+        let USER_ID = 'daughter';  // Default, will be updated from auth
+
+        // Initialize user from auth
+        async function initUser() {
+            try {
+                const response = await fetch(`${API_BASE}/auth/user`);
+                if (response.ok) {
+                    const user = await response.json();
+                    USER_ID = user.user_id || 'daughter';
+                    console.log('User loaded for assessment:', USER_ID);
+                }
+            } catch (e) {
+                console.log('Auth not available, using default user');
+            }
+        }
 
         // State
         let selectedPdfs = [];  // Array of selected PDF IDs
@@ -881,6 +895,7 @@
 
         // Initialize
         document.addEventListener('DOMContentLoaded', async () => {
+            await initUser();  // Get current user first
             await loadPdfs();
             setupTestTypeSelector();
             checkAnkiConnection();

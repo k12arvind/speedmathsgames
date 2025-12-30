@@ -1009,9 +1009,31 @@
 
         // API Base URL
         const API_BASE = '/api/diary';
+        let currentUserId = 'saanvi';  // Default, will be updated from auth
+
+        // Initialize user from auth
+        async function initUser() {
+            try {
+                const response = await fetch('/auth/user');
+                if (response.ok) {
+                    const user = await response.json();
+                    currentUserId = user.user_id || 'saanvi';
+                    console.log('Diary user loaded:', currentUserId);
+                }
+            } catch (e) {
+                console.log('Auth not available, using default user');
+            }
+        }
+
+        // Helper to add user_id to URLs
+        function withUserId(url) {
+            const separator = url.includes('?') ? '&' : '?';
+            return `${url}${separator}user_id=${currentUserId}`;
+        }
 
         // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
+            await initUser();  // Get current user first
             initializeMoodSelector();
             initializeSliders();
             loadSubjects();
@@ -1067,7 +1089,7 @@
         // Load Entry
         async function loadEntry(dateStr) {
             try {
-                const response = await fetch(`${API_BASE}/entries/${dateStr}`);
+                const response = await fetch(withUserId(`${API_BASE}/entries/${dateStr}`));
                 const data = await response.json();
                 
                 currentEntry = data.entry;
@@ -1143,7 +1165,7 @@
         // Load Subjects
         async function loadSubjects() {
             try {
-                const response = await fetch(`${API_BASE}/subjects`);
+                const response = await fetch(withUserId(`${API_BASE}/subjects`));
                 const data = await response.json();
                 subjects = data.subjects || [];
                 renderSubjects();
@@ -1229,6 +1251,7 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
+                        user_id: currentUserId,
                         subject_name: activeSubject.subject_name,
                         time_spent_minutes: timeSpent,
                         topics_covered: topics.length > 0 ? topics : null,
@@ -1258,6 +1281,7 @@
             const dateStr = formatDate(currentDate);
             
             const entryData = {
+                user_id: currentUserId,
                 entry_date: dateStr,
                 journal_text: document.getElementById('journalText').value || null,
                 mood: selectedMood,
@@ -1302,7 +1326,7 @@
         // Load Reminders
         async function loadReminders() {
             try {
-                const response = await fetch(`${API_BASE}/reminders`);
+                const response = await fetch(withUserId(`${API_BASE}/reminders`));
                 const data = await response.json();
                 
                 const container = document.getElementById('remindersContainer');
@@ -1335,7 +1359,7 @@
         // Load Streaks
         async function loadStreaks() {
             try {
-                const response = await fetch(`${API_BASE}/streaks`);
+                const response = await fetch(withUserId(`${API_BASE}/streaks`));
                 const data = await response.json();
                 
                 const container = document.getElementById('streaksContainer');
@@ -1385,7 +1409,7 @@
         // Load Weekly Summary
         async function loadWeeklySummary() {
             try {
-                const response = await fetch(`${API_BASE}/weekly-summary`);
+                const response = await fetch(withUserId(`${API_BASE}/weekly-summary`));
                 const data = await response.json();
                 
                 const container = document.getElementById('weeklySummary');
@@ -1453,7 +1477,7 @@
 
         async function loadWeeklySnapshot() {
             try {
-                const response = await fetch(`${API_BASE}/weekly-snapshot?weeks_back=${snapshotWeeksBack}`);
+                const response = await fetch(withUserId(`${API_BASE}/weekly-snapshot?weeks_back=${snapshotWeeksBack}`));
                 const data = await response.json();
                 const snapshot = data.snapshot;
 
@@ -1667,7 +1691,7 @@
             `;
 
             try {
-                const response = await fetch(`${API_BASE}/date-range?start_date=${startDate}&end_date=${endDate}`);
+                const response = await fetch(withUserId(`${API_BASE}/date-range?start_date=${startDate}&end_date=${endDate}`));
                 const data = await response.json();
                 const analytics = data.analytics;
 

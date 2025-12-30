@@ -421,6 +421,21 @@
     <script>
         let selectedTopics = [];
         let selectedCount = 20;
+        let currentUserId = 'daughter';  // Default, will be updated from auth
+
+        // Get user from auth on page load
+        async function initUser() {
+            try {
+                const response = await fetch(`${window.location.origin}/auth/user`);
+                if (response.ok) {
+                    const user = await response.json();
+                    currentUserId = user.user_id || 'daughter';
+                    console.log('User loaded:', currentUserId);
+                }
+            } catch (e) {
+                console.log('Auth not available, using default user');
+            }
+        }
 
         function toggleTopic(topic) {
             const option = document.querySelector(`.topic-option[data-topic="${topic}"]`);
@@ -475,14 +490,15 @@
             const params = new URLSearchParams({
                 topics: selectedTopics.join(','),
                 count: selectedCount,
-                user_id: 'daughter'
+                user_id: currentUserId
             });
 
             window.location.href = `math_practice.html?${params.toString()}`;
         }
 
-        // Auto-select arithmetic by default
-        window.onload = () => {
+        // Initialize on page load
+        window.onload = async () => {
+            await initUser();
             toggleTopic('arithmetic');
         };
     </script>

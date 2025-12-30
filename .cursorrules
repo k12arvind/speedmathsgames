@@ -68,17 +68,41 @@ This is a CLAT (Common Law Admission Test) exam preparation system that:
 
 ## Critical Deployment Rules
 
-### NEVER Sync Directly to Mac Mini
-- ❌ NEVER use rsync/scp directly to Mac Mini
-- ❌ NEVER run commands on Mac Mini without user approval
-- ✅ ONLY deploy via Git after user confirmation
-- ✅ Test on MacBook Pro first
+### Mac Mini Direct Access (ENABLED)
+- ✅ CAN SSH directly to Mac Mini for deployments
+- ✅ CAN restart server on Mac Mini
+- ✅ CAN run git pull on Mac Mini
+- ✅ CAN check server logs on Mac Mini
 
-### Deployment Workflow
-1. Develop and test on MacBook Pro (username: arvind)
-2. Wait for user approval
-3. Commit to Git
-4. User manually pulls on Mac Mini (username: arvindkumar)
+### Mac Mini Connection Details
+- **Hostname:** macmini.local (or use IP if hostname doesn't resolve)
+- **Username:** arvindkumar
+- **Project Path:** ~/clat_preparation
+- **Server Log:** /tmp/server.log
+
+### Deployment Workflow (Automated)
+1. Develop on MacBook Pro (username: arvind)
+2. Commit changes to Git
+3. SSH to Mac Mini and pull changes
+4. Restart server on Mac Mini
+5. Verify deployment via API test
+
+### Server Restart Commands (Mac Mini)
+```bash
+# SSH to Mac Mini
+ssh arvindkumar@macmini.local
+
+# Pull latest changes
+cd ~/clat_preparation && git pull
+
+# Restart server
+pkill -f unified_server.py 2>/dev/null || true
+sleep 2
+nohup ~/clat_preparation/venv_clat/bin/python ~/clat_preparation/server/unified_server.py > /tmp/server.log 2>&1 &
+
+# Verify
+sleep 3 && curl -s http://localhost:8001/api/test
+```
 
 ### Cross-Machine Compatibility
 - MacBook Pro: `/Users/arvind/...`
