@@ -3332,6 +3332,25 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             )
             self.send_json({'success': True, 'data': summary})
         
+        # GET /api/finance/bills/notifications - Get dashboard notifications
+        elif path == '/api/finance/bills/notifications':
+            # Generate reminders first
+            self.finance_db.generate_all_reminders()
+            notifications = self.finance_db.get_dashboard_notifications()
+            self.send_json({'success': True, 'data': notifications})
+        
+        # GET /api/finance/bills/analytics - Get bill analytics
+        elif path == '/api/finance/bills/analytics':
+            months = int(query_params.get('months', ['12'])[0])
+            analytics = self.finance_db.get_bill_analytics(months)
+            self.send_json({'success': True, 'data': analytics})
+        
+        # GET /api/finance/bills/history - Get all payment history
+        elif path == '/api/finance/bills/history':
+            months = int(query_params.get('months', ['6'])[0])
+            history = self.finance_db.get_all_payment_history(months)
+            self.send_json({'success': True, 'data': history})
+        
         # GET /api/finance/bills/{id} - Get specific bill
         elif path.startswith('/api/finance/bills/') and '/payments' not in path:
             bill_id = int(path.split('/')[-1])
@@ -3569,6 +3588,18 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 self.send_json({'success': True})
             else:
                 self.send_json({'error': 'Payment not found'}, 404)
+        
+        # POST /api/finance/bills/reminders/dismiss - Dismiss a reminder
+        elif path == '/api/finance/bills/reminders/dismiss':
+            reminder_id = data.get('reminder_id')
+            if not reminder_id:
+                self.send_json({'error': 'reminder_id required'}, 400)
+                return
+            success = self.finance_db.dismiss_reminder(reminder_id)
+            if success:
+                self.send_json({'success': True})
+            else:
+                self.send_json({'error': 'Reminder not found'}, 404)
         
         else:
             self.send_json({'error': 'Unknown finance endpoint'})

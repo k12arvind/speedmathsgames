@@ -1373,3 +1373,316 @@ class FinanceDatabase:
             ''', (bill_id, due_date, bill.get('typical_amount') if bill else None))
             
             return cursor.lastrowid
+    
+    # =========================================================================
+    # BILL REMINDERS & NOTIFICATIONS
+    # =========================================================================
+    
+    def _init_reminders_table(self):
+        """Initialize bill reminders table."""
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS bill_reminders (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    bill_id INTEGER NOT NULL,
+                    due_date TEXT NOT NULL,
+                    reminder_date TEXT NOT NULL,
+                    days_before INTEGER NOT NULL,
+                    status TEXT DEFAULT 'pending',
+                    sent_at TEXT,
+                    notification_type TEXT DEFAULT 'dashboard',
+                    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (bill_id) REFERENCES recurring_bills(id) ON DELETE CASCADE,
+                    UNIQUE(bill_id, due_date, days_before)
+                )
+            ''')
+    
+    def get_pending_reminders(self) -> List[Dict]:
+        """Get all pending reminders for today or overdue."""
+        self._init_reminders_table()
+        from datetime import datetime
+        today = datetime.now().date().isoformat()
+        
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT r.*, b.name as bill_name, b.category, b.typical_amount, b.owner
+                FROM bill_reminders r
+                JOIN recurring_bills b ON r.bill_id = b.id
+                WHERE r.status = 'pending' AND r.reminder_date <= ?
+                ORDER BY r.reminder_date, r.days_before
+            ''', (today,))
+            return [dict(row) for row in cursor.fetchall()]
+    
+    def generate_reminders_for_bill(self, bill: Dict) -> int:
+        """Generate reminder records for a bill's upcoming due date."""
+        self._init_reminders_table()
+        
+        next_due = self._calculate_next_due_date(bill)
+        if not next_due:
+            return 0
+        
+        reminder_days = [int(d) for d in bill.get('reminder_days', '7,3,2,1').split(',')]
+        generated = 0
+        
+        from datetime import timedelta
+        
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            
+            for days in reminder_days:
+                reminder_date = next_due - timedelta(days=days)
+                
+                try:
+                    cursor.execute('''
+                        INSERT OR IGNORE INTO bill_reminders 
+                        (bill_id, due_date, reminder_date, days_before, status)
+                        VALUES (?, ?, ?, ?, 'pending')
+                    ''', (bill['id'], next_due.isoformat(), reminder_date.isoformat(), days))
+                    if cursor.rowcount > 0:
+                        generated += 1
+                except:
+                    pass
+            
+            return generated
+    
+    def generate_all_reminders(self) -> int:
+        """Generate reminders for all active bills."""
+        bills = self.get_bills()
+        total = 0
+        for bill in bills:
+            total += self.generate_reminders_for_bill(bill)
+        return total
+    
+    def mark_reminder_sent(self, reminder_id: int) -> bool:
+        """Mark a reminder as sent."""
+        self._init_reminders_table()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                UPDATE bill_reminders 
+                SET status = 'sent', sent_at = CURRENT_TIMESTAMP
+                WHERE id = ?
+            ''', (reminder_id,))
+            return cursor.rowcount > 0
+    
+    def dismiss_reminder(self, reminder_id: int) -> bool:
+        """Dismiss a reminder."""
+        self._init_reminders_table()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                UPDATE bill_reminders 
+                SET status = 'dismissed', sent_at = CURRENT_TIMESTAMP
+                WHERE id = ?
+            ''', (reminder_id,))
+            return cursor.rowcount > 0
+    
+    def get_dashboard_notifications(self) -> List[Dict]:
+        """Get notifications for dashboard display."""
+        notifications = []
+        
+        # Get overdue bills
+        overdue = self.get_overdue_bills()
+        for bill in overdue:
+            notifications.append({
+                'type': 'overdue',
+                'severity': 'high',
+                'title': f'{bill["name"]} is overdue!',
+                'message': f'{bill["days_overdue"]} days overdue - ₹{bill.get("typical_amount", 0):,.0f}',
+                'bill_id': bill['id'],
+                'due_date': bill['next_due_date']
+            })
+        
+        # Get upcoming reminders
+        reminders = self.get_pending_reminders()
+        for r in reminders:
+            if r['days_before'] == 1:
+                severity = 'high'
+                title = f'{r["bill_name"]} is due tomorrow!'
+            elif r['days_before'] <= 3:
+                severity = 'medium'
+                title = f'{r["bill_name"]} due in {r["days_before"]} days'
+            else:
+                severity = 'low'
+                title = f'{r["bill_name"]} due in {r["days_before"]} days'
+            
+            notifications.append({
+                'type': 'reminder',
+                'severity': severity,
+                'title': title,
+                'message': f'Due: {r["due_date"]} - ₹{r.get("typical_amount", 0):,.0f}',
+                'bill_id': r['bill_id'],
+                'reminder_id': r['id'],
+                'due_date': r['due_date']
+            })
+        
+        return sorted(notifications, key=lambda x: (
+            0 if x['severity'] == 'high' else 1 if x['severity'] == 'medium' else 2
+        ))
+    
+    # =========================================================================
+    # BILL ANALYTICS
+    # =========================================================================
+    
+    def get_bill_analytics(self, months: int = 12) -> Dict:
+        """Get bill payment analytics for the last N months."""
+        self._init_bills_tables()
+        from datetime import datetime, timedelta
+        from calendar import monthrange
+        
+        today = datetime.now()
+        
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            
+            # Monthly spending by category
+            monthly_by_category = []
+            for i in range(months - 1, -1, -1):
+                # Calculate month
+                month = today.month - i
+                year = today.year
+                while month <= 0:
+                    month += 12
+                    year -= 1
+                
+                start_date = f"{year}-{month:02d}-01"
+                _, last_day = monthrange(year, month)
+                end_date = f"{year}-{month:02d}-{last_day}"
+                
+                cursor.execute('''
+                    SELECT 
+                        b.category,
+                        SUM(COALESCE(p.amount_paid, 0)) as total_paid,
+                        COUNT(CASE WHEN p.status = 'paid' THEN 1 END) as paid_count
+                    FROM bill_payments p
+                    JOIN recurring_bills b ON p.bill_id = b.id
+                    WHERE p.due_date >= ? AND p.due_date <= ?
+                    GROUP BY b.category
+                ''', (start_date, end_date))
+                
+                category_data = {}
+                for row in cursor.fetchall():
+                    category_data[row['category']] = {
+                        'total_paid': row['total_paid'] or 0,
+                        'paid_count': row['paid_count'] or 0
+                    }
+                
+                monthly_by_category.append({
+                    'month': f"{year}-{month:02d}",
+                    'month_name': datetime(year, month, 1).strftime('%b %Y'),
+                    'categories': category_data
+                })
+            
+            # Total by category (all time)
+            cursor.execute('''
+                SELECT 
+                    b.category,
+                    SUM(COALESCE(p.amount_paid, 0)) as total_paid,
+                    COUNT(*) as total_payments,
+                    AVG(COALESCE(p.amount_paid, 0)) as avg_payment
+                FROM bill_payments p
+                JOIN recurring_bills b ON p.bill_id = b.id
+                WHERE p.status = 'paid'
+                GROUP BY b.category
+            ''')
+            
+            category_totals = {}
+            for row in cursor.fetchall():
+                category_totals[row['category']] = {
+                    'total_paid': row['total_paid'] or 0,
+                    'total_payments': row['total_payments'] or 0,
+                    'avg_payment': row['avg_payment'] or 0
+                }
+            
+            # Payment stats
+            cursor.execute('''
+                SELECT 
+                    COUNT(*) as total_records,
+                    SUM(CASE WHEN status = 'paid' THEN 1 ELSE 0 END) as paid_count,
+                    SUM(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) as pending_count,
+                    SUM(CASE WHEN status = 'overdue' THEN 1 ELSE 0 END) as overdue_count,
+                    SUM(COALESCE(amount_paid, 0)) as total_paid,
+                    SUM(CASE WHEN status != 'paid' THEN COALESCE(amount_due, 0) ELSE 0 END) as total_pending
+                FROM bill_payments
+            ''')
+            
+            stats_row = cursor.fetchone()
+            payment_stats = {
+                'total_records': stats_row['total_records'] or 0,
+                'paid_count': stats_row['paid_count'] or 0,
+                'pending_count': stats_row['pending_count'] or 0,
+                'overdue_count': stats_row['overdue_count'] or 0,
+                'total_paid': stats_row['total_paid'] or 0,
+                'total_pending': stats_row['total_pending'] or 0
+            }
+            
+            # Monthly totals
+            monthly_totals = []
+            for i in range(months - 1, -1, -1):
+                month = today.month - i
+                year = today.year
+                while month <= 0:
+                    month += 12
+                    year -= 1
+                
+                start_date = f"{year}-{month:02d}-01"
+                _, last_day = monthrange(year, month)
+                end_date = f"{year}-{month:02d}-{last_day}"
+                
+                cursor.execute('''
+                    SELECT 
+                        SUM(COALESCE(amount_paid, 0)) as total_paid,
+                        COUNT(CASE WHEN status = 'paid' THEN 1 END) as paid_count
+                    FROM bill_payments
+                    WHERE due_date >= ? AND due_date <= ? AND status = 'paid'
+                ''', (start_date, end_date))
+                
+                row = cursor.fetchone()
+                monthly_totals.append({
+                    'month': f"{year}-{month:02d}",
+                    'month_name': datetime(year, month, 1).strftime('%b %Y'),
+                    'total_paid': row['total_paid'] or 0,
+                    'paid_count': row['paid_count'] or 0
+                })
+            
+            return {
+                'monthly_by_category': monthly_by_category,
+                'category_totals': category_totals,
+                'payment_stats': payment_stats,
+                'monthly_totals': monthly_totals
+            }
+    
+    def get_bill_payment_history(self, bill_id: int, limit: int = 24) -> List[Dict]:
+        """Get detailed payment history for a specific bill."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT p.*, b.name as bill_name, b.category
+                FROM bill_payments p
+                JOIN recurring_bills b ON p.bill_id = b.id
+                WHERE p.bill_id = ?
+                ORDER BY p.due_date DESC
+                LIMIT ?
+            ''', (bill_id, limit))
+            return [dict(row) for row in cursor.fetchall()]
+    
+    def get_all_payment_history(self, months: int = 6) -> List[Dict]:
+        """Get all payment history for the last N months."""
+        self._init_bills_tables()
+        from datetime import datetime, timedelta
+        
+        start_date = (datetime.now() - timedelta(days=months * 30)).date().isoformat()
+        
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT p.*, b.name as bill_name, b.category, b.provider
+                FROM bill_payments p
+                JOIN recurring_bills b ON p.bill_id = b.id
+                WHERE p.due_date >= ?
+                ORDER BY p.due_date DESC, p.created_at DESC
+            ''', (start_date,))
+            return [dict(row) for row in cursor.fetchall()]
