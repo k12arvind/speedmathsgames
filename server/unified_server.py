@@ -3837,7 +3837,8 @@ def main():
     UnifiedHandler.assessment_db = AssessmentDatabase()
     UnifiedHandler.anki = AnkiConnector()
 
-    math_db_path = Path(__file__).parent.parent / 'math_module' / 'math_tracker.db'
+    # Use root-level math_tracker.db (same as populate_math_questions.py)
+    math_db_path = Path(__file__).parent.parent / 'math_tracker.db'
     UnifiedHandler.math_db = MathDatabase(str(math_db_path))
 
     UnifiedHandler.pdf_scanner = PDFScanner()
