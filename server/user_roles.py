@@ -39,7 +39,7 @@ FAMILY_MEMBERS = {
         'name': 'Saanvi',
         'role': 'child',
         'can_view_all_users': False,
-        'can_edit_settings': False,  # Admin controls her settings
+        'can_edit_settings': True,  # Can edit own math settings
     },
     
     # Daughter 2
@@ -48,7 +48,7 @@ FAMILY_MEMBERS = {
         'name': 'Navya',
         'role': 'child',
         'can_view_all_users': False,
-        'can_edit_settings': False,  # Admin controls her settings
+        'can_edit_settings': True,  # Can edit own math settings
     },
 }
 
