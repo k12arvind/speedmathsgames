@@ -120,6 +120,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
+        '/index.html',
+        '/',
         '/login.html',
         '/privacy_policy.html',
         '/auth/login',
