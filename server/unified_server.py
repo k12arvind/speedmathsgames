@@ -622,6 +622,36 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     self.send_header('Content-Type', 'application/json')
                     self.end_headers()
                     self.send_json({'error': 'Invalid path'})
+            # DELETE /api/finance/bills/{id}
+            elif path.startswith('/api/finance/bills/'):
+                if not self._check_private_access():
+                    return
+                parts = path.split('/')
+                if len(parts) == 5:
+                    try:
+                        bill_id = int(parts[4])
+                        success = self.finance_db.delete_bill(bill_id)
+                        
+                        if success:
+                            self.send_response(200)
+                            self.send_header('Content-Type', 'application/json')
+                            self.end_headers()
+                            self.send_json({'success': True, 'message': 'Bill deleted'})
+                        else:
+                            self.send_response(404)
+                            self.send_header('Content-Type', 'application/json')
+                            self.end_headers()
+                            self.send_json({'error': 'Bill not found'})
+                    except ValueError:
+                        self.send_response(400)
+                        self.send_header('Content-Type', 'application/json')
+                        self.end_headers()
+                        self.send_json({'error': 'Invalid bill ID'})
+                else:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid path'})
             else:
                 self.send_response(404)
                 self.send_header('Content-Type', 'application/json')
@@ -3273,6 +3303,51 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 config['api_key'] = '***' if config.get('api_key') else None
             self.send_json({'success': True, 'data': config})
         
+        # ===================== BILLS API =====================
+        
+        # GET /api/finance/bills - List all bills
+        elif path == '/api/finance/bills':
+            category = query_params.get('category', [None])[0]
+            bills = self.finance_db.get_bills(owner, category)
+            self.send_json({'success': True, 'data': bills})
+        
+        # GET /api/finance/bills/upcoming - Get upcoming bills
+        elif path == '/api/finance/bills/upcoming':
+            days = int(query_params.get('days', ['7'])[0])
+            bills = self.finance_db.get_upcoming_bills(days)
+            self.send_json({'success': True, 'data': bills})
+        
+        # GET /api/finance/bills/overdue - Get overdue bills
+        elif path == '/api/finance/bills/overdue':
+            bills = self.finance_db.get_overdue_bills()
+            self.send_json({'success': True, 'data': bills})
+        
+        # GET /api/finance/bills/summary - Get monthly summary
+        elif path == '/api/finance/bills/summary':
+            month = query_params.get('month', [None])[0]
+            year = query_params.get('year', [None])[0]
+            summary = self.finance_db.get_bills_summary(
+                int(month) if month else None,
+                int(year) if year else None
+            )
+            self.send_json({'success': True, 'data': summary})
+        
+        # GET /api/finance/bills/{id} - Get specific bill
+        elif path.startswith('/api/finance/bills/') and '/payments' not in path:
+            bill_id = int(path.split('/')[-1])
+            bill = self.finance_db.get_bill(bill_id)
+            if bill:
+                bill['payments'] = self.finance_db.get_bill_payments(bill_id)
+                self.send_json({'success': True, 'data': bill})
+            else:
+                self.send_json({'error': 'Bill not found'}, 404)
+        
+        # GET /api/finance/bills/{id}/payments - Get payment history
+        elif '/payments' in path and path.startswith('/api/finance/bills/'):
+            bill_id = int(path.split('/')[4])
+            payments = self.finance_db.get_bill_payments(bill_id)
+            self.send_json({'success': True, 'data': payments})
+        
         else:
             self.send_json({'error': 'Unknown finance endpoint'})
 
@@ -3444,6 +3519,56 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 self.send_json({'success': True, 'imported': imported})
             except Exception as e:
                 self.send_json({'error': str(e)}, 400)
+        
+        # ===================== BILLS API =====================
+        
+        # POST /api/finance/bills - Add new bill
+        elif path == '/api/finance/bills':
+            data['owner'] = data.get('owner', current_owner)
+            bill_id = self.finance_db.add_bill(data)
+            self.send_json({'success': True, 'id': bill_id})
+        
+        # POST /api/finance/bills/{id} - Update bill
+        elif path.startswith('/api/finance/bills/') and '/pay' not in path and '/payments' not in path:
+            bill_id = int(path.split('/')[-1])
+            success = self.finance_db.update_bill(bill_id, data)
+            if success:
+                self.send_json({'success': True})
+            else:
+                self.send_json({'error': 'Bill not found'}, 404)
+        
+        # POST /api/finance/bills/{id}/payments - Add payment record
+        elif '/payments' in path and path.startswith('/api/finance/bills/'):
+            bill_id = int(path.split('/')[4])
+            payment_id = self.finance_db.add_bill_payment(bill_id, data)
+            self.send_json({'success': True, 'id': payment_id})
+        
+        # POST /api/finance/bills/{id}/pay - Mark bill as paid
+        elif '/pay' in path and path.startswith('/api/finance/bills/'):
+            bill_id = int(path.split('/')[4])
+            due_date = data.get('due_date')
+            amount = data.get('amount')
+            payment_method = data.get('payment_method')
+            
+            # Ensure payment record exists
+            payment_id = self.finance_db.ensure_payment_record(bill_id, due_date)
+            
+            # Mark as paid
+            success = self.finance_db.mark_bill_paid(payment_id, amount, payment_method)
+            if success:
+                self.send_json({'success': True, 'payment_id': payment_id})
+            else:
+                self.send_json({'error': 'Failed to mark as paid'}, 400)
+        
+        # POST /api/finance/bills/{id}/payment/{payment_id} - Update payment
+        elif '/payment/' in path and path.startswith('/api/finance/bills/'):
+            parts = path.split('/')
+            payment_id = int(parts[-1])
+            success = self.finance_db.update_bill_payment(payment_id, data)
+            if success:
+                self.send_json({'success': True})
+            else:
+                self.send_json({'error': 'Payment not found'}, 404)
         
         else:
             self.send_json({'error': 'Unknown finance endpoint'})

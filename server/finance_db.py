@@ -935,4 +935,441 @@ class FinanceDatabase:
                 WHERE id = 1
             ''')
             return cursor.rowcount > 0
-
+    
+    # =========================================================================
+    # RECURRING BILLS
+    # =========================================================================
+    
+    def _init_bills_tables(self):
+        """Initialize bill tracking tables."""
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            
+            # Recurring Bills Table
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS recurring_bills (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    category TEXT NOT NULL,
+                    account_number TEXT,
+                    provider TEXT,
+                    frequency TEXT NOT NULL DEFAULT 'monthly',
+                    due_day INTEGER,
+                    billing_month INTEGER,
+                    typical_amount REAL,
+                    property_id INTEGER,
+                    reminder_days TEXT DEFAULT '7,3,2,1',
+                    owner TEXT NOT NULL,
+                    notes TEXT,
+                    is_active BOOLEAN DEFAULT 1,
+                    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            
+            # Bill Payments History
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS bill_payments (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    bill_id INTEGER NOT NULL,
+                    due_date TEXT NOT NULL,
+                    amount_due REAL,
+                    amount_paid REAL,
+                    payment_date TEXT,
+                    payment_method TEXT,
+                    status TEXT DEFAULT 'pending',
+                    late_fee REAL DEFAULT 0,
+                    notes TEXT,
+                    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (bill_id) REFERENCES recurring_bills(id) ON DELETE CASCADE
+                )
+            ''')
+    
+    def get_bills(self, owner: Optional[str] = None, category: Optional[str] = None) -> List[Dict]:
+        """Get all recurring bills."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            query = 'SELECT * FROM recurring_bills WHERE is_active = 1'
+            params = []
+            
+            if owner:
+                query += ' AND owner = ?'
+                params.append(owner)
+            if category:
+                query += ' AND category = ?'
+                params.append(category)
+            
+            query += ' ORDER BY due_day'
+            cursor.execute(query, params)
+            return [dict(row) for row in cursor.fetchall()]
+    
+    def get_bill(self, bill_id: int) -> Optional[Dict]:
+        """Get a specific bill."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('SELECT * FROM recurring_bills WHERE id = ?', (bill_id,))
+            row = cursor.fetchone()
+            return dict(row) if row else None
+    
+    def add_bill(self, data: Dict) -> int:
+        """Add a new recurring bill."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                INSERT INTO recurring_bills
+                (name, category, account_number, provider, frequency, due_day, 
+                 billing_month, typical_amount, property_id, reminder_days, owner, notes)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                data['name'],
+                data['category'],
+                data.get('account_number'),
+                data.get('provider'),
+                data.get('frequency', 'monthly'),
+                data.get('due_day'),
+                data.get('billing_month'),
+                data.get('typical_amount'),
+                data.get('property_id'),
+                data.get('reminder_days', '7,3,2,1'),
+                data['owner'],
+                data.get('notes')
+            ))
+            return cursor.lastrowid
+    
+    def update_bill(self, bill_id: int, data: Dict) -> bool:
+        """Update a recurring bill."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                UPDATE recurring_bills 
+                SET name = ?, category = ?, account_number = ?, provider = ?,
+                    frequency = ?, due_day = ?, billing_month = ?, typical_amount = ?,
+                    property_id = ?, reminder_days = ?, notes = ?, updated_at = CURRENT_TIMESTAMP
+                WHERE id = ?
+            ''', (
+                data['name'],
+                data['category'],
+                data.get('account_number'),
+                data.get('provider'),
+                data.get('frequency', 'monthly'),
+                data.get('due_day'),
+                data.get('billing_month'),
+                data.get('typical_amount'),
+                data.get('property_id'),
+                data.get('reminder_days', '7,3,2,1'),
+                data.get('notes'),
+                bill_id
+            ))
+            return cursor.rowcount > 0
+    
+    def delete_bill(self, bill_id: int) -> bool:
+        """Soft delete a bill."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute(
+                'UPDATE recurring_bills SET is_active = 0, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+                (bill_id,)
+            )
+            return cursor.rowcount > 0
+    
+    def get_bill_payments(self, bill_id: int, limit: int = 12) -> List[Dict]:
+        """Get payment history for a bill."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT * FROM bill_payments 
+                WHERE bill_id = ? 
+                ORDER BY due_date DESC 
+                LIMIT ?
+            ''', (bill_id, limit))
+            return [dict(row) for row in cursor.fetchall()]
+    
+    def add_bill_payment(self, bill_id: int, data: Dict) -> int:
+        """Add a payment record for a bill."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                INSERT INTO bill_payments
+                (bill_id, due_date, amount_due, amount_paid, payment_date, payment_method, status, late_fee, notes)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                bill_id,
+                data['due_date'],
+                data.get('amount_due'),
+                data.get('amount_paid'),
+                data.get('payment_date'),
+                data.get('payment_method'),
+                data.get('status', 'pending'),
+                data.get('late_fee', 0),
+                data.get('notes')
+            ))
+            return cursor.lastrowid
+    
+    def update_bill_payment(self, payment_id: int, data: Dict) -> bool:
+        """Update a payment record."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                UPDATE bill_payments 
+                SET amount_due = ?, amount_paid = ?, payment_date = ?, 
+                    payment_method = ?, status = ?, late_fee = ?, notes = ?
+                WHERE id = ?
+            ''', (
+                data.get('amount_due'),
+                data.get('amount_paid'),
+                data.get('payment_date'),
+                data.get('payment_method'),
+                data.get('status'),
+                data.get('late_fee', 0),
+                data.get('notes'),
+                payment_id
+            ))
+            return cursor.rowcount > 0
+    
+    def mark_bill_paid(self, payment_id: int, amount_paid: float, payment_method: str = None) -> bool:
+        """Mark a bill payment as paid."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                UPDATE bill_payments 
+                SET amount_paid = ?, payment_date = DATE('now'), status = 'paid', payment_method = ?
+                WHERE id = ?
+            ''', (amount_paid, payment_method, payment_id))
+            return cursor.rowcount > 0
+    
+    def get_upcoming_bills(self, days: int = 7) -> List[Dict]:
+        """Get bills due in the next N days."""
+        self._init_bills_tables()
+        from datetime import datetime, timedelta
+        
+        today = datetime.now()
+        bills = self.get_bills()
+        upcoming = []
+        
+        for bill in bills:
+            next_due = self._calculate_next_due_date(bill)
+            if next_due:
+                days_until = (next_due - today.date()).days
+                if 0 <= days_until <= days:
+                    bill['next_due_date'] = next_due.isoformat()
+                    bill['days_until_due'] = days_until
+                    bill['urgency'] = 'high' if days_until <= 2 else 'medium' if days_until <= 3 else 'normal'
+                    
+                    # Check if payment record exists for this cycle
+                    payment = self._get_current_payment(bill['id'], next_due)
+                    bill['current_payment'] = payment
+                    
+                    upcoming.append(bill)
+        
+        return sorted(upcoming, key=lambda x: x['days_until_due'])
+    
+    def get_overdue_bills(self) -> List[Dict]:
+        """Get overdue bills."""
+        self._init_bills_tables()
+        from datetime import datetime
+        
+        today = datetime.now()
+        bills = self.get_bills()
+        overdue = []
+        
+        for bill in bills:
+            next_due = self._calculate_next_due_date(bill)
+            if next_due:
+                days_until = (next_due - today.date()).days
+                if days_until < 0:
+                    # Check if already paid
+                    payment = self._get_current_payment(bill['id'], next_due)
+                    if not payment or payment.get('status') != 'paid':
+                        bill['next_due_date'] = next_due.isoformat()
+                        bill['days_overdue'] = abs(days_until)
+                        bill['current_payment'] = payment
+                        overdue.append(bill)
+        
+        return sorted(overdue, key=lambda x: x['days_overdue'], reverse=True)
+    
+    def get_bills_summary(self, month: int = None, year: int = None) -> Dict:
+        """Get bills summary for a month."""
+        self._init_bills_tables()
+        from datetime import datetime
+        
+        if not month:
+            month = datetime.now().month
+        if not year:
+            year = datetime.now().year
+        
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            
+            # Get payments for the month
+            start_date = f"{year}-{month:02d}-01"
+            if month == 12:
+                end_date = f"{year + 1}-01-01"
+            else:
+                end_date = f"{year}-{month + 1:02d}-01"
+            
+            cursor.execute('''
+                SELECT 
+                    COUNT(*) as total_bills,
+                    SUM(CASE WHEN status = 'paid' THEN 1 ELSE 0 END) as paid_count,
+                    SUM(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) as pending_count,
+                    SUM(CASE WHEN status = 'overdue' THEN 1 ELSE 0 END) as overdue_count,
+                    SUM(COALESCE(amount_due, 0)) as total_due,
+                    SUM(CASE WHEN status = 'paid' THEN COALESCE(amount_paid, 0) ELSE 0 END) as total_paid,
+                    SUM(CASE WHEN status != 'paid' THEN COALESCE(amount_due, 0) ELSE 0 END) as total_pending
+                FROM bill_payments
+                WHERE due_date >= ? AND due_date < ?
+            ''', (start_date, end_date))
+            
+            row = cursor.fetchone()
+            return {
+                'month': month,
+                'year': year,
+                'total_bills': row['total_bills'] or 0,
+                'paid_count': row['paid_count'] or 0,
+                'pending_count': row['pending_count'] or 0,
+                'overdue_count': row['overdue_count'] or 0,
+                'total_due': row['total_due'] or 0,
+                'total_paid': row['total_paid'] or 0,
+                'total_pending': row['total_pending'] or 0,
+            }
+    
+    def _calculate_next_due_date(self, bill: Dict) -> Optional[date]:
+        """Calculate the next due date for a bill."""
+        from datetime import datetime, timedelta
+        from calendar import monthrange
+        
+        today = datetime.now().date()
+        due_day = bill.get('due_day')
+        frequency = bill.get('frequency', 'monthly')
+        
+        if not due_day:
+            return None
+        
+        if frequency == 'monthly':
+            # Find next occurrence of due_day
+            year, month = today.year, today.month
+            
+            # Handle months with fewer days
+            _, last_day = monthrange(year, month)
+            actual_due_day = min(due_day, last_day)
+            
+            due_date = today.replace(day=actual_due_day)
+            
+            # If already passed this month, move to next month
+            if due_date < today:
+                if month == 12:
+                    year += 1
+                    month = 1
+                else:
+                    month += 1
+                _, last_day = monthrange(year, month)
+                actual_due_day = min(due_day, last_day)
+                due_date = today.replace(year=year, month=month, day=actual_due_day)
+            
+            return due_date
+        
+        elif frequency == 'quarterly':
+            billing_month = bill.get('billing_month', 1)
+            quarter_months = [billing_month, billing_month + 3, billing_month + 6, billing_month + 9]
+            quarter_months = [m if m <= 12 else m - 12 for m in quarter_months]
+            
+            for m in sorted(quarter_months):
+                year = today.year
+                if m < today.month:
+                    continue
+                _, last_day = monthrange(year, m)
+                actual_due_day = min(due_day, last_day)
+                due_date = today.replace(month=m, day=actual_due_day)
+                if due_date >= today:
+                    return due_date
+            
+            # Next year
+            m = min(quarter_months)
+            year = today.year + 1
+            _, last_day = monthrange(year, m)
+            actual_due_day = min(due_day, last_day)
+            return date(year, m, actual_due_day)
+        
+        elif frequency == 'half_yearly':
+            billing_month = bill.get('billing_month', 1)
+            half_months = [billing_month, billing_month + 6]
+            half_months = [m if m <= 12 else m - 12 for m in half_months]
+            
+            for m in sorted(half_months):
+                year = today.year
+                _, last_day = monthrange(year, m)
+                actual_due_day = min(due_day, last_day)
+                due_date = date(year, m, actual_due_day)
+                if due_date >= today:
+                    return due_date
+            
+            m = min(half_months)
+            year = today.year + 1
+            _, last_day = monthrange(year, m)
+            actual_due_day = min(due_day, last_day)
+            return date(year, m, actual_due_day)
+        
+        elif frequency == 'yearly':
+            billing_month = bill.get('billing_month', 1)
+            year = today.year
+            _, last_day = monthrange(year, billing_month)
+            actual_due_day = min(due_day, last_day)
+            due_date = date(year, billing_month, actual_due_day)
+            
+            if due_date < today:
+                year += 1
+                _, last_day = monthrange(year, billing_month)
+                actual_due_day = min(due_day, last_day)
+                due_date = date(year, billing_month, actual_due_day)
+            
+            return due_date
+        
+        return None
+    
+    def _get_current_payment(self, bill_id: int, due_date) -> Optional[Dict]:
+        """Get payment record for current billing cycle."""
+        self._init_bills_tables()
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT * FROM bill_payments 
+                WHERE bill_id = ? AND due_date = ?
+            ''', (bill_id, due_date.isoformat()))
+            row = cursor.fetchone()
+            return dict(row) if row else None
+    
+    def ensure_payment_record(self, bill_id: int, due_date: str) -> int:
+        """Ensure a payment record exists for the billing cycle."""
+        self._init_bills_tables()
+        
+        # Check if record exists
+        with self.get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT id FROM bill_payments 
+                WHERE bill_id = ? AND due_date = ?
+            ''', (bill_id, due_date))
+            row = cursor.fetchone()
+            
+            if row:
+                return row['id']
+            
+            # Get bill details for typical amount
+            bill = self.get_bill(bill_id)
+            
+            # Create new payment record
+            cursor.execute('''
+                INSERT INTO bill_payments (bill_id, due_date, amount_due, status)
+                VALUES (?, ?, ?, 'pending')
+            ''', (bill_id, due_date, bill.get('typical_amount') if bill else None))
+            
+            return cursor.lastrowid
