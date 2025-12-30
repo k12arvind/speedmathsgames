@@ -46,9 +46,9 @@ Two-machine setup with MacBook Pro as **development/source** and Mac Mini as **p
 ├── auth/                      # Google OAuth
 │   ├── google_auth.py
 │   └── user_db.py
-├── math_module/               # Math practice
-│   ├── math_db.py
-│   └── math_tracker.db
+├── math_module/               # Math practice module code
+│   └── math_db.py             # Database class (uses root-level math_tracker.db)
+├── math_tracker.db            # Math questions DB (360 questions) - ROOT LEVEL
 ├── logs/                      # Server logs
 ├── start_server.sh            # Server startup script
 └── .git/                      # Version control (MacBook only)
@@ -130,9 +130,9 @@ Managed by: `launchctl` (always running)
 - Tables: `test_sessions`, `question_attempts`, `question_performance`
 - Purpose: Assessment tests and analytics
 
-### 3. Math Tracker (`math_module/math_tracker.db`)
-- Location: `~/clat_preparation/math_module/`
-- Tables: `questions`, `user_progress`, `sessions`
+### 3. Math Tracker (`math_tracker.db`)
+- Location: `~/clat_preparation/` (ROOT level - NOT in math_module/)
+- Tables: `math_questions` (360), `math_sessions`, `math_answers`, `math_topic_settings`
 - Purpose: Math practice tracking
 
 ### 4. Users Database (`auth/users.db`)
