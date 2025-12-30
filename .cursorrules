@@ -41,9 +41,44 @@ This is a CLAT (Common Law Admission Test) exam preparation system that:
 │   ├── extract_html.py     # HTML extraction
 │   └── generate_clean_pdf_final.py  # PDF generation
 ├── venv_clat/              # Shared Python virtual environment
-├── revision_tracker.db     # Main database
+├── revision_tracker.db     # Main GK database
+├── math_tracker.db         # Math questions & sessions (360 questions)
 └── assessment_tracker.db   # Assessment tracking
 ```
+
+## CRITICAL: Database Locations (NEVER CREATE DUPLICATES)
+
+All databases live at the **ROOT level** (`~/clat_preparation/`). Do NOT create databases in subdirectories.
+
+| Database | Location | Purpose | Tables |
+|----------|----------|---------|--------|
+| `revision_tracker.db` | `~/clat_preparation/` | GK PDFs, topics, questions | pdfs, topics, questions, assessment_jobs |
+| `math_tracker.db` | `~/clat_preparation/` | Math practice system | math_questions (360), math_sessions, math_answers, math_topic_settings |
+| `assessment_tracker.db` | `~/clat_preparation/` | Assessment tracking | test_sessions, question_attempts |
+| `finance_tracker.db` | `~/clat_preparation/` | Finance tracking | transactions, budgets |
+| `health_tracker.db` | `~/clat_preparation/` | Health tracking | weight_log, exercise_log |
+
+### Database Path Pattern (ALWAYS USE)
+```python
+# ✅ CORRECT - Root level database
+db_path = Path(__file__).parent.parent / 'math_tracker.db'  # From server/
+db_path = Path.home() / 'clat_preparation' / 'math_tracker.db'
+
+# ❌ WRONG - Creates duplicate in subdirectory
+db_path = Path(__file__).parent / 'math_tracker.db'  # From math_module/
+db_path = Path(__file__).parent.parent / 'math_module' / 'math_tracker.db'
+```
+
+### Before Creating/Modifying Databases
+1. **CHECK** if database already exists at root level
+2. **NEVER** create databases in subdirectories (math_module/, server/, etc.)
+3. **VERIFY** server uses the same path as scripts (e.g., populate_math_questions.py)
+
+### Past Issues (December 2025)
+- Math questions were generated to root `math_tracker.db` (360 questions)
+- Server was configured to use `math_module/math_tracker.db` (old, 195 questions)
+- Result: Users saw only 10-20 questions instead of expected amounts
+- Fix: Always use root level path, deleted duplicate database
 
 ## Code Style & Standards
 
@@ -314,6 +349,14 @@ source ~/.zshrc
 - URL format: `https://www.toprankers.com/current-affairs-DD-MONTH-YYYY`
 - Page might not be published yet (future dates)
 - Check BeautifulSoup is installed
+
+### iCloud Sync Issues (PDFs not appearing on Mac Mini)
+The `~/saanvi/` folder is synced via iCloud. If new PDFs don't appear:
+1. Check iCloud status: `brctl status` (look for `needs-sync-down`)
+2. Force download: `brctl download ~/saanvi/LegalEdgeweeklyGK/`
+3. Open Finder on Mac Mini and navigate to folder (triggers sync)
+4. Check iCloud Drive storage isn't full
+5. Wait 5-10 minutes for automatic sync
 
 ## AI-Specific Instructions
 
