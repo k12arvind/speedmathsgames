@@ -922,24 +922,18 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             user_id = data.get('user_id', 'daughter')
             topics = data.get('topics', [])
             total_questions = data.get('total_questions', 10)
-            
-            print(f"🧮 Math session create: user={user_id}, topics={topics}, total_questions={total_questions}")
 
             questions = []
             for topic in topics:
                 setting = self.math_db.get_topic_setting(user_id, topic)
                 difficulty = setting['difficulty'] if setting else 'medium'
                 limit_per_topic = total_questions // len(topics) if topics else total_questions
-                print(f"   Topic {topic}: difficulty={difficulty}, limit={limit_per_topic}")
                 qs = self.math_db.get_questions([topic], difficulty, limit=limit_per_topic)
-                print(f"   Got {len(qs)} questions for {topic}")
                 questions.extend(qs)
 
             import random
             random.shuffle(questions)
-            print(f"   Total before trim: {len(questions)}, trimming to {total_questions}")
             questions = questions[:total_questions]
-            print(f"   Final count: {len(questions)}")
 
             session_id = self.math_db.create_session(user_id, topics, total_questions)
 
@@ -2557,6 +2551,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             python_exe = str(venv_python) if venv_python.exists() else sys.executable
 
             # Start subprocess in background with output to log file
+            # Pass environment variables (including ANTHROPIC_API_KEY)
             log_file = open(f'/tmp/assessment_job_{job_id[:8]}.log', 'w')
             subprocess.Popen([
                 python_exe,
@@ -2565,7 +2560,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 pdf_id,
                 source,
                 week
-            ], stdout=log_file, stderr=log_file)
+            ], stdout=log_file, stderr=log_file, env=os.environ.copy())
 
             self.send_json({
                 'job_id': job_id,
