@@ -378,6 +378,40 @@ The `~/saanvi/` folder is synced via iCloud. If new PDFs don't appear:
 - Verify API keys are set
 - Check file permissions
 
+## Debugging & Execution Visibility Rules
+
+When debugging or handling unexpected behavior:
+
+- **Default to a debugging workflow, not speculative fixes.**
+- Reason about runtime execution paths before modifying logic.
+- If execution is unclear, instrument the code with temporary, structured logging.
+- Prefer logs that expose:
+  - Inputs
+  - Intermediate state
+  - Key decisions / branches
+  - Outputs
+
+### Debug Log Format
+Debug logs should be:
+- Clearly labeled (`[DEBUG STEP]`, `[DEBUG STATE]`, `[DEBUG DECISION]`, `[DEBUG RESULT]`)
+- Structured where possible (objects, key-value pairs)
+- Temporary unless explicitly requested otherwise
+
+### Log Preservation Rules
+- **Do NOT remove or weaken existing business-logic logs**
+- Preserve meaningful logs and add debug instrumentation separately
+- Remove debug logs after issue is resolved (unless user requests to keep)
+
+### Workflow
+1. **Understand first**: Read code and reason about execution path
+2. **Instrument**: Add debug logs at key points
+3. **Execute**: Run the code and collect output
+4. **Analyze**: Use logs to identify root cause
+5. **Fix**: Make targeted fix based on evidence
+6. **Clean up**: Remove temporary debug logs
+
+Assume the user is willing to run the code and share execution output.
+
 ## Recent Changes (December 2025)
 
 ### Project Consolidation
