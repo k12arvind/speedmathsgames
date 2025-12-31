@@ -122,9 +122,29 @@
         /* Stats Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+
+        /* Stats Section Header */
+        .stats-section {
+            margin-bottom: var(--space-md);
+        }
+
+        .stats-section-title {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-xs);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stats-section-title span {
+            font-size: 0.9rem;
         }
 
         .stat-box {
@@ -462,6 +482,103 @@
             color: var(--text-muted);
         }
 
+        /* GK Stats Container */
+        .gk-test-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .gk-test-entry {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            border-left: 3px solid var(--border-color);
+        }
+
+        .gk-test-entry.saanvi { border-left-color: #ec4899; }
+        .gk-test-entry.navya { border-left-color: #3b82f6; }
+
+        .gk-test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+        }
+
+        .gk-test-info {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            flex: 1;
+        }
+
+        .gk-pdf-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            word-break: break-word;
+        }
+
+        .gk-test-date {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+        }
+
+        .gk-test-score {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 4px 12px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .gk-test-score.high { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .gk-test-score.medium { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .gk-test-score.low { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+
+        .gk-test-details {
+            display: flex;
+            gap: var(--space-lg);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .gk-test-detail {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .gk-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .gk-summary-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            text-align: center;
+        }
+
+        .gk-summary-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--accent-primary);
+        }
+
+        .gk-summary-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .stats-grid {
@@ -507,6 +624,21 @@
             </div>
             <div class="diary-entries" id="diary-entries">
                 <div class="loading">Loading diary entries...</div>
+            </div>
+        </div>
+
+        <!-- GK Practice Section -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2 class="section-title">📚 GK Practice History</h2>
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-gk-filter="all">All</button>
+                    <button class="tab-btn" data-gk-filter="saanvi">Saanvi</button>
+                    <button class="tab-btn" data-gk-filter="navya">Navya</button>
+                </div>
+            </div>
+            <div class="gk-stats-container" id="gk-stats-container">
+                <div class="loading">Loading GK stats...</div>
             </div>
         </div>
 
@@ -594,18 +726,64 @@
                                 </div>
                             </div>
                             
-                            <div class="stats-grid">
-                                <div class="stat-box">
-                                    <div class="stat-value">${child.diary_entries_this_week}</div>
-                                    <div class="stat-label">Diary (7d)</div>
+                            <!-- Math Stats Section -->
+                            <div class="stats-section">
+                                <div class="stats-section-title"><span>🧮</span> Math Practice</div>
+                                <div class="stats-grid">
+                                    <div class="stat-box">
+                                        <div class="stat-value">${child.math_sessions || 0}</div>
+                                        <div class="stat-label">Sessions</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value">${child.math_questions || 0}</div>
+                                        <div class="stat-label">Questions</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value">${child.math_correct || 0}</div>
+                                        <div class="stat-label">Correct</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value" style="color: ${child.math_accuracy >= 70 ? '#10b981' : child.math_accuracy >= 50 ? '#f59e0b' : '#ef4444'}">
+                                            ${child.math_accuracy ? child.math_accuracy.toFixed(0) + '%' : '-'}
+                                        </div>
+                                        <div class="stat-label">Accuracy</div>
+                                    </div>
                                 </div>
-                                <div class="stat-box">
-                                    <div class="stat-value">${child.math_sessions}</div>
-                                    <div class="stat-label">Math Sessions</div>
+                            </div>
+                            
+                            <!-- GK Stats Section -->
+                            <div class="stats-section">
+                                <div class="stats-section-title"><span>📚</span> GK Practice</div>
+                                <div class="stats-grid">
+                                    <div class="stat-box">
+                                        <div class="stat-value">${child.gk_pdfs_revised || 0}</div>
+                                        <div class="stat-label">PDFs Revised</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value">${child.gk_tests || 0}</div>
+                                        <div class="stat-label">Tests</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value">${child.gk_questions || 0}</div>
+                                        <div class="stat-label">Questions</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value" style="color: ${child.gk_accuracy >= 70 ? '#10b981' : child.gk_accuracy >= 50 ? '#f59e0b' : '#ef4444'}">
+                                            ${child.gk_accuracy ? child.gk_accuracy.toFixed(0) + '%' : '-'}
+                                        </div>
+                                        <div class="stat-label">Accuracy</div>
+                                    </div>
                                 </div>
-                                <div class="stat-box">
-                                    <div class="stat-value">${child.math_accuracy ? child.math_accuracy.toFixed(0) + '%' : '-'}</div>
-                                    <div class="stat-label">Math Accuracy</div>
+                            </div>
+                            
+                            <!-- Study Diary Section -->
+                            <div class="stats-section">
+                                <div class="stats-section-title"><span>📔</span> Study Diary</div>
+                                <div class="stats-grid" style="grid-template-columns: 1fr;">
+                                    <div class="stat-box">
+                                        <div class="stat-value">${child.diary_entries_this_week}</div>
+                                        <div class="stat-label">Entries This Week</div>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -618,7 +796,8 @@
                             
                             <div class="quick-actions">
                                 <button class="quick-btn" onclick="viewDiary('${child.user_id}')">📔 Diary</button>
-                                <button class="quick-btn" onclick="viewMath('${child.user_id}')">📊 Math Stats</button>
+                                <button class="quick-btn" onclick="viewGK('${child.user_id}')">📚 GK Stats</button>
+                                <button class="quick-btn" onclick="viewMath('${child.user_id}')">🧮 Math</button>
                             </div>
                         </div>
                     `;
@@ -842,6 +1021,141 @@
             document.getElementById('settings-grid').scrollIntoView({ behavior: 'smooth' });
         }
 
+        // View GK stats for specific user
+        function viewGK(userId) {
+            // Update tab buttons
+            document.querySelectorAll('[data-gk-filter]').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.gkFilter === userId) {
+                    btn.classList.add('active');
+                }
+            });
+            loadGKStats(userId);
+            document.getElementById('gk-stats-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Load GK stats
+        async function loadGKStats(filter = 'all') {
+            const container = document.getElementById('gk-stats-container');
+            container.innerHTML = '<div class="loading">Loading GK stats...</div>';
+            
+            try {
+                // Get GK tests for children
+                const users = filter === 'all' ? ['saanvi', 'navya'] : [filter];
+                let allTests = [];
+                let totalPDFs = new Set();
+                let totalQuestions = 0;
+                let totalCorrect = 0;
+                
+                for (const userId of users) {
+                    const response = await fetch(`${API_BASE}/api/assessment/tests?user_id=${userId}`);
+                    const data = await response.json();
+                    
+                    if (data.tests) {
+                        data.tests.forEach(test => {
+                            test.user_id = userId;
+                            test.user_name = userId.charAt(0).toUpperCase() + userId.slice(1);
+                            allTests.push(test);
+                            
+                            if (test.status === 'completed') {
+                                totalPDFs.add(test.pdf_filename);
+                                totalQuestions += test.total_questions || 0;
+                                totalCorrect += test.correct_answers || 0;
+                            }
+                        });
+                    }
+                }
+                
+                // Sort by date
+                allTests.sort((a, b) => new Date(b.started_at || 0) - new Date(a.started_at || 0));
+                
+                const avgAccuracy = totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0;
+                
+                let html = `
+                    <div class="gk-summary-grid">
+                        <div class="gk-summary-card">
+                            <div class="gk-summary-value">${totalPDFs.size}</div>
+                            <div class="gk-summary-label">PDFs Revised</div>
+                        </div>
+                        <div class="gk-summary-card">
+                            <div class="gk-summary-value">${allTests.length}</div>
+                            <div class="gk-summary-label">Total Tests</div>
+                        </div>
+                        <div class="gk-summary-card">
+                            <div class="gk-summary-value">${totalQuestions}</div>
+                            <div class="gk-summary-label">Questions Attempted</div>
+                        </div>
+                        <div class="gk-summary-card">
+                            <div class="gk-summary-value" style="color: ${avgAccuracy >= 70 ? '#10b981' : avgAccuracy >= 50 ? '#f59e0b' : '#ef4444'}">
+                                ${avgAccuracy.toFixed(0)}%
+                            </div>
+                            <div class="gk-summary-label">Average Accuracy</div>
+                        </div>
+                    </div>
+                `;
+                
+                if (allTests.length === 0) {
+                    html += '<div class="loading">No GK tests found</div>';
+                } else {
+                    html += '<div class="gk-test-list">';
+                    allTests.slice(0, 20).forEach(test => {
+                        const score = test.score || 0;
+                        const scoreClass = score >= 70 ? 'high' : score >= 50 ? 'medium' : 'low';
+                        const date = test.started_at ? formatDate(test.started_at) : '-';
+                        
+                        html += `
+                            <div class="gk-test-entry ${test.user_id}">
+                                <div class="gk-test-header">
+                                    <div class="gk-test-info">
+                                        <span class="user-dot ${test.user_id}"></span>
+                                        <div>
+                                            <div class="gk-pdf-name">${test.pdf_filename || 'Unknown PDF'}</div>
+                                            <div class="gk-test-date">${test.user_name} • ${date}</div>
+                                        </div>
+                                    </div>
+                                    <div class="gk-test-score ${scoreClass}">
+                                        ${score.toFixed(0)}%
+                                    </div>
+                                </div>
+                                <div class="gk-test-details">
+                                    <div class="gk-test-detail">
+                                        <span>✅</span> ${test.correct_answers || 0}/${test.total_questions || 0} correct
+                                    </div>
+                                    <div class="gk-test-detail">
+                                        <span>❌</span> ${test.wrong_answers || 0} wrong
+                                    </div>
+                                    <div class="gk-test-detail">
+                                        <span>⏭️</span> ${test.skipped_answers || 0} skipped
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                    
+                    if (allTests.length > 20) {
+                        html += `<div style="text-align: center; margin-top: var(--space-md); color: var(--text-muted);">
+                            Showing 20 of ${allTests.length} tests
+                        </div>`;
+                    }
+                }
+                
+                container.innerHTML = html;
+            } catch (error) {
+                console.error('Error loading GK stats:', error);
+                container.innerHTML = '<div class="loading" style="color: var(--accent-danger);">Failed to load GK stats</div>';
+            }
+        }
+
+        // GK Tab button handlers
+        document.querySelectorAll('[data-gk-filter]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('[data-gk-filter]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                loadGKStats(btn.dataset.gkFilter);
+            });
+        });
+
         // Tab button handlers
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -862,6 +1176,7 @@
         setCurrentDate();
         loadFamilyOverview();
         loadDiaryEntries();
+        loadGKStats();
         loadMathSettings();
     </script>
 </body>

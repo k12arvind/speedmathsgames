@@ -3024,20 +3024,41 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 diary_entries = self.diary_db.get_entries(user_id=user_id, limit=7)
                 total_diary_entries = len(diary_entries)
                 
-                # Get math summary
+                # Get math summary (detailed)
                 math_perf = self.math_db.get_overall_performance(user_id)
                 
-                # Get GK summary
+                # Get GK summary (detailed)
                 gk_tests = self.assessment_db.get_all_tests(user_id)
+                gk_perf = self.assessment_db.get_user_performance_summary(user_id)
+                
+                # Count unique PDFs revised (completed tests)
+                unique_pdfs = set()
+                total_gk_questions = 0
+                total_gk_correct = 0
+                for test in gk_tests:
+                    if test.get('status') == 'completed':
+                        unique_pdfs.add(test.get('pdf_filename'))
+                        total_gk_questions += test.get('total_questions', 0)
+                        total_gk_correct += test.get('correct_answers', 0)
+                
+                gk_accuracy = (total_gk_correct / total_gk_questions * 100) if total_gk_questions > 0 else 0
                 
                 children_data.append({
                     'user_id': user_id,
                     'name': child['name'],
                     'email': child['email'],
                     'diary_entries_this_week': total_diary_entries,
+                    # Math stats
                     'math_sessions': math_perf.get('total_sessions', 0),
+                    'math_questions': math_perf.get('total_questions', 0),
+                    'math_correct': math_perf.get('correct_answers', 0),
                     'math_accuracy': math_perf.get('accuracy', 0),
-                    'gk_tests': len(gk_tests)
+                    # GK stats
+                    'gk_tests': len(gk_tests),
+                    'gk_pdfs_revised': len(unique_pdfs),
+                    'gk_questions': total_gk_questions,
+                    'gk_correct': total_gk_correct,
+                    'gk_accuracy': gk_accuracy
                 })
             
             self.send_json({'children': children_data})
