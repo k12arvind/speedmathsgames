@@ -20,7 +20,7 @@ from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from calendar_db import CalendarDatabase
+from server.calendar_db import CalendarDatabase
 
 # OAuth 2.0 Scopes
 SCOPES = [

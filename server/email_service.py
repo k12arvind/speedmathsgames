@@ -19,7 +19,7 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from calendar_db import CalendarDatabase
+from server.calendar_db import CalendarDatabase
 
 # Gmail API scopes
 GMAIL_SCOPES = ['https://www.googleapis.com/auth/gmail.send']
@@ -133,8 +133,8 @@ class DailySummaryService:
     """Service for generating and sending daily summary emails."""
     
     def __init__(self, calendar_db: CalendarDatabase = None):
-        from calendar_db import CalendarDatabase
-        from google_calendar_client import GoogleCalendarClient
+        from server.calendar_db import CalendarDatabase
+        from server.google_calendar_client import GoogleCalendarClient
         
         self.db = calendar_db or CalendarDatabase()
         self.calendar_client = GoogleCalendarClient(self.db)
@@ -199,7 +199,7 @@ class DailySummaryService:
     
     def _get_bill_reminders(self) -> List[Dict[str, Any]]:
         """Get bills that need reminders (7, 3, 2, 1, 0 days before due)."""
-        from finance_db import FinanceDatabase
+        from server.finance_db import FinanceDatabase
         
         finance_db = FinanceDatabase()
         today = datetime.now().date()
