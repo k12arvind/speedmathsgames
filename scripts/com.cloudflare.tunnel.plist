@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.cloudflare.tunnel</string>
+    
+    <!-- Use wrapper script that waits for network -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/arvindkumar/clat_preparation/scripts/start_cloudflared.sh</string>
+    </array>
+    
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <key>KeepAlive</key>
+    <dict>
+        <!-- Only keep alive if it exits with non-zero status -->
+        <key>SuccessfulExit</key>
+        <false/>
+        <!-- Also restart if it crashes -->
+        <key>Crashed</key>
+        <true/>
+    </dict>
+    
+    <!-- Wait 10 seconds before restarting after failure -->
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    
+    <key>StandardOutPath</key>
+    <string>/Users/arvindkumar/clat_preparation/logs/cloudflared.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Users/arvindkumar/clat_preparation/logs/cloudflared_error.log</string>
+</dict>
+</plist>
+

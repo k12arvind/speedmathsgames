@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.clatprep.healthmonitor</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/arvindkumar/clat_preparation/scripts/health_monitor.sh</string>
+    </array>
+    
+    <!-- Run every 2 minutes -->
+    <key>StartInterval</key>
+    <integer>120</integer>
+    
+    <!-- Also run at load (important for power cut recovery) -->
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <key>StandardOutPath</key>
+    <string>/Users/arvindkumar/clat_preparation/logs/health_monitor_daemon.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Users/arvindkumar/clat_preparation/logs/health_monitor_daemon_error.log</string>
+</dict>
+</plist>
+
