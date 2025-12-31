@@ -590,6 +590,73 @@ Revised PDF (green checkmark)
 3. Role determines which pages/features are visible
 4. Dynamic user_id flows through all API calls
 
+## Resilient Auto-Recovery System (December 2025)
+
+### Overview
+The system is designed to automatically recover from power cuts without manual intervention.
+
+### Components
+
+| Component | File | Purpose |
+|-----------|------|---------|
+| **Health Monitor** | `scripts/health_monitor.sh` | Runs every 2 minutes, checks server & tunnel health |
+| **Cloudflared Starter** | `scripts/start_cloudflared.sh` | Waits for network before starting tunnel |
+| **Server Starter** | `scripts/start_server.sh` | Loads API key from .zshrc, ensures venv exists |
+| **Deploy Script** | `scripts/deploy_resilient_services.sh` | One-command setup of all LaunchAgents |
+
+### LaunchAgents (Mac Mini ~/Library/LaunchAgents/)
+
+| Plist | Service | Features |
+|-------|---------|----------|
+| `com.clatprep.server.plist` | Python Server | RunAtLoad, KeepAlive, auto-restart |
+| `com.cloudflare.tunnel.plist` | Cloudflared | RunAtLoad, network-aware startup |
+| `com.clatprep.healthmonitor.plist` | Health Check | Runs every 2 minutes |
+
+### Auto-Recovery Flow (After Power Cut)
+
+```
+Power Restored
+    ↓
+Mac Mini auto-boots (System Settings > Energy Saver enabled)
+    ↓
+LaunchAgents start automatically
+    ↓
+start_server.sh → waits for network → starts Python server
+    ↓
+start_cloudflared.sh → waits for network → starts tunnel
+    ↓
+health_monitor.sh (every 2 min) → checks & restarts if needed
+```
+
+### Logs Location (Mac Mini)
+
+| Log | Path |
+|-----|------|
+| Server | `~/clat_preparation/logs/server.log` |
+| Server Errors | `~/clat_preparation/logs/server_error.log` |
+| Cloudflared | `~/clat_preparation/logs/cloudflared.log` |
+| Cloudflared Errors | `~/clat_preparation/logs/cloudflared_error.log` |
+| Health Monitor | `~/clat_preparation/logs/health_monitor.log` |
+| Startup Logs | `~/clat_preparation/logs/*_startup.log` |
+
+### Redeploy Resilience System
+```bash
+ssh mac-mini "cd ~/clat_preparation && git pull && bash scripts/deploy_resilient_services.sh"
+```
+
+### Verify Services
+```bash
+ssh mac-mini "launchctl list | grep -E 'clatprep|cloudflare'"
+ssh mac-mini "curl -s http://localhost:8001/api/stats"
+curl -s https://speedmathsgames.com
+```
+
+### Important: Mac Mini Auto-Boot
+Ensure this setting is enabled on Mac Mini:
+**System Settings > Energy Saver > "Start up automatically after a power failure"**
+
+This is already enabled on the current Mac Mini (autorestart=1).
+
 ## When in Doubt
 1. Read PROJECT_HANDOFF.md first
 2. Check existing code patterns
