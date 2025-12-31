@@ -706,6 +706,7 @@
         <div class="header-content">
             <h1>📔 Daily Study Diary</h1>
             <nav class="header-nav">
+                <a href="family_dashboard.html" class="nav-btn" id="familyDashboardBtn" style="background: #10b981; border-color: #059669; display: none;">👨‍👩‍👧‍👦 Family</a>
                 <button class="nav-btn" onclick="openWeeklySnapshot()" style="background: #ec4899; border-color: #db2777;">📅 Weekly Snapshot</button>
                 <button class="nav-btn" onclick="openDateRangeAnalytics()" style="background: #f59e0b; border-color: #d97706;">📊 Custom Analytics</button>
                 <a href="index.html" class="nav-btn">🏠 Home</a>
@@ -1019,6 +1020,11 @@
                     const user = await response.json();
                     currentUserId = user.user_id || 'saanvi';
                     console.log('Diary user loaded:', currentUserId);
+                    
+                    // Show Family Dashboard button for admin/parent users
+                    if (user.role === 'admin' || user.role === 'parent') {
+                        document.getElementById('familyDashboardBtn').style.display = 'inline-flex';
+                    }
                 }
             } catch (e) {
                 console.log('Auth not available, using default user');
