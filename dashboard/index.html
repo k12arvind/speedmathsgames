@@ -151,6 +151,7 @@
         .card-mock::before { background: var(--gradient-orange); }
         .card-finance::before { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
         .card-health::before { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
+        .card-calendar::before { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
 
         .card-gk:hover { --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2); }
         .card-math:hover { --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.2); }
@@ -158,6 +159,7 @@
         .card-mock:hover { --shadow-glow: 0 0 40px rgba(249, 115, 22, 0.2); }
         .card-finance:hover { --shadow-glow: 0 0 40px rgba(16, 185, 129, 0.2); }
         .card-health:hover { --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.2); }
+        .card-calendar:hover { --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.2); }
 
         .module-header {
             display: flex;
@@ -241,6 +243,7 @@
         .card-mock .stat-value { color: var(--accent-orange); }
         .card-finance .stat-value { color: #10b981; }
         .card-health .stat-value { color: #06b6d4; }
+        .card-calendar .stat-value { color: #8b5cf6; }
 
         .stat-label {
             font-size: 0.6875rem;
@@ -272,6 +275,7 @@
         .card-mock .module-cta { background: var(--gradient-orange); }
         .card-finance .module-cta { background: linear-gradient(135deg, #10b981 0%, #047857 100%); }
         .card-health .module-cta { background: linear-gradient(135deg, #06b6d4 0%, #0e7490 100%); }
+        .card-calendar .module-cta { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
 
         .module-cta:hover {
             transform: translateY(-2px);
@@ -666,6 +670,38 @@
                 Open Health <span class="arrow">→</span>
             </button>
         </a>
+
+        <!-- Calendar Module (Private - Parents Only) -->
+        <a href="calendar.html" class="module-card card-calendar private-module" id="calendar-module" style="display: none;">
+            <div class="module-header">
+                <div class="module-icon">📅</div>
+                <div>
+                    <div class="module-title">Calendar</div>
+                    <div class="module-subtitle">Google Calendar Sync</div>
+                </div>
+            </div>
+            <div class="module-description">
+                View and manage events from all your Google calendars with bill reminders and daily summaries.
+            </div>
+            <ul class="module-features">
+                <li>3 Google accounts synced</li>
+                <li>Bill due dates on calendar</li>
+                <li>Daily 8 AM email summary</li>
+            </ul>
+            <div class="module-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="calendar-events">-</div>
+                    <div class="stat-label">Today's Events</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="calendar-accounts">-</div>
+                    <div class="stat-label">Accounts</div>
+                </div>
+            </div>
+            <button class="module-cta">
+                Open Calendar <span class="arrow">→</span>
+            </button>
+        </a>
     </div>
 
     <div class="footer-links">
@@ -787,6 +823,7 @@
                 if (user.can_access_private_modules) {
                     document.getElementById('finance-module').style.display = 'flex';
                     document.getElementById('health-module').style.display = 'flex';
+                    document.getElementById('calendar-module').style.display = 'flex';
                     
                     // Load Finance stats
                     try {

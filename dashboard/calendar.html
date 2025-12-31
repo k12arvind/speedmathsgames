@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | CLAT Preparation Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-hover: #1a1a25;
+            --border-color: #2a2a3a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --accent-blue: #4285f4;
+            --accent-green: #34a853;
+            --accent-red: #ea4335;
+            --accent-yellow: #fbbc05;
+            --accent-purple: #9c27b0;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-card);
+            border-right: 1px solid var(--border-color);
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 100;
+        }
+        
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .sidebar-header h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .mini-calendar {
+            background: var(--bg-hover);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .mini-calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .mini-calendar-header h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .mini-calendar-nav {
+            display: flex;
+            gap: 4px;
+        }
+        
+        .mini-calendar-nav button {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .mini-calendar-nav button:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        
+        .mini-calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            text-align: center;
+        }
+        
+        .mini-calendar-day {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            padding: 4px;
+        }
+        
+        .mini-calendar-date {
+            font-size: 0.8rem;
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .mini-calendar-date:hover {
+            background: var(--accent-blue);
+            color: white;
+        }
+        
+        .mini-calendar-date.today {
+            background: var(--accent-blue);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .mini-calendar-date.selected {
+            background: var(--accent-purple);
+            color: white;
+        }
+        
+        .mini-calendar-date.other-month {
+            color: #555;
+        }
+        
+        /* Account List */
+        .accounts-section {
+            margin-bottom: 24px;
+        }
+        
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        
+        .account-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .account-item:hover {
+            background: var(--bg-hover);
+        }
+        
+        .account-item.active {
+            background: var(--bg-hover);
+        }
+        
+        .account-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        
+        .account-name {
+            font-size: 0.875rem;
+            flex: 1;
+        }
+        
+        .account-toggle {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .account-toggle.checked {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        
+        /* Bills Section */
+        .bills-section {
+            margin-bottom: 24px;
+        }
+        
+        .bill-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            background: var(--bg-hover);
+            margin-bottom: 8px;
+        }
+        
+        .bill-item.overdue {
+            border-left: 3px solid var(--accent-red);
+        }
+        
+        .bill-item.due-soon {
+            border-left: 3px solid var(--accent-yellow);
+        }
+        
+        .bill-icon {
+            font-size: 1.25rem;
+        }
+        
+        .bill-info {
+            flex: 1;
+        }
+        
+        .bill-name {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .bill-due {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .bill-amount {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        /* Calendar Header */
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 16px 20px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .calendar-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .calendar-nav button {
+            background: var(--bg-hover);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .calendar-nav button:hover {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        
+        .calendar-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .view-toggle {
+            display: flex;
+            background: var(--bg-hover);
+            border-radius: 8px;
+            padding: 4px;
+        }
+        
+        .view-toggle button {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+        
+        .view-toggle button.active {
+            background: var(--accent-blue);
+            color: white;
+        }
+        
+        .calendar-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn-sync {
+            background: var(--bg-hover);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        
+        .btn-sync:hover {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        
+        .btn-sync.syncing i {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .btn-add-event {
+            background: var(--accent-blue);
+            border: none;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .btn-add-event:hover {
+            background: #3367d6;
+        }
+        
+        /* Day View */
+        .day-view {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .day-date-large {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            line-height: 1;
+        }
+        
+        .day-info h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 4px;
+        }
+        
+        .day-info p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.875rem;
+        }
+        
+        .day-timeline {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .hour-row {
+            display: flex;
+            min-height: 60px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .hour-label {
+            width: 80px;
+            padding: 8px 16px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-align: right;
+            flex-shrink: 0;
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .hour-events {
+            flex: 1;
+            padding: 4px 8px;
+            position: relative;
+        }
+        
+        .event-block {
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .event-block:hover {
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .event-block .event-time {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+        
+        .event-block .event-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .event-block .event-account {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            margin-top: 2px;
+        }
+        
+        /* Week View */
+        .week-view {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        
+        .week-header {
+            display: grid;
+            grid-template-columns: 80px repeat(7, 1fr);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .week-header-cell {
+            padding: 16px 8px;
+            text-align: center;
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .week-header-cell:last-child {
+            border-right: none;
+        }
+        
+        .week-header-cell .day-name {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+        
+        .week-header-cell .day-number {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        
+        .week-header-cell.today .day-number {
+            background: var(--accent-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .week-body {
+            max-height: calc(100vh - 250px);
+            overflow-y: auto;
+        }
+        
+        .week-row {
+            display: grid;
+            grid-template-columns: 80px repeat(7, 1fr);
+            min-height: 60px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .week-time-cell {
+            padding: 8px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-align: right;
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .week-day-cell {
+            padding: 4px;
+            border-right: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .week-day-cell:last-child {
+            border-right: none;
+        }
+        
+        /* Month View */
+        .month-view {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        
+        .month-header {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .month-header-cell {
+            padding: 16px;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            border-right: 1px solid var(--border-color);
+        }
+        
+        .month-header-cell:last-child {
+            border-right: none;
+        }
+        
+        .month-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        
+        .month-cell {
+            min-height: 120px;
+            padding: 8px;
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .month-cell:hover {
+            background: var(--bg-hover);
+        }
+        
+        .month-cell:nth-child(7n) {
+            border-right: none;
+        }
+        
+        .month-cell.other-month {
+            opacity: 0.4;
+        }
+        
+        .month-cell.today {
+            background: rgba(66, 133, 244, 0.1);
+        }
+        
+        .month-cell-date {
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .month-cell.today .month-cell-date {
+            background: var(--accent-blue);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .month-event {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .month-event-more {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            padding: 2px 6px;
+        }
+        
+        /* Bill Events (special styling) */
+        .event-bill {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%) !important;
+        }
+        
+        .month-event.event-bill {
+            background: #ff9800 !important;
+        }
+        
+        /* Modal */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .modal-backdrop.show {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: var(--bg-card);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .modal-header h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .modal-close {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+        
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-hover);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+        
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            padding: 16px 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .btn-cancel {
+            background: var(--bg-hover);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .btn-save {
+            background: var(--accent-blue);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        /* Setup Required Banner */
+        .setup-banner {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            display: none;
+        }
+        
+        .setup-banner h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+        
+        .setup-banner p {
+            margin: 0 0 16px;
+            opacity: 0.9;
+        }
+        
+        .setup-banner .btn-setup {
+            background: white;
+            color: #f57c00;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Connected accounts status */
+        .sync-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            background: var(--bg-hover);
+            border-radius: 6px;
+            margin-top: 16px;
+        }
+        
+        .sync-status.connected {
+            color: var(--accent-green);
+        }
+        
+        .sync-status.error {
+            color: var(--accent-red);
+        }
+        
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+        }
+        
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .week-header,
+            .week-row {
+                grid-template-columns: 60px repeat(7, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="back-link" style="margin-bottom: 0;">
+                <i class="bi bi-arrow-left"></i>
+            </a>
+            <h1>📅 Calendar</h1>
+        </div>
+        
+        <!-- Mini Calendar -->
+        <div class="mini-calendar">
+            <div class="mini-calendar-header">
+                <h3 id="miniCalMonth">January 2025</h3>
+                <div class="mini-calendar-nav">
+                    <button onclick="miniCalPrev()"><i class="bi bi-chevron-left"></i></button>
+                    <button onclick="miniCalNext()"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="mini-calendar-grid" id="miniCalGrid">
+                <!-- Days populated by JS -->
+            </div>
+        </div>
+        
+        <!-- Accounts -->
+        <div class="accounts-section">
+            <div class="section-title">Calendars</div>
+            <div id="accountsList">
+                <!-- Populated by JS -->
+                <div class="account-item" style="color: var(--text-secondary);">
+                    <i class="bi bi-arrow-repeat"></i>
+                    Loading accounts...
+                </div>
+            </div>
+            <div id="syncStatus" class="sync-status">
+                <i class="bi bi-clock"></i>
+                <span>Last synced: Never</span>
+            </div>
+        </div>
+        
+        <!-- Upcoming Bills -->
+        <div class="bills-section">
+            <div class="section-title">Upcoming Bills</div>
+            <div id="billsList">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+        
+        <!-- Connect Account Button -->
+        <button class="btn-sync" style="width: 100%; justify-content: center; margin-top: 16px;" onclick="connectAccount()">
+            <i class="bi bi-plus-lg"></i>
+            Connect Google Account
+        </button>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Setup Banner (shown if no accounts connected) -->
+        <div class="setup-banner" id="setupBanner">
+            <h3>⚙️ Setup Required</h3>
+            <p>Connect your Google accounts to sync your calendar events.</p>
+            <button class="btn-setup" onclick="connectAccount()">Connect Google Account</button>
+        </div>
+        
+        <!-- Calendar Header -->
+        <div class="calendar-header">
+            <div class="calendar-nav">
+                <button onclick="goToToday()">Today</button>
+                <button onclick="navigatePrev()"><i class="bi bi-chevron-left"></i></button>
+                <button onclick="navigateNext()"><i class="bi bi-chevron-right"></i></button>
+                <span class="calendar-title" id="calendarTitle">January 2025</span>
+            </div>
+            
+            <div class="view-toggle">
+                <button class="active" data-view="day" onclick="setView('day')">Day</button>
+                <button data-view="week" onclick="setView('week')">Week</button>
+                <button data-view="month" onclick="setView('month')">Month</button>
+            </div>
+            
+            <div class="calendar-actions">
+                <button class="btn-sync" id="syncBtn" onclick="syncCalendars()">
+                    <i class="bi bi-arrow-repeat"></i>
+                    Sync
+                </button>
+                <button class="btn-add-event" onclick="openEventModal()">
+                    <i class="bi bi-plus-lg"></i>
+                    Add Event
+                </button>
+            </div>
+        </div>
+        
+        <!-- Calendar Views -->
+        <div id="calendarContainer">
+            <!-- Populated by JS based on view -->
+        </div>
+    </main>
+    
+    <!-- Add/Edit Event Modal -->
+    <div class="modal-backdrop" id="eventModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Event</h3>
+                <button class="modal-close" onclick="closeEventModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Event Title</label>
+                    <input type="text" class="form-control" id="eventTitle" placeholder="Meeting with...">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Start Date & Time</label>
+                        <input type="datetime-local" class="form-control" id="eventStart">
+                    </div>
+                    <div class="form-group">
+                        <label>End Date & Time</label>
+                        <input type="datetime-local" class="form-control" id="eventEnd">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="eventAllDay" onchange="toggleAllDay()">
+                        All Day Event
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" class="form-control" id="eventLocation" placeholder="Office, Zoom link, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" id="eventDescription" placeholder="Add details..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Calendar</label>
+                    <select class="form-control" id="eventAccount">
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeEventModal()">Cancel</button>
+                <button class="btn-save" onclick="saveEvent()">Save Event</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        
+        // State
+        let currentView = 'day';
+        let currentDate = new Date();
+        let miniCalDate = new Date();
+        let accounts = [];
+        let events = [];
+        let bills = [];
+        let enabledAccounts = new Set();
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
+            await checkAuth(true);
+            await loadAccounts();
+            await loadEvents();
+            await loadBills();
+            renderMiniCalendar();
+            renderCalendar();
+        });
+        
+        // Load accounts
+        async function loadAccounts() {
+            try {
+                const response = await fetch(`${API_BASE}/api/calendar/accounts`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    accounts = data.accounts || [];
+                    accounts.forEach(acc => enabledAccounts.add(acc.email));
+                    renderAccountsList();
+                    updateAccountSelect();
+                    
+                    if (accounts.length === 0) {
+                        document.getElementById('setupBanner').style.display = 'block';
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading accounts:', error);
+            }
+        }
+        
+        // Load events
+        async function loadEvents() {
+            const startDate = getViewStartDate();
+            const endDate = getViewEndDate();
+            
+            try {
+                const response = await fetch(
+                    `${API_BASE}/api/calendar/events?start=${startDate.toISOString()}&end=${endDate.toISOString()}`
+                );
+                const data = await response.json();
+                
+                if (data.success) {
+                    events = data.events || [];
+                    renderCalendar();
+                }
+            } catch (error) {
+                console.error('Error loading events:', error);
+            }
+        }
+        
+        // Load bills
+        async function loadBills() {
+            try {
+                const response = await fetch(`${API_BASE}/api/finance/bills/upcoming`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    bills = data.data || [];
+                    renderBillsList();
+                }
+            } catch (error) {
+                console.error('Error loading bills:', error);
+            }
+        }
+        
+        // Get view date ranges
+        function getViewStartDate() {
+            const d = new Date(currentDate);
+            if (currentView === 'day') {
+                d.setHours(0, 0, 0, 0);
+            } else if (currentView === 'week') {
+                d.setDate(d.getDate() - d.getDay());
+                d.setHours(0, 0, 0, 0);
+            } else {
+                d.setDate(1);
+                d.setHours(0, 0, 0, 0);
+            }
+            return d;
+        }
+        
+        function getViewEndDate() {
+            const d = new Date(currentDate);
+            if (currentView === 'day') {
+                d.setHours(23, 59, 59, 999);
+            } else if (currentView === 'week') {
+                d.setDate(d.getDate() - d.getDay() + 7);
+                d.setHours(23, 59, 59, 999);
+            } else {
+                d.setMonth(d.getMonth() + 1, 0);
+                d.setHours(23, 59, 59, 999);
+            }
+            return d;
+        }
+        
+        // Render accounts list
+        function renderAccountsList() {
+            const container = document.getElementById('accountsList');
+            
+            if (accounts.length === 0) {
+                container.innerHTML = `
+                    <div class="account-item" style="color: var(--text-secondary);">
+                        <i class="bi bi-info-circle"></i>
+                        No accounts connected
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = accounts.map(acc => `
+                <div class="account-item ${enabledAccounts.has(acc.email) ? 'active' : ''}" 
+                     onclick="toggleAccount('${acc.email}')">
+                    <div class="account-dot" style="background: ${acc.color}"></div>
+                    <span class="account-name">${acc.email.split('@')[0]}</span>
+                    <div class="account-toggle ${enabledAccounts.has(acc.email) ? 'checked' : ''}">
+                        ${enabledAccounts.has(acc.email) ? '<i class="bi bi-check" style="font-size: 12px;"></i>' : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Update account select in modal
+        function updateAccountSelect() {
+            const select = document.getElementById('eventAccount');
+            select.innerHTML = accounts.map(acc => `
+                <option value="${acc.email}" ${acc.is_primary ? 'selected' : ''}>
+                    ${acc.display_name || acc.email}
+                </option>
+            `).join('');
+        }
+        
+        // Render bills list
+        function renderBillsList() {
+            const container = document.getElementById('billsList');
+            
+            if (bills.length === 0) {
+                container.innerHTML = `
+                    <div style="color: var(--text-secondary); font-size: 0.875rem; padding: 12px;">
+                        No upcoming bills
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = bills.slice(0, 5).map(bill => {
+                const dueDate = new Date(bill.next_due_date || bill.due_date);
+                const today = new Date();
+                const daysUntil = Math.ceil((dueDate - today) / (1000 * 60 * 60 * 24));
+                const isOverdue = daysUntil < 0;
+                const isDueSoon = daysUntil <= 3;
+                
+                return `
+                    <div class="bill-item ${isOverdue ? 'overdue' : isDueSoon ? 'due-soon' : ''}">
+                        <div class="bill-icon">💰</div>
+                        <div class="bill-info">
+                            <div class="bill-name">${bill.name}</div>
+                            <div class="bill-due">
+                                ${isOverdue ? 'Overdue!' : daysUntil === 0 ? 'Due today' : `Due in ${daysUntil} days`}
+                            </div>
+                        </div>
+                        <div class="bill-amount">₹${(bill.typical_amount || 0).toLocaleString()}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Toggle account visibility
+        function toggleAccount(email) {
+            if (enabledAccounts.has(email)) {
+                enabledAccounts.delete(email);
+            } else {
+                enabledAccounts.add(email);
+            }
+            renderAccountsList();
+            renderCalendar();
+        }
+        
+        // View controls
+        function setView(view) {
+            currentView = view;
+            document.querySelectorAll('.view-toggle button').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.view === view);
+            });
+            loadEvents();
+        }
+        
+        function navigatePrev() {
+            if (currentView === 'day') {
+                currentDate.setDate(currentDate.getDate() - 1);
+            } else if (currentView === 'week') {
+                currentDate.setDate(currentDate.getDate() - 7);
+            } else {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+            }
+            loadEvents();
+        }
+        
+        function navigateNext() {
+            if (currentView === 'day') {
+                currentDate.setDate(currentDate.getDate() + 1);
+            } else if (currentView === 'week') {
+                currentDate.setDate(currentDate.getDate() + 7);
+            } else {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+            }
+            loadEvents();
+        }
+        
+        function goToToday() {
+            currentDate = new Date();
+            loadEvents();
+        }
+        
+        // Render calendar
+        function renderCalendar() {
+            updateTitle();
+            
+            const container = document.getElementById('calendarContainer');
+            
+            if (currentView === 'day') {
+                renderDayView(container);
+            } else if (currentView === 'week') {
+                renderWeekView(container);
+            } else {
+                renderMonthView(container);
+            }
+        }
+        
+        function updateTitle() {
+            const options = { year: 'numeric', month: 'long' };
+            if (currentView === 'day') {
+                options.day = 'numeric';
+                options.weekday = 'long';
+            }
+            document.getElementById('calendarTitle').textContent = 
+                currentDate.toLocaleDateString('en-US', options);
+        }
+        
+        // Day View
+        function renderDayView(container) {
+            const dayEvents = getEventsForDate(currentDate);
+            const billEvents = getBillEventsForDate(currentDate);
+            const allEvents = [...dayEvents, ...billEvents];
+            
+            const dayName = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
+            const monthYear = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            
+            let html = `
+                <div class="day-view">
+                    <div class="day-header">
+                        <div class="day-date-large">${currentDate.getDate()}</div>
+                        <div class="day-info">
+                            <h2>${dayName}</h2>
+                            <p>${monthYear}</p>
+                        </div>
+                    </div>
+                    <div class="day-timeline">
+            `;
+            
+            for (let hour = 6; hour <= 22; hour++) {
+                const hourStr = hour.toString().padStart(2, '0');
+                const hourLabel = hour === 0 ? '12 AM' : hour < 12 ? `${hour} AM` : hour === 12 ? '12 PM' : `${hour - 12} PM`;
+                
+                const hourEvents = allEvents.filter(e => {
+                    if (e.is_all_day) return hour === 6;
+                    const eventHour = new Date(e.start).getHours();
+                    return eventHour === hour;
+                });
+                
+                html += `
+                    <div class="hour-row">
+                        <div class="hour-label">${hourLabel}</div>
+                        <div class="hour-events">
+                            ${hourEvents.map(e => renderEventBlock(e)).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            html += '</div></div>';
+            container.innerHTML = html;
+        }
+        
+        // Week View
+        function renderWeekView(container) {
+            const startOfWeek = new Date(currentDate);
+            startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay());
+            
+            const days = [];
+            for (let i = 0; i < 7; i++) {
+                const d = new Date(startOfWeek);
+                d.setDate(d.getDate() + i);
+                days.push(d);
+            }
+            
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            let html = `
+                <div class="week-view">
+                    <div class="week-header">
+                        <div class="week-header-cell"></div>
+                        ${days.map(d => {
+                            const isToday = d.toDateString() === today.toDateString();
+                            return `
+                                <div class="week-header-cell ${isToday ? 'today' : ''}">
+                                    <div class="day-name">${d.toLocaleDateString('en-US', { weekday: 'short' })}</div>
+                                    <div class="day-number">${d.getDate()}</div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div class="week-body">
+            `;
+            
+            for (let hour = 6; hour <= 22; hour++) {
+                const hourLabel = hour === 0 ? '12 AM' : hour < 12 ? `${hour} AM` : hour === 12 ? '12 PM' : `${hour - 12} PM`;
+                
+                html += `
+                    <div class="week-row">
+                        <div class="week-time-cell">${hourLabel}</div>
+                        ${days.map(d => {
+                            const dayEvents = [...getEventsForDate(d), ...getBillEventsForDate(d)];
+                            const hourEvents = dayEvents.filter(e => {
+                                if (e.is_all_day) return hour === 6;
+                                const eventHour = new Date(e.start).getHours();
+                                return eventHour === hour;
+                            });
+                            
+                            return `
+                                <div class="week-day-cell" onclick="selectDate(${d.getTime()})">
+                                    ${hourEvents.map(e => renderEventBlock(e, true)).join('')}
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            }
+            
+            html += '</div></div>';
+            container.innerHTML = html;
+        }
+        
+        // Month View
+        function renderMonthView(container) {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const startDate = new Date(firstDay);
+            startDate.setDate(startDate.getDate() - startDate.getDay());
+            
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            
+            let html = `
+                <div class="month-view">
+                    <div class="month-header">
+                        ${days.map(d => `<div class="month-header-cell">${d}</div>`).join('')}
+                    </div>
+                    <div class="month-grid">
+            `;
+            
+            const current = new Date(startDate);
+            for (let i = 0; i < 42; i++) {
+                const isOtherMonth = current.getMonth() !== month;
+                const isToday = current.toDateString() === today.toDateString();
+                
+                const dayEvents = [...getEventsForDate(current), ...getBillEventsForDate(current)];
+                
+                html += `
+                    <div class="month-cell ${isOtherMonth ? 'other-month' : ''} ${isToday ? 'today' : ''}"
+                         onclick="selectDate(${current.getTime()})">
+                        <div class="month-cell-date">${current.getDate()}</div>
+                        ${dayEvents.slice(0, 3).map(e => `
+                            <div class="month-event ${e.is_bill ? 'event-bill' : ''}" 
+                                 style="background: ${e.color || '#4285f4'};">
+                                ${e.summary || e.title}
+                            </div>
+                        `).join('')}
+                        ${dayEvents.length > 3 ? `<div class="month-event-more">+${dayEvents.length - 3} more</div>` : ''}
+                    </div>
+                `;
+                
+                current.setDate(current.getDate() + 1);
+            }
+            
+            html += '</div></div>';
+            container.innerHTML = html;
+        }
+        
+        // Render single event block
+        function renderEventBlock(event, compact = false) {
+            const time = event.is_all_day ? 'All Day' : 
+                new Date(event.start).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+            
+            return `
+                <div class="event-block ${event.is_bill ? 'event-bill' : ''}" 
+                     style="background: ${event.color || '#4285f4'};"
+                     onclick="viewEvent('${event.id}', '${event.account_email || ''}')">
+                    ${!compact ? `<div class="event-time">${time}</div>` : ''}
+                    <div class="event-title">${event.summary || event.title}</div>
+                    ${!compact && event.account_email ? `<div class="event-account">${event.account_email.split('@')[0]}</div>` : ''}
+                </div>
+            `;
+        }
+        
+        // Get events for a specific date
+        function getEventsForDate(date) {
+            const dateStr = date.toISOString().split('T')[0];
+            return events.filter(e => {
+                if (!enabledAccounts.has(e.account_email)) return false;
+                const eventDate = e.start.split('T')[0];
+                return eventDate === dateStr;
+            });
+        }
+        
+        // Get bill events for a specific date
+        function getBillEventsForDate(date) {
+            const dateStr = date.toISOString().split('T')[0];
+            return bills.filter(b => {
+                const dueDate = b.next_due_date || b.due_date;
+                return dueDate === dateStr;
+            }).map(b => ({
+                id: `bill-${b.id}`,
+                summary: `💰 Bill: ${b.name}`,
+                title: b.name,
+                start: b.next_due_date || b.due_date,
+                is_all_day: true,
+                is_bill: true,
+                color: '#ff9800'
+            }));
+        }
+        
+        // Select date
+        function selectDate(timestamp) {
+            currentDate = new Date(timestamp);
+            setView('day');
+        }
+        
+        // Mini Calendar
+        function renderMiniCalendar() {
+            const year = miniCalDate.getFullYear();
+            const month = miniCalDate.getMonth();
+            
+            document.getElementById('miniCalMonth').textContent = 
+                miniCalDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const startDate = new Date(firstDay);
+            startDate.setDate(startDate.getDate() - startDate.getDay());
+            
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+            
+            let html = days.map(d => `<div class="mini-calendar-day">${d}</div>`).join('');
+            
+            const current = new Date(startDate);
+            for (let i = 0; i < 42; i++) {
+                const isOtherMonth = current.getMonth() !== month;
+                const isToday = current.toDateString() === today.toDateString();
+                const isSelected = current.toDateString() === currentDate.toDateString();
+                
+                html += `
+                    <div class="mini-calendar-date ${isOtherMonth ? 'other-month' : ''} 
+                         ${isToday ? 'today' : ''} ${isSelected ? 'selected' : ''}"
+                         onclick="selectDate(${current.getTime()})">${current.getDate()}</div>
+                `;
+                
+                current.setDate(current.getDate() + 1);
+            }
+            
+            document.getElementById('miniCalGrid').innerHTML = html;
+        }
+        
+        function miniCalPrev() {
+            miniCalDate.setMonth(miniCalDate.getMonth() - 1);
+            renderMiniCalendar();
+        }
+        
+        function miniCalNext() {
+            miniCalDate.setMonth(miniCalDate.getMonth() + 1);
+            renderMiniCalendar();
+        }
+        
+        // Sync calendars
+        async function syncCalendars() {
+            const btn = document.getElementById('syncBtn');
+            btn.classList.add('syncing');
+            btn.disabled = true;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/calendar/sync`, { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.success) {
+                    await loadEvents();
+                    document.getElementById('syncStatus').innerHTML = `
+                        <i class="bi bi-check-circle"></i>
+                        <span>Synced just now</span>
+                    `;
+                    document.getElementById('syncStatus').className = 'sync-status connected';
+                }
+            } catch (error) {
+                console.error('Sync error:', error);
+            } finally {
+                btn.classList.remove('syncing');
+                btn.disabled = false;
+            }
+        }
+        
+        // Connect account
+        function connectAccount() {
+            window.location.href = `${API_BASE}/api/calendar/auth?redirect=${encodeURIComponent(window.location.href)}`;
+        }
+        
+        // Event Modal
+        function openEventModal(event = null) {
+            const modal = document.getElementById('eventModal');
+            
+            if (event) {
+                document.getElementById('modalTitle').textContent = 'Edit Event';
+                document.getElementById('eventTitle').value = event.summary || '';
+                document.getElementById('eventStart').value = event.start ? event.start.slice(0, 16) : '';
+                document.getElementById('eventEnd').value = event.end ? event.end.slice(0, 16) : '';
+                document.getElementById('eventLocation').value = event.location || '';
+                document.getElementById('eventDescription').value = event.description || '';
+                document.getElementById('eventAllDay').checked = event.is_all_day || false;
+                document.getElementById('eventAccount').value = event.account_email || '';
+            } else {
+                document.getElementById('modalTitle').textContent = 'Add Event';
+                const now = new Date();
+                now.setMinutes(0);
+                now.setSeconds(0);
+                const start = now.toISOString().slice(0, 16);
+                now.setHours(now.getHours() + 1);
+                const end = now.toISOString().slice(0, 16);
+                
+                document.getElementById('eventTitle').value = '';
+                document.getElementById('eventStart').value = start;
+                document.getElementById('eventEnd').value = end;
+                document.getElementById('eventLocation').value = '';
+                document.getElementById('eventDescription').value = '';
+                document.getElementById('eventAllDay').checked = false;
+            }
+            
+            modal.classList.add('show');
+        }
+        
+        function closeEventModal() {
+            document.getElementById('eventModal').classList.remove('show');
+        }
+        
+        function toggleAllDay() {
+            const isAllDay = document.getElementById('eventAllDay').checked;
+            // Could change input types here if needed
+        }
+        
+        async function saveEvent() {
+            const eventData = {
+                title: document.getElementById('eventTitle').value,
+                start: document.getElementById('eventStart').value,
+                end: document.getElementById('eventEnd').value,
+                location: document.getElementById('eventLocation').value,
+                description: document.getElementById('eventDescription').value,
+                is_all_day: document.getElementById('eventAllDay').checked,
+                account_email: document.getElementById('eventAccount').value
+            };
+            
+            if (!eventData.title) {
+                alert('Please enter an event title');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/calendar/events`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(eventData)
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    closeEventModal();
+                    await loadEvents();
+                } else {
+                    alert(data.error || 'Failed to save event');
+                }
+            } catch (error) {
+                console.error('Save error:', error);
+                alert('Failed to save event');
+            }
+        }
+        
+        function viewEvent(eventId, accountEmail) {
+            // For now, just log - could open modal with details
+            console.log('View event:', eventId, accountEmail);
+        }
+    </script>
+</body>
+</html>
+

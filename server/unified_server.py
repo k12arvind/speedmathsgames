@@ -94,6 +94,11 @@ from server.health_db import HealthDatabase
 from server.mstock_client import MStockClient, FreeMarketData, parse_mstock_csv_export
 from server.blood_report_parser import BloodReportParser
 
+# Import calendar modules for Google Calendar integration
+from server.calendar_db import CalendarDatabase
+from server.google_calendar_client import GoogleCalendarClient, CREDENTIALS_FILE
+from server.email_service import DailySummaryService
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -117,6 +122,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     health_db = None
     mstock_client = None
     blood_report_parser = None
+    calendar_db = None
+    calendar_client = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -470,6 +477,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Health API endpoints (private - parents only)
             elif path.startswith('/api/health/'):
                 self.handle_health_get(path, query_params)
+            # Calendar API endpoints (private - parents only)
+            elif path.startswith('/api/calendar/'):
+                self.handle_calendar_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -528,6 +538,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Health API endpoints (private - parents only)
             elif path.startswith('/api/health/'):
                 self.handle_health_post(path, data)
+            # Calendar API endpoints (private - parents only)
+            elif path.startswith('/api/calendar/'):
+                self.handle_calendar_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -3807,6 +3820,247 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         else:
             self.send_json({'error': 'Unknown health endpoint'})
 
+    # =========================================================================
+    # Calendar API Handlers
+    # =========================================================================
+    
+    def handle_calendar_get(self, path: str, query_params: dict):
+        """Handle calendar API GET requests."""
+        if not self._check_private_access():
+            return
+        
+        # GET /api/calendar/accounts - List connected Google accounts
+        if path == '/api/calendar/accounts':
+            accounts = self.calendar_db.get_all_accounts()
+            # Don't expose tokens
+            safe_accounts = [{
+                'email': a['email'],
+                'display_name': a['display_name'],
+                'color': a['color'],
+                'is_primary': a['is_primary'],
+                'is_active': a['is_active']
+            } for a in accounts]
+            self.send_json({'success': True, 'accounts': safe_accounts})
+        
+        # GET /api/calendar/events - Get events for date range
+        elif path == '/api/calendar/events':
+            from datetime import datetime
+            
+            start = query_params.get('start', [None])[0]
+            end = query_params.get('end', [None])[0]
+            
+            if not start or not end:
+                self.send_json({'error': 'start and end dates required'}, 400)
+                return
+            
+            try:
+                start_dt = datetime.fromisoformat(start.replace('Z', '+00:00'))
+                end_dt = datetime.fromisoformat(end.replace('Z', '+00:00'))
+                
+                events = self.calendar_client.get_events_all_accounts(start_dt, end_dt)
+                self.send_json({'success': True, 'events': events})
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
+        # GET /api/calendar/auth - Start OAuth flow
+        elif path == '/api/calendar/auth':
+            redirect = query_params.get('redirect', [''])[0]
+            
+            # Build callback URL
+            callback_url = f"{self._get_base_url()}/api/calendar/callback"
+            
+            try:
+                auth_url = self.calendar_client.get_auth_url(
+                    redirect_uri=callback_url,
+                    state=redirect  # Store redirect URL in state
+                )
+                # Redirect to Google OAuth
+                self.send_response(302)
+                self.send_header('Location', auth_url)
+                self.end_headers()
+            except FileNotFoundError as e:
+                self.send_json({'error': str(e)}, 500)
+            except Exception as e:
+                self.send_json({'error': f'OAuth error: {str(e)}'}, 500)
+        
+        # GET /api/calendar/callback - OAuth callback
+        elif path == '/api/calendar/callback':
+            callback_url = f"{self._get_base_url()}/api/calendar/callback"
+            full_url = f"{callback_url}?{self.path.split('?', 1)[1]}" if '?' in self.path else callback_url
+            
+            try:
+                result = self.calendar_client.handle_oauth_callback(
+                    authorization_response=full_url,
+                    redirect_uri=callback_url
+                )
+                
+                # Get redirect from state parameter
+                state = query_params.get('state', [''])[0]
+                redirect_to = state if state else '/calendar.html'
+                
+                self.send_response(302)
+                self.send_header('Location', redirect_to)
+                self.end_headers()
+            except Exception as e:
+                self.send_json({'error': f'OAuth callback failed: {str(e)}'}, 500)
+        
+        # GET /api/calendar/status - Check connection status
+        elif path == '/api/calendar/status':
+            accounts = self.calendar_db.get_all_accounts()
+            statuses = []
+            
+            for account in accounts:
+                success, message = self.calendar_client.test_connection(account['email'])
+                sync_status = self.calendar_db.get_sync_status(account['email'])
+                
+                statuses.append({
+                    'email': account['email'],
+                    'connected': success,
+                    'message': message,
+                    'last_sync': sync_status.get('last_sync') if sync_status else None
+                })
+            
+            self.send_json({'success': True, 'accounts': statuses})
+        
+        else:
+            self.send_json({'error': 'Unknown calendar endpoint'})
+    
+    def handle_calendar_post(self, path: str, data: dict):
+        """Handle calendar API POST requests."""
+        if not self._check_private_access():
+            return
+        
+        # POST /api/calendar/sync - Sync all calendars
+        if path == '/api/calendar/sync':
+            from datetime import datetime, timedelta
+            
+            accounts = self.calendar_db.get_all_accounts()
+            results = []
+            
+            # Sync events for next 30 days
+            start = datetime.now()
+            end = start + timedelta(days=30)
+            
+            for account in accounts:
+                try:
+                    events = self.calendar_client.get_events(
+                        account['email'], start, end
+                    )
+                    results.append({
+                        'email': account['email'],
+                        'events_synced': len(events),
+                        'success': True
+                    })
+                except Exception as e:
+                    results.append({
+                        'email': account['email'],
+                        'error': str(e),
+                        'success': False
+                    })
+            
+            self.send_json({'success': True, 'results': results})
+        
+        # POST /api/calendar/events - Create new event
+        elif path == '/api/calendar/events':
+            account_email = data.get('account_email')
+            
+            if not account_email:
+                # Use primary account
+                accounts = self.calendar_db.get_all_accounts()
+                primary = next((a for a in accounts if a['is_primary']), None)
+                account_email = primary['email'] if primary else (accounts[0]['email'] if accounts else None)
+            
+            if not account_email:
+                self.send_json({'error': 'No Google account connected'}, 400)
+                return
+            
+            try:
+                result = self.calendar_client.create_event(account_email, data)
+                if result:
+                    self.send_json({'success': True, 'event': result})
+                else:
+                    self.send_json({'error': 'Failed to create event'}, 500)
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
+        # POST /api/calendar/events/{id}/update - Update event
+        elif path.startswith('/api/calendar/events/') and path.endswith('/update'):
+            parts = path.split('/')
+            event_id = parts[-2]
+            account_email = data.get('account_email')
+            
+            if not account_email:
+                self.send_json({'error': 'account_email required'}, 400)
+                return
+            
+            try:
+                result = self.calendar_client.update_event(account_email, event_id, data)
+                if result:
+                    self.send_json({'success': True, 'event': result})
+                else:
+                    self.send_json({'error': 'Failed to update event'}, 500)
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
+        # POST /api/calendar/events/{id}/delete - Delete event
+        elif path.startswith('/api/calendar/events/') and path.endswith('/delete'):
+            parts = path.split('/')
+            event_id = parts[-2]
+            account_email = data.get('account_email')
+            
+            if not account_email:
+                self.send_json({'error': 'account_email required'}, 400)
+                return
+            
+            try:
+                success = self.calendar_client.delete_event(account_email, event_id)
+                self.send_json({'success': success})
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
+        # POST /api/calendar/bills/sync - Sync bills to Google Calendar
+        elif path == '/api/calendar/bills/sync':
+            target_email = data.get('target_email', 'k12arvind@gmail.com')
+            
+            # Get all active bills
+            bills = self.finance_db.get_bills()
+            synced = 0
+            errors = []
+            
+            for bill in bills:
+                try:
+                    event_id = self.calendar_client.sync_bill_to_calendar(bill, target_email)
+                    if event_id:
+                        synced += 1
+                except Exception as e:
+                    errors.append({'bill': bill.get('name'), 'error': str(e)})
+            
+            self.send_json({
+                'success': True,
+                'bills_synced': synced,
+                'errors': errors
+            })
+        
+        # POST /api/calendar/summary/send - Send daily summary now
+        elif path == '/api/calendar/summary/send':
+            recipient = data.get('recipient', 'arvind@orchids.edu.in')
+            
+            try:
+                summary_service = DailySummaryService(self.calendar_db)
+                success = summary_service.generate_and_send_summary(recipient)
+                self.send_json({'success': success})
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+        
+        else:
+            self.send_json({'error': 'Unknown calendar endpoint'})
+    
+    def _get_base_url(self) -> str:
+        """Get the base URL for the server."""
+        host = self.headers.get('Host', 'localhost:8001')
+        protocol = 'https' if 'speedmathsgames.com' in host else 'http'
+        return f"{protocol}://{host}"
+
     def send_json(self, data: dict, status_code: int = 200):
         """Send JSON response with optional status code."""
         if status_code != 200:
@@ -3880,6 +4134,18 @@ def main():
         print("✅ MStock client initialized (API configured)")
     else:
         print("⚠️  MStock client initialized (credentials not configured)")
+    
+    # Initialize calendar module for Google Calendar integration
+    UnifiedHandler.calendar_db = CalendarDatabase()
+    UnifiedHandler.calendar_client = GoogleCalendarClient(UnifiedHandler.calendar_db)
+    print("✅ Calendar module initialized")
+    
+    # Check if Google OAuth credentials are configured
+    if CREDENTIALS_FILE.exists():
+        print(f"✅ Google OAuth credentials found at {CREDENTIALS_FILE}")
+    else:
+        print(f"⚠️  Google OAuth credentials not found at {CREDENTIALS_FILE}")
+        print("   To enable Google Calendar sync, download OAuth credentials from GCP Console")
 
     # Initialize Anthropic client
     api_key = os.environ.get("ANTHROPIC_API_KEY")

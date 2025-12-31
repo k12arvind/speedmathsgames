@@ -33,6 +33,7 @@ echo "2. Stopping existing services..."
 launchctl unload "$LAUNCH_AGENTS_DIR/com.clatprep.healthmonitor.plist" 2>/dev/null
 launchctl unload "$LAUNCH_AGENTS_DIR/com.cloudflare.tunnel.plist" 2>/dev/null
 launchctl unload "$LAUNCH_AGENTS_DIR/com.clatprep.server.plist" 2>/dev/null
+launchctl unload "$LAUNCH_AGENTS_DIR/com.clatprep.dailysummary.plist" 2>/dev/null
 pkill -f unified_server.py 2>/dev/null
 pkill -f cloudflared 2>/dev/null
 sleep 3
@@ -43,6 +44,7 @@ echo "3. Installing LaunchAgent configurations..."
 cp "$SCRIPTS_DIR/com.clatprep.healthmonitor.plist" "$LAUNCH_AGENTS_DIR/"
 cp "$SCRIPTS_DIR/com.cloudflare.tunnel.plist" "$LAUNCH_AGENTS_DIR/"
 cp "$SCRIPTS_DIR/com.clatprep.server.plist" "$LAUNCH_AGENTS_DIR/"
+cp "$SCRIPTS_DIR/com.clatprep.dailysummary.plist" "$LAUNCH_AGENTS_DIR/"
 
 # Load services
 echo ""
@@ -52,6 +54,7 @@ sleep 3
 launchctl load "$LAUNCH_AGENTS_DIR/com.cloudflare.tunnel.plist"
 sleep 5
 launchctl load "$LAUNCH_AGENTS_DIR/com.clatprep.healthmonitor.plist"
+launchctl load "$LAUNCH_AGENTS_DIR/com.clatprep.dailysummary.plist"
 
 # Verify services
 echo ""
