@@ -4095,6 +4095,54 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         print(f"[{self.log_date_time_string()}] {format % args}")
 
 
+def verify_database_health():
+    """Check database health and log warnings for missing data."""
+    print("\n" + "="*60)
+    print("DATABASE HEALTH CHECK")
+    print("="*60)
+    
+    checks = [
+        ('math_tracker.db', 'math_questions', 300, 'Math questions'),
+        ('revision_tracker.db', 'pdfs', 10, 'GK PDFs'),
+    ]
+    
+    all_healthy = True
+    root_path = Path(__file__).parent.parent
+    
+    for db_name, table, min_count, description in checks:
+        db_path = root_path / db_name
+        if not db_path.exists():
+            print(f"❌ {db_name}: FILE NOT FOUND at {db_path}")
+            all_healthy = False
+            continue
+            
+        try:
+            import sqlite3
+            conn = sqlite3.connect(str(db_path))
+            cursor = conn.cursor()
+            cursor.execute(f"SELECT COUNT(*) FROM {table}")
+            count = cursor.fetchone()[0]
+            conn.close()
+            
+            if count >= min_count:
+                print(f"✅ {description}: {count} (expected >= {min_count})")
+            else:
+                print(f"⚠️  {description}: {count} (expected >= {min_count}) - LOW COUNT!")
+                all_healthy = False
+        except Exception as e:
+            print(f"❌ {db_name}: Error checking - {e}")
+            all_healthy = False
+    
+    print("="*60)
+    if all_healthy:
+        print("✅ All databases healthy")
+    else:
+        print("⚠️  Some databases have issues - check above")
+    print("="*60 + "\n")
+    
+    return all_healthy
+
+
 def main():
     """Start the unified server."""
     parser = argparse.ArgumentParser(description='Unified CLAT Preparation Server')
@@ -4110,6 +4158,9 @@ def main():
     # Use root-level math_tracker.db (same as populate_math_questions.py)
     math_db_path = Path(__file__).parent.parent / 'math_tracker.db'
     UnifiedHandler.math_db = MathDatabase(str(math_db_path))
+    
+    # Run database health check
+    verify_database_health()
 
     UnifiedHandler.pdf_scanner = PDFScanner()
 

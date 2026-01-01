@@ -10,10 +10,14 @@ Handles all database interactions for questions, sessions, answers, and analytic
 
 import sqlite3
 import json
+import logging
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 from datetime import datetime
 import uuid
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 class MathDatabase:
@@ -24,9 +28,16 @@ class MathDatabase:
             db_path = Path(__file__).parent.parent / 'math_tracker.db'
 
         self.db_path = db_path
+        logger.info(f"[MATH_DB] Initializing with path: {self.db_path}")
+        logger.info(f"[MATH_DB] DB exists: {Path(self.db_path).exists()}")
+        
         self.conn = sqlite3.connect(str(self.db_path), check_same_thread=False)
         self.conn.row_factory = sqlite3.Row
         self._init_schema()
+        
+        # Log question count on init
+        question_count = self.get_question_count()
+        logger.info(f"[MATH_DB] Questions in database: {question_count}")
 
     def _init_schema(self):
         """Initialize database schema if tables don't exist."""
@@ -141,6 +152,8 @@ class MathDatabase:
     def get_questions(self, topics: List[str], difficulty: str,
                      limit: int = None) -> List[Dict]:
         """Get random questions for specified topics and difficulty."""
+        logger.info(f"[MATH_DB] get_questions called: topics={topics}, difficulty={difficulty}, limit={limit}")
+        
         cursor = self.conn.cursor()
 
         # Build query
@@ -160,8 +173,17 @@ class MathDatabase:
 
         cursor.execute(query, params)
         rows = cursor.fetchall()
+        
+        result = [dict(row) for row in rows]
+        logger.info(f"[MATH_DB] get_questions returned {len(result)} questions")
+        
+        if len(result) == 0:
+            # Log warning with diagnostic info
+            total = self.get_question_count()
+            by_topic = self.get_questions_by_topic()
+            logger.warning(f"[MATH_DB] WARNING: 0 questions returned! Total in DB: {total}, By topic: {by_topic}")
 
-        return [dict(row) for row in rows]
+        return result
 
     def get_question_by_id(self, question_id: int) -> Optional[Dict]:
         """Get a specific question by ID."""
@@ -192,6 +214,18 @@ class MathDatabase:
         cursor.execute(query, params)
         return cursor.fetchone()['count']
 
+    def get_question_count(self) -> int:
+        """Get total question count in database."""
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT COUNT(*) as count FROM math_questions")
+        return cursor.fetchone()['count']
+
+    def get_questions_by_topic(self) -> Dict[str, int]:
+        """Get question count grouped by topic."""
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT topic, COUNT(*) as count FROM math_questions GROUP BY topic")
+        return {row['topic']: row['count'] for row in cursor.fetchall()}
+
     # ============================================================================
     # SESSIONS
     # ============================================================================
@@ -199,6 +233,16 @@ class MathDatabase:
     def create_session(self, user_id: str, topics: List[str],
                       total_questions: int) -> str:
         """Create a new practice session."""
+        logger.info(f"[MATH_SESSION] Creating session for user={user_id}, topics={topics}, questions={total_questions}")
+        logger.info(f"[MATH_SESSION] DB path: {self.db_path}")
+        
+        # Verify questions exist before creating session
+        question_count = self.get_question_count()
+        logger.info(f"[MATH_SESSION] Questions in DB: {question_count}")
+        
+        if question_count == 0:
+            logger.error(f"[MATH_SESSION] CRITICAL: No questions in database! Cannot create valid session.")
+        
         session_id = str(uuid.uuid4())
         cursor = self.conn.cursor()
 
@@ -212,6 +256,7 @@ class MathDatabase:
         ))
 
         self.conn.commit()
+        logger.info(f"[MATH_SESSION] Created session_id={session_id}")
         return session_id
 
     def complete_session(self, session_id: str, total_time_seconds: float,
