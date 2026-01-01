@@ -4101,19 +4101,29 @@ def verify_database_health():
     print("DATABASE HEALTH CHECK")
     print("="*60)
     
+    # (db_name, table, min_count, description, is_critical)
+    # is_critical=True means 0 is a problem, False means 0 is acceptable for new users
     checks = [
-        ('math_tracker.db', 'math_questions', 300, 'Math questions'),
-        ('revision_tracker.db', 'pdfs', 10, 'GK PDFs'),
+        ('math_tracker.db', 'math_questions', 300, 'Math questions', True),
+        ('revision_tracker.db', 'topics', 10, 'GK Topics', True),
+        ('finance_tracker.db', 'stock_holdings', 0, 'Stock holdings', False),
+        ('finance_tracker.db', 'assets', 0, 'Assets', False),
+        ('finance_tracker.db', 'recurring_bills', 0, 'Recurring bills', False),
+        ('health_tracker.db', 'health_profiles', 0, 'Health profiles', False),
+        ('assessment_tracker.db', 'test_sessions', 0, 'Test sessions', False),
     ]
     
     all_healthy = True
     root_path = Path(__file__).parent.parent
     
-    for db_name, table, min_count, description in checks:
+    for db_name, table, min_count, description, is_critical in checks:
         db_path = root_path / db_name
         if not db_path.exists():
-            print(f"❌ {db_name}: FILE NOT FOUND at {db_path}")
-            all_healthy = False
+            if is_critical:
+                print(f"❌ {db_name}: FILE NOT FOUND at {db_path}")
+                all_healthy = False
+            else:
+                print(f"⚠️  {db_name}: Not found (optional)")
             continue
             
         try:
@@ -4125,19 +4135,24 @@ def verify_database_health():
             conn.close()
             
             if count >= min_count:
-                print(f"✅ {description}: {count} (expected >= {min_count})")
-            else:
-                print(f"⚠️  {description}: {count} (expected >= {min_count}) - LOW COUNT!")
+                print(f"✅ {description}: {count}")
+            elif is_critical:
+                print(f"❌ {description}: {count} (expected >= {min_count}) - CRITICAL!")
                 all_healthy = False
+            else:
+                print(f"ℹ️  {description}: {count}")
         except Exception as e:
-            print(f"❌ {db_name}: Error checking - {e}")
-            all_healthy = False
+            if is_critical:
+                print(f"❌ {db_name}: Error checking - {e}")
+                all_healthy = False
+            else:
+                print(f"⚠️  {db_name}: {e}")
     
     print("="*60)
     if all_healthy:
-        print("✅ All databases healthy")
+        print("✅ All critical databases healthy")
     else:
-        print("⚠️  Some databases have issues - check above")
+        print("❌ CRITICAL: Some databases have issues!")
     print("="*60 + "\n")
     
     return all_healthy
