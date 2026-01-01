@@ -8,9 +8,11 @@ venv/
 env/
 *.egg-info/
 
-# Database files - KEEP production databases in Git for sync
-# *.db
-# *.db-journal
+# Database files - DO NOT TRACK (prevents data loss during git pull)
+# Each machine maintains its own production data
+# Use scripts/safe_pull.sh for deployments
+# Use scripts/export_data.sh to migrate data between machines
+*.db
 *.sqlite
 *.sqlite3
 
