@@ -554,6 +554,33 @@
             box-shadow: 0 6px 30px rgba(124, 58, 237, 0.5);
         }
 
+        /* Table Wrapper - Always enable horizontal scroll */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-primary) var(--bg-secondary);
+        }
+
+        .table-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 4px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 4px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #9333ea;
+        }
+
         /* iPad Responsive - Horizontal Scroll for Tables */
         @media (max-width: 1024px) {
             .header-content {
@@ -569,10 +596,8 @@
             }
 
             .table-wrapper {
-                width: 100%;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                border-radius: 12px;
+                border-radius: 0 0 12px 12px;
+                margin-top: 0;
             }
 
             .table-container {
@@ -581,19 +606,44 @@
 
             /* Swipe indicator for iPad */
             .table-wrapper::before {
-                content: '← Swipe to see more →';
+                content: '👆 Swipe left/right to see all columns →';
                 display: block;
                 text-align: center;
-                padding: 8px;
-                background: rgba(124, 58, 237, 0.1);
-                color: var(--accent-primary);
-                font-size: 12px;
+                padding: 10px;
+                background: linear-gradient(90deg, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+                color: #a78bfa;
+                font-size: 13px;
                 font-weight: 600;
-                border-radius: 8px 8px 0 0;
+                border-bottom: 1px solid var(--border-color);
+                position: sticky;
+                left: 0;
             }
 
             table {
-                min-width: 1200px;
+                min-width: 1100px;
+            }
+
+            /* Make action buttons more touch-friendly */
+            .btn {
+                min-height: 44px;
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+
+            .action-buttons {
+                gap: 8px;
+            }
+        }
+
+        /* Extra small screens (phones) */
+        @media (max-width: 600px) {
+            table {
+                min-width: 900px;
+            }
+
+            .table-wrapper::before {
+                font-size: 12px;
+                padding: 8px;
             }
         }
 
@@ -918,24 +968,26 @@
             }
 
             const tableHTML = `
-                <table>
-                    <thead>
-                        <tr>
-                            <th onclick="sortTable('filename')">PDF Name</th>
-                            <th onclick="sortTable('date_published')">Date</th>
-                            <th onclick="sortTable('source_type')">Type</th>
-                            <th onclick="sortTable('total_topics')">Topics</th>
-                            <th onclick="sortTable('revision_count')">Revisions</th>
-                            <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
-                            <th onclick="sortTable('days_since_revision')">Last Revised</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${pdfs.map(pdf => createTableRow(pdf)).join('')}
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable('filename')">PDF Name</th>
+                                <th onclick="sortTable('date_published')">Date</th>
+                                <th onclick="sortTable('source_type')">Type</th>
+                                <th onclick="sortTable('total_topics')">Topics</th>
+                                <th onclick="sortTable('revision_count')">Revisions</th>
+                                <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
+                                <th onclick="sortTable('days_since_revision')">Last Revised</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${pdfs.map(pdf => createTableRow(pdf)).join('')}
+                        </tbody>
+                    </table>
+                </div>
             `;
 
             container.innerHTML = tableHTML;
@@ -959,20 +1011,22 @@
             }
 
             const tableHTML = `
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Parent PDF</th>
-                            <th># Chunks</th>
-                            <th>Overlap</th>
-                            <th>Original Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${chunkedPdfs.map(item => createChunkedRow(item)).join('')}
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Parent PDF</th>
+                                <th># Chunks</th>
+                                <th>Overlap</th>
+                                <th>Original Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${chunkedPdfs.map(item => createChunkedRow(item)).join('')}
+                        </tbody>
+                    </table>
+                </div>
             `;
 
             container.innerHTML = tableHTML;
@@ -1036,20 +1090,22 @@
             }
 
             const tableHTML = `
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Filename</th>
-                            <th>Pages</th>
-                            <th>Size</th>
-                            <th>Archived Date</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${largeFiles.map(file => createLargeFileRow(file)).join('')}
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Filename</th>
+                                <th>Pages</th>
+                                <th>Size</th>
+                                <th>Archived Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${largeFiles.map(file => createLargeFileRow(file)).join('')}
+                        </tbody>
+                    </table>
+                </div>
             `;
 
             container.innerHTML = tableHTML;
