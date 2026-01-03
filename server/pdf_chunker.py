@@ -64,21 +64,31 @@ class PdfChunker:
                 reader = PyPDF2.PdfReader(pdf_file)
                 total_pages = len(reader.pages)
 
-                # Smart chunk calculation: avoid tiny final chunks
-                # If final chunk would be 1-3 pages, extend second-to-last chunk instead
-                initial_chunks = (total_pages + max_pages - 1) // max_pages
+                # Calculate number of chunks needed
+                # With overlap: each chunk after the first shares 1 page with the previous
+                # So effective advance per chunk is (max_pages - 1) except for the first chunk
+                if overlap_pages:
+                    # Formula: 1 + ceil((total_pages - max_pages) / (max_pages - 1))
+                    # Simplified: ceil((total_pages - 1) / (max_pages - 1))
+                    if total_pages <= max_pages:
+                        initial_chunks = 1
+                    else:
+                        initial_chunks = 1 + ((total_pages - max_pages - 1) // (max_pages - 1)) + 1
+                else:
+                    initial_chunks = (total_pages + max_pages - 1) // max_pages
 
                 # Calculate what the last chunk size would be
-                if overlap_pages:
-                    # With overlap, we need to account for overlaps reducing available pages
-                    pages_in_full_chunks = (initial_chunks - 1) * (max_pages - 1) + max_pages
-                    remaining_pages = total_pages - pages_in_full_chunks + 1
+                if overlap_pages and initial_chunks > 1:
+                    # Last chunk starts at: (initial_chunks - 1) * (max_pages - 1)
+                    last_chunk_start = (initial_chunks - 1) * (max_pages - 1)
+                    remaining_pages = total_pages - last_chunk_start
                 else:
                     remaining_pages = total_pages % max_pages
                     if remaining_pages == 0:
                         remaining_pages = max_pages
 
-                # If final chunk is too small (1-3 pages), merge it with previous chunk
+                # Smart chunk calculation: avoid tiny final chunks (1-3 pages)
+                # If final chunk would be too small, extend second-to-last chunk instead
                 MIN_CHUNK_SIZE = 4
                 if initial_chunks > 1 and remaining_pages < MIN_CHUNK_SIZE:
                     total_chunks = initial_chunks - 1
