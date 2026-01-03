@@ -1,11 +1,11 @@
 /*
  * CLAT Preparation Hub - Shared Design System
- * Modern, dark theme optimized for iPad and young users
- * Version 2.0
+ * Dark & Light theme optimized for iPad and young users
+ * Version 3.0 - With Theme Toggle Support
  */
 
 /* ============================================
-   CSS VARIABLES - Design Tokens
+   CSS VARIABLES - Design Tokens (Dark Theme Default)
    ============================================ */
 :root {
     /* Colors - Dark Theme with Vibrant Accents */
@@ -78,6 +78,178 @@
     --z-sticky: 200;
     --z-modal: 300;
     --z-toast: 400;
+}
+
+/* ============================================
+   LIGHT THEME - Override Variables
+   ============================================ */
+[data-theme="light"] {
+    /* Background Colors - Clean Light Theme */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --bg-input: #ffffff;
+    --bg-glass: rgba(255, 255, 255, 0.9);
+    
+    /* Text Colors */
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --text-accent: #7c3aed;
+    
+    /* Keep accent colors vibrant but adjust for light bg */
+    --accent-primary: #7c3aed;
+    --accent-secondary: #0891b2;
+    --accent-success: #059669;
+    --accent-warning: #d97706;
+    --accent-danger: #dc2626;
+    --accent-pink: #db2777;
+    --accent-blue: #2563eb;
+    --accent-orange: #ea580c;
+    
+    /* Gradients - Slightly adjusted for light theme */
+    --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+    --gradient-blue: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+    --gradient-green: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    --gradient-orange: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.05) 100%);
+    
+    /* Borders - Visible on light backgrounds */
+    --border-color: rgba(0, 0, 0, 0.1);
+    --border-accent: rgba(124, 58, 237, 0.2);
+    
+    /* Shadows - Softer for light theme */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+.theme-toggle {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-md);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Dark theme icon (show sun for switching to light) */
+.theme-toggle .icon-sun {
+    display: block;
+}
+
+.theme-toggle .icon-moon {
+    display: none;
+}
+
+/* Light theme icon (show moon for switching to dark) */
+[data-theme="light"] .theme-toggle .icon-sun {
+    display: none;
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+    display: block;
+}
+
+/* Smooth transition for theme change */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card, .stat-card, .table-container, .nav-pills, .btn, .badge, .modal, .form-input, .form-select {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light theme specific adjustments */
+[data-theme="light"] .btn-primary {
+    box-shadow: var(--shadow-sm), 0 0 15px rgba(124, 58, 237, 0.2);
+}
+
+[data-theme="light"] .btn-primary:hover {
+    box-shadow: var(--shadow-md), 0 0 25px rgba(124, 58, 237, 0.3);
+}
+
+[data-theme="light"] .stat-value {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="light"] .header-title h1 {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Light theme table hover */
+[data-theme="light"] .table tr:hover {
+    background: #f1f5f9;
+}
+
+/* Light theme scrollbar */
+[data-theme="light"]::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+[data-theme="light"]::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+}
+
+[data-theme="light"]::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Light theme modal overlay */
+[data-theme="light"] .modal-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Badge adjustments for light theme */
+[data-theme="light"] .badge-primary {
+    background: rgba(124, 58, 237, 0.15);
+    color: #7c3aed;
+}
+
+[data-theme="light"] .badge-success {
+    background: rgba(5, 150, 105, 0.15);
+    color: #059669;
+}
+
+[data-theme="light"] .badge-warning {
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+}
+
+[data-theme="light"] .badge-danger {
+    background: rgba(220, 38, 38, 0.15);
+    color: #dc2626;
 }
 
 /* ============================================

@@ -976,6 +976,37 @@
 
         // Initialize session on page load
         window.onload = initSession;
+
+        // ========================================
+        // THEME TOGGLE FUNCTIONALITY
+        // ========================================
+        function initTheme() {
+            const savedTheme = localStorage.getItem('speedmaths-theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('speedmaths-theme', newTheme);
+            
+            const toggle = document.querySelector('.theme-toggle');
+            toggle.style.transform = 'scale(1.2) rotate(180deg)';
+            setTimeout(() => { toggle.style.transform = ''; }, 300);
+        }
+
+        initTheme();
     </script>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+    </button>
 </body>
 </html>
