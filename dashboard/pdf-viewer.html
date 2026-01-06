@@ -411,6 +411,12 @@
         let penThickness = 2; // Default pen thickness
         let eraseMode = false;
 
+        // View tracking state
+        let viewSessionId = null;
+        let pagesViewed = new Set();
+        let viewUpdateTimeout = null;
+        let viewComplete = false;
+
         async function initializePdfViewer() {
             try {
                 // Load PDF from server
@@ -423,7 +429,7 @@
                 await loadAnnotations();
 
                 // Render all pages (continuous view)
-                renderAllPages();
+                await renderAllPages();
 
                 // Log access
                 await fetch(`/api/annotations/${encodeURIComponent(pdfId)}/access`, {
@@ -431,6 +437,12 @@
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({access_type: 'view'})
                 });
+
+                // Start view session for scroll tracking
+                await startViewSession();
+
+                // Set up page visibility observer
+                setupViewTracking();
 
             } catch (error) {
                 console.error('Error loading PDF:', error);
@@ -1013,6 +1025,133 @@
                 toggleBtn.textContent = '◀';
             }
         });
+
+        // =============================================
+        // View Tracking Functions
+        // =============================================
+
+        async function startViewSession() {
+            try {
+                const response = await fetch(`/api/annotations/${encodeURIComponent(pdfId)}/view-session/start`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        total_pages: totalPages
+                    })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    viewSessionId = data.session_id;
+                    console.log(`View session started: ${viewSessionId} (${totalPages} pages)`);
+                }
+            } catch (error) {
+                console.warn('Could not start view session:', error);
+            }
+        }
+
+        function setupViewTracking() {
+            if (!viewSessionId) return;
+
+            const pageWrappers = document.querySelectorAll('.page-wrapper');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                        const pageLabel = entry.target.querySelector('.page-label');
+                        if (pageLabel) {
+                            const pageMatch = pageLabel.textContent.match(/Page (\d+)/);
+                            if (pageMatch) {
+                                const pageNum = parseInt(pageMatch[1], 10);
+                                if (!pagesViewed.has(pageNum)) {
+                                    pagesViewed.add(pageNum);
+                                    scheduleViewUpdate();
+                                }
+                            }
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.5  // Page must be 50% visible
+            });
+
+            pageWrappers.forEach(wrapper => {
+                observer.observe(wrapper);
+            });
+
+            // Handle page close - send final update
+            window.addEventListener('beforeunload', () => {
+                if (viewSessionId && pagesViewed.size > 0) {
+                    const data = JSON.stringify({
+                        session_id: viewSessionId,
+                        pages_viewed: Array.from(pagesViewed)
+                    });
+                    navigator.sendBeacon(
+                        `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
+                        new Blob([data], {type: 'application/json'})
+                    );
+                }
+            });
+        }
+
+        function scheduleViewUpdate() {
+            // Debounce updates - send every 500ms max
+            if (viewUpdateTimeout) {
+                clearTimeout(viewUpdateTimeout);
+            }
+
+            viewUpdateTimeout = setTimeout(async () => {
+                await sendViewUpdate();
+            }, 500);
+        }
+
+        async function sendViewUpdate() {
+            if (!viewSessionId || viewComplete) return;
+
+            try {
+                const response = await fetch(`/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        session_id: viewSessionId,
+                        pages_viewed: Array.from(pagesViewed)
+                    })
+                });
+
+                const data = await response.json();
+                if (data.success && data.is_complete && !viewComplete) {
+                    viewComplete = true;
+                    showViewCompleteToast();
+                    console.log('PDF fully viewed! view_count incremented.');
+                }
+            } catch (error) {
+                console.warn('Could not update view progress:', error);
+            }
+        }
+
+        function showViewCompleteToast() {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #4CAF50;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                font-size: 14px;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                animation: slideIn 0.3s ease;
+            `;
+            toast.innerHTML = '✓ PDF fully viewed';
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
 
         // Initialize
         initializePdfViewer();

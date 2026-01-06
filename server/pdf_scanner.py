@@ -173,11 +173,12 @@ class PDFScanner:
             # Track file modification-based revisions
             # Check if we have tracked this PDF before
             cursor.execute("""
-                SELECT last_modified, file_edit_count FROM pdfs WHERE filename = ?
+                SELECT last_modified, file_edit_count, view_count FROM pdfs WHERE filename = ?
             """, (pdf_file.name,))
             pdf_record = cursor.fetchone()
 
             file_edit_count = 0
+            view_count = 0
             if pdf_record:
                 # Compare stored modification time with current
                 stored_mtime = pdf_record['last_modified']
@@ -193,6 +194,8 @@ class PDFScanner:
                     conn.commit()
                 else:
                     file_edit_count = pdf_record['file_edit_count'] or 0
+                # Get view count (scroll-through completions)
+                view_count = pdf_record['view_count'] or 0
             else:
                 # First time seeing this PDF, insert it
                 # Store RELATIVE path for cross-machine compatibility
@@ -244,6 +247,7 @@ class PDFScanner:
                 'categories_list': categories,
                 'revision_count': file_edit_count,  # Now tracks file edits
                 'total_revisions': file_edit_count,  # Same as revision_count
+                'view_count': view_count,  # Scroll-through completions
                 'assessment_attempts': assessment_attempts,  # NEW: Test attempts
                 'last_revised': last_modified if file_edit_count > 0 else None,
                 'last_modified': last_modified,

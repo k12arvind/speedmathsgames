@@ -1017,6 +1017,7 @@
                                 <th onclick="sortTable('source_type')">Type</th>
                                 <th onclick="sortTable('total_topics')">Topics</th>
                                 <th onclick="sortTable('revision_count')">Revisions</th>
+                                <th onclick="sortTable('view_count')">Views</th>
                                 <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
                                 <th onclick="sortTable('days_since_revision')">Last Revised</th>
                                 <th>Status</th>
@@ -1190,6 +1191,11 @@
                                       assessmentAttempts >= 2 ? 'medium' :
                                       assessmentAttempts >= 1 ? 'low' : 'none';
 
+            const viewCount = pdf.view_count || 0;
+            const viewBadgeClass = viewCount >= 3 ? 'high' :
+                                   viewCount >= 2 ? 'medium' :
+                                   viewCount >= 1 ? 'low' : 'none';
+
             const lastRevised = pdf.days_since_revision !== null
                 ? pdf.days_since_revision === 0
                     ? 'Today'
@@ -1297,6 +1303,7 @@
                     <td><span class="badge badge-${pdf.source_type}">${pdf.source_type}</span></td>
                     <td>${pdf.total_topics}</td>
                     <td><span class="badge badge-count ${revisionBadgeClass}">×${revisionCount}</span></td>
+                    <td><span class="badge badge-count ${viewBadgeClass}" title="Complete scroll-throughs">👁 ${viewCount}</span></td>
                     <td><span class="badge badge-count ${attemptsBadgeClass}">${assessmentAttempts}×</span></td>
                     <td>${lastRevised}</td>
                     <td>${statusBadge}</td>
@@ -1744,6 +1751,7 @@
                                     <tr><td><strong>Status:</strong></td><td>${isProcessed ? '✓ Complete' : '⏳ Pending'}</td></tr>
                                     ${pdfData.pdf ? `
                                         <tr><td><strong>Revisions:</strong></td><td>${pdfData.pdf.revision_count || 0}</td></tr>
+                                        <tr><td><strong>Views:</strong></td><td>${pdfData.pdf.view_count || 0} (scroll-throughs)</td></tr>
                                         <tr><td><strong>Test Attempts:</strong></td><td>${pdfData.pdf.assessment_attempts || 0}</td></tr>
                                     ` : ''}
                                 </table>

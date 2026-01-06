@@ -7,8 +7,11 @@ process_pdf_with_tracking.py
 Complete PDF processing pipeline:
 1. Chunk PDF if large (using intelligent chunking)
 2. Generate MCQs for each PDF/chunk
-3. Generate and import Anki flashcards
+3. Generate flashcards (saved to local database)
 4. Update database with processing status
+
+NOTE: This is a legacy script. The recommended approach is to use
+the assessment_processor.py via /api/assessment/create-progress endpoint.
 """
 
 import sys
@@ -97,15 +100,15 @@ def chunk_pdf_if_needed(pdf_path: str) -> List[str]:
         return [pdf_path]
 
 
-def generate_anki_cards_for_pdf(pdf_path: str, source: str, week: str) -> int:
-    """Generate and import Anki flashcards."""
+def generate_flashcards_for_pdf(pdf_path: str, source: str, week: str) -> int:
+    """Generate flashcards and save to local database."""
     script_dir = Path(__file__).parent
-    venv_python = Path.home() / 'Desktop' / 'anki_automation' / 'venv' / 'bin' / 'python3'
+    venv_python = Path.home() / 'clat_preparation' / 'venv_clat' / 'bin' / 'python3'
     python_exe = str(venv_python) if venv_python.exists() else 'python3'
 
-    print(f"  🎴 Generating Anki flashcards...")
+    print(f"  🎴 Generating flashcards...")
 
-    # Generate flashcards
+    # Generate flashcards (saves to local database via generate_flashcards.py)
     result = subprocess.run(
         [python_exe, str(script_dir / 'generate_flashcards.py'), pdf_path, source, week],
         capture_output=True,
@@ -117,25 +120,20 @@ def generate_anki_cards_for_pdf(pdf_path: str, source: str, week: str) -> int:
         print(f"  ⚠️  Flashcard generation had issues: {result.stderr[:200]}")
         return 0
 
-    # Import to Anki
-    print(f"  📥 Importing to Anki...")
-    result = subprocess.run(
-        [python_exe, str(script_dir / 'import_to_anki.py')],
-        capture_output=True,
-        text=True,
-        cwd=str(script_dir)
-    )
-
-    if result.returncode != 0:
-        print(f"  ⚠️  Anki import had issues: {result.stderr[:200]}")
-        return 0
-
     # Try to parse card count from output
     try:
         for line in result.stdout.split('\n'):
-            if 'Successfully imported:' in line:
-                count = int(line.split(':')[1].strip().split()[0])
-                return count
+            # Look for card count in various output formats
+            if 'cards generated' in line.lower() or 'cards saved' in line.lower():
+                import re
+                match = re.search(r'(\d+)\s*cards?', line, re.IGNORECASE)
+                if match:
+                    return int(match.group(1))
+            if 'Generated' in line and 'cards' in line:
+                import re
+                match = re.search(r'(\d+)', line)
+                if match:
+                    return int(match.group(1))
     except:
         pass
 
@@ -161,7 +159,7 @@ def update_processing_status(pdf_id: str, status_data: Dict):
         status_data['chunk_count'],
         json.dumps(status_data['chunk_files']),
         status_data['mcq_count'],
-        status_data['anki_card_count'],
+        status_data['card_count'],  # stored in anki_card_count column
     ))
 
     conn.commit()
@@ -211,11 +209,11 @@ def process_pdf_complete(pdf_path: str, source: str, week: str):
         print(f"File: {Path(pdf_file).name}")
         print(f"{'='*60}")
 
-        # Generate Anki cards
+        # Generate flashcards
         update_status(week, f"Generating flashcards for chunk {i+1}...", 40 + (i * 40 // len(pdf_files)))
-        card_count = generate_anki_cards_for_pdf(pdf_file, source, pdf_id)
+        card_count = generate_flashcards_for_pdf(pdf_file, source, pdf_id)
         total_cards += card_count
-        print(f"  ✅ Generated {card_count} Anki cards")
+        print(f"  ✅ Generated {card_count} flashcards")
 
     # Step 3: Update database
     update_status(week, "Importing to database...", 90)
@@ -227,7 +225,7 @@ def process_pdf_complete(pdf_path: str, source: str, week: str):
         'chunk_count': len(pdf_files),
         'chunk_files': pdf_files,
         'mcq_count': 0,  # MCQs generated separately
-        'anki_card_count': total_cards
+        'card_count': total_cards  # mapped to anki_card_count column for compatibility
     })
 
     update_status(week, "Complete!", 100)
@@ -235,7 +233,7 @@ def process_pdf_complete(pdf_path: str, source: str, week: str):
     print("\n" + "="*60)
     print("✅ Processing Complete!")
     print("="*60)
-    print(f"Total Anki Cards: {total_cards}")
+    print(f"Total Flashcards: {total_cards}")
     print(f"Chunks Created: {len(pdf_files)}")
     print()
 
@@ -243,7 +241,7 @@ def process_pdf_complete(pdf_path: str, source: str, week: str):
     result = {
         'success': True,
         'pdf_id': week,
-        'anki_card_count': total_cards,
+        'card_count': total_cards,
         'chunk_count': len(pdf_files),
         'is_chunked': is_chunked
     }

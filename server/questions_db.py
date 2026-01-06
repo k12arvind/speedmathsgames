@@ -340,6 +340,64 @@ class QuestionsDatabase:
         conn.close()
         return counts
 
+    def get_questions_by_ids(self, question_ids: List[int]) -> List[Dict]:
+        """
+        Get questions by their IDs.
+
+        Used for weak topics practice - fetches questions that need more practice.
+
+        Args:
+            question_ids: List of question IDs to fetch
+
+        Returns list of question dicts ready for testing.
+        """
+        if not question_ids:
+            return []
+
+        conn = self._get_connection()
+        cursor = conn.cursor()
+
+        placeholders = ','.join('?' * len(question_ids))
+        cursor.execute(f"""
+            SELECT
+                q.question_id,
+                q.pdf_filename,
+                q.question_text,
+                q.answer_text,
+                q.category,
+                q.deck_name,
+                q.tags,
+                qc.choices,
+                qc.correct_index
+            FROM questions q
+            LEFT JOIN question_choices qc ON q.question_id = qc.question_id
+            WHERE q.question_id IN ({placeholders})
+            ORDER BY q.question_id
+        """, question_ids)
+
+        questions = []
+        for row in cursor.fetchall():
+            q = {
+                'question_id': row['question_id'],
+                'note_id': row['question_id'],  # For compatibility
+                'pdf_filename': row['pdf_filename'],
+                'question': row['question_text'],
+                'answer': row['answer_text'],
+                'category': row['category'] or 'General',
+                'deck': row['deck_name'],
+                'tags': json.loads(row['tags']) if row['tags'] else []
+            }
+
+            # Add choices if available
+            if row['choices']:
+                q['choices'] = json.loads(row['choices'])
+                q['correct_index'] = row['correct_index']
+
+            questions.append(q)
+
+        conn.close()
+        return questions
+
     def search_questions(
         self,
         category: str = None,

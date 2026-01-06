@@ -1,12 +1,12 @@
-# Core dependencies for CLAT GK Anki automation
+# Core dependencies for TopRankers PDF generation
 
 # PDF processing
 PyMuPDF>=1.24.0
 
-# AI card generation
+# AI processing
 anthropic>=0.39.0
 
-# Anki integration
+# HTTP requests
 requests>=2.31.0
 
 # HTML processing (for TopRankers current affairs)

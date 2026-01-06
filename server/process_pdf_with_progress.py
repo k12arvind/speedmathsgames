@@ -129,7 +129,7 @@ def count_cards_in_json(json_path: Path) -> int:
 
 def process_chunk_with_progress(chunk_path: Path, source: str, week: str,
                                 chunk_num: int, total_chunks: int,
-                                automation_dir: Path, logger: ProgressLogger,
+                                project_dir: Path, logger: ProgressLogger,
                                 job_id: str, db: ProcessingJobsDB) -> int:
     """Process a single PDF chunk with progress tracking."""
     logger.info(f"")
@@ -183,29 +183,19 @@ def process_chunk_with_progress(chunk_path: Path, source: str, week: str,
         result = subprocess.run(
             cmd,
             check=True,
-            cwd=str(automation_dir),
+            cwd=str(project_dir),
             capture_output=True,
             text=True,
             env=env
         )
 
         # Count cards generated
-        json_path = automation_dir / "inbox" / "week_cards.json"
+        json_path = project_dir / "inbox" / "week_cards.json"
         cards_count = count_cards_in_json(json_path)
         logger.success(f"Generated {cards_count} flashcards")
 
-        # Import to Anki
-        logger.info("Importing to Anki...")
-        db.update_progress(
-            job_id,
-            completed_chunks=chunk_num-1,
-            current_step=f"Importing chunk {chunk_num}/{total_chunks} to Anki"
-        )
-
-        import_cmd = ["python3", "import_to_anki.py", "inbox/week_cards.json"]
-        subprocess.run(import_cmd, check=True, cwd=str(automation_dir), env=env)
-
-        logger.success(f"Chunk {chunk_num}/{total_chunks} complete: {cards_count} cards imported")
+        # Cards are saved to local database by generate_flashcards.py
+        logger.success(f"Chunk {chunk_num}/{total_chunks} complete: {cards_count} flashcards generated")
 
         # Update progress with cards count
         db.update_progress(
@@ -250,10 +240,10 @@ def process_pdf_with_progress(job_id: str):
         week = job['week']
         total_chunks = job['total_chunks']
 
-        # Determine automation directory (where generate_flashcards.py is)
-        automation_dir = Path.home() / "Desktop" / "anki_automation"
-        if not automation_dir.exists():
-            raise FileNotFoundError(f"Automation directory not found: {automation_dir}")
+        # Determine project directory (where generate_flashcards.py is)
+        project_dir = Path(__file__).parent.parent  # clat_preparation directory
+        if not (project_dir / "generate_flashcards.py").exists():
+            raise FileNotFoundError(f"generate_flashcards.py not found in: {project_dir}")
 
         # Check PDF exists
         if not pdf_path.exists():
@@ -286,7 +276,7 @@ def process_pdf_with_progress(job_id: str):
                     week,
                     chunk['num'],
                     len(chunks),
-                    automation_dir,
+                    project_dir,
                     logger,
                     job_id,
                     db
@@ -333,21 +323,16 @@ def process_pdf_with_progress(job_id: str):
             logger.info("Generating flashcards with Claude AI...")
             db.update_progress(job_id, 0, "Calling Claude API (this may take 60-90 seconds)...")
             cmd = ["python3", "generate_flashcards.py", str(pdf_path), source, week]
-            subprocess.run(cmd, check=True, cwd=str(automation_dir), env=env)
+            subprocess.run(cmd, check=True, cwd=str(project_dir), env=env)
 
             # Count cards generated
-            json_path = automation_dir / "inbox" / "week_cards.json"
+            json_path = project_dir / "inbox" / "week_cards.json"
             cards_count = count_cards_in_json(json_path)
             logger.success(f"Generated {cards_count} flashcards")
 
-            # Import to Anki
-            logger.info("Importing to Anki...")
-            db.update_progress(job_id, 0, f"Importing {cards_count} cards to Anki...", cards_count)
-            import_cmd = ["python3", "import_to_anki.py", "inbox/week_cards.json"]
-            subprocess.run(import_cmd, check=True, cwd=str(automation_dir), env=env)
-
+            # Cards saved to local database by generate_flashcards.py
             db.update_progress(job_id, 1, "Processing complete", cards_count)
-            logger.success(f"Processing complete: {cards_count} cards imported to Anki")
+            logger.success(f"Processing complete: {cards_count} flashcards generated")
 
         # Mark as completed
         db.mark_completed(job_id)

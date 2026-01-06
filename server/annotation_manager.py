@@ -544,3 +544,179 @@ class AnnotationManager:
 
         finally:
             conn.close()
+
+    # ============================================================
+    # VIEW SESSION TRACKING
+    # ============================================================
+
+    def start_view_session(
+        self,
+        pdf_id: str,
+        total_pages: int,
+        user_id: str = 'system'
+    ) -> str:
+        """
+        Start a new PDF view session.
+
+        Args:
+            pdf_id: PDF filename
+            total_pages: Total number of pages in the PDF
+            user_id: User identifier
+
+        Returns:
+            session_id: Unique session identifier
+        """
+        import uuid
+        session_id = str(uuid.uuid4())
+
+        conn = self._get_connection()
+        cursor = conn.cursor()
+
+        try:
+            cursor.execute("""
+                INSERT INTO pdf_view_sessions
+                (session_id, pdf_id, user_id, total_pages, pages_viewed)
+                VALUES (?, ?, ?, ?, '[]')
+            """, (session_id, pdf_id, user_id, total_pages))
+
+            conn.commit()
+            return session_id
+
+        except Exception as e:
+            conn.rollback()
+            raise RuntimeError(f"Failed to start view session: {e}")
+        finally:
+            conn.close()
+
+    def update_pages_viewed(
+        self,
+        session_id: str,
+        pages_viewed: List[int]
+    ) -> Dict[str, Any]:
+        """
+        Update which pages have been viewed in a session.
+
+        Args:
+            session_id: Session ID from start_view_session
+            pages_viewed: List of page numbers that have been viewed
+
+        Returns:
+            Dict with is_complete status and updated pages list
+        """
+        conn = self._get_connection()
+        cursor = conn.cursor()
+
+        try:
+            # Get session info
+            cursor.execute("""
+                SELECT pdf_id, total_pages, pages_viewed, is_complete
+                FROM pdf_view_sessions
+                WHERE session_id = ?
+            """, (session_id,))
+
+            row = cursor.fetchone()
+            if not row:
+                return {'error': 'Session not found'}
+
+            pdf_id = row['pdf_id']
+            total_pages = row['total_pages']
+            current_pages_json = row['pages_viewed']
+            already_complete = row['is_complete']
+
+            # If already complete, don't update again
+            if already_complete:
+                return {
+                    'session_id': session_id,
+                    'pages_viewed': json.loads(current_pages_json),
+                    'total_pages': total_pages,
+                    'is_complete': True,
+                    'already_counted': True
+                }
+
+            # Merge with existing pages
+            current_pages = set(json.loads(current_pages_json))
+            current_pages.update(pages_viewed)
+
+            # Check if complete (all pages 1 to total_pages viewed)
+            is_complete = len(current_pages) >= total_pages and \
+                         all(p in current_pages for p in range(1, total_pages + 1))
+
+            # Update session
+            cursor.execute("""
+                UPDATE pdf_view_sessions
+                SET pages_viewed = ?,
+                    is_complete = ?,
+                    completed_at = CASE WHEN ? = 1 THEN CURRENT_TIMESTAMP ELSE completed_at END
+                WHERE session_id = ?
+            """, (
+                json.dumps(sorted(current_pages)),
+                1 if is_complete else 0,
+                1 if is_complete else 0,
+                session_id
+            ))
+
+            # If just completed, increment view_count in pdfs table
+            just_completed = is_complete and not already_complete
+            if just_completed:
+                cursor.execute("""
+                    UPDATE pdfs
+                    SET view_count = COALESCE(view_count, 0) + 1
+                    WHERE filename = ?
+                """, (pdf_id,))
+
+            conn.commit()
+
+            return {
+                'session_id': session_id,
+                'pages_viewed': sorted(current_pages),
+                'total_pages': total_pages,
+                'is_complete': is_complete,
+                'just_completed': just_completed
+            }
+
+        except Exception as e:
+            conn.rollback()
+            raise RuntimeError(f"Failed to update pages viewed: {e}")
+        finally:
+            conn.close()
+
+    def get_view_stats(self, pdf_id: str) -> Dict[str, Any]:
+        """
+        Get view statistics for a PDF.
+
+        Args:
+            pdf_id: PDF filename
+
+        Returns:
+            Dict with view_count, total_sessions, completed_sessions
+        """
+        conn = self._get_connection()
+        cursor = conn.cursor()
+
+        try:
+            # Get view_count from pdfs table
+            cursor.execute("""
+                SELECT COALESCE(view_count, 0) as view_count
+                FROM pdfs WHERE filename = ?
+            """, (pdf_id,))
+            row = cursor.fetchone()
+            view_count = row['view_count'] if row else 0
+
+            # Get session stats
+            cursor.execute("""
+                SELECT
+                    COUNT(*) as total_sessions,
+                    COALESCE(SUM(is_complete), 0) as completed_sessions
+                FROM pdf_view_sessions
+                WHERE pdf_id = ?
+            """, (pdf_id,))
+            stats = cursor.fetchone()
+
+            return {
+                'view_count': view_count,
+                'total_sessions': stats['total_sessions'] or 0,
+                'completed_sessions': stats['completed_sessions'] or 0
+            }
+
+        finally:
+            conn.close()

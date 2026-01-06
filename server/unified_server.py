@@ -47,7 +47,7 @@ except ImportError:
 
 # Import API handlers (from server directory)
 from server.assessment_database import AssessmentDatabase
-from server.anki_connector import AnkiConnector
+# AnkiConnector removed - system now uses local questions database as source of truth
 from anthropic import Anthropic
 
 # Import math database
@@ -107,7 +107,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     google_auth = None
     user_db = None
     assessment_db = None
-    anki = None
+    # anki removed - using local questions_db instead
     anthropic = None
     math_db = None
     pdf_scanner = None
@@ -686,14 +686,22 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def handle_assessment_get(self, path: str, query_params: dict):
         """Handle assessment API GET requests."""
-        # Import from assessment_api.py logic
+        # Anki endpoints removed - system uses local questions database
         if path == '/api/assessment/check-anki':
-            available = self.anki.test_connection()
-            self.send_json({'available': available})
+            # Anki no longer used - always return available since we use local DB
+            self.send_json({'available': True, 'message': 'Using local questions database'})
 
         elif path == '/api/assessment/categories':
-            categories = self.anki.get_deck_names()
-            self.send_json({'categories': categories})
+            # Get categories from local questions database
+            try:
+                conn = self.questions_db._get_connection()
+                cursor = conn.cursor()
+                cursor.execute("SELECT DISTINCT category FROM questions WHERE category IS NOT NULL ORDER BY category")
+                categories = [row['category'] for row in cursor.fetchall()]
+                conn.close()
+                self.send_json({'categories': categories})
+            except Exception as e:
+                self.send_json({'categories': [], 'error': str(e)})
 
         elif path == '/api/assessment/performance/summary':
             user_id = query_params.get('user_id', ['daughter'])[0]
@@ -760,20 +768,23 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
             # Handle weak topics test
             if session_type == 'weak':
-                weak_note_ids = self.assessment_db.get_weak_questions(user_id, limit=20)
+                # Get weak questions from performance tracking
+                # Note: anki_note_id column now stores question_id values
+                weak_questions_data = self.assessment_db.get_weak_questions(user_id, limit=20)
 
-                if not weak_note_ids:
+                if not weak_questions_data:
                     self.send_json({
                         'error': 'No weak topics found. Take some tests first to identify weak areas!'
                     })
                     return
 
-                # Get questions from Anki for weak note IDs
-                note_ids = [str(q['anki_note_id']) for q in weak_note_ids]
-                questions = self.anki.get_questions_by_note_ids(note_ids)
+                # Get full question data from local questions database
+                # The anki_note_id field now contains question_id values
+                question_ids = [int(q['anki_note_id']) for q in weak_questions_data if q.get('anki_note_id')]
+                questions = self.questions_db.get_questions_by_ids(question_ids)
 
                 if not questions:
-                    self.send_json({'error': 'Could not load weak topic questions from Anki.'})
+                    self.send_json({'error': 'Could not load weak topic questions from database.'})
                     return
 
                 pdf_id = 'weak_topics'
@@ -2346,6 +2357,59 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 self.send_json({
                     'success': True,
                     'message': 'Access logged successfully'
+                })
+
+            # POST /api/annotations/{pdf_id}/view-session/start
+            # Start a new PDF view session for tracking scroll completion
+            elif '/view-session/start' in path:
+                pdf_id = unquote(path.split('/api/annotations/')[-1].split('/view-session/')[0])
+                total_pages = data.get('total_pages', 1)
+                user_id = data.get('user_id', 'system')
+
+                session_id = self.annotation_manager.start_view_session(
+                    pdf_id=pdf_id,
+                    total_pages=total_pages,
+                    user_id=user_id
+                )
+
+                self.send_json({
+                    'success': True,
+                    'session_id': session_id,
+                    'pdf_id': pdf_id,
+                    'total_pages': total_pages
+                })
+
+            # POST /api/annotations/{pdf_id}/view-session/update
+            # Update pages viewed and check for completion
+            elif '/view-session/update' in path:
+                session_id = data.get('session_id')
+                pages_viewed = data.get('pages_viewed', [])
+
+                if not session_id:
+                    self.send_json({'error': 'session_id is required'})
+                    return
+
+                result = self.annotation_manager.update_pages_viewed(
+                    session_id=session_id,
+                    pages_viewed=pages_viewed
+                )
+
+                self.send_json({
+                    'success': True,
+                    **result
+                })
+
+            # POST /api/annotations/{pdf_id}/view-stats (also accepts GET)
+            # Get view statistics for a PDF
+            elif '/view-stats' in path:
+                pdf_id = unquote(path.split('/api/annotations/')[-1].split('/view-stats')[0])
+
+                stats = self.annotation_manager.get_view_stats(pdf_id=pdf_id)
+
+                self.send_json({
+                    'success': True,
+                    'pdf_id': pdf_id,
+                    **stats
                 })
 
             else:
@@ -4168,7 +4232,7 @@ def main():
     # Initialize databases
     print("Initializing databases...")
     UnifiedHandler.assessment_db = AssessmentDatabase()
-    UnifiedHandler.anki = AnkiConnector()
+    # AnkiConnector removed - using local questions_db instead
 
     # Use root-level math_tracker.db (same as populate_math_questions.py)
     math_db_path = Path(__file__).parent.parent / 'math_tracker.db'

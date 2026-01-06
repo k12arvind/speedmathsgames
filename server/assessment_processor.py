@@ -26,7 +26,6 @@ from server.pdf_chunker import PdfChunker
 from server.questions_db import QuestionsDatabase
 from server.pdf_scanner import relative_to_absolute  # Cross-machine path compatibility
 from generate_flashcards_streaming import generate_flashcards_for_topics
-from import_to_anki import add_note_to_anki, ensure_decks_exist, check_anki_connect
 
 
 class AssessmentProcessor:
@@ -282,7 +281,8 @@ No markdown, no explanation - just the JSON array."""
            - For each batch:
              - Skips duplicates (overlapping pages)
              - Sends to Claude (10-15s)
-             - Imports to Anki
+             - Saves to local questions database
+             - Generates MCQ choices
              - Updates progress
         3. Marks chunks as complete
 
@@ -300,28 +300,6 @@ No markdown, no explanation - just the JSON array."""
                 status='processing',
                 status_message='Starting assessment creation...'
             )
-
-            # Check AnkiConnect
-            self.progress_callback(job_id, 'Checking AnkiConnect...')
-            try:
-                version = check_anki_connect()
-                self.progress_callback(job_id, f'✅ AnkiConnect version {version}')
-            except Exception as e:
-                raise RuntimeError(f"AnkiConnect not available: {e}")
-
-            # Ensure decks exist
-            self.progress_callback(job_id, 'Ensuring Anki decks exist...')
-            DECKS = [
-                "CLAT GK::Awards / Sports / Defence",
-                "CLAT GK::Economy & Business",
-                "CLAT GK::Environment & Science",
-                "CLAT GK::Government Schemes & Reports",
-                "CLAT GK::International Affairs",
-                "CLAT GK::Polity & Constitution",
-                "CLAT GK::Static GK",
-                "CLAT GK::Supreme Court / High Court Judgements",
-            ]
-            ensure_decks_exist(DECKS)
 
             # Get all chunks for this PDF
             chunks = self.get_chunks_for_pdf(parent_pdf_id)
@@ -477,32 +455,6 @@ No markdown, no explanation - just the JSON array."""
                             self.progress_callback(
                                 job_id,
                                 f'✅ Generated {mcq_generated} MCQ choices'
-                            )
-
-                        # STEP 3: Also import to Anki (for flashcard practice, optional)
-                        self.progress_callback(
-                            job_id,
-                            f'Importing {batch_card_count} cards to Anki...'
-                        )
-
-                        anki_imported = 0
-                        for card in cards:
-                            try:
-                                add_note_to_anki(
-                                    card['deck'],
-                                    card['front'],
-                                    card['back'],
-                                    card['tags']
-                                )
-                                anki_imported += 1
-                            except Exception as e:
-                                # Anki import is optional - don't fail if it doesn't work
-                                print(f"Warning: Failed to import card to Anki: {e}")
-
-                        if anki_imported > 0:
-                            self.progress_callback(
-                                job_id,
-                                f'✅ Also imported {anki_imported} cards to Anki'
                             )
 
                         # Use saved_count as the authoritative count

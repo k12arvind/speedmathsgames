@@ -4,7 +4,7 @@
 """
 generate_flashcards_streaming.py
 
-Generates Anki flashcards for CLAT GK from topic batches (2-3 topics at a time).
+Generates flashcards for CLAT GK from topic batches (2-3 topics at a time).
 This enables continuous progress updates instead of blocking 60-90 seconds.
 """
 
@@ -47,7 +47,7 @@ TOPIC_TAGS = [
 ]
 
 
-BATCH_FLASHCARD_PROMPT = """You are generating Anki flashcards for CLAT GK from a batch of 2-3 topics.
+BATCH_FLASHCARD_PROMPT = """You are generating flashcards for CLAT GK from a batch of 2-3 topics.
 Output ONLY valid JSON in this exact schema:
 
 {{{{

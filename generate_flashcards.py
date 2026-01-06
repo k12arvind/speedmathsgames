@@ -4,7 +4,7 @@
 """
 generate_flashcards.py
 
-Generates Anki flashcards for CLAT GK from a Manthan PDF using Claude API.
+Generates flashcards for CLAT GK from a Manthan PDF using Claude API.
 Outputs valid JSON with 100-200 cards following the exact schema required.
 """
 
@@ -19,7 +19,7 @@ from anthropic import Anthropic
 
 
 # Configuration
-OUTPUT_PATH = Path.home() / "Desktop" / "anki_automation" / "inbox" / "week_cards.json"
+OUTPUT_PATH = Path.home() / "clat_preparation" / "flashcards_output" / "week_cards.json"
 WEEK_TAG = "2025_Dec_W1"
 SOURCE = "manthan"
 
@@ -48,7 +48,7 @@ TOPIC_TAGS = [
 ]
 
 
-FLASHCARD_PROMPT = """You are generating Anki flashcards for CLAT GK from the attached PDF.
+FLASHCARD_PROMPT = """You are generating flashcards for CLAT GK from the attached PDF.
 Output ONLY valid JSON in this exact schema:
 
 {{{{

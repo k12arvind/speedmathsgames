@@ -1,331 +1,675 @@
-# CLAT Preparation System - Architecture
+# SpeedMathsGames.com - Complete System Architecture
 
-## Overview
+**Last Updated:** January 3, 2026
+**Version:** 4.0
+**Status:** Production (Active on speedmathsgames.com)
 
-Two-machine setup with MacBook Pro as **development/source** and Mac Mini as **production server**.
+---
 
-## Machine Roles
+## Table of Contents
 
-### MacBook Pro (Development/Source)
-- **Primary development machine**
-- **Source of truth** for all code and data
-- Git repository maintained here
-- PDFs stored here: `~/saanvi/` (synced to iCloud)
-- Testing server: `http://localhost:8001`
+1. [System Overview](#1-system-overview)
+2. [Tech Stack](#2-tech-stack)
+3. [Deployment Topology](#3-deployment-topology)
+4. [Directory Structure](#4-directory-structure)
+5. [Backend Architecture](#5-backend-architecture)
+6. [Frontend Architecture](#6-frontend-architecture)
+7. [Database Architecture](#7-database-architecture)
+8. [Authentication & Authorization](#8-authentication--authorization)
+9. [Feature Modules](#9-feature-modules)
+10. [Third-Party Integrations](#10-third-party-integrations)
+11. [Data Flows](#11-data-flows)
+12. [Key Technical Patterns](#12-key-technical-patterns)
 
-### Mac Mini (Production)
-- **Production server** running 24/7
-- Receives code and data from MacBook Pro via sync
-- Public access via Cloudflare Tunnel
-- Public URL: `https://speedmathsgames.com`
+---
 
-## Directory Structure
+## 1. System Overview
 
-### Code Location (Both Machines)
+### Purpose
+SpeedMathsGames.com is a comprehensive CLAT (Common Law Admission Test) exam preparation system that includes:
+- **GK Dashboard** - Current affairs PDF management and revision tracking
+- **Math Speed Games** - 360+ math practice questions with analytics
+- **Assessment System** - AI-powered flashcard generation from PDFs
+- **Daily Diary** - Study tracking with streaks and reminders
+- **Mock Test Analysis** - CLAT-format mock test tracking and analytics
+- **Finance Dashboard** - Personal finance and net worth tracking (Parents only)
+- **Health Dashboard** - Fitness, diet, and health tracking (Parents only)
+- **Calendar Integration** - Google Calendar sync with bill reminders
+
+### Family Users
+| Email | Username | Role | Access |
+|-------|----------|------|--------|
+| k12arvind@gmail.com | arvind | Admin, Parent | All features + Finance + Health |
+| deepay2019@gmail.com | deepa | Parent | All features + Finance + Health |
+| 20saanvi12@gmail.com | saanvi | Child | Math, GK, Diary, Mocks |
+| 20navya12@gmail.com | navya | Child | Math, GK, Diary, Mocks |
+
+---
+
+## 2. Tech Stack
+
+### Backend
+| Component | Technology |
+|-----------|------------|
+| Server | Python 3.9+ with `ThreadingHTTPServer` |
+| Database | SQLite3 (6 databases) |
+| API | Custom REST API |
+| Authentication | Google OAuth 2.0 |
+
+### Frontend
+| Component | Technology |
+|-----------|------------|
+| Framework | Vanilla HTML5, CSS3, JavaScript |
+| Styling | Custom CSS with dark/light mode |
+| PDF Viewer | ts-pdf, pdfjs-dist |
+| Charts | (if applicable) |
+
+### External APIs
+| Service | Purpose |
+|---------|---------|
+| Anthropic Claude API | AI flashcard generation |
+| AnkiConnect | Flashcard synchronization |
+| Google OAuth 2.0 | User authentication |
+| Google Calendar API | Calendar sync |
+| Gmail API | Email notifications |
+| mStock API | Stock portfolio data |
+
+---
+
+## 3. Deployment Topology
+
 ```
-~/clat_preparation/
-├── server/                    # Server components
-│   ├── unified_server.py      # Main HTTP server
-│   ├── assessment_database.py # Assessment/test logic
-│   ├── pdf_scanner.py         # Scans PDFs from ~/saanvi/
-│   └── anki_connector.py      # Anki integration
-├── pdf_generation/            # PDF processing
-│   ├── generate_clean_pdf_final.py  # PDF generator
-│   ├── extract_html.py        # HTML extractor
-│   └── automate_html.sh       # Automation script
-├── scripts/                   # Utility scripts
-│   ├── auto_sync_pdfs.sh      # Daily PDF sync
-│   ├── sync_to_mac_mini.sh    # Full code sync
-│   └── backup_databases.sh    # Database backup
-├── dashboard/                 # HTML/CSS/JS files
-│   ├── index.html
-│   ├── comprehensive_dashboard.html
-│   ├── assessment.html
-│   ├── pdf_dashboard.html
-│   └── daily_analytics.html
-├── auth/                      # Google OAuth
-│   ├── google_auth.py
-│   └── user_db.py
-├── math_module/               # Math practice module code
-│   └── math_db.py             # Database class (uses root-level math_tracker.db)
-├── math_tracker.db            # Math questions DB (360 questions) - ROOT LEVEL
-├── logs/                      # Server logs
-├── start_server.sh            # Server startup script
-└── .git/                      # Version control (MacBook only)
-```
-
-### PDF Location (Both Machines)
-```
-~/saanvi/
-├── Legaledgedailygk/          # Daily current affairs PDFs
-│   └── current_affairs_2025_december_*.pdf
-├── LegalEdgeweeklyGK/         # Weekly current affairs PDFs
-│   └── weekly-current-affairs-*.pdf
-└── weeklyGKCareerLauncher/    # Weekly GK from Career Launcher
-    └── 5070_Manthan2.0*.pdf
-```
-
-**Note:** This folder can be shared on iCloud Drive for iPad access. Both machines use identical structure to avoid confusion.
-
-## Version Control
-
-### Git Repository (MacBook Pro Only)
-- Repository: `~/clat_preparation/.git`
-- Tracks: Python code, HTML/CSS/JS, configuration
-- Ignores: PDFs, databases, logs, venv
-
-### Syncing Changes
-
-**To sync MacBook Pro → Mac Mini:**
-```bash
-cd ~/clat_preparation
-./sync_to_mac_mini.sh
-```
-
-This syncs:
-1. Python code (*.py files)
-2. Dashboard files (HTML/CSS/JS)
-3. Math module
-4. New PDFs (preserves existing)
-5. Restarts Mac Mini server
-
-## Server Architecture
-
-### Unified Server (Port 8001)
-```
-unified_server.py
-├── Authentication (Google OAuth)
-├── GK Dashboard API
-│   ├── /api/dashboard
-│   ├── /api/pdfs/*
-│   └── /api/stats
-├── Assessment API
-│   ├── /api/assessment/start
-│   ├── /api/assessment/submit
-│   └── /api/assessment/results
-├── Math API
-│   ├── /api/math/questions
-│   └── /api/math/submit
-└── Analytics API
-    ├── /api/analytics/daily
-    └── /api/analytics/categories
+┌─────────────────────────────────────────────────────────────────┐
+│                        Internet                                   │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    Cloudflare Tunnel                              │
+│                 speedmathsgames.com                               │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                   Mac Mini (Production)                          │
+│  User: arvindkumar                                               │
+│  Home: /Users/arvindkumar                                        │
+│  Server: localhost:8001                                          │
+│  Running: 24/7                                                   │
+└─────────────────────────────────────────────────────────────────┘
+                              ▲
+                              │ Git Push/Pull + rsync (PDFs)
+                              │
+┌─────────────────────────────────────────────────────────────────┐
+│                 MacBook Pro (Development)                        │
+│  User: arvind                                                    │
+│  Home: /Users/arvind                                             │
+│  Server: localhost:8001 (testing)                                │
+│  Git Repository: Source of Truth                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-### Cloudflare Tunnel (Mac Mini Only)
-```
-speedmathsgames.com → Cloudflare Tunnel → localhost:8001
-```
+### Machine Roles
 
-Managed by: `launchctl` (always running)
+| Machine | Role | URL | Purpose |
+|---------|------|-----|---------|
+| MacBook Pro | Development | localhost:8001 | Code development, testing, Git source |
+| Mac Mini | Production | speedmathsgames.com | 24/7 public server via Cloudflare |
 
-## Databases
-
-### 1. Revision Tracker (`revision_tracker.db`)
-- Location: `~/clat_preparation/`
-- Tables: `topics`, `revisions`, `pdfs`, `statistics`
-- Purpose: GK topics and revision tracking
-
-### 2. Assessment Database (`assessment.db`)
-- Location: `~/clat_preparation/`
-- Tables: `test_sessions`, `question_attempts`, `question_performance`
-- Purpose: Assessment tests and analytics
-
-### 3. Math Tracker (`math_tracker.db`)
-- Location: `~/clat_preparation/` (ROOT level - NOT in math_module/)
-- Tables: `math_questions` (360), `math_sessions`, `math_answers`, `math_topic_settings`
-- Purpose: Math practice tracking
-
-### 4. Users Database (`auth/users.db`)
-- Location: `~/clat_preparation/auth/`
-- Tables: `users`, `sessions`
-- Purpose: User authentication and sessions
-
-## Data Flow
-
-### 1. Daily Current Affairs Processing
-```
-TopRankers URL
-    ↓
-MacBook Pro: generate_clean_pdf_final.py
-    ↓
-PDF saved: ~/saanvi/Legaledgedailygk/
-    ↓
-MacBook Pro: automate_html.sh
-    ↓
-Anki cards created and imported
-    ↓
-Run: ./sync_to_mac_mini.sh
-    ↓
-PDF synced to Mac Mini
-    ↓
-Mac Mini: PDF scanner detects new file
-    ↓
-Visible in dashboard
-```
-
-### 2. Assessment Flow
-```
-User clicks "Take Test" on dashboard
-    ↓
-Frontend: assessment.html
-    ↓
-API: /api/assessment/start
-    ↓
-Backend: Fetches questions from Anki
-    ↓
-User answers questions
-    ↓
-API: /api/assessment/submit
-    ↓
-Backend: Stores in assessment.db
-    ↓
-Results displayed + Analytics updated
-```
-
-## Key Principles
-
-### 1. Single Source of Truth
-- **MacBook Pro** is the source
-- All development happens here
-- Git tracks code changes
-- PDFs stored here first
-
-### 2. Sync, Don't Modify on Mac Mini
-- Mac Mini receives updates
-- Don't edit code directly on Mac Mini
-- Only logs and databases change on Mac Mini
-
-### 3. Folder Structure Consistency
-- **NEVER** change `~/saanvi/` paths
-- `pdf_scanner.py` expects this exact structure
-- Both machines must have identical structure
-- This folder is in home directory (not Desktop) to avoid permission issues
-
-### 4. Database Independence
-- Databases are **NOT** synced
-- Each machine has independent data
-- Mac Mini has production data
-- MacBook Pro has test data
-
-## Common Operations
-
-### Add New Feature
+### Syncing Workflow
 ```bash
 # On MacBook Pro
-cd ~/clat_preparation
-git status
-# Edit files
-git add .
-git commit -m "Add feature"
-./sync_to_mac_mini.sh
-```
+git add . && git commit -m "Changes" && git push origin main
 
-### Add New Daily PDF
-```bash
-# On MacBook Pro
-cd ~/clat_preparation
-source venv/bin/activate
-source ~/.zshrc
-./pdf_generation/automate_html.sh https://www.toprankers.com/current-affairs-[date]
-# PDF automatically saved to ~/saanvi/Legaledgedailygk/
-# Then sync PDFs to Mac Mini
+# On Mac Mini
+cd ~/clat_preparation && git pull origin main
+
+# PDFs synced separately
 ./scripts/auto_sync_pdfs.sh
 ```
 
-### Restart Mac Mini Server
-```bash
-ssh mac-mini "launchctl stop com.clatprep.server && launchctl start com.clatprep.server"
+---
+
+## 4. Directory Structure
+
+```
+~/clat_preparation/
+├── server/                          # Backend Python modules
+│   ├── unified_server.py           # Main HTTP server (4,300+ lines)
+│   ├── assessment_database.py      # Assessment/test tracking
+│   ├── anki_connector.py           # Anki integration
+│   ├── pdf_scanner.py              # PDF discovery
+│   ├── pdf_chunker.py              # PDF splitting
+│   ├── math_db.py                  # Math module database
+│   ├── diary_db.py                 # Diary tracking
+│   ├── mock_db.py                  # Mock test analysis
+│   ├── finance_db.py               # Financial tracking
+│   ├── health_db.py                # Health tracking
+│   ├── calendar_db.py              # Calendar events
+│   ├── questions_db.py             # Local question storage
+│   ├── google_calendar_client.py   # Google Calendar API
+│   ├── email_service.py            # Gmail integration
+│   ├── user_roles.py               # Family configuration
+│   └── google_auth.py              # OAuth handler
+│
+├── dashboard/                       # Frontend files
+│   ├── index.html                  # Landing page
+│   ├── login.html                  # Google OAuth login
+│   ├── comprehensive_dashboard.html # Main GK hub
+│   ├── math_practice.html          # Math games
+│   ├── assessment.html             # Take assessments
+│   ├── assessment-progress.html    # Assessment creation tracker
+│   ├── pdf_dashboard.html          # PDF management
+│   ├── pdf-viewer.html             # Enhanced PDF reader
+│   ├── pdf-chunker.html            # PDF splitting UI
+│   ├── diary.html                  # Daily study diary
+│   ├── mock_analysis.html          # Mock test analysis
+│   ├── calendar.html               # Calendar integration
+│   ├── finance_dashboard.html      # Finance overview
+│   ├── finance_accounts.html       # Bank accounts
+│   ├── finance_bills.html          # Bill tracking
+│   ├── finance_stocks.html         # Stock portfolio
+│   ├── finance_assets.html         # Assets tracking
+│   ├── finance_liabilities.html    # Loans/debts
+│   ├── health_dashboard.html       # Health overview
+│   ├── health_diet.html            # Diet tracking
+│   ├── health_weight.html          # Weight logging
+│   ├── health_workout.html         # Workout sessions
+│   ├── health_reports.html         # Blood reports
+│   ├── family_dashboard.html       # Admin: family view
+│   ├── math_admin.html             # Math questions admin
+│   ├── shared-styles.css           # Global CSS
+│   └── auth.js                     # Auth utilities
+│
+├── math_module/                     # Math module code
+│   └── math_db.py                  # Math database class
+│
+├── toprankers/                      # TopRankers automation
+│   ├── automate_html.sh            # Main automation
+│   ├── generate_clean_pdf_final.py # PDF generation
+│   ├── generate_flashcards_from_html.py
+│   └── import_to_anki.py
+│
+├── scripts/                         # Utility scripts
+│   ├── start_server.sh             # Start server
+│   ├── sync_to_mac_mini.sh         # Full sync
+│   ├── auto_sync_pdfs.sh           # PDF sync
+│   └── deploy_resilient_services.sh
+│
+├── migrations/                      # Database migrations
+│   ├── add_diary_tables.sql
+│   └── add_mock_analysis_tables.sql
+│
+├── docs/                           # Additional docs
+│   └── GOOGLE_CALENDAR_SETUP.md
+│
+├── logs/                           # Server logs
+│
+├── venv_clat/                      # Python virtual environment
+│
+├── .env                            # Environment variables
+├── revision_tracker.db             # GK database
+├── math_tracker.db                 # Math database
+├── assessment_tracker.db           # Assessment database
+├── finance_tracker.db              # Finance database
+├── health_tracker.db               # Health database
+└── calendar_tracker.db             # Calendar database
+
+~/saanvi/                            # PDF storage
+├── Legaledgedailygk/               # Daily current affairs
+├── LegalEdgeweeklyGK/              # Weekly PDFs (LegalEdge)
+└── weeklyGKCareerLauncher/         # Weekly PDFs (Career Launcher)
 ```
 
-### View Mac Mini Logs
-```bash
-ssh mac-mini "tail -50 ~/clat_preparation/logs/server.log"
+---
+
+## 5. Backend Architecture
+
+### Main Server: `server/unified_server.py`
+
+The unified server (~4,300 lines) handles all HTTP requests using Python's `ThreadingHTTPServer`.
+
+```python
+class UnifiedHandler(SimpleHTTPRequestHandler):
+    # Shared instances (initialized once)
+    google_auth = None
+    user_db = None
+    assessment_db = None
+    anki = None
+    anthropic = None
+    math_db = None
+    pdf_scanner = None
+    processing_db = None
+    annotation_manager = None
+    pdf_chunker = None
+    diary_db = None
+    mock_db = None
+    questions_db = None
+    finance_db = None
+    health_db = None
+    calendar_db = None
+    calendar_client = None
 ```
 
-### Check Server Status
-```bash
-# Mac Mini (local)
-curl http://localhost:8001/api/dashboard
-
-# Mac Mini (public)
-curl https://speedmathsgames.com/api/dashboard
+### Request Flow
+```
+HTTP Request
+    ↓
+UnifiedHandler.do_GET/do_POST/do_DELETE
+    ↓
+Route matching (based on /api/* path)
+    ↓
+Authentication check (session cookie)
+    ↓
+Role-based access control
+    ↓
+Handler method execution
+    ↓
+JSON response + CORS headers
 ```
 
-## Troubleshooting
+### API Endpoint Categories
 
-### PDFs Not Showing
-1. Check PDFs exist: `ls ~/saanvi/Legaledgedailygk/`
-2. Check scanner paths: `grep BASE_PATH ~/clat_preparation/server/pdf_scanner.py`
-3. Sync: `cd ~/clat_preparation && ./scripts/auto_sync_pdfs.sh`
-4. Test scanner: `python3 ~/clat_preparation/server/pdf_scanner.py`
-5. Restart server on Mac Mini if needed
+| Category | Base Path | Purpose |
+|----------|-----------|---------|
+| Authentication | `/auth/*` | OAuth login/logout |
+| Dashboard | `/api/dashboard` | GK PDF listing |
+| PDF | `/api/pdf/*`, `/api/chunks/*` | PDF operations |
+| Assessment | `/api/assessment/*` | Tests and results |
+| Math | `/api/math/*` | Math practice |
+| Diary | `/api/diary/*` | Study diary |
+| Mock | `/api/mocks/*` | Mock test analysis |
+| Analytics | `/api/analytics/*` | Performance stats |
+| Finance | `/api/finance/*` | Financial tracking (Parents) |
+| Health | `/api/health/*` | Health tracking (Parents) |
+| Calendar | `/api/calendar/*` | Calendar sync |
+| Admin | `/api/admin/*` | Family management |
 
-### Code Changes Not Reflecting
-1. Check you synced: `./sync_to_mac_mini.sh`
-2. Verify server restarted
-3. Clear browser cache
+---
 
-### Authentication Not Working
-1. Check `.env` exists: `ls ~/clat_preparation/.env`
-2. Verify OAuth credentials set
-3. Server must run WITHOUT `--no-auth` flag
+## 6. Frontend Architecture
 
-### Folder Structure Clarification
-- **ALWAYS** use `~/saanvi/` (home directory, not Desktop)
-- Desktop has permission issues on Mac Mini
-- Same structure on both machines avoids confusion
-- Folder can be shared on iCloud for iPad access
+### Page Structure
+All pages follow a consistent structure:
+- Include `shared-styles.css` for theming
+- Include `auth.js` for authentication
+- Check authentication on load
+- Support dark/light mode toggle
 
-## Environment Variables
+### Key Frontend Files
 
-### Required Variables (.env)
-```bash
-# Anthropic API (for flashcard generation)
-ANTHROPIC_API_KEY=sk-ant-api03-...
+| File | Purpose |
+|------|---------|
+| `index.html` | Landing page with hero section |
+| `login.html` | Google OAuth login |
+| `comprehensive_dashboard.html` | Main GK hub |
+| `auth.js` | `checkAuth()`, `logout()`, session management |
+| `shared-styles.css` | CSS variables for theming |
 
-# Google OAuth (for authentication)
-GOOGLE_CLIENT_ID=...
-GOOGLE_CLIENT_SECRET=...
-GOOGLE_REDIRECT_URI=https://speedmathsgames.com/auth/callback
+### Dark/Light Mode
+```css
+:root {
+    --bg-primary: #1a1a2e;
+    --text-primary: #e0e0e0;
+    /* ... dark mode colors */
+}
+
+[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --text-primary: #333333;
+    /* ... light mode colors */
+}
 ```
 
-## URLs
+### Real-Time Features
+- **Server-Sent Events (SSE)**: Used for progress tracking during PDF processing
+- **Polling**: Assessment progress checks every 2 seconds
+- **Fetch API**: All API calls use async/await patterns
 
-### Local (MacBook Pro)
-- Main: http://localhost:8001/
-- Dashboard: http://localhost:8001/comprehensive_dashboard.html
-- Assessment: http://localhost:8001/assessment.html
-- Analytics: http://localhost:8001/dashboard/daily_analytics.html
+---
 
-### Local Network (Mac Mini)
-- Main: http://mac-mini:8001/
-- Dashboard: http://mac-mini:8001/comprehensive_dashboard.html
+## 7. Database Architecture
 
-### Public (Mac Mini via Cloudflare)
-- Main: https://speedmathsgames.com/
-- Dashboard: https://speedmathsgames.com/comprehensive_dashboard.html
-- Assessment: https://speedmathsgames.com/assessment.html
+### Database Files
 
-## Maintenance
+| Database | Purpose | Size |
+|----------|---------|------|
+| `revision_tracker.db` | GK PDFs, topics, revisions, diary, mocks | ~1.5 MB |
+| `math_tracker.db` | Math questions, sessions, answers | ~650 KB |
+| `assessment_tracker.db` | Test sessions, question attempts | ~70 KB |
+| `finance_tracker.db` | Accounts, assets, stocks, liabilities | ~85 KB |
+| `health_tracker.db` | Weight, workouts, diet, reports | ~105 KB |
+| `calendar_tracker.db` | OAuth tokens, events, sync status | New |
 
-### Daily
-- Process TopRankers daily current affairs: `cd ~/clat_preparation && ./pdf_generation/automate_html.sh [URL]`
-- Sync to Mac Mini: `./scripts/auto_sync_pdfs.sh`
+### Key Tables by Database
 
-### Weekly
-- Commit code changes: `git add . && git commit -m "..."`
-- Check Mac Mini server logs
-- Verify public URL is accessible
+#### revision_tracker.db
+- `pdfs` - PDF metadata
+- `topics` - GK topics
+- `pdf_chunks` - Chunked PDF tracking
+- `pdf_annotations` - PDF annotations
+- `diary_entries` - Daily study entries
+- `diary_subjects` - Subject tracking
+- `subject_streaks` - Streak calculations
+- `mock_tests` - Mock test results
+- `mock_sections` - Section-wise analysis
+- `questions` - Local question storage
 
-### Monthly
-- Review database sizes
-- Clean old logs: `rm ~/clat_preparation/logs/*.log`
-- Backup databases
+#### math_tracker.db
+- `math_questions` - 360+ questions
+- `math_sessions` - Practice sessions
+- `math_answers` - User answers
+- `math_settings` - Topic/difficulty preferences
+- `math_topic_performance` - Performance aggregation
 
-## Future Improvements
+#### finance_tracker.db
+- `bank_accounts` - Account tracking
+- `balance_history` - Historical balances
+- `assets` - Real estate, vehicles
+- `stocks` - Stock holdings
+- `dividends` - Dividend tracking
+- `liabilities` - Loans, debts
+- `net_worth_history` - Net worth over time
 
-- [ ] Automated Git commits before sync
-- [ ] Automated sync on file changes (fswatch)
-- [ ] Database backup to MacBook Pro
-- [ ] Health monitoring dashboard
-- [ ] Automated testing before sync
+#### health_tracker.db
+- `health_profiles` - User profiles (age, height)
+- `weight_log` - Weight tracking
+- `workouts` - Workout sessions
+- `exercise_library` - Exercise catalog
+- `diet_log` - Food/calorie tracking
+- `blood_reports` - Medical reports
+
+---
+
+## 8. Authentication & Authorization
+
+### Google OAuth 2.0 Flow
+```
+1. User visits /login.html
+2. Clicks "Sign in with Google"
+3. Redirect to Google OAuth consent
+4. Google callback to /auth/google/callback
+5. Server validates token, creates session
+6. Session stored in HttpOnly cookie
+7. Redirect to dashboard
+```
+
+### Role-Based Access Control
+
+| Role | Permissions |
+|------|-------------|
+| Admin | All features + family management |
+| Parent | All features + Finance + Health |
+| Child | Math, GK, Diary, Mocks only |
+
+### Permission Checks
+```python
+# In unified_server.py
+def is_parent_or_admin(self, user):
+    return user.get('role') in ['parent', 'admin']
+
+def can_access_finance(self, user):
+    return self.is_parent_or_admin(user)
+
+def can_access_health(self, user):
+    return self.is_parent_or_admin(user)
+```
+
+### Public Pages (No Auth Required)
+- `/` and `/index.html`
+- `/login.html`
+- `/privacy_policy.html`
+
+---
+
+## 9. Feature Modules
+
+### 9.1 GK Dashboard
+**Purpose**: Manage and track current affairs PDFs
+
+**Features**:
+- Scans PDFs from 3 folders (LegalEdge Daily, Weekly, Career Launcher)
+- Shows file metadata (size, pages, dates)
+- PDF chunking for large files (>20 pages)
+- PDF annotations (draw, highlight, notes)
+- Revision tracking and statistics
+- Assessment creation (AI flashcards)
+
+### 9.2 Math Speed Games
+**Purpose**: Practice math with 360+ questions
+
+**Features**:
+- Multiple topics: Arithmetic, Algebra, Geometry, Data Interpretation
+- Difficulty levels: Easy, Medium, Hard
+- Session tracking with accuracy
+- Topic-based performance analytics
+- User-customizable settings
+
+### 9.3 Assessment System
+**Purpose**: AI-powered flashcard generation and testing
+
+**Features**:
+- Create assessments from PDFs using Claude AI
+- Multiple test modes: Full, Quick, Weak Topics
+- Real-time progress tracking via SSE
+- Question-wise performance analytics
+- Mastery levels: Not Started → Learning → Reviewing → Mastered
+
+### 9.4 Daily Diary
+**Purpose**: Track daily study progress
+
+**Features**:
+- Daily entry logging
+- Subject-wise tracking
+- Streak calculation (consecutive days)
+- Smart reminders
+- Mood/confidence tracking
+- Historical analytics
+
+### 9.5 Mock Test Analysis
+**Purpose**: Track CLAT mock test performance
+
+**CLAT Format**:
+| Section | Questions |
+|---------|-----------|
+| English | 28 |
+| Current Affairs | 35 |
+| Legal Reasoning | 35 |
+| Logical Reasoning | 28 |
+| Quantitative | 14 |
+| **Total** | **150** (120 minutes) |
+
+**Features**:
+- Section-wise performance tracking
+- Percentile and rank estimation
+- Time-per-question analysis
+- Weak areas identification
+- Historical comparison
+
+### 9.6 Finance Dashboard (Parents Only)
+**Purpose**: Personal finance and net worth tracking
+
+**Features**:
+- Bank account management
+- Stock portfolio tracking (via mStock API)
+- Asset tracking (real estate, vehicles)
+- Liability management (loans, debts)
+- Bill tracking with reminders
+- Net worth calculation and history
+- Dividend tracking
+
+### 9.7 Health Dashboard (Parents Only)
+**Purpose**: Health and fitness tracking
+
+**Features**:
+- Weight logging with trends
+- Workout session tracking
+- Exercise library
+- Diet/calorie logging
+- Blood report parsing and analysis
+- Health goals and progress
+
+### 9.8 Calendar Integration
+**Purpose**: Google Calendar sync
+
+**Features**:
+- Multi-account Google Calendar sync
+- Bill reminders as calendar events
+- Daily email summaries
+- Event caching for performance
+
+---
+
+## 10. Third-Party Integrations
+
+### Anthropic Claude API
+- **Purpose**: AI flashcard generation from PDFs
+- **Model**: Claude Sonnet 4.5
+- **Flow**: PDF text → Claude prompt → Q&A flashcard pairs
+- **Cost**: ~$0.05-0.08 per daily PDF
+
+### AnkiConnect
+- **Purpose**: Sync flashcards with Anki desktop
+- **Port**: localhost:8765
+- **Methods**: Query by tags, create notes, import cards
+- **Tag Format**: `week:2025_Dec_D19`, `source:pdf_filename`
+
+### Google APIs
+- **OAuth 2.0**: User authentication
+- **Calendar API**: Read/write calendar events
+- **Gmail API**: Send daily summary emails
+
+### mStock API
+- **Purpose**: Stock portfolio data
+- **Features**: CSV export parsing, price tracking, dividends
+
+---
+
+## 11. Data Flows
+
+### Daily PDF Processing
+```
+TopRankers URL
+    ↓
+generate_clean_pdf_final.py
+    ↓
+PDF saved → ~/saanvi/Legaledgedailygk/
+    ↓
+automate_html.sh → Anki cards
+    ↓
+./sync_to_mac_mini.sh
+    ↓
+PDFScanner.scan_all_folders()
+    ↓
+Database updated
+    ↓
+Dashboard displays PDF
+```
+
+### Assessment Creation Flow
+```
+User clicks "Create Assessment"
+    ↓
+POST /api/create-assessment
+    ↓
+Job created in assessment_jobs table
+    ↓
+Background: AssessmentProcessor runs
+    ↓
+Fetches questions from Anki/Questions DB
+    ↓
+Frontend polls /api/assessment/progress
+    ↓
+SSE updates with progress
+    ↓
+Assessment ready
+```
+
+### Test Taking Flow
+```
+Student clicks "Take Test"
+    ↓
+GET /api/assessment/questions?session_id=...
+    ↓
+Questions displayed
+    ↓
+Student answers
+    ↓
+POST /api/assessment/submit
+    ↓
+Server grades, saves to DB
+    ↓
+Update: question_attempts, question_performance
+    ↓
+Results displayed
+```
+
+---
+
+## 12. Key Technical Patterns
+
+### Cross-Machine Path Handling
+```python
+def path_to_relative(absolute_path):
+    """Convert /Users/arvind/saanvi/... → saanvi/..."""
+    return absolute_path.replace(os.path.expanduser('~') + '/', '')
+
+def relative_to_absolute(relative_path):
+    """Convert saanvi/... → /Users/{current_user}/saanvi/..."""
+    return os.path.join(os.path.expanduser('~'), relative_path)
+```
+
+### Server-Sent Events (SSE)
+```python
+# Server sends progress updates
+self.wfile.write(f"data: {json.dumps(progress)}\n\n".encode())
+self.wfile.flush()
+
+# Client listens
+const eventSource = new EventSource(`/api/processing/${jobId}/logs`);
+eventSource.onmessage = (e) => updateProgress(JSON.parse(e.data));
+```
+
+### Thread-Safe Database
+```python
+conn = sqlite3.connect(db_path, check_same_thread=False)
+conn.row_factory = sqlite3.Row  # Dict-like access
+```
+
+### CORS Headers
+```python
+def add_cors_headers(self):
+    self.send_header('Access-Control-Allow-Origin', '*')
+    self.send_header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
+    self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+```
+
+---
+
+## Related Documentation
+
+- **[API_REFERENCE.md](./API_REFERENCE.md)** - Complete API endpoint documentation
+- **[DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md)** - Detailed database schema
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deployment and operations guide
+- **[MAC_MINI_SETUP.md](./MAC_MINI_SETUP.md)** - Mac Mini specific setup
+- **[GOOGLE_CALENDAR_SETUP.md](./docs/GOOGLE_CALENDAR_SETUP.md)** - Calendar API setup
+
+---
+
+## Summary Statistics
+
+| Metric | Value |
+|--------|-------|
+| Total Lines of Code | ~4,300+ (unified_server.py alone) |
+| Database Tables | 60+ across all databases |
+| HTML Pages | 30+ frontend pages |
+| API Endpoints | 60+ REST endpoints |
+| Family Members | 4 (2 parents, 2 children) |
+| Math Questions | 360+ |
+| Python Modules | 15+ |
+| Database Files | 6 |
+| Deployment Machines | 2 |
+
+---
+
+*This document is the source of truth for system architecture. Update when making significant changes.*
