@@ -620,7 +620,7 @@
             }
 
             table {
-                min-width: 1100px;
+                min-width: 1200px;
             }
 
             /* Make action buttons more touch-friendly */
@@ -1018,6 +1018,7 @@
                                 <th onclick="sortTable('total_topics')">Topics</th>
                                 <th onclick="sortTable('revision_count')">Revisions</th>
                                 <th onclick="sortTable('view_count')">Views</th>
+                                <th onclick="sortTable('days_since_view')">Last Viewed</th>
                                 <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
                                 <th onclick="sortTable('days_since_revision')">Last Revised</th>
                                 <th>Status</th>
@@ -1202,6 +1203,12 @@
                     : `${pdf.days_since_revision}d ago`
                 : 'Never';
 
+            const lastViewed = pdf.days_since_view !== null && pdf.days_since_view !== undefined
+                ? pdf.days_since_view === 0
+                    ? 'Today'
+                    : `${pdf.days_since_view}d ago`
+                : 'Never';
+
             // Check if PDF needs chunking (>13 pages = red indicator)
             const pageCount = pdf.page_count || 0;
             const needsChunking = pdf.needs_chunking || false;
@@ -1304,6 +1311,7 @@
                     <td>${pdf.total_topics}</td>
                     <td><span class="badge badge-count ${revisionBadgeClass}">×${revisionCount}</span></td>
                     <td><span class="badge badge-count ${viewBadgeClass}" title="Complete scroll-throughs">👁 ${viewCount}</span></td>
+                    <td>${lastViewed}</td>
                     <td><span class="badge badge-count ${attemptsBadgeClass}">${assessmentAttempts}×</span></td>
                     <td>${lastRevised}</td>
                     <td>${statusBadge}</td>

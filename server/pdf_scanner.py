@@ -234,6 +234,23 @@ class PDFScanner:
             file_mtime = datetime.fromtimestamp(stat.st_mtime)
             days_since_revision = (datetime.now() - file_mtime).days if file_edit_count > 0 else None
 
+            # Get last viewed timestamp from view sessions
+            last_viewed = None
+            days_since_view = None
+            cursor.execute("""
+                SELECT completed_at FROM pdf_view_sessions
+                WHERE pdf_id = ? AND is_complete = 1
+                ORDER BY completed_at DESC LIMIT 1
+            """, (pdf_file.name,))
+            view_result = cursor.fetchone()
+            if view_result and view_result['completed_at']:
+                last_viewed = view_result['completed_at']
+                try:
+                    view_dt = datetime.fromisoformat(last_viewed.replace('Z', '+00:00').split('+')[0])
+                    days_since_view = (datetime.now() - view_dt).days
+                except:
+                    pass
+
             pdf_data = {
                 'pdf_id': source_date,
                 'filename': pdf_file.name,
@@ -248,6 +265,8 @@ class PDFScanner:
                 'revision_count': file_edit_count,  # Now tracks file edits
                 'total_revisions': file_edit_count,  # Same as revision_count
                 'view_count': view_count,  # Scroll-through completions
+                'last_viewed': last_viewed,  # Last complete scroll-through timestamp
+                'days_since_view': days_since_view,  # Days since last view
                 'assessment_attempts': assessment_attempts,  # NEW: Test attempts
                 'last_revised': last_modified if file_edit_count > 0 else None,
                 'last_modified': last_modified,
