@@ -520,6 +520,7 @@
 
             // Add page number label
             const pageLabel = document.createElement('div');
+            pageLabel.className = 'page-label';
             pageLabel.style.cssText = 'position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;';
             pageLabel.textContent = `Page ${pageNum} of ${totalPages}`;
             wrapper.appendChild(pageLabel);
