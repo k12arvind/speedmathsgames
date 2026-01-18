@@ -110,6 +110,23 @@
             font-size: 1rem;
         }
 
+        .auto-detect-hint {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .auto-detect-hint .icon {
+            font-size: 1.2rem;
+        }
+
         .upload-zone {
             border: 2px dashed var(--border-color);
             border-radius: 12px;
@@ -291,6 +308,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         .result-title {
@@ -315,11 +334,40 @@
             color: #ef4444;
         }
 
+        .result-badge.info {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3b82f6;
+        }
+
+        .result-badge.warning {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
         .result-content {
             font-size: 0.9rem;
             color: var(--text-secondary);
             line-height: 1.6;
         }
+
+        .result-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .result-detail .icon {
+            font-size: 1.1rem;
+        }
+
+        .result-detail.success { border-left: 3px solid #10b981; }
+        .result-detail.info { border-left: 3px solid #3b82f6; }
+        .result-detail.warning { border-left: 3px solid #f59e0b; }
+        .result-detail.error { border-left: 3px solid #ef4444; }
 
         .result-questions {
             margin-top: 12px;
@@ -370,6 +418,15 @@
         .loading-text {
             color: var(--text-secondary);
             font-size: 1rem;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .loading-details {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 8px;
+            text-align: center;
         }
 
         @keyframes spin {
@@ -434,6 +491,7 @@
     <div class="loading-overlay" id="loading">
         <div class="loading-spinner"></div>
         <div class="loading-text" id="loading-text">Processing...</div>
+        <div class="loading-details" id="loading-details"></div>
     </div>
 
     <div class="container">
@@ -462,7 +520,7 @@
         </div>
 
         <div class="section">
-            <h2 class="section-title">1. Select Topic</h2>
+            <h2 class="section-title">1. Topic Selection (Optional)</h2>
             <div class="form-group">
                 <label class="form-label">Which topic are these pages from?</label>
                 <select class="form-select" id="topic-select">
@@ -470,12 +528,12 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label class="form-label">Page Number (optional)</label>
-                <input type="number" class="form-input" id="page-number" placeholder="e.g., 487">
+            <div class="auto-detect-hint">
+                <span class="icon">&#10004;</span>
+                <span>Topic can be <strong>auto-detected</strong> from page number! Leave unselected to auto-detect.</span>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 20px;">
                 <div class="checkbox-group">
                     <input type="checkbox" id="is-answer-key">
                     <label class="checkbox-label" for="is-answer-key">This is an answer key page (not questions)</label>
@@ -488,7 +546,7 @@
             <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()">
                 <div class="upload-icon"></div>
                 <div class="upload-text">Click to upload or drag & drop</div>
-                <div class="upload-hint">Take a clear photo of the book page with tick-marked questions</div>
+                <div class="upload-hint">Take a clear photo of the book page with circled question numbers</div>
             </div>
             <input type="file" class="upload-input" id="file-input" accept="image/*" multiple onchange="handleFiles(this.files)">
 
@@ -500,7 +558,7 @@
         <div class="section">
             <h2 class="section-title">3. Extract Questions</h2>
             <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                Claude Vision will scan your uploaded images and extract all tick-marked questions with their answer choices.
+                Claude Vision will scan your uploaded images and extract questions with <strong>circled numbers</strong>, along with their answer choices.
             </p>
             <button class="action-btn" id="extract-btn" onclick="extractQuestions()" disabled>
                 Extract Questions with AI
@@ -537,9 +595,9 @@
                 const data = await response.json();
                 const select = document.getElementById('topic-select');
 
-                select.innerHTML = '<option value="">Select a topic...</option>' +
+                select.innerHTML = '<option value="">Auto-detect from page number</option>' +
                     data.topics.map(t =>
-                        `<option value="${t.topic_id}">${t.chapter_number}. ${t.topic_name}</option>`
+                        `<option value="${t.topic_id}">${t.chapter_number}. ${t.topic_name} (pages ${t.page_range})</option>`
                     ).join('');
             } catch (error) {
                 console.error('Error loading topics:', error);
@@ -594,7 +652,8 @@
             }
 
             container.style.display = 'block';
-            document.getElementById('extract-btn').disabled = !document.getElementById('topic-select').value;
+            // Enable extract button if we have files (topic is now optional)
+            document.getElementById('extract-btn').disabled = false;
 
             grid.innerHTML = uploadedFiles.map((f, i) => `
                 <div class="preview-item">
@@ -625,24 +684,26 @@
             updatePreviews();
         }
 
+        function showLoading(text, details = '') {
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('loading-text').textContent = text;
+            document.getElementById('loading-details').textContent = details;
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
         async function extractQuestions() {
             const topicId = document.getElementById('topic-select').value;
-            const pageNumber = document.getElementById('page-number').value;
             const isAnswerKey = document.getElementById('is-answer-key').checked;
-
-            if (!topicId) {
-                alert('Please select a topic');
-                return;
-            }
 
             if (uploadedFiles.length === 0) {
                 alert('Please upload at least one image');
                 return;
             }
 
-            // Show loading
-            document.getElementById('loading').style.display = 'flex';
-            document.getElementById('loading-text').textContent = 'Uploading images...';
+            showLoading('Uploading images...', 'Please wait...');
             document.getElementById('step-2').classList.add('active');
 
             const results = [];
@@ -653,72 +714,156 @@
                 updatePreviews();
 
                 try {
-                    // Upload image
-                    document.getElementById('loading-text').textContent =
-                        `Uploading image ${i + 1} of ${uploadedFiles.length}...`;
+                    showLoading(
+                        `Processing image ${i + 1} of ${uploadedFiles.length}...`,
+                        'Uploading to server'
+                    );
 
-                    const base64Data = f.data.split(',')[1]; // Remove data:image/...;base64, prefix
+                    const base64Data = f.data.split(',')[1];
 
-                    const uploadResponse = await fetch(`${API_BASE}/api/book/upload`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            topic_id: parseInt(topicId),
-                            page_number: pageNumber ? parseInt(pageNumber) + i : null,
-                            is_answer_key: isAnswerKey,
-                            image_data: base64Data
-                        })
-                    });
+                    if (isAnswerKey) {
+                        // Answer key upload - use the dedicated endpoint
+                        showLoading(
+                            `Processing answer key ${i + 1}...`,
+                            'Extracting answers from image'
+                        );
 
-                    const uploadData = await uploadResponse.json();
+                        const response = await fetch(`${API_BASE}/api/book/answers/upload`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                topic_id: topicId ? parseInt(topicId) : null,
+                                image_data: base64Data
+                            })
+                        });
 
-                    if (uploadData.error) {
-                        f.status = 'error';
-                        results.push({ file: f.name, error: uploadData.error });
-                        continue;
+                        const data = await response.json();
+
+                        if (data.error) {
+                            f.status = 'error';
+                            results.push({
+                                file: f.name,
+                                success: false,
+                                error: data.error,
+                                details: []
+                            });
+                        } else {
+                            f.status = 'extracted';
+                            const details = [];
+
+                            if (data.page_number) {
+                                details.push({ type: 'info', icon: '&#128196;', text: `Page number detected: ${data.page_number}` });
+                            }
+                            if (data.auto_detected) {
+                                details.push({ type: 'success', icon: '&#10004;', text: `Topic auto-detected: ${data.topic_name}` });
+                            } else if (data.topic_name) {
+                                details.push({ type: 'info', icon: '&#128218;', text: `Topic: ${data.topic_name}` });
+                            }
+                            if (data.total_answers_found) {
+                                details.push({ type: 'info', icon: '&#128221;', text: `Found ${data.total_answers_found} answers in answer key` });
+                            }
+                            if (data.answers_set) {
+                                details.push({ type: 'success', icon: '&#10004;', text: `Matched ${data.answers_set} answers to questions` });
+                            }
+
+                            results.push({
+                                file: f.name,
+                                success: true,
+                                isAnswerKey: true,
+                                details: details,
+                                answersSet: data.answers_set,
+                                totalAnswers: data.total_answers_found
+                            });
+                        }
+                    } else {
+                        // Question page upload
+                        showLoading(
+                            `Uploading image ${i + 1}...`,
+                            'Sending to server'
+                        );
+
+                        const uploadResponse = await fetch(`${API_BASE}/api/book/upload`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                topic_id: topicId ? parseInt(topicId) : null,
+                                page_number: null,
+                                is_answer_key: false,
+                                image_data: base64Data
+                            })
+                        });
+
+                        const uploadData = await uploadResponse.json();
+
+                        if (uploadData.error) {
+                            f.status = 'error';
+                            results.push({ file: f.name, success: false, error: uploadData.error, details: [] });
+                            continue;
+                        }
+
+                        f.status = 'extracting';
+                        updatePreviews();
+
+                        showLoading(
+                            `Extracting questions from image ${i + 1}...`,
+                            'Claude Vision is analyzing the page (this may take 10-20 seconds)'
+                        );
+
+                        const extractResponse = await fetch(`${API_BASE}/api/book/extract`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                page_id: uploadData.page_id
+                            })
+                        });
+
+                        const extractData = await extractResponse.json();
+
+                        if (extractData.error) {
+                            f.status = 'error';
+                            results.push({ file: f.name, success: false, error: extractData.error, details: [] });
+                        } else {
+                            f.status = 'extracted';
+                            const details = [];
+
+                            if (extractData.page_number) {
+                                details.push({ type: 'info', icon: '&#128196;', text: `Page number detected: ${extractData.page_number}` });
+                            }
+                            if (extractData.topic_name) {
+                                if (extractData.auto_detected) {
+                                    details.push({ type: 'success', icon: '&#10004;', text: `Topic auto-detected: ${extractData.topic_name}` });
+                                } else {
+                                    details.push({ type: 'info', icon: '&#128218;', text: `Topic: ${extractData.topic_name}` });
+                                }
+                            }
+                            if (extractData.questions && extractData.questions.length > 0) {
+                                const qNums = extractData.questions.map(q => q.question_number).join(', ');
+                                details.push({ type: 'success', icon: '&#128221;', text: `${extractData.questions.length} questions extracted (Q${qNums})` });
+                            } else {
+                                details.push({ type: 'warning', icon: '&#9888;', text: 'No circled questions found on this page' });
+                            }
+
+                            results.push({
+                                file: f.name,
+                                success: true,
+                                questions: extractData.questions || [],
+                                details: details
+                            });
+                        }
                     }
-
-                    f.status = 'extracting';
-                    updatePreviews();
-
-                    // Extract questions
-                    document.getElementById('loading-text').textContent =
-                        `Extracting from image ${i + 1} of ${uploadedFiles.length}... (this may take a moment)`;
-
-                    const extractResponse = await fetch(`${API_BASE}/api/book/extract`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            page_id: uploadData.page_id
-                        })
-                    });
-
-                    const extractData = await extractResponse.json();
-
-                    f.status = extractData.success ? 'extracted' : 'error';
-                    results.push({
-                        file: f.name,
-                        success: extractData.success,
-                        questions: extractData.questions || [],
-                        answers: extractData.answers || {},
-                        answers_set: extractData.answers_set,
-                        error: extractData.error
-                    });
 
                 } catch (error) {
                     f.status = 'error';
-                    results.push({ file: f.name, error: error.message });
+                    results.push({ file: f.name, success: false, error: error.message, details: [] });
                 }
 
                 updatePreviews();
             }
 
-            // Hide loading
-            document.getElementById('loading').style.display = 'none';
+            hideLoading();
             document.getElementById('step-2').classList.add('completed');
             document.getElementById('step-3').classList.add('active');
 
-            // Show results
             showResults(results);
         }
 
@@ -730,12 +875,29 @@
                 <div class="result-card">
                     <div class="result-header">
                         <span class="result-title">${r.file}</span>
-                        <span class="result-badge ${r.success ? 'success' : 'error'}">
-                            ${r.success ? (r.answers_set ? `${r.answers_set} answers set` : `${r.questions.length} questions extracted`) : 'Error'}
-                        </span>
+                        ${r.success ? `
+                            <span class="result-badge success">
+                                ${r.isAnswerKey ? `${r.answersSet || 0} answers matched` : `${r.questions?.length || 0} questions`}
+                            </span>
+                        ` : `
+                            <span class="result-badge error">Error</span>
+                        `}
                     </div>
                     <div class="result-content">
-                        ${r.error ? `<p style="color: #ef4444;">${r.error}</p>` : ''}
+                        ${r.error ? `
+                            <div class="result-detail error">
+                                <span class="icon">&#10060;</span>
+                                <span>${r.error}</span>
+                            </div>
+                        ` : ''}
+
+                        ${r.details && r.details.map(d => `
+                            <div class="result-detail ${d.type}">
+                                <span class="icon">${d.icon}</span>
+                                <span>${d.text}</span>
+                            </div>
+                        `).join('')}
+
                         ${r.questions && r.questions.length > 0 ? `
                             <div class="result-questions">
                                 ${r.questions.slice(0, 3).map(q => `
@@ -744,10 +906,13 @@
                                         <div class="question-preview-text">${truncate(q.question_text, 150)}</div>
                                     </div>
                                 `).join('')}
-                                ${r.questions.length > 3 ? `<p style="color: var(--text-muted); margin-top: 8px;">...and ${r.questions.length - 3} more questions</p>` : ''}
+                                ${r.questions.length > 3 ? `
+                                    <p style="color: var(--text-muted); margin-top: 8px; font-size: 0.85rem;">
+                                        ...and ${r.questions.length - 3} more questions
+                                    </p>
+                                ` : ''}
                             </div>
                         ` : ''}
-                        ${r.answers_set ? `<p style="color: #10b981;">Set correct answers for ${r.answers_set} questions</p>` : ''}
                     </div>
                 </div>
             `).join('');
@@ -765,7 +930,6 @@
             uploadedPages = [];
             updatePreviews();
             document.getElementById('extraction-results').style.display = 'none';
-            document.getElementById('page-number').value = '';
             document.getElementById('is-answer-key').checked = false;
 
             // Reset steps
@@ -774,12 +938,6 @@
             });
             document.getElementById('step-1').classList.add('active');
         }
-
-        // Check topic select to enable/disable extract button
-        document.getElementById('topic-select').addEventListener('change', function() {
-            document.getElementById('extract-btn').disabled =
-                !this.value || uploadedFiles.length === 0;
-        });
 
         window.onload = init;
     </script>
