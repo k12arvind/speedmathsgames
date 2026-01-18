@@ -574,6 +574,23 @@ class BookPracticeDB:
         finally:
             conn.close()
 
+    def get_questions_by_page_number(self, page_number: int) -> List[Dict]:
+        """Get all questions from a specific page number (for duplicate detection)"""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            # Join with uploaded_pages to get page_number
+            cursor.execute("""
+                SELECT q.question_id, q.question_number, q.topic_id, p.page_number
+                FROM book_questions q
+                JOIN uploaded_pages p ON q.page_id = p.page_id
+                WHERE p.page_number = ?
+                ORDER BY q.question_number
+            """, (page_number,))
+            return [dict(row) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
     def get_pending_review_questions(self, page_id: int = None) -> List[Dict]:
         """Get questions that need verification"""
         conn = self._get_connection()

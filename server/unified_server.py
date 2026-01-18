@@ -4731,6 +4731,19 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                     extracted_page_num = result.get('page_number')
                     extracted_topic = result.get('topic_name')
 
+                    # Check for duplicate page (only for question pages, not answer keys)
+                    if extracted_page_num:
+                        existing_questions = self.book_practice_db.get_questions_by_page_number(extracted_page_num)
+                        if existing_questions:
+                            self.send_json({
+                                'success': False,
+                                'error': f'Duplicate page! Page {extracted_page_num} has already been scanned with {len(existing_questions)} questions.',
+                                'duplicate': True,
+                                'page_number': extracted_page_num,
+                                'existing_questions': [q['question_number'] for q in existing_questions]
+                            }, 400)
+                            return
+
                     # Auto-detect topic from page number if topic wasn't set
                     topic_id = page['topic_id']
                     detected_topic = None
