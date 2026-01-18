@@ -4682,95 +4682,108 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 self.send_json({'error': 'page_id required'}, 400)
                 return
 
-            # Get page info
-            conn = self.book_practice_db._get_connection()
-            cursor = conn.cursor()
-            cursor.execute("SELECT * FROM uploaded_pages WHERE page_id = ?", (page_id,))
-            page = cursor.fetchone()
-            conn.close()
+            try:
+                # Get page info
+                conn = self.book_practice_db._get_connection()
+                cursor = conn.cursor()
+                cursor.execute("SELECT * FROM uploaded_pages WHERE page_id = ?", (page_id,))
+                page = cursor.fetchone()
+                conn.close()
 
-            if not page:
-                self.send_json({'error': 'Page not found'}, 404)
-                return
+                if not page:
+                    self.send_json({'error': 'Page not found'}, 404)
+                    return
 
-            page = dict(page)
+                page = dict(page)
 
-            # Extract questions using Claude Vision
-            if not self.book_image_extractor:
-                self.send_json({'error': 'Image extractor not initialized'}, 500)
-                return
+                # Check if image file exists
+                import os
+                if not os.path.exists(page['image_path']):
+                    self.send_json({'error': f"Image file not found: {page['image_path']}"}, 404)
+                    return
 
-            if page['is_answer_key']:
-                # Extract answers
-                answers, raw_response = self.book_image_extractor.extract_answers(page['image_path'])
+                # Extract questions using Claude Vision
+                if not self.book_image_extractor:
+                    self.send_json({'error': 'Image extractor not initialized'}, 500)
+                    return
 
-                # Update answers for questions in this topic
-                if answers:
-                    count = self.book_practice_db.set_correct_answers_by_topic(page['topic_id'], answers)
-                    self.book_practice_db.update_page_extraction(page_id, 'extracted', raw_response)
-                    self.send_json({
-                        'success': True,
-                        'answers_set': count,
-                        'answers': answers
-                    })
-                else:
-                    self.send_json({'success': False, 'error': 'No answers extracted', 'raw': raw_response})
-            else:
-                # Extract questions (returns dict with page_number, topic_name, questions)
-                result, raw_response = self.book_image_extractor.extract_questions(page['image_path'])
-                questions = result.get('questions', [])
-                extracted_page_num = result.get('page_number')
-                extracted_topic = result.get('topic_name')
+                if page['is_answer_key']:
+                    # Extract answers - returns {page_number, answers}
+                    result, raw_response = self.book_image_extractor.extract_answers(page['image_path'])
+                    answers = result.get('answers', {})
 
-                # Auto-detect topic from page number if topic wasn't set
-                topic_id = page['topic_id']
-                detected_topic = None
-                if extracted_page_num and not topic_id:
-                    detected_topic = self.book_practice_db.get_topic_by_page(extracted_page_num)
-                    if detected_topic:
-                        topic_id = detected_topic['topic_id']
-                        # Update the uploaded_page with the detected topic
-                        conn = self.book_practice_db._get_connection()
-                        cursor = conn.cursor()
-                        cursor.execute(
-                            "UPDATE uploaded_pages SET topic_id = ?, page_number = ? WHERE page_id = ?",
-                            (topic_id, extracted_page_num, page_id)
-                        )
-                        conn.commit()
-                        conn.close()
-
-                if questions:
-                    # Add questions to database
-                    questions_to_add = []
-                    for q in questions:
-                        questions_to_add.append({
-                            'topic_id': topic_id,
-                            'page_id': page_id,
-                            'question_number': q.get('question_number'),
-                            'question_text': q.get('question_text'),
-                            'choices': q.get('choices', {}),
-                            'source_exam': q.get('source_exam')
+                    # Update answers for questions in this topic
+                    if answers:
+                        count = self.book_practice_db.set_correct_answers_by_topic(page['topic_id'], answers)
+                        self.book_practice_db.update_page_extraction(page_id, 'extracted', raw_response)
+                        self.send_json({
+                            'success': True,
+                            'answers_set': count,
+                            'answers': answers,
+                            'page_number': result.get('page_number')
                         })
-
-                    count = self.book_practice_db.add_questions_bulk(questions_to_add)
-                    self.book_practice_db.update_page_extraction(page_id, 'extracted', raw_response)
-
-                    self.send_json({
-                        'success': True,
-                        'questions_added': count,
-                        'questions': questions,
-                        'page_number': extracted_page_num,
-                        'topic_name': extracted_topic,
-                        'detected_topic': detected_topic
-                    })
+                    else:
+                        self.send_json({'success': False, 'error': 'No answers extracted', 'raw': raw_response})
                 else:
-                    self.send_json({
-                        'success': False,
-                        'error': 'No questions extracted (no tick marks found?)',
-                        'raw': raw_response,
-                        'page_number': extracted_page_num,
-                        'topic_name': extracted_topic
-                    })
+                    # Extract questions (returns dict with page_number, topic_name, questions)
+                    result, raw_response = self.book_image_extractor.extract_questions(page['image_path'])
+                    questions = result.get('questions', [])
+                    extracted_page_num = result.get('page_number')
+                    extracted_topic = result.get('topic_name')
+
+                    # Auto-detect topic from page number if topic wasn't set
+                    topic_id = page['topic_id']
+                    detected_topic = None
+                    if extracted_page_num and not topic_id:
+                        detected_topic = self.book_practice_db.get_topic_by_page(extracted_page_num)
+                        if detected_topic:
+                            topic_id = detected_topic['topic_id']
+                            # Update the uploaded_page with the detected topic
+                            conn = self.book_practice_db._get_connection()
+                            cursor = conn.cursor()
+                            cursor.execute(
+                                "UPDATE uploaded_pages SET topic_id = ?, page_number = ? WHERE page_id = ?",
+                                (topic_id, extracted_page_num, page_id)
+                            )
+                            conn.commit()
+                            conn.close()
+
+                    if questions:
+                        # Add questions to database
+                        questions_to_add = []
+                        for q in questions:
+                            questions_to_add.append({
+                                'topic_id': topic_id,
+                                'page_id': page_id,
+                                'question_number': q.get('question_number'),
+                                'question_text': q.get('question_text'),
+                                'choices': q.get('choices', {}),
+                                'source_exam': q.get('source_exam')
+                            })
+
+                        count = self.book_practice_db.add_questions_bulk(questions_to_add)
+                        self.book_practice_db.update_page_extraction(page_id, 'extracted', raw_response)
+
+                        self.send_json({
+                            'success': True,
+                            'questions_added': count,
+                            'questions': questions,
+                            'page_number': extracted_page_num,
+                            'topic_name': extracted_topic,
+                            'detected_topic': detected_topic,
+                            'auto_detected': detected_topic is not None
+                        })
+                    else:
+                        self.send_json({
+                            'success': False,
+                            'error': 'No questions extracted (no circled questions found?)',
+                            'raw': raw_response,
+                            'page_number': extracted_page_num,
+                            'topic_name': extracted_topic
+                        })
+            except Exception as e:
+                import traceback
+                self.send_json({'error': f'Extraction failed: {str(e)}', 'traceback': traceback.format_exc()}, 500)
 
         # POST /api/book/questions/approve - Approve reviewed questions
         elif path == '/api/book/questions/approve':
