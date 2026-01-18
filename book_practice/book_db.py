@@ -89,10 +89,20 @@ class BookPracticeDB:
                     topic_name TEXT NOT NULL UNIQUE,
                     chapter_number INTEGER,
                     page_range TEXT,
+                    answer_key_page_start INTEGER,
+                    answer_key_page_end INTEGER,
                     total_questions INTEGER DEFAULT 0,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
             """)
+
+            # Migration: Add answer_key columns if they don't exist
+            cursor.execute("PRAGMA table_info(book_topics)")
+            columns = [col[1] for col in cursor.fetchall()]
+            if 'answer_key_page_start' not in columns:
+                cursor.execute("ALTER TABLE book_topics ADD COLUMN answer_key_page_start INTEGER")
+            if 'answer_key_page_end' not in columns:
+                cursor.execute("ALTER TABLE book_topics ADD COLUMN answer_key_page_end INTEGER")
 
             # Uploaded page images
             cursor.execute("""
@@ -253,6 +263,54 @@ class BookPracticeDB:
                     except ValueError:
                         continue
             return None
+        finally:
+            conn.close()
+
+    def get_topic_by_answer_key_page(self, page_number: int) -> Optional[Dict]:
+        """Find topic by answer key page number"""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            # First try exact match with answer_key_page range
+            cursor.execute("""
+                SELECT * FROM book_topics
+                WHERE answer_key_page_start IS NOT NULL
+                  AND ? >= answer_key_page_start
+                  AND ? <= COALESCE(answer_key_page_end, answer_key_page_start)
+            """, (page_number, page_number))
+            row = cursor.fetchone()
+            if row:
+                return dict(row)
+
+            # If no answer key range set, fall back to checking if page is within chapter range
+            # (answer keys are often at the end of the chapter)
+            cursor.execute("SELECT * FROM book_topics WHERE page_range IS NOT NULL")
+            for row in cursor.fetchall():
+                topic = dict(row)
+                page_range = topic.get('page_range', '')
+                if page_range and '-' in page_range:
+                    try:
+                        start, end = page_range.split('-')
+                        if int(start) <= page_number <= int(end):
+                            return topic
+                    except ValueError:
+                        continue
+            return None
+        finally:
+            conn.close()
+
+    def set_answer_key_pages(self, topic_id: int, start_page: int, end_page: int = None) -> bool:
+        """Set the answer key page range for a topic"""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("""
+                UPDATE book_topics
+                SET answer_key_page_start = ?, answer_key_page_end = ?
+                WHERE topic_id = ?
+            """, (start_page, end_page or start_page, topic_id))
+            conn.commit()
+            return cursor.rowcount > 0
         finally:
             conn.close()
 

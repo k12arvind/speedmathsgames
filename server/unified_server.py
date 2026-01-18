@@ -4866,35 +4866,78 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
         # POST /api/book/answers/upload - Upload answer key image
         elif path == '/api/book/answers/upload':
-            topic_id = data.get('topic_id')
+            topic_id = data.get('topic_id')  # Optional - can be auto-detected from page number
             image_data = data.get('image_data')
 
-            if not topic_id or not image_data:
-                self.send_json({'error': 'topic_id and image_data required'}, 400)
+            if not image_data:
+                self.send_json({'error': 'image_data required'}, 400)
                 return
 
             import base64
             try:
                 image_bytes = base64.b64decode(image_data)
-                image_path = save_uploaded_image(image_bytes, topic_id, None, is_answer_key=True)
-                page_id = self.book_practice_db.add_uploaded_page(topic_id, image_path, None, True)
+                # Use topic_id 0 temporarily if not provided (will be updated after detection)
+                temp_topic_id = topic_id if topic_id else 0
+                image_path = save_uploaded_image(image_bytes, temp_topic_id, None, is_answer_key=True)
 
-                # Immediately extract answers
+                # Extract answers (returns {page_number, answers})
                 if self.book_image_extractor:
-                    answers, raw = self.book_image_extractor.extract_answers(image_path)
+                    result, raw = self.book_image_extractor.extract_answers(image_path)
+                    extracted_page_num = result.get('page_number')
+                    answers = result.get('answers', {})
+
+                    # Auto-detect topic from page number if not provided
+                    detected_topic = None
+                    final_topic_id = topic_id
+                    if extracted_page_num and not topic_id:
+                        detected_topic = self.book_practice_db.get_topic_by_answer_key_page(extracted_page_num)
+                        if detected_topic:
+                            final_topic_id = detected_topic['topic_id']
+                            print(f"Auto-detected topic from answer key page {extracted_page_num}: {detected_topic['topic_name']}")
+
+                    if not final_topic_id:
+                        self.send_json({
+                            'error': 'Could not determine topic. Please select a topic manually.',
+                            'page_number': extracted_page_num,
+                            'answers_found': len(answers)
+                        }, 400)
+                        return
+
+                    # Record the uploaded page
+                    page_id = self.book_practice_db.add_uploaded_page(
+                        final_topic_id, image_path, extracted_page_num, True
+                    )
+
+                    # Update the topic's answer key page range
+                    if extracted_page_num:
+                        self.book_practice_db.set_answer_key_pages(final_topic_id, extracted_page_num)
+
+                    # Set correct answers for questions in this topic
                     if answers:
-                        count = self.book_practice_db.set_correct_answers_by_topic(topic_id, answers)
+                        count = self.book_practice_db.set_correct_answers_by_topic(final_topic_id, answers)
                         self.book_practice_db.update_page_extraction(page_id, 'extracted', raw)
+
+                        # Get topic name for response
+                        topic_info = self.book_practice_db.get_topic(final_topic_id)
+                        topic_name = topic_info['topic_name'] if topic_info else 'Unknown'
+
                         self.send_json({
                             'success': True,
                             'page_id': page_id,
+                            'page_number': extracted_page_num,
+                            'topic_id': final_topic_id,
+                            'topic_name': topic_name,
+                            'auto_detected': detected_topic is not None,
                             'answers_set': count,
-                            'answers': answers
+                            'total_answers_found': len(answers),
+                            'answers': {str(k): v for k, v in answers.items()}
                         })
                         return
 
-                self.send_json({'success': True, 'page_id': page_id})
+                self.send_json({'success': True, 'page_id': page_id if 'page_id' in dir() else None})
             except Exception as e:
+                import traceback
+                traceback.print_exc()
                 self.send_json({'error': str(e)}, 500)
 
         else:

@@ -84,23 +84,34 @@ Return ONLY valid JSON in this exact format:
 If page_number or topic_name not visible, use null.
 If no circled questions found, return: {"page_number": null, "topic_name": null, "questions": []}"""
 
-    ANSWER_KEY_PROMPT = """Extract answers from this answer key page.
-This is an answer key page from RS Aggarwal's book.
+    ANSWER_KEY_PROMPT = """Extract answers from this answer key page from RS Aggarwal's Quantitative Aptitude book.
 
-For each answer visible, extract:
+FIRST, look at the page header/top for:
+1. Page number (usually in the corner, e.g., "468" or "■ 468")
+
+THEN, look for an "ANSWERS" section and extract all answer mappings visible.
+
+For each answer visible in the ANSWERS grid/table, extract:
 - The question number
 - The correct answer choice (a, b, c, d, or e)
 
-Return ONLY a valid JSON object mapping question numbers to correct answers.
-Format:
+Return ONLY valid JSON in this exact format:
 {
-  "1": "b",
-  "2": "a",
-  "3": "d",
-  "17": "c"
+  "page_number": 468,
+  "answers": {
+    "1": "c",
+    "2": "b",
+    "3": "a",
+    "17": "c",
+    "37": "a"
+  }
 }
 
-Only include answers that are clearly visible on this page."""
+IMPORTANT:
+- Extract ALL answer mappings visible in the ANSWERS section
+- The answers are typically in a grid format like: "1. (c)  2. (b)  3. (a)" etc.
+- Only include answers that are clearly visible
+- If page_number is not visible, use null"""
 
     def __init__(self, api_key: str = None):
         """Initialize the extractor with Anthropic API key"""
@@ -217,23 +228,24 @@ Only include answers that are clearly visible on this page."""
                     pass
             return {'page_number': None, 'topic_name': None, 'questions': []}
 
-    def extract_answers(self, image_path: str) -> Tuple[Dict[int, str], str]:
+    def extract_answers(self, image_path: str) -> Tuple[Dict, str]:
         """
         Extract answers from an answer key page
 
         Returns:
-            Tuple of (answers_dict, raw_response)
+            Tuple of (result_dict, raw_response)
+            result_dict contains: page_number, answers (dict mapping question_number to choice)
         """
         image_data = self._encode_image(image_path)
         if not image_data:
-            return {}, "Error: Could not read image file"
+            return {'page_number': None, 'answers': {}}, "Error: Could not read image file"
 
         media_type = self._get_media_type(image_path)
 
         try:
             response = self.client.messages.create(
                 model="claude-sonnet-4-20250514",
-                max_tokens=2048,
+                max_tokens=4096,
                 messages=[
                     {
                         "role": "user",
@@ -258,12 +270,12 @@ Only include answers that are clearly visible on this page."""
             raw_response = response.content[0].text
 
             # Parse the JSON response
-            answers = self._parse_answer_response(raw_response)
+            result = self._parse_answer_response(raw_response)
 
-            return answers, raw_response
+            return result, raw_response
 
         except Exception as e:
-            return {}, f"Error: {str(e)}"
+            return {'page_number': None, 'answers': {}}, f"Error: {str(e)}"
 
     def _encode_image(self, image_path: str) -> Optional[str]:
         """Read and base64 encode an image file"""
@@ -333,7 +345,7 @@ Only include answers that are clearly visible on this page."""
 
         return []
 
-    def _parse_answer_response(self, response: str) -> Dict[int, str]:
+    def _parse_answer_response(self, response: str) -> Dict:
         """Parse answer key JSON from Claude's response"""
         response = response.strip()
 
@@ -359,13 +371,37 @@ Only include answers that are clearly visible on this page."""
         if start_idx != -1 and end_idx != -1:
             json_str = response[start_idx:end_idx + 1]
             try:
-                raw_answers = json.loads(json_str)
-                # Convert string keys to integers
-                return {int(k): v.lower() for k, v in raw_answers.items()}
+                data = json.loads(json_str)
+
+                # Handle new format with page_number and answers
+                if 'answers' in data:
+                    answers = {}
+                    for k, v in data['answers'].items():
+                        try:
+                            answers[int(k)] = v.lower()
+                        except (ValueError, AttributeError):
+                            continue
+                    return {
+                        'page_number': data.get('page_number'),
+                        'answers': answers
+                    }
+
+                # Handle old format (just question -> answer mapping)
+                answers = {}
+                for k, v in data.items():
+                    if k != 'page_number':
+                        try:
+                            answers[int(k)] = v.lower()
+                        except (ValueError, AttributeError):
+                            continue
+                return {
+                    'page_number': None,
+                    'answers': answers
+                }
             except (json.JSONDecodeError, ValueError):
                 pass
 
-        return {}
+        return {'page_number': None, 'answers': {}}
 
     def _apply_math_conversions(self, text: str) -> str:
         """Apply Unicode math conversions to text"""
