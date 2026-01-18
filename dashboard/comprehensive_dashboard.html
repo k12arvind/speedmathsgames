@@ -1174,9 +1174,12 @@
 
         // Extract questions from monthly PDF (questions are embedded, not AI-generated)
         async function extractMonthlyQuestions(filename) {
-            if (!confirm(`Extract embedded questions from "${filename}"?\n\nThis will scan the PDF for PRACTICE QUESTIONS sections and ANSWER KEYs.`)) {
-                return;
-            }
+            // Find and disable the button to prevent double-clicks
+            const buttons = document.querySelectorAll(`button[onclick*="${filename}"]`);
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                btn.innerHTML = '⏳ Extracting...';
+            });
 
             try {
                 const response = await fetch(`${API_BASE}/api/monthly/extract-questions`, {
@@ -1188,14 +1191,23 @@
                 const result = await response.json();
 
                 if (result.success) {
-                    alert(`✅ Extracted ${result.question_count} questions from ${filename}`);
+                    // Reload dashboard to show updated question count
                     await loadDashboardData();
                 } else {
-                    alert(`❌ Error: ${result.error}`);
+                    console.error('Extract error:', result.error);
+                    // Re-enable button on error
+                    buttons.forEach(btn => {
+                        btn.disabled = false;
+                        btn.innerHTML = '✨ Extract Qs';
+                    });
                 }
             } catch (error) {
                 console.error('Error extracting questions:', error);
-                alert('Failed to extract questions. Please try again.');
+                // Re-enable button on error
+                buttons.forEach(btn => {
+                    btn.disabled = false;
+                    btn.innerHTML = '✨ Extract Qs';
+                });
             }
         }
 
