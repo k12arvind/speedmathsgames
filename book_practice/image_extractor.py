@@ -31,10 +31,15 @@ MATH_CONVERSIONS = {
 class BookImageExtractor:
     """Extracts questions from book page images using Claude Vision API"""
 
-    EXTRACTION_PROMPT = """Extract all questions marked with a tick (✓) or check mark from this textbook page.
-This is a page from RS Aggarwal's Quantitative Aptitude and Reasoning book.
+    EXTRACTION_PROMPT = """Extract information from this textbook page from RS Aggarwal's Quantitative Aptitude book.
 
-For each tick-marked question, provide:
+FIRST, look at the page header/top for:
+1. Page number (usually in the corner, e.g., "487" or "■ 487")
+2. Topic/Chapter name (e.g., "Alligation or Mixture", "Time and Work", "Percentage")
+
+THEN, extract all questions marked with a tick (✓), check mark, or any hand-drawn mark next to them.
+
+For each marked question, provide:
 - question_number: The question number (e.g., 17, 18)
 - question_text: The full question text
   - Convert fractions to Unicode where possible: 3/5 → ⅗, 1/2 → ½, 1/4 → ¼, 2/3 → ⅔, 3/4 → ¾
@@ -42,33 +47,37 @@ For each tick-marked question, provide:
   - Use superscript for powers: x² not x^2, m³ not m^3
   - Keep ratios as "3 : 5" (with spaces)
   - Keep decimal numbers as-is
-- choices: Array of answer options [a, b, c, d] or [a, b, c, d, e]
+- choices: Answer options as object {a, b, c, d} or {a, b, c, d, e}
   - Each choice should be the exact text after the option letter
   - Apply same Unicode conversions to choices
 - source_exam: If visible (e.g., "IBPS PO Prelims 23/09/2023", "SSC CGL", "CAT 2022")
 
 IMPORTANT:
-- ONLY extract questions that have a visible tick mark (✓) or check mark next to them
-- Do NOT include questions without tick marks
-- If no tick marks are visible, return an empty array
+- Include ANY question with a visible mark next to it (tick, check, pencil mark, pen mark)
+- Look carefully for marks - they may be in pencil, pen, or highlighter
 - Preserve all mathematical notation and symbols accurately
 
-Return ONLY a valid JSON array, no other text. Format:
-[
-  {
-    "question_number": 17,
-    "question_text": "The full question text here...",
-    "choices": {
-      "a": "Option A text",
-      "b": "Option B text",
-      "c": "Option C text",
-      "d": "Option D text"
-    },
-    "source_exam": "IBPS PO 2023" or null
-  }
-]
+Return ONLY valid JSON in this exact format:
+{
+  "page_number": 487,
+  "topic_name": "Alligation or Mixture",
+  "questions": [
+    {
+      "question_number": 17,
+      "question_text": "The full question text here...",
+      "choices": {
+        "a": "Option A text",
+        "b": "Option B text",
+        "c": "Option C text",
+        "d": "Option D text"
+      },
+      "source_exam": "IBPS PO 2023"
+    }
+  ]
+}
 
-If there are no tick-marked questions on this page, return: []"""
+If page_number or topic_name not visible, use null.
+If no marked questions found, return: {"page_number": null, "topic_name": null, "questions": []}"""
 
     ANSWER_KEY_PROMPT = """Extract answers from this answer key page.
 This is an answer key page from RS Aggarwal's book.
@@ -95,17 +104,18 @@ Only include answers that are clearly visible on this page."""
             raise ValueError("ANTHROPIC_API_KEY environment variable not set")
         self.client = Anthropic(api_key=self.api_key)
 
-    def extract_questions(self, image_path: str) -> Tuple[List[Dict], str]:
+    def extract_questions(self, image_path: str) -> Tuple[Dict, str]:
         """
         Extract questions from a book page image
 
         Returns:
-            Tuple of (extracted_questions, raw_response)
+            Tuple of (result_dict, raw_response)
+            result_dict contains: page_number, topic_name, questions
         """
         # Read and encode the image
         image_data = self._encode_image(image_path)
         if not image_data:
-            return [], "Error: Could not read image file"
+            return {'page_number': None, 'topic_name': None, 'questions': []}, "Error: Could not read image file"
 
         # Determine media type
         media_type = self._get_media_type(image_path)
@@ -138,20 +148,69 @@ Only include answers that are clearly visible on this page."""
 
             raw_response = response.content[0].text
 
-            # Parse the JSON response
-            questions = self._parse_json_response(raw_response)
+            # Parse the JSON response - now expecting object with page_number, topic_name, questions
+            result = self._parse_extraction_response(raw_response)
 
             # Apply math conversions to questions
-            for q in questions:
+            for q in result.get('questions', []):
                 q['question_text'] = self._apply_math_conversions(q.get('question_text', ''))
                 if 'choices' in q:
                     for key in q['choices']:
                         q['choices'][key] = self._apply_math_conversions(q['choices'][key])
 
-            return questions, raw_response
+            return result, raw_response
 
         except Exception as e:
-            return [], f"Error: {str(e)}"
+            return {'page_number': None, 'topic_name': None, 'questions': []}, f"Error: {str(e)}"
+
+    def _parse_extraction_response(self, raw_response: str) -> Dict:
+        """Parse the extraction response which includes page_number, topic_name, and questions"""
+        # Try to find JSON in the response
+        text = raw_response.strip()
+
+        # Remove markdown code blocks if present
+        if text.startswith('```'):
+            lines = text.split('\n')
+            # Remove first line (```json or ```)
+            lines = lines[1:]
+            # Remove last line if it's just ```
+            if lines and lines[-1].strip() == '```':
+                lines = lines[:-1]
+            text = '\n'.join(lines)
+
+        try:
+            data = json.loads(text)
+            # Handle new format
+            if isinstance(data, dict) and 'questions' in data:
+                return {
+                    'page_number': data.get('page_number'),
+                    'topic_name': data.get('topic_name'),
+                    'questions': data.get('questions', [])
+                }
+            # Handle old format (array of questions)
+            elif isinstance(data, list):
+                return {
+                    'page_number': None,
+                    'topic_name': None,
+                    'questions': data
+                }
+            return {'page_number': None, 'topic_name': None, 'questions': []}
+        except json.JSONDecodeError:
+            # Try to extract JSON from text
+            start = text.find('{')
+            end = text.rfind('}') + 1
+            if start != -1 and end > start:
+                try:
+                    data = json.loads(text[start:end])
+                    if isinstance(data, dict) and 'questions' in data:
+                        return {
+                            'page_number': data.get('page_number'),
+                            'topic_name': data.get('topic_name'),
+                            'questions': data.get('questions', [])
+                        }
+                except json.JSONDecodeError:
+                    pass
+            return {'page_number': None, 'topic_name': None, 'questions': []}
 
     def extract_answers(self, image_path: str) -> Tuple[Dict[int, str], str]:
         """

@@ -15,46 +15,49 @@ class BookPracticeDB:
     """Database handler for book practice questions and sessions"""
 
     # Default RS Aggarwal topics (will be populated from the book)
+    # RS Aggarwal Quantitative Aptitude - Table of Contents with page ranges
     DEFAULT_TOPICS = [
-        {'name': 'Number Series', 'chapter_number': 1},
-        {'name': 'Letter Series', 'chapter_number': 2},
-        {'name': 'Coding-Decoding', 'chapter_number': 3},
-        {'name': 'Blood Relations', 'chapter_number': 4},
-        {'name': 'Analogy', 'chapter_number': 5},
-        {'name': 'Classification', 'chapter_number': 6},
-        {'name': 'Direction Sense', 'chapter_number': 7},
-        {'name': 'Logical Sequence of Words', 'chapter_number': 8},
-        {'name': 'Arithmetical Reasoning', 'chapter_number': 9},
-        {'name': 'Number, Ranking & Time Sequence', 'chapter_number': 10},
-        {'name': 'Mathematical Operations', 'chapter_number': 11},
-        {'name': 'Inserting Missing Character', 'chapter_number': 12},
-        {'name': 'Data Sufficiency', 'chapter_number': 13},
-        {'name': 'Logic', 'chapter_number': 14},
-        {'name': 'Statement - Arguments', 'chapter_number': 15},
-        {'name': 'Statement - Assumptions', 'chapter_number': 16},
-        {'name': 'Statement - Courses of Action', 'chapter_number': 17},
-        {'name': 'Statement - Conclusions', 'chapter_number': 18},
-        {'name': 'Deriving Conclusions from Passages', 'chapter_number': 19},
-        {'name': 'Theme Detection', 'chapter_number': 20},
-        {'name': 'Alligation or Mixture', 'chapter_number': 21},
-        {'name': 'Average', 'chapter_number': 22},
-        {'name': 'Percentage', 'chapter_number': 23},
-        {'name': 'Profit and Loss', 'chapter_number': 24},
-        {'name': 'Ratio and Proportion', 'chapter_number': 25},
-        {'name': 'Partnership', 'chapter_number': 26},
-        {'name': 'Chain Rule', 'chapter_number': 27},
-        {'name': 'Time and Work', 'chapter_number': 28},
-        {'name': 'Pipes and Cisterns', 'chapter_number': 29},
-        {'name': 'Time and Distance', 'chapter_number': 30},
-        {'name': 'Boats and Streams', 'chapter_number': 31},
-        {'name': 'Problems on Trains', 'chapter_number': 32},
-        {'name': 'Simple Interest', 'chapter_number': 33},
-        {'name': 'Compound Interest', 'chapter_number': 34},
-        {'name': 'Permutation and Combination', 'chapter_number': 35},
-        {'name': 'Probability', 'chapter_number': 36},
-        {'name': 'Area', 'chapter_number': 37},
-        {'name': 'Volume and Surface Area', 'chapter_number': 38},
-        {'name': 'Races and Games of Skill', 'chapter_number': 39},
+        # SECTION-I: ARITHMETICAL ABILITY
+        {'name': 'Number System', 'chapter_number': 1, 'page_start': 3, 'page_end': 20},
+        {'name': 'H.C.F. and L.C.M. of Numbers', 'chapter_number': 2, 'page_start': 21, 'page_end': 30},
+        {'name': 'Decimal Fractions', 'chapter_number': 3, 'page_start': 31, 'page_end': 47},
+        {'name': 'Simplification', 'chapter_number': 4, 'page_start': 48, 'page_end': 86},
+        {'name': 'Square Roots and Cube Roots', 'chapter_number': 5, 'page_start': 87, 'page_end': 102},
+        {'name': 'Average', 'chapter_number': 6, 'page_start': 103, 'page_end': 132},
+        {'name': 'Problems on Numbers', 'chapter_number': 7, 'page_start': 133, 'page_end': 148},
+        {'name': 'Problems on Ages', 'chapter_number': 8, 'page_start': 149, 'page_end': 163},
+        {'name': 'Surds and Indices', 'chapter_number': 9, 'page_start': 164, 'page_end': 178},
+        {'name': 'Logarithms', 'chapter_number': 10, 'page_start': 179, 'page_end': 187},
+        {'name': 'Percentage', 'chapter_number': 11, 'page_start': 188, 'page_end': 232},
+        {'name': 'Profit and Loss', 'chapter_number': 12, 'page_start': 233, 'page_end': 272},
+        {'name': 'Ratio and Proportion', 'chapter_number': 13, 'page_start': 273, 'page_end': 311},
+        {'name': 'Partnership', 'chapter_number': 14, 'page_start': 312, 'page_end': 331},
+        {'name': 'Chain Rule', 'chapter_number': 15, 'page_start': 332, 'page_end': 346},
+        {'name': 'Pipes and Cisterns', 'chapter_number': 16, 'page_start': 347, 'page_end': 366},
+        {'name': 'Time and Work', 'chapter_number': 17, 'page_start': 367, 'page_end': 399},
+        {'name': 'Time and Distance', 'chapter_number': 18, 'page_start': 400, 'page_end': 440},
+        {'name': 'Boats and Streams', 'chapter_number': 19, 'page_start': 441, 'page_end': 457},
+        {'name': 'Problems on Trains', 'chapter_number': 20, 'page_start': 458, 'page_end': 483},
+        {'name': 'Alligation or Mixture', 'chapter_number': 21, 'page_start': 484, 'page_end': 494},
+        {'name': 'Simple Interest', 'chapter_number': 22, 'page_start': 495, 'page_end': 519},
+        {'name': 'Compound Interest', 'chapter_number': 23, 'page_start': 520, 'page_end': 550},
+        {'name': 'Area', 'chapter_number': 24, 'page_start': 551, 'page_end': 609},
+        {'name': 'Volume and Surface Areas', 'chapter_number': 25, 'page_start': 610, 'page_end': 641},
+        {'name': 'Races and Games of Skill', 'chapter_number': 26, 'page_start': 642, 'page_end': 646},
+        {'name': 'Calendar', 'chapter_number': 27, 'page_start': 647, 'page_end': 651},
+        {'name': 'Clocks', 'chapter_number': 28, 'page_start': 652, 'page_end': 660},
+        {'name': 'Stocks and Shares', 'chapter_number': 29, 'page_start': 661, 'page_end': 667},
+        {'name': 'Permutations and Combinations', 'chapter_number': 30, 'page_start': 668, 'page_end': 676},
+        {'name': 'Probability', 'chapter_number': 31, 'page_start': 677, 'page_end': 686},
+        {'name': 'True Discount', 'chapter_number': 32, 'page_start': 687, 'page_end': 691},
+        {'name': "Banker's Discount", 'chapter_number': 33, 'page_start': 692, 'page_end': 695},
+        {'name': 'Height and Distance', 'chapter_number': 34, 'page_start': 696, 'page_end': 705},
+        {'name': 'Odd Man Out and Series', 'chapter_number': 35, 'page_start': 706, 'page_end': 716},
+        # SECTION-II: DATA INTERPRETATION
+        {'name': 'Tabulation', 'chapter_number': 36, 'page_start': 719, 'page_end': 746},
+        {'name': 'Bar Graphs', 'chapter_number': 37, 'page_start': 747, 'page_end': 766},
+        {'name': 'Pie Chart', 'chapter_number': 38, 'page_start': 767, 'page_end': 785},
+        {'name': 'Line Graphs', 'chapter_number': 39, 'page_start': 786, 'page_end': 809},
     ]
 
     # Spaced repetition intervals (in days)
@@ -188,10 +191,11 @@ class BookPracticeDB:
             cursor.execute("SELECT COUNT(*) FROM book_topics")
             if cursor.fetchone()[0] == 0:
                 for topic in self.DEFAULT_TOPICS:
+                    page_range = f"{topic['page_start']}-{topic['page_end']}"
                     cursor.execute("""
-                        INSERT INTO book_topics (topic_name, chapter_number)
-                        VALUES (?, ?)
-                    """, (topic['name'], topic['chapter_number']))
+                        INSERT INTO book_topics (topic_name, chapter_number, page_range)
+                        VALUES (?, ?, ?)
+                    """, (topic['name'], topic['chapter_number'], page_range))
 
             conn.commit()
         finally:
@@ -229,6 +233,26 @@ class BookPracticeDB:
             """, (topic_id,))
             row = cursor.fetchone()
             return dict(row) if row else None
+        finally:
+            conn.close()
+
+    def get_topic_by_page(self, page_number: int) -> Optional[Dict]:
+        """Find topic by page number using page_range"""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM book_topics WHERE page_range IS NOT NULL")
+            for row in cursor.fetchall():
+                topic = dict(row)
+                page_range = topic.get('page_range', '')
+                if page_range and '-' in page_range:
+                    try:
+                        start, end = page_range.split('-')
+                        if int(start) <= page_number <= int(end):
+                            return topic
+                    except ValueError:
+                        continue
+            return None
         finally:
             conn.close()
 

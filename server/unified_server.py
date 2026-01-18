@@ -4716,15 +4716,35 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 else:
                     self.send_json({'success': False, 'error': 'No answers extracted', 'raw': raw_response})
             else:
-                # Extract questions
-                questions, raw_response = self.book_image_extractor.extract_questions(page['image_path'])
+                # Extract questions (returns dict with page_number, topic_name, questions)
+                result, raw_response = self.book_image_extractor.extract_questions(page['image_path'])
+                questions = result.get('questions', [])
+                extracted_page_num = result.get('page_number')
+                extracted_topic = result.get('topic_name')
+
+                # Auto-detect topic from page number if topic wasn't set
+                topic_id = page['topic_id']
+                detected_topic = None
+                if extracted_page_num and not topic_id:
+                    detected_topic = self.book_practice_db.get_topic_by_page(extracted_page_num)
+                    if detected_topic:
+                        topic_id = detected_topic['topic_id']
+                        # Update the uploaded_page with the detected topic
+                        conn = self.book_practice_db._get_connection()
+                        cursor = conn.cursor()
+                        cursor.execute(
+                            "UPDATE uploaded_pages SET topic_id = ?, page_number = ? WHERE page_id = ?",
+                            (topic_id, extracted_page_num, page_id)
+                        )
+                        conn.commit()
+                        conn.close()
 
                 if questions:
                     # Add questions to database
                     questions_to_add = []
                     for q in questions:
                         questions_to_add.append({
-                            'topic_id': page['topic_id'],
+                            'topic_id': topic_id,
                             'page_id': page_id,
                             'question_number': q.get('question_number'),
                             'question_text': q.get('question_text'),
@@ -4738,13 +4758,18 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                     self.send_json({
                         'success': True,
                         'questions_added': count,
-                        'questions': questions
+                        'questions': questions,
+                        'page_number': extracted_page_num,
+                        'topic_name': extracted_topic,
+                        'detected_topic': detected_topic
                     })
                 else:
                     self.send_json({
                         'success': False,
                         'error': 'No questions extracted (no tick marks found?)',
-                        'raw': raw_response
+                        'raw': raw_response,
+                        'page_number': extracted_page_num,
+                        'topic_name': extracted_topic
                     })
 
         # POST /api/book/questions/approve - Approve reviewed questions
