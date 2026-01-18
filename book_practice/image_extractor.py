@@ -35,12 +35,22 @@ class BookImageExtractor:
 
 FIRST, look at the page header/top for:
 1. Page number (usually in the corner, e.g., "487" or "■ 487")
-2. Topic/Chapter name (e.g., "Alligation or Mixture", "Time and Work", "Percentage")
+2. Topic/Chapter name (e.g., "Alligation or Mixture", "Time and Work", "Time and Distance", "Percentage")
 
-THEN, extract all questions marked with a tick (✓), check mark, or any hand-drawn mark next to them.
+THEN, identify questions where the QUESTION NUMBER ITSELF has been circled with a hand-drawn circle.
 
-For each marked question, provide:
-- question_number: The question number (e.g., 17, 18)
+CRITICAL RULES FOR DETECTING CIRCLED QUESTIONS:
+- ONLY include questions where there is a circle drawn DIRECTLY AROUND the question number (e.g., a circle around "68" or "100")
+- The circle must be around the NUMBER at the start of the question, NOT elsewhere in the question text
+- IGNORE circles that appear:
+  * Within the question text or answer choices
+  * As bleed-through or shadows from other pages
+  * Around parts of the question other than the question number
+- Look for pen or pencil circles (may be green, black, or blue ink)
+- The question numbers are typically bold and appear at the left margin (e.g., "68.", "100.")
+
+For each circled question, provide:
+- question_number: The question number that was circled (e.g., 68, 100)
 - question_text: The full question text
   - Convert fractions to Unicode where possible: 3/5 → ⅗, 1/2 → ½, 1/4 → ¼, 2/3 → ⅔, 3/4 → ¾
   - Use × for multiplication, ÷ for division
@@ -52,18 +62,13 @@ For each marked question, provide:
   - Apply same Unicode conversions to choices
 - source_exam: If visible (e.g., "IBPS PO Prelims 23/09/2023", "SSC CGL", "CAT 2022")
 
-IMPORTANT:
-- Include ANY question with a visible mark next to it (tick, check, pencil mark, pen mark)
-- Look carefully for marks - they may be in pencil, pen, or highlighter
-- Preserve all mathematical notation and symbols accurately
-
 Return ONLY valid JSON in this exact format:
 {
   "page_number": 487,
-  "topic_name": "Alligation or Mixture",
+  "topic_name": "Time and Distance",
   "questions": [
     {
-      "question_number": 17,
+      "question_number": 68,
       "question_text": "The full question text here...",
       "choices": {
         "a": "Option A text",
@@ -77,7 +82,7 @@ Return ONLY valid JSON in this exact format:
 }
 
 If page_number or topic_name not visible, use null.
-If no marked questions found, return: {"page_number": null, "topic_name": null, "questions": []}"""
+If no circled questions found, return: {"page_number": null, "topic_name": null, "questions": []}"""
 
     ANSWER_KEY_PROMPT = """Extract answers from this answer key page.
 This is an answer key page from RS Aggarwal's book.
