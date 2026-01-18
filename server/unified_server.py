@@ -102,6 +102,10 @@ from server.calendar_db import CalendarDatabase
 from server.google_calendar_client import GoogleCalendarClient, CREDENTIALS_FILE
 from server.email_service import DailySummaryService
 
+# Import book practice module
+from book_practice.book_db import BookPracticeDB
+from book_practice.image_extractor import BookImageExtractor, save_uploaded_image
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -127,6 +131,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     blood_report_parser = None
     calendar_db = None
     calendar_client = None
+    book_practice_db = None
+    book_image_extractor = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -483,6 +489,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Calendar API endpoints (private - parents only)
             elif path.startswith('/api/calendar/'):
                 self.handle_calendar_get(path, query_params)
+            # Book Practice API endpoints
+            elif path.startswith('/api/book/'):
+                self.handle_book_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -547,6 +556,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Calendar API endpoints (private - parents only)
             elif path.startswith('/api/calendar/'):
                 self.handle_calendar_post(path, data)
+            # Book Practice API endpoints
+            elif path.startswith('/api/book/'):
+                self.handle_book_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -1434,7 +1446,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 questions = extractor.extract_from_chunk(str(pdf_path))
 
                 # Mark extraction as attempted in database (even if 0 questions found)
-                conn = sqlite3.connect(self.db_path)
+                db_path = Path(__file__).parent.parent / "revision_tracker.db"
+                conn = sqlite3.connect(db_path)
                 cursor = conn.cursor()
                 cursor.execute(
                     "UPDATE pdfs SET extraction_attempted = 1 WHERE filename = ?",
@@ -4413,7 +4426,374 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         
         else:
             self.send_json({'error': 'Unknown calendar endpoint'})
-    
+
+    # ============================================================
+    # BOOK PRACTICE API METHODS
+    # ============================================================
+
+    def handle_book_get(self, path: str, query_params: dict):
+        """Handle book practice API GET requests."""
+
+        # GET /api/book/topics - List all topics
+        if path == '/api/book/topics':
+            topics = self.book_practice_db.get_topics()
+            self.send_json({'topics': topics})
+
+        # GET /api/book/topic/{id} - Get single topic
+        elif path.startswith('/api/book/topic/') and not path.endswith('/questions'):
+            topic_id = int(path.split('/')[-1])
+            topic = self.book_practice_db.get_topic(topic_id)
+            if topic:
+                self.send_json({'topic': topic})
+            else:
+                self.send_json({'error': 'Topic not found'}, 404)
+
+        # GET /api/book/topic/{id}/questions - Get questions for a topic
+        elif path.startswith('/api/book/topic/') and path.endswith('/questions'):
+            topic_id = int(path.split('/')[-2])
+            limit = int(query_params.get('limit', [100])[0])
+            questions = self.book_practice_db.get_questions_by_topic(topic_id, limit)
+            self.send_json({'questions': questions, 'count': len(questions)})
+
+        # GET /api/book/questions/pending - Get questions pending review
+        elif path == '/api/book/questions/pending':
+            page_id = query_params.get('page_id', [None])[0]
+            page_id = int(page_id) if page_id else None
+            questions = self.book_practice_db.get_pending_review_questions(page_id)
+            self.send_json({'questions': questions, 'count': len(questions)})
+
+        # GET /api/book/question/{id} - Get single question
+        elif path.startswith('/api/book/question/') and not '/history' in path:
+            question_id = int(path.split('/')[-1])
+            question = self.book_practice_db.get_question(question_id)
+            if question:
+                self.send_json({'question': question})
+            else:
+                self.send_json({'error': 'Question not found'}, 404)
+
+        # GET /api/book/question/{id}/history - Get question attempt history
+        elif path.startswith('/api/book/question/') and path.endswith('/history'):
+            question_id = int(path.split('/')[-2])
+            user_id = query_params.get('user_id', ['saanvi'])[0]
+            history = self.book_practice_db.get_question_history(question_id, user_id)
+            self.send_json(history)
+
+        # GET /api/book/session/{id} - Get session details
+        elif path.startswith('/api/book/session/') and not '/next' in path:
+            session_id = int(path.split('/')[-1])
+            session = self.book_practice_db.get_session(session_id)
+            if session:
+                self.send_json({'session': session})
+            else:
+                self.send_json({'error': 'Session not found'}, 404)
+
+        # GET /api/book/analytics/overview - Get overall stats
+        elif path == '/api/book/analytics/overview':
+            user_id = query_params.get('user_id', ['saanvi'])[0]
+            stats = self.book_practice_db.get_overview_stats(user_id)
+            self.send_json({'stats': stats})
+
+        # GET /api/book/analytics/topics - Get topic performance
+        elif path == '/api/book/analytics/topics':
+            user_id = query_params.get('user_id', ['saanvi'])[0]
+            topics = self.book_practice_db.get_topic_performance(user_id)
+            self.send_json({'topics': topics})
+
+        # GET /api/book/analytics/trends - Get accuracy trend
+        elif path == '/api/book/analytics/trends':
+            user_id = query_params.get('user_id', ['saanvi'])[0]
+            days = int(query_params.get('days', [30])[0])
+            trends = self.book_practice_db.get_accuracy_trend(user_id, days)
+            self.send_json({'trends': trends})
+
+        # GET /api/book/analytics/weak - Get weak topics
+        elif path == '/api/book/analytics/weak':
+            user_id = query_params.get('user_id', ['saanvi'])[0]
+            limit = int(query_params.get('limit', [5])[0])
+            weak = self.book_practice_db.get_weak_topics(user_id, limit)
+            self.send_json({'weak_topics': weak})
+
+        # GET /api/book/sessions - Get session history
+        elif path == '/api/book/sessions':
+            user_id = query_params.get('user_id', ['saanvi'])[0]
+            limit = int(query_params.get('limit', [20])[0])
+            sessions = self.book_practice_db.get_session_history(user_id, limit)
+            self.send_json({'sessions': sessions})
+
+        # GET /api/book/pages/pending - Get pages pending extraction
+        elif path == '/api/book/pages/pending':
+            pages = self.book_practice_db.get_pending_pages()
+            self.send_json({'pages': pages})
+
+        # GET /api/book/pages/{topic_id} - Get pages for a topic
+        elif path.startswith('/api/book/pages/'):
+            topic_id = int(path.split('/')[-1])
+            pages = self.book_practice_db.get_pages_by_topic(topic_id)
+            self.send_json({'pages': pages})
+
+        else:
+            self.send_json({'error': 'Book practice endpoint not found'})
+
+    def handle_book_post(self, path: str, data: dict):
+        """Handle book practice API POST requests."""
+
+        # POST /api/book/topics - Add new topic
+        if path == '/api/book/topics':
+            name = data.get('name')
+            chapter_number = data.get('chapter_number')
+            page_range = data.get('page_range')
+
+            if not name:
+                self.send_json({'error': 'Topic name required'}, 400)
+                return
+
+            topic_id = self.book_practice_db.add_topic(name, chapter_number, page_range)
+            self.send_json({'success': True, 'topic_id': topic_id})
+
+        # POST /api/book/topic/{id}/update - Update topic
+        elif path.startswith('/api/book/topic/') and path.endswith('/update'):
+            topic_id = int(path.split('/')[-2])
+            success = self.book_practice_db.update_topic(topic_id, **data)
+            self.send_json({'success': success})
+
+        # POST /api/book/upload - Upload page image (expects base64 image)
+        elif path == '/api/book/upload':
+            topic_id = data.get('topic_id')
+            page_number = data.get('page_number')
+            is_answer_key = data.get('is_answer_key', False)
+            image_data = data.get('image_data')  # Base64 encoded
+
+            if not topic_id or not image_data:
+                self.send_json({'error': 'topic_id and image_data required'}, 400)
+                return
+
+            import base64
+            try:
+                # Decode base64 image
+                image_bytes = base64.b64decode(image_data)
+
+                # Save the image
+                image_path = save_uploaded_image(
+                    image_bytes,
+                    topic_id,
+                    page_number,
+                    is_answer_key
+                )
+
+                # Record in database
+                page_id = self.book_practice_db.add_uploaded_page(
+                    topic_id, image_path, page_number, is_answer_key
+                )
+
+                self.send_json({
+                    'success': True,
+                    'page_id': page_id,
+                    'image_path': image_path
+                })
+            except Exception as e:
+                self.send_json({'error': f'Upload failed: {str(e)}'}, 500)
+
+        # POST /api/book/extract - Extract questions from page
+        elif path == '/api/book/extract':
+            page_id = data.get('page_id')
+
+            if not page_id:
+                self.send_json({'error': 'page_id required'}, 400)
+                return
+
+            # Get page info
+            conn = self.book_practice_db._get_connection()
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM uploaded_pages WHERE page_id = ?", (page_id,))
+            page = cursor.fetchone()
+            conn.close()
+
+            if not page:
+                self.send_json({'error': 'Page not found'}, 404)
+                return
+
+            page = dict(page)
+
+            # Extract questions using Claude Vision
+            if not self.book_image_extractor:
+                self.send_json({'error': 'Image extractor not initialized'}, 500)
+                return
+
+            if page['is_answer_key']:
+                # Extract answers
+                answers, raw_response = self.book_image_extractor.extract_answers(page['image_path'])
+
+                # Update answers for questions in this topic
+                if answers:
+                    count = self.book_practice_db.set_correct_answers_by_topic(page['topic_id'], answers)
+                    self.book_practice_db.update_page_extraction(page_id, 'extracted', raw_response)
+                    self.send_json({
+                        'success': True,
+                        'answers_set': count,
+                        'answers': answers
+                    })
+                else:
+                    self.send_json({'success': False, 'error': 'No answers extracted', 'raw': raw_response})
+            else:
+                # Extract questions
+                questions, raw_response = self.book_image_extractor.extract_questions(page['image_path'])
+
+                if questions:
+                    # Add questions to database
+                    questions_to_add = []
+                    for q in questions:
+                        questions_to_add.append({
+                            'topic_id': page['topic_id'],
+                            'page_id': page_id,
+                            'question_number': q.get('question_number'),
+                            'question_text': q.get('question_text'),
+                            'choices': q.get('choices', {}),
+                            'source_exam': q.get('source_exam')
+                        })
+
+                    count = self.book_practice_db.add_questions_bulk(questions_to_add)
+                    self.book_practice_db.update_page_extraction(page_id, 'extracted', raw_response)
+
+                    self.send_json({
+                        'success': True,
+                        'questions_added': count,
+                        'questions': questions
+                    })
+                else:
+                    self.send_json({
+                        'success': False,
+                        'error': 'No questions extracted (no tick marks found?)',
+                        'raw': raw_response
+                    })
+
+        # POST /api/book/questions/approve - Approve reviewed questions
+        elif path == '/api/book/questions/approve':
+            question_ids = data.get('question_ids', [])
+
+            if not question_ids:
+                self.send_json({'error': 'question_ids required'}, 400)
+                return
+
+            count = self.book_practice_db.verify_questions(question_ids)
+            self.send_json({'success': True, 'approved_count': count})
+
+        # POST /api/book/question/{id}/update - Update a question
+        elif path.startswith('/api/book/question/') and path.endswith('/update'):
+            question_id = int(path.split('/')[-2])
+            success = self.book_practice_db.update_question(question_id, **data)
+            self.send_json({'success': success})
+
+        # POST /api/book/question/{id}/delete - Delete a question
+        elif path.startswith('/api/book/question/') and path.endswith('/delete'):
+            question_id = int(path.split('/')[-2])
+            success = self.book_practice_db.delete_question(question_id)
+            self.send_json({'success': success})
+
+        # POST /api/book/session/start - Start practice session
+        elif path == '/api/book/session/start':
+            user_id = data.get('user_id', 'saanvi')
+            mode = data.get('mode', 'topic_select')  # 'topic_select' or 'smart_weak'
+            topic_ids = data.get('topic_ids', [])
+            question_count = data.get('question_count', 10)
+
+            # Create session
+            session_id = self.book_practice_db.create_session(
+                user_id, mode, topic_ids, question_count
+            )
+
+            # Get questions for practice
+            questions = self.book_practice_db.get_questions_for_practice(
+                topic_ids if topic_ids else None,
+                question_count,
+                mode,
+                user_id
+            )
+
+            if not questions:
+                self.send_json({
+                    'error': 'No verified questions available. Please add and verify questions first.'
+                }, 400)
+                return
+
+            # Store questions in session (for tracking)
+            self._book_session_questions = self._book_session_questions if hasattr(self, '_book_session_questions') else {}
+            self._book_session_questions[session_id] = questions
+
+            self.send_json({
+                'success': True,
+                'session_id': session_id,
+                'questions': questions,
+                'total_questions': len(questions)
+            })
+
+        # POST /api/book/session/{id}/answer - Submit answer
+        elif path.startswith('/api/book/session/') and path.endswith('/answer'):
+            session_id = int(path.split('/')[-2])
+            user_id = data.get('user_id', 'saanvi')
+            question_id = data.get('question_id')
+            selected_choice = data.get('selected_choice')
+            time_taken = data.get('time_taken', 0)
+            notes = data.get('notes')
+
+            if not question_id or not selected_choice:
+                self.send_json({'error': 'question_id and selected_choice required'}, 400)
+                return
+
+            result = self.book_practice_db.record_attempt(
+                session_id, question_id, user_id, selected_choice, time_taken, notes
+            )
+
+            self.send_json(result)
+
+        # POST /api/book/session/{id}/complete - Complete session
+        elif path.startswith('/api/book/session/') and path.endswith('/complete'):
+            session_id = int(path.split('/')[-2])
+            stats = self.book_practice_db.complete_session(session_id)
+            self.send_json({'success': True, 'stats': stats})
+
+        # POST /api/book/attempt/{id}/note - Add note to attempt
+        elif path.startswith('/api/book/attempt/') and path.endswith('/note'):
+            attempt_id = int(path.split('/')[-2])
+            note = data.get('note', '')
+            success = self.book_practice_db.add_note_to_attempt(attempt_id, note)
+            self.send_json({'success': success})
+
+        # POST /api/book/answers/upload - Upload answer key image
+        elif path == '/api/book/answers/upload':
+            topic_id = data.get('topic_id')
+            image_data = data.get('image_data')
+
+            if not topic_id or not image_data:
+                self.send_json({'error': 'topic_id and image_data required'}, 400)
+                return
+
+            import base64
+            try:
+                image_bytes = base64.b64decode(image_data)
+                image_path = save_uploaded_image(image_bytes, topic_id, None, is_answer_key=True)
+                page_id = self.book_practice_db.add_uploaded_page(topic_id, image_path, None, True)
+
+                # Immediately extract answers
+                if self.book_image_extractor:
+                    answers, raw = self.book_image_extractor.extract_answers(image_path)
+                    if answers:
+                        count = self.book_practice_db.set_correct_answers_by_topic(topic_id, answers)
+                        self.book_practice_db.update_page_extraction(page_id, 'extracted', raw)
+                        self.send_json({
+                            'success': True,
+                            'page_id': page_id,
+                            'answers_set': count,
+                            'answers': answers
+                        })
+                        return
+
+                self.send_json({'success': True, 'page_id': page_id})
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+
+        else:
+            self.send_json({'error': 'Book practice endpoint not found'})
+
     def _get_base_url(self) -> str:
         """Get the base URL for the server."""
         host = self.headers.get('Host', 'localhost:8001')
@@ -4564,7 +4944,11 @@ def main():
     UnifiedHandler.calendar_db = CalendarDatabase()
     UnifiedHandler.calendar_client = GoogleCalendarClient(UnifiedHandler.calendar_db)
     print("✅ Calendar module initialized")
-    
+
+    # Initialize book practice module
+    UnifiedHandler.book_practice_db = BookPracticeDB()
+    print("✅ Book practice database initialized")
+
     # Check if Google OAuth credentials are configured
     if CREDENTIALS_FILE.exists():
         print(f"✅ Google OAuth credentials found at {CREDENTIALS_FILE}")
@@ -4577,8 +4961,16 @@ def main():
     if api_key:
         UnifiedHandler.anthropic = Anthropic(api_key=api_key)
         print("✅ Anthropic API initialized")
+
+        # Initialize book image extractor (requires Anthropic API key)
+        try:
+            UnifiedHandler.book_image_extractor = BookImageExtractor(api_key)
+            print("✅ Book image extractor initialized")
+        except Exception as e:
+            print(f"⚠️  Book image extractor not available: {e}")
     else:
         print("⚠️  Anthropic API key not set")
+        print("⚠️  Book image extractor not available (no Anthropic API key)")
 
     # Initialize authentication (unless disabled)
     auth_enabled = False
@@ -4616,6 +5008,7 @@ def main():
     print(f"   • Math API (/api/math/*)")
     print(f"   • GK Dashboard API (/api/dashboard, /api/pdfs/*)")
     print(f"   • Diary API (/api/diary/*)")
+    print(f"   • Book Practice API (/api/book/*)")
     if auth_enabled:
         print(f"   • Authentication (/auth/*)")
 
@@ -4631,6 +5024,7 @@ def main():
     print(f"   Math Admin:        http://localhost:{args.port}/math_admin.html")
     print(f"   Math Analytics:    http://localhost:{args.port}/math_analytics.html")
     print(f"   Daily Diary:       http://localhost:{args.port}/diary.html")
+    print(f"   Book Practice:     http://localhost:{args.port}/book_practice.html")
 
     print(f"\n⌨️  Press Ctrl+C to stop the server")
     print("="*70 + "\n")
