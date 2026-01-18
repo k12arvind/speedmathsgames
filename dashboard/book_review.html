@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Review Questions - CLAT Preparation</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body {
+            background: var(--bg-primary);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .stat-badge {
+            background: var(--bg-input);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .stat-badge span {
+            font-weight: 700;
+            color: #f59e0b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-card-hover);
+            border-color: #f59e0b;
+            color: var(--text-primary);
+        }
+
+        .filters {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-select {
+            padding: 10px 14px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            min-width: 200px;
+        }
+
+        .bulk-actions {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .bulk-btn {
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .bulk-btn.approve {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+
+        .bulk-btn.approve:hover {
+            transform: translateY(-1px);
+        }
+
+        .bulk-btn.select-all {
+            background: var(--bg-input);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Question Cards */
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .question-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .question-card:hover {
+            border-color: var(--border-accent);
+        }
+
+        .question-card.selected {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 1px #f59e0b;
+        }
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            background: var(--bg-input);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .question-checkbox {
+            width: 22px;
+            height: 22px;
+            accent-color: #f59e0b;
+        }
+
+        .question-meta {
+            flex: 1;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .question-number {
+            font-weight: 700;
+            color: #f59e0b;
+        }
+
+        .topic-badge {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .source-badge {
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+        }
+
+        .question-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.2s;
+            background: var(--bg-card);
+        }
+
+        .action-icon:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .action-icon.edit { color: #3b82f6; }
+        .action-icon.delete { color: #ef4444; }
+
+        .question-body {
+            padding: 20px;
+        }
+
+        .question-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .choices-list {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .choice-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-input);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .choice-item.correct {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .choice-letter {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .choice-item.correct .choice-letter {
+            background: #10b981;
+            color: white;
+        }
+
+        .choice-text {
+            flex: 1;
+            font-size: 0.9rem;
+        }
+
+        .correct-answer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+
+        .correct-label {
+            color: var(--text-muted);
+        }
+
+        .correct-select {
+            padding: 6px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+        }
+
+        /* Edit Mode */
+        .edit-mode {
+            display: none;
+        }
+
+        .question-card.editing .view-mode {
+            display: none;
+        }
+
+        .question-card.editing .edit-mode {
+            display: block;
+        }
+
+        .edit-input {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            resize: vertical;
+        }
+
+        .edit-input:focus {
+            outline: none;
+            border-color: #f59e0b;
+        }
+
+        .edit-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .edit-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .edit-btn.save {
+            background: #10b981;
+            color: white;
+        }
+
+        .edit-btn.cancel {
+            background: var(--bg-input);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .empty-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+
+        .empty-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .empty-text {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .empty-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--bg-input);
+            border-top-color: #f59e0b;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            .header-stats { display: none; }
+            .bulk-actions { margin-left: 0; width: 100%; }
+            .filters { flex-direction: column; }
+            .filter-select { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Review Questions</h1>
+            <div class="header-stats">
+                <div class="stat-badge">Pending: <span id="pending-count">0</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="book_upload.html" class="nav-link">Upload</a>
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="filters">
+            <select class="filter-select" id="topic-filter" onchange="loadQuestions()">
+                <option value="">All Topics</option>
+            </select>
+
+            <div class="bulk-actions">
+                <button class="bulk-btn select-all" onclick="toggleSelectAll()">Select All</button>
+                <button class="bulk-btn approve" id="approve-btn" onclick="approveSelected()" disabled>
+                    Approve Selected (<span id="selected-count">0</span>)
+                </button>
+            </div>
+        </div>
+
+        <div class="questions-list" id="questions-list">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                Loading questions...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let questions = [];
+        let selectedIds = new Set();
+
+        async function init() {
+            await loadTopics();
+            await loadQuestions();
+        }
+
+        async function loadTopics() {
+            try {
+                const response = await fetch(`${API_BASE}/api/book/topics`);
+                const data = await response.json();
+                const select = document.getElementById('topic-filter');
+
+                select.innerHTML = '<option value="">All Topics</option>' +
+                    data.topics.map(t =>
+                        `<option value="${t.topic_id}">${t.chapter_number}. ${t.topic_name}</option>`
+                    ).join('');
+            } catch (error) {
+                console.error('Error loading topics:', error);
+            }
+        }
+
+        async function loadQuestions() {
+            const list = document.getElementById('questions-list');
+            list.innerHTML = '<div class="loading"><div class="loading-spinner"></div>Loading questions...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/book/questions/pending`);
+                const data = await response.json();
+                questions = data.questions || [];
+
+                document.getElementById('pending-count').textContent = questions.length;
+
+                if (questions.length === 0) {
+                    list.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-icon"></div>
+                            <div class="empty-title">No Questions to Review</div>
+                            <div class="empty-text">All extracted questions have been reviewed, or no questions have been uploaded yet.</div>
+                            <a href="book_upload.html" class="empty-btn">Upload Pages</a>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Filter by topic if selected
+                const topicFilter = document.getElementById('topic-filter').value;
+                let filtered = questions;
+                if (topicFilter) {
+                    filtered = questions.filter(q => q.topic_id == topicFilter);
+                }
+
+                renderQuestions(filtered);
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                list.innerHTML = '<div class="empty-state"><div class="empty-title">Error loading questions</div></div>';
+            }
+        }
+
+        function renderQuestions(questions) {
+            const list = document.getElementById('questions-list');
+
+            list.innerHTML = questions.map(q => `
+                <div class="question-card" id="q-${q.question_id}">
+                    <div class="question-header">
+                        <input type="checkbox" class="question-checkbox"
+                               onchange="toggleSelect(${q.question_id})"
+                               ${selectedIds.has(q.question_id) ? 'checked' : ''}>
+                        <div class="question-meta">
+                            <span class="question-number">Q${q.question_number || '?'}</span>
+                            <span class="topic-badge">${q.topic_name}</span>
+                            ${q.source_exam ? `<span class="source-badge">${q.source_exam}</span>` : ''}
+                        </div>
+                        <div class="question-actions">
+                            <button class="action-icon edit" onclick="toggleEdit(${q.question_id})" title="Edit">E</button>
+                            <button class="action-icon delete" onclick="deleteQuestion(${q.question_id})" title="Delete">X</button>
+                        </div>
+                    </div>
+                    <div class="question-body">
+                        <div class="view-mode">
+                            <div class="question-text">${q.question_text}</div>
+                            <div class="choices-list">
+                                ${Object.entries(q.choices).map(([key, value]) => `
+                                    <div class="choice-item ${q.correct_choice === key ? 'correct' : ''}">
+                                        <span class="choice-letter">${key.toUpperCase()}</span>
+                                        <span class="choice-text">${value}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="correct-answer">
+                                <span class="correct-label">Correct Answer:</span>
+                                <select class="correct-select" onchange="setCorrectAnswer(${q.question_id}, this.value)">
+                                    <option value="">Not set</option>
+                                    ${Object.keys(q.choices).map(key =>
+                                        `<option value="${key}" ${q.correct_choice === key ? 'selected' : ''}>${key.toUpperCase()}</option>`
+                                    ).join('')}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="edit-mode">
+                            <textarea class="edit-input" id="edit-text-${q.question_id}" rows="4">${q.question_text}</textarea>
+                            ${Object.entries(q.choices).map(([key, value]) => `
+                                <div style="display: flex; gap: 10px; margin-bottom: 8px;">
+                                    <span class="choice-letter" style="margin-top: 8px;">${key.toUpperCase()}</span>
+                                    <input class="edit-input" style="margin-bottom: 0; flex: 1;"
+                                           id="edit-choice-${q.question_id}-${key}" value="${value}">
+                                </div>
+                            `).join('')}
+                            <div class="edit-actions">
+                                <button class="edit-btn cancel" onclick="toggleEdit(${q.question_id})">Cancel</button>
+                                <button class="edit-btn save" onclick="saveEdit(${q.question_id})">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleSelect(id) {
+            if (selectedIds.has(id)) {
+                selectedIds.delete(id);
+            } else {
+                selectedIds.add(id);
+            }
+            updateSelectedCount();
+            document.getElementById(`q-${id}`).classList.toggle('selected', selectedIds.has(id));
+        }
+
+        function toggleSelectAll() {
+            const checkboxes = document.querySelectorAll('.question-checkbox');
+            const allSelected = selectedIds.size === checkboxes.length;
+
+            if (allSelected) {
+                selectedIds.clear();
+                checkboxes.forEach(cb => {
+                    cb.checked = false;
+                    cb.closest('.question-card').classList.remove('selected');
+                });
+            } else {
+                questions.forEach(q => selectedIds.add(q.question_id));
+                checkboxes.forEach(cb => {
+                    cb.checked = true;
+                    cb.closest('.question-card').classList.add('selected');
+                });
+            }
+            updateSelectedCount();
+        }
+
+        function updateSelectedCount() {
+            document.getElementById('selected-count').textContent = selectedIds.size;
+            document.getElementById('approve-btn').disabled = selectedIds.size === 0;
+        }
+
+        async function approveSelected() {
+            if (selectedIds.size === 0) return;
+
+            const btn = document.getElementById('approve-btn');
+            btn.disabled = true;
+            btn.textContent = 'Approving...';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/book/questions/approve`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        question_ids: Array.from(selectedIds)
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Remove approved questions from list
+                    selectedIds.forEach(id => {
+                        const el = document.getElementById(`q-${id}`);
+                        if (el) el.remove();
+                    });
+                    selectedIds.clear();
+                    updateSelectedCount();
+
+                    // Reload to refresh counts
+                    await loadQuestions();
+                } else {
+                    alert('Error approving questions: ' + (data.error || 'Unknown error'));
+                }
+            } catch (error) {
+                console.error('Error approving:', error);
+                alert('Error approving questions');
+            }
+
+            btn.textContent = `Approve Selected (${selectedIds.size})`;
+        }
+
+        function toggleEdit(id) {
+            const card = document.getElementById(`q-${id}`);
+            card.classList.toggle('editing');
+        }
+
+        async function saveEdit(id) {
+            const q = questions.find(q => q.question_id === id);
+            const questionText = document.getElementById(`edit-text-${id}`).value;
+
+            const choices = {};
+            Object.keys(q.choices).forEach(key => {
+                choices[key] = document.getElementById(`edit-choice-${id}-${key}`).value;
+            });
+
+            try {
+                const response = await fetch(`${API_BASE}/api/book/question/${id}/update`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        question_text: questionText,
+                        choices: choices
+                    })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    await loadQuestions();
+                } else {
+                    alert('Error saving: ' + (data.error || 'Unknown error'));
+                }
+            } catch (error) {
+                console.error('Error saving:', error);
+                alert('Error saving changes');
+            }
+        }
+
+        async function setCorrectAnswer(id, choice) {
+            try {
+                await fetch(`${API_BASE}/api/book/question/${id}/update`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ correct_choice: choice })
+                });
+            } catch (error) {
+                console.error('Error setting correct answer:', error);
+            }
+        }
+
+        async function deleteQuestion(id) {
+            if (!confirm('Are you sure you want to delete this question?')) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/api/book/question/${id}/delete`, {
+                    method: 'POST'
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    document.getElementById(`q-${id}`).remove();
+                    questions = questions.filter(q => q.question_id !== id);
+                    selectedIds.delete(id);
+                    updateSelectedCount();
+                    document.getElementById('pending-count').textContent = questions.length;
+                }
+            } catch (error) {
+                console.error('Error deleting:', error);
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

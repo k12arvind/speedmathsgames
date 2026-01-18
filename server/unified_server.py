@@ -686,6 +686,87 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     self.send_header('Content-Type', 'application/json')
                     self.end_headers()
                     self.send_json({'error': 'Invalid path'})
+            # DELETE /api/book/topics/{id}
+            elif path.startswith('/api/book/topics/'):
+                parts = path.split('/')
+                if len(parts) == 5:
+                    try:
+                        topic_id = int(parts[4])
+                        success = self.book_practice_db.delete_topic(topic_id)
+
+                        if success:
+                            self.send_response(200)
+                            self.send_header('Content-Type', 'application/json')
+                            self.end_headers()
+                            self.send_json({'success': True, 'message': 'Topic deleted'})
+                        else:
+                            self.send_response(404)
+                            self.send_header('Content-Type', 'application/json')
+                            self.end_headers()
+                            self.send_json({'error': 'Topic not found'})
+                    except ValueError:
+                        self.send_response(400)
+                        self.send_header('Content-Type', 'application/json')
+                        self.end_headers()
+                        self.send_json({'error': 'Invalid topic ID'})
+                else:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid path'})
+            else:
+                self.send_response(404)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.send_json({'error': 'Not Found'})
+
+        except Exception as e:
+            self.send_response(500)
+            self.send_header('Content-Type', 'application/json')
+            self.end_headers()
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
+    def do_PUT(self):
+        """Handle PUT requests."""
+        try:
+            path = self.path.split('?')[0]
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length) if content_length > 0 else b''
+            data = json.loads(body) if body else {}
+
+            # PUT /api/book/topics/{id}
+            if path.startswith('/api/book/topics/'):
+                parts = path.split('/')
+                if len(parts) == 5:
+                    try:
+                        topic_id = int(parts[4])
+                        success = self.book_practice_db.update_topic(
+                            topic_id,
+                            topic_name=data.get('topic_name'),
+                            chapter_number=data.get('chapter_number'),
+                            page_range=data.get('page_range')
+                        )
+
+                        if success:
+                            self.send_response(200)
+                            self.send_header('Content-Type', 'application/json')
+                            self.end_headers()
+                            self.send_json({'success': True, 'message': 'Topic updated'})
+                        else:
+                            self.send_response(404)
+                            self.send_header('Content-Type', 'application/json')
+                            self.end_headers()
+                            self.send_json({'error': 'Topic not found or no changes'})
+                    except ValueError:
+                        self.send_response(400)
+                        self.send_header('Content-Type', 'application/json')
+                        self.end_headers()
+                        self.send_json({'error': 'Invalid topic ID'})
+                else:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid path'})
             else:
                 self.send_response(404)
                 self.send_header('Content-Type', 'application/json')

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Upload Book Pages - CLAT Preparation</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body {
+            background: var(--bg-primary);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-card-hover);
+            border-color: #f59e0b;
+            color: var(--text-primary);
+        }
+
+        .section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: #f59e0b;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .upload-zone {
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--bg-input);
+        }
+
+        .upload-zone:hover {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .upload-zone.dragover {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .upload-text {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .upload-hint {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .upload-input {
+            display: none;
+        }
+
+        .preview-container {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .preview-item {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .preview-info {
+            padding: 12px;
+        }
+
+        .preview-name {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .preview-status {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .preview-status.success { color: #10b981; }
+        .preview-status.error { color: #ef4444; }
+        .preview-status.processing { color: #f59e0b; }
+
+        .remove-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
+            background: rgba(0,0,0,0.7);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .remove-btn:hover {
+            background: #ef4444;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: var(--bg-input);
+            border-radius: 8px;
+        }
+
+        .checkbox-group input {
+            width: 20px;
+            height: 20px;
+            accent-color: #f59e0b;
+        }
+
+        .checkbox-label {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .action-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .action-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .action-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .action-btn.secondary {
+            background: var(--bg-input);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .action-btn.secondary:hover:not(:disabled) {
+            border-color: #f59e0b;
+            box-shadow: none;
+        }
+
+        /* Extraction Results */
+        .extraction-results {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .result-card {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .result-title {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .result-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .result-badge.success {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .result-badge.error {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
+
+        .result-content {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .result-questions {
+            margin-top: 12px;
+        }
+
+        .question-preview {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+
+        .question-preview-number {
+            font-size: 0.75rem;
+            color: #f59e0b;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .question-preview-text {
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        /* Loading overlay */
+        .loading-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 15, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid var(--bg-input);
+            border-top-color: #f59e0b;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .loading-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Progress steps */
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+        }
+
+        .step.active {
+            color: #f59e0b;
+        }
+
+        .step.completed {
+            color: #10b981;
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid currentColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .step.active .step-number,
+        .step.completed .step-number {
+            background: currentColor;
+            color: var(--bg-card);
+        }
+
+        .step-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .steps {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-text" id="loading-text">Processing...</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Upload Book Pages</h1>
+            <div class="nav-links">
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="book_review.html" class="nav-link">Review</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step active" id="step-1">
+                <span class="step-number">1</span>
+                <span class="step-label">Upload</span>
+            </div>
+            <div class="step" id="step-2">
+                <span class="step-number">2</span>
+                <span class="step-label">Extract</span>
+            </div>
+            <div class="step" id="step-3">
+                <span class="step-number">3</span>
+                <span class="step-label">Review</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">1. Select Topic</h2>
+            <div class="form-group">
+                <label class="form-label">Which topic are these pages from?</label>
+                <select class="form-select" id="topic-select">
+                    <option value="">Loading topics...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Page Number (optional)</label>
+                <input type="number" class="form-input" id="page-number" placeholder="e.g., 487">
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="is-answer-key">
+                    <label class="checkbox-label" for="is-answer-key">This is an answer key page (not questions)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Upload Page Photo(s)</h2>
+            <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()">
+                <div class="upload-icon"></div>
+                <div class="upload-text">Click to upload or drag & drop</div>
+                <div class="upload-hint">Take a clear photo of the book page with tick-marked questions</div>
+            </div>
+            <input type="file" class="upload-input" id="file-input" accept="image/*" multiple onchange="handleFiles(this.files)">
+
+            <div class="preview-container" id="preview-container">
+                <div class="preview-grid" id="preview-grid"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">3. Extract Questions</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                Claude Vision will scan your uploaded images and extract all tick-marked questions with their answer choices.
+            </p>
+            <button class="action-btn" id="extract-btn" onclick="extractQuestions()" disabled>
+                Extract Questions with AI
+            </button>
+        </div>
+
+        <div class="extraction-results" id="extraction-results">
+            <h2 class="section-title">Extraction Results</h2>
+            <div id="results-container"></div>
+            <div style="margin-top: 20px; display: flex; gap: 12px;">
+                <a href="book_review.html" class="action-btn" style="text-align: center; text-decoration: none;">
+                    Review & Approve Questions
+                </a>
+                <button class="action-btn secondary" onclick="resetForm()">
+                    Upload More
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let uploadedFiles = [];
+        let uploadedPages = [];
+
+        async function init() {
+            await loadTopics();
+            setupDragDrop();
+        }
+
+        async function loadTopics() {
+            try {
+                const response = await fetch(`${API_BASE}/api/book/topics`);
+                const data = await response.json();
+                const select = document.getElementById('topic-select');
+
+                select.innerHTML = '<option value="">Select a topic...</option>' +
+                    data.topics.map(t =>
+                        `<option value="${t.topic_id}">${t.chapter_number}. ${t.topic_name}</option>`
+                    ).join('');
+            } catch (error) {
+                console.error('Error loading topics:', error);
+            }
+        }
+
+        function setupDragDrop() {
+            const zone = document.getElementById('upload-zone');
+
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                zone.classList.add('dragover');
+            });
+
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('dragover');
+            });
+
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('dragover');
+                handleFiles(e.dataTransfer.files);
+            });
+        }
+
+        function handleFiles(files) {
+            for (const file of files) {
+                if (!file.type.startsWith('image/')) continue;
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    uploadedFiles.push({
+                        file: file,
+                        data: e.target.result,
+                        name: file.name,
+                        status: 'ready'
+                    });
+                    updatePreviews();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function updatePreviews() {
+            const container = document.getElementById('preview-container');
+            const grid = document.getElementById('preview-grid');
+
+            if (uploadedFiles.length === 0) {
+                container.style.display = 'none';
+                document.getElementById('extract-btn').disabled = true;
+                return;
+            }
+
+            container.style.display = 'block';
+            document.getElementById('extract-btn').disabled = !document.getElementById('topic-select').value;
+
+            grid.innerHTML = uploadedFiles.map((f, i) => `
+                <div class="preview-item">
+                    <img src="${f.data}" alt="${f.name}">
+                    <button class="remove-btn" onclick="removeFile(${i})">x</button>
+                    <div class="preview-info">
+                        <div class="preview-name">${f.name}</div>
+                        <div class="preview-status ${f.status}">${getStatusText(f.status)}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getStatusText(status) {
+            switch (status) {
+                case 'ready': return 'Ready to upload';
+                case 'uploading': return 'Uploading...';
+                case 'uploaded': return 'Uploaded';
+                case 'extracting': return 'Extracting...';
+                case 'extracted': return 'Extracted';
+                case 'error': return 'Error';
+                default: return status;
+            }
+        }
+
+        function removeFile(index) {
+            uploadedFiles.splice(index, 1);
+            updatePreviews();
+        }
+
+        async function extractQuestions() {
+            const topicId = document.getElementById('topic-select').value;
+            const pageNumber = document.getElementById('page-number').value;
+            const isAnswerKey = document.getElementById('is-answer-key').checked;
+
+            if (!topicId) {
+                alert('Please select a topic');
+                return;
+            }
+
+            if (uploadedFiles.length === 0) {
+                alert('Please upload at least one image');
+                return;
+            }
+
+            // Show loading
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('loading-text').textContent = 'Uploading images...';
+            document.getElementById('step-2').classList.add('active');
+
+            const results = [];
+
+            for (let i = 0; i < uploadedFiles.length; i++) {
+                const f = uploadedFiles[i];
+                f.status = 'uploading';
+                updatePreviews();
+
+                try {
+                    // Upload image
+                    document.getElementById('loading-text').textContent =
+                        `Uploading image ${i + 1} of ${uploadedFiles.length}...`;
+
+                    const base64Data = f.data.split(',')[1]; // Remove data:image/...;base64, prefix
+
+                    const uploadResponse = await fetch(`${API_BASE}/api/book/upload`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            topic_id: parseInt(topicId),
+                            page_number: pageNumber ? parseInt(pageNumber) + i : null,
+                            is_answer_key: isAnswerKey,
+                            image_data: base64Data
+                        })
+                    });
+
+                    const uploadData = await uploadResponse.json();
+
+                    if (uploadData.error) {
+                        f.status = 'error';
+                        results.push({ file: f.name, error: uploadData.error });
+                        continue;
+                    }
+
+                    f.status = 'extracting';
+                    updatePreviews();
+
+                    // Extract questions
+                    document.getElementById('loading-text').textContent =
+                        `Extracting from image ${i + 1} of ${uploadedFiles.length}... (this may take a moment)`;
+
+                    const extractResponse = await fetch(`${API_BASE}/api/book/extract`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            page_id: uploadData.page_id
+                        })
+                    });
+
+                    const extractData = await extractResponse.json();
+
+                    f.status = extractData.success ? 'extracted' : 'error';
+                    results.push({
+                        file: f.name,
+                        success: extractData.success,
+                        questions: extractData.questions || [],
+                        answers: extractData.answers || {},
+                        answers_set: extractData.answers_set,
+                        error: extractData.error
+                    });
+
+                } catch (error) {
+                    f.status = 'error';
+                    results.push({ file: f.name, error: error.message });
+                }
+
+                updatePreviews();
+            }
+
+            // Hide loading
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('step-2').classList.add('completed');
+            document.getElementById('step-3').classList.add('active');
+
+            // Show results
+            showResults(results);
+        }
+
+        function showResults(results) {
+            const container = document.getElementById('results-container');
+            const resultsSection = document.getElementById('extraction-results');
+
+            container.innerHTML = results.map(r => `
+                <div class="result-card">
+                    <div class="result-header">
+                        <span class="result-title">${r.file}</span>
+                        <span class="result-badge ${r.success ? 'success' : 'error'}">
+                            ${r.success ? (r.answers_set ? `${r.answers_set} answers set` : `${r.questions.length} questions extracted`) : 'Error'}
+                        </span>
+                    </div>
+                    <div class="result-content">
+                        ${r.error ? `<p style="color: #ef4444;">${r.error}</p>` : ''}
+                        ${r.questions && r.questions.length > 0 ? `
+                            <div class="result-questions">
+                                ${r.questions.slice(0, 3).map(q => `
+                                    <div class="question-preview">
+                                        <div class="question-preview-number">Q${q.question_number}</div>
+                                        <div class="question-preview-text">${truncate(q.question_text, 150)}</div>
+                                    </div>
+                                `).join('')}
+                                ${r.questions.length > 3 ? `<p style="color: var(--text-muted); margin-top: 8px;">...and ${r.questions.length - 3} more questions</p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${r.answers_set ? `<p style="color: #10b981;">Set correct answers for ${r.answers_set} questions</p>` : ''}
+                    </div>
+                </div>
+            `).join('');
+
+            resultsSection.style.display = 'block';
+        }
+
+        function truncate(text, maxLength) {
+            if (!text) return '';
+            return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+        }
+
+        function resetForm() {
+            uploadedFiles = [];
+            uploadedPages = [];
+            updatePreviews();
+            document.getElementById('extraction-results').style.display = 'none';
+            document.getElementById('page-number').value = '';
+            document.getElementById('is-answer-key').checked = false;
+
+            // Reset steps
+            document.querySelectorAll('.step').forEach(s => {
+                s.classList.remove('active', 'completed');
+            });
+            document.getElementById('step-1').classList.add('active');
+        }
+
+        // Check topic select to enable/disable extract button
+        document.getElementById('topic-select').addEventListener('change', function() {
+            document.getElementById('extract-btn').disabled =
+                !this.value || uploadedFiles.length === 0;
+        });
+
+        window.onload = init;
+    </script>
+</body>
+</html>

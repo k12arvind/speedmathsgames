@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Analytics - Book Practice</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body {
+            background: var(--bg-primary);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-card-hover);
+            border-color: #f59e0b;
+            color: var(--text-primary);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 500px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-value.primary { color: #f59e0b; }
+        .stat-value.success { color: #10b981; }
+        .stat-value.info { color: #3b82f6; }
+        .stat-value.warning { color: #f97316; }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Mastery Progress */
+        .mastery-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .mastery-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mastery-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .mastery-label {
+            width: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .mastery-bar {
+            flex: 1;
+            height: 24px;
+            background: var(--bg-input);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .mastery-fill {
+            height: 100%;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+            min-width: 40px;
+            transition: width 0.5s ease;
+        }
+
+        .mastery-fill.new { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); }
+        .mastery-fill.learning { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+        .mastery-fill.practiced { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+        .mastery-fill.mastered { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+
+        /* Topic Performance */
+        .topics-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .topics-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .topics-table th,
+        .topics-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .topics-table th {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .topics-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .topic-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .accuracy-bar {
+            width: 80px;
+            height: 8px;
+            background: var(--bg-input);
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .accuracy-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .accuracy-fill.good { background: #10b981; }
+        .accuracy-fill.medium { background: #f59e0b; }
+        .accuracy-fill.poor { background: #ef4444; }
+
+        .accuracy-text {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .accuracy-text.good { color: #10b981; }
+        .accuracy-text.medium { color: #f59e0b; }
+        .accuracy-text.poor { color: #ef4444; }
+
+        /* Weak Topics */
+        .weak-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .weak-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .weak-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 8px;
+        }
+
+        .weak-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .weak-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+        }
+
+        .weak-stat {
+            color: var(--text-secondary);
+        }
+
+        .weak-stat span {
+            font-weight: 700;
+            color: #ef4444;
+        }
+
+        /* Session History */
+        .sessions-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .session-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .session-item:last-child {
+            border-bottom: none;
+        }
+
+        .session-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .session-date {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .session-mode {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .session-stats {
+            display: flex;
+            gap: 20px;
+            text-align: right;
+        }
+
+        .session-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .session-stat-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .session-stat-value.good { color: #10b981; }
+        .session-stat-value.medium { color: #f59e0b; }
+        .session-stat-value.poor { color: #ef4444; }
+
+        .session-stat-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        .empty-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--bg-input);
+            border-top-color: #f59e0b;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Book Practice Analytics</h1>
+            <div class="nav-links">
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="book_topics.html" class="nav-link">Topics</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="stats-grid" id="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value primary" id="total-questions">-</div>
+                <div class="stat-label">Total Questions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value success" id="accuracy">-</div>
+                <div class="stat-label">Overall Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value info" id="total-sessions">-</div>
+                <div class="stat-label">Sessions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value warning" id="avg-time">-</div>
+                <div class="stat-label">Avg Time</div>
+            </div>
+        </div>
+
+        <div class="mastery-section">
+            <h2 class="section-title">Mastery Progress</h2>
+            <div class="mastery-bars" id="mastery-bars">
+                <div class="loading"><div class="loading-spinner"></div></div>
+            </div>
+        </div>
+
+        <div class="weak-section">
+            <h2 class="section-title">Weak Topics (Need Practice)</h2>
+            <div class="weak-list" id="weak-list">
+                <div class="loading"><div class="loading-spinner"></div></div>
+            </div>
+        </div>
+
+        <div class="topics-section">
+            <h2 class="section-title">Topic Performance</h2>
+            <table class="topics-table" id="topics-table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Questions</th>
+                        <th>Attempted</th>
+                        <th>Accuracy</th>
+                        <th>Avg Time</th>
+                    </tr>
+                </thead>
+                <tbody id="topics-tbody">
+                    <tr><td colspan="5" class="loading"><div class="loading-spinner"></div></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sessions-section">
+            <h2 class="section-title">Recent Sessions</h2>
+            <div id="sessions-list">
+                <div class="loading"><div class="loading-spinner"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let currentUser = null;
+
+        async function init() {
+            currentUser = await checkAuth(false);
+            if (!currentUser) {
+                currentUser = { user_id: 'saanvi' };
+            }
+            await loadAnalytics();
+        }
+
+        async function loadAnalytics() {
+            const userId = currentUser.user_id;
+
+            // Load all data in parallel
+            try {
+                const [overviewRes, topicsRes, weakRes, sessionsRes] = await Promise.all([
+                    fetch(`${API_BASE}/api/book/analytics/overview?user_id=${userId}`),
+                    fetch(`${API_BASE}/api/book/analytics/topics?user_id=${userId}`),
+                    fetch(`${API_BASE}/api/book/analytics/weak?user_id=${userId}`),
+                    fetch(`${API_BASE}/api/book/sessions?user_id=${userId}`)
+                ]);
+
+                const [overviewData, topicsData, weakData, sessionsData] = await Promise.all([
+                    overviewRes.json(),
+                    topicsRes.json(),
+                    weakRes.json(),
+                    sessionsRes.json()
+                ]);
+
+                renderOverview(overviewData.stats);
+                renderMastery(overviewData.stats);
+                renderTopics(topicsData.topics);
+                renderWeak(weakData.weak_topics);
+                renderSessions(sessionsData.sessions);
+
+            } catch (error) {
+                console.error('Error loading analytics:', error);
+            }
+        }
+
+        function renderOverview(stats) {
+            if (!stats) {
+                document.getElementById('total-questions').textContent = '0';
+                document.getElementById('accuracy').textContent = '0%';
+                document.getElementById('total-sessions').textContent = '0';
+                document.getElementById('avg-time').textContent = '0s';
+                return;
+            }
+
+            document.getElementById('total-questions').textContent = stats.total_questions || 0;
+            document.getElementById('accuracy').textContent = `${stats.overall_accuracy || 0}%`;
+            document.getElementById('total-sessions').textContent = stats.total_sessions || 0;
+            document.getElementById('avg-time').textContent = `${stats.average_time || 0}s`;
+        }
+
+        function renderMastery(stats) {
+            const container = document.getElementById('mastery-bars');
+
+            if (!stats || stats.total_questions === 0) {
+                container.innerHTML = '<div class="empty-state"><div class="empty-icon"></div>No practice data yet. Start practicing to see your progress!</div>';
+                return;
+            }
+
+            const total = stats.total_questions || 1;
+            const newCount = stats.new_count || 0;
+            const learningCount = stats.learning_count || 0;
+            const practicedCount = stats.practiced_count || 0;
+            const masteredCount = stats.mastered_count || 0;
+
+            container.innerHTML = `
+                <div class="mastery-item">
+                    <span class="mastery-label">New</span>
+                    <div class="mastery-bar">
+                        <div class="mastery-fill new" style="width: ${(newCount/total)*100}%">${newCount}</div>
+                    </div>
+                </div>
+                <div class="mastery-item">
+                    <span class="mastery-label">Learning</span>
+                    <div class="mastery-bar">
+                        <div class="mastery-fill learning" style="width: ${(learningCount/total)*100}%">${learningCount}</div>
+                    </div>
+                </div>
+                <div class="mastery-item">
+                    <span class="mastery-label">Practiced</span>
+                    <div class="mastery-bar">
+                        <div class="mastery-fill practiced" style="width: ${(practicedCount/total)*100}%">${practicedCount}</div>
+                    </div>
+                </div>
+                <div class="mastery-item">
+                    <span class="mastery-label">Mastered</span>
+                    <div class="mastery-bar">
+                        <div class="mastery-fill mastered" style="width: ${(masteredCount/total)*100}%">${masteredCount}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderTopics(topics) {
+            const tbody = document.getElementById('topics-tbody');
+
+            if (!topics || topics.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="empty-state">No topic data available</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = topics.map(t => {
+                const accClass = t.accuracy >= 80 ? 'good' : t.accuracy >= 50 ? 'medium' : 'poor';
+                return `
+                    <tr>
+                        <td class="topic-name">${t.topic_name}</td>
+                        <td>${t.total_questions}</td>
+                        <td>${t.attempted_questions}</td>
+                        <td>
+                            <div class="accuracy-bar">
+                                <div class="accuracy-fill ${accClass}" style="width: ${t.accuracy}%"></div>
+                            </div>
+                            <span class="accuracy-text ${accClass}">${t.accuracy}%</span>
+                        </td>
+                        <td>${t.avg_time}s</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderWeak(weakTopics) {
+            const container = document.getElementById('weak-list');
+
+            if (!weakTopics || weakTopics.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div class="empty-icon"></div>No weak topics identified yet. Keep practicing!</div>';
+                return;
+            }
+
+            container.innerHTML = weakTopics.map(t => `
+                <div class="weak-item">
+                    <span class="weak-name">${t.topic_name}</span>
+                    <div class="weak-stats">
+                        <span class="weak-stat">Accuracy: <span>${Math.round(t.accuracy)}%</span></span>
+                        <span class="weak-stat">Attempts: <span>${t.attempts}</span></span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderSessions(sessions) {
+            const container = document.getElementById('sessions-list');
+
+            if (!sessions || sessions.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div class="empty-icon"></div>No practice sessions yet. Start your first session!</div>';
+                return;
+            }
+
+            container.innerHTML = sessions.slice(0, 10).map(s => {
+                const accClass = s.accuracy >= 80 ? 'good' : s.accuracy >= 50 ? 'medium' : 'poor';
+                const date = new Date(s.completed_at).toLocaleDateString('en-IN', {
+                    weekday: 'short', day: 'numeric', month: 'short'
+                });
+                return `
+                    <div class="session-item">
+                        <div class="session-info">
+                            <span class="session-date">${date}</span>
+                            <span class="session-mode">${s.mode === 'smart_weak' ? 'Smart Mode' : 'Topic Practice'}</span>
+                        </div>
+                        <div class="session-stats">
+                            <div class="session-stat">
+                                <span class="session-stat-value">${s.total_correct}/${s.total_attempted}</span>
+                                <span class="session-stat-label">Score</span>
+                            </div>
+                            <div class="session-stat">
+                                <span class="session-stat-value ${accClass}">${s.accuracy}%</span>
+                                <span class="session-stat-label">Accuracy</span>
+                            </div>
+                            <div class="session-stat">
+                                <span class="session-stat-value">${s.avg_time}s</span>
+                                <span class="session-stat-label">Avg Time</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

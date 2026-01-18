@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Topics - Book Practice</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body {
+            background: var(--bg-primary);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            background: var(--bg-input);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-card-hover);
+            border-color: #f59e0b;
+            color: var(--text-primary);
+        }
+
+        /* Add Topic Section */
+        .add-topic-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .add-topic-card h3 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .add-form {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr auto;
+            gap: 12px;
+            align-items: end;
+        }
+
+        @media (max-width: 768px) {
+            .add-form {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #f59e0b;
+        }
+
+        .btn-add {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-add:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        /* Stats Summary */
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .stats-summary { grid-template-columns: 1fr; }
+        }
+
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .summary-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f59e0b;
+        }
+
+        .summary-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Topics Table */
+        .topics-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .topics-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topics-header h3 {
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        .search-box {
+            padding: 8px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 13px;
+            width: 200px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #f59e0b;
+        }
+
+        .topics-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .topics-table th {
+            padding: 12px 20px;
+            text-align: left;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-input);
+        }
+
+        .topics-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        .topics-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .topics-table tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .topic-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .topic-name.editing {
+            padding: 6px 10px;
+            background: var(--bg-input);
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .chapter-num {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .page-range {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .question-count {
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        .question-count.zero {
+            color: var(--text-muted);
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-icon:hover {
+            border-color: #f59e0b;
+            color: #f59e0b;
+        }
+
+        .btn-icon.delete:hover {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .btn-icon.save {
+            background: #10b981;
+            border-color: #10b981;
+            color: #fff;
+        }
+
+        .btn-icon.save:hover {
+            background: #059669;
+        }
+
+        /* Empty State */
+        .empty-state {
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .empty-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        /* Loading */
+        .loading {
+            padding: 40px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: #f59e0b;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            background: #10b981;
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.error {
+            background: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Topic Management</h1>
+            <div class="nav-links">
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="book_upload.html" class="nav-link">Upload</a>
+                <a href="book_review.html" class="nav-link">Review</a>
+                <a href="book_analytics.html" class="nav-link">Analytics</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <!-- Add Topic Form -->
+        <div class="add-topic-card">
+            <h3>Add New Topic</h3>
+            <div class="add-form">
+                <div class="form-group">
+                    <label>Topic Name</label>
+                    <input type="text" id="topicName" placeholder="e.g., Probability">
+                </div>
+                <div class="form-group">
+                    <label>Chapter #</label>
+                    <input type="number" id="chapterNum" placeholder="e.g., 25">
+                </div>
+                <div class="form-group">
+                    <label>Page Range</label>
+                    <input type="text" id="pageRange" placeholder="e.g., 550-580">
+                </div>
+                <button class="btn-add" onclick="addTopic()">Add Topic</button>
+            </div>
+        </div>
+
+        <!-- Stats Summary -->
+        <div class="stats-summary">
+            <div class="summary-card">
+                <div class="summary-value" id="totalTopics">0</div>
+                <div class="summary-label">Total Topics</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value" id="topicsWithQuestions">0</div>
+                <div class="summary-label">Topics with Questions</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value" id="totalQuestions">0</div>
+                <div class="summary-label">Total Questions</div>
+            </div>
+        </div>
+
+        <!-- Topics Table -->
+        <div class="topics-card">
+            <div class="topics-header">
+                <h3>All Topics</h3>
+                <input type="text" class="search-box" id="searchBox" placeholder="Search topics..." oninput="filterTopics()">
+            </div>
+            <div id="topicsContainer">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    Loading topics...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        let allTopics = [];
+        let editingId = null;
+
+        async function loadTopics() {
+            try {
+                const response = await fetch('/api/book/topics');
+                const data = await response.json();
+                allTopics = data.topics || [];
+                updateStats();
+                renderTopics();
+            } catch (error) {
+                console.error('Failed to load topics:', error);
+                showToast('Failed to load topics', true);
+            }
+        }
+
+        function updateStats() {
+            const totalTopics = allTopics.length;
+            const topicsWithQuestions = allTopics.filter(t => t.total_questions > 0).length;
+            const totalQuestions = allTopics.reduce((sum, t) => sum + (t.total_questions || 0), 0);
+
+            document.getElementById('totalTopics').textContent = totalTopics;
+            document.getElementById('topicsWithQuestions').textContent = topicsWithQuestions;
+            document.getElementById('totalQuestions').textContent = totalQuestions;
+        }
+
+        function filterTopics() {
+            const search = document.getElementById('searchBox').value.toLowerCase();
+            const filtered = allTopics.filter(t =>
+                t.topic_name.toLowerCase().includes(search) ||
+                (t.chapter_number && t.chapter_number.toString().includes(search))
+            );
+            renderTopics(filtered);
+        }
+
+        function renderTopics(topics = allTopics) {
+            const container = document.getElementById('topicsContainer');
+
+            if (topics.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📚</div>
+                        <p>No topics found</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = `
+                <table class="topics-table">
+                    <thead>
+                        <tr>
+                            <th>Ch #</th>
+                            <th>Topic Name</th>
+                            <th>Pages</th>
+                            <th>Questions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${topics.map(t => renderTopicRow(t)).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        function renderTopicRow(topic) {
+            const isEditing = editingId === topic.topic_id;
+            const countClass = topic.total_questions > 0 ? '' : 'zero';
+
+            if (isEditing) {
+                return `
+                    <tr>
+                        <td>
+                            <input type="number" class="topic-name editing" id="editChapter"
+                                value="${topic.chapter_number || ''}" style="width: 60px;">
+                        </td>
+                        <td>
+                            <input type="text" class="topic-name editing" id="editName"
+                                value="${topic.topic_name}">
+                        </td>
+                        <td>
+                            <input type="text" class="topic-name editing" id="editPages"
+                                value="${topic.page_range || ''}" style="width: 100px;">
+                        </td>
+                        <td class="question-count ${countClass}">${topic.total_questions || 0}</td>
+                        <td class="action-btns">
+                            <button class="btn-icon save" onclick="saveEdit(${topic.topic_id})" title="Save">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </button>
+                            <button class="btn-icon" onclick="cancelEdit()" title="Cancel">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }
+
+            return `
+                <tr>
+                    <td class="chapter-num">${topic.chapter_number || '-'}</td>
+                    <td class="topic-name">${topic.topic_name}</td>
+                    <td class="page-range">${topic.page_range || '-'}</td>
+                    <td class="question-count ${countClass}">${topic.total_questions || 0}</td>
+                    <td class="action-btns">
+                        <button class="btn-icon" onclick="startEdit(${topic.topic_id})" title="Edit">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                        </button>
+                        <button class="btn-icon delete" onclick="deleteTopic(${topic.topic_id}, '${topic.topic_name}')" title="Delete">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+            `;
+        }
+
+        function startEdit(topicId) {
+            editingId = topicId;
+            renderTopics();
+            document.getElementById('editName').focus();
+        }
+
+        function cancelEdit() {
+            editingId = null;
+            renderTopics();
+        }
+
+        async function saveEdit(topicId) {
+            const name = document.getElementById('editName').value.trim();
+            const chapter = document.getElementById('editChapter').value;
+            const pages = document.getElementById('editPages').value.trim();
+
+            if (!name) {
+                showToast('Topic name is required', true);
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/book/topics/${topicId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        topic_name: name,
+                        chapter_number: chapter ? parseInt(chapter) : null,
+                        page_range: pages || null
+                    })
+                });
+
+                if (response.ok) {
+                    editingId = null;
+                    showToast('Topic updated');
+                    loadTopics();
+                } else {
+                    const err = await response.json();
+                    showToast(err.error || 'Failed to update', true);
+                }
+            } catch (error) {
+                showToast('Failed to update topic', true);
+            }
+        }
+
+        async function addTopic() {
+            const name = document.getElementById('topicName').value.trim();
+            const chapter = document.getElementById('chapterNum').value;
+            const pages = document.getElementById('pageRange').value.trim();
+
+            if (!name) {
+                showToast('Topic name is required', true);
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/book/topics', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        topic_name: name,
+                        chapter_number: chapter ? parseInt(chapter) : null,
+                        page_range: pages || null
+                    })
+                });
+
+                if (response.ok) {
+                    document.getElementById('topicName').value = '';
+                    document.getElementById('chapterNum').value = '';
+                    document.getElementById('pageRange').value = '';
+                    showToast('Topic added');
+                    loadTopics();
+                } else {
+                    const err = await response.json();
+                    showToast(err.error || 'Failed to add topic', true);
+                }
+            } catch (error) {
+                showToast('Failed to add topic', true);
+            }
+        }
+
+        async function deleteTopic(topicId, topicName) {
+            const topic = allTopics.find(t => t.topic_id === topicId);
+            if (topic && topic.total_questions > 0) {
+                if (!confirm(`"${topicName}" has ${topic.total_questions} questions. Delete anyway?`)) {
+                    return;
+                }
+            } else {
+                if (!confirm(`Delete topic "${topicName}"?`)) {
+                    return;
+                }
+            }
+
+            try {
+                const response = await fetch(`/api/book/topics/${topicId}`, {
+                    method: 'DELETE'
+                });
+
+                if (response.ok) {
+                    showToast('Topic deleted');
+                    loadTopics();
+                } else {
+                    const err = await response.json();
+                    showToast(err.error || 'Failed to delete', true);
+                }
+            } catch (error) {
+                showToast('Failed to delete topic', true);
+            }
+        }
+
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast show' + (isError ? ' error' : '');
+            setTimeout(() => toast.className = 'toast', 3000);
+        }
+
+        // Initialize
+        loadTopics();
+    </script>
+</body>
+</html>
