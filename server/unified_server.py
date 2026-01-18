@@ -4639,13 +4639,13 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
         # POST /api/book/upload - Upload page image (expects base64 image)
         elif path == '/api/book/upload':
-            topic_id = data.get('topic_id')
+            topic_id = data.get('topic_id')  # Optional - can be auto-detected later
             page_number = data.get('page_number')
             is_answer_key = data.get('is_answer_key', False)
             image_data = data.get('image_data')  # Base64 encoded
 
-            if not topic_id or not image_data:
-                self.send_json({'error': 'topic_id and image_data required'}, 400)
+            if not image_data:
+                self.send_json({'error': 'image_data required'}, 400)
                 return
 
             import base64
@@ -4653,15 +4653,15 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 # Decode base64 image
                 image_bytes = base64.b64decode(image_data)
 
-                # Save the image
+                # Save the image (use 0 for topic_id if not provided - will be updated during extraction)
                 image_path = save_uploaded_image(
                     image_bytes,
-                    topic_id,
+                    topic_id or 0,
                     page_number,
                     is_answer_key
                 )
 
-                # Record in database
+                # Record in database (topic_id can be None - will be updated during extraction)
                 page_id = self.book_practice_db.add_uploaded_page(
                     topic_id, image_path, page_number, is_answer_key
                 )
