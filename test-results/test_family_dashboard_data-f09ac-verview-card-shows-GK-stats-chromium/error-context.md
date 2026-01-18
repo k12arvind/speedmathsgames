@@ -1,0 +1,220 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - link "← Back to Home" [ref=e3] [cursor=pointer]:
+    - /url: index.html
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "👨‍👩‍👧‍👧 Family Dashboard" [level=1] [ref=e6]
+      - generic [ref=e7]: Admin
+    - generic [ref=e8]: Friday, 9 January 2026
+  - generic [ref=e10]: Access denied. Admin or parent role required.
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - heading "📅 Weekly Activity Tracker" [level=2] [ref=e13]
+      - generic [ref=e14]:
+        - button "Saanvi" [ref=e15] [cursor=pointer]
+        - button "Navya" [ref=e16] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e18]: Diary
+      - generic [ref=e20]: GK Practice
+      - generic [ref=e22]: Math
+    - generic [ref=e24]:
+      - generic [ref=e25] [cursor=pointer]:
+        - generic [ref=e26]: Sat
+        - generic [ref=e27]: "3"
+      - generic [ref=e28] [cursor=pointer]:
+        - generic [ref=e29]: Sun
+        - generic [ref=e30]: "4"
+        - generic "Diary entry" [ref=e32]
+      - generic [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]: Mon
+        - generic [ref=e35]: "5"
+      - generic [ref=e36] [cursor=pointer]:
+        - generic [ref=e37]: Tue
+        - generic [ref=e38]: "6"
+      - generic [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: Wed
+        - generic [ref=e41]: "7"
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: Thu
+        - generic [ref=e44]: "8"
+        - generic "Diary entry" [ref=e46]
+      - generic [ref=e47] [cursor=pointer]:
+        - generic [ref=e48]: Fri
+        - generic [ref=e49]: "9"
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - heading "📔 Recent Diary Entries" [level=2] [ref=e52]
+      - generic [ref=e53]:
+        - button "All" [ref=e54] [cursor=pointer]
+        - button "Saanvi" [ref=e55] [cursor=pointer]
+        - button "Navya" [ref=e56] [cursor=pointer]
+    - generic [ref=e58]: Access denied. Admin or parent role required.
+  - generic [ref=e59]:
+    - generic [ref=e60]:
+      - heading "📚 GK Practice History" [level=2] [ref=e61]
+      - generic [ref=e62]:
+        - button "All" [ref=e63] [cursor=pointer]
+        - button "Saanvi" [ref=e64] [cursor=pointer]
+        - button "Navya" [ref=e65] [cursor=pointer]
+    - generic [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: "0"
+          - generic [ref=e70]: PDFs Revised
+        - generic [ref=e71]:
+          - generic [ref=e72]: "0"
+          - generic [ref=e73]: Total Tests
+        - generic [ref=e74]:
+          - generic [ref=e75]: "0"
+          - generic [ref=e76]: Questions Attempted
+        - generic [ref=e77]:
+          - generic [ref=e78]: 0%
+          - generic [ref=e79]: Average Accuracy
+      - generic [ref=e80]: No GK activity found
+  - generic [ref=e81]:
+    - heading "🧮 Math Topic Settings" [level=2] [ref=e83]
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - strong [ref=e88]: Saanvi's Topics
+        - table [ref=e89]:
+          - rowgroup [ref=e90]:
+            - row "Topic Enabled Difficulty" [ref=e91]:
+              - columnheader "Topic" [ref=e92]
+              - columnheader "Enabled" [ref=e93]
+              - columnheader "Difficulty" [ref=e94]
+          - rowgroup [ref=e95]:
+            - row "➕ Arithmetic Medium" [ref=e96]:
+              - cell "➕ Arithmetic" [ref=e97]
+              - cell [ref=e98]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e100]:
+                - combobox [ref=e101] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "💯 Percentages Medium" [ref=e102]:
+              - cell "💯 Percentages" [ref=e103]
+              - cell [ref=e104]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e106]:
+                - combobox [ref=e107] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "⚖️ Ratios Medium" [ref=e108]:
+              - cell "⚖️ Ratios" [ref=e109]
+              - cell [ref=e110]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e112]:
+                - combobox [ref=e113] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "⏱️ Time & Work Medium" [ref=e114]:
+              - cell "⏱️ Time & Work" [ref=e115]
+              - cell [ref=e116]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e118]:
+                - combobox [ref=e119] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "📊 Averages Medium" [ref=e120]:
+              - cell "📊 Averages" [ref=e121]
+              - cell [ref=e122]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e124]:
+                - combobox [ref=e125] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "🔢 BODMAS Medium" [ref=e126]:
+              - cell "🔢 BODMAS" [ref=e127]
+              - cell [ref=e128]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e130]:
+                - combobox [ref=e131] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+        - button "💾 Save Saanvi's Settings" [ref=e132] [cursor=pointer]
+      - generic [ref=e133]:
+        - strong [ref=e136]: Navya's Topics
+        - table [ref=e137]:
+          - rowgroup [ref=e138]:
+            - row "Topic Enabled Difficulty" [ref=e139]:
+              - columnheader "Topic" [ref=e140]
+              - columnheader "Enabled" [ref=e141]
+              - columnheader "Difficulty" [ref=e142]
+          - rowgroup [ref=e143]:
+            - row "➕ Arithmetic Medium" [ref=e144]:
+              - cell "➕ Arithmetic" [ref=e145]
+              - cell [ref=e146]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e148]:
+                - combobox [ref=e149] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "💯 Percentages Medium" [ref=e150]:
+              - cell "💯 Percentages" [ref=e151]
+              - cell [ref=e152]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e154]:
+                - combobox [ref=e155] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "⚖️ Ratios Medium" [ref=e156]:
+              - cell "⚖️ Ratios" [ref=e157]
+              - cell [ref=e158]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e160]:
+                - combobox [ref=e161] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "⏱️ Time & Work Medium" [ref=e162]:
+              - cell "⏱️ Time & Work" [ref=e163]
+              - cell [ref=e164]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e166]:
+                - combobox [ref=e167] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "📊 Averages Medium" [ref=e168]:
+              - cell "📊 Averages" [ref=e169]
+              - cell [ref=e170]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e172]:
+                - combobox [ref=e173] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+            - row "🔢 BODMAS Medium" [ref=e174]:
+              - cell "🔢 BODMAS" [ref=e175]
+              - cell [ref=e176]:
+                - generic:
+                  - checkbox [checked]
+              - cell "Medium" [ref=e178]:
+                - combobox [ref=e179] [cursor=pointer]:
+                  - option "Easy"
+                  - option "Medium" [selected]
+                  - option "Hard"
+        - button "💾 Save Navya's Settings" [ref=e180] [cursor=pointer]
+```

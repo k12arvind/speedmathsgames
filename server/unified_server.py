@@ -1427,11 +1427,22 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 extractor = MonthlyQuestionExtractor()
                 questions = extractor.extract_from_chunk(str(pdf_path))
 
+                # Mark extraction as attempted in database (even if 0 questions found)
+                conn = sqlite3.connect(self.db_path)
+                cursor = conn.cursor()
+                cursor.execute(
+                    "UPDATE pdfs SET extraction_attempted = 1 WHERE filename = ?",
+                    (filename,)
+                )
+                conn.commit()
+                conn.close()
+
+                # If no questions found, still return success (extraction was completed)
                 if not questions:
                     self.send_json({
-                        'success': False,
-                        'error': 'No questions found in PDF. Try chunking the PDF first if it is large.',
-                        'question_count': 0
+                        'success': True,
+                        'question_count': 0,
+                        'message': 'Extraction complete - no practice questions found in this section'
                     })
                     return
 

@@ -1130,9 +1130,17 @@
                 : 'Never';
 
             // Question status - monthly PDFs have embedded questions
-            const questionBadge = localQuestions > 0
-                ? `<span class="badge" style="background: #10b981; color: white;">${localQuestions} Qs</span>`
-                : `<span class="badge" style="background: #f59e0b; color: white;">Extract</span>`;
+            // Check if extraction was already attempted (extraction_attempted flag)
+            const extractionAttempted = pdf.extraction_attempted || false;
+
+            let questionBadge;
+            if (localQuestions > 0) {
+                questionBadge = `<span class="badge" style="background: #10b981; color: white;">${localQuestions} Qs</span>`;
+            } else if (extractionAttempted) {
+                questionBadge = `<span class="badge" style="background: #6b7280; color: white;">0 Qs</span>`;
+            } else {
+                questionBadge = `<span class="badge" style="background: #f59e0b; color: white;">Extract</span>`;
+            }
 
             // Test button - enabled if questions exist
             const testButton = localQuestions > 0
@@ -1143,8 +1151,8 @@
                        📝 Test
                    </button>`;
 
-            // Extract questions button - for monthly PDFs without extracted questions
-            const extractButton = localQuestions === 0
+            // Extract questions button - only show if extraction hasn't been attempted yet
+            const extractButton = (localQuestions === 0 && !extractionAttempted)
                 ? `<button class="btn btn-warning" onclick="extractMonthlyQuestions('${pdf.filename}')" style="background: #f59e0b; color: white;">
                        ⚡ Extract Qs
                    </button>`

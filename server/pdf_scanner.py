@@ -181,13 +181,14 @@ class PDFScanner:
             # Track file modification-based revisions
             # Check if we have tracked this PDF before
             cursor.execute("""
-                SELECT last_modified, file_edit_count, view_count, date_added FROM pdfs WHERE filename = ?
+                SELECT last_modified, file_edit_count, view_count, date_added, extraction_attempted FROM pdfs WHERE filename = ?
             """, (pdf_file.name,))
             pdf_record = cursor.fetchone()
 
             file_edit_count = 0
             view_count = 0
             date_added = None
+            extraction_attempted = False
             if pdf_record:
                 # Compare stored modification time with current
                 stored_mtime = pdf_record['last_modified']
@@ -207,6 +208,8 @@ class PDFScanner:
                 view_count = pdf_record['view_count'] or 0
                 # Get date when PDF was first added
                 date_added = pdf_record['date_added']
+                # Check if extraction was attempted (for monthly PDFs)
+                extraction_attempted = bool(pdf_record['extraction_attempted'])
             else:
                 # First time seeing this PDF, insert it
                 # Store RELATIVE path for cross-machine compatibility
@@ -286,7 +289,8 @@ class PDFScanner:
                 'last_modified': last_modified,
                 'file_size_kb': round(file_size_kb, 2),
                 'days_since_revision': days_since_revision,
-                'exists_in_db': total_topics > 0
+                'exists_in_db': total_topics > 0,
+                'extraction_attempted': extraction_attempted  # For monthly PDFs
             }
 
             pdfs.append(pdf_data)
