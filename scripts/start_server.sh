@@ -55,15 +55,21 @@ ensure_venv() {
     fi
 }
 
-# Load API key from .zshrc
+# Load API key from .env file
 load_api_key() {
-    if [ -f "$HOME/.zshrc" ]; then
-        export ANTHROPIC_API_KEY=$(grep ANTHROPIC_API_KEY ~/.zshrc | cut -d\' -f2)
+    ENV_FILE="/Users/arvindkumar/clat_preparation/.env"
+    if [ -f "$ENV_FILE" ]; then
+        # Source the .env file to load environment variables
+        set -a
+        source "$ENV_FILE"
+        set +a
         if [ -n "$ANTHROPIC_API_KEY" ]; then
-            log "API key loaded from .zshrc"
+            log "API key loaded from .env"
         else
-            log "WARNING: API key not found in .zshrc"
+            log "WARNING: ANTHROPIC_API_KEY not found in .env"
         fi
+    else
+        log "WARNING: .env file not found at $ENV_FILE"
     fi
 }
 
