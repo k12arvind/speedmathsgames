@@ -737,7 +737,20 @@
                             })
                         });
 
-                        const data = await response.json();
+                        const responseText = await response.text();
+                        let data;
+                        try {
+                            data = JSON.parse(responseText);
+                        } catch (jsonError) {
+                            f.status = 'error';
+                            results.push({
+                                file: f.name,
+                                success: false,
+                                error: `Answer key JSON error: ${responseText.substring(0, 200)}`,
+                                details: []
+                            });
+                            continue;
+                        }
 
                         if (data.error) {
                             f.status = 'error';
@@ -793,7 +806,22 @@
                             })
                         });
 
-                        const uploadData = await uploadResponse.json();
+                        // Check if response is OK before parsing JSON
+                        const uploadText = await uploadResponse.text();
+                        if (!uploadResponse.ok) {
+                            f.status = 'error';
+                            results.push({ file: f.name, success: false, error: `HTTP ${uploadResponse.status}: ${uploadText.substring(0, 200)}`, details: [] });
+                            continue;
+                        }
+
+                        let uploadData;
+                        try {
+                            uploadData = JSON.parse(uploadText);
+                        } catch (jsonError) {
+                            f.status = 'error';
+                            results.push({ file: f.name, success: false, error: `Invalid JSON: ${uploadText.substring(0, 200)}`, details: [] });
+                            continue;
+                        }
 
                         if (uploadData.error) {
                             f.status = 'error';
@@ -817,7 +845,15 @@
                             })
                         });
 
-                        const extractData = await extractResponse.json();
+                        const extractText = await extractResponse.text();
+                        let extractData;
+                        try {
+                            extractData = JSON.parse(extractText);
+                        } catch (jsonError) {
+                            f.status = 'error';
+                            results.push({ file: f.name, success: false, error: `Extract JSON error: ${extractText.substring(0, 200)}`, details: [] });
+                            continue;
+                        }
 
                         if (extractData.error) {
                             f.status = 'error';
