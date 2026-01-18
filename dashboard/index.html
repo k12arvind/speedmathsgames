@@ -751,7 +751,7 @@
 
         async function loadStats() {
             const user = await checkAuth(false);  // Don't redirect, just check
-            
+
             // If not logged in, just show the page without personalized stats
             if (!user) {
                 // Show login prompt in user indicator
@@ -763,65 +763,106 @@
                 return;
             }
 
-            const userId = user.user_id;
             document.getElementById('loading-overlay').style.display = 'flex';
-            
+
+            // Determine which users to fetch stats for
+            const isAdmin = user.can_view_all_users || user.role === 'admin' || user.role === 'parent';
+            const userIds = isAdmin ? ['saanvi', 'navya'] : [user.user_id];
+
             // Show admin link for admin/parent users
-            if (user.can_view_all_users || user.role === 'admin' || user.role === 'parent') {
+            if (isAdmin) {
                 document.getElementById('admin-link').style.display = 'flex';
             }
 
+            // Helper to fetch and combine stats for multiple users
+            async function fetchForUsers(urlTemplate) {
+                const results = await Promise.all(
+                    userIds.map(uid => fetch(urlTemplate.replace('{user_id}', uid)).then(r => r.json()).catch(() => null))
+                );
+                return results.filter(r => r !== null);
+            }
+
             try {
-                // Load Math stats
+                // Load Math stats (combined for both kids)
                 try {
-                    const mathResponse = await fetch(`${API_BASE}/api/math/performance/overall?user_id=${userId}`);
-                    const mathData = await mathResponse.json();
-                    const mathPerf = mathData.performance;
-                    document.getElementById('math-sessions').textContent = mathPerf.total_sessions || 0;
-                    const avgTime = mathPerf.average_time || 0;
+                    const mathResults = await fetchForUsers(`${API_BASE}/api/math/performance/overall?user_id={user_id}`);
+                    let totalSessions = 0, totalTime = 0, timeCount = 0;
+                    mathResults.forEach(data => {
+                        if (data.performance) {
+                            totalSessions += data.performance.total_sessions || 0;
+                            if (data.performance.average_time > 0) {
+                                totalTime += data.performance.average_time;
+                                timeCount++;
+                            }
+                        }
+                    });
+                    document.getElementById('math-sessions').textContent = totalSessions;
+                    const avgTime = timeCount > 0 ? totalTime / timeCount : 0;
                     document.getElementById('math-avgtime').textContent = avgTime > 0 ? avgTime.toFixed(1) + 's' : '-';
                 } catch (e) {
                     console.log('Math stats not available');
                 }
 
-                // Load GK stats
+                // Load GK stats (combined for both kids)
                 try {
-                    const gkResponse = await fetch(`${API_BASE}/api/assessment/performance/summary?user_id=${userId}`);
-                    const gkData = await gkResponse.json();
-                    if (gkData.performance) {
-                        document.getElementById('gk-cards').textContent = gkData.performance.total_questions || 0;
-                        const accuracy = gkData.performance.accuracy || 0;
-                        document.getElementById('gk-accuracy').textContent = accuracy > 0 ? accuracy.toFixed(0) + '%' : '-';
-                    }
+                    const gkResults = await fetchForUsers(`${API_BASE}/api/assessment/performance/summary?user_id={user_id}`);
+                    let totalQuestions = 0, totalCorrect = 0, totalAttempted = 0;
+                    gkResults.forEach(data => {
+                        if (data.performance) {
+                            totalQuestions += data.performance.total_questions || 0;
+                            // Calculate weighted accuracy
+                            const acc = data.performance.accuracy || 0;
+                            const qs = data.performance.total_questions || 0;
+                            totalCorrect += (acc / 100) * qs;
+                            totalAttempted += qs;
+                        }
+                    });
+                    document.getElementById('gk-cards').textContent = totalQuestions;
+                    const accuracy = totalAttempted > 0 ? (totalCorrect / totalAttempted) * 100 : 0;
+                    document.getElementById('gk-accuracy').textContent = accuracy > 0 ? accuracy.toFixed(0) + '%' : '-';
                 } catch (e) {
                     console.log('GK stats not available');
                 }
 
-                // Load Diary stats
+                // Load Diary stats (combined for both kids)
                 try {
-                    const diaryResponse = await fetch(`${API_BASE}/api/diary/streaks`);
-                    const diaryData = await diaryResponse.json();
-                    if (diaryData.streaks) {
-                        document.getElementById('diary-streak').textContent = diaryData.streaks.current_streak || 0;
-                    }
-                    const weeklyResponse = await fetch(`${API_BASE}/api/diary/weekly-snapshot?weeks_back=0`);
-                    const weeklyData = await weeklyResponse.json();
-                    if (weeklyData.snapshot) {
-                        document.getElementById('diary-hours').textContent = (weeklyData.snapshot.summary?.total_hours || 0) + 'h';
-                    }
+                    const streakResults = await fetchForUsers(`${API_BASE}/api/diary/streaks?user_id={user_id}`);
+                    let maxStreak = 0;
+                    streakResults.forEach(data => {
+                        if (data.streaks?.current_streak > maxStreak) {
+                            maxStreak = data.streaks.current_streak;
+                        }
+                    });
+                    document.getElementById('diary-streak').textContent = maxStreak;
+
+                    const weeklyResults = await fetchForUsers(`${API_BASE}/api/diary/weekly-snapshot?user_id={user_id}&weeks_back=0`);
+                    let totalHours = 0;
+                    weeklyResults.forEach(data => {
+                        if (data.snapshot?.summary) {
+                            totalHours += data.snapshot.summary.total_hours || 0;
+                        }
+                    });
+                    document.getElementById('diary-hours').textContent = totalHours + 'h';
                 } catch (e) {
                     console.log('Diary stats not available');
                 }
 
-                // Load Mock stats
+                // Load Mock stats (combined for both kids)
                 try {
-                    const mockResponse = await fetch(`${API_BASE}/api/mocks/stats`);
-                    const mockData = await mockResponse.json();
-                    if (mockData.stats) {
-                        document.getElementById('mock-count').textContent = mockData.stats.total_mocks || 0;
-                        const avgScore = mockData.stats.average_score;
-                        document.getElementById('mock-avg').textContent = avgScore ? avgScore.toFixed(0) : '-';
-                    }
+                    const mockResults = await fetchForUsers(`${API_BASE}/api/mocks/stats?user_id={user_id}`);
+                    let totalMocks = 0, totalScore = 0, scoreCount = 0;
+                    mockResults.forEach(data => {
+                        if (data.stats) {
+                            totalMocks += data.stats.total_mocks || 0;
+                            if (data.stats.average_score) {
+                                totalScore += data.stats.average_score * (data.stats.total_mocks || 1);
+                                scoreCount += data.stats.total_mocks || 1;
+                            }
+                        }
+                    });
+                    document.getElementById('mock-count').textContent = totalMocks;
+                    const avgScore = scoreCount > 0 ? totalScore / scoreCount : 0;
+                    document.getElementById('mock-avg').textContent = avgScore > 0 ? avgScore.toFixed(0) : '-';
                 } catch (e) {
                     console.log('Mock stats not available');
                 }
