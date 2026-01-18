@@ -128,6 +128,7 @@
 
         .stat-card.daily::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
         .stat-card.weekly::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .stat-card.monthly::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
         .stat-card.never::before { background: linear-gradient(90deg, #ef4444, #f87171); }
         .stat-card.completion::before { background: linear-gradient(90deg, #10b981, #34d399); }
 
@@ -714,6 +715,10 @@
                 <div class="stat-value" id="weekly-pdfs">0</div>
                 <div class="stat-label">Weekly PDFs</div>
             </div>
+            <div class="stat-card monthly">
+                <div class="stat-value" id="monthly-pdfs">0</div>
+                <div class="stat-label">Monthly PDFs</div>
+            </div>
             <div class="stat-card never">
                 <div class="stat-value" id="never-revised">0</div>
                 <div class="stat-label">Never Revised</div>
@@ -964,6 +969,7 @@
             document.getElementById('total-pdfs').textContent = stats.total_pdfs;
             document.getElementById('daily-pdfs').textContent = stats.daily_pdfs;
             document.getElementById('weekly-pdfs').textContent = stats.weekly_pdfs;
+            document.getElementById('monthly-pdfs').textContent = stats.monthly_pdfs || dashboardData.pdfs.monthly?.length || 0;
             document.getElementById('never-revised').textContent = stats.never_revised;
             document.getElementById('completion-rate').textContent = stats.completion_rate + '%';
         }
