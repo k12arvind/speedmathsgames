@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracted Questions - Problems on Trains</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .stats {
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+        }
+        .question-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .question-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .correct-answer-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .page-number {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .source-exam {
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        .question-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .choices {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .choice {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px 16px;
+            transition: all 0.2s ease;
+        }
+        .choice:hover {
+            border-color: #667eea;
+            background: #f0f3ff;
+        }
+        .choice.correct {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-color: #10b981;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+        }
+        .choice.correct .choice-label {
+            color: #059669;
+        }
+        .choice.correct .choice-text {
+            color: #065f46;
+            font-weight: 600;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #667eea;
+            margin-right: 8px;
+        }
+        .choice-text {
+            color: #333;
+        }
+        .five-choices {
+            grid-template-columns: 1fr 1fr;
+        }
+        .five-choices .choice:nth-child(5) {
+            grid-column: 1 / -1;
+            max-width: 50%;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+        .legend {
+            background: rgba(255,255,255,0.95);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-box {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+        }
+        .legend-box.correct {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 2px solid #10b981;
+        }
+        .legend-box.normal {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+        }
+        @media (max-width: 600px) {
+            .choices {
+                grid-template-columns: 1fr;
+            }
+            .five-choices .choice:nth-child(5) {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Problems on Trains</h1>
+        <p class="subtitle">Chapter 20 | RS Aggarwal Quantitative Aptitude</p>
+
+        <div class="stats">
+            <strong>10 Difficult Questions Extracted</strong> | Pages 462-465 | <strong>Answers Matched from Answer Key</strong>
+        </div>
+
+        <div class="legend">
+            <span style="font-weight: bold; color: #333;">Legend:</span>
+            <div class="legend-item">
+                <div class="legend-box correct"></div>
+                <span>Correct Answer</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box normal"></div>
+                <span>Other Options</span>
+            </div>
+        </div>
+
+        <!-- Question 17 - Page 462 - Answer: (c) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 17</span>
+                <span class="correct-answer-badge">Answer: (c)</span>
+                <span class="page-number">Page 462</span>
+                <span class="source-exam">Hotel Management, 2017</span>
+            </div>
+            <div class="question-text">
+                A train takes 5 minutes to cross a telegraphic post. Then the time taken by another train whose length is just double of the first train and moving with same speed to cross a platform of its own length is
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">10 minutes</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">15 minutes</span>
+                </div>
+                <div class="choice correct">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">20 minutes</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">Data inadequate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 37 - Page 463 - Answer: (a) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 37</span>
+                <span class="correct-answer-badge">Answer: (a)</span>
+                <span class="page-number">Page 463</span>
+                <span class="source-exam">SSC-CHSL (10+2) Exam, 2015</span>
+            </div>
+            <div class="question-text">
+                Two trains start at the same time from A and B and proceed toward each other at the speed of 75 km/hr and 50 km/hr respectively. When both meet at a point in between, one train was found to have travelled 175 km more than the other. Find the distance between A and B.
+            </div>
+            <div class="choices">
+                <div class="choice correct">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">875 km</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">785 km</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">758 km</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">857 km</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 38 - Page 463 - Answer: (b) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 38</span>
+                <span class="correct-answer-badge">Answer: (b)</span>
+                <span class="page-number">Page 463</span>
+                <span class="source-exam">SSC-CHSL (10+2) Exam, 2015</span>
+            </div>
+            <div class="question-text">
+                A train passes two bridges of lengths 500 m and 250 m in 100 seconds and 60 seconds respectively. The length of the train is
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">152 m</span>
+                </div>
+                <div class="choice correct">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">125 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">250 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">120 m</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 39 - Page 463 - Answer: (a) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 39</span>
+                <span class="correct-answer-badge">Answer: (a)</span>
+                <span class="page-number">Page 463</span>
+                <span class="source-exam">IBPS PO Prelims 16/10/2022 (Shift-1)</span>
+            </div>
+            <div class="question-text">
+                Train A moving at speed 72 kmph crosses train B moving at ¾th speed of train A in the same direction in 1 min and 26 seconds. The length of train A is 25/18th of the length of train B. What is the difference between the lengths of two trains?
+            </div>
+            <div class="choices five-choices">
+                <div class="choice correct">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">70 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">85 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">110 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">60 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(e)</span>
+                    <span class="choice-text">90 m</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 40 - Page 463 - Answer: (b) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 40</span>
+                <span class="correct-answer-badge">Answer: (b)</span>
+                <span class="page-number">Page 463</span>
+                <span class="source-exam">IBPS Clerk Prelims 03/09/2022 (Shift-1)</span>
+            </div>
+            <div class="question-text">
+                Length of train A is half as that of train B. Train A and B crosses the platform of length 100 meters in 5 seconds and 6 seconds respectively. If the ratio of speed of train A and B is 2:3, find the length of train B.
+            </div>
+            <div class="choices five-choices">
+                <div class="choice">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">450 m</span>
+                </div>
+                <div class="choice correct">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">800 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">600 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">900 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(e)</span>
+                    <span class="choice-text">750 m</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 49 - Page 464 - Answer: (b) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 49</span>
+                <span class="correct-answer-badge">Answer: (b)</span>
+                <span class="page-number">Page 464</span>
+                <span class="source-exam">SBI Clerk Mains 2024</span>
+            </div>
+            <div class="question-text">
+                A train takes t seconds to pass a pole and t + 12 seconds to pass a platform. The combined length of the train and the platform is 540 meters and the train's length is L meters. If the train's length is reduced by 30 meters, it then takes 17 seconds to cross a pole. Determine the value of t.
+            </div>
+            <div class="choices five-choices">
+                <div class="choice">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">23.5</span>
+                </div>
+                <div class="choice correct">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">18.7</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">16.8</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">20.5</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(e)</span>
+                    <span class="choice-text">None of these</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 53 - Page 464 - Answer: (b) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 53</span>
+                <span class="correct-answer-badge">Answer: (b)</span>
+                <span class="page-number">Page 464</span>
+                <span class="source-exam">SSC CGL Tier-I CBE Exam, 2019</span>
+            </div>
+            <div class="question-text">
+                A train travelling at 44 km/h crosses a man walking with a speed of 8 km/h in the same direction, in 15 seconds. If the train crosses a woman coming from the opposite direction in 10 seconds, then what is the speed of the woman?
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">10.5 km/h</span>
+                </div>
+                <div class="choice correct">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">10 km/h</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">9 km/h</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">8.5 km/h</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 66 - Page 465 - Answer: (d) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 66</span>
+                <span class="correct-answer-badge">Answer: (d)</span>
+                <span class="page-number">Page 465</span>
+                <span class="source-exam">-</span>
+            </div>
+            <div class="question-text">
+                A train 400 m long overtook a man walking along the line in the same direction as the train, at the rate of 5 kmph and passed him in 40 seconds. The train reached the station in 20 minutes after passing the man. In what time did the man reach the station?
+            </div>
+            <div class="choices">
+                <div class="choice">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">2 hr 24 min</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">2 hr 30 min 40 sec</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">2 hr 36 min 48 sec</span>
+                </div>
+                <div class="choice correct">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">2 hr 48 min 48 sec</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 67 - Page 465 - Answer: (c) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 67</span>
+                <span class="correct-answer-badge">Answer: (c)</span>
+                <span class="page-number">Page 465</span>
+                <span class="source-exam">-</span>
+            </div>
+            <div class="question-text">
+                A train, 240 m long, crosses a man walking along the line in opposite direction at the rate of...
+            </div>
+            <div class="note">
+                <strong>Note:</strong> This question is partially cut off at the bottom of the page image. The full question text and answer choices could not be extracted. Correct answer from answer key is <strong>(c)</strong>. Please re-upload with the complete question visible.
+            </div>
+        </div>
+
+        <!-- Question 70 - Page 465 - Answer: (a) -->
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Q. 70</span>
+                <span class="correct-answer-badge">Answer: (a)</span>
+                <span class="page-number">Page 465</span>
+                <span class="source-exam">-</span>
+            </div>
+            <div class="question-text">
+                If a train takes 1.75 sec to cross a telegraphic post and 1.5 sec to overtake a cyclist racing along a road parallel to the track @ 10 metres per second, then the length of the train is
+            </div>
+            <div class="choices">
+                <div class="choice correct">
+                    <span class="choice-label">(a)</span>
+                    <span class="choice-text">105 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(b)</span>
+                    <span class="choice-text">115 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(c)</span>
+                    <span class="choice-text">125 m</span>
+                </div>
+                <div class="choice">
+                    <span class="choice-label">(d)</span>
+                    <span class="choice-text">135 m</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
