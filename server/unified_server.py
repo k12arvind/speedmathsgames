@@ -728,9 +728,15 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             questions_attempted = self.assessment_db.get_total_questions_attempted(user_id)
             mastery_breakdown = self.assessment_db.get_mastery_breakdown(user_id)
 
-            # Return in format expected by frontend
+            # Return in format expected by frontend (index.html expects 'performance' key)
             self.send_json({
-                'overall_stats': {
+                'performance': {
+                    'total_tests': total_tests,
+                    'average_score': round(avg_score, 1),
+                    'total_questions': questions_attempted,
+                    'accuracy': round(accuracy, 1)
+                },
+                'overall_stats': {  # Keep for backwards compatibility
                     'total_tests': total_tests,
                     'average_score': round(avg_score, 1),
                     'total_questions': questions_attempted,
@@ -2904,8 +2910,16 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
         # GET /api/diary/streaks - Get all subject streaks
         elif path == '/api/diary/streaks':
-            streaks = self.diary_db.get_streaks(user_id)
-            self.send_json({'streaks': streaks})
+            streaks_list = self.diary_db.get_streaks(user_id)
+            # Calculate aggregate current_streak (max across all subjects)
+            max_streak = max((s.get('current_streak', 0) for s in streaks_list), default=0)
+            # Return both the list AND an aggregate object for index.html compatibility
+            self.send_json({
+                'streaks': {
+                    'current_streak': max_streak,
+                    'subjects': streaks_list
+                }
+            })
 
         # GET /api/diary/neglected - Get neglected subjects
         elif path == '/api/diary/neglected':
