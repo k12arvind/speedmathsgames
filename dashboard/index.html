@@ -9,10 +9,10 @@
     <title>CLAT Preparation Hub</title>
     <link rel="stylesheet" href="shared-styles.css">
     <style>
-        /* Hero Section */
+        /* Hero Section - Compact */
         .hero {
             text-align: center;
-            padding: var(--space-2xl) var(--space-lg);
+            padding: var(--space-md) var(--space-md) var(--space-sm);
             position: relative;
         }
 
@@ -22,29 +22,23 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(212, 168, 83, 0.12) 0%, transparent 70%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 168, 83, 0.08) 0%, transparent 70%);
             pointer-events: none;
         }
 
         .hero-emoji {
-            font-size: 4rem;
-            margin-bottom: var(--space-md);
+            font-size: 2.5rem;
+            margin-bottom: var(--space-xs);
             display: block;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
 
         .hero h1 {
             font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
             font-weight: 700;
-            margin-bottom: var(--space-sm);
+            margin-bottom: 4px;
             background: linear-gradient(135deg, #f5f5f5 0%, #d4a853 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -52,33 +46,33 @@
         }
 
         .hero p {
-            font-size: 1.125rem;
+            font-size: 0.875rem;
             color: var(--text-secondary);
-            max-width: 500px;
+            max-width: 400px;
             margin: 0 auto;
         }
 
-        /* Countdown Banner */
+        /* Countdown Banner - Compact */
         .countdown-banner {
             display: flex;
             justify-content: center;
-            gap: var(--space-lg);
-            margin: var(--space-xl) 0;
+            gap: var(--space-sm);
+            margin: var(--space-sm) 0;
             flex-wrap: wrap;
         }
 
         .countdown-item {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-md);
+            padding: var(--space-xs) var(--space-md);
             text-align: center;
-            min-width: 100px;
+            min-width: 70px;
         }
 
         .countdown-number {
             font-family: var(--font-display);
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             font-weight: 700;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -88,36 +82,43 @@
         }
 
         .countdown-unit {
-            font-size: 0.75rem;
+            font-size: 0.625rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            margin-top: var(--space-xs);
+            margin-top: 2px;
         }
 
-        /* Modules Grid */
+        .countdown-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: var(--space-xs);
+        }
+
+        /* Modules Grid - Compact */
         .modules-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-lg);
-            max-width: 1200px;
+            gap: var(--space-sm);
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 var(--space-lg);
+            padding: 0 var(--space-sm);
         }
 
         @media (max-width: 900px) {
             .modules-grid {
                 grid-template-columns: 1fr;
-                gap: var(--space-md);
+                gap: var(--space-xs);
             }
         }
 
-        /* Module Cards */
+        /* Module Cards - Compact */
         .module-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-xl);
-            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
             text-decoration: none;
             color: inherit;
             display: flex;
@@ -166,48 +167,48 @@
         .module-header {
             display: flex;
             align-items: flex-start;
-            gap: var(--space-md);
-            margin-bottom: var(--space-md);
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xs);
         }
 
         .module-icon {
-            font-size: 3rem;
+            font-size: 2rem;
             line-height: 1;
             flex-shrink: 0;
         }
 
         .module-title {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.125rem;
             font-weight: 600;
-            margin-bottom: var(--space-xs);
+            margin-bottom: 2px;
         }
 
         .module-subtitle {
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
         }
 
         .module-description {
-            font-size: 0.9375rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: var(--space-lg);
+            line-height: 1.5;
+            margin-bottom: var(--space-sm);
             flex: 1;
         }
 
-        /* Module Features */
+        /* Module Features - Compact */
         .module-features {
             list-style: none;
-            margin-bottom: var(--space-lg);
+            margin-bottom: var(--space-sm);
         }
 
         .module-features li {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-xs) 0;
-            font-size: 0.875rem;
+            gap: 6px;
+            padding: 2px 0;
+            font-size: 0.75rem;
             color: var(--text-secondary);
         }
 
@@ -215,18 +216,18 @@
             content: '✓';
             color: var(--accent-success);
             font-weight: 700;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
         }
 
-        /* Module Stats */
+        /* Module Stats - Compact */
         .module-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-md);
-            padding: var(--space-md) 0;
+            gap: var(--space-sm);
+            padding: var(--space-xs) 0;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
-            margin-bottom: var(--space-lg);
+            margin-bottom: var(--space-sm);
         }
 
         .stat-item {
@@ -235,10 +236,10 @@
 
         .stat-value {
             font-family: var(--font-display);
-            font-size: 1.75rem;
+            font-size: 1.25rem;
             font-weight: 700;
             line-height: 1;
-            margin-bottom: var(--space-xs);
+            margin-bottom: 2px;
         }
 
         .card-gk .stat-value { color: var(--accent-blue); }
@@ -256,21 +257,21 @@
             letter-spacing: 0.05em;
         }
 
-        /* Module CTA */
+        /* Module CTA - Compact */
         .module-cta {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: var(--space-sm);
-            padding: var(--space-md) var(--space-lg);
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
             border-radius: var(--radius-md);
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 0.875rem;
+            font-weight: 600;
             color: white;
             border: none;
             cursor: pointer;
             transition: all var(--transition-normal);
-            min-height: 52px;
+            min-height: 36px;
         }
 
         .card-gk .module-cta { background: var(--gradient-blue); }
@@ -294,23 +295,23 @@
             transform: translateX(4px);
         }
 
-        /* Footer Links */
+        /* Footer Links - Compact */
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: var(--space-lg);
-            margin: var(--space-2xl) 0;
+            gap: var(--space-sm);
+            margin: var(--space-md) 0 var(--space-sm);
             flex-wrap: wrap;
         }
 
         .footer-link {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm) var(--space-md);
+            gap: 4px;
+            padding: var(--space-xs) var(--space-sm);
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             border-radius: var(--radius-md);
             transition: all var(--transition-fast);
         }
@@ -320,12 +321,12 @@
             background: var(--bg-card);
         }
 
-        /* Footer */
+        /* Footer - Compact */
         .footer {
             text-align: center;
-            padding: var(--space-xl);
+            padding: var(--space-sm);
             color: var(--text-muted);
-            font-size: 0.875rem;
+            font-size: 0.75rem;
         }
 
         .footer-brand {
@@ -466,6 +467,7 @@
         <h1>CLAT Preparation Hub</h1>
         <p>Your personalized journey to law school success starts here</p>
         
+        <div class="countdown-label">⏰ CLAT 2026 Exam Countdown</div>
         <div class="countdown-banner">
             <div class="countdown-item">
                 <div class="countdown-number" id="countdown-days">---</div>
@@ -477,7 +479,7 @@
             </div>
             <div class="countdown-item">
                 <div class="countdown-number" id="countdown-mins">--</div>
-                <div class="countdown-unit">Minutes</div>
+                <div class="countdown-unit">Mins</div>
             </div>
         </div>
     </div>
@@ -722,25 +724,26 @@
     <script src="auth.js"></script>
     <script>
         const API_BASE = window.location.origin;
-        
-        // CLAT 2026 exam date (December 2025 - usually first Sunday)
-        const CLAT_DATE = new Date('2025-12-07T10:00:00');
+
+        // CLAT 2026 exam date - First Sunday of December 2026 at 2 PM IST
+        // December 1, 2026 is Tuesday, so first Sunday is December 6, 2026
+        const CLAT_DATE = new Date('2026-12-06T14:00:00+05:30');
 
         function updateCountdown() {
             const now = new Date();
             const diff = CLAT_DATE - now;
-            
+
             if (diff <= 0) {
                 document.getElementById('countdown-days').textContent = '0';
-                document.getElementById('countdown-hours').textContent = '0';
-                document.getElementById('countdown-mins').textContent = '0';
+                document.getElementById('countdown-hours').textContent = '00';
+                document.getElementById('countdown-mins').textContent = '00';
                 return;
             }
-            
+
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            
+
             document.getElementById('countdown-days').textContent = days;
             document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
             document.getElementById('countdown-mins').textContent = mins.toString().padStart(2, '0');
