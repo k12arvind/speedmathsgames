@@ -173,12 +173,13 @@ class PDFScanner:
             # Track file modification-based revisions
             # Check if we have tracked this PDF before
             cursor.execute("""
-                SELECT last_modified, file_edit_count, view_count FROM pdfs WHERE filename = ?
+                SELECT last_modified, file_edit_count, view_count, date_added FROM pdfs WHERE filename = ?
             """, (pdf_file.name,))
             pdf_record = cursor.fetchone()
 
             file_edit_count = 0
             view_count = 0
+            date_added = None
             if pdf_record:
                 # Compare stored modification time with current
                 stored_mtime = pdf_record['last_modified']
@@ -196,16 +197,19 @@ class PDFScanner:
                     file_edit_count = pdf_record['file_edit_count'] or 0
                 # Get view count (scroll-through completions)
                 view_count = pdf_record['view_count'] or 0
+                # Get date when PDF was first added
+                date_added = pdf_record['date_added']
             else:
                 # First time seeing this PDF, insert it
                 # Store RELATIVE path for cross-machine compatibility
                 relative_filepath = path_to_relative(str(pdf_file))
+                date_added = datetime.now().isoformat()
                 cursor.execute("""
                     INSERT INTO pdfs (filename, filepath, source_type, source_name, date_published,
                                      date_added, total_topics, last_modified, file_edit_count)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)
                 """, (pdf_file.name, relative_filepath, source_type, source_name,
-                      date_match or file_date, datetime.now().isoformat(),
+                      date_match or file_date, date_added,
                       total_topics, last_modified))
                 conn.commit()
 
@@ -215,12 +219,13 @@ class PDFScanner:
             try:
                 assessment_conn = sqlite3.connect(Path(__file__).parent / "assessment_tracker.db")
                 assessment_cursor = assessment_conn.cursor()
+                # Match on source_date (date format), pdf_id, or pdf_filename
                 assessment_cursor.execute("""
                     SELECT COUNT(DISTINCT qa.session_id) as attempt_count
                     FROM question_attempts qa
                     JOIN test_sessions ts ON qa.session_id = ts.session_id
-                    WHERE ts.source_date = ? OR ts.pdf_id = ?
-                """, (source_date, source_date))
+                    WHERE ts.source_date = ? OR ts.pdf_id = ? OR ts.pdf_filename = ? OR ts.source_date = ?
+                """, (source_date, source_date, pdf_file.name, pdf_file.name))
                 result = assessment_cursor.fetchone()
                 if result:
                     assessment_attempts = result[0] or 0
@@ -234,6 +239,23 @@ class PDFScanner:
             file_mtime = datetime.fromtimestamp(stat.st_mtime)
             days_since_revision = (datetime.now() - file_mtime).days if file_edit_count > 0 else None
 
+            # Get last viewed timestamp from view sessions
+            last_viewed = None
+            days_since_view = None
+            cursor.execute("""
+                SELECT completed_at FROM pdf_view_sessions
+                WHERE pdf_id = ? AND is_complete = 1
+                ORDER BY completed_at DESC LIMIT 1
+            """, (pdf_file.name,))
+            view_result = cursor.fetchone()
+            if view_result and view_result['completed_at']:
+                last_viewed = view_result['completed_at']
+                try:
+                    view_dt = datetime.fromisoformat(last_viewed.replace('Z', '+00:00').split('+')[0])
+                    days_since_view = (datetime.now() - view_dt).days
+                except:
+                    pass
+
             pdf_data = {
                 'pdf_id': source_date,
                 'filename': pdf_file.name,
@@ -241,13 +263,16 @@ class PDFScanner:
                 'source_type': source_type,
                 'source_name': source_name,
                 'date_published': date_match or file_date,
+                'date_added': date_added,  # When PDF was first added to system
                 'total_topics': total_topics,
                 'revised_topics': 0,  # Not used anymore
                 'categories': categories,
                 'categories_list': categories,
-                'revision_count': file_edit_count,  # Now tracks file edits
-                'total_revisions': file_edit_count,  # Same as revision_count
+                'revision_count': view_count,  # Changed: Now shows complete view count
+                'total_revisions': view_count,  # Changed: Same as revision_count
                 'view_count': view_count,  # Scroll-through completions
+                'last_viewed': last_viewed,  # Last complete scroll-through timestamp
+                'days_since_view': days_since_view,  # Days since last view
                 'assessment_attempts': assessment_attempts,  # NEW: Test attempts
                 'last_revised': last_modified if file_edit_count > 0 else None,
                 'last_modified': last_modified,

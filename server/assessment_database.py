@@ -161,6 +161,29 @@ class AssessmentDatabase:
             ON question_performance(anki_note_id)
         """)
 
+        # Question difficulty tags table - per-user difficulty ratings
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS question_difficulty_tags (
+                tag_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                anki_note_id TEXT NOT NULL,
+                user_id TEXT NOT NULL,
+                difficulty_tag TEXT DEFAULT 'not_attempted',
+                total_attempts INTEGER DEFAULT 0,
+                correct_attempts INTEGER DEFAULT 0,
+                last_attempt_at TEXT,
+                last_correct_at TEXT,
+                last_wrong_at TEXT,
+                created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                updated_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(anki_note_id, user_id)
+            )
+        """)
+
+        cursor.execute("""
+            CREATE INDEX IF NOT EXISTS idx_difficulty_user_tag
+            ON question_difficulty_tags(user_id, difficulty_tag)
+        """)
+
         self.conn.commit()
 
     def create_test_session(self, user_id: str, pdf_id: str, pdf_filename: str,
@@ -179,7 +202,7 @@ class AssessmentDatabase:
 
     def record_question_attempt(self, session_id: int, anki_note_id: str, question_text: str,
                                correct_answer: str, user_answer: str, category: str,
-                               is_correct: bool, time_taken: int) -> int:
+                               is_correct: bool, time_taken: int, active_time_seconds: int = 0) -> int:
         """Record a question attempt."""
         cursor = self.conn.cursor()
 
@@ -191,19 +214,37 @@ class AssessmentDatabase:
 
         attempt_number = cursor.fetchone()['count'] + 1
 
-        # Insert attempt
+        # Insert attempt (with active_time_seconds)
         cursor.execute("""
             INSERT INTO question_attempts
             (session_id, anki_note_id, question_text, correct_answer, user_answer,
-             category, is_correct, time_taken_seconds, attempt_number, answered_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             category, is_correct, time_taken_seconds, active_time_seconds, attempt_number, answered_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (session_id, anki_note_id, question_text, correct_answer, user_answer,
-              category, 1 if is_correct else 0, time_taken, attempt_number, datetime.now().isoformat()))
+              category, 1 if is_correct else 0, time_taken, active_time_seconds, attempt_number, datetime.now().isoformat()))
 
         attempt_id = cursor.lastrowid
 
         # Update question performance
         self._update_question_performance(anki_note_id, question_text, category, is_correct, attempt_number == 1)
+
+        # Update difficulty tag for this user
+        # Get user_id from session
+        cursor.execute("SELECT user_id FROM test_sessions WHERE session_id = ?", (session_id,))
+        session = cursor.fetchone()
+        if session:
+            self._update_difficulty_tag(session['user_id'], anki_note_id, is_correct)
+
+        # Update session totals (correct_answers, wrong_answers, score)
+        cursor.execute("""
+            UPDATE test_sessions SET
+                correct_answers = (SELECT COUNT(*) FROM question_attempts WHERE session_id = ? AND is_correct = 1),
+                wrong_answers = (SELECT COUNT(*) FROM question_attempts WHERE session_id = ? AND is_correct = 0),
+                score_percentage = ROUND(100.0 *
+                    (SELECT COUNT(*) FROM question_attempts WHERE session_id = ? AND is_correct = 1) /
+                    NULLIF((SELECT COUNT(*) FROM question_attempts WHERE session_id = ?), 0), 2)
+            WHERE session_id = ?
+        """, (session_id, session_id, session_id, session_id, session_id))
 
         self.conn.commit()
         return attempt_id
@@ -463,6 +504,235 @@ class AssessmentDatabase:
         """)
 
         return {row['mastery_level']: row['count'] for row in cursor.fetchall()}
+
+    # ============== Difficulty Tag Methods ==============
+
+    @staticmethod
+    def calculate_difficulty_tag(total_attempts: int, correct_attempts: int) -> str:
+        """Calculate difficulty tag based on attempt history.
+
+        Questions start as 'easy' by default and become harder when answered incorrectly.
+        - Easy: No attempts yet, OR 100% correct
+        - Medium: 60-99% correct
+        - Difficult: 30-59% correct
+        - Very Difficult: <30% correct (consistently wrong)
+        """
+        if total_attempts == 0:
+            return 'easy'  # New questions start as easy
+
+        accuracy = correct_attempts / total_attempts
+
+        # Easy: 100% correct (never got it wrong)
+        if accuracy >= 1.0:
+            return 'easy'
+        # Medium: Mostly correct (60-99%)
+        elif accuracy >= 0.6:
+            return 'medium'
+        # Difficult: Struggling (30-59%)
+        elif accuracy >= 0.3:
+            return 'difficult'
+        # Very Difficult: Consistently wrong (<30%)
+        else:
+            return 'very_difficult'
+
+    def _update_difficulty_tag(self, user_id: str, anki_note_id: str, is_correct: bool):
+        """Update difficulty tag for a question after an attempt."""
+        cursor = self.conn.cursor()
+        now = datetime.now().isoformat()
+
+        # Get existing tag record
+        cursor.execute("""
+            SELECT * FROM question_difficulty_tags
+            WHERE user_id = ? AND anki_note_id = ?
+        """, (user_id, anki_note_id))
+
+        existing = cursor.fetchone()
+
+        if existing:
+            # Update existing record
+            total_attempts = existing['total_attempts'] + 1
+            correct_attempts = existing['correct_attempts'] + (1 if is_correct else 0)
+            new_tag = self.calculate_difficulty_tag(total_attempts, correct_attempts)
+
+            cursor.execute("""
+                UPDATE question_difficulty_tags
+                SET difficulty_tag = ?,
+                    total_attempts = ?,
+                    correct_attempts = ?,
+                    last_attempt_at = ?,
+                    last_correct_at = CASE WHEN ? = 1 THEN ? ELSE last_correct_at END,
+                    last_wrong_at = CASE WHEN ? = 0 THEN ? ELSE last_wrong_at END,
+                    updated_at = ?
+                WHERE user_id = ? AND anki_note_id = ?
+            """, (new_tag, total_attempts, correct_attempts, now,
+                  1 if is_correct else 0, now,
+                  1 if is_correct else 0, now,
+                  now, user_id, anki_note_id))
+        else:
+            # Insert new record
+            new_tag = self.calculate_difficulty_tag(1, 1 if is_correct else 0)
+
+            cursor.execute("""
+                INSERT INTO question_difficulty_tags
+                (anki_note_id, user_id, difficulty_tag, total_attempts, correct_attempts,
+                 last_attempt_at, last_correct_at, last_wrong_at)
+                VALUES (?, ?, ?, 1, ?, ?, ?, ?)
+            """, (anki_note_id, user_id, new_tag,
+                  1 if is_correct else 0,
+                  now,
+                  now if is_correct else None,
+                  now if not is_correct else None))
+
+    def get_difficulty_summary(self, user_id: str) -> Dict:
+        """Get distribution of questions by difficulty tag for a user."""
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT difficulty_tag, COUNT(*) as count
+            FROM question_difficulty_tags
+            WHERE user_id = ?
+            GROUP BY difficulty_tag
+            ORDER BY CASE difficulty_tag
+                WHEN 'easy' THEN 1
+                WHEN 'medium' THEN 2
+                WHEN 'difficult' THEN 3
+                WHEN 'very_difficult' THEN 4
+                WHEN 'not_attempted' THEN 5
+            END
+        """, (user_id,))
+
+        result = {row['difficulty_tag']: row['count'] for row in cursor.fetchall()}
+
+        # Ensure all tags are represented (no longer tracking 'not_attempted' - questions default to 'easy')
+        for tag in ['easy', 'medium', 'difficult', 'very_difficult']:
+            if tag not in result:
+                result[tag] = 0
+
+        # Calculate total (exclude any legacy 'not_attempted' entries)
+        result['total'] = result['easy'] + result['medium'] + result['difficult'] + result['very_difficult']
+
+        return result
+
+    def get_questions_by_difficulty(self, user_id: str, difficulty_tag: str,
+                                    limit: int = 50) -> List[Dict]:
+        """Get questions filtered by difficulty tag."""
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT
+                qdt.anki_note_id,
+                qdt.difficulty_tag,
+                qdt.total_attempts,
+                qdt.correct_attempts,
+                qdt.last_attempt_at,
+                qp.question_text,
+                qp.category,
+                CAST(qdt.correct_attempts AS REAL) / qdt.total_attempts * 100 as accuracy
+            FROM question_difficulty_tags qdt
+            LEFT JOIN question_performance qp ON qdt.anki_note_id = qp.anki_note_id
+            WHERE qdt.user_id = ? AND qdt.difficulty_tag = ?
+            ORDER BY qdt.last_attempt_at DESC
+            LIMIT ?
+        """, (user_id, difficulty_tag, limit))
+
+        return [dict(row) for row in cursor.fetchall()]
+
+    def get_difficulty_tag_for_question(self, user_id: str, anki_note_id: str) -> Optional[str]:
+        """Get difficulty tag for a specific question and user.
+
+        Returns 'easy' for questions with no attempt history (new questions start easy).
+        """
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT difficulty_tag FROM question_difficulty_tags
+            WHERE user_id = ? AND anki_note_id = ?
+        """, (user_id, anki_note_id))
+
+        result = cursor.fetchone()
+        return result['difficulty_tag'] if result else 'easy'  # New questions default to easy
+
+    def get_today_activity(self, user_id: str) -> Dict:
+        """Get today's activity summary for a user (for parent dashboard)."""
+        cursor = self.conn.cursor()
+        today = datetime.now().strftime('%Y-%m-%d')
+
+        # Tests completed today
+        cursor.execute("""
+            SELECT
+                session_id,
+                pdf_filename,
+                total_questions,
+                correct_answers,
+                wrong_answers,
+                skipped_answers,
+                score_percentage,
+                time_taken_seconds,
+                started_at,
+                completed_at
+            FROM test_sessions
+            WHERE user_id = ? AND date(started_at) = ? AND status = 'completed'
+            ORDER BY started_at DESC
+        """, (user_id, today))
+
+        tests = [dict(row) for row in cursor.fetchall()]
+
+        # Calculate totals
+        total_questions = sum(t['total_questions'] for t in tests)
+        total_correct = sum(t['correct_answers'] for t in tests)
+        total_wrong = sum(t['wrong_answers'] for t in tests)
+
+        return {
+            'date': today,
+            'tests_completed': len(tests),
+            'total_questions': total_questions,
+            'total_correct': total_correct,
+            'total_wrong': total_wrong,
+            'accuracy': round((total_correct / total_questions * 100) if total_questions > 0 else 0, 1),
+            'tests': tests
+        }
+
+    def backfill_difficulty_tags(self, user_id: str) -> int:
+        """Backfill difficulty tags from existing question_attempts data."""
+        cursor = self.conn.cursor()
+        now = datetime.now().isoformat()
+
+        # Get all questions attempted by this user with their stats
+        cursor.execute("""
+            SELECT
+                qa.anki_note_id,
+                COUNT(*) as total_attempts,
+                SUM(qa.is_correct) as correct_attempts,
+                MAX(qa.answered_at) as last_attempt_at,
+                MAX(CASE WHEN qa.is_correct = 1 THEN qa.answered_at ELSE NULL END) as last_correct_at,
+                MAX(CASE WHEN qa.is_correct = 0 THEN qa.answered_at ELSE NULL END) as last_wrong_at,
+                MIN(qa.answered_at) as created_at
+            FROM question_attempts qa
+            JOIN test_sessions ts ON qa.session_id = ts.session_id
+            WHERE ts.user_id = ? AND qa.anki_note_id IS NOT NULL AND qa.anki_note_id != ''
+            GROUP BY qa.anki_note_id
+        """, (user_id,))
+
+        rows = cursor.fetchall()
+        count = 0
+
+        for row in rows:
+            total = row['total_attempts']
+            correct = row['correct_attempts'] or 0
+            tag = self.calculate_difficulty_tag(total, correct)
+
+            cursor.execute("""
+                INSERT OR REPLACE INTO question_difficulty_tags
+                (anki_note_id, user_id, difficulty_tag, total_attempts, correct_attempts,
+                 last_attempt_at, last_correct_at, last_wrong_at, created_at, updated_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (row['anki_note_id'], user_id, tag, total, correct,
+                  row['last_attempt_at'], row['last_correct_at'], row['last_wrong_at'],
+                  row['created_at'], now))
+            count += 1
+
+        self.conn.commit()
+        return count
 
     def close(self):
         """Close database connection."""

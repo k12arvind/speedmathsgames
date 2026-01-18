@@ -86,7 +86,10 @@ cleanup_old_processes
 # Set working directory
 cd /Users/arvindkumar/clat_preparation
 
+# Activate venv to set up proper environment
+source /Users/arvindkumar/clat_preparation/venv_clat/bin/activate
+
 # Start server (exec replaces this script with python)
 log "Starting Python server daemon..."
-exec "$PYTHON" "$SERVER"
+exec python3 "$SERVER"
 

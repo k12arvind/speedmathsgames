@@ -371,6 +371,10 @@
         .pdf-name {
             font-weight: 600;
             color: var(--text-primary);
+            max-width: 280px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
         }
 
         .badge {
@@ -449,9 +453,10 @@
         }
 
         .action-buttons {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
             gap: 6px;
-            flex-wrap: wrap;
+            justify-content: start;
         }
 
         .btn {
@@ -620,7 +625,7 @@
             }
 
             table {
-                min-width: 1100px;
+                min-width: 1200px;
             }
 
             /* Make action buttons more touch-friendly */
@@ -900,7 +905,7 @@
         // Global state
         let dashboardData = null;
         let currentFilter = 'all';
-        let sortColumn = 'date_published';
+        let sortColumn = 'date_added';
         let sortDirection = 'desc';
 
         // Initialize
@@ -1013,11 +1018,11 @@
                         <thead>
                             <tr>
                                 <th onclick="sortTable('filename')">PDF Name</th>
-                                <th onclick="sortTable('date_published')">Date</th>
+                                <th onclick="sortTable('date_added')">Added</th>
                                 <th onclick="sortTable('source_type')">Type</th>
-                                <th onclick="sortTable('total_topics')">Topics</th>
                                 <th onclick="sortTable('revision_count')">Revisions</th>
                                 <th onclick="sortTable('view_count')">Views</th>
+                                <th onclick="sortTable('days_since_view')">Last Viewed</th>
                                 <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
                                 <th onclick="sortTable('days_since_revision')">Last Revised</th>
                                 <th>Status</th>
@@ -1202,6 +1207,12 @@
                     : `${pdf.days_since_revision}d ago`
                 : 'Never';
 
+            const lastViewed = pdf.days_since_view !== null && pdf.days_since_view !== undefined
+                ? pdf.days_since_view === 0
+                    ? 'Today'
+                    : `${pdf.days_since_view}d ago`
+                : 'Never';
+
             // Check if PDF needs chunking (>13 pages = red indicator)
             const pageCount = pdf.page_count || 0;
             const needsChunking = pdf.needs_chunking || false;
@@ -1244,7 +1255,7 @@
                         onclick="createAssessment('${pdf.filename}', '${sourceName}', '${weekValue}')"
                         ${needsChunking ? 'disabled' : ''}
                         style="${needsChunking ? 'background: #9e9e9e; opacity: 0.5; cursor: not-allowed;' : 'background: #ff9800; color: white;'}">
-                    ${needsChunking ? '📝 Create Assessment' : '⏳ Loading...'}
+                    ${needsChunking ? '📝 + Quiz' : '⏳ Loading...'}
                 </button>
             `;
 
@@ -1299,11 +1310,11 @@
             return `
                 <tr>
                     <td class="pdf-name" style="${pdfNameStyle}">${pdf.filename}${pageInfo}</td>
-                    <td>${formatDate(pdf.date_published)}</td>
+                    <td>${formatDate(pdf.date_added || pdf.date_published)}</td>
                     <td><span class="badge badge-${pdf.source_type}">${pdf.source_type}</span></td>
-                    <td>${pdf.total_topics}</td>
                     <td><span class="badge badge-count ${revisionBadgeClass}">×${revisionCount}</span></td>
                     <td><span class="badge badge-count ${viewBadgeClass}" title="Complete scroll-throughs">👁 ${viewCount}</span></td>
+                    <td>${lastViewed}</td>
                     <td><span class="badge badge-count ${attemptsBadgeClass}">${assessmentAttempts}×</span></td>
                     <td>${lastRevised}</td>
                     <td>${statusBadge}</td>
@@ -1547,7 +1558,7 @@
                     assessmentButton.style.background = '#9e9e9e';
                     assessmentButton.style.cursor = 'not-allowed';
                     assessmentButton.style.opacity = '0.5';
-                    assessmentButton.innerText = '📝 Create Assessment';
+                    assessmentButton.innerText = '📝 + Quiz';
 
                     // Test - disabled
                     testButton.disabled = true;
@@ -1629,7 +1640,7 @@
                     assessmentButton.style.color = 'white';
                     assessmentButton.style.cursor = 'pointer';
                     assessmentButton.style.opacity = '1';
-                    assessmentButton.innerText = '📝 Create Assessment';
+                    assessmentButton.innerText = '📝 + Quiz';
 
                     testButton.disabled = true;
                     testButton.style.opacity = '0.5';
@@ -1721,7 +1732,7 @@
                 // Build status badge
                 const statusBadge = isProcessed 
                     ? `<div class="alert alert-success"><strong>✓ Processed</strong> - ${assessmentStatus.total_cards || 0} flashcards generated</div>`
-                    : `<div class="alert alert-warning"><strong>⚠️ Not Yet Processed</strong> - Click "Create Assessment" to process this PDF and generate flashcards.</div>`;
+                    : `<div class="alert alert-warning"><strong>⚠️ Not Yet Processed</strong> - Click "+ Quiz" to process this PDF and generate flashcards.</div>`;
 
                 let modalContent = `
                     <div style="max-height: 70vh; overflow-y: auto;">

@@ -739,6 +739,38 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             weak = self.assessment_db.get_weak_questions(user_id, limit=10)
             self.send_json({'weak_questions': weak})
 
+        # ============== Difficulty Tag Endpoints ==============
+
+        elif path == '/api/assessment/difficulty/summary':
+            # Get difficulty distribution for a user
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            summary = self.assessment_db.get_difficulty_summary(user_id)
+            self.send_json(summary)
+
+        elif path == '/api/assessment/difficulty/questions':
+            # Get questions by difficulty tag
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            tag = query_params.get('tag', ['difficult'])[0]
+            limit = int(query_params.get('limit', ['50'])[0])
+            questions = self.assessment_db.get_questions_by_difficulty(user_id, tag, limit)
+            self.send_json({'questions': questions, 'tag': tag, 'count': len(questions)})
+
+        elif path == '/api/assessment/difficulty/tag':
+            # Get difficulty tag for a specific question
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            note_id = query_params.get('note_id', [''])[0]
+            if not note_id:
+                self.send_json({'error': 'note_id required'})
+                return
+            tag = self.assessment_db.get_difficulty_tag_for_question(user_id, note_id)
+            self.send_json({'note_id': note_id, 'difficulty_tag': tag})
+
+        elif path == '/api/assessment/difficulty/backfill':
+            # Backfill difficulty tags from existing data
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            count = self.assessment_db.backfill_difficulty_tags(user_id)
+            self.send_json({'success': True, 'backfilled_count': count, 'user_id': user_id})
+
         else:
             self.send_json({'error': 'Assessment endpoint not found'})
 
@@ -888,6 +920,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             correct_answer = data.get('correct_answer')
             category = data.get('category', '')
             time_taken = data.get('time_taken', 0)
+            active_time_seconds = data.get('active_time_seconds', 0)
 
             # Calculate is_correct
             is_correct = (user_answer.strip() == correct_answer.strip())
@@ -900,7 +933,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 user_answer=user_answer,
                 category=category,
                 is_correct=is_correct,
-                time_taken=time_taken
+                time_taken=time_taken,
+                active_time_seconds=active_time_seconds
             )
 
             self.send_json({'success': True})
@@ -2384,6 +2418,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             elif '/view-session/update' in path:
                 session_id = data.get('session_id')
                 pages_viewed = data.get('pages_viewed', [])
+                active_time_seconds = data.get('active_time_seconds', 0)
 
                 if not session_id:
                     self.send_json({'error': 'session_id is required'})
@@ -2391,7 +2426,8 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
                 result = self.annotation_manager.update_pages_viewed(
                     session_id=session_id,
-                    pages_viewed=pages_viewed
+                    pages_viewed=pages_viewed,
+                    active_time_seconds=active_time_seconds
                 )
 
                 self.send_json({
@@ -3264,6 +3300,139 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 })
             
             self.send_json({'date': today, 'activity': activity})
+
+        # GET /api/admin/gk/activity/today - Today's GK activity for parent dashboard
+        elif path == '/api/admin/gk/activity/today':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            activity = self.assessment_db.get_today_activity(user_id)
+
+            # Also get PDF views and revisions from pdf_view_sessions
+            conn = sqlite3.connect(self.db_path)
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            today = datetime.now().strftime('%Y-%m-%d')
+
+            # PDFs viewed today (complete scroll-throughs)
+            cursor.execute("""
+                SELECT pdf_id, completed_at
+                FROM pdf_view_sessions
+                WHERE user_id = ? AND date(completed_at) = ? AND is_complete = 1
+                ORDER BY completed_at DESC
+            """, (user_id, today))
+            views = [dict(row) for row in cursor.fetchall()]
+            conn.close()
+
+            activity['pdfs_viewed'] = len(views)
+            activity['pdf_views'] = views
+            self.send_json(activity)
+
+        # GET /api/admin/gk/views - Get PDF view sessions for a user
+        elif path == '/api/admin/gk/views':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            limit = int(query_params.get('limit', ['100'])[0])
+
+            db_path = Path(__file__).parent.parent / 'revision_tracker.db'
+            conn = sqlite3.connect(str(db_path))
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+
+            try:
+                # Get ALL view sessions (complete and partial) with time spent
+                # Cap time at 60 minutes max per session to avoid overnight idle inflation
+                cursor.execute("""
+                    SELECT pdf_id,
+                           date(COALESCE(completed_at, started_at)) as view_date,
+                           started_at, completed_at, user_id, is_complete,
+                           total_pages, pages_viewed,
+                           CASE
+                               WHEN completed_at IS NOT NULL AND started_at IS NOT NULL
+                               THEN MIN(
+                                   CAST((julianday(completed_at) - julianday(started_at)) * 24 * 60 AS INTEGER),
+                                   60
+                               )
+                               ELSE NULL
+                           END as minutes_spent,
+                           COALESCE(active_time_seconds, 0) as active_time_seconds
+                    FROM pdf_view_sessions
+                    WHERE (user_id = ? OR user_id = 'system') AND pages_viewed != '[]'
+                    ORDER BY started_at DESC
+                    LIMIT ?
+                """, (user_id, limit))
+                all_views = [dict(row) for row in cursor.fetchall()]
+
+                # Separate complete and partial views
+                complete_views = [v for v in all_views if v['is_complete'] == 1]
+                partial_views = [v for v in all_views if v['is_complete'] == 0]
+
+            except Exception as e:
+                print(f"Error fetching PDF views: {e}")
+                all_views = []
+                complete_views = []
+                partial_views = []
+            conn.close()
+            self.send_json({
+                'user_id': user_id,
+                'views': all_views,
+                'complete_views': complete_views,
+                'partial_views': partial_views,
+                'complete_count': len(complete_views),
+                'partial_count': len(partial_views),
+                'count': len(all_views)
+            })
+
+        # GET /api/admin/gk/tests - Get GK test sessions for a user
+        elif path == '/api/admin/gk/tests':
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            date = query_params.get('date', [None])[0]
+            limit = int(query_params.get('limit', ['50'])[0])
+
+            conn = sqlite3.connect(str(Path(__file__).parent / "assessment_tracker.db"))
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+
+            if date:
+                # Filter by specific date with actual time from question_attempts
+                cursor.execute("""
+                    SELECT ts.session_id, ts.pdf_filename, ts.total_questions, ts.correct_answers,
+                           ts.wrong_answers, ts.skipped_answers, ts.score_percentage, ts.time_taken_seconds,
+                           ts.started_at, ts.completed_at, ts.status,
+                           COALESCE(qa.actual_time_seconds, ts.time_taken_seconds, 0) as actual_time_seconds,
+                           COALESCE(qa.active_time_seconds, 0) as active_time_seconds
+                    FROM test_sessions ts
+                    LEFT JOIN (
+                        SELECT session_id,
+                               SUM(time_taken_seconds) as actual_time_seconds,
+                               SUM(active_time_seconds) as active_time_seconds
+                        FROM question_attempts
+                        GROUP BY session_id
+                    ) qa ON ts.session_id = qa.session_id
+                    WHERE ts.user_id = ? AND date(ts.started_at) = ?
+                    ORDER BY ts.started_at DESC
+                """, (user_id, date))
+            else:
+                # Return all tests (limited) with actual time from question_attempts
+                cursor.execute("""
+                    SELECT ts.session_id, ts.pdf_filename, ts.total_questions, ts.correct_answers,
+                           ts.wrong_answers, ts.skipped_answers, ts.score_percentage, ts.time_taken_seconds,
+                           ts.started_at, ts.completed_at, ts.status,
+                           COALESCE(qa.actual_time_seconds, ts.time_taken_seconds, 0) as actual_time_seconds,
+                           COALESCE(qa.active_time_seconds, 0) as active_time_seconds
+                    FROM test_sessions ts
+                    LEFT JOIN (
+                        SELECT session_id,
+                               SUM(time_taken_seconds) as actual_time_seconds,
+                               SUM(active_time_seconds) as active_time_seconds
+                        FROM question_attempts
+                        GROUP BY session_id
+                    ) qa ON ts.session_id = qa.session_id
+                    WHERE ts.user_id = ?
+                    ORDER BY ts.started_at DESC
+                    LIMIT ?
+                """, (user_id, limit))
+
+            tests = [dict(row) for row in cursor.fetchall()]
+            conn.close()
+            self.send_json({'date': date, 'user_id': user_id, 'tests': tests, 'count': len(tests)})
 
         else:
             self.send_json({'error': 'Unknown admin endpoint'})

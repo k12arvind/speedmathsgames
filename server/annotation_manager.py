@@ -591,7 +591,8 @@ class AnnotationManager:
     def update_pages_viewed(
         self,
         session_id: str,
-        pages_viewed: List[int]
+        pages_viewed: List[int],
+        active_time_seconds: int = 0
     ) -> Dict[str, Any]:
         """
         Update which pages have been viewed in a session.
@@ -599,6 +600,7 @@ class AnnotationManager:
         Args:
             session_id: Session ID from start_view_session
             pages_viewed: List of page numbers that have been viewed
+            active_time_seconds: Active time spent (excluding idle/hidden tab time)
 
         Returns:
             Dict with is_complete status and updated pages list
@@ -637,21 +639,27 @@ class AnnotationManager:
             current_pages = set(json.loads(current_pages_json))
             current_pages.update(pages_viewed)
 
-            # Check if complete (all pages 1 to total_pages viewed)
-            is_complete = len(current_pages) >= total_pages and \
-                         all(p in current_pages for p in range(1, total_pages + 1))
+            # Check if complete
+            # A view is complete if:
+            # 1. ALL pages are viewed, OR
+            # 2. At least 85% of pages are viewed (accounts for users not scrolling to empty last pages)
+            all_pages_viewed = all(p in current_pages for p in range(1, total_pages + 1))
+            viewed_percentage = len(current_pages) / total_pages if total_pages > 0 else 0
+            is_complete = all_pages_viewed or viewed_percentage >= 0.85
 
             # Update session
             cursor.execute("""
                 UPDATE pdf_view_sessions
                 SET pages_viewed = ?,
                     is_complete = ?,
-                    completed_at = CASE WHEN ? = 1 THEN CURRENT_TIMESTAMP ELSE completed_at END
+                    completed_at = CASE WHEN ? = 1 THEN CURRENT_TIMESTAMP ELSE completed_at END,
+                    active_time_seconds = ?
                 WHERE session_id = ?
             """, (
                 json.dumps(sorted(current_pages)),
                 1 if is_complete else 0,
                 1 if is_complete else 0,
+                active_time_seconds,
                 session_id
             ))
 

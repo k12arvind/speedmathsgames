@@ -66,8 +66,8 @@
         .member-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-xl);
-            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
             position: relative;
             overflow: hidden;
         }
@@ -78,7 +78,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
         }
 
         .member-card.saanvi::before { background: linear-gradient(135deg, #ec4899, #f472b6); }
@@ -87,18 +87,18 @@
         .member-header {
             display: flex;
             align-items: center;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
         }
 
         .member-avatar {
-            width: 56px;
-            height: 56px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 700;
             color: white;
         }
@@ -107,9 +107,9 @@
         .member-card.navya .member-avatar { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
 
         .member-info h3 {
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .member-info .role {
@@ -119,7 +119,54 @@
             letter-spacing: 0.05em;
         }
 
-        /* Stats Grid */
+        /* Compact Stats Row */
+        .stats-row {
+            display: flex;
+            gap: var(--space-md);
+            padding: 6px 10px;
+            background: var(--bg-primary);
+            border-radius: var(--radius-sm);
+            margin-bottom: 6px;
+            align-items: center;
+        }
+
+        .stats-row-title {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            min-width: 50px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stats-row-title span {
+            font-size: 0.85rem;
+        }
+
+        .stat-inline {
+            display: flex;
+            align-items: baseline;
+            gap: 3px;
+        }
+
+        .stat-inline .stat-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+
+        .stat-inline .stat-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: lowercase;
+        }
+
+        .stat-divider {
+            color: var(--text-muted);
+            opacity: 0.3;
+        }
+
+        /* Legacy support */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -127,7 +174,6 @@
             margin-bottom: var(--space-md);
         }
 
-        /* Stats Section Header */
         .stats-section {
             margin-bottom: var(--space-md);
         }
@@ -169,57 +215,65 @@
             margin-top: 4px;
         }
 
-        /* Today's Activity */
+        /* Today's Activity - Compact */
         .today-activity {
             background: var(--bg-primary);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            padding: 6px 10px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
         }
 
         .activity-header {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-sm);
-            font-size: 0.8rem;
-            color: var(--text-secondary);
+            gap: 4px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            min-width: 50px;
         }
 
         .activity-content {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
         }
 
         .no-activity {
             color: var(--text-muted);
             font-style: italic;
+            font-size: 0.75rem;
         }
 
         .activity-item {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            padding: 4px 0;
+            gap: 4px;
+            font-size: 0.8rem;
         }
 
         .activity-icon {
-            font-size: 1rem;
+            font-size: 0.85rem;
         }
 
-        /* Quick Actions */
+        /* Quick Actions - Compact */
         .quick-actions {
             display: flex;
-            gap: var(--space-sm);
-            margin-top: var(--space-md);
+            gap: 6px;
+            margin-top: 8px;
         }
 
         .quick-btn {
             flex: 1;
-            padding: var(--space-sm) var(--space-md);
+            padding: 4px 8px;
             border: 1px solid var(--border-color);
             background: transparent;
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-sm);
             color: var(--text-secondary);
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             cursor: pointer;
             transition: all var(--transition-fast);
         }
@@ -230,43 +284,43 @@
             border-color: var(--border-accent);
         }
 
-        /* Diary Section */
+        /* Section Cards - Compact */
         .section-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-xl);
-            padding: var(--space-xl);
-            margin-bottom: var(--space-xl);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
         }
 
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: var(--space-lg);
+            margin-bottom: var(--space-sm);
         }
 
         .section-title {
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: 6px;
         }
 
-        /* Tab Buttons */
+        /* Tab Buttons - Compact */
         .tab-buttons {
             display: flex;
-            gap: var(--space-sm);
+            gap: 4px;
         }
 
         .tab-btn {
-            padding: var(--space-sm) var(--space-md);
+            padding: 4px 10px;
             border: 1px solid var(--border-color);
             background: transparent;
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-sm);
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             cursor: pointer;
             transition: all var(--transition-fast);
         }
@@ -288,27 +342,34 @@
             gap: var(--space-md);
         }
 
+        /* Compact diary entries - one line per entry */
         .diary-entry {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
             background: var(--bg-primary);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
-            border-left: 3px solid var(--border-color);
+            border-left: 3px solid #4b5563;
         }
 
-        .diary-entry.saanvi { border-left-color: #ec4899; }
-        .diary-entry.navya { border-left-color: #3b82f6; }
+        .diary-entry.logged { border-left-color: #10b981; background: rgba(16, 185, 129, 0.05); }
+        .diary-entry.not-logged { border-left-color: #6b7280; opacity: 0.7; }
+        .diary-entry.saanvi.logged { border-left-color: #ec4899; background: rgba(236, 72, 153, 0.05); }
+        .diary-entry.navya.logged { border-left-color: #3b82f6; background: rgba(59, 130, 246, 0.05); }
 
-        .diary-entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--space-sm);
+        .diary-entry-date {
+            min-width: 70px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
         }
 
         .diary-entry-user {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: 6px;
+            min-width: 80px;
         }
 
         .user-dot {
@@ -320,30 +381,44 @@
         .user-dot.saanvi { background: #ec4899; }
         .user-dot.navya { background: #3b82f6; }
 
-        .diary-entry-date {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-        }
-
-        .diary-entry-content {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
+        .diary-entry-user strong {
+            font-size: 0.85rem;
         }
 
         .diary-entry-subjects {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--space-xs);
-            margin-top: var(--space-sm);
+            gap: 6px;
+            flex: 1;
         }
 
         .subject-tag {
             background: var(--bg-card);
             padding: 2px 8px;
             border-radius: var(--radius-sm);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .diary-entry-total {
+            font-size: 0.75rem;
+            color: var(--accent-success);
+            font-weight: 600;
+            min-width: 50px;
+            text-align: right;
+        }
+
+        .diary-entries-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .diary-entry-mood {
+            font-size: 0.9rem;
         }
 
         /* Math Settings Section */
@@ -579,6 +654,344 @@
             letter-spacing: 0.05em;
         }
 
+        /* Daily GK Summary Rows */
+        .gk-daily-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .gk-daily-row {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-md);
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--border-color);
+        }
+
+        .gk-daily-row:hover {
+            background: var(--bg-hover);
+        }
+
+        .gk-daily-date {
+            min-width: 100px;
+        }
+
+        .gk-daily-date .date-primary {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+
+        .gk-daily-date .date-user {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .gk-daily-stats {
+            display: flex;
+            gap: var(--space-lg);
+            flex: 1;
+        }
+
+        .daily-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .daily-stat .stat-icon {
+            font-size: 0.9rem;
+        }
+
+        .daily-stat .stat-value {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        .daily-stat .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .daily-stat.correct .stat-value {
+            color: #10b981;
+        }
+
+        .daily-stat.wrong .stat-value {
+            color: #ef4444;
+        }
+
+        .daily-stat.viewed .stat-value {
+            color: #60a5fa;
+        }
+
+        .daily-stat.tested .stat-value {
+            color: #a78bfa;
+        }
+
+        .daily-stat.time .stat-value {
+            color: #8b5cf6;
+        }
+
+        .daily-stat.view-time .stat-value {
+            color: #22d3ee;
+        }
+
+        .daily-stat.test-time .stat-value {
+            color: #a78bfa;
+        }
+
+        /* Time unit styling - smaller but same color as number */
+        .time-unit {
+            font-size: 0.75em;
+            font-weight: 500;
+            margin-left: 3px;
+        }
+
+        .gk-daily-accuracy {
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 6px 12px;
+            border-radius: var(--radius-md);
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .gk-daily-accuracy.high {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .gk-daily-accuracy.medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+
+        .gk-daily-accuracy.low {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        .gk-daily-accuracy.none {
+            background: var(--bg-primary);
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .gk-daily-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .gk-daily-stats {
+                flex-wrap: wrap;
+                gap: var(--space-sm);
+            }
+
+            .gk-daily-accuracy {
+                align-self: flex-end;
+            }
+        }
+
+        /* 7-Day Activity Calendar - Compact */
+        .week-calendar {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .day-cell {
+            flex: 1;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 6px 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .day-cell:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .day-cell.today {
+            border-color: var(--accent-primary);
+            background: rgba(212, 168, 83, 0.1);
+        }
+
+        .day-cell.has-activity {
+            background: rgba(34, 197, 94, 0.08);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .day-cell.no-activity {
+            opacity: 0.5;
+        }
+
+        .day-cell.selected {
+            border-color: var(--accent-primary);
+            background: rgba(212, 168, 83, 0.15);
+        }
+
+        .day-name {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .day-number {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+
+        .day-cell.today .day-number {
+            color: var(--accent-primary);
+        }
+
+        .day-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            margin-top: 2px;
+        }
+
+        .activity-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .activity-dot.diary { background: #a78bfa; }
+        .activity-dot.gk { background: #22c55e; }
+        .activity-dot.math { background: #f59e0b; }
+
+        /* Day Details Panel */
+        .day-details {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-top: var(--space-md);
+            display: none;
+        }
+
+        .day-details.visible {
+            display: block;
+            animation: slideDown 0.2s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .day-details-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .day-details-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .close-details {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+
+        .activity-section {
+            margin-bottom: var(--space-md);
+        }
+
+        .activity-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .activity-section-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .activity-item {
+            background: var(--bg-primary);
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .activity-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* User Toggle for Calendar - Compact */
+        .calendar-user-toggle {
+            display: flex;
+            gap: 4px;
+        }
+
+        .user-toggle-btn {
+            padding: 3px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .user-toggle-btn.active {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: white;
+        }
+
+        .user-toggle-btn.saanvi.active {
+            background: #ec4899;
+            border-color: #ec4899;
+        }
+
+        .user-toggle-btn.navya.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+        }
+
+        /* Legend - Compact */
+        .calendar-legend {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 6px;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .stats-grid {
@@ -612,6 +1025,34 @@
             <div class="loading">Loading family data...</div>
         </div>
 
+        <!-- 7-Day Activity Calendar -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2 class="section-title">📅 Weekly Activity Tracker</h2>
+                <div class="calendar-user-toggle">
+                    <button class="user-toggle-btn saanvi active" data-user="saanvi">Saanvi</button>
+                    <button class="user-toggle-btn navya" data-user="navya">Navya</button>
+                </div>
+            </div>
+            <div class="calendar-legend">
+                <div class="legend-item"><span class="activity-dot diary"></span> Diary</div>
+                <div class="legend-item"><span class="activity-dot gk"></span> GK Practice</div>
+                <div class="legend-item"><span class="activity-dot math"></span> Math</div>
+            </div>
+            <div class="week-calendar" id="week-calendar">
+                <!-- Days will be generated by JavaScript -->
+            </div>
+            <div class="day-details" id="day-details">
+                <div class="day-details-header">
+                    <span class="day-details-title" id="details-date">January 8, 2026</span>
+                    <button class="close-details" onclick="closeDayDetails()">&times;</button>
+                </div>
+                <div id="details-content">
+                    <!-- Activity details will be loaded here -->
+                </div>
+            </div>
+        </div>
+
         <!-- Diary Entries Section -->
         <div class="section-card">
             <div class="section-header">
@@ -632,8 +1073,8 @@
             <div class="section-header">
                 <h2 class="section-title">📚 GK Practice History</h2>
                 <div class="tab-buttons">
-                    <button class="tab-btn active" data-gk-filter="all">All</button>
-                    <button class="tab-btn" data-gk-filter="saanvi">Saanvi</button>
+                    <button class="tab-btn" data-gk-filter="all">All</button>
+                    <button class="tab-btn active" data-gk-filter="saanvi">Saanvi</button>
                     <button class="tab-btn" data-gk-filter="navya">Navya</button>
                 </div>
             </div>
@@ -659,10 +1100,19 @@
         // Format date for display
         function formatDate(dateStr) {
             const date = new Date(dateStr);
-            return date.toLocaleDateString('en-IN', { 
-                weekday: 'short', 
-                day: 'numeric', 
-                month: 'short' 
+            return date.toLocaleDateString('en-IN', {
+                weekday: 'short',
+                day: 'numeric',
+                month: 'short'
+            });
+        }
+
+        // Compact date format for diary entries (e.g., "Jan 8")
+        function formatDateCompact(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-IN', {
+                day: 'numeric',
+                month: 'short'
             });
         }
 
@@ -716,6 +1166,9 @@
                         activityHtml = '<div class="no-activity">No diary entry today</div>';
                     }
 
+                    // Helper for accuracy color
+                    const getAccuracyColor = (acc) => acc >= 70 ? '#10b981' : acc >= 50 ? '#f59e0b' : '#ef4444';
+
                     html += `
                         <div class="member-card ${child.user_id}">
                             <div class="member-header">
@@ -725,73 +1178,63 @@
                                     <div class="role">Daughter</div>
                                 </div>
                             </div>
-                            
-                            <!-- Math Stats Section -->
-                            <div class="stats-section">
-                                <div class="stats-section-title"><span>🧮</span> Math Practice</div>
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">${child.math_sessions || 0}</div>
-                                        <div class="stat-label">Sessions</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">${child.math_questions || 0}</div>
-                                        <div class="stat-label">Questions</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">${child.math_correct || 0}</div>
-                                        <div class="stat-label">Correct</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value" style="color: ${child.math_accuracy >= 70 ? '#10b981' : child.math_accuracy >= 50 ? '#f59e0b' : '#ef4444'}">
-                                            ${child.math_accuracy ? child.math_accuracy.toFixed(0) + '%' : '-'}
-                                        </div>
-                                        <div class="stat-label">Accuracy</div>
-                                    </div>
+
+                            <!-- Math Stats - Compact Row -->
+                            <div class="stats-row">
+                                <div class="stats-row-title"><span>🧮</span> Math</div>
+                                <div class="stat-inline">
+                                    <span class="stat-value">${child.math_sessions || 0}</span>
+                                    <span class="stat-label">sess</span>
+                                </div>
+                                <span class="stat-divider">·</span>
+                                <div class="stat-inline">
+                                    <span class="stat-value">${child.math_questions || 0}</span>
+                                    <span class="stat-label">Q</span>
+                                </div>
+                                <span class="stat-divider">·</span>
+                                <div class="stat-inline">
+                                    <span class="stat-value">${child.math_correct || 0}</span>
+                                    <span class="stat-label">✓</span>
+                                </div>
+                                <span class="stat-divider">·</span>
+                                <div class="stat-inline">
+                                    <span class="stat-value" style="color: ${getAccuracyColor(child.math_accuracy)}">${child.math_accuracy ? child.math_accuracy.toFixed(0) + '%' : '-'}</span>
                                 </div>
                             </div>
-                            
-                            <!-- GK Stats Section -->
-                            <div class="stats-section">
-                                <div class="stats-section-title"><span>📚</span> GK Practice</div>
-                                <div class="stats-grid">
-                                    <div class="stat-box">
-                                        <div class="stat-value">${child.gk_pdfs_revised || 0}</div>
-                                        <div class="stat-label">PDFs Revised</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">${child.gk_tests || 0}</div>
-                                        <div class="stat-label">Tests</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value">${child.gk_questions || 0}</div>
-                                        <div class="stat-label">Questions</div>
-                                    </div>
-                                    <div class="stat-box">
-                                        <div class="stat-value" style="color: ${child.gk_accuracy >= 70 ? '#10b981' : child.gk_accuracy >= 50 ? '#f59e0b' : '#ef4444'}">
-                                            ${child.gk_accuracy ? child.gk_accuracy.toFixed(0) + '%' : '-'}
-                                        </div>
-                                        <div class="stat-label">Accuracy</div>
-                                    </div>
+
+                            <!-- GK Stats - Compact Row -->
+                            <div class="stats-row">
+                                <div class="stats-row-title"><span>📚</span> GK</div>
+                                <div class="stat-inline">
+                                    <span class="stat-value">${child.gk_pdfs_revised || 0}</span>
+                                    <span class="stat-label">PDFs</span>
+                                </div>
+                                <span class="stat-divider">·</span>
+                                <div class="stat-inline">
+                                    <span class="stat-value">${child.gk_tests || 0}</span>
+                                    <span class="stat-label">tests</span>
+                                </div>
+                                <span class="stat-divider">·</span>
+                                <div class="stat-inline">
+                                    <span class="stat-value">${child.gk_questions || 0}</span>
+                                    <span class="stat-label">Q</span>
+                                </div>
+                                <span class="stat-divider">·</span>
+                                <div class="stat-inline">
+                                    <span class="stat-value" style="color: ${getAccuracyColor(child.gk_accuracy)}">${child.gk_accuracy ? child.gk_accuracy.toFixed(0) + '%' : '-'}</span>
                                 </div>
                             </div>
-                            
-                            <!-- Study Diary Section -->
-                            <div class="stats-section">
-                                <div class="stats-section-title"><span>📔</span> Study Diary</div>
-                                <div class="stats-grid" style="grid-template-columns: 1fr;">
-                                    <div class="stat-box">
-                                        <div class="stat-value">${child.diary_entries_this_week}</div>
-                                        <div class="stat-label">Entries This Week</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
+
+                            <!-- Study Diary + Today's Activity - Compact Row -->
                             <div class="today-activity">
-                                <div class="activity-header">
-                                    <span>📅</span> Today's Activity
-                                </div>
-                                ${activityHtml}
+                                <div class="activity-header"><span>📅</span> Today</div>
+                                ${activity && activity.has_diary_entry
+                                    ? `<span style="color: #10b981; font-size: 0.75rem;">✓ Logged</span>
+                                       ${activity.diary_summary.total_hours ? `<span class="stat-divider">·</span><span style="font-size: 0.8rem;">${activity.diary_summary.total_hours}h studied</span>` : ''}
+                                       ${activity.diary_summary.subjects && activity.diary_summary.subjects.length > 0 ? `<span class="stat-divider">·</span><span style="font-size: 0.75rem; color: var(--text-muted);">${activity.diary_summary.subjects.map(s => s.subject_name).join(', ')}</span>` : ''}`
+                                    : '<span class="no-activity">No entry today</span>'
+                                }
+                                <span style="margin-left: auto; font-size: 0.7rem; color: var(--text-muted);">${child.diary_entries_this_week} this week</span>
                             </div>
                             
                             <div class="quick-actions">
@@ -841,32 +1284,42 @@
                     return;
                 }
 
-                let html = '';
+                let html = '<div class="diary-entries-list">';
                 entries.forEach(entry => {
-                    const subjectsHtml = entry.subjects && entry.subjects.length > 0 
-                        ? `<div class="diary-entry-subjects">
-                            ${entry.subjects.map(s => `<span class="subject-tag">${s.subject_name} (${s.time_spent_minutes || 0}min)</span>`).join('')}
-                           </div>`
-                        : '';
+                    const hasStudyData = entry.subjects && entry.subjects.length > 0;
+                    const isLogged = hasStudyData || entry.total_study_hours > 0;
+                    const loggedClass = isLogged ? 'logged' : 'not-logged';
+
+                    // Compact subject display (just names, no time per subject)
+                    const subjectNames = hasStudyData
+                        ? entry.subjects.map(s => s.subject_name).join(', ')
+                        : '-';
+
+                    // Total time in a readable format
+                    const totalMins = hasStudyData ? entry.subjects.reduce((sum, s) => sum + (s.time_spent_minutes || 0), 0) : 0;
+                    const totalTime = entry.total_study_hours
+                        ? `${entry.total_study_hours}<span class="time-unit">hrs</span>`
+                        : (totalMins > 0 ? `${totalMins}<span class="time-unit">min</span>` : '-');
 
                     html += `
-                        <div class="diary-entry ${entry.user_id}">
-                            <div class="diary-entry-header">
-                                <div class="diary-entry-user">
-                                    <span class="user-dot ${entry.user_id}"></span>
-                                    <strong>${entry.user_name || entry.user_id}</strong>
-                                    ${entry.mood ? `<span style="margin-left: 8px;">${getMoodEmoji(entry.mood)}</span>` : ''}
-                                </div>
-                                <div class="diary-entry-date">${formatDate(entry.entry_date)}</div>
+                        <div class="diary-entry ${entry.user_id} ${loggedClass}">
+                            <div class="diary-entry-date">${formatDateCompact(entry.entry_date)}</div>
+                            <div class="diary-entry-user">
+                                <span class="user-dot ${entry.user_id}"></span>
+                                <strong>${(entry.user_name || entry.user_id).charAt(0).toUpperCase()}</strong>
                             </div>
-                            <div class="diary-entry-content">
-                                ${entry.journal_text || '<em>No journal entry</em>'}
+                            ${entry.mood ? `<span class="diary-entry-mood">${getMoodEmoji(entry.mood)}</span>` : ''}
+                            <div class="diary-entry-subjects">
+                                ${hasStudyData
+                                    ? entry.subjects.map(s => `<span class="subject-tag">${s.subject_name}</span>`).join('')
+                                    : '<span style="color: var(--text-muted); font-size: 0.75rem;">No session</span>'
+                                }
                             </div>
-                            ${subjectsHtml}
-                            ${entry.total_study_hours ? `<div style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted);">📚 ${entry.total_study_hours}h total study time</div>` : ''}
+                            <div class="diary-entry-total">${totalTime !== '-' ? totalTime : ''}</div>
                         </div>
                     `;
                 });
+                html += '</div>';
                 
                 document.getElementById('diary-entries').innerHTML = html;
             } catch (error) {
@@ -1034,35 +1487,74 @@
             document.getElementById('gk-stats-container').scrollIntoView({ behavior: 'smooth' });
         }
 
+        // Map display names to database user IDs
+        function mapUserIdForGK(displayName) {
+            // Assessment database now uses 'saanvi' (was previously 'daughter')
+            // Keep the mapping in case we need to adjust
+            const mapping = { 'saanvi': 'saanvi', 'navya': 'navya' };
+            return mapping[displayName] || displayName;
+        }
+
         // Load GK stats
         async function loadGKStats(filter = 'all') {
             const container = document.getElementById('gk-stats-container');
             container.innerHTML = '<div class="loading">Loading GK stats...</div>';
-            
+
             try {
                 // Get GK tests for children
-                const users = filter === 'all' ? ['saanvi', 'navya'] : [filter];
+                const displayUsers = filter === 'all' ? ['saanvi', 'navya'] : [filter];
                 let allTests = [];
                 let totalPDFs = new Set();
                 let totalQuestions = 0;
                 let totalCorrect = 0;
-                
-                for (const userId of users) {
-                    const response = await fetch(`${API_BASE}/api/assessment/tests?user_id=${userId}`);
-                    const data = await response.json();
-                    
-                    if (data.tests) {
-                        data.tests.forEach(test => {
-                            test.user_id = userId;
-                            test.user_name = userId.charAt(0).toUpperCase() + userId.slice(1);
-                            allTests.push(test);
-                            
-                            if (test.status === 'completed') {
-                                totalPDFs.add(test.pdf_filename);
-                                totalQuestions += test.total_questions || 0;
-                                totalCorrect += test.correct_answers || 0;
-                            }
-                        });
+
+                let allViews = [];
+
+                for (const displayUser of displayUsers) {
+                    const dbUserId = mapUserIdForGK(displayUser);
+
+                    // Fetch tests
+                    try {
+                        const response = await fetch(`${API_BASE}/api/admin/gk/tests?user_id=${dbUserId}&limit=50`);
+                        const data = await response.json();
+
+                        if (data.error) {
+                            console.error(`GK tests API error for ${displayUser}:`, data.error);
+                        } else if (data.tests && Array.isArray(data.tests)) {
+                            console.log(`Loaded ${data.tests.length} GK tests for ${displayUser}`);
+                            data.tests.forEach(test => {
+                                test.user_id = displayUser;
+                                test.user_name = displayUser.charAt(0).toUpperCase() + displayUser.slice(1);
+                                allTests.push(test);
+
+                                if (test.status === 'completed') {
+                                    totalPDFs.add(test.pdf_filename);
+                                    totalQuestions += test.total_questions || 0;
+                                    totalCorrect += test.correct_answers || 0;
+                                }
+                            });
+                        }
+                    } catch (e) {
+                        console.error(`Failed to fetch GK tests for ${displayUser}:`, e);
+                    }
+
+                    // Fetch views
+                    try {
+                        const viewResponse = await fetch(`${API_BASE}/api/admin/gk/views?user_id=${dbUserId}&limit=100`);
+                        const viewData = await viewResponse.json();
+
+                        if (viewData.error) {
+                            console.error(`GK views API error for ${displayUser}:`, viewData.error);
+                        } else if (viewData.views && Array.isArray(viewData.views)) {
+                            console.log(`Loaded ${viewData.views.length} PDF views for ${displayUser}`);
+                            viewData.views.forEach(view => {
+                                view.user_id = displayUser;
+                                view.user_name = displayUser.charAt(0).toUpperCase() + displayUser.slice(1);
+                                allViews.push(view);
+                            });
+                        }
+                    } catch (e) {
+                        console.error(`Failed to fetch PDF views for ${displayUser}:`, e);
                     }
                 }
                 
@@ -1094,48 +1586,166 @@
                     </div>
                 `;
                 
-                if (allTests.length === 0) {
-                    html += '<div class="loading">No GK tests found</div>';
+                if (allTests.length === 0 && allViews.length === 0) {
+                    html += '<div class="loading">No GK activity found</div>';
                 } else {
-                    html += '<div class="gk-test-list">';
-                    allTests.slice(0, 20).forEach(test => {
-                        const score = test.score || 0;
-                        const scoreClass = score >= 70 ? 'high' : score >= 50 ? 'medium' : 'low';
-                        const date = test.started_at ? formatDate(test.started_at) : '-';
-                        
+                    // Group activity by date
+                    const activityByDate = {};
+
+                    // Process views (now includes complete and partial)
+                    allViews.forEach(view => {
+                        const dateKey = view.view_date || (view.started_at ? view.started_at.split('T')[0] : null);
+                        if (!dateKey) return;
+
+                        if (!activityByDate[dateKey]) {
+                            activityByDate[dateKey] = {
+                                date: dateKey,
+                                completeViewPdfs: new Set(),
+                                partialViewPdfs: new Set(),
+                                testedPdfs: new Set(),
+                                attempted: 0,
+                                correctAnswers: 0,
+                                wrongAnswers: 0,
+                                viewActiveSeconds: 0,
+                                testActiveSeconds: 0,
+                                users: new Set()
+                            };
+                        }
+                        // Track complete vs partial views
+                        if (view.is_complete) {
+                            activityByDate[dateKey].completeViewPdfs.add(view.pdf_id);
+                        } else {
+                            activityByDate[dateKey].partialViewPdfs.add(view.pdf_id);
+                        }
+                        // Add ACTIVE time spent viewing (excludes idle/hidden tab time)
+                        // Only use active_time_seconds - DO NOT fallback to elapsed time
+                        if (view.active_time_seconds && view.active_time_seconds > 0) {
+                            activityByDate[dateKey].viewActiveSeconds += view.active_time_seconds;
+                        }
+                        activityByDate[dateKey].users.add(view.user_name);
+                    });
+
+                    // Process tests (only count completed tests with actual attempts)
+                    allTests.forEach(test => {
+                        if (test.started_at) {
+                            const correct = test.correct_answers || 0;
+                            const wrong = test.wrong_answers || 0;
+                            const attempted = correct + wrong;
+
+                            // Skip tests with no attempts (incomplete/abandoned)
+                            if (attempted === 0) return;
+
+                            const dateKey = test.started_at.split('T')[0];
+                            if (!activityByDate[dateKey]) {
+                                activityByDate[dateKey] = {
+                                    date: dateKey,
+                                    completeViewPdfs: new Set(),
+                                    partialViewPdfs: new Set(),
+                                    testedPdfs: new Set(),
+                                    attempted: 0,
+                                    correctAnswers: 0,
+                                    wrongAnswers: 0,
+                                    viewActiveSeconds: 0,
+                                    testActiveSeconds: 0,
+                                    users: new Set()
+                                };
+                            }
+                            activityByDate[dateKey].testedPdfs.add(test.pdf_filename);
+                            activityByDate[dateKey].attempted += attempted;
+                            activityByDate[dateKey].correctAnswers += correct;
+                            activityByDate[dateKey].wrongAnswers += wrong;
+                            // Add ACTIVE time spent on test (excludes idle/hidden tab time)
+                            // Only use active_time_seconds - DO NOT fallback to elapsed time
+                            if (test.active_time_seconds && test.active_time_seconds > 0) {
+                                activityByDate[dateKey].testActiveSeconds += test.active_time_seconds;
+                            }
+                            activityByDate[dateKey].users.add(test.user_name);
+                        }
+                    });
+
+                    // Sort dates descending
+                    const sortedDates = Object.keys(activityByDate).sort((a, b) => new Date(b) - new Date(a));
+
+                    html += '<div class="gk-daily-list">';
+                    sortedDates.slice(0, 14).forEach(dateKey => {
+                        const day = activityByDate[dateKey];
+                        const accuracy = day.attempted > 0
+                            ? (day.correctAnswers / day.attempted * 100)
+                            : 0;
+                        const accuracyClass = day.attempted > 0 ? (accuracy >= 70 ? 'high' : accuracy >= 50 ? 'medium' : 'low') : 'none';
+                        const displayDate = formatDate(dateKey);
+                        const userList = Array.from(day.users).join(', ');
+                        const completeViews = day.completeViewPdfs ? day.completeViewPdfs.size : 0;
+                        const partialViews = day.partialViewPdfs ? day.partialViewPdfs.size : 0;
+                        const testedCount = day.testedPdfs.size;
+
+                        // Format ACTIVE time spent (excludes idle/hidden tab time)
+                        const viewActiveMins = Math.round((day.viewActiveSeconds || 0) / 60);
+                        const testActiveMins = Math.round((day.testActiveSeconds || 0) / 60);
+                        const totalActiveMins = viewActiveMins + testActiveMins;
+                        const timeDisplay = totalActiveMins > 0 ? `${totalActiveMins}m` : '-';
+                        const timeBreakdown = totalActiveMins > 0 ? `View: ${viewActiveMins}m, Test: ${testActiveMins}m (active time)` : '';
+
+                        // View display: show complete/partial breakdown
+                        const viewDisplay = completeViews > 0 || partialViews > 0
+                            ? `${completeViews}${partialViews > 0 ? `+${partialViews}` : ''}`
+                            : '0';
+                        const viewTitle = `${completeViews} complete, ${partialViews} partial views`;
+
                         html += `
-                            <div class="gk-test-entry ${test.user_id}">
-                                <div class="gk-test-header">
-                                    <div class="gk-test-info">
-                                        <span class="user-dot ${test.user_id}"></span>
-                                        <div>
-                                            <div class="gk-pdf-name">${test.pdf_filename || 'Unknown PDF'}</div>
-                                            <div class="gk-test-date">${test.user_name} • ${date}</div>
-                                        </div>
+                            <div class="gk-daily-row">
+                                <div class="gk-daily-date">
+                                    <div class="date-primary">${displayDate}</div>
+                                    <div class="date-user">${userList}</div>
+                                </div>
+                                <div class="gk-daily-stats">
+                                    <div class="daily-stat viewed" title="${viewTitle}">
+                                        <span class="stat-icon">👁️</span>
+                                        <span class="stat-value">${viewDisplay}</span>
+                                        <span class="stat-label">View</span>
                                     </div>
-                                    <div class="gk-test-score ${scoreClass}">
-                                        ${score.toFixed(0)}%
+                                    <div class="daily-stat tested">
+                                        <span class="stat-icon">📝</span>
+                                        <span class="stat-value">${testedCount}</span>
+                                        <span class="stat-label">Test</span>
+                                    </div>
+                                    <div class="daily-stat">
+                                        <span class="stat-icon">❓</span>
+                                        <span class="stat-value">${day.attempted}</span>
+                                        <span class="stat-label">Qs</span>
+                                    </div>
+                                    <div class="daily-stat correct">
+                                        <span class="stat-icon">✅</span>
+                                        <span class="stat-value">${day.correctAnswers}</span>
+                                        <span class="stat-label">Right</span>
+                                    </div>
+                                    <div class="daily-stat wrong">
+                                        <span class="stat-icon">❌</span>
+                                        <span class="stat-value">${day.wrongAnswers}</span>
+                                        <span class="stat-label">Wrong</span>
+                                    </div>
+                                    <div class="daily-stat view-time" title="Time spent viewing PDFs">
+                                        <span class="stat-icon">📖</span>
+                                        <span class="stat-value">${viewActiveMins > 0 ? `${viewActiveMins}<span class="time-unit">min</span>` : '-'}</span>
+                                        <span class="stat-label">View</span>
+                                    </div>
+                                    <div class="daily-stat test-time" title="Time spent on tests">
+                                        <span class="stat-icon">⏱️</span>
+                                        <span class="stat-value">${testActiveMins > 0 ? `${testActiveMins}<span class="time-unit">min</span>` : '-'}</span>
+                                        <span class="stat-label">Test</span>
                                     </div>
                                 </div>
-                                <div class="gk-test-details">
-                                    <div class="gk-test-detail">
-                                        <span>✅</span> ${test.correct_answers || 0}/${test.total_questions || 0} correct
-                                    </div>
-                                    <div class="gk-test-detail">
-                                        <span>❌</span> ${test.wrong_answers || 0} wrong
-                                    </div>
-                                    <div class="gk-test-detail">
-                                        <span>⏭️</span> ${test.skipped_answers || 0} skipped
-                                    </div>
+                                <div class="gk-daily-accuracy ${accuracyClass}">
+                                    ${day.attempted > 0 ? accuracy.toFixed(0) + '%' : '-'}
                                 </div>
                             </div>
                         `;
                     });
                     html += '</div>';
-                    
-                    if (allTests.length > 20) {
+
+                    if (sortedDates.length > 14) {
                         html += `<div style="text-align: center; margin-top: var(--space-md); color: var(--text-muted);">
-                            Showing 20 of ${allTests.length} tests
+                            Showing last 14 days
                         </div>`;
                     }
                 }
@@ -1172,12 +1782,222 @@
             document.getElementById('current-date').textContent = now.toLocaleDateString('en-IN', options);
         }
 
+        // ============== 7-Day Activity Calendar ==============
+
+        let selectedCalendarUser = 'saanvi';
+        let weeklyActivityData = {};
+
+        // Generate last 7 days
+        function getLast7Days() {
+            const days = [];
+            const today = new Date();
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date(today);
+                date.setDate(today.getDate() - i);
+                days.push(date);
+            }
+            return days;
+        }
+
+        // Load weekly activity data
+        async function loadWeeklyActivity() {
+            const days = getLast7Days();
+            const gkUserId = mapUserIdForGK(selectedCalendarUser);
+
+            // Fetch diary entries for the week
+            try {
+                const diaryResponse = await fetch(`${API_BASE}/api/diary/entries?user_id=${selectedCalendarUser}&days=7`);
+                const diaryData = await diaryResponse.json();
+
+                // Map diary entries by date
+                const diaryByDate = {};
+                if (diaryData.entries) {
+                    diaryData.entries.forEach(entry => {
+                        const dateKey = entry.entry_date.split('T')[0];
+                        diaryByDate[dateKey] = entry;
+                    });
+                }
+
+                // Fetch all GK tests for the user, then group by date
+                const gkByDate = {};
+                try {
+                    const gkResponse = await fetch(`${API_BASE}/api/admin/gk/tests?user_id=${gkUserId}&limit=100`);
+                    const gkData = await gkResponse.json();
+
+                    if (gkData.error) {
+                        console.error('GK API error for calendar:', gkData.error);
+                    } else if (gkData.tests && Array.isArray(gkData.tests)) {
+                        console.log(`Calendar: Loaded ${gkData.tests.length} GK tests for ${selectedCalendarUser}`);
+                        gkData.tests.forEach(test => {
+                            if (test.started_at) {
+                                const dateKey = test.started_at.split('T')[0];
+                                if (!gkByDate[dateKey]) {
+                                    gkByDate[dateKey] = [];
+                                }
+                                gkByDate[dateKey].push(test);
+                            }
+                        });
+                        console.log('GK tests by date:', Object.keys(gkByDate));
+                    }
+                } catch (e) {
+                    console.error('Error fetching GK tests for calendar:', e);
+                }
+
+                // Build activity data
+                weeklyActivityData = {};
+                days.forEach(day => {
+                    const dateStr = day.toISOString().split('T')[0];
+                    weeklyActivityData[dateStr] = {
+                        date: day,
+                        diary: diaryByDate[dateStr] || null,
+                        gk: gkByDate[dateStr] || [],
+                        math: [] // TODO: Add math session data when available
+                    };
+                });
+
+                renderWeekCalendar();
+            } catch (error) {
+                console.error('Error loading weekly activity:', error);
+                renderWeekCalendar();
+            }
+        }
+
+        // Render the week calendar
+        function renderWeekCalendar() {
+            const days = getLast7Days();
+            const today = new Date().toISOString().split('T')[0];
+            const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+            let html = '';
+            days.forEach(day => {
+                const dateStr = day.toISOString().split('T')[0];
+                const activity = weeklyActivityData[dateStr] || {};
+                const isToday = dateStr === today;
+
+                const hasDiary = activity.diary && (activity.diary.subjects?.length > 0 || activity.diary.journal_text);
+                const hasGK = activity.gk && activity.gk.length > 0;
+                const hasMath = activity.math && activity.math.length > 0;
+                const hasAnyActivity = hasDiary || hasGK || hasMath;
+
+                html += `
+                    <div class="day-cell ${isToday ? 'today' : ''} ${hasAnyActivity ? 'has-activity' : 'no-activity'}"
+                         onclick="showDayDetails('${dateStr}')"
+                         data-date="${dateStr}">
+                        <div class="day-name">${dayNames[day.getDay()]}</div>
+                        <div class="day-number">${day.getDate()}</div>
+                        <div class="day-indicators">
+                            ${hasDiary ? '<span class="activity-dot diary" title="Diary entry"></span>' : ''}
+                            ${hasGK ? '<span class="activity-dot gk" title="GK practice"></span>' : ''}
+                            ${hasMath ? '<span class="activity-dot math" title="Math practice"></span>' : ''}
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('week-calendar').innerHTML = html;
+        }
+
+        // Show day details
+        function showDayDetails(dateStr) {
+            const activity = weeklyActivityData[dateStr] || {};
+            const date = new Date(dateStr);
+            const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+
+            document.getElementById('details-date').textContent = date.toLocaleDateString('en-IN', options);
+
+            // Clear previous selection
+            document.querySelectorAll('.day-cell').forEach(cell => cell.classList.remove('selected'));
+            document.querySelector(`.day-cell[data-date="${dateStr}"]`)?.classList.add('selected');
+
+            let html = '';
+
+            // Diary section
+            if (activity.diary) {
+                const diary = activity.diary;
+                html += `
+                    <div class="activity-section">
+                        <div class="activity-section-title">
+                            <span class="activity-dot diary"></span> Study Diary
+                        </div>
+                        ${diary.journal_text ? `<div class="activity-item">${diary.journal_text}</div>` : ''}
+                        ${diary.subjects && diary.subjects.length > 0 ? `
+                            <div class="activity-item">
+                                <strong>Subjects:</strong> ${diary.subjects.map(s => `${s.subject_name} (${s.time_spent_minutes}min)`).join(', ')}
+                            </div>
+                        ` : ''}
+                        ${diary.total_study_hours ? `<div class="activity-item">Total: ${diary.total_study_hours}h</div>` : ''}
+                    </div>
+                `;
+            }
+
+            // GK section
+            if (activity.gk && activity.gk.length > 0) {
+                html += `
+                    <div class="activity-section">
+                        <div class="activity-section-title">
+                            <span class="activity-dot gk"></span> GK Practice
+                        </div>
+                        ${activity.gk.map(test => `
+                            <div class="activity-item">
+                                ${test.pdf_filename ? test.pdf_filename.replace('.pdf', '').replace(/_/g, ' ') : 'Test'}
+                                - ${test.correct_answers || 0}/${test.total_questions || 0} correct
+                                (${(test.score_percentage || 0).toFixed(0)}%)
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            // Math section
+            if (activity.math && activity.math.length > 0) {
+                html += `
+                    <div class="activity-section">
+                        <div class="activity-section-title">
+                            <span class="activity-dot math"></span> Math Practice
+                        </div>
+                        ${activity.math.map(session => `
+                            <div class="activity-item">${session.topic} - ${session.correct}/${session.total}</div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            // No activity
+            if (!html) {
+                html = '<div class="activity-item" style="color: var(--text-muted);">No activity recorded for this day</div>';
+            }
+
+            document.getElementById('details-content').innerHTML = html;
+            document.getElementById('day-details').classList.add('visible');
+        }
+
+        // Close day details
+        function closeDayDetails() {
+            document.getElementById('day-details').classList.remove('visible');
+            document.querySelectorAll('.day-cell').forEach(cell => cell.classList.remove('selected'));
+        }
+
+        // Setup calendar user toggle
+        function setupCalendarToggle() {
+            document.querySelectorAll('.user-toggle-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.user-toggle-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedCalendarUser = btn.dataset.user;
+                    closeDayDetails();
+                    loadWeeklyActivity();
+                });
+            });
+        }
+
         // Initialize
         setCurrentDate();
         loadFamilyOverview();
         loadDiaryEntries();
-        loadGKStats();
+        loadGKStats('saanvi');
         loadMathSettings();
+        setupCalendarToggle();
+        loadWeeklyActivity();
     </script>
 </body>
 </html>

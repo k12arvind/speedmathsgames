@@ -318,6 +318,48 @@
             border: 1px solid rgba(124, 58, 237, 0.3);
         }
 
+        /* Difficulty Badges */
+        .difficulty-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 8px;
+        }
+
+        .difficulty-badge.easy {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .difficulty-badge.medium {
+            background: rgba(234, 179, 8, 0.15);
+            color: #eab308;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+        }
+
+        .difficulty-badge.difficult {
+            background: rgba(249, 115, 22, 0.15);
+            color: #f97316;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+        }
+
+        .difficulty-badge.very-difficult {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .difficulty-badge.not-attempted {
+            background: rgba(113, 113, 122, 0.15);
+            color: #71717a;
+            border: 1px solid rgba(113, 113, 122, 0.3);
+        }
+
         .choices-container {
             margin: 24px 0;
         }
@@ -703,7 +745,7 @@
 
             <div class="question-card">
                 <div class="question-number">Question <span id="q-num">1</span></div>
-                <div class="question-category" id="q-category">Category</div>
+                <div class="question-category" id="q-category">Category</div><span class="difficulty-badge easy" id="q-difficulty">Easy</span>
                 <div class="question-text" id="q-text">Loading question...</div>
 
                 <!-- Multiple choice options -->
@@ -838,6 +880,62 @@
         let lastSubmitTime = 0;  // Track last submit time for debouncing
         let debugLogs = [];  // Store all debug logs
         let isWaitingForNextQuestion = false;  // Track if we're showing feedback and waiting for "Next Question" click
+
+        // Active time tracking state
+        let questionActiveTimeSeconds = 0;  // Active time for current question
+        let totalActiveTimeSeconds = 0;  // Total active time for test
+        let isPageVisible = true;
+        let activeTimeInterval = null;
+
+        // =============================================
+        // Active Time Tracking Functions
+        // For tests: track time when page is visible (focused)
+        // Don't use idle timeout - reading/thinking is still active test-taking
+        // =============================================
+
+        function startActiveTimeTracking() {
+            // Handle visibility changes (tab switching) - this is the only pause condition
+            document.addEventListener('visibilitychange', onVisibilityChange);
+
+            // Start the timer that increments active time when page is visible
+            activeTimeInterval = setInterval(() => {
+                if (isPageVisible && !document.hidden) {
+                    questionActiveTimeSeconds++;
+                    totalActiveTimeSeconds++;
+                }
+            }, 1000);
+
+            console.log('Active time tracking started (visible page time)');
+        }
+
+        function onVisibilityChange() {
+            if (document.hidden) {
+                isPageVisible = false;
+                console.log('Tab hidden - pausing active time');
+            } else {
+                isPageVisible = true;
+                console.log('Tab visible - resuming active time');
+            }
+        }
+
+        function resetQuestionActiveTime() {
+            questionActiveTimeSeconds = 0;
+        }
+
+        function getQuestionActiveTime() {
+            return questionActiveTimeSeconds;
+        }
+
+        function getTotalActiveTime() {
+            return totalActiveTimeSeconds;
+        }
+
+        function stopActiveTimeTracking() {
+            if (activeTimeInterval) {
+                clearInterval(activeTimeInterval);
+                activeTimeInterval = null;
+            }
+        }
 
         // Debug logging function
         function debugLog(message, data = null) {
@@ -1300,6 +1398,9 @@
                 answers = [];
                 testStartTime = Date.now();
 
+                // Start active time tracking
+                startActiveTimeTracking();
+
                 // Update UI with actual question count
                 const actualQuestionCount = questions.length;
                 document.getElementById('total-q').textContent = actualQuestionCount;
@@ -1323,6 +1424,9 @@
 
         // Show question
         function showQuestion() {
+            // Reset active time for this question
+            resetQuestionActiveTime();
+
             debugLog('=== SHOW QUESTION CALLED ===', {
                 questionsLength: questions ? questions.length : 'undefined',
                 currentQuestionIndex
@@ -1348,6 +1452,9 @@
             document.getElementById('q-num').textContent = currentQuestionIndex + 1;
             document.getElementById('q-category').textContent = question.category;
             document.getElementById('q-text').textContent = question.question;
+
+            // Fetch and display difficulty tag
+            updateDifficultyBadge(question.id || question.anki_note_id);
 
             // Render multiple choice options
             const choicesContainer = document.getElementById('choices-container');
@@ -1395,6 +1502,38 @@
             }
 
             debugLog('=== SHOW QUESTION COMPLETED ===');
+        }
+
+        // Update difficulty badge for current question
+        async function updateDifficultyBadge(noteId) {
+            const badge = document.getElementById('q-difficulty');
+            if (!badge || !noteId) {
+                if (badge) {
+                    badge.className = 'difficulty-badge easy';
+                    badge.textContent = 'Easy';
+                }
+                return;
+            }
+
+            try {
+                const response = await fetch(`${ASSESSMENT_API}/api/assessment/difficulty/tag?user_id=${USER_ID}&note_id=${noteId}`);
+                const data = await response.json();
+
+                const tag = data.difficulty_tag || 'easy';
+                const labels = {
+                    'easy': 'Easy',
+                    'medium': 'Medium',
+                    'difficult': 'Difficult',
+                    'very_difficult': 'Very Difficult'
+                };
+
+                badge.className = `difficulty-badge ${tag.replace('_', '-')}`;
+                badge.textContent = labels[tag] || 'Easy';
+            } catch (error) {
+                debugLog('Error fetching difficulty tag', error);
+                badge.className = 'difficulty-badge easy';
+                badge.textContent = 'Easy';
+            }
         }
 
         // Select a choice
@@ -1523,6 +1662,7 @@
             debugLog('Visual feedback displayed, changing button to Next Question');
 
             // Record answer in background (don't wait for response)
+            const activeTimeForQuestion = getQuestionActiveTime();
             fetch(`${ASSESSMENT_API}/api/assessment/answer/submit`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -1533,12 +1673,14 @@
                     correct_answer: correctAnswer,
                     user_answer: userAnswer,
                     category: question.category,
-                    time_taken: Math.floor((Date.now() - testStartTime) / 1000)
+                    time_taken: Math.floor((Date.now() - testStartTime) / 1000),
+                    active_time_seconds: activeTimeForQuestion
                 })
             }).catch(error => {
                 console.error('Failed to submit answer (background):', error);
                 // Don't show error to user - answer is already recorded locally
             });
+            console.log(`Question answered with ${activeTimeForQuestion}s active time`);
 
             // Record answer locally (no need to wait for API)
             answers.push({

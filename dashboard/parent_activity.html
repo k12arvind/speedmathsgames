@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Parent View">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Parent Activity Dashboard - CLAT Prep</title>
+
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Scholarly Noir Palette */
+            --bg-void: #0a0a0c;
+            --bg-deep: #111114;
+            --bg-card: #18181b;
+            --bg-elevated: #1f1f23;
+            --bg-hover: #27272b;
+
+            /* Warm Amber/Gold Accents */
+            --accent-gold: #d4a853;
+            --accent-amber: #f5a623;
+            --accent-warm: #e8983a;
+            --accent-glow: rgba(212, 168, 83, 0.15);
+            --accent-glow-strong: rgba(212, 168, 83, 0.25);
+
+            /* Status Colors */
+            --success: #22c55e;
+            --success-muted: rgba(34, 197, 94, 0.15);
+            --warning: #eab308;
+            --warning-muted: rgba(234, 179, 8, 0.15);
+            --danger: #ef4444;
+            --danger-muted: rgba(239, 68, 68, 0.15);
+            --info: #3b82f6;
+            --info-muted: rgba(59, 130, 246, 0.15);
+
+            /* Text Hierarchy */
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --text-accent: var(--accent-gold);
+
+            /* Borders & Shadows */
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-medium: rgba(255, 255, 255, 0.1);
+            --border-accent: rgba(212, 168, 83, 0.3);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 40px rgba(212, 168, 83, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-void);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Subtle noise texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+            z-index: 1;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f5f5f5 0%, #d4a853 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .child-selector {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .date-display {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .date-picker {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Summary Cards Grid */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .summary-card:hover {
+            border-color: var(--border-accent);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+
+        .summary-card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .summary-card .value {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .summary-card .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-card.success .value { color: var(--success); }
+        .summary-card.danger .value { color: var(--danger); }
+        .summary-card.info .value { color: var(--info); }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Test Details Table */
+        .tests-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .tests-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tests-table th {
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .tests-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 14px;
+        }
+
+        .tests-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tests-table tr:hover {
+            background: var(--bg-elevated);
+        }
+
+        .pdf-name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .score-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .score-badge.excellent {
+            background: var(--success-muted);
+            color: var(--success);
+        }
+
+        .score-badge.good {
+            background: var(--info-muted);
+            color: var(--info);
+        }
+
+        .score-badge.needs-work {
+            background: var(--warning-muted);
+            color: var(--warning);
+        }
+
+        .score-badge.poor {
+            background: var(--danger-muted);
+            color: var(--danger);
+        }
+
+        .stat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            background: var(--bg-elevated);
+            border-radius: 12px;
+            font-size: 13px;
+            margin-right: 8px;
+        }
+
+        .stat-pill.correct {
+            color: var(--success);
+        }
+
+        .stat-pill.wrong {
+            color: var(--danger);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 48px 24px;
+            color: var(--text-muted);
+        }
+
+        .empty-state .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        /* Difficulty Distribution */
+        .difficulty-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .difficulty-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .difficulty-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .difficulty-label {
+            width: 120px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .difficulty-bar-container {
+            flex: 1;
+            height: 24px;
+            background: var(--bg-elevated);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .difficulty-bar {
+            height: 100%;
+            border-radius: 12px;
+            transition: width 0.5s ease;
+        }
+
+        .difficulty-bar.easy {
+            background: linear-gradient(90deg, #22c55e 0%, #4ade80 100%);
+        }
+
+        .difficulty-bar.medium {
+            background: linear-gradient(90deg, #eab308 0%, #fbbf24 100%);
+        }
+
+        .difficulty-bar.difficult {
+            background: linear-gradient(90deg, #f97316 0%, #fb923c 100%);
+        }
+
+        .difficulty-bar.very-difficult {
+            background: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
+        }
+
+        .difficulty-count {
+            min-width: 60px;
+            text-align: right;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* PDF Views Section */
+        .views-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .view-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .view-item:last-child {
+            border-bottom: none;
+        }
+
+        .view-item .pdf-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .view-item .time {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 48px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-subtle);
+            border-top-color: var(--accent-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tests-table {
+                font-size: 12px;
+            }
+
+            .tests-table th,
+            .tests-table td {
+                padding: 10px 8px;
+            }
+
+            .difficulty-label {
+                width: 80px;
+                font-size: 12px;
+            }
+        }
+
+        /* Two-column layout for larger screens */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <a href="index.html" class="back-link">
+                    <span>&larr;</span> Back to Hub
+                </a>
+                <h1>Parent Activity Dashboard</h1>
+            </div>
+            <div class="header-meta">
+                <select id="childSelector" class="child-selector">
+                    <option value="daughter">Saanvi</option>
+                    <option value="navya">Navya</option>
+                </select>
+                <input type="date" id="datePicker" class="date-picker">
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-grid" id="summaryCards">
+            <div class="loading"><div class="spinner"></div></div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Left Column: Tests & Views -->
+            <div class="left-column">
+                <!-- Test Details -->
+                <div class="tests-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <span>Test Sessions</span>
+                        </h2>
+                    </div>
+                    <div id="testsContent">
+                        <div class="loading"><div class="spinner"></div></div>
+                    </div>
+                </div>
+
+                <!-- PDF Views -->
+                <div class="views-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <span>PDFs Viewed</span>
+                        </h2>
+                    </div>
+                    <div id="viewsContent">
+                        <div class="loading"><div class="spinner"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Difficulty Distribution -->
+            <div class="right-column">
+                <div class="difficulty-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <span>Question Mastery</span>
+                        </h2>
+                    </div>
+                    <div id="difficultyContent">
+                        <div class="loading"><div class="spinner"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let currentChild = 'daughter';
+        let currentDate = new Date().toISOString().split('T')[0];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set default date
+            document.getElementById('datePicker').value = currentDate;
+
+            // Event listeners
+            document.getElementById('childSelector').addEventListener('change', (e) => {
+                currentChild = e.target.value;
+                loadAllData();
+            });
+
+            document.getElementById('datePicker').addEventListener('change', (e) => {
+                currentDate = e.target.value;
+                loadAllData();
+            });
+
+            // Initial load
+            loadAllData();
+        });
+
+        async function loadAllData() {
+            await Promise.all([
+                loadActivitySummary(),
+                loadDifficultySummary()
+            ]);
+        }
+
+        async function loadActivitySummary() {
+            try {
+                const response = await fetch(`/api/admin/gk/activity/today?user_id=${currentChild}&date=${currentDate}`);
+                const data = await response.json();
+
+                renderSummaryCards(data);
+                renderTests(data.tests || []);
+                renderViews(data.pdf_views || []);
+            } catch (error) {
+                console.error('Error loading activity:', error);
+                document.getElementById('summaryCards').innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">Error loading data</div>
+                    </div>
+                `;
+            }
+        }
+
+        async function loadDifficultySummary() {
+            try {
+                const response = await fetch(`/api/assessment/difficulty/summary?user_id=${currentChild}`);
+                const data = await response.json();
+                renderDifficulty(data);
+            } catch (error) {
+                console.error('Error loading difficulty:', error);
+                document.getElementById('difficultyContent').innerHTML = `
+                    <div class="empty-state">No data available</div>
+                `;
+            }
+        }
+
+        function renderSummaryCards(data) {
+            const html = `
+                <div class="summary-card">
+                    <div class="icon">Tests</div>
+                    <div class="value">${data.tests_completed || 0}</div>
+                    <div class="label">Tests Completed</div>
+                </div>
+                <div class="summary-card">
+                    <div class="icon">View</div>
+                    <div class="value">${data.pdfs_viewed || 0}</div>
+                    <div class="label">PDFs Viewed</div>
+                </div>
+                <div class="summary-card success">
+                    <div class="icon">Correct</div>
+                    <div class="value">${data.total_correct || 0}</div>
+                    <div class="label">Correct Answers</div>
+                </div>
+                <div class="summary-card danger">
+                    <div class="icon">Wrong</div>
+                    <div class="value">${data.total_wrong || 0}</div>
+                    <div class="label">Wrong Answers</div>
+                </div>
+                <div class="summary-card info">
+                    <div class="icon">Accuracy</div>
+                    <div class="value">${data.accuracy || 0}%</div>
+                    <div class="label">Overall Accuracy</div>
+                </div>
+            `;
+            document.getElementById('summaryCards').innerHTML = html;
+        }
+
+        function renderTests(tests) {
+            if (!tests || tests.length === 0) {
+                document.getElementById('testsContent').innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">No tests taken on this date</div>
+                    </div>
+                `;
+                return;
+            }
+
+            const rows = tests.map(test => {
+                const score = test.score_percentage || 0;
+                let scoreClass = 'poor';
+                if (score >= 90) scoreClass = 'excellent';
+                else if (score >= 75) scoreClass = 'good';
+                else if (score >= 60) scoreClass = 'needs-work';
+
+                const time = test.started_at ? new Date(test.started_at).toLocaleTimeString('en-US', {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true
+                }) : '';
+
+                return `
+                    <tr>
+                        <td>
+                            <div class="pdf-name">${formatPdfName(test.pdf_filename)}</div>
+                        </td>
+                        <td>${test.total_questions || 0} Q</td>
+                        <td>
+                            <span class="stat-pill correct">${test.correct_answers || 0}</span>
+                            <span class="stat-pill wrong">${test.wrong_answers || 0}</span>
+                        </td>
+                        <td>
+                            <span class="score-badge ${scoreClass}">${score.toFixed(1)}%</span>
+                        </td>
+                        <td class="time">${time}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('testsContent').innerHTML = `
+                <table class="tests-table">
+                    <thead>
+                        <tr>
+                            <th>PDF</th>
+                            <th>Questions</th>
+                            <th>Results</th>
+                            <th>Score</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>${rows}</tbody>
+                </table>
+            `;
+        }
+
+        function renderViews(views) {
+            if (!views || views.length === 0) {
+                document.getElementById('viewsContent').innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">No PDFs viewed on this date</div>
+                    </div>
+                `;
+                return;
+            }
+
+            const items = views.map(view => {
+                const time = view.completed_at ? new Date(view.completed_at).toLocaleTimeString('en-US', {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    hour12: true
+                }) : '';
+
+                return `
+                    <div class="view-item">
+                        <div class="pdf-name">
+                            <span>${formatPdfName(view.pdf_id)}</span>
+                        </div>
+                        <span class="time">${time}</span>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('viewsContent').innerHTML = items;
+        }
+
+        function renderDifficulty(data) {
+            // Calculate total from the four main categories (excluding not_attempted legacy data)
+            const total = (data.easy || 0) + (data.medium || 0) + (data.difficult || 0) + (data.very_difficult || 0);
+            const tags = [
+                { key: 'easy', label: 'Easy', class: 'easy' },
+                { key: 'medium', label: 'Medium', class: 'medium' },
+                { key: 'difficult', label: 'Difficult', class: 'difficult' },
+                { key: 'very_difficult', label: 'Very Difficult', class: 'very-difficult' }
+            ];
+
+            const rows = tags.map(tag => {
+                const count = data[tag.key] || 0;
+                const percentage = total > 0 ? (count / total * 100) : 0;
+
+                return `
+                    <div class="difficulty-row">
+                        <div class="difficulty-label">${tag.label}</div>
+                        <div class="difficulty-bar-container">
+                            <div class="difficulty-bar ${tag.class}" style="width: ${percentage}%"></div>
+                        </div>
+                        <div class="difficulty-count">${count} (${percentage.toFixed(0)}%)</div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('difficultyContent').innerHTML = `
+                <div class="difficulty-bars">
+                    ${rows}
+                </div>
+                <div style="margin-top: 20px; text-align: center; color: var(--text-muted); font-size: 13px;">
+                    Total Questions Attempted: ${data.total || 0}
+                </div>
+            `;
+        }
+
+        function formatPdfName(filename) {
+            if (!filename) return 'Unknown';
+            // Extract date from filename like current_affairs_2026_january_2.pdf
+            const match = filename.match(/(\d{4})_(\w+)_(\d{1,2})/);
+            if (match) {
+                const month = match[2].charAt(0).toUpperCase() + match[2].slice(1);
+                return `${month} ${match[3]}, ${match[1]}`;
+            }
+            // Try YYYY-MM-DD format
+            const dateMatch = filename.match(/(\d{4})-(\d{2})-(\d{2})/);
+            if (dateMatch) {
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                return `${months[parseInt(dateMatch[2]) - 1]} ${parseInt(dateMatch[3])}, ${dateMatch[1]}`;
+            }
+            return filename.replace('.pdf', '').replace(/_/g, ' ');
+        }
+    </script>
+</body>
+</html>

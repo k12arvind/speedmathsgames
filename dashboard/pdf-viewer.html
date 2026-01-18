@@ -413,12 +413,22 @@
 
         // View tracking state
         let viewSessionId = null;
+        let currentUserId = 'system';  // Will be updated from auth
         let pagesViewed = new Set();
         let viewUpdateTimeout = null;
         let viewComplete = false;
 
+        // Active time tracking state
+        // Track time when page is visible - reading a PDF is active even without mouse movement
+        let activeTimeSeconds = 0;
+        let isPageVisible = true;
+        let activeTimeInterval = null;
+
         async function initializePdfViewer() {
             try {
+                // Get current user for view tracking
+                await fetchCurrentUser();
+
                 // Load PDF from server
                 const pdfUrl = `/api/pdf/serve/${encodeURIComponent(pdfId)}`;
                 const loadingTask = pdfjsLib.getDocument(pdfUrl);
@@ -520,6 +530,7 @@
 
             // Add page number label
             const pageLabel = document.createElement('div');
+            pageLabel.className = 'page-label';
             pageLabel.style.cssText = 'position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;';
             pageLabel.textContent = `Page ${pageNum} of ${totalPages}`;
             wrapper.appendChild(pageLabel);
@@ -1027,8 +1038,63 @@
         });
 
         // =============================================
+        // Active Time Tracking Functions
+        // =============================================
+
+        function startActiveTimeTracking() {
+            // Handle visibility changes (tab switching) - this is the only pause condition
+            // Reading a PDF is active even without mouse movement
+            document.addEventListener('visibilitychange', onVisibilityChange);
+
+            // Start the timer that increments active time when page is visible
+            activeTimeInterval = setInterval(() => {
+                if (isPageVisible && !document.hidden) {
+                    activeTimeSeconds++;
+                }
+            }, 1000);
+
+            console.log('Active time tracking started (visible page time)');
+        }
+
+        function onVisibilityChange() {
+            if (document.hidden) {
+                isPageVisible = false;
+                console.log('Tab hidden - pausing active time');
+            } else {
+                isPageVisible = true;
+                console.log('Tab visible - resuming active time');
+            }
+        }
+
+        function stopActiveTimeTracking() {
+            if (activeTimeInterval) {
+                clearInterval(activeTimeInterval);
+                activeTimeInterval = null;
+            }
+        }
+
+        function getActiveTimeSeconds() {
+            return activeTimeSeconds;
+        }
+
+        // =============================================
         // View Tracking Functions
         // =============================================
+
+        async function fetchCurrentUser() {
+            try {
+                const response = await fetch('/auth/user');
+                if (response.ok) {
+                    const user = await response.json();
+                    if (user && user.user_id) {
+                        currentUserId = user.user_id;
+                        console.log(`View tracking user: ${currentUserId}`);
+                    }
+                }
+            } catch (error) {
+                console.warn('Could not fetch current user, using default:', error);
+            }
+        }
 
         async function startViewSession() {
             try {
@@ -1036,13 +1102,16 @@
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
-                        total_pages: totalPages
+                        total_pages: totalPages,
+                        user_id: currentUserId
                     })
                 });
                 const data = await response.json();
                 if (data.success) {
                     viewSessionId = data.session_id;
-                    console.log(`View session started: ${viewSessionId} (${totalPages} pages)`);
+                    console.log(`View session started: ${viewSessionId} (${totalPages} pages) for user ${currentUserId}`);
+                    // Start active time tracking
+                    startActiveTimeTracking();
                 }
             } catch (error) {
                 console.warn('Could not start view session:', error);
@@ -1081,9 +1150,11 @@
             // Handle page close - send final update
             window.addEventListener('beforeunload', () => {
                 if (viewSessionId && pagesViewed.size > 0) {
+                    stopActiveTimeTracking();
                     const data = JSON.stringify({
                         session_id: viewSessionId,
-                        pages_viewed: Array.from(pagesViewed)
+                        pages_viewed: Array.from(pagesViewed),
+                        active_time_seconds: getActiveTimeSeconds()
                     });
                     navigator.sendBeacon(
                         `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
@@ -1113,15 +1184,17 @@
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
                         session_id: viewSessionId,
-                        pages_viewed: Array.from(pagesViewed)
+                        pages_viewed: Array.from(pagesViewed),
+                        active_time_seconds: getActiveTimeSeconds()
                     })
                 });
 
                 const data = await response.json();
                 if (data.success && data.is_complete && !viewComplete) {
                     viewComplete = true;
+                    stopActiveTimeTracking();
                     showViewCompleteToast();
-                    console.log('PDF fully viewed! view_count incremented.');
+                    console.log(`PDF fully viewed! Active time: ${getActiveTimeSeconds()}s`);
                 }
             } catch (error) {
                 console.warn('Could not update view progress:', error);
