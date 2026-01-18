@@ -83,6 +83,11 @@ class PDFScanner:
             'path': BASE_PATH / 'weeklyGKCareerLauncher',
             'type': 'weekly',
             'source': 'career_launcher'
+        },
+        'monthly_legaledge': {
+            'path': BASE_PATH / 'Monthly-CLATPOST-LegalEdge',
+            'type': 'monthly',
+            'source': 'legaledge'
         }
     }
 
@@ -100,6 +105,7 @@ class PDFScanner:
                 'legaledge': [],
                 'career_launcher': []
             },
+            'monthly': [],
             'total_count': 0,
             'scan_time': datetime.now().isoformat()
         }
@@ -115,6 +121,8 @@ class PDFScanner:
 
             if folder_info['type'] == 'daily':
                 results['daily'].extend(pdfs)
+            elif folder_info['type'] == 'monthly':
+                results['monthly'].extend(pdfs)
             else:
                 results['weekly'][folder_info['source']].extend(pdfs)
 
@@ -340,6 +348,10 @@ class PDFScanner:
                 if pdf['revision_count'] == 0:
                     never_revised += 1
 
+        for pdf in all_pdfs['monthly']:
+            if pdf['revision_count'] == 0:
+                never_revised += 1
+
         # Calculate completion rate
         completion_rate = round((total_pdfs - never_revised) / max(total_pdfs, 1) * 100, 1)
 
@@ -347,12 +359,14 @@ class PDFScanner:
             'total_pdfs': total_pdfs,
             'daily_pdfs': len(all_pdfs['daily']),
             'weekly_pdfs': sum(len(pdfs) for pdfs in all_pdfs['weekly'].values()),
+            'monthly_pdfs': len(all_pdfs['monthly']),
             'never_revised': never_revised,
             'completion_rate': completion_rate,
             'folders': {
                 'legaledge_daily': len(all_pdfs['daily']),
                 'legaledge_weekly': len(all_pdfs['weekly']['legaledge']),
-                'career_launcher_weekly': len(all_pdfs['weekly']['career_launcher'])
+                'career_launcher_weekly': len(all_pdfs['weekly']['career_launcher']),
+                'monthly_legaledge': len(all_pdfs['monthly'])
             }
         }
 
@@ -385,6 +399,15 @@ class PDFScanner:
                 else:
                     filtered.append(pdf)
 
+        # Check monthly
+        for pdf in all_pdfs['monthly']:
+            if pdf['last_revised']:
+                last_rev = datetime.fromisoformat(pdf['last_revised'])
+                if last_rev < cutoff_date:
+                    filtered.append(pdf)
+            else:
+                filtered.append(pdf)
+
         return filtered
 
     def filter_by_revision_count(self, min_count: int, max_count: Optional[int] = None) -> List[Dict]:
@@ -414,6 +437,16 @@ class PDFScanner:
                     if min_count <= rev_count <= max_count:
                         filtered.append(pdf)
 
+        # Check monthly
+        for pdf in all_pdfs['monthly']:
+            rev_count = pdf['revision_count']
+            if max_count is None:
+                if rev_count >= min_count:
+                    filtered.append(pdf)
+            else:
+                if min_count <= rev_count <= max_count:
+                    filtered.append(pdf)
+
         return filtered
 
 
@@ -429,6 +462,7 @@ if __name__ == '__main__':
     print(f"Daily PDFs: {len(results['daily'])}")
     print(f"Weekly PDFs (LegalEdge): {len(results['weekly']['legaledge'])}")
     print(f"Weekly PDFs (Career Launcher): {len(results['weekly']['career_launcher'])}")
+    print(f"Monthly PDFs: {len(results['monthly'])}")
 
     print("\n📊 Statistics:")
     stats = scanner.get_statistics()

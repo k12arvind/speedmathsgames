@@ -80,6 +80,9 @@ from server.mock_db import MockDatabase
 # Import questions database for local question storage (source of truth for tests)
 from server.questions_db import QuestionsDatabase
 
+# Import monthly question extractor for Monthly CLAT Post PDFs
+from server.monthly_question_extractor import MonthlyQuestionExtractor
+
 # Import user roles configuration for family member management
 from server.user_roles import (
     get_user_profile, get_user_id_from_email, get_user_role,
@@ -523,6 +526,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Assessment Creation API endpoints
             elif path.startswith('/api/create-assessment'):
                 self.handle_assessment_creation_post(path, data)
+            # Monthly PDF API endpoints (extract embedded questions)
+            elif path.startswith('/api/monthly/'):
+                self.handle_monthly_post(path, data)
             # Diary API endpoints
             elif path.startswith('/api/diary/'):
                 self.handle_diary_post(path, data)
@@ -1257,6 +1263,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             if 'weekly' in scan_results:
                 scan_results['weekly']['legaledge'] = self._add_page_counts(scan_results['weekly'].get('legaledge', []))
                 scan_results['weekly']['career_launcher'] = self._add_page_counts(scan_results['weekly'].get('career_launcher', []))
+            # Add page counts to monthly PDFs
+            scan_results['monthly'] = self._add_page_counts(scan_results.get('monthly', []))
 
             # Organize into segregated structure
             data = {
@@ -1396,7 +1404,77 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         
         else:
             self.send_json({'error': 'GK dashboard endpoint not found'})
-    
+
+    def handle_monthly_post(self, path: str, data: dict):
+        """Handle Monthly PDF API POST requests."""
+        if path == '/api/monthly/extract-questions':
+            # Extract embedded questions from monthly CLAT Post PDF
+            filename = data.get('filename')
+            if not filename:
+                self.send_json({'error': 'Filename is required'})
+                return
+
+            try:
+                # Find the PDF file
+                monthly_folder = Path.home() / 'saanvi' / 'Monthly-CLATPOST-LegalEdge'
+                pdf_path = monthly_folder / filename
+
+                if not pdf_path.exists():
+                    self.send_json({'error': f'PDF not found: {filename}'})
+                    return
+
+                # Extract questions using the monthly extractor
+                extractor = MonthlyQuestionExtractor()
+                questions = extractor.extract_from_chunk(str(pdf_path))
+
+                if not questions:
+                    self.send_json({
+                        'success': False,
+                        'error': 'No questions found in PDF. Try chunking the PDF first if it is large.',
+                        'question_count': 0
+                    })
+                    return
+
+                # Save questions to database
+                for q in questions:
+                    # Get correct answer text
+                    correct_answer = ''
+                    if q['choices'] and 0 <= q['correct_index'] < len(q['choices']):
+                        correct_answer = q['choices'][q['correct_index']] or 'Unknown'
+
+                    qid = self.questions_db.add_question(
+                        pdf_filename=filename,
+                        question_text=q['question_text'],
+                        answer_text=correct_answer,
+                        category=q.get('category', 'General Knowledge'),
+                        source_name='legaledge',
+                        week_tag=None  # Monthly has no week tag
+                    )
+                    # Add MCQ choices
+                    if qid and q['choices']:
+                        self.questions_db.save_mcq_choices(
+                            question_id=qid,
+                            choices=q['choices'],
+                            correct_index=q['correct_index']
+                        )
+
+                self.send_json({
+                    'success': True,
+                    'question_count': len(questions),
+                    'filename': filename,
+                    'categories': list(set(q.get('category', 'General Knowledge') for q in questions))
+                })
+
+            except Exception as e:
+                self.send_json({
+                    'success': False,
+                    'error': str(e),
+                    'trace': traceback.format_exc()
+                })
+
+        else:
+            self.send_json({'error': 'Monthly endpoint not found'})
+
     def _create_pdf_from_url(self, url: str) -> dict:
         """Create PDF from TopRankers URL."""
         import subprocess
@@ -2571,6 +2649,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 output_dir = data.get('output_directory')
                 max_pages = data.get('max_pages_per_chunk', 10)
                 naming_pattern = data.get('naming_pattern', '{basename}_part{num}')
+                source_type = data.get('source_type')  # 'daily', 'weekly', 'monthly'
 
                 if not pdf_path or not output_dir:
                     self.send_json({
@@ -2592,7 +2671,8 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                         pdf_path,
                         output_dir,
                         max_pages,
-                        naming_pattern
+                        naming_pattern,
+                        source_type=source_type
                     ):
                         # Send as Server-Sent Event
                         event_data = json.dumps(update)

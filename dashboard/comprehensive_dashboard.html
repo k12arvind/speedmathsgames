@@ -783,6 +783,10 @@
                 📖 Weekly (Career Launcher)
                 <span class="tab-badge" id="weekly-cl-count">0</span>
             </button>
+            <button class="tab" data-tab="monthly">
+                📅 Monthly
+                <span class="tab-badge" id="monthly-count">0</span>
+            </button>
             <button class="tab" data-tab="all">
                 📊 All PDFs
                 <span class="tab-badge" id="all-count">0</span>
@@ -827,6 +831,18 @@
                     </div>
                 </div>
                 <div id="weekly-careerlauncher-table"></div>
+            </div>
+        </div>
+
+        <div id="monthly-tab" class="tab-content">
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">📅 Monthly CLAT Post - LegalEdge</div>
+                    <div class="table-actions">
+                        <button class="btn-icon" onclick="refreshData()" title="Refresh">↻</button>
+                    </div>
+                </div>
+                <div id="monthly-table"></div>
             </div>
         </div>
 
@@ -958,9 +974,14 @@
             document.getElementById('weekly-le-count').textContent = dashboardData.pdfs.weekly.legaledge.length;
             document.getElementById('weekly-cl-count').textContent = dashboardData.pdfs.weekly.career_launcher.length;
 
+            // Monthly PDFs count
+            const monthlyCount = dashboardData.pdfs.monthly ? dashboardData.pdfs.monthly.length : 0;
+            document.getElementById('monthly-count').textContent = monthlyCount;
+
             const allCount = dashboardData.pdfs.daily.length +
                            dashboardData.pdfs.weekly.legaledge.length +
-                           dashboardData.pdfs.weekly.career_launcher.length;
+                           dashboardData.pdfs.weekly.career_launcher.length +
+                           monthlyCount;
             document.getElementById('all-count').textContent = allCount;
 
             // Update large files count
@@ -980,15 +1001,20 @@
         function renderAllTables() {
             // Reset row counter before rendering all tables
             rowIdCounter = 0;
-            
+
             renderTable('daily-table', dashboardData.pdfs.daily);
             renderTable('weekly-legaledge-table', dashboardData.pdfs.weekly.legaledge);
             renderTable('weekly-careerlauncher-table', dashboardData.pdfs.weekly.career_launcher);
 
+            // Render monthly table (uses different rendering for embedded questions)
+            const monthlyPdfs = dashboardData.pdfs.monthly || [];
+            renderMonthlyTable('monthly-table', monthlyPdfs);
+
             const allPdfs = [
                 ...dashboardData.pdfs.daily,
                 ...dashboardData.pdfs.weekly.legaledge,
-                ...dashboardData.pdfs.weekly.career_launcher
+                ...dashboardData.pdfs.weekly.career_launcher,
+                ...monthlyPdfs
             ];
             renderTable('all-table', allPdfs);
 
@@ -1037,6 +1063,140 @@
             `;
 
             container.innerHTML = tableHTML;
+        }
+
+        // Render monthly PDFs table (different UI - no Create Assessment button, questions embedded)
+        function renderMonthlyTable(containerId, pdfs) {
+            const container = document.getElementById(containerId);
+
+            if (!pdfs || pdfs.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📅</div>
+                        <div>No Monthly PDFs found</div>
+                        <small style="margin-top: 10px; display: block; color: var(--text-muted);">
+                            Monthly CLAT Post PDFs have embedded questions - no AI generation needed!
+                        </small>
+                    </div>
+                `;
+                return;
+            }
+
+            const tableHTML = `
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable('filename')">PDF Name</th>
+                                <th onclick="sortTable('date_added')">Added</th>
+                                <th onclick="sortTable('page_count')">Pages</th>
+                                <th onclick="sortTable('view_count')">Views</th>
+                                <th onclick="sortTable('days_since_view')">Last Viewed</th>
+                                <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
+                                <th>Questions</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${pdfs.map(pdf => createMonthlyTableRow(pdf)).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            container.innerHTML = tableHTML;
+        }
+
+        // Create monthly PDF table row (simplified - no Create Assessment button)
+        function createMonthlyTableRow(pdf) {
+            const rowId = ++rowIdCounter;
+            const viewCount = pdf.view_count || 0;
+            const assessmentAttempts = pdf.assessment_attempts || 0;
+            const pageCount = pdf.page_count || 0;
+            const localQuestions = pdf.local_questions || 0;
+
+            const viewBadgeClass = viewCount >= 3 ? 'high' :
+                                   viewCount >= 2 ? 'medium' :
+                                   viewCount >= 1 ? 'low' : 'none';
+
+            const attemptsBadgeClass = assessmentAttempts >= 5 ? 'high' :
+                                       assessmentAttempts >= 2 ? 'medium' :
+                                       assessmentAttempts >= 1 ? 'low' : 'none';
+
+            const lastViewed = pdf.days_since_view !== null && pdf.days_since_view !== undefined
+                ? pdf.days_since_view === 0
+                    ? 'Today'
+                    : `${pdf.days_since_view}d ago`
+                : 'Never';
+
+            // Question status - monthly PDFs have embedded questions
+            const questionBadge = localQuestions > 0
+                ? `<span class="badge" style="background: #10b981; color: white;">${localQuestions} Qs</span>`
+                : `<span class="badge" style="background: #f59e0b; color: white;">Extract</span>`;
+
+            // Test button - enabled if questions exist
+            const testButton = localQuestions > 0
+                ? `<button class="btn btn-primary" onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')" style="background: #3b82f6;">
+                       📝 Test
+                   </button>`
+                : `<button class="btn btn-secondary" disabled style="opacity: 0.5; cursor: not-allowed;">
+                       📝 Test
+                   </button>`;
+
+            // Extract questions button - for monthly PDFs without extracted questions
+            const extractButton = localQuestions === 0
+                ? `<button class="btn btn-warning" onclick="extractMonthlyQuestions('${pdf.filename}')" style="background: #f59e0b; color: white;">
+                       ⚡ Extract Qs
+                   </button>`
+                : '';
+
+            return `
+                <tr>
+                    <td class="pdf-name">${pdf.filename}</td>
+                    <td>${formatDate(pdf.date_added || pdf.date_published)}</td>
+                    <td><span class="badge" style="background: #6b7280; color: white;">${pageCount} pg</span></td>
+                    <td><span class="badge badge-count ${viewBadgeClass}" title="Complete scroll-throughs">👁 ${viewCount}</span></td>
+                    <td>${lastViewed}</td>
+                    <td><span class="badge badge-count ${attemptsBadgeClass}">${assessmentAttempts}×</span></td>
+                    <td>${questionBadge}</td>
+                    <td>
+                        <div class="action-buttons">
+                            ${extractButton}
+                            ${testButton}
+                            <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background: #3b82f6;">
+                                📄 View PDF
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // Extract questions from monthly PDF (questions are embedded, not AI-generated)
+        async function extractMonthlyQuestions(filename) {
+            if (!confirm(`Extract embedded questions from "${filename}"?\n\nThis will scan the PDF for PRACTICE QUESTIONS sections and ANSWER KEYs.`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/api/monthly/extract-questions`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ filename: filename })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert(`✅ Extracted ${result.question_count} questions from ${filename}`);
+                    await loadDashboardData();
+                } else {
+                    alert(`❌ Error: ${result.error}`);
+                }
+            } catch (error) {
+                console.error('Error extracting questions:', error);
+                alert('Failed to extract questions. Please try again.');
+            }
         }
 
         // Render chunked PDFs table

@@ -33,7 +33,8 @@ class PdfChunker:
         output_dir: str,
         max_pages: int = 10,
         naming_pattern: str = "{basename}_part{num}",
-        overlap_pages: bool = True
+        overlap_pages: bool = True,
+        source_type: str = None
     ) -> Generator[Dict, None, None]:
         """
         Split PDF into chunks and yield progress updates.
@@ -44,10 +45,15 @@ class PdfChunker:
             max_pages: Maximum pages per chunk
             naming_pattern: Pattern for chunk filenames
             overlap_pages: If True, last page of each chunk becomes first page of next chunk
+            source_type: Type of source ('daily', 'weekly', 'monthly').
+                         Monthly PDFs use 25 pages per chunk.
 
         Yields:
             dict: Progress updates with type: 'progress', 'chunk_created', 'error', 'complete'
         """
+        # Auto-adjust chunk size for monthly PDFs
+        if source_type == 'monthly':
+            max_pages = 25
         try:
             input_pdf = Path(input_path)
             output_path = Path(output_dir)
