@@ -4499,7 +4499,7 @@ def verify_database_health():
 def main():
     """Start the unified server."""
     parser = argparse.ArgumentParser(description='Unified CLAT Preparation Server')
-    parser.add_argument('--port', type=int, default=8001, help='Port to run on (default: 8001)')
+    parser.add_argument('--port', type=int, default=8765, help='Port to run on (default: 8765)')
     parser.add_argument('--no-auth', action='store_true', help='Disable authentication (dev mode)')
     args = parser.parse_args()
 
