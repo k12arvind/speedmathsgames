@@ -593,17 +593,18 @@
         let sortDirection = 'desc';
 
         // Chart Modal
-        function openChart(symbol, event) {
+        // tvSymbol = full TradingView symbol like "NSE:RELIANCE" or "BSE:TCS"
+        function openChart(tvSymbol, event) {
             // Ctrl+click or middle-click → open in new tab
             if (event && (event.ctrlKey || event.metaKey || event.button === 1)) {
-                window.open(`https://www.tradingview.com/chart/?symbol=NSE:${symbol}`, '_blank');
+                window.open(`https://www.tradingview.com/chart/?symbol=${tvSymbol}`, '_blank');
                 return;
             }
             if (event) event.preventDefault();
 
             const modal = document.getElementById('chart-modal');
             const body = document.getElementById('chart-modal-body');
-            document.getElementById('chart-modal-symbol').textContent = `NSE:${symbol}`;
+            document.getElementById('chart-modal-symbol').textContent = tvSymbol;
 
             // Clear previous widget
             body.innerHTML = '<div id="tradingview-widget"></div>';
@@ -614,7 +615,7 @@
             script.onload = () => {
                 new TradingView.widget({
                     container_id: 'tradingview-widget',
-                    symbol: `NSE:${symbol}`,
+                    symbol: tvSymbol,
                     interval: 'D',
                     timezone: 'Asia/Kolkata',
                     theme: 'dark',
@@ -779,7 +780,7 @@
                     <td>${s.volume_ratio}x</td>
                     <td><div class="criteria-dots">${dots}</div></td>
                     <td>${status}</td>
-                    <td><span class="chart-link" onclick="openChart('${s.symbol}', event)" title="Open chart">📊</span></td>
+                    <td><span class="chart-link" onclick="openChart('${(s.tradingview_link || '').split('symbol=')[1] || 'NSE:' + s.symbol}', event)" title="Open chart">📊</span></td>
                 </tr>`;
             }).join('');
         }
@@ -813,7 +814,7 @@
                     <td><span class="vcp-badge">${v.notation}</span></td>
                     <td>${v.volume_trend}</td>
                     <td class="${qClass}" style="font-weight:bold;">${qScore}</td>
-                    <td><span class="chart-link" onclick="openChart('${v.symbol}', event)" title="Open chart">📊</span></td>
+                    <td><span class="chart-link" onclick="openChart('NSE:${v.symbol}', event)" title="Open chart">📊</span></td>
                 </tr>`;
             }).join('');
         }
@@ -839,7 +840,7 @@
                     <td>${b.volume_ratio}x</td>
                     <td>${b.suggested_stop}</td>
                     <td>${b.risk_pct}%</td>
-                    <td><span class="chart-link" onclick="openChart('${b.symbol}', event)" title="Open chart">📊</span></td>
+                    <td><span class="chart-link" onclick="openChart('NSE:${b.symbol}', event)" title="Open chart">📊</span></td>
                 </tr>`;
             }).join('');
         }
