@@ -208,11 +208,20 @@
             font-size: 0.75rem;
             color: var(--text-muted);
             margin-top: 4px;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .preview-status.success { color: #10b981; }
-        .preview-status.error { color: #ef4444; }
+        .preview-status.error {
+            color: #ef4444;
+            font-weight: 600;
+            cursor: help;
+        }
         .preview-status.processing { color: #f59e0b; }
+        .preview-status.extracting { color: #f59e0b; }
 
         .remove-btn {
             position: absolute;
@@ -661,20 +670,20 @@
                     <button class="remove-btn" onclick="removeFile(${i})">x</button>
                     <div class="preview-info">
                         <div class="preview-name">${f.name}</div>
-                        <div class="preview-status ${f.status}">${getStatusText(f.status)}</div>
+                        <div class="preview-status ${f.status}" ${f.errorMessage ? `title="${f.errorMessage}"` : ''}>${getStatusText(f.status, f.errorMessage)}</div>
                     </div>
                 </div>
             `).join('');
         }
 
-        function getStatusText(status) {
+        function getStatusText(status, errorMessage) {
             switch (status) {
                 case 'ready': return 'Ready to upload';
                 case 'uploading': return 'Uploading...';
                 case 'uploaded': return 'Uploaded';
                 case 'extracting': return 'Extracting...';
                 case 'extracted': return 'Extracted';
-                case 'error': return 'Error';
+                case 'error': return errorMessage || 'Error';
                 default: return status;
             }
         }
@@ -743,6 +752,7 @@
                             data = JSON.parse(responseText);
                         } catch (jsonError) {
                             f.status = 'error';
+                            f.errorMessage = `JSON error: ${responseText.substring(0, 100)}`;
                             results.push({
                                 file: f.name,
                                 success: false,
@@ -754,6 +764,7 @@
 
                         if (data.error) {
                             f.status = 'error';
+                            f.errorMessage = data.error;
                             results.push({
                                 file: f.name,
                                 success: false,
@@ -810,6 +821,7 @@
                         const uploadText = await uploadResponse.text();
                         if (!uploadResponse.ok) {
                             f.status = 'error';
+                            f.errorMessage = `HTTP ${uploadResponse.status}`;
                             results.push({ file: f.name, success: false, error: `HTTP ${uploadResponse.status}: ${uploadText.substring(0, 200)}`, details: [] });
                             continue;
                         }
@@ -819,12 +831,14 @@
                             uploadData = JSON.parse(uploadText);
                         } catch (jsonError) {
                             f.status = 'error';
+                            f.errorMessage = `Invalid JSON response`;
                             results.push({ file: f.name, success: false, error: `Invalid JSON: ${uploadText.substring(0, 200)}`, details: [] });
                             continue;
                         }
 
                         if (uploadData.error) {
                             f.status = 'error';
+                            f.errorMessage = uploadData.error;
                             results.push({ file: f.name, success: false, error: uploadData.error, details: [] });
                             continue;
                         }
@@ -846,17 +860,48 @@
                         });
 
                         const extractText = await extractResponse.text();
+
+                        // Check for HTTP errors first
+                        if (!extractResponse.ok) {
+                            f.status = 'error';
+                            let errorMsg;
+                            if (extractResponse.status === 502) {
+                                errorMsg = 'Gateway timeout - extraction took too long. Try again.';
+                            } else {
+                                // Try to parse JSON error response
+                                try {
+                                    const errorData = JSON.parse(extractText);
+                                    errorMsg = errorData.error || `HTTP ${extractResponse.status}`;
+                                } catch (e) {
+                                    errorMsg = `HTTP ${extractResponse.status}: ${extractText.substring(0, 100) || 'Server error'}`;
+                                }
+                            }
+                            f.errorMessage = errorMsg;
+                            results.push({ file: f.name, success: false, error: errorMsg, details: [] });
+                            continue;
+                        }
+
+                        // Check for empty response
+                        if (!extractText || extractText.trim() === '') {
+                            f.status = 'error';
+                            f.errorMessage = 'Empty response - connection may have timed out';
+                            results.push({ file: f.name, success: false, error: 'Empty response from server - try again', details: [] });
+                            continue;
+                        }
+
                         let extractData;
                         try {
                             extractData = JSON.parse(extractText);
                         } catch (jsonError) {
                             f.status = 'error';
-                            results.push({ file: f.name, success: false, error: `Extract JSON error: ${extractText.substring(0, 200)}`, details: [] });
+                            f.errorMessage = `Invalid response format`;
+                            results.push({ file: f.name, success: false, error: `Invalid JSON: ${extractText.substring(0, 150)}`, details: [] });
                             continue;
                         }
 
                         if (extractData.error) {
                             f.status = 'error';
+                            f.errorMessage = extractData.error;
                             results.push({ file: f.name, success: false, error: extractData.error, details: [] });
                         } else {
                             f.status = 'extracted';
@@ -890,6 +935,7 @@
 
                 } catch (error) {
                     f.status = 'error';
+                    f.errorMessage = error.message;
                     results.push({ file: f.name, success: false, error: error.message, details: [] });
                 }
 

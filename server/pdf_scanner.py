@@ -65,37 +65,43 @@ def relative_to_absolute(relative_path: str) -> str:
 class PDFScanner:
     """Scans PDF folders and syncs with database."""
 
-    # Define folder locations - same structure on both MacBook Pro and Mac Mini
-    BASE_PATH = Path.home() / "saanvi"
-
-    FOLDERS = {
-        'legaledge_daily': {
-            'path': BASE_PATH / 'Legaledgedailygk',
-            'type': 'daily',
-            'source': 'legaledge'
-        },
-        'legaledge_weekly': {
-            'path': BASE_PATH / 'LegalEdgeweeklyGK',
-            'type': 'weekly',
-            'source': 'legaledge'
-        },
-        'career_launcher_weekly': {
-            'path': BASE_PATH / 'weeklyGKCareerLauncher',
-            'type': 'weekly',
-            'source': 'career_launcher'
-        },
-        'monthly_legaledge': {
-            'path': BASE_PATH / 'Monthly-CLATPOST-LegalEdge',
-            'type': 'monthly',
-            'source': 'legaledge'
-        }
-    }
-
     def __init__(self, db_path: Optional[Path] = None):
         if db_path is None:
             # Database is in parent directory (clat_preparation/)
             db_path = Path(__file__).parent.parent / "revision_tracker.db"
         self.db_path = db_path
+
+        # IMPORTANT: Define paths as INSTANCE attributes, not CLASS attributes
+        # This ensures Path.home() is evaluated at instantiation time, not at import time.
+        # When the server is started by launchd at boot, Path.home() may return wrong values
+        # if evaluated too early. Evaluating here guarantees correct paths.
+        self.BASE_PATH = Path.home() / "saanvi"
+
+        self.FOLDERS = {
+            'legaledge_daily': {
+                'path': self.BASE_PATH / 'Legaledgedailygk',
+                'type': 'daily',
+                'source': 'legaledge'
+            },
+            'legaledge_weekly': {
+                'path': self.BASE_PATH / 'LegalEdgeweeklyGK',
+                'type': 'weekly',
+                'source': 'legaledge'
+            },
+            'career_launcher_weekly': {
+                'path': self.BASE_PATH / 'weeklyGKCareerLauncher',
+                'type': 'weekly',
+                'source': 'career_launcher'
+            },
+            'monthly_legaledge': {
+                'path': self.BASE_PATH / 'Monthly-CLATPOST-LegalEdge',
+                'type': 'monthly',
+                'source': 'legaledge'
+            }
+        }
+
+        # Log paths at initialization for debugging
+        print(f"📁 PDFScanner initialized: BASE_PATH={self.BASE_PATH} (exists={self.BASE_PATH.exists()})")
 
     def scan_all_folders(self) -> Dict:
         """Scan all PDF folders and return organized data."""

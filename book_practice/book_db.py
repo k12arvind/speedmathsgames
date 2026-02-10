@@ -600,7 +600,7 @@ class BookPracticeDB:
                 cursor.execute("""
                     SELECT q.*, t.topic_name
                     FROM book_questions q
-                    JOIN book_topics t ON q.topic_id = t.topic_id
+                    LEFT JOIN book_topics t ON q.topic_id = t.topic_id
                     WHERE q.is_verified = 0 AND q.page_id = ?
                     ORDER BY q.question_number
                 """, (page_id,))
@@ -608,7 +608,7 @@ class BookPracticeDB:
                 cursor.execute("""
                     SELECT q.*, t.topic_name
                     FROM book_questions q
-                    JOIN book_topics t ON q.topic_id = t.topic_id
+                    LEFT JOIN book_topics t ON q.topic_id = t.topic_id
                     WHERE q.is_verified = 0
                     ORDER BY q.topic_id, q.question_number
                 """)

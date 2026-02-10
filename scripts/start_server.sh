@@ -92,10 +92,25 @@ cleanup_old_processes
 # Set working directory
 cd /Users/arvindkumar/clat_preparation
 
-# Activate venv to set up proper environment
-source /Users/arvindkumar/clat_preparation/venv_clat/bin/activate
+# Set HOME explicitly (may not be set during early boot)
+export HOME="/Users/arvindkumar"
 
-# Start server (exec replaces this script with python)
-log "Starting Python server daemon..."
-exec python3 "$SERVER"
+# Disable user site-packages to ensure only venv packages are used
+export PYTHONNOUSERSITE=1
+
+# Set VIRTUAL_ENV and update PATH to ensure proper venv activation
+export VIRTUAL_ENV="/Users/arvindkumar/clat_preparation/venv_clat"
+export PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# DEBUG: Log which Python will be used
+log "VIRTUAL_ENV: $VIRTUAL_ENV"
+log "PYTHONNOUSERSITE: $PYTHONNOUSERSITE"
+log "PYTHON variable: $PYTHON"
+log "Python exists: $(test -f $PYTHON && echo 'yes' || echo 'no')"
+log "Which python3: $(which python3)"
+
+# Start server using explicit venv python path (with unbuffered output)
+log "Starting Python server daemon with $PYTHON..."
+export PYTHONUNBUFFERED=1
+exec "$PYTHON" "$SERVER"
 

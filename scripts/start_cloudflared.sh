@@ -1,9 +1,12 @@
 #!/bin/bash
 # =============================================================================
 # Cloudflared Tunnel Starter with Network Wait
-# 
+#
 # This wrapper script ensures network is available before starting cloudflared.
 # Important for recovery after power cuts when router takes time to boot.
+#
+# NOTE: Do NOT kill existing processes here - launchd manages process lifecycle.
+# Killing processes causes restart loops.
 # =============================================================================
 
 LOG_FILE="/Users/arvindkumar/clat_preparation/logs/cloudflared_startup.log"
@@ -16,9 +19,9 @@ log() {
 wait_for_network() {
     local retries=0
     local max_wait=60  # 60 x 2s = 120 seconds
-    
+
     log "Waiting for network..."
-    
+
     while [ $retries -lt $max_wait ]; do
         # Check if we can reach Cloudflare
         if ping -c 1 -W 2 1.1.1.1 > /dev/null 2>&1; then
@@ -28,18 +31,9 @@ wait_for_network() {
         retries=$((retries + 1))
         sleep 2
     done
-    
+
     log "ERROR: Network not available after 2 minutes"
     return 1
-}
-
-# Kill any existing cloudflared processes to avoid conflicts
-cleanup_old_processes() {
-    if pgrep -f "cloudflared.*tunnel" > /dev/null 2>&1; then
-        log "Killing old cloudflared processes..."
-        pkill -f "cloudflared.*tunnel" 2>/dev/null
-        sleep 3
-    fi
 }
 
 # Main
@@ -50,9 +44,6 @@ log "Starting cloudflared tunnel..."
 if ! wait_for_network; then
     exit 1
 fi
-
-# Clean up old processes
-cleanup_old_processes
 
 # Start cloudflared (exec replaces this script with cloudflared)
 log "Starting cloudflared tunnel daemon..."

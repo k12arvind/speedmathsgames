@@ -13,6 +13,17 @@ Unified HTTP server that combines:
 Single server on port 8001 for everything.
 """
 
+# DEBUG: Print Python environment at startup (for diagnosing launchd issues)
+import sys
+import os
+print(f"🐍 Python executable: {sys.executable}")
+print(f"🐍 sys.prefix: {sys.prefix}")
+print(f"🐍 sys.base_prefix: {sys.base_prefix}")
+print(f"🐍 In venv: {sys.prefix != sys.base_prefix}")
+print(f"🐍 HOME: {os.environ.get('HOME', 'NOT SET')}")
+print(f"🐍 sys.path[0:3]: {sys.path[0:3]}")
+# END DEBUG
+
 from http.server import SimpleHTTPRequestHandler, HTTPServer, ThreadingHTTPServer
 from http.cookies import SimpleCookie
 from urllib.parse import urlparse, parse_qs, unquote
@@ -440,11 +451,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def handle_api_get(self, path: str, query_params: dict):
         """Route GET API requests."""
-        self.send_response(200)
-        self.send_header('Content-Type', 'application/json')
-        # CORS headers added automatically in end_headers()
-        self.end_headers()
-
+        # NOTE: Don't send headers here - let each handler call send_json() which sends proper headers
         try:
             # Assessment API endpoints
             if path.startswith('/api/assessment/'):
@@ -457,7 +464,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                  path.startswith('/api/filter/') or path.startswith('/api/stats') or \
                  path.startswith('/api/pdf/') or path.startswith('/api/chunks/') or \
                  path.startswith('/api/large-files') or path.startswith('/api/assessment-status/') or \
-                 path.startswith('/api/assessment-progress/'):
+                 path.startswith('/api/assessment-progress/') or path == '/api/debug':
                 self.handle_gk_dashboard_get(path, query_params)
             # Analytics API endpoints
             elif path.startswith('/api/analytics/'):
@@ -499,11 +506,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def handle_api_post(self, path: str, data: dict):
         """Route POST API requests."""
-        self.send_response(200)
-        self.send_header('Content-Type', 'application/json')
-        # CORS headers added automatically in end_headers()
-        self.end_headers()
-
+        # NOTE: Don't send headers here - let each handler call send_json() which sends proper headers
         try:
             # Assessment API endpoints
             if path.startswith('/api/assessment/'):
@@ -1417,6 +1420,31 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         elif path == '/api/stats':
             stats = self.pdf_scanner.get_statistics()
             self.send_json(stats)
+
+        elif path == '/api/debug':
+            # Diagnostic endpoint to debug launchd issues
+            import sys
+            import os
+            scanner = self.pdf_scanner
+            debug_info = {
+                'python_executable': sys.executable,
+                'sys_prefix': sys.prefix,
+                'sys_base_prefix': sys.base_prefix,
+                'in_venv': sys.prefix != sys.base_prefix,
+                'home': os.environ.get('HOME', 'NOT SET'),
+                'scanner_base_path': str(scanner.BASE_PATH) if scanner else 'N/A',
+                'scanner_base_path_exists': scanner.BASE_PATH.exists() if scanner else False,
+                'folders': {}
+            }
+            if scanner:
+                for k, v in scanner.FOLDERS.items():
+                    path = v['path']
+                    debug_info['folders'][k] = {
+                        'path': str(path),
+                        'exists': path.exists(),
+                        'pdf_count': len(list(path.glob('*.pdf'))) if path.exists() else 0
+                    }
+            self.send_json(debug_info)
 
         elif path.startswith('/api/pdf/'):
             pdf_id = path.split('/')[-1]
@@ -4977,10 +5005,12 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
 
     def send_json(self, data: dict, status_code: int = 200):
         """Send JSON response with optional status code."""
-        if status_code != 200:
-            self.send_response(status_code)
-            self.send_header('Content-Type', 'application/json')
-            self.end_headers()
+        self.send_response(status_code)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.end_headers()
         self.wfile.write(json.dumps(data).encode())
 
     def log_message(self, format, *args):
@@ -5071,6 +5101,7 @@ def main():
     verify_database_health()
 
     UnifiedHandler.pdf_scanner = PDFScanner()
+    # PDFScanner now logs its initialization in __init__
 
     # Initialize processing jobs database
     UnifiedHandler.processing_db = ProcessingJobsDB()
