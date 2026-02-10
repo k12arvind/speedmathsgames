@@ -5340,7 +5340,8 @@ def main():
     print("✅ Book practice database initialized")
 
     # Initialize momentum scanner module
-    UnifiedHandler.momentum_db = MomentumDatabase()
+    momentum_db_path = str(Path(__file__).parent / 'momentum_tracker.db')
+    UnifiedHandler.momentum_db = MomentumDatabase(momentum_db_path)
     UnifiedHandler.momentum_scanner = MomentumScanner(UnifiedHandler.momentum_db)
     print("✅ Momentum scanner initialized")
 
