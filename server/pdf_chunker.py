@@ -193,7 +193,7 @@ class PdfChunker:
                 }
 
                 original_folder = input_pdf.parent
-                large_files_dir = Path.home() / 'Desktop' / 'saanvi' / 'large_files'
+                large_files_dir = input_pdf.parent.parent / 'large_files'
                 large_files_dir.mkdir(parents=True, exist_ok=True)
 
                 # Move original file to large_files

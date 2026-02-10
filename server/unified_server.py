@@ -1333,7 +1333,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         sys.path.insert(0, str(Path(__file__).parent))
         from pdf_chunker import PdfChunker
 
-        large_files_dir = Path.home() / 'Desktop' / 'saanvi' / 'large_files'
+        large_files_dir = Path.home() / 'saanvi' / 'large_files'
         if not large_files_dir.exists():
             return []
 
@@ -2270,8 +2270,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                     Path.home() / 'saanvi' / 'Legaledgedailygk',
                     Path.home() / 'saanvi' / 'LegalEdgeweeklyGK',
                     Path.home() / 'saanvi' / 'weeklyGKCareerLauncher',
-                    Path.home() / 'Desktop' / 'saanvi' / 'Legaledgedailygk',
-                    Path.home() / 'Desktop' / 'saanvi' / 'legaledgegk'
+                    Path.home() / 'saanvi' / 'large_files'
                 ]:
                     potential_path = base_dir / pdf_id
                     if potential_path.exists():
