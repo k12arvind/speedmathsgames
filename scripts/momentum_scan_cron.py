@@ -61,11 +61,12 @@ def main():
         print(f'[{datetime.now()}] Skipping scan: {reason} ({today})')
         return
 
-    # Determine DB path: use home dir (works on both local and GCP)
-    db_path = str(Path.home() / 'clat_preparation' / 'momentum_tracker.db')
-    if not Path(db_path).parent.exists():
-        # Fallback for GCP where home might differ
-        db_path = '/opt/speedmathsgames/momentum_tracker.db'
+    # Determine DB path
+    # GCP: /opt/speedmathsgames/server/momentum_tracker.db
+    # Local: ~/clat_preparation/momentum_tracker.db
+    gcp_db = Path('/opt/speedmathsgames/server/momentum_tracker.db')
+    local_db = Path.home() / 'clat_preparation' / 'momentum_tracker.db'
+    db_path = str(gcp_db if gcp_db.exists() else local_db)
 
     start = datetime.now()
     print(f'\n[{start}] Starting daily momentum scan...')

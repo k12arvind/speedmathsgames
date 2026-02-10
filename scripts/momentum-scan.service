@@ -5,12 +5,12 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-User=root
-WorkingDirectory=/root/clat_preparation
-ExecStart=/root/clat_preparation/venv_clat/bin/python /root/clat_preparation/scripts/momentum_scan_cron.py
-Environment=HOME=/root
-StandardOutput=append:/root/clat_preparation/logs/momentum_scan.log
-StandardError=append:/root/clat_preparation/logs/momentum_scan.log
+User=www-data
+WorkingDirectory=/opt/speedmathsgames
+ExecStart=/opt/speedmathsgames/venv/bin/python /opt/speedmathsgames/scripts/momentum_scan_cron.py
+Environment=HOME=/opt/speedmathsgames
+StandardOutput=append:/opt/speedmathsgames/logs/momentum_scan.log
+StandardError=append:/opt/speedmathsgames/logs/momentum_scan.log
 TimeoutStartSec=300
 
 [Install]
