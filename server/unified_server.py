@@ -1615,14 +1615,99 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             self.send_json({'error': 'Monthly endpoint not found'})
 
     def _create_pdf_from_url(self, url: str) -> dict:
-        """Create PDF from TopRankers URL."""
+        """Create PDF from TopRankers URL (daily HTML or weekly CDN PDF)."""
         import subprocess
         import re
-        
-        # Validate URL
-        if 'toprankers.com' not in url:
-            raise ValueError('Only TopRankers URLs are supported')
-        
+
+        # Validate URL - accept both toprankers.com and cdn.toprankers.net.in
+        if 'toprankers.com' not in url and 'cdn.toprankers.net.in' not in url:
+            raise ValueError('Only TopRankers URLs are supported (toprankers.com or cdn.toprankers.net.in)')
+
+        # Detect if this is a direct CDN PDF link (weekly/monthly)
+        is_cdn_pdf = 'cdn.toprankers.net.in' in url and url.endswith('.pdf')
+
+        if is_cdn_pdf:
+            return self._download_cdn_pdf(url)
+        else:
+            return self._generate_pdf_from_html(url)
+
+    def _download_cdn_pdf(self, url: str) -> dict:
+        """Download PDF directly from TopRankers CDN (weekly/monthly PDFs)."""
+        import re
+        import requests
+
+        # Determine type and folder from URL
+        url_lower = url.lower()
+        if 'weekly' in url_lower:
+            pdf_type = 'weekly'
+            folder = 'LegalEdgeweeklyGK'
+        elif 'monthly' in url_lower:
+            pdf_type = 'monthly'
+            folder = 'Monthly-CLATPOST-LegalEdge'
+        else:
+            pdf_type = 'weekly'
+            folder = 'LegalEdgeweeklyGK'
+
+        # Extract date range from URL for filename
+        # Pattern: weekly-current-affairs-25th-jan-to-31st-jan-2026
+        date_range = re.search(
+            r'(\d+)(?:st|nd|rd|th)?-(\w+)-to-(\d+)(?:st|nd|rd|th)?-(\w+)-(\d{4})',
+            url_lower
+        )
+        if date_range:
+            d1, m1, d2, m2, year = date_range.groups()
+            filename = f"{pdf_type}_ca_{year}_{m1}_{d1}_to_{m2}_{d2}.pdf"
+        else:
+            # Fallback: use the original filename from URL
+            filename = url.split('/')[-1]
+            # Remove the hash suffix if present (e.g., -02937ba274d45.pdf -> .pdf)
+            filename = re.sub(r'-[0-9a-f]{10,}\.pdf$', '.pdf', filename)
+
+        output_path = Path.home() / "saanvi" / folder / filename
+
+        # Check if already exists
+        if output_path.exists():
+            return {
+                'success': True,
+                'message': 'PDF already exists',
+                'filename': filename,
+                'path': str(output_path),
+                'pdf_type': pdf_type,
+                'already_existed': True
+            }
+
+        # Download the PDF
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        response = requests.get(url, timeout=60, stream=True)
+        response.raise_for_status()
+
+        # Verify it's actually a PDF
+        content_type = response.headers.get('content-type', '')
+        if 'pdf' not in content_type and not url.endswith('.pdf'):
+            raise ValueError(f'URL does not point to a PDF (content-type: {content_type})')
+
+        with open(output_path, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+
+        if not output_path.exists() or output_path.stat().st_size == 0:
+            raise RuntimeError("PDF download failed or file is empty")
+
+        return {
+            'success': True,
+            'message': f'{pdf_type.title()} PDF downloaded successfully',
+            'filename': filename,
+            'path': str(output_path),
+            'pdf_type': pdf_type,
+            'size_kb': output_path.stat().st_size / 1024
+        }
+
+    def _generate_pdf_from_html(self, url: str) -> dict:
+        """Generate clean PDF from TopRankers HTML page (daily current affairs)."""
+        import subprocess
+        import re
+
         # Extract date from URL for filename
         date_match = re.search(r'(\d+)(?:st|nd|rd|th)?-(\w+)-(\d{4})', url)
         if date_match:
@@ -1631,9 +1716,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         else:
             from datetime import datetime
             filename = f"current_affairs_{datetime.now().strftime('%Y_%m_%d')}.pdf"
-        
+
         output_path = Path.home() / "saanvi" / "Legaledgedailygk" / filename
-        
+
         # Check if already exists
         if output_path.exists():
             return {
@@ -1643,10 +1728,10 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 'path': str(output_path),
                 'already_existed': True
             }
-        
+
         # Run the PDF generation script
         script_path = Path(__file__).parent.parent / 'toprankers' / 'generate_clean_pdf_final.py'
-        
+
         result = subprocess.run(
             [sys.executable, str(script_path), url, str(output_path)],
             capture_output=True,
@@ -1654,13 +1739,13 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             cwd=str(script_path.parent),
             timeout=60
         )
-        
+
         if result.returncode != 0:
             raise RuntimeError(f"PDF generation failed: {result.stderr}")
-        
+
         if not output_path.exists():
             raise RuntimeError("PDF was not created")
-        
+
         return {
             'success': True,
             'message': 'PDF created successfully',

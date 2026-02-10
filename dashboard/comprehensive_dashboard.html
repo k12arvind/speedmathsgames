@@ -735,7 +735,7 @@
                 <div style="flex: 1; min-width: 280px;">
                     <label style="font-size: 11px; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">📰 Create PDF from TopRankers URL</label>
                     <div style="display: flex; gap: 8px;">
-                        <input type="text" id="toprankers-url" placeholder="https://www.toprankers.com/current-affairs-..." 
+                        <input type="text" id="toprankers-url" placeholder="TopRankers daily/weekly URL (toprankers.com or cdn.toprankers.net.in)"
                                style="flex: 1; padding: 10px 14px; background: var(--bg-input); border: 1px solid var(--border-color); border-radius: 8px; font-size: 13px; color: var(--text-primary); outline: none; transition: border-color 0.2s;"
                                onfocus="this.style.borderColor='var(--accent-primary)'" onblur="this.style.borderColor='var(--border-color)'">
                         <button onclick="createPdfFromUrl()" id="create-pdf-btn" class="btn btn-success">
@@ -2114,8 +2114,8 @@
                 return;
             }
             
-            if (!url.includes('toprankers.com')) {
-                alert('Please enter a valid TopRankers URL');
+            if (!url.includes('toprankers.com') && !url.includes('cdn.toprankers.net.in')) {
+                alert('Please enter a valid TopRankers URL (toprankers.com or cdn.toprankers.net.in)');
                 return;
             }
             
