@@ -255,10 +255,68 @@
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 1.1rem;
+            cursor: pointer;
         }
 
         .chart-link:hover {
             color: #16a34a;
+        }
+
+        /* Chart Modal */
+        .chart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .chart-modal.active {
+            display: flex;
+        }
+
+        .chart-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95vw;
+            max-width: 1400px;
+            padding: 8px 4px;
+        }
+
+        .chart-modal-symbol {
+            color: #16a34a;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .chart-modal-close {
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0 8px;
+            line-height: 1;
+        }
+
+        .chart-modal-close:hover {
+            color: #fff;
+        }
+
+        .chart-modal-body {
+            width: 95vw;
+            max-width: 1400px;
+            height: 80vh;
+            background: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .empty-state {
@@ -507,6 +565,15 @@
         </div>
     </div>
 
+    <!-- Chart Modal -->
+    <div class="chart-modal" id="chart-modal" onclick="if(event.target===this)closeChart()">
+        <div class="chart-modal-header">
+            <span class="chart-modal-symbol" id="chart-modal-symbol">NSE:SYMBOL</span>
+            <button class="chart-modal-close" onclick="closeChart()" title="Close (Esc)">&times;</button>
+        </div>
+        <div class="chart-modal-body" id="chart-modal-body"></div>
+    </div>
+
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loading-overlay">
         <div class="loading-box">
@@ -524,6 +591,58 @@
         let allResults = [];
         let sortColumn = 'rs_rating';
         let sortDirection = 'desc';
+
+        // Chart Modal
+        function openChart(symbol, event) {
+            // Ctrl+click or middle-click → open in new tab
+            if (event && (event.ctrlKey || event.metaKey || event.button === 1)) {
+                window.open(`https://www.tradingview.com/chart/?symbol=NSE:${symbol}`, '_blank');
+                return;
+            }
+            if (event) event.preventDefault();
+
+            const modal = document.getElementById('chart-modal');
+            const body = document.getElementById('chart-modal-body');
+            document.getElementById('chart-modal-symbol').textContent = `NSE:${symbol}`;
+
+            // Clear previous widget
+            body.innerHTML = '<div id="tradingview-widget"></div>';
+
+            // Inject TradingView widget
+            const script = document.createElement('script');
+            script.src = 'https://s3.tradingview.com/tv.js';
+            script.onload = () => {
+                new TradingView.widget({
+                    container_id: 'tradingview-widget',
+                    symbol: `NSE:${symbol}`,
+                    interval: 'D',
+                    timezone: 'Asia/Kolkata',
+                    theme: 'dark',
+                    style: '1',
+                    locale: 'en',
+                    toolbar_bg: '#1e1e1e',
+                    enable_publishing: false,
+                    hide_side_toolbar: false,
+                    allow_symbol_change: true,
+                    width: '100%',
+                    height: '100%',
+                    save_image: false
+                });
+            };
+            body.appendChild(script);
+            modal.classList.add('active');
+        }
+
+        function closeChart() {
+            const modal = document.getElementById('chart-modal');
+            modal.classList.remove('active');
+            document.getElementById('chart-modal-body').innerHTML = '';
+        }
+
+        // Close on Escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeChart();
+        });
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
@@ -660,7 +779,7 @@
                     <td>${s.volume_ratio}x</td>
                     <td><div class="criteria-dots">${dots}</div></td>
                     <td>${status}</td>
-                    <td><a href="${s.tradingview_link}" target="_blank" class="chart-link">📊</a></td>
+                    <td><span class="chart-link" onclick="openChart('${s.symbol}', event)" title="Open chart">📊</span></td>
                 </tr>`;
             }).join('');
         }
@@ -694,7 +813,7 @@
                     <td><span class="vcp-badge">${v.notation}</span></td>
                     <td>${v.volume_trend}</td>
                     <td class="${qClass}" style="font-weight:bold;">${qScore}</td>
-                    <td><a href="${link}" target="_blank" class="chart-link">📊</a></td>
+                    <td><span class="chart-link" onclick="openChart('${v.symbol}', event)" title="Open chart">📊</span></td>
                 </tr>`;
             }).join('');
         }
@@ -720,7 +839,7 @@
                     <td>${b.volume_ratio}x</td>
                     <td>${b.suggested_stop}</td>
                     <td>${b.risk_pct}%</td>
-                    <td><a href="${link}" target="_blank" class="chart-link">📊</a></td>
+                    <td><span class="chart-link" onclick="openChart('${b.symbol}', event)" title="Open chart">📊</span></td>
                 </tr>`;
             }).join('');
         }

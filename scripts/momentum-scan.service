@@ -1,0 +1,17 @@
+[Unit]
+Description=Daily Momentum Scanner - Minervini Trend Template
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/root/clat_preparation
+ExecStart=/root/clat_preparation/venv_clat/bin/python /root/clat_preparation/scripts/momentum_scan_cron.py
+Environment=HOME=/root
+StandardOutput=append:/root/clat_preparation/logs/momentum_scan.log
+StandardError=append:/root/clat_preparation/logs/momentum_scan.log
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target
