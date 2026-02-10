@@ -156,6 +156,7 @@
         .card-finance::before { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
         .card-health::before { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
         .card-calendar::before { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
+        .card-momentum::before { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
 
         .card-gk:hover { --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2); }
         .card-math:hover { --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.2); }
@@ -165,6 +166,7 @@
         .card-finance:hover { --shadow-glow: 0 0 40px rgba(16, 185, 129, 0.2); }
         .card-health:hover { --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.2); }
         .card-calendar:hover { --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.2); }
+        .card-momentum:hover { --shadow-glow: 0 0 40px rgba(249, 115, 22, 0.2); }
 
         .module-header {
             display: flex;
@@ -251,6 +253,7 @@
         .card-finance .stat-value { color: #10b981; }
         .card-health .stat-value { color: #06b6d4; }
         .card-calendar .stat-value { color: #8b5cf6; }
+        .card-momentum .stat-value { color: #f97316; }
 
         .stat-label {
             font-size: 0.6875rem;
@@ -284,6 +287,7 @@
         .card-finance .module-cta { background: linear-gradient(135deg, #10b981 0%, #047857 100%); }
         .card-health .module-cta { background: linear-gradient(135deg, #06b6d4 0%, #0e7490 100%); }
         .card-calendar .module-cta { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
+        .card-momentum .module-cta { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
 
         .module-cta:hover {
             transform: translateY(-2px);
@@ -743,6 +747,38 @@
                 Open Calendar <span class="arrow">→</span>
             </button>
         </a>
+
+        <!-- Momentum Scanner Module (Private - Parents Only) -->
+        <a href="momentum_dashboard.html" class="module-card card-momentum private-module" id="momentum-module" style="display: none;">
+            <div class="module-header">
+                <div class="module-icon">📈</div>
+                <div>
+                    <div class="module-title">Momentum Scanner</div>
+                    <div class="module-subtitle">Minervini Method</div>
+                </div>
+            </div>
+            <div class="module-description">
+                Daily stock scanner using Mark Minervini's Trend Template, VCP patterns, and breakout detection for NSE stocks.
+            </div>
+            <ul class="module-features">
+                <li>Trend Template (8 criteria)</li>
+                <li>VCP pattern detection</li>
+                <li>TradingView chart links</li>
+            </ul>
+            <div class="module-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="momentum-qualifying">-</div>
+                    <div class="stat-label">Qualifying</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="momentum-vcp">-</div>
+                    <div class="stat-label">VCP Setups</div>
+                </div>
+            </div>
+            <button class="module-cta">
+                Open Scanner <span class="arrow">→</span>
+            </button>
+        </a>
     </div>
 
     <div class="footer-links">
@@ -960,6 +996,19 @@
                         }
                     } catch (e) {
                         console.log('Health stats not available');
+                    }
+
+                    // Show and load Momentum Scanner stats
+                    document.getElementById('momentum-module').style.display = 'flex';
+                    try {
+                        const momentumResponse = await fetch(`${API_BASE}/api/momentum/summary`);
+                        const momentumData = await momentumResponse.json();
+                        if (momentumData.data) {
+                            document.getElementById('momentum-qualifying').textContent = momentumData.data.qualifying_count || '0';
+                            document.getElementById('momentum-vcp').textContent = momentumData.data.active_vcp_count || '0';
+                        }
+                    } catch (e) {
+                        console.log('Momentum stats not available');
                     }
                 }
 

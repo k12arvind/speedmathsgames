@@ -117,6 +117,10 @@ from server.email_service import DailySummaryService
 from book_practice.book_db import BookPracticeDB
 from book_practice.image_extractor import BookImageExtractor, save_uploaded_image
 
+# Import momentum scanner module
+from server.momentum_db import MomentumDatabase
+from server.momentum_scanner import MomentumScanner
+
 
 class UnifiedHandler(SimpleHTTPRequestHandler):
     """Unified HTTP handler with all APIs and authentication."""
@@ -144,6 +148,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     calendar_client = None
     book_practice_db = None
     book_image_extractor = None
+    momentum_db = None
+    momentum_scanner = None
 
     # Public pages that don't require authentication
     PUBLIC_PAGES = [
@@ -499,6 +505,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Book Practice API endpoints
             elif path.startswith('/api/book/'):
                 self.handle_book_get(path, query_params)
+            # Momentum Scanner API endpoints (private - parents only)
+            elif path.startswith('/api/momentum/'):
+                self.handle_momentum_get(path, query_params)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -562,6 +571,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Book Practice API endpoints
             elif path.startswith('/api/book/'):
                 self.handle_book_post(path, data)
+            # Momentum Scanner API endpoints (private - parents only)
+            elif path.startswith('/api/momentum/'):
+                self.handle_momentum_post(path, data)
             else:
                 self.send_json({'error': 'Not Found'})
         except Exception as e:
@@ -5081,6 +5093,94 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         else:
             self.send_json({'error': 'Book practice endpoint not found'})
 
+    # ==================== Momentum Scanner API ====================
+
+    def handle_momentum_get(self, path: str, query_params: dict):
+        """Handle momentum scanner GET requests."""
+        if not self._check_private_access():
+            return
+
+        # GET /api/momentum/summary - Dashboard summary
+        if path == '/api/momentum/summary':
+            summary = self.momentum_db.get_dashboard_summary()
+            self.send_json({'success': True, 'data': summary})
+
+        # GET /api/momentum/results - Latest scan results with VCP and breakouts
+        elif path == '/api/momentum/results':
+            latest_scan = self.momentum_db.get_latest_scan()
+            if not latest_scan:
+                self.send_json({'success': True, 'data': {
+                    'qualifying': [], 'vcp': [], 'breakouts': [], 'history': []
+                }})
+                return
+
+            qualifying = self.momentum_db.get_scan_results(latest_scan['id'])
+            vcp = self.momentum_db.get_active_vcp_patterns()
+            breakouts = self.momentum_db.get_recent_breakouts()
+            history = self.momentum_db.get_scan_history()
+
+            # Mark qualifying stocks that have VCP or breakout
+            vcp_symbols = {v['symbol'] for v in vcp}
+            breakout_symbols = {b['symbol'] for b in breakouts}
+            for stock in qualifying:
+                stock['has_vcp'] = stock['symbol'] in vcp_symbols
+                stock['has_breakout'] = stock['symbol'] in breakout_symbols
+                # Parse tt_criteria_met from JSON string
+                if isinstance(stock.get('tt_criteria_met'), str):
+                    try:
+                        stock['tt_criteria_met'] = json.loads(stock['tt_criteria_met'])
+                    except (json.JSONDecodeError, TypeError):
+                        stock['tt_criteria_met'] = {}
+
+            self.send_json({'success': True, 'data': {
+                'qualifying': qualifying,
+                'vcp': vcp,
+                'breakouts': breakouts,
+                'history': history,
+                'scan': latest_scan
+            }})
+
+        # GET /api/momentum/history - Scan history
+        elif path == '/api/momentum/history':
+            days = int(query_params.get('days', ['30'])[0])
+            history = self.momentum_db.get_scan_history(days)
+            self.send_json({'success': True, 'data': history})
+
+        else:
+            self.send_json({'error': 'Momentum endpoint not found'})
+
+    def handle_momentum_post(self, path: str, data: dict):
+        """Handle momentum scanner POST requests."""
+        if not self._check_private_access():
+            return
+
+        # POST /api/momentum/scan - Run a new scan
+        if path == '/api/momentum/scan':
+            try:
+                import threading
+
+                # Run scan (this takes a few minutes)
+                scanner = self.momentum_scanner
+                results = scanner.run_full_scan()
+
+                self.send_json({
+                    'success': True,
+                    'data': {
+                        'scan_id': results['scan_id'],
+                        'scan_date': results['scan_date'],
+                        'total_scanned': results['total_scanned'],
+                        'qualifying_count': results['qualifying_count'],
+                        'vcp_count': len(results['vcp_candidates']),
+                        'breakout_count': len(results['breakouts']),
+                        'duration_sec': results['duration_sec'],
+                    }
+                })
+            except Exception as e:
+                self.send_json({'error': f'Scan failed: {str(e)}'}, 500)
+
+        else:
+            self.send_json({'error': 'Momentum endpoint not found'})
+
     def _get_base_url(self) -> str:
         """Get the base URL for the server."""
         host = self.headers.get('Host', 'localhost:8001')
@@ -5238,6 +5338,11 @@ def main():
     # Initialize book practice module
     UnifiedHandler.book_practice_db = BookPracticeDB()
     print("✅ Book practice database initialized")
+
+    # Initialize momentum scanner module
+    UnifiedHandler.momentum_db = MomentumDatabase()
+    UnifiedHandler.momentum_scanner = MomentumScanner(UnifiedHandler.momentum_db)
+    print("✅ Momentum scanner initialized")
 
     # Check if Google OAuth credentials are configured
     if CREDENTIALS_FILE.exists():

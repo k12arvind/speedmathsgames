@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Momentum Scanner - Minervini Method</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #166534 100%);
+            color: white;
+            padding: 16px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .header h1 {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+
+        .scan-info {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            background: var(--bg-secondary);
+            padding: 4px;
+            border-radius: var(--radius-md);
+            margin: 16px auto;
+            max-width: 600px;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.2s;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+        }
+
+        .tab.active {
+            background: #16a34a;
+            color: white;
+        }
+
+        .tab .badge {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1px 6px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-left: 4px;
+        }
+
+        .tab:not(.active) .badge {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+            max-width: 1600px;
+            padding: 0 16px;
+        }
+
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 12px 16px;
+            text-align: center;
+        }
+
+        .summary-card .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #16a34a;
+        }
+
+        .summary-card .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            padding: 8px 16px;
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .filter-bar select, .filter-bar input {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+        }
+
+        .stock-table-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 16px 100px;
+            overflow-x: auto;
+        }
+
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .stock-table th {
+            background: var(--bg-secondary);
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .stock-table th:hover {
+            color: var(--text-primary);
+        }
+
+        .stock-table th.sorted-asc::after { content: ' ▲'; }
+        .stock-table th.sorted-desc::after { content: ' ▼'; }
+
+        .stock-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        .stock-table tr:hover {
+            background: var(--bg-secondary);
+        }
+
+        .stock-symbol {
+            font-weight: 700;
+            color: #16a34a;
+        }
+
+        .stock-symbol a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .stock-symbol a:hover {
+            text-decoration: underline;
+        }
+
+        .rs-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .rs-high { background: rgba(22, 163, 74, 0.2); color: #16a34a; }
+        .rs-medium { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .rs-low { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+
+        .pct-positive { color: #16a34a; }
+        .pct-negative { color: #ef4444; }
+
+        .vcp-badge {
+            background: rgba(168, 85, 247, 0.2);
+            color: #a855f7;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .breakout-badge {
+            background: rgba(234, 179, 8, 0.2);
+            color: #eab308;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .criteria-dots {
+            display: flex;
+            gap: 3px;
+        }
+
+        .criteria-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+        }
+
+        .criteria-dot.pass { background: #16a34a; }
+        .criteria-dot.fail { background: #ef4444; }
+
+        .chart-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .chart-link:hover {
+            color: #16a34a;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state h3 {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .scan-btn {
+            background: #16a34a;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .scan-btn:hover { background: #15803d; }
+        .scan-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .back-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .back-link:hover { color: white; }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-box {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .loading-box .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--bg-tertiary);
+            border-top-color: #16a34a;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .progress-bar-container {
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+            height: 8px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background: #16a34a;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div>
+                <h1>Momentum Scanner</h1>
+                <div class="scan-info" id="scan-info">Loading...</div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <button class="scan-btn" id="run-scan-btn" onclick="runScan()">Run Scan</button>
+                <a href="momentum_methodology.html" class="back-link" style="font-size:0.8rem;">Methodology</a>
+                <a href="index.html" class="back-link">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 1600px; margin: 0 auto;">
+        <div class="summary-cards" id="summary-cards">
+            <div class="summary-card">
+                <div class="value" id="stat-scanned">-</div>
+                <div class="label">Stocks Scanned</div>
+            </div>
+            <div class="summary-card">
+                <div class="value" id="stat-qualifying">-</div>
+                <div class="label">Pass Trend Template</div>
+            </div>
+            <div class="summary-card">
+                <div class="value" id="stat-vcp">-</div>
+                <div class="label">VCP Setups</div>
+            </div>
+            <div class="summary-card">
+                <div class="value" id="stat-breakouts">-</div>
+                <div class="label">Breakouts (7d)</div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="trend-template" onclick="switchTab('trend-template')">
+                Trend Template <span class="badge" id="tab-tt-count">0</span>
+            </button>
+            <button class="tab" data-tab="vcp" onclick="switchTab('vcp')">
+                VCP Setups <span class="badge" id="tab-vcp-count">0</span>
+            </button>
+            <button class="tab" data-tab="breakouts" onclick="switchTab('breakouts')">
+                Breakouts <span class="badge" id="tab-breakout-count">0</span>
+            </button>
+            <button class="tab" data-tab="history" onclick="switchTab('history')">
+                History
+            </button>
+        </div>
+
+        <div class="filter-bar" id="filter-bar">
+            <select id="filter-fno" onchange="applyFilters()">
+                <option value="all">All Stocks</option>
+                <option value="fno">F&O Only</option>
+            </select>
+            <select id="filter-sector" onchange="applyFilters()">
+                <option value="all">All Sectors</option>
+            </select>
+            <input type="text" id="filter-search" placeholder="Search symbol / company..." oninput="applyFilters()">
+        </div>
+
+        <div class="stock-table-container">
+            <!-- Trend Template Tab -->
+            <div id="tab-content-trend-template">
+                <table class="stock-table" id="tt-table">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('symbol')">#</th>
+                            <th onclick="sortTable('symbol')">Symbol</th>
+                            <th onclick="sortTable('sector')">Sector</th>
+                            <th onclick="sortTable('close')">Close</th>
+                            <th onclick="sortTable('rs_rating')">RS</th>
+                            <th onclick="sortTable('pct_from_52w_high')">% 52W High</th>
+                            <th onclick="sortTable('pct_from_52w_low')">% 52W Low</th>
+                            <th>50 DMA</th>
+                            <th>150 DMA</th>
+                            <th>200 DMA</th>
+                            <th onclick="sortTable('volume_ratio')">Vol Ratio</th>
+                            <th>Criteria</th>
+                            <th>Status</th>
+                            <th>Chart</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tt-tbody"></tbody>
+                </table>
+                <div class="empty-state" id="tt-empty" style="display:none;">
+                    <h3>No scan results yet</h3>
+                    <p>Click "Run Scan" to analyze stocks using Minervini's Trend Template</p>
+                </div>
+            </div>
+
+            <!-- VCP Tab -->
+            <div id="tab-content-vcp" style="display:none;">
+                <table class="stock-table" id="vcp-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Symbol</th>
+                            <th>Close</th>
+                            <th>Pivot</th>
+                            <th>% from Pivot</th>
+                            <th>Contractions</th>
+                            <th>Notation</th>
+                            <th>Volume</th>
+                            <th>Quality</th>
+                            <th>Chart</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vcp-tbody"></tbody>
+                </table>
+                <div class="empty-state" id="vcp-empty" style="display:none;">
+                    <h3>No VCP patterns detected</h3>
+                    <p>VCP patterns are found among Trend Template qualifying stocks</p>
+                </div>
+            </div>
+
+            <!-- Breakouts Tab -->
+            <div id="tab-content-breakouts" style="display:none;">
+                <table class="stock-table" id="breakout-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Symbol</th>
+                            <th>Date</th>
+                            <th>Breakout Price</th>
+                            <th>Volume Ratio</th>
+                            <th>Suggested Stop</th>
+                            <th>Risk %</th>
+                            <th>Chart</th>
+                        </tr>
+                    </thead>
+                    <tbody id="breakout-tbody"></tbody>
+                </table>
+                <div class="empty-state" id="breakout-empty" style="display:none;">
+                    <h3>No recent breakouts</h3>
+                    <p>Breakouts are detected when VCP stocks clear their pivot on high volume</p>
+                </div>
+            </div>
+
+            <!-- History Tab -->
+            <div id="tab-content-history" style="display:none;">
+                <table class="stock-table" id="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Stocks Scanned</th>
+                            <th>Qualifying</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-box">
+            <div class="spinner"></div>
+            <div id="loading-message">Scanning stocks...</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let currentTab = 'trend-template';
+        let allResults = [];
+        let sortColumn = 'rs_rating';
+        let sortDirection = 'desc';
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadDashboard();
+        });
+
+        async function loadDashboard() {
+            try {
+                // Load summary and latest results in parallel
+                const [summaryRes, resultsRes] = await Promise.all([
+                    fetch(`${API_BASE}/api/momentum/summary`),
+                    fetch(`${API_BASE}/api/momentum/results`)
+                ]);
+
+                if (summaryRes.ok) {
+                    const summary = await summaryRes.json();
+                    if (summary.success) {
+                        updateSummary(summary.data);
+                    }
+                }
+
+                if (resultsRes.ok) {
+                    const results = await resultsRes.json();
+                    if (results.success) {
+                        allResults = results.data.qualifying || [];
+                        populateSectorFilter(allResults);
+                        renderTrendTemplate(allResults);
+                        renderVCPTable(results.data.vcp || []);
+                        renderBreakouts(results.data.breakouts || []);
+                        renderHistory(results.data.history || []);
+                    }
+                }
+            } catch (err) {
+                console.error('Failed to load dashboard:', err);
+                document.getElementById('scan-info').textContent = 'Error loading data';
+            }
+        }
+
+        function updateSummary(data) {
+            document.getElementById('stat-scanned').textContent = data.total_scanned || '-';
+            document.getElementById('stat-qualifying').textContent = data.qualifying_count || '0';
+            document.getElementById('stat-vcp').textContent = data.active_vcp_count || '0';
+            document.getElementById('stat-breakouts').textContent = data.recent_breakouts || '0';
+
+            document.getElementById('tab-tt-count').textContent = data.qualifying_count || '0';
+            document.getElementById('tab-vcp-count').textContent = data.active_vcp_count || '0';
+            document.getElementById('tab-breakout-count').textContent = data.recent_breakouts || '0';
+
+            if (data.last_scan_date) {
+                document.getElementById('scan-info').textContent =
+                    `Last scan: ${data.last_scan_date} | ${data.qualifying_count} qualifying stocks`;
+            } else {
+                document.getElementById('scan-info').textContent = 'No scans yet — click Run Scan';
+            }
+        }
+
+        function renderTrendTemplate(stocks) {
+            const tbody = document.getElementById('tt-tbody');
+            const empty = document.getElementById('tt-empty');
+
+            if (!stocks || stocks.length === 0) {
+                tbody.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+
+            empty.style.display = 'none';
+
+            // Sort
+            stocks.sort((a, b) => {
+                let va = a[sortColumn] || 0;
+                let vb = b[sortColumn] || 0;
+                if (typeof va === 'string') {
+                    return sortDirection === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+                }
+                return sortDirection === 'asc' ? va - vb : vb - va;
+            });
+
+            tbody.innerHTML = stocks.map((s, i) => {
+                const rsClass = s.rs_rating >= 90 ? 'rs-high' :
+                                s.rs_rating >= 70 ? 'rs-medium' : 'rs-low';
+
+                const pctHighClass = s.pct_from_52w_high >= 0 ? 'pct-positive' : 'pct-negative';
+                const pctLowClass = s.pct_from_52w_low >= 0 ? 'pct-positive' : 'pct-negative';
+
+                // Criteria dots
+                const criteria = s.tt_criteria_met || {};
+                const criteriaKeys = Object.keys(criteria);
+                const dots = criteriaKeys.map(k =>
+                    `<span class="criteria-dot ${criteria[k] ? 'pass' : 'fail'}" title="${k}"></span>`
+                ).join('');
+
+                // Status badges
+                let status = '';
+                if (s.has_breakout) {
+                    status = '<span class="breakout-badge">BREAKOUT</span>';
+                } else if (s.has_vcp) {
+                    status = '<span class="vcp-badge">VCP</span>';
+                }
+                const tc = s.tt_criteria_met || {};
+                if (tc.momentum_burst) {
+                    status += ' <span style="background:#f97316;color:#fff;padding:1px 5px;border-radius:4px;font-size:0.65rem;font-weight:600;">BURST</span>';
+                }
+                if (tc.near_ema21) {
+                    status += ' <span style="color:#22d3ee;font-size:0.65rem;font-weight:600;">21E</span>';
+                }
+
+                const sectorShort = (s.sector || '').replace('Technology Services', 'Tech Svc')
+                    .replace('Electronic Technology', 'Electronics')
+                    .replace('Non-Energy Minerals', 'Metals/Mining')
+                    .replace('Energy Minerals', 'Energy')
+                    .replace('Consumer Durables', 'Consumer')
+                    .replace('Industrial Services', 'Industrials')
+                    .replace('Health Technology', 'Healthcare')
+                    .replace('Process Industries', 'Process Ind.')
+                    .replace('Producer Manufacturing', 'Mfg.')
+                    .replace('Distribution Services', 'Distribution');
+
+                const fnoTag = s.is_fno ? ' <span style="color:#a855f7;font-size:0.7rem;">F&O</span>' : '';
+
+                return `<tr>
+                    <td>${i + 1}</td>
+                    <td class="stock-symbol">
+                        <a href="${s.tradingview_link}" target="_blank" title="${s.company_name || s.symbol}">${s.symbol}</a>${fnoTag}
+                    </td>
+                    <td style="font-size:0.75rem;color:var(--text-muted);max-width:100px;overflow:hidden;text-overflow:ellipsis;">${sectorShort}</td>
+                    <td>${s.close_price || s.close}</td>
+                    <td><span class="rs-badge ${rsClass}">${s.rs_rating}</span></td>
+                    <td class="${pctHighClass}">${s.pct_from_52w_high}%</td>
+                    <td class="${pctLowClass}">+${s.pct_from_52w_low}%</td>
+                    <td>${s.sma_50 || '-'}</td>
+                    <td>${s.sma_150 || '-'}</td>
+                    <td>${s.sma_200 || '-'}</td>
+                    <td>${s.volume_ratio}x</td>
+                    <td><div class="criteria-dots">${dots}</div></td>
+                    <td>${status}</td>
+                    <td><a href="${s.tradingview_link}" target="_blank" class="chart-link">📊</a></td>
+                </tr>`;
+            }).join('');
+        }
+
+        function renderVCPTable(vcps) {
+            const tbody = document.getElementById('vcp-tbody');
+            const empty = document.getElementById('vcp-empty');
+
+            if (!vcps || vcps.length === 0) {
+                tbody.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+
+            empty.style.display = 'none';
+            tbody.innerHTML = vcps.map((v, i) => {
+                const link = `https://www.tradingview.com/chart/?symbol=NSE:${v.symbol}`;
+                const qScore = v.quality_score || 0;
+                const qClass = qScore >= 80 ? 'pct-positive' : qScore >= 60 ? '' : 'pct-negative';
+                const tags = [];
+                if (v.near_21ema) tags.push('<span style="color:#22d3ee;font-size:0.7rem;">21EMA</span>');
+                if (v.has_inside_bar) tags.push('<span style="color:#a78bfa;font-size:0.7rem;">IB</span>');
+                const tagStr = tags.length ? ' ' + tags.join(' ') : '';
+                return `<tr>
+                    <td>${i + 1}</td>
+                    <td class="stock-symbol"><a href="${link}" target="_blank">${v.symbol}</a>${tagStr}</td>
+                    <td>${v.current_price}</td>
+                    <td>${v.pivot_price}</td>
+                    <td class="${v.pct_from_pivot <= 5 ? 'pct-positive' : ''}">${v.pct_from_pivot}%</td>
+                    <td>${v.num_contractions}</td>
+                    <td><span class="vcp-badge">${v.notation}</span></td>
+                    <td>${v.volume_trend}</td>
+                    <td class="${qClass}" style="font-weight:bold;">${qScore}</td>
+                    <td><a href="${link}" target="_blank" class="chart-link">📊</a></td>
+                </tr>`;
+            }).join('');
+        }
+
+        function renderBreakouts(breakouts) {
+            const tbody = document.getElementById('breakout-tbody');
+            const empty = document.getElementById('breakout-empty');
+
+            if (!breakouts || breakouts.length === 0) {
+                tbody.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+
+            empty.style.display = 'none';
+            tbody.innerHTML = breakouts.map((b, i) => {
+                const link = `https://www.tradingview.com/chart/?symbol=NSE:${b.symbol}`;
+                return `<tr>
+                    <td>${i + 1}</td>
+                    <td class="stock-symbol"><a href="${link}" target="_blank">${b.symbol}</a></td>
+                    <td>${b.breakout_date}</td>
+                    <td>${b.breakout_price}</td>
+                    <td>${b.volume_ratio}x</td>
+                    <td>${b.suggested_stop}</td>
+                    <td>${b.risk_pct}%</td>
+                    <td><a href="${link}" target="_blank" class="chart-link">📊</a></td>
+                </tr>`;
+            }).join('');
+        }
+
+        function renderHistory(history) {
+            const tbody = document.getElementById('history-tbody');
+            tbody.innerHTML = (history || []).map(h => `<tr>
+                <td>${h.scan_date}</td>
+                <td>${h.total_stocks_scanned}</td>
+                <td>${h.qualifying_count}</td>
+                <td>${h.scan_duration_sec ? h.scan_duration_sec.toFixed(1) + 's' : '-'}</td>
+            </tr>`).join('');
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.tab[data-tab="${tab}"]`).classList.add('active');
+
+            ['trend-template', 'vcp', 'breakouts', 'history'].forEach(t => {
+                document.getElementById(`tab-content-${t}`).style.display = t === tab ? '' : 'none';
+            });
+
+            // Show/hide filter bar for trend template
+            document.getElementById('filter-bar').style.display = tab === 'trend-template' ? '' : 'none';
+        }
+
+        function sortTable(column) {
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortColumn = column;
+                sortDirection = 'desc';
+            }
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const fno = document.getElementById('filter-fno').value;
+            const sector = document.getElementById('filter-sector').value;
+            const search = document.getElementById('filter-search').value.toUpperCase();
+
+            let filtered = allResults.filter(s => {
+                if (fno === 'fno' && !s.is_fno) return false;
+                if (sector !== 'all' && s.sector !== sector) return false;
+                if (search) {
+                    const sym = (s.symbol || '').toUpperCase();
+                    const name = (s.company_name || '').toUpperCase();
+                    const sec = (s.sector || '').toUpperCase();
+                    if (!sym.includes(search) && !name.includes(search) && !sec.includes(search)) return false;
+                }
+                return true;
+            });
+
+            renderTrendTemplate(filtered);
+        }
+
+        function populateSectorFilter(stocks) {
+            const sectors = [...new Set(stocks.map(s => s.sector).filter(Boolean))].sort();
+            const select = document.getElementById('filter-sector');
+            select.innerHTML = '<option value="all">All Sectors</option>' +
+                sectors.map(s => `<option value="${s}">${s}</option>`).join('');
+        }
+
+        async function runScan() {
+            const btn = document.getElementById('run-scan-btn');
+            const overlay = document.getElementById('loading-overlay');
+
+            btn.disabled = true;
+            overlay.classList.add('active');
+            document.getElementById('loading-message').textContent = 'Starting scan...';
+            document.getElementById('loading-progress').style.width = '0%';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/momentum/scan`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({})
+                });
+
+                if (!response.ok) throw new Error('Scan failed');
+
+                const result = await response.json();
+
+                if (result.success) {
+                    document.getElementById('loading-message').textContent = 'Scan complete! Loading results...';
+                    document.getElementById('loading-progress').style.width = '100%';
+
+                    // Reload dashboard
+                    await loadDashboard();
+                } else {
+                    throw new Error(result.error || 'Scan failed');
+                }
+            } catch (err) {
+                alert('Scan error: ' + err.message);
+            } finally {
+                btn.disabled = false;
+                overlay.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

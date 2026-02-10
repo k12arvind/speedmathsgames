@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Methodology - Momentum Scanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body {
+            background: var(--bg-primary, #0f172a);
+            color: var(--text-primary, #e2e8f0);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #166534 100%);
+            color: white;
+            padding: 16px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .header a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .container-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        .intro {
+            background: var(--bg-secondary, #1e293b);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            border-left: 4px solid #16a34a;
+        }
+
+        .intro p {
+            margin: 0;
+            line-height: 1.7;
+            color: var(--text-secondary, #94a3b8);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #4ade80;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+        }
+
+        .source-card {
+            background: var(--bg-secondary, #1e293b);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: border-color 0.2s;
+        }
+
+        .source-card:hover {
+            border-color: rgba(74, 222, 128, 0.3);
+        }
+
+        .source-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin: 0 0 6px 0;
+        }
+
+        .source-card .role {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 12px;
+        }
+
+        .concept-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .concept-list li {
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            display: flex;
+            gap: 10px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .concept-list li:last-child {
+            border-bottom: none;
+        }
+
+        .concept-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .tag-implemented {
+            background: rgba(74, 222, 128, 0.15);
+            color: #4ade80;
+        }
+
+        .tag-research {
+            background: rgba(96, 165, 250, 0.15);
+            color: #60a5fa;
+        }
+
+        .tag-planned {
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+        }
+
+        .tag-data {
+            background: rgba(167, 139, 250, 0.15);
+            color: #a78bfa;
+        }
+
+        .source-links {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .source-links a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 0.82rem;
+            display: inline-block;
+            margin-right: 16px;
+            margin-bottom: 4px;
+        }
+
+        .source-links a:hover {
+            text-decoration: underline;
+        }
+
+        .data-decision {
+            background: var(--bg-secondary, #1e293b);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .data-decision h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin: 0 0 12px;
+        }
+
+        table.comparison {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        table.comparison th {
+            background: rgba(255,255,255,0.05);
+            padding: 8px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #94a3b8;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        table.comparison td {
+            padding: 8px 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: #cbd5e1;
+        }
+
+        .verdict {
+            color: #4ade80;
+            font-weight: 600;
+        }
+
+        .rejected {
+            color: #f87171;
+        }
+
+        .backtest-card {
+            background: var(--bg-secondary, #1e293b);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .backtest-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+
+        .stat-highlight {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #4ade80;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .legend {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .mapping-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-top: 16px;
+        }
+
+        .mapping-table th {
+            background: rgba(255,255,255,0.05);
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+            color: #94a3b8;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mapping-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: #cbd5e1;
+            vertical-align: top;
+        }
+
+        .code-ref {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.78rem;
+            background: rgba(255,255,255,0.06);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #a78bfa;
+        }
+
+        @media (max-width: 768px) {
+            .container-main { padding: 16px 12px 40px; }
+            .source-card, .data-decision, .backtest-card { padding: 16px; }
+            table.comparison, .mapping-table { font-size: 0.78rem; }
+            table.comparison th, table.comparison td,
+            .mapping-table th, .mapping-table td { padding: 6px 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-content">
+        <h1>Research Methodology</h1>
+        <a href="momentum_dashboard.html">Back to Scanner</a>
+    </div>
+</div>
+
+<div class="container-main">
+
+    <div class="intro">
+        <p>
+            This page documents the research sources, traders, and educators whose work informed
+            the Momentum Scanner implementation. Each concept in the scanner is mapped to its origin
+            — from Mark Minervini's original SEPA methodology to Indian market adaptations by local
+            practitioners. Tags indicate whether a concept is <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+            in the scanner, used for <span class="concept-tag tag-research">RESEARCH</span> only,
+            <span class="concept-tag tag-planned">PLANNED</span> for future phases, or influenced
+            <span class="concept-tag tag-data">DATA ARCHITECTURE</span> decisions.
+        </p>
+    </div>
+
+    <!-- ===================== SECTION 1: MINERVINI ===================== -->
+    <div class="section">
+        <h2>1. Mark Minervini — Primary Methodology</h2>
+
+        <div class="source-card">
+            <h3>Mark Minervini</h3>
+            <div class="role">US Trading Champion (1997), Author of "Trade Like a Stock Market Wizard" and "Think & Trade Like a Champion"</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Trend Template (8 criteria):</strong> Price > SMA150 & SMA200, SMA150 > SMA200, SMA200 rising, SMA50 > SMA150 & SMA200, Price > SMA50, ≥30% above 52W low, within 25% of 52W high, RS ≥ 70. All 8 criteria implemented as vectorized checks in <span class="code-ref">momentum_scanner.py:141-209</span></span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>SEPA (Specific Entry Point Analysis):</strong> Stage 2 uptrend focus — only buy stocks in the accumulation/markup phase. The Trend Template filter ensures only Stage 2 stocks pass.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>VCP (Volatility Contraction Pattern):</strong> Progressively tighter price contractions (e.g., 25% → 15% → 8%) with declining volume. Detected via segment analysis in <span class="code-ref">momentum_scanner.py:211-301</span>. First contraction ≤ 35%, final ≤ 15%, volume must decline.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Breakout Detection:</strong> Price above pivot on volume ≥ 40% above 50-day average. Stop-loss placed 8% below pivot. Implemented in <span class="code-ref">momentum_scanner.py:303-328</span></span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Relative Strength Rating:</strong> Percentile rank of weighted performance composite (40% 3M + 20% 6M + 20% 1Y + 20% 1M). Computed in <span class="code-ref">momentum_scanner.py:124-139</span></span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>VCP Notation Format:</strong> "12W 25%-15%-8% / 3T" format (duration, contraction depths, number of contractions) from Minervini's base analysis shorthand.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-planned">PLANNED</span>
+                    <span><strong>Power Play Setup:</strong> 100%+ gain in 8 weeks followed by 3-6 week consolidation with max 20% correction. Rare but highest-momentum setup. Planned for Phase 2.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-planned">PLANNED</span>
+                    <span><strong>Progressive Exposure:</strong> Start at 25-50% invested, scale up only with winning trades, scale back to cash on 5-7% drawdown. Planned for portfolio tracker module.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-planned">PLANNED</span>
+                    <span><strong>Position Sizing:</strong> Max 1-2% account risk per trade. Position Size = (Equity × Risk%) / (Entry - Stop). Planned for portfolio module.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Fundamental Screening:</strong> EPS growth ≥ 20% quarterly, ≥ 25% annual, revenue growth ≥ 15%, ROE ≥ 17%. Not implemented — TradingView screener provides technical data only; fundamentals would require a separate data source.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://www.chartmill.com/documentation/stock-screener/technical-analysis-trading-strategies/496-Mark-Minervini-Trend-Template-A-Step-by-Step-Guide-for-Beginners" target="_blank">ChartMill — Trend Template Guide</a>
+                <a href="https://www.finermarketpoints.com/post/what-is-mark-minervini-s-trading-strategy-the-complete-sepa-vcp-guide" target="_blank">FinerMarketPoints — Complete SEPA & VCP</a>
+                <a href="https://traderlion.com/technical-analysis/volatility-contraction-pattern/" target="_blank">TraderLion — Mastering VCP</a>
+                <a href="https://trendspider.com/learning-center/volatility-contraction-pattern-vcp/" target="_blank">TrendSpider — VCP Explained</a>
+                <a href="https://deepvue.com/screener/minervini-trend-template/" target="_blank">Deepvue — Trend Template</a>
+                <a href="https://brkoutgeek.substack.com/p/mark-minervinis-power-play-setup" target="_blank">BrkoutGeek — Power Play Setup</a>
+                <a href="https://traderlion.com/investing-champions/mark-minervinis-risk-management/" target="_blank">TraderLion — Risk Management</a>
+                <a href="https://tintintrading.substack.com/p/maximizing-profits-with-progressive" target="_blank">TinTinTrading — Progressive Exposure</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 2: INDIAN TRADERS ===================== -->
+    <div class="section">
+        <h2>2. Indian Market Practitioners</h2>
+
+        <div class="source-card" style="border-left: 3px solid #a78bfa;">
+            <h3>Manas Arora (@iManasArora)</h3>
+            <div class="role">Full-time swing trader since 2012 (15+ years market experience). Speaker at TraderLion Annual Conference 2025. Creator of the Purple Dot indicator. Cash-market-only practitioner — no leverage, no F&O.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>6-Point Scanner Template:</strong> His stock selection criteria closely mirrors Minervini's Trend Template: (1) Close > Rs 30, (2) Within 25% of 52W high, (3) Close > SMA50 > SMA200, (4) SMA200 rising ≥ 3 months, (5) Close > 50% above 52W low, (6) 52W high achieved within 6 months. Criteria 1-5 are already in our Trend Template. Criterion 6 (recency of 52W high) is a useful additional filter.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Volatility Contraction as core setup:</strong> Arora's "Momentum Burst" setup is fundamentally a VCP variant — uptrending stocks with strong institutional volume that base/correct in orderly fashion with declining volume. Daily range contracts to &lt; 2-3%, often forming inside bars. This validates our VCP detection logic which looks for progressively tighter contractions.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-planned">PLANNED</span>
+                    <span><strong>Purple Dot Indicator (≥5% move + ≥500K volume):</strong> His free TradingView indicator "Combined Up Down with Volume" marks stocks making ≥5% daily moves on ≥500K volume. "More dots = high volatility & liquidity." This is used to build watchlists of "fast movers" for subsequent VCP monitoring. Could be added as a pre-filter or momentum flag in the scanner.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-planned">PLANNED</span>
+                    <span><strong>SVRO Entry Setup:</strong> Presented at TraderLion 2025. <strong>S</strong>trong Start (gap-up showing early strength) + <strong>V</strong>alue Area (price near 21 EMA support) + <strong>R</strong>elative Volume (high volume confirming) + <strong>O</strong>pening Range Break. This is an intraday entry timing method on top of a daily VCP — applicable when we add alert/notification features.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-planned">PLANNED</span>
+                    <span><strong>21 EMA as key support:</strong> Price during correction must stay above the 21-day EMA. "Stocks contracting within 1-5% above 21 EMA are prime candidates." A low piercing the 21 EMA is acceptable; a close below is a sell signal. Could be added as a VCP quality filter — current VCP candidates near 21 EMA are higher probability.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Prior upmove requirement:</strong> Minimum 50% prior upmove backed by institutional volumes before any VCP entry is considered. "Without this upmove, no amount of contraction is enough." Our 30% above 52W low criterion partially captures this but his 50% threshold is more aggressive.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>"Strong Start" entry timing:</strong> Enters within first 1-2% of the move on 5-min/15-min confirmation. A gap-up after a shakeout day or breaking above an inside bar is his potent entry signal. This is intraday execution — not applicable to our daily scanner but relevant for a future alerts module.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Aggressive position sizing + pyramiding:</strong> Takes large initial positions ("mammoth sized") with 1-2% risk, then doubles down on pullbacks showing same volatility contraction traits. "Sells into strength" — partial exits at 3-5% gains, final chunks on cessation of uptrend. Strike rate ~65-75% in uptrends. Trades typically last 3-4 days.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Dead simple stop-loss:</strong> Round figure 1-2% from entry OR low of daily candle, whichever is smaller. Break of 21 EMA = definite sell. Simpler than Minervini's 7-8% max stop — reflects his tighter entry timing reducing required stop distance.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Small/mid-cap focus:</strong> Emphasizes small-cap and mid-cap stocks for higher momentum potential. Consistent with Indian market dynamics where small-caps show more explosive moves than large-caps.</span>
+                </li>
+            </ul>
+
+            <div style="margin-top: 16px; padding: 14px 16px; background: rgba(167,139,250,0.06); border-radius: 8px;">
+                <strong style="color: #a78bfa; font-size: 0.85rem;">Additional insights from X/Twitter threads:</strong>
+                <ul class="concept-list" style="margin-top: 8px;">
+                    <li>
+                        <span class="concept-tag tag-research">RESEARCH</span>
+                        <span><strong>"Risk first. Always."</strong> Structures positions so overnight gap-downs can't cause more than 2-3% portfolio damage. Refuses to hold full-size positions overnight. References Minervini: willing to allocate 400% to one stock but would never hold it overnight.</span>
+                    </li>
+                    <li>
+                        <span class="concept-tag tag-research">RESEARCH</span>
+                        <span><strong>"Shakeout before breakout":</strong> A false breakdown/shakeout that shakes out weak holders is "majorly responsible for clean breakouts." SS (Strong Start) after a shakeout day is a potent entry signal. Anticipating the breakout rather than chasing it reduces risk.</span>
+                    </li>
+                    <li>
+                        <span class="concept-tag tag-research">RESEARCH</span>
+                        <span><strong>No price targets:</strong> Calls target-setting "futile." Remains flexible — "My view can change with the next bar." Sells based on price action deterioration, not pre-set targets.</span>
+                    </li>
+                    <li>
+                        <span class="concept-tag tag-research">RESEARCH</span>
+                        <span><strong>NSE only, ignore indices:</strong> Trades only NSE stocks (avoids BSE for lower volume). Does not monitor Nifty/Sensex — "Indices don't generate profits, stocks do." Focuses entirely on individual stock setups.</span>
+                    </li>
+                    <li>
+                        <span class="concept-tag tag-research">RESEARCH</span>
+                        <span><strong>Chart Gym series:</strong> Weekly chart annotation exercises where traders mark entries, exits, stops on historical charts. Builds pattern recognition through deliberate practice — "Chart reading muscles."</span>
+                    </li>
+                    <li>
+                        <span class="concept-tag tag-research">RESEARCH</span>
+                        <span><strong>Stock Life Cycle framework:</strong> Compares stock stages to tree growth (seed → sapling → mature tree). Helps identify when a stock is in its "growth stage" (equivalent to Minervini's Stage 2) — the optimal time to enter.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="source-links">
+                <a href="https://sakatas.substack.com/p/manas-arora-momentum-burst-set-up" target="_blank">Momentum Burst Setup (Sakata's Substack)</a>
+                <a href="https://karanshah137.substack.com/p/lessons-from-a-full-time-swing-trader" target="_blank">Lessons from a Full-Time Swing Trader</a>
+                <a href="https://traderlion.com/lesson/manas-arora-the-svro-entry-setup-and-trade-case-studies/" target="_blank">TraderLion — SVRO Entry Setup</a>
+                <a href="https://www.tradingview.com/script/66J0xpC1-Combined-Up-down-with-volume/" target="_blank">Purple Dot Indicator (TradingView)</a>
+                <a href="https://chartink.com/screener/manas-arora-vcp-pattern" target="_blank">Chartink — Manas Arora VCP Pattern</a>
+                <a href="https://threadreaderapp.com/thread/1448537114438627329.html" target="_blank">X Thread — Risk Management & Position Sizing</a>
+                <a href="https://threadreaderapp.com/user/iManasArora" target="_blank">All Threads on Thread Reader</a>
+                <a href="https://x.com/iManasArora" target="_blank">@iManasArora on X</a>
+                <a href="https://www.youtube.com/@iManasArora" target="_blank">YouTube Channel</a>
+                <a href="https://www.manasarora.com/" target="_blank">manasarora.com</a>
+            </div>
+        </div>
+
+        <div class="source-card" style="border-left: 3px solid #60a5fa;">
+            <h3>Mohit Vidyarthii (@MohitVidyarthii) — Living For Trading</h3>
+            <div class="role">Trader & Mentor. 2,400+ followers on X. Focus: high RS stocks, swing trading with discipline and risk management. Followed by Vivek Gautam.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>High RS stock hunting:</strong> Core approach revolves around finding stocks with high Relative Strength — stocks outperforming the broader market. Aligns with our RS Rating ≥ 70 criterion (Minervini's Criterion 8). His focus on RS as the primary filter validates the weight we give to RS rating in ranking qualifying stocks.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Discipline-first philosophy:</strong> "Focused on discipline, risk & learning from every trade." Emphasizes process over outcomes — consistent with Minervini's emphasis on following the system regardless of individual trade results. Reinforces that win rate matters less than discipline.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Market swing navigation:</strong> Shares real-time insights on navigating market swings — identifying when to be aggressive vs. defensive. This aligns with Minervini's progressive exposure concept (scale up in favorable conditions, scale back in adverse ones).</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Learning from every trade:</strong> Advocates trade journaling and post-trade analysis as the primary path to improvement. Consistent with Manas Arora's "Chart Gym" approach and Minervini's emphasis on studying past trades to refine entry/exit timing.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://x.com/MohitVidyarthii" target="_blank">@MohitVidyarthii on X</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>Prashant Shah — Definedge Securities</h3>
+            <div class="role">India's first IFTA Master of Financial Technical Analysis. Creator of RZone relative strength platform.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Relative Strength benchmarked against Nifty:</strong> RS rating computed as percentile rank within the Indian stock universe rather than against a US index. Adapted from Definedge's Ratio Rank methodology.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Momentum Score Dashboard:</strong> RZone provides P&F (Point & Figure) based RS charts. Studied the approach but implemented simpler percentile-based RS instead.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://www.definedgesecurities.com/products/rzone/" target="_blank">Definedge RZone</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>Vivek Bajaj — StockEdge / ELearnMarkets</h3>
+            <div class="role">Founder of StockEdge (4M+ users). Evolved from scalper to momentum investor.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>AI Momentum Scoring:</strong> StockEdge's proprietary momentum scoring combines technical and volume signals. Informed our RS rating weight distribution (heavier on 3-month performance).</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Volume-based confirmation:</strong> Breakout volume must be ≥ 40% above average — standard across Indian momentum practitioners including Bajaj's teachings.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://web.stockedge.com/scan-groups" target="_blank">StockEdge Scans</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>MarketSmith India</h3>
+            <div class="role">Official Minervini Trend Template as a "Guru Screen" for Indian stocks. William O'Neil's CANSLIM methodology adapted for NSE/BSE.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Trend Template as a pre-built screen:</strong> MarketSmith India offers 1-month and 3-month Minervini Trend Template variants. Validated our 8-criteria implementation against their published results.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>RS Rating (IBD-style):</strong> MarketSmith uses IBD's proprietary RS Rating (1-99). Our implementation approximates this using TradingView performance data weighted by time period.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://marketsmithindia.com/mstool/list/marketsmith-stock-screens/minervini-trend-template-5-months/idealists.jsp" target="_blank">MarketSmith India — Minervini Screen</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>StockManiacs Blog</h3>
+            <div class="role">Indian trading blog with detailed SEPA/VCP articles specifically adapted for NSE stocks.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Indian Trend Template adaptation:</strong> Detailed walkthrough of applying all 8 criteria to Indian stocks. Confirmed that SMA150 (not commonly available) is critical and must be sourced or computed.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-implemented">IMPLEMENTED</span>
+                    <span><strong>Circuit limit awareness:</strong> Highlighted the need to filter or flag stocks with tight circuit limits (2-5%) which can trap capital for days. Influenced our F&O stock labeling — F&O stocks have no circuit limits.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://www.stockmaniacs.net/unleashing-the-power-of-the-mark-minervini-sepa-strategy/" target="_blank">StockManiacs — SEPA Strategy for India</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>Capitalmind — Deepak Shenoy</h3>
+            <div class="role">Runs Adaptive Momentum PMS (Portfolio Management Service) with audited 30.2% annual returns over 5 years.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Momentum investing validation in India:</strong> Capitalmind's published backtests (2007-2019) showed simple momentum beats Nifty 90% of the time. Rs 100 → Rs 464 (momentum) vs Rs 300 (Nifty). Confirmed momentum works in Indian markets.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Winner ratio insight:</strong> Capitalmind's PMS barely reaches 50% win rate — returns come from a few big winners, not frequent small wins. Validates Minervini's emphasis on reward-to-risk ratio over win rate.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://www.capitalmind.in/portfolio-management-service/momentum" target="_blank">Capitalmind Momentum PMS</a>
+                <a href="https://www.capitalmind.in/insights/momentum-investing-basics-india" target="_blank">Capitalmind — Momentum Investing Basics</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>Zerodha Varsity</h3>
+            <div class="role">Free educational platform by India's largest discount broker.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Momentum portfolios module:</strong> Free chapter on building momentum portfolios with Nifty 500 universe backtests. Confirmed monthly rebalancing works well for Indian momentum strategies.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://zerodha.com/varsity/chapter/momentum-portfolios/" target="_blank">Zerodha Varsity — Momentum Portfolios</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>MomentumLAB</h3>
+            <div class="role">Quantitative research blog publishing rigorous backtests on Indian momentum strategies.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>10-year backtest on Nifty 200:</strong> ROC 1,3,6-2Wk strategy delivered 40% CAGR with highest Sharpe Ratio. Shorter lookback (3-9 months) outperforms in uptrends; longer (6-12 months) more stable. Informed our RS rating weighting — 40% weight on 3-month, 20% on 6-month.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://momentum-lab.medium.com/momentum-strategies-in-indian-markets-insights-from-a-10-year-backtest-analysis-ef285d6533c4" target="_blank">MomentumLAB — 10-Year Backtest</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>VCPstocks.com</h3>
+            <div class="role">Dedicated VCP scanner for both US and Indian (BSE) stocks. Daily email alerts before market open.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Automated VCP scanning approach:</strong> Confirmed that automated VCP detection is viable for Indian stocks. Their approach of running scans on the full BSE universe validated our architecture of scanning TradingView first, then checking VCP on qualifying stocks only.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://vcpstocks.com/" target="_blank">VCPstocks.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 3: TRADINGVIEW COMMUNITY ===================== -->
+    <div class="section">
+        <h2>3. TradingView Community — Pine Script Indicators</h2>
+
+        <div class="source-card">
+            <h3>kingshukghosh71</h3>
+            <div class="role">TradingView Pine Script author. Created "Minervini VCP Pattern — Indian Context" indicator.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>VCP adapted for NSE volume patterns:</strong> Indian stocks have different volume characteristics (lower liquidity, higher impact of FII flows). This indicator adjusts volume thresholds for Indian market conditions. Informed our VCP volume analysis approach.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://in.tradingview.com/script/ZDW7dMhF-Minervini-VCP-Pattern-Indian-Context/" target="_blank">TradingView — VCP Indian Context</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>vishnuv</h3>
+            <div class="role">TradingView Pine Script author (Indian). Created complete SEPA dashboard indicator.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Complete SEPA indicator:</strong> Full Trend Template + RS analysis as a single TradingView indicator. Studied the implementation to validate our criteria logic.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://in.tradingview.com/script/FBD7SZom-Mark-Minervini-Trend-Template-SEPA/" target="_blank">TradingView — Minervini SEPA by vishnuv</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>ravihls</h3>
+            <div class="role">TradingView Pine Script author. Created "VCP Pattern with Pocket Pivots" indicator.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>VCP + Pocket Pivots:</strong> Combines VCP detection with institutional buying signals (pocket pivots = unusually high volume days that exceed any down-day volume in last 10 days). Pocket pivot detection is a potential Phase 2 enhancement.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://www.tradingview.com/script/filyLJ1l-VCP-Pattern-with-Pocket-Pivots-by-Mark-Minervini/" target="_blank">TradingView — VCP with Pocket Pivots</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>Manas Arora (imanasarora)</h3>
+            <div class="role">TradingView Pine Script author. Created "Combined Up Down with Volume" (Purple Dot) indicator — free on TradingView.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-planned">PLANNED</span>
+                    <span><strong>Purple Dot — momentum identification:</strong> Marks a purple dot when a stock makes ≥5% move (up or down) with ≥500K volume. Customizable thresholds. "More dots = high volatility & liquidity." Used as a pre-screen to identify "fast movers" for VCP watchlist building. Could be adapted as a momentum flag in our scanner results.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://www.tradingview.com/script/66J0xpC1-Combined-Up-down-with-volume/" target="_blank">TradingView — Purple Dot (Combined Up Down with Volume)</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>Chartink Community Screens</h3>
+            <div class="role">India's most popular free stock screener with community-built Minervini scans.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Trend Template scan formula:</strong> Chartink's community recreated the Minervini Trend Template using their scan syntax. Cross-referenced our implementation against their formula to ensure correctness.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://chartink.com/screener/mark-minervini-trend-template-with-volume" target="_blank">Chartink — Minervini Trend Template</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <h3>Screener.in Community</h3>
+            <div class="role">Popular Indian fundamental screening platform with community-created technical screens.</div>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-research">RESEARCH</span>
+                    <span><strong>Minervini Template screens:</strong> Multiple community screens including "Stage 2 + VCP Setup" and "Mark Minervini Trend Template". Used as reference for validating qualifying stock lists.</span>
+                </li>
+            </ul>
+            <div class="source-links">
+                <a href="https://www.screener.in/screens/331347/mark-minervini-trend-template/" target="_blank">Screener.in — Minervini Template</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 4: DATA ARCHITECTURE ===================== -->
+    <div class="section">
+        <h2>4. Data Architecture Decisions</h2>
+
+        <p style="color: #94a3b8; margin-bottom: 16px; font-size: 0.9rem;">
+            Three data source options were evaluated. The winner was <code>tradingview-screener</code> —
+            an unofficial Python library that provides all needed fields in a single API call.
+        </p>
+
+        <div class="data-decision">
+            <h3>Data Source Comparison</h3>
+            <table class="comparison">
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th>Stocks</th>
+                        <th>Speed</th>
+                        <th>SMA150</th>
+                        <th>Sector</th>
+                        <th>Market Cap</th>
+                        <th>Cost</th>
+                        <th>Verdict</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>tradingview-screener</strong></td>
+                        <td>5000+</td>
+                        <td>~5 sec</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Free</td>
+                        <td class="verdict">CHOSEN</td>
+                    </tr>
+                    <tr>
+                        <td>Zerodha Kite Connect</td>
+                        <td>All NSE/BSE</td>
+                        <td>Fast</td>
+                        <td>No (compute)</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Rs 500/mo</td>
+                        <td class="rejected">No fundamentals</td>
+                    </tr>
+                    <tr>
+                        <td>mStock API</td>
+                        <td>All NSE/BSE</td>
+                        <td>Unknown</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Free</td>
+                        <td class="rejected">Poor docs, no fundamentals</td>
+                    </tr>
+                    <tr>
+                        <td>TradingView Premium</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>$60/mo</td>
+                        <td class="rejected">No data API even with Premium</td>
+                    </tr>
+                    <tr>
+                        <td>yfinance (original)</td>
+                        <td>~150</td>
+                        <td>~15 min</td>
+                        <td>Yes (compute)</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Free</td>
+                        <td class="rejected">Too slow for 5000 stocks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="data-decision">
+            <h3>Architecture: Hybrid Approach</h3>
+            <table class="comparison">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Data Source</th>
+                        <th>Purpose</th>
+                        <th>Stocks</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phase 1</td>
+                        <td>tradingview-screener</td>
+                        <td>Bulk data: OHLCV, SMAs, 52W range, sector, market cap, performance</td>
+                        <td>5000</td>
+                        <td>~5 sec</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2</td>
+                        <td>Vectorized pandas</td>
+                        <td>Trend Template (8 criteria) + RS rating computation</td>
+                        <td>5000</td>
+                        <td>&lt;1 sec</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 3</td>
+                        <td>yfinance</td>
+                        <td>6-month OHLCV for VCP detection on top 100 qualifying stocks</td>
+                        <td>~100</td>
+                        <td>~30 sec</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 12px; color: #94a3b8; font-size: 0.85rem;">
+                Total scan time: <strong style="color: #4ade80;">~36 seconds</strong> (vs ~15 minutes with pure yfinance for just 150 stocks).
+            </p>
+        </div>
+
+        <div class="data-decision">
+            <h3>Key Design Decisions</h3>
+            <ul class="concept-list">
+                <li>
+                    <span class="concept-tag tag-data">DATA</span>
+                    <span><strong>SMA200 "rising" proxy:</strong> TradingView screener provides current SMA values but no historical SMAs. We use SMA150 > SMA200 as a proxy — if the shorter MA is above the longer, the 200 DMA is being pulled upward. (Source: StockManiacs, Chartink community discussions)</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-data">DATA</span>
+                    <span><strong>is_primary filter:</strong> TradingView lists stocks on both NSE and BSE. The <code>is_primary == True</code> filter deduplicates to show each stock once (typically the NSE listing).</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-data">DATA</span>
+                    <span><strong>Symbol mapping:</strong> TradingView uses underscores (BAJAJ_AUTO), yfinance uses hyphens (BAJAJ-AUTO). ETFs (.RR suffix), InvITs (.PP suffix), and BSE scrip codes (numeric prefixes) are skipped for yfinance VCP checks.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-data">DATA</span>
+                    <span><strong>F&O stock labeling:</strong> F&O stocks have no circuit limits, making them safer for momentum trading. Labeling influenced by StockManiacs and Chartink community advice on avoiding circuit limit traps.</span>
+                </li>
+                <li>
+                    <span class="concept-tag tag-data">DATA</span>
+                    <span><strong>VCP limited to top 100:</strong> Only the top 100 qualifying stocks (by RS rating) are checked for VCP via yfinance, keeping scan time under 40 seconds. Higher RS stocks are more likely to form quality VCP patterns.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 5: CONCEPT-TO-CODE MAPPING ===================== -->
+    <div class="section">
+        <h2>5. Concept-to-Code Mapping</h2>
+
+        <div class="data-decision">
+            <table class="mapping-table">
+                <thead>
+                    <tr>
+                        <th>Scanner Feature</th>
+                        <th>Primary Source</th>
+                        <th>Indian Adaptation Source</th>
+                        <th>Code Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trend Template (8 criteria)</td>
+                        <td>Minervini — "Trade Like a Stock Market Wizard"</td>
+                        <td>Chartink, MarketSmith India, StockManiacs</td>
+                        <td><span class="code-ref">apply_trend_template()</span></td>
+                    </tr>
+                    <tr>
+                        <td>RS Rating (0-100)</td>
+                        <td>Minervini / IBD RS Rating concept</td>
+                        <td>MomentumLAB (weight distribution), Definedge (percentile approach)</td>
+                        <td><span class="code-ref">compute_rs_rating()</span></td>
+                    </tr>
+                    <tr>
+                        <td>VCP Detection</td>
+                        <td>Minervini — VCP pattern criteria</td>
+                        <td>Manas Arora (Momentum Burst), kingshukghosh71 (NSE volume), VCPstocks.com</td>
+                        <td><span class="code-ref">detect_vcp()</span></td>
+                    </tr>
+                    <tr>
+                        <td>Breakout Alert</td>
+                        <td>Minervini — pivot breakout + volume surge</td>
+                        <td>Vivek Bajaj / StockEdge (volume confirmation thresholds)</td>
+                        <td><span class="code-ref">check_breakout()</span></td>
+                    </tr>
+                    <tr>
+                        <td>F&O Stock Labels</td>
+                        <td>—</td>
+                        <td>StockManiacs, Chartink community (circuit limit risk)</td>
+                        <td><span class="code-ref">FNO_SYMBOLS</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sector Filtering</td>
+                        <td>—</td>
+                        <td>TradingView screener fields</td>
+                        <td><span class="code-ref">fetch_screener_data()</span></td>
+                    </tr>
+                    <tr>
+                        <td>TradingView Chart Links</td>
+                        <td>—</td>
+                        <td>TradingView URL pattern research</td>
+                        <td><span class="code-ref">tradingview_link</span> in results</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 6: VALIDATION ===================== -->
+    <div class="section">
+        <h2>6. Validation Evidence</h2>
+
+        <p style="color: #94a3b8; margin-bottom: 16px; font-size: 0.9rem;">
+            Multiple independent sources validate that momentum strategies work in the Indian market.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+            <div class="backtest-card">
+                <h3 style="color: #e2e8f0;">MomentumLAB Backtest</h3>
+                <div class="stat-highlight">40% CAGR</div>
+                <div class="stat-label">ROC 1,3,6-2Wk strategy over 10 years on Nifty 200 universe</div>
+                <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 8px;">Max drawdown: -30% to -35%. Shorter lookback (3-9M) outperforms in uptrends.</p>
+            </div>
+
+            <div class="backtest-card">
+                <h3 style="color: #e2e8f0;">Capitalmind PMS</h3>
+                <div class="stat-highlight">30.2% /yr</div>
+                <div class="stat-label">Live audited returns over 5 years (vs Nifty 50's 16.1%)</div>
+                <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 8px;">AUM crossed Rs 2,000 crore. ~50% win rate — returns from magnitude, not frequency.</p>
+            </div>
+
+            <div class="backtest-card">
+                <h3 style="color: #e2e8f0;">Capitalmind Backtest</h3>
+                <div class="stat-highlight">90% of time</div>
+                <div class="stat-label">Simple momentum beats Nifty (2007-2019)</div>
+                <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 8px;">Rs 100 → Rs 464 (momentum) vs Rs 300 (Nifty). 30-stock monthly rebalance.</p>
+            </div>
+
+            <div class="backtest-card">
+                <h3 style="color: #e2e8f0;">NSE Validation</h3>
+                <div class="stat-highlight">Nifty500 Momentum 50</div>
+                <div class="stat-label">Official NSE index based on momentum scoring</div>
+                <p style="font-size: 0.82rem; color: #94a3b8; margin-top: 8px;">Multiple mutual funds now track this index (Motilal Oswal, Nippon India, Bandhan).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 7: ALL SOURCES ===================== -->
+    <div class="section">
+        <h2>7. Complete Source List</h2>
+
+        <div class="data-decision">
+            <h3>Books & Primary Sources</h3>
+            <ul class="concept-list" style="font-size: 0.85rem;">
+                <li>Mark Minervini — "Trade Like a Stock Market Wizard" (2013)</li>
+                <li>Mark Minervini — "Think & Trade Like a Champion" (2017)</li>
+                <li>William O'Neil — "How to Make Money in Stocks" (CANSLIM methodology, influences RS Rating concept)</li>
+            </ul>
+        </div>
+
+        <div class="data-decision">
+            <h3>Web Sources — Minervini Methodology</h3>
+            <ul class="concept-list" style="font-size: 0.85rem;">
+                <li><a href="https://www.chartmill.com/documentation/stock-screener/technical-analysis-trading-strategies/496-Mark-Minervini-Trend-Template-A-Step-by-Step-Guide-for-Beginners" target="_blank" style="color: #60a5fa;">ChartMill — Trend Template Step-by-Step Guide</a></li>
+                <li><a href="https://www.finermarketpoints.com/post/what-is-mark-minervini-s-trading-strategy-the-complete-sepa-vcp-guide" target="_blank" style="color: #60a5fa;">FinerMarketPoints — Complete SEPA & VCP Guide</a></li>
+                <li><a href="https://www.finermarketpoints.com/post/what-is-a-vcp-pattern-mark-minervini-s-volatility-contraction-pattern-explained" target="_blank" style="color: #60a5fa;">FinerMarketPoints — VCP Pattern Explained</a></li>
+                <li><a href="https://traderlion.com/technical-analysis/volatility-contraction-pattern/" target="_blank" style="color: #60a5fa;">TraderLion — Mastering the Volatility Contraction Pattern</a></li>
+                <li><a href="https://traderlion.com/investing-champions/mark-minervinis-risk-management/" target="_blank" style="color: #60a5fa;">TraderLion — Minervini Risk Management (2021 Championship)</a></li>
+                <li><a href="https://trendspider.com/learning-center/volatility-contraction-pattern-vcp/" target="_blank" style="color: #60a5fa;">TrendSpider — VCP Pattern Explained</a></li>
+                <li><a href="https://deepvue.com/screener/how-mark-minervini-screens-for-stocks/" target="_blank" style="color: #60a5fa;">Deepvue — How Minervini Screens for Stocks</a></li>
+                <li><a href="https://deepvue.com/screener/minervini-trend-template/" target="_blank" style="color: #60a5fa;">Deepvue — Minervini Trend Template</a></li>
+                <li><a href="https://deepvue.com/screener/volatility-contraction-pattern/" target="_blank" style="color: #60a5fa;">Deepvue — Volatility Contraction Pattern Guide</a></li>
+                <li><a href="https://brkoutgeek.substack.com/p/mark-minervinis-power-play-setup" target="_blank" style="color: #60a5fa;">BrkoutGeek — Power Play Setup</a></li>
+                <li><a href="https://tradingengineered.substack.com/p/the-powerplay-setup" target="_blank" style="color: #60a5fa;">TradingEngineered — The Powerplay Setup</a></li>
+                <li><a href="https://quantstrategy.io/blog/sepa-strategy-explained-mastering-trend-following-with-mark/" target="_blank" style="color: #60a5fa;">QuantStrategy.io — SEPA Strategy Explained</a></li>
+                <li><a href="https://tintintrading.substack.com/p/maximizing-profits-with-progressive" target="_blank" style="color: #60a5fa;">TinTinTrading — Progressive Exposure Strategy</a></li>
+                <li><a href="https://www.daytrading.com/mark-minervini-momentum-strategies" target="_blank" style="color: #60a5fa;">DayTrading.com — Minervini Momentum Strategies</a></li>
+                <li><a href="https://pictureperfectportfolios.com/how-to-invest-like-mark-minervini-momentum-trading-champion/" target="_blank" style="color: #60a5fa;">PicturePerfectPortfolios — How To Invest Like Minervini</a></li>
+            </ul>
+        </div>
+
+        <div class="data-decision">
+            <h3>Web Sources — Indian Market Adaptations</h3>
+            <ul class="concept-list" style="font-size: 0.85rem;">
+                <li><a href="https://www.stockmaniacs.net/unleashing-the-power-of-the-mark-minervini-sepa-strategy/" target="_blank" style="color: #60a5fa;">StockManiacs — SEPA Strategy for India</a></li>
+                <li><a href="https://chartink.com/screener/mark-minervini-trend-template-with-volume" target="_blank" style="color: #60a5fa;">Chartink — Minervini Trend Template with Volume</a></li>
+                <li><a href="https://marketsmithindia.com/mstool/list/marketsmith-stock-screens/minervini-trend-template-5-months/idealists.jsp" target="_blank" style="color: #60a5fa;">MarketSmith India — Minervini Trend Template Screen</a></li>
+                <li><a href="https://www.definedgesecurities.com/products/rzone/" target="_blank" style="color: #60a5fa;">Definedge RZone — Relative Strength Platform</a></li>
+                <li><a href="https://web.stockedge.com/scan-groups" target="_blank" style="color: #60a5fa;">StockEdge — 500+ Stock Scans</a></li>
+                <li><a href="https://vcpstocks.com/" target="_blank" style="color: #60a5fa;">VCPstocks.com — Dedicated VCP Scanner (US + India)</a></li>
+                <li><a href="https://www.capitalmind.in/portfolio-management-service/momentum" target="_blank" style="color: #60a5fa;">Capitalmind — Adaptive Momentum PMS</a></li>
+                <li><a href="https://www.capitalmind.in/insights/momentum-investing-basics-india" target="_blank" style="color: #60a5fa;">Capitalmind — Momentum Investing Basics India</a></li>
+                <li><a href="https://momentum-lab.medium.com/momentum-strategies-in-indian-markets-insights-from-a-10-year-backtest-analysis-ef285d6533c4" target="_blank" style="color: #60a5fa;">MomentumLAB — 10-Year Backtest Analysis</a></li>
+                <li><a href="https://www.niftyindices.com/indices/equity/strategy-indices/nifty500--momentum--50" target="_blank" style="color: #60a5fa;">NSE — Nifty500 Momentum 50 Index</a></li>
+                <li><a href="https://zerodha.com/varsity/chapter/momentum-portfolios/" target="_blank" style="color: #60a5fa;">Zerodha Varsity — Momentum Portfolios</a></li>
+                <li><a href="https://www.screener.in/screens/331347/mark-minervini-trend-template/" target="_blank" style="color: #60a5fa;">Screener.in — Minervini Template (Community)</a></li>
+                <li><a href="https://groww.in/p/stock-market-circuit-breakers" target="_blank" style="color: #60a5fa;">Groww — Circuit Breakers Reference</a></li>
+            </ul>
+        </div>
+
+        <div class="data-decision">
+            <h3>Web Sources — Manas Arora</h3>
+            <ul class="concept-list" style="font-size: 0.85rem;">
+                <li><a href="https://sakatas.substack.com/p/manas-arora-momentum-burst-set-up" target="_blank" style="color: #60a5fa;">Sakata's Substack — Manas Arora Momentum Burst Setup (Detailed Breakdown)</a></li>
+                <li><a href="https://karanshah137.substack.com/p/lessons-from-a-full-time-swing-trader" target="_blank" style="color: #60a5fa;">Karan Shah — Lessons from a Full-Time Swing Trader (Manas Arora Insights)</a></li>
+                <li><a href="https://traderlion.com/lesson/manas-arora-the-svro-entry-setup-and-trade-case-studies/" target="_blank" style="color: #60a5fa;">TraderLion — SVRO Entry Setup and Trade Case Studies (Conference 2025)</a></li>
+                <li><a href="https://x.com/iManasArora" target="_blank" style="color: #60a5fa;">@iManasArora on X — Real-time Trade Sharing & Chart Gym Series</a></li>
+                <li><a href="https://www.youtube.com/@iManasArora" target="_blank" style="color: #60a5fa;">Manas Arora YouTube Channel</a></li>
+                <li><a href="https://www.manasarora.com/" target="_blank" style="color: #60a5fa;">manasarora.com — Courses & Education Platform</a></li>
+                <li><a href="https://chartink.com/screener/manas-arora-vcp-pattern" target="_blank" style="color: #60a5fa;">Chartink — Manas Arora VCP Pattern Scanner</a></li>
+                <li><a href="https://chartink.com/screener/manas-arora-swing-trade" target="_blank" style="color: #60a5fa;">Chartink — Manas Arora Swing Trade Scanner</a></li>
+                <li><a href="https://threadreaderapp.com/thread/1448537114438627329.html" target="_blank" style="color: #60a5fa;">Thread Reader — Manas Arora Risk Management & Position Sizing Thread</a></li>
+                <li><a href="https://threadreaderapp.com/user/iManasArora" target="_blank" style="color: #60a5fa;">Thread Reader — All Manas Arora Threads (Chart Gym, Stock Life Cycle, etc.)</a></li>
+                <li><a href="https://chartink.com/screener/stage2atimanasarora" target="_blank" style="color: #60a5fa;">Chartink — Stage 2 @iManasArora Scanner</a></li>
+            </ul>
+        </div>
+
+        <div class="data-decision">
+            <h3>Web Sources — Mohit Vidyarthii</h3>
+            <ul class="concept-list" style="font-size: 0.85rem;">
+                <li><a href="https://x.com/MohitVidyarthii" target="_blank" style="color: #60a5fa;">@MohitVidyarthii (Living For Trading) on X — High RS Stock Insights & Swing Trading</a></li>
+            </ul>
+        </div>
+
+        <div class="data-decision">
+            <h3>TradingView Pine Script Indicators</h3>
+            <ul class="concept-list" style="font-size: 0.85rem;">
+                <li><a href="https://www.tradingview.com/script/66J0xpC1-Combined-Up-down-with-volume/" target="_blank" style="color: #60a5fa;">imanasarora — Purple Dot / Combined Up Down with Volume</a></li>
+                <li><a href="https://in.tradingview.com/script/ZDW7dMhF-Minervini-VCP-Pattern-Indian-Context/" target="_blank" style="color: #60a5fa;">kingshukghosh71 — Minervini VCP Pattern (Indian Context)</a></li>
+                <li><a href="https://in.tradingview.com/script/FBD7SZom-Mark-Minervini-Trend-Template-SEPA/" target="_blank" style="color: #60a5fa;">vishnuv — Mark Minervini Trend Template & SEPA</a></li>
+                <li><a href="https://www.tradingview.com/script/filyLJ1l-VCP-Pattern-with-Pocket-Pivots-by-Mark-Minervini/" target="_blank" style="color: #60a5fa;">ravihls — VCP Pattern with Pocket Pivots</a></li>
+                <li><a href="https://www.tradingview.com/script/E5qJyMHf/" target="_blank" style="color: #60a5fa;">Minervini Trend Template Screener v5 (General)</a></li>
+            </ul>
+        </div>
+
+        <div class="data-decision">
+            <h3>Data Source Research</h3>
+            <ul class="concept-list" style="font-size: 0.85rem;">
+                <li><a href="https://www.tradingview.com/rest-api-spec/" target="_blank" style="color: #60a5fa;">TradingView REST API Spec (Broker-only)</a></li>
+                <li><a href="https://pineify.app/resources/blog/does-tradingview-have-an-api-comprehensive-guide-to-tradingviews-api-offerings" target="_blank" style="color: #60a5fa;">Pineify — Does TradingView Have an API?</a></li>
+                <li><a href="https://github.com/rongardF/tvdatafeed" target="_blank" style="color: #60a5fa;">tvdatafeed — TradingView Historical Data (GitHub)</a></li>
+                <li><a href="https://pypi.org/project/tradingview-ta/" target="_blank" style="color: #60a5fa;">tradingview-ta — Technical Analysis Wrapper (PyPI)</a></li>
+                <li><a href="https://pypi.org/project/yfinance/" target="_blank" style="color: #60a5fa;">yfinance — Yahoo Finance Data (PyPI)</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
