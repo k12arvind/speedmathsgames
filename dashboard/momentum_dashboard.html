@@ -8,6 +8,7 @@
     <title>Momentum Scanner - Minervini Method</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="shared-styles.css">
+    <script src="https://unpkg.com/lightweight-charts@4/dist/lightweight-charts.standalone.production.js"></script>
     <style>
         body {
             background: var(--bg-primary);
@@ -592,10 +593,11 @@
         let sortColumn = 'rs_rating';
         let sortDirection = 'desc';
 
-        // Chart Modal
+        // Chart Modal using lightweight-charts (TradingView open-source library)
         // tvSymbol = full TradingView symbol like "NSE:RELIANCE" or "BSE:TCS"
+        let currentChart = null;
         function openChart(tvSymbol, event) {
-            // Ctrl+click or middle-click → open in new tab
+            // Ctrl+click or middle-click → open on TradingView
             if (event && (event.ctrlKey || event.metaKey || event.button === 1)) {
                 window.open(`https://www.tradingview.com/chart/?symbol=${tvSymbol}`, '_blank');
                 return;
@@ -604,43 +606,72 @@
 
             const modal = document.getElementById('chart-modal');
             const body = document.getElementById('chart-modal-body');
-            document.getElementById('chart-modal-symbol').textContent = tvSymbol;
+            const headerSymbol = document.getElementById('chart-modal-symbol');
+            headerSymbol.innerHTML = `${tvSymbol} <a href="https://www.tradingview.com/chart/?symbol=${tvSymbol}" target="_blank" style="font-size:0.75rem;color:#888;margin-left:8px;">Open on TradingView &#8599;</a>`;
 
-            // Clear previous widget
-            body.innerHTML = '';
-
-            // Use the newer embed-widget-advanced-chart (supports all symbols)
-            const container = document.createElement('div');
-            container.className = 'tradingview-widget-container';
-            container.style.cssText = 'height:100%;width:100%';
-
-            const widgetDiv = document.createElement('div');
-            widgetDiv.className = 'tradingview-widget-container__widget';
-            widgetDiv.style.cssText = 'height:100%;width:100%';
-            container.appendChild(widgetDiv);
-
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
-            script.async = true;
-            script.textContent = JSON.stringify({
-                symbol: tvSymbol,
-                interval: 'D',
-                timezone: 'Asia/Kolkata',
-                theme: 'dark',
-                style: '1',
-                locale: 'en',
-                allow_symbol_change: true,
-                hide_side_toolbar: false,
-                calendar: false,
-                support_host: 'https://www.tradingview.com',
-                width: '100%',
-                height: '100%'
-            });
-            container.appendChild(script);
-
-            body.appendChild(container);
+            // Show loading state
+            body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#888;"><div class="spinner" style="width:30px;height:30px;border:3px solid #333;border-top-color:#16a34a;border-radius:50%;animation:spin 0.8s linear infinite;margin-right:12px;"></div>Loading chart data...</div>';
             modal.classList.add('active');
+
+            // Extract symbol name (NSE:RELIANCE -> RELIANCE)
+            const symbol = tvSymbol.includes(':') ? tvSymbol.split(':')[1] : tvSymbol;
+
+            // Fetch OHLCV data from our backend
+            fetch(`${API_BASE}/api/momentum/chart/${symbol}`)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.error) {
+                        body.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#ef4444;">${data.error}</div>`;
+                        return;
+                    }
+                    renderLightweightChart(body, data.candles, tvSymbol);
+                })
+                .catch(err => {
+                    body.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#ef4444;">Failed to load chart: ${err.message}</div>`;
+                });
+        }
+
+        function renderLightweightChart(container, candles, symbol) {
+            container.innerHTML = '';
+            const chart = LightweightCharts.createChart(container, {
+                width: container.clientWidth,
+                height: container.clientHeight,
+                layout: { background: { type: 'solid', color: '#1e1e1e' }, textColor: '#d1d4dc' },
+                grid: { vertLines: { color: '#2a2a2a' }, horzLines: { color: '#2a2a2a' } },
+                crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+                rightPriceScale: { borderColor: '#333' },
+                timeScale: { borderColor: '#333', timeVisible: false },
+                watermark: { visible: true, text: symbol, color: 'rgba(255,255,255,0.04)', fontSize: 48 }
+            });
+
+            const candleSeries = chart.addCandlestickSeries({
+                upColor: '#16a34a', downColor: '#ef4444',
+                borderUpColor: '#16a34a', borderDownColor: '#ef4444',
+                wickUpColor: '#16a34a', wickDownColor: '#ef4444'
+            });
+            candleSeries.setData(candles);
+
+            const volumeSeries = chart.addHistogramSeries({
+                priceFormat: { type: 'volume' },
+                priceScaleId: 'volume'
+            });
+            chart.priceScale('volume').applyOptions({
+                scaleMargins: { top: 0.8, bottom: 0 }
+            });
+            volumeSeries.setData(candles.map(c => ({
+                time: c.time,
+                value: c.volume,
+                color: c.close >= c.open ? 'rgba(22,163,74,0.3)' : 'rgba(239,68,68,0.3)'
+            })));
+
+            chart.timeScale().fitContent();
+            currentChart = chart;
+
+            // Resize on window resize
+            const resizeObserver = new ResizeObserver(() => {
+                chart.applyOptions({ width: container.clientWidth, height: container.clientHeight });
+            });
+            resizeObserver.observe(container);
         }
 
         function closeChart() {

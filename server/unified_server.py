@@ -5146,6 +5146,40 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             history = self.momentum_db.get_scan_history(days)
             self.send_json({'success': True, 'data': history})
 
+        # GET /api/momentum/chart/<symbol> - OHLCV data for inline charts
+        elif path.startswith('/api/momentum/chart/'):
+            symbol = path.split('/api/momentum/chart/')[1]
+            if not symbol:
+                self.send_json({'error': 'Symbol required'})
+                return
+            try:
+                import yfinance as yf
+                # Convert to yfinance format: RELIANCE -> RELIANCE.NS
+                yf_symbol = symbol.replace('_', '-') + '.NS'
+                ticker = yf.Ticker(yf_symbol)
+                hist = ticker.history(period='1y', interval='1d')
+                if hist.empty:
+                    # Try BSE
+                    yf_symbol = symbol.replace('_', '-') + '.BO'
+                    ticker = yf.Ticker(yf_symbol)
+                    hist = ticker.history(period='1y', interval='1d')
+                if hist.empty:
+                    self.send_json({'error': f'No data for {symbol}'})
+                    return
+                candles = []
+                for date, row in hist.iterrows():
+                    candles.append({
+                        'time': date.strftime('%Y-%m-%d'),
+                        'open': round(row['Open'], 2),
+                        'high': round(row['High'], 2),
+                        'low': round(row['Low'], 2),
+                        'close': round(row['Close'], 2),
+                        'volume': int(row['Volume'])
+                    })
+                self.send_json({'success': True, 'symbol': symbol, 'candles': candles})
+            except Exception as e:
+                self.send_json({'error': f'Chart data error: {str(e)}'})
+
         else:
             self.send_json({'error': 'Momentum endpoint not found'})
 
