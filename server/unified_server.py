@@ -1738,10 +1738,35 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 'already_existed': True
             }
 
-        # Download the PDF
+        # Download the PDF. Use browser-like headers because the CDN blocks
+        # default python-requests user agents.
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        response = requests.get(url, timeout=60, stream=True)
+        headers = {
+            'User-Agent': (
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+                'AppleWebKit/605.1.15 (KHTML, like Gecko) '
+                'Version/17.0 Safari/605.1.15'
+            ),
+            'Accept': 'application/pdf,*/*',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Referer': 'https://www.toprankers.com/',
+        }
+
+        response = requests.get(url, headers=headers, timeout=60, stream=True)
+        if response.status_code == 403:
+            raise RuntimeError(
+                "TopRankers CDN returned 403 Forbidden for this PDF. "
+                "The CDN now requires authentication — the public download "
+                "link is no longer accessible without a TopRankers login. "
+                "Please download the PDF manually from TopRankers and place "
+                f"it at: {output_path}"
+            )
+        if response.status_code == 404:
+            raise RuntimeError(
+                f"TopRankers returned 404 Not Found. The URL may be outdated "
+                f"or the PDF has been moved. URL: {url}"
+            )
         response.raise_for_status()
 
         # Verify it's actually a PDF
