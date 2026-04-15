@@ -1605,6 +1605,10 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def handle_monthly_post(self, path: str, data: dict):
         """Handle Monthly PDF API POST requests."""
+        if path == '/api/monthly/chunk-and-generate':
+            self._handle_monthly_chunk_and_generate(data)
+            return
+
         if path == '/api/monthly/extract-questions':
             # Extract embedded questions from monthly CLAT Post PDF
             filename = data.get('filename')
@@ -1710,6 +1714,123 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
         else:
             self.send_json({'error': 'Monthly endpoint not found'})
+
+    def _handle_monthly_chunk_and_generate(self, data: dict):
+        """One-click: chunk a large monthly PDF (if needed) then kick off AI
+        question generation across all chunks. Returns {job_id, chunk_count}."""
+        import subprocess
+
+        filename = (data.get('filename') or '').strip()
+        source = data.get('source') or 'legaledge'
+        week = data.get('week') or ''
+        if not filename:
+            self.send_json({'error': 'filename is required'}, 400)
+            return
+
+        try:
+            monthly_folder = Path.home() / 'saanvi' / 'Monthly-CLATPOST-LegalEdge'
+            pdf_path = monthly_folder / filename
+
+            # Defensive: also look in large_files (if this PDF was already
+            # moved by a previous chunk run).
+            if not pdf_path.exists():
+                alt = monthly_folder.parent / 'large_files' / filename
+                if alt.exists():
+                    pdf_path = alt
+
+            # If still not found, the PDF may already be chunked — that's OK,
+            # we just skip chunking and go straight to assessment creation.
+            pdf_exists = pdf_path.exists()
+
+            # Check current chunk state in DB
+            already_chunked = bool(self.pdf_chunker and self.pdf_chunker.is_chunked(filename))
+
+            chunk_records = []
+            if not already_chunked:
+                if not pdf_exists:
+                    self.send_json({
+                        'error': f'PDF not found in monthly folder or large_files: {filename}'
+                    })
+                    return
+
+                # Get page count to decide if chunking is needed
+                page_count = PdfChunker.get_pdf_page_count(str(pdf_path))
+                # Monthly chunker uses 25 pages/chunk; only chunk if > 25 pages
+                if page_count > 25:
+                    output_dir = monthly_folder  # chunks land next to the original
+                    # Drain the generator synchronously
+                    final_summary = None
+                    for update in self.pdf_chunker.chunk_pdf(
+                        str(pdf_path),
+                        str(output_dir),
+                        max_pages=25,
+                        naming_pattern='{basename}_part{num}',
+                        source_type='monthly',
+                    ):
+                        if update.get('type') == 'error':
+                            raise RuntimeError(update.get('message', 'Chunking failed'))
+                        if update.get('type') == 'complete':
+                            final_summary = update
+                    if not final_summary:
+                        raise RuntimeError('Chunking finished without a complete event')
+                    chunk_records = final_summary.get('chunks', [])
+
+                    # Refresh the scanner so chunk rows appear in the dashboard
+                    try:
+                        if self.pdf_scanner:
+                            self.pdf_scanner.scan_all_folders()
+                    except Exception:
+                        pass
+                else:
+                    # Small monthly PDF — proceed as a single "chunk" via the
+                    # existing fallback in get_chunks_for_pdf.
+                    pass
+
+            # Now trigger the assessment creation job using the parent PDF id.
+            # assessment_processor's get_chunks_for_pdf will pick up either the
+            # real chunks or the single-PDF fallback.
+            db_path = Path.home() / 'clat_preparation' / 'revision_tracker.db'
+            if not db_path.exists():
+                db_path = Path(__file__).parent.parent / 'revision_tracker.db'
+            conn = sqlite3.connect(str(db_path), check_same_thread=False)
+            cursor = conn.cursor()
+            cursor.execute(
+                "SELECT COUNT(*) FROM pdf_chunks WHERE parent_pdf_id = ?",
+                (filename,),
+            )
+            chunk_count = cursor.fetchone()[0] or 1
+            conn.close()
+
+            job_id = self.assessment_jobs_db.create_job(filename, chunk_count)
+
+            processor_path = Path(__file__).parent / 'assessment_processor.py'
+            venv_python = Path(__file__).parent.parent / 'venv_clat' / 'bin' / 'python3'
+            python_exe = str(venv_python) if venv_python.exists() else sys.executable
+
+            log_file = open(f'/tmp/assessment_job_{job_id[:8]}.log', 'w')
+            subprocess.Popen(
+                [python_exe, str(processor_path), job_id, filename, source, week or 'monthly'],
+                stdout=log_file, stderr=log_file, env=os.environ.copy(),
+            )
+
+            self.send_json({
+                'success': True,
+                'job_id': job_id,
+                'chunk_count': chunk_count,
+                'chunked_now': bool(chunk_records),
+                'chunks_created': len(chunk_records),
+                'message': (
+                    f'Chunked into {len(chunk_records)} parts and started AI generation'
+                    if chunk_records else
+                    'Started AI generation'
+                ),
+            })
+
+        except Exception as e:
+            self.send_json({
+                'error': str(e),
+                'trace': traceback.format_exc(),
+            })
 
     # Maps the four PDF categories to their folders under ~/saanvi
     _UPLOAD_FOLDERS = {

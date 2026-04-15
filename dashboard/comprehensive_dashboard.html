@@ -1304,38 +1304,40 @@
             return `monthly-${anyYear ? anyYear[1] : new Date().getFullYear()}`;
         }
 
-        // Kick off AI-powered question generation for a monthly PDF (uses the
-        // same create-assessment flow as daily/weekly).
+        // Kick off AI-powered question generation for a monthly PDF.
+        // For large PDFs, this auto-chunks (25 pages/chunk) then generates
+        // questions for every chunk in a single background job.
         async function generateMonthlyAssessment(filename, pageCount) {
-            if (pageCount && pageCount > 13) {
-                alert(
-                    `This PDF has ${pageCount} pages, which is too large for one-shot AI generation.\n\n` +
-                    `Please chunk it first using the PDF Chunker page, then come back and click "Generate Qs" on each chunk.\n\n` +
-                    `Opening the PDF Chunker…`
-                );
-                window.location.href = 'pdf-chunker.html';
-                return;
-            }
+            const willChunk = pageCount && pageCount > 25;
+            const confirmMsg = willChunk
+                ? `Generate questions for "${filename}" using Claude AI?\n\n` +
+                  `This PDF has ${pageCount} pages. It will be:\n` +
+                  `1. Auto-chunked into 25-page parts\n` +
+                  `2. Sent topic-by-topic through Claude for MCQ generation\n` +
+                  `3. Saved into the local questions DB\n\n` +
+                  `May take 5–15 minutes. Continue?`
+                : `Generate questions for "${filename}" using Claude AI?\n\n` +
+                  `This will:\n` +
+                  `1. Extract topics from the PDF\n` +
+                  `2. Generate MCQs via Claude\n` +
+                  `3. Save them to the local questions DB\n\n` +
+                  `May take 2–5 minutes. Continue?`;
 
-            if (!confirm(
-                `Generate questions for "${filename}" using Claude AI?\n\n` +
-                `This will:\n` +
-                `1. Extract topics from the PDF\n` +
-                `2. Generate MCQ questions via Claude\n` +
-                `3. Save them to the local questions DB\n\n` +
-                `May take 2–5 minutes.`
-            )) {
-                return;
-            }
+            if (!confirm(confirmMsg)) return;
 
             const weekTag = deriveMonthlyWeekTag(filename);
 
+            // Disable the button while we kick things off so the user doesn't
+            // double-click (chunking is not instant).
+            const buttons = document.querySelectorAll(`button[onclick*="generateMonthlyAssessment"][onclick*="${filename.replace(/'/g, "\\'")}"]`);
+            buttons.forEach(b => { b.disabled = true; b.innerHTML = '⏳ Preparing...'; });
+
             try {
-                const response = await fetch(`${API_BASE}/api/create-assessment`, {
+                const response = await fetch(`${API_BASE}/api/monthly/chunk-and-generate`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        pdf_id: filename,
+                        filename: filename,
                         source: 'legaledge',
                         week: weekTag,
                     }),
@@ -1343,11 +1345,13 @@
                 const result = await response.json();
                 if (result.error) {
                     alert(`Failed to start question generation: ${result.error}`);
+                    buttons.forEach(b => { b.disabled = false; b.innerHTML = '🤖 Generate Qs'; });
                     return;
                 }
                 window.location.href = `assessment-progress.html?job_id=${result.job_id}`;
             } catch (e) {
                 alert(`Error starting question generation: ${e.message}`);
+                buttons.forEach(b => { b.disabled = false; b.innerHTML = '🤖 Generate Qs'; });
             }
         }
 
