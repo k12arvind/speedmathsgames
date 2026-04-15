@@ -60,13 +60,25 @@ def clean_text(text: str) -> str:
     return text
 
 
+# TopRankers uses a brown/maroon hex for topic headings. Historically #a52a2a,
+# as of 2026-03 they switched to #b22222 (firebrick). Match any known value.
+TOPIC_HEADING_COLORS = ('#a52a2a', '#b22222')
+
+
+def _is_topic_heading_style(style) -> bool:
+    if not style:
+        return False
+    s = style.lower().replace(' ', '')
+    return any(f'color:{c}' in s for c in TOPIC_HEADING_COLORS)
+
+
 def extract_topics_from_html(html_content: str) -> List[Dict[str, str]]:
     """Extract structured topics from HTML content."""
     soup = BeautifulSoup(html_content, 'html.parser')
     topics = []
 
     # Find all topic headings (colored brown/maroon with strong tag)
-    topic_headings = soup.find_all('span', style=lambda s: s and 'color:#a52a2a' in s.lower())
+    topic_headings = soup.find_all('span', style=_is_topic_heading_style)
 
     for heading_span in topic_headings:
         strong_tag = heading_span.find('strong')
@@ -88,7 +100,7 @@ def extract_topics_from_html(html_content: str) -> List[Dict[str, str]]:
 
         while current_element:
             # Stop if we hit another topic heading
-            if current_element.find('span', style=lambda s: s and 'color:#a52a2a' in s.lower()):
+            if current_element.find('span', style=_is_topic_heading_style):
                 break
 
             # Extract text from paragraphs
