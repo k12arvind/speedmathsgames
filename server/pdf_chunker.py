@@ -218,8 +218,16 @@ class PdfChunker:
                     chunk_src = Path(chunk_info['path'])
                     chunk_dest = original_folder / chunk_src.name
                     if chunk_src.exists():
-                        shutil.copy2(str(chunk_src), str(chunk_dest))
-                        # Update chunk path in database to point to new location
+                        # Skip if source == destination (chunks were written
+                        # directly into the original folder — copy would raise
+                        # "same file" SameFileError).
+                        try:
+                            same = chunk_src.resolve() == chunk_dest.resolve()
+                        except Exception:
+                            same = str(chunk_src) == str(chunk_dest)
+                        if not same:
+                            shutil.copy2(str(chunk_src), str(chunk_dest))
+                        # Update chunk path in database to point to final location
                         chunk_info['path'] = str(chunk_dest)
 
                 yield {
