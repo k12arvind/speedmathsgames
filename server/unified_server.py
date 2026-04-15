@@ -1636,12 +1636,38 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 conn.commit()
                 conn.close()
 
-                # If no questions found, still return success (extraction was completed)
+                # If no questions found, diagnose why so the user gets an actionable
+                # message instead of a silent "0".
                 if not questions:
+                    text_sample = extractor.extract_text_from_pdf(str(pdf_path))
+                    lower = (text_sample or '').lower()
+                    reason = ('Extraction complete — no practice questions found in this section.')
+                    looks_like_current_affairs = (
+                        'practice questions' not in lower
+                        and ('contents' in lower or 'national' in lower)
+                    )
+                    if looks_like_current_affairs:
+                        reason = (
+                            'This PDF appears to be a Monthly Current Affairs '
+                            'summary (topic-based, no embedded practice questions). '
+                            'The "Extract Questions" flow is for CLAT Post monthly '
+                            'editions which have a PRACTICE QUESTIONS section. '
+                            'For current-affairs PDFs, use the daily/weekly AI '
+                            'question-generation flow, or keep this PDF as a '
+                            'reading resource without questions.'
+                        )
+                    elif 'practice questions' not in lower:
+                        reason = (
+                            'No "PRACTICE QUESTIONS" section was found in this '
+                            'PDF. It may be a different product type, or the '
+                            'questions use a format the extractor does not yet '
+                            'recognise.'
+                        )
                     self.send_json({
                         'success': True,
                         'question_count': 0,
-                        'message': 'Extraction complete - no practice questions found in this section'
+                        'reason': reason,
+                        'message': reason,
                     })
                     return
 

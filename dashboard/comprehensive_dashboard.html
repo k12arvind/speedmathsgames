@@ -1304,10 +1304,22 @@
                 const result = await response.json();
 
                 if (result.success) {
+                    // If nothing was found, tell the user why instead of silently reloading
+                    if (result.question_count === 0) {
+                        const reason = result.reason || result.message
+                            || 'No practice questions were found in this PDF.';
+                        alert(`No questions extracted from ${filename}\n\n${reason}`);
+                        buttons.forEach(btn => {
+                            btn.disabled = false;
+                            btn.innerHTML = '✨ Extract Qs';
+                        });
+                        return;
+                    }
                     // Reload dashboard to show updated question count
                     await loadDashboardData();
                 } else {
                     console.error('Extract error:', result.error);
+                    alert(`Extraction failed: ${result.error || 'Unknown error'}`);
                     // Re-enable button on error
                     buttons.forEach(btn => {
                         btn.disabled = false;
