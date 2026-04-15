@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Session Review - Book Practice</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: var(--bg-primary); min-height: 100vh; padding: 20px; color: var(--text-primary); }
+        .container { max-width: 900px; margin: 0 auto; }
+
+        .header {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 16px 20px; border-radius: 12px; margin-bottom: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            gap: 12px; flex-wrap: wrap;
+        }
+        .header h1 {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 8px 14px; background: var(--bg-input); color: var(--text-secondary);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            font-size: 13px; font-weight: 600; text-decoration: none;
+        }
+        .nav-link:hover { color: #f59e0b; border-color: #f59e0b; }
+
+        .meta-card {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 12px; padding: 20px; margin-bottom: 16px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .meta-stat {
+            background: var(--bg-input); padding: 14px; border-radius: 10px; text-align: center;
+        }
+        .meta-value { font-size: 1.5rem; font-weight: 700; }
+        .meta-value.good { color: #10b981; }
+        .meta-value.medium { color: #f59e0b; }
+        .meta-value.poor { color: #ef4444; }
+        .meta-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 4px; }
+
+        .meta-sub { color: var(--text-secondary); font-size: 0.88rem; }
+        .meta-sub span { margin-right: 14px; }
+
+        .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .action-btn {
+            padding: 10px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 600;
+            cursor: pointer; border: 1px solid var(--border-color);
+            background: var(--bg-card); color: var(--text-primary); text-decoration: none;
+        }
+        .action-btn.primary { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border: none; }
+        .action-btn.danger { background: rgba(239,68,68,0.1); color: #ef4444; border-color: rgba(239,68,68,0.4); }
+        .action-btn:hover { filter: brightness(1.1); }
+
+        /* Re-use review list styles (copy from book_practice.html) */
+        .review-list h3 { font-size: 1.05rem; color: var(--text-primary); margin-bottom: 12px; }
+        .review-item {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; margin-bottom: 8px; overflow: hidden;
+        }
+        .review-item-header {
+            display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+            cursor: pointer; user-select: none;
+        }
+        .review-item-header:hover { background: var(--bg-card-hover, rgba(255,255,255,0.02)); }
+        .rv-idx { color: var(--text-muted); font-size: 0.85rem; min-width: 28px; }
+        .rv-chip {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 24px; height: 24px; border-radius: 50%;
+            font-weight: 700; font-size: 0.8rem;
+        }
+        .rv-chip.correct { background: rgba(16,185,129,0.15); color: #10b981; }
+        .rv-chip.wrong { background: rgba(239,68,68,0.15); color: #ef4444; }
+        .rv-text { flex: 1; color: var(--text-primary); font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .rv-time { color: var(--text-muted); font-size: 0.82rem; white-space: nowrap; }
+        .rv-caret { color: var(--text-muted); transition: transform 0.2s; }
+        .review-item.open .rv-caret { transform: rotate(90deg); }
+        .review-item-body {
+            display: none; padding: 0 14px 14px 14px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem; color: var(--text-secondary);
+        }
+        .review-item.open .review-item-body { display: block; padding-top: 12px; }
+        .rv-q-text { color: var(--text-primary); margin-bottom: 10px; line-height: 1.5; white-space: pre-wrap; }
+        .rv-choices { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+        .rv-choice {
+            padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px;
+            background: var(--bg-input); display: flex; gap: 10px; align-items: flex-start;
+        }
+        .rv-choice .lbl { font-weight: 700; color: var(--text-muted); min-width: 18px; }
+        .rv-choice.correct { border-color: #10b981; background: rgba(16,185,129,0.08); color: #10b981; }
+        .rv-choice.picked-wrong { border-color: #ef4444; background: rgba(239,68,68,0.08); color: #ef4444; }
+        .rv-meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+        .rv-pill {
+            background: var(--bg-input); border: 1px solid var(--border-color);
+            padding: 4px 10px; border-radius: 999px; font-size: 0.78rem; color: var(--text-secondary);
+        }
+        .rv-status { font-size: 0.78rem; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+        .rv-status.new { background: rgba(148,163,184,0.15); color: #94a3b8; }
+        .rv-status.improving { background: rgba(16,185,129,0.15); color: #10b981; }
+        .rv-status.mastered { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .rv-status.struggling { background: rgba(239,68,68,0.15); color: #ef4444; }
+        .rv-status.practicing { background: rgba(99,102,241,0.15); color: #818cf8; }
+        .rv-trend { display: inline-flex; gap: 3px; align-items: center; }
+        .rv-trend span { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+        .rv-trend .ok { background: #10b981; }
+        .rv-trend .no { background: #ef4444; }
+        .rv-note-row { display: flex; gap: 8px; align-items: flex-start; }
+        .rv-note-input {
+            flex: 1; padding: 8px 10px; background: var(--bg-input);
+            border: 1px solid var(--border-color); border-radius: 6px;
+            color: var(--text-primary); font-size: 0.85rem; resize: vertical; min-height: 40px;
+        }
+        .rv-note-btn {
+            padding: 8px 14px; background: var(--bg-input);
+            border: 1px solid var(--border-color); border-radius: 6px;
+            color: var(--text-primary); font-size: 0.82rem; cursor: pointer;
+        }
+        .rv-note-btn:hover { border-color: #f59e0b; color: #f59e0b; }
+        .rv-saved { color: #10b981; font-size: 0.8rem; margin-left: 8px; display: none; }
+        .rv-saved.show { display: inline; }
+
+        .loading, .empty { padding: 40px; text-align: center; color: var(--text-secondary); }
+
+        @media (max-width: 600px) {
+            .meta-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Session Review</h1>
+            <div class="nav-links">
+                <a href="book_sessions.html" class="nav-link">← All sessions</a>
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="loading">Loading…</div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let currentUser = null;
+        let sessionData = null;
+        let sessionId = null;
+
+        function getParam(name) {
+            const p = new URLSearchParams(window.location.search);
+            return p.get(name);
+        }
+
+        async function init() {
+            currentUser = await checkAuth(false);
+            if (!currentUser) currentUser = { user_id: 'saanvi' };
+            sessionId = parseInt(getParam('session_id'), 10);
+            if (!sessionId) {
+                document.getElementById('content').innerHTML = '<div class="empty" style="color:#ef4444;">Missing session_id</div>';
+                return;
+            }
+            await loadSession();
+        }
+
+        async function loadSession() {
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/session/${sessionId}/detail`);
+                const data = await resp.json();
+                if (data.error) {
+                    document.getElementById('content').innerHTML =
+                        `<div class="empty" style="color:#ef4444;">Error: ${escapeHtml(data.error)}</div>`;
+                    return;
+                }
+                sessionData = data;
+                render();
+            } catch (e) {
+                document.getElementById('content').innerHTML =
+                    `<div class="empty" style="color:#ef4444;">Error: ${e.message}</div>`;
+            }
+        }
+
+        function render() {
+            const s = sessionData.session;
+            const qs = sessionData.questions || [];
+            const acc = s.accuracy || 0;
+            const accClass = acc >= 80 ? 'good' : acc >= 50 ? 'medium' : 'poor';
+            const completedDate = s.completed_at ? new Date(s.completed_at + 'Z') : null;
+            const startedDate = s.started_at ? new Date(s.started_at + 'Z') : null;
+            const avgTime = qs.length
+                ? Math.round(qs.reduce((a, q) => a + (q.time_taken_seconds || 0), 0) / qs.length)
+                : 0;
+            const duration = s.session_duration_seconds != null
+                ? s.session_duration_seconds
+                : qs.reduce((a, q) => a + (q.time_taken_seconds || 0), 0);
+
+            const topics = (s.topic_names && s.topic_names.length)
+                ? s.topic_names.join(', ')
+                : (s.mode === 'smart_weak' ? 'Smart mode (auto-selected)' : 'All topics');
+
+            const modeLabel = {
+                smart_weak: 'Smart',
+                retry_wrong: 'Retry-wrong',
+                topic_select: 'Topic practice'
+            }[s.mode] || s.mode;
+
+            const html = `
+                <div class="meta-card">
+                    <div class="meta-grid">
+                        <div class="meta-stat">
+                            <div class="meta-value ${accClass}">${s.total_correct}/${s.total_attempted}</div>
+                            <div class="meta-label">Score</div>
+                        </div>
+                        <div class="meta-stat">
+                            <div class="meta-value ${accClass}">${acc}%</div>
+                            <div class="meta-label">Accuracy</div>
+                        </div>
+                        <div class="meta-stat">
+                            <div class="meta-value">${avgTime}s</div>
+                            <div class="meta-label">Avg / Q</div>
+                        </div>
+                        <div class="meta-stat">
+                            <div class="meta-value">${formatDuration(duration)}</div>
+                            <div class="meta-label">Total Time</div>
+                        </div>
+                    </div>
+                    <div class="meta-sub">
+                        <span><strong>Date:</strong> ${completedDate ? completedDate.toLocaleString() : '—'}</span>
+                        <span><strong>Mode:</strong> ${escapeHtml(modeLabel)}</span>
+                        <span><strong>Topics:</strong> ${escapeHtml(topics)}</span>
+                        ${s.parent_session_id ? `<span><strong>Retry of:</strong> <a href="book_session_detail.html?session_id=${s.parent_session_id}" style="color:#f59e0b;">session #${s.parent_session_id}</a></span>` : ''}
+                    </div>
+                </div>
+
+                <div class="actions">
+                    ${sessionData.wrong_count > 0
+                        ? `<button class="action-btn primary" onclick="retryWrong()">Retry Wrong (${sessionData.wrong_count})</button>`
+                        : ''}
+                    <a href="book_practice.html" class="action-btn">New Practice Session</a>
+                    <button class="action-btn danger" onclick="deleteSession()">Delete Session</button>
+                </div>
+
+                <div class="review-list">
+                    <h3>Question-by-question review</h3>
+                    <div id="review-items"></div>
+                </div>
+            `;
+            document.getElementById('content').innerHTML = html;
+            renderReviewList(qs);
+        }
+
+        function statusLabel(status) {
+            const map = {
+                new: 'New',
+                improving: 'First wrong, now correct',
+                mastered: 'Mastered',
+                struggling: 'Still struggling',
+                practicing: 'Practicing'
+            };
+            return map[status] || status;
+        }
+
+        function renderReviewList(list) {
+            const container = document.getElementById('review-items');
+            if (!list.length) {
+                container.innerHTML = '<div class="empty">No attempts recorded.</div>';
+                return;
+            }
+            const html = list.map((q, idx) => {
+                const short = (q.question_text || '').replace(/\s+/g, ' ').trim();
+                const shortDisplay = short.length > 90 ? short.slice(0, 90) + '…' : short;
+                const choicesHtml = Object.entries(q.choices || {}).map(([k, v]) => {
+                    let cls = '';
+                    if (k === q.correct_choice) cls = 'correct';
+                    else if (k === q.selected_choice && !q.is_correct) cls = 'picked-wrong';
+                    return `<div class="rv-choice ${cls}"><span class="lbl">${k.toUpperCase()}.</span><span>${escapeHtml(v)}</span></div>`;
+                }).join('');
+
+                const recentHtml = (q.recent_outcomes || [])
+                    .map(ok => `<span class="${ok ? 'ok' : 'no'}" title="${ok ? 'Correct' : 'Wrong'}"></span>`)
+                    .join('');
+
+                return `
+                    <div class="review-item" data-attempt-id="${q.attempt_id}" data-idx="${idx}">
+                        <div class="review-item-header" onclick="toggleItem(${idx})">
+                            <span class="rv-idx">Q${idx + 1}</span>
+                            <span class="rv-chip ${q.is_correct ? 'correct' : 'wrong'}">${q.is_correct ? '✓' : '✗'}</span>
+                            <span class="rv-text">${escapeHtml(shortDisplay)}</span>
+                            <span class="rv-time">${q.time_taken_seconds || 0}s</span>
+                            <span class="rv-caret">›</span>
+                        </div>
+                        <div class="review-item-body">
+                            <div class="rv-q-text">${escapeHtml(q.question_text || '')}</div>
+                            <div class="rv-choices">${choicesHtml}</div>
+                            <div class="rv-meta-row">
+                                <span class="rv-pill">Topic: ${escapeHtml(q.topic_name || '—')}</span>
+                                <span class="rv-pill">Time: ${q.time_taken_seconds || 0}s</span>
+                                <span class="rv-pill">Lifetime: ${q.lifetime.correct_attempts}/${q.lifetime.total_attempts} (${q.lifetime.accuracy}%)</span>
+                                ${recentHtml ? `<span class="rv-pill">Recent <span class="rv-trend">${recentHtml}</span></span>` : ''}
+                                <span class="rv-status ${q.status}">${statusLabel(q.status)}</span>
+                            </div>
+                            <div class="rv-note-row">
+                                <textarea class="rv-note-input" id="note-${q.attempt_id}" placeholder="Add a note">${escapeHtml(q.notes || '')}</textarea>
+                                <button class="rv-note-btn" onclick="saveNote(${q.attempt_id})">Save note</button>
+                                <span class="rv-saved" id="saved-${q.attempt_id}">Saved ✓</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            container.innerHTML = html;
+        }
+
+        function toggleItem(idx) {
+            const el = document.querySelector(`.review-item[data-idx="${idx}"]`);
+            if (el) el.classList.toggle('open');
+        }
+
+        async function saveNote(attemptId) {
+            const input = document.getElementById(`note-${attemptId}`);
+            const saved = document.getElementById(`saved-${attemptId}`);
+            if (!input) return;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/attempt/${attemptId}/note`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ note: input.value, user_id: sessionData.session.user_id })
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    saved.classList.add('show');
+                    setTimeout(() => saved.classList.remove('show'), 2000);
+                } else {
+                    alert('Could not save note');
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+            }
+        }
+
+        async function retryWrong() {
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/session/${sessionId}/retry-wrong`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({})
+                });
+                const data = await resp.json();
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+                // Store the retry session questions in sessionStorage and jump to practice
+                sessionStorage.setItem('book_retry_session', JSON.stringify({
+                    session_id: data.session_id,
+                    questions: data.questions,
+                    parent_session_id: sessionId
+                }));
+                window.location.href = 'book_practice.html?retry=1';
+            } catch (e) {
+                alert('Error: ' + e.message);
+            }
+        }
+
+        async function deleteSession() {
+            if (!confirm('Delete this session and all its attempts? This will also recompute the question stats.')) return;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/session/${sessionId}`, { method: 'DELETE' });
+                const data = await resp.json();
+                if (data.success) {
+                    window.location.href = 'book_sessions.html';
+                } else {
+                    alert(data.error || 'Could not delete');
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+            }
+        }
+
+        function formatDuration(secs) {
+            secs = Math.max(0, Math.round(secs || 0));
+            const m = Math.floor(secs / 60);
+            const s = secs % 60;
+            if (m > 0) return `${m}m ${s}s`;
+            return `${s}s`;
+        }
+
+        function escapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

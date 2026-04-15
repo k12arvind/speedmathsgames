@@ -432,7 +432,10 @@
         </div>
 
         <div class="sessions-section">
-            <h2 class="section-title">Recent Sessions</h2>
+            <h2 class="section-title" style="display: flex; justify-content: space-between; align-items: center;">
+                <span>Recent Sessions</span>
+                <a href="book_sessions.html" class="nav-link" style="font-size: 0.82rem; font-weight: 500;">View all →</a>
+            </h2>
             <div id="sessions-list">
                 <div class="loading"><div class="loading-spinner"></div></div>
             </div>
@@ -593,16 +596,21 @@
                 return;
             }
 
-            container.innerHTML = sessions.slice(0, 10).map(s => {
+            container.innerHTML = sessions.slice(0, 5).map(s => {
                 const accClass = s.accuracy >= 80 ? 'good' : s.accuracy >= 50 ? 'medium' : 'poor';
                 const date = new Date(s.completed_at).toLocaleDateString('en-IN', {
                     weekday: 'short', day: 'numeric', month: 'short'
                 });
+                const modeLabel = {
+                    smart_weak: 'Smart Mode',
+                    retry_wrong: 'Retry-wrong',
+                    topic_select: 'Topic Practice'
+                }[s.mode] || s.mode;
                 return `
-                    <div class="session-item">
+                    <a class="session-item" href="book_session_detail.html?session_id=${s.session_id}" style="display: flex; text-decoration: none; color: inherit;">
                         <div class="session-info">
                             <span class="session-date">${date}</span>
-                            <span class="session-mode">${s.mode === 'smart_weak' ? 'Smart Mode' : 'Topic Practice'}</span>
+                            <span class="session-mode">${modeLabel}</span>
                         </div>
                         <div class="session-stats">
                             <div class="session-stat">
@@ -618,7 +626,7 @@
                                 <span class="session-stat-label">Avg Time</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 `;
             }).join('');
         }

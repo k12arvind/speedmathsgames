@@ -701,6 +701,56 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     self.send_header('Content-Type', 'application/json')
                     self.end_headers()
                     self.send_json({'error': 'Invalid path'})
+            # DELETE /api/book/session/{id} - Delete a practice session
+            elif path.startswith('/api/book/session/'):
+                parts = path.split('/')
+                if len(parts) != 5:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid path'})
+                    return
+                try:
+                    session_id = int(parts[4])
+                except ValueError:
+                    self.send_response(400)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': 'Invalid session_id'})
+                    return
+
+                # Ownership check
+                current_user = self.get_current_user()
+                orig = self.book_practice_db.get_session(session_id)
+                if not orig:
+                    self.send_response(404)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': 'Session not found'})
+                    return
+
+                owner_id = orig['user_id']
+                if current_user:
+                    is_owner = current_user.get('user_id') == owner_id
+                    is_parent_viewer = current_user.get('can_view_all_users', False)
+                    if not (is_owner or is_parent_viewer):
+                        self.send_response(403)
+                        self.send_header('Content-Type', 'application/json')
+                        self.end_headers()
+                        self.send_json({'error': 'Forbidden'})
+                        return
+
+                success = self.book_practice_db.delete_session(session_id, owner_id)
+                if success:
+                    self.send_response(200)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'success': True, 'message': 'Session deleted'})
+                else:
+                    self.send_response(404)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': 'Session not found'})
             # DELETE /api/book/topics/{id}
             elif path.startswith('/api/book/topics/'):
                 parts = path.split('/')
@@ -4683,7 +4733,33 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             history = self.book_practice_db.get_question_history(question_id, user_id)
             self.send_json(history)
 
-        # GET /api/book/session/{id} - Get session details
+        # GET /api/book/session/{id}/detail - Full session review
+        elif path.startswith('/api/book/session/') and path.endswith('/detail'):
+            try:
+                session_id = int(path.split('/')[-2])
+            except ValueError:
+                self.send_json({'error': 'Invalid session_id'}, 400)
+                return
+
+            detail = self.book_practice_db.get_session_detail(session_id)
+            if not detail:
+                self.send_json({'error': 'Session not found'}, 404)
+                return
+
+            # Access control: owner, or a parent (can_view_all_users)
+            current_user = self.get_current_user()
+            owner_id = detail['session']['user_id']
+            if current_user:
+                is_owner = current_user.get('user_id') == owner_id
+                is_parent_viewer = current_user.get('can_view_all_users', False)
+                if not (is_owner or is_parent_viewer):
+                    self.send_json({'error': 'Forbidden'}, 403)
+                    return
+            # If auth is disabled, fall through (dev mode)
+
+            self.send_json(detail)
+
+        # GET /api/book/session/{id} - Get session details (basic)
         elif path.startswith('/api/book/session/') and not '/next' in path:
             session_id = int(path.split('/')[-1])
             session = self.book_practice_db.get_session(session_id)
@@ -4719,11 +4795,21 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             self.send_json({'weak_topics': weak})
 
         # GET /api/book/sessions - Get session history
+        # Parents may pass ?user_id=<child> to view a child's sessions; others
+        # are scoped to themselves regardless of the query param.
         elif path == '/api/book/sessions':
-            user_id = query_params.get('user_id', ['saanvi'])[0]
+            requested_user_id = query_params.get('user_id', [None])[0]
             limit = int(query_params.get('limit', [20])[0])
+            current_user = self.get_current_user()
+            if current_user:
+                if current_user.get('can_view_all_users', False):
+                    user_id = requested_user_id or current_user.get('user_id') or 'saanvi'
+                else:
+                    user_id = current_user.get('user_id') or 'saanvi'
+            else:
+                user_id = requested_user_id or 'saanvi'
             sessions = self.book_practice_db.get_session_history(user_id, limit)
-            self.send_json({'sessions': sessions})
+            self.send_json({'sessions': sessions, 'user_id': user_id})
 
         # GET /api/book/pages/pending - Get pages pending extraction
         elif path == '/api/book/pages/pending':
@@ -5007,11 +5093,68 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             stats = self.book_practice_db.complete_session(session_id)
             self.send_json({'success': True, 'stats': stats})
 
-        # POST /api/book/attempt/{id}/note - Add note to attempt
+        # POST /api/book/session/{id}/retry-wrong - Start a new session with only
+        # the questions the user got wrong in the original session.
+        elif path.startswith('/api/book/session/') and path.endswith('/retry-wrong'):
+            try:
+                original_session_id = int(path.split('/')[-2])
+            except ValueError:
+                self.send_json({'error': 'Invalid session_id'}, 400)
+                return
+
+            current_user = self.get_current_user()
+            orig = self.book_practice_db.get_session(original_session_id)
+            if not orig:
+                self.send_json({'error': 'Session not found'}, 404)
+                return
+
+            # The retry session is always owned by the original session's user.
+            # Only the owner (or a parent) can trigger the retry.
+            owner_id = orig['user_id']
+            if current_user:
+                is_owner = current_user.get('user_id') == owner_id
+                is_parent_viewer = current_user.get('can_view_all_users', False)
+                if not (is_owner or is_parent_viewer):
+                    self.send_json({'error': 'Forbidden'}, 403)
+                    return
+
+            result = self.book_practice_db.create_retry_wrong_session(
+                original_session_id, owner_id
+            )
+            if not result:
+                self.send_json({'error': 'No wrong questions to retry'}, 400)
+                return
+
+            self.send_json({
+                'success': True,
+                'session_id': result['session_id'],
+                'questions': result['questions'],
+                'total_questions': len(result['questions']),
+                'parent_session_id': original_session_id,
+            })
+
+        # POST /api/book/attempt/{id}/note - Add/update note on an attempt
         elif path.startswith('/api/book/attempt/') and path.endswith('/note'):
-            attempt_id = int(path.split('/')[-2])
+            try:
+                attempt_id = int(path.split('/')[-2])
+            except ValueError:
+                self.send_json({'error': 'Invalid attempt_id'}, 400)
+                return
             note = data.get('note', '')
-            success = self.book_practice_db.add_note_to_attempt(attempt_id, note)
+
+            # Scope update to the current user (if authenticated); parents can
+            # edit a child's note by passing ?user_id= via data.
+            current_user = self.get_current_user()
+            if current_user and current_user.get('can_view_all_users', False):
+                target_user_id = data.get('user_id') or current_user.get('user_id')
+            elif current_user:
+                target_user_id = current_user.get('user_id')
+            else:
+                target_user_id = data.get('user_id', 'saanvi')
+
+            success = self.book_practice_db.update_attempt_note(
+                attempt_id, target_user_id, note
+            )
             self.send_json({'success': success})
 
         # POST /api/book/answers/upload - Upload answer key image
@@ -5370,8 +5513,10 @@ def main():
     print("✅ Calendar module initialized")
 
     # Initialize book practice module
-    UnifiedHandler.book_practice_db = BookPracticeDB()
-    print("✅ Book practice database initialized")
+    # Use .resolve() because server may be started with relative path (e.g. `python unified_server.py`)
+    book_practice_db_path = str(Path(__file__).resolve().parent.parent / 'book_practice.db')
+    UnifiedHandler.book_practice_db = BookPracticeDB(book_practice_db_path)
+    print(f"✅ Book practice database initialized: {book_practice_db_path}")
 
     # Initialize momentum scanner module
     momentum_db_path = str(Path(__file__).parent / 'momentum_tracker.db')

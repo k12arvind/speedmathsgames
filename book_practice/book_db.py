@@ -150,9 +150,22 @@ class BookPracticeDB:
                     started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     completed_at TIMESTAMP,
                     total_correct INTEGER DEFAULT 0,
-                    total_attempted INTEGER DEFAULT 0
+                    total_attempted INTEGER DEFAULT 0,
+                    parent_session_id INTEGER,
+                    session_duration_seconds INTEGER,
+                    first_question_shown_at TIMESTAMP
                 )
             """)
+
+            # Migration: add columns to existing practice_sessions if missing
+            cursor.execute("PRAGMA table_info(practice_sessions)")
+            session_cols = [col[1] for col in cursor.fetchall()]
+            if 'parent_session_id' not in session_cols:
+                cursor.execute("ALTER TABLE practice_sessions ADD COLUMN parent_session_id INTEGER")
+            if 'session_duration_seconds' not in session_cols:
+                cursor.execute("ALTER TABLE practice_sessions ADD COLUMN session_duration_seconds INTEGER")
+            if 'first_question_shown_at' not in session_cols:
+                cursor.execute("ALTER TABLE practice_sessions ADD COLUMN first_question_shown_at TIMESTAMP")
 
             # Individual question attempts
             cursor.execute("""
@@ -191,7 +204,10 @@ class BookPracticeDB:
             # Create indexes
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_questions_topic ON book_questions(topic_id)")
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_attempts_session ON question_attempts(session_id)")
+            cursor.execute("CREATE INDEX IF NOT EXISTS idx_attempts_session_question ON question_attempts(session_id, question_id)")
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_attempts_question ON question_attempts(question_id)")
+            cursor.execute("CREATE INDEX IF NOT EXISTS idx_sessions_user ON practice_sessions(user_id)")
+            cursor.execute("CREATE INDEX IF NOT EXISTS idx_sessions_parent ON practice_sessions(parent_session_id)")
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_attempts_user ON question_attempts(user_id)")
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_mastery_user ON question_mastery(user_id)")
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_mastery_level ON question_mastery(mastery_level)")
@@ -956,22 +972,41 @@ class BookPracticeDB:
                 SELECT
                     COUNT(*) as total_attempted,
                     SUM(CASE WHEN is_correct = 1 THEN 1 ELSE 0 END) as total_correct,
-                    AVG(time_taken_seconds) as avg_time
+                    AVG(time_taken_seconds) as avg_time,
+                    SUM(time_taken_seconds) as total_time
                 FROM question_attempts
                 WHERE session_id = ?
             """, (session_id,))
             stats = dict(cursor.fetchone())
+
+            # Compute session duration from first_question_shown_at to now.
+            # Fall back to sum of per-question times if we never captured a start.
+            cursor.execute("""
+                SELECT first_question_shown_at,
+                       CAST((julianday(CURRENT_TIMESTAMP) - julianday(first_question_shown_at)) * 86400 AS INTEGER) as duration
+                FROM practice_sessions
+                WHERE session_id = ?
+            """, (session_id,))
+            row = cursor.fetchone()
+            duration = None
+            if row and row['first_question_shown_at'] and row['duration'] is not None:
+                duration = int(row['duration'])
+            if duration is None or duration < 0:
+                duration = int(stats['total_time'] or 0)
 
             # Update session
             cursor.execute("""
                 UPDATE practice_sessions
                 SET completed_at = CURRENT_TIMESTAMP,
                     total_correct = ?,
-                    total_attempted = ?
+                    total_attempted = ?,
+                    session_duration_seconds = ?
                 WHERE session_id = ?
-            """, (stats['total_correct'] or 0, stats['total_attempted'] or 0, session_id))
+            """, (stats['total_correct'] or 0, stats['total_attempted'] or 0,
+                  duration, session_id))
 
             conn.commit()
+            stats['session_duration_seconds'] = duration
             return stats
         finally:
             conn.close()
@@ -1014,6 +1049,15 @@ class BookPracticeDB:
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             """, (session_id, question_id, user_id, selected_choice,
                   is_correct, time_taken, attempt_number, notes))
+            attempt_id = cursor.lastrowid
+
+            # If this is the first attempt in the session, record when the first
+            # question was actually shown (for accurate session duration).
+            cursor.execute("""
+                UPDATE practice_sessions
+                SET first_question_shown_at = datetime(CURRENT_TIMESTAMP, ? || ' seconds')
+                WHERE session_id = ? AND first_question_shown_at IS NULL
+            """, (f'-{int(time_taken or 0)}', session_id))
 
             # Update mastery
             self._update_mastery(cursor, question_id, user_id, is_correct, time_taken)
@@ -1021,6 +1065,7 @@ class BookPracticeDB:
             conn.commit()
 
             return {
+                'attempt_id': attempt_id,
                 'is_correct': is_correct,
                 'correct_choice': correct_choice,
                 'attempt_number': attempt_number,
@@ -1332,8 +1377,344 @@ class BookPracticeDB:
                     session['selected_topics'] = json.loads(session['selected_topics'])
                 session['accuracy'] = round((session['total_correct'] / session['total_attempted']) * 100, 1) if session['total_attempted'] > 0 else 0
                 session['avg_time'] = round(session['avg_time'] or 0, 1)
+                # Resolve topic names for display
+                session['topic_names'] = self._resolve_topic_names(cursor, session.get('selected_topics'))
                 results.append(session)
 
             return results
+        finally:
+            conn.close()
+
+    def _resolve_topic_names(self, cursor, topic_ids) -> List[str]:
+        """Helper to resolve topic_ids (list or JSON string) to names."""
+        if not topic_ids:
+            return []
+        if isinstance(topic_ids, str):
+            try:
+                topic_ids = json.loads(topic_ids)
+            except Exception:
+                return []
+        if not topic_ids:
+            return []
+        placeholders = ','.join('?' * len(topic_ids))
+        cursor.execute(
+            f"SELECT topic_name FROM book_topics WHERE topic_id IN ({placeholders})",
+            tuple(topic_ids)
+        )
+        return [row['topic_name'] for row in cursor.fetchall()]
+
+    # ============================================================
+    # SESSION REVIEW (detail, delete, retry-wrong)
+    # ============================================================
+
+    def get_session_detail(self, session_id: int) -> Optional[Dict]:
+        """Return full session detail: metadata + per-question attempts with
+        question text, choices, correctness, time, notes, lifetime stats,
+        recent trend, and improvement status. Owner check is handled by caller."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+
+            # Session metadata
+            cursor.execute("SELECT * FROM practice_sessions WHERE session_id = ?", (session_id,))
+            srow = cursor.fetchone()
+            if not srow:
+                return None
+            session = dict(srow)
+            if session.get('selected_topics'):
+                try:
+                    session['selected_topics'] = json.loads(session['selected_topics'])
+                except Exception:
+                    session['selected_topics'] = []
+            session['topic_names'] = self._resolve_topic_names(cursor, session.get('selected_topics'))
+            user_id = session['user_id']
+
+            # Accuracy
+            if session['total_attempted']:
+                session['accuracy'] = round(
+                    (session['total_correct'] / session['total_attempted']) * 100, 1
+                )
+            else:
+                session['accuracy'] = 0
+
+            # Per-question attempts in this session, joined with question details
+            cursor.execute("""
+                SELECT
+                    a.attempt_id, a.question_id, a.selected_choice, a.is_correct,
+                    a.time_taken_seconds, a.attempt_number, a.notes, a.attempted_at,
+                    q.question_text, q.correct_choice,
+                    q.choice_a, q.choice_b, q.choice_c, q.choice_d, q.choice_e,
+                    q.question_number, q.difficulty, q.source_exam,
+                    t.topic_id, t.topic_name
+                FROM question_attempts a
+                JOIN book_questions q ON a.question_id = q.question_id
+                LEFT JOIN book_topics t ON q.topic_id = t.topic_id
+                WHERE a.session_id = ?
+                ORDER BY a.attempt_id ASC
+            """, (session_id,))
+            attempt_rows = [dict(r) for r in cursor.fetchall()]
+
+            questions = []
+            for a in attempt_rows:
+                qid = a['question_id']
+
+                # Lifetime stats for this (question, user)
+                cursor.execute("""
+                    SELECT total_attempts, correct_attempts, accuracy,
+                           average_time_seconds, best_time_seconds, mastery_level
+                    FROM question_mastery
+                    WHERE question_id = ? AND user_id = ?
+                """, (qid, user_id))
+                mrow = cursor.fetchone()
+                lifetime = dict(mrow) if mrow else {
+                    'total_attempts': 0, 'correct_attempts': 0, 'accuracy': 0.0,
+                    'average_time_seconds': None, 'best_time_seconds': None,
+                    'mastery_level': 'new'
+                }
+
+                # Recent 3 outcomes for this question (most recent last)
+                cursor.execute("""
+                    SELECT is_correct FROM question_attempts
+                    WHERE question_id = ? AND user_id = ?
+                    ORDER BY attempted_at DESC LIMIT 3
+                """, (qid, user_id))
+                recent = [bool(r['is_correct']) for r in cursor.fetchall()]
+                recent.reverse()  # oldest → newest
+
+                # Attempt in this session is the current one; figure out status
+                # relative to prior history.
+                cursor.execute("""
+                    SELECT is_correct FROM question_attempts
+                    WHERE question_id = ? AND user_id = ? AND attempt_id < ?
+                    ORDER BY attempted_at ASC
+                """, (qid, user_id, a['attempt_id']))
+                prior = [bool(r['is_correct']) for r in cursor.fetchall()]
+
+                total_attempts = lifetime['total_attempts'] or 0
+                accuracy = lifetime['accuracy'] or 0.0
+
+                # Status pill
+                if not prior:
+                    status = 'new'  # never seen before this session
+                elif total_attempts > 3 and accuracy < 50:
+                    status = 'struggling'
+                elif accuracy >= 80 and a['is_correct']:
+                    status = 'mastered'
+                elif any(not p for p in prior) and a['is_correct']:
+                    status = 'improving'  # was wrong before, now correct
+                else:
+                    status = 'practicing'
+
+                choices = {
+                    'a': a['choice_a'], 'b': a['choice_b'], 'c': a['choice_c'],
+                    'd': a['choice_d'], 'e': a['choice_e'],
+                }
+                choices = {k: v for k, v in choices.items() if v}
+
+                questions.append({
+                    'attempt_id': a['attempt_id'],
+                    'question_id': qid,
+                    'question_number': a['question_number'],
+                    'question_text': a['question_text'],
+                    'choices': choices,
+                    'correct_choice': a['correct_choice'],
+                    'selected_choice': a['selected_choice'],
+                    'is_correct': bool(a['is_correct']),
+                    'time_taken_seconds': a['time_taken_seconds'],
+                    'attempt_number': a['attempt_number'],
+                    'notes': a['notes'],
+                    'attempted_at': a['attempted_at'],
+                    'topic_id': a['topic_id'],
+                    'topic_name': a['topic_name'],
+                    'difficulty': a['difficulty'],
+                    'lifetime': {
+                        'total_attempts': lifetime['total_attempts'] or 0,
+                        'correct_attempts': lifetime['correct_attempts'] or 0,
+                        'accuracy': round(lifetime['accuracy'] or 0.0, 1),
+                        'average_time_seconds': round(lifetime['average_time_seconds'] or 0, 1),
+                        'best_time_seconds': lifetime['best_time_seconds'],
+                        'mastery_level': lifetime['mastery_level'],
+                    },
+                    'recent_outcomes': recent,
+                    'status': status,
+                })
+
+            # Count how many wrong for the retry button
+            wrong_count = sum(1 for q in questions if not q['is_correct'])
+
+            return {
+                'session': session,
+                'questions': questions,
+                'wrong_count': wrong_count,
+            }
+        finally:
+            conn.close()
+
+    def get_wrong_question_ids_from_session(self, session_id: int) -> List[int]:
+        """Return list of question_ids the user got wrong in a session."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("""
+                SELECT question_id FROM question_attempts
+                WHERE session_id = ? AND is_correct = 0
+                ORDER BY attempt_id ASC
+            """, (session_id,))
+            return [row['question_id'] for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    def get_questions_by_ids(self, question_ids: List[int]) -> List[Dict]:
+        """Load full question rows (with choices & topic name) for a list of ids,
+        preserving the given order."""
+        if not question_ids:
+            return []
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            placeholders = ','.join('?' * len(question_ids))
+            cursor.execute(f"""
+                SELECT q.*, t.topic_name
+                FROM book_questions q
+                JOIN book_topics t ON q.topic_id = t.topic_id
+                WHERE q.question_id IN ({placeholders})
+            """, tuple(question_ids))
+            by_id = {}
+            for row in cursor.fetchall():
+                q = dict(row)
+                q['choices'] = {
+                    'a': q.pop('choice_a'), 'b': q.pop('choice_b'),
+                    'c': q.pop('choice_c'), 'd': q.pop('choice_d'),
+                    'e': q.pop('choice_e'),
+                }
+                q['choices'] = {k: v for k, v in q['choices'].items() if v}
+                by_id[q['question_id']] = q
+            return [by_id[qid] for qid in question_ids if qid in by_id]
+        finally:
+            conn.close()
+
+    def create_retry_wrong_session(self, original_session_id: int, user_id: str) -> Optional[Dict]:
+        """Create a new session containing only the questions wrong in the original.
+        Returns {session_id, questions} or None if no wrong questions."""
+        wrong_ids = self.get_wrong_question_ids_from_session(original_session_id)
+        if not wrong_ids:
+            return None
+
+        # Original session (for mode/topics context)
+        orig = self.get_session(original_session_id)
+        topic_ids = orig['selected_topics'] if orig and orig.get('selected_topics') else []
+
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("""
+                INSERT INTO practice_sessions
+                (user_id, mode, selected_topics, question_count, parent_session_id)
+                VALUES (?, 'retry_wrong', ?, ?, ?)
+            """, (user_id,
+                  json.dumps(topic_ids) if topic_ids else None,
+                  len(wrong_ids),
+                  original_session_id))
+            session_id = cursor.lastrowid
+            conn.commit()
+        finally:
+            conn.close()
+
+        questions = self.get_questions_by_ids(wrong_ids)
+        return {'session_id': session_id, 'questions': questions}
+
+    def delete_session(self, session_id: int, user_id: str) -> bool:
+        """Delete a session and its attempts. Verifies ownership.
+        Recomputes question_mastery for any affected questions.
+        Returns True on success, False if session not found or not owned."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute(
+                "SELECT user_id FROM practice_sessions WHERE session_id = ?",
+                (session_id,)
+            )
+            row = cursor.fetchone()
+            if not row:
+                return False
+            owner = row['user_id']
+
+            # Capture affected questions before deletion
+            cursor.execute(
+                "SELECT DISTINCT question_id FROM question_attempts WHERE session_id = ?",
+                (session_id,)
+            )
+            affected_qids = [r['question_id'] for r in cursor.fetchall()]
+
+            cursor.execute("DELETE FROM question_attempts WHERE session_id = ?", (session_id,))
+            cursor.execute("DELETE FROM practice_sessions WHERE session_id = ?", (session_id,))
+
+            # Recompute mastery for each affected question
+            for qid in affected_qids:
+                self._recompute_mastery(cursor, qid, owner)
+
+            conn.commit()
+            return True
+        finally:
+            conn.close()
+
+    def _recompute_mastery(self, cursor, question_id: int, user_id: str):
+        """Recompute question_mastery row from remaining attempts."""
+        cursor.execute("""
+            SELECT COUNT(*) as total,
+                   SUM(CASE WHEN is_correct = 1 THEN 1 ELSE 0 END) as correct,
+                   AVG(time_taken_seconds) as avg_time,
+                   MIN(CASE WHEN is_correct = 1 THEN time_taken_seconds END) as best_time,
+                   MAX(attempted_at) as last_attempted
+            FROM question_attempts
+            WHERE question_id = ? AND user_id = ?
+        """, (question_id, user_id))
+        row = cursor.fetchone()
+        total = row['total'] or 0
+        correct = row['correct'] or 0
+
+        if total == 0:
+            cursor.execute(
+                "DELETE FROM question_mastery WHERE question_id = ? AND user_id = ?",
+                (question_id, user_id)
+            )
+            return
+
+        accuracy = (correct / total) * 100
+        if total < 3 or accuracy < 50:
+            mastery_level = 'learning'
+        elif accuracy < 80:
+            mastery_level = 'practiced'
+        else:
+            mastery_level = 'mastered'
+
+        cursor.execute("""
+            INSERT INTO question_mastery
+            (question_id, user_id, total_attempts, correct_attempts, accuracy,
+             average_time_seconds, best_time_seconds, last_attempted, mastery_level,
+             next_review_date, spaced_interval_index)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NULL, 0)
+            ON CONFLICT(question_id) DO UPDATE SET
+                total_attempts = excluded.total_attempts,
+                correct_attempts = excluded.correct_attempts,
+                accuracy = excluded.accuracy,
+                average_time_seconds = excluded.average_time_seconds,
+                best_time_seconds = excluded.best_time_seconds,
+                last_attempted = excluded.last_attempted,
+                mastery_level = excluded.mastery_level
+        """, (question_id, user_id, total, correct, accuracy,
+              row['avg_time'], row['best_time'], row['last_attempted'], mastery_level))
+
+    def update_attempt_note(self, attempt_id: int, user_id: str, note: str) -> bool:
+        """Update note on an attempt. Verifies user ownership."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.cursor()
+            cursor.execute("""
+                UPDATE question_attempts SET notes = ?
+                WHERE attempt_id = ? AND user_id = ?
+            """, (note, attempt_id, user_id))
+            conn.commit()
+            return cursor.rowcount > 0
         finally:
             conn.close()

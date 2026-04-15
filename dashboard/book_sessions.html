@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Session History - Book Practice</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: var(--bg-primary); min-height: 100vh; padding: 20px; color: var(--text-primary); }
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        .header {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .header h1 {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 8px 14px; background: var(--bg-input); color: var(--text-secondary);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            font-size: 13px; font-weight: 600; text-decoration: none;
+        }
+        .nav-link:hover { color: #f59e0b; border-color: #f59e0b; }
+
+        .filter-row {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 14px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .filter-row label { font-size: 0.85rem; color: var(--text-muted); }
+        .filter-row select {
+            padding: 8px 12px; background: var(--bg-input);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            color: var(--text-primary); font-size: 0.9rem;
+        }
+
+        .sessions-list {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .session-row {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 1.2fr 2fr 1fr 1fr 1fr auto;
+            gap: 14px;
+            align-items: center;
+        }
+        .session-row:last-child { border-bottom: none; }
+        .session-row:hover { background: var(--bg-card-hover, rgba(255,255,255,0.02)); }
+
+        .sr-date { font-size: 0.9rem; color: var(--text-primary); }
+        .sr-date small { display: block; color: var(--text-muted); font-size: 0.75rem; margin-top: 2px; }
+
+        .sr-topics { font-size: 0.85rem; color: var(--text-secondary); }
+
+        .sr-score { font-weight: 700; font-size: 1rem; }
+        .sr-score.good { color: #10b981; }
+        .sr-score.medium { color: #f59e0b; }
+        .sr-score.poor { color: #ef4444; }
+
+        .sr-time { font-size: 0.85rem; color: var(--text-secondary); }
+
+        .sr-actions { display: flex; gap: 6px; }
+        .sr-btn {
+            padding: 6px 12px; border: 1px solid var(--border-color);
+            border-radius: 6px; background: var(--bg-input);
+            color: var(--text-primary); font-size: 0.82rem;
+            cursor: pointer; text-decoration: none;
+        }
+        .sr-btn:hover { border-color: #f59e0b; color: #f59e0b; }
+        .sr-btn.danger:hover { border-color: #ef4444; color: #ef4444; }
+
+        .mode-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            background: rgba(245, 158, 11, 0.12);
+            color: #f59e0b;
+            margin-top: 4px;
+        }
+        .mode-pill.retry { background: rgba(99,102,241,0.12); color: #818cf8; }
+
+        .empty {
+            padding: 40px; text-align: center; color: var(--text-muted);
+        }
+        .loading { padding: 40px; text-align: center; color: var(--text-secondary); }
+
+        @media (max-width: 720px) {
+            .session-row {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: auto;
+            }
+            .sr-actions { grid-column: 1 / -1; justify-content: flex-end; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Session History</h1>
+            <div class="nav-links">
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="book_analytics.html" class="nav-link">Analytics</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="filter-row">
+            <div id="user-selector-wrap" style="display: none;">
+                <label for="user-selector">Viewing: </label>
+                <select id="user-selector" onchange="onUserChanged()"></select>
+            </div>
+            <div style="margin-left: auto; color: var(--text-muted); font-size: 0.82rem;" id="session-count">—</div>
+        </div>
+
+        <div class="sessions-list" id="sessions-list">
+            <div class="loading">Loading…</div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let currentUser = null;
+        let viewingUserId = null;
+
+        async function init() {
+            currentUser = await checkAuth(false);
+            if (!currentUser) currentUser = { user_id: 'saanvi', can_view_all_users: false };
+            viewingUserId = currentUser.user_id;
+
+            if (currentUser.can_view_all_users) {
+                await setupUserSelector();
+            }
+            await loadSessions();
+        }
+
+        async function setupUserSelector() {
+            try {
+                const resp = await fetch(`${API_BASE}/api/admin/children`);
+                const data = await resp.json();
+                const children = (data.children || []).map(c => ({ user_id: c.user_id, name: c.name }));
+                // Include self at the top
+                const options = [{ user_id: currentUser.user_id, name: currentUser.name || 'Me' }, ...children];
+                const seen = new Set();
+                const unique = options.filter(o => {
+                    if (seen.has(o.user_id)) return false;
+                    seen.add(o.user_id); return true;
+                });
+                const sel = document.getElementById('user-selector');
+                sel.innerHTML = unique.map(o =>
+                    `<option value="${o.user_id}">${escapeHtml(o.name)}</option>`
+                ).join('');
+                sel.value = viewingUserId;
+                document.getElementById('user-selector-wrap').style.display = 'block';
+            } catch (e) {
+                console.warn('Could not load user list', e);
+            }
+        }
+
+        function onUserChanged() {
+            viewingUserId = document.getElementById('user-selector').value;
+            loadSessions();
+        }
+
+        async function loadSessions() {
+            const list = document.getElementById('sessions-list');
+            list.innerHTML = '<div class="loading">Loading…</div>';
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/sessions?user_id=${encodeURIComponent(viewingUserId)}&limit=100`);
+                const data = await resp.json();
+                const sessions = data.sessions || [];
+                document.getElementById('session-count').textContent =
+                    `${sessions.length} session${sessions.length === 1 ? '' : 's'}`;
+
+                if (!sessions.length) {
+                    list.innerHTML = '<div class="empty">No sessions yet. <a href="book_practice.html" style="color:#f59e0b;">Start one now →</a></div>';
+                    return;
+                }
+                list.innerHTML = sessions.map(renderSession).join('');
+            } catch (e) {
+                list.innerHTML = `<div class="empty" style="color:#ef4444;">Error: ${e.message}</div>`;
+            }
+        }
+
+        function renderSession(s) {
+            const score = s.total_attempted > 0 ? `${s.total_correct}/${s.total_attempted}` : '—';
+            const acc = s.accuracy || 0;
+            const accClass = acc >= 80 ? 'good' : acc >= 50 ? 'medium' : 'poor';
+            const completedDate = s.completed_at ? new Date(s.completed_at + 'Z') : null;
+            const dateStr = completedDate ? completedDate.toLocaleString() : '—';
+            const topicNames = (s.topic_names && s.topic_names.length)
+                ? s.topic_names.join(', ')
+                : (s.mode === 'smart_weak' ? 'Smart mode' : 'All topics');
+            const duration = s.session_duration_seconds != null
+                ? formatDuration(s.session_duration_seconds)
+                : formatDuration(Math.round((s.avg_time || 0) * (s.total_attempted || 0)));
+            const modePill = s.mode === 'retry_wrong'
+                ? '<span class="mode-pill retry">Retry-wrong</span>'
+                : (s.mode === 'smart_weak' ? '<span class="mode-pill">Smart</span>' : '');
+
+            return `
+                <div class="session-row">
+                    <div class="sr-date">${escapeHtml(dateStr)} ${modePill}</div>
+                    <div class="sr-topics">${escapeHtml(topicNames)}</div>
+                    <div class="sr-score ${accClass}">${score} · ${acc}%</div>
+                    <div class="sr-time">${duration} total<br><small>${Math.round(s.avg_time || 0)}s avg</small></div>
+                    <div class="sr-time">${s.question_count || s.total_attempted || 0} Qs</div>
+                    <div class="sr-actions">
+                        <a href="book_session_detail.html?session_id=${s.session_id}" class="sr-btn">View</a>
+                        <button class="sr-btn danger" onclick="deleteSession(${s.session_id})">Delete</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function deleteSession(id) {
+            if (!confirm('Delete this session and all its attempts? This will also recompute the question stats.')) return;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/session/${id}`, { method: 'DELETE' });
+                const data = await resp.json();
+                if (data.success) {
+                    await loadSessions();
+                } else {
+                    alert(data.error || 'Could not delete session');
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+            }
+        }
+
+        function formatDuration(secs) {
+            secs = Math.max(0, Math.round(secs || 0));
+            const m = Math.floor(secs / 60);
+            const s = secs % 60;
+            if (m > 0) return `${m}m ${s}s`;
+            return `${s}s`;
+        }
+
+        function escapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

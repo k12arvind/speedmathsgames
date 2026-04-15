@@ -633,6 +633,203 @@
             border-color: #f59e0b;
         }
 
+        /* Session review list (inline on completion screen) */
+        .review-list {
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .review-list h3 {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .review-item {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .review-item-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .review-item-header:hover {
+            background: var(--bg-card-hover, rgba(255,255,255,0.02));
+        }
+
+        .rv-idx {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            min-width: 28px;
+        }
+
+        .rv-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+        .rv-chip.correct { background: rgba(16,185,129,0.15); color: #10b981; }
+        .rv-chip.wrong { background: rgba(239,68,68,0.15); color: #ef4444; }
+
+        .rv-text {
+            flex: 1;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .rv-time {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            white-space: nowrap;
+        }
+
+        .rv-caret {
+            color: var(--text-muted);
+            transition: transform 0.2s;
+        }
+
+        .review-item.open .rv-caret {
+            transform: rotate(90deg);
+        }
+
+        .review-item-body {
+            display: none;
+            padding: 0 14px 14px 14px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .review-item.open .review-item-body {
+            display: block;
+            padding-top: 12px;
+        }
+
+        .rv-q-text {
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        .rv-choices {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .rv-choice {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--bg-card);
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .rv-choice .lbl { font-weight: 700; color: var(--text-muted); min-width: 18px; }
+        .rv-choice.correct { border-color: #10b981; background: rgba(16,185,129,0.08); color: #10b981; }
+        .rv-choice.picked-wrong { border-color: #ef4444; background: rgba(239,68,68,0.08); color: #ef4444; }
+
+        .rv-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .rv-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+        }
+
+        .rv-status {
+            font-size: 0.78rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+        .rv-status.new { background: rgba(148,163,184,0.15); color: #94a3b8; }
+        .rv-status.improving { background: rgba(16,185,129,0.15); color: #10b981; }
+        .rv-status.mastered { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .rv-status.struggling { background: rgba(239,68,68,0.15); color: #ef4444; }
+        .rv-status.practicing { background: rgba(99,102,241,0.15); color: #818cf8; }
+
+        .rv-trend {
+            display: inline-flex;
+            gap: 3px;
+            align-items: center;
+        }
+        .rv-trend span {
+            width: 14px; height: 14px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        .rv-trend .ok { background: #10b981; }
+        .rv-trend .no { background: #ef4444; }
+
+        .rv-note-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+        .rv-note-input {
+            flex: 1;
+            padding: 8px 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            resize: vertical;
+            min-height: 40px;
+        }
+        .rv-note-btn {
+            padding: 8px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.82rem;
+            cursor: pointer;
+        }
+        .rv-note-btn:hover { border-color: #f59e0b; color: #f59e0b; }
+
+        .rv-saved {
+            color: #10b981;
+            font-size: 0.8rem;
+            margin-left: 8px;
+            display: none;
+        }
+        .rv-saved.show { display: inline; }
+
+        .results-btn.danger {
+            background: rgba(239,68,68,0.1);
+            color: #ef4444;
+            border: 1px solid rgba(239,68,68,0.4);
+        }
+
         @media (max-width: 600px) {
             .mode-selector {
                 grid-template-columns: 1fr;
@@ -743,7 +940,7 @@
         <div class="results-screen" id="results-screen">
             <h2 class="results-title">Session Complete!</h2>
 
-            <div class="results-stats">
+            <div class="results-stats" style="grid-template-columns: repeat(4, 1fr);">
                 <div class="result-stat">
                     <div class="result-value" id="result-score">0/0</div>
                     <div class="result-label">Score</div>
@@ -754,12 +951,23 @@
                 </div>
                 <div class="result-stat">
                     <div class="result-value" id="result-time">0s</div>
-                    <div class="result-label">Avg Time</div>
+                    <div class="result-label">Avg / Q</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-value" id="result-duration">0s</div>
+                    <div class="result-label">Total Time</div>
                 </div>
             </div>
 
+            <div class="review-list" id="review-list">
+                <h3>Question-by-question review</h3>
+                <div id="review-items"></div>
+            </div>
+
             <div class="results-actions">
+                <button class="results-btn primary" id="retry-wrong-btn" onclick="retryWrong()" style="display: none;">Retry Wrong Only</button>
                 <button class="results-btn primary" onclick="newSession()">Practice Again</button>
+                <a href="book_sessions.html" class="results-btn secondary">Session History</a>
                 <a href="book_analytics.html" class="results-btn secondary">View Analytics</a>
             </div>
         </div>
@@ -768,6 +976,7 @@
             <a href="book_upload.html" class="footer-link">Upload Pages</a>
             <a href="book_review.html" class="footer-link">Review Questions</a>
             <a href="book_topics.html" class="footer-link">Manage Topics</a>
+            <a href="book_sessions.html" class="footer-link">Session History</a>
             <a href="book_analytics.html" class="footer-link">Analytics</a>
         </div>
     </div>
@@ -787,11 +996,36 @@
         let questionStartTime = 0;
         let totalTime = 0;
         let timerInterval = null;
+        let lastAttemptId = null;
 
         async function init() {
             currentUser = await checkAuth(false);
             if (!currentUser) {
                 currentUser = { user_id: 'saanvi' };
+            }
+            // If we arrived from session_detail "Retry Wrong", drop straight into practice
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('retry') === '1') {
+                const raw = sessionStorage.getItem('book_retry_session');
+                if (raw) {
+                    try {
+                        const payload = JSON.parse(raw);
+                        sessionStorage.removeItem('book_retry_session');
+                        sessionId = payload.session_id;
+                        questions = payload.questions || [];
+                        currentQuestionIndex = 0;
+                        correctCount = 0;
+                        totalTime = 0;
+                        document.getElementById('setup-screen').style.display = 'none';
+                        document.getElementById('question-card').style.display = 'block';
+                        document.getElementById('session-info').style.display = 'flex';
+                        document.getElementById('correct-count').textContent = '0';
+                        showQuestion();
+                        return;
+                    } catch (e) {
+                        console.warn('Could not resume retry session:', e);
+                    }
+                }
             }
             await loadTopics();
         }
@@ -825,7 +1059,7 @@
             }
 
             grid.innerHTML = topicsWithQuestions.map(topic => `
-                <div class="topic-item" onclick="toggleTopic(${topic.topic_id})">
+                <div class="topic-item" onclick="toggleTopic(${topic.topic_id}, event)">
                     <input type="checkbox" id="topic-${topic.topic_id}" ${selectedTopics.includes(topic.topic_id) ? 'checked' : ''}>
                     <span class="topic-name">${topic.topic_name}</span>
                     <span class="topic-count">${topic.verified_count} Qs</span>
@@ -842,16 +1076,22 @@
                 mode === 'topic_select' ? 'block' : 'none';
         }
 
-        function toggleTopic(topicId) {
+        function toggleTopic(topicId, event) {
+            const checkbox = document.getElementById(`topic-${topicId}`);
+            if (!checkbox) return;
+
+            // If click was NOT on the checkbox itself, toggle it manually
+            if (!event || event.target.tagName !== 'INPUT') {
+                checkbox.checked = !checkbox.checked;
+            }
+            // Either way, sync selectedTopics with checkbox state
             const index = selectedTopics.indexOf(topicId);
-            if (index === -1) {
+            if (checkbox.checked && index === -1) {
                 selectedTopics.push(topicId);
-            } else {
+            } else if (!checkbox.checked && index !== -1) {
                 selectedTopics.splice(index, 1);
             }
-            // Update checkbox
-            const checkbox = document.getElementById(`topic-${topicId}`);
-            if (checkbox) checkbox.checked = !checkbox.checked;
+
             // Update item styling
             document.querySelectorAll('.topic-item').forEach(item => {
                 const cb = item.querySelector('input');
@@ -1021,6 +1261,7 @@
                 });
 
                 const result = await response.json();
+                lastAttemptId = result.attempt_id || null;
 
                 // Show correct/incorrect
                 const correctChoice = result.correct_choice;
@@ -1050,11 +1291,22 @@
         }
 
         async function nextQuestion() {
-            // Save notes if any
-            const notes = document.getElementById('notes-input').value.trim();
-            if (notes) {
-                // Could save notes here if needed
+            // Save notes to the attempt we just recorded, if any
+            const notesEl = document.getElementById('notes-input');
+            const notes = notesEl ? notesEl.value.trim() : '';
+            if (notes && lastAttemptId) {
+                try {
+                    await fetch(`${API_BASE}/api/book/attempt/${lastAttemptId}/note`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ note: notes, user_id: currentUser.user_id })
+                    });
+                } catch (e) {
+                    console.warn('Could not save note:', e);
+                }
             }
+            if (notesEl) notesEl.value = '';
+            lastAttemptId = null;
 
             currentQuestionIndex++;
             showQuestion();
@@ -1064,16 +1316,19 @@
             clearInterval(timerInterval);
 
             // Complete session on server
+            let completeStats = null;
             try {
-                await fetch(`${API_BASE}/api/book/session/${sessionId}/complete`, {
+                const resp = await fetch(`${API_BASE}/api/book/session/${sessionId}/complete`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' }
                 });
+                const payload = await resp.json();
+                completeStats = payload.stats || null;
             } catch (error) {
                 console.error('Error completing session:', error);
             }
 
-            // Show results
+            // Show results screen
             document.getElementById('question-card').style.display = 'none';
             document.getElementById('session-info').style.display = 'none';
             document.getElementById('results-screen').style.display = 'block';
@@ -1081,12 +1336,179 @@
             const total = questions.length;
             const accuracy = total > 0 ? Math.round((correctCount / total) * 100) : 0;
             const avgTime = total > 0 ? Math.round(totalTime / total) : 0;
+            const duration = completeStats && completeStats.session_duration_seconds != null
+                ? completeStats.session_duration_seconds
+                : totalTime;
 
             document.getElementById('result-score').textContent = `${correctCount}/${total}`;
             document.getElementById('result-accuracy').textContent = `${accuracy}%`;
             document.getElementById('result-accuracy').className =
                 `result-value ${accuracy >= 80 ? 'good' : accuracy >= 50 ? 'medium' : 'poor'}`;
             document.getElementById('result-time').textContent = `${avgTime}s`;
+            document.getElementById('result-duration').textContent = formatDuration(duration);
+
+            // Load full per-question review from server
+            await loadAndRenderReview(sessionId);
+        }
+
+        function formatDuration(secs) {
+            secs = Math.max(0, Math.round(secs || 0));
+            const m = Math.floor(secs / 60);
+            const s = secs % 60;
+            if (m > 0) return `${m}m ${s}s`;
+            return `${s}s`;
+        }
+
+        async function loadAndRenderReview(sid) {
+            const container = document.getElementById('review-items');
+            container.innerHTML = '<div class="loading"><div class="loading-spinner"></div>Loading review...</div>';
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/session/${sid}/detail`);
+                const data = await resp.json();
+                if (data.error) {
+                    container.innerHTML = `<div style="color:#ef4444;">Could not load review: ${data.error}</div>`;
+                    return;
+                }
+                renderReviewList(data.questions || []);
+                const wrongBtn = document.getElementById('retry-wrong-btn');
+                if (data.wrong_count > 0) {
+                    wrongBtn.textContent = `Retry Wrong (${data.wrong_count})`;
+                    wrongBtn.style.display = 'inline-block';
+                } else {
+                    wrongBtn.style.display = 'none';
+                }
+            } catch (e) {
+                container.innerHTML = `<div style="color:#ef4444;">Error: ${e.message}</div>`;
+            }
+        }
+
+        function statusLabel(status) {
+            const map = {
+                new: 'New',
+                improving: 'First wrong, now correct',
+                mastered: 'Mastered',
+                struggling: 'Still struggling',
+                practicing: 'Practicing'
+            };
+            return map[status] || status;
+        }
+
+        function renderReviewList(list) {
+            const container = document.getElementById('review-items');
+            if (!list.length) {
+                container.innerHTML = '<div style="color: var(--text-muted);">No attempts recorded.</div>';
+                return;
+            }
+            const html = list.map((q, idx) => {
+                const short = (q.question_text || '').replace(/\s+/g, ' ').trim();
+                const shortDisplay = short.length > 90 ? short.slice(0, 90) + '…' : short;
+                const choicesHtml = Object.entries(q.choices || {}).map(([k, v]) => {
+                    let cls = '';
+                    if (k === q.correct_choice) cls = 'correct';
+                    else if (k === q.selected_choice && !q.is_correct) cls = 'picked-wrong';
+                    return `<div class="rv-choice ${cls}"><span class="lbl">${k.toUpperCase()}.</span><span>${escapeHtml(v)}</span></div>`;
+                }).join('');
+
+                const recentHtml = (q.recent_outcomes || [])
+                    .map(ok => `<span class="${ok ? 'ok' : 'no'}" title="${ok ? 'Correct' : 'Wrong'}"></span>`)
+                    .join('');
+
+                return `
+                    <div class="review-item" data-attempt-id="${q.attempt_id}" data-idx="${idx}">
+                        <div class="review-item-header" onclick="toggleReviewItem(${idx})">
+                            <span class="rv-idx">Q${idx + 1}</span>
+                            <span class="rv-chip ${q.is_correct ? 'correct' : 'wrong'}">${q.is_correct ? '✓' : '✗'}</span>
+                            <span class="rv-text">${escapeHtml(shortDisplay)}</span>
+                            <span class="rv-time">${q.time_taken_seconds || 0}s</span>
+                            <span class="rv-caret">›</span>
+                        </div>
+                        <div class="review-item-body">
+                            <div class="rv-q-text">${escapeHtml(q.question_text || '')}</div>
+                            <div class="rv-choices">${choicesHtml}</div>
+                            <div class="rv-meta-row">
+                                <span class="rv-pill">Topic: ${escapeHtml(q.topic_name || '—')}</span>
+                                <span class="rv-pill">Time: ${q.time_taken_seconds || 0}s</span>
+                                <span class="rv-pill">Lifetime: ${q.lifetime.correct_attempts}/${q.lifetime.total_attempts} (${q.lifetime.accuracy}%)</span>
+                                ${recentHtml ? `<span class="rv-pill">Recent <span class="rv-trend">${recentHtml}</span></span>` : ''}
+                                <span class="rv-status ${q.status}">${statusLabel(q.status)}</span>
+                            </div>
+                            <div class="rv-note-row">
+                                <textarea class="rv-note-input" id="note-${q.attempt_id}" placeholder="Add a note (what went wrong, formula to remember, etc.)">${escapeHtml(q.notes || '')}</textarea>
+                                <button class="rv-note-btn" onclick="saveNote(${q.attempt_id})">Save note</button>
+                                <span class="rv-saved" id="saved-${q.attempt_id}">Saved ✓</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            container.innerHTML = html;
+        }
+
+        function toggleReviewItem(idx) {
+            const el = document.querySelector(`.review-item[data-idx="${idx}"]`);
+            if (el) el.classList.toggle('open');
+        }
+
+        async function saveNote(attemptId) {
+            const input = document.getElementById(`note-${attemptId}`);
+            const saved = document.getElementById(`saved-${attemptId}`);
+            if (!input) return;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/attempt/${attemptId}/note`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ note: input.value, user_id: currentUser.user_id })
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    saved.classList.add('show');
+                    setTimeout(() => saved.classList.remove('show'), 2000);
+                } else {
+                    alert('Could not save note');
+                }
+            } catch (e) {
+                alert('Error saving note: ' + e.message);
+            }
+        }
+
+        function escapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        async function retryWrong() {
+            const btn = document.getElementById('retry-wrong-btn');
+            btn.disabled = true;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/session/${sessionId}/retry-wrong`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({})
+                });
+                const data = await resp.json();
+                if (data.error) {
+                    alert(data.error);
+                    btn.disabled = false;
+                    return;
+                }
+                // Reset state and drop into practice with the new session
+                sessionId = data.session_id;
+                questions = data.questions || [];
+                currentQuestionIndex = 0;
+                correctCount = 0;
+                totalTime = 0;
+                document.getElementById('correct-count').textContent = '0';
+
+                document.getElementById('results-screen').style.display = 'none';
+                document.getElementById('setup-screen').style.display = 'none';
+                document.getElementById('question-card').style.display = 'block';
+                document.getElementById('session-info').style.display = 'flex';
+                showQuestion();
+            } catch (e) {
+                alert('Error starting retry: ' + e.message);
+                btn.disabled = false;
+            }
         }
 
         function newSession() {
