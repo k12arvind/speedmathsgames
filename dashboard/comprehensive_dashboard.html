@@ -929,6 +929,51 @@
         let sortColumn = 'date_added';
         let sortDirection = 'desc';
 
+        // Pagination: 25 items per page, keyed by container id
+        const PAGE_SIZE = 25;
+        const paginationState = {};   // containerId -> current page (1-indexed)
+        const paginationData = {};    // containerId -> sorted pdf list (cache for page switches)
+
+        function sortByDateDesc(pdfs) {
+            // Non-mutating sort: newest first, by date_added (or date_published)
+            return [...pdfs].sort((a, b) => {
+                const da = new Date(a.date_added || a.date_published || 0).getTime() || 0;
+                const db = new Date(b.date_added || b.date_published || 0).getTime() || 0;
+                return db - da;
+            });
+        }
+
+        function renderPaginationControls(containerId, total, page) {
+            const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+            if (totalPages <= 1) return '';
+            const start = (page - 1) * PAGE_SIZE + 1;
+            const end = Math.min(page * PAGE_SIZE, total);
+            const prevDisabled = page <= 1 ? 'disabled' : '';
+            const nextDisabled = page >= totalPages ? 'disabled' : '';
+            return `
+                <div class="pagination-bar" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;border-top:1px solid var(--border-color);background:var(--bg-card);border-radius:0 0 12px 12px;flex-wrap:wrap;">
+                    <div style="color:var(--text-muted);font-size:0.85rem;">Showing <strong style="color:var(--text-primary);">${start}–${end}</strong> of <strong style="color:var(--text-primary);">${total}</strong></div>
+                    <div style="display:flex;gap:6px;align-items:center;">
+                        <button onclick="goToPage('${containerId}', ${page - 1})" ${prevDisabled} style="padding:6px 12px;border:1px solid var(--border-color);background:var(--bg-input);color:var(--text-primary);border-radius:6px;cursor:${prevDisabled ? 'not-allowed' : 'pointer'};opacity:${prevDisabled ? '0.4' : '1'};font-size:0.85rem;">← Prev</button>
+                        <span style="color:var(--text-secondary);font-size:0.85rem;padding:0 8px;">Page ${page} of ${totalPages}</span>
+                        <button onclick="goToPage('${containerId}', ${page + 1})" ${nextDisabled} style="padding:6px 12px;border:1px solid var(--border-color);background:var(--bg-input);color:var(--text-primary);border-radius:6px;cursor:${nextDisabled ? 'not-allowed' : 'pointer'};opacity:${nextDisabled ? '0.4' : '1'};font-size:0.85rem;">Next →</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function goToPage(containerId, page) {
+            const pdfs = paginationData[containerId];
+            if (!pdfs) return;
+            const totalPages = Math.max(1, Math.ceil(pdfs.length / PAGE_SIZE));
+            page = Math.max(1, Math.min(page, totalPages));
+            paginationState[containerId] = page;
+            // Re-render using the same cached sorted list
+            const isMonthly = containerId === 'monthly-table';
+            if (isMonthly) renderMonthlyTable(containerId, pdfs);
+            else renderTable(containerId, pdfs);
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', async () => {
             await loadDashboardData();
@@ -1034,15 +1079,30 @@
         function renderTable(containerId, pdfs) {
             const container = document.getElementById(containerId);
 
-            if (pdfs.length === 0) {
+            if (!pdfs || pdfs.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
                         <div class="empty-icon">📭</div>
                         <div>No PDFs found</div>
                     </div>
                 `;
+                paginationState[containerId] = 1;
+                paginationData[containerId] = [];
                 return;
             }
+
+            // Cache the sorted list so page navigation doesn't re-sort
+            const sorted = paginationData[containerId] === pdfs
+                ? pdfs
+                : sortByDateDesc(pdfs);
+            paginationData[containerId] = sorted;
+
+            const page = paginationState[containerId] || 1;
+            const totalPages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
+            const safePage = Math.min(page, totalPages);
+            paginationState[containerId] = safePage;
+            const pageStart = (safePage - 1) * PAGE_SIZE;
+            const pageItems = sorted.slice(pageStart, pageStart + PAGE_SIZE);
 
             const tableHTML = `
                 <div class="table-wrapper">
@@ -1062,10 +1122,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            ${pdfs.map(pdf => createTableRow(pdf)).join('')}
+                            ${pageItems.map(pdf => createTableRow(pdf)).join('')}
                         </tbody>
                     </table>
                 </div>
+                ${renderPaginationControls(containerId, sorted.length, safePage)}
             `;
 
             container.innerHTML = tableHTML;
@@ -1085,8 +1146,22 @@
                         </small>
                     </div>
                 `;
+                paginationState[containerId] = 1;
+                paginationData[containerId] = [];
                 return;
             }
+
+            const sorted = paginationData[containerId] === pdfs
+                ? pdfs
+                : sortByDateDesc(pdfs);
+            paginationData[containerId] = sorted;
+
+            const page = paginationState[containerId] || 1;
+            const totalPages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
+            const safePage = Math.min(page, totalPages);
+            paginationState[containerId] = safePage;
+            const pageStart = (safePage - 1) * PAGE_SIZE;
+            const pageItems = sorted.slice(pageStart, pageStart + PAGE_SIZE);
 
             const tableHTML = `
                 <div class="table-wrapper">
@@ -1104,10 +1179,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            ${pdfs.map(pdf => createMonthlyTableRow(pdf)).join('')}
+                            ${pageItems.map(pdf => createMonthlyTableRow(pdf)).join('')}
                         </tbody>
                     </table>
                 </div>
+                ${renderPaginationControls(containerId, sorted.length, safePage)}
             `;
 
             container.innerHTML = tableHTML;
@@ -1609,7 +1685,9 @@
                 const response = await fetch(`${API_BASE}/api/filter/untouched?weeks=${weeks}`);
                 const data = await response.json();
 
-                // Update all tab with filtered results
+                // Reset to first page for new filter result
+                paginationState['all-table'] = 1;
+                paginationData['all-table'] = null;
                 renderTable('all-table', data.pdfs);
                 switchTab('all');
             } catch (error) {
@@ -1631,6 +1709,8 @@
                 const response = await fetch(url);
                 const data = await response.json();
 
+                paginationState['all-table'] = 1;
+                paginationData['all-table'] = null;
                 renderTable('all-table', data.pdfs);
                 switchTab('all');
             } catch (error) {
