@@ -530,7 +530,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             elif path.startswith('/api/revise/'):
                 self.handle_gk_dashboard_post(path, data)
             # PDF creation and sync endpoints
-            elif path in ['/api/create-pdf-from-url', '/api/sync-pdfs']:
+            elif path in ['/api/create-pdf-from-url', '/api/sync-pdfs', '/api/upload-pdf']:
                 self.handle_gk_dashboard_post(path, data)
             # Processing API endpoints
             elif path.startswith('/api/processing/'):
@@ -1576,13 +1576,22 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             if not url:
                 self.send_json({'error': 'URL is required'}, 400)
                 return
-            
+
             try:
                 result = self._create_pdf_from_url(url)
                 self.send_json(result)
             except Exception as e:
                 self.send_json({'error': str(e)}, 500)
-        
+
+        elif path == '/api/upload-pdf':
+            # Upload a PDF directly (used when TopRankers CDN blocks auto-download).
+            # Body: { category: 'daily'|'weekly_legaledge'|'weekly_career_launcher'|'monthly', filename: '...', data_base64: '...' }
+            try:
+                result = self._handle_pdf_upload(data)
+                self.send_json(result)
+            except Exception as e:
+                self.send_json({'error': str(e)}, 500)
+
         elif path == '/api/sync-pdfs':
             # Bidirectional sync with Mac Mini
             try:
@@ -1675,6 +1684,82 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
         else:
             self.send_json({'error': 'Monthly endpoint not found'})
+
+    # Maps the four PDF categories to their folders under ~/saanvi
+    _UPLOAD_FOLDERS = {
+        'daily': 'Legaledgedailygk',
+        'weekly_legaledge': 'LegalEdgeweeklyGK',
+        'weekly_career_launcher': 'weeklyGKCareerLauncher',
+        'monthly': 'Monthly-CLATPOST-LegalEdge',
+    }
+
+    def _handle_pdf_upload(self, data: dict) -> dict:
+        """Save a user-uploaded PDF into the correct category folder.
+
+        Accepts either base64 payload (data_base64) or raw bytes via a
+        hex-encoded 'data_hex' field. Category must match one of the four
+        scanner folders. Filename is sanitized."""
+        import base64
+        import re
+
+        category = (data.get('category') or '').strip()
+        filename = (data.get('filename') or '').strip()
+        b64 = data.get('data_base64') or ''
+
+        if category not in self._UPLOAD_FOLDERS:
+            raise ValueError(
+                f"Invalid category '{category}'. Expected one of: "
+                f"{', '.join(self._UPLOAD_FOLDERS.keys())}"
+            )
+        if not filename:
+            raise ValueError('filename is required')
+        if not b64:
+            raise ValueError('data_base64 is required')
+
+        # Sanitize filename: keep only basename, restrict characters
+        filename = Path(filename).name  # strip any path traversal
+        if not filename.lower().endswith('.pdf'):
+            filename = filename + '.pdf'
+        # Allow alnum, dash, underscore, dot, space; replace everything else
+        filename = re.sub(r'[^A-Za-z0-9._\- ]', '_', filename)
+        if not filename or filename == '.pdf':
+            raise ValueError('filename is empty after sanitization')
+
+        # Decode and validate
+        try:
+            pdf_bytes = base64.b64decode(b64, validate=False)
+        except Exception as e:
+            raise ValueError(f'Could not decode base64 payload: {e}')
+
+        if len(pdf_bytes) < 100:
+            raise ValueError(f'File too small ({len(pdf_bytes)} bytes) — not a valid PDF')
+        if not pdf_bytes.startswith(b'%PDF'):
+            raise ValueError(
+                'File does not appear to be a PDF (missing "%PDF" magic header). '
+                'Please upload an actual PDF file.'
+            )
+        max_bytes = 50 * 1024 * 1024
+        if len(pdf_bytes) > max_bytes:
+            raise ValueError(f'File too large ({len(pdf_bytes) / 1024 / 1024:.1f} MB). Max 50 MB.')
+
+        folder = self._UPLOAD_FOLDERS[category]
+        output_path = Path.home() / 'saanvi' / folder / filename
+
+        already_existed = output_path.exists()
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, 'wb') as f:
+            f.write(pdf_bytes)
+
+        return {
+            'success': True,
+            'message': 'PDF uploaded (overwrote existing)' if already_existed else 'PDF uploaded',
+            'filename': filename,
+            'path': str(output_path),
+            'category': category,
+            'folder': folder,
+            'already_existed': already_existed,
+            'size_kb': len(pdf_bytes) / 1024,
+        }
 
     def _create_pdf_from_url(self, url: str) -> dict:
         """Create PDF from TopRankers URL (daily HTML or weekly CDN PDF)."""

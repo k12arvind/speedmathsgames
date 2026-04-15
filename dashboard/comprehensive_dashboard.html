@@ -749,6 +749,29 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Alternative: direct upload (used when TopRankers CDN blocks auto-download) -->
+            <div style="margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border-color);">
+                <label style="font-size: 11px; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">📤 Or upload a PDF directly (if TopRankers blocks the URL)</label>
+                <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                    <select id="upload-category"
+                            style="padding: 10px 12px; background: var(--bg-input); border: 1px solid var(--border-color); border-radius: 8px; font-size: 13px; color: var(--text-primary); outline: none; min-width: 200px;">
+                        <option value="daily">📰 Daily (LegalEdge)</option>
+                        <option value="weekly_legaledge">📚 Weekly (LegalEdge)</option>
+                        <option value="weekly_career_launcher">📚 Weekly (Career Launcher)</option>
+                        <option value="monthly" selected>📅 Monthly (CLAT Post)</option>
+                    </select>
+                    <input type="file" id="upload-file" accept="application/pdf,.pdf"
+                           style="flex: 1; min-width: 220px; padding: 9px 12px; background: var(--bg-input); border: 1px solid var(--border-color); border-radius: 8px; font-size: 13px; color: var(--text-primary);">
+                    <button onclick="uploadPdfFile()" id="upload-pdf-btn" class="btn btn-success">
+                        ⬆️ Upload PDF
+                    </button>
+                </div>
+                <div style="margin-top: 6px; font-size: 11px; color: var(--text-muted);">
+                    Max 50 MB · File will be placed in the folder that matches the selected category and will be picked up by the scanner automatically.
+                </div>
+            </div>
+
             <div id="tool-status" style="margin-top: 10px; font-size: 12px; color: var(--text-muted); display: none; padding: 8px 12px; background: var(--bg-input); border-radius: 8px;"></div>
         </div>
 
@@ -2236,6 +2259,77 @@
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = '📄 Create PDF';
+            }
+        }
+
+        // Upload a PDF file directly (alternative to TopRankers URL auto-download).
+        async function uploadPdfFile() {
+            const fileInput = document.getElementById('upload-file');
+            const categorySel = document.getElementById('upload-category');
+            const btn = document.getElementById('upload-pdf-btn');
+            const statusDiv = document.getElementById('tool-status');
+
+            const file = fileInput.files && fileInput.files[0];
+            if (!file) {
+                alert('Please choose a PDF file to upload.');
+                return;
+            }
+            if (file.size > 50 * 1024 * 1024) {
+                alert(`File is too large (${(file.size / 1024 / 1024).toFixed(1)} MB). Max 50 MB.`);
+                return;
+            }
+            if (!/\.pdf$/i.test(file.name) && file.type !== 'application/pdf') {
+                alert('Please choose a .pdf file.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Uploading...';
+            statusDiv.style.display = 'block';
+            statusDiv.innerHTML = `📤 Uploading <strong>${file.name}</strong> (${(file.size / 1024).toFixed(1)} KB)...`;
+            statusDiv.style.color = '#3b82f6';
+
+            try {
+                // Read as data URL → strip prefix → raw base64
+                const base64 = await new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = () => {
+                        const s = String(reader.result || '');
+                        const i = s.indexOf('base64,');
+                        resolve(i >= 0 ? s.slice(i + 7) : s);
+                    };
+                    reader.onerror = () => reject(reader.error || new Error('File read failed'));
+                    reader.readAsDataURL(file);
+                });
+
+                const response = await fetch(`${API_BASE}/api/upload-pdf`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        category: categorySel.value,
+                        filename: file.name,
+                        data_base64: base64,
+                    }),
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    const verb = result.already_existed ? 'Overwrote existing' : 'Uploaded';
+                    statusDiv.innerHTML = `✅ ${verb}: <strong>${result.filename}</strong> (${result.size_kb?.toFixed(1)} KB) → <code style="font-size:11px;">${result.folder}/</code>`;
+                    statusDiv.style.color = '#10b981';
+                    fileInput.value = '';
+                    // Refresh dashboard so the new PDF appears
+                    await loadDashboardData();
+                } else {
+                    statusDiv.innerHTML = `❌ Error: ${result.error}`;
+                    statusDiv.style.color = '#ef4444';
+                }
+            } catch (e) {
+                statusDiv.innerHTML = `❌ Error: ${e.message}`;
+                statusDiv.style.color = '#ef4444';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '⬆️ Upload PDF';
             }
         }
 
