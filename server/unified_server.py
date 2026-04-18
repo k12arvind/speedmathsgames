@@ -909,6 +909,20 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             weak = self.assessment_db.get_weak_questions(user_id, limit=10)
             self.send_json({'weak_questions': weak})
 
+        # GET /api/assessment/performance/pdf/{pdf_id}?user_id=
+        elif path.startswith('/api/assessment/performance/pdf/'):
+            pdf_id = path.split('/api/assessment/performance/pdf/')[1]
+            pdf_id = unquote(pdf_id)
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            current_user = self.get_current_user()
+            if current_user:
+                if current_user.get('can_view_all_users', False):
+                    user_id = query_params.get('user_id', [current_user.get('user_id', 'saanvi')])[0]
+                else:
+                    user_id = current_user.get('user_id', 'saanvi')
+            history = self.assessment_db.get_pdf_test_history(user_id, pdf_id)
+            self.send_json(history)
+
         # ============== Difficulty Tag Endpoints ==============
 
         elif path == '/api/assessment/difficulty/summary':

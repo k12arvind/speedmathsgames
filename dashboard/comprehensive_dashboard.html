@@ -2072,15 +2072,18 @@
         // View details - now accepts both pdfId and filename
         async function viewDetails(pdfId, filename) {
             try {
-                // Try to fetch PDF metadata from database
-                const pdfResponse = await fetch(`${API_BASE}/api/pdf/${encodeURIComponent(pdfId)}`);
+                // Fetch PDF metadata, assessment status, annotations, and test history in parallel
+                const [pdfResponse, assessmentResponse, testHistoryResponse] = await Promise.all([
+                    fetch(`${API_BASE}/api/pdf/${encodeURIComponent(pdfId)}`),
+                    fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(filename || pdfId)}`),
+                    fetch(`${API_BASE}/api/assessment/performance/pdf/${encodeURIComponent(filename || pdfId)}`),
+                ]);
+
                 const pdfData = await pdfResponse.json();
-
-                // Try to fetch assessment status to show card count
-                const assessmentResponse = await fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(filename || pdfId)}`);
                 const assessmentStatus = await assessmentResponse.json();
+                const testHistory = await testHistoryResponse.json();
 
-                // Fetch annotation details
+                // Fetch annotation details (optional)
                 let details = { summary: {}, revision_history: [], access_log: [] };
                 try {
                     const detailsResponse = await fetch(`${API_BASE}/api/annotations/${encodeURIComponent(pdfId)}/details`);
@@ -2101,15 +2104,85 @@
                 const isProcessed = hasCards || (pdfData.pdf && assessmentStatus.all_complete);
 
                 // Build status badge
-                const statusBadge = isProcessed 
+                const statusBadge = isProcessed
                     ? `<div class="alert alert-success"><strong>✓ Processed</strong> - ${assessmentStatus.total_cards || 0} flashcards generated</div>`
                     : `<div class="alert alert-warning"><strong>⚠️ Not Yet Processed</strong> - Click "+ Quiz" to process this PDF and generate flashcards.</div>`;
+
+                // Test performance summary
+                const ts = testHistory.summary || {};
+                const sessions = testHistory.sessions || [];
+                const weakQs = testHistory.weak_questions || [];
+                const hasTests = ts.total_tests > 0;
+
+                const testSummaryHtml = hasTests ? `
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0;">
+                        <div style="text-align: center; padding: 10px; background: rgba(16,185,129,0.1); border-radius: 8px;">
+                            <div style="font-size: 1.4rem; font-weight: 700; color: #10b981;">${ts.best_score}%</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Best Score</div>
+                        </div>
+                        <div style="text-align: center; padding: 10px; background: rgba(59,130,246,0.1); border-radius: 8px;">
+                            <div style="font-size: 1.4rem; font-weight: 700; color: #3b82f6;">${ts.avg_score}%</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Avg Score</div>
+                        </div>
+                        <div style="text-align: center; padding: 10px; background: rgba(245,158,11,0.1); border-radius: 8px;">
+                            <div style="font-size: 1.4rem; font-weight: 700; color: #f59e0b;">${ts.total_tests}</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Tests Taken</div>
+                        </div>
+                        <div style="text-align: center; padding: 10px; background: rgba(139,92,246,0.1); border-radius: 8px;">
+                            <div style="font-size: 1.4rem; font-weight: 700; color: #a78bfa;">${ts.total_correct}/${ts.total_correct + ts.total_wrong + ts.total_skipped}</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Total Correct</div>
+                        </div>
+                    </div>
+                ` : '';
+
+                // Test sessions table
+                const sessionsHtml = sessions.length > 0 ? `
+                    <h6 class="mt-3" style="color: var(--text-primary);">Test Sessions</h6>
+                    <table class="table table-sm table-striped" style="font-size: 0.85rem;">
+                        <thead><tr>
+                            <th>Date</th><th>Type</th><th>Score</th><th>✓</th><th>✗</th><th>—</th><th>Time</th><th>Status</th>
+                        </tr></thead>
+                        <tbody>
+                            ${sessions.slice(0, 10).map(s => {
+                                const scoreColor = (s.score || 0) >= 80 ? '#10b981' : (s.score || 0) >= 50 ? '#f59e0b' : '#ef4444';
+                                const date = s.started_at ? new Date(s.started_at).toLocaleDateString('en-IN', {day:'numeric',month:'short',year:'numeric'}) : '—';
+                                const time = s.time_taken_seconds ? (s.time_taken_seconds < 60 ? s.time_taken_seconds + 's' : Math.floor(s.time_taken_seconds/60) + 'm ' + (s.time_taken_seconds%60) + 's') : '—';
+                                return `<tr>
+                                    <td>${date}</td>
+                                    <td><span class="badge" style="background:#6b7280;color:white;font-size:0.7rem;">${s.session_type || 'full'}</span></td>
+                                    <td style="font-weight:700;color:${scoreColor};">${Math.round(s.score || 0)}%</td>
+                                    <td style="color:#10b981;">${s.correct_answers || 0}</td>
+                                    <td style="color:#ef4444;">${s.wrong_answers || 0}</td>
+                                    <td style="color:#94a3b8;">${s.skipped_answers || 0}</td>
+                                    <td>${time}</td>
+                                    <td>${s.status === 'completed' ? '<span style="color:#10b981;">✓</span>' : '<span style="color:#f59e0b;">⏳</span>'}</td>
+                                </tr>`;
+                            }).join('')}
+                        </tbody>
+                    </table>
+                    ${sessions.length > 10 ? `<div style="color:#94a3b8;font-size:0.8rem;text-align:center;">…and ${sessions.length - 10} more</div>` : ''}
+                ` : '';
+
+                // Weak questions for this PDF
+                const weakHtml = weakQs.length > 0 ? `
+                    <h6 class="mt-3" style="color: #ef4444;">Frequently Wrong Questions</h6>
+                    <div style="font-size: 0.85rem;">
+                        ${weakQs.map(q => `
+                            <div style="padding: 8px 10px; margin-bottom: 6px; background: rgba(239,68,68,0.08); border-left: 3px solid #ef4444; border-radius: 4px;">
+                                <div style="color: var(--text-primary);">${q.question_text.slice(0, 120)}${q.question_text.length > 120 ? '…' : ''}</div>
+                                <div style="color: #94a3b8; font-size: 0.75rem; margin-top: 4px;">${q.category} · Wrong ${q.times_wrong}× across sessions</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : '';
 
                 let modalContent = `
                     <div style="max-height: 70vh; overflow-y: auto;">
                         <h4 class="mb-3">${displayName}</h4>
-                        
+
                         ${statusBadge}
+
+                        ${testSummaryHtml}
 
                         <div class="row">
                             <div class="col-md-6">
@@ -2139,6 +2212,9 @@
                                 </table>
                             </div>
                         </div>
+
+                        ${sessionsHtml}
+                        ${weakHtml}
 
                         ${revisionHistory.length > 0 ? `
                             <h6 class="mt-3">Recent Revision History</h6>

@@ -505,6 +505,86 @@ class AssessmentDatabase:
 
         return {row['mastery_level']: row['count'] for row in cursor.fetchall()}
 
+    def get_pdf_test_history(self, user_id: str, pdf_id: str) -> Dict:
+        """Get complete test history for a specific PDF + user.
+
+        Returns {
+            summary: {total_tests, best_score, avg_score, last_test_date,
+                       total_correct, total_wrong, total_skipped},
+            sessions: [{session_id, score, correct, wrong, skipped,
+                        total_questions, time_taken, started_at, status, ...}],
+            weak_questions: [{question_text, category, times_wrong, last_wrong}]
+        }
+        """
+        cursor = self.conn.cursor()
+
+        # All sessions for this (user, pdf)
+        cursor.execute("""
+            SELECT session_id, session_type, total_questions,
+                   correct_answers, wrong_answers, skipped_answers,
+                   score_percentage as score, time_taken_seconds,
+                   started_at, completed_at, status
+            FROM test_sessions
+            WHERE user_id = ? AND (pdf_id = ? OR pdf_filename = ?)
+            ORDER BY started_at DESC
+        """, (user_id, pdf_id, pdf_id))
+        sessions = [dict(r) for r in cursor.fetchall()]
+
+        completed = [s for s in sessions if s['status'] == 'completed']
+
+        # Aggregated summary
+        if completed:
+            best = max(s['score'] or 0 for s in completed)
+            avg = sum(s['score'] or 0 for s in completed) / len(completed)
+            total_correct = sum(s['correct_answers'] or 0 for s in completed)
+            total_wrong = sum(s['wrong_answers'] or 0 for s in completed)
+            total_skipped = sum(s['skipped_answers'] or 0 for s in completed)
+            last_date = completed[0].get('completed_at') or completed[0].get('started_at')
+        else:
+            best = avg = total_correct = total_wrong = total_skipped = 0
+            last_date = None
+
+        # pdf_performance table (aggregated) — fallback
+        cursor.execute("""
+            SELECT * FROM pdf_performance
+            WHERE user_id = ? AND pdf_id = ?
+        """, (user_id, pdf_id))
+        perf_row = cursor.fetchone()
+        pdf_perf = dict(perf_row) if perf_row else None
+
+        # Weak questions for this PDF
+        weak = []
+        session_ids = [s['session_id'] for s in sessions]
+        if session_ids:
+            ph = ','.join('?' * len(session_ids))
+            cursor.execute(f"""
+                SELECT question_text, category,
+                       COUNT(*) as times_wrong
+                FROM question_attempts
+                WHERE session_id IN ({ph}) AND is_correct = 0
+                  AND user_answer IS NOT NULL
+                GROUP BY question_text
+                HAVING COUNT(*) >= 2
+                ORDER BY times_wrong DESC
+                LIMIT 10
+            """, session_ids)
+            weak = [dict(r) for r in cursor.fetchall()]
+
+        return {
+            'summary': {
+                'total_tests': len(completed),
+                'best_score': round(best, 1),
+                'avg_score': round(avg, 1),
+                'last_test_date': last_date,
+                'total_correct': total_correct,
+                'total_wrong': total_wrong,
+                'total_skipped': total_skipped,
+            },
+            'sessions': sessions,
+            'weak_questions': weak,
+            'pdf_performance': pdf_perf,
+        }
+
     # ============== Difficulty Tag Methods ==============
 
     @staticmethod
