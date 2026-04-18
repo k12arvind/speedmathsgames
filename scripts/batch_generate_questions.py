@@ -173,7 +173,7 @@ def run_assessment(pdf_id: str, source: str, week: str):
         [PYTHON_EXE, str(PROCESSOR), job_id, pdf_id, source, week],
         capture_output=True, text=True,
         env={**os.environ, "PYTHONPATH": str(ROOT)},
-        timeout=600,  # 10 min max per PDF
+        timeout=1200,  # 20 min max per PDF
     )
 
     if result.returncode != 0:
