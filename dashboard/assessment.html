@@ -880,6 +880,18 @@
         let lastSubmitTime = 0;  // Track last submit time for debouncing
         let debugLogs = [];  // Store all debug logs
         let isWaitingForNextQuestion = false;  // Track if we're showing feedback and waiting for "Next Question" click
+        let testInProgress = false;  // for beforeunload guard
+
+        // Warn before closing/navigating away during an active test
+        window.addEventListener('beforeunload', function(e) {
+            if (testInProgress && currentQuestionIndex < questions.length) {
+                const remaining = questions.length - currentQuestionIndex;
+                const msg = 'You have ' + remaining + ' questions remaining. Your progress will be lost if you leave.';
+                e.preventDefault();
+                e.returnValue = msg;
+                return msg;
+            }
+        });
 
         // Active time tracking state
         let questionActiveTimeSeconds = 0;  // Active time for current question
@@ -1323,6 +1335,40 @@
             const selectedPdf = selectedPdfs[0];
             console.log('Using PDF filename:', selectedPdf);
 
+            // ── Check for incomplete (in_progress) session ──────────────
+            try {
+                const incRes = await fetch(
+                    `${ASSESSMENT_API}/api/assessment/incomplete?pdf_id=${encodeURIComponent(selectedPdf)}&user_id=${encodeURIComponent(USER_ID)}`
+                );
+                const incData = await incRes.json();
+                if (incData.incomplete) {
+                    const inc = incData.incomplete;
+                    const remaining = inc.total_questions - inc.answered_count;
+                    const resumeChoice = confirm(
+                        `You have an incomplete test for this PDF!\n\n` +
+                        `Started: ${new Date(inc.started_at).toLocaleString()}\n` +
+                        `Answered: ${inc.answered_count} of ${inc.total_questions} (${inc.correct} correct, ${inc.wrong} wrong)\n` +
+                        `Remaining: ${remaining} questions\n\n` +
+                        `Click OK to RESUME from where you left off.\n` +
+                        `Click Cancel to START FRESH (the old session will be abandoned).`
+                    );
+                    if (resumeChoice) {
+                        await resumeTest(selectedPdf, inc);
+                        return;
+                    }
+                    // User chose fresh start — mark old session as abandoned
+                    try {
+                        await fetch(`${ASSESSMENT_API}/api/assessment/session/complete`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ session_id: inc.session_id })
+                        });
+                    } catch (e) { console.warn('Could not abandon old session:', e); }
+                }
+            } catch (e) {
+                console.warn('Incomplete check failed (non-fatal):', e);
+            }
+
             console.log('Switching to test screen...');
             showScreen('test-screen');
             document.getElementById('header-subtitle').textContent = 'Good luck! 🍀';
@@ -1408,6 +1454,7 @@
 
                 // Start timer
                 startTimer();
+                testInProgress = true;
 
                 // Show first question
                 showQuestion();
@@ -1418,6 +1465,109 @@
                 console.error('Error message:', error.message);
                 console.error('Error stack:', error.stack);
                 alert('Failed to start test. Error: ' + error.message);
+                showScreen('selection-screen');
+            }
+        }
+
+        // Resume an incomplete test session.
+        // Loads all questions for the PDF, filters out already-answered ones,
+        // and re-uses the existing session_id so new answers append.
+        async function resumeTest(pdfId, incompleteInfo) {
+            console.log('=== RESUMING TEST ===', incompleteInfo);
+            showScreen('test-screen');
+            document.getElementById('header-subtitle').textContent = 'Resuming test... ⏳';
+            document.getElementById('q-text').textContent = 'Loading remaining questions...';
+
+            try {
+                // Load ALL questions for this PDF (don't create a new session)
+                const requestBody = {
+                    user_id: USER_ID,
+                    pdf_id: pdfId,
+                    pdf_filename: pdfId,
+                    source_date: pdfId,
+                    session_type: 'full',
+                    initial_batch: false
+                };
+                const response = await fetch(`${ASSESSMENT_API}/api/assessment/session/create`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(requestBody),
+                    signal: AbortSignal.timeout(120000)
+                });
+                const data = await response.json();
+                if (data.error || !data.questions) {
+                    alert('Error loading questions: ' + (data.error || 'No questions'));
+                    showScreen('selection-screen');
+                    return;
+                }
+
+                // Filter out already-answered questions
+                const answeredSet = new Set(incompleteInfo.answered_question_ids || []);
+                const remainingQuestions = data.questions.filter(q =>
+                    !answeredSet.has(q.note_id) && !answeredSet.has(String(q.note_id))
+                );
+
+                console.log('Total questions:', data.questions.length,
+                             'Already answered:', answeredSet.size,
+                             'Remaining:', remainingQuestions.length);
+
+                if (remainingQuestions.length === 0) {
+                    alert('All questions in this session have been answered. Starting results...');
+                    // Use the OLD session id for completion
+                    currentSession = incompleteInfo.session_id;
+                    // Build answers from the incomplete info for results display
+                    answers = Array(incompleteInfo.answered_count).fill({
+                        question: '(previously answered)',
+                        is_correct: false
+                    });
+                    // Mark correct ones
+                    for (let i = 0; i < incompleteInfo.correct; i++) answers[i] = { ...answers[i], is_correct: true };
+                    finishTest();
+                    return;
+                }
+
+                // Use the OLD session (not the new one that was just created).
+                // Abandon the newly-created session silently.
+                const newSessionId = data.session_id;
+                currentSession = incompleteInfo.session_id;
+                // Silently abandon the session that create just made
+                fetch(`${ASSESSMENT_API}/api/assessment/session/complete`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ session_id: newSessionId })
+                }).catch(() => {});
+
+                // Shuffle remaining questions
+                questions = remainingQuestions.sort(() => 0.5 - Math.random());
+                allQuestions = questions;
+                backgroundLoadComplete = true;
+
+                // Pre-fill answers array with previous answers (for accurate result count)
+                answers = [];
+                for (let i = 0; i < incompleteInfo.answered_count; i++) {
+                    answers.push({
+                        question: '(previously answered)',
+                        correct_answer: '',
+                        user_answer: 'answered',
+                        is_correct: i < incompleteInfo.correct
+                    });
+                }
+
+                currentQuestionIndex = 0;
+                testStartTime = Date.now();
+                startActiveTimeTracking();
+
+                document.getElementById('total-q').textContent =
+                    incompleteInfo.total_questions;
+                document.getElementById('header-subtitle').textContent =
+                    `Resumed — ${remainingQuestions.length} questions remaining 🍀`;
+                startTimer();
+                testInProgress = true;
+                showQuestion();
+
+            } catch (error) {
+                console.error('Resume failed:', error);
+                alert('Failed to resume: ' + error.message + '. Starting fresh instead.');
                 showScreen('selection-screen');
             }
         }
@@ -1448,8 +1598,11 @@
             const question = questions[currentQuestionIndex];
             debugLog('Rendering question', { questionIndex: currentQuestionIndex });
 
-            document.getElementById('current-q').textContent = currentQuestionIndex + 1;
-            document.getElementById('q-num').textContent = currentQuestionIndex + 1;
+            // In a resumed test, answers[] already has the previously-answered
+            // entries, so answers.length + 1 gives the overall question number.
+            const displayNum = answers.length + 1;
+            document.getElementById('current-q').textContent = displayNum;
+            document.getElementById('q-num').textContent = displayNum;
             document.getElementById('q-category').textContent = question.category;
             document.getElementById('q-text').textContent = question.question;
 
@@ -1821,6 +1974,7 @@
         async function finishTest() {
             if (!confirm('Finish test and see results?')) return;
 
+            testInProgress = false;
             stopTimer();
 
             // Complete session

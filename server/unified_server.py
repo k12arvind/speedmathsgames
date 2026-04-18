@@ -867,6 +867,19 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             except Exception as e:
                 self.send_json({'categories': [], 'error': str(e)})
 
+        # GET /api/assessment/incomplete?pdf_id=…&user_id=…
+        elif path == '/api/assessment/incomplete':
+            pdf_id = query_params.get('pdf_id', [''])[0]
+            user_id = query_params.get('user_id', ['daughter'])[0]
+            current_user = self.get_current_user()
+            if current_user:
+                user_id = current_user.get('user_id') or user_id
+            if not pdf_id:
+                self.send_json({'error': 'pdf_id required'}, 400)
+                return
+            incomplete = self.assessment_db.get_incomplete_session(user_id, pdf_id)
+            self.send_json({'incomplete': incomplete})
+
         elif path == '/api/assessment/performance/summary':
             user_id = query_params.get('user_id', ['daughter'])[0]
             tests = self.assessment_db.get_all_tests(user_id)

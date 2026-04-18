@@ -588,6 +588,58 @@ class AssessmentDatabase:
             'pdf_performance': pdf_perf,
         }
 
+    def get_incomplete_session(self, user_id: str, pdf_id: str) -> Optional[Dict]:
+        """Find the most recent in_progress session for a (user, pdf).
+
+        Returns None if no incomplete session exists, otherwise:
+        {
+            session_id, total_questions, answered_count,
+            correct, wrong, skipped, started_at,
+            answered_question_ids: [anki_note_id, ...]
+        }
+        """
+        cursor = self.conn.cursor()
+
+        cursor.execute("""
+            SELECT session_id, total_questions, correct_answers,
+                   wrong_answers, skipped_answers, started_at
+            FROM test_sessions
+            WHERE user_id = ? AND (pdf_id = ? OR pdf_filename = ?)
+              AND status = 'in_progress'
+            ORDER BY session_id DESC
+            LIMIT 1
+        """, (user_id, pdf_id, pdf_id))
+
+        row = cursor.fetchone()
+        if not row:
+            return None
+
+        session = dict(row)
+        sid = session['session_id']
+
+        # Get the list of already-answered question note_ids
+        cursor.execute("""
+            SELECT anki_note_id, is_correct, user_answer
+            FROM question_attempts
+            WHERE session_id = ?
+            ORDER BY attempt_id
+        """, (sid,))
+
+        attempts = [dict(r) for r in cursor.fetchall()]
+        answered_ids = [a['anki_note_id'] for a in attempts]
+        correct = sum(1 for a in attempts if a['is_correct'] == 1)
+        wrong = sum(1 for a in attempts if a['is_correct'] == 0 and a['user_answer'])
+
+        return {
+            'session_id': sid,
+            'total_questions': session['total_questions'],
+            'answered_count': len(attempts),
+            'correct': correct,
+            'wrong': wrong,
+            'started_at': session['started_at'],
+            'answered_question_ids': answered_ids,
+        }
+
     # ============== Difficulty Tag Methods ==============
 
     @staticmethod
