@@ -530,16 +530,19 @@ class AssessmentDatabase:
         """, (user_id, pdf_id, pdf_id))
         sessions = [dict(r) for r in cursor.fetchall()]
 
-        completed = [s for s in sessions if s['status'] == 'completed']
+        # Count sessions with any answers (not just status='completed',
+        # because many sessions never call complete_test_session).
+        with_answers = [s for s in sessions
+                        if (s['correct_answers'] or 0) + (s['wrong_answers'] or 0) > 0]
 
         # Aggregated summary
-        if completed:
-            best = max(s['score'] or 0 for s in completed)
-            avg = sum(s['score'] or 0 for s in completed) / len(completed)
-            total_correct = sum(s['correct_answers'] or 0 for s in completed)
-            total_wrong = sum(s['wrong_answers'] or 0 for s in completed)
-            total_skipped = sum(s['skipped_answers'] or 0 for s in completed)
-            last_date = completed[0].get('completed_at') or completed[0].get('started_at')
+        if with_answers:
+            best = max(s['score'] or 0 for s in with_answers)
+            avg = sum(s['score'] or 0 for s in with_answers) / len(with_answers)
+            total_correct = sum(s['correct_answers'] or 0 for s in with_answers)
+            total_wrong = sum(s['wrong_answers'] or 0 for s in with_answers)
+            total_skipped = sum(s['skipped_answers'] or 0 for s in with_answers)
+            last_date = with_answers[0].get('completed_at') or with_answers[0].get('started_at')
         else:
             best = avg = total_correct = total_wrong = total_skipped = 0
             last_date = None
@@ -572,7 +575,7 @@ class AssessmentDatabase:
 
         return {
             'summary': {
-                'total_tests': len(completed),
+                'total_tests': len(with_answers),
                 'best_score': round(best, 1),
                 'avg_score': round(avg, 1),
                 'last_test_date': last_date,
