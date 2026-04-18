@@ -2130,7 +2130,7 @@
                         </div>
                         <div style="text-align: center; padding: 10px; background: rgba(139,92,246,0.1); border-radius: 8px;">
                             <div style="font-size: 1.4rem; font-weight: 700; color: #a78bfa;">${ts.total_correct}/${ts.total_correct + ts.total_wrong + ts.total_skipped}</div>
-                            <div style="font-size: 0.75rem; color: #94a3b8;">Total Correct</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Correct / Attempted</div>
                         </div>
                     </div>
                 ` : '';
@@ -2200,14 +2200,18 @@
                                 </table>
                             </div>
                             <div class="col-md-6">
-                                <h6>Assessment Status</h6>
-                                <table class="table table-sm">
-                                    <tr><td><strong>Flashcards:</strong></td><td><strong style="color: ${hasCards ? '#10b981' : '#6b7280'}">${assessmentStatus.total_cards || 0} cards</strong></td></tr>
-                                    <tr><td><strong>Status:</strong></td><td>${isProcessed ? '✓ Complete' : '⏳ Pending'}</td></tr>
+                                <h6>Assessment & Test Status</h6>
+                                <table class="table table-sm" style="color: var(--text-primary, #e2e8f0);">
+                                    <tr><td><strong>Question Bank:</strong></td><td><strong style="color: #10b981;">${assessmentStatus.total_cards || 0} questions</strong></td></tr>
+                                    <tr><td><strong>Generation:</strong></td><td>${isProcessed ? '<span style="color:#10b981;">✓ Complete</span>' : '<span style="color:#f59e0b;">⏳ Pending</span>'}</td></tr>
+                                    <tr><td><strong>Tests Taken:</strong></td><td>${ts.total_tests || 0}</td></tr>
+                                    ${hasTests ? `
+                                        <tr><td><strong>Questions Attempted:</strong></td><td>${ts.total_correct + ts.total_wrong + ts.total_skipped} of ${assessmentStatus.total_cards || '?'}</td></tr>
+                                        <tr><td><strong>Best Score:</strong></td><td style="color: ${ts.best_score >= 80 ? '#10b981' : ts.best_score >= 50 ? '#f59e0b' : '#ef4444'};">${ts.best_score}%</td></tr>
+                                    ` : ''}
                                     ${pdfData.pdf ? `
                                         <tr><td><strong>Revisions:</strong></td><td>${pdfData.pdf.revision_count || 0}</td></tr>
-                                        <tr><td><strong>Views:</strong></td><td>${pdfData.pdf.view_count || 0} (scroll-throughs)</td></tr>
-                                        <tr><td><strong>Test Attempts:</strong></td><td>${pdfData.pdf.assessment_attempts || 0}</td></tr>
+                                        <tr><td><strong>Views:</strong></td><td>${pdfData.pdf.view_count || 0}</td></tr>
                                     ` : ''}
                                 </table>
                             </div>
