@@ -506,7 +506,11 @@ class AssessmentDatabase:
         return {row['mastery_level']: row['count'] for row in cursor.fetchall()}
 
     def get_pdf_test_history(self, user_id: str, pdf_id: str) -> Dict:
-        """Get complete test history for a specific PDF + user.
+        """Get complete test history for a specific PDF.
+
+        Note: user_id is accepted for API compatibility but we query ALL
+        users for this pdf_id because the assessment system historically
+        uses 'daughter' as the default user_id while auth uses 'saanvi'.
 
         Returns {
             summary: {total_tests, best_score, avg_score, last_test_date,
@@ -518,16 +522,17 @@ class AssessmentDatabase:
         """
         cursor = self.conn.cursor()
 
-        # All sessions for this (user, pdf)
+        # All sessions for this pdf (any user — 'daughter' and 'saanvi' are
+        # the same person in different parts of the system)
         cursor.execute("""
             SELECT session_id, session_type, total_questions,
                    correct_answers, wrong_answers, skipped_answers,
                    score_percentage as score, time_taken_seconds,
                    started_at, completed_at, status
             FROM test_sessions
-            WHERE user_id = ? AND (pdf_id = ? OR pdf_filename = ?)
+            WHERE pdf_id = ? OR pdf_filename = ?
             ORDER BY started_at DESC
-        """, (user_id, pdf_id, pdf_id))
+        """, (pdf_id, pdf_id))
         sessions = [dict(r) for r in cursor.fetchall()]
 
         # Count sessions with any answers (not just status='completed',
@@ -589,7 +594,10 @@ class AssessmentDatabase:
         }
 
     def get_incomplete_session(self, user_id: str, pdf_id: str) -> Optional[Dict]:
-        """Find the most recent in_progress session for a (user, pdf).
+        """Find the most recent in_progress session for a pdf.
+
+        Note: ignores user_id filter because assessment uses 'daughter'
+        while auth uses 'saanvi' — same person.
 
         Returns None if no incomplete session exists, otherwise:
         {
@@ -604,11 +612,11 @@ class AssessmentDatabase:
             SELECT session_id, total_questions, correct_answers,
                    wrong_answers, skipped_answers, started_at
             FROM test_sessions
-            WHERE user_id = ? AND (pdf_id = ? OR pdf_filename = ?)
+            WHERE (pdf_id = ? OR pdf_filename = ?)
               AND status = 'in_progress'
             ORDER BY session_id DESC
             LIMIT 1
-        """, (user_id, pdf_id, pdf_id))
+        """, (pdf_id, pdf_id))
 
         row = cursor.fetchone()
         if not row:
