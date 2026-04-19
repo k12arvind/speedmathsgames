@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Question Manager - Book Practice</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: var(--bg-primary); min-height: 100vh; padding: 20px; color: var(--text-primary); }
+        .container { max-width: 960px; margin: 0 auto; }
+        .header {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 16px 20px; border-radius: 12px; margin-bottom: 16px;
+            display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+        }
+        .header h1 {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 8px 14px; background: var(--bg-input); color: var(--text-secondary);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            font-size: 13px; font-weight: 600; text-decoration: none;
+        }
+        .nav-link:hover { color: #f59e0b; border-color: #f59e0b; }
+
+        .filter-bar {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 12px 16px; border-radius: 10px; margin-bottom: 14px;
+            display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+        }
+        .filter-bar select, .filter-bar input {
+            padding: 8px 12px; background: var(--bg-input); border: 1px solid var(--border-color);
+            border-radius: 6px; color: var(--text-primary); font-size: 0.85rem;
+        }
+        .filter-bar input { flex: 1; min-width: 180px; }
+        .filter-bar .count { margin-left: auto; color: var(--text-muted); font-size: 0.82rem; }
+
+        .q-row {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; margin-bottom: 8px; padding: 12px 14px;
+        }
+        .q-row.no-answer { border-left: 3px solid #ef4444; }
+
+        .q-top {
+            display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+            margin-bottom: 6px;
+        }
+        .q-meta { font-size: 0.75rem; color: var(--text-muted); }
+        .q-topic { font-size: 0.72rem; color: #f59e0b; }
+        .q-text { font-size: 0.88rem; color: var(--text-primary); margin-bottom: 8px; line-height: 1.4; }
+
+        .q-choices {
+            display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 8px;
+        }
+        .ch {
+            padding: 5px 12px; border: 1px solid var(--border-color);
+            border-radius: 5px; font-size: 0.82rem; cursor: pointer;
+            background: var(--bg-input); color: var(--text-primary);
+        }
+        .ch:hover { border-color: #f59e0b; }
+        .ch.correct { border-color: #10b981; background: rgba(16,185,129,0.12); color: #10b981; font-weight: 600; }
+        .ch.selected-new { border-color: #3b82f6; background: rgba(59,130,246,0.12); color: #3b82f6; }
+
+        .q-actions {
+            display: flex; gap: 6px; align-items: center;
+        }
+        .btn-sm {
+            padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 5px;
+            font-size: 0.78rem; cursor: pointer; background: var(--bg-input); color: var(--text-primary);
+        }
+        .btn-sm:hover { border-color: #f59e0b; }
+        .btn-sm.save { background: rgba(16,185,129,0.15); color: #10b981; border-color: #10b981; }
+        .btn-sm.save:disabled { opacity: 0.3; cursor: not-allowed; }
+        .btn-sm.del { background: rgba(239,68,68,0.1); color: #ef4444; border-color: rgba(239,68,68,0.3); }
+        .btn-sm.del:hover { background: rgba(239,68,68,0.2); }
+        .status-msg { font-size: 0.78rem; color: #10b981; }
+
+        .loading, .empty { padding: 40px; text-align: center; color: var(--text-muted); }
+
+        .page-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 0; font-size: 0.85rem; color: var(--text-muted);
+        }
+        .page-bar button {
+            padding: 6px 14px; border: 1px solid var(--border-color); border-radius: 6px;
+            background: var(--bg-input); color: var(--text-primary); cursor: pointer; font-size: 0.82rem;
+        }
+        .page-bar button:disabled { opacity: 0.3; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Question Manager</h1>
+            <div class="nav-links">
+                <a href="book_unanswered.html" class="nav-link">Unanswered</a>
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <select id="topic-filter" onchange="applyFilters()">
+                <option value="">All Topics</option>
+            </select>
+            <select id="answer-filter" onchange="applyFilters()">
+                <option value="">All</option>
+                <option value="answered">With answer</option>
+                <option value="unanswered">Missing answer</option>
+            </select>
+            <input type="text" id="search" placeholder="Search question text..." oninput="applyFilters()">
+            <span class="count" id="result-count">—</span>
+        </div>
+
+        <div id="content"><div class="loading">Loading...</div></div>
+        <div id="page-controls"></div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        const PAGE_SIZE = 25;
+        let allQuestions = [];
+        let filtered = [];
+        let currentPage = 1;
+        let pendingChanges = {};  // qid -> new choice letter
+
+        async function init() {
+            await loadAllQuestions();
+        }
+
+        async function loadAllQuestions() {
+            try {
+                // Load ALL questions across all topics
+                const resp = await fetch(`${API_BASE}/api/book/topics`);
+                const topicData = await resp.json();
+                const topics = topicData.topics || [];
+
+                // Populate topic filter
+                const sel = document.getElementById('topic-filter');
+                topics.filter(t => t.question_count > 0).forEach(t => {
+                    sel.innerHTML += `<option value="${t.topic_id}">${esc(t.topic_name)} (${t.question_count})</option>`;
+                });
+
+                // Load questions per topic
+                allQuestions = [];
+                for (const t of topics) {
+                    if (t.question_count === 0) continue;
+                    const qResp = await fetch(`${API_BASE}/api/book/topic/${t.topic_id}/questions?limit=500`);
+                    const qData = await qResp.json();
+                    (qData.questions || []).forEach(q => {
+                        q.topic_name = t.topic_name;
+                        q.topic_id = t.topic_id;
+                        allQuestions.push(q);
+                    });
+                }
+
+                allQuestions.sort((a, b) => (a.topic_name || '').localeCompare(b.topic_name || '') || (a.question_number || 0) - (b.question_number || 0));
+                applyFilters();
+            } catch (e) {
+                document.getElementById('content').innerHTML = `<div class="empty" style="color:#ef4444;">Error: ${e.message}</div>`;
+            }
+        }
+
+        function applyFilters() {
+            const topicId = document.getElementById('topic-filter').value;
+            const answerFilter = document.getElementById('answer-filter').value;
+            const search = (document.getElementById('search').value || '').toLowerCase();
+
+            filtered = allQuestions.filter(q => {
+                if (topicId && String(q.topic_id) !== topicId) return false;
+                if (answerFilter === 'answered' && !q.correct_choice) return false;
+                if (answerFilter === 'unanswered' && q.correct_choice) return false;
+                if (search && !(q.question_text || '').toLowerCase().includes(search)) return false;
+                return true;
+            });
+
+            currentPage = 1;
+            document.getElementById('result-count').textContent = filtered.length + ' questions';
+            renderPage();
+        }
+
+        function renderPage() {
+            const start = (currentPage - 1) * PAGE_SIZE;
+            const page = filtered.slice(start, start + PAGE_SIZE);
+            const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+            if (filtered.length === 0) {
+                document.getElementById('content').innerHTML = '<div class="empty">No questions match the filter.</div>';
+                document.getElementById('page-controls').innerHTML = '';
+                return;
+            }
+
+            document.getElementById('content').innerHTML = page.map(renderRow).join('');
+
+            document.getElementById('page-controls').innerHTML = filtered.length > PAGE_SIZE ? `
+                <div class="page-bar">
+                    <span>Showing ${start + 1}–${Math.min(start + PAGE_SIZE, filtered.length)} of ${filtered.length}</span>
+                    <div style="display:flex;gap:6px;">
+                        <button onclick="goPage(${currentPage - 1})" ${currentPage <= 1 ? 'disabled' : ''}>← Prev</button>
+                        <span style="padding:6px 10px;">Page ${currentPage} of ${totalPages}</span>
+                        <button onclick="goPage(${currentPage + 1})" ${currentPage >= totalPages ? 'disabled' : ''}>Next →</button>
+                    </div>
+                </div>
+            ` : '';
+        }
+
+        function goPage(p) {
+            const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+            currentPage = Math.max(1, Math.min(p, totalPages));
+            renderPage();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderRow(q) {
+            const choices = q.choices || {};
+            const keys = Object.keys(choices).sort();
+            const hasAnswer = !!q.correct_choice;
+            const pending = pendingChanges[q.question_id];
+
+            const choicesHtml = keys.map(k => {
+                let cls = '';
+                if (k === q.correct_choice) cls = 'correct';
+                if (pending && k === pending) cls = 'selected-new';
+                return `<span class="ch ${cls}" onclick="pickChoice(${q.question_id},'${k}')" title="Click to set as correct">${k.toUpperCase()}. ${esc(choices[k] || '').slice(0, 50)}</span>`;
+            }).join('');
+
+            return `
+                <div class="q-row ${hasAnswer ? '' : 'no-answer'}" id="qrow-${q.question_id}">
+                    <div class="q-top">
+                        <div>
+                            <span class="q-meta">Q#${q.question_number || '?'} · ID ${q.question_id}</span>
+                            <span class="q-topic">${esc(q.topic_name || '')}</span>
+                        </div>
+                        <div class="q-actions">
+                            <button class="btn-sm save" id="savebtn-${q.question_id}"
+                                    onclick="saveChoice(${q.question_id})" ${pending ? '' : 'disabled'}>
+                                Save
+                            </button>
+                            <button class="btn-sm del" onclick="deleteQ(${q.question_id})">Delete</button>
+                            <span class="status-msg" id="status-${q.question_id}"></span>
+                        </div>
+                    </div>
+                    <div class="q-text">${esc(q.question_text || '')}</div>
+                    <div class="q-choices" id="choices-${q.question_id}">${choicesHtml}</div>
+                </div>
+            `;
+        }
+
+        function pickChoice(qid, choice) {
+            const q = allQuestions.find(q => q.question_id === qid);
+            if (q && choice === q.correct_choice) {
+                // Clicking the already-correct choice: deselect pending change
+                delete pendingChanges[qid];
+            } else {
+                pendingChanges[qid] = choice;
+            }
+            renderPage();
+        }
+
+        async function saveChoice(qid) {
+            const choice = pendingChanges[qid];
+            if (!choice) return;
+            const btn = document.getElementById(`savebtn-${qid}`);
+            const msg = document.getElementById(`status-${qid}`);
+            btn.disabled = true;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/question/${qid}/update`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ correct_choice: choice })
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    // Update local data
+                    const q = allQuestions.find(q => q.question_id === qid);
+                    if (q) q.correct_choice = choice;
+                    delete pendingChanges[qid];
+                    msg.textContent = 'Saved!';
+                    setTimeout(() => { msg.textContent = ''; }, 2000);
+                    renderPage();
+                } else {
+                    alert('Failed: ' + (data.error || 'unknown'));
+                    btn.disabled = false;
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+                btn.disabled = false;
+            }
+        }
+
+        async function deleteQ(qid) {
+            const q = allQuestions.find(q => q.question_id === qid);
+            const preview = q ? (q.question_text || '').slice(0, 60) : '';
+            if (!confirm(`Delete question #${qid}?\n"${preview}…"\n\nThis cannot be undone.`)) return;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/question/${qid}/delete`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({})
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    allQuestions = allQuestions.filter(q => q.question_id !== qid);
+                    delete pendingChanges[qid];
+                    applyFilters();
+                } else {
+                    alert('Delete failed: ' + (data.error || 'unknown'));
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+            }
+        }
+
+        function esc(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

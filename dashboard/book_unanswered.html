@@ -109,6 +109,7 @@
             <div class="nav-links">
                 <a href="book_practice.html" class="nav-link">Practice</a>
                 <a href="book_analytics.html" class="nav-link">Analytics</a>
+                <a href="book_questions_admin.html" class="nav-link">All Questions</a>
                 <a href="book_upload.html" class="nav-link">Upload Pages</a>
                 <a href="index.html" class="nav-link">Home</a>
             </div>
@@ -204,6 +205,10 @@
                                 onclick="saveAnswer(${q.question_id})" disabled>
                             Set as correct answer
                         </button>
+                        <button class="save-btn" style="background:#ef4444;"
+                                onclick="deleteQuestion(${q.question_id})">
+                            Delete
+                        </button>
                         <span class="saved-msg" id="saved-${q.question_id}">Saved!</span>
                     </div>
                 </div>
@@ -262,6 +267,28 @@
                 alert('Error: ' + e.message);
                 btn.disabled = false;
                 btn.textContent = 'Set as correct answer';
+            }
+        }
+
+        async function deleteQuestion(qid) {
+            if (!confirm('Delete question #' + qid + '? This cannot be undone.')) return;
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/question/${qid}/delete`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({})
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    const card = document.getElementById(`qcard-${qid}`);
+                    if (card) card.remove();
+                    const countEl = document.getElementById('unanswered-count');
+                    countEl.textContent = Math.max(0, parseInt(countEl.textContent) - 1);
+                } else {
+                    alert('Delete failed: ' + (data.error || 'unknown'));
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
             }
         }
 
