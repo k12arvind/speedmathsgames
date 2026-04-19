@@ -302,7 +302,9 @@ class PDFScanner:
                 pass
 
             # "Last Revised" = most recent meaningful activity (view, test, or annotation)
-            # "Revision count" = total engagements (views + tests + annotations)
+            # "Revision count" = views + tests (not individual pen strokes which
+            # inflate the count by 50-150 per PDF).  Annotations still contribute
+            # to the "Last Revised" date.
             activity_dates = []
             for ts_str in [last_viewed, last_test, last_annotation]:
                 if ts_str:
@@ -313,7 +315,7 @@ class PDFScanner:
                         pass
             last_revised = max(activity_dates).isoformat() if activity_dates else None
             days_since_revision = (datetime.now() - max(activity_dates)).days if activity_dates else None
-            revision_count = view_count + assessment_attempts + annotation_count_total
+            revision_count = view_count + assessment_attempts
 
             pdf_data = {
                 'pdf_id': source_date,
