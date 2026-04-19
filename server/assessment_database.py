@@ -533,7 +533,29 @@ class AssessmentDatabase:
             WHERE pdf_id = ? OR pdf_filename = ?
             ORDER BY started_at DESC
         """, (pdf_id, pdf_id))
-        sessions = [dict(r) for r in cursor.fetchall()]
+        raw_sessions = [dict(r) for r in cursor.fetchall()]
+
+        # Compute actual duration from attempt timestamps for each session
+        # (time_taken_seconds on the session is always 0 because
+        # complete_test_session is never called by the frontend).
+        sessions = []
+        for s in raw_sessions:
+            cursor.execute("""
+                SELECT MIN(answered_at) as first_at, MAX(answered_at) as last_at
+                FROM question_attempts WHERE session_id = ?
+            """, (s['session_id'],))
+            span = cursor.fetchone()
+            computed_time = 0
+            if span and span['first_at'] and span['last_at']:
+                try:
+                    from datetime import datetime as _dt
+                    t0 = _dt.fromisoformat(span['first_at'])
+                    t1 = _dt.fromisoformat(span['last_at'])
+                    computed_time = max(0, int((t1 - t0).total_seconds()))
+                except Exception:
+                    pass
+            s['time_taken_seconds'] = computed_time or s['time_taken_seconds'] or 0
+            sessions.append(s)
 
         # Count sessions with any answers (not just status='completed',
         # because many sessions never call complete_test_session).

@@ -251,11 +251,6 @@ class PDFScanner:
                 # Assessment database might not exist yet
                 pass
 
-            # Days since last file edit
-            days_since_revision = None
-            file_mtime = datetime.fromtimestamp(stat.st_mtime)
-            days_since_revision = (datetime.now() - file_mtime).days if file_edit_count > 0 else None
-
             # Get last viewed timestamp from view sessions
             last_viewed = None
             days_since_view = None
@@ -273,6 +268,53 @@ class PDFScanner:
                 except:
                     pass
 
+            # Get last annotation timestamp
+            last_annotation = None
+            annotation_count_total = 0
+            try:
+                cursor.execute("""
+                    SELECT MAX(timestamp) as last_ts, COUNT(*) as cnt
+                    FROM pdf_revision_records WHERE pdf_id = ?
+                """, (pdf_file.name,))
+                ann_row = cursor.fetchone()
+                if ann_row and ann_row['last_ts']:
+                    last_annotation = ann_row['last_ts']
+                    annotation_count_total = ann_row['cnt'] or 0
+            except:
+                pass
+
+            # Get last test timestamp from assessment_tracker
+            last_test = None
+            try:
+                assessment_conn2 = sqlite3.connect(Path(__file__).parent / "assessment_tracker.db")
+                assessment_cursor2 = assessment_conn2.cursor()
+                assessment_cursor2.execute("""
+                    SELECT MAX(started_at) as last_ts
+                    FROM test_sessions
+                    WHERE (pdf_id = ? OR pdf_filename = ?)
+                      AND correct_answers > 0
+                """, (pdf_file.name, pdf_file.name))
+                test_row = assessment_cursor2.fetchone()
+                if test_row and test_row[0]:
+                    last_test = test_row[0]
+                assessment_conn2.close()
+            except:
+                pass
+
+            # "Last Revised" = most recent meaningful activity (view, test, or annotation)
+            # "Revision count" = total engagements (views + tests + annotations)
+            activity_dates = []
+            for ts_str in [last_viewed, last_test, last_annotation]:
+                if ts_str:
+                    try:
+                        dt = datetime.fromisoformat(str(ts_str).replace('Z', '+00:00').split('+')[0])
+                        activity_dates.append(dt)
+                    except:
+                        pass
+            last_revised = max(activity_dates).isoformat() if activity_dates else None
+            days_since_revision = (datetime.now() - max(activity_dates)).days if activity_dates else None
+            revision_count = view_count + assessment_attempts + annotation_count_total
+
             pdf_data = {
                 'pdf_id': source_date,
                 'filename': pdf_file.name,
@@ -280,23 +322,23 @@ class PDFScanner:
                 'source_type': source_type,
                 'source_name': source_name,
                 'date_published': date_match or file_date,
-                'date_added': date_added,  # When PDF was first added to system
+                'date_added': date_added,
                 'total_topics': total_topics,
-                'revised_topics': 0,  # Not used anymore
+                'revised_topics': 0,
                 'categories': categories,
                 'categories_list': categories,
-                'revision_count': view_count,  # Changed: Now shows complete view count
-                'total_revisions': view_count,  # Changed: Same as revision_count
-                'view_count': view_count,  # Scroll-through completions
-                'last_viewed': last_viewed,  # Last complete scroll-through timestamp
-                'days_since_view': days_since_view,  # Days since last view
-                'assessment_attempts': assessment_attempts,  # NEW: Test attempts
-                'last_revised': last_modified if file_edit_count > 0 else None,
+                'revision_count': revision_count,  # views + tests + annotations
+                'total_revisions': revision_count,
+                'view_count': view_count,
+                'last_viewed': last_viewed,
+                'days_since_view': days_since_view,
+                'assessment_attempts': assessment_attempts,
+                'last_revised': last_revised,  # most recent activity (view/test/annotation)
                 'last_modified': last_modified,
                 'file_size_kb': round(file_size_kb, 2),
                 'days_since_revision': days_since_revision,
                 'exists_in_db': total_topics > 0,
-                'extraction_attempted': extraction_attempted  # For monthly PDFs
+                'extraction_attempted': extraction_attempted
             }
 
             pdfs.append(pdf_data)
