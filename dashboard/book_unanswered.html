@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Unanswered Questions - Book Practice</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: var(--bg-primary); min-height: 100vh; padding: 20px; color: var(--text-primary); }
+        .container { max-width: 900px; margin: 0 auto; }
+        .header {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 16px 20px; border-radius: 12px; margin-bottom: 20px;
+            display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+        }
+        .header h1 {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 8px 14px; background: var(--bg-input); color: var(--text-secondary);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            font-size: 13px; font-weight: 600; text-decoration: none;
+        }
+        .nav-link:hover { color: #f59e0b; border-color: #f59e0b; }
+
+        .summary-bar {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 14px 18px; border-radius: 10px; margin-bottom: 16px;
+            display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        .summary-bar .count { font-size: 1.3rem; font-weight: 700; color: #ef4444; }
+        .summary-bar .label { color: var(--text-muted); font-size: 0.82rem; }
+
+        .topic-group {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 12px; margin-bottom: 14px; overflow: hidden;
+        }
+        .topic-header {
+            padding: 12px 16px; background: var(--bg-input);
+            font-weight: 600; font-size: 0.95rem; color: var(--text-primary);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .topic-header .badge {
+            background: rgba(239,68,68,0.15); color: #ef4444;
+            padding: 3px 10px; border-radius: 999px; font-size: 0.78rem;
+        }
+
+        .q-card {
+            padding: 14px 16px; border-top: 1px solid var(--border-color);
+        }
+        .q-meta {
+            font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px;
+        }
+        .q-text {
+            font-size: 0.92rem; color: var(--text-primary); margin-bottom: 10px;
+            line-height: 1.5; white-space: pre-wrap;
+        }
+        .choices-row {
+            display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px;
+        }
+        .choice-btn {
+            padding: 8px 16px; border: 1px solid var(--border-color);
+            border-radius: 6px; background: var(--bg-input);
+            color: var(--text-primary); font-size: 0.85rem;
+            cursor: pointer; transition: all 0.15s;
+            display: flex; gap: 8px; align-items: center;
+        }
+        .choice-btn:hover { border-color: #f59e0b; background: rgba(245,158,11,0.08); }
+        .choice-btn .lbl { font-weight: 700; color: var(--text-muted); min-width: 16px; }
+        .choice-btn.selected {
+            border-color: #10b981; background: rgba(16,185,129,0.12); color: #10b981;
+        }
+        .choice-btn.saved {
+            border-color: #10b981; background: rgba(16,185,129,0.15); color: #10b981;
+            pointer-events: none;
+        }
+
+        .save-row {
+            display: flex; gap: 8px; align-items: center;
+        }
+        .save-btn {
+            padding: 6px 14px; border: none; border-radius: 6px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white; font-size: 0.82rem; font-weight: 600;
+            cursor: pointer;
+        }
+        .save-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+        .saved-msg { color: #10b981; font-size: 0.82rem; display: none; }
+        .saved-msg.show { display: inline; }
+
+        .empty { padding: 40px; text-align: center; color: var(--text-muted); }
+        .loading { padding: 40px; text-align: center; color: var(--text-secondary); }
+
+        .all-done {
+            padding: 40px; text-align: center;
+            background: rgba(16,185,129,0.08); border-radius: 12px;
+            color: #10b981; font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Unanswered Questions</h1>
+            <div class="nav-links">
+                <a href="book_practice.html" class="nav-link">Practice</a>
+                <a href="book_analytics.html" class="nav-link">Analytics</a>
+                <a href="book_upload.html" class="nav-link">Upload Pages</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="summary-bar" id="summary-bar">
+            <div>
+                <div class="count" id="unanswered-count">—</div>
+                <div class="label">questions without answers</div>
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.82rem;" id="summary-detail"></div>
+        </div>
+
+        <div id="content">
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let questionsData = [];
+        let selections = {};  // question_id -> choice letter
+
+        async function init() {
+            await loadQuestions();
+        }
+
+        async function loadQuestions() {
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/questions/unanswered`);
+                const data = await resp.json();
+                questionsData = data.questions || [];
+                document.getElementById('unanswered-count').textContent = questionsData.length;
+
+                if (questionsData.length === 0) {
+                    document.getElementById('content').innerHTML =
+                        '<div class="all-done">All questions have correct answers set!</div>';
+                    document.getElementById('summary-detail').textContent = '';
+                    return;
+                }
+
+                // Group by topic
+                const byTopic = {};
+                questionsData.forEach(q => {
+                    const key = q.topic_name || 'Unknown';
+                    if (!byTopic[key]) byTopic[key] = [];
+                    byTopic[key].push(q);
+                });
+
+                const topicSummary = Object.entries(byTopic)
+                    .map(([name, qs]) => `${name}: ${qs.length}`)
+                    .join(' · ');
+                document.getElementById('summary-detail').textContent = topicSummary;
+
+                // Render
+                const html = Object.entries(byTopic).map(([topicName, qs]) => `
+                    <div class="topic-group">
+                        <div class="topic-header">
+                            <span>${escHtml(topicName)}</span>
+                            <span class="badge">${qs.length} missing</span>
+                        </div>
+                        ${qs.map(renderQuestion).join('')}
+                    </div>
+                `).join('');
+
+                document.getElementById('content').innerHTML = html;
+            } catch (e) {
+                document.getElementById('content').innerHTML =
+                    `<div class="empty" style="color:#ef4444;">Error: ${e.message}</div>`;
+            }
+        }
+
+        function renderQuestion(q) {
+            const choiceKeys = Object.keys(q.choices || {}).sort();
+            const choicesHtml = choiceKeys.map(k => `
+                <button class="choice-btn" id="choice-${q.question_id}-${k}"
+                        onclick="selectChoice(${q.question_id}, '${k}')">
+                    <span class="lbl">${k.toUpperCase()}.</span>
+                    <span>${escHtml(q.choices[k])}</span>
+                </button>
+            `).join('');
+
+            return `
+                <div class="q-card" id="qcard-${q.question_id}">
+                    <div class="q-meta">Q#${q.question_number || '?'} · ID ${q.question_id}</div>
+                    <div class="q-text">${escHtml(q.question_text || '')}</div>
+                    <div class="choices-row" id="choices-${q.question_id}">
+                        ${choicesHtml}
+                    </div>
+                    <div class="save-row">
+                        <button class="save-btn" id="save-${q.question_id}"
+                                onclick="saveAnswer(${q.question_id})" disabled>
+                            Set as correct answer
+                        </button>
+                        <span class="saved-msg" id="saved-${q.question_id}">Saved!</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectChoice(qid, choice) {
+            selections[qid] = choice;
+            // Update UI — highlight selected, unhighlight others
+            const container = document.getElementById(`choices-${qid}`);
+            container.querySelectorAll('.choice-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            document.getElementById(`choice-${qid}-${choice}`).classList.add('selected');
+            document.getElementById(`save-${qid}`).disabled = false;
+        }
+
+        async function saveAnswer(qid) {
+            const choice = selections[qid];
+            if (!choice) return;
+
+            const btn = document.getElementById(`save-${qid}`);
+            const msg = document.getElementById(`saved-${qid}`);
+            btn.disabled = true;
+            btn.textContent = 'Saving...';
+
+            try {
+                const resp = await fetch(`${API_BASE}/api/book/question/${qid}/update`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ correct_choice: choice }),
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    btn.textContent = 'Saved!';
+                    btn.style.background = '#10b981';
+                    msg.classList.add('show');
+                    // Mark all choices as "done"
+                    document.querySelectorAll(`#choices-${qid} .choice-btn`).forEach(b => {
+                        b.classList.remove('selected');
+                        b.style.pointerEvents = 'none';
+                        b.style.opacity = '0.5';
+                    });
+                    document.getElementById(`choice-${qid}-${choice}`).classList.add('saved');
+                    document.getElementById(`choice-${qid}-${choice}`).style.opacity = '1';
+
+                    // Update count
+                    const countEl = document.getElementById('unanswered-count');
+                    countEl.textContent = Math.max(0, parseInt(countEl.textContent) - 1);
+                } else {
+                    alert('Failed: ' + (data.error || 'unknown'));
+                    btn.disabled = false;
+                    btn.textContent = 'Set as correct answer';
+                }
+            } catch (e) {
+                alert('Error: ' + e.message);
+                btn.disabled = false;
+                btn.textContent = 'Set as correct answer';
+            }
+        }
+
+        function escHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

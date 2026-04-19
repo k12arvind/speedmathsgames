@@ -4994,6 +4994,35 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             questions = self.book_practice_db.get_questions_by_topic(topic_id, limit)
             self.send_json({'questions': questions, 'count': len(questions)})
 
+        # GET /api/book/questions/unanswered - Questions without correct_choice
+        elif path == '/api/book/questions/unanswered':
+            conn = self.book_practice_db._get_connection()
+            try:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT q.question_id, q.question_number, q.question_text,
+                           q.choice_a, q.choice_b, q.choice_c, q.choice_d, q.choice_e,
+                           q.correct_choice, q.topic_id,
+                           t.topic_name
+                    FROM book_questions q
+                    JOIN book_topics t ON q.topic_id = t.topic_id
+                    WHERE (q.correct_choice IS NULL OR q.correct_choice = '')
+                      AND q.is_verified = 1
+                    ORDER BY t.topic_name, q.question_number
+                """)
+                questions = []
+                for row in cursor.fetchall():
+                    q = dict(row)
+                    q['choices'] = {
+                        k: q.pop(f'choice_{k}')
+                        for k in ['a', 'b', 'c', 'd', 'e']
+                        if q.get(f'choice_{k}')
+                    }
+                    questions.append(q)
+                self.send_json({'questions': questions, 'count': len(questions)})
+            finally:
+                conn.close()
+
         # GET /api/book/questions/pending - Get questions pending review
         elif path == '/api/book/questions/pending':
             page_id = query_params.get('page_id', [None])[0]
