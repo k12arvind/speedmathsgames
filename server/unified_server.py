@@ -1537,7 +1537,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
         # GET /api/pdf/view-history/{pdf_id} — reading session history
         elif path.startswith('/api/pdf/view-history/'):
-            pdf_id = unquote(path.split('/api/pdf/view-history/')[1])
+            from urllib.parse import unquote as _unq
+            pdf_id = _unq(path.split('/api/pdf/view-history/')[1])
             db_path = Path(__file__).parent.parent / 'revision_tracker.db'
             try:
                 conn = sqlite3.connect(str(db_path))
