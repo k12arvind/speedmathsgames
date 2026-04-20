@@ -3,777 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="CLAT GK Revision">
-    <title>CLAT GK Revision Dashboard</title>
+    <title>Smart Revision Dashboard</title>
+    <link rel="stylesheet" href="shared-styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-600: #4b5563;
-            --gray-800: #1f2937;
-            --gray-900: #111827;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--gray-50);
-            color: var(--gray-900);
-            line-height: 1.6;
-            padding-bottom: 80px;
-        }
+        body { background: var(--bg-primary); min-height: 100vh; padding: 20px; color: var(--text-primary); }
+        .container { max-width: 900px; margin: 0 auto; }
 
         .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 16px 20px; border-radius: 12px; margin-bottom: 16px;
+            display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
         }
-
         .header h1 {
-            font-size: 24px;
-            margin-bottom: 5px;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 8px 14px; background: var(--bg-input); color: var(--text-secondary);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            font-size: 13px; font-weight: 600; text-decoration: none;
+        }
+        .nav-link:hover { color: #f59e0b; border-color: #f59e0b; }
+
+        .overview {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 10px; margin-bottom: 16px;
+        }
+        .ov-card {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; padding: 14px 10px; text-align: center;
+        }
+        .ov-val { font-size: 1.5rem; font-weight: 700; }
+        .ov-lbl { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.03em; }
+
+        .context-bar {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; padding: 10px 16px; margin-bottom: 16px;
+            font-size: 0.82rem; color: var(--text-muted); display: flex;
+            justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+        }
+        .context-tag { padding: 3px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; }
+        .context-tag.weekend { background: rgba(139,92,246,0.15); color: #a78bfa; }
+        .context-tag.holiday { background: rgba(245,158,11,0.15); color: #f59e0b; }
+        .context-tag.ramp { background: rgba(239,68,68,0.15); color: #ef4444; }
+
+        .queue-section { margin-bottom: 20px; }
+        .queue-title {
+            font-size: 0.85rem; font-weight: 700; color: var(--text-primary);
+            margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+        }
+        .queue-title .count {
+            background: var(--bg-input); padding: 2px 8px; border-radius: 10px;
+            font-size: 0.75rem; color: var(--text-muted);
         }
 
-        .exam-countdown {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-top: 8px;
+        .rev-item {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; margin-bottom: 8px; overflow: hidden;
+            border-left: 5px solid #94a3b8;
         }
+        .rev-item[data-level="1"] { border-left-color: #10b966; }
+        .rev-item[data-level="2"] { border-left-color: #2178d9; }
+        .rev-item[data-level="3"] { border-left-color: #9c26b0; }
+        .rev-item[data-level="4"] { border-left-color: #d91c1c; }
+        .rev-item.new-item { border-left-color: #f59e0b; }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            padding: 20px;
+        .rev-item-body {
+            padding: 12px 14px; display: flex; justify-content: space-between;
+            align-items: center; gap: 12px; flex-wrap: wrap;
         }
+        .rev-info { flex: 1; min-width: 200px; }
+        .rev-title { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 3px; }
+        .rev-meta { font-size: 0.75rem; color: var(--text-muted); display: flex; gap: 10px; flex-wrap: wrap; }
 
-        .stat-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            text-align: center;
-        }
+        .rev-acc { font-size: 1rem; font-weight: 700; min-width: 45px; text-align: center; }
+        .rev-acc.good { color: #10b966; }
+        .rev-acc.fair { color: #2178d9; }
+        .rev-acc.weak { color: #9c26b0; }
+        .rev-acc.poor { color: #d91c1c; }
+        .rev-acc.new { color: #f59e0b; }
 
-        .stat-value {
-            font-size: 32px;
-            font-weight: bold;
-            color: var(--primary);
-            display: block;
+        .rev-actions { display: flex; gap: 6px; }
+        .rev-btn {
+            padding: 6px 12px; border: 1px solid var(--border-color); border-radius: 6px;
+            background: var(--bg-input); color: var(--text-primary); font-size: 0.78rem;
+            cursor: pointer; text-decoration: none; white-space: nowrap;
         }
+        .rev-btn:hover { border-color: #f59e0b; color: #f59e0b; }
+        .rev-btn.primary { background: rgba(139,92,246,0.15); color: #a78bfa; border-color: rgba(139,92,246,0.3); }
+        .rev-btn.success { background: rgba(16,185,129,0.15); color: #10b981; border-color: rgba(16,185,129,0.3); }
 
-        .stat-label {
-            font-size: 13px;
-            color: var(--gray-600);
-            margin-top: 5px;
+        .cat-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px; margin-bottom: 16px;
         }
+        .cat-card {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; padding: 12px;
+        }
+        .cat-name { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+        .cat-bar { height: 6px; border-radius: 3px; background: var(--bg-input); margin-bottom: 6px; overflow: hidden; }
+        .cat-fill { height: 100%; border-radius: 3px; }
+        .cat-stats { font-size: 0.72rem; color: var(--text-muted); display: flex; justify-content: space-between; }
 
-        .section {
-            margin: 0 20px 25px;
+        .progress-section {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; padding: 16px; margin-bottom: 16px;
         }
+        .progress-section h3 { font-size: 0.9rem; color: var(--text-primary); margin: 0 0 12px; }
+        .prog-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .prog-label { font-size: 0.8rem; color: var(--text-muted); min-width: 100px; }
+        .prog-bar { flex: 1; height: 8px; background: var(--bg-input); border-radius: 4px; overflow: hidden; }
+        .prog-fill { height: 100%; border-radius: 4px; }
+        .prog-val { font-size: 0.8rem; font-weight: 600; min-width: 45px; text-align: right; }
 
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
+        .test-section {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; padding: 16px; text-align: center; margin-bottom: 16px;
         }
+        .test-btn {
+            padding: 12px 28px; border: none; border-radius: 10px;
+            background: linear-gradient(135deg, #f59e0b, #d97706); color: white;
+            font-size: 1rem; font-weight: 700; cursor: pointer;
+        }
+        .test-btn:hover { filter: brightness(1.1); }
 
-        .section-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--gray-800);
-        }
-
-        .section-badge {
-            background: var(--danger);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .pdf-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .pdf-card {
-            background: white;
-            border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-            border-left: 4px solid var(--primary);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .pdf-card:active {
-            transform: scale(0.98);
-        }
-
-        .pdf-card.overdue {
-            border-left-color: var(--danger);
-        }
-
-        .pdf-card.due-soon {
-            border-left-color: var(--warning);
-        }
-
-        .pdf-card.unrevised {
-            border-left-color: var(--gray-300);
-            opacity: 0.85;
-        }
-
-        .pdf-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--gray-900);
-            margin-bottom: 8px;
-        }
-
-        .pdf-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            font-size: 12px;
-            color: var(--gray-600);
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .category-tag {
-            display: inline-block;
-            padding: 3px 8px;
-            background: var(--gray-100);
-            border-radius: 6px;
-            font-size: 11px;
-            color: var(--gray-700);
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-        .priority-badge {
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-        }
-
-        .priority-high {
-            background: var(--danger);
-            color: white;
-        }
-
-        .priority-medium {
-            background: var(--warning);
-            color: white;
-        }
-
-        .priority-low {
-            background: var(--success);
-            color: white;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 10px;
-            padding: 20px 20px 10px;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .tab {
-            padding: 10px 20px;
-            background: white;
-            border: 2px solid var(--gray-200);
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: all 0.2s;
-        }
-
-        .tab.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        .fab {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .fab:active {
-            transform: scale(0.9);
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 40px 20px;
-            color: var(--gray-600);
-        }
-
-        .empty-state-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
-            opacity: 0.5;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: var(--gray-200);
-            color: var(--gray-700);
-        }
-
-        .btn:active {
-            transform: scale(0.95);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            max-width: 500px;
-            width: 100%;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .modal-header {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--gray-900);
-        }
-
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: var(--gray-600);
-        }
-
-        .spinner {
-            border: 3px solid var(--gray-200);
-            border-top: 3px solid var(--primary);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 16px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .filter-bar {
-            padding: 0 20px 15px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .search-box {
-            flex: 1;
-            padding: 10px 16px;
-            border: 2px solid var(--gray-200);
-            border-radius: 8px;
-            font-size: 14px;
-        }
-
-        .search-box:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        @media (max-width: 640px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        .empty-state { padding: 40px; text-align: center; color: var(--text-muted); }
+        .loading { padding: 40px; text-align: center; color: var(--text-muted); }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎯 CLAT GK Revision Tracker</h1>
-        <div class="exam-countdown">
-            <span id="days-to-exam">...</span> days to CLAT 2026
-        </div>
-    </div>
-
-    <div class="stats-grid" id="stats-grid">
-        <div class="stat-card">
-            <span class="stat-value" id="stat-total-pdfs">0</span>
-            <span class="stat-label">Total PDFs</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-value" id="stat-due">0</span>
-            <span class="stat-label">Due Today</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-value" id="stat-unrevised">0</span>
-            <span class="stat-label">Never Revised</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-value" id="stat-rate">0%</span>
-            <span class="stat-label">Completion</span>
-        </div>
-    </div>
-
-    <div class="tabs" id="tabs">
-        <div class="tab active" data-tab="due">Due for Revision</div>
-        <div class="tab" data-tab="unrevised">Not Started</div>
-        <div class="tab" data-tab="categories">By Category</div>
-        <div class="tab" data-tab="recent">Recently Revised</div>
-    </div>
-
-    <div class="filter-bar">
-        <input type="text" class="search-box" id="search-box" placeholder="Search PDFs...">
-    </div>
-
-    <div class="section" id="pdf-list-section">
-        <div class="section-header">
-            <div class="section-title" id="section-title">Due for Revision</div>
-            <div class="section-badge" id="section-badge">0</div>
-        </div>
-        <div class="pdf-list" id="pdf-list">
-            <div class="loading">
-                <div class="spinner"></div>
-                <div>Loading your PDFs...</div>
+    <div class="container">
+        <div class="header">
+            <h1>Smart Revision</h1>
+            <div class="nav-links">
+                <a href="revision_settings.html" class="nav-link">Settings</a>
+                <a href="comprehensive_dashboard.html" class="nav-link">GK Dashboard</a>
+                <a href="daily_gk_summary.html" class="nav-link">Daily Summary</a>
+                <a href="index.html" class="nav-link">Home</a>
             </div>
         </div>
+
+        <div class="overview" id="overview"></div>
+        <div class="context-bar" id="context-bar"></div>
+        <div id="queue-content"><div class="loading">Loading revision queue...</div></div>
+        <div id="category-health"></div>
+        <div id="progress-section"></div>
     </div>
 
-    <div class="fab" onclick="refreshData()">
-        ↻
-    </div>
-
-    <div class="modal" id="pdf-modal">
-        <div class="modal-content">
-            <div class="modal-header" id="modal-title"></div>
-            <div id="modal-body"></div>
-            <div class="action-buttons">
-                <button class="btn btn-primary" onclick="markAsRevised()">✓ Mark Revised</button>
-                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
-            </div>
-        </div>
-    </div>
-
+    <script src="auth.js"></script>
     <script>
-        // Configuration
-        const API_URL = 'http://localhost:8000'; // Local server URL
-        const EXAM_DATE = new Date('2026-12-06');
+        const API_BASE = window.location.origin;
 
-        // State
-        let currentTab = 'due';
-        let allPDFs = [];
-        let selectedPDF = null;
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            setupTabSwitching();
-            setupSearch();
-            calculateExamCountdown();
-            loadData();
-
-            // Refresh every 5 minutes
-            setInterval(loadData, 5 * 60 * 1000);
-        });
-
-        function calculateExamCountdown() {
-            const now = new Date();
-            const diffTime = EXAM_DATE - now;
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-            document.getElementById('days-to-exam').textContent = diffDays;
-        }
-
-        function setupTabSwitching() {
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    currentTab = tab.dataset.tab;
-                    renderPDFs();
-                });
-            });
-        }
-
-        function setupSearch() {
-            document.getElementById('search-box').addEventListener('input', (e) => {
-                renderPDFs(e.target.value);
-            });
-        }
-
-        async function loadData() {
+        async function init() {
             try {
-                // In a real implementation, this would fetch from the Python API
-                // For now, we'll load from localStorage or a JSON file
-
-                const response = await fetch(`${API_URL}/api/dashboard`);
-                if (!response.ok) {
-                    // Fallback to mock data
-                    loadMockData();
-                    return;
-                }
-
-                const data = await response.json();
-                updateDashboard(data);
-            } catch (error) {
-                console.log('API not available, using mock data');
-                loadMockData();
+                const resp = await fetch(`${API_BASE}/api/revision/queue`);
+                const data = await resp.json();
+                renderOverview(data);
+                renderContext(data.stats);
+                renderQueue(data);
+                renderCategoryHealth(data);
+                renderProgress(data.schedule_stats);
+            } catch (e) {
+                document.getElementById('queue-content').innerHTML =
+                    `<div class="empty-state" style="color:#ef4444;">Error: ${e.message}</div>`;
             }
         }
 
-        function loadMockData() {
-            // Mock data for testing
-            const mockData = {
-                statistics: {
-                    total_pdfs: 45,
-                    due_for_revision: 8,
-                    never_revised: 12,
-                    revision_rate: 65
-                },
-                due_pdfs: generateMockPDFs('due', 8),
-                unrevised_pdfs: generateMockPDFs('unrevised', 12),
-                categories: {
-                    'National': 15,
-                    'International': 12,
-                    'Economy': 8,
-                    'Environment': 6,
-                    'Sports': 4
-                }
-            };
-
-            updateDashboard(mockData);
+        function renderOverview(data) {
+            const s = data.stats || {};
+            const ss = data.schedule_stats || {};
+            document.getElementById('overview').innerHTML = `
+                <div class="ov-card"><div class="ov-val" style="color:#d91c1c;">${s.overdue || 0}</div><div class="ov-lbl">Overdue</div></div>
+                <div class="ov-card"><div class="ov-val" style="color:#f59e0b;">${s.due_today || 0}</div><div class="ov-lbl">Due Today</div></div>
+                <div class="ov-card"><div class="ov-val" style="color:#0ea5e9;">${s.estimated_minutes || 0}m</div><div class="ov-lbl">Est. Time</div></div>
+                <div class="ov-card"><div class="ov-val" style="color:#10b966;">${ss.mastered || 0}</div><div class="ov-lbl">Mastered</div></div>
+                <div class="ov-card"><div class="ov-val" style="color:#a78bfa;">${ss.streak || 0}</div><div class="ov-lbl">Day Streak</div></div>
+            `;
         }
 
-        function generateMockPDFs(type, count) {
-            const pdfs = [];
-            const categories = ['National', 'International', 'Economy', 'Environment', 'Sports', 'Awards'];
-            const sources = ['legaledge', 'toprankers', 'career_launcher'];
-
-            for (let i = 0; i < count; i++) {
-                const daysAgo = Math.floor(Math.random() * 30);
-                const date = new Date();
-                date.setDate(date.getDate() - daysAgo);
-
-                pdfs.push({
-                    pdf_id: i + 1,
-                    filename: `current_affairs_${date.toISOString().split('T')[0]}.pdf`,
-                    source_name: sources[Math.floor(Math.random() * sources.length)],
-                    date_published: date.toISOString().split('T')[0],
-                    total_topics: Math.floor(Math.random() * 50) + 20,
-                    categories: JSON.stringify([
-                        categories[Math.floor(Math.random() * categories.length)],
-                        categories[Math.floor(Math.random() * categories.length)]
-                    ]),
-                    revision_count: type === 'unrevised' ? 0 : Math.floor(Math.random() * 5) + 1,
-                    next_review: type === 'due' ? new Date().toISOString() : null,
-                    priority: Math.floor(Math.random() * 10) + 1,
-                    filepath: `/path/to/${sources[i % sources.length]}/file.pdf`
-                });
-            }
-
-            return pdfs;
+        function renderContext(s) {
+            const tags = [];
+            if (s.is_weekend) tags.push('<span class="context-tag weekend">Weekend · ' + Math.round(s.load_factor * 100) + '% load</span>');
+            if (s.is_holiday) tags.push('<span class="context-tag holiday">Holiday · reduced load</span>');
+            if (s.load_factor > 1) tags.push('<span class="context-tag ramp">Exam ramp · ' + Math.round(s.load_factor * 100) + '% load</span>');
+            const showing = (s.showing_revision || 0) + (s.showing_new || 0);
+            document.getElementById('context-bar').innerHTML = `
+                <span>Showing ${showing} sections (${s.showing_revision || 0} revision + ${s.showing_new || 0} new)</span>
+                <div>${tags.join(' ')}</div>
+            `;
         }
 
-        function updateDashboard(data) {
-            // Update statistics
-            document.getElementById('stat-total-pdfs').textContent = data.statistics.total_pdfs;
-            document.getElementById('stat-due').textContent = data.statistics.due_for_revision;
-            document.getElementById('stat-unrevised').textContent = data.statistics.never_revised;
-            document.getElementById('stat-rate').textContent = data.statistics.revision_rate + '%';
+        function renderQueue(data) {
+            const revQueue = data.revision_queue || [];
+            const newQueue = data.new_queue || [];
+            const container = document.getElementById('queue-content');
 
-            // Store PDFs
-            allPDFs = {
-                due: data.due_pdfs || [],
-                unrevised: data.unrevised_pdfs || [],
-                categories: data.categories || {}
-            };
-
-            // Render current tab
-            renderPDFs();
-        }
-
-        function renderPDFs(searchQuery = '') {
-            const container = document.getElementById('pdf-list');
-            let pdfs = [];
-            let title = '';
-
-            // Get PDFs based on current tab
-            switch(currentTab) {
-                case 'due':
-                    pdfs = allPDFs.due || [];
-                    title = 'Due for Revision';
-                    break;
-                case 'unrevised':
-                    pdfs = allPDFs.unrevised || [];
-                    title = 'Not Started';
-                    break;
-                case 'categories':
-                    renderCategories();
-                    return;
-                case 'recent':
-                    pdfs = []; // Would fetch recently revised
-                    title = 'Recently Revised';
-                    break;
-            }
-
-            // Filter by search
-            if (searchQuery) {
-                pdfs = pdfs.filter(pdf =>
-                    pdf.filename.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    pdf.categories.toLowerCase().includes(searchQuery.toLowerCase())
-                );
-            }
-
-            // Update header
-            document.getElementById('section-title').textContent = title;
-            document.getElementById('section-badge').textContent = pdfs.length;
-
-            // Render PDFs
-            if (pdfs.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">✨</div>
-                        <div>No PDFs to show</div>
-                    </div>
-                `;
+            if (revQueue.length === 0 && newQueue.length === 0) {
+                container.innerHTML = `<div class="empty-state">
+                    <div style="font-size:2rem;margin-bottom:10px;">🎉</div>
+                    <div style="font-size:1.1rem;font-weight:600;margin-bottom:6px;">All caught up!</div>
+                    <div>No sections due for revision today. Read a new PDF or take a test to get started.</div>
+                </div>`;
                 return;
             }
 
-            container.innerHTML = pdfs.map(pdf => renderPDFCard(pdf)).join('');
+            let html = '';
+            const groups = [
+                { level: 4, emoji: '🔴', title: 'Must Revise' },
+                { level: 3, emoji: '🟣', title: 'Needs Revision' },
+                { level: 2, emoji: '🔵', title: 'Weekly Review' },
+                { level: 1, emoji: '🟢', title: 'Maintenance' },
+                { level: 0, emoji: '⚪', title: 'Read, Not Tested' },
+            ];
 
-            // Add click handlers
-            document.querySelectorAll('.pdf-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const pdfId = parseInt(card.dataset.pdfId);
-                    showPDFDetails(pdfs.find(p => p.pdf_id === pdfId));
-                });
-            });
+            for (const g of groups) {
+                const items = revQueue.filter(r => r.revision_level === g.level);
+                if (items.length > 0) {
+                    html += `<div class="queue-section">
+                        <div class="queue-title">${g.emoji} ${g.title} <span class="count">${items.length}</span></div>
+                        ${items.map(renderRevItem).join('')}
+                    </div>`;
+                }
+            }
+
+            if (newQueue.length > 0) {
+                html += `<div class="queue-section">
+                    <div class="queue-title">📰 New Sections <span class="count">${newQueue.length}</span></div>
+                    ${newQueue.map(renderNewItem).join('')}
+                </div>`;
+            }
+
+            if (revQueue.length > 0) {
+                html += `<div class="test-section">
+                    <div style="color:var(--text-muted);font-size:0.85rem;margin-bottom:10px;">
+                        After re-reading, verify your recall:
+                    </div>
+                    <button class="test-btn" onclick="alert('Revision testing coming in next update.\\nFor now, take tests from the GK Dashboard.')">
+                        📝 Take Revision Test
+                    </button>
+                </div>`;
+            }
+
+            container.innerHTML = html;
         }
 
-        function renderPDFCard(pdf) {
-            const categories = JSON.parse(pdf.categories || '[]');
-            const isOverdue = pdf.priority >= 8;
-            const isDueSoon = pdf.priority >= 6 && pdf.priority < 8;
-            const isUnrevised = pdf.revision_count === 0;
+        function renderRevItem(r) {
+            const acc = r.last_test_accuracy != null ? Math.round(r.last_test_accuracy) + '%' : '—';
+            const accClass = r.last_test_accuracy >= 85 ? 'good' : r.last_test_accuracy >= 70 ? 'fair' :
+                             r.last_test_accuracy >= 50 ? 'weak' : r.last_test_accuracy != null ? 'poor' : 'new';
+            const overdue = (r.days_overdue || 0) > 0 ? `<span style="color:#d91c1c;">${r.days_overdue}d overdue</span>` : '';
+            const lastRead = r.last_read_date ? daysAgo(r.last_read_date) : 'Never';
+            const lastTest = r.last_test_date ? daysAgo(r.last_test_date) : 'Never';
 
-            let cardClass = 'pdf-card';
-            if (isOverdue) cardClass += ' overdue';
-            else if (isDueSoon) cardClass += ' due-soon';
-            else if (isUnrevised) cardClass += ' unrevised';
-
-            const priorityBadge = pdf.priority >= 8 ? 'priority-high' :
-                                 pdf.priority >= 6 ? 'priority-medium' : 'priority-low';
-
-            const daysAgo = Math.floor((new Date() - new Date(pdf.date_published)) / (1000 * 60 * 60 * 24));
-
-            return `
-                <div class="${cardClass}" data-pdf-id="${pdf.pdf_id}">
-                    <div class="pdf-title">${pdf.filename}</div>
-                    <div class="pdf-meta">
-                        <div class="meta-item">
-                            📅 ${daysAgo} days ago
+            return `<div class="rev-item" data-level="${r.revision_level}">
+                <div class="rev-item-body">
+                    <div class="rev-info">
+                        <div class="rev-title">${esc(r.section_title || 'Section ' + r.section_index)}</div>
+                        <div class="rev-meta">
+                            <span>${esc(r.category || '')}</span>
+                            <span>${esc(r.pdf_filename || '')}</span>
+                            ${overdue}
                         </div>
-                        <div class="meta-item">
-                            📚 ${pdf.total_topics} topics
+                        <div class="rev-meta">
+                            <span>Read: ${lastRead}</span>
+                            <span>Test: ${lastTest}</span>
                         </div>
-                        ${pdf.revision_count > 0 ? `
-                        <div class="meta-item">
-                            ✅ ${pdf.revision_count}x revised
-                        </div>
-                        ` : ''}
-                        <span class="priority-badge ${priorityBadge}">
-                            ${pdf.priority >= 8 ? 'High Priority' : pdf.priority >= 6 ? 'Medium' : 'Low'}
-                        </span>
                     </div>
-                    <div style="margin-top: 8px;">
-                        ${categories.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
+                    <div class="rev-acc ${accClass}">${acc}</div>
+                    <div class="rev-actions">
+                        <a href="article_viewer.html?pdf=${encodeURIComponent(r.pdf_filename)}#section-${r.section_index}"
+                           class="rev-btn primary" target="_blank">📖 Read</a>
+                        <button class="rev-btn success" onclick="markRevised('${esc(r.pdf_filename)}', ${r.section_index}, this)">✅ Revised</button>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function renderNewItem(s) {
+            return `<div class="rev-item new-item">
+                <div class="rev-item-body">
+                    <div class="rev-info">
+                        <div class="rev-title">${esc(s.section_title || 'Section ' + s.section_index)}</div>
+                        <div class="rev-meta">
+                            <span>${esc(s.category || '')}</span>
+                            <span>${esc(s.pdf_filename || '')}</span>
+                        </div>
+                    </div>
+                    <div class="rev-acc new">NEW</div>
+                    <div class="rev-actions">
+                        <a href="article_viewer.html?pdf=${encodeURIComponent(s.pdf_filename)}#section-${s.section_index}"
+                           class="rev-btn primary" target="_blank">📖 Read</a>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function renderCategoryHealth(data) {
+            const revQueue = data.revision_queue || [];
+            const catStats = {};
+            for (const r of revQueue) {
+                const cat = r.category || 'Other';
+                if (!catStats[cat]) catStats[cat] = { due: 0, totalAcc: 0, accCount: 0 };
+                catStats[cat].due++;
+                if (r.last_test_accuracy != null) {
+                    catStats[cat].totalAcc += r.last_test_accuracy;
+                    catStats[cat].accCount++;
+                }
+            }
+            const cats = Object.entries(catStats).sort((a, b) => b[1].due - a[1].due);
+            if (cats.length === 0) { document.getElementById('category-health').innerHTML = ''; return; }
+
+            document.getElementById('category-health').innerHTML = `
+                <div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:10px;">Category Health</div>
+                <div class="cat-grid">
+                    ${cats.map(([cat, s]) => {
+                        const avg = s.accCount > 0 ? Math.round(s.totalAcc / s.accCount) : 0;
+                        const color = avg >= 85 ? '#10b966' : avg >= 70 ? '#2178d9' : avg >= 50 ? '#9c26b0' : s.accCount > 0 ? '#d91c1c' : '#94a3b8';
+                        return `<div class="cat-card">
+                            <div class="cat-name">${esc(cat)}</div>
+                            <div class="cat-bar"><div class="cat-fill" style="width:${avg}%;background:${color};"></div></div>
+                            <div class="cat-stats"><span>${avg}% avg</span><span>${s.due} due</span></div>
+                        </div>`;
+                    }).join('')}
+                </div>
+            `;
+        }
+
+        function renderProgress(ss) {
+            if (!ss) return;
+            document.getElementById('progress-section').innerHTML = `
+                <div class="progress-section">
+                    <h3>Revision Progress</h3>
+                    <div class="prog-row">
+                        <span class="prog-label">Read</span>
+                        <div class="prog-bar"><div class="prog-fill" style="width:${ss.read_percent}%;background:#0ea5e9;"></div></div>
+                        <span class="prog-val" style="color:#0ea5e9;">${ss.read_percent}%</span>
+                    </div>
+                    <div class="prog-row">
+                        <span class="prog-label">Mastered</span>
+                        <div class="prog-bar"><div class="prog-fill" style="width:${ss.mastered_percent}%;background:#10b966;"></div></div>
+                        <span class="prog-val" style="color:#10b966;">${ss.mastered_percent}%</span>
+                    </div>
+                    <div style="font-size:0.78rem;color:var(--text-muted);margin-top:8px;">
+                        ${ss.total_scheduled} of ${ss.total_sections} sections tracked · ${ss.mastered} mastered
                     </div>
                 </div>
             `;
         }
 
-        function renderCategories() {
-            const container = document.getElementById('pdf-list');
-            const categories = allPDFs.categories || {};
-
-            document.getElementById('section-title').textContent = 'By Category';
-            document.getElementById('section-badge').textContent = Object.keys(categories).length;
-
-            if (Object.keys(categories).length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-state-icon">📂</div>
-                        <div>No categories found</div>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = Object.entries(categories)
-                .sort((a, b) => b[1] - a[1])
-                .map(([cat, count]) => `
-                    <div class="pdf-card">
-                        <div class="pdf-title">${cat}</div>
-                        <div class="pdf-meta">
-                            <div class="meta-item">📚 ${count} PDFs</div>
-                        </div>
-                    </div>
-                `).join('');
-        }
-
-        function showPDFDetails(pdf) {
-            selectedPDF = pdf;
-            const categories = JSON.parse(pdf.categories || '[]');
-
-            document.getElementById('modal-title').textContent = pdf.filename;
-            document.getElementById('modal-body').innerHTML = `
-                <div style="margin-bottom: 16px;">
-                    <strong>Source:</strong> ${pdf.source_name}<br>
-                    <strong>Published:</strong> ${pdf.date_published}<br>
-                    <strong>Topics:</strong> ${pdf.total_topics}<br>
-                    <strong>Revisions:</strong> ${pdf.revision_count || 0}<br>
-                    ${pdf.next_review ? `<strong>Next Review:</strong> ${pdf.next_review.split('T')[0]}<br>` : ''}
-                </div>
-                <div>
-                    <strong>Categories:</strong><br>
-                    ${categories.map(cat => `<span class="category-tag">${cat}</span>`).join('')}
-                </div>
-            `;
-
-            document.getElementById('pdf-modal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('pdf-modal').classList.remove('active');
-            selectedPDF = null;
-        }
-
-        async function markAsRevised() {
-            if (!selectedPDF) return;
-
+        async function markRevised(pdfFilename, sectionIndex, btn) {
+            btn.textContent = '✅ Done!';
+            btn.style.opacity = '0.5';
+            btn.style.pointerEvents = 'none';
             try {
-                const response = await fetch(`${API_URL}/api/revise/${selectedPDF.pdf_id}`, {
-                    method: 'POST'
+                await fetch(`${API_BASE}/api/revision/mark-revised`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pdf_filename: pdfFilename, section_index: sectionIndex }),
                 });
-
-                if (response.ok) {
-                    alert('✅ Marked as revised!');
-                    closeModal();
-                    loadData();
-                } else {
-                    throw new Error('Failed to mark as revised');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                // For demo, just close modal
-                alert('✅ Marked as revised! (Demo mode)');
-                closeModal();
-                // Refresh after short delay
-                setTimeout(loadData, 500);
-            }
+            } catch (e) { console.warn(e); }
         }
 
-        function refreshData() {
-            loadData();
-
-            // Visual feedback
-            const fab = document.querySelector('.fab');
-            fab.style.transform = 'rotate(360deg)';
-            setTimeout(() => {
-                fab.style.transform = 'rotate(0deg)';
-            }, 500);
+        function daysAgo(dateStr) {
+            if (!dateStr) return 'Never';
+            const diff = Math.floor((Date.now() - new Date(dateStr).getTime()) / 86400000);
+            if (diff === 0) return 'Today';
+            if (diff === 1) return 'Yesterday';
+            return diff + 'd ago';
         }
 
-        // Service Worker for PWA capabilities
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').catch(err => {
-                console.log('Service Worker registration failed:', err);
-            });
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
+
+        window.onload = init;
     </script>
 </body>
 </html>
