@@ -2177,6 +2177,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         with open(output_path, 'wb') as f:
             f.write(pdf_bytes)
 
+        # Auto-convert to HTML for article viewer
+        self._auto_convert_to_html(str(output_path))
+
         return {
             'success': True,
             'message': 'PDF uploaded (overwrote existing)' if already_existed else 'PDF uploaded',
@@ -2187,6 +2190,16 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             'already_existed': already_existed,
             'size_kb': len(pdf_bytes) / 1024,
         }
+
+    def _auto_convert_to_html(self, pdf_path: str):
+        """Auto-convert a newly created/uploaded PDF to HTML sections (background, non-blocking)."""
+        try:
+            from server.html_converter import convert_and_store
+            db_path = str(Path(__file__).parent.parent / 'revision_tracker.db')
+            n = convert_and_store(pdf_path, db_path)
+            print(f"HTML auto-convert: {Path(pdf_path).name} → {n} sections")
+        except Exception as e:
+            print(f"HTML auto-convert failed for {pdf_path}: {e}")
 
     def _create_pdf_from_url(self, url: str) -> dict:
         """Create PDF from TopRankers URL (daily HTML or weekly CDN PDF)."""
@@ -2293,6 +2306,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         if not output_path.exists() or output_path.stat().st_size == 0:
             raise RuntimeError("PDF download failed or file is empty")
 
+        # Auto-convert to HTML for article viewer
+        self._auto_convert_to_html(str(output_path))
+
         return {
             'success': True,
             'message': f'{pdf_type.title()} PDF downloaded successfully',
@@ -2345,6 +2361,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         if not output_path.exists():
             raise RuntimeError("PDF was not created")
 
+        # Auto-convert to HTML for article viewer
+        self._auto_convert_to_html(str(output_path))
+
         return {
             'success': True,
             'message': 'PDF created successfully',
@@ -2352,7 +2371,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             'path': str(output_path),
             'size_kb': output_path.stat().st_size / 1024
         }
-    
+
     def _sync_pdfs_bidirectional(self) -> dict:
         """Bidirectional sync of ~/saanvi folders with Mac Mini."""
         import subprocess
