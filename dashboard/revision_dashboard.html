@@ -241,9 +241,10 @@
                     <div style="color:var(--text-muted);font-size:0.85rem;margin-bottom:10px;">
                         After re-reading, verify your recall:
                     </div>
-                    <button class="test-btn" onclick="alert('Revision testing coming in next update.\\nFor now, take tests from the GK Dashboard.')">
+                    <button class="test-btn" onclick="startRevisionTest()" id="revision-test-btn">
                         📝 Take Revision Test
                     </button>
+                    <div id="test-status" style="margin-top:8px;font-size:0.82rem;color:var(--text-muted);"></div>
                 </div>`;
             }
 
@@ -352,6 +353,63 @@
                     </div>
                 </div>
             `;
+        }
+
+        async function startRevisionTest() {
+            const btn = document.getElementById('revision-test-btn');
+            const status = document.getElementById('test-status');
+            btn.disabled = true;
+            btn.textContent = '⏳ Preparing test...';
+            status.textContent = 'Collecting questions from due sections...';
+
+            try {
+                const resp = await fetch(`${API_BASE}/api/revision/create-test`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({}),
+                });
+                const data = await resp.json();
+
+                if (data.error) {
+                    status.textContent = data.error;
+                    status.style.color = '#ef4444';
+                    btn.disabled = false;
+                    btn.textContent = '📝 Take Revision Test';
+                    return;
+                }
+
+                if (!data.questions || data.questions.length === 0) {
+                    status.textContent = 'No questions available. Read some sections first.';
+                    btn.disabled = false;
+                    btn.textContent = '📝 Take Revision Test';
+                    return;
+                }
+
+                // Store test data in sessionStorage and redirect to assessment page
+                const sections = data.sections_covered || [];
+                const sectionNames = sections.map(s => s.section_title || s.category).slice(0, 5).join(', ');
+
+                status.textContent = `${data.total_questions} questions from ${sections.length} sections. Launching test...`;
+                status.style.color = '#10b981';
+
+                // Store for the assessment page to pick up
+                sessionStorage.setItem('revision_test', JSON.stringify({
+                    session_id: data.session_id,
+                    questions: data.questions,
+                    total_questions: data.total_questions,
+                    sections_covered: sections,
+                    is_revision_test: true,
+                }));
+
+                // Redirect to assessment page in revision mode
+                window.location.href = `assessment.html?mode=revision`;
+
+            } catch (e) {
+                status.textContent = 'Error: ' + e.message;
+                status.style.color = '#ef4444';
+                btn.disabled = false;
+                btn.textContent = '📝 Take Revision Test';
+            }
         }
 
         async function markRevised(pdfFilename, sectionIndex, btn) {

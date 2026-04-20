@@ -606,3 +606,133 @@ class RevisionEngine:
             'read_percent': round(total / max(1, total_sections) * 100, 1),
             'mastered_percent': round(mastered / max(1, total_sections) * 100, 1),
         }
+
+    # ── Revision Test Creation ─────────────────────────────
+
+    def get_revision_test_questions(self) -> Dict:
+        """Pull questions for a revision test from today's due sections.
+
+        Groups questions by section, weights by revision level + category,
+        caps at revision_test_count setting.
+
+        Returns {questions: [...], sections_covered: [...], session_meta: {...}}
+        """
+        queue = self.get_daily_queue()
+        rev_items = queue.get('revision_queue', [])
+        test_count = self.get_setting('revision_test_count')
+
+        if not rev_items:
+            return {'questions': [], 'sections_covered': [], 'error': 'No sections due for revision'}
+
+        conn = self._conn()
+        c = conn.cursor()
+        all_questions = []
+        sections_covered = []
+
+        for item in rev_items:
+            pdf = item['pdf_filename']
+            sec_idx = item['section_index']
+            cat = item['category']
+            level = item['revision_level']
+
+            # Get the HTML article section to find its category
+            c.execute("""
+                SELECT section_title, category FROM html_articles
+                WHERE pdf_filename = ? AND section_index = ?
+            """, (pdf, sec_idx))
+            art_row = c.fetchone()
+            sec_title = dict(art_row)['section_title'] if art_row else ''
+            sec_cat = dict(art_row)['category'] if art_row else cat
+
+            # Find questions for this section by matching pdf + category run
+            # Questions are ordered by question_id; sections correspond to
+            # consecutive runs of the same category
+            c.execute("""
+                SELECT question_id, question_text, answer_text, category, tags
+                FROM questions
+                WHERE pdf_filename = ?
+                ORDER BY question_id
+            """, (pdf,))
+            pdf_questions = [dict(r) for r in c.fetchall()]
+
+            # Group into sections (same logic as section_analyzer)
+            sections_in_pdf = []
+            current_sec = None
+            for q in pdf_questions:
+                if current_sec and current_sec['category'] == q['category']:
+                    current_sec['questions'].append(q)
+                else:
+                    if current_sec:
+                        sections_in_pdf.append(current_sec)
+                    current_sec = {'category': q['category'], 'questions': [q]}
+            if current_sec:
+                sections_in_pdf.append(current_sec)
+
+            # Match section_index
+            if sec_idx < len(sections_in_pdf):
+                sec_qs = sections_in_pdf[sec_idx]['questions']
+                # Weight: more questions from harder sections
+                weight = max(1, level)
+                for q in sec_qs:
+                    q['_weight'] = weight
+                    q['_pdf'] = pdf
+                    q['_section_index'] = sec_idx
+                    q['_section_title'] = sec_title
+                all_questions.extend(sec_qs)
+                sections_covered.append({
+                    'pdf_filename': pdf,
+                    'section_index': sec_idx,
+                    'section_title': sec_title,
+                    'category': sec_cat,
+                    'revision_level': level,
+                    'question_count': len(sec_qs),
+                })
+
+        conn.close()
+
+        # Sort by weight (harder sections first) then shuffle within weight groups
+        import random
+        all_questions.sort(key=lambda q: q['_weight'], reverse=True)
+
+        # Cap to test_count
+        selected = all_questions[:test_count]
+        random.shuffle(selected)
+
+        # Clean up internal fields
+        for q in selected:
+            q.pop('_weight', None)
+            q.pop('_pdf', None)
+            q.pop('_section_index', None)
+            q.pop('_section_title', None)
+
+        return {
+            'questions': selected,
+            'sections_covered': sections_covered,
+            'total_available': len(all_questions),
+            'selected_count': len(selected),
+        }
+
+    def update_schedule_from_test(self, pdf_filename: str, assessment_db_path: str):
+        """After a test on a PDF, update revision_schedule for all sections.
+
+        Reads section-level performance from section_analyzer and updates
+        the SRS intervals accordingly.
+        """
+        from server.section_analyzer import get_section_performance
+
+        sections = get_section_performance(pdf_filename, self.db_path, assessment_db_path)
+        if not sections:
+            return 0
+
+        updated = 0
+        for i, sec in enumerate(sections):
+            if sec['attempted'] > 0 and sec['accuracy'] is not None:
+                self.update_section_after_test(
+                    pdf_filename, i,
+                    sec.get('first_question', '')[:80],
+                    sec['category'],
+                    sec['accuracy']
+                )
+                updated += 1
+
+        return updated

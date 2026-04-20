@@ -2545,6 +2545,72 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             self.send_json({'success': True})
             return
 
+        # POST /api/revision/create-test — generate a revision test
+        if path == '/api/revision/create-test':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            result = engine.get_revision_test_questions()
+            if result.get('error'):
+                self.send_json(result)
+                return
+
+            questions = result['questions']
+            if not questions:
+                self.send_json({'error': 'No questions available for revision test'})
+                return
+
+            # Create a test session using the existing assessment system
+            session_id = self.assessment_db.create_test_session(
+                user_id='daughter',
+                pdf_id='revision_test',
+                pdf_filename='Revision Test',
+                source_date='revision',
+                session_type='revision',
+                total_questions=len(questions)
+            )
+
+            # Load MCQ choices for each question
+            formatted = []
+            for q in questions:
+                stored = self._get_stored_mcq_choices(q.get('question_id') or q.get('anki_note_id'))
+                if stored:
+                    q['choices'] = stored['choices']
+                    q['correct_index'] = stored['correct_index']
+                else:
+                    q['choices'] = [q.get('answer_text', 'Unknown')]
+                    q['correct_index'] = 0
+
+                formatted.append({
+                    'note_id': str(q.get('question_id', '')),
+                    'question': q.get('question_text', ''),
+                    'answer': q.get('answer_text', ''),
+                    'category': q.get('category', ''),
+                    'choices': q['choices'],
+                    'correct_index': q['correct_index'],
+                })
+
+            self.send_json({
+                'success': True,
+                'session_id': session_id,
+                'questions': formatted,
+                'total_questions': len(formatted),
+                'sections_covered': result.get('sections_covered', []),
+            })
+            return
+
+        # POST /api/revision/update-from-test — trigger schedule update after a test
+        if path == '/api/revision/update-from-test':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            pdf_filename = data.get('pdf_filename', '')
+            if not pdf_filename:
+                self.send_json({'error': 'pdf_filename required'})
+                return
+            assessment_db = str(Path(__file__).parent / 'assessment_tracker.db')
+            updated = engine.update_schedule_from_test(pdf_filename, assessment_db)
+            self.send_json({'success': True, 'sections_updated': updated})
+            return
+
         # POST /api/revision/mark-read — record a section was read
         if path == '/api/revision/mark-read':
             from server.revision_engine import RevisionEngine

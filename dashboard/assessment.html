@@ -1006,6 +1006,23 @@
         // Initialize
         document.addEventListener('DOMContentLoaded', async () => {
             await initUser();  // Get current user first
+
+            // Check for revision test mode (launched from revision dashboard)
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('mode') === 'revision') {
+                const revData = sessionStorage.getItem('revision_test');
+                if (revData) {
+                    try {
+                        const payload = JSON.parse(revData);
+                        sessionStorage.removeItem('revision_test');
+                        await startRevisionTestMode(payload);
+                        return;  // Skip normal initialization
+                    } catch (e) {
+                        console.warn('Could not load revision test data:', e);
+                    }
+                }
+            }
+
             await loadPdfs();
             setupTestTypeSelector();
             checkAnkiConnection();
@@ -1029,6 +1046,35 @@
             console.log('startTest function defined:', typeof startTest);
             console.log('startTest:', startTest);
         });
+
+        // Revision test mode — launched from revision dashboard with pre-loaded questions
+        async function startRevisionTestMode(payload) {
+            console.log('=== REVISION TEST MODE ===', payload);
+            showScreen('test-screen');
+            document.getElementById('header-subtitle').textContent = 'Revision Test 🧠';
+
+            currentSession = payload.session_id;
+            questions = payload.questions || [];
+            allQuestions = questions;
+            backgroundLoadComplete = true;
+
+            // Shuffle
+            questions = questions.sort(() => 0.5 - Math.random());
+
+            currentQuestionIndex = 0;
+            answers = [];
+            testStartTime = Date.now();
+
+            startActiveTimeTracking();
+            document.getElementById('total-q').textContent = questions.length;
+            startTimer();
+            testInProgress = true;
+            showQuestion();
+
+            // After test completes, trigger revision schedule update
+            // Store sections for post-test update
+            window._revisionSections = payload.sections_covered || [];
+        }
 
         // Handle URL parameters (for direct PDF selection from dashboard)
         async function handleUrlParameters() {
@@ -1986,6 +2032,26 @@
                         session_id: currentSession
                     })
                 });
+
+                // Update revision schedule after test completion.
+                // For revision tests: update all covered PDFs.
+                // For regular tests: update the tested PDF.
+                try {
+                    const pdfsToUpdate = new Set();
+                    if (window._revisionSections && window._revisionSections.length > 0) {
+                        window._revisionSections.forEach(s => pdfsToUpdate.add(s.pdf_filename));
+                        window._revisionSections = null;
+                    } else if (selectedPdfs && selectedPdfs.length > 0) {
+                        selectedPdfs.forEach(p => pdfsToUpdate.add(p));
+                    }
+                    for (const pdf of pdfsToUpdate) {
+                        fetch(`${ASSESSMENT_API}/api/revision/update-from-test`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ pdf_filename: pdf }),
+                        }).catch(e => console.warn('Revision schedule update failed for ' + pdf + ':', e));
+                    }
+                } catch (e) { console.warn('Revision update error:', e); }
 
                 // Show results
                 showResults();
