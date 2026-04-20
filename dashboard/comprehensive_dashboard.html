@@ -2072,16 +2072,18 @@
         // View details - now accepts both pdfId and filename
         async function viewDetails(pdfId, filename) {
             try {
-                // Fetch PDF metadata, assessment status, annotations, and test history in parallel
-                const [pdfResponse, assessmentResponse, testHistoryResponse] = await Promise.all([
+                // Fetch PDF metadata, assessment status, test history, and view history in parallel
+                const [pdfResponse, assessmentResponse, testHistoryResponse, viewHistoryResponse] = await Promise.all([
                     fetch(`${API_BASE}/api/pdf/${encodeURIComponent(pdfId)}`),
                     fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(filename || pdfId)}`),
                     fetch(`${API_BASE}/api/assessment/performance/pdf/${encodeURIComponent(filename || pdfId)}`),
+                    fetch(`${API_BASE}/api/pdf/view-history/${encodeURIComponent(filename || pdfId)}`),
                 ]);
 
                 const pdfData = await pdfResponse.json();
                 const assessmentStatus = await assessmentResponse.json();
                 const testHistory = await testHistoryResponse.json();
+                const viewHistory = await viewHistoryResponse.json();
 
                 // Fetch annotation details (optional)
                 let details = { summary: {}, revision_history: [], access_log: [] };
@@ -2116,6 +2118,12 @@
                 const totalAttempted = (ts.total_correct || 0) + (ts.total_wrong || 0) + (ts.total_skipped || 0);
                 const qBank = assessmentStatus.total_cards || 0;
 
+                // View/reading history
+                const viewSessions = viewHistory.sessions || [];
+                const totalReadTime = viewHistory.total_active_time_seconds || 0;
+                const completeReads = viewHistory.complete_sessions || 0;
+                const hasViews = viewSessions.length > 0;
+
                 function fmtTime(secs) {
                     if (!secs) return '—';
                     const m = Math.floor(secs / 60), s = secs % 60;
@@ -2129,29 +2137,73 @@
 
                         <!-- Compact stat strip -->
                         <div style="display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap;">
-                            <div style="flex:1; min-width: 60px; text-align:center; padding:8px 4px; background:rgba(16,185,129,0.1); border-radius:6px;">
+                            <div style="flex:1; min-width: 55px; text-align:center; padding:8px 4px; background:rgba(16,185,129,0.1); border-radius:6px;">
                                 <div style="font-size:1.1rem; font-weight:700; color:#10b981;">${qBank}</div>
                                 <div style="font-size:0.65rem; color:#94a3b8;">Questions</div>
                             </div>
                             ${hasTests ? `
-                            <div style="flex:1; min-width: 60px; text-align:center; padding:8px 4px; background:rgba(59,130,246,0.1); border-radius:6px;">
+                            <div style="flex:1; min-width: 55px; text-align:center; padding:8px 4px; background:rgba(59,130,246,0.1); border-radius:6px;">
                                 <div style="font-size:1.1rem; font-weight:700; color:#3b82f6;">${ts.best_score}%</div>
                                 <div style="font-size:0.65rem; color:#94a3b8;">Best</div>
                             </div>
-                            <div style="flex:1; min-width: 60px; text-align:center; padding:8px 4px; background:rgba(245,158,11,0.1); border-radius:6px;">
+                            <div style="flex:1; min-width: 55px; text-align:center; padding:8px 4px; background:rgba(245,158,11,0.1); border-radius:6px;">
                                 <div style="font-size:1.1rem; font-weight:700; color:#f59e0b;">${ts.total_tests}</div>
                                 <div style="font-size:0.65rem; color:#94a3b8;">Tests</div>
                             </div>
-                            <div style="flex:1; min-width: 60px; text-align:center; padding:8px 4px; background:rgba(139,92,246,0.1); border-radius:6px;">
+                            <div style="flex:1; min-width: 55px; text-align:center; padding:8px 4px; background:rgba(139,92,246,0.1); border-radius:6px;">
                                 <div style="font-size:1.1rem; font-weight:700; color:#a78bfa;">${ts.total_correct}/${totalAttempted}</div>
                                 <div style="font-size:0.65rem; color:#94a3b8;">Correct</div>
                             </div>
                             ` : `
-                            <div style="flex:3; text-align:center; padding:8px; color:#94a3b8; font-size:0.85rem;">
-                                ${isProcessed ? 'No tests taken yet' : '⏳ Pending question generation'}
+                            <div style="flex:2; text-align:center; padding:8px; color:#94a3b8; font-size:0.85rem;">
+                                ${isProcessed ? 'No tests taken yet' : '⏳ Pending'}
                             </div>
                             `}
+                            <div style="flex:1; min-width: 55px; text-align:center; padding:8px 4px; background:rgba(14,165,233,0.1); border-radius:6px;">
+                                <div style="font-size:1.1rem; font-weight:700; color:#0ea5e9;">${fmtTime(totalReadTime)}</div>
+                                <div style="font-size:0.65rem; color:#94a3b8;">Read Time</div>
+                            </div>
+                            <div style="flex:1; min-width: 55px; text-align:center; padding:8px 4px; background:rgba(14,165,233,0.06); border-radius:6px;">
+                                <div style="font-size:1.1rem; font-weight:700; color:#38bdf8;">${completeReads}</div>
+                                <div style="font-size:0.65rem; color:#94a3b8;">Full Reads</div>
+                            </div>
                         </div>
+
+                        ${hasViews ? (() => {
+                            // Group view sessions by date, sum active_time per day
+                            const byDay = {};
+                            viewSessions.forEach(v => {
+                                const day = (v.started_at || '').slice(0, 10);
+                                if (!day) return;
+                                if (!byDay[day]) byDay[day] = { time: 0, sessions: 0, complete: 0 };
+                                byDay[day].time += v.active_time_seconds || 0;
+                                byDay[day].sessions++;
+                                if (v.is_complete) byDay[day].complete++;
+                            });
+                            const days = Object.entries(byDay).sort((a, b) => b[0].localeCompare(a[0]));
+                            return `
+                                <div style="font-size:0.8rem; font-weight:600; color:var(--text-primary); margin-bottom:6px;">Reading Sessions</div>
+                                <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin-bottom:12px;">
+                                    <thead>
+                                        <tr style="border-bottom:1px solid var(--border-color,#333); color:#94a3b8;">
+                                            <th style="padding:4px 6px; text-align:left;">Date</th>
+                                            <th style="padding:4px 6px; text-align:right;">Active Time</th>
+                                            <th style="padding:4px 6px; text-align:center;">Full Read</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${days.map(([day, d]) => {
+                                            const dt = new Date(day + 'T00:00:00').toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'});
+                                            return `<tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                                                <td style="padding:5px 6px; color:var(--text-primary);">${dt}</td>
+                                                <td style="padding:5px 6px; text-align:right; color:#0ea5e9; font-weight:600;">${fmtTime(d.time)}</td>
+                                                <td style="padding:5px 6px; text-align:center;">${d.complete > 0 ? '<span style="color:#10b981;">✓</span>' : '<span style="color:#94a3b8;">—</span>'}</td>
+                                            </tr>`;
+                                        }).join('')}
+                                    </tbody>
+                                </table>
+                            `;
+                        })() : ''}
 
                         ${sessions.length > 0 ? `
                         <!-- Test sessions — compact table, no horizontal scroll -->

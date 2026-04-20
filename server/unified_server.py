@@ -1535,6 +1535,39 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     }
             self.send_json(debug_info)
 
+        # GET /api/pdf/view-history/{pdf_id} — reading session history
+        elif path.startswith('/api/pdf/view-history/'):
+            pdf_id = unquote(path.split('/api/pdf/view-history/')[1])
+            db_path = Path(__file__).parent.parent / 'revision_tracker.db'
+            try:
+                conn = sqlite3.connect(str(db_path))
+                conn.row_factory = sqlite3.Row
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT session_id, pdf_id, user_id, total_pages,
+                           pages_viewed, started_at, completed_at,
+                           is_complete, active_time_seconds
+                    FROM pdf_view_sessions
+                    WHERE pdf_id = ?
+                    ORDER BY started_at DESC
+                """, (pdf_id,))
+                sessions = [dict(r) for r in cursor.fetchall()]
+
+                # Filter to sessions with actual activity
+                real = [s for s in sessions if (s['active_time_seconds'] or 0) > 0]
+                total_time = sum(s['active_time_seconds'] or 0 for s in real)
+                complete_count = sum(1 for s in real if s['is_complete'])
+
+                conn.close()
+                self.send_json({
+                    'sessions': real,
+                    'total_sessions': len(real),
+                    'complete_sessions': complete_count,
+                    'total_active_time_seconds': total_time,
+                })
+            except Exception as e:
+                self.send_json({'sessions': [], 'error': str(e)})
+
         elif path.startswith('/api/pdf/'):
             pdf_id = path.split('/')[-1]
             # Find PDF in scan results
