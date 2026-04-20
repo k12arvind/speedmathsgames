@@ -404,6 +404,7 @@
         let totalPages = 0;
         let scale = 1.5;
         let annotations = {}; // Store annotations by page
+        let sectionColors = {}; // page number → [{color, startFrac, endFrac}]
         let currentTool = null;
         let isDrawing = false;
         let startX, startY;
@@ -435,8 +436,9 @@
                 pdfDoc = await loadingTask.promise;
                 totalPages = pdfDoc.numPages;
 
-                // Load existing annotations
+                // Load existing annotations + section performance data
                 await loadAnnotations();
+                await loadSectionColors();
 
                 // Render all pages (continuous view)
                 await renderAllPages();
@@ -481,6 +483,57 @@
                 }
             } catch (error) {
                 console.warn('Could not load annotations:', error);
+            }
+        }
+
+        async function loadSectionColors() {
+            // Load section performance and map to page-level color bars
+            try {
+                const resp = await fetch(`/api/gk/section-analysis/${encodeURIComponent(pdfId)}`);
+                const data = await resp.json();
+                const sections = data.sections || [];
+                if (sections.length === 0) return;
+
+                const colorMap = {
+                    4: '#d91c1c',  // Deep Red — must revise
+                    3: '#9c26b0',  // Purple — needs revision
+                    2: '#2178d9',  // Blue — fair
+                    1: '#10b966',  // Green — good
+                    0: '#94a3b8',  // Grey — not tested
+                };
+
+                // Distribute sections across pages proportionally
+                const sectionsPerPage = Math.max(1, sections.length / totalPages);
+                sectionColors = {};
+
+                for (let i = 0; i < sections.length; i++) {
+                    const pageIdx = Math.min(Math.floor(i / sectionsPerPage), totalPages - 1);
+                    const pageNum = pageIdx + 1;
+                    if (!sectionColors[pageNum]) sectionColors[pageNum] = [];
+
+                    // Calculate vertical fraction within the page
+                    const secsOnPage = sectionColors[pageNum];
+                    sectionColors[pageNum].push({
+                        color: colorMap[sections[i].level] || '#94a3b8',
+                        label: sections[i].label,
+                        category: sections[i].category,
+                        accuracy: sections[i].accuracy,
+                    });
+                }
+
+                // Normalize fractions per page
+                for (const pn of Object.keys(sectionColors)) {
+                    const secs = sectionColors[pn];
+                    const frac = 1 / secs.length;
+                    secs.forEach((s, idx) => {
+                        s.startFrac = idx * frac;
+                        s.endFrac = (idx + 1) * frac;
+                    });
+                }
+
+                console.log('Section colors loaded for', Object.keys(sectionColors).length, 'pages');
+            } catch (e) {
+                console.warn('Could not load section colors:', e);
             }
         }
 
@@ -534,6 +587,31 @@
             pageLabel.style.cssText = 'position: absolute; top: 5px; right: 5px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;';
             pageLabel.textContent = `Page ${pageNum} of ${totalPages}`;
             wrapper.appendChild(pageLabel);
+
+            // Draw section color bars on the left margin (from section analysis)
+            const pageSections = sectionColors[pageNum] || [];
+            if (pageSections.length > 0) {
+                const barWidth = 10;
+                const pageHeight = canvas.height;
+
+                for (const sec of pageSections) {
+                    const y1 = sec.startFrac * pageHeight;
+                    const y2 = sec.endFrac * pageHeight;
+
+                    // Colored bar
+                    const bar = document.createElement('div');
+                    bar.style.cssText = `position:absolute; left:0; top:${y1}px; width:${barWidth}px; height:${y2 - y1}px; background:${sec.color}; opacity:0.85; border-radius:0 3px 3px 0; cursor:pointer; z-index:5;`;
+                    bar.title = `${sec.category}\n${sec.accuracy != null ? sec.accuracy + '% accuracy' : 'Not tested'}\n${sec.label}`;
+                    wrapper.appendChild(bar);
+
+                    // Small label next to the bar
+                    const lbl = document.createElement('div');
+                    const midY = (y1 + y2) / 2 - 6;
+                    lbl.style.cssText = `position:absolute; left:${barWidth + 2}px; top:${midY}px; font-size:9px; color:${sec.color}; font-weight:600; white-space:nowrap; z-index:5; pointer-events:none; text-shadow: 0 0 3px rgba(0,0,0,0.5);`;
+                    lbl.textContent = sec.label === 'Not Tested' ? '' : sec.label;
+                    wrapper.appendChild(lbl);
+                }
+            }
 
             container.appendChild(wrapper);
 

@@ -19,12 +19,12 @@ from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 
 
-# Color scheme for the 4-level scale
+# Color scheme for the 4-level scale — visually distinct
 COLORS = {
-    4: (0.94, 0.27, 0.27),   # Red — needs lots of revision
-    3: (0.98, 0.47, 0.09),   # Orange — needs revision
-    2: (0.96, 0.62, 0.04),   # Yellow — fair
-    1: (0.06, 0.73, 0.50),   # Green — good
+    4: (0.85, 0.11, 0.11),   # Deep Red — must revise
+    3: (0.61, 0.15, 0.69),   # Purple — needs revision
+    2: (0.13, 0.47, 0.85),   # Blue — fair
+    1: (0.06, 0.73, 0.40),   # Green — good
     0: (0.58, 0.64, 0.70),   # Grey — not tested
 }
 
