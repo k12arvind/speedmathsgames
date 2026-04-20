@@ -1289,6 +1289,9 @@
                             <button class="btn btn-info" onclick="viewPdf('${escFilename}')" style="background: #3b82f6;">
                                 📄 View PDF
                             </button>
+                            <button class="btn btn-info" onclick="readArticle('${escFilename}')" style="background: #8b5cf6;">
+                                📖 Read
+                            </button>
                         </div>
                     </td>
                 </tr>
@@ -1693,6 +1696,9 @@
                             ${testButton}
                             <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background: #3b82f6;">
                                 📄 View PDF
+                            </button>
+                            <button class="btn btn-info" onclick="readArticle('${pdf.filename}')" style="background: #8b5cf6;">
+                                📖 Read
                             </button>
                             ${revisedButton}
                             <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')">
@@ -2408,6 +2414,11 @@
         function sortTable(column) {
             // Implement sorting logic
             console.log('Sort by:', column);
+        }
+
+        // Open HTML article viewer
+        function readArticle(pdfId) {
+            window.open(`article_viewer.html?pdf=${encodeURIComponent(pdfId)}`, '_blank');
         }
 
         function esc(s) {
