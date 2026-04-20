@@ -2519,11 +2519,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def handle_gk_api_post(self, path: str, data: dict):
         """Handle GK PDF processing API POST requests."""
+        from pathlib import Path as _Path  # local alias to avoid scoping conflicts
 
         # POST /api/revision/settings — save settings
         if path == '/api/revision/settings':
             from server.revision_engine import RevisionEngine
-            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine = RevisionEngine(str(_Path(__file__).parent.parent / 'revision_tracker.db'))
             updates = data.get('settings', {})
             count = engine.update_settings(updates)
             self.send_json({'success': True, 'updated': count})
@@ -2532,7 +2533,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # POST /api/revision/settings/reset — reset to defaults
         if path == '/api/revision/settings/reset':
             from server.revision_engine import RevisionEngine
-            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine = RevisionEngine(str(_Path(__file__).parent.parent / 'revision_tracker.db'))
             engine.reset_all_settings()
             self.send_json({'success': True})
             return
@@ -2540,7 +2541,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # POST /api/revision/mark-revised — mark section as revised
         if path == '/api/revision/mark-revised':
             from server.revision_engine import RevisionEngine
-            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine = RevisionEngine(str(_Path(__file__).parent.parent / 'revision_tracker.db'))
             engine.mark_section_revised(data.get('pdf_filename', ''), data.get('section_index', 0))
             self.send_json({'success': True})
             return
@@ -2548,7 +2549,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # POST /api/revision/create-test — generate a revision test
         if path == '/api/revision/create-test':
             from server.revision_engine import RevisionEngine
-            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine = RevisionEngine(str(_Path(__file__).parent.parent / 'revision_tracker.db'))
             result = engine.get_revision_test_questions()
             if result.get('error'):
                 self.send_json(result)
@@ -2601,12 +2602,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # POST /api/revision/update-from-test — trigger schedule update after a test
         if path == '/api/revision/update-from-test':
             from server.revision_engine import RevisionEngine
-            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine = RevisionEngine(str(_Path(__file__).parent.parent / 'revision_tracker.db'))
             pdf_filename = data.get('pdf_filename', '')
             if not pdf_filename:
                 self.send_json({'error': 'pdf_filename required'})
                 return
-            assessment_db = str(Path(__file__).parent / 'assessment_tracker.db')
+            assessment_db = str(_Path(__file__).parent / 'assessment_tracker.db')
             updated = engine.update_schedule_from_test(pdf_filename, assessment_db)
             self.send_json({'success': True, 'sections_updated': updated})
             return
@@ -2614,7 +2615,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # POST /api/revision/mark-read — record a section was read
         if path == '/api/revision/mark-read':
             from server.revision_engine import RevisionEngine
-            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine = RevisionEngine(str(_Path(__file__).parent.parent / 'revision_tracker.db'))
             engine.mark_section_read(
                 data.get('pdf_filename', ''), data.get('section_index', 0),
                 data.get('section_title', ''), data.get('category', '')
@@ -2624,7 +2625,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
         # POST /api/gk/html-annotation — save a highlight or note
         if path == '/api/gk/html-annotation':
-            db_path = str(Path(__file__).parent.parent / 'revision_tracker.db')
+            db_path = str(_Path(__file__).parent.parent / 'revision_tracker.db')
             try:
                 from server.html_converter import init_html_tables
                 init_html_tables(db_path)
