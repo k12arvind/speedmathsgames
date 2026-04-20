@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Article Viewer</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: var(--bg-primary); min-height: 100vh; padding: 0; color: var(--text-primary); }
+
+        .top-bar {
+            background: var(--bg-card); border-bottom: 1px solid var(--border-color);
+            padding: 12px 20px; display: flex; justify-content: space-between;
+            align-items: center; position: sticky; top: 0; z-index: 50; flex-wrap: wrap; gap: 8px;
+        }
+        .top-bar h1 { font-size: 1rem; color: var(--text-primary); margin: 0; }
+        .top-bar .subtitle { font-size: 0.78rem; color: var(--text-muted); }
+        .toolbar { display: flex; gap: 6px; align-items: center; }
+        .tool-btn {
+            padding: 6px 12px; border: 1px solid var(--border-color); border-radius: 6px;
+            background: var(--bg-input); color: var(--text-primary); font-size: 0.8rem;
+            cursor: pointer;
+        }
+        .tool-btn:hover { border-color: #f59e0b; }
+        .tool-btn.active { border-color: #f59e0b; background: rgba(245,158,11,0.12); color: #f59e0b; }
+        .color-dot {
+            width: 20px; height: 20px; border-radius: 50%; cursor: pointer;
+            border: 2px solid transparent; display: inline-block;
+        }
+        .color-dot.active { border-color: white; }
+
+        .article-container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+        /* Section cards */
+        .section-card {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 12px; margin-bottom: 16px; overflow: hidden;
+            border-left: 6px solid #94a3b8;
+        }
+        .section-card[data-level="1"] { border-left-color: #10b966; }
+        .section-card[data-level="2"] { border-left-color: #2178d9; }
+        .section-card[data-level="3"] { border-left-color: #9c26b0; }
+        .section-card[data-level="4"] { border-left-color: #d91c1c; }
+
+        .section-header {
+            padding: 10px 16px; background: var(--bg-input);
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.78rem; color: var(--text-muted); flex-wrap: wrap; gap: 6px;
+        }
+        .section-badge {
+            padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600;
+        }
+        .section-badge[data-level="0"] { background: rgba(148,163,184,0.15); color: #94a3b8; }
+        .section-badge[data-level="1"] { background: rgba(16,185,102,0.15); color: #10b966; }
+        .section-badge[data-level="2"] { background: rgba(33,120,217,0.15); color: #2178d9; }
+        .section-badge[data-level="3"] { background: rgba(156,38,176,0.15); color: #9c26b0; }
+        .section-badge[data-level="4"] { background: rgba(217,28,28,0.15); color: #d91c1c; }
+
+        .section-content {
+            padding: 16px 20px; font-size: 0.95rem; line-height: 1.7;
+            color: var(--text-primary);
+        }
+        .section-content h2 {
+            font-size: 1.15rem; font-weight: 700; color: #c0392b;
+            margin: 0 0 12px 0; line-height: 1.4;
+        }
+        .section-content h3 {
+            font-size: 0.95rem; font-weight: 700; color: var(--text-primary);
+            margin: 14px 0 8px 0;
+        }
+        .section-content p { margin: 6px 0; }
+        .section-content p.lead { color: var(--text-secondary); font-style: italic; }
+        .section-content ul {
+            margin: 8px 0; padding-left: 20px;
+        }
+        .section-content li {
+            margin: 4px 0; line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        .section-content strong { color: var(--text-primary); }
+
+        .section-actions {
+            padding: 8px 16px; border-top: 1px solid var(--border-color);
+            display: flex; gap: 8px; flex-wrap: wrap;
+        }
+        .action-btn {
+            padding: 5px 12px; border: 1px solid var(--border-color);
+            border-radius: 6px; background: var(--bg-input); color: var(--text-primary);
+            font-size: 0.78rem; cursor: pointer;
+        }
+        .action-btn:hover { border-color: #f59e0b; }
+        .action-btn.revised { background: rgba(16,185,102,0.1); color: #10b966; border-color: #10b966; }
+
+        /* Highlights */
+        mark.user-highlight {
+            border-radius: 2px; padding: 0 2px; cursor: pointer;
+        }
+        mark.user-highlight.yellow { background: rgba(255,255,0,0.35); }
+        mark.user-highlight.green { background: rgba(0,255,100,0.25); }
+        mark.user-highlight.pink { background: rgba(255,100,150,0.3); }
+
+        /* Inline notes */
+        .inline-note {
+            background: rgba(59,130,246,0.08); border-left: 3px solid #3b82f6;
+            padding: 6px 10px; margin: 6px 0; border-radius: 0 6px 6px 0;
+            font-size: 0.85rem; color: #93c5fd; position: relative;
+        }
+        .inline-note .note-meta {
+            font-size: 0.72rem; color: var(--text-muted); margin-bottom: 2px;
+        }
+        .inline-note .delete-note {
+            position: absolute; top: 4px; right: 8px; cursor: pointer;
+            color: var(--text-muted); font-size: 0.8rem;
+        }
+        .inline-note .delete-note:hover { color: #ef4444; }
+
+        /* Highlight toolbar popup */
+        .highlight-toolbar {
+            position: fixed; display: none; background: var(--bg-card);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            padding: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 100;
+            gap: 4px;
+        }
+        .highlight-toolbar.show { display: flex; }
+        .ht-btn {
+            width: 28px; height: 28px; border-radius: 50%; border: none;
+            cursor: pointer;
+        }
+        .ht-btn.yellow { background: rgba(255,255,0,0.5); }
+        .ht-btn.green { background: rgba(0,255,100,0.4); }
+        .ht-btn.pink { background: rgba(255,100,150,0.45); }
+        .ht-btn.note { background: var(--bg-input); border: 1px solid var(--border-color);
+            font-size: 0.75rem; width: auto; padding: 0 10px; border-radius: 6px;
+            color: var(--text-primary); }
+
+        .loading { padding: 60px; text-align: center; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div>
+            <h1 id="article-title">Loading...</h1>
+            <div class="subtitle" id="article-subtitle"></div>
+        </div>
+        <div class="toolbar">
+            <a href="comprehensive_dashboard.html" class="tool-btn">Dashboard</a>
+            <a href="index.html" class="tool-btn">Home</a>
+        </div>
+    </div>
+
+    <div class="highlight-toolbar" id="highlight-toolbar">
+        <button class="ht-btn yellow" onclick="applyHighlight('yellow')" title="Yellow highlight"></button>
+        <button class="ht-btn green" onclick="applyHighlight('green')" title="Green highlight"></button>
+        <button class="ht-btn pink" onclick="applyHighlight('pink')" title="Pink highlight"></button>
+        <button class="ht-btn note" onclick="addNoteFromSelection()" title="Add note">+ Note</button>
+    </div>
+
+    <div class="article-container" id="article-container">
+        <div class="loading">Loading article...</div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        const params = new URLSearchParams(window.location.search);
+        const pdfId = params.get('pdf') || '';
+        let sections = [];
+        let sectionPerf = [];
+        let savedAnnotations = [];
+        let currentSelection = null;
+
+        async function init() {
+            if (!pdfId) {
+                document.getElementById('article-container').innerHTML =
+                    '<div class="loading" style="color:#ef4444;">Missing ?pdf= parameter</div>';
+                return;
+            }
+
+            document.getElementById('article-title').textContent = pdfId.replace('.pdf', '').replace(/_/g, ' ');
+
+            // Load article HTML + section performance in parallel
+            const [artResp, perfResp] = await Promise.all([
+                fetch(`${API_BASE}/api/gk/html-article/${encodeURIComponent(pdfId)}`),
+                fetch(`${API_BASE}/api/gk/section-analysis/${encodeURIComponent(pdfId)}`).catch(() => ({ json: () => ({ sections: [] }) })),
+            ]);
+
+            const artData = await artResp.json();
+            const perfData = await perfResp.json();
+
+            sections = artData.sections || [];
+            sectionPerf = perfData.sections || [];
+            savedAnnotations = artData.annotations || [];
+
+            if (sections.length === 0) {
+                document.getElementById('article-container').innerHTML =
+                    '<div class="loading">No HTML content found for this PDF. It may not have been converted yet.</div>';
+                return;
+            }
+
+            document.getElementById('article-subtitle').textContent =
+                `${sections.length} sections · ${sectionPerf.length ? sectionPerf.length + ' tested' : 'Not tested yet'}`;
+
+            renderArticle();
+            setupSelectionHandler();
+        }
+
+        function renderArticle() {
+            const container = document.getElementById('article-container');
+
+            container.innerHTML = sections.map((sec, idx) => {
+                const perf = sectionPerf[idx] || {};
+                const level = perf.level != null ? perf.level : 0;
+                const label = perf.label || 'Not Tested';
+                const acc = perf.accuracy != null ? perf.accuracy + '%' : '—';
+
+                // Apply saved highlights to HTML content
+                let html = sec.html_content;
+                const secAnnotations = savedAnnotations.filter(a => a.section_index === idx);
+                // We'll apply highlights via DOM after rendering
+
+                return `
+                    <div class="section-card" data-level="${level}" data-section="${idx}" id="section-${idx}">
+                        <div class="section-header">
+                            <span>${sec.category} · Page ${sec.page_number}</span>
+                            <span class="section-badge" data-level="${level}">${label} ${acc !== '—' ? '· ' + acc : ''}</span>
+                        </div>
+                        <div class="section-content" id="content-${idx}">
+                            ${html}
+                        </div>
+                        <div class="section-actions">
+                            <button class="action-btn" onclick="markRevised(${idx})">✅ Mark as Revised</button>
+                            <button class="action-btn" onclick="testSection(${idx})">📝 Test This Section</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Apply saved annotations
+            applySavedAnnotations();
+        }
+
+        function applySavedAnnotations() {
+            for (const ann of savedAnnotations) {
+                if (ann.annotation_type === 'highlight' && ann.highlighted_text) {
+                    const content = document.getElementById(`content-${ann.section_index}`);
+                    if (!content) continue;
+                    highlightTextInElement(content, ann.highlighted_text, ann.color || 'yellow', ann.annotation_id);
+                }
+                if (ann.annotation_type === 'note' && ann.note_text) {
+                    const content = document.getElementById(`content-${ann.section_index}`);
+                    if (!content) continue;
+                    const noteDiv = document.createElement('div');
+                    noteDiv.className = 'inline-note';
+                    noteDiv.innerHTML = `
+                        <div class="note-meta">Note · ${new Date(ann.created_at).toLocaleDateString()}</div>
+                        ${escHtml(ann.note_text)}
+                        <span class="delete-note" onclick="deleteAnnotation(${ann.annotation_id}, this)">&times;</span>
+                    `;
+                    // Insert after the content
+                    content.appendChild(noteDiv);
+                }
+            }
+        }
+
+        function highlightTextInElement(element, text, color, annId) {
+            const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                const idx = node.textContent.indexOf(text);
+                if (idx === -1) continue;
+
+                const range = document.createRange();
+                range.setStart(node, idx);
+                range.setEnd(node, idx + text.length);
+
+                const mark = document.createElement('mark');
+                mark.className = `user-highlight ${color}`;
+                mark.dataset.annotationId = annId;
+                mark.onclick = () => {
+                    if (confirm('Remove this highlight?')) {
+                        deleteAnnotation(annId, mark);
+                    }
+                };
+                range.surroundContents(mark);
+                break;
+            }
+        }
+
+        // Selection handling — show toolbar when user selects text
+        function setupSelectionHandler() {
+            document.addEventListener('mouseup', (e) => {
+                const sel = window.getSelection();
+                if (!sel || sel.isCollapsed || !sel.toString().trim()) {
+                    document.getElementById('highlight-toolbar').classList.remove('show');
+                    currentSelection = null;
+                    return;
+                }
+
+                // Check selection is within a section-content
+                const anchor = sel.anchorNode?.parentElement?.closest('.section-content');
+                if (!anchor) return;
+
+                currentSelection = {
+                    text: sel.toString().trim(),
+                    sectionIndex: parseInt(anchor.id.replace('content-', '')),
+                    range: sel.getRangeAt(0).cloneRange(),
+                };
+
+                // Position toolbar near the selection
+                const rect = sel.getRangeAt(0).getBoundingClientRect();
+                const toolbar = document.getElementById('highlight-toolbar');
+                toolbar.style.top = (rect.top - 40 + window.scrollY) + 'px';
+                toolbar.style.left = (rect.left + rect.width / 2 - 60) + 'px';
+                toolbar.classList.add('show');
+            });
+        }
+
+        async function applyHighlight(color) {
+            if (!currentSelection) return;
+            const toolbar = document.getElementById('highlight-toolbar');
+            toolbar.classList.remove('show');
+
+            // Save to server
+            try {
+                const resp = await fetch(`${API_BASE}/api/gk/html-annotation`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        pdf_filename: pdfId,
+                        section_index: currentSelection.sectionIndex,
+                        annotation_type: 'highlight',
+                        highlighted_text: currentSelection.text,
+                        color: color,
+                    }),
+                });
+                const data = await resp.json();
+
+                if (data.success) {
+                    // Apply highlight visually
+                    const mark = document.createElement('mark');
+                    mark.className = `user-highlight ${color}`;
+                    mark.dataset.annotationId = data.annotation_id;
+                    mark.onclick = () => {
+                        if (confirm('Remove this highlight?')) deleteAnnotation(data.annotation_id, mark);
+                    };
+                    currentSelection.range.surroundContents(mark);
+                }
+            } catch (e) {
+                console.error('Failed to save highlight:', e);
+            }
+
+            window.getSelection().removeAllRanges();
+            currentSelection = null;
+        }
+
+        async function addNoteFromSelection() {
+            if (!currentSelection) return;
+            const toolbar = document.getElementById('highlight-toolbar');
+            toolbar.classList.remove('show');
+
+            const noteText = prompt('Add a note for:\n"' + currentSelection.text.slice(0, 80) + '..."');
+            if (!noteText) return;
+
+            try {
+                const resp = await fetch(`${API_BASE}/api/gk/html-annotation`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        pdf_filename: pdfId,
+                        section_index: currentSelection.sectionIndex,
+                        annotation_type: 'note',
+                        highlighted_text: currentSelection.text,
+                        note_text: noteText,
+                    }),
+                });
+                const data = await resp.json();
+
+                if (data.success) {
+                    const content = document.getElementById(`content-${currentSelection.sectionIndex}`);
+                    const noteDiv = document.createElement('div');
+                    noteDiv.className = 'inline-note';
+                    noteDiv.innerHTML = `
+                        <div class="note-meta">Note · Just now</div>
+                        ${escHtml(noteText)}
+                        <span class="delete-note" onclick="deleteAnnotation(${data.annotation_id}, this)">&times;</span>
+                    `;
+                    // Insert near the selection
+                    const range = currentSelection.range;
+                    const parent = range.endContainer.parentElement;
+                    if (parent && parent.closest('.section-content')) {
+                        parent.closest('p, li, h3, ul')?.after(noteDiv) || content.appendChild(noteDiv);
+                    }
+                }
+            } catch (e) {
+                console.error('Failed to save note:', e);
+            }
+
+            window.getSelection().removeAllRanges();
+            currentSelection = null;
+        }
+
+        async function deleteAnnotation(annId, element) {
+            try {
+                await fetch(`${API_BASE}/api/gk/html-annotation/${annId}`, { method: 'DELETE' });
+                if (element.tagName === 'MARK') {
+                    const text = element.textContent;
+                    element.replaceWith(document.createTextNode(text));
+                } else {
+                    element.closest('.inline-note')?.remove();
+                }
+            } catch (e) {
+                console.error('Delete failed:', e);
+            }
+        }
+
+        function markRevised(sectionIdx) {
+            const btn = event.target;
+            btn.classList.add('revised');
+            btn.textContent = '✅ Revised!';
+            btn.disabled = true;
+            // TODO: call revision_schedule API when built
+        }
+
+        function testSection(sectionIdx) {
+            // TODO: implement inline section test
+            alert('Section testing will be available in the next update.');
+        }
+
+        function escHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

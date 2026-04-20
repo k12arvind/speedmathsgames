@@ -585,8 +585,27 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         try:
             path = self.path.split('?')[0]
 
+            # DELETE /api/gk/html-annotation/{id}
+            if path.startswith('/api/gk/html-annotation/'):
+                try:
+                    ann_id = int(path.split('/')[-1])
+                    db_path = str(Path(__file__).parent.parent / 'revision_tracker.db')
+                    conn = sqlite3.connect(db_path)
+                    conn.execute("UPDATE html_annotations SET is_active = 0 WHERE annotation_id = ?", (ann_id,))
+                    conn.commit()
+                    conn.close()
+                    self.send_response(200)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'success': True})
+                except Exception as e:
+                    self.send_response(500)
+                    self.send_header('Content-Type', 'application/json')
+                    self.end_headers()
+                    self.send_json({'error': str(e)})
+
             # DELETE /api/annotations/{annotation_id}
-            if path.startswith('/api/annotations/'):
+            elif path.startswith('/api/annotations/'):
                 parts = path.split('/')
                 if len(parts) == 4:
                     annotation_id = parts[3]
@@ -1622,6 +1641,42 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             pdf_id = unquote(path.split('/')[-1])
             self.handle_assessment_status_get(pdf_id)
 
+        # GET /api/gk/html-article/{pdf_id} — get HTML article content + annotations
+        elif path.startswith('/api/gk/html-article/'):
+            from urllib.parse import unquote as _unq_ha
+            pdf_id = _unq_ha(path.split('/api/gk/html-article/')[1])
+            db_path = str(Path(__file__).parent.parent / 'revision_tracker.db')
+            try:
+                conn = sqlite3.connect(db_path)
+                conn.row_factory = sqlite3.Row
+                c = conn.cursor()
+
+                # Ensure tables exist
+                from server.html_converter import init_html_tables
+                init_html_tables(db_path)
+
+                c.execute("""
+                    SELECT * FROM html_articles WHERE pdf_filename = ?
+                    ORDER BY section_index
+                """, (pdf_id,))
+                sections = [dict(r) for r in c.fetchall()]
+
+                c.execute("""
+                    SELECT * FROM html_annotations
+                    WHERE pdf_filename = ? AND is_active = 1
+                    ORDER BY section_index, annotation_id
+                """, (pdf_id,))
+                annotations = [dict(r) for r in c.fetchall()]
+
+                conn.close()
+                self.send_json({
+                    'sections': sections,
+                    'annotations': annotations,
+                    'pdf_id': pdf_id,
+                })
+            except Exception as e:
+                self.send_json({'sections': [], 'annotations': [], 'error': str(e)})
+
         # GET /api/gk/section-analysis/{pdf_id} — per-section performance for a PDF
         elif path.startswith('/api/gk/section-analysis/'):
             from urllib.parse import unquote as _unq2
@@ -2425,6 +2480,50 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def handle_gk_api_post(self, path: str, data: dict):
         """Handle GK PDF processing API POST requests."""
+
+        # POST /api/gk/html-annotation — save a highlight or note
+        if path == '/api/gk/html-annotation':
+            db_path = str(Path(__file__).parent.parent / 'revision_tracker.db')
+            try:
+                from server.html_converter import init_html_tables
+                init_html_tables(db_path)
+                conn = sqlite3.connect(db_path)
+                c = conn.cursor()
+
+                # Find article_id
+                c.execute(
+                    "SELECT article_id FROM html_articles WHERE pdf_filename = ? AND section_index = ?",
+                    (data.get('pdf_filename'), data.get('section_index'))
+                )
+                row = c.fetchone()
+                article_id = row[0] if row else 0
+
+                c.execute("""
+                    INSERT INTO html_annotations
+                    (article_id, pdf_filename, section_index, annotation_type,
+                     highlighted_text, note_text, color)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    article_id,
+                    data.get('pdf_filename'),
+                    data.get('section_index'),
+                    data.get('annotation_type', 'highlight'),
+                    data.get('highlighted_text'),
+                    data.get('note_text'),
+                    data.get('color', '#FFFF00'),
+                ))
+                ann_id = c.lastrowid
+                conn.commit()
+                conn.close()
+                self.send_json({'success': True, 'annotation_id': ann_id})
+            except Exception as e:
+                self.send_json({'error': str(e)})
+            return
+
+        # DELETE /api/gk/html-annotation/{id}
+        if path.startswith('/api/gk/html-annotation/') and self.command == 'DELETE':
+            return  # Handled in do_DELETE
+
         if path == '/api/gk/process-pdf':
             import threading
             import subprocess
