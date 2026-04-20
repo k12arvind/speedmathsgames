@@ -1622,6 +1622,53 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             pdf_id = unquote(path.split('/')[-1])
             self.handle_assessment_status_get(pdf_id)
 
+        # GET /api/gk/section-analysis/{pdf_id} — per-section performance for a PDF
+        elif path.startswith('/api/gk/section-analysis/'):
+            from urllib.parse import unquote as _unq2
+            from server.section_analyzer import get_section_performance
+            pdf_id = _unq2(path.split('/api/gk/section-analysis/')[1])
+            questions_db = str(Path(__file__).parent.parent / 'revision_tracker.db')
+            assessment_db = str(Path(__file__).parent / 'assessment_tracker.db')
+            try:
+                sections = get_section_performance(pdf_id, questions_db, assessment_db)
+                self.send_json({'sections': sections, 'pdf_id': pdf_id})
+            except Exception as e:
+                self.send_json({'error': str(e), 'sections': []})
+
+        # POST-like GET: /api/gk/scored-pdf/{pdf_id} — generate color-coded PDF
+        elif path.startswith('/api/gk/scored-pdf/'):
+            from urllib.parse import unquote as _unq3
+            from server.section_analyzer import get_section_performance, generate_scored_pdf
+            pdf_id = _unq3(path.split('/api/gk/scored-pdf/')[1])
+            questions_db = str(Path(__file__).parent.parent / 'revision_tracker.db')
+            assessment_db = str(Path(__file__).parent / 'assessment_tracker.db')
+            try:
+                sections = get_section_performance(pdf_id, questions_db, assessment_db)
+                # Find the actual PDF file
+                from server.pdf_scanner import relative_to_absolute
+                rev_conn = sqlite3.connect(questions_db)
+                rev_conn.row_factory = sqlite3.Row
+                rc = rev_conn.cursor()
+                rc.execute("SELECT filepath FROM pdfs WHERE filename = ?", (pdf_id,))
+                row = rc.fetchone()
+                rev_conn.close()
+                if not row:
+                    self.send_json({'error': 'PDF not found in database'})
+                    return
+                pdf_path = relative_to_absolute(row['filepath'])
+                if not Path(pdf_path).exists():
+                    self.send_json({'error': f'PDF file not found: {pdf_path}'})
+                    return
+                output = generate_scored_pdf(pdf_path, sections)
+                self.send_json({
+                    'success': True,
+                    'scored_pdf': output,
+                    'sections': sections,
+                    'pdf_id': pdf_id,
+                })
+            except Exception as e:
+                self.send_json({'error': str(e), 'trace': traceback.format_exc()})
+
         # GET /api/gk/daily-summary?days=14&offset=0 — aggregate reading + test activity by day
         elif path == '/api/gk/daily-summary':
             self._handle_daily_gk_summary(query_params)

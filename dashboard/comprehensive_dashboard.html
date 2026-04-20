@@ -2073,18 +2073,21 @@
         // View details - now accepts both pdfId and filename
         async function viewDetails(pdfId, filename) {
             try {
-                // Fetch PDF metadata, assessment status, test history, and view history in parallel
-                const [pdfResponse, assessmentResponse, testHistoryResponse, viewHistoryResponse] = await Promise.all([
+                // Fetch PDF metadata, assessment status, test history, view history, and section analysis in parallel
+                const fn = filename || pdfId;
+                const [pdfResponse, assessmentResponse, testHistoryResponse, viewHistoryResponse, sectionResponse] = await Promise.all([
                     fetch(`${API_BASE}/api/pdf/${encodeURIComponent(pdfId)}`),
-                    fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(filename || pdfId)}`),
-                    fetch(`${API_BASE}/api/assessment/performance/pdf/${encodeURIComponent(filename || pdfId)}`),
-                    fetch(`${API_BASE}/api/pdf/view-history/${encodeURIComponent(filename || pdfId)}`),
+                    fetch(`${API_BASE}/api/assessment-status/${encodeURIComponent(fn)}`),
+                    fetch(`${API_BASE}/api/assessment/performance/pdf/${encodeURIComponent(fn)}`),
+                    fetch(`${API_BASE}/api/pdf/view-history/${encodeURIComponent(fn)}`),
+                    fetch(`${API_BASE}/api/gk/section-analysis/${encodeURIComponent(fn)}`),
                 ]);
 
                 const pdfData = await pdfResponse.json();
                 const assessmentStatus = await assessmentResponse.json();
                 const testHistory = await testHistoryResponse.json();
                 const viewHistory = await viewHistoryResponse.json();
+                const sectionAnalysis = await sectionResponse.json();
 
                 // Fetch annotation details (optional)
                 let details = { summary: {}, revision_history: [], access_log: [] };
@@ -2236,6 +2239,48 @@
                         </table>
                         ` : ''}
 
+                        ${(() => {
+                            const secs = sectionAnalysis.sections || [];
+                            if (secs.length === 0) return '';
+                            const levelColors = {'Must Revise':'#ef4444','Needs Revision':'#f97316','Fair':'#f59e0b','Good':'#10b981','Not Tested':'#94a3b8'};
+                            return `
+                                <div style="font-size:0.8rem; font-weight:600; color:var(--text-primary); margin-bottom:6px;">Section Analysis</div>
+                                <table style="width:100%; border-collapse:collapse; font-size:0.78rem; margin-bottom:12px;">
+                                    <thead>
+                                        <tr style="border-bottom:1px solid var(--border-color,#333); color:#94a3b8;">
+                                            <th style="padding:4px 6px; text-align:left; width:8px;"></th>
+                                            <th style="padding:4px 6px; text-align:left;">Topic</th>
+                                            <th style="padding:4px 6px; text-align:center;">Qs</th>
+                                            <th style="padding:4px 6px; text-align:center;">✓</th>
+                                            <th style="padding:4px 6px; text-align:center;">✗</th>
+                                            <th style="padding:4px 6px; text-align:right;">Acc</th>
+                                            <th style="padding:4px 6px; text-align:right;">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${secs.map(s => {
+                                            const color = levelColors[s.label] || '#94a3b8';
+                                            return '<tr style="border-bottom:1px solid rgba(255,255,255,0.05);">' +
+                                                '<td style="padding:4px 2px;"><div style="width:6px;height:18px;border-radius:2px;background:'+color+';"></div></td>' +
+                                                '<td style="padding:4px 6px;color:var(--text-primary);" title="'+esc(s.first_question || '')+'">'+esc(s.category)+'</td>' +
+                                                '<td style="padding:4px 6px;text-align:center;color:var(--text-muted);">'+s.question_count+'</td>' +
+                                                '<td style="padding:4px 6px;text-align:center;color:#10b981;">'+(s.correct||0)+'</td>' +
+                                                '<td style="padding:4px 6px;text-align:center;color:#ef4444;">'+(s.wrong||0)+'</td>' +
+                                                '<td style="padding:4px 6px;text-align:right;color:'+color+';font-weight:600;">'+(s.accuracy != null ? s.accuracy+'%' : '—')+'</td>' +
+                                                '<td style="padding:4px 6px;text-align:right;color:'+color+';font-size:0.72rem;">'+s.label+'</td>' +
+                                            '</tr>';
+                                        }).join('')}
+                                    </tbody>
+                                </table>
+                                <div style="margin-bottom:12px;">
+                                    <button onclick="generateScoredPdf('${esc(fn)}')" style="padding:6px 14px;border:1px solid var(--border-color);border-radius:6px;background:rgba(139,92,246,0.1);color:#a78bfa;font-size:0.8rem;cursor:pointer;">
+                                        Generate Color-Coded PDF for Revision
+                                    </button>
+                                    <span id="scored-pdf-status" style="font-size:0.78rem;margin-left:8px;color:#94a3b8;"></span>
+                                </div>
+                            `;
+                        })()}
+
                         ${weakQs.length > 0 ? `
                         <div style="font-size:0.8rem; font-weight:600; color:#ef4444; margin-bottom:6px;">Frequently Wrong</div>
                         ${weakQs.slice(0, 5).map(q => `
@@ -2369,6 +2414,38 @@
         function sortTable(column) {
             // Implement sorting logic
             console.log('Sort by:', column);
+        }
+
+        // Generate color-coded revision PDF
+        async function generateScoredPdf(pdfId) {
+            const status = document.getElementById('scored-pdf-status');
+            if (status) status.textContent = 'Generating...';
+            try {
+                const resp = await fetch(`${API_BASE}/api/gk/scored-pdf/${encodeURIComponent(pdfId)}`);
+                const data = await resp.json();
+                if (data.success) {
+                    if (status) {
+                        status.style.color = '#10b981';
+                        status.textContent = 'Generated! File saved as ' + (data.scored_pdf || '').split('/').pop();
+                    }
+                } else {
+                    if (status) {
+                        status.style.color = '#ef4444';
+                        status.textContent = 'Error: ' + (data.error || 'Unknown');
+                    }
+                }
+            } catch (e) {
+                if (status) {
+                    status.style.color = '#ef4444';
+                    status.textContent = 'Error: ' + e.message;
+                }
+            }
+        }
+
+        function esc(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
         }
 
         // Show error
