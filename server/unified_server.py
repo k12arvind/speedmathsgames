@@ -470,7 +470,8 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                  path.startswith('/api/filter/') or path.startswith('/api/stats') or \
                  path.startswith('/api/pdf/') or path.startswith('/api/chunks/') or \
                  path.startswith('/api/large-files') or path.startswith('/api/assessment-status/') or \
-                 path.startswith('/api/assessment-progress/') or path == '/api/debug':
+                 path.startswith('/api/assessment-progress/') or path == '/api/debug' or \
+                 path.startswith('/api/gk/'):
                 self.handle_gk_dashboard_get(path, query_params)
             # Analytics API endpoints
             elif path.startswith('/api/analytics/'):
@@ -1621,8 +1622,158 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             pdf_id = unquote(path.split('/')[-1])
             self.handle_assessment_status_get(pdf_id)
 
+        # GET /api/gk/daily-summary?days=14&offset=0 — aggregate reading + test activity by day
+        elif path == '/api/gk/daily-summary':
+            self._handle_daily_gk_summary(query_params)
+
         else:
             self.send_json({'error': 'GK dashboard endpoint not found'})
+
+    def _handle_daily_gk_summary(self, query_params):
+        """Return per-day reading + test aggregates for the Daily GK Summary page."""
+        from datetime import datetime as _dt, timedelta as _td
+
+        days = int(query_params.get('days', [14])[0])
+        offset = int(query_params.get('offset', [0])[0])  # skip N most-recent days
+        days = min(days, 365)
+
+        today = _dt.now().date()
+        start_date = today - _td(days=days + offset - 1)
+        end_date = today - _td(days=offset)
+
+        try:
+            # --- View sessions ---
+            rev_db = Path(__file__).parent.parent / 'revision_tracker.db'
+            conn = sqlite3.connect(str(rev_db))
+            conn.row_factory = sqlite3.Row
+            c = conn.cursor()
+            c.execute("""
+                SELECT DATE(started_at) as day, pdf_id,
+                       SUM(active_time_seconds) as time,
+                       MAX(is_complete) as complete
+                FROM pdf_view_sessions
+                WHERE DATE(started_at) >= ? AND DATE(started_at) <= ?
+                  AND active_time_seconds > 0
+                GROUP BY day, pdf_id
+                ORDER BY day DESC, pdf_id
+            """, (start_date.isoformat(), end_date.isoformat()))
+            view_rows = [dict(r) for r in c.fetchall()]
+            conn.close()
+
+            # --- Test sessions ---
+            assess_db = Path(__file__).parent / 'assessment_tracker.db'
+            conn2 = sqlite3.connect(str(assess_db))
+            conn2.row_factory = sqlite3.Row
+            c2 = conn2.cursor()
+            c2.execute("""
+                SELECT DATE(started_at) as day, pdf_id,
+                       SUM(correct_answers) as correct,
+                       SUM(wrong_answers) as wrong,
+                       COUNT(*) as tests
+                FROM test_sessions
+                WHERE DATE(started_at) >= ? AND DATE(started_at) <= ?
+                  AND (correct_answers > 0 OR wrong_answers > 0)
+                GROUP BY day, pdf_id
+                ORDER BY day DESC, pdf_id
+            """, (start_date.isoformat(), end_date.isoformat()))
+            test_rows = [dict(r) for r in c2.fetchall()]
+
+            # Get per-test time from question_attempts (first→last)
+            test_times = {}  # (day, pdf_id) → seconds
+            c2.execute("""
+                SELECT DATE(ts.started_at) as day, ts.pdf_id, ts.session_id,
+                       MIN(qa.answered_at) as first_at, MAX(qa.answered_at) as last_at
+                FROM test_sessions ts
+                JOIN question_attempts qa ON qa.session_id = ts.session_id
+                WHERE DATE(ts.started_at) >= ? AND DATE(ts.started_at) <= ?
+                GROUP BY ts.session_id
+            """, (start_date.isoformat(), end_date.isoformat()))
+            for r in c2.fetchall():
+                key = (r['day'], r['pdf_id'])
+                try:
+                    t0 = _dt.fromisoformat(r['first_at'])
+                    t1 = _dt.fromisoformat(r['last_at'])
+                    secs = max(0, int((t1 - t0).total_seconds()))
+                except Exception:
+                    secs = 0
+                test_times[key] = test_times.get(key, 0) + secs
+            conn2.close()
+
+            # --- Build per-day structure ---
+            day_map = {}
+            for d in range(days):
+                date = (end_date - _td(days=d)).isoformat()
+                day_map[date] = {
+                    'date': date,
+                    'pdfs_read': 0, 'read_seconds': 0,
+                    'tests_taken': 0, 'test_seconds': 0,
+                    'correct': 0, 'wrong': 0,
+                    'pdfs_detail': [], 'tests_detail': [],
+                }
+
+            for v in view_rows:
+                day = v['day']
+                if day not in day_map:
+                    continue
+                dm = day_map[day]
+                dm['pdfs_read'] += 1
+                dm['read_seconds'] += v['time'] or 0
+                dm['pdfs_detail'].append({
+                    'pdf_id': v['pdf_id'],
+                    'time': v['time'] or 0,
+                    'complete': bool(v['complete']),
+                })
+
+            for t in test_rows:
+                day = t['day']
+                if day not in day_map:
+                    continue
+                dm = day_map[day]
+                dm['tests_taken'] += t['tests'] or 0
+                dm['correct'] += t['correct'] or 0
+                dm['wrong'] += t['wrong'] or 0
+                tt = test_times.get((day, t['pdf_id']), 0)
+                dm['test_seconds'] += tt
+                dm['tests_detail'].append({
+                    'pdf_id': t['pdf_id'],
+                    'correct': t['correct'] or 0,
+                    'wrong': t['wrong'] or 0,
+                    'tests': t['tests'] or 0,
+                    'score': round(((t['correct'] or 0) / max(1, (t['correct'] or 0) + (t['wrong'] or 0))) * 100, 1),
+                    'time': tt,
+                })
+
+            result_days = sorted(day_map.values(), key=lambda d: d['date'], reverse=True)
+
+            # Summary
+            total_pdfs = sum(d['pdfs_read'] for d in result_days)
+            total_read = sum(d['read_seconds'] for d in result_days)
+            total_tests = sum(d['tests_taken'] for d in result_days)
+            total_correct = sum(d['correct'] for d in result_days)
+            total_wrong = sum(d['wrong'] for d in result_days)
+
+            # Current streak (consecutive days with activity from today backwards)
+            streak = 0
+            for d in result_days:
+                if d['pdfs_read'] > 0 or d['tests_taken'] > 0:
+                    streak += 1
+                else:
+                    break
+
+            self.send_json({
+                'days': result_days,
+                'summary': {
+                    'current_streak': streak,
+                    'total_pdfs_read': total_pdfs,
+                    'total_read_seconds': total_read,
+                    'total_tests': total_tests,
+                    'total_correct': total_correct,
+                    'total_wrong': total_wrong,
+                },
+            })
+
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()})
 
     def handle_gk_dashboard_post(self, path: str, data: dict):
         """Handle GK dashboard API POST requests."""

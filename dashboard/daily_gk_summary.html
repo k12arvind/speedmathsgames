@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Daily GK Summary</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: var(--bg-primary); min-height: 100vh; padding: 20px; color: var(--text-primary); }
+        .container { max-width: 960px; margin: 0 auto; }
+        .header {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 16px 20px; border-radius: 12px; margin-bottom: 16px;
+            display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+        }
+        .header h1 {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 8px 14px; background: var(--bg-input); color: var(--text-secondary);
+            border: 1px solid var(--border-color); border-radius: 8px;
+            font-size: 13px; font-weight: 600; text-decoration: none;
+        }
+        .nav-link:hover { color: #f59e0b; border-color: #f59e0b; }
+
+        /* Overview cards */
+        .overview {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px; margin-bottom: 16px;
+        }
+        .ov-card {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; padding: 14px 12px; text-align: center;
+        }
+        .ov-val { font-size: 1.4rem; font-weight: 700; }
+        .ov-lbl { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+
+        /* Period selector */
+        .period-bar {
+            display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; align-items: center;
+        }
+        .period-btn {
+            padding: 7px 14px; border: 1px solid var(--border-color); border-radius: 6px;
+            background: var(--bg-input); color: var(--text-primary); font-size: 0.82rem;
+            cursor: pointer;
+        }
+        .period-btn.active { border-color: #f59e0b; background: rgba(245,158,11,0.12); color: #f59e0b; font-weight: 600; }
+
+        /* Day rows */
+        .day-card {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; margin-bottom: 8px; overflow: hidden;
+        }
+        .day-card.inactive { opacity: 0.4; }
+        .day-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 14px; cursor: pointer; user-select: none;
+        }
+        .day-header:hover { background: var(--bg-card-hover, rgba(255,255,255,0.02)); }
+        .day-date { font-weight: 600; font-size: 0.9rem; }
+        .day-date small { font-weight: 400; color: var(--text-muted); margin-left: 6px; }
+        .day-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+        .chip {
+            padding: 3px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+        }
+        .chip.read { background: rgba(14,165,233,0.12); color: #0ea5e9; }
+        .chip.test { background: rgba(16,185,129,0.12); color: #10b981; }
+        .chip.score { background: rgba(245,158,11,0.12); color: #f59e0b; }
+        .chip.none { background: rgba(148,163,184,0.1); color: #94a3b8; }
+
+        .day-details {
+            display: none; padding: 0 14px 12px; border-top: 1px solid var(--border-color);
+            font-size: 0.82rem;
+        }
+        .day-card.open .day-details { display: block; padding-top: 10px; }
+        .day-card.open .day-caret { transform: rotate(90deg); }
+        .day-caret { color: var(--text-muted); transition: transform 0.15s; font-size: 0.9rem; }
+
+        .detail-section { margin-bottom: 10px; }
+        .detail-title { font-weight: 600; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+        .detail-row {
+            display: flex; justify-content: space-between; padding: 4px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+        .detail-row:last-child { border-bottom: none; }
+
+        .streak-bar {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 10px; padding: 12px 16px; margin-bottom: 14px;
+            display: flex; gap: 3px; flex-wrap: wrap; align-items: center;
+        }
+        .streak-dot {
+            width: 18px; height: 18px; border-radius: 3px; display: inline-block;
+        }
+        .streak-dot.active { background: #10b981; }
+        .streak-dot.partial { background: #f59e0b; }
+        .streak-dot.none { background: var(--bg-input); border: 1px solid var(--border-color); }
+
+        .loading { padding: 40px; text-align: center; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Daily GK Summary</h1>
+            <div class="nav-links">
+                <a href="comprehensive_dashboard.html" class="nav-link">Dashboard</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="overview" id="overview">
+            <div class="ov-card"><div class="ov-val" id="ov-streak" style="color:#10b981;">—</div><div class="ov-lbl">Day Streak</div></div>
+            <div class="ov-card"><div class="ov-val" id="ov-pdfs" style="color:#0ea5e9;">—</div><div class="ov-lbl">PDFs Read (period)</div></div>
+            <div class="ov-card"><div class="ov-val" id="ov-readtime" style="color:#38bdf8;">—</div><div class="ov-lbl">Reading Time</div></div>
+            <div class="ov-card"><div class="ov-val" id="ov-tests" style="color:#f59e0b;">—</div><div class="ov-lbl">Tests Taken</div></div>
+            <div class="ov-card"><div class="ov-val" id="ov-correct" style="color:#10b981;">—</div><div class="ov-lbl">Questions Correct</div></div>
+            <div class="ov-card"><div class="ov-val" id="ov-accuracy" style="color:#a78bfa;">—</div><div class="ov-lbl">Accuracy</div></div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+            <div class="period-bar" id="period-bar">
+                <button class="period-btn" data-days="14" onclick="setPeriod(14)">14 Days</button>
+                <button class="period-btn active" data-days="30" onclick="setPeriod(30)">30 Days</button>
+                <button class="period-btn" data-days="60" onclick="setPeriod(60)">60 Days</button>
+                <button class="period-btn" data-days="90" onclick="setPeriod(90)">90 Days</button>
+            </div>
+            <div class="streak-bar" id="streak-bar"></div>
+        </div>
+
+        <div id="days-list"><div class="loading">Loading...</div></div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let dailyData = [];
+        let currentPeriod = 30;
+        let dayPage = 0;  // 0 = most recent
+        const DAYS_PER_PAGE = 25;
+
+        async function init() {
+            await loadData(currentPeriod);
+        }
+
+        function setPeriod(days) {
+            currentPeriod = days;
+            dayPage = 0;
+            document.querySelectorAll('.period-btn').forEach(b => b.classList.toggle('active', parseInt(b.dataset.days) === days));
+            loadData(days);
+        }
+
+        async function loadData(days) {
+            document.getElementById('days-list').innerHTML = '<div class="loading">Loading...</div>';
+            try {
+                const resp = await fetch(`${API_BASE}/api/gk/daily-summary?days=${days}`);
+                const data = await resp.json();
+                dailyData = data.days || [];
+                dayPage = 0;
+                renderOverview(data);
+                renderStreak(dailyData);
+                renderDays(dailyData);
+            } catch (e) {
+                document.getElementById('days-list').innerHTML = `<div class="loading" style="color:#ef4444;">Error: ${e.message}</div>`;
+            }
+        }
+
+        function renderOverview(data) {
+            const s = data.summary || {};
+            document.getElementById('ov-streak').textContent = s.current_streak || 0;
+            document.getElementById('ov-pdfs').textContent = s.total_pdfs_read || 0;
+            document.getElementById('ov-readtime').textContent = fmtTime(s.total_read_seconds || 0);
+            document.getElementById('ov-tests').textContent = s.total_tests || 0;
+            document.getElementById('ov-correct').textContent = s.total_correct || 0;
+            const total = (s.total_correct || 0) + (s.total_wrong || 0);
+            document.getElementById('ov-accuracy').textContent = total > 0 ? Math.round(s.total_correct / total * 100) + '%' : '—';
+        }
+
+        function renderStreak(days) {
+            const bar = document.getElementById('streak-bar');
+            const dots = days.slice().reverse().map(d => {
+                const hasRead = (d.pdfs_read || 0) > 0;
+                const hasTest = (d.tests_taken || 0) > 0;
+                const cls = (hasRead && hasTest) ? 'active' : (hasRead || hasTest) ? 'partial' : 'none';
+                const label = d.date;
+                return `<div class="streak-dot ${cls}" title="${label}"></div>`;
+            }).join('');
+            bar.innerHTML = dots;
+        }
+
+        function dayPagePrev() { if (dayPage > 0) { dayPage--; renderDays(dailyData); } }
+        function dayPageNext() {
+            const totalPages = Math.ceil(dailyData.length / DAYS_PER_PAGE);
+            if (dayPage < totalPages - 1) { dayPage++; renderDays(dailyData); }
+        }
+
+        function renderDays(days) {
+            if (!days.length) {
+                document.getElementById('days-list').innerHTML = '<div class="loading">No activity data found.</div>';
+                return;
+            }
+
+            const totalPages = Math.ceil(days.length / DAYS_PER_PAGE);
+            const pageStart = dayPage * DAYS_PER_PAGE;
+            const pageDays = days.slice(pageStart, pageStart + DAYS_PER_PAGE);
+
+            let paginationHtml = '';
+            if (totalPages > 1) {
+                paginationHtml = `
+                    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;font-size:0.85rem;color:var(--text-muted);">
+                        <span>Showing days ${pageStart + 1}–${Math.min(pageStart + DAYS_PER_PAGE, days.length)} of ${days.length}</span>
+                        <div style="display:flex;gap:6px;">
+                            <button class="period-btn" onclick="dayPagePrev()" ${dayPage <= 0 ? 'disabled style="opacity:0.3"' : ''}>← Newer</button>
+                            <button class="period-btn" onclick="dayPageNext()" ${dayPage >= totalPages - 1 ? 'disabled style="opacity:0.3"' : ''}>Older →</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.getElementById('days-list').innerHTML = pageDays.map((d, idx) => {
+                const globalIdx = pageStart + idx;
+                const hasActivity = (d.pdfs_read || 0) > 0 || (d.tests_taken || 0) > 0;
+                const dt = new Date(d.date + 'T00:00:00');
+                const dayName = dt.toLocaleDateString('en-IN', { weekday: 'short' });
+                const dateStr = dt.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
+                const chips = [];
+                if (d.pdfs_read > 0) chips.push(`<span class="chip read">${d.pdfs_read} PDF${d.pdfs_read > 1 ? 's' : ''} · ${fmtTime(d.read_seconds)}</span>`);
+                if (d.tests_taken > 0) {
+                    const total = (d.correct || 0) + (d.wrong || 0);
+                    const acc = total > 0 ? Math.round(d.correct / total * 100) : 0;
+                    chips.push(`<span class="chip test">${d.tests_taken} test${d.tests_taken > 1 ? 's' : ''} · ${fmtTime(d.test_seconds)}</span>`);
+                    chips.push(`<span class="chip score">${d.correct}✓ ${d.wrong}✗ · ${acc}%</span>`);
+                }
+                if (!hasActivity) chips.push(`<span class="chip none">No activity</span>`);
+
+                // Detail: which PDFs were read, which tested
+                let detailHtml = '';
+                if (d.pdfs_detail && d.pdfs_detail.length > 0) {
+                    detailHtml += `<div class="detail-section">
+                        <div class="detail-title">PDFs Read</div>
+                        ${d.pdfs_detail.map(p => `
+                            <div class="detail-row">
+                                <span style="color:var(--text-primary);">${esc(p.pdf_id)}</span>
+                                <span style="color:#0ea5e9;">${fmtTime(p.time)} ${p.complete ? '✓' : ''}</span>
+                            </div>
+                        `).join('')}
+                    </div>`;
+                }
+                if (d.tests_detail && d.tests_detail.length > 0) {
+                    detailHtml += `<div class="detail-section">
+                        <div class="detail-title">Tests Taken</div>
+                        ${d.tests_detail.map(t => {
+                            const sc = t.score || 0;
+                            const scColor = sc >= 80 ? '#10b981' : sc >= 50 ? '#f59e0b' : '#ef4444';
+                            return `<div class="detail-row">
+                                <span style="color:var(--text-primary);">${esc(t.pdf_id)}</span>
+                                <span><span style="color:${scColor};font-weight:700;">${Math.round(sc)}%</span> <span style="color:#10b981;">${t.correct}✓</span> <span style="color:#ef4444;">${t.wrong}✗</span> <span style="color:var(--text-muted);">${fmtTime(t.time)}</span></span>
+                            </div>`;
+                        }).join('')}
+                    </div>`;
+                }
+
+                return `
+                    <div class="day-card ${hasActivity ? '' : 'inactive'}" data-idx="${globalIdx}">
+                        <div class="day-header" onclick="toggleDay(${globalIdx})">
+                            <div class="day-date">${dayName} ${dateStr}</div>
+                            <div style="display:flex;gap:8px;align-items:center;">
+                                <div class="day-chips">${chips.join('')}</div>
+                                ${hasActivity ? '<span class="day-caret">›</span>' : ''}
+                            </div>
+                        </div>
+                        ${detailHtml ? `<div class="day-details">${detailHtml}</div>` : ''}
+                    </div>
+                `;
+            }).join('') + paginationHtml;
+        }
+
+        function toggleDay(idx) {
+            const card = document.querySelector(`.day-card[data-idx="${idx}"]`);
+            if (card && !card.classList.contains('inactive')) card.classList.toggle('open');
+        }
+
+        function fmtTime(secs) {
+            if (!secs) return '0m';
+            const h = Math.floor(secs / 3600);
+            const m = Math.floor((secs % 3600) / 60);
+            if (h > 0) return h + 'h ' + m + 'm';
+            return m + 'm';
+        }
+
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
