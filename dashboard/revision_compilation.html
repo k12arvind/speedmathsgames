@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Revision Compilation</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: #f5f5f0; min-height: 100vh; padding: 0; color: #2c3e50; }
+
+        .top-bar {
+            background: #ffffff; border-bottom: 1px solid #e0e0e0;
+            padding: 12px 20px; position: sticky; top: 0; z-index: 50;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .top-bar h1 { font-size: 1.1rem; color: #2c3e50; margin: 0; }
+        .top-bar .subtitle { font-size: 0.78rem; color: #7f8c8d; }
+        .nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 6px 12px; background: #f8f8f8; color: #2c3e50;
+            border: 1px solid #d0d0d0; border-radius: 6px; font-size: 0.8rem;
+            text-decoration: none;
+        }
+        .nav-link:hover { border-color: #f59e0b; color: #f59e0b; }
+
+        .filter-bar {
+            max-width: 800px; margin: 16px auto 0; padding: 10px 16px;
+            background: #fff; border: 1px solid #e0e0e0; border-radius: 10px;
+            display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+        .filter-bar select, .filter-bar button {
+            padding: 6px 12px; border: 1px solid #d0d0d0; border-radius: 6px;
+            background: #f8f8f8; color: #2c3e50; font-size: 0.82rem; cursor: pointer;
+        }
+        .filter-bar button.active { border-color: #f59e0b; background: rgba(245,158,11,0.08); color: #f59e0b; }
+        .filter-count { margin-left: auto; font-size: 0.78rem; color: #7f8c8d; }
+
+        .article-container { max-width: 800px; margin: 16px auto; padding: 0 16px 40px; }
+
+        /* Category banner */
+        .category-banner {
+            padding: 8px 18px; font-size: 0.95rem; font-weight: 700;
+            font-style: italic; color: white; text-align: center;
+            border-radius: 6px; margin: 20px 0 14px 0;
+        }
+        .category-banner.national { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
+        .category-banner.international { background: linear-gradient(135deg, #2980b9, #3498db); }
+        .category-banner.economy { background: linear-gradient(135deg, #e67e22, #f39c12); }
+        .category-banner.environment { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .category-banner.polity { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+        .category-banner.awards { background: linear-gradient(135deg, #d35400, #e67e22); }
+        .category-banner.supreme { background: linear-gradient(135deg, #2c3e50, #34495e); }
+        .category-banner.government { background: linear-gradient(135deg, #16a085, #1abc9c); }
+        .category-banner.static { background: linear-gradient(135deg, #7f8c8d, #95a5a6); }
+        .category-banner.general { background: linear-gradient(135deg, #2c3e50, #34495e); }
+
+        /* Section card */
+        .section-card {
+            background: #ffffff; border: 1px solid #e0e0e0;
+            border-radius: 12px; margin-bottom: 14px; overflow: hidden;
+            border-left: 6px solid #94a3b8; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .section-card[data-level="1"] { border-left-color: #10b966; }
+        .section-card[data-level="2"] { border-left-color: #2178d9; }
+        .section-card[data-level="3"] { border-left-color: #9c26b0; }
+        .section-card[data-level="4"] { border-left-color: #d91c1c; }
+
+        .section-header {
+            padding: 8px 14px; background: #f8f8f5;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.75rem; color: #7f8c8d; flex-wrap: wrap; gap: 6px;
+        }
+        .section-badge { padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; }
+        .section-badge[data-level="0"] { background: rgba(148,163,184,0.15); color: #94a3b8; }
+        .section-badge[data-level="1"] { background: rgba(16,185,102,0.15); color: #10b966; }
+        .section-badge[data-level="2"] { background: rgba(33,120,217,0.15); color: #2178d9; }
+        .section-badge[data-level="3"] { background: rgba(156,38,176,0.15); color: #9c26b0; }
+        .section-badge[data-level="4"] { background: rgba(217,28,28,0.15); color: #d91c1c; }
+
+        .section-content {
+            padding: 16px 28px; font-size: 0.95rem; line-height: 1.75;
+            color: #2c3e50; font-family: Georgia, 'Times New Roman', serif;
+        }
+        .section-content h2 { font-size: 1.2rem; font-weight: 700; color: #c0392b; margin: 0 0 14px 0; line-height: 1.4; font-style: italic; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+        .section-content h3 { font-size: 0.95rem; font-weight: 700; color: #2c3e50; margin: 18px 0 8px 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+        .section-content p { margin: 8px 0; text-align: justify; }
+        .section-content ul { margin: 10px 0; padding-left: 24px; list-style: none; }
+        .section-content li { margin: 8px 0; line-height: 1.7; position: relative; padding-left: 8px; }
+        .section-content li::before { content: '•'; position: absolute; left: -16px; color: #34495e; font-weight: bold; }
+        .section-content strong { color: #2c3e50; }
+
+        .section-actions {
+            padding: 8px 16px; border-top: 1px solid #e8e8e8; background: #fafaf8;
+            display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+        }
+        .action-btn {
+            padding: 5px 12px; border: 1px solid #d0d0d0; border-radius: 6px;
+            background: #f8f8f8; color: #2c3e50; font-size: 0.78rem; cursor: pointer;
+        }
+        .action-btn:hover { border-color: #f59e0b; }
+        .action-btn.revised { background: rgba(16,185,102,0.1); color: #10b966; border-color: #10b966; }
+        .source-link { font-size: 0.72rem; color: #7f8c8d; margin-left: auto; }
+
+        /* Inline notes from annotations */
+        .inline-note {
+            background: #eef4ff; border-left: 3px solid #3b82f6;
+            padding: 6px 10px; margin: 6px 0; border-radius: 0 6px 6px 0;
+            font-size: 0.85rem; color: #1e40af;
+        }
+
+        mark.user-highlight { border-radius: 2px; padding: 0 2px; }
+        mark.user-highlight.yellow { background: rgba(255,255,0,0.35); }
+        mark.user-highlight.green { background: rgba(0,255,100,0.25); }
+        mark.user-highlight.pink { background: rgba(255,100,150,0.3); }
+
+        .loading { padding: 60px; text-align: center; color: #7f8c8d; }
+        .empty { padding: 60px; text-align: center; color: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div>
+            <h1 id="page-title">Revision Compilation</h1>
+            <div class="subtitle" id="page-subtitle">All sections due for revision in one view</div>
+        </div>
+        <div class="nav-links">
+            <a href="revision_dashboard.html" class="nav-link">Dashboard</a>
+            <a href="revision_settings.html" class="nav-link">Settings</a>
+            <a href="index.html" class="nav-link">Home</a>
+        </div>
+    </div>
+
+    <div class="filter-bar">
+        <select id="category-filter" onchange="applyFilters()">
+            <option value="">All Categories</option>
+        </select>
+        <select id="level-filter" onchange="applyFilters()">
+            <option value="">All Levels</option>
+            <option value="4">Must Revise</option>
+            <option value="3">Needs Revision</option>
+            <option value="2">Fair / Weekly</option>
+            <option value="1">Good / Maintenance</option>
+            <option value="0">Not Tested</option>
+        </select>
+        <button id="btn-overdue" onclick="toggleOverdue()" class="active">Overdue + Due Today</button>
+        <button id="btn-all" onclick="toggleAll()">All Scheduled</button>
+        <span class="filter-count" id="filter-count">—</span>
+    </div>
+
+    <div class="article-container" id="content">
+        <div class="loading">Loading sections...</div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let allSections = [];
+        let filteredSections = [];
+        let showOnlyDue = true;
+
+        async function init() {
+            try {
+                // Load revision queue (due sections) + all schedule for "all" mode
+                const [queueResp, schedResp] = await Promise.all([
+                    fetch(`${API_BASE}/api/revision/queue`),
+                    fetch(`${API_BASE}/api/revision/stats`),
+                ]);
+                const queueData = await queueResp.json();
+                const statsData = await schedResp.json();
+
+                // Combine revision queue items — each has pdf_filename + section_index
+                const revItems = queueData.revision_queue || [];
+
+                // For each revision item, load the HTML content
+                const htmlPromises = [];
+                const pdfSet = new Set(revItems.map(r => r.pdf_filename));
+                const htmlByPdf = {};
+
+                for (const pdf of pdfSet) {
+                    htmlPromises.push(
+                        fetch(`${API_BASE}/api/gk/html-article/${encodeURIComponent(pdf)}`)
+                            .then(r => r.json())
+                            .then(data => { htmlByPdf[pdf] = data; })
+                            .catch(() => {})
+                    );
+                }
+                await Promise.all(htmlPromises);
+
+                // Also load section performance
+                const perfPromises = [];
+                const perfByPdf = {};
+                for (const pdf of pdfSet) {
+                    perfPromises.push(
+                        fetch(`${API_BASE}/api/gk/section-analysis/${encodeURIComponent(pdf)}`)
+                            .then(r => r.json())
+                            .then(data => { perfByPdf[pdf] = data.sections || []; })
+                            .catch(() => {})
+                    );
+                }
+                await Promise.all(perfPromises);
+
+                // Build allSections: revision schedule item + HTML content + performance
+                allSections = [];
+                for (const item of revItems) {
+                    const pdf = item.pdf_filename;
+                    const idx = item.section_index;
+                    const htmlData = htmlByPdf[pdf];
+                    const articles = htmlData?.sections || [];
+                    const article = articles.find(a => a.section_index === idx);
+                    const annotations = (htmlData?.annotations || []).filter(a => a.section_index === idx);
+                    const perf = (perfByPdf[pdf] || [])[idx] || {};
+
+                    allSections.push({
+                        ...item,
+                        html_content: article?.html_content || '<p style="color:#999;">Content not available.</p>',
+                        section_title: item.section_title || article?.section_title || 'Section ' + idx,
+                        category: item.category || article?.category || '',
+                        perf: perf,
+                        annotations: annotations,
+                    });
+                }
+
+                // Populate category filter
+                const cats = [...new Set(allSections.map(s => s.category).filter(Boolean))].sort();
+                const catSel = document.getElementById('category-filter');
+                cats.forEach(c => {
+                    catSel.innerHTML += `<option value="${c}">${c}</option>`;
+                });
+
+                document.getElementById('page-subtitle').textContent =
+                    `${allSections.length} sections from ${pdfSet.size} PDFs`;
+
+                applyFilters();
+            } catch (e) {
+                document.getElementById('content').innerHTML =
+                    `<div class="empty" style="color:#ef4444;">Error: ${e.message}</div>`;
+            }
+        }
+
+        function toggleOverdue() {
+            showOnlyDue = true;
+            document.getElementById('btn-overdue').classList.add('active');
+            document.getElementById('btn-all').classList.remove('active');
+            applyFilters();
+        }
+        function toggleAll() {
+            showOnlyDue = false;
+            document.getElementById('btn-all').classList.add('active');
+            document.getElementById('btn-overdue').classList.remove('active');
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const catFilter = document.getElementById('category-filter').value;
+            const levelFilter = document.getElementById('level-filter').value;
+
+            filteredSections = allSections.filter(s => {
+                if (catFilter && s.category !== catFilter) return false;
+                if (levelFilter && String(s.revision_level) !== levelFilter) return false;
+                return true;
+            });
+
+            document.getElementById('filter-count').textContent = filteredSections.length + ' sections';
+            renderSections();
+        }
+
+        function renderSections() {
+            const container = document.getElementById('content');
+            if (filteredSections.length === 0) {
+                container.innerHTML = `<div class="empty">
+                    <div style="font-size:2rem;margin-bottom:10px;">🎉</div>
+                    No sections match the current filter.
+                </div>`;
+                return;
+            }
+
+            let lastCategory = '';
+            container.innerHTML = filteredSections.map((s, idx) => {
+                const level = s.revision_level || 0;
+                const perf = s.perf || {};
+                const acc = perf.accuracy != null ? perf.accuracy + '%' : (s.last_test_accuracy != null ? Math.round(s.last_test_accuracy) + '%' : '—');
+                const label = perf.label || levelLabel(level);
+
+                let bannerHtml = '';
+                if (s.category !== lastCategory) {
+                    lastCategory = s.category;
+                    const cls = catClass(s.category);
+                    bannerHtml = `<div class="category-banner ${cls}">${esc(s.category)}</div>`;
+                }
+
+                // Apply annotations to HTML content
+                let html = s.html_content;
+                const highlights = (s.annotations || []).filter(a => a.annotation_type === 'highlight');
+                const notes = (s.annotations || []).filter(a => a.annotation_type === 'note');
+
+                // Notes appended at the end
+                const notesHtml = notes.map(n =>
+                    `<div class="inline-note">${esc(n.note_text || '')}</div>`
+                ).join('');
+
+                return `
+                    ${bannerHtml}
+                    <div class="section-card" data-level="${level}" id="comp-sec-${idx}">
+                        <div class="section-header">
+                            <span>${esc(s.pdf_filename || '')} · Page ${s.page_number || '?'}</span>
+                            <span class="section-badge" data-level="${level}">${label} · ${acc}</span>
+                        </div>
+                        <div class="section-content">
+                            ${html}
+                            ${notesHtml}
+                        </div>
+                        <div class="section-actions">
+                            <button class="action-btn" onclick="markRevised('${esc(s.pdf_filename)}', ${s.section_index}, this)">✅ Mark as Revised</button>
+                            <span class="source-link">Last read: ${daysAgo(s.last_read_date)} · Last test: ${daysAgo(s.last_test_date)}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Apply highlights via DOM
+            setTimeout(() => applyHighlights(), 100);
+        }
+
+        function applyHighlights() {
+            for (const s of filteredSections) {
+                const highlights = (s.annotations || []).filter(a => a.annotation_type === 'highlight' && a.highlighted_text);
+                if (highlights.length === 0) continue;
+                const idx = filteredSections.indexOf(s);
+                const card = document.getElementById(`comp-sec-${idx}`);
+                if (!card) continue;
+                const content = card.querySelector('.section-content');
+                for (const h of highlights) {
+                    highlightText(content, h.highlighted_text, h.color || 'yellow');
+                }
+            }
+        }
+
+        function highlightText(element, text, color) {
+            const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+            while (walker.nextNode()) {
+                const node = walker.currentNode;
+                const idx = node.textContent.indexOf(text);
+                if (idx === -1) continue;
+                try {
+                    const range = document.createRange();
+                    range.setStart(node, idx);
+                    range.setEnd(node, idx + text.length);
+                    const mark = document.createElement('mark');
+                    mark.className = `user-highlight ${color}`;
+                    range.surroundContents(mark);
+                } catch (e) {}
+                break;
+            }
+        }
+
+        async function markRevised(pdf, secIdx, btn) {
+            btn.classList.add('revised');
+            btn.textContent = '✅ Done!';
+            btn.style.pointerEvents = 'none';
+            try {
+                await fetch(`${API_BASE}/api/revision/mark-revised`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pdf_filename: pdf, section_index: secIdx }),
+                });
+            } catch (e) {}
+        }
+
+        function levelLabel(l) {
+            return { 4: 'Must Revise', 3: 'Needs Revision', 2: 'Fair', 1: 'Good', 0: 'Not Tested' }[l] || 'Unknown';
+        }
+
+        function catClass(cat) {
+            const c = (cat || '').toLowerCase();
+            if (c.includes('national') && !c.includes('international')) return 'national';
+            if (c.includes('international')) return 'international';
+            if (c.includes('economy')) return 'economy';
+            if (c.includes('environment') || c.includes('science')) return 'environment';
+            if (c.includes('polity')) return 'polity';
+            if (c.includes('awards') || c.includes('sport') || c.includes('defence')) return 'awards';
+            if (c.includes('supreme') || c.includes('court')) return 'supreme';
+            if (c.includes('government') || c.includes('scheme')) return 'government';
+            if (c.includes('static')) return 'static';
+            return 'general';
+        }
+
+        function daysAgo(d) {
+            if (!d) return 'Never';
+            const diff = Math.floor((Date.now() - new Date(d).getTime()) / 86400000);
+            if (diff === 0) return 'Today';
+            if (diff === 1) return 'Yesterday';
+            return diff + 'd ago';
+        }
+
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
