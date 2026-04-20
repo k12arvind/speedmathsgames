@@ -3,14 +3,16 @@ PDF → Semantic HTML converter for current affairs PDFs.
 
 Extracts section-level content with proper formatting (headings, bullets,
 bold/italic) and stores in the html_articles table.
+
+Key design: PDF text is extracted line-by-line, but consecutive body-text
+lines are JOINED into single paragraphs. Bullet continuation lines (that
+don't start with •) are merged into the previous bullet item.
 """
 
 import sqlite3
-import json
 import re
 import fitz  # PyMuPDF
 from pathlib import Path
-from datetime import datetime
 from typing import List, Dict
 
 
@@ -56,11 +58,11 @@ def init_html_tables(db_path: str):
             article_id INTEGER NOT NULL,
             pdf_filename TEXT NOT NULL,
             section_index INTEGER NOT NULL,
-            annotation_type TEXT NOT NULL,  -- 'highlight', 'note'
-            start_offset INTEGER,          -- character offset in plain_text
+            annotation_type TEXT NOT NULL,
+            start_offset INTEGER,
             end_offset INTEGER,
-            highlighted_text TEXT,          -- the selected text
-            note_text TEXT,                 -- user's note
+            highlighted_text TEXT,
+            note_text TEXT,
             color TEXT DEFAULT '#FFFF00',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -81,15 +83,39 @@ def _esc(s: str) -> str:
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 
+def _styled_span(span) -> str:
+    """Convert a PDF text span to styled HTML."""
+    t = span['text']
+    if not t.strip():
+        return t
+    sb = bool(span['flags'] & (1 << 4))  # bold
+    si = bool(span['flags'] & (1 << 1))  # italic
+    ht = _esc(t)
+    if sb:
+        ht = f'<strong>{ht}</strong>'
+    if si:
+        ht = f'<em>{ht}</em>'
+    return ht
+
+
+def _line_to_html(line) -> str:
+    """Convert all spans in a line to HTML."""
+    return ''.join(_styled_span(s) for s in line['spans'])
+
+
 def convert_pdf_to_html(pdf_path: str) -> List[Dict]:
     """Convert a PDF to a list of semantic HTML sections.
 
-    Returns list of {title, category, page, html, plain_text}
+    Lines that belong to the same paragraph are joined. Bullet continuation
+    lines are merged into the previous bullet item.
     """
     doc = fitz.open(pdf_path)
     sections = []
     current_section = None
     current_category = 'General'
+
+    # Collect all classified lines first
+    classified_lines = []
 
     for page_idx in range(len(doc)):
         page = doc[page_idx]
@@ -99,107 +125,134 @@ def convert_pdf_to_html(pdf_path: str) -> List[Dict]:
             if 'lines' not in b:
                 continue
             for line in b['lines']:
-                full_text = ''.join(span['text'] for span in line['spans']).strip()
+                full_text = ''.join(s['text'] for s in line['spans']).strip()
                 if not full_text:
                     continue
 
                 first_span = line['spans'][0]
                 size = first_span['size']
                 bold = bool(first_span['flags'] & (1 << 4))
+                html = _line_to_html(line)
 
-                # Skip overall title (18pt+) and date lines
-                if size >= 18:
-                    continue
-                if size >= 12 and not bold and re.match(r'^\d+\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}$', full_text):
-                    continue
-
-                # Category header: 14pt+ bold, known category name
-                cat_check = full_text.strip().rstrip(':')
-                if size >= 13.5 and bold and cat_check in CATEGORY_MAP:
-                    current_category = CATEGORY_MAP[cat_check]
-                    continue
-
-                # Section title: 12pt bold, substantial text
-                if size >= 11.5 and bold and len(full_text) > 15:
-                    # Don't create sections from "Daily Current Affairs" or similar
-                    if 'Daily Current Affairs' in full_text or 'Weekly Current Affairs' in full_text:
-                        continue
-
-                    if current_section and len(current_section['html_parts']) > 1:
-                        sections.append(current_section)
-
-                    current_section = {
-                        'title': full_text,
-                        'category': current_category,
-                        'page': page_idx + 1,
-                        'html_parts': [f'<h2>{_esc(full_text)}</h2>'],
-                        'plain_parts': [full_text],
-                    }
-                    continue
-
-                if not current_section:
-                    continue
-
-                # Body content
-                is_bullet = full_text.startswith('•') or full_text.startswith('- ')
-
-                # Build styled HTML from spans
-                html_line = ''
-                for span in line['spans']:
-                    t = span['text']
-                    if not t.strip():
-                        html_line += t
-                        continue
-                    sb = bool(span['flags'] & (1 << 4))
-                    si = bool(span['flags'] & (1 << 1))
-                    ht = _esc(t)
-                    if sb:
-                        ht = f'<strong>{ht}</strong>'
-                    if si:
-                        ht = f'<em>{ht}</em>'
-                    html_line += ht
-
-                if is_bullet:
-                    html_line = re.sub(r'^[•\-]\s*', '', html_line).strip()
-                    current_section['html_parts'].append(f'<li>{html_line}</li>')
-                elif re.match(r'^Key\s+Points', full_text, re.IGNORECASE):
-                    current_section['html_parts'].append(f'<h3>{_esc(full_text)}</h3>')
-                elif re.match(r'^(In the News|Background|Context)', full_text):
-                    current_section['html_parts'].append(f'<p class="lead">{html_line}</p>')
-                else:
-                    current_section['html_parts'].append(f'<p>{html_line}</p>')
-
-                current_section['plain_parts'].append(full_text)
-
-    if current_section and len(current_section['html_parts']) > 1:
-        sections.append(current_section)
+                classified_lines.append({
+                    'text': full_text,
+                    'html': html,
+                    'size': size,
+                    'bold': bold,
+                    'page': page_idx + 1,
+                    'is_bullet': full_text.startswith('•') or full_text.startswith('- '),
+                    'is_key_points': bool(re.match(r'^Key\s+Points', full_text, re.IGNORECASE)),
+                })
 
     doc.close()
 
-    # Post-process: wrap consecutive <li> in <ul>
-    for sec in sections:
-        parts = sec['html_parts']
-        processed = []
-        in_list = False
-        for p in parts:
-            if p.startswith('<li>'):
-                if not in_list:
-                    processed.append('<ul>')
-                    in_list = True
-                processed.append(p)
+    # Now process classified lines: group into sections, merge paragraphs
+    for cl in classified_lines:
+        # Skip title and date
+        if cl['size'] >= 18:
+            continue
+        if cl['size'] >= 12 and not cl['bold'] and re.match(
+            r'^\d+\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}$',
+            cl['text']
+        ):
+            continue
+
+        # Category header
+        cat_check = cl['text'].strip().rstrip(':')
+        if cl['size'] >= 13.5 and cl['bold'] and cat_check in CATEGORY_MAP:
+            current_category = CATEGORY_MAP[cat_check]
+            continue
+
+        # Section title
+        if cl['size'] >= 11.5 and cl['bold'] and len(cl['text']) > 15:
+            if 'Daily Current Affairs' in cl['text'] or 'Weekly Current Affairs' in cl['text']:
+                continue
+
+            # Save previous section
+            if current_section and current_section['elements']:
+                sections.append(_finalize_section(current_section))
+
+            current_section = {
+                'title': cl['text'],
+                'category': current_category,
+                'page': cl['page'],
+                'elements': [],  # list of {type: 'p'|'bullet'|'h3', html, text}
+            }
+            continue
+
+        if not current_section:
+            continue
+
+        # Classify this line
+        if cl['is_key_points']:
+            current_section['elements'].append({
+                'type': 'h3', 'html': _esc(cl['text']), 'text': cl['text']
+            })
+        elif cl['is_bullet']:
+            # Start a new bullet item (strip the bullet character)
+            bullet_html = re.sub(r'^[•\-]\s*', '', cl['html']).strip()
+            bullet_text = re.sub(r'^[•\-]\s*', '', cl['text']).strip()
+            current_section['elements'].append({
+                'type': 'bullet', 'html': bullet_html, 'text': bullet_text
+            })
+        else:
+            # Body text — should we merge with previous element?
+            prev = current_section['elements'][-1] if current_section['elements'] else None
+
+            if prev and prev['type'] == 'bullet' and cl['size'] < 11:
+                # Continuation of previous bullet (same or smaller font, no bullet marker)
+                prev['html'] += ' ' + cl['html']
+                prev['text'] += ' ' + cl['text']
+            elif prev and prev['type'] == 'p' and cl['size'] < 11 and not cl['bold']:
+                # Continuation of previous paragraph
+                prev['html'] += ' ' + cl['html']
+                prev['text'] += ' ' + cl['text']
             else:
-                if in_list:
-                    processed.append('</ul>')
-                    in_list = False
-                processed.append(p)
-        if in_list:
-            processed.append('</ul>')
-        sec['html'] = '\n'.join(processed)
-        sec['plain_text'] = '\n'.join(sec['plain_parts'])
-        del sec['html_parts']
-        del sec['plain_parts']
+                # New paragraph
+                current_section['elements'].append({
+                    'type': 'p', 'html': cl['html'], 'text': cl['text']
+                })
+
+    # Don't forget the last section
+    if current_section and current_section['elements']:
+        sections.append(_finalize_section(current_section))
 
     return sections
+
+
+def _finalize_section(sec: dict) -> dict:
+    """Convert section elements into final HTML string."""
+    html_parts = [f'<h2>{_esc(sec["title"])}</h2>']
+    plain_parts = [sec['title']]
+    in_list = False
+
+    for el in sec['elements']:
+        if el['type'] == 'bullet':
+            if not in_list:
+                html_parts.append('<ul>')
+                in_list = True
+            html_parts.append(f'<li>{el["html"]}</li>')
+        else:
+            if in_list:
+                html_parts.append('</ul>')
+                in_list = False
+            if el['type'] == 'h3':
+                html_parts.append(f'<h3>{el["html"]}</h3>')
+            elif el['type'] == 'p':
+                html_parts.append(f'<p>{el["html"]}</p>')
+
+        plain_parts.append(el['text'])
+
+    if in_list:
+        html_parts.append('</ul>')
+
+    return {
+        'title': sec['title'],
+        'category': sec['category'],
+        'page': sec['page'],
+        'html': '\n'.join(html_parts),
+        'plain_text': '\n'.join(plain_parts),
+    }
 
 
 def store_html_sections(db_path: str, pdf_filename: str, sections: List[Dict]):
@@ -208,7 +261,6 @@ def store_html_sections(db_path: str, pdf_filename: str, sections: List[Dict]):
     conn = sqlite3.connect(db_path)
     c = conn.cursor()
 
-    # Remove old entries for this PDF
     c.execute("DELETE FROM html_articles WHERE pdf_filename = ?", (pdf_filename,))
 
     for i, sec in enumerate(sections):

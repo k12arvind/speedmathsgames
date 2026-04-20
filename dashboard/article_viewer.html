@@ -6,20 +6,21 @@
     <title>Article Viewer</title>
     <link rel="stylesheet" href="shared-styles.css">
     <style>
-        body { background: var(--bg-primary); min-height: 100vh; padding: 0; color: var(--text-primary); }
+        body { background: #f5f5f0; min-height: 100vh; padding: 0; color: #2c3e50; }
 
         .top-bar {
-            background: var(--bg-card); border-bottom: 1px solid var(--border-color);
+            background: #ffffff; border-bottom: 1px solid #e0e0e0;
             padding: 12px 20px; display: flex; justify-content: space-between;
             align-items: center; position: sticky; top: 0; z-index: 50; flex-wrap: wrap; gap: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
-        .top-bar h1 { font-size: 1rem; color: var(--text-primary); margin: 0; }
-        .top-bar .subtitle { font-size: 0.78rem; color: var(--text-muted); }
+        .top-bar h1 { font-size: 1rem; color: #2c3e50; margin: 0; }
+        .top-bar .subtitle { font-size: 0.78rem; color: #7f8c8d; }
         .toolbar { display: flex; gap: 6px; align-items: center; }
         .tool-btn {
-            padding: 6px 12px; border: 1px solid var(--border-color); border-radius: 6px;
-            background: var(--bg-input); color: var(--text-primary); font-size: 0.8rem;
-            cursor: pointer;
+            padding: 6px 12px; border: 1px solid #d0d0d0; border-radius: 6px;
+            background: #f8f8f8; color: #2c3e50; font-size: 0.8rem;
+            cursor: pointer; text-decoration: none;
         }
         .tool-btn:hover { border-color: #f59e0b; }
         .tool-btn.active { border-color: #f59e0b; background: rgba(245,158,11,0.12); color: #f59e0b; }
@@ -33,9 +34,10 @@
 
         /* Section cards */
         .section-card {
-            background: var(--bg-card); border: 1px solid var(--border-color);
+            background: #ffffff; border: 1px solid #e0e0e0;
             border-radius: 12px; margin-bottom: 16px; overflow: hidden;
             border-left: 6px solid #94a3b8;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         }
         .section-card[data-level="1"] { border-left-color: #10b966; }
         .section-card[data-level="2"] { border-left-color: #2178d9; }
@@ -43,9 +45,9 @@
         .section-card[data-level="4"] { border-left-color: #d91c1c; }
 
         .section-header {
-            padding: 10px 16px; background: var(--bg-input);
+            padding: 10px 16px; background: #f8f8f5;
             display: flex; justify-content: space-between; align-items: center;
-            font-size: 0.78rem; color: var(--text-muted); flex-wrap: wrap; gap: 6px;
+            font-size: 0.78rem; color: #7f8c8d; flex-wrap: wrap; gap: 6px;
         }
         .section-badge {
             padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600;
@@ -74,11 +76,8 @@
         .category-banner.general { background: linear-gradient(135deg, #2c3e50, #34495e); }
 
         .section-content {
-            padding: 16px 24px 16px 24px; font-size: 0.95rem; line-height: 1.75;
+            padding: 16px 28px 16px 28px; font-size: 0.95rem; line-height: 1.75;
             color: #2c3e50; font-family: Georgia, 'Times New Roman', serif;
-        }
-        @media (prefers-color-scheme: dark) {
-            .section-content { color: var(--text-primary); }
         }
         .section-content h2 {
             font-size: 1.2rem; font-weight: 700; color: #c0392b;
@@ -87,7 +86,7 @@
             font-style: italic;
         }
         .section-content h3 {
-            font-size: 0.95rem; font-weight: 700; color: var(--text-primary, #2c3e50);
+            font-size: 0.95rem; font-weight: 700; color: #2c3e50;
             margin: 18px 0 8px 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
@@ -107,19 +106,19 @@
         }
         .section-content li::before {
             content: '•'; position: absolute; left: -16px;
-            color: #7f8c8d; font-weight: bold;
+            color: #34495e; font-weight: bold;
         }
         .section-content strong {
-            color: var(--text-primary, #2c3e50);
+            color: #2c3e50;
         }
 
         .section-actions {
-            padding: 8px 16px; border-top: 1px solid var(--border-color);
-            display: flex; gap: 8px; flex-wrap: wrap;
+            padding: 8px 16px; border-top: 1px solid #e8e8e8;
+            display: flex; gap: 8px; flex-wrap: wrap; background: #fafaf8;
         }
         .action-btn {
-            padding: 5px 12px; border: 1px solid var(--border-color);
-            border-radius: 6px; background: var(--bg-input); color: var(--text-primary);
+            padding: 5px 12px; border: 1px solid #d0d0d0;
+            border-radius: 6px; background: #f8f8f8; color: #2c3e50;
             font-size: 0.78rem; cursor: pointer;
         }
         .action-btn:hover { border-color: #f59e0b; }
@@ -135,24 +134,24 @@
 
         /* Inline notes */
         .inline-note {
-            background: rgba(59,130,246,0.08); border-left: 3px solid #3b82f6;
+            background: #eef4ff; border-left: 3px solid #3b82f6;
             padding: 6px 10px; margin: 6px 0; border-radius: 0 6px 6px 0;
-            font-size: 0.85rem; color: #93c5fd; position: relative;
+            font-size: 0.85rem; color: #1e40af; position: relative;
         }
         .inline-note .note-meta {
-            font-size: 0.72rem; color: var(--text-muted); margin-bottom: 2px;
+            font-size: 0.72rem; color: #7f8c8d; margin-bottom: 2px;
         }
         .inline-note .delete-note {
             position: absolute; top: 4px; right: 8px; cursor: pointer;
-            color: var(--text-muted); font-size: 0.8rem;
+            color: #bbb; font-size: 0.8rem;
         }
         .inline-note .delete-note:hover { color: #ef4444; }
 
         /* Highlight toolbar popup */
         .highlight-toolbar {
-            position: fixed; display: none; background: var(--bg-card);
-            border: 1px solid var(--border-color); border-radius: 8px;
-            padding: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 100;
+            position: fixed; display: none; background: #ffffff;
+            border: 1px solid #d0d0d0; border-radius: 8px;
+            padding: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 100;
             gap: 4px;
         }
         .highlight-toolbar.show { display: flex; }
@@ -163,11 +162,11 @@
         .ht-btn.yellow { background: rgba(255,255,0,0.5); }
         .ht-btn.green { background: rgba(0,255,100,0.4); }
         .ht-btn.pink { background: rgba(255,100,150,0.45); }
-        .ht-btn.note { background: var(--bg-input); border: 1px solid var(--border-color);
+        .ht-btn.note { background: #f8f8f8; border: 1px solid #d0d0d0;
             font-size: 0.75rem; width: auto; padding: 0 10px; border-radius: 6px;
-            color: var(--text-primary); }
+            color: #2c3e50; }
 
-        .loading { padding: 60px; text-align: center; color: var(--text-muted); }
+        .loading { padding: 60px; text-align: center; color: #7f8c8d; }
     </style>
 </head>
 <body>
