@@ -471,7 +471,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                  path.startswith('/api/pdf/') or path.startswith('/api/chunks/') or \
                  path.startswith('/api/large-files') or path.startswith('/api/assessment-status/') or \
                  path.startswith('/api/assessment-progress/') or path == '/api/debug' or \
-                 path.startswith('/api/gk/'):
+                 path.startswith('/api/gk/') or path.startswith('/api/revision/'):
                 self.handle_gk_dashboard_get(path, query_params)
             # Analytics API endpoints
             elif path.startswith('/api/analytics/'):
@@ -526,7 +526,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 self.handle_math_post(path, data)
             # GK Dashboard API endpoints
             # GK PDF Processing API endpoints
-            elif path.startswith('/api/gk/'):
+            elif path.startswith('/api/gk/') or path.startswith('/api/revision/'):
                 self.handle_gk_api_post(path, data)
             elif path.startswith('/api/revise/'):
                 self.handle_gk_dashboard_post(path, data)
@@ -1641,6 +1641,26 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             pdf_id = unquote(path.split('/')[-1])
             self.handle_assessment_status_get(pdf_id)
 
+        # GET /api/revision/settings — get all revision settings
+        elif path == '/api/revision/settings':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            self.send_json({'settings': engine.get_all_settings()})
+
+        # GET /api/revision/queue — today's revision queue
+        elif path == '/api/revision/queue':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            queue = engine.get_daily_queue()
+            stats = engine.get_schedule_stats()
+            self.send_json({**queue, 'schedule_stats': stats})
+
+        # GET /api/revision/stats — revision statistics
+        elif path == '/api/revision/stats':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            self.send_json(engine.get_schedule_stats())
+
         # GET /api/gk/html-article/{pdf_id} — get HTML article content + annotations
         elif path.startswith('/api/gk/html-article/'):
             from urllib.parse import unquote as _unq_ha
@@ -2499,6 +2519,42 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
     def handle_gk_api_post(self, path: str, data: dict):
         """Handle GK PDF processing API POST requests."""
+
+        # POST /api/revision/settings — save settings
+        if path == '/api/revision/settings':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            updates = data.get('settings', {})
+            count = engine.update_settings(updates)
+            self.send_json({'success': True, 'updated': count})
+            return
+
+        # POST /api/revision/settings/reset — reset to defaults
+        if path == '/api/revision/settings/reset':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine.reset_all_settings()
+            self.send_json({'success': True})
+            return
+
+        # POST /api/revision/mark-revised — mark section as revised
+        if path == '/api/revision/mark-revised':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine.mark_section_revised(data.get('pdf_filename', ''), data.get('section_index', 0))
+            self.send_json({'success': True})
+            return
+
+        # POST /api/revision/mark-read — record a section was read
+        if path == '/api/revision/mark-read':
+            from server.revision_engine import RevisionEngine
+            engine = RevisionEngine(str(Path(__file__).parent.parent / 'revision_tracker.db'))
+            engine.mark_section_read(
+                data.get('pdf_filename', ''), data.get('section_index', 0),
+                data.get('section_title', ''), data.get('category', '')
+            )
+            self.send_json({'success': True})
+            return
 
         # POST /api/gk/html-annotation — save a highlight or note
         if path == '/api/gk/html-annotation':

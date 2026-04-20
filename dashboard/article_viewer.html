@@ -235,6 +235,7 @@
 
             renderArticle();
             setupSelectionHandler();
+            startViewTracking();
         }
 
         function renderArticle() {
@@ -463,12 +464,88 @@
             }
         }
 
-        function markRevised(sectionIdx) {
+        // ── View Tracking (section-level) ──────────────────────
+        let sectionsViewed = new Set();
+        let activeSeconds = 0;
+        let isVisible = true;
+        let activeInterval = null;
+        let viewSessionStarted = false;
+
+        function startViewTracking() {
+            // Active time counter
+            document.addEventListener('visibilitychange', () => {
+                isVisible = !document.hidden;
+            });
+            activeInterval = setInterval(() => {
+                if (isVisible) activeSeconds++;
+            }, 1000);
+
+            // IntersectionObserver per section
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+                        const idx = entry.target.dataset.section;
+                        if (idx != null && !sectionsViewed.has(idx)) {
+                            sectionsViewed.add(idx);
+                            // Record this section as read
+                            const sec = sections[parseInt(idx)];
+                            if (sec) {
+                                fetch(`${API_BASE}/api/revision/mark-read`, {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        pdf_filename: pdfId,
+                                        section_index: parseInt(idx),
+                                        section_title: sec.section_title || '',
+                                        category: sec.category || '',
+                                    }),
+                                }).catch(() => {});
+                            }
+                        }
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.section-card').forEach(card => observer.observe(card));
+            viewSessionStarted = true;
+
+            // Start a view session via existing API
+            fetch(`/api/annotations/${encodeURIComponent(pdfId)}/view-session/start`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ total_pages: sections.length, user_id: 'system' }),
+            }).then(r => r.json()).then(d => {
+                if (d.success) window._viewSessionId = d.session_id;
+            }).catch(() => {});
+
+            // Save on page close
+            window.addEventListener('beforeunload', () => {
+                if (window._viewSessionId) {
+                    const data = JSON.stringify({
+                        session_id: window._viewSessionId,
+                        pages_viewed: Array.from(sectionsViewed).map(Number),
+                        active_time_seconds: activeSeconds,
+                    });
+                    navigator.sendBeacon(
+                        `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
+                        new Blob([data], { type: 'application/json' })
+                    );
+                }
+            });
+        }
+
+        async function markRevised(sectionIdx) {
             const btn = event.target;
             btn.classList.add('revised');
             btn.textContent = '✅ Revised!';
             btn.disabled = true;
-            // TODO: call revision_schedule API when built
+            try {
+                await fetch(`${API_BASE}/api/revision/mark-revised`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pdf_filename: pdfId, section_index: sectionIdx }),
+                });
+            } catch (e) { console.warn('Mark revised failed:', e); }
         }
 
         function testSection(sectionIdx) {

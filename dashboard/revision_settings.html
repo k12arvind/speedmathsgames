@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Settings</title>
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        body { background: var(--bg-primary); min-height: 100vh; padding: 20px; color: var(--text-primary); }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            padding: 16px 20px; border-radius: 12px; margin-bottom: 16px;
+            display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+        }
+        .header h1 {
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .nav-link {
+            padding: 8px 14px; background: var(--bg-input); color: var(--text-secondary);
+            border: 1px solid var(--border-color); border-radius: 8px; font-size: 13px; text-decoration: none;
+        }
+        .nav-link:hover { color: #f59e0b; border-color: #f59e0b; }
+
+        .tabs { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+        .tab {
+            padding: 8px 16px; border: 1px solid var(--border-color); border-radius: 8px;
+            background: var(--bg-input); color: var(--text-secondary); cursor: pointer; font-size: 0.85rem;
+        }
+        .tab.active { border-color: #f59e0b; color: #f59e0b; background: rgba(245,158,11,0.08); }
+
+        .settings-group {
+            background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 12px; padding: 20px; margin-bottom: 16px;
+        }
+        .settings-group h3 { font-size: 1rem; color: var(--text-primary); margin: 0 0 16px 0; }
+
+        .setting-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); gap: 16px;
+        }
+        .setting-row:last-child { border-bottom: none; }
+        .setting-label { flex: 1; }
+        .setting-label .name { font-size: 0.9rem; color: var(--text-primary); }
+        .setting-label .desc { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+        .setting-input { min-width: 120px; text-align: right; }
+        .setting-input input[type="number"] {
+            width: 80px; padding: 6px 10px; background: var(--bg-input);
+            border: 1px solid var(--border-color); border-radius: 6px;
+            color: var(--text-primary); text-align: center; font-size: 0.9rem;
+        }
+        .setting-input select {
+            padding: 6px 10px; background: var(--bg-input);
+            border: 1px solid var(--border-color); border-radius: 6px;
+            color: var(--text-primary); font-size: 0.9rem;
+        }
+        .setting-input input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; }
+        .setting-input input[type="date"] {
+            padding: 6px 10px; background: var(--bg-input);
+            border: 1px solid var(--border-color); border-radius: 6px;
+            color: var(--text-primary); font-size: 0.9rem;
+        }
+
+        .btn-bar {
+            display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px; border-radius: 8px; font-size: 0.9rem;
+            font-weight: 600; cursor: pointer; border: none;
+        }
+        .btn-primary { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+        .btn-secondary { background: var(--bg-input); color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-danger { background: rgba(239,68,68,0.1); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+
+        .save-status { font-size: 0.85rem; padding: 8px; text-align: center; border-radius: 6px; display: none; }
+        .save-status.show { display: block; }
+        .save-status.success { background: rgba(16,185,129,0.1); color: #10b981; }
+        .save-status.error { background: rgba(239,68,68,0.1); color: #ef4444; }
+
+        .holiday-list { margin-top: 8px; }
+        .holiday-item {
+            display: flex; gap: 8px; align-items: center; margin: 4px 0;
+            padding: 4px 8px; background: var(--bg-input); border-radius: 6px; font-size: 0.85rem;
+        }
+        .holiday-item .remove { cursor: pointer; color: #ef4444; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Revision Settings</h1>
+            <div class="nav-links">
+                <a href="comprehensive_dashboard.html" class="nav-link">Dashboard</a>
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+
+        <div class="tabs" id="tabs"></div>
+        <div id="settings-content"></div>
+
+        <div class="btn-bar">
+            <button class="btn btn-danger" onclick="resetAll()">Reset to Defaults</button>
+            <button class="btn btn-primary" onclick="saveAll()">Save All Changes</button>
+        </div>
+        <div class="save-status" id="save-status"></div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const API_BASE = window.location.origin;
+        let allSettings = {};
+        let pendingChanges = {};
+        let activeTab = 'workload';
+
+        const TAB_LABELS = {
+            workload: 'Daily Workload',
+            buckets: 'Revision Buckets',
+            new_pdfs: 'New PDFs',
+            srs: 'SRS Intervals',
+            weights: 'Category Weights',
+            schedule: 'Schedule',
+            display: 'Display',
+        };
+
+        async function init() {
+            const resp = await fetch(`${API_BASE}/api/revision/settings`);
+            const data = await resp.json();
+            allSettings = data.settings || {};
+            renderTabs();
+            renderSettings();
+        }
+
+        function renderTabs() {
+            const categories = [...new Set(Object.values(allSettings).map(s => s.category))];
+            document.getElementById('tabs').innerHTML = categories.map(cat =>
+                `<div class="tab ${cat === activeTab ? 'active' : ''}" onclick="switchTab('${cat}')">${TAB_LABELS[cat] || cat}</div>`
+            ).join('');
+        }
+
+        function switchTab(cat) {
+            activeTab = cat;
+            renderTabs();
+            renderSettings();
+        }
+
+        function renderSettings() {
+            const entries = Object.entries(allSettings).filter(([k, v]) => v.category === activeTab);
+            if (entries.length === 0) {
+                document.getElementById('settings-content').innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted);">No settings in this category.</div>';
+                return;
+            }
+
+            const html = `<div class="settings-group">
+                <h3>${TAB_LABELS[activeTab] || activeTab}</h3>
+                ${entries.map(([key, s]) => renderSettingRow(key, s)).join('')}
+            </div>`;
+            document.getElementById('settings-content').innerHTML = html;
+        }
+
+        function renderSettingRow(key, s) {
+            const val = pendingChanges[key] !== undefined ? pendingChanges[key] : s.setting_value;
+            let inputHtml = '';
+
+            switch (s.setting_type) {
+                case 'number':
+                    inputHtml = `<input type="number" value="${val}" min="${s.min_value || ''}" max="${s.max_value || ''}" step="${key.includes('multiplier') ? '0.1' : '1'}" onchange="onChange('${key}', parseFloat(this.value))">`;
+                    break;
+                case 'boolean':
+                    inputHtml = `<input type="checkbox" ${val ? 'checked' : ''} onchange="onChange('${key}', this.checked)">`;
+                    break;
+                case 'select':
+                    const options = (s.options || []).map(o =>
+                        `<option value="${o}" ${o === val ? 'selected' : ''}>${o}</option>`
+                    ).join('');
+                    inputHtml = `<select onchange="onChange('${key}', this.value)">${options}</select>`;
+                    break;
+                case 'date':
+                    inputHtml = `<input type="date" value="${val || ''}" onchange="onChange('${key}', this.value || null)">`;
+                    break;
+                case 'text':
+                    inputHtml = `<input type="text" value="${val || ''}" style="width:80px;padding:6px;background:var(--bg-input);border:1px solid var(--border-color);border-radius:6px;color:var(--text-primary);text-align:center;" onchange="onChange('${key}', this.value)">`;
+                    break;
+                case 'text[]':
+                    inputHtml = renderHolidayList(key, val || []);
+                    break;
+            }
+
+            return `<div class="setting-row">
+                <div class="setting-label">
+                    <div class="name">${s.label}</div>
+                    ${s.description ? `<div class="desc">${s.description}</div>` : ''}
+                </div>
+                <div class="setting-input">${inputHtml}</div>
+            </div>`;
+        }
+
+        function renderHolidayList(key, dates) {
+            const items = dates.map((d, i) =>
+                `<div class="holiday-item"><span>${d}</span><span class="remove" onclick="removeHoliday('${key}', ${i})">×</span></div>`
+            ).join('');
+            return `<div>
+                <input type="date" id="new-holiday" style="padding:4px 8px;background:var(--bg-input);border:1px solid var(--border-color);border-radius:4px;color:var(--text-primary);">
+                <button onclick="addHoliday('${key}')" style="padding:4px 10px;background:var(--bg-input);border:1px solid var(--border-color);border-radius:4px;color:var(--text-primary);cursor:pointer;">+ Add</button>
+                <div class="holiday-list">${items || '<span style="color:var(--text-muted);font-size:0.8rem;">No holidays set</span>'}</div>
+            </div>`;
+        }
+
+        function addHoliday(key) {
+            const input = document.getElementById('new-holiday');
+            if (!input.value) return;
+            const current = pendingChanges[key] || allSettings[key]?.setting_value || [];
+            if (!current.includes(input.value)) {
+                current.push(input.value);
+                current.sort();
+                onChange(key, current);
+                renderSettings();
+            }
+        }
+
+        function removeHoliday(key, idx) {
+            const current = [...(pendingChanges[key] || allSettings[key]?.setting_value || [])];
+            current.splice(idx, 1);
+            onChange(key, current);
+            renderSettings();
+        }
+
+        function onChange(key, value) {
+            pendingChanges[key] = value;
+        }
+
+        async function saveAll() {
+            if (Object.keys(pendingChanges).length === 0) {
+                showStatus('No changes to save.', 'success');
+                return;
+            }
+            try {
+                const resp = await fetch(`${API_BASE}/api/revision/settings`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ settings: pendingChanges }),
+                });
+                const data = await resp.json();
+                if (data.success) {
+                    showStatus(`Saved ${data.updated} settings.`, 'success');
+                    // Update local state
+                    for (const [k, v] of Object.entries(pendingChanges)) {
+                        if (allSettings[k]) allSettings[k].setting_value = v;
+                    }
+                    pendingChanges = {};
+                } else {
+                    showStatus('Error: ' + (data.error || 'Unknown'), 'error');
+                }
+            } catch (e) {
+                showStatus('Error: ' + e.message, 'error');
+            }
+        }
+
+        async function resetAll() {
+            if (!confirm('Reset ALL settings to defaults? This cannot be undone.')) return;
+            try {
+                await fetch(`${API_BASE}/api/revision/settings/reset`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({}),
+                });
+                pendingChanges = {};
+                await init();
+                showStatus('All settings reset to defaults.', 'success');
+            } catch (e) {
+                showStatus('Error: ' + e.message, 'error');
+            }
+        }
+
+        function showStatus(msg, type) {
+            const el = document.getElementById('save-status');
+            el.textContent = msg;
+            el.className = 'save-status show ' + type;
+            setTimeout(() => el.classList.remove('show'), 3000);
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
