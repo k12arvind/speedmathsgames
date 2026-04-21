@@ -209,6 +209,7 @@
             <option value="#0000FF">Blue</option>
             <option value="#00AA00">Green</option>
         </select>
+        <button id="eraser-btn" onclick="toggleEraser()" style="height:36px;padding:0 12px;border-radius:8px;border:2px solid #ef4444;background:#fff;color:#ef4444;font-size:0.8rem;font-weight:600;cursor:pointer;">🧹</button>
         <span id="annotation-status" style="font-size:0.75rem;color:#10b981;margin-left:4px;"></span>
     </div>
 
@@ -548,6 +549,14 @@
         // ── Pen Drawing Mode (Apple Pencil support) ────────────
         let penModeActive = false;
         let penCanvases = {};
+        let eraserMode = false;
+
+        function toggleEraser() {
+            eraserMode = !eraserMode;
+            const btn = document.getElementById('eraser-btn');
+            btn.style.background = eraserMode ? '#ef4444' : '#fff';
+            btn.style.color = eraserMode ? '#fff' : '#ef4444';
+        }
 
         function togglePenMode() {
             penModeActive = !penModeActive;
@@ -556,24 +565,30 @@
             btn.style.color = penModeActive ? '#fff' : '#f59e0b';
             btn.textContent = penModeActive ? '✏️ ON' : '✏️ Draw';
 
-            // Create or toggle canvas overlays on each section
+            // Create canvas overlays on each section (if not already created)
             document.querySelectorAll('.section-content').forEach(content => {
                 const idx = content.id.replace('content-', '');
                 let canvas = penCanvases[idx];
 
                 if (!canvas) {
                     canvas = document.createElement('canvas');
-                    canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;cursor:crosshair;touch-action:none;';
-                    canvas.width = content.offsetWidth;
-                    canvas.height = content.offsetHeight;
+                    // touch-action:pinch-zoom allows two-finger scroll while drawing
+                    canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;cursor:crosshair;touch-action:pinch-zoom;';
+                    canvas.width = content.offsetWidth * 2;  // 2x for retina
+                    canvas.height = content.offsetHeight * 2;
+                    canvas.style.width = '100%';
+                    canvas.style.height = '100%';
                     content.style.position = 'relative';
                     content.appendChild(canvas);
                     penCanvases[idx] = canvas;
                     setupPenCanvas(canvas, idx);
                 }
 
-                canvas.style.display = penModeActive ? 'block' : 'none';
+                // Canvas always VISIBLE (to show saved strokes) but only
+                // interactive when pen mode is on
+                canvas.style.display = 'block';
                 canvas.style.pointerEvents = penModeActive ? 'auto' : 'none';
+                canvas.style.cursor = penModeActive ? 'crosshair' : 'default';
             });
         }
 
@@ -592,12 +607,20 @@
             }
 
             function startDraw(e) {
+                // Only intercept single-touch (pen/finger). Two-finger = scroll.
+                if (e.touches && e.touches.length > 1) return;
                 e.preventDefault();
                 drawing = true;
                 points = [getPos(e)];
-                const color = document.getElementById('pen-color').value;
-                ctx.strokeStyle = color;
-                ctx.lineWidth = 3;
+
+                if (eraserMode) {
+                    ctx.globalCompositeOperation = 'destination-out';
+                    ctx.lineWidth = 20;
+                } else {
+                    ctx.globalCompositeOperation = 'source-over';
+                    ctx.strokeStyle = document.getElementById('pen-color').value;
+                    ctx.lineWidth = 4;
+                }
                 ctx.lineCap = 'round';
                 ctx.lineJoin = 'round';
                 ctx.beginPath();
@@ -606,6 +629,7 @@
 
             function draw(e) {
                 if (!drawing) return;
+                if (e.touches && e.touches.length > 1) { drawing = false; return; }
                 e.preventDefault();
                 const pos = getPos(e);
                 points.push(pos);
@@ -616,8 +640,9 @@
             function endDraw(e) {
                 if (!drawing) return;
                 drawing = false;
-                if (points.length >= 2) {
-                    // Save pen stroke as annotation
+                ctx.globalCompositeOperation = 'source-over';
+
+                if (!eraserMode && points.length >= 2) {
                     const color = document.getElementById('pen-color').value;
                     fetch(`${API_BASE}/api/gk/html-annotation`, {
                         method: 'POST',
@@ -636,7 +661,7 @@
                         }),
                     }).then(() => {
                         const status = document.getElementById('annotation-status');
-                        if (status) { status.textContent = '✓'; setTimeout(() => status.textContent = '', 1000); }
+                        if (status) { status.textContent = '✓ saved'; setTimeout(() => status.textContent = '', 1500); }
                     }).catch(() => {});
                 }
             }
@@ -644,6 +669,8 @@
             canvas.addEventListener('mousedown', startDraw);
             canvas.addEventListener('mousemove', draw);
             canvas.addEventListener('mouseup', endDraw);
+            canvas.addEventListener('mouseleave', endDraw);
+            // passive:false needed to preventDefault on touch
             canvas.addEventListener('touchstart', startDraw, { passive: false });
             canvas.addEventListener('touchmove', draw, { passive: false });
             canvas.addEventListener('touchend', endDraw);
@@ -687,9 +714,9 @@
                             }
                             ctx.stroke();
                         }
-                        // Always show canvas if it has strokes
+                        // Always show canvas with saved strokes (non-interactive)
                         canvas.style.display = 'block';
-                        canvas.style.pointerEvents = penModeActive ? 'auto' : 'none';
+                        canvas.style.pointerEvents = 'none';
                     } catch (e) {}
                 }
             }
