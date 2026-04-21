@@ -1617,8 +1617,8 @@
             const testButton = `
                 <button id="${testButtonId}" class="btn btn-primary"
                         onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')"
-                        disabled style="opacity:0.5;cursor:not-allowed;padding:4px 8px;font-size:0.72rem;">
-                    📝
+                        disabled style="opacity:0.5;cursor:not-allowed;padding:3px 6px;font-size:0.7rem;">
+                    Test
                 </button>
             `;
 
@@ -1674,10 +1674,9 @@
                     <td style="white-space:normal;">
                         <div style="display:flex;gap:2px;flex-wrap:wrap;">
                             ${chunkButton}${assessmentButton}${testButton}
-                            <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:3px 5px;font-size:0.68rem;">📖</button>
-                            <button class="btn" onclick="viewPdf('${pdf.filename}')" style="background:#3b82f6;color:#fff;padding:3px 5px;font-size:0.68rem;">📄</button>
+                            <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:3px 6px;font-size:0.7rem;">Read</button>
                             ${revisedButton}
-                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 5px;font-size:0.68rem;">ⓘ</button>
+                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 6px;font-size:0.7rem;">Details</button>
                         </div>
                     </td>
                 </tr>
