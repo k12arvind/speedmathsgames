@@ -780,17 +780,45 @@
                 if (d.success) window._viewSessionId = d.session_id;
             }).catch(() => {});
 
-            // Save on page close
+            // Periodic save every 30 seconds (iPad doesn't reliably fire beforeunload)
+            setInterval(() => {
+                if (window._viewSessionId && activeSeconds > 0) {
+                    fetch(`/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            session_id: window._viewSessionId,
+                            pages_viewed: Array.from(sectionsViewed).map(Number),
+                            active_time_seconds: activeSeconds,
+                        }),
+                    }).catch(() => {});
+                }
+            }, 30000);
+
+            // Also save on page close / visibility change
             window.addEventListener('beforeunload', () => {
-                if (window._viewSessionId) {
-                    const data = JSON.stringify({
-                        session_id: window._viewSessionId,
-                        pages_viewed: Array.from(sectionsViewed).map(Number),
-                        active_time_seconds: activeSeconds,
-                    });
+                if (window._viewSessionId && activeSeconds > 0) {
                     navigator.sendBeacon(
                         `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
-                        new Blob([data], { type: 'application/json' })
+                        new Blob([JSON.stringify({
+                            session_id: window._viewSessionId,
+                            pages_viewed: Array.from(sectionsViewed).map(Number),
+                            active_time_seconds: activeSeconds,
+                        })], { type: 'application/json' })
+                    );
+                }
+            });
+
+            // iPad: also fire on visibilitychange (tab switch / app switch)
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden && window._viewSessionId && activeSeconds > 0) {
+                    navigator.sendBeacon(
+                        `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
+                        new Blob([JSON.stringify({
+                            session_id: window._viewSessionId,
+                            pages_viewed: Array.from(sectionsViewed).map(Number),
+                            active_time_seconds: activeSeconds,
+                        })], { type: 'application/json' })
                     );
                 }
             });
