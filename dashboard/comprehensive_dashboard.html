@@ -1670,12 +1670,12 @@
                     <td>${assessmentAttempts || '—'}</td>
                     <td style="color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};">${lastRevisedShort}</td>
                     <td>${statusBadge}</td>
-                    <td style="white-space:normal;">
-                        <div style="display:flex;gap:2px;flex-wrap:wrap;">
-                            ${chunkButton}${assessmentButton}${testButton}
+                    <td>
+                        <div style="display:flex;gap:2px;flex-wrap:nowrap;">
+                            ${assessmentButton}${testButton}
                             <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:3px 6px;font-size:0.7rem;">Read</button>
                             ${revisedButton}
-                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 6px;font-size:0.7rem;">Details</button>
+                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 6px;font-size:0.7rem;background:#374151;color:#fff;">Details</button>
                         </div>
                     </td>
                 </tr>
