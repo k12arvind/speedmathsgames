@@ -374,10 +374,10 @@
 
         table { width: 100%; max-width: 100%; border-collapse: collapse; table-layout: fixed; }
         th, td { padding: 3px 2px !important; overflow: hidden; text-overflow: ellipsis; font-size: 11px; white-space: nowrap; }
-        /* Fixed pixel widths that add up to ~980px for iPad landscape */
-        col.col-name { width: 150px; }
+        /* Fixed pixel widths — total ~980px for iPad landscape */
+        col.col-name { width: 180px; }
         col.col-data { width: 30px; }
-        col.col-actions { width: auto; }
+        col.col-actions { width: 280px; }
 
         .badge {
             display: inline-flex;
@@ -1671,8 +1671,8 @@
                     <td>${assessmentAttempts || '—'}</td>
                     <td style="color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};">${lastRevisedShort}</td>
                     <td>${statusBadge}</td>
-                    <td>
-                        <div style="display:flex;gap:2px;flex-wrap:nowrap;">
+                    <td style="white-space:normal;">
+                        <div style="display:flex;gap:2px;flex-wrap:wrap;">
                             ${chunkButton}${assessmentButton}${testButton}
                             <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:3px 5px;font-size:0.68rem;">📖</button>
                             <button class="btn" onclick="viewPdf('${pdf.filename}')" style="background:#3b82f6;color:#fff;padding:3px 5px;font-size:0.68rem;">📄</button>
