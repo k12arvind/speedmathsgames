@@ -372,11 +372,12 @@
             white-space: nowrap;
         }
 
-        table { width: 100%; border-collapse: collapse; table-layout: auto; }
+        table { width: 100%; max-width: 100%; border-collapse: collapse; table-layout: fixed; }
         th, td { padding: 3px 2px !important; overflow: hidden; text-overflow: ellipsis; font-size: 11px; white-space: nowrap; }
-        td:first-child { max-width: 140px; }
-        td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5) { width: 28px; text-align: center; }
-        td:last-child { white-space: normal; }
+        /* Fixed pixel widths that add up to ~980px for iPad landscape */
+        col.col-name { width: 150px; }
+        col.col-data { width: 30px; }
+        col.col-actions { width: auto; }
 
         .badge {
             display: inline-flex;
@@ -1112,6 +1113,14 @@
             const tableHTML = `
                 <div class="table-wrapper">
                     <table>
+                        <colgroup>
+                            <col class="col-name">
+                            <col class="col-data">
+                            <col class="col-data">
+                            <col class="col-data">
+                            <col class="col-data">
+                            <col class="col-actions">
+                        </colgroup>
                         <thead>
                             <tr>
                                 <th>PDF</th>
