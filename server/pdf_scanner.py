@@ -254,19 +254,27 @@ class PDFScanner:
             # Get last viewed timestamp from view sessions
             last_viewed = None
             days_since_view = None
+            # Count ANY view session (not just complete ones) — she opened the article
             cursor.execute("""
-                SELECT completed_at FROM pdf_view_sessions
-                WHERE pdf_id = ? AND is_complete = 1
-                ORDER BY completed_at DESC LIMIT 1
+                SELECT COALESCE(completed_at, started_at) as last_ts
+                FROM pdf_view_sessions
+                WHERE pdf_id = ?
+                ORDER BY started_at DESC LIMIT 1
             """, (pdf_file.name,))
             view_result = cursor.fetchone()
-            if view_result and view_result['completed_at']:
-                last_viewed = view_result['completed_at']
+            if view_result and view_result['last_ts']:
+                last_viewed = view_result['last_ts']
                 try:
                     view_dt = datetime.fromisoformat(last_viewed.replace('Z', '+00:00').split('+')[0])
                     days_since_view = (datetime.now() - view_dt).days
                 except:
                     pass
+            # Count total view sessions (opened the article at least once)
+            cursor.execute("""
+                SELECT COUNT(*) as cnt FROM pdf_view_sessions
+                WHERE pdf_id = ?
+            """, (pdf_file.name,))
+            view_count = cursor.fetchone()['cnt'] or view_count
 
             # Get last annotation timestamp
             last_annotation = None
