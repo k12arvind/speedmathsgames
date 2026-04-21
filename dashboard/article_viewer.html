@@ -30,7 +30,7 @@
         }
         .color-dot.active { border-color: white; }
 
-        .article-container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 20px 20px 80px 20px; }
 
         /* Section cards */
         .section-card {
@@ -186,6 +186,21 @@
         <button class="ht-btn green" onclick="applyHighlight('green')" title="Green highlight"></button>
         <button class="ht-btn pink" onclick="applyHighlight('pink')" title="Pink highlight"></button>
         <button class="ht-btn note" onclick="addNoteFromSelection()" title="Add note">+ Note</button>
+    </div>
+
+    <!-- Fixed bottom annotation bar for touch devices (iPad) -->
+    <div id="annotation-bar" style="
+        position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+        background: #fff; border-top: 2px solid #e0e0e0;
+        padding: 8px 16px; display: flex; gap: 8px; align-items: center;
+        justify-content: center; box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    ">
+        <span style="font-size:0.78rem;color:#7f8c8d;margin-right:8px;">Select text, then:</span>
+        <button onclick="applyHighlight('yellow')" style="width:40px;height:40px;border-radius:50%;border:2px solid #ccc;background:rgba(255,255,0,0.5);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Yellow"></button>
+        <button onclick="applyHighlight('green')" style="width:40px;height:40px;border-radius:50%;border:2px solid #ccc;background:rgba(0,255,100,0.4);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Green"></button>
+        <button onclick="applyHighlight('pink')" style="width:40px;height:40px;border-radius:50%;border:2px solid #ccc;background:rgba(255,100,150,0.45);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Pink"></button>
+        <button onclick="addNoteFromSelection()" style="height:40px;padding:0 16px;border-radius:8px;border:2px solid #3b82f6;background:#eef4ff;color:#1e40af;font-size:0.85rem;font-weight:600;cursor:pointer;-webkit-tap-highlight-color:transparent;">+ Note</button>
+        <span id="annotation-status" style="font-size:0.78rem;color:#10b981;margin-left:8px;"></span>
     </div>
 
     <div class="article-container" id="article-container">
@@ -387,7 +402,25 @@
         }
 
         async function applyHighlight(color) {
-            if (!currentSelection) return;
+            // If no current selection, try to grab one now
+            if (!currentSelection) {
+                const sel = window.getSelection();
+                if (sel && !sel.isCollapsed && sel.toString().trim()) {
+                    const anchor = sel.anchorNode?.parentElement?.closest('.section-content');
+                    if (anchor) {
+                        currentSelection = {
+                            text: sel.toString().trim(),
+                            sectionIndex: parseInt(anchor.id.replace('content-', '')),
+                            range: sel.getRangeAt(0).cloneRange(),
+                        };
+                    }
+                }
+            }
+            if (!currentSelection) {
+                const status = document.getElementById('annotation-status');
+                if (status) { status.textContent = 'Select text first!'; setTimeout(() => status.textContent = '', 2000); }
+                return;
+            }
             const toolbar = document.getElementById('highlight-toolbar');
             toolbar.classList.remove('show');
 
@@ -407,14 +440,15 @@
                 const data = await resp.json();
 
                 if (data.success) {
-                    // Apply highlight visually
                     const mark = document.createElement('mark');
                     mark.className = `user-highlight ${color}`;
                     mark.dataset.annotationId = data.annotation_id;
                     mark.onclick = () => {
                         if (confirm('Remove this highlight?')) deleteAnnotation(data.annotation_id, mark);
                     };
-                    currentSelection.range.surroundContents(mark);
+                    try { currentSelection.range.surroundContents(mark); } catch(e) { console.warn('Highlight wrap failed:', e); }
+                    const status = document.getElementById('annotation-status');
+                    if (status) { status.textContent = '✓ Highlighted!'; setTimeout(() => status.textContent = '', 2000); }
                 }
             } catch (e) {
                 console.error('Failed to save highlight:', e);
@@ -425,7 +459,24 @@
         }
 
         async function addNoteFromSelection() {
-            if (!currentSelection) return;
+            if (!currentSelection) {
+                const sel = window.getSelection();
+                if (sel && !sel.isCollapsed && sel.toString().trim()) {
+                    const anchor = sel.anchorNode?.parentElement?.closest('.section-content');
+                    if (anchor) {
+                        currentSelection = {
+                            text: sel.toString().trim(),
+                            sectionIndex: parseInt(anchor.id.replace('content-', '')),
+                            range: sel.getRangeAt(0).cloneRange(),
+                        };
+                    }
+                }
+            }
+            if (!currentSelection) {
+                const status = document.getElementById('annotation-status');
+                if (status) { status.textContent = 'Select text first!'; setTimeout(() => status.textContent = '', 2000); }
+                return;
+            }
             const toolbar = document.getElementById('highlight-toolbar');
             toolbar.classList.remove('show');
 
