@@ -188,23 +188,33 @@
         <button class="ht-btn note" onclick="addNoteFromSelection()" title="Add note">+ Note</button>
     </div>
 
-    <!-- Compact annotation bar -->
+    <!-- Annotation toolbar -->
     <div id="annotation-bar" style="
-        position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
-        background: #fff; border-top: 2px solid #e0e0e0;
-        padding: 6px 10px; display: flex; gap: 5px; align-items: center;
-        justify-content: center; box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+        position:fixed; bottom:0; left:0; right:0; z-index:60;
+        background:#fff; border-top:2px solid #e0e0e0;
+        padding:6px 12px; display:flex; gap:0; align-items:center;
+        justify-content:center; box-shadow:0 -2px 8px rgba(0,0,0,0.1);
+        flex-wrap:nowrap;
     ">
-        <button onclick="applyHighlight('yellow')" style="width:30px;height:30px;border-radius:50%;border:2px solid #ccc;background:rgba(255,255,0,0.6);cursor:pointer;" title="Highlight yellow"></button>
-        <button onclick="applyHighlight('green')" style="width:30px;height:30px;border-radius:50%;border:2px solid #ccc;background:rgba(0,200,80,0.5);cursor:pointer;" title="Highlight green"></button>
-        <button onclick="applyHighlight('pink')" style="width:30px;height:30px;border-radius:50%;border:2px solid #ccc;background:rgba(255,100,150,0.5);cursor:pointer;" title="Highlight pink"></button>
-        <button onclick="addNoteFromSelection()" style="width:30px;height:30px;border-radius:50%;border:2px solid #3b82f6;background:#eef4ff;color:#1e40af;font-size:0.75rem;cursor:pointer;" title="Add note">📝</button>
-        <div style="width:1px;height:24px;background:#ddd;margin:0 2px;"></div>
-        <button id="pen-toggle" onclick="togglePenMode()" style="width:30px;height:30px;border-radius:50%;border:2px solid #f59e0b;background:#fff8e1;cursor:pointer;font-size:0.8rem;" title="Pen draw">✏️</button>
-        <input type="color" id="pen-color" value="#FF0000" style="width:30px;height:30px;border:none;border-radius:50%;cursor:pointer;padding:0;" title="Pen color">
-        <button id="eraser-btn" onclick="toggleEraser()" style="width:30px;height:30px;border-radius:50%;border:2px solid #ef4444;background:#fff;cursor:pointer;font-size:0.75rem;" title="Eraser">🧹</button>
-        <div style="width:1px;height:24px;background:#ddd;margin:0 2px;"></div>
-        <span id="annotation-status" style="font-size:0.72rem;color:#10b981;min-width:40px;text-align:center;">—</span>
+        <!-- 4 quick highlight colors -->
+        <button onclick="applyHighlight('yellow')" style="width:28px;height:28px;border-radius:50%;border:2px solid #ddd;background:#ffe066;margin:0 2px;cursor:pointer;"></button>
+        <button onclick="applyHighlight('green')" style="width:28px;height:28px;border-radius:50%;border:2px solid #ddd;background:#66e0a0;margin:0 2px;cursor:pointer;"></button>
+        <button onclick="applyHighlight('pink')" style="width:28px;height:28px;border-radius:50%;border:2px solid #ddd;background:#ff99bb;margin:0 2px;cursor:pointer;"></button>
+        <button onclick="applyHighlight('blue')" style="width:28px;height:28px;border-radius:50%;border:2px solid #ddd;background:#99ccff;margin:0 2px;cursor:pointer;"></button>
+        <!-- Color grid picker -->
+        <input type="color" id="pen-color" value="#FF0000" style="width:28px;height:28px;border:2px solid #ddd;border-radius:50%;cursor:pointer;padding:0;margin:0 2px;" title="More colors">
+        <!-- Divider -->
+        <div style="width:1px;height:22px;background:#ccc;margin:0 6px;"></div>
+        <!-- Pen ON/OFF toggle -->
+        <button id="pen-toggle" onclick="togglePenMode()" style="height:28px;padding:0 10px;border-radius:14px;border:2px solid #f59e0b;background:#fff8e1;color:#b45309;font-size:0.72rem;font-weight:700;cursor:pointer;white-space:nowrap;">PEN OFF</button>
+        <!-- Eraser -->
+        <button id="eraser-btn" onclick="toggleEraser()" style="height:28px;padding:0 8px;border-radius:14px;border:2px solid #ddd;background:#fff;font-size:0.72rem;cursor:pointer;margin:0 2px;">🧹</button>
+        <!-- Divider -->
+        <div style="width:1px;height:22px;background:#ccc;margin:0 6px;"></div>
+        <!-- Note button -->
+        <button onclick="addNoteFromSelection()" style="height:28px;padding:0 10px;border-radius:14px;border:2px solid #3b82f6;background:#eef4ff;color:#1e40af;font-size:0.72rem;font-weight:600;cursor:pointer;">NOTE</button>
+        <!-- Save indicator -->
+        <div id="annotation-status" style="height:28px;padding:0 8px;border-radius:14px;border:2px solid #ddd;background:#f0f0f0;color:#999;font-size:0.7rem;display:flex;align-items:center;margin-left:4px;">saved</div>
     </div>
 
     <div class="article-container" id="article-container">
@@ -423,7 +433,7 @@
             }
             if (!currentSelection) {
                 const status = document.getElementById('annotation-status');
-                if (status) { status.textContent = 'Select text first!'; setTimeout(() => status.textContent = '', 2000); }
+                if (status) { status.textContent = 'select text!'; status.style.color = '#ef4444'; setTimeout(() => { status.textContent = 'saved'; status.style.color = '#999'; }, 2000); }
                 return;
             }
             const toolbar = document.getElementById('highlight-toolbar');
@@ -453,7 +463,7 @@
                     };
                     try { currentSelection.range.surroundContents(mark); } catch(e) { console.warn('Highlight wrap failed:', e); }
                     const status = document.getElementById('annotation-status');
-                    if (status) { status.textContent = '✓ Highlighted!'; setTimeout(() => status.textContent = '', 2000); }
+                    if (status) { status.textContent = '✓ saved'; status.style.background = '#d1fae5'; status.style.color = '#059669'; status.style.borderColor = '#10b981'; setTimeout(() => { status.textContent = 'saved'; status.style.background = '#f0f0f0'; status.style.color = '#999'; status.style.borderColor = '#ddd'; }, 2000); }
                 }
             } catch (e) {
                 console.error('Failed to save highlight:', e);
@@ -479,7 +489,7 @@
             }
             if (!currentSelection) {
                 const status = document.getElementById('annotation-status');
-                if (status) { status.textContent = 'Select text first!'; setTimeout(() => status.textContent = '', 2000); }
+                if (status) { status.textContent = 'select text!'; status.style.color = '#ef4444'; setTimeout(() => { status.textContent = 'saved'; status.style.color = '#999'; }, 2000); }
                 return;
             }
             const toolbar = document.getElementById('highlight-toolbar');
@@ -556,8 +566,8 @@
             penModeActive = !penModeActive;
             const btn = document.getElementById('pen-toggle');
             btn.style.background = penModeActive ? '#f59e0b' : '#fff8e1';
-            btn.style.color = penModeActive ? '#fff' : '#f59e0b';
-            btn.textContent = penModeActive ? '✏️ ON' : '✏️ Draw';
+            btn.style.color = penModeActive ? '#fff' : '#b45309';
+            btn.textContent = penModeActive ? 'PEN ON' : 'PEN OFF';
 
             // Create canvas overlays on each section (if not already created)
             document.querySelectorAll('.section-content').forEach(content => {
@@ -655,7 +665,7 @@
                         }),
                     }).then(() => {
                         const status = document.getElementById('annotation-status');
-                        if (status) { status.textContent = '✓ saved'; setTimeout(() => status.textContent = '', 1500); }
+                        if (status) { status.textContent = '✓ saved'; status.style.background = '#d1fae5'; status.style.color = '#059669'; status.style.borderColor = '#10b981'; setTimeout(() => { status.textContent = 'saved'; status.style.background = '#f0f0f0'; status.style.color = '#999'; status.style.borderColor = '#ddd'; }, 2000); }
                     }).catch(() => {});
                 }
             }

@@ -94,26 +94,21 @@
 
         /* Statistics Grid - 6 cards in one row */
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        @media (max-width: 1200px) {
-            .stats-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
         }
 
         .stat-card {
             background: var(--bg-card);
-            padding: 12px;
-            border-radius: 10px;
+            padding: 6px 10px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
             position: relative;
             overflow: hidden;
+            flex: 1;
+            min-width: 70px;
         }
 
         .stat-card::before {
@@ -133,26 +128,26 @@
         .stat-card.completion::before { background: linear-gradient(90deg, #10b981, #34d399); }
 
         .stat-value {
-            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-size: 1.2rem;
             font-weight: 800;
             color: var(--text-primary);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .stat-label {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: var(--text-muted);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.03em;
         }
 
         /* Tools Section */
         .tools-section {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 16px;
+            border-radius: 10px;
+            padding: 10px;
             margin-bottom: 20px;
         }
 
@@ -372,14 +367,19 @@
         .pdf-name {
             font-weight: 600;
             color: var(--text-primary);
-            max-width: 180px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
 
-        table { table-layout: auto; border-collapse: collapse; }
-        th, td { padding: 4px 3px !important; }
+        table { table-layout: fixed; width: 100%; border-collapse: collapse; }
+        th, td { padding: 4px 3px !important; overflow: hidden; text-overflow: ellipsis; }
+        th:first-child, td:first-child { width: 35%; }
+        th:nth-child(2), td:nth-child(2) { width: 8%; text-align: center; }
+        th:nth-child(3), td:nth-child(3) { width: 8%; text-align: center; }
+        th:nth-child(4), td:nth-child(4) { width: 8%; text-align: center; }
+        th:nth-child(5), td:nth-child(5) { width: 8%; text-align: center; }
+        th:last-child, td:last-child { width: 33%; }
 
         .badge {
             display: inline-flex;
@@ -1137,11 +1137,11 @@
                     <table>
                         <thead>
                             <tr>
-                                <th onclick="sortTable('filename')">PDF</th>
-                                <th onclick="sortTable('view_count')" title="Views">👁</th>
-                                <th onclick="sortTable('assessment_attempts')" title="Tests">📝</th>
-                                <th onclick="sortTable('days_since_revision')" title="Last Revised">Rev</th>
-                                <th>Status</th>
+                                <th>PDF</th>
+                                <th>👁</th>
+                                <th>📝</th>
+                                <th>Rev</th>
+                                <th>St</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -1685,20 +1685,15 @@
                     <td style="text-align:center;font-size:0.8rem;">${assessmentAttempts || '—'}</td>
                     <td style="text-align:center;font-size:0.8rem;color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};" title="${lastRevised}">${lastRevisedShort}</td>
                     <td>${statusBadge}</td>
+                    <td style="text-align:center;">${viewCount || '—'}</td>
+                    <td style="text-align:center;">${assessmentAttempts || '—'}</td>
+                    <td style="text-align:center;color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};">${lastRevisedShort}</td>
+                    <td style="text-align:center;">${statusBadge}</td>
                     <td>
-                        <div class="action-buttons" style="gap:3px;">
-                            ${chunkButton}
-                            ${assessmentButton}
+                        <div class="action-buttons" style="gap:2px;flex-wrap:nowrap;">
                             ${testButton}
-                            <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background:#3b82f6;padding:4px 8px;font-size:0.72rem;">
-                                📄
-                            </button>
-                            <button class="btn btn-info" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;padding:4px 8px;font-size:0.72rem;">
-                                📖
-                            </button>
-                            ${revisedButton}
-                            <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:4px 8px;font-size:0.72rem;">
-                                ⓘ
+                            <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:3px 5px;font-size:0.68rem;">📖</button>
+                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 5px;font-size:0.68rem;">ⓘ
                             </button>
                         </div>
                     </td>
