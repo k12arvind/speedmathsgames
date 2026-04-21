@@ -156,15 +156,15 @@
         }
         .highlight-toolbar.show { display: flex; }
         .ht-btn {
-            width: 28px; height: 28px; border-radius: 50%; border: none;
-            cursor: pointer;
+            width: 36px; height: 36px; border-radius: 50%; border: none;
+            cursor: pointer; -webkit-tap-highlight-color: transparent;
         }
         .ht-btn.yellow { background: rgba(255,255,0,0.5); }
         .ht-btn.green { background: rgba(0,255,100,0.4); }
         .ht-btn.pink { background: rgba(255,100,150,0.45); }
         .ht-btn.note { background: #f8f8f8; border: 1px solid #d0d0d0;
-            font-size: 0.75rem; width: auto; padding: 0 10px; border-radius: 6px;
-            color: #2c3e50; }
+            font-size: 0.82rem; width: auto; padding: 0 14px; border-radius: 6px;
+            color: #2c3e50; height: 36px; }
 
         .loading { padding: 60px; text-align: center; color: #7f8c8d; }
     </style>
@@ -338,16 +338,22 @@
         }
 
         // Selection handling — show toolbar when user selects text
+        // Works on both mouse (desktop) and touch/stylus (iPad)
         function setupSelectionHandler() {
-            document.addEventListener('mouseup', (e) => {
+            function checkSelection() {
                 const sel = window.getSelection();
                 if (!sel || sel.isCollapsed || !sel.toString().trim()) {
-                    document.getElementById('highlight-toolbar').classList.remove('show');
-                    currentSelection = null;
+                    // Small delay before hiding — iPad sometimes fires early
+                    setTimeout(() => {
+                        const s = window.getSelection();
+                        if (!s || s.isCollapsed || !s.toString().trim()) {
+                            document.getElementById('highlight-toolbar').classList.remove('show');
+                            currentSelection = null;
+                        }
+                    }, 200);
                     return;
                 }
 
-                // Check selection is within a section-content
                 const anchor = sel.anchorNode?.parentElement?.closest('.section-content');
                 if (!anchor) return;
 
@@ -357,12 +363,26 @@
                     range: sel.getRangeAt(0).cloneRange(),
                 };
 
-                // Position toolbar near the selection
                 const rect = sel.getRangeAt(0).getBoundingClientRect();
                 const toolbar = document.getElementById('highlight-toolbar');
-                toolbar.style.top = (rect.top - 40 + window.scrollY) + 'px';
-                toolbar.style.left = (rect.left + rect.width / 2 - 60) + 'px';
+                toolbar.style.top = (rect.top - 44 + window.scrollY) + 'px';
+                toolbar.style.left = Math.max(10, Math.min(rect.left + rect.width / 2 - 60, window.innerWidth - 160)) + 'px';
                 toolbar.classList.add('show');
+            }
+
+            // Desktop: mouseup
+            document.addEventListener('mouseup', checkSelection);
+
+            // iPad/touch: selectionchange fires when user selects with finger/pencil
+            document.addEventListener('selectionchange', () => {
+                // Debounce — wait for selection to stabilize
+                clearTimeout(window._selDebounce);
+                window._selDebounce = setTimeout(checkSelection, 300);
+            });
+
+            // Also handle touchend for stylus users
+            document.addEventListener('touchend', () => {
+                setTimeout(checkSelection, 400);
             });
         }
 

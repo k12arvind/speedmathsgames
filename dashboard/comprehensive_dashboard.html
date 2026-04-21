@@ -1134,14 +1134,10 @@
                     <table>
                         <thead>
                             <tr>
-                                <th onclick="sortTable('filename')">PDF Name</th>
-                                <th onclick="sortTable('date_added')">Added</th>
-                                <th onclick="sortTable('source_type')">Type</th>
-                                <th onclick="sortTable('revision_count')">Revisions</th>
-                                <th onclick="sortTable('view_count')">Views</th>
-                                <th onclick="sortTable('days_since_view')">Last Viewed</th>
-                                <th onclick="sortTable('assessment_attempts')">Test Attempts</th>
-                                <th onclick="sortTable('days_since_revision')">Last Revised</th>
+                                <th onclick="sortTable('filename')">PDF</th>
+                                <th onclick="sortTable('view_count')" title="Views">👁</th>
+                                <th onclick="sortTable('assessment_attempts')" title="Tests">📝</th>
+                                <th onclick="sortTable('days_since_revision')" title="Last Revised">Rev</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
@@ -1679,31 +1675,32 @@
                 );
             }, 0);
 
+            // Compact notations
+            const lastRevisedShort = pdf.days_since_revision !== null
+                ? (pdf.days_since_revision === 0 ? '0d' : `-${pdf.days_since_revision}d`)
+                : '✗';
+
             return `
                 <tr>
-                    <td class="pdf-name" style="${pdfNameStyle}">${pdf.filename}${pageInfo}</td>
-                    <td>${formatDate(pdf.date_added || pdf.date_published)}</td>
-                    <td><span class="badge badge-${pdf.source_type}">${pdf.source_type}</span></td>
-                    <td><span class="badge badge-count ${revisionBadgeClass}">×${revisionCount}</span></td>
-                    <td><span class="badge badge-count ${viewBadgeClass}" title="Complete scroll-throughs">👁 ${viewCount}</span></td>
-                    <td>${lastViewed}</td>
-                    <td><span class="badge badge-count ${attemptsBadgeClass}">${assessmentAttempts}×</span></td>
-                    <td>${lastRevised}</td>
+                    <td class="pdf-name" style="${pdfNameStyle};font-size:0.8rem;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${pdf.filename}">${pdf.filename.replace('.pdf','').replace(/current_affairs_/,'').replace(/weekly_ca_/,'w_')}${pageInfo}</td>
+                    <td style="text-align:center;font-size:0.8rem;">${viewCount || '—'}</td>
+                    <td style="text-align:center;font-size:0.8rem;">${assessmentAttempts || '—'}</td>
+                    <td style="text-align:center;font-size:0.8rem;color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};" title="${lastRevised}">${lastRevisedShort}</td>
                     <td>${statusBadge}</td>
                     <td>
-                        <div class="action-buttons">
+                        <div class="action-buttons" style="gap:3px;">
                             ${chunkButton}
                             ${assessmentButton}
                             ${testButton}
-                            <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background: #3b82f6;">
-                                📄 View PDF
+                            <button class="btn btn-info" onclick="viewPdf('${pdf.filename}')" style="background:#3b82f6;padding:4px 8px;font-size:0.72rem;">
+                                📄
                             </button>
-                            <button class="btn btn-info" onclick="readArticle('${pdf.filename}')" style="background: #8b5cf6;">
-                                📖 Read
+                            <button class="btn btn-info" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;padding:4px 8px;font-size:0.72rem;">
+                                📖
                             </button>
                             ${revisedButton}
-                            <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')">
-                                Details
+                            <button class="btn btn-secondary" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:4px 8px;font-size:0.72rem;">
+                                ⓘ
                             </button>
                         </div>
                     </td>
