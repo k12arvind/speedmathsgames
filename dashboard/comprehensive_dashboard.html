@@ -563,13 +563,10 @@
             box-shadow: 0 6px 30px rgba(124, 58, 237, 0.5);
         }
 
-        /* Table Wrapper - Always enable horizontal scroll */
+        /* Table Wrapper - fit to screen, no horizontal scroll */
         .table-wrapper {
             width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent-primary) var(--bg-secondary);
+            overflow-x: hidden;
         }
 
         .table-wrapper::-webkit-scrollbar {
@@ -590,7 +587,6 @@
             background: #9333ea;
         }
 
-        /* iPad Responsive - Horizontal Scroll for Tables */
         @media (max-width: 1024px) {
             .header-content {
                 flex-direction: column;
@@ -601,26 +597,11 @@
                 width: 100%;
                 overflow-x: auto;
                 padding-bottom: 8px;
-                -webkit-overflow-scrolling: touch;
             }
 
-            .table-wrapper {
-                border-radius: 0 0 12px 12px;
-                margin-top: 0;
-            }
-
-            .table-container {
-                overflow: visible;
-            }
-
-            /* Swipe indicator for iPad */
             .table-wrapper::before {
-                content: '👆 Swipe left/right to see all columns →';
-                display: block;
-                text-align: center;
-                padding: 10px;
-                background: linear-gradient(90deg, rgba(124, 58, 237, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
-                color: #a78bfa;
+                content: none !important;
+                display: none !important;
                 font-size: 13px;
                 font-weight: 600;
                 border-bottom: 1px solid var(--border-color);
@@ -1680,21 +1661,18 @@
 
             return `
                 <tr>
-                    <td class="pdf-name" style="${pdfNameStyle};font-size:0.8rem;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${pdf.filename}">${pdf.filename.replace('.pdf','').replace(/current_affairs_/,'').replace(/weekly_ca_/,'w_')}${pageInfo}</td>
-                    <td style="text-align:center;font-size:0.8rem;">${viewCount || '—'}</td>
-                    <td style="text-align:center;font-size:0.8rem;">${assessmentAttempts || '—'}</td>
-                    <td style="text-align:center;font-size:0.8rem;color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};" title="${lastRevised}">${lastRevisedShort}</td>
+                    <td class="pdf-name" title="${pdf.filename}">${pdf.filename.replace('.pdf','').replace(/current_affairs_/,'').replace(/weekly_ca_/,'w_')}${pageInfo}</td>
+                    <td>${viewCount || '—'}</td>
+                    <td>${assessmentAttempts || '—'}</td>
+                    <td style="color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};">${lastRevisedShort}</td>
                     <td>${statusBadge}</td>
-                    <td style="text-align:center;">${viewCount || '—'}</td>
-                    <td style="text-align:center;">${assessmentAttempts || '—'}</td>
-                    <td style="text-align:center;color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};">${lastRevisedShort}</td>
-                    <td style="text-align:center;">${statusBadge}</td>
                     <td>
-                        <div class="action-buttons" style="gap:2px;flex-wrap:nowrap;">
-                            ${testButton}
+                        <div style="display:flex;gap:2px;flex-wrap:nowrap;">
+                            ${chunkButton}${assessmentButton}${testButton}
                             <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:3px 5px;font-size:0.68rem;">📖</button>
-                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 5px;font-size:0.68rem;">ⓘ
-                            </button>
+                            <button class="btn" onclick="viewPdf('${pdf.filename}')" style="background:#3b82f6;color:#fff;padding:3px 5px;font-size:0.68rem;">📄</button>
+                            ${revisedButton}
+                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 5px;font-size:0.68rem;">ⓘ</button>
                         </div>
                     </td>
                 </tr>
