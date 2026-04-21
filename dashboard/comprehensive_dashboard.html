@@ -341,13 +341,13 @@
         }
 
         th {
-            padding: 12px 14px;
+            padding: 6px 4px;
             text-align: left;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.03em;
             border-bottom: 1px solid var(--border-color);
             cursor: pointer;
             user-select: none;
@@ -359,9 +359,9 @@
         }
 
         td {
-            padding: 12px 14px;
+            padding: 5px 4px;
             border-bottom: 1px solid var(--border-color);
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-secondary);
         }
 
@@ -1645,12 +1645,12 @@
             // Get local question count (from questions table - source of truth)
             const localQuestions = pdf.local_questions || 0;
             
-            // Compact status badge
+            // Compact status: green tick or red cross
             let statusBadge;
             if (localQuestions > 0) {
-                statusBadge = `<span id="${statusBadgeId}" class="badge-status badge-processed" style="font-size:0.72rem;padding:2px 6px;">${localQuestions}Q</span>`;
+                statusBadge = `<span id="${statusBadgeId}" style="color:#10b981;font-size:0.85rem;" title="${localQuestions} questions">✓</span>`;
             } else {
-                statusBadge = `<span id="${statusBadgeId}" class="badge-status badge-not-processed" style="font-size:0.72rem;padding:2px 6px;">—</span>`;
+                statusBadge = `<span id="${statusBadgeId}" style="color:#ef4444;font-size:0.85rem;" title="Not processed">✗</span>`;
             }
 
             // Async check for assessment status (after DOM is ready)
@@ -1942,47 +1942,38 @@
                     revisedButton.style.opacity = '0.5';
                     revisedButton.style.cursor = 'not-allowed';
 
-                    // Status - Not Processed
-                    statusBadge.className = 'badge-status badge-not-processed';
-                    statusBadge.innerText = '⚠ Not Processed';
+                    // Status — compact
+                    statusBadge.style.color = '#ef4444';
+                    statusBadge.innerText = '✗';
 
                 } else if (isProcessed) {
-                    // RULE 2: Has cards or processed - Create Assessment GREYED, Test & Revised ACTIVE
-                    
-                    // Create Assessment - show card count, disabled
-                    if (hasCards) {
-                        assessmentButton.innerText = `✅ ${totalCards} cards`;
-                    } else {
-                        assessmentButton.innerText = `✅ Created`;
-                    }
+                    // RULE 2: processed
+                    assessmentButton.innerText = `${totalCards}Q`;
                     assessmentButton.disabled = true;
                     assessmentButton.style.background = '#9e9e9e';
                     assessmentButton.style.cursor = 'not-allowed';
                     assessmentButton.style.opacity = '0.6';
 
-                    // Test - ACTIVE
                     testButton.disabled = false;
                     testButton.style.opacity = '1';
                     testButton.style.cursor = 'pointer';
                     testButton.style.background = '#3b82f6';
 
-                    // Revised - ACTIVE, GREEN if revisionCount > 0
                     revisedButton.disabled = false;
                     revisedButton.style.cursor = 'pointer';
                     revisedButton.style.opacity = '1';
                     if (revisionCount > 0) {
                         revisedButton.style.background = '#10b981';
                         revisedButton.style.color = 'white';
-                        revisedButton.innerText = '✓ Revised';
+                        revisedButton.innerText = 'R✓';
                     } else {
                         revisedButton.style.background = '#6b7280';
                         revisedButton.style.color = 'white';
-                        revisedButton.innerText = '✓ Revised';
+                        revisedButton.innerText = 'R✗';
                     }
 
-                    // Status - PROCESSED
-                    statusBadge.className = 'badge-status badge-processed';
-                    statusBadge.innerText = '✓ Processed';
+                    statusBadge.style.color = '#10b981';
+                    statusBadge.innerText = '✓';
 
                 } else if (status.has_assessments) {
                     // RULE 3: Assessment in progress - show progress

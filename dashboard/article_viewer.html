@@ -188,19 +188,28 @@
         <button class="ht-btn note" onclick="addNoteFromSelection()" title="Add note">+ Note</button>
     </div>
 
-    <!-- Fixed bottom annotation bar for touch devices (iPad) -->
+    <!-- Fixed bottom annotation bar -->
     <div id="annotation-bar" style="
         position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
         background: #fff; border-top: 2px solid #e0e0e0;
         padding: 8px 16px; display: flex; gap: 8px; align-items: center;
         justify-content: center; box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
     ">
-        <span style="font-size:0.78rem;color:#7f8c8d;margin-right:8px;">Select text, then:</span>
-        <button onclick="applyHighlight('yellow')" style="width:40px;height:40px;border-radius:50%;border:2px solid #ccc;background:rgba(255,255,0,0.5);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Yellow"></button>
-        <button onclick="applyHighlight('green')" style="width:40px;height:40px;border-radius:50%;border:2px solid #ccc;background:rgba(0,255,100,0.4);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Green"></button>
-        <button onclick="applyHighlight('pink')" style="width:40px;height:40px;border-radius:50%;border:2px solid #ccc;background:rgba(255,100,150,0.45);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Pink"></button>
-        <button onclick="addNoteFromSelection()" style="height:40px;padding:0 16px;border-radius:8px;border:2px solid #3b82f6;background:#eef4ff;color:#1e40af;font-size:0.85rem;font-weight:600;cursor:pointer;-webkit-tap-highlight-color:transparent;">+ Note</button>
-        <span id="annotation-status" style="font-size:0.78rem;color:#10b981;margin-left:8px;"></span>
+        <span style="font-size:0.75rem;color:#7f8c8d;">Text:</span>
+        <button onclick="applyHighlight('yellow')" style="width:36px;height:36px;border-radius:50%;border:2px solid #ccc;background:rgba(255,255,0,0.5);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Yellow highlight"></button>
+        <button onclick="applyHighlight('green')" style="width:36px;height:36px;border-radius:50%;border:2px solid #ccc;background:rgba(0,255,100,0.4);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Green highlight"></button>
+        <button onclick="applyHighlight('pink')" style="width:36px;height:36px;border-radius:50%;border:2px solid #ccc;background:rgba(255,100,150,0.45);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Pink highlight"></button>
+        <button onclick="addNoteFromSelection()" style="height:36px;padding:0 12px;border-radius:8px;border:2px solid #3b82f6;background:#eef4ff;color:#1e40af;font-size:0.8rem;font-weight:600;cursor:pointer;">📝</button>
+        <div style="width:1px;height:28px;background:#ddd;margin:0 4px;"></div>
+        <span style="font-size:0.75rem;color:#7f8c8d;">Pen:</span>
+        <button id="pen-toggle" onclick="togglePenMode()" style="height:36px;padding:0 14px;border-radius:8px;border:2px solid #f59e0b;background:#fff8e1;color:#f59e0b;font-size:0.8rem;font-weight:600;cursor:pointer;">✏️ Draw</button>
+        <select id="pen-color" style="height:36px;border-radius:6px;border:1px solid #ccc;font-size:0.8rem;padding:0 6px;">
+            <option value="#FFFF00">Yellow</option>
+            <option value="#FF0000">Red</option>
+            <option value="#0000FF">Blue</option>
+            <option value="#00AA00">Green</option>
+        </select>
+        <span id="annotation-status" style="font-size:0.75rem;color:#10b981;margin-left:4px;"></span>
     </div>
 
     <div class="article-container" id="article-container">
@@ -251,6 +260,7 @@
             renderArticle();
             setupSelectionHandler();
             startViewTracking();
+            applySavedPenAnnotations();
         }
 
         function renderArticle() {
@@ -532,6 +542,156 @@
                 }
             } catch (e) {
                 console.error('Delete failed:', e);
+            }
+        }
+
+        // ── Pen Drawing Mode (Apple Pencil support) ────────────
+        let penModeActive = false;
+        let penCanvases = {};
+
+        function togglePenMode() {
+            penModeActive = !penModeActive;
+            const btn = document.getElementById('pen-toggle');
+            btn.style.background = penModeActive ? '#f59e0b' : '#fff8e1';
+            btn.style.color = penModeActive ? '#fff' : '#f59e0b';
+            btn.textContent = penModeActive ? '✏️ ON' : '✏️ Draw';
+
+            // Create or toggle canvas overlays on each section
+            document.querySelectorAll('.section-content').forEach(content => {
+                const idx = content.id.replace('content-', '');
+                let canvas = penCanvases[idx];
+
+                if (!canvas) {
+                    canvas = document.createElement('canvas');
+                    canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;cursor:crosshair;touch-action:none;';
+                    canvas.width = content.offsetWidth;
+                    canvas.height = content.offsetHeight;
+                    content.style.position = 'relative';
+                    content.appendChild(canvas);
+                    penCanvases[idx] = canvas;
+                    setupPenCanvas(canvas, idx);
+                }
+
+                canvas.style.display = penModeActive ? 'block' : 'none';
+                canvas.style.pointerEvents = penModeActive ? 'auto' : 'none';
+            });
+        }
+
+        function setupPenCanvas(canvas, sectionIdx) {
+            const ctx = canvas.getContext('2d');
+            let drawing = false;
+            let points = [];
+
+            function getPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                const touch = e.touches ? e.touches[0] : e;
+                return {
+                    x: (touch.clientX - rect.left) * (canvas.width / rect.width),
+                    y: (touch.clientY - rect.top) * (canvas.height / rect.height)
+                };
+            }
+
+            function startDraw(e) {
+                e.preventDefault();
+                drawing = true;
+                points = [getPos(e)];
+                const color = document.getElementById('pen-color').value;
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 3;
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                ctx.beginPath();
+                ctx.moveTo(points[0].x, points[0].y);
+            }
+
+            function draw(e) {
+                if (!drawing) return;
+                e.preventDefault();
+                const pos = getPos(e);
+                points.push(pos);
+                ctx.lineTo(pos.x, pos.y);
+                ctx.stroke();
+            }
+
+            function endDraw(e) {
+                if (!drawing) return;
+                drawing = false;
+                if (points.length >= 2) {
+                    // Save pen stroke as annotation
+                    const color = document.getElementById('pen-color').value;
+                    fetch(`${API_BASE}/api/gk/html-annotation`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            pdf_filename: pdfId,
+                            section_index: parseInt(sectionIdx),
+                            annotation_type: 'pen',
+                            highlighted_text: JSON.stringify({
+                                points: points,
+                                color: color,
+                                width: canvas.width,
+                                height: canvas.height,
+                            }),
+                            color: color,
+                        }),
+                    }).then(() => {
+                        const status = document.getElementById('annotation-status');
+                        if (status) { status.textContent = '✓'; setTimeout(() => status.textContent = '', 1000); }
+                    }).catch(() => {});
+                }
+            }
+
+            canvas.addEventListener('mousedown', startDraw);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', endDraw);
+            canvas.addEventListener('touchstart', startDraw, { passive: false });
+            canvas.addEventListener('touchmove', draw, { passive: false });
+            canvas.addEventListener('touchend', endDraw);
+        }
+
+        // Redraw saved pen annotations on load
+        function applySavedPenAnnotations() {
+            for (const ann of savedAnnotations) {
+                if (ann.annotation_type === 'pen' && ann.highlighted_text) {
+                    try {
+                        const data = JSON.parse(ann.highlighted_text);
+                        const content = document.getElementById(`content-${ann.section_index}`);
+                        if (!content) continue;
+
+                        let canvas = penCanvases[ann.section_index];
+                        if (!canvas) {
+                            canvas = document.createElement('canvas');
+                            canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;pointer-events:none;touch-action:none;';
+                            canvas.width = data.width || content.offsetWidth;
+                            canvas.height = data.height || content.offsetHeight;
+                            content.style.position = 'relative';
+                            content.appendChild(canvas);
+                            penCanvases[ann.section_index] = canvas;
+                            setupPenCanvas(canvas, ann.section_index);
+                            canvas.style.display = 'none';
+                        }
+
+                        const ctx = canvas.getContext('2d');
+                        const pts = data.points || [];
+                        if (pts.length >= 2) {
+                            // Scale if canvas size differs
+                            const sx = canvas.width / (data.width || canvas.width);
+                            const sy = canvas.height / (data.height || canvas.height);
+                            ctx.strokeStyle = data.color || ann.color || '#FFFF00';
+                            ctx.lineWidth = 3;
+                            ctx.lineCap = 'round';
+                            ctx.beginPath();
+                            ctx.moveTo(pts[0].x * sx, pts[0].y * sy);
+                            for (let i = 1; i < pts.length; i++) {
+                                ctx.lineTo(pts[i].x * sx, pts[i].y * sy);
+                            }
+                            ctx.stroke();
+                        }
+                        // Always show canvas if it has strokes
+                        canvas.style.display = 'block';
+                        canvas.style.pointerEvents = penModeActive ? 'auto' : 'none';
+                    } catch (e) {}
+                }
             }
         }
 
