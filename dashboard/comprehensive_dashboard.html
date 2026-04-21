@@ -1270,11 +1270,8 @@
                             ${extractButton}
                             ${generateButton}
                             ${testButton}
-                            <button class="btn btn-info" onclick="viewPdf('${escFilename}')" style="background: #3b82f6;">
-                                📄 View PDF
-                            </button>
-                            <button class="btn btn-info" onclick="readArticle('${escFilename}')" style="background: #8b5cf6;">
-                                📖 Read
+                            <button class="btn btn-info" onclick="readArticle('${escFilename}')" style="background: #8b5cf6;padding:4px 10px;font-size:0.75rem;">
+                                Read
                             </button>
                         </div>
                     </td>
@@ -1445,8 +1442,8 @@
 
             // Generate list of chunk links
             const chunkLinks = item.chunks.map(chunk => `
-                <button class="btn btn-info" onclick="viewPdf('${chunk.chunk_filename}')"
-                        style="background: #3b82f6; font-size: 11px; padding: 4px 8px; margin: 2px;">
+                <button class="btn btn-info" onclick="readArticle('${chunk.chunk_filename}')"
+                        style="background: #8b5cf6; font-size: 11px; padding: 4px 8px; margin: 2px;">
                     Part ${chunk.chunk_number} (p${chunk.start_page}-${chunk.end_page})
                 </button>
             `).join('');
@@ -1524,8 +1521,8 @@
                     <td>${archivedDate}</td>
                     <td>
                         <div class="action-buttons">
-                            <button class="btn btn-info" onclick="viewPdf('${file.filename}')" style="background: #3b82f6;">
-                                📄 View PDF
+                            <button class="btn btn-info" onclick="readArticle('${file.filename}')" style="background: #8b5cf6;padding:4px 10px;font-size:0.75rem;">
+                                Read
                             </button>
                         </div>
                     </td>
@@ -1829,30 +1826,15 @@
             window.location.href = `assessment.html?pdf_id=${encodeURIComponent(pdfId)}&filename=${encodeURIComponent(filename)}`;
         }
 
-        // View PDF - Open PDF viewer with annotation capabilities
-        async function viewPdf(pdfId) {
-            // Check if spaced version exists
-            let pdfToView = pdfId;
+        // View content — opens HTML article viewer (primary)
+        function viewPdf(pdfId) {
+            // Redirect to HTML article viewer as default
+            readArticle(pdfId);
+        }
 
-            // If filename doesn't end with _s.pdf, check if spaced version exists
-            if (!pdfId.endsWith('_s.pdf')) {
-                try {
-                    const response = await fetch(`/api/pdf-spacing/check/${encodeURIComponent(pdfId)}`);
-                    const data = await response.json();
-
-                    // If spaced version exists, use it
-                    if (data.spaced_exists) {
-                        // Replace .pdf with _s.pdf
-                        pdfToView = pdfId.replace('.pdf', '_s.pdf');
-                        console.log(`Using spaced version: ${pdfToView}`);
-                    }
-                } catch (error) {
-                    console.log('Could not check for spaced version, using original');
-                }
-            }
-
-            // Open PDF viewer in new tab
-            window.open(`pdf-viewer.html?pdf_id=${encodeURIComponent(pdfToView)}`, '_blank');
+        // Legacy PDF viewer — for accessing old pen annotations
+        function viewPdfLegacy(pdfId) {
+            window.open(`pdf-viewer.html?pdf_id=${encodeURIComponent(pdfId)}`, '_blank');
         }
 
         // Chunk PDF - Open PDF chunker with pre-filled filepath
@@ -2252,6 +2234,10 @@
                             </div>
                         `).join('')}
                         ` : ''}
+
+                        <div style="margin-top:12px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.05);font-size:0.75rem;">
+                            <a href="#" onclick="viewPdfLegacy('${esc(fn)}');return false;" style="color:#94a3b8;">Open in legacy PDF viewer (for old pen annotations)</a>
+                        </div>
                     </div>
                 `;
 
@@ -2320,8 +2306,8 @@
                                     <td>${chunk.start_page}-${chunk.end_page} (${chunk.total_pages} pages)</td>
                                     <td>${chunk.file_size_kb} KB</td>
                                     <td>
-                                        <button class="btn btn-sm btn-info" onclick="viewPdf('${chunk.chunk_filename}')">
-                                            View
+                                        <button class="btn btn-sm btn-info" onclick="readArticle('${chunk.chunk_filename}')">
+                                            Read
                                         </button>
                                     </td>
                                 </tr>
