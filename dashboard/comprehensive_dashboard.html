@@ -24,7 +24,7 @@
         .header {
             background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
             color: white;
-            padding: 16px 20px;
+            padding: 8px 16px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -38,7 +38,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 6px;
         }
 
         .header h1 {
@@ -147,20 +147,22 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 8px;
+            margin-bottom: 8px;
         }
 
         .tools-section label {
             color: var(--text-secondary);
+            font-size: 10px !important;
         }
 
         .tools-section input {
             background: var(--bg-input);
             border: 1px solid var(--border-color);
             color: var(--text-primary);
-            border-radius: 8px;
-            padding: 10px 14px;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 12px;
         }
 
         .tools-section input:focus {
@@ -171,42 +173,39 @@
         /* Filters */
         .filters-section {
             background: var(--bg-card);
-            padding: 16px;
-            border-radius: 12px;
+            padding: 8px 10px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
 
         .filter-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 12px;
+            gap: 4px;
+            margin-bottom: 4px;
             align-items: center;
         }
 
-        .filter-row:last-child {
-            margin-bottom: 0;
-        }
+        .filter-row:last-child { margin-bottom: 0; }
 
         .filter-label {
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
             color: var(--text-secondary);
-            margin-right: 8px;
+            margin-right: 4px;
         }
 
         .filter-btn {
-            padding: 8px 14px;
+            padding: 4px 8px;
             border: 1px solid var(--border-color);
             background: var(--bg-input);
             color: var(--text-secondary);
-            border-radius: 8px;
-            font-size: 13px;
+            border-radius: 6px;
+            font-size: 11px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
-            min-height: 40px;
+            min-height: unset;
         }
 
         .filter-btn:hover {
@@ -220,14 +219,13 @@
             border-color: transparent;
         }
 
-        /* Tabs */
         .tabs {
             display: flex;
-            gap: 4px;
-            margin-bottom: 20px;
+            gap: 2px;
+            margin-bottom: 8px;
             background: var(--bg-card);
-            padding: 4px;
-            border-radius: 12px;
+            padding: 3px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
@@ -236,17 +234,16 @@
         .tabs::-webkit-scrollbar { display: none; }
 
         .tab {
-            padding: 10px 20px;
+            padding: 6px 12px;
             background: transparent;
             border: none;
-            border-radius: 8px;
-            font-size: 14px;
+            border-radius: 6px;
+            font-size: 12px;
             font-weight: 600;
             color: var(--text-secondary);
             cursor: pointer;
-            transition: all 0.2s;
             white-space: nowrap;
-            min-height: 44px;
+            min-height: unset;
         }
 
         .tab:hover {
@@ -373,7 +370,9 @@
         }
 
         table { width: 100%; max-width: 100%; border-collapse: collapse; table-layout: fixed; }
-        th, td { padding: 3px 2px !important; overflow: hidden; text-overflow: ellipsis; font-size: 11px; white-space: nowrap; }
+        th, td { padding: 3px 2px !important; font-size: 11px; white-space: nowrap; }
+        td:first-child { overflow: hidden; text-overflow: ellipsis; }
+        td:last-child { overflow: visible !important; white-space: normal !important; }
         /* Fixed pixel widths — total ~980px for iPad landscape */
         col.col-name { width: 180px; }
         col.col-data { width: 30px; }
@@ -1114,12 +1113,12 @@
                 <div class="table-wrapper">
                     <table style="width:100%!important;max-width:100%!important;table-layout:fixed!important;">
                         <colgroup>
-                            <col style="width:30%">
-                            <col style="width:5%">
-                            <col style="width:5%">
-                            <col style="width:5%">
-                            <col style="width:5%">
-                            <col style="width:50%">
+                            <col style="width:22%">
+                            <col style="width:4%">
+                            <col style="width:4%">
+                            <col style="width:4%">
+                            <col style="width:4%">
+                            <col style="width:62%">
                         </colgroup>
                         <thead>
                             <tr>
