@@ -1615,7 +1615,7 @@
             const testButton = `
                 <button id="${testButtonId}" class="btn btn-primary"
                         onclick="takeTest('${pdf.pdf_id}', '${pdf.filename}')"
-                        disabled style="opacity:0.5;cursor:not-allowed;padding:3px 6px;font-size:0.7rem;">
+                        disabled style="opacity:0.5;cursor:not-allowed;padding:4px 10px;font-size:0.75rem;">
                     Test
                 </button>
             `;
@@ -1670,11 +1670,11 @@
                     <td style="color:${lastRevisedShort === '✗' ? '#ef4444' : '#94a3b8'};">${lastRevisedShort}</td>
                     <td>${statusBadge}</td>
                     <td>
-                        <div style="display:flex;gap:2px;flex-wrap:nowrap;">
+                        <div style="display:flex;gap:4px;flex-wrap:nowrap;justify-content:flex-end;">
                             ${assessmentButton}${testButton}
-                            <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:3px 6px;font-size:0.7rem;">Read</button>
+                            <button class="btn" onclick="readArticle('${pdf.filename}')" style="background:#8b5cf6;color:#fff;padding:4px 10px;font-size:0.75rem;">Read</button>
                             ${revisedButton}
-                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:3px 6px;font-size:0.7rem;background:#374151;color:#fff;">Details</button>
+                            <button class="btn" onclick="viewDetails('${pdf.pdf_id}', '${pdf.filename}')" style="padding:4px 10px;font-size:0.75rem;background:#374151;color:#fff;">Details</button>
                         </div>
                     </td>
                 </tr>
