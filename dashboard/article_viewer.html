@@ -188,29 +188,23 @@
         <button class="ht-btn note" onclick="addNoteFromSelection()" title="Add note">+ Note</button>
     </div>
 
-    <!-- Fixed bottom annotation bar -->
+    <!-- Compact annotation bar -->
     <div id="annotation-bar" style="
         position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
         background: #fff; border-top: 2px solid #e0e0e0;
-        padding: 8px 16px; display: flex; gap: 8px; align-items: center;
+        padding: 6px 10px; display: flex; gap: 5px; align-items: center;
         justify-content: center; box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
     ">
-        <span style="font-size:0.75rem;color:#7f8c8d;">Text:</span>
-        <button onclick="applyHighlight('yellow')" style="width:36px;height:36px;border-radius:50%;border:2px solid #ccc;background:rgba(255,255,0,0.5);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Yellow highlight"></button>
-        <button onclick="applyHighlight('green')" style="width:36px;height:36px;border-radius:50%;border:2px solid #ccc;background:rgba(0,255,100,0.4);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Green highlight"></button>
-        <button onclick="applyHighlight('pink')" style="width:36px;height:36px;border-radius:50%;border:2px solid #ccc;background:rgba(255,100,150,0.45);cursor:pointer;-webkit-tap-highlight-color:transparent;" title="Pink highlight"></button>
-        <button onclick="addNoteFromSelection()" style="height:36px;padding:0 12px;border-radius:8px;border:2px solid #3b82f6;background:#eef4ff;color:#1e40af;font-size:0.8rem;font-weight:600;cursor:pointer;">📝</button>
-        <div style="width:1px;height:28px;background:#ddd;margin:0 4px;"></div>
-        <span style="font-size:0.75rem;color:#7f8c8d;">Pen:</span>
-        <button id="pen-toggle" onclick="togglePenMode()" style="height:36px;padding:0 14px;border-radius:8px;border:2px solid #f59e0b;background:#fff8e1;color:#f59e0b;font-size:0.8rem;font-weight:600;cursor:pointer;">✏️ Draw</button>
-        <select id="pen-color" style="height:36px;border-radius:6px;border:1px solid #ccc;font-size:0.8rem;padding:0 6px;">
-            <option value="#FFFF00">Yellow</option>
-            <option value="#FF0000">Red</option>
-            <option value="#0000FF">Blue</option>
-            <option value="#00AA00">Green</option>
-        </select>
-        <button id="eraser-btn" onclick="toggleEraser()" style="height:36px;padding:0 12px;border-radius:8px;border:2px solid #ef4444;background:#fff;color:#ef4444;font-size:0.8rem;font-weight:600;cursor:pointer;">🧹</button>
-        <span id="annotation-status" style="font-size:0.75rem;color:#10b981;margin-left:4px;"></span>
+        <button onclick="applyHighlight('yellow')" style="width:30px;height:30px;border-radius:50%;border:2px solid #ccc;background:rgba(255,255,0,0.6);cursor:pointer;" title="Highlight yellow"></button>
+        <button onclick="applyHighlight('green')" style="width:30px;height:30px;border-radius:50%;border:2px solid #ccc;background:rgba(0,200,80,0.5);cursor:pointer;" title="Highlight green"></button>
+        <button onclick="applyHighlight('pink')" style="width:30px;height:30px;border-radius:50%;border:2px solid #ccc;background:rgba(255,100,150,0.5);cursor:pointer;" title="Highlight pink"></button>
+        <button onclick="addNoteFromSelection()" style="width:30px;height:30px;border-radius:50%;border:2px solid #3b82f6;background:#eef4ff;color:#1e40af;font-size:0.75rem;cursor:pointer;" title="Add note">📝</button>
+        <div style="width:1px;height:24px;background:#ddd;margin:0 2px;"></div>
+        <button id="pen-toggle" onclick="togglePenMode()" style="width:30px;height:30px;border-radius:50%;border:2px solid #f59e0b;background:#fff8e1;cursor:pointer;font-size:0.8rem;" title="Pen draw">✏️</button>
+        <input type="color" id="pen-color" value="#FF0000" style="width:30px;height:30px;border:none;border-radius:50%;cursor:pointer;padding:0;" title="Pen color">
+        <button id="eraser-btn" onclick="toggleEraser()" style="width:30px;height:30px;border-radius:50%;border:2px solid #ef4444;background:#fff;cursor:pointer;font-size:0.75rem;" title="Eraser">🧹</button>
+        <div style="width:1px;height:24px;background:#ddd;margin:0 2px;"></div>
+        <span id="annotation-status" style="font-size:0.72rem;color:#10b981;min-width:40px;text-align:center;">—</span>
     </div>
 
     <div class="article-container" id="article-container">
