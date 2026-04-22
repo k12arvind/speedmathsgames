@@ -188,6 +188,14 @@
         <button class="ht-btn note" onclick="addNoteFromSelection()" title="Add note">+ Note</button>
     </div>
 
+    <!-- Reading timer -->
+    <div id="reading-timer" style="
+        position: fixed; top: 50px; right: 12px; z-index: 55;
+        background: #fff; border: 2px solid #10b981; border-radius: 8px;
+        padding: 4px 12px; font-size: 0.9rem; font-weight: 700;
+        color: #10b981; font-family: monospace; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    ">00:00</div>
+
     <!-- Annotation toolbar -->
     <div id="annotation-bar" style="
         position:fixed; bottom:0; left:0; right:0; z-index:60;
@@ -731,29 +739,47 @@
         let activeSeconds = 0;
         let viewSessionStarted = false;
 
-        // Robust time tracking: use elapsed wall-clock time minus hidden time
-        let _trackStartTime = Date.now();
-        let _hiddenAccum = 0;        // ms spent hidden
-        let _lastHiddenAt = null;
+        // Visible timer — counts up when page is active, pauses when hidden
+        let _timerSeconds = 0;
+        let _timerRunning = true;
+        let _timerInterval = null;
 
         function getActiveSeconds() {
-            const elapsed = Date.now() - _trackStartTime;
-            return Math.max(0, Math.round((elapsed - _hiddenAccum) / 1000));
+            return _timerSeconds;
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(_timerSeconds / 60);
+            const s = _timerSeconds % 60;
+            const el = document.getElementById('reading-timer');
+            if (el) {
+                el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+                el.style.borderColor = _timerRunning ? '#10b981' : '#ef4444';
+                el.style.color = _timerRunning ? '#10b981' : '#ef4444';
+            }
         }
 
         function startViewTracking() {
-            _trackStartTime = Date.now();
-            _hiddenAccum = 0;
-            _lastHiddenAt = null;
+            _timerSeconds = 0;
+            _timerRunning = true;
 
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    _lastHiddenAt = Date.now();
-                } else if (_lastHiddenAt) {
-                    _hiddenAccum += (Date.now() - _lastHiddenAt);
-                    _lastHiddenAt = null;
+            // Tick every second when page is visible
+            _timerInterval = setInterval(() => {
+                if (_timerRunning) {
+                    _timerSeconds++;
+                    updateTimerDisplay();
                 }
+            }, 1000);
+
+            // Pause/resume on visibility change
+            document.addEventListener('visibilitychange', () => {
+                _timerRunning = !document.hidden;
+                updateTimerDisplay();
             });
+
+            // Also pause on window blur / resume on focus (catches more cases)
+            window.addEventListener('blur', () => { _timerRunning = false; updateTimerDisplay(); });
+            window.addEventListener('focus', () => { _timerRunning = true; updateTimerDisplay(); });
 
             // IntersectionObserver per section
             const observer = new IntersectionObserver((entries) => {

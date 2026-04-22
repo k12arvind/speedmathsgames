@@ -1076,6 +1076,47 @@
             window._revisionSections = payload.sections_covered || [];
         }
 
+        // Answer submission with retry — prevents lost answers
+        const _answerQueue = [];
+        let _submitting = false;
+
+        async function submitAnswerWithRetry(payload, retries = 3) {
+            _answerQueue.push({ payload, retries });
+            if (!_submitting) processAnswerQueue();
+        }
+
+        async function processAnswerQueue() {
+            if (_submitting || _answerQueue.length === 0) return;
+            _submitting = true;
+
+            while (_answerQueue.length > 0) {
+                const item = _answerQueue[0];
+                try {
+                    const resp = await fetch(`${ASSESSMENT_API}/api/assessment/answer/submit`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(item.payload),
+                        signal: AbortSignal.timeout(10000),
+                    });
+                    if (resp.ok) {
+                        _answerQueue.shift(); // success — remove from queue
+                    } else {
+                        throw new Error('HTTP ' + resp.status);
+                    }
+                } catch (e) {
+                    console.warn('Answer submit failed, retrying...', e.message);
+                    item.retries--;
+                    if (item.retries <= 0) {
+                        console.error('Answer LOST after retries:', item.payload.question?.slice(0, 50));
+                        _answerQueue.shift(); // give up
+                    } else {
+                        await new Promise(r => setTimeout(r, 1000)); // wait 1s before retry
+                    }
+                }
+            }
+            _submitting = false;
+        }
+
         // Handle URL parameters (for direct PDF selection from dashboard)
         async function handleUrlParameters() {
             console.log('=== HANDLING URL PARAMETERS ===');
@@ -1085,6 +1126,8 @@
 
             console.log('URL pdfId:', pdfId);
             console.log('URL filename:', filename);
+
+            const autostart = urlParams.get('autostart') === '1';
 
             if (pdfId && filename) {
                 // Update header subtitle
@@ -1860,25 +1903,19 @@
 
             debugLog('Visual feedback displayed, changing button to Next Question');
 
-            // Record answer in background (don't wait for response)
+            // Record answer — await with retry to prevent lost answers
             const activeTimeForQuestion = getQuestionActiveTime();
-            fetch(`${ASSESSMENT_API}/api/assessment/answer/submit`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    session_id: currentSession,
-                    note_id: question.note_id,
-                    question: question.question,
-                    correct_answer: correctAnswer,
-                    user_answer: userAnswer,
-                    category: question.category,
-                    time_taken: Math.floor((Date.now() - testStartTime) / 1000),
-                    active_time_seconds: activeTimeForQuestion
-                })
-            }).catch(error => {
-                console.error('Failed to submit answer (background):', error);
-                // Don't show error to user - answer is already recorded locally
-            });
+            const answerPayload = {
+                session_id: currentSession,
+                note_id: question.note_id,
+                question: question.question,
+                correct_answer: correctAnswer,
+                user_answer: userAnswer,
+                category: question.category,
+                time_taken: Math.floor((Date.now() - testStartTime) / 1000),
+                active_time_seconds: activeTimeForQuestion
+            };
+            submitAnswerWithRetry(answerPayload);
             console.log(`Question answered with ${activeTimeForQuestion}s active time`);
 
             // Record answer locally (no need to wait for API)
