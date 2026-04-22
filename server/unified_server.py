@@ -2200,6 +2200,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # Auto-convert to HTML for article viewer
         self._auto_convert_to_html(str(output_path))
 
+        # Auto-chunk if > 13 pages
+        self._auto_chunk_if_needed(str(output_path), filename, category.split('_')[0])
+
         return {
             'success': True,
             'message': 'PDF uploaded (overwrote existing)' if already_existed else 'PDF uploaded',
@@ -2210,6 +2213,42 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             'already_existed': already_existed,
             'size_kb': len(pdf_bytes) / 1024,
         }
+
+    def _auto_chunk_if_needed(self, pdf_path: str, filename: str, source_type: str):
+        """Auto-chunk PDFs > 13 pages so question generation works immediately."""
+        try:
+            from server.pdf_chunker import PdfChunker
+            page_count = PdfChunker.get_pdf_page_count(pdf_path)
+            if page_count <= 13:
+                return
+            if not self.pdf_chunker:
+                return
+            if self.pdf_chunker.is_chunked(filename):
+                return
+
+            max_pages = 25 if 'monthly' in source_type else 10
+            chunk_count = 0
+            for update in self.pdf_chunker.chunk_pdf(
+                pdf_path, str(Path(pdf_path).parent),
+                max_pages=max_pages,
+                naming_pattern='{basename}_part{num}',
+                source_type=source_type,
+            ):
+                if update.get('type') == 'chunk_created':
+                    chunk_count += 1
+                    self._auto_convert_to_html(update.get('path', ''))
+                if update.get('type') == 'error':
+                    print(f"Chunk error: {update.get('message')}")
+                    return
+
+            if self.pdf_scanner:
+                try:
+                    self.pdf_scanner.scan_all_folders()
+                except:
+                    pass
+            print(f"Auto-chunked {filename}: {chunk_count} chunks ({page_count} pages)")
+        except Exception as e:
+            print(f"Auto-chunk failed for {filename}: {e}")
 
     def _auto_convert_to_html(self, pdf_path: str):
         """Auto-convert a newly created/uploaded PDF to HTML sections (background, non-blocking)."""
@@ -2329,6 +2368,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # Auto-convert to HTML for article viewer
         self._auto_convert_to_html(str(output_path))
 
+        # Auto-chunk if large
+        self._auto_chunk_if_needed(str(output_path), filename, pdf_type)
+
         return {
             'success': True,
             'message': f'{pdf_type.title()} PDF downloaded successfully',
@@ -2383,6 +2425,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
         # Auto-convert to HTML for article viewer
         self._auto_convert_to_html(str(output_path))
+
+        # Auto-chunk if large
+        self._auto_chunk_if_needed(str(output_path), filename, 'daily')
 
         return {
             'success': True,
