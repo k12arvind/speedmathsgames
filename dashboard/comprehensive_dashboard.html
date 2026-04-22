@@ -1822,8 +1822,8 @@
 
         // Take test - Navigate to assessment with PDF pre-selected
         function takeTest(pdfId, filename) {
-            // Pass PDF details via URL parameters
-            window.location.href = `assessment.html?pdf_id=${encodeURIComponent(pdfId)}&filename=${encodeURIComponent(filename)}`;
+            // Jump directly to test — skip the selection screen
+            window.location.href = `assessment.html?pdf_id=${encodeURIComponent(pdfId)}&filename=${encodeURIComponent(filename)}&autostart=1`;
         }
 
         // View content — opens HTML article viewer (primary)

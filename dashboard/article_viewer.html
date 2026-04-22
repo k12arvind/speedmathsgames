@@ -819,7 +819,7 @@
                 if (d.success) window._viewSessionId = d.session_id;
             }).catch(() => {});
 
-            // Periodic save every 30 seconds (iPad doesn't reliably fire beforeunload)
+            // Periodic save every 15 seconds
             setInterval(() => {
                 if (window._viewSessionId && getActiveSeconds() > 0) {
                     fetch(`/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`, {
@@ -832,7 +832,21 @@
                         }),
                     }).catch(() => {});
                 }
-            }, 30000);
+            }, 15000);
+
+            // pagehide is more reliable than beforeunload on mobile
+            window.addEventListener('pagehide', () => {
+                if (window._viewSessionId && getActiveSeconds() > 0) {
+                    navigator.sendBeacon(
+                        `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
+                        new Blob([JSON.stringify({
+                            session_id: window._viewSessionId,
+                            pages_viewed: Array.from(sectionsViewed).map(Number),
+                            active_time_seconds: getActiveSeconds(),
+                        })], { type: 'application/json' })
+                    );
+                }
+            });
 
             // Also save on page close / visibility change
             window.addEventListener('beforeunload', () => {

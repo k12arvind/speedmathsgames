@@ -1150,7 +1150,6 @@
                         
                         // Wait for table to render then check the checkbox
                         setTimeout(() => {
-                            // Find checkbox by filename attribute
                             const checkbox = document.querySelector(`.pdf-checkbox[data-filename="${filename}"]`);
                             if (checkbox) {
                                 checkbox.disabled = false;
@@ -1162,6 +1161,12 @@
                                 }
                             }
                             updateSelectionUI();
+
+                            // Auto-start: skip selection screen, go directly to test
+                            if (autostart) {
+                                console.log('Auto-starting test for:', filename);
+                                startTest();
+                            }
                         }, 500);
                     } else {
                         // PDF has no questions
