@@ -729,18 +729,31 @@
         // ── View Tracking (section-level) ──────────────────────
         let sectionsViewed = new Set();
         let activeSeconds = 0;
-        let isVisible = true;
-        let activeInterval = null;
         let viewSessionStarted = false;
 
+        // Robust time tracking: use elapsed wall-clock time minus hidden time
+        let _trackStartTime = Date.now();
+        let _hiddenAccum = 0;        // ms spent hidden
+        let _lastHiddenAt = null;
+
+        function getActiveSeconds() {
+            const elapsed = Date.now() - _trackStartTime;
+            return Math.max(0, Math.round((elapsed - _hiddenAccum) / 1000));
+        }
+
         function startViewTracking() {
-            // Active time counter
+            _trackStartTime = Date.now();
+            _hiddenAccum = 0;
+            _lastHiddenAt = null;
+
             document.addEventListener('visibilitychange', () => {
-                isVisible = !document.hidden;
+                if (document.hidden) {
+                    _lastHiddenAt = Date.now();
+                } else if (_lastHiddenAt) {
+                    _hiddenAccum += (Date.now() - _lastHiddenAt);
+                    _lastHiddenAt = null;
+                }
             });
-            activeInterval = setInterval(() => {
-                if (isVisible) activeSeconds++;
-            }, 1000);
 
             // IntersectionObserver per section
             const observer = new IntersectionObserver((entries) => {
@@ -782,14 +795,14 @@
 
             // Periodic save every 30 seconds (iPad doesn't reliably fire beforeunload)
             setInterval(() => {
-                if (window._viewSessionId && activeSeconds > 0) {
+                if (window._viewSessionId && getActiveSeconds() > 0) {
                     fetch(`/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             session_id: window._viewSessionId,
                             pages_viewed: Array.from(sectionsViewed).map(Number),
-                            active_time_seconds: activeSeconds,
+                            active_time_seconds: getActiveSeconds(),
                         }),
                     }).catch(() => {});
                 }
@@ -797,13 +810,13 @@
 
             // Also save on page close / visibility change
             window.addEventListener('beforeunload', () => {
-                if (window._viewSessionId && activeSeconds > 0) {
+                if (window._viewSessionId && getActiveSeconds() > 0) {
                     navigator.sendBeacon(
                         `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
                         new Blob([JSON.stringify({
                             session_id: window._viewSessionId,
                             pages_viewed: Array.from(sectionsViewed).map(Number),
-                            active_time_seconds: activeSeconds,
+                            active_time_seconds: getActiveSeconds(),
                         })], { type: 'application/json' })
                     );
                 }
@@ -811,13 +824,13 @@
 
             // iPad: also fire on visibilitychange (tab switch / app switch)
             document.addEventListener('visibilitychange', () => {
-                if (document.hidden && window._viewSessionId && activeSeconds > 0) {
+                if (document.hidden && window._viewSessionId && getActiveSeconds() > 0) {
                     navigator.sendBeacon(
                         `/api/annotations/${encodeURIComponent(pdfId)}/view-session/update`,
                         new Blob([JSON.stringify({
                             session_id: window._viewSessionId,
                             pages_viewed: Array.from(sectionsViewed).map(Number),
-                            active_time_seconds: activeSeconds,
+                            active_time_seconds: getActiveSeconds(),
                         })], { type: 'application/json' })
                     );
                 }
