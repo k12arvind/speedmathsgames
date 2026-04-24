@@ -2490,15 +2490,21 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             }
 
         script_path = Path(__file__).parent.parent / 'drishti' / 'generate_pdf.py'
+        # Image-heavy days (10+ infographics across articles) occasionally
+        # need more than a minute — give the subprocess enough headroom.
         result = subprocess.run(
             [sys.executable, str(script_path), url, str(output_path)],
             capture_output=True, text=True,
-            cwd=str(script_path.parent), timeout=90,
+            cwd=str(script_path.parent), timeout=240,
         )
         if result.returncode != 0:
             raise RuntimeError(f"Drishti PDF generation failed: {result.stderr.strip() or result.stdout.strip()}")
         if not output_path.exists():
             raise RuntimeError('Drishti PDF was not created')
+
+        # Capture size BEFORE auto-chunking, which may move/delete the original
+        # when the PDF is large (> 13 pages).
+        size_kb = output_path.stat().st_size / 1024
 
         self._auto_convert_to_html(str(output_path))
         self._auto_chunk_if_needed(str(output_path), filename, 'daily_drishti')
@@ -2509,7 +2515,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             'filename': filename,
             'path': str(output_path),
             'pdf_type': 'daily_drishti',
-            'size_kb': output_path.stat().st_size / 1024,
+            'size_kb': size_kb,
         }
 
     def _sync_pdfs_bidirectional(self) -> dict:
