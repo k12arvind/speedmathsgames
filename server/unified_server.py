@@ -1471,6 +1471,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
 
             # Add page counts to all PDFs
             scan_results['daily'] = self._add_page_counts(scan_results.get('daily', []))
+            scan_results['daily_drishti'] = self._add_page_counts(scan_results.get('daily_drishti', []))
             if 'weekly' in scan_results:
                 scan_results['weekly']['legaledge'] = self._add_page_counts(scan_results['weekly'].get('legaledge', []))
                 scan_results['weekly']['career_launcher'] = self._add_page_counts(scan_results['weekly'].get('career_launcher', []))
@@ -1490,6 +1491,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             scan_results = self.pdf_scanner.scan_all_folders()
             all_pdfs = []
             all_pdfs.extend(scan_results.get('daily', []))
+            all_pdfs.extend(scan_results.get('daily_drishti', []))
             if 'weekly' in scan_results:
                 all_pdfs.extend(scan_results['weekly'].get('legaledge', []))
                 all_pdfs.extend(scan_results['weekly'].get('career_launcher', []))
@@ -2132,9 +2134,10 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 'trace': traceback.format_exc(),
             })
 
-    # Maps the four PDF categories to their folders under ~/saanvi
+    # Maps the five PDF categories to their folders under ~/saanvi
     _UPLOAD_FOLDERS = {
         'daily': 'Legaledgedailygk',
+        'daily_drishti': 'DrishtiDailyGK',
         'weekly_legaledge': 'LegalEdgeweeklyGK',
         'weekly_career_launcher': 'weeklyGKCareerLauncher',
         'monthly': 'Monthly-CLATPOST-LegalEdge',
@@ -2261,21 +2264,34 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             print(f"HTML auto-convert failed for {pdf_path}: {e}")
 
     def _create_pdf_from_url(self, url: str) -> dict:
-        """Create PDF from TopRankers URL (daily HTML or weekly CDN PDF)."""
+        """Create PDF from a supported source URL.
+
+        Supported sources:
+          - TopRankers daily HTML (current-affairs-*)
+          - TopRankers CDN PDFs (cdn.toprankers.net.in, weekly/monthly)
+          - Drishti IAS daily news-analysis page
+        """
         import subprocess
         import re
 
-        # Validate URL - accept both toprankers.com and cdn.toprankers.net.in
-        if 'toprankers.com' not in url and 'cdn.toprankers.net.in' not in url:
-            raise ValueError('Only TopRankers URLs are supported (toprankers.com or cdn.toprankers.net.in)')
+        url_l = url.lower()
+        is_toprankers = 'toprankers.com' in url_l or 'cdn.toprankers.net.in' in url_l
+        is_drishti = 'drishtiias.com' in url_l
+
+        if not (is_toprankers or is_drishti):
+            raise ValueError(
+                'Unsupported URL. Supported sources: toprankers.com, '
+                'cdn.toprankers.net.in, drishtiias.com'
+            )
+
+        if is_drishti:
+            return self._generate_drishti_pdf(url)
 
         # Detect if this is a direct CDN PDF link (weekly/monthly)
-        is_cdn_pdf = 'cdn.toprankers.net.in' in url and url.endswith('.pdf')
-
+        is_cdn_pdf = 'cdn.toprankers.net.in' in url_l and url_l.endswith('.pdf')
         if is_cdn_pdf:
             return self._download_cdn_pdf(url)
-        else:
-            return self._generate_pdf_from_html(url)
+        return self._generate_pdf_from_html(url)
 
     def _download_cdn_pdf(self, url: str) -> dict:
         """Download PDF directly from TopRankers CDN (weekly/monthly PDFs)."""
@@ -2437,11 +2453,70 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             'size_kb': output_path.stat().st_size / 1024
         }
 
+    def _generate_drishti_pdf(self, url: str) -> dict:
+        """Generate clean daily-GK PDF from a Drishti IAS news-analysis page."""
+        import subprocess
+        import re
+
+        # Expected path: /current-affairs-news-analysis-editorials/news-analysis/DD-MM-YYYY
+        m = re.search(r'news-analysis/(\d{2})-(\d{2})-(\d{4})', url)
+        if m:
+            day, month, year = m.groups()
+            months = {
+                '01': 'january', '02': 'february', '03': 'march', '04': 'april',
+                '05': 'may', '06': 'june', '07': 'july', '08': 'august',
+                '09': 'september', '10': 'october', '11': 'november', '12': 'december',
+            }
+            month_name = months.get(month, month)
+            filename = (
+                f"drishti_current_affairs_{year}_{month_name}_{int(day)}.pdf"
+            )
+        else:
+            from datetime import datetime
+            filename = (
+                f"drishti_current_affairs_{datetime.now().strftime('%Y_%m_%d')}.pdf"
+            )
+
+        output_path = Path.home() / 'saanvi' / 'DrishtiDailyGK' / filename
+
+        if output_path.exists():
+            return {
+                'success': True,
+                'message': 'PDF already exists',
+                'filename': filename,
+                'path': str(output_path),
+                'pdf_type': 'daily_drishti',
+                'already_existed': True,
+            }
+
+        script_path = Path(__file__).parent.parent / 'drishti' / 'generate_pdf.py'
+        result = subprocess.run(
+            [sys.executable, str(script_path), url, str(output_path)],
+            capture_output=True, text=True,
+            cwd=str(script_path.parent), timeout=90,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(f"Drishti PDF generation failed: {result.stderr.strip() or result.stdout.strip()}")
+        if not output_path.exists():
+            raise RuntimeError('Drishti PDF was not created')
+
+        self._auto_convert_to_html(str(output_path))
+        self._auto_chunk_if_needed(str(output_path), filename, 'daily_drishti')
+
+        return {
+            'success': True,
+            'message': 'Drishti PDF created successfully',
+            'filename': filename,
+            'path': str(output_path),
+            'pdf_type': 'daily_drishti',
+            'size_kb': output_path.stat().st_size / 1024,
+        }
+
     def _sync_pdfs_bidirectional(self) -> dict:
         """Bidirectional sync of ~/saanvi folders with Mac Mini."""
         import subprocess
         
-        folders = ['Legaledgedailygk', 'LegalEdgeweeklyGK', 'weeklyGKCareerLauncher']
+        folders = ['Legaledgedailygk', 'DrishtiDailyGK', 'LegalEdgeweeklyGK', 'weeklyGKCareerLauncher']
         results = {'synced': [], 'errors': []}
         
         for folder in folders:
@@ -3098,6 +3173,7 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
                 # Also check common PDF directories
                 for base_dir in [
                     Path.home() / 'saanvi' / 'Legaledgedailygk',
+                    Path.home() / 'saanvi' / 'DrishtiDailyGK',
                     Path.home() / 'saanvi' / 'LegalEdgeweeklyGK',
                     Path.home() / 'saanvi' / 'weeklyGKCareerLauncher',
                     Path.home() / 'saanvi' / 'large_files'

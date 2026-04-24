@@ -83,6 +83,11 @@ class PDFScanner:
                 'type': 'daily',
                 'source': 'legaledge'
             },
+            'drishti_daily': {
+                'path': self.BASE_PATH / 'DrishtiDailyGK',
+                'type': 'daily_drishti',
+                'source': 'drishti'
+            },
             'legaledge_weekly': {
                 'path': self.BASE_PATH / 'LegalEdgeweeklyGK',
                 'type': 'weekly',
@@ -107,6 +112,7 @@ class PDFScanner:
         """Scan all PDF folders and return organized data."""
         results = {
             'daily': [],
+            'daily_drishti': [],
             'weekly': {
                 'legaledge': [],
                 'career_launcher': []
@@ -127,6 +133,8 @@ class PDFScanner:
 
             if folder_info['type'] == 'daily':
                 results['daily'].extend(pdfs)
+            elif folder_info['type'] == 'daily_drishti':
+                results['daily_drishti'].extend(pdfs)
             elif folder_info['type'] == 'monthly':
                 results['monthly'].extend(pdfs)
             else:
@@ -405,6 +413,10 @@ class PDFScanner:
             if pdf['revision_count'] == 0:
                 never_revised += 1
 
+        for pdf in all_pdfs.get('daily_drishti', []):
+            if pdf['revision_count'] == 0:
+                never_revised += 1
+
         for source in all_pdfs['weekly'].values():
             for pdf in source:
                 if pdf['revision_count'] == 0:
@@ -420,12 +432,14 @@ class PDFScanner:
         return {
             'total_pdfs': total_pdfs,
             'daily_pdfs': len(all_pdfs['daily']),
+            'daily_drishti_pdfs': len(all_pdfs.get('daily_drishti', [])),
             'weekly_pdfs': sum(len(pdfs) for pdfs in all_pdfs['weekly'].values()),
             'monthly_pdfs': len(all_pdfs['monthly']),
             'never_revised': never_revised,
             'completion_rate': completion_rate,
             'folders': {
                 'legaledge_daily': len(all_pdfs['daily']),
+                'drishti_daily': len(all_pdfs.get('daily_drishti', [])),
                 'legaledge_weekly': len(all_pdfs['weekly']['legaledge']),
                 'career_launcher_weekly': len(all_pdfs['weekly']['career_launcher']),
                 'monthly_legaledge': len(all_pdfs['monthly'])

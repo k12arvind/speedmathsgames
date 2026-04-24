@@ -714,9 +714,9 @@
         <div class="tools-section">
             <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 280px;">
-                    <label style="font-size: 11px; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">📰 Create PDF from TopRankers URL</label>
+                    <label style="font-size: 11px; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">📰 Create PDF from URL (TopRankers or Drishti IAS)</label>
                     <div style="display: flex; gap: 8px;">
-                        <input type="text" id="toprankers-url" placeholder="TopRankers daily/weekly URL (toprankers.com or cdn.toprankers.net.in)"
+                        <input type="text" id="toprankers-url" placeholder="TopRankers (toprankers.com) or Drishti IAS (drishtiias.com/current-affairs-news-analysis-editorials/news-analysis/DD-MM-YYYY)"
                                style="flex: 1; padding: 10px 14px; background: var(--bg-input); border: 1px solid var(--border-color); border-radius: 8px; font-size: 13px; color: var(--text-primary); outline: none; transition: border-color 0.2s;"
                                onfocus="this.style.borderColor='var(--accent-primary)'" onblur="this.style.borderColor='var(--border-color)'">
                         <button onclick="createPdfFromUrl()" id="create-pdf-btn" class="btn btn-success">
@@ -738,6 +738,7 @@
                     <select id="upload-category"
                             style="padding: 10px 12px; background: var(--bg-input); border: 1px solid var(--border-color); border-radius: 8px; font-size: 13px; color: var(--text-primary); outline: none; min-width: 200px;">
                         <option value="daily">📰 Daily (LegalEdge)</option>
+                        <option value="daily_drishti">🗞️ Daily (Drishti IAS)</option>
                         <option value="weekly_legaledge">📚 Weekly (LegalEdge)</option>
                         <option value="weekly_career_launcher">📚 Weekly (Career Launcher)</option>
                         <option value="monthly" selected>📅 Monthly (CLAT Post)</option>
@@ -784,6 +785,10 @@
                 📰 Daily
                 <span class="tab-badge" id="daily-count">0</span>
             </button>
+            <button class="tab" data-tab="daily-drishti">
+                🗞️ Daily Drishti
+                <span class="tab-badge" id="daily-drishti-count">0</span>
+            </button>
             <button class="tab" data-tab="weekly-legaledge">
                 📚 Weekly (LegalEdge)
                 <span class="tab-badge" id="weekly-le-count">0</span>
@@ -816,6 +821,18 @@
                     </div>
                 </div>
                 <div id="daily-table"></div>
+            </div>
+        </div>
+
+        <div id="daily-drishti-tab" class="tab-content">
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="table-title">🗞️ Daily Current Affairs - Drishti IAS</div>
+                    <div class="table-actions">
+                        <button class="btn-icon" onclick="refreshData()" title="Refresh">↻</button>
+                    </div>
+                </div>
+                <div id="daily-drishti-table"></div>
             </div>
         </div>
 
@@ -947,15 +964,19 @@
             });
         }
 
-        function renderPaginationControls(containerId, total, page) {
+        function renderPaginationControls(containerId, total, page, position = 'bottom') {
             const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
             if (totalPages <= 1) return '';
             const start = (page - 1) * PAGE_SIZE + 1;
             const end = Math.min(page * PAGE_SIZE, total);
             const prevDisabled = page <= 1 ? 'disabled' : '';
             const nextDisabled = page >= totalPages ? 'disabled' : '';
+            const isTop = position === 'top';
+            const borderStyle = isTop
+                ? 'border-bottom:1px solid var(--border-color);border-radius:12px 12px 0 0;'
+                : 'border-top:1px solid var(--border-color);border-radius:0 0 12px 12px;';
             return `
-                <div class="pagination-bar" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;border-top:1px solid var(--border-color);background:var(--bg-card);border-radius:0 0 12px 12px;flex-wrap:wrap;">
+                <div class="pagination-bar pagination-${position}" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;${borderStyle}background:var(--bg-card);flex-wrap:wrap;">
                     <div style="color:var(--text-muted);font-size:0.85rem;">Showing <strong style="color:var(--text-primary);">${start}–${end}</strong> of <strong style="color:var(--text-primary);">${total}</strong></div>
                     <div style="display:flex;gap:6px;align-items:center;">
                         <button onclick="goToPage('${containerId}', ${page - 1})" ${prevDisabled} style="padding:6px 12px;border:1px solid var(--border-color);background:var(--bg-input);color:var(--text-primary);border-radius:6px;cursor:${prevDisabled ? 'not-allowed' : 'pointer'};opacity:${prevDisabled ? '0.4' : '1'};font-size:0.85rem;">← Prev</button>
@@ -1025,7 +1046,9 @@
 
         // Update tab counts
         function updateTabCounts() {
+            const drishtiCount = (dashboardData.pdfs.daily_drishti || []).length;
             document.getElementById('daily-count').textContent = dashboardData.pdfs.daily.length;
+            document.getElementById('daily-drishti-count').textContent = drishtiCount;
             document.getElementById('weekly-le-count').textContent = dashboardData.pdfs.weekly.legaledge.length;
             document.getElementById('weekly-cl-count').textContent = dashboardData.pdfs.weekly.career_launcher.length;
 
@@ -1034,6 +1057,7 @@
             document.getElementById('monthly-count').textContent = monthlyCount;
 
             const allCount = dashboardData.pdfs.daily.length +
+                           drishtiCount +
                            dashboardData.pdfs.weekly.legaledge.length +
                            dashboardData.pdfs.weekly.career_launcher.length +
                            monthlyCount;
@@ -1058,6 +1082,8 @@
             rowIdCounter = 0;
 
             renderTable('daily-table', dashboardData.pdfs.daily);
+            const drishtiDaily = dashboardData.pdfs.daily_drishti || [];
+            renderTable('daily-drishti-table', drishtiDaily);
             renderTable('weekly-legaledge-table', dashboardData.pdfs.weekly.legaledge);
             renderTable('weekly-careerlauncher-table', dashboardData.pdfs.weekly.career_launcher);
 
@@ -1067,6 +1093,7 @@
 
             const allPdfs = [
                 ...dashboardData.pdfs.daily,
+                ...drishtiDaily,
                 ...dashboardData.pdfs.weekly.legaledge,
                 ...dashboardData.pdfs.weekly.career_launcher,
                 ...monthlyPdfs
@@ -1109,6 +1136,7 @@
             const pageItems = sorted.slice(pageStart, pageStart + PAGE_SIZE);
 
             const tableHTML = `
+                ${renderPaginationControls(containerId, sorted.length, safePage, 'top')}
                 <div class="table-wrapper">
                     <table style="width:100%!important;max-width:100%!important;table-layout:fixed!important;">
                         <colgroup>
@@ -1134,7 +1162,7 @@
                         </tbody>
                     </table>
                 </div>
-                ${renderPaginationControls(containerId, sorted.length, safePage)}
+                ${renderPaginationControls(containerId, sorted.length, safePage, 'bottom')}
             `;
 
             container.innerHTML = tableHTML;
@@ -1172,6 +1200,7 @@
             const pageItems = sorted.slice(pageStart, pageStart + PAGE_SIZE);
 
             const tableHTML = `
+                ${renderPaginationControls(containerId, sorted.length, safePage, 'top')}
                 <div class="table-wrapper">
                     <table>
                         <thead>
@@ -1191,7 +1220,7 @@
                         </tbody>
                     </table>
                 </div>
-                ${renderPaginationControls(containerId, sorted.length, safePage)}
+                ${renderPaginationControls(containerId, sorted.length, safePage, 'bottom')}
             `;
 
             container.innerHTML = tableHTML;
@@ -2388,12 +2417,14 @@
             
             const url = urlInput.value.trim();
             if (!url) {
-                alert('Please enter a TopRankers URL');
+                alert('Please enter a TopRankers or Drishti IAS URL');
                 return;
             }
-            
-            if (!url.includes('toprankers.com') && !url.includes('cdn.toprankers.net.in')) {
-                alert('Please enter a valid TopRankers URL (toprankers.com or cdn.toprankers.net.in)');
+
+            const isToprankers = url.includes('toprankers.com') || url.includes('cdn.toprankers.net.in');
+            const isDrishti = url.includes('drishtiias.com');
+            if (!isToprankers && !isDrishti) {
+                alert('Please enter a valid TopRankers URL (toprankers.com / cdn.toprankers.net.in) or Drishti IAS URL (drishtiias.com)');
                 return;
             }
             
