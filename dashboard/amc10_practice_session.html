@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Practice Session · AMC 10</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <!-- MathJax for LaTeX rendering. AMC questions use $ ... $ and \( \) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$','$'],['\\(','\\)']],
+             displayMath: [['$$','$$'],['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:920px; margin:0 auto; padding:20px 18px 40px; }
+
+    .head {
+      display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+      background: var(--bg-card); border:1px solid var(--border-color);
+      padding:12px 16px; border-radius:12px; margin-bottom:14px;
+      position:sticky; top:0; z-index:5; backdrop-filter: blur(8px);
+    }
+    .head .meta { font-size:0.85rem; color: var(--text-muted); }
+    .head .timer {
+      margin-left:auto; font-family:'JetBrains Mono',monospace;
+      font-size:1.1rem; font-weight:700;
+      padding:6px 12px; border-radius:8px;
+      background: var(--bg-input); border:1px solid var(--border-color);
+    }
+    .timer.warn { color:#f59e0b; border-color:#f59e0b; }
+    .timer.danger { color:#f87171; border-color:#f87171; }
+
+    /* Progress dots */
+    .dots { display:flex; gap:5px; flex-wrap:wrap; }
+    .dot {
+      width:24px; height:24px; border-radius:50%; cursor:pointer;
+      background: var(--bg-input); border:1px solid var(--border-color);
+      font-size:11px; line-height:22px; text-align:center; color:var(--text-muted);
+      transition: transform .1s;
+    }
+    .dot.current { border-color: var(--accent-blue); color: var(--accent-blue);
+                   transform: scale(1.15); }
+    .dot.answered { background: rgba(74,222,128,0.15); border-color: rgba(74,222,128,0.4);
+                    color: var(--accent-success); }
+    .dot.flagged { background: rgba(245,158,11,0.15); border-color: rgba(245,158,11,0.5); color:#f59e0b; }
+
+    .qcard {
+      background: var(--bg-card); border:1px solid var(--border-color);
+      border-radius:12px; padding:24px; margin-bottom:14px;
+    }
+    .qmeta {
+      font-size:0.78rem; color: var(--text-muted); margin-bottom:10px;
+      letter-spacing:0.04em; text-transform:uppercase;
+    }
+    .qtext {
+      font-size:1.04rem; line-height:1.65; color: var(--text-primary);
+      margin-bottom:18px; white-space:pre-wrap; word-wrap:break-word;
+    }
+
+    .choices { display:flex; flex-direction:column; gap:10px; }
+    .choice {
+      display:flex; gap:14px; align-items:flex-start;
+      padding:14px 18px; background: var(--bg-input);
+      border:1px solid var(--border-color); border-radius:10px;
+      cursor:pointer; user-select:none; transition: all .12s;
+      font-size:0.95rem; line-height:1.55;
+    }
+    .choice:hover { border-color: var(--accent-blue); }
+    .choice .letter {
+      width:30px; min-width:30px; height:30px; border-radius:50%;
+      background: var(--bg-card); border:1px solid var(--border-color);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:0.85rem;
+    }
+    .choice.selected {
+      background: rgba(96,165,250,0.10);
+      border-color: var(--accent-blue);
+    }
+    .choice.selected .letter {
+      background: var(--accent-blue); color:#0a0a0c; border-color: var(--accent-blue);
+    }
+
+    .actions {
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+    }
+    .btn {
+      padding:10px 18px; border-radius:8px; font-size:14px; font-weight:600;
+      cursor:pointer; border:1px solid var(--border-color);
+      background: var(--bg-input); color: var(--text-primary);
+    }
+    .btn:hover { border-color: var(--accent-blue); }
+    .btn.primary {
+      background: linear-gradient(135deg,#a78bfa 0%,#60a5fa 100%);
+      color:#0a0a0c; border:none;
+    }
+    .btn.primary:hover { transform: translateY(-1px); }
+    .btn.danger { color:#f87171; border-color:#f87171; }
+    .btn.flag.on { color:#f59e0b; border-color:#f59e0b; }
+
+    .empty { padding:50px 20px; text-align:center; color:var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div style="font-weight:600;font-size:0.92rem;">AMC 10 Practice</div>
+        <div class="meta" id="position">Loading…</div>
+      </div>
+      <div class="dots" id="dots"></div>
+      <div class="timer" id="timer">--:--</div>
+    </div>
+
+    <div id="card"><div class="empty">Loading question…</div></div>
+
+    <div class="actions">
+      <button class="btn flag" id="flag">⚐ Flag</button>
+      <button class="btn" id="prev">← Prev</button>
+      <button class="btn primary" id="next">Next →</button>
+      <span style="flex:1"></span>
+      <button class="btn danger" id="finish">Finish session</button>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    const sid = new URLSearchParams(location.search).get('sid');
+    if (!sid) { document.body.innerHTML = '<div style="padding:30px;color:#888;">No session id.</div>'; }
+
+    function userId() {
+      try {
+        const u = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser')||'{}');
+        return u.user_id || 'navya';
+      } catch(e){ return 'navya'; }
+    }
+
+    let session = null;
+    let attempts = [];          // server-side state cache
+    let local = [];             // local mutations: choice, time_spent, flagged
+    let currentIdx = 0;
+    let questionStartedAt = Date.now();
+    let lastTickAt = Date.now();
+    let elapsedSeconds = 0;     // total session
+    let timerLimit = 0;         // 0 = untimed
+    let timerInterval = null;
+
+    async function loadSession(){
+      const r = await fetch(API + '/api/amc10/session/' + encodeURIComponent(sid) +
+                            '?user_id=' + encodeURIComponent(userId()));
+      session = await r.json();
+      if (session.error) { alert('Could not load session: ' + session.error); return; }
+      attempts = session.attempts || [];
+      local = attempts.map(a => ({
+        choice: a.user_choice || null,
+        time_spent: a.time_spent_seconds || 0,
+        flagged: !!a.flagged,
+        synced: !!a.user_choice,   // already on server?
+      }));
+      timerLimit = session.time_limit_seconds || 0;
+      currentIdx = local.findIndex(x => !x.choice);
+      if (currentIdx < 0) currentIdx = 0;
+      renderDots();
+      renderQuestion();
+      startTimer();
+    }
+
+    function startTimer(){
+      questionStartedAt = lastTickAt = Date.now();
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(updateTimer, 1000);
+      updateTimer();
+    }
+    function updateTimer(){
+      const now = Date.now();
+      const tickDelta = Math.round((now - lastTickAt) / 1000);
+      if (tickDelta > 0) {
+        elapsedSeconds += tickDelta;
+        local[currentIdx].time_spent += tickDelta;
+        lastTickAt = now;
+      }
+      const el = document.getElementById('timer');
+      if (timerLimit > 0) {
+        const remaining = Math.max(0, timerLimit - elapsedSeconds);
+        const m = Math.floor(remaining / 60), s = remaining % 60;
+        el.textContent = `${m}:${String(s).padStart(2,'0')}`;
+        el.classList.toggle('warn', remaining < timerLimit * 0.25);
+        el.classList.toggle('danger', remaining < 60);
+        if (remaining === 0) finishSession(true);
+      } else {
+        const m = Math.floor(elapsedSeconds / 60), s = elapsedSeconds % 60;
+        el.textContent = `${m}:${String(s).padStart(2,'0')}`;
+      }
+    }
+
+    function renderDots(){
+      const root = document.getElementById('dots');
+      root.innerHTML = local.map((s, i) => {
+        const cls = ['dot'];
+        if (i === currentIdx) cls.push('current');
+        if (s.choice) cls.push('answered');
+        if (s.flagged) cls.push('flagged');
+        return `<div class="${cls.join(' ')}" onclick="jumpTo(${i})">${i+1}</div>`;
+      }).join('');
+    }
+    window.jumpTo = (i) => { saveCurrentTime(); currentIdx = i; renderQuestion(); renderDots(); startTimer(); };
+
+    function saveCurrentTime() {
+      const now = Date.now();
+      const delta = Math.round((now - lastTickAt) / 1000);
+      if (delta > 0) {
+        elapsedSeconds += delta;
+        local[currentIdx].time_spent += delta;
+        lastTickAt = now;
+      }
+    }
+
+    function renderQuestion(){
+      const a = attempts[currentIdx]; const s = local[currentIdx];
+      document.getElementById('position').textContent =
+        `Question ${currentIdx+1} of ${attempts.length}  ·  ${a.contest_label} #${a.problem_number}  ·  ${a.topic_name||''}`;
+      const choices = ['A','B','C','D','E'].map(L => {
+        const text = a['choice_' + L.toLowerCase()];
+        if (!text) return '';
+        return `<div class="choice ${s.choice===L?'selected':''}" onclick="selectChoice('${L}')">
+                  <span class="letter">${L}</span>
+                  <span>${escapeHtml(text)}</span>
+                </div>`;
+      }).join('');
+      const flag = document.getElementById('flag');
+      flag.classList.toggle('on', s.flagged);
+      flag.textContent = s.flagged ? '⚐ Flagged' : '⚐ Flag';
+      document.getElementById('card').innerHTML = `
+        <div class="qcard">
+          <div class="qmeta">Year ${a.year} · ${a.subtopic_name || ''}</div>
+          <div class="qtext">${escapeHtml(a.question_text)}</div>
+          <div class="choices">${choices}</div>
+        </div>`;
+      // Re-typeset MathJax on this part of the DOM
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([document.getElementById('card')]).catch(()=>{});
+      }
+    }
+
+    function escapeHtml(s) {
+      return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    window.selectChoice = (L) => {
+      saveCurrentTime();
+      local[currentIdx].choice = L;
+      // Optimistic UI + sync to server
+      submitCurrent();
+      renderQuestion(); renderDots();
+    };
+
+    async function submitCurrent(){
+      const a = attempts[currentIdx]; const s = local[currentIdx];
+      try {
+        const r = await fetch(API + '/api/amc10/session/' + encodeURIComponent(sid) + '/attempt', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({
+            user_id: userId(),
+            question_id: a.question_id,
+            choice: s.choice,
+            time_spent_seconds: s.time_spent,
+            flagged: s.flagged,
+          })
+        });
+        await r.json();
+        s.synced = true;
+      } catch(e){ console.warn('Sync failed:', e); }
+    }
+
+    document.getElementById('flag').addEventListener('click', () => {
+      local[currentIdx].flagged = !local[currentIdx].flagged;
+      submitCurrent();
+      renderQuestion(); renderDots();
+    });
+    document.getElementById('prev').addEventListener('click', () => {
+      if (currentIdx > 0) jumpTo(currentIdx - 1);
+    });
+    document.getElementById('next').addEventListener('click', () => {
+      saveCurrentTime();
+      if (currentIdx < attempts.length - 1) jumpTo(currentIdx + 1);
+      else if (confirm('This is the last question. Finish session?')) finishSession();
+    });
+    document.getElementById('finish').addEventListener('click', () => {
+      if (confirm('Finish the session and reveal solutions?')) finishSession();
+    });
+
+    async function finishSession(autoTimeout=false){
+      saveCurrentTime();
+      // Force-sync the current question one more time
+      await submitCurrent();
+      try {
+        await fetch(API + '/api/amc10/session/' + encodeURIComponent(sid) + '/finish', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({user_id: userId()})
+        });
+      } catch(e){}
+      location.href = 'amc10_practice_results.html?sid=' + encodeURIComponent(sid);
+    }
+
+    loadSession();
+    // Save on tab close
+    window.addEventListener('beforeunload', () => { saveCurrentTime(); submitCurrent(); });
+  </script>
+</body>
+</html>

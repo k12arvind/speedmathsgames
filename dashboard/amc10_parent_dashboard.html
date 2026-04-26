@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Navya's AMC 10 Progress · Parent Dashboard</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:1100px; margin:0 auto; padding:22px 18px 60px; }
+    .head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+            margin-bottom:14px; align-items:center; }
+    .head h1 { font-family:'Playfair Display',serif; margin:0; font-size:clamp(1.3rem,3vw,1.8rem); }
+    .nav { display:flex; gap:6px; flex-wrap:wrap; }
+    .nav a { padding:7px 13px; background:var(--bg-input); color:var(--text-secondary);
+             border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+             font-weight:600; text-decoration:none; }
+    .banner {
+      background: linear-gradient(135deg, rgba(167,139,250,0.10), rgba(96,165,250,0.10));
+      border:1px solid rgba(167,139,250,0.30);
+      border-radius:10px; padding:10px 14px; margin-bottom:18px;
+      font-size:0.88rem; color: var(--text-secondary);
+    }
+    .banner strong { color: var(--text-primary); }
+
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-bottom:18px; }
+    .stat { background:var(--bg-card); border:1px solid var(--border-color);
+            border-radius:10px; padding:14px; text-align:center; }
+    .stat-val { font-size:1.6rem; font-weight:700; }
+    .stat-lbl { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;
+                letter-spacing:0.05em; margin-top:3px; }
+
+    .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
+    @media (max-width:780px) { .grid2 { grid-template-columns: 1fr; } }
+    .panel { background:var(--bg-card); border:1px solid var(--border-color);
+             border-radius:12px; padding:18px; margin-bottom:14px; }
+    .panel h2 { font-size:0.86rem; text-transform:uppercase; color:var(--text-muted);
+                margin:0 0 14px; letter-spacing:0.05em; font-weight:600; }
+
+    .bars { display:flex; gap:6px; align-items:flex-end; height:140px;
+            border-bottom:1px solid var(--border-color); padding-bottom:6px; }
+    .bar-col { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; }
+    .bar { width:100%; max-width:34px;
+           background: linear-gradient(0deg,#a78bfa 0%,#60a5fa 100%);
+           border-radius:4px 4px 0 0; min-height:2px; }
+    .bar-lbl { font-size:0.62rem; color:var(--text-muted); transform:rotate(-45deg); transform-origin:50% 0; }
+    .bar-val { font-size:0.7rem; color:var(--text-secondary); font-weight:600; }
+
+    .topic-row { display:grid; grid-template-columns:1fr auto 1fr 70px;
+                  gap:12px; align-items:center; padding:7px 0; }
+    .topic-row .name { font-weight:600; font-size:0.92rem; }
+    .topic-row .ratio { color:var(--text-muted); font-size:0.82rem; }
+    .topic-row .barwrap { background:var(--bg-input); height:8px; border-radius:4px; overflow:hidden; }
+    .topic-row .barwrap > span { display:block; height:100%;
+              background: linear-gradient(135deg,var(--accent-success),var(--accent-blue)); }
+    .topic-row .pct { text-align:right; font-weight:700; }
+    .topic-row .pct.good { color: var(--accent-success); }
+    .topic-row .pct.warn { color:#f59e0b; }
+    .topic-row .pct.bad  { color: var(--accent-danger); }
+
+    .session-row {
+      display:grid; grid-template-columns: 100px 1fr 70px 60px;
+      gap:8px; align-items:center; padding:7px 0;
+      border-bottom:1px solid var(--border-subtle); font-size:0.86rem;
+    }
+    .session-row:last-child { border-bottom:none; }
+    .session-row .when { color:var(--text-muted); font-size:0.76rem; }
+    .session-row .acc.good { color:var(--accent-success); font-weight:600; }
+    .session-row .acc.warn { color:#f59e0b; }
+    .session-row .acc.bad  { color:var(--accent-danger); }
+
+    .empty { color:var(--text-muted); padding:24px; text-align:center; font-size:0.9rem; }
+
+    .mistake-row {
+      padding:9px 12px; border-bottom:1px solid var(--border-subtle);
+      font-size:0.86rem;
+    }
+    .mistake-row:last-child { border-bottom:none; }
+    .mistake-row .topic-tag {
+      background: rgba(248,113,113,0.10); color: var(--accent-danger);
+      font-size:0.72rem; padding:2px 7px; border-radius:4px; margin-right:8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>👪 Parent Dashboard</h1>
+      <div class="nav">
+        <a href="amc10_hub.html">← AMC 10 Hub</a>
+        <a href="family_dashboard.html">Family</a>
+        <a href="index.html">Main hub</a>
+      </div>
+    </div>
+
+    <div class="banner">
+      Viewing <strong id="viewing">Navya</strong>'s practice progress · read-only ·
+      data refreshes when you reload this page.
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-val" id="streak"      style="color:#fb923c;">—</div><div class="stat-lbl">Day streak</div></div>
+      <div class="stat"><div class="stat-val" id="today-q"     style="color:#60a5fa;">—</div><div class="stat-lbl">Today's Qs</div></div>
+      <div class="stat"><div class="stat-val" id="week-q"      style="color:#a78bfa;">—</div><div class="stat-lbl">This week's Qs</div></div>
+      <div class="stat"><div class="stat-val" id="total-q"     style="color:#22d3ee;">—</div><div class="stat-lbl">Lifetime Qs</div></div>
+      <div class="stat"><div class="stat-val" id="overall-acc" style="color:#4ade80;">—</div><div class="stat-lbl">Overall accuracy</div></div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h2>Last 14 days</h2>
+        <div class="bars" id="bars"><div class="empty">No data yet</div></div>
+      </div>
+      <div class="panel">
+        <h2>Topic mastery</h2>
+        <div id="mastery"><div class="empty">No data yet</div></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Recent sessions</h2>
+      <div id="sessions"><div class="empty">No sessions yet</div></div>
+    </div>
+
+    <div class="panel">
+      <h2>Mistake log (last 30 days, weakest topics first)</h2>
+      <div id="mistakes"><div class="empty">No mistakes recorded yet</div></div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    const TARGET_USER = 'navya';   // parent dashboard always views Navya
+
+    function fmtTime(s){ s=s||0; if(s<60) return s+'s'; return Math.floor(s/60)+'m'; }
+    function fmtDate(d){
+      if(!d) return '—'; const dt = new Date(d);
+      return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'}) + ' ' +
+             dt.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+    }
+
+    async function load(){
+      const r = await fetch(API + '/api/amc10/progress?user_id=' + encodeURIComponent(TARGET_USER));
+      const d = await r.json();
+      document.getElementById('viewing').textContent = TARGET_USER.charAt(0).toUpperCase() + TARGET_USER.slice(1);
+
+      document.getElementById('streak').textContent = (d.streak || 0) + 'd';
+
+      const tm = d.topic_mastery || [];
+      const totalAttempted = tm.reduce((s,t)=>s+t.attempted,0);
+      const totalCorrect = tm.reduce((s,t)=>s+t.correct,0);
+      document.getElementById('total-q').textContent = totalAttempted.toLocaleString();
+      document.getElementById('overall-acc').textContent = totalAttempted
+        ? Math.round((totalCorrect/totalAttempted)*100) + '%' : '—';
+
+      const today = (d.daily_summary || []).find(x => x.day === new Date().toISOString().slice(0,10));
+      document.getElementById('today-q').textContent = today ? (today.attempted || 0) : 0;
+
+      const last7 = (d.daily_summary || []).slice(0, 7).reduce((s,x)=>s+(x.attempted||0),0);
+      document.getElementById('week-q').textContent = last7;
+
+      // Bars
+      const days = (d.daily_summary || []).slice(0,14).reverse();
+      const max = Math.max(1, ...days.map(x => x.attempted||0));
+      const barsRoot = document.getElementById('bars');
+      if (!days.length) barsRoot.innerHTML = '<div class="empty">No data yet</div>';
+      else barsRoot.innerHTML = days.map(x => {
+        const h = Math.round(((x.attempted||0)/max)*120);
+        return `<div class="bar-col">
+                  <span class="bar-val">${x.attempted||0}</span>
+                  <div class="bar" style="height:${h}px;" title="${x.day}: ${x.attempted} attempted, ${x.correct} correct"></div>
+                  <span class="bar-lbl">${(x.day||'').slice(5)}</span>
+                </div>`;
+      }).join('');
+
+      // Topic mastery (sorted weak → strong)
+      const tmSorted = [...tm].sort((a,b)=>a.accuracy-b.accuracy);
+      const masteryRoot = document.getElementById('mastery');
+      if (!tmSorted.length) masteryRoot.innerHTML = '<div class="empty">No topic data yet</div>';
+      else masteryRoot.innerHTML = tmSorted.map(t => {
+        const cl = t.accuracy >= 75 ? 'good' : t.accuracy >= 50 ? 'warn' : 'bad';
+        return `<div class="topic-row">
+                  <div class="name">${t.topic_name}</div>
+                  <div class="ratio">${t.correct}/${t.attempted}</div>
+                  <div class="barwrap"><span style="width:${t.accuracy}%;"></span></div>
+                  <div class="pct ${cl}">${t.accuracy}%</div>
+                </div>`;
+      }).join('');
+
+      // Sessions
+      const sl = d.recent_sessions || [];
+      const sessRoot = document.getElementById('sessions');
+      if (!sl.length) sessRoot.innerHTML = '<div class="empty">No sessions yet</div>';
+      else sessRoot.innerHTML = sl.map(s => {
+        const acc = s.served_count ? Math.round((s.correct_count/s.served_count)*100) : 0;
+        const cl = acc >= 75 ? 'good' : acc >= 50 ? 'warn' : 'bad';
+        const filt = s.topic_filter && s.topic_filter.length ? s.topic_filter.join(', ') : 'All';
+        return `<a href="amc10_practice_results.html?sid=${encodeURIComponent(s.session_id)}&user_id=${encodeURIComponent(TARGET_USER)}"
+                   style="text-decoration:none;color:inherit;">
+                  <div class="session-row">
+                    <div class="when">${fmtDate(s.created_at)}</div>
+                    <div>${filt} · ${s.served_count} qs · ${fmtTime(s.elapsed_seconds)}</div>
+                    <div class="acc ${cl}">${s.correct_count}/${s.served_count}</div>
+                    <div class="acc ${cl}" style="text-align:right;">${acc}%</div>
+                  </div>
+                </a>`;
+      }).join('');
+
+      // Mistake summary by topic — weakest first
+      const mistakesRoot = document.getElementById('mistakes');
+      const weakTopics = tmSorted.filter(t => t.accuracy < 70);
+      if (!weakTopics.length) mistakesRoot.innerHTML = '<div class="empty">No weak topics — keep going!</div>';
+      else mistakesRoot.innerHTML = weakTopics.map(t => {
+        const wrong = t.attempted - t.correct;
+        return `<div class="mistake-row">
+                  <span class="topic-tag">${t.topic_name}</span>
+                  ${wrong} mistakes out of ${t.attempted} attempts (${t.accuracy}%)
+                </div>`;
+      }).join('');
+    }
+    load();
+  </script>
+</body>
+</html>

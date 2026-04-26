@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Math Theory Books · Navya</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width: 1100px; margin:0 auto; padding:24px 18px 60px; }
+    .head { display:flex; justify-content:space-between; align-items:center;
+            flex-wrap:wrap; gap:14px; margin-bottom:24px; }
+    .head h1 { font-family:'Playfair Display',serif; font-size:clamp(1.4rem,3.5vw,1.9rem);
+               margin:0; }
+    .nav a { padding:7px 13px; background:var(--bg-input); color:var(--text-secondary);
+             border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+             font-weight:600; text-decoration:none; }
+    .nav a:hover { color:var(--accent-blue); border-color:var(--accent-blue); }
+
+    .book-list { display:flex; flex-direction:column; gap:10px; }
+    .book {
+      display:grid; grid-template-columns: 1fr auto;
+      gap:14px; align-items:center; padding:16px;
+      background:var(--bg-card); border:1px solid var(--border-color);
+      border-radius:12px; text-decoration:none; color:inherit;
+      transition: border-color .15s;
+    }
+    .book:hover { border-color: var(--accent-blue); }
+    .book h3 { margin:0 0 4px; font-size:1rem; font-weight:600; }
+    .book .meta { color: var(--text-muted); font-size:0.8rem; }
+    .book .progress {
+      width:160px; text-align:right; font-size:0.85rem; color: var(--text-secondary);
+    }
+    .progress .bar {
+      height:6px; background: var(--bg-input); border-radius:4px; overflow:hidden;
+      margin-top:6px; min-width:120px;
+    }
+    .progress .bar > span {
+      display:block; height:100%; background: linear-gradient(135deg,#60a5fa,#a78bfa);
+    }
+    .empty {
+      padding:50px 20px; text-align:center; color:var(--text-muted);
+      background: var(--bg-card); border:1px dashed var(--border-color);
+      border-radius:12px;
+    }
+    @media (max-width:600px) {
+      .book { grid-template-columns: 1fr; }
+      .book .progress { width:100%; text-align:left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>📚 Theory Books</h1>
+      <div class="nav">
+        <a href="amc10_hub.html">← AMC 10 Hub</a>
+        <a href="amc10_practice_setup.html">✏️ Practice</a>
+      </div>
+    </div>
+    <div id="list" class="book-list"><div class="empty">Loading books…</div></div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    function userId(){
+      try {
+        const u = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser')||'{}');
+        return u.user_id || 'navya';
+      } catch(e){ return 'navya'; }
+    }
+    function fmtTime(seconds){
+      seconds = seconds || 0;
+      if (seconds < 60) return seconds + 's';
+      const m = Math.floor(seconds/60);
+      if (m < 60) return m + 'm';
+      const h = Math.floor(m/60);
+      return h + 'h ' + (m%60) + 'm';
+    }
+    async function load(){
+      const r = await fetch(API + '/api/amc10/books?user_id=' + encodeURIComponent(userId()));
+      const d = await r.json();
+      const list = document.getElementById('list');
+      if (!d.books || !d.books.length) {
+        list.innerHTML = '<div class="empty">No books available yet. Books are being processed.</div>';
+        return;
+      }
+      list.innerHTML = d.books.map(b => {
+        const pct = b.total_pages ? Math.min(100, Math.round((b.pages_seen / b.total_pages) * 100)) : 0;
+        return `
+          <a class="book" href="amc10_book_reader.html?book=${encodeURIComponent(b.book_id)}">
+            <div>
+              <h3>${b.title}</h3>
+              <div class="meta">${b.total_pages.toLocaleString()} pages · ${b.chapter_count} chapters · read ${fmtTime(b.total_seconds_read)}</div>
+            </div>
+            <div class="progress">
+              ${pct}% read (${b.pages_seen}/${b.total_pages})
+              <div class="bar"><span style="width:${pct}%"></span></div>
+            </div>
+          </a>`;
+      }).join('');
+    }
+    load();
+  </script>
+</body>
+</html>

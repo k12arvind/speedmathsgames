@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Practice Results · AMC 10</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:920px; margin:0 auto; padding:22px 18px 60px; }
+    .head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+            margin-bottom:18px; align-items:center; }
+    .head h1 { font-family:'Playfair Display',serif; margin:0; font-size:clamp(1.3rem,3vw,1.7rem); }
+    .nav a { padding:7px 13px; background:var(--bg-input); color:var(--text-secondary);
+             border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+             font-weight:600; text-decoration:none; }
+    .nav a:hover { color:var(--accent-blue); border-color:var(--accent-blue); }
+
+    .summary {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+      gap:10px; margin-bottom:18px;
+    }
+    .stat {
+      background:var(--bg-card); border:1px solid var(--border-color);
+      border-radius:10px; padding:14px; text-align:center;
+    }
+    .stat-val { font-size:1.4rem; font-weight:700; }
+    .stat-lbl { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;
+                letter-spacing:0.05em; margin-top:3px; }
+
+    .qrow {
+      background:var(--bg-card); border:1px solid var(--border-color);
+      border-radius:10px; padding:14px 16px; margin-bottom:8px;
+    }
+    .qrow.correct { border-left: 4px solid var(--accent-success); }
+    .qrow.wrong   { border-left: 4px solid var(--accent-danger); }
+    .qrow.skipped { border-left: 4px solid var(--text-muted); }
+    .qhead {
+      display:flex; gap:10px; align-items:center; cursor:pointer;
+    }
+    .qhead .num { font-weight:700; font-size:1rem; min-width:36px; }
+    .qhead .badge {
+      padding:3px 9px; border-radius:6px; font-size:0.72rem; font-weight:600;
+      text-transform:uppercase; letter-spacing:0.04em;
+    }
+    .qhead .badge.ok { background:rgba(74,222,128,0.15); color:var(--accent-success); }
+    .qhead .badge.no { background:rgba(248,113,113,0.15); color:var(--accent-danger); }
+    .qhead .badge.skip { background:rgba(168,168,168,0.15); color:var(--text-muted); }
+    .qhead .topic { color:var(--text-muted); font-size:0.85rem; flex:1; }
+    .qhead .reveal { font-size:0.78rem; color:var(--accent-blue); }
+    .qbody { display:none; padding-top:14px; margin-top:10px;
+             border-top:1px solid var(--border-color); }
+    .qrow.open .qbody { display:block; }
+    .qtext { white-space:pre-wrap; line-height:1.6; margin-bottom:14px; }
+    .choice-line {
+      padding:8px 12px; margin-bottom:6px; background:var(--bg-input);
+      border:1px solid var(--border-color); border-radius:6px; font-size:0.92rem;
+    }
+    .choice-line.correct { border-color: var(--accent-success); background: rgba(74,222,128,0.05); }
+    .choice-line.user-wrong { border-color: var(--accent-danger); background: rgba(248,113,113,0.05); }
+    .choice-line .L { font-weight:700; margin-right:8px; }
+    .solution {
+      margin-top:10px; padding:12px 14px;
+      background:rgba(96,165,250,0.05); border:1px dashed rgba(96,165,250,0.3);
+      border-radius:8px; line-height:1.6; white-space:pre-wrap;
+    }
+    .solution .label {
+      font-weight:700; color:var(--accent-blue); margin-bottom:6px; font-size:0.85rem;
+      text-transform:uppercase; letter-spacing:0.04em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>📊 Session Results</h1>
+      <div class="nav">
+        <a href="amc10_practice_setup.html">↻ New session</a>
+        <a href="amc10_progress.html">📈 Progress</a>
+        <a href="amc10_hub.html">← Hub</a>
+      </div>
+    </div>
+
+    <div class="summary" id="summary"></div>
+    <div id="qlist"></div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    const sid = new URLSearchParams(location.search).get('sid');
+    function userId() {
+      try {
+        const u = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser')||'{}');
+        return u.user_id || 'navya';
+      } catch(e){ return 'navya'; }
+    }
+    function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+    function fmtTime(s) {
+      s = s || 0;
+      if (s < 60) return s + 's';
+      return Math.floor(s/60) + 'm ' + (s%60) + 's';
+    }
+
+    async function load(){
+      const r = await fetch(API + '/api/amc10/session/' + encodeURIComponent(sid) + '/full?user_id=' + encodeURIComponent(userId()));
+      const sess = await r.json();
+      const correct = sess.correct_count || 0;
+      const wrong = sess.wrong_count || 0;
+      const skipped = sess.skipped_count || 0;
+      const total = sess.served_count || (sess.attempts||[]).length;
+      const acc = total ? Math.round((correct / total) * 100) : 0;
+      document.getElementById('summary').innerHTML = `
+        <div class="stat"><div class="stat-val" style="color:var(--accent-success);">${correct}</div><div class="stat-lbl">Correct</div></div>
+        <div class="stat"><div class="stat-val" style="color:var(--accent-danger);">${wrong}</div><div class="stat-lbl">Wrong</div></div>
+        <div class="stat"><div class="stat-val" style="color:var(--text-muted);">${skipped}</div><div class="stat-lbl">Skipped</div></div>
+        <div class="stat"><div class="stat-val" style="color:var(--accent-blue);">${acc}%</div><div class="stat-lbl">Accuracy</div></div>
+        <div class="stat"><div class="stat-val">${fmtTime(sess.elapsed_seconds||0)}</div><div class="stat-lbl">Total time</div></div>
+      `;
+      const qlist = document.getElementById('qlist');
+      qlist.innerHTML = (sess.attempts || []).map((a, i) => {
+        const cls = a.is_correct ? 'correct' : (a.user_choice ? 'wrong' : 'skipped');
+        const badge = a.is_correct
+          ? '<span class="badge ok">Correct</span>'
+          : (a.user_choice ? '<span class="badge no">Wrong</span>' : '<span class="badge skip">Skipped</span>');
+        const ans = a.user_choice ? `Your answer: <strong>${a.user_choice}</strong>` : 'Skipped';
+        const choices = ['A','B','C','D','E'].map(L => {
+          const t = a['choice_' + L.toLowerCase()];
+          if (!t) return '';
+          let cl = 'choice-line';
+          if (L === a.correct_choice) cl += ' correct';
+          else if (L === a.user_choice) cl += ' user-wrong';
+          return `<div class="${cl}"><span class="L">${L}.</span>${escapeHtml(t)}</div>`;
+        }).join('');
+        return `
+          <div class="qrow ${cls}" id="qr-${i}">
+            <div class="qhead" onclick="document.getElementById('qr-${i}').classList.toggle('open');retypeset()">
+              <div class="num">${i+1}.</div>
+              ${badge}
+              <div class="topic">${a.contest_label} #${a.problem_number} · ${a.topic_name||''}${a.subtopic_name?' / '+a.subtopic_name:''}  ·  ${ans}  ·  ${fmtTime(a.time_spent_seconds||0)}</div>
+              <div class="reveal">▾ Show</div>
+            </div>
+            <div class="qbody">
+              <div class="qtext">${escapeHtml(a.question_text)}</div>
+              ${choices}
+              ${a.official_solution ? `<div class="solution"><div class="label">Official Solution (correct: ${a.correct_choice})</div>${escapeHtml(a.official_solution)}</div>` : ''}
+            </div>
+          </div>`;
+      }).join('');
+      retypeset();
+    }
+    function retypeset(){
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([document.getElementById('qlist')]).catch(()=>{});
+      }
+    }
+    load();
+  </script>
+</body>
+</html>

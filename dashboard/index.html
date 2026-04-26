@@ -157,6 +157,8 @@
         .card-health::before { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
         .card-calendar::before { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
         .card-momentum::before { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
+        .card-amc10::before { background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%); }
+        .card-amc10:hover { --shadow-glow: 0 0 40px rgba(167, 139, 250, 0.25); }
 
         .card-gk:hover { --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2); }
         .card-math:hover { --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.2); }
@@ -553,6 +555,38 @@
             </div>
             <button class="module-cta">
                 Start Math <span class="arrow">→</span>
+            </button>
+        </a>
+
+        <!-- Navya's AMC 10 Module — visible to navya/arvind/deepa only -->
+        <a href="amc10_hub.html" class="module-card card-amc10 private-module" id="amc10-module" style="display: none;">
+            <div class="module-header">
+                <div class="module-icon">🎯</div>
+                <div>
+                    <div class="module-title">Navya's Maths</div>
+                    <div class="module-subtitle">AMC 10 Preparation</div>
+                </div>
+            </div>
+            <div class="module-description">
+                15 AoPS theory books + 1,025 real AMC 10 questions (2000–2022). Topic-wise practice, time-bound mocks, and daily progress tracking.
+            </div>
+            <ul class="module-features">
+                <li>Read theory: page-perfect math + diagrams</li>
+                <li>Real AMC questions, topic & year filters</li>
+                <li>Streak, mastery heatmap, mistake log</li>
+            </ul>
+            <div class="module-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="amc10-streak">-</div>
+                    <div class="stat-label">Streak</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="amc10-acc">-</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+            <button class="module-cta">
+                Open AMC 10 <span class="arrow">→</span>
             </button>
         </a>
 
@@ -954,6 +988,24 @@
                     document.getElementById('book-accuracy').textContent = accuracy > 0 ? accuracy.toFixed(0) + '%' : '-';
                 } catch (e) {
                     console.log('Book stats not available');
+                }
+
+                // AMC 10 module — visible to Navya and her parents
+                const amc10Audience = ['navya', 'arvind', 'deepa'];
+                if (amc10Audience.includes(user.user_id)) {
+                    const card = document.getElementById('amc10-module');
+                    if (card) card.style.display = 'flex';
+                    // Load AMC10 stats for the card
+                    try {
+                        const targetUser = (user.user_id === 'navya') ? 'navya' : 'navya';  // parents view Navya
+                        const r = await fetch(`${API_BASE}/api/amc10/progress?user_id=${encodeURIComponent(targetUser)}`);
+                        const d = await r.json();
+                        document.getElementById('amc10-streak').textContent = (d.streak || 0) + 'd';
+                        const tm = d.topic_mastery || [];
+                        const att = tm.reduce((s,t)=>s+t.attempted,0);
+                        const cor = tm.reduce((s,t)=>s+t.correct,0);
+                        document.getElementById('amc10-acc').textContent = att ? Math.round(cor/att*100) + '%' : '-';
+                    } catch(e) { /* progress endpoint may not exist on older deploys */ }
                 }
 
                 // Show private modules for parents (Arvind & Deepa only)

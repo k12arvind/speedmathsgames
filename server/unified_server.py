@@ -63,6 +63,7 @@ from anthropic import Anthropic
 
 # Import math database
 from math_module.math_db import MathDatabase
+from amc10.practice_db import AMC10PracticeDB
 
 # Import PDF scanner for GK dashboard (includes cross-machine path helpers)
 from server.pdf_scanner import PDFScanner, relative_to_absolute, path_to_relative
@@ -132,6 +133,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     # anki removed - using local questions_db instead
     anthropic = None
     math_db = None
+    amc10_db = None
     pdf_scanner = None
     processing_db = None
     annotation_manager = None
@@ -214,6 +216,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             from urllib.parse import unquote
             pdf_id = unquote(path.split('/')[-1])
             self.handle_pdf_serve(pdf_id)
+            return
+
+        # Math-books static content (HTML chapters + JPEG pages)
+        # /static/MathsBooksHTML/<book_id>/<file>
+        if path.startswith('/static/MathsBooksHTML/'):
+            self.handle_math_book_asset(path)
             return
 
         # API endpoints
@@ -465,6 +473,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Math API endpoints
             elif path.startswith('/api/math/'):
                 self.handle_math_get(path, query_params)
+            # AMC10 (Navya's maths) API endpoints
+            elif path.startswith('/api/amc10/'):
+                self.handle_amc10_get(path, query_params)
             # GK Dashboard API endpoints (including assessment status)
             elif path.startswith('/api/dashboard') or path.startswith('/api/pdfs/') or \
                  path.startswith('/api/filter/') or path.startswith('/api/stats') or \
@@ -524,6 +535,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Math API endpoints
             elif path.startswith('/api/math/'):
                 self.handle_math_post(path, data)
+            # AMC10 (Navya's maths) API endpoints
+            elif path.startswith('/api/amc10/'):
+                self.handle_amc10_post(path, data)
             # GK Dashboard API endpoints
             # GK PDF Processing API endpoints
             elif path.startswith('/api/gk/') or path.startswith('/api/revision/'):
@@ -1461,6 +1475,156 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # Sort by modified time descending
         large_files.sort(key=lambda x: x['modified'], reverse=True)
         return large_files
+
+    # ----------------------------------------------------------------------
+    # AMC10 (Navya's maths) endpoints
+    # ----------------------------------------------------------------------
+    def _amc10_user_id(self, query_params, data=None) -> str:
+        """Resolve the user_id for an AMC10 request.
+
+        Logged-in users get their session user_id. Parents (arvind/deepa) may
+        pass ?user_id=navya to view her data; child accounts can only see
+        their own. Falls back to 'navya' for local-dev unauthenticated calls.
+        """
+        # Logged-in user (set by auth middleware on the request)
+        session_user = getattr(self, 'current_user_id', None)
+
+        # Parent override via ?user_id=navya
+        requested = (query_params or {}).get('user_id', [None])[0] if query_params else None
+        if requested is None and data:
+            requested = data.get('user_id')
+
+        if session_user:
+            if requested and requested != session_user:
+                # Only parents can view other users
+                role = (getattr(self, 'current_user_role', None) or '').lower()
+                if role in ('admin', 'parent'):
+                    return requested
+            return session_user
+
+        # Unauthenticated fallback (local dev) — assume Navya
+        return requested or 'navya'
+
+    def handle_amc10_get(self, path: str, query_params: dict):
+        try:
+            if path == '/api/amc10/topics':
+                self.send_json({'topics': self.amc10_db.topic_tree()})
+                return
+            if path == '/api/amc10/books':
+                user_id = self._amc10_user_id(query_params)
+                self.send_json({'books': self.amc10_db.list_books(user_id)})
+                return
+            if path.startswith('/api/amc10/book/'):
+                # /api/amc10/book/<book_id>/chapters
+                parts = path.split('/')
+                if len(parts) >= 6 and parts[5] == 'chapters':
+                    user_id = self._amc10_user_id(query_params)
+                    book_id = parts[4]
+                    self.send_json({
+                        'book_id': book_id,
+                        'chapters': self.amc10_db.list_chapters(book_id, user_id),
+                    })
+                    return
+            if path == '/api/amc10/sessions':
+                user_id = self._amc10_user_id(query_params)
+                limit = int((query_params or {}).get('limit', ['25'])[0])
+                self.send_json({'sessions': self.amc10_db.recent_sessions(user_id, limit)})
+                return
+            if path.startswith('/api/amc10/session/'):
+                parts = path.split('/')
+                # /api/amc10/session/<sid>           → fetch session
+                # /api/amc10/session/<sid>/full      → fetch with correct answers + solutions
+                if len(parts) == 5:
+                    sid = parts[4]
+                    user_id = self._amc10_user_id(query_params)
+                    sess = self.amc10_db.get_session(sid, user_id, include_correct=False)
+                    self.send_json(sess)
+                    return
+                if len(parts) >= 6 and parts[5] == 'full':
+                    sid = parts[4]
+                    user_id = self._amc10_user_id(query_params)
+                    sess = self.amc10_db.get_session(sid, user_id, include_correct=True)
+                    self.send_json(sess)
+                    return
+            if path == '/api/amc10/progress':
+                user_id = self._amc10_user_id(query_params)
+                self.send_json({
+                    'user_id': user_id,
+                    'streak': self.amc10_db.streak(user_id),
+                    'topic_mastery': self.amc10_db.topic_mastery(user_id),
+                    'daily_summary': self.amc10_db.daily_summary(user_id, days=14),
+                    'recent_sessions': self.amc10_db.recent_sessions(user_id, limit=10),
+                })
+                return
+
+            self.send_json({'error': f'unknown amc10 path: {path}'}, 404)
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()}, 500)
+
+    def handle_amc10_post(self, path: str, data: dict):
+        try:
+            if path == '/api/amc10/session/create':
+                user_id = self._amc10_user_id(None, data)
+                topics = data.get('topics') or None         # list of topic_codes
+                subtopics = data.get('subtopics') or None
+                year_min = data.get('year_min')
+                year_max = data.get('year_max')
+                difficulty = data.get('difficulty')          # easy|medium|hard|mixed|None
+                if difficulty in ('mixed', '', None):
+                    difficulty = None
+                count = int(data.get('count', 5))
+                count = max(1, min(50, count))
+                time_limit = int(data.get('time_limit_seconds', 0))
+                sess = self.amc10_db.create_session(
+                    user_id=user_id,
+                    topic_filter=topics if topics else None,
+                    subtopic_filter=subtopics if subtopics else None,
+                    year_min=year_min, year_max=year_max,
+                    difficulty_band=difficulty,
+                    requested_count=count,
+                    time_limit_seconds=time_limit,
+                )
+                self.send_json(sess)
+                return
+
+            if path.startswith('/api/amc10/session/') and path.endswith('/attempt'):
+                # /api/amc10/session/<sid>/attempt
+                sid = path.split('/')[4]
+                user_id = self._amc10_user_id(None, data)
+                res = self.amc10_db.submit_attempt(
+                    session_id=sid, user_id=user_id,
+                    question_id=int(data['question_id']),
+                    user_choice=data.get('choice'),
+                    time_spent_seconds=int(data.get('time_spent_seconds', 0)),
+                    flagged=bool(data.get('flagged', False)),
+                    revealed_solution=bool(data.get('revealed_solution', False)),
+                )
+                self.send_json(res)
+                return
+
+            if path.startswith('/api/amc10/session/') and path.endswith('/finish'):
+                sid = path.split('/')[4]
+                user_id = self._amc10_user_id(None, data)
+                self.send_json(self.amc10_db.finish_session(sid, user_id))
+                return
+
+            if path == '/api/amc10/book-view':
+                user_id = self._amc10_user_id(None, data)
+                self.amc10_db.record_book_view(
+                    user_id=user_id,
+                    book_id=str(data['book_id']),
+                    chapter_number=int(data.get('chapter_number') or 0),
+                    page_number=int(data.get('page_number') or 0),
+                    seconds=int(data.get('seconds') or 0),
+                )
+                self.send_json({'ok': True})
+                return
+
+            self.send_json({'error': f'unknown amc10 path: {path}'}, 404)
+        except PermissionError as e:
+            self.send_json({'error': str(e)}, 403)
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()}, 500)
 
     def handle_gk_dashboard_get(self, path: str, query_params: dict):
         """Handle GK dashboard API GET requests."""
@@ -3158,6 +3322,43 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
     # ============================================================
     # PDF VIEWER & ANNOTATION METHODS
     # ============================================================
+
+    def handle_math_book_asset(self, path: str):
+        """Serve files from ~/saanvi/MathsBooksHTML/ — chapter HTMLs and page JPEGs.
+
+        URL shape: /static/MathsBooksHTML/<book_id>/<filename>
+
+        Path traversal is blocked by resolving the requested path against the
+        root and rejecting anything outside it.
+        """
+        import os
+        import mimetypes
+        from urllib.parse import unquote
+        prefix = '/static/MathsBooksHTML/'
+        rel = unquote(path[len(prefix):])
+        if '..' in rel.split('/'):
+            self.send_response(400); self.end_headers(); return
+
+        root = (Path.home() / 'saanvi' / 'MathsBooksHTML').resolve()
+        target = (root / rel).resolve()
+        try:
+            target.relative_to(root)
+        except ValueError:
+            self.send_response(403); self.end_headers(); return
+        if not target.is_file():
+            self.send_response(404); self.end_headers(); return
+
+        ctype, _ = mimetypes.guess_type(str(target))
+        ctype = ctype or 'application/octet-stream'
+        self.send_response(200)
+        self.send_header('Content-Type', ctype)
+        self.send_header('Content-Length', str(target.stat().st_size))
+        # Browsers can cache page images aggressively — they don't change.
+        if target.suffix.lower() in ('.jpg', '.jpeg', '.png'):
+            self.send_header('Cache-Control', 'public, max-age=86400')
+        self.end_headers()
+        with open(target, 'rb') as f:
+            self.wfile.write(f.read())
 
     def handle_pdf_serve(self, pdf_id: str):
         """Serve PDF file for viewing in browser."""
@@ -6346,6 +6547,11 @@ def main():
     # Use root-level math_tracker.db (same as populate_math_questions.py)
     math_db_path = Path(__file__).parent.parent / 'math_tracker.db'
     UnifiedHandler.math_db = MathDatabase(str(math_db_path))
+
+    # AMC10 practice DB (Navya's maths)
+    amc10_db_path = Path(__file__).parent.parent / 'amc10_practice.db'
+    UnifiedHandler.amc10_db = AMC10PracticeDB(str(amc10_db_path))
+    print("✅ AMC10 practice database initialized")
     
     # Run database health check
     verify_database_health()

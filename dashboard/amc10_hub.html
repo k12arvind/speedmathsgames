@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AMC 10 Maths · Navya</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 18px 60px; }
+    .head {
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:14px; margin-bottom:28px;
+    }
+    .title h1 {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:clamp(1.5rem,4vw,2.1rem); margin:0;
+      background: linear-gradient(135deg,#a78bfa 0%,#60a5fa 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .title small { color: var(--text-muted); font-size:0.85rem; }
+    .nav { display:flex; gap:8px; flex-wrap:wrap; }
+    .nav a {
+      padding:8px 14px; background: var(--bg-input); color: var(--text-secondary);
+      border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+      font-weight:600; text-decoration:none;
+    }
+    .nav a:hover { color: var(--accent-blue); border-color: var(--accent-blue); }
+
+    .stats {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:12px; margin-bottom:24px;
+    }
+    .stat {
+      background: var(--bg-card); border:1px solid var(--border-color);
+      border-radius:12px; padding:16px; text-align:center;
+    }
+    .stat-val { font-size:1.6rem; font-weight:700; }
+    .stat-lbl { font-size:0.75rem; color: var(--text-muted); text-transform:uppercase;
+                letter-spacing:0.05em; margin-top:4px; }
+
+    .tiles {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:16px;
+    }
+    .tile {
+      display:block; background: var(--bg-card); border:1px solid var(--border-color);
+      border-radius:14px; padding:24px; text-decoration:none; color:inherit;
+      transition: transform .15s, border-color .15s, box-shadow .15s;
+    }
+    .tile:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-glow);
+    }
+    .tile-icon { font-size:2.4rem; line-height:1; margin-bottom:14px; }
+    .tile h2 { margin:0 0 6px; font-size:1.2rem; font-weight:600; }
+    .tile p { margin:0 0 10px; color: var(--text-secondary); font-size:0.9rem; line-height:1.5; }
+    .tile .meta { font-size:0.78rem; color: var(--text-muted); }
+    .tile.theory  { border-left: 4px solid #60a5fa; }
+    .tile.practice{ border-left: 4px solid #4ade80; }
+    .tile.progress{ border-left: 4px solid #f59e0b; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <div class="title">
+        <h1>🎯 AMC 10 — Maths Practice</h1>
+        <small id="user-line">Loading…</small>
+      </div>
+      <div class="nav">
+        <a href="index.html">← Hub</a>
+        <a href="amc10_progress.html">📈 Progress</a>
+        <a href="amc10_parent_dashboard.html" id="parent-link" style="display:none;">👪 Parent view</a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-val" id="streak" style="color:#fb923c;">—</div><div class="stat-lbl">Day streak</div></div>
+      <div class="stat"><div class="stat-val" id="today-q"  style="color:#60a5fa;">—</div><div class="stat-lbl">Today's questions</div></div>
+      <div class="stat"><div class="stat-val" id="today-acc" style="color:#4ade80;">—</div><div class="stat-lbl">Today's accuracy</div></div>
+      <div class="stat"><div class="stat-val" id="total-bank" style="color:#a78bfa;">—</div><div class="stat-lbl">Question bank</div></div>
+    </div>
+
+    <div class="tiles">
+      <a class="tile theory" href="amc10_books.html">
+        <div class="tile-icon">📚</div>
+        <h2>Read Theory</h2>
+        <p>15 AoPS textbooks — Algebra, Geometry, Number Theory, Counting & Probability, and more. Pages render with full math notation and diagrams. Reading time tracked automatically.</p>
+        <div class="meta" id="books-meta">Loading book count…</div>
+      </a>
+      <a class="tile practice" href="amc10_practice_setup.html">
+        <div class="tile-icon">✏️</div>
+        <h2>Practice Questions</h2>
+        <p>Pick topic, difficulty, year window and question count. Time-bound or untimed. Real AMC 10 problems from 2000–2022 with official solutions.</p>
+        <div class="meta" id="practice-meta">Loading topic counts…</div>
+      </a>
+      <a class="tile progress" href="amc10_progress.html">
+        <div class="tile-icon">📊</div>
+        <h2>My Progress</h2>
+        <p>Daily streak, topic mastery heatmap, recent sessions and a mistake log to focus on weak areas.</p>
+        <div class="meta" id="progress-meta">Loading progress…</div>
+      </a>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    async function jget(p){ const r=await fetch(API+p); if(!r.ok) throw new Error(r.statusText); return r.json(); }
+
+    async function init(){
+      // User identity (from auth.js if available)
+      let userId = 'navya', name = 'Navya', role = 'child';
+      try {
+        const user = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser') || '{}');
+        if (user.user_id) { userId = user.user_id; name = user.name || name; role = user.role || role; }
+      } catch(e){}
+      document.getElementById('user-line').textContent = `${name}'s practice space`;
+      if (role === 'admin' || role === 'parent') {
+        document.getElementById('parent-link').style.display = '';
+      }
+
+      // Stats
+      try {
+        const [topics, prog] = await Promise.all([
+          jget('/api/amc10/topics'),
+          jget('/api/amc10/progress?user_id=' + encodeURIComponent(userId)),
+        ]);
+
+        const totalQ = topics.topics.reduce((s,t)=>s+t.count,0);
+        document.getElementById('total-bank').textContent = totalQ.toLocaleString();
+        document.getElementById('practice-meta').textContent =
+          topics.topics.map(t => `${t.name}: ${t.count}`).join(' · ');
+
+        document.getElementById('streak').textContent = (prog.streak || 0) + 'd';
+
+        const today = (prog.daily_summary || []).find(d => d.day === new Date().toISOString().slice(0,10));
+        if (today) {
+          document.getElementById('today-q').textContent = today.attempted || 0;
+          const acc = today.attempted ? Math.round((today.correct/today.attempted)*100) : 0;
+          document.getElementById('today-acc').textContent = acc + '%';
+        } else {
+          document.getElementById('today-q').textContent = '0';
+          document.getElementById('today-acc').textContent = '—';
+        }
+
+        const totalAcc = prog.topic_mastery && prog.topic_mastery.length
+          ? Math.round(prog.topic_mastery.reduce((s,t)=>s+t.correct,0) / Math.max(1, prog.topic_mastery.reduce((s,t)=>s+t.attempted,0)) * 100)
+          : null;
+        document.getElementById('progress-meta').textContent = totalAcc !== null
+          ? `Overall accuracy: ${totalAcc}% · ${prog.recent_sessions.length} sessions`
+          : 'No sessions yet — start with 5 easy questions.';
+      } catch(e){
+        console.error(e);
+      }
+
+      // Books count
+      try {
+        const b = await jget('/api/amc10/books?user_id=' + encodeURIComponent(userId));
+        const totalBookPages = b.books.reduce((s, x) => s + (x.total_pages || 0), 0);
+        document.getElementById('books-meta').textContent =
+          `${b.books.length} books · ${totalBookPages.toLocaleString()} pages total`;
+      } catch(e){
+        document.getElementById('books-meta').textContent = 'Books not yet imported';
+      }
+    }
+    init();
+  </script>
+</body>
+</html>
