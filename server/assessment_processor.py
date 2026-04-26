@@ -319,7 +319,10 @@ No markdown, no explanation - just the JSON array."""
 
             # Process each chunk
             for chunk_idx, chunk in enumerate(chunks, 1):
-                chunk_path = chunk['chunk_path']
+                # Chunks stored by pdf_chunker use relative paths (saanvi/…) for
+                # cross-machine portability — resolve to the current $HOME before
+                # opening, otherwise Pillow/fitz can't find the file.
+                chunk_path = relative_to_absolute(chunk['chunk_path'])
                 chunk_name = chunk['chunk_filename']
 
                 self.progress_callback(
