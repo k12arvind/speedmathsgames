@@ -1,0 +1,17 @@
+[Unit]
+Description=Drishti IAS daily current-affairs pull (PDF + Claude question generation)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/speedmathsgames
+ExecStart=/opt/speedmathsgames/venv/bin/python /opt/speedmathsgames/scripts/drishti_daily_cron.py
+StandardOutput=append:/opt/speedmathsgames/logs/drishti_daily.log
+StandardError=append:/opt/speedmathsgames/logs/drishti_daily.log
+TimeoutStartSec=2400
+
+[Install]
+WantedBy=multi-user.target

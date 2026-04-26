@@ -1,0 +1,14 @@
+[Unit]
+Description=Run Drishti IAS daily current-affairs pull every weekday morning IST
+
+[Timer]
+# 02:30 UTC = 08:00 IST every Mon-Sat. Drishti has typically published the
+# day's analysis by then. We catch yesterday + today on each run, so a
+# missed run is recovered by the next day automatically.
+OnCalendar=Mon..Sat 02:30:00
+Persistent=true
+RandomizedDelaySec=10min
+Unit=drishti-daily.service
+
+[Install]
+WantedBy=timers.target
