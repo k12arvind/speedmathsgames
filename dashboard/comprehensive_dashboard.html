@@ -1090,20 +1090,19 @@
             rowIdCounter = 0;
 
             renderTable('daily-table', dashboardData.pdfs.daily);
-            // Filter out chunked parts (_part1.pdf, _part2.pdf …) when the
-            // parent PDF is also in the list — questions live on the parent,
-            // so the parts otherwise just show as "0 Q / Not Processed" noise.
+            // Build the Daily Drishti list as one row per actual day:
+            // 1. drop chunked parts (_part1.pdf, _part2.pdf …) — questions
+            //    live on the parent identifier, never on the parts
+            // 2. for chunked days whose parent was moved by the auto-chunker
+            //    into /var/www/saanvi/large_files/, splice the parent back
+            //    in so its questions stay visible from this tab
             const allDrishti = dashboardData.pdfs.daily_drishti || [];
-            const drishtiParents = new Set(
-              allDrishti.filter(p => !/_part\d+\.pdf$/.test(p.filename))
-                        .map(p => p.filename)
-            );
-            const drishtiDaily = allDrishti.filter(p => {
-              const m = p.filename.match(/^(.+?)_part\d+\.pdf$/);
-              if (!m) return true;                 // not a chunk → keep
-              const parent = m[1] + '.pdf';
-              return !drishtiParents.has(parent);  // chunk: keep only if parent missing
-            });
+            const noChunks  = allDrishti.filter(p => !/_part\d+\.pdf$/.test(p.filename));
+            const knownNames = new Set(noChunks.map(p => p.filename));
+            const drishtiLargeParents = (dashboardData.large_files || [])
+              .filter(p => /^drishti_current_affairs_/.test(p.filename))
+              .filter(p => !knownNames.has(p.filename));
+            const drishtiDaily = [...noChunks, ...drishtiLargeParents];
             renderTable('daily-drishti-table', drishtiDaily);
             renderTable('weekly-legaledge-table', dashboardData.pdfs.weekly.legaledge);
             renderTable('weekly-careerlauncher-table', dashboardData.pdfs.weekly.career_launcher);
