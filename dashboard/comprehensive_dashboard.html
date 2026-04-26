@@ -1090,7 +1090,20 @@
             rowIdCounter = 0;
 
             renderTable('daily-table', dashboardData.pdfs.daily);
-            const drishtiDaily = dashboardData.pdfs.daily_drishti || [];
+            // Filter out chunked parts (_part1.pdf, _part2.pdf …) when the
+            // parent PDF is also in the list — questions live on the parent,
+            // so the parts otherwise just show as "0 Q / Not Processed" noise.
+            const allDrishti = dashboardData.pdfs.daily_drishti || [];
+            const drishtiParents = new Set(
+              allDrishti.filter(p => !/_part\d+\.pdf$/.test(p.filename))
+                        .map(p => p.filename)
+            );
+            const drishtiDaily = allDrishti.filter(p => {
+              const m = p.filename.match(/^(.+?)_part\d+\.pdf$/);
+              if (!m) return true;                 // not a chunk → keep
+              const parent = m[1] + '.pdf';
+              return !drishtiParents.has(parent);  // chunk: keep only if parent missing
+            });
             renderTable('daily-drishti-table', drishtiDaily);
             renderTable('weekly-legaledge-table', dashboardData.pdfs.weekly.legaledge);
             renderTable('weekly-careerlauncher-table', dashboardData.pdfs.weekly.career_launcher);
@@ -1101,12 +1114,14 @@
 
             const allPdfs = [
                 ...dashboardData.pdfs.daily,
-                ...drishtiDaily,
+                ...drishtiDaily,                // parts already filtered out
                 ...dashboardData.pdfs.weekly.legaledge,
                 ...dashboardData.pdfs.weekly.career_launcher,
                 ...monthlyPdfs
             ];
             renderTable('all-table', allPdfs);
+            // Update Drishti tab badge to reflect deduped count
+            document.getElementById('daily-drishti-count').textContent = drishtiDaily.length;
 
             // Render large files table
             if (dashboardData.large_files) {
