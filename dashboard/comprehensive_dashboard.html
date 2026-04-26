@@ -956,11 +956,19 @@
         const paginationData = {};    // containerId -> sorted pdf list (cache for page switches)
 
         function sortByDateDesc(pdfs) {
-            // Non-mutating sort: newest first, by date_added (or date_published)
+            // Non-mutating sort: newest first, by content date (date_published).
+            // Falls back to date_added (scan time) when content date is missing.
+            // Tie-breaker: original chunks (no _partN) come before their parts,
+            // and parts sort by part number ascending.
+            const partNum = fn => {
+                const m = (fn || '').match(/_part(\d+)/);
+                return m ? parseInt(m[1], 10) : 0;
+            };
             return [...pdfs].sort((a, b) => {
-                const da = new Date(a.date_added || a.date_published || 0).getTime() || 0;
-                const db = new Date(b.date_added || b.date_published || 0).getTime() || 0;
-                return db - da;
+                const da = new Date(a.date_published || a.date_added || 0).getTime() || 0;
+                const db = new Date(b.date_published || b.date_added || 0).getTime() || 0;
+                if (db !== da) return db - da;
+                return partNum(a.filename) - partNum(b.filename);
             });
         }
 
