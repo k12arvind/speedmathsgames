@@ -2454,12 +2454,22 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         }
 
     def _generate_drishti_pdf(self, url: str) -> dict:
-        """Generate clean daily-GK PDF from a Drishti IAS news-analysis page."""
+        """Generate clean daily-GK PDF from a Drishti IAS news-analysis page.
+
+        Accepts both URL formats Drishti serves:
+          - DD-MM-YYYY  e.g. /news-analysis/17-04-2026
+          - YYYY-MM-DD  e.g. /news-analysis/2026-04-17
+        """
         import subprocess
         import re
 
-        # Expected path: /current-affairs-news-analysis-editorials/news-analysis/DD-MM-YYYY
         m = re.search(r'news-analysis/(\d{2})-(\d{2})-(\d{4})', url)
+        if not m:
+            m_iso = re.search(r'news-analysis/(\d{4})-(\d{2})-(\d{2})', url)
+            if m_iso:
+                year, month, day = m_iso.groups()
+                m = re.match(r'(?P<d>\d{2})-(?P<m>\d{2})-(?P<y>\d{4})',
+                             f"{day}-{month}-{year}")
         if m:
             day, month, year = m.groups()
             months = {

@@ -41,6 +41,10 @@ DRISHTI_DAILY_URL_RE = re.compile(
     r'drishtiias\.com/current-affairs-news-analysis-editorials/news-analysis/(\d{2})-(\d{2})-(\d{4})',
     re.IGNORECASE,
 )
+DRISHTI_DAILY_URL_RE_ISO = re.compile(
+    r'drishtiias\.com/current-affairs-news-analysis-editorials/news-analysis/(\d{4})-(\d{2})-(\d{2})',
+    re.IGNORECASE,
+)
 
 
 def fetch_html_content(url: str, timeout: int = 30) -> str:
@@ -60,12 +64,17 @@ def fetch_html_content(url: str, timeout: int = 30) -> str:
 def extract_date_from_url(url: str) -> Optional[Dict[str, str]]:
     """Return {'day','month','year'} or None.
 
-    Drishti uses DD-MM-YYYY in its URL path.
+    Drishti accepts both DD-MM-YYYY and YYYY-MM-DD in its URL path; both serve
+    the same content. We support both formats here.
     """
     m = DRISHTI_DAILY_URL_RE.search(url)
-    if not m:
-        return None
-    day, month, year = m.groups()
+    if m:
+        day, month, year = m.groups()
+    else:
+        m_iso = DRISHTI_DAILY_URL_RE_ISO.search(url)
+        if not m_iso:
+            return None
+        year, month, day = m_iso.groups()
     months = [
         'january', 'february', 'march', 'april', 'may', 'june',
         'july', 'august', 'september', 'october', 'november', 'december',
