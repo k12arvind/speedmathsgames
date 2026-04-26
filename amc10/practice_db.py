@@ -516,6 +516,50 @@ class AMC10PracticeDB:
             """, (user_id, cutoff)).fetchall()
             return [dict(r) for r in rows]
 
+    def daily_reading_summary(self, user_id: str, days: int = 14) -> List[Dict[str, Any]]:
+        """Per-day pages read and seconds spent across all books."""
+        cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+        with self._conn() as c:
+            rows = c.execute("""
+                SELECT DATE(recorded_at) AS day,
+                       SUM(seconds_read) AS seconds,
+                       COUNT(DISTINCT book_id || '|' || chapter_number || '|' || page_number) AS pages_seen
+                FROM amc10_book_view_sessions
+                WHERE user_id = ? AND recorded_at >= ?
+                GROUP BY DATE(recorded_at)
+                ORDER BY day DESC
+            """, (user_id, cutoff)).fetchall()
+            return [dict(r) for r in rows]
+
+    def books_in_progress(self, user_id: str, limit: int = 10) -> List[Dict[str, Any]]:
+        """Books the user has started but not finished, sorted by most recent."""
+        with self._conn() as c:
+            rows = c.execute("""
+                SELECT b.book_id, b.title, b.total_pages, b.chapter_count,
+                       SUM(rp.pages_seen)   AS pages_seen,
+                       SUM(rp.seconds_read) AS seconds_read,
+                       MAX(rp.last_viewed_at) AS last_viewed_at
+                FROM math_books b
+                JOIN math_book_reading_progress rp ON rp.book_id = b.book_id
+                WHERE rp.user_id = ? AND rp.pages_seen > 0
+                GROUP BY b.book_id
+                ORDER BY MAX(rp.last_viewed_at) DESC
+                LIMIT ?
+            """, (user_id, limit)).fetchall()
+            return [dict(r) for r in rows]
+
+    def lifetime_reading(self, user_id: str) -> Dict[str, Any]:
+        """Total pages, seconds, and number of distinct books touched."""
+        with self._conn() as c:
+            r = c.execute("""
+                SELECT COALESCE(SUM(pages_seen), 0)     AS pages,
+                       COALESCE(SUM(seconds_read), 0)   AS seconds,
+                       COUNT(DISTINCT book_id)          AS books
+                FROM math_book_reading_progress
+                WHERE user_id = ?
+            """, (user_id,)).fetchone()
+        return dict(r) if r else {'pages': 0, 'seconds': 0, 'books': 0}
+
     def streak(self, user_id: str) -> int:
         """Consecutive days (including today) with at least one practice attempt."""
         with self._conn() as c:

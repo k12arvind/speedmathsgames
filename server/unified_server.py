@@ -1553,6 +1553,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                     'streak': self.amc10_db.streak(user_id),
                     'topic_mastery': self.amc10_db.topic_mastery(user_id),
                     'daily_summary': self.amc10_db.daily_summary(user_id, days=14),
+                    'daily_reading': self.amc10_db.daily_reading_summary(user_id, days=14),
+                    'books_in_progress': self.amc10_db.books_in_progress(user_id, limit=10),
+                    'lifetime_reading': self.amc10_db.lifetime_reading(user_id),
                     'recent_sessions': self.amc10_db.recent_sessions(user_id, limit=10),
                 })
                 return

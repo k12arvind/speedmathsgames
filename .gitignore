@@ -64,3 +64,7 @@ temp/
 *.swp
 *.swo
 venv_clat/
+
+# AoPS Wiki HTML cache (large, regenerable)
+.aops_cache/
+amc10_topic_review.csv
