@@ -64,6 +64,7 @@ from anthropic import Anthropic
 # Import math database
 from math_module.math_db import MathDatabase
 from amc10.practice_db import AMC10PracticeDB
+from physics.practice_db import PhysicsPracticeDB
 
 # Import PDF scanner for GK dashboard (includes cross-machine path helpers)
 from server.pdf_scanner import PDFScanner, relative_to_absolute, path_to_relative
@@ -134,6 +135,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     anthropic = None
     math_db = None
     amc10_db = None
+    physics_db = None
     pdf_scanner = None
     processing_db = None
     annotation_manager = None
@@ -222,6 +224,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # /static/MathsBooksHTML/<book_id>/<file>
         if path.startswith('/static/MathsBooksHTML/'):
             self.handle_math_book_asset(path)
+            return
+
+        # Physics-books static content
+        # /static/PhysicsBooksHTML/<book_id>/<file>
+        if path.startswith('/static/PhysicsBooksHTML/'):
+            self.handle_physics_book_asset(path)
             return
 
         # API endpoints
@@ -476,6 +484,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # AMC10 (Navya's maths) API endpoints
             elif path.startswith('/api/amc10/'):
                 self.handle_amc10_get(path, query_params)
+            # Physics (Navya's physics) API endpoints
+            elif path.startswith('/api/physics/'):
+                self.handle_physics_get(path, query_params)
             # GK Dashboard API endpoints (including assessment status)
             elif path.startswith('/api/dashboard') or path.startswith('/api/pdfs/') or \
                  path.startswith('/api/filter/') or path.startswith('/api/stats') or \
@@ -538,6 +549,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # AMC10 (Navya's maths) API endpoints
             elif path.startswith('/api/amc10/'):
                 self.handle_amc10_post(path, data)
+            # Physics (Navya's physics) API endpoints
+            elif path.startswith('/api/physics/'):
+                self.handle_physics_post(path, data)
             # GK Dashboard API endpoints
             # GK PDF Processing API endpoints
             elif path.startswith('/api/gk/') or path.startswith('/api/revision/'):
@@ -1624,6 +1638,153 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 return
 
             self.send_json({'error': f'unknown amc10 path: {path}'}, 404)
+        except PermissionError as e:
+            self.send_json({'error': str(e)}, 403)
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()}, 500)
+
+    # ----------------------------------------------------------------------
+    # Physics (Navya's physics) endpoints
+    # ----------------------------------------------------------------------
+    def _physics_user_id(self, query_params, data=None) -> str:
+        """Same parent-override semantics as the AMC10 resolver."""
+        session_user = getattr(self, 'current_user_id', None)
+        requested = (query_params or {}).get('user_id', [None])[0] if query_params else None
+        if requested is None and data:
+            requested = data.get('user_id')
+        if session_user:
+            if requested and requested != session_user:
+                role = (getattr(self, 'current_user_role', None) or '').lower()
+                if role in ('admin', 'parent'):
+                    return requested
+            return session_user
+        return requested or 'navya'
+
+    def handle_physics_get(self, path: str, query_params: dict):
+        try:
+            if path == '/api/physics/topics':
+                self.send_json({'topics': self.physics_db.topic_tree()})
+                return
+            if path == '/api/physics/books':
+                user_id = self._physics_user_id(query_params)
+                self.send_json({'books': self.physics_db.list_books(user_id)})
+                return
+            if path.startswith('/api/physics/book/'):
+                # /api/physics/book/<book_id>/chapters
+                parts = path.split('/')
+                if len(parts) >= 6 and parts[5] == 'chapters':
+                    user_id = self._physics_user_id(query_params)
+                    book_id = parts[4]
+                    self.send_json({
+                        'book_id': book_id,
+                        'chapters': self.physics_db.list_chapters(book_id, user_id),
+                    })
+                    return
+            if path == '/api/physics/sessions':
+                user_id = self._physics_user_id(query_params)
+                limit = int((query_params or {}).get('limit', ['25'])[0])
+                self.send_json({'sessions': self.physics_db.recent_sessions(user_id, limit)})
+                return
+            if path.startswith('/api/physics/session/'):
+                parts = path.split('/')
+                if len(parts) == 5:
+                    sid = parts[4]
+                    user_id = self._physics_user_id(query_params)
+                    sess = self.physics_db.get_session(sid, user_id, include_correct=False)
+                    self.send_json(sess)
+                    return
+                if len(parts) >= 6 and parts[5] == 'full':
+                    sid = parts[4]
+                    user_id = self._physics_user_id(query_params)
+                    sess = self.physics_db.get_session(sid, user_id, include_correct=True)
+                    self.send_json(sess)
+                    return
+            if path == '/api/physics/progress':
+                user_id = self._physics_user_id(query_params)
+                self.send_json({
+                    'user_id': user_id,
+                    'streak': self.physics_db.streak(user_id),
+                    'topic_mastery': self.physics_db.topic_mastery(user_id),
+                    'daily_summary': self.physics_db.daily_summary(user_id, days=14),
+                    'daily_reading': self.physics_db.daily_reading_summary(user_id, days=14),
+                    'books_in_progress': self.physics_db.books_in_progress(user_id, limit=10),
+                    'lifetime_reading': self.physics_db.lifetime_reading(user_id),
+                    'recent_sessions': self.physics_db.recent_sessions(user_id, limit=10),
+                    'total_questions': self.physics_db.total_question_count(),
+                })
+                return
+            if path == '/api/physics/stats':
+                self.send_json({
+                    'total_questions': self.physics_db.total_question_count(),
+                })
+                return
+
+            self.send_json({'error': f'unknown physics path: {path}'}, 404)
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()}, 500)
+
+    def handle_physics_post(self, path: str, data: dict):
+        try:
+            if path == '/api/physics/session/create':
+                user_id = self._physics_user_id(None, data)
+                topics = data.get('topics') or None
+                subtopics = data.get('subtopics') or None
+                books = data.get('books') or None
+                chapters = data.get('chapters') or None
+                if chapters:
+                    chapters = [int(c) for c in chapters]
+                difficulty = data.get('difficulty')
+                if difficulty in ('mixed', '', None):
+                    difficulty = None
+                count = int(data.get('count', 5))
+                count = max(1, min(50, count))
+                time_limit = int(data.get('time_limit_seconds', 0))
+                sess = self.physics_db.create_session(
+                    user_id=user_id,
+                    topic_filter=topics if topics else None,
+                    subtopic_filter=subtopics if subtopics else None,
+                    book_filter=books if books else None,
+                    chapter_filter=chapters if chapters else None,
+                    difficulty_band=difficulty,
+                    requested_count=count,
+                    time_limit_seconds=time_limit,
+                )
+                self.send_json(sess)
+                return
+
+            if path.startswith('/api/physics/session/') and path.endswith('/attempt'):
+                sid = path.split('/')[4]
+                user_id = self._physics_user_id(None, data)
+                res = self.physics_db.submit_attempt(
+                    session_id=sid, user_id=user_id,
+                    question_id=int(data['question_id']),
+                    user_choice=data.get('choice'),
+                    time_spent_seconds=int(data.get('time_spent_seconds', 0)),
+                    flagged=bool(data.get('flagged', False)),
+                    revealed_solution=bool(data.get('revealed_solution', False)),
+                )
+                self.send_json(res)
+                return
+
+            if path.startswith('/api/physics/session/') and path.endswith('/finish'):
+                sid = path.split('/')[4]
+                user_id = self._physics_user_id(None, data)
+                self.send_json(self.physics_db.finish_session(sid, user_id))
+                return
+
+            if path == '/api/physics/book-view':
+                user_id = self._physics_user_id(None, data)
+                self.physics_db.record_book_view(
+                    user_id=user_id,
+                    book_id=str(data['book_id']),
+                    chapter_number=int(data.get('chapter_number') or 0),
+                    page_number=int(data.get('page_number') or 0),
+                    seconds=int(data.get('seconds') or 0),
+                )
+                self.send_json({'ok': True})
+                return
+
+            self.send_json({'error': f'unknown physics path: {path}'}, 404)
         except PermissionError as e:
             self.send_json({'error': str(e)}, 403)
         except Exception as e:
@@ -3367,6 +3528,35 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
         self.send_header('Content-Type', ctype)
         self.send_header('Content-Length', str(target.stat().st_size))
         # Browsers can cache page images aggressively — they don't change.
+        if target.suffix.lower() in ('.jpg', '.jpeg', '.png'):
+            self.send_header('Cache-Control', 'public, max-age=86400')
+        self.end_headers()
+        with open(target, 'rb') as f:
+            self.wfile.write(f.read())
+
+    def handle_physics_book_asset(self, path: str):
+        """Serve files from ~/saanvi/PhysicsBooksHTML/ — same shape as math books."""
+        import mimetypes
+        from urllib.parse import unquote
+        prefix = '/static/PhysicsBooksHTML/'
+        rel = unquote(path[len(prefix):])
+        if '..' in rel.split('/'):
+            self.send_response(400); self.end_headers(); return
+
+        root = (Path.home() / 'saanvi' / 'PhysicsBooksHTML').resolve()
+        target = (root / rel).resolve()
+        try:
+            target.relative_to(root)
+        except ValueError:
+            self.send_response(403); self.end_headers(); return
+        if not target.is_file():
+            self.send_response(404); self.end_headers(); return
+
+        ctype, _ = mimetypes.guess_type(str(target))
+        ctype = ctype or 'application/octet-stream'
+        self.send_response(200)
+        self.send_header('Content-Type', ctype)
+        self.send_header('Content-Length', str(target.stat().st_size))
         if target.suffix.lower() in ('.jpg', '.jpeg', '.png'):
             self.send_header('Cache-Control', 'public, max-age=86400')
         self.end_headers()
@@ -6565,6 +6755,11 @@ def main():
     amc10_db_path = Path(__file__).parent.parent / 'amc10_practice.db'
     UnifiedHandler.amc10_db = AMC10PracticeDB(str(amc10_db_path))
     print("✅ AMC10 practice database initialized")
+
+    # Physics practice DB (Navya's physics)
+    physics_db_path = Path(__file__).parent.parent / 'physics_practice.db'
+    UnifiedHandler.physics_db = PhysicsPracticeDB(str(physics_db_path))
+    print("✅ Physics practice database initialized")
     
     # Run database health check
     verify_database_health()

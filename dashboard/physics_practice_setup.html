@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Practice Setup · Physics</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:780px; margin:0 auto; padding:24px 18px 60px; }
+    h1 { font-family:'Playfair Display',serif; font-size:clamp(1.4rem,3.5vw,1.9rem); margin:0 0 18px; }
+    .head { display:flex; justify-content:space-between; align-items:center;
+            flex-wrap:wrap; gap:14px; margin-bottom:24px; }
+    .nav a { padding:7px 13px; background:var(--bg-input); color:var(--text-secondary);
+             border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+             font-weight:600; text-decoration:none; }
+    .nav a:hover { color:#06b6d4; border-color:#06b6d4; }
+
+    .panel {
+      background: var(--bg-card); border:1px solid var(--border-color);
+      border-radius:12px; padding:20px; margin-bottom:14px;
+    }
+    .panel h2 {
+      margin:0 0 12px; font-size:0.92rem; text-transform:uppercase;
+      letter-spacing:0.05em; color: var(--text-muted); font-weight:600;
+    }
+
+    .topics { display:flex; flex-wrap:wrap; gap:8px; }
+    .topic {
+      display:flex; align-items:center; gap:8px; padding:9px 14px;
+      background: var(--bg-input); border:1px solid var(--border-color);
+      border-radius:8px; cursor:pointer; user-select:none; font-size:13px;
+    }
+    .topic input { display:none; }
+    .topic.checked {
+      background: rgba(6,182,212,0.10); border-color: #06b6d4;
+      color: var(--text-primary);
+    }
+    .topic .ct { color: var(--text-muted); font-size:11px; }
+    .topic.checked .ct { color: #06b6d4; }
+
+    .opts { display:flex; gap:8px; flex-wrap:wrap; }
+    .opts label {
+      padding:9px 16px; background: var(--bg-input);
+      border:1px solid var(--border-color); border-radius:8px;
+      cursor:pointer; user-select:none; font-size:13px;
+    }
+    .opts input { display:none; }
+    .opts label.checked {
+      background: rgba(74,222,128,0.10); border-color: var(--accent-success);
+      color: var(--accent-success);
+    }
+
+    .start-btn {
+      display:block; width:100%; padding:14px;
+      background: linear-gradient(135deg,#06b6d4 0%,#6366f1 100%);
+      color:#0a0a0c; border:none; border-radius:10px;
+      font-size:15px; font-weight:700; cursor:pointer;
+      transition: transform .1s;
+    }
+    .start-btn:hover { transform: translateY(-1px); }
+    .start-btn[disabled] { opacity:0.5; cursor:not-allowed; }
+
+    .info-banner {
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.30);
+      color: #fbbf24; padding:12px 16px; border-radius:8px;
+      margin-bottom:14px; font-size:0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>✏️ Practice Setup</h1>
+      <div class="nav"><a href="physics_hub.html">← Hub</a></div>
+    </div>
+
+    <div id="empty-banner" class="info-banner" style="display:none;">
+      ⚠️ No questions in the bank yet. Books are uploaded; questions will be added soon.
+    </div>
+
+    <div class="panel">
+      <h2>Topics <small style="text-transform:none;color:var(--text-muted);font-weight:400;">(none = all)</small></h2>
+      <div id="topics" class="topics">Loading…</div>
+    </div>
+
+    <div class="panel">
+      <h2>Books <small style="text-transform:none;color:var(--text-muted);font-weight:400;">(none = all)</small></h2>
+      <div id="books" class="topics">Loading…</div>
+    </div>
+
+    <div class="panel">
+      <h2>Difficulty</h2>
+      <div class="opts" id="difficulty">
+        <label><input type="radio" name="diff" value=""        checked>Mixed</label>
+        <label><input type="radio" name="diff" value="easy">Easy</label>
+        <label><input type="radio" name="diff" value="medium">Medium</label>
+        <label><input type="radio" name="diff" value="hard">Hard</label>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Number of questions</h2>
+      <div class="opts" id="count">
+        <label><input type="radio" name="cnt" value="5">5</label>
+        <label><input type="radio" name="cnt" value="10" checked>10</label>
+        <label><input type="radio" name="cnt" value="15">15</label>
+        <label><input type="radio" name="cnt" value="25">25 (full mock)</label>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Time limit</h2>
+      <div class="opts" id="time">
+        <label><input type="radio" name="tl" value="0" checked>Untimed</label>
+        <label><input type="radio" name="tl" value="60">1 min/Q</label>
+        <label><input type="radio" name="tl" value="120">2 min/Q</label>
+        <label><input type="radio" name="tl" value="180">3 min/Q</label>
+      </div>
+    </div>
+
+    <button class="start-btn" id="start">Start Practice →</button>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    function userId() {
+      try {
+        const u = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser')||'{}');
+        return u.user_id || 'navya';
+      } catch(e){ return 'navya'; }
+    }
+
+    let topicChecked = new Set();
+    let bookChecked = new Set();
+
+    async function loadTopics(){
+      const r = await fetch(API + '/api/physics/topics');
+      const d = await r.json();
+      const root = document.getElementById('topics');
+      if (!d.topics || !d.topics.length) {
+        root.innerHTML = '<div style="color:var(--text-muted);font-size:0.85rem;">No topics tagged yet.</div>';
+        return;
+      }
+      root.innerHTML = d.topics.map(t => `
+        <label class="topic" data-code="${t.code}">
+          <input type="checkbox">
+          <span>${t.name}</span>
+          <span class="ct">${t.count}</span>
+        </label>`).join('');
+      root.querySelectorAll('.topic').forEach(el => {
+        el.addEventListener('click', () => {
+          el.classList.toggle('checked');
+          const code = el.dataset.code;
+          if (topicChecked.has(code)) topicChecked.delete(code);
+          else topicChecked.add(code);
+        });
+      });
+    }
+
+    async function loadBooks(){
+      const r = await fetch(API + '/api/physics/books?user_id=' + encodeURIComponent(userId()));
+      const d = await r.json();
+      const root = document.getElementById('books');
+      if (!d.books || !d.books.length) {
+        root.innerHTML = '<div style="color:var(--text-muted);font-size:0.85rem;">No books yet.</div>';
+        return;
+      }
+      root.innerHTML = d.books.map(b => `
+        <label class="topic" data-bid="${b.book_id}">
+          <input type="checkbox">
+          <span>${b.title}</span>
+          <span class="ct">${b.chapter_count}ch</span>
+        </label>`).join('');
+      root.querySelectorAll('.topic').forEach(el => {
+        el.addEventListener('click', () => {
+          el.classList.toggle('checked');
+          const bid = el.dataset.bid;
+          if (bookChecked.has(bid)) bookChecked.delete(bid);
+          else bookChecked.add(bid);
+        });
+      });
+    }
+
+    async function loadStats(){
+      try {
+        const r = await fetch(API + '/api/physics/stats');
+        const d = await r.json();
+        if ((d.total_questions || 0) === 0) {
+          document.getElementById('empty-banner').style.display = '';
+        }
+      } catch(e){}
+    }
+
+    document.querySelectorAll('.opts').forEach(grp => {
+      grp.addEventListener('change', e => {
+        grp.querySelectorAll('label').forEach(l => l.classList.toggle(
+          'checked', l.querySelector('input').checked));
+      });
+      grp.querySelectorAll('label').forEach(l =>
+        l.classList.toggle('checked', l.querySelector('input').checked));
+    });
+
+    document.getElementById('start').addEventListener('click', async () => {
+      const btn = document.getElementById('start');
+      btn.disabled = true; btn.textContent = 'Starting…';
+      const body = {
+        user_id: userId(),
+        topics: Array.from(topicChecked),
+        books: Array.from(bookChecked),
+        difficulty: document.querySelector('input[name=diff]:checked').value,
+        count: parseInt(document.querySelector('input[name=cnt]:checked').value, 10),
+        time_limit_seconds: parseInt(document.querySelector('input[name=tl]:checked').value, 10) *
+                            parseInt(document.querySelector('input[name=cnt]:checked').value, 10),
+      };
+      try {
+        const r = await fetch(API + '/api/physics/session/create', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify(body)
+        });
+        const sess = await r.json();
+        if (!sess.session_id) throw new Error(sess.error || 'No session created');
+        if (!sess.attempts || !sess.attempts.length) {
+          alert('No questions matched these filters. Once questions are added you can practice from here.');
+          btn.disabled = false; btn.textContent = 'Start Practice →';
+          return;
+        }
+        location.href = 'physics_practice_session.html?sid=' + encodeURIComponent(sess.session_id);
+      } catch(e) {
+        alert('Could not start session: ' + e.message);
+        btn.disabled = false; btn.textContent = 'Start Practice →';
+      }
+    });
+
+    loadTopics();
+    loadBooks();
+    loadStats();
+  </script>
+</body>
+</html>

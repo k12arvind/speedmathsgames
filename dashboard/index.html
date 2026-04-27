@@ -159,6 +159,8 @@
         .card-momentum::before { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
         .card-amc10::before { background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%); }
         .card-amc10:hover { --shadow-glow: 0 0 40px rgba(167, 139, 250, 0.25); }
+        .card-physics::before { background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%); }
+        .card-physics:hover { --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.25); }
 
         .card-gk:hover { --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2); }
         .card-math:hover { --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.2); }
@@ -291,6 +293,7 @@
         .card-calendar .module-cta { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
         .card-momentum .module-cta { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
         .card-amc10 .module-cta { background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%); color: #ffffff; }
+        .card-physics .module-cta { background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%); color: #ffffff; }
 
         .module-cta:hover {
             transform: translateY(-2px);
@@ -588,6 +591,38 @@
             </div>
             <button class="module-cta">
                 Open AMC 10 <span class="arrow">→</span>
+            </button>
+        </a>
+
+        <!-- Navya's Physics Module — visible to navya/arvind/deepa only -->
+        <a href="physics_hub.html" class="module-card card-physics private-module" id="physics-module" style="display: none;">
+            <div class="module-header">
+                <div class="module-icon">⚛️</div>
+                <div>
+                    <div class="module-title">Navya's Physics</div>
+                    <div class="module-subtitle">Class IX Physics Practice</div>
+                </div>
+            </div>
+            <div class="module-description">
+                Theory books (HC Verma + 200 Puzzling Physics Problems) with built-in reading-time tracking. Practice questions and topic mastery added as the bank grows.
+            </div>
+            <ul class="module-features">
+                <li>Read theory: page-perfect rendering, mobile-friendly</li>
+                <li>Practice with topic / book / chapter filters</li>
+                <li>Streak, mastery heatmap, parent dashboard</li>
+            </ul>
+            <div class="module-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="physics-streak">-</div>
+                    <div class="stat-label">Streak</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="physics-acc">-</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+            <button class="module-cta">
+                Open Physics <span class="arrow">→</span>
             </button>
         </a>
 
@@ -1007,6 +1042,19 @@
                         const cor = tm.reduce((s,t)=>s+t.correct,0);
                         document.getElementById('amc10-acc').textContent = att ? Math.round(cor/att*100) + '%' : '-';
                     } catch(e) { /* progress endpoint may not exist on older deploys */ }
+
+                    // Physics module — same audience as AMC10
+                    const pcard = document.getElementById('physics-module');
+                    if (pcard) pcard.style.display = 'flex';
+                    try {
+                        const r = await fetch(`${API_BASE}/api/physics/progress?user_id=navya`);
+                        const d = await r.json();
+                        document.getElementById('physics-streak').textContent = (d.streak || 0) + 'd';
+                        const tm = d.topic_mastery || [];
+                        const att = tm.reduce((s,t)=>s+t.attempted,0);
+                        const cor = tm.reduce((s,t)=>s+t.correct,0);
+                        document.getElementById('physics-acc').textContent = att ? Math.round(cor/att*100) + '%' : '-';
+                    } catch(e) { /* progress endpoint may not be deployed yet */ }
                 }
 
                 // Show private modules for parents (Arvind & Deepa only)

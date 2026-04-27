@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Navya's Physics Progress · Parent Dashboard</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:1200px; margin:0 auto; padding:22px 18px 60px; }
+    .head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+            margin-bottom:14px; align-items:center; }
+    .head h1 { font-family:'Playfair Display',serif; margin:0; font-size:clamp(1.3rem,3vw,1.8rem); }
+    .nav { display:flex; gap:6px; flex-wrap:wrap; }
+    .nav a { padding:7px 13px; background:var(--bg-input); color:var(--text-secondary);
+             border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+             font-weight:600; text-decoration:none; }
+    .nav a:hover { color:#06b6d4; border-color:#06b6d4; }
+    .banner {
+      background: linear-gradient(135deg, rgba(6,182,212,0.10), rgba(99,102,241,0.10));
+      border:1px solid rgba(6,182,212,0.30);
+      border-radius:10px; padding:10px 14px; margin-bottom:16px;
+      font-size:0.88rem; color: var(--text-secondary);
+    }
+    .banner strong { color: var(--text-primary); }
+
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-bottom:16px; }
+    .stat { background:var(--bg-card); border:1px solid var(--border-color);
+            border-radius:10px; padding:14px; text-align:center; }
+    .stat-val { font-size:1.5rem; font-weight:700; }
+    .stat-lbl { font-size:0.7rem; color:var(--text-muted); text-transform:uppercase;
+                letter-spacing:0.05em; margin-top:3px; }
+
+    .today {
+      background: linear-gradient(135deg, var(--bg-card), rgba(74,222,128,0.04));
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-success);
+      border-radius:12px; padding:18px 20px; margin-bottom:16px;
+    }
+    .today h3 { margin:0 0 12px; font-size:0.92rem; color: var(--accent-success);
+                text-transform:uppercase; letter-spacing:0.05em; font-weight:600; }
+    .today-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+    .today-cell { font-size:0.85rem; color: var(--text-secondary); }
+    .today-cell strong {
+      display:block; font-size:1.4rem; color: var(--text-primary);
+      font-weight:700; margin-bottom:2px;
+    }
+
+    .grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
+    @media (max-width:880px) { .grid2 { grid-template-columns: 1fr; } }
+    .panel { background:var(--bg-card); border:1px solid var(--border-color);
+             border-radius:12px; padding:18px; margin-bottom:14px; }
+    .panel h2 { font-size:0.86rem; text-transform:uppercase; color:var(--text-muted);
+                margin:0 0 14px; letter-spacing:0.05em; font-weight:600; }
+
+    .bars { display:flex; gap:6px; align-items:flex-end; height:170px;
+            border-bottom:1px solid var(--border-color); padding-bottom:6px; }
+    .bar-col { flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; min-width:0; }
+    .bar-stack { width:100%; max-width:36px; display:flex; flex-direction:column; justify-content:flex-end; min-height:2px; }
+    .bar-practice { background: linear-gradient(0deg, #06b6d4 0%, #6366f1 100%); }
+    .bar-reading  { background: linear-gradient(0deg, #4ade80 0%, #22d3ee 100%); border-radius:4px 4px 0 0; }
+    .bar-stack > div:first-child { border-radius:4px 4px 0 0; }
+    .bar-stack > div:last-child  { border-radius:0; }
+    .bar-stack > div:only-child  { border-radius:4px 4px 0 0; }
+    .bar-lbl { font-size:0.62rem; color:var(--text-muted); transform:rotate(-45deg);
+               transform-origin:50% 0; white-space:nowrap; }
+    .bar-val { font-size:0.7rem; color:var(--text-secondary); font-weight:600; }
+    .legend { display:flex; gap:14px; margin-top:8px; font-size:0.78rem; color:var(--text-muted); }
+    .legend-dot { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:4px; vertical-align:-1px; }
+
+    .topic-row { display:grid; grid-template-columns:1fr 70px 1fr 70px;
+                  gap:10px; align-items:center; padding:7px 0; }
+    .topic-row .name { font-weight:600; font-size:0.92rem; }
+    .topic-row .ratio { color:var(--text-muted); font-size:0.82rem; text-align:right; }
+    .topic-row .barwrap { background:var(--bg-input); height:8px; border-radius:4px; overflow:hidden; }
+    .topic-row .barwrap > span { display:block; height:100%;
+              background: linear-gradient(135deg, var(--accent-success), #06b6d4); }
+    .topic-row .pct { text-align:right; font-weight:700; }
+    .topic-row .pct.good { color: var(--accent-success); }
+    .topic-row .pct.warn { color:#f59e0b; }
+    .topic-row .pct.bad  { color: var(--accent-danger); }
+
+    .book-row {
+      display:grid; grid-template-columns: 1fr 70px 90px 100px;
+      gap:10px; align-items:center; padding:9px 0;
+      border-bottom:1px solid var(--border-subtle); font-size:0.86rem;
+    }
+    .book-row:last-child { border-bottom:none; }
+    .book-row .title { font-weight:600; }
+    .book-row .meta { color:var(--text-muted); font-size:0.74rem; margin-top:1px; }
+    .book-row .pct { font-weight:700; text-align:right; color:#06b6d4; }
+    .book-row .when { color:var(--text-muted); font-size:0.78rem; text-align:right; }
+    .book-row .time { font-variant-numeric: tabular-nums; text-align:right; }
+
+    .session-row {
+      display:grid; grid-template-columns: 110px 1fr 80px 70px 60px;
+      gap:8px; align-items:center; padding:8px 0;
+      border-bottom:1px solid var(--border-subtle); font-size:0.86rem;
+    }
+    .session-row:last-child { border-bottom:none; }
+    .session-row .when { color:var(--text-muted); font-size:0.76rem; }
+    .session-row .acc.good { color: var(--accent-success); font-weight:600; }
+    .session-row .acc.warn { color:#f59e0b; }
+    .session-row .acc.bad  { color: var(--accent-danger); }
+
+    .empty { color:var(--text-muted); padding:24px; text-align:center; font-size:0.88rem; }
+
+    .mistake-row { padding:9px 12px; border-bottom:1px solid var(--border-subtle); font-size:0.86rem; }
+    .mistake-row:last-child { border-bottom:none; }
+    .mistake-row .topic-tag {
+      background: rgba(248,113,113,0.10); color: var(--accent-danger);
+      font-size:0.72rem; padding:2px 7px; border-radius:4px; margin-right:8px;
+    }
+
+    .donut-wrap { display:flex; align-items:center; gap:18px; }
+    .donut { position:relative; width:140px; height:140px; flex-shrink:0; }
+    .donut svg { transform: rotate(-90deg); }
+    .donut .center {
+      position:absolute; inset:0; display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+    }
+    .donut .center .total { font-size:1.4rem; font-weight:700; }
+    .donut .center .lbl { font-size:0.7rem; color:var(--text-muted);
+                          text-transform:uppercase; letter-spacing:0.05em; }
+    .donut-legend { font-size:0.85rem; line-height:1.7; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>👪 Parent Dashboard — Navya's Physics</h1>
+      <div class="nav">
+        <a href="physics_hub.html">← Physics</a>
+        <a href="family_dashboard.html">Family</a>
+        <a href="index.html">Main hub</a>
+      </div>
+    </div>
+    <div class="banner">
+      Read-only view of <strong id="viewing">Navya</strong>'s practice + theory reading.
+      Refreshes when you reload this page.
+    </div>
+
+    <div class="today">
+      <h3>📅 Today</h3>
+      <div class="today-grid">
+        <div class="today-cell"><strong id="today-q">—</strong>Questions attempted</div>
+        <div class="today-cell"><strong id="today-acc">—</strong>Accuracy on today's Qs</div>
+        <div class="today-cell"><strong id="today-pages">—</strong>Pages read</div>
+        <div class="today-cell"><strong id="today-read-time">—</strong>Reading time</div>
+        <div class="today-cell"><strong id="today-q-time">—</strong>Time on questions</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-val" id="streak"      style="color:#fb923c;">—</div><div class="stat-lbl">Day streak</div></div>
+      <div class="stat"><div class="stat-val" id="lifetime-q"  style="color:#6366f1;">—</div><div class="stat-lbl">Lifetime questions</div></div>
+      <div class="stat"><div class="stat-val" id="lifetime-acc" style="color:#4ade80;">—</div><div class="stat-lbl">Lifetime accuracy</div></div>
+      <div class="stat"><div class="stat-val" id="lifetime-pages" style="color:#22d3ee;">—</div><div class="stat-lbl">Pages read total</div></div>
+      <div class="stat"><div class="stat-val" id="lifetime-read"  style="color:#06b6d4;">—</div><div class="stat-lbl">Reading time total</div></div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h2>Last 14 days · time spent</h2>
+        <div class="bars" id="bars"><div class="empty">No data yet</div></div>
+        <div class="legend">
+          <span><span class="legend-dot" style="background:#06b6d4;"></span>Practice (Qs)</span>
+          <span><span class="legend-dot" style="background:#22d3ee;"></span>Reading (books)</span>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Time split · last 14 days</h2>
+        <div class="donut-wrap">
+          <div class="donut" id="donut"></div>
+          <div class="donut-legend" id="donut-legend"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h2>Books in progress</h2>
+        <div id="books"><div class="empty">No books opened yet</div></div>
+      </div>
+      <div class="panel">
+        <h2>Topic mastery</h2>
+        <div id="mastery"><div class="empty">No data yet</div></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Recent sessions</h2>
+      <div id="sessions"><div class="empty">No sessions yet</div></div>
+    </div>
+
+    <div class="panel">
+      <h2>Weak topics (focus list)</h2>
+      <div id="mistakes"><div class="empty">Not enough data yet</div></div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    const TARGET_USER = (new URLSearchParams(location.search).get('user_id')) || 'navya';
+
+    function fmtTime(s) {
+      s = Math.round(s || 0);
+      if (s < 60) return s + 's';
+      if (s < 3600) return Math.round(s / 60) + 'm';
+      const h = Math.floor(s / 3600);
+      const m = Math.round((s % 3600) / 60);
+      return h + 'h' + (m ? ' ' + m + 'm' : '');
+    }
+    function fmtDate(d) {
+      if (!d) return '—'; const dt = new Date(d);
+      return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'}) + ' ' +
+             dt.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+    }
+    function fmtRel(iso) {
+      if (!iso) return '—';
+      const d = new Date(iso);
+      const m = Math.floor((Date.now() - d.getTime()) / 60000);
+      if (m < 1) return 'Now';
+      if (m < 60) return m + 'm ago';
+      if (m < 60*24) return Math.floor(m/60) + 'h ago';
+      const days = Math.floor(m / (60*24));
+      if (days === 1) return 'Yesterday';
+      if (days < 7) return days + 'd ago';
+      return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    }
+    function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+    function todayISO() { return new Date().toISOString().slice(0,10); }
+
+    async function load() {
+      const r = await fetch(API + '/api/physics/progress?user_id=' + encodeURIComponent(TARGET_USER));
+      const d = await r.json();
+      document.getElementById('viewing').textContent = TARGET_USER.charAt(0).toUpperCase() + TARGET_USER.slice(1);
+
+      const today = todayISO();
+      const todayQ = (d.daily_summary || []).find(x => x.day === today);
+      const todayR = (d.daily_reading || []).find(x => x.day === today);
+      document.getElementById('today-q').textContent = todayQ ? (todayQ.attempted || 0) : 0;
+      document.getElementById('today-acc').textContent = todayQ && todayQ.attempted
+        ? Math.round((todayQ.correct / todayQ.attempted) * 100) + '%' : '—';
+      document.getElementById('today-pages').textContent = todayR ? (todayR.pages_seen || 0) : 0;
+      document.getElementById('today-read-time').textContent = todayR ? fmtTime(todayR.seconds) : '—';
+      document.getElementById('today-q-time').textContent = todayQ ? fmtTime(todayQ.total_seconds) : '—';
+
+      document.getElementById('streak').textContent = (d.streak || 0) + 'd';
+      const tm = d.topic_mastery || [];
+      const totalAtt = tm.reduce((s,t)=>s+t.attempted,0);
+      const totalCor = tm.reduce((s,t)=>s+t.correct,0);
+      document.getElementById('lifetime-q').textContent = totalAtt.toLocaleString();
+      document.getElementById('lifetime-acc').textContent = totalAtt
+        ? Math.round((totalCor/totalAtt)*100) + '%' : '—';
+      const lt = d.lifetime_reading || {};
+      document.getElementById('lifetime-pages').textContent = (lt.pages || 0).toLocaleString();
+      document.getElementById('lifetime-read').textContent = fmtTime(lt.seconds || 0);
+
+      const last14 = [];
+      for (let i = 13; i >= 0; i--) {
+        const dt = new Date(); dt.setDate(dt.getDate() - i);
+        const k = dt.toISOString().slice(0,10);
+        const q = (d.daily_summary || []).find(x => x.day === k);
+        const rd = (d.daily_reading || []).find(x => x.day === k);
+        last14.push({
+          day: k,
+          practice_s: q ? (q.total_seconds || 0) : 0,
+          reading_s: rd ? (rd.seconds || 0) : 0,
+        });
+      }
+      const max = Math.max(60, ...last14.map(x => x.practice_s + x.reading_s));
+      const root = document.getElementById('bars');
+      root.innerHTML = last14.map(x => {
+        const total = x.practice_s + x.reading_s;
+        const stackH = total > 0 ? Math.max(2, Math.round((total / max) * 140)) : 0;
+        const readH = total > 0 ? Math.round((x.reading_s / total) * stackH) : 0;
+        const pracH = stackH - readH;
+        const totMin = Math.round(total / 60);
+        return `<div class="bar-col">
+                  <span class="bar-val">${totMin > 0 ? totMin + 'm' : ''}</span>
+                  <div class="bar-stack" style="height:${stackH}px;" title="${x.day}: ${fmtTime(x.practice_s)} practice + ${fmtTime(x.reading_s)} reading">
+                    ${readH > 0 ? `<div class="bar-reading" style="height:${readH}px;"></div>` : ''}
+                    ${pracH > 0 ? `<div class="bar-practice" style="height:${pracH}px;"></div>` : ''}
+                  </div>
+                  <span class="bar-lbl">${x.day.slice(5)}</span>
+                </div>`;
+      }).join('');
+
+      const sumPr = last14.reduce((s,x)=>s+x.practice_s,0);
+      const sumRd = last14.reduce((s,x)=>s+x.reading_s,0);
+      const totT = sumPr + sumRd;
+      const donutSize = 140, donutR = 50, donutC = 2 * Math.PI * donutR;
+      const prFrac = totT > 0 ? sumPr / totT : 0;
+      const rdFrac = totT > 0 ? sumRd / totT : 0;
+      const donut = document.getElementById('donut');
+      donut.innerHTML = `
+        <svg width="${donutSize}" height="${donutSize}">
+          <circle cx="${donutSize/2}" cy="${donutSize/2}" r="${donutR}"
+                  stroke="#1f2731" stroke-width="14" fill="none"/>
+          <circle cx="${donutSize/2}" cy="${donutSize/2}" r="${donutR}"
+                  stroke="#22d3ee" stroke-width="14" fill="none"
+                  stroke-dasharray="${donutC * rdFrac} ${donutC * (1-rdFrac)}" />
+          <circle cx="${donutSize/2}" cy="${donutSize/2}" r="${donutR}"
+                  stroke="#06b6d4" stroke-width="14" fill="none"
+                  stroke-dasharray="${donutC * prFrac} ${donutC * (1-prFrac)}"
+                  stroke-dashoffset="${-donutC * rdFrac}" />
+        </svg>
+        <div class="center">
+          <div class="total">${fmtTime(totT)}</div>
+          <div class="lbl">14-day total</div>
+        </div>`;
+      document.getElementById('donut-legend').innerHTML = `
+        <div><span class="legend-dot" style="background:#06b6d4;"></span>
+          <strong>${fmtTime(sumPr)}</strong> · ${totT ? Math.round(prFrac*100) : 0}% practice</div>
+        <div><span class="legend-dot" style="background:#22d3ee;"></span>
+          <strong>${fmtTime(sumRd)}</strong> · ${totT ? Math.round(rdFrac*100) : 0}% reading</div>
+        <div style="margin-top:6px;color:var(--text-muted);font-size:0.78rem;">
+          ${last14.filter(x=>x.practice_s||x.reading_s).length} of 14 days active
+        </div>`;
+
+      const bip = d.books_in_progress || [];
+      const bRoot = document.getElementById('books');
+      bRoot.innerHTML = bip.length
+        ? bip.map(b => {
+            const pct = b.total_pages ? Math.round((b.pages_seen / b.total_pages) * 100) : 0;
+            return `<div class="book-row">
+                      <div>
+                        <div class="title">${escapeHtml(b.title)}</div>
+                        <div class="meta">${b.pages_seen}/${b.total_pages} pages · ${b.chapter_count} chapters</div>
+                      </div>
+                      <div class="time">${fmtTime(b.seconds_read)}</div>
+                      <div class="pct">${pct}%</div>
+                      <div class="when">${fmtRel(b.last_viewed_at)}</div>
+                    </div>`;
+          }).join('')
+        : '<div class="empty">No books opened yet</div>';
+
+      const tmSorted = [...tm].sort((a,b)=>a.accuracy-b.accuracy);
+      const masteryRoot = document.getElementById('mastery');
+      masteryRoot.innerHTML = tmSorted.length
+        ? tmSorted.map(t => {
+            const cl = t.accuracy >= 75 ? 'good' : t.accuracy >= 50 ? 'warn' : 'bad';
+            return `<div class="topic-row">
+                      <div class="name">${t.topic_name}</div>
+                      <div class="ratio">${t.correct}/${t.attempted}</div>
+                      <div class="barwrap"><span style="width:${t.accuracy}%;"></span></div>
+                      <div class="pct ${cl}">${t.accuracy}%</div>
+                    </div>`;
+          }).join('')
+        : '<div class="empty">No topic data yet</div>';
+
+      const sl = d.recent_sessions || [];
+      const sessRoot = document.getElementById('sessions');
+      sessRoot.innerHTML = sl.length
+        ? sl.map(s => {
+            const acc = s.served_count ? Math.round((s.correct_count/s.served_count)*100) : 0;
+            const cl = acc >= 75 ? 'good' : acc >= 50 ? 'warn' : 'bad';
+            const filt = s.topic_filter && s.topic_filter.length ? s.topic_filter.join(', ') : 'All topics';
+            return `<a href="physics_practice_results.html?sid=${encodeURIComponent(s.session_id)}&user_id=${encodeURIComponent(TARGET_USER)}"
+                       style="text-decoration:none;color:inherit;">
+                      <div class="session-row">
+                        <div class="when">${fmtDate(s.created_at)}</div>
+                        <div>${filt}</div>
+                        <div class="when">${s.served_count} qs · ${fmtTime(s.elapsed_seconds)}</div>
+                        <div class="acc ${cl}">${s.correct_count}/${s.served_count}</div>
+                        <div class="acc ${cl}" style="text-align:right;">${acc}%</div>
+                      </div>
+                    </a>`;
+          }).join('')
+        : '<div class="empty">No sessions yet</div>';
+
+      const weak = tmSorted.filter(t => t.accuracy < 70);
+      const mRoot = document.getElementById('mistakes');
+      mRoot.innerHTML = weak.length
+        ? weak.map(t => `<div class="mistake-row">
+            <span class="topic-tag">${t.topic_name}</span>
+            ${t.attempted - t.correct} wrong out of ${t.attempted} attempts (${t.accuracy}%)
+          </div>`).join('')
+        : '<div class="empty">No weak areas yet — keep going!</div>';
+    }
+    load();
+  </script>
+</body>
+</html>
