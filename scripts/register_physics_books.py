@@ -24,7 +24,12 @@ HTML_ROOT = Path.home() / 'saanvi' / 'PhysicsBooksHTML'
 
 
 def main():
-    db = PhysicsPracticeDB()
+    # On the VM, www-data's home is /var/www, but the unified server initializes
+    # the DB at <repo-root>/physics_practice.db (sibling of server/). Use the
+    # same path here so registration writes to the DB the server actually reads.
+    db_path = Path(__file__).resolve().parent.parent / 'physics_practice.db'
+    db = PhysicsPracticeDB(str(db_path))
+    print(f'Using DB: {db_path}')
     if not HTML_ROOT.exists():
         print(f'No HTML root at {HTML_ROOT}, nothing to register')
         return
