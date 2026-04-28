@@ -189,10 +189,19 @@ def fetch_one(source: dict, date: dt.date) -> tuple[str, str]:
     pdf_result = post_json('/api/create-pdf-from-url', {'url': url}, timeout=300)
     if not pdf_result.get('success'):
         err = str(pdf_result.get('error') or '')
-        # Treat 404 / "not found" as "publication missed today" — not a failure
-        # the cron should retry forever.
-        if any(s in err.lower() for s in ('404', 'not found', 'no such', 'returned 404')):
-            logging.info(f'[{label} {date}] no publication yet ({err[:120]})')
+        # Treat "publication not yet available" cases as no-publish (the next
+        # day's run, which also pulls yesterday, will pick it up):
+        #   - HTTP 404 / "not found"
+        #   - TopRankers soft-404: their server returns 200 with a 404 page,
+        #     so the upstream script raises "No topics found in HTML content"
+        #   - Drishti pre-publication: "No articles found on the Drishti page"
+        no_publish_signals = (
+            '404', 'not found', 'no such', 'returned 404',
+            'no topics found',          # TopRankers soft-404
+            'no articles found',         # Drishti before publish
+        )
+        if any(s in err.lower() for s in no_publish_signals):
+            logging.info(f'[{label} {date}] no publication yet — will retry tomorrow')
             return ('no-publish', err[:200])
         logging.warning(f'[{label} {date}] PDF generation failed: {err[:200]}')
         return ('failed', err[:200])
