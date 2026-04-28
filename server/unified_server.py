@@ -2773,6 +2773,16 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # Auto-chunk if large
         self._auto_chunk_if_needed(str(output_path), filename, 'daily')
 
+        # Register the new PDF in the `pdfs` table immediately so a follow-up
+        # /api/create-assessment can find it. Without this, small PDFs (≤13
+        # pages, not auto-chunked) race the periodic scanner and the
+        # assessment processor crashes with "No chunks found".
+        try:
+            if self.pdf_scanner:
+                self.pdf_scanner.scan_all_folders()
+        except Exception as e:
+            print(f"  ⚠️  scan-after-create failed: {e}")
+
         return {
             'success': True,
             'message': 'PDF created successfully',
