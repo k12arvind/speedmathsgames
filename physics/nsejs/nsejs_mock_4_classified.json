@@ -1,0 +1,1362 @@
+{
+  "paper": "mock_4",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "The trajectory of a projectile fired horizontally with velocity u is parabola given by (Take vertical downward direction as positive):",
+      "choices": {
+        "a": "y = g/(2u^2) x^2",
+        "b": "y = -g/(2u^2) x^2",
+        "c": "x = g/(2u^2) y^2",
+        "d": "x = -g/(2u^2) y^2"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "body": "If P = Q then which of the following is NOT correct",
+      "choices": {
+        "a": "P = Q",
+        "b": "|P| = |Q|",
+        "c": "PQ = QP",
+        "d": "P + Q = P + Q"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "general",
+      "topic_name": "General Physics",
+      "subtopic_code": "vectors",
+      "subtopic_name": "Vector Operations",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "body": "The velocity of light in a medium is half of its velocity in air. If ray of light emerges from such a medium into air, critical angle is",
+      "choices": {
+        "a": "15°",
+        "b": "30°",
+        "c": "45°",
+        "d": "60°"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "μ = c/v = c/2 = 2\nsin c = 1/μ = 1/2\nc = 30°"
+    },
+    {
+      "number": 4,
+      "body": "Shown in the figure is a circular loop of radius r and resistance R. A variable magnetic field of induction B = B0e^-t is established inside the coil. If the key (K) is closed, the electrical power developed right after closing the switch is equal to",
+      "choices": {
+        "a": "B0^2π r^2/R",
+        "b": "B0·10r^3/R",
+        "c": "B0^2π^2r^4 R/5",
+        "d": "B0^2π^2r^4/R"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Electromagnetic Induction",
+      "subtopic_code": "faraday",
+      "subtopic_name": "Faraday's Law",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "P = e^2/R ; e = d/dt (BA) = A d/dt (B.e^-t) = AB_0 e^-t ⇒ P = 1/R (AB_0 e^-t)^2 = A^2 B_0^2 e^-2t/R\nAt the time of starting t = 0 so P = A^2 B_0^2/R ⇒ P = (πr^2)^2 B_0^2/R = B_0^2 π^2 r^4/R"
+    },
+    {
+      "number": 5,
+      "body": "An object with a mass 10 kg moves at a constant velocity of 10 m/sec. A constant force then acts for 4 second on the object and gives it a speed of 2 m/sec in opposite direction. The acceleration produced in it, is",
+      "choices": {
+        "a": "3 m/sec^2",
+        "b": "-3 m/sec^2",
+        "c": "0.3 m/sec^2",
+        "d": "-0.3 m/sec^2"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Motion with Constant Acceleration",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a = (v_2 - v_1)/t = (-2) - (+10)/4 = -12/4 = -3 m/s^2"
+    },
+    {
+      "number": 6,
+      "body": "What is the maximum acceleration of the particle doing the SHM y = 2sin[πt/2 + φ] where y is in cm",
+      "choices": {
+        "a": "π/2 cm/s^2",
+        "b": "π^2/2 cm/s^2",
+        "c": "π/4 cm/s^2",
+        "d": "π^2/4 cm/s^2"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves and Oscillations",
+      "subtopic_code": "shm",
+      "subtopic_name": "Simple Harmonic Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Comparing given equation with standard equation,\ny = a sin(ωt + φ), we get, a = 2 cm, ω = π/2\n∴ A_max = ω^2 A = (π/2)^2 × 2 = π^2/2 cm/s^2"
+    },
+    {
+      "number": 7,
+      "body": "A battery of e.m.f. 10 V is connected to resistance as shown in figure. The potential difference VA - VB between the points A and B is",
+      "choices": {
+        "a": "-2V",
+        "b": "2V",
+        "c": "5V",
+        "d": "20/11 V"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "DC Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "(B) R_eq = 5Ω , Current i = 10/5 = 2A and current in each branch = 1A\nPotential difference between C and A,\nV_C - V_A = 1 × 1 = 1V     .....(i)\nPotential difference between C and B,\nV_C - V_B = 1 × 3 = 3V     .....(ii)"
+    },
+    {
+      "number": 8,
+      "body": "The masses and radii of the earth and moon are M₁, R₁ and M₂, R₂ respectively. Their centres are distance d apart. The minimum velocity with which a particle of mass m should be projected from a point midway between their centres so that it escapes to infinity is",
+      "choices": {
+        "a": "2√(G/d)(M₁ + M₂)",
+        "b": "2√(2G/d)(M₁ + M₂)",
+        "c": "2√(Gm/d)(M₁ + M₂)",
+        "d": "2√(Gm(M₁ + M₂)/d(R₁ + R₂))"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Gravitation",
+      "subtopic_code": "escape_velocity",
+      "subtopic_name": "Escape Velocity",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Gravitational potential at mid point V = -GM1/d/2 + -GM2/d/2. Now, PE = m × V = -2Gm/d (M1 + M2) [m = mass of particle]. So, for projecting particle from mid point to infinity KE =| PE|. => 1/2 mv^2 = 2Gm/d (M1 + M2) => v = 2√[G(M1 + M2)/d]"
+    },
+    {
+      "number": 9,
+      "body": "In the given circuit the current I₁ is",
+      "choices": {
+        "a": "0.4 A",
+        "b": "- 0.4 A",
+        "c": "0.8 A",
+        "d": "- 0.8 A"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "circuit_analysis",
+      "subtopic_name": "Circuit Analysis",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Circuit diagram is essential for solving this problem",
+      "solution": "The circuit can be simplified as follows [Circuit diagram showing resistors and voltage sources]. Applying KCL at junction A: I3 = I1 + I2 .....(i). Applying Kirchoff's voltage law for the loop ABCDA: -30I1 - 40I3 + 40 = 0 => -30I1 - 40(I1 + I2) + 40 = 0 => 7I1 + 4I2 = 4 .....(ii). Applying Kirchoff's voltage law for the loop ADEFA: -40I2 - 40I3 + 80 + 40 = 0 => -40I2 - 40(I1 + I2) = -120 => I1 + 2I2 = 3 ......(iii). On solving equation (ii) and (iii) I1 = -0.4A."
+    },
+    {
+      "number": 10,
+      "body": "A body of mass 6kg is under a force which causes displacement in it given by S = t²/4 metres where t is time. The work done by the force in 2 seconds is",
+      "choices": {
+        "a": "12 J",
+        "b": "9 J",
+        "c": "6 J",
+        "d": "3 J"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Work, Energy and Power",
+      "subtopic_code": "work_energy",
+      "subtopic_name": "Work and Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "s = t^2/4 ∴ ds = t/2 dt. F = ma = md^2s/dt^2 = 6d^2[t^2/4] = 3N. Now W = ∫F ds = ∫3 × t/2 dt = 3/2 ∫t^2 dt = 3/2 × [t^3/3] = 3/4[(2)^3 - (0)^3] = 3J"
+    },
+    {
+      "number": 11,
+      "body": "At which temperature the speed of sound in hydrogen will be same as that of speed of sound in oxygen at 100°C",
+      "choices": {
+        "a": "- 148°C",
+        "b": "- 212.5°C",
+        "c": "- 317.5°C",
+        "d": "- 249.7°C"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Sound Waves",
+      "subtopic_code": "sound_speed",
+      "subtopic_name": "Speed of Sound",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Speed of sound in gases is v = √(γRT/M) ∝ T ∝ M (Because v, γ-constant). Hence TH2/TO2 = MO2/MH2 => TH2/(273+100) = 32/2 => TH2 = 23.2K = -249.7°C"
+    },
+    {
+      "number": 12,
+      "body": "A uniformly tapering vessel is filled with a liquid of density 900 kg/m³. The force that acts on the base of the vessel due to the liquid is (g = 10 ms⁻²)",
+      "choices": {
+        "a": "3.6 N",
+        "b": "7.2 N",
+        "c": "9.0 N",
+        "d": "14.4 N"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Fluid Mechanics",
+      "subtopic_code": "fluid_pressure",
+      "subtopic_name": "Fluid Pressure",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Diagram showing vessel dimensions is essential for solving",
+      "solution": "Force acting on the base F = P × A = hdgA = 0.4 × 900 × 10 × 2 × 10^-3 = 7.2N"
+    },
+    {
+      "number": 13,
+      "body": "When a ceiling fan is switched off its angular velocity reduces to 50% while it makes 36 rotations. How many more rotation will it make before coming to rest (Assume uniform angular retardation)",
+      "choices": {
+        "a": "18",
+        "b": "12",
+        "c": "36",
+        "d": "48"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Rotational Motion",
+      "subtopic_code": "angular_motion",
+      "subtopic_name": "Angular Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "By using equation ω² = ω₀² - 2αθ\n(ω₀/2)² = ω₀² - 2α(2π) ⇒ α = 3ω₀²/(4·4π×36), (n = 36)\nNow let fan completes total n' revolution from the starting to come to rest\n0 = ω₀² - 2α(2πn') ⇒ n' = ω₀²/(4απ)\nsubstituting the value of α from equation (i)\nn' = ω₀²·4×4π×36/(4π·3ω₀²) = 48 revolution\nNumber of rotation = 48 - 36 = 12"
+    },
+    {
+      "number": 14,
+      "body": "A current of 2.0 ampere passes through a cell of e.m.f. 1.5 volts having internal resistance of 0.15 ohm. The potential difference measured, in volts, across both the ends of the cell will be",
+      "choices": {
+        "a": "1.35",
+        "b": "1.50",
+        "c": "1.00",
+        "d": "1.20"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "emf_internal_resistance",
+      "subtopic_name": "EMF and Internal Resistance",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "V = E - ir = 1.5 - 2×0.15 = 1.20Volt"
+    },
+    {
+      "number": 15,
+      "body": "An equilateral prism is placed on the prism table of a spectrometer in the position of minimum deviation. If the angle of incidence is 60°, the angle of deviation of the ray is",
+      "choices": {
+        "a": "90°",
+        "b": "60°",
+        "c": "45°",
+        "d": "30°"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "prism",
+      "subtopic_name": "Prism and Refraction",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "δ = i + e - A\nfor δ minimum i = e = 60°\nA = 60° given then δ minimum = 60°"
+    },
+    {
+      "number": 16,
+      "body": "In order to pass 10% of main current through a moving coil galvanometer of 99 ohm, the resistance of the required shunt is",
+      "choices": {
+        "a": "9.9 Ω",
+        "b": "10 Ω",
+        "c": "11 Ω",
+        "d": "9 Ω"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "galvanometer",
+      "subtopic_name": "Galvanometer and Shunt",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Shunt resistances S = I_g·G/(I - I_g) = 10×99/(100-10) = 11Ω"
+    },
+    {
+      "number": 17,
+      "body": "The average e.m.f. induced in a coil in which the current changes from 2 ampere to 4 ampere in 0.05 second is 8 volt. What is the self inductance of the coil ?",
+      "choices": {
+        "a": "0.1 H",
+        "b": "0.2 H",
+        "c": "0.4 H",
+        "d": "0.8 H"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Electromagnetic Induction",
+      "subtopic_code": "self_inductance",
+      "subtopic_name": "Self Inductance",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "e = -L·di/dt ⇒ 8 = L·(4-2)/0.05 ⇒ L = 0.2 H"
+    },
+    {
+      "number": 18,
+      "body": "A flat plate moves normally with a speed v₁ towards a horizontal jet of water of uniform area of cross-section. The jet discharges water at the rate of volume V per second at a speed of v₂. The density of water is ρ. Assume that water splashes along the surface of the plate at right angles to the original motion. The magnitude of the force acting on the plate due to the jet of water is",
+      "choices": {
+        "a": "ρVv₁",
+        "b": "ρV(v₁ + v₂)",
+        "c": "ρV/(v₁ + v₂) × v₁²",
+        "d": "ρ[V/v₂](v₁ + v₂)²"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid_mechanics",
+      "subtopic_name": "Fluid Mechanics and Momentum",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Force acting on plate, F = dp/dt = -(dm/dt)\nMass of water reaching the plate per sec = dm/dt = A·v·ρ = A(v₁ + v₂)ρ = V/v₂(v₁ + v₂)ρ\n(v = v₁ + v₂ = velocity of water coming out of jet w.r.t. plate) (A = Area of cross section of jet = V/v₂)\n∴ F = dm/dt·v = V/v₂(v₁ + v₂)ρ×(v₁ + v₂) = ρ[V/v₂](v₁ + v₂)²"
+    },
+    {
+      "number": 19,
+      "body": "A vessel of depth 2d cm is half filled with a liquid of refractive index μ₁ and the upper half with a liquid of refractive index μ₂. The apparent depth of the vessel seen perpendicularly is",
+      "choices": {
+        "a": "d(μ₁μ₂/(μ₁ + μ₂))",
+        "b": "d(1/μ₁ + 1/μ₂)",
+        "c": "2d(1/μ₁ + 1/μ₂)",
+        "d": "2d(1/(μ₁μ₂))"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction and Apparent Depth",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "body": "A certain amount of heat is required to raise the temperature of x gram of a substance through t₁°C. The same amount of heat when taken away from y gram of water, it cools through t₂°C. Therefore, the specific heat of the substance is",
+      "choices": {
+        "a": "yt₂/xt₁",
+        "b": "xt₂/yt₁",
+        "c": "yt₂/xt₁",
+        "d": "xt₁/yt₁"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "specific_heat",
+      "subtopic_name": "Specific Heat",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x = S₁/t₁ = v × t₂ ⇒ S₂ = vt₂/xt₁"
+    },
+    {
+      "number": 21,
+      "body": "Skin is an accessory organ of respiration in",
+      "choices": {
+        "a": "Humans",
+        "b": "Frog",
+        "c": "Rabbit",
+        "d": "Lizard"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "body": "A phenomenon, which works opposite to the linkage is :-",
+      "choices": {
+        "a": "Independent assortment",
+        "b": "Crossing over",
+        "c": "Segregation",
+        "d": "Mutation"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "In any given ecosystem, number of individuals in a species remains more or less constant over a period of time. This constancy of numbers is maintained by",
+      "choices": {
+        "a": "Parasites",
+        "b": "Predators",
+        "c": "Man",
+        "d": "Available food"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "Testis in scrotal sac of man is connected with the abdominal cavity by",
+      "choices": {
+        "a": "Inguinal canal",
+        "b": "Haversian canal",
+        "c": "Vagina cavity",
+        "d": "Spermatic canal"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "(a) Particles observed by George Palade are composed of two subunits\n(b) Cilia causes the movement of either the cell or the surrounding fluid\n(c) The ribosomes on ER are bigger than the cytoplasmic ribosomes",
+      "choices": {
+        "a": "a, b correct and c incorrect",
+        "b": "a incorrect and b, c correct",
+        "c": "a, b incorrect and c correct",
+        "d": "a correct and b, c incorrect"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "body": "Roots of cacti as compared to root of Lemna",
+      "choices": {
+        "a": "will be less developed",
+        "b": "will not possess root cap",
+        "c": "will possess root pockets",
+        "d": "will be more extensive and branched"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "body": "Plasmodium enters the human body as :-",
+      "choices": {
+        "a": "Female Anopheles mosquito",
+        "b": "Sporozoite",
+        "c": "Trophozoite",
+        "d": "Haemozoin"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "body": "The abnormal frequency of bowel movement and increased liquidity of the faecal discharge is known as",
+      "choices": {
+        "a": "Vomiting",
+        "b": "Diarrhoea",
+        "c": "Constipation",
+        "d": "Indigestion"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "body": "If a cell is reduced in size (shrinks) of placing in a solution of sugar, the solution is :-",
+      "choices": {
+        "a": "Hypertonic",
+        "b": "Hypotonic",
+        "c": "Isotonic",
+        "d": "None of the above"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "body": "Angiotensinogen is converted into angiotensin by",
+      "choices": {
+        "a": "Rennin",
+        "b": "Androgen",
+        "c": "Aldosterone",
+        "d": "Renin"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "body": "In human, autonomic nervous system is composed of",
+      "choices": {
+        "a": "Sympathetic and parasympathetic nerves",
+        "b": "Cranial and spinal nerves",
+        "c": "Brain and spinal nerves",
+        "d": "Medullated and non-medullated nerves"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "body": "Spermeiogenesis is the process in which",
+      "choices": {
+        "a": "Spermatids change into spermatozoa",
+        "b": "Spermatogonia produce spermatids",
+        "c": "Spermatocytes give rise to spermatozoa",
+        "d": "Dormant spermatozoa become active just before ejaculation"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "body": "Gross primary productivity is –",
+      "choices": {
+        "a": "Rate at which organic molecules are formed in an autotroph",
+        "b": "Rate at which organic molecules are used up by an autotroph",
+        "c": "Storage of organic molecules in the body of an autotroph",
+        "d": "Rate at which organic molecules are transferred to next higher trophic level"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "body": "When peacock, eats snake which eats insects depends on green plants, the peacock is -",
+      "choices": {
+        "a": "a primary consumer",
+        "b": "a primary decomposer",
+        "c": "a final decomposer of plants",
+        "d": "the apex of the food pyramid"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "body": "Which one of the following is the correct matching of a vitamin, its nature and its deficiency disease?",
+      "choices": {
+        "a": "Vitamin K – Fat soluble – Beri-Beri",
+        "b": "Vitamin B1 – Fat soluble – Beri-Beri",
+        "c": "Vitamin K – Water soluble – Pellagra",
+        "d": "Vitamin A – Fat soluble – Night blindness"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "body": "Which of the following statements are correct:- (A) Systemic circulation takes place between left ventricle of heart and body. (B) Adrenal medullary hormones can decrease the cardiac output. (C) Heart failure is not the same as cardiac arrest or heart attack. (D) The opening between the right atrium and the right ventricle is guarded by a value formed of two muscular flaps.",
+      "choices": {
+        "a": "Two",
+        "b": "One",
+        "c": "Four",
+        "d": "Three"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "In F2 – generation of dihybrid cross, if 4000 plants are produced, then how many will have single recessive trait :-",
+      "choices": {
+        "a": "1000",
+        "b": "1500",
+        "c": "2000",
+        "d": "4000"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "body": "Four events A, B, C and D occurs during mitosis in the following sequence B → D → C → A Choose the correct match for A, B, C and D from the following :- (i) Chromosomes decondense (ii) Chromatids moves to opposite pole (iii) Centrioles moves toward opposite pole (iv) Chromosomes arrange on equator",
+      "choices": {
+        "a": "A → (iv) B → (iii) C → (ii) D → (i)",
+        "b": "A → (ii) B → (i) C → (iii) D → (iv)",
+        "c": "A → (i) B → (iii) C → (ii) D → (iv)",
+        "d": "A → (iv) B → (ii) C → (iii) D → (i)"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "What organisms are considered plants by some taxonomists and protists by others?",
+      "choices": {
+        "a": "Fungi",
+        "b": "Algae",
+        "c": "Diatoms",
+        "d": "Mosses"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "Which of the following is a pair of viral diseases?",
+      "choices": {
+        "a": "Ringworm, AIDS",
+        "b": "Common cold, AIDS",
+        "c": "Dysentery, common cold",
+        "d": "Typhoid, tuberculosis"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "body": "Which among the following is not a state function -",
+      "choices": {
+        "a": "Internal energy",
+        "b": "Free energy",
+        "c": "Work",
+        "d": "Enthalpy"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "Which has maximum no. of equivalent Per mole of the oxidants :",
+      "choices": {
+        "a": "Zn(S) + VO2+(aq) → Zn2+ + V3+",
+        "b": "Ag(s) + NO3-(aq) → Ag+(aq) + NO2(g)",
+        "c": "Mg(s) + VO42-(aq) → Mg2+(aq) + V2+(aq)",
+        "d": "I(aq)- + IO3-(aq) → I3-(aq)"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "No. of equivalent per mole = change in oxidation state per mole\n\n2n(s) + VO₄⁻(aq) → Zn²⁺ + V⁺\noxidant\n2\nNo. of equivalent per mole = 1\n\nAg(s) + NO₃⁻(aq) → Ag(aq) + NO(g)\noxidant\n2\nNo. of equivalent per mole = 1\n\nMg(s) + VO₄⁻(aq) → Mg²⁺(aq) + V²⁺(aq)\noxidant\n3\nNo. of equivalent per mole = 3"
+    },
+    {
+      "number": 43,
+      "body": "The [H+] of a solution is 0.03 M. The pOH of this solution is",
+      "choices": {
+        "a": "12.48",
+        "b": "12.52",
+        "c": "12.54",
+        "d": "12.58"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "pH = -log(0.03) pH = 1.52\npOH = 14 - pH = 14 - 1.52 = 12.48"
+    },
+    {
+      "number": 44,
+      "body": "The reaction, 3ClO-(aq) ClO3-(aq) + 2Cl-(aq) is an example of:",
+      "choices": {
+        "a": "Oxidation reaction",
+        "b": "Reduction reaction",
+        "c": "Disproportionation reaction",
+        "d": "Decomposition reaction"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "body": "Which of the following statement is wrong about order of reaction ?",
+      "choices": {
+        "a": "Order is experimentally determined",
+        "b": "Order is independent of the stoichiometry of reaction",
+        "c": "Order may not be fractional",
+        "d": "Order is the sum of the power to which the concentration terms are raised to express the rate of reaction"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "The maximum tendency to form unipositive ion is for the element with the electronic configuration-",
+      "choices": {
+        "a": "1s², 2s², 2p⁶, 3s²",
+        "b": "1s², 2s²2p⁶, 3s²3p¹",
+        "c": "1s², 2s²2p⁶, 3s²3p²",
+        "d": "1s², 2s²2p⁶, 3s²3p³"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "body": "In presence of PbS and ZnS in a mineral the froth floatation process require NaCN because-",
+      "choices": {
+        "a": "ZnS goes into the solution as soluble complex [Zn(CN)₄]²⁻",
+        "b": "Zn(CN)₂ is precipitated",
+        "c": "PbS forms soluble complex Na₂[Pb(CN)₄]",
+        "d": "ZnS forms insoluble complex [Zn(CN)₄]²⁻"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "ZnS forms water soluble complex\nSnS + 4 NaCN → 4Na+ + [Sn(CN)4]^2- + S^-2\nWater soluble."
+    },
+    {
+      "number": 48,
+      "body": "Derived name of (CH₃)₄C is :",
+      "choices": {
+        "a": "Tetramethylmethane",
+        "b": "2,2-Dimethylpropane",
+        "c": "Neopentane",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "CH3-C-CH3 → It is derived from methane.\nAll H atoms of the methane are replaced by methyl so its derived name is tetramethyl methane."
+    },
+    {
+      "number": 49,
+      "body": "What will be the normality of a solution obtained by mixing 0.45 N and 0.60 N NaOH in the ratio 2 : 1 by volume ?",
+      "choices": {
+        "a": "0.4 N",
+        "b": "0.5 N",
+        "c": "1.05 N",
+        "d": "0.15 N"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the volume of two solutions be 2x & x ml.\nN1V1 + N2V2 = NV\n0.45 × 2x + 0.6 × x = N (2x + x)\n.90x + .60x = N × 3x\n1.5x = N × 3x ; N = 1/2 = 0.5"
+    },
+    {
+      "number": 50,
+      "body": "π-bond can not be formed between -",
+      "choices": {
+        "a": "C–C",
+        "b": "O–O",
+        "c": "N–N",
+        "d": "hybrid orbitals"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Hybrid orbital only form σ bond they can not form π bond and pure orbital form π bond vaya partial overlapping."
+    },
+    {
+      "number": 51,
+      "body": "Universal indicator is",
+      "choices": {
+        "a": "the indicator that changes its colours at different hydroxyl ion concentration.",
+        "b": "the indicator that shows different colours at different hydrogen ion concentrations.",
+        "c": "is effective only at low hydrogen ion concentration.",
+        "d": "gives same colour at different pH."
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "body": "T-type of shape is exhibited by the molecule",
+      "choices": {
+        "a": "ICl₃",
+        "b": "CHCl₃",
+        "c": "CCl₄",
+        "d": "PCl₅"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "body": "PbS is roasted to give",
+      "choices": {
+        "a": "PbO₂, SO₂",
+        "b": "PbO, PbSO₄",
+        "c": "PbO₂, PbSO₄",
+        "d": "PbO, PbSO₄, SO₂"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "2PbS + 3O2 → 2PbO + 2SO2\nPbS + 2O2 → PbSO4"
+    },
+    {
+      "number": 54,
+      "body": "Iron forms two oxides, in first oxide 56 gram. Iron is found to be combined with 16 gram oxygen and in second oxide 112 gram. Iron is found to be combined with 48 gram oxygen. This data satisfy the law of",
+      "choices": {
+        "a": "Conservation of mass",
+        "b": "Reciprocal proportion",
+        "c": "Multiple proportions",
+        "d": "Combining volume"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "In First oxide : Mass of Fe = 56 gm\nMass of O2 = 16 gm\nIn Second oxide : Mass of Fe = 112 gm\nMass of O2 = 48 gm\n112 gm Fe combines with 48 gm of oxygen\n56 gm Fe combines with 48/112 × 56 = 24 gm of oxygen\nThus, the masses of oxygen in two oxides which combines with 56 gm (Fixed amount) of iron are in the ratio of 2 : 3. This is a simple ratio. Hence the data illustrate law of multiple proportion."
+    },
+    {
+      "number": 55,
+      "body": "Decrease in atomic number is observed in:",
+      "choices": {
+        "a": "α-emission, Positron, emission,",
+        "b": "β-emission",
+        "c": "β-Positron",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a-emission shows a decrease in atomic number + 4He4."
+    },
+    {
+      "number": 56,
+      "body": "Auto reduction process is used for the extraction of",
+      "choices": {
+        "a": "Hg",
+        "b": "Pb",
+        "c": "Cu",
+        "d": "All"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Auto reduction process when the sulphide ore of less electropositive metals like Hg, Pb and Cu are heated in air to convert part of ore in to oxide or sulphide which then reacts the remaining sulphide are to give the metal and sulphur dioxide.\nPbS + O2 → SO2 + Pb"
+    },
+    {
+      "number": 57,
+      "body": "Correct order of electronegativity of N, P, C and Si is :",
+      "choices": {
+        "a": "N < P < C < Si",
+        "b": "N > C > Si > P",
+        "c": "N = P > C = Si",
+        "d": "N > C > P > Si"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "body": "Insulin contains 3.4% sulphur by mass. What will be the minimum molecular weight of insulin -",
+      "choices": {
+        "a": "94.117",
+        "b": "1884",
+        "c": "941",
+        "d": "976"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "For minimum mol. wt, insulin must have at least one S-atom in its one molecule.\n∴ 3.4 gm S then mol. wt of insulin = 100\n32 gm S then mol. wt of insulin = (100×32)/34 = 941.176\nMin. mol. wt of insulin = 941.176"
+    },
+    {
+      "number": 59,
+      "body": "A given sample of pure compound contains 9.81 gm of Zn, 1.8 × 10^23 atoms of chromium, and 0.60 mol of oxygen atoms. What is the simplest formula -",
+      "choices": {
+        "a": "ZnCr2O7",
+        "b": "ZnCr2O4",
+        "c": "ZnCrO4",
+        "d": "ZnCrO6"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Element moles simple ratio\nZn: 9.81/65 = 0.15, ratio 1\nCr: 1.8×10^23/(6.02×10^23) = 0.3, ratio 2\nO: 0.6, ratio 4\nSimplest formula = ZnCr2O4"
+    },
+    {
+      "number": 60,
+      "body": "The mass % of a solvent in a solution is recorded as 82. The mass % of the solute will be",
+      "choices": {
+        "a": "21.",
+        "b": "19.",
+        "c": "18.",
+        "d": "16."
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "body": "The figure below shows a triangle ABC with a semicircle on each of its three sides. If AB = 20, AC = 21 and BC = 29, what is the area of the shaded region?",
+      "choices": {
+        "a": "210",
+        "b": "100",
+        "c": "60",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Note how the 'entire' region is comprised of the two full semicircles (with diameters AB and BC respectively) and triangle ABC. Now note how the shaded region (the mickey-mouse-ear shaped region) is formed by subtracting the largest semicircle (with diameter BC) from the entire region. Okay let's start by calculating the area of the entire region. Note that 20:21:29 is very conveniently a Pythagorean triplet, so triangle ABC is a right triangle. This makes our lives easier. Triangle ABC has area (20·21)/2 = 210, and the two full semicircles have area π(20/2)^2 = 100π and π(21/2)^2 = (441/4)π, so the entire region has area 210 + 100π + (441/4)π. Now, the largest semicircle has area π(29/2)^2 = (841/4)π. Hence the desired mickey-mouse-ear shaped shaded area has area 210 + 100π + (441/4)π - (841/4)π = 210 + 100π - (400/4)π = 210 + 100π - 100π = 210."
+    },
+    {
+      "number": 62,
+      "body": "Two parallel chords in a circle have lengths 10 and 14, and the distance between them is 6. The chord parallel to these chords and midway between them is of length √a where a is",
+      "choices": {
+        "a": "144",
+        "b": "156",
+        "c": "168",
+        "d": "184"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Let AB be the chord of length 10, CD be the chord of length 14, E be the point on CD such that AE = 6, F be the point on CD such that BF = 6. Then CE = FD = 2. Extend BF intersecting the circle at G and let FG = x. By Power of a Point, 6 × x = 12 × 2 ⟹ x = 4. Since ∠ABC is a right angle and A and G are on the circle, the diameter AG = 10√2 by Pythagorean Theorem, so the radius is 5√2. Let O be the center of the circle, H be the midpoint of CD. Then CH = 7 and ∠OHC is a right angle. Then OH = 1, again by Pythagorean Theorem. The chord midway between AB and CD is a distance of 3 away from each, so 2 away from O. Using the Pythagorean Theorem one more time, half the length of the chord is equal to √46. Then √a = 2√46 ⟹ a = 184.\n\nAlternate: Let JM be the diameter of the circle that is perpendicular to the chords, which we will call AB and CD, and let the intersection points be K and L respectively. Let PQ be the chord of length √a, which hits JM at X. Let x = JK, y = JL, and n = PX. Then by Power of a Point K and L: x(d + 6) = 25 and (x + 6)y = 49. Subtracting one from the other yields y - x = 4. Then x(x + 10) = 25. Also, Power of a Point on X yields n^2 = (x + 3)(x + 7) = x(x + 10) + 21 = 25 + 21 = 46 ⟹ PQ = 2√46 = √184."
+    },
+    {
+      "number": 63,
+      "body": "Let ΔABC be a triangle with AB = 3, BC = 4 and AC = 5. Let I be the center of the circle inscribed in ΔABC. What is the product of AI, BI and CI ?",
+      "choices": {
+        "a": "5",
+        "b": "10",
+        "c": "20",
+        "d": "None of these"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "We get that r = 1, thus we have by the Pythagorean theorem AT^2 = 2^2 + 1^2 = 5, CT = 10 and BT = 2thus the product is AT · CT · BT = 10"
+    },
+    {
+      "number": 64,
+      "body": "If 3sinθ + 4cosθ = 5, then the value of sinθ is",
+      "choices": {
+        "a": "2/3",
+        "b": "4/5",
+        "c": "3/5",
+        "d": "5/3"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "We have, 3sinθ + 4 cosθ = 5 ...(1)\nSquaring on both sides\n⇒ 9 sin²θ + 16cos²θ + 24sinθ cosθ = 25\n⇒ 16sin²θ + 9cos²θ - 24sinθ cosθ = 0\n⇒ (4sinθ - 3cosθ)² = 0\n⇒ 4sinθ - 3cosθ = 0 ...(2)\nBy solving (1) and (2), we get\nSinθ = 3/5"
+    },
+    {
+      "number": 65,
+      "body": "If three points (0, 0), (3, sqrt(3)) and (3, λ) form an equilateral triangle, then find the sum of all possible values of λ.",
+      "choices": {
+        "a": "2√3",
+        "b": "-√3",
+        "c": "√3",
+        "d": "0"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the three points be A(0, 0), B (3, √3) and C(3, λ).\n∴ AB = BC = CA [∵ △ABC is an equilateral △]\n⇒ AB² = BC² = CA² ⇒ AB² = BC²\n⇒ (0 - 3)² + (0 - √3)² = (3 - 3)² + (√3 - λ)²\n⇒ 9 + 3 = 0 + 3 - 2λ √3 + λ²\n⇒ λ² - 2 √3λ - 9 = 0\n⇒ λ (λ - 3√3) + √3(λ - 3√3) = 0\n⇒ (λ - 3√3)(λ + √3) = 0\n⇒ λ = 3√3 or λ = - √3."
+    },
+    {
+      "number": 66,
+      "body": "If 9 times the 9th term in an arithmetic progression is equal to 15 times the 15th term in the arithmetic progression, what is the 24th term ?",
+      "choices": {
+        "a": "0",
+        "b": "9",
+        "c": "15",
+        "d": "23"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "9a₁₄ = 15a₁₁\n9 (a + 8d) = 15 (a + 14d)\n9a + 72d = 15a + 210d\n6a + 138d = 0\na + 23d = 0\na₂₄ = 0."
+    },
+    {
+      "number": 67,
+      "body": "When Meena turned 16 years old, her parents gave her a cake with n candles, where n has exactly 16 different positive integer divisors. What is the smallest possible value of n ?",
+      "choices": {
+        "a": "200",
+        "b": "500",
+        "c": "70",
+        "d": "120"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "16 = 2 · 2 · 2 · 2 = 2 · 8 = 4 · 4 = 2 · 2 · 4Evaluating each of these cases, we get 2 · 3 · 5 · 7 = 210 for the first case, 2⁷ · 3 for the second case, 2⁸ · 3³ = 216for the third case, and 2³ · 3 · 5 = 120"
+    },
+    {
+      "number": 68,
+      "body": "Each of the series 13 + 15 + 17 + ...... and 14 + 17 + 20 + ..... is continued to 100 terms. Find how many terms are identical between the two series",
+      "choices": {
+        "a": "35",
+        "b": "34",
+        "c": "32",
+        "d": "33"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Common terms of the series are 17, 23, 29, ......, 209\na = 17, d = 6, aₙ = 209\na + (n - 1)d = 209\n17 + (n - 1)6 = 209\nNumber of terms = 33."
+    },
+    {
+      "number": 69,
+      "body": "A quadratic equation ax^2 - 2ax + b = 0 has two real solutions. What is the average of the solutions?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "b/a",
+        "d": "2b/a"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "The sum of the solutions is -b/a so if we apply this we get the sum is -2a/(-a) = 2 and since the sum is 2, the average of the 2 solutions is 2/2 = 1 → A"
+    },
+    {
+      "number": 70,
+      "body": "Let t be a real number satisfying the equation (1 + t)^2 / (1 + t^2) = 13/37. Then (1 + t)^3 / (1 + t^3) = m/n, where m and n are positive coprime integers. Find m + n.",
+      "choices": {
+        "a": "62",
+        "b": "75",
+        "c": "90",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Now we have a goal: find 1 - l + l^2 in terms of l alone. From the given equation, we have 37(1 + l)^2 = 12(1 + l^2). Expanding and rearranging gives 12l^2 + 37l + 12 = 0. We wish to relate this to l^2 - l + 1, so to force that, we subtract 49l from both sides to get 12(l^2 - l + 1) = -49l. Therefore l^2 - l + 1 = -49l/12. Substituting this into our desired expression gives 1 + 3l/(-49l/12) = 1 - 36/49 = 13/49. Therefore the answer is 13 + 49 = 62. Alternate: Replace 13/37 with a general N. Note that the given rearranges to N = (1 + l)^2/(1 + l^2) = 1 + 2l/(1 + l^2) = 1 + 2/(l + 1/l) ⟹ l + 1/l = 2/(N-1). Now remark that (1 + l)^3/(1 + l^3) = (1 + l)^3/((1 + l)(l^2 - l + 1)) = (l + 1)^2/(l^2 - l + 1) = 1 + 3l/(l^2 - l + 1) = 1 + 3/(l + 1/l - 1). Hence substituting our expression for l + 1/l yields 1 + 3/(l + 1/l - 1) = 1 + 3/(2/(N-1) - 1) = 1 + 3(N-1)/(3-N) = 2N/(3-N). Plugging in N = 13/37 and simplifying gives a result of 13/49, so the requested answers 13 + 49 = 62"
+    },
+    {
+      "number": 71,
+      "body": "Kiana has two older twin brothers. The product of their three ages is 128. What is the sum of their three ages?",
+      "choices": {
+        "a": "10",
+        "b": "12",
+        "c": "16",
+        "d": "18"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "128 = 2^7. Kiana's brothers could then be 8, and she could be 2⋅2 + 8 + 8 = D, 18."
+    },
+    {
+      "number": 72,
+      "body": "What is the remainder when 3^0 + 3^1 + 3^2 + ....... + 3^2009 is divided by 8 ?",
+      "choices": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "4"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Powers of 3 mod 8 cycle as follows: 1, 3, 1, 3, 1, 3, ... Therefore, the required sum is 1005(1) + 1005(3) = 1005(4) ≡ 4 (mod 8) So the remainder is 4 (D)."
+    },
+    {
+      "number": 73,
+      "body": "Suppose x > 1 is a real number such that x + 1/x = √22. What is x^2 - 1/x^2 ?",
+      "choices": {
+        "a": "6√11",
+        "b": "6",
+        "c": "0",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Notice that (x + 1/x)^2 = (x - 1/x)^2 + 4, so x - 1/x = √18. So, we can multiply the two equations to get (x + 1/x)(x - 1/x) = x^2 - 1/x^2 = √18√22 = 6√11."
+    },
+    {
+      "number": 74,
+      "body": "Suppose ABCD is a convex quadrilateral satisfying AB = BC, AC = BD, ∠ABD = 80° and ∠CBD = 20°. What is ∠BCD in degrees?",
+      "choices": {
+        "a": "130°",
+        "b": "60°",
+        "c": "90°",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "First consider the projection D' of D such that ABDD' is a parallelogram. Now, let the foot of the perpendicular from B to AC be E, the intersection of AC and BD be F, and the intersection of BD and D'C be G. Then, ∠BFE = 90° - 30° = 60°. It is easy to find that ∠FCB = 40°. Also ∠CAD' = ∠DAB - ∠EAB = 100° - 40° = 60°. Now realize that △AD'C is isosceles. So it is actually an equilateral triangle. Consequently, ∠GCF = 60° and ∠DGC = 120°. Now realize that △D'DC ≅ △BCD. So △GCD is isosceles so ∠GCD = 30°. So ∠BCD = 40° + 60° + 30° = 130°"
+    },
+    {
+      "number": 75,
+      "body": "Let a, b, c and d be real numbers with | a - b | = 2, | b - c | = 3 and | c - d| = 4. What is the sum of all possible values of |a - d| ?",
+      "choices": {
+        "a": "9",
+        "b": "12",
+        "c": "15",
+        "d": "18"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "|a - b| = 2 ⟹ a - b = 2, -2\n|b - c| = 3 ⟹ b - c = 3, -3\n|c - d| = 4 ⟹ c - d = 4, -4\nThus, we can have |a - d| = 9, 5, 3, 1 by testing cases, so the sum of these is 18, or (D)"
+    },
+    {
+      "number": 76,
+      "body": "The smallest positive integer greater than 1 that leaves a remainder of 1 when divided by 4, 5, and 6 lies between which of the following pairs of numbers?",
+      "choices": {
+        "a": "2 and 19",
+        "b": "20 and 39",
+        "c": "40 and 59",
+        "d": "60 and 79"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "lcm(4, 5, 6) = 60. Add 1 to get 61, so the answer is D"
+    },
+    {
+      "number": 77,
+      "body": "A rectangular floor measures a by b feet, where a and b are positive integers with b > a. An artist paints a rectangle on the floor with the sides of the rectangle parallel to the sides of the floor. The unpainted part of the floor forms a border of width 1 foot around the painted rectangle and occupies half of the area of the entire floor. How many possibilities are there for the ordered pair (a, b) ?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "This inner rectangle has dimensions b - 2 and a - 2. 2 times the area of this rectangle is the area of the larger rectangle with dimensions a and b, so:\n2(a - 2)(b - 2) = ab\nab - 4a - 4b + 16 = 8\n(a - 4)(b - 4) = 8\n8 can be broken up as 1*8 and 2*4. Both give one solution for (a,b) since b > a. Thus, the answer is B) 2"
+    },
+    {
+      "number": 78,
+      "body": "Suppose a, b and c are nonzero real numbers such that bc + 1/a = ca + 2/b = ab + 7/c = 1/(a+b+c). Find a + b + c.",
+      "choices": {
+        "a": "-3^(1/2)",
+        "b": "-2^(1/3)",
+        "c": "0",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "We have bc + 1/a = a/(a+b+c) ⟹ abc + 1 = a/(a+b+c).\nPerforming similar operations yields 3abc + 10 = 1 ⟹ abc = -3.\nNext, we multiply the three equations together, yielding\n(abc)^2 + 10abc + 23 + 1/4/abc = 1/(a+b+c)^3.\nIt follows that 9 - 30 + 23 - 1/4/3 = 1/(a+b+c)^3, so our answer is -3^(1/3)/2"
+    },
+    {
+      "number": 79,
+      "body": "Twenty percent less than 60 is one-third more than what number?",
+      "choices": {
+        "a": "16",
+        "b": "30",
+        "c": "32",
+        "d": "36"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "60 * .8 = 4x/3\n48 = 4x/3\nx = 36, D"
+    },
+    {
+      "number": 80,
+      "body": "The least common multiple of a and b is 12, and the least common multiple of b and c is 15. What is the least possible value of the least common multiple of a and c?",
+      "choices": {
+        "a": "20",
+        "b": "30",
+        "c": "60",
+        "d": "120"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "GCD(12, 15) = 3. So b = 3. Divide both LCM's by 3 to find b and c. We get c as 5 and a as 4. Therefore our LCM is 20\nAlternate:\nlcm(a, b) = 2^2 · 3\nlcm(b, c) = 3 · 5\nTherefore, lcm(a, c) = 2^2 · 5 = 20 → A"
+    }
+  ]
+}

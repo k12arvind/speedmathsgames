@@ -1,0 +1,323 @@
+{
+  "paper": "fiitjee_practice",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "In the circuit shown below, the cell has an e.m.f. of 10 V and internal resistance of 1 ohm. The other resistances are shown in the figure. The potential difference VA - VB is:",
+      "choices": {
+        "a": "6 V",
+        "b": "4 V",
+        "c": "2 V",
+        "d": "-2 V"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electric Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing resistance configuration"
+    },
+    {
+      "number": 2,
+      "body": "Three batteries of negligible internal resistance and three resistors of 4, 8 and 12 Ω are connected as shown in figure here. The current through the 12 Ω resistor is:",
+      "choices": {
+        "a": "0.57 A",
+        "b": "1.09 A",
+        "c": "0.04 A",
+        "d": "1.14 A"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electric Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing battery and resistor configuration"
+    },
+    {
+      "number": 3,
+      "body": "When a plant of chromosomal type aa pollinates a plant of type AA, what chromosome constitution of embryo and endosperm is expected in the resulting seeds.",
+      "choices": {
+        "a": "diploid zygote of type Aa and triploid endosperm of type AAa",
+        "b": "diploid zygote of type aa and triploid endosperm of type Aaa",
+        "c": "diploid zygote of type AA and triploid endosperm of type AAa",
+        "d": "diploid zygote of type Aa and triploid endosperm of type aaa"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "body": "In the circuit shown, each resistance is 2. The potential V1 as indicated in the circuit, is equal to:",
+      "choices": {
+        "a": "11 V",
+        "b": "-11V",
+        "c": "9 V",
+        "d": "-9 V"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electric Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing voltage sources and resistor configuration"
+    },
+    {
+      "number": 5,
+      "body": "In a dihybrid cross AABB x aabb, F2 progeny of AABB, AABb,AaBB and AaBb occurs in the ratio of",
+      "choices": {
+        "a": "1 : 1 : 1 : 1",
+        "b": "9 : 3 : 3 : 1",
+        "c": "1 : 2 : 2 : 1",
+        "d": "1 : 2 : 2 : 4"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "body": "If Drosophila males of genotype AaBb are crossed with females of genotype AABB, what is the percentage of white-eyed wrinkle-winged offspring in the first generation (a-white eye, A-red eye; B-smooth wings, b-wrinkled wings)?",
+      "choices": {
+        "a": "0%",
+        "b": "10%",
+        "c": "20%",
+        "d": "25%"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "body": "In Mendel's experiments with Garden Pea, round seeds shape (RR) were dominant over wrinkled seeds (rr), yellow cotyledons (YY) were dominant over green cotyledons (yy). What are expected phenotypes in F2 generation RRYY x rryy?",
+      "choices": {
+        "a": "only wrinkled seeds with green cotyledons",
+        "b": "only wrinkled seeds with yellow cotyledons",
+        "c": "only round seeds with green cotyledons",
+        "d": "round seeds with yellow cotyledons and wrinkled seeds with cotyledons"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "A wire has linear resistance ρ (in Ohm/m). Find the resistance R between points A and B if the side of the larger square is d:",
+      "choices": {
+        "a": "ρd/√2",
+        "b": "√2 ρd",
+        "c": "2 ρd",
+        "d": "None of these"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance Networks",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing the wire configuration between points A and B"
+    },
+    {
+      "number": 9,
+      "body": "Figure shows an infinite circuit formed by the repetition of the same link, consisting of resistance R₁ = 4.0 Ω and R₂ = 3.0 Ω. Find the resistance of this circuit between points A and B.",
+      "choices": {
+        "a": "6Ω",
+        "b": "4Ω",
+        "c": "8Ω",
+        "d": "10Ω"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "infinite_networks",
+      "subtopic_name": "Infinite Resistance Networks",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing the infinite network configuration"
+    },
+    {
+      "number": 10,
+      "body": "A 12 year old boy develops a disorder also present in his father. No one else in the family is known to be affected. Which of the following modes of inheritance is least likely?",
+      "choices": {
+        "a": "autosomal recessive",
+        "b": "autosomal dominant",
+        "c": "X-linked recessive",
+        "d": "Y-linked"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "body": "A colour blind man and a phenotypically normal woman have four children (each has 46 chromosomes)-a boy with haemophilia but no other traits; a boy with color blindness but no other trails; a color-blind girls but no other traits; and a phenotypically normal girl (all traits mentioned are inherited as X-linked recessives). What is the probability that the normal is heterpzygous for color blindness?",
+      "choices": {
+        "a": "1/4",
+        "b": "1/2",
+        "c": "3/4",
+        "d": "1"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "body": "Match list-I with list-II and select the correct using the codes given below the lists.\nList-I (Character of man): (P) Sex-linked, (Q) Sex-Influenced, (R) Sex-limited\nList-II (Example): 1. Baldness, 2. Acquired immune deficiency syndrome, 3. Klinefelter's syndrome, 4. Haemophilia, 5. Tuft of hairs (hypertrichosis) on pinna",
+      "choices": {
+        "a": "P-4, Q-1,R-5",
+        "b": "P-5,Q-3,R-2",
+        "c": "P-5, Q-1,R-3",
+        "d": "P-4,Q-3,R-2"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "Match list-I with list-II and select the correct answer using the code given below the lists.\nList-I: (P) Incomplete dominance, (Q) Codominance, (R) Polygenes, (S) Complementary genes\nList-II: 1. Human skin colour, 2. Purple colour in maize due to anthocyanin, 3. Human being blonging to AB blood group, 4. Pink flower in 4 O'clock plant",
+      "choices": {
+        "a": "P-4,Q-3,R-1,S-2",
+        "b": "P-3,Q-4,R-2,S-1",
+        "c": "P-4,Q-3,R-2,S-1",
+        "d": "P-3,Q-4,R-1,S-2"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "body": "Male child with blood group AB is colourblind. His parents could be",
+      "choices": {
+        "a": "father normal vision with blood group A, mother colourblind with group O",
+        "b": "father colour blind with group O, mother colour blind with blood group AB",
+        "c": "father normal vision with blood group A, mother colourblind with blood group B",
+        "d": "father colourblind with blood group O, mother normal vision with blood group O"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "body": "How many different types of gametes could be produced by an individual with that arbitrary genotype of AAbbCCDdEe?",
+      "choices": {
+        "a": "two",
+        "b": "four",
+        "c": "six",
+        "d": "eight"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "body": "Albinism is a condition that results from the lack of normal pigmentation. Individuals possessing two recessive alleles (aa) are albino. Similarly, attached earlobes result from two recessive alleles (ee). Ina family, the husband is an albino with attached earlobes. What is the genotype of the mother?",
+      "choices": {
+        "a": "aaee",
+        "b": "aaEE",
+        "c": "AaEe",
+        "d": "AAEE"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "body": "A species of plant is discovered in which individual plants produce either white or purple flowers. True breeding plants that have short stems with flowers are crossed with true breeding plants that have tall stems and purple flowers. The resulting offspring all have tall with purple flowers. When one of these tall, purple-flowered offspring is crossed with a short, white-floweredplant, plants with the following characteristics were obtained in equal proportions. White flowers on tall stems and purple flowers on tall stems. White flowers on short stems, purple flowers on short stems. Given the information above, which of the following is most likely true?",
+      "choices": {
+        "a": "the white-flower allele and is most likely true?",
+        "b": "the genes for flower colour and stem length are closely linked",
+        "c": "extensive closing-over between the purple-flower allele and the white allele has occurred",
+        "d": "the genes for flower color and stem length are not linked"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "body": "A male fruit fly (Drosophila melanogaster) with red eyes and long wings was mated with a female with purple eyes and vestigial wings. All of the offspring in the F1 generation red eyes and long wings. These F1 flies were test crossed with purple-eyed, vestigial-winged flies. Their offspring, the F2 generation, appeared as indicated below.\nF2\n125 red eyes, long wings\n124 purple eyes, vestigial wings\n18 purple eyes, long wings\n16 red eyes, vestigial wings\n283 Total\nIf on the F1 and F2 generation the same characteristics appeared in both male and females, it would be safe to assume that these traits for eye color and wing length...",
+      "choices": {
+        "a": "are sex-linked",
+        "b": "vary in dominance according to sex",
+        "c": "are sex-influenced characteristics",
+        "d": "follow the Mendelian rule of independent assortment"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "body": "A retrovirus is an RNA virus with the ability to convert its sequence into DNA by reverse transcription. Reverse transcription is mediated by enzyme reverse transcriptase. Which of the following are the functions of reverse transcriptase in retroviruses?\n1. it hydrolyzes the host cell's DNA\n2. it uses viral RNA as a template for DNA synthesis.\n3. it converts host cell RNA into viral DNA.\n4. it translates viral RNA into proteins.\n5. it uses viral RNA as a template for making complementary RNA strands.\n6. it degrades RNA from DNA-RNA hybrid.",
+      "choices": {
+        "a": "2 and 6",
+        "b": "2 and 3",
+        "c": "1, 4 and 5",
+        "d": "2, 4, 5 and 6"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "body": "The accompanying pedigree is for a rare, hereditary disorder of the skin.\nP. disorder appears to be dominant because all affected individuals have an effect parent\nQ. disorder appears to be recessive and X-linked\nR. disorder appears to be recessive and autosomal\nS. the genotype of A and B are d/d and D/d",
+      "choices": {
+        "a": "P and R",
+        "b": "Q and S",
+        "c": "P and S",
+        "d": "Q and R"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the pedigree diagram showing the inheritance pattern across generations"
+    }
+  ]
+}

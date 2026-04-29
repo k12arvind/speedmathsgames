@@ -42,9 +42,13 @@ from anthropic import Anthropic
 
 
 VISION_MODEL = 'claude-sonnet-4-20250514'
-PAGES_DIR = Path('/tmp/nsejs_pages')
-OUT_DIR = Path(__file__).parent / 'vision_pages'
-OUT_DIR.mkdir(exist_ok=True)
+# Defaults preserved for backwards compat with the original 2006-2019 bundle run.
+DEFAULT_PAGES_DIR = Path('/tmp/nsejs_pages')
+DEFAULT_OUT_DIR = Path(__file__).parent / 'vision_pages'
+
+# Set globally by main(); used by process_page().
+PAGES_DIR = DEFAULT_PAGES_DIR
+OUT_DIR = DEFAULT_OUT_DIR
 
 
 SYSTEM_PROMPT = """You are extracting structured data from a single page of a
@@ -176,7 +180,14 @@ def main():
                     help='end page inclusive')
     ap.add_argument('--parallel', type=int, default=6)
     ap.add_argument('--force', action='store_true', help='re-extract even if JSON exists')
+    ap.add_argument('--pages-dir', type=str, default=str(DEFAULT_PAGES_DIR))
+    ap.add_argument('--out-dir', type=str, default=str(DEFAULT_OUT_DIR))
     args = ap.parse_args()
+
+    global PAGES_DIR, OUT_DIR
+    PAGES_DIR = Path(args.pages_dir)
+    OUT_DIR = Path(args.out_dir)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     pages = list(range(args.start, args.end + 1))
     pending = [p for p in pages if args.force or not (OUT_DIR / f'p{p:03d}.json').exists()]

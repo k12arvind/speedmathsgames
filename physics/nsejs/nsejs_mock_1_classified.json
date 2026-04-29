@@ -1,0 +1,351 @@
+{
+  "paper": "mock_1",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "A wheel of radius 1 m rolls forward half a revolution on a horizontal ground. The magnitude of the displacement of the point of wheel initially in contact with the ground is",
+      "choices": {
+        "a": "2π",
+        "b": "√2 π",
+        "c": "√π² + 4",
+        "d": "π"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "rotation",
+      "subtopic_name": "Rotational Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 2,
+      "body": "Choose the events that occur in non-cyclic photophosphorylation but not in cyclic photophosphorylation.\nI. Synthesis of ATP\nII. Water splitting\nIII. Involvement of PS I\nIV. Formation of NADPH\nV. Phosphorylation occurs due to cyclic flow of electrons\nChoose the correct answer from the options given below option.",
+      "choices": {
+        "a": "I and IV only",
+        "b": "I, II and V only",
+        "c": "II, III, IV and V only",
+        "d": "II, IV and V only"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "body": "A police jeep (speed 90 km/h) is trying to overtake a culprit going on a bike (speed 72 km/h). The bike crosses a turning and the police jeep crosses the same turning 10 s later. Assuming that they move at constant speed, find how far away from the turning the police jeep will catch up with the bike.",
+      "choices": {
+        "a": "40 s",
+        "b": "60 s",
+        "c": "80 s",
+        "d": "20 s"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Relative Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 4,
+      "body": "P, Q and R are three metals that undergo chemical reactions as follows:\nP2O3 + 2Q → Q2O3 + 2P\n2P + 3RO → P2O3 + 3R\n3RSO4 + 2Q → Q2(SO4)3 + 3R\nObserve the reactions and arrange the metals in the increasing order of their reactivity.",
+      "choices": {
+        "a": "R, P, Q",
+        "b": "Q, P, R",
+        "c": "P, Q, R",
+        "d": "Q, R, P"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "body": "An object is moving with a uniform acceleration which is parallel to its instantaneous direction of motion. The displacement (s) – velocity (v) graph of this object is",
+      "choices": {
+        "a": "[curved graph showing s vs v with decreasing slope]",
+        "b": "[curved graph showing s vs v with increasing slope]",
+        "c": "[linear graph showing s vs v]",
+        "d": "[linear graph showing s vs v with different slope]"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Motion Graphs",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the specific graph options"
+    },
+    {
+      "number": 6,
+      "body": "A body is thrown horizontally from the top of a tower of height 5 m. It touches the ground at a distance of 10 m from the foot of the tower. The initial velocity of the body is (g = 10 ms⁻²)",
+      "choices": {
+        "a": "2.5 ms⁻¹",
+        "b": "5 ms⁻¹",
+        "c": "10 ms⁻¹",
+        "d": "20 ms⁻¹"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 7,
+      "body": "Refer to the given graph and select the correct option for the question that follows:\n\nHow much oxygen will be released to the tissues by blood on passing from lungs to tissues?",
+      "choices": {
+        "a": "15 mL of O2/100 mL of blood",
+        "b": "10 mL of O2/100 mL of blood",
+        "c": "5 mL of O2/100 mL of blood",
+        "d": "20 mL of O2/100 mL of blood"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the oxygen dissociation curve graph"
+    },
+    {
+      "number": 8,
+      "body": "In the above pressure (P) versus temperature (T) graph, which line represents the increase in density of an ideal gas?",
+      "choices": {
+        "a": "AB",
+        "b": "CD",
+        "c": "EF",
+        "d": "GH"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "has_figure": true,
+      "skip_reason": "Question requires interpretation of the P-T graph showing various lines (A through H) to determine which represents increase in density of ideal gas"
+    },
+    {
+      "number": 9,
+      "body": "Observe the given curve carefully and mark the correct statement.\n(A) T1 is the melting point and dry ice changes to CO2 gas from t1 and t2.\n(B) T1 is the boiling point and water vapours change to water from t1 and t2.\n(C) T1 is the freezing point and molten copper(II) sulphate changes to solid copper(II) sulphate from time t1 to t2.\n(D) T1 is the melting point and solid copper(II) sulphate changes to molten copper(II) sulphate from t1 to t2.",
+      "choices": {
+        "a": "T1 is the melting point and dry ice changes to CO2 gas from t1 and t2.",
+        "b": "T1 is the boiling point and water vapours change to water from t1 and t2.",
+        "c": "T1 is the freezing point and molten copper(II) sulphate changes to solid copper(II) sulphate from time t1 to t2.",
+        "d": "T1 is the melting point and solid copper(II) sulphate changes to molten copper(II) sulphate from t1 to t2."
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the temperature-time curve diagram"
+    },
+    {
+      "number": 10,
+      "body": "Priya and Kartik wanted to study about diffusion among liquids. They took identical beakers and poured 100 mL of H2O in both beakers. Priya heated the water to 50°C but Kartik maintained the water at room temperature. They both added 5 drops of ink into the beaker, what will they notice?",
+      "choices": {
+        "a": "Colour of ink spreads faster in Priya's beaker.",
+        "b": "Colour of ink spreads faster in Kartik's beaker.",
+        "c": "Colour of ink spreads at the same rate in both beakers.",
+        "d": "In both the beakers, ink drops settle down at the bottom without spreading."
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "body": "Match the List-I with List-II:\nColumn-I\n(a) P-wave\n(b) Q-wave\n(c) QRS complex\n(d) T-wave\n\nColumn-II\n(i) Beginning of systole\n(ii) Repolarisation of ventricles\n(iii) Depolarization of atria\n(iv) Depolarization of ventricles\n\nChoose the correct answer from the options given below:",
+      "choices": {
+        "a": "(a)-(iii); (b)-(i); (c)-(iv); (d)-(ii)",
+        "b": "(a)-(iv); (b)-(iii); (c)-(ii); (d)-(i)",
+        "c": "(a)-(ii); (b)-(iv); (c)-(i); (d)-(iii)",
+        "d": "(a)-(i); (b)-(ii); (c)-(iii); (d)-(iv)"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "body": "In animals, heart is the main pumping station, supplying and collecting blood from various parts of the body. In mammals, which of the following structures regulates the unidirectional flow of blood and found between left auricle and ventricle?",
+      "choices": {
+        "a": "Tricuspid valve",
+        "b": "Aortic semilunar valve",
+        "c": "Pulmonary semilunar valve",
+        "d": "Mitral valve"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "The chlorophyll molecules make use of visible radiations by absorbing wavelengths of light which are effective in photosynthesis. When a photon of light collides with chlorophyll molecules, it gets excited and when it comes back to ground state, the released energy is utilized in photosynthetic phosphorylation. Different wavelengths of light give different amount of light reaction products. Following are the absorption spectra of various wavelengths of visible light. Which of the following lights will yield maximum photosynthesis?",
+      "choices": {
+        "a": "Red",
+        "b": "Blue",
+        "c": "White",
+        "d": "Green"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine the correct answer without the absorption spectra graph shown in the figure"
+    },
+    {
+      "number": 14,
+      "body": "An object pin is placed at a distance 5 cm from first focus of a thin convex lens on its principle axis, the lens forms a real and inverted image of this object pin at a distance 45 cm beyond the second focus. The focal length of the lens is",
+      "choices": {
+        "a": "10 cm",
+        "b": "15 cm",
+        "c": "20 cm",
+        "d": "25 cm"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Lenses",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 15,
+      "body": "Rate of photosynthesis in hydrophytes depends on various parameters. The adjacent graph shows the effect of one parameter (while keeping all the others constant) on the rate of photosynthesis. Rate of photosynthesis is plotted on Y-axis. Identify the parameter which is plotted along X-axis.",
+      "choices": {
+        "a": "light intensity",
+        "b": "wavelength",
+        "c": "temperature",
+        "d": "CO2 concentration"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine the correct answer without analyzing the graph shown in the figure"
+    },
+    {
+      "number": 16,
+      "body": "A person living in Kullu-Manali observed that cooking food without using pressure cooker takes more time. The reason for this observation is that at high altitude:",
+      "choices": {
+        "a": "pressure increases",
+        "b": "temperature decreases",
+        "c": "pressure decreases",
+        "d": "temperature increases"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "body": "Which of the following are correct? (A) Basophils are the most abundant cells of the total WBCs (B) Basophils secrete histamine, serotonin and heparin (C) Basophils are involved in inflammatory response (D) Basophils have kidney shaped nucleus",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": "This is a PART-A question with 'One or more than one correct' format but the answer choices are not provided in the image"
+    },
+    {
+      "number": 18,
+      "body": "Two particles A and B of masses 5 kg and 10 Kg are kept at a separation of 1 m. Both the particles are free to move. If the two particles are released from rest, then mark out the correct statement(s)",
+      "choices": {
+        "a": "Both the particles experience an equal and opposite force.",
+        "b": "Magnitudes of acceleration of both the particles are the same.",
+        "c": "Magnitude of acceleration of both the particles are different.",
+        "d": "Magnitude of acceleration of A is double of that of B."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "gravitation",
+      "subtopic_name": "Newton's Law of Gravitation",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 19,
+      "body": "The radius and mass of earth are increased by 0.5%. Which of the following statements are true at the surface of the earth?",
+      "choices": {
+        "a": "g will increase",
+        "b": "g will decrease",
+        "c": "Escape velocity will remain unchanged",
+        "d": "Potential energy will remain unchanged"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "gravitation",
+      "subtopic_name": "Gravitational Field and Escape Velocity",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 20,
+      "body": "A square of side 3 cm is placed at a distance of 25 cm from a concave mirror of focal length 10 cm. The centre of the square is at the axis of the mirror and the plane is normal to the axis. The area enclosed by the image of the square is",
+      "choices": {
+        "a": "4 cm²",
+        "b": "6 cm²",
+        "c": "16 cm²",
+        "d": "36 cm²"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Spherical Mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    }
+  ]
+}

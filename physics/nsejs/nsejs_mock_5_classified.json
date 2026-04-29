@@ -1,0 +1,1438 @@
+{
+  "paper": "mock_5",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "It was calculated that a shell when fired from a gun with a certain velocity and at an angle of elevation 5π/36 radians should strike a given target. In actual practice it was found that a hill just intervened in the trajectory. At what angle of elevation should the gun be fired to hit the target?",
+      "choices": {
+        "a": "5π/36 radian",
+        "b": "7π/36 radian",
+        "c": "11π/36 radian",
+        "d": "13π/36 radian"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "body": "The refractive index of a certain glass is 1.5 for light whose wavelength in vacuum is 6000 Å. The wavelength of this light when it passes through glass is",
+      "choices": {
+        "a": "4000 Å",
+        "b": "6000 Å",
+        "c": "9000 Å",
+        "d": "15000 Å"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "λ_medium = λ_air/μ = 6000/1.5 = 4000 Å"
+    },
+    {
+      "number": 3,
+      "body": "A 60 kg weight is dragged on a horizontal surface by a rope upto 2 metres. If coefficient of friction is μ = 0.5, the angle of rope with the surface is 60° and g = 9.8 m/sec², then work done is",
+      "choices": {
+        "a": "294 joules",
+        "b": "315 joules",
+        "c": "588 joules",
+        "d": "197 joules"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "work_energy",
+      "subtopic_name": "Work and Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let body is dragged with force P, making an angle 60° with the horizontal. f_k = Kinetic friction in the motion = μ_k R. From the figure f_k = P cos60° and R = mg - P sin60°. ∴ P cos60° = μ_k (mg - P sin60°). ⇒ P/2 = 0.5(60 × 10 - P√3/2) ⇒ P = 315.1 N. ∴ f_k = P cos60° = 315.1/2 N. Work done = f_k × s = 315.1/2 × 2 = 315 Joule"
+    },
+    {
+      "number": 4,
+      "body": "The total energy of the body executing S.H.M. is E. Then the kinetic energy when the displacement is half of the amplitude, is",
+      "choices": {
+        "a": "E/2",
+        "b": "E/4",
+        "c": "3E/4",
+        "d": "√3/4 E"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves and Oscillations",
+      "subtopic_code": "shm",
+      "subtopic_name": "Simple Harmonic Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Total energy in SHM E = 1/2 mω²a² ; (where a = amplitude). Kinetic energy U = 1/2 mω²(a² - y²) = E - 1/2 mω²y². When y = a/2 ⇒ U = E - 1/2 mω²(a²/4) = E - E/4 = 3E/4"
+    },
+    {
+      "number": 5,
+      "body": "The current in the adjoining circuit will be",
+      "choices": {
+        "a": "1/45 ampere",
+        "b": "1/15 ampere",
+        "c": "1/10 ampere",
+        "d": "1/5 ampere"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electric Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing resistor values and configuration",
+      "solution": "R_equivalent = (30 + 30)30 / (30 + 30) + 30 = 60 × 30 / 90 = 20Ω\n∴ i = V/R = 2/20 = 1/10 ampere"
+    },
+    {
+      "number": 6,
+      "body": "A 500 kg car takes a round turn of radius 50 m with a velocity of 36 km/hr. The centripetal force is",
+      "choices": {
+        "a": "250 N",
+        "b": "750 N",
+        "c": "1000 N",
+        "d": "1200 N"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "circular_motion",
+      "subtopic_name": "Circular Motion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "body": "In the adjoining diagram, a wavefront AB, moving in air is incident on a plane glass surface XY. Its position CD after refraction through a glass slab is shown also along with the normals drawn at A and D. The refractive index of glass with respect to air (μ = 1) will be equal to",
+      "choices": {
+        "a": "sin θ/sin θ'",
+        "b": "sin θ/sin φ'",
+        "c": "sin φ'/sin θ",
+        "d": "AB/CD"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "In the case of refraction if CD is the refracted wave front and v₁ and v₂ are the speed of light in the two media, then in the time the wavelets from B reaches C, the wavelet from A will reach D, such that\nt = BC/v_w = AD/v_g ⇒ BC/AD = v_w/v_g .....(i)\nBut in ΔACB, BC = AC sinθ .....(ii)\nwhile in ΔACD, AD = AC sinθ' .....(iii)\nFrom equations (i), (ii) and (iii) v_w/v_g = sinθ/sinθ'\nAlso μ ∝ 1/v ⇒ v_w/v_g = μ_g/μ_w = sinθ/sinθ'\n⇒ μ_g = sinθ/sinθ'"
+    },
+    {
+      "number": 8,
+      "body": "Consider the circuits shown in the figure. Both the circuits are taking same current from battery but current through R in the second circuit is 1/10 th of current through R in the first circuit. If R is 11 Ω, the value of R₁",
+      "choices": {
+        "a": "9.9 Ω",
+        "b": "11 Ω",
+        "c": "8.8 Ω",
+        "d": "7.7 Ω"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "resistor_networks",
+      "subtopic_name": "Resistor Networks",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "In figure (b) current through\nR₃ = i - i/10 = 9i/10\nPotential difference across R₃ = Potential difference across\nR ⇒ R₃ × 9i/10 = R × i/10\ni.e. R₃ = R/9 = 11/9 Ω\nR_eq = (R₃ × R)/(R₃ + R) = (11/9 × 11)/(11/9 + 11) = 11/10 Ω\nTotal circuit resistance = 11/10 + R₁ = R = 11 ⇒ R₁ = 9.9Ω"
+    },
+    {
+      "number": 9,
+      "body": "In the figure shown, for an angle of incidence 45°, at the top surface, what is the minimum refractive index needed for total internal reflection at vertical face",
+      "choices": {
+        "a": "sqrt(2) + 1 / 2",
+        "b": "sqrt(3/2)",
+        "c": "sqrt(1/2)",
+        "d": "sqrt(2) + 1"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "At point A, by Snell's law\n[Shows diagram with Air-45° angle and glass medium with 90° angle at point A and point B with angle μ]"
+    },
+    {
+      "number": 10,
+      "body": "Assuming earth to be a sphere of a uniform density, what is the value of gravitational acceleration in a mine 100 km below the earth's surface (Given R = 6400 km)",
+      "choices": {
+        "a": "9.66 m/s²",
+        "b": "7.64 m/s²",
+        "c": "5.06m/s²",
+        "d": "3.10 m/s²"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Gravitation",
+      "subtopic_code": "gravitational_field",
+      "subtopic_name": "Gravitational Field",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "g' = g(1 - d/R) = 9.8(1 - 100/6400) = 9.66 m/s²"
+    },
+    {
+      "number": 11,
+      "body": "When a large bubble rises from the bottom of a lake to the surface. Its radius doubles. If atmospheric pressure is equal to that of column of water height H, then the depth of lake is",
+      "choices": {
+        "a": "H",
+        "b": "2H",
+        "c": "7H",
+        "d": "8H"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Fluid Mechanics",
+      "subtopic_code": "pressure",
+      "subtopic_name": "Pressure in Fluids",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "P₁V₁ = P₂V₂ ⇒ (P₀ + hρg) × (4/3)πr³ = P₀ × (4/3)π(2r)³\nWhere, h = depth of lake\n⇒ hρg = 7P₀ ⇒ h = 7 × (Hρg/ρg) = 7H₀"
+    },
+    {
+      "number": 12,
+      "body": "A body moves a distance of 10 m along a straight line under the action of a force of 5 N. If the work done is 25 joules, the angle which the force makes with the direction of motion of the body is",
+      "choices": {
+        "a": "0°",
+        "b": "30°",
+        "c": "60°",
+        "d": "90°"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Work and Energy",
+      "subtopic_code": "work",
+      "subtopic_name": "Work Done by Force",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "W = Fs cos θ ⇒ cos θ = W/Fs = 25/50 = 1/2 ⇒ θ = 60°"
+    },
+    {
+      "number": 13,
+      "body": "A magnetic needle is kept in a non-uniform magnetic field. It experiences",
+      "choices": {
+        "a": "A force and a torque",
+        "b": "A force but not a torque",
+        "c": "A torque but not a force",
+        "d": "Neither a torque nor a force"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "magnetic_dipole",
+      "subtopic_name": "Magnetic Dipole in Field",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "body": "A motor car is travelling at 20 m/s on a circular road of radius 100m. It is increasing its speed at the rate of 3 m/s². Acceleration of motor car is :",
+      "choices": {
+        "a": "3 m/sec²",
+        "b": "5 m/sec²",
+        "c": "8 m/sec²",
+        "d": "None of these"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Circular Motion",
+      "subtopic_code": "circular_motion",
+      "subtopic_name": "Circular Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "body": "A bullet of mass 50 gm is horizontally fired with a velocity 100 ms-1 from a gun of mass 10 kg. What will be the recoil velocity of the gun ?",
+      "choices": {
+        "a": "100 ms⁻¹",
+        "b": "500 ms⁻¹",
+        "c": "0.5ms⁻¹",
+        "d": "Zero"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Conservation Laws",
+      "subtopic_code": "momentum_conservation",
+      "subtopic_name": "Conservation of Momentum",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Recoil velocity\nV = mv/M = (50×10⁻³ × 10²)/10 = 1/2 = 0.5 m/s = Ans"
+    },
+    {
+      "number": 16,
+      "body": "Which of the following equation does not represent a simple harmonic motion",
+      "choices": {
+        "a": "y = a sin ωt",
+        "b": "y = a cos ωt",
+        "c": "y = a sin ωt + b cos ωt",
+        "d": "y = a tan ωt"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Oscillations and Waves",
+      "subtopic_code": "shm",
+      "subtopic_name": "Simple Harmonic Motion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Standard equation of S.H.M. d²y/dt² = -ω²y, is not satisfied by y = a tan ωt."
+    },
+    {
+      "number": 17,
+      "body": "The reading of the ideal voltmeter in the adjoining diagram will be",
+      "choices": {
+        "a": "4 V",
+        "b": "8 V",
+        "c": "12 V",
+        "d": "14 V"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electric Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing voltmeter placement and component values",
+      "solution": "Current flowing in the circuit i = E/R = (10-4)/(20+10) = 1/5 A\nP.D. across AC = (1/5) × 20 = 4 V\nP.D. across AN = 4 + 4 = 8V"
+    },
+    {
+      "number": 18,
+      "body": "A single horizontal force F is applied to a block of mass M1 which is in contact with another block of mass M2 as shown in the figure. If the surfaces are frictionless, the force between the block is :",
+      "choices": {
+        "a": "M1F/M2",
+        "b": "M1M2F/(M1 + M2)",
+        "c": "M2F/(M1 + M2)",
+        "d": "M2F/M1"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "dynamics",
+      "subtopic_name": "Newton's Laws",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "body": "The AC produced in India changes its direction in every :",
+      "choices": {
+        "a": "1/100 second",
+        "b": "100 second",
+        "c": "50 second",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "ac",
+      "subtopic_name": "Alternating Current",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "body": "A 10.0 W electrical heater is used to heat a container filled with 0.5 kg of water. It is found that the temperature of the water and the container rise by 3 K in 15 minutes. The container is then emptied, dried, and filled with 2 kg of an oil. It is now observed that the same heater raises the temperature of the container-oil system by 2 K in 20 minutes. Assuming no other heat losses in any of the processes, the specific heat capacity of the oil is",
+      "choices": {
+        "a": "2.5 × 10^3 JK^-1 kg^-1",
+        "b": "5.1 × 10^3 JK^-1 kg^-1",
+        "c": "3.0 × 10^3 JK^-1 kg^-1",
+        "d": "1.5 × 10^3 JK^-1 kg^-1"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "calorimetry",
+      "subtopic_name": "Calorimetry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "body": "The most popularly known blood grouping is the ABO grouping. It is named ABO and not ABC, because \"O\" in it refers to having",
+      "choices": {
+        "a": "No antigens A and B on RBCs",
+        "b": "Other antigens besides A and B on RBCs",
+        "c": "Overdominance of this type on the genes for A and B types",
+        "d": "One antibody only - either anti-A or anti-B on the RBCs"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "body": "Which statement is true for mitosis",
+      "choices": {
+        "a": "Daughter cells exhibit division of labour i.e. perform different functions",
+        "b": "Daughter cells are exactly similar in all respect",
+        "c": "Daughter cells have half the number of chromosomes as compared to mother cell",
+        "d": "Daughter cells have differences in genetic characters"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "Match the following\n'A'\nA. Amylase\nB. Pepsin\nC. Lipase\nD. Sucrase\nE. Mouth\nF. Stomach\nG. Intestine\nH. Anus\n\n'B'\n1. Break down of sucrose\n2. Break down of lipid\n3. Break down of protein\n4. Break down of starch\n5. Digestion of proteins\n6. Egestion\n7. Ingestion\n8. Digestion and absorption\n\nThe correct pairing sequence is",
+      "choices": {
+        "a": "4, 5, 2, 1, 3, 7, 6, 8",
+        "b": "4, 3, 2, 1, 7, 5, 8, 6",
+        "c": "5, 4, 1, 2, 7, 3, 8, 6",
+        "d": "5, 4, 1, 2, 7, 6, 3, 8"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "Conversion of organic nitrogenous compound into ammonium compounds is called",
+      "choices": {
+        "a": "Nitrification",
+        "b": "Denitrification",
+        "c": "Ammonification",
+        "d": "Denaturation"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "If a cell A with DPD 4 bars is connected to cell B, C, D whose osmotic pressure and turgor pressure are respectively 4 and 4, 10 and 5, 7 and 3 bar, the flow of water will be :",
+      "choices": {
+        "a": "B to A, C and D",
+        "b": "A to D, B and C",
+        "c": "C to A, B and D",
+        "d": "A to B, C and D"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "body": "In the absence of decomposers, ecosystem functioning is adversely affected due to",
+      "choices": {
+        "a": "Blocking of energy flow",
+        "b": "Blocking of mineral cycling",
+        "c": "Blocking of solar energy to herbivores",
+        "d": "Rate of decomposition of other components will increase"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "body": "The main plant body of Algae is :-",
+      "choices": {
+        "a": "Haploid",
+        "b": "Diploid",
+        "c": "Haplo-diploid",
+        "d": "Diplo-haploid"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "body": "Life cannot originate from inorganic materials at present because",
+      "choices": {
+        "a": "High degree of environmental pollution",
+        "b": "A very high amount of oxygen in the atmosphere",
+        "c": "Very high atmospheric temperature",
+        "d": "Absence of raw materials"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "body": "A compound which is produced by an organism and inhibits the growth of other organism is called",
+      "choices": {
+        "a": "Antibody",
+        "b": "Antigen",
+        "c": "Antiallergic",
+        "d": "Antibiotic"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "body": "Phytohormone commonly called stress hormone is",
+      "choices": {
+        "a": "Auxin",
+        "b": "Abscissic acid",
+        "c": "Gibberellin",
+        "d": "Cytokinins"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "body": "Nucleus in a sperm is situated in the",
+      "choices": {
+        "a": "Head",
+        "b": "Middle piece",
+        "c": "Tail",
+        "d": "Acrosome"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "body": "In Whittaker's five kingdom classification, eukaryotes were assigned to",
+      "choices": {
+        "a": "All the five kingdom",
+        "b": "Only four of the five kingdoms",
+        "c": "Only three kingdom",
+        "d": "Only one kingdom"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "body": "Animals of which phylum contains open circulatory system :-",
+      "choices": {
+        "a": "Arthropoda",
+        "b": "Annelida",
+        "c": "Chordata",
+        "d": "Both 1 and 3"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "body": "The enzymes responsible for the digestion of starch in food of man is present in",
+      "choices": {
+        "a": "The salivary and gastric secretions",
+        "b": "The salivary and pancreatic secretions",
+        "c": "The gastric and pancreatic secretions",
+        "d": "The gastric and duodenal secretions"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "body": "The correct relationship of value of Respiratory quotient is",
+      "choices": {
+        "a": "Glucose>Fats>Organic acid",
+        "b": "Glucose<Fats<Organic acid",
+        "c": "Fats> Glucose>Organic acid",
+        "d": "Fats< Glucose< Organic acid"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "body": "Match the disease in column-I with the appropriate items (pathogen/prevention/treatment) in column-II :\nColumn I\n(A) Amoebiasis\n(B) Diphtheria\n(C) Cholera\n(D) Syphilis",
+      "choices": {
+        "a": "a-(ii), b-(iv), c-(i), d(iii)",
+        "b": "a-(ii), b-(i), c-(iii), d(iv)",
+        "c": "a-(ii), b-(iii), c-(iv), d(i)",
+        "d": "a-(i), b-(ii), c-(iii), d(iv)"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "Male gamete in Angiosperm is produced by :-",
+      "choices": {
+        "a": "Generative cell",
+        "b": "Microspore cell",
+        "c": "Vegetative cell",
+        "d": "Tube cell"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "body": "Which one of the following is not a characteristic of phylum Annelida :-",
+      "choices": {
+        "a": "Metamerism",
+        "b": "Closed blood vascular system",
+        "c": "Comb plates for locomotion",
+        "d": "Nephridia for osmoregulation and excretion"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "Which of the following gases contributes most to global warming",
+      "choices": {
+        "a": "Nitrogen dioxide",
+        "b": "Carbon dioxide",
+        "c": "Carbon monoxide",
+        "d": "Sulphur dioxide"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "Prokaryotic cell is characterized by :-",
+      "choices": {
+        "a": "Presence of nucleus, mitochondria and plastids",
+        "b": "Absence of cell wall, DNA fibrils and plastids",
+        "c": "Presence of spindle fibres, DNA fibrils and Golgi bodies",
+        "d": "Absence of endoplasmic reticulum, Golgi bodies and spindle fibres."
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "body": "X and Y are two metals. When burnt in air, X forms only oxide while Y forms oxide and nitride.",
+      "choices": {
+        "a": "Ca and Mg",
+        "b": "Na and Mg",
+        "c": "Li and Na",
+        "d": "Na and K"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "A flask filled with CCl4 vapour was weighed at a temperature and pressure. The flask was then filled with oxygen at the same temperature and pressure. The mass of CCl4 vapour would be about :",
+      "choices": {
+        "a": "The same as that of the oxygen",
+        "b": "Approx. One-fifth as heavy as oxygen",
+        "c": "Approx. Five times as heavy as oxygen",
+        "d": "Approx.Twice as heavy as oxygen"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "At constant P, V and T, w ∝ m."
+    },
+    {
+      "number": 43,
+      "body": "Which is not a redox reaction?",
+      "choices": {
+        "a": "H₂ + Br₂ → 2 HBr",
+        "b": "NH₄Cl → NH₃ + HCl",
+        "c": "NH₄NO₃ → N₂O + 2H₂O",
+        "d": "Fe + S → FeS"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "body": "Sodium hydroxide is produced on a large scale",
+      "choices": {
+        "a": "by the hydrolysis of Na₂CO₃",
+        "b": "by the electrolysis of an aqueous solution of NaCl using a mercury cathode cell",
+        "c": "by adding water to sodium oxide",
+        "d": "by reacting sodium with water"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "body": "The major product of acid - catalysed dehydration of 2- butanol is -",
+      "choices": {
+        "a": "2 - butene",
+        "b": "2 - butyne",
+        "c": "1 - butene",
+        "d": "1 - butyne"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Major product will be 2-butene-"
+    },
+    {
+      "number": 46,
+      "body": "Compound (A) on heating gives carbon dioxide, water and soda ash. (A) reacts with HCl and gives",
+      "choices": {
+        "a": "NaCl + CO₂ + H₂O",
+        "b": "NaCl + CO₂ + CH₄",
+        "c": "CO₂ + H₂O + CH₄",
+        "d": "NaCl + H₂O + CH₄"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "NaHCO₃ + HCl NaCl + CO₂ + H₂O"
+    },
+    {
+      "number": 47,
+      "body": "When CH₃ - CH₂ - COOH₃ reacts with C₂H₅OH in presence of concentrated sulphuric acid, which of the following ester is formed ?",
+      "choices": {
+        "a": "CH₃ - C - OC₂H₅ (with double bonded O above C)",
+        "b": "CH₃ - C - O - CH₃ (with double bonded O above C)",
+        "c": "C₂H₅ - C - O - C₂H₅ (with double bonded O above C)",
+        "d": "CH₃ - CH₂ - C - OC₂H₅ (with double bonded O above C)"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "body": "How many atoms are contained in a mole of acetic acid ?",
+      "choices": {
+        "a": "8×6.02×10²³ atom/mol",
+        "b": "4×6.02×10²³ atom/mol",
+        "c": "6×6.02×10²³ atom/mol",
+        "d": "None of the above"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "1 molecule of CH₃COOH contains 8 atoms\n1 mole contains 8 NA atoms"
+    },
+    {
+      "number": 49,
+      "body": "Carbon cannot be used in the reduction of Al₂O₃ because :",
+      "choices": {
+        "a": "it is non-metal",
+        "b": "the heat of formation of CO₂ is more than that of Al₂O₃",
+        "c": "pure carbon is not easily available",
+        "d": "the heat of formation of Al₂O₃ is too high"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "body": "A single electron in an ion has ionization energy equal to 217.6 eV. What is the total number of neutrons present in one ion of it ?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "5",
+        "d": "9"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "The weight of sulphuric acid needed for dissolving 3g magnesium carbonate is :",
+      "choices": {
+        "a": "3.5 g",
+        "b": "7.0 g",
+        "c": "1.7 g",
+        "d": "17.0 g"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "body": "A metal M forms a compound M₃HPO₄. The formula of the metal sulphate is :",
+      "choices": {
+        "a": "M₂SO₄",
+        "b": "MSO₄",
+        "c": "M(SO₄)₂",
+        "d": "M₂(SO₄)₃"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "body": "An oxide of sulphur contains 50% S. What will be its empirical formula ?",
+      "choices": {
+        "a": "SO",
+        "b": "SO₂",
+        "c": "SO₃",
+        "d": "S₂O₃"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Chemical Formulas",
+      "subtopic_code": "empirical_formula",
+      "subtopic_name": "Empirical Formula",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "body": "If radius of second stationary orbit (in Bohr's atom) is R. Then radius of third orbit will be :",
+      "choices": {
+        "a": "R/3",
+        "b": "9R",
+        "c": "R/9",
+        "d": "2.25 R"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Atomic Structure",
+      "subtopic_code": "bohr_model",
+      "subtopic_name": "Bohr Model",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "body": "Which of the following metal oxides show amphoteric behaviour ?\n(a) Zn(OH)₂\t\t(b) BeO\t\t(c) Al₂O₃\t\t(d) Pb(OH)₂",
+      "choices": {
+        "a": "b,c,d",
+        "b": "a,c,d",
+        "c": "a,b,c",
+        "d": "a,b,c,d"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Chemical Properties",
+      "subtopic_code": "amphoteric_oxides",
+      "subtopic_name": "Amphoteric Oxides",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "An iron compound yielded C = 64.4%, H = 5.5% and Fe = 29.9%. The simple formula of the compound is",
+      "choices": {
+        "a": "C₁₄H₁₄Fe",
+        "b": "C₅H₁₀Fe",
+        "c": "C₁₀H₅Fe",
+        "d": "C₅H₅Fe"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Chemical Formulas",
+      "subtopic_code": "molecular_formula",
+      "subtopic_name": "Molecular Formula",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "body": "The correct order of bond angles is :",
+      "choices": {
+        "a": "H₂S < NH₃ < BF₃ < SiH₄",
+        "b": "NH₃ < H₂S < SiH₄ < BF₃",
+        "c": "H₂S < NH₃ < SiH₄ < BF₃",
+        "d": "H₂S < SiH₄ < NH₃ < BF₃"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Molecular Geometry",
+      "subtopic_code": "bond_angles",
+      "subtopic_name": "Bond Angles",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "The bond angles are    H₂S    NH₃    SiH₄    BF₃\n                      92.6°   107°   109°28' 120°"
+    },
+    {
+      "number": 58,
+      "body": "Second electron gain enthalpy :",
+      "choices": {
+        "a": "is always negative.",
+        "b": "is always positive.",
+        "c": "can be positive or negative.",
+        "d": "is always zero."
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Atomic Properties",
+      "subtopic_code": "electron_affinity",
+      "subtopic_name": "Electron Affinity",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "body": "How many moles of Fe²⁺ ions are formed, when excess of iron is treated with 50 mL of 4.0 M HCl under inert atomsphere ? Assume to change in volume :",
+      "choices": {
+        "a": "0.4",
+        "b": "0.1",
+        "c": "0.2",
+        "d": "0.8"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Chemical Reactions",
+      "subtopic_code": "stoichiometry",
+      "subtopic_name": "Stoichiometry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Meq. of Fe³⁺ = Meq. of FeCl₃\n= Meq. of HCl = 50 × 4 = 200\nMole of Fe³⁺ = = 0.1"
+    },
+    {
+      "number": 60,
+      "body": "The extraction of zinc from zinc blende is achieved by :",
+      "choices": {
+        "a": "electrolytic reducting",
+        "b": "roasting followed by reduction with carbon",
+        "c": "roasting followed by reduction with another metal",
+        "d": "roasting followed by self-reduction"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Metallurgy",
+      "subtopic_code": "extraction",
+      "subtopic_name": "Extraction of Metals",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "body": "The quadratic equation x² + mx + n = 0 has roots that are twice those of x² + px + m = 0, and none of m, n and p is zero. What is the value of n/p ?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "4",
+        "d": "8"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the roots of x² + px + m = 0 be r₁ and r₂. The sum of the roots is r₁ + r₂ = −p. The product is r₁r₂ = m. The roots of x² + mx + n = 0 are 2r₁ and 2r₂. The product of these roots is 4r₁r₂ = n. The sum of these roots is −m = 2(r₁ + r₂) = −2p ⟺ m = 2p.\n\nWe need n/p = 4r₁r₂/p = 4m/p = 4(2p)/p = 8"
+    },
+    {
+      "number": 62,
+      "body": "A triangle is partitioned into three triangles and a quadrilateral by drawing two lines from vertices to their opposite sides. The areas of the three triangles are 3, 7, and 7, as shown. What is the area of the shaded quadrilateral?",
+      "choices": {
+        "a": "15",
+        "b": "17",
+        "c": "18",
+        "d": "35/2"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "If C is the cevian intersection with AC, E the intersection of the other cevian with AB and {F} = BD ∩ CE, see that BF = FD and EF/FC = 3/7\n\nApplying Menelaus to △ABD with the transversal CFE we get BE/AE = CD/AC, while Menelaus from △ACE with transversal BDF: CD/AD = 7·BE/3·AB, multiplying these 2 relations side by side,\n\none gets: AE·AD/AB·AC = 3/7\n\nThis last relation means S_ADE/S_ABC = 3/7. Seeing that S_DEF = 3, from the above relation we get S_ADE = 15; adding S_DEF = 3, finally S_AEFD = 18"
+    },
+    {
+      "number": 63,
+      "body": "Circles of diameter 1 inch and 3 inches have the same center. The smaller circle is painted red, and the portion outside the smaller circle and inside the larger circle is painted blue. What is the ratio of the blue-painted area to the red-painted area?",
+      "choices": {
+        "a": "8",
+        "b": "6",
+        "c": "3",
+        "d": "2"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Geometry",
+      "subtopic_code": "circles",
+      "subtopic_name": "Circle Areas",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "The smaller circle has area pi. The large circle has area 9pi. The blue area has area 9pi-pi=8pi. The ratio is 8pi/pi=8. A."
+    },
+    {
+      "number": 64,
+      "body": "The equations 2x + 7 = 3 and bx - 10 = -2 have the same solution for x. What is the value of b?",
+      "choices": {
+        "a": "-8",
+        "b": "-4",
+        "c": "-2",
+        "d": "4"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Algebra",
+      "subtopic_code": "equations",
+      "subtopic_name": "Linear Equations",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "2x + 7 = 3 ⟹ x = −2, so −2 = bx − 10 = −2b − 10\nso 2b = −8 ⟹ b = −4, or (B)"
+    },
+    {
+      "number": 65,
+      "body": "In a triangle with integer side lengths, one side is three times as long as a second side, and the length of the third side is 15. What is the greatest possible perimeter of the triangle?",
+      "choices": {
+        "a": "43",
+        "b": "44",
+        "c": "45",
+        "d": "46"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Geometry",
+      "subtopic_code": "triangles",
+      "subtopic_name": "Triangle Inequality",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "By triangle inequality, 15 has to have the middle length. The largest value of x which satisfies x + 15 > 3x is x = 7, so we have 7 + 15 + 21 = 43 ⇒ (A)"
+    },
+    {
+      "number": 66,
+      "body": "Which of the following is equivalent to x/(x-1) * sqrt(1-x/x) when x < 0?",
+      "choices": {
+        "a": "-x",
+        "b": "x",
+        "c": "1",
+        "d": "sqrt(x/2)"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Algebra",
+      "subtopic_code": "expressions",
+      "subtopic_name": "Algebraic Expressions",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Algebraically simplifying, we have √x² = x. However, this is for x < 0, and the square root function gives the positive root, so our answer is (A)"
+    },
+    {
+      "number": 67,
+      "body": "Let a1, a2,... be a sequence for which a1 = 2, a2 = 3 and an = an-1/an-2 for each positive integer n ≥ 3. What is a2019?",
+      "choices": {
+        "a": "1/2",
+        "b": "2/3",
+        "c": "3/2",
+        "d": "3"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Sequences",
+      "subtopic_code": "recursive",
+      "subtopic_name": "Recursive Sequences",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "we see that the first few terms are 2,3,3/2, 1/2, 1/3, 2/3, 2,3, and so on. It repeats with period 6. 2006 is 2 greater than a multiple of 6, so the answer is 3. (D)"
+    },
+    {
+      "number": 68,
+      "body": "In rectangle ABCD, we have A = (6, -22), B = (2006, 178) and D = (8, y), for some integer y. What is the area of rectangle ABCD?",
+      "choices": {
+        "a": "4000",
+        "b": "4040",
+        "c": "4400",
+        "d": "40, 400"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Coordinate Geometry",
+      "subtopic_code": "rectangles",
+      "subtopic_name": "Rectangle Area",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "AB ⊥ AD\nSo, the slope of segment AB is equal to the negative reciprocal of the slope of segment AD.\n(yb - ya)/(xb - xa) = -1/(yd - ya)/(xd - xa)\n(178 + 22)/(2006 - 6) = -(8 - 6)/(y + 22)\n200/2000 = -2/(y + 22)\n1/10 = -2/(y + 22)\n-1 = 20/(y + 22)\n-y - 22 = 20\n-y = 42\ny = -42\nBecause ABCD is a rectangle, A_ABCD = (AB)(AD)\nAB = sqrt((2006 - 6)^2 + (178 + 22)^2)\nAB = sqrt((2000)^2 + (200)^2)\nAB = sqrt(4000000 + 400000)\nAB = sqrt(4400000)\nAB = 100sqrt(404)\n\nAD = sqrt((8 - 6)^2 + (-42 + 22)^2)\nAD = sqrt(2^2 + (-20)^2)\nAD = sqrt(4 + 400)\nAD = sqrt(404)\n\nA_ABCD = (AB)(AD) = 100sqrt(404)sqrt(404) = 40400 = (D)"
+    },
+    {
+      "number": 69,
+      "body": "Which one of the following quantities is irrational?",
+      "choices": {
+        "a": "(1 - tan^2 30°)/(1 + tan^2 30°)",
+        "b": "4 cos^2 30° - 3cos30°",
+        "c": "3 sin 30° - 4 sin^3 30°",
+        "d": "(2cot30°)/(cot^2 30° - 1)"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Trigonometry",
+      "subtopic_code": "identities",
+      "subtopic_name": "Trigonometric Identities",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Option (A) (1 - tan^2 30)/(1 + tan^2 30) = (1 - (1/sqrt(3))^2)/(1 + (1/sqrt(3))^2) = (1 - 1/3)/(1 + 1/3) = (2/3)/(4/3) = 1/2 (rational)\n\noption (B) 4 cos^4 30 - 3 cos 30 = cos 3 × 30 = cos 90 = 0 (rational)\noption (C) 3 sin 30 - 4 sin^3 30 = sin 3 × 30 = sin 90 = 1 (rational)\noption (D) (2cot30°)/(cot^2 30-1) = (2(sqrt(3)))/(sqrt(3))^2-1 = (2sqrt(3))/2 = sqrt(3) (irrational)"
+    },
+    {
+      "number": 70,
+      "body": "Find the sum to 200 terms of the series 1 + 4 + 6 + 5 + 11 + 6 + ......",
+      "choices": {
+        "a": "32,200",
+        "b": "23,200",
+        "c": "30,200",
+        "d": "None of these"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Series",
+      "subtopic_code": "arithmetic",
+      "subtopic_name": "Arithmetic Series",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Ist AP S₁ = (1 + 6 + 11 + ...up to 100 terms)\nS₁ = 100/2 [2(1) + 99 × 5] = 24850\nIInd AP S₂ = (4 + 5 + 6 + ... upto 100 terms)\nS₂ = 100/2 [2(4) + 99 × 1] = 5350\nS₁ + S₂ = 30,200. Correct option is (C)"
+    },
+    {
+      "number": 71,
+      "body": "When the polynomial x^3 - 2 is divided by the polynomial x^2 - 2, the remainder is",
+      "choices": {
+        "a": "2x - 2",
+        "b": "-2",
+        "c": "-2x - 2",
+        "d": "2x + 2"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Algebra",
+      "subtopic_code": "polynomials",
+      "subtopic_name": "Polynomial Division",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x³ - 2 = x(x² - 2) + 2x - 2 so the remainder is 2x - 2. Option (A) is correct."
+    },
+    {
+      "number": 72,
+      "body": "What is the tens digit in the sum 7! + 8! + 9! + ...... + 2018! ?",
+      "choices": {
+        "a": "1",
+        "b": "3",
+        "c": "4",
+        "d": "6"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Number Theory",
+      "subtopic_code": "factorials",
+      "subtopic_name": "Factorial Properties",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "7! = 5040\n8! = 40320\n9! = 362880\n10! = 3628800\nFrom 10! and on, we see that the ten's digit is simply 0. Therefore, we add 4 + 2 + 8 = 4 → C"
+    },
+    {
+      "number": 73,
+      "body": "A rectangle has area A cm^2 and perimeter P cm, where A and P are positive integers. Which of the following numbers cannot equal A + P ?",
+      "choices": {
+        "a": "100",
+        "b": "102",
+        "c": "104",
+        "d": "106"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "A = lw\nP = 2l + 2w\nA + P = lw + 2l + 2w\nA + P + 4 = (l + 2)(w + 2)\nWe are given that l and w are positive integers (see the proof above); obviously the only numbers that cannot be made as factors are 1 and 2.\nThus we are looking for a number such that n + 4 is the product of 2 and a prime.\nChecking, we see n = 102"
+    },
+    {
+      "number": 74,
+      "body": "How many pairs of positive integers (a, b) are there such that gcd (a, b) = 1 and a/b + 14b/9a is an integer?",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "9",
+        "d": "12"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let a/b + 14b/9a = n for some integer n. 9a² + 14b² = 9abn9 has to divide b². Otherwise, since 9 clearly divides 9a² and 9abm, the left hand side would not be divisible by n and the right hand side would. For 9 to divide b², either 3 or 9 divides b. If 9 divides it, then the right hand side would be divisible by 81 but the left hand side would still only be divisible by 9. That means only 3 can divide b. If any other number divides it, it would also divide the right hand side but not the left hand side, because a and b are relatively prime. Thus the only possible value of b is 3.\nIf something divides a except for 1, 2, 7, and 14 then it would not divide the term 14b², but it would divide the right hand side and the term 9a² and so this is impossible. So the only possible values of a are 1, 2, 7, 14\nWe then have four possibilities of (a, b): (1, 3), (2, 3), (7, 3), and (14, 3). If we plug them in we see that they all work, so the answer is (A)"
+    },
+    {
+      "number": 75,
+      "body": "There are two values of a for which the equation 4x^2 + ax + 8x + 9 = 0 has only one solution for x. What is the sum of these values of a?",
+      "choices": {
+        "a": "-16",
+        "b": "-8",
+        "c": "0",
+        "d": "8"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "4x² + (8 + a)x + 9 = 0 must be a perfect square.\nso we have (2x + 3)² = 0 or (2x - 3)² = 0,\nwhich give b = 8 + a = ±12 so we have a = 4, -20, and the sum of the values is -16 → A"
+    },
+    {
+      "number": 76,
+      "body": "Which of the following numbers is a perfect square?",
+      "choices": {
+        "a": "14! 15!/2",
+        "b": "17! 18!/2",
+        "c": "16! 17!/2",
+        "d": "15! 16!/2"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Notice how (17!!8!)/(2) = ((17!)^2 · 18)/(2) = 17!^2 · 9. This is obviously a perfect square, so our answer is (B)"
+    },
+    {
+      "number": 77,
+      "body": "Suppose that m and n are positive integers such that 75m = n^3. What is the minimum possible value of m + n?",
+      "choices": {
+        "a": "15",
+        "b": "30",
+        "c": "60",
+        "d": "5700"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "75 factorizes as 5^2 × 3. If 75m = n^3, so the exponents of each of the prime factors of 75m must be multiples of 3. Then 75m = 3^3 × 5^3 ⟹ m = 3^2 × 5 and n = ∛(75m) = 3^(1/3) × 5^(1/3) = 3 × 5 = 15 and so m + n = 45 + 15 = 60. Alternate: We have m + n = n^3/75 + n. Since 5|n, write n = 5k. Then m = (125k^3)/(75) = (5k^3)/(3), so put k = 3. Then m = 45 and n = 15, so m + n ≥ 60. (C)"
+    },
+    {
+      "number": 78,
+      "body": "Rectangle ABCD has AB = 8 and BC = 6.. Point M is the midpoint of diagonal AC, and E is on AB with ME ⊥ AC. What is the area of △AME ?",
+      "choices": {
+        "a": "65/8",
+        "b": "25/3",
+        "c": "9",
+        "d": "75/8"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "It can be shown that △AME ~ △ABC, because they both have a right angle and they share an angle in common. Thus, the scale factor of △AME to △ABC is 5/8. Therefore, ME = 6 · (5/8) = 15/4, and AM = 5, so the area is AM · ME = (1/2) · 5 · (15/4) = 75/8 (D)"
+    },
+    {
+      "number": 79,
+      "body": "Suppose that a cows give b gallons of milk in c days. At this rate, how many gallons of milk will d cows give in e days?",
+      "choices": {
+        "a": "bde/ac",
+        "b": "ac/bde",
+        "c": "abde/c",
+        "d": "bcde/a"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Note that we need to multiply b by d/a for the new supply of cows and c/c for the extra time, so (A)"
+    },
+    {
+      "number": 80,
+      "body": "There are 24 four-digit whole numbers that use each of the four digits 2, 4, 5 and 7 exactly once. Only one of these four-digit numbers is a multiple of another one. Which of the following is it?",
+      "choices": {
+        "a": "5724",
+        "b": "7245",
+        "c": "7425",
+        "d": "7254"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "The number must be either 2 or 3 times the smaller. We can easily check each option to find that 7425 = 3 · 2475 and the answer is (C)."
+    }
+  ]
+}

@@ -1,0 +1,1343 @@
+{
+  "paper": "2014_15_v2",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Three identical vessels carrying equal amount of water are placed in three lifts. Lift A is accelerating upwards, lift B is accelerating downwards while lift C is moving up with constant velocity. The pressure at a depth h from free surface in the three vessel is measured as pA, pB and pC then which of the following is true",
+      "choices": {
+        "a": "pA = pC > pB",
+        "b": "pA > pC > pB",
+        "c": "pA > pC = pB",
+        "d": "pA = pC = pB"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid_statics",
+      "subtopic_name": "Fluid Statics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 2,
+      "body": "In the reaction, 2KClO3→2KCl + 3O2 What is the volume of oxygen released under NTP conditions when 36.75g of KClO3 is heated?",
+      "choices": {
+        "a": "3.6 litres",
+        "b": "7.2 litres",
+        "c": "10 litres",
+        "d": "1.8 litres"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "body": "Figure shows a square grid of order 3, which of the following is correct formula for the total number of squares in a similar grid of order n.",
+      "choices": {
+        "a": "n(n+1)/2",
+        "b": "n(n+1)(2n+1)/6",
+        "c": "n²(n+1)²/4",
+        "d": "n(n+1)(n+2)/6"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "body": "If the distance between genes - W, X, Y, and Z on a chromosome are as follows: from W-Y is 18 units, W-X is 26 units, W-Z is 40 units, X-Y is 8 units and X-Z is 14 units, the sequence of W, X, Y, Z genes on the chromosome would be:",
+      "choices": {
+        "a": "W, X, Y, Z.",
+        "b": "X, Y, W, Z.",
+        "c": "Y, W, X, Z.",
+        "d": "W, Y, X, Z."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "body": "In a plant, 30 megaspore mother cells are generated. If all the ovules are fertilised, how many seeds are expected to be formed?",
+      "choices": {
+        "a": "30",
+        "b": "60",
+        "c": "90",
+        "d": "120"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "body": "A water filter advertisement claims to provide 8 litres of water per hour. How much time does it take to fill four bottles of 1.5 litres each?",
+      "choices": {
+        "a": "2 hr",
+        "b": "1 hr",
+        "c": "45 min",
+        "d": "30 min"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "body": "Which among the following salts will not change the pH of water on addition a)Sodium chloride b) Sodium cyanide c) Sodium bicarbonate d) Sodium carbonate",
+      "choices": {
+        "a": "Sodium chloride",
+        "b": "Sodium cyanide",
+        "c": "Sodium bicarbonate",
+        "d": "Sodium carbonate"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "A particle starting from rest is moving with uniform acceleration in a straight line. The percentage increase of the displacement of the particle in 9th second compared to that in the immediate previous second is about",
+      "choices": {
+        "a": "8.3%",
+        "b": "13.3%",
+        "c": "20.6%",
+        "d": "24.5%"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 9,
+      "body": "An inflated balloon with a heavy rock tied to it submerges in water. As the balloon sinks deeper and deeper, the buoyant force acting on it",
+      "choices": {
+        "a": "increases",
+        "b": "decreases",
+        "c": "remains nearly unchanged",
+        "d": "Initially increases and then decreases"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "buoyancy",
+      "subtopic_name": "Buoyancy and Archimedes Principle",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 10,
+      "body": "For a first order reaction, the ratio of the times taken for completion of 99.9% and 50% of the reaction is",
+      "choices": {
+        "a": "8",
+        "b": "9",
+        "c": "10",
+        "d": "12"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "body": "If set of marbles, of radius 5 cm, is poured into a cube of side 1 m. The maximum number of marbles that can be filled into the box are",
+      "choices": {
+        "a": "1000",
+        "b": "2000",
+        "c": "1500",
+        "d": "3000"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "body": "Most of the insects have egg, larva, pupa and adult stages in the life cycle. This is primarily due to :",
+      "choices": {
+        "a": "relatively short adult phase.",
+        "b": "terrestrial habitat they have adapted to.",
+        "c": "eggs storing little reserved food.",
+        "d": "flying mode of locomotion majority have."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "Which of the following has been proved to contribute to the transport of water in vascular plants?\n\ni. Positive root pressure\nii. Hyrophilic cell walls\niii. Capillarity\niv. Transpirational pull\nv. Cohesion between water molecules",
+      "choices": {
+        "a": "i, ii, iii, iv and v",
+        "b": "only i, iii and v",
+        "c": "only ii, iv and v",
+        "d": "only i, ii, iv and v"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "body": "A round table cover has six equal designs as shown in the adjacent figure. If the radius of the cover is 4 cm, then cost of making the designs at the rate of Rs 10.00 per cm² (round off your answer to a nearest rupee) is",
+      "choices": {
+        "a": "Rs 85",
+        "b": "86",
+        "c": "87",
+        "d": "90"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the figure showing the six equal designs"
+    },
+    {
+      "number": 15,
+      "body": "Which of the following series of elements have nearly the same atomic radii?",
+      "choices": {
+        "a": "F, Cl, Br, I",
+        "b": "Na, K, Rb, Cs",
+        "c": "Li, Be, B, C",
+        "d": "Fe, Co, Ni, Cu"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "body": "A particle is moving along a straight line. Its velocity time graph is as shown in the adjacent figure. Then\nMatch the following\n\nPhysical quantity | Remarks\n(i) Acceleration at 4 second | (p) Positive\n(ii) Velocity at 4 second | (q) Negative\n(iii) Direction of motion at 2 second | (r) Zero",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the velocity-time graph"
+    },
+    {
+      "number": 17,
+      "body": "A rectangular parallelepiped with sides a, b and c in the ratio 3:2:1 is kept on a uniformly rough horizontal surface as shown in the figures below. The value of limiting friction is",
+      "choices": {
+        "a": "Minimum in (i)",
+        "b": "Minimum in (ii)",
+        "c": "Minimum in (iii)",
+        "d": "Same in all cases"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "friction",
+      "subtopic_name": "Friction and equilibrium",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the figure showing the three orientations of the parallelepiped"
+    },
+    {
+      "number": 18,
+      "body": "Which of the following has the maximum number of unpaired electrons?",
+      "choices": {
+        "a": "Ti^3+",
+        "b": "V^3+",
+        "c": "Fe^3+",
+        "d": "Fe^2+"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "body": "The houses of a row are numbered consecutively from 1 to 49. Find the value of x such that the sum of the numbers of houses preceding the house numbered x is equal to the sum of the numbers of the houses following it.",
+      "choices": {
+        "a": "25",
+        "b": "37",
+        "c": "35",
+        "d": "No such value exists"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "body": "Urea is the principle excretary waste in larval as well as adult phases of:",
+      "choices": {
+        "a": "Cockroach",
+        "b": "Frog",
+        "c": "Crab",
+        "d": "Starfish"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "body": "Use of excessive NKP fertilizers has resulted in:\ni. Reduction in number as well as species of nitrogen fixing bacteria\nii. Increase in number as well as types of denitrifying bacteria\niii. Increase in the proportion of coarse particles in soil.\niv. Increase in number as well as types of ammonifying microbes\nv. Increase in number as well as types of nitrifying bacteria",
+      "choices": {
+        "a": "i, ii, iii, iv and v",
+        "b": "only ii, iv and v",
+        "c": "only i and ii",
+        "d": "only i, ii and iii"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "body": "Along a road lie an odd number of stones placed at intervals of 10 metre. These stones have to be assembled around the middle stone. A person can carry only one stone at a time. If a man starts from one of the end stones, and by carrying them in succession he covers 3 km to pile all stones at the centre. The number of stones is then",
+      "choices": {
+        "a": "12",
+        "b": "15",
+        "c": "25",
+        "d": "30"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "The following variation of properties is generally seen in the periodic table.",
+      "choices": {
+        "a": "Atomic radius and ionization energy both increase across a period.",
+        "b": "Atomic radius increases and ionization energy decreases across a period.",
+        "c": "Atomic radius decreases and ionization energy increases across a period.",
+        "d": "Atomic radius and ionization energy both decrease across a period."
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "The erythrocytes separated from human blood were mixed with certain fluids on a slide and observed under the microscope. Which of the following will be the expected result?",
+      "choices": {
+        "a": "With distilled water the cells swell and eventually burst.",
+        "b": "With serum the cells clump and coagulate.",
+        "c": "With sea water the cells undergo no apparent change.",
+        "d": "With tap water cells shrink and appear cremated."
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "The largest of the jelly-fishes grow over 1 meter in diameter and can survive without any skeletal support due to:",
+      "choices": {
+        "a": "rapid beating of cilia creating an upthrust.",
+        "b": "the bottom dwelling habit.",
+        "c": "high salinity and subsequent buoyancy of sea water.",
+        "d": "upwelling currents in water."
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "body": "The diagram shows a road network. All vehicles drive in one direction from A to B. Numbers represent the maximum flow rate (capacity of roads) in vehicles per hour. The maximum number of vehicles that can drive through the network every hour is",
+      "choices": {
+        "a": "315",
+        "b": "215",
+        "c": "240",
+        "d": "340"
+      },
+      "correct": null,
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without analyzing the road network diagram"
+    },
+    {
+      "number": 27,
+      "body": "An excess of NaOH solution is added gradually to an aqueous solution of ZnSO4. Which of the following will happen?",
+      "choices": {
+        "a": "A white precipitate is formed which does not dissolve in excess NaOH.",
+        "b": "A green precipitate is formed which dissolves in excess NaOH.",
+        "c": "A white precipitate is formed which dissolves in excess NaOH.",
+        "d": "No observable change occurs."
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "body": "If two bodies of different masses, initially at rest, are acted upon by the same force for the same time, then both bodies acquire the same",
+      "choices": {
+        "a": "Velocity",
+        "b": "momentum",
+        "c": "acceleration",
+        "d": "kinetic energy"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "impulse",
+      "subtopic_name": "Impulse and Momentum",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 29,
+      "body": "It is more difficult to walk on a sandy road than on a concrete road. The most appropriate reason for this is",
+      "choices": {
+        "a": "sand is soft and concrete is hard",
+        "b": "the friction between sand and feet is less than that between concrete and feet",
+        "c": "the friction between sand and feet is more than that between concrete and feet",
+        "d": "the sand is grainy but concrete is solid"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "friction",
+      "subtopic_name": "Friction",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 30,
+      "body": "In which of the following series of transition metal ions, all metal ions have 3d² electronic configuration?",
+      "choices": {
+        "a": "Ti³⁺, V⁴⁺, Cr⁵⁺, Mn⁶⁺",
+        "b": "Ti²⁺, V³⁺, Cr⁴⁺, Mn⁵⁺",
+        "c": "Ti³⁺, V²⁺, Cr³⁺, Mn⁴⁺",
+        "d": "Ti⁴⁺, V²⁺, Cr²⁺, Mn³⁺"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "topic_name": "Electronic Configuration",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "body": "A piece of wire 60 cm long is cut into two parts, one of them being 24 cm long. Each part is then bent to form a square. The ratio of the area of the larger square to the smaller square is",
+      "choices": {
+        "a": "11/3",
+        "b": "7/4",
+        "c": "3/2",
+        "d": "9/4"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "body": "In the cells of oil seeds which of the cell organelles have to be more active?",
+      "choices": {
+        "a": "Mitochondria.",
+        "b": "Smooth Endoplasmic Reticulum.",
+        "c": "Rough Endoplasmic Reticulum.",
+        "d": "Nucleoli."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "body": "Which of the following sugars tastes most sweet?",
+      "choices": {
+        "a": "Fructose.",
+        "b": "Ribose.",
+        "c": "Sucrose.",
+        "d": "Lactose."
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "topic_name": "Carbohydrates",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "body": "Scientists in an R & D company made three design improvements on a car: the first saves 50% of fuel, the second saves 30% of fuel and the third saves 20%. If the company implements all three design changes at once, the new car will consume fuel that is ___% of the fuel consumption of normal car.",
+      "choices": {
+        "a": "50%",
+        "b": "28%",
+        "c": "100%",
+        "d": "20%"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "body": "Aluminum is extracted from its oxide by",
+      "choices": {
+        "a": "Calcination",
+        "b": "Reduction",
+        "c": "Thermal decomposition",
+        "d": "Electrolysis"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "topic_name": "Metallurgy",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "body": "The magnetic force on a moving charged particle can change the particle's",
+      "choices": {
+        "a": "speed only",
+        "b": "direction only",
+        "c": "Both speed and direction",
+        "d": "neither of speed nor direction"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "charged_particles",
+      "subtopic_name": "Motion of Charged Particles",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 37,
+      "body": "A ray of light is incident on system of mirror as shown in the adjacent figure. What is the total deflection (d) of the ray when it emerges out after two reflections?",
+      "choices": {
+        "a": "220°",
+        "b": "180°",
+        "c": "140°",
+        "d": "120°"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "reflection",
+      "subtopic_name": "Reflection",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the mirror configuration in the figure"
+    },
+    {
+      "number": 38,
+      "body": "The oxidation number of sulphur in sodium thiosulphate (Na₂S₂O₃) is",
+      "choices": {
+        "a": "+1",
+        "b": "+2",
+        "c": "+3",
+        "d": "+4"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "topic_name": "Oxidation Number",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "The adjacent figure is a modification of the Switzerland flag to suit the problem! Five identical small squares form the central cross. The length of each side of the big square is 10 m. If the area of the white cross is 20% of the area of the square flag, then the length of the side of the small square is",
+      "choices": {
+        "a": "1.75 m",
+        "b": "2.25 m",
+        "c": "1.6 m",
+        "d": "2 m"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "The algae belonging to which group can sustain normal growth at the greater depth of ocean?",
+      "choices": {
+        "a": "Green algae.",
+        "b": "Blue-green algae.",
+        "c": "Brown algae.",
+        "d": "Red algae."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "body": "Snakes, the cold blooded animals, flick their bifid tongue often to:",
+      "choices": {
+        "a": "sample air for chemoreceptors.",
+        "b": "sense vibrations in earth.",
+        "c": "sense the nature of substratum.",
+        "d": "sense the temperature of air."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "We all know that the sky appears to touch the ground at a distance. The distance at which we perceive the sky to touch the ground is called horizon. The reason for the perception is due to the fact that the Earth is a sphere (almost) and not a flat surface. Which of these pictures below accurately depict the horizon for a person standing on a high rise building like Burj Khalifa in Dubai? (Here, 'h' represents the height of the building while line 'H' represents the horizon)",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "horizon",
+      "subtopic_name": "Horizon and Perspective",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the figure showing the different horizon diagrams"
+    },
+    {
+      "number": 43,
+      "body": "Sulphuric acid is manufactured by the contact process in which sulphur dioxide reacts with oxygen in presence of a catalyst. If 5.6 moles of SO2 reacts with 4.8 moles of O2 and a large excess of water, the maximum number of moles of H2SO4 that can be obtained is.",
+      "choices": {
+        "a": "5.6",
+        "b": "11.2",
+        "c": "4.8",
+        "d": "1.4"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "body": "The element essential for determining the three dimentional structure of proteins is:",
+      "choices": {
+        "a": "carbon.",
+        "b": "hydrogen.",
+        "c": "nitrogen.",
+        "d": "sulphur."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "body": "The general indigestion experienced by a patient suffering from obstructive jaundice is due to:",
+      "choices": {
+        "a": "the lack of emulsification of lipids.",
+        "b": "the low pH in the intestine not supporting optimal activity of enzymes.",
+        "c": "the acceleration of intestinal peristalsis reducing the retention time for food.",
+        "d": "the diffusion of bile pigments in blood suppressing secretion of digestive juices."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "A number is said to be a triangular number if it is the sum of consecutive numbers beginning with 1. Which one of the following is not a triangular number",
+      "choices": {
+        "a": "1431",
+        "b": "190",
+        "c": "506",
+        "d": "28"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "body": "The equivalent weight of MnSO4 is half its molecular weight when it is converted to",
+      "choices": {
+        "a": "Mn2O3",
+        "b": "MnO2",
+        "c": "MnO4",
+        "d": "MnO4^2-"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "body": "A light source of diameter 2 cm is placed 20 cm behind a circular opaque disc of diameter 4cm. Shadow is formed on a screen at a distance of 80cm. The ratio of the area of umbra and penumbra shadow regions is equal to.",
+      "choices": {
+        "a": "0.22",
+        "b": "0.18",
+        "c": "0.58",
+        "d": "0.11"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "shadows",
+      "subtopic_name": "Shadow Formation",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 49,
+      "body": "Consider the following two statements. Statement 1: The direction of acceleration of a particle must be always same as that of velocity. Statement 2: Acceleration is the rate of change of velocity. Choose the correct option",
+      "choices": {
+        "a": "Statement (1) is correct while statement (2) is wrong",
+        "b": "Statement (1) and (2) are correct",
+        "c": "Statement (1) is wrong while statement (2) is correct",
+        "d": "Statement (1) and (2) are wrong."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 50,
+      "body": "Rust is a mixture of",
+      "choices": {
+        "a": "FeO + Fe(OH)2",
+        "b": "FeO + Fe(OH)3",
+        "c": "Fe2O3 + Fe(OH)3",
+        "d": "Fe3O4 + Fe(OH)3"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "If the distance between A and B is 230 km, B and C is 120 km, C and A is 350 km. Also, if the distance between C and D is 200 km, distance between D and B is 330 km and distance from A to E is 100 km and distance between D and E is 570 km. The diagram (not drawn to scale) that represents this graphically is",
+      "choices": {
+        "a": "[diagram showing points arranged in a pentagon shape]",
+        "b": "[diagram showing points in a rectangular arrangement]",
+        "c": "[diagram showing points in a triangular arrangement with additional point]",
+        "d": "[diagram showing points in a different rectangular arrangement]"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "body": "Which of the following contains the same number of atoms as 13.5 grams of aluminum?",
+      "choices": {
+        "a": "10 g of sodium",
+        "b": "10 g of magnesium",
+        "c": "20 g of potassium",
+        "d": "20 g of calcium"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "body": "Consider the following two statements. Statement 1 is an assertion of a concept while Statement 2 is the reason.\nStatement (1): When red light travels from air to water, for observer in water it appears to be still red.\nStatement (2): Colour of light is associated with frequency and frequency does not change, when it travels in different medium.\nChoose the correct option",
+      "choices": {
+        "a": "Statement (1) is correct while statement (2) is wrong",
+        "b": "Statement (1) and (2) are correct",
+        "c": "Statement (1) is wrong while statement (2) is correct",
+        "d": "Statement (1) and (2) are wrong."
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction and Light Properties",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 54,
+      "body": "A spring of spring constant 7600 Nm^-1 is attached to a block of mass 0.25 kg as shown in figure. Frequency of oscillation on frictionless surface is",
+      "choices": {
+        "a": "27.76 Hz",
+        "b": "39.26 Hz",
+        "c": "9681.5 Hz",
+        "d": "98.39 Hz"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves and Oscillations",
+      "subtopic_code": "shm",
+      "subtopic_name": "Simple Harmonic Motion",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 55,
+      "body": "The following data was recorded for the reaction A + B →Product at 298K.\n\nExperiment No. | [A] | [B] | Rate of reaction\n1 | 1.00M | 0.15M | 4.20 x 10^-3\n2 | 2.00M | 0.15M | 8.40 x 10^-3\n3 | 1.00M | 0.30M | 8.40 x 10^-3\n\nFrom the above data one can conclude that",
+      "choices": {
+        "a": "Rate ∝ [A]^2[B]",
+        "b": "Rate ∝ [A][B]^2",
+        "c": "Rate ∝ [A][B]",
+        "d": "Rate ∝ [A]^2[B]^2"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "The sum of 2 digits x and y is divisible by 7. What can one say about a 3 digit number formed by these two digits.",
+      "choices": {
+        "a": "xyx is divisible by 7",
+        "b": "xxy is divisible by 7",
+        "c": "yyx is divisible by 7^2",
+        "d": "yyx is divisible by 7"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "body": "Most of the microbes employed in commercial fermentation for producing antibodies are:",
+      "choices": {
+        "a": "thread bacteria.",
+        "b": "yeasts.",
+        "c": "eubacteria.",
+        "d": "ascomycete fungi."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "body": "Most of the cellular RNA is synthesised and stored respectively in:",
+      "choices": {
+        "a": "cytoplasm and ribosomes.",
+        "b": "ribosomes and cytoplasm.",
+        "c": "nucleus and ribosomes.",
+        "d": "ribosomes and nucleus."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "body": "A number of bacteria are placed in a glass. 1 second later each bacterium divides in three, the next second each of the resulting bacteria divides in three again, and so on. After one minute the glass is full. When was 1/9^th of the glass full?",
+      "choices": {
+        "a": "15 sec",
+        "b": "58 sec",
+        "c": "45 sec",
+        "d": "38 sec"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "body": "A number x is a rational number If there exists integers p and q such that x = p/q. This is the definition of rational numbers in which,",
+      "choices": {
+        "a": "both p & q can be zero",
+        "b": "both p & q should not be zero",
+        "c": "p can be zero but not q",
+        "d": "q can be zero but not p"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "body": "There is a solution of 1 Litre HCl of pH 5. When 9 L of water is added to this solution, the pH turns out to be",
+      "choices": {
+        "a": "pH 5 itself",
+        "b": "pH 10",
+        "c": "pH 4",
+        "d": "pH 6"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "body": "A wave is sent along a string by oscillating at one end. If the tension in the string is increased then speed of the wave and wavelength of the wave",
+      "choices": {
+        "a": "both increase",
+        "b": "speed increases, wavelength decreases",
+        "c": "both decreases",
+        "d": "wavelength increases, speed decreases"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "string_waves",
+      "subtopic_name": "Waves on Strings",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 63,
+      "body": "Clock A based on oscillations of spring and clock B is based on pendulum motion. Both the clocks keep the same time on earth. If they are taken to a planet having half the density of earth and twice the radius",
+      "choices": {
+        "a": "then A runs faster than B.",
+        "b": "B runs faster than A.",
+        "c": "both will run at same rate as earth",
+        "d": "both will run at equal faster rate than earth."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "oscillations",
+      "subtopic_name": "Simple Harmonic Motion",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 64,
+      "body": "Assuming ideal gas behavior, which among the following gases will have the least density under room temperature and pressure.",
+      "choices": {
+        "a": "Nitrogen",
+        "b": "Oxygen",
+        "c": "Ozone",
+        "d": "Fluorine"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "body": "The least positive integer, n, such that 2 divides n, 3 divides n + 1, 4 divides n + 2, 5 divides n + 3 and 6 divides n + 4 is",
+      "choices": {
+        "a": "52",
+        "b": "120",
+        "c": "720",
+        "d": "62"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "body": "Which of the following places having same number of species is considered most biodiverse?",
+      "choices": {
+        "a": "species belonging to more taxa.",
+        "b": "many of the species endemic.",
+        "c": "many of the species economically important.",
+        "d": "species adapted to greater number of habitats."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "body": "Axolotl, the Mexican Salamander, shows 'neoteny' or larva becoming sexually mature (adult). Which of the following characters indicate larval features in it?\n\ni. Naked skin\nii. External gills\niii. Lidless eyes\niv. Laterally compressed tail\nv. Clawless digits",
+      "choices": {
+        "a": "i, ii, iii, iv and v.",
+        "b": "only i, ii, iv and v",
+        "c": "only ii, iii, iv and v.",
+        "d": "only ii and iv."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "body": "The solution set of the inequality 0 < x/(x+1) < 1, x ∈ R is",
+      "choices": {
+        "a": "Set of all positive real numbers",
+        "b": "set of all non-negative real numbers",
+        "c": "set of all real numbers except -1",
+        "d": "Set of all numbers satisfying 0 ≤ x ≤ 1, x ∈ R"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "body": "Which among the following organic compounds is likely to have more than one possible structure?",
+      "choices": {
+        "a": "CH4",
+        "b": "C3H8",
+        "c": "C2H4",
+        "d": "C3H6"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "body": "In the circuit B1, B2, and B3 represent identical bulbs. Consider the case (i) With resistance R4 (ii) without the resistance R4 (R4 comparable with resistance of bulb)",
+      "choices": {
+        "a": "B1,B2 and B3 glow with equal brightness in both cases.",
+        "b": "B1 brightest in (i) and in (ii) B2 and B3 become brighter and B1 dimmer compared to case (i).",
+        "c": "B2,B3 brightest in case (i) and B1 becomes brighter in (ii).",
+        "d": "B1 brightest in (i) and B2 becomes brighter in comparison to B3 in (ii)."
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Circuit Analysis",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Circuit diagram is essential for understanding the configuration of bulbs and resistors"
+    },
+    {
+      "number": 71,
+      "body": "Three identical resistors each of resistance R are connected in the following four configurations. Rank the arrangement in the order of their equivalent resistors from highest to lowest.",
+      "choices": {
+        "a": "i,ii,iii & iv",
+        "b": "iv,iii,ii & i",
+        "c": "i,iii,iv & ii",
+        "d": "ii,iv,iii & i"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Series and Parallel Resistance",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Circuit diagrams showing the four configurations are essential for solving"
+    },
+    {
+      "number": 72,
+      "body": "Given below are the structures of the famous molecules called Aspirin and Paracetamol. Which among the listed functional groups do the two molecules put together NOT contain?",
+      "choices": {
+        "a": "Ketone",
+        "b": "Ester",
+        "c": "Alcohol",
+        "d": "Carboxylic acid"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "body": "Number plate of a vehicle consists of 4 digits. The first digit is the square of second. The third digit is thrice the second and the fourth digit is twice the second. The sum of all 4 digits is thrice the first. The number is",
+      "choices": {
+        "a": "1132",
+        "b": "4264",
+        "c": "9396",
+        "d": "1642"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "body": "The pteridophytic character that is considered to have led to the evolution of gymnosperms is:",
+      "choices": {
+        "a": "homospory.",
+        "b": "heterospory.",
+        "c": "furcate venation.",
+        "d": "sporophylls distinct from vegetative leaves."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 75,
+      "body": "Seeds trapped in crevices of rocks soak in water, swell and cause fragmentation of rock. The process involved is termed:",
+      "choices": {
+        "a": "imbibition.",
+        "b": "osmosis.",
+        "c": "Tyndall effect.",
+        "d": "water potential."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 76,
+      "body": "If the highest common factor of a, b and c is 1, where a, b and c belong to the set of natural numbers, then the highest common factor of (a X b) and c is",
+      "choices": {
+        "a": "c",
+        "b": "a X b",
+        "c": "1",
+        "d": "Insufficient data"
+      },
+      "correct": null,
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 77,
+      "body": "If a firecracker burns with emission of red colour light, which cation is it likely to contain?",
+      "choices": {
+        "a": "Sodium",
+        "b": "Copper",
+        "c": "Iron",
+        "d": "Lithium"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "body": "A positively charged insulator is brought in contact with an uncharged conductor then a) conductor acquires positive charge due to conduction b) conductor acquires negative charge due to induction c) conductor acquires positive charge due to induction d) conductor cannot acquire any charge.",
+      "choices": {
+        "a": "conductor acquires positive charge due to conduction",
+        "b": "conductor acquires negative charge due to induction",
+        "c": "conductor acquires positive charge due to induction",
+        "d": "conductor cannot acquire any charge."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "electrostatics",
+      "subtopic_name": "Electrostatics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 79,
+      "body": "Two infinite wires carrying identical current are placed at position A and C normal to plane of the paper as shown in the adjacent figure. The resultant magnetic field (B) at point P on the perpendicular bisector is a) Along perpendicular bisector pointing towards line AC b) Along Line joining PC and pointing towards C c) Along line joining PA and pointing towards A d) Along line parallel to AC and pointing towards right",
+      "choices": {
+        "a": "Along perpendicular bisector pointing towards line AC",
+        "b": "Along Line joining PC and pointing towards C",
+        "c": "Along line joining PA and pointing towards A",
+        "d": "Along line parallel to AC and pointing towards right"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "magnetic_field",
+      "subtopic_name": "Magnetic Field",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the figure showing the configuration of wires and point P"
+    },
+    {
+      "number": 80,
+      "body": "When an incandescent bulb is switched on and the outer glass bulb also gets heated up. This is due to a) Conduction and convection of heat from filament to the bulb by the medium inside the bulb at lower temperatures and by radiation of heat at higher temperature b) Convection of heat from filament to the bulb by the medium inside the bulb at all temperatures c) Radiation of heat from filament to the bulb at all temperatures d) Conduction of heat from filament to the bulb by the medium inside the bulb at higher temperatures and by radiation of heat at lower temperature",
+      "choices": {
+        "a": "Conduction and convection of heat from filament to the bulb by the medium inside the bulb at lower temperatures and by radiation of heat at higher temperature",
+        "b": "Convection of heat from filament to the bulb by the medium inside the bulb at all temperatures",
+        "c": "Radiation of heat from filament to the bulb at all temperatures",
+        "d": "Conduction of heat from filament to the bulb by the medium inside the bulb at higher temperatures and by radiation of heat at lower temperature"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "heat_transfer",
+      "subtopic_name": "Heat Transfer",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    }
+  ]
+}

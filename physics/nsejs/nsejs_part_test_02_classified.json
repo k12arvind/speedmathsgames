@@ -1,0 +1,1017 @@
+{
+  "paper": "part_test_02",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Masses of three are in the ratio 1 : 3 : 5. Their lengths are in the ratio 5 : 3 : 2. When they are connected in series to an external source, the amounts of heats produced in them are in the ratio",
+      "choices": {
+        "a": "125 : 15 : 1",
+        "b": "1 : 15 : 125",
+        "c": "5 : 3 : 1",
+        "d": "1 : 3 : 5"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance and Heating",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 2,
+      "body": "A cell develops the same power across two resistances R1 & R2 separately. The internal resistance of the cell is",
+      "choices": {
+        "a": "√(R1R2)",
+        "b": "√(2R1R2)",
+        "c": "R1 + R2",
+        "d": "R1 - R2"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Circuit Analysis",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 3,
+      "body": "Find out the value of current through 2Ω resistance for the given circuit.",
+      "choices": {
+        "a": "0",
+        "b": "1.6 A",
+        "c": "2.4 A",
+        "d": "3 A"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Circuit Analysis",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram"
+    },
+    {
+      "number": 4,
+      "body": "Equivalent resistance across A and B in the given circuit if r = 10Ω, R = 20Ω is",
+      "choices": {
+        "a": "7Ω",
+        "b": "14Ω",
+        "c": "35Ω",
+        "d": "20/3 Ω"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Equivalent Resistance",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram"
+    },
+    {
+      "number": 5,
+      "body": "The effective resistance between points P and Q of the electrical circuit shown in the figure is",
+      "choices": {
+        "a": "2Rr/(R+r)",
+        "b": "8R(R+r)/(3R+r)",
+        "c": "2r + 4R",
+        "d": "5R/2 + 2r"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Equivalent Resistance",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram"
+    },
+    {
+      "number": 6,
+      "body": "Two bars of radius r and 2r are kept in contact as shown. An electric current I is passed through the bars. Which one of the following is correct?",
+      "choices": {
+        "a": "Heat produced in bar BC is 4 times the heat produced in bar AB.",
+        "b": "Electric field in both halves is equal.",
+        "c": "Current density across AB is double that of across BC.",
+        "d": "Potential difference across AB is 4 times that of across BC."
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "current",
+      "subtopic_name": "Current and Resistance",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the diagram showing the bar configuration"
+    },
+    {
+      "number": 7,
+      "body": "Two holes of unequal diameters d1 and d2(d1 > d2) are cut in a metal sheet. If the sheet is heated",
+      "choices": {
+        "a": "Both d1 and d2 will decrease",
+        "b": "Both d1 and d2 will increase",
+        "c": "d1 will increase, d2 will decrease",
+        "d": "d1 will decrease, d2 will increase"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Temperature",
+      "subtopic_code": "expansion",
+      "subtopic_name": "Thermal Expansion",
+      "difficulty": "easy",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 8,
+      "body": "If there are no heat losses, the heat released by the condensation of x gram of steam at 100°C into water at 100°C can be used to convert y gram of ice at 0°C into water at 100°C. Then the ratio y : x is nearly",
+      "choices": {
+        "a": "1 : 1",
+        "b": "2.5 : 1",
+        "c": "2 : 1",
+        "d": "3 : 1"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "phase_change",
+      "subtopic_name": "Phase Changes and Latent Heat",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 9,
+      "body": "Two mirrors are inclined at an angle θ as shown in the figure. Light ray is incident parallel to one of the mirrors. Light will start retracing its path after third reflection if:",
+      "choices": {
+        "a": "θ = 45°",
+        "b": "θ = 30°",
+        "c": "θ = 60°",
+        "d": "All three"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "reflection",
+      "subtopic_name": "Reflection from Mirrors",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the figure showing the mirror configuration"
+    },
+    {
+      "number": 10,
+      "body": "A person's eye is at a height of 1.5 m. He stands infront of a 0.3m long plane mirror which is 0.8 m above the ground. The length of the image he sees of himself is:",
+      "choices": {
+        "a": "1.5 m",
+        "b": "1.0 m",
+        "c": "0.8 m",
+        "d": "0.6 m"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "plane_mirror",
+      "subtopic_name": "Plane Mirror",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 11,
+      "body": "A plane mirror is moving with velocity 4i + 5j + 8k. A point object in front of the mirror moves with a velocity 3i + 4j + 5k. Here k is along the normal to the plane mirror and facing towards the object. The velocity of the image is:",
+      "choices": {
+        "a": "−3i − 4j + 5k",
+        "b": "3i + 4j + 11k",
+        "c": "−3i − 4j + 11k",
+        "d": "7i + 9j + 11k"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "plane_mirror",
+      "subtopic_name": "Plane Mirror",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 12,
+      "body": "Given that, velocity of light in quartz = 1.5 × 10^8 m/s and velocity of light in glycerine = (9/4) × 10^8 m/s. Now a slab made of quartz is placed in glycerine as shown. The shift of the object produced by slab is",
+      "choices": {
+        "a": "6 cm",
+        "b": "3.55 cm",
+        "c": "9 cm",
+        "d": "2 cm"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction and Displacement",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "A rectangular metal tank filled with a certain liquid is as shown in the figure. The observer, whose eye is in level with the top of the tank can just see the corner E of the tank. Therefore, the minimum refractive index of the liquid is",
+      "choices": {
+        "a": "1.67",
+        "b": "1.50",
+        "c": "1.33",
+        "d": "1.25"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "body": "In the figure shown find the total magnification after two successive reflections first on M₁ and then on M₂. f = 10cm, f = -20cm",
+      "choices": {
+        "a": "+1",
+        "b": "−2",
+        "c": "+2",
+        "d": "−1"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "spherical_mirrors",
+      "subtopic_name": "Spherical Mirrors",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "body": "The image for the converging beam after refraction through the curved surface (in the given figure) is formed at:",
+      "choices": {
+        "a": "x = 40 cm",
+        "b": "x = 40/3 cm",
+        "c": "x = -40/3 cm",
+        "d": "x = 180/7 cm"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the optical diagram showing beam refraction"
+    },
+    {
+      "number": 16,
+      "body": "1 g steam at 100°C is passed in an insulated vessel having 1 g ice at 0°C. Find the equilibrium temperature of the mixture. Neglect heat capacity of the vessel",
+      "choices": {
+        "a": "100°C",
+        "b": "80°C",
+        "c": "60°C",
+        "d": "40°C"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "calorimetry",
+      "subtopic_name": "Calorimetry and Phase Changes",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 17,
+      "body": "In the electrical network, shown in the diagram, R1 = 5 Ω, R2 = 2 Ω, R3 = 3 Ω and E1 = 2E2 = 10V. Sources have negligible internal resistance. For this network,",
+      "choices": {
+        "a": "The power generated in R1 is 6.4 J/s",
+        "b": "If the sources of e.m.f E1 and E2 were physically inter changed, without changing the polarities, the power generated in R1 will be the same.",
+        "c": "If the polarities of the sources E1 and E2 were both reversed, the power generated in R1 will be the same.",
+        "d": "The ratio of the powers generated in R2 and R3 is 1 : 30."
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electrical Circuits",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the circuit diagram"
+    },
+    {
+      "number": 18,
+      "body": "In the given network, the powers generated in the resistors R1 and R2 are P1 and P2 and the power generated in R is P. For this network,",
+      "choices": {
+        "a": "If P1 = P2, it necessarily follows that R1 = R2",
+        "b": "If R = R1 + R2, then P > P1 + P2",
+        "c": "If P = P1 + P2, then R < (R1 + R2)/4",
+        "d": "If R1 = R2, then it necessarily follows that P = P1 + P2"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electrical Circuits",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the circuit diagram"
+    },
+    {
+      "number": 19,
+      "body": "When the temperature of a copper coin is raised by 80°C, its diameter increases by 0.2%.",
+      "choices": {
+        "a": "Percentage rise in the area of a face is 0.4%",
+        "b": "Percentage rise in the thickness is 0.4%",
+        "c": "Percentage rise in the volume is 0.6%",
+        "d": "Coefficient of linear expansion of copper is 0.25 × 10^-4/°C"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "expansion",
+      "subtopic_name": "Thermal Expansion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 20,
+      "body": "A clock is calibrated at a temperature of 20°C. Assume that the pendulum is a thin brass rod of negligible mass with a heavy bob attached to the end (αbrass = 19 × 10^-6 K)",
+      "choices": {
+        "a": "On a hot day at 30°C the clock loses 6.2 s",
+        "b": "On a hot day at 30°C the clock loses 8.2 s",
+        "c": "On a cold day at 10°C the clock gains 8.2 s",
+        "d": "On a cold day at 10°C the clock gains 6.2 s"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "expansion",
+      "subtopic_name": "Thermal Expansion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 21,
+      "body": "Air contains 79% N2 and 21% O2 by volume. If the pressure is 750 mm of Hg, the partial pressure of O2 is -",
+      "choices": {
+        "a": "157.5 mm of Hg",
+        "b": "175.5 mm of Hg",
+        "c": "315.0 mm of Hg",
+        "d": "257.5 mm of Hg"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "body": "A 4.0 dm³ flask containing N2 at 4.0 bar was connected to a 6.0 dm³ containing helium at 6.0 bar, and the gases were allowed to mix isothermally, then the total pressure of the resulting mixture will be",
+      "choices": {
+        "a": "10.0 bar",
+        "b": "5.2 bar",
+        "c": "1.6 bar",
+        "d": "5.0 bar"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "Choose the correct option for graphical representation of Boyle's law, which shows a graph of pressure vs. volume of a gas at different temperatures:",
+      "choices": {
+        "a": "Graph 1",
+        "b": "Graph 2",
+        "c": "Graph 3",
+        "d": "Graph 4"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question requires analyzing four pressure vs volume graphs at different temperatures to identify correct Boyle's law representation"
+    },
+    {
+      "number": 24,
+      "body": "600 cc of a gas at a pressure of 750 mm is compressed to 500 cc. Taking the temperature to remain constant, the increase in pressure is:",
+      "choices": {
+        "a": "150 mm",
+        "b": "250 mm",
+        "c": "350 mm",
+        "d": "450 mm"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "A weather balloon is inflated with He. The volume of balloon is 200 m³ and it must be inflated to a pressure of 0.2 atm. If 100 L gas cylinders of He of a pressure of 100 atm are used, how many cylinders are needed? Assume temperature is constant.",
+      "choices": {
+        "a": "1",
+        "b": "4",
+        "c": "8",
+        "d": "2"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "body": "At 27°C the ratio of rms velocities of ozone to oxygen is",
+      "choices": {
+        "a": "sqrt(5/5)",
+        "b": "sqrt(4/3)",
+        "c": "sqrt(2/3)",
+        "d": "0.25"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "body": "Densities of two gases having same molar masses are in the ratio 1 : 2 and their temperature are in the ratio 2 : 1. Then the ratio of their respective pressure is :-",
+      "choices": {
+        "a": "1 : 1",
+        "b": "1 : 2",
+        "c": "2 : 1",
+        "d": "4 : 1"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "body": "A unit cell having dimensions, a = b ≠ c ; α = β = γ = 90° is known as",
+      "choices": {
+        "a": "Cubic",
+        "b": "Tetragonal",
+        "c": "Rhombohedral",
+        "d": "Orthorhombic"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "body": "Which of the following property of water can be used to explain the spherical shape of rain droplets?",
+      "choices": {
+        "a": "Viscosity",
+        "b": "Surface tension",
+        "c": "Critical phenomena",
+        "d": "Pressure"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "body": "Identify A, B and C respectively in the given curve? Atomic volume vs Atomic mass",
+      "choices": {
+        "a": "Li, F, Be",
+        "b": "Be, Li, F",
+        "c": "Li, Mg, Cl",
+        "d": "F, K, Ca"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question requires analyzing specific peaks A, B, and C on an atomic volume vs atomic mass curve"
+    },
+    {
+      "number": 31,
+      "body": "If atomic number of X is 25, then atomic number of Y and Z will be :-",
+      "choices": {
+        "a": "42, 76",
+        "b": "43, 74",
+        "c": "41, 77",
+        "d": "44, 79"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question requires analyzing a diagram showing relationship between elements X, Y, and Z"
+    },
+    {
+      "number": 32,
+      "body": "An element whose IUPAC name is ununtrium (Uut) belongs to :",
+      "choices": {
+        "a": "s-block element",
+        "b": "p-block element",
+        "c": "d-block element",
+        "d": "Transition element"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "body": "Assertion (A): The atomic radii of the elements of the oxygen family are smaller than the atomic radii of the corresponding elements of the nitrogen family. Reason (R): The members of the oxygen family are more electronegative and thus have lower values of nuclear charge than those of the nitrogen family.",
+      "choices": {
+        "a": "Both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "Both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "Assertion is True but the Reason is False",
+        "d": "Both Assertion & Reason are false."
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "body": "The correct order regarding electronegativity of hybrid orbitals of carbon is :-",
+      "choices": {
+        "a": "sp < sp^2 < sp^3",
+        "b": "sp > sp^2 > sp^3",
+        "c": "sp < sp^2 > sp^3",
+        "d": "sp > sp^2 < sp^3"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "body": "Which of the following will have the most negative electron gain enthalpy and which the least negative ?",
+      "choices": {
+        "a": "F, Cl",
+        "b": "Cl, F",
+        "c": "Cl, S",
+        "d": "Cl, P"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "body": "50 ml of hydrogen diffuses through a small hole from vessel in 20 minutes time. Time taken for 40 ml of oxygen to diffuse out under similar conditions will be:",
+      "choices": {
+        "a": "12 min",
+        "b": "64 min",
+        "c": "8 min",
+        "d": "32 min"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "Which of the following orders of atomic / Ionic radius is/are correct ?",
+      "choices": {
+        "a": "B < Ga < Al",
+        "b": "Ni < Cu < Zn",
+        "c": "C < O < N",
+        "d": "Al^+3 < Al^+2 < Al^+1"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "body": "Which of the following are correct ?",
+      "choices": {
+        "a": "IE2(Mg) < IE2(Na)",
+        "b": "EA (N) < EA (P)",
+        "c": "Atomic size Mg^+2 > Atomic size (Li^+)",
+        "d": "IP of Na < Mg < Al"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "Which of the following process is endothermic",
+      "choices": {
+        "a": "A^2- → A^-",
+        "b": "A^3+ → A^2+",
+        "c": "A^+ → A^3+",
+        "d": "A^+ (ns^2np^6(n+1)s^1) → A^2+"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "The incorrect statement(s) is/are",
+      "choices": {
+        "a": "Gases deviate maximum from ideal behaviour when the temperature is very high and pressure is very low",
+        "b": "Gases deviate minimum from the ideal behaviour when the temperature is very low and pressure is very high",
+        "c": "Gases tend to become ideal at Boyle's temperature over a wide range of pressure",
+        "d": "Gases tend to become ideal at critical temperature"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "body": "Which of the following is an example of secondary succession?",
+      "choices": {
+        "a": "Vegetation developing on a bare rock.",
+        "b": "Vegetation developing following forest fire",
+        "c": "Fungus growing on a banana peel.",
+        "d": "Conversion of pond into a crop field by humans"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "Stratification is more common in which of the following?",
+      "choices": {
+        "a": "Deciduous forest",
+        "b": "Tropical rain forest",
+        "c": "Temperate forest",
+        "d": "Tropical savannah"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "body": "The figure shows a food web, where A, B, C, D etc. are different species. And the direction of the arrows symbolizes the direction of flow of nutrients. An increase in the population of which species is likely to decrease the population of species A.",
+      "choices": {
+        "a": "Species D",
+        "b": "Species F",
+        "c": "Species G",
+        "d": "Species E"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the food web diagram"
+    },
+    {
+      "number": 44,
+      "body": "Which of the following is a source of nitrogenous compound in diet?",
+      "choices": {
+        "a": "Arhar and moth beans",
+        "b": "Soyabean and til",
+        "c": "Moong and ragi",
+        "d": "Sprouted pulses and cod liver oil"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "body": "Which of the following is not a step in Multiple Ovulation Embryo Transfer Technology (MOET)?",
+      "choices": {
+        "a": "Cow is administered hormone having LH like activity for super ovulation.",
+        "b": "Cow yields about 6-8 eggs at a time",
+        "c": "Cow is fertilized by artificial insemination",
+        "d": "Fertilized eggs are transferred to surrogate mothers at 8-32 cell stage"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "Use of excessive NKP fertilizers has resulted in\ni. Reduction in number as well as species of nitrogen fixing bacteria\nii. Increase in number as well as types of denitrifying bacteria\niii. Increase in the proportion of coarse particles in soil.\niv. Increase in number as well as types of ammonifying microbes\nv. Increase in number as well as types of nitrifying bacteria",
+      "choices": {
+        "a": "i, ii, iii, iv and v",
+        "b": "Only ii, iv and v",
+        "c": "Only i and ii",
+        "d": "Only i, ii and iii"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "body": "The following graph depicts changes in two populations (A and B) of herbivores in a grassy field. A possible reason for these changes is that:",
+      "choices": {
+        "a": "Population B competed more successfully for food than population A",
+        "b": "Population A produced more offspring than population B",
+        "c": "Population A consumed the members of population B",
+        "d": "Both plant populations in this habitat decreased."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the population graph"
+    },
+    {
+      "number": 48,
+      "body": "When grain was stored in a closed tin, there were no maggots in it. But when opened after some months, there were maggots in the tin. From where they could have entered the tin?",
+      "choices": {
+        "a": "They must have entered the tin from the gaps",
+        "b": "They were hidden in the gaps",
+        "c": "There must be maggot eggs in the grain, when the grain was filled in the tin",
+        "d": "Maggots were born automatically"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "body": "If the Bengal Tiger becomes extinct",
+      "choices": {
+        "a": "Hyenas and wolves will become scarce.",
+        "b": "The wild areas will be safe for man and domestic animals.",
+        "c": "Its gene pool will be lost forever.",
+        "d": "The populations of beautiful animals like deers will get stabilised."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "body": "Which of the following is a result of biological magnification?",
+      "choices": {
+        "a": "Top level predators may be most harmed by toxic chemicals in environment",
+        "b": "Increase in carbon dioxide",
+        "c": "The green-house effect will be most significant at the poles",
+        "d": "Energy is lost at each tropic level of a food chain"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "Mud flats with mangrove plants export a lot of organic matter to waters in contact. This is primarily because",
+      "choices": {
+        "a": "There are fewer consumers in mangrove community",
+        "b": "Excreta of animals in mangrove community is richer in fibers",
+        "c": "Detritivores are lacking in mangrove community",
+        "d": "Aerobic decomposers cannot survive in waterlogged mud"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "body": "Match column-I with column-II and select the correct option from the codes given below.\n\nColumn-I | Column-II\nA Commensalism | (i) One inhibited, other unaffected\nB Parasitism | (ii) One benefitted, other unaffected\nC Mutualism | (iii) Both are benefitted\nD Amensalism | (iv) One benefitted, other harmed",
+      "choices": {
+        "a": "A-(iv), B-(ii), C-(iii), D-(i)",
+        "b": "A-(iii), B-(iv), C-(ii), D-(i)",
+        "c": "A-(ii), B-(iv), C-(iii), D-(i)",
+        "d": "A-(i), B-(iv), C-(ii), D-(iii)"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "body": "The following question refers to energy transfer between trophic levels in an ecosystem. Primary production is the amount of light energy converted to chemical energy (organic compounds) by the autotrophs in an ecosystem during a given time period. Net Secondary production is the amount of chemical energy in consumers' food that is converted to their own new biomass during a given period of time. The following figure represents the partitioning of energy by a caterpillar eating a leaf and consuming 200J of energy.\n\nWhat percentage of the energy in the caterpillar's food is actually used for secondary production?",
+      "choices": {
+        "a": "16.5",
+        "b": "33.0",
+        "c": "33.5",
+        "d": "50.0"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the figure showing energy partitioning values"
+    },
+    {
+      "number": 54,
+      "body": "Green house gases absorb (and trap) outgoing infrared radiation (heat) from Earth and contribute to global warming. A molecule that acts as a green house gas, generally has a permanent dipole moment and sometimes for other reasons. Going only by the condition of permanent dipole moment, in the list of gases given below, how many can be potential green house gases?\n\nWater vapour, Sulphur dioxide, Boron trifluoride, carbon monoxide, carbon dioxide, nitrogen, oxygen, methane, hydrogen sulphide, ammonia",
+      "choices": {
+        "a": "Five",
+        "b": "Six",
+        "c": "Seven",
+        "d": "Four"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "body": "In the passage given above there seems to be a factual error with respect to the ant carrying the food to the nest. The most probable reason for this mistake would be",
+      "choices": {
+        "a": "Pea pod is too heavy for an ant to carry to its nest.",
+        "b": "Pea cannot be carried by an ant in the summer because it is a Rabi crop.",
+        "c": "Ant couldn't have passed by easily since it is the favourite food of grasshoppers.",
+        "d": "Grasshoppers avoid coming out in summer and thus there cannot be grasshopper in the story."
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": "general",
+      "topic_name": "Animal Behavior and Ecology",
+      "subtopic_code": "insect_behavior",
+      "subtopic_name": "Insect Behavior",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "After hearing to an influential lecture on \"how to conserve environment by avoiding usage of plastic\" Ghan Shyam resolved that he should also contribute towards protecting the environment from plastic menace. Can you suggest him the first step how should he go about doing this effectively",
+      "choices": {
+        "a": "He should urge his parents to stop using plastic materials at home.",
+        "b": "He should write a letter to the local civic body against selling plastic materials around his locality.",
+        "c": "He should practice minimising plastic usage himself.",
+        "d": "He should ask his teacher to advice people on his behalf to stop usage of plastics."
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": "general",
+      "topic_name": "Environmental Science",
+      "subtopic_code": "conservation",
+      "subtopic_name": "Environmental Conservation",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "body": "Study the following diagram and answer the questions. An insecticide is sprayed to protect the plants. Which of the following statements are false?",
+      "choices": {
+        "a": "Toads and insectivorous birds will prosper as they will get ample supply of dead insects.",
+        "b": "Herbivores will be greatly affected, plants will be safe and carnivores will move to other areas and will not be affected greatly.",
+        "c": "Some insects will die, some will become resistant and prolifer more and top carnivore will be affected most.",
+        "d": "Some insects will die, but there will be no long term effects as the pesticides will get washed away."
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": "general",
+      "topic_name": "Ecology and Food Chains",
+      "subtopic_code": "pesticide_effects",
+      "subtopic_name": "Pesticide Effects on Ecosystem",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "body": "One of the following statements is correct with reference to biodiversity. Identify it.",
+      "choices": {
+        "a": "The areas with very few plant and animal species (low species richness) with no threatened species are called biodiversity hotspots.",
+        "b": "Biodiversity increases from higher altitudes to lower altitudes.",
+        "c": "Biodiversity decreases from the equator to polar regions.",
+        "d": "Depletion in genetic diversity of crop plants is mainly due to the introduction of better varieties with high yield, disease resistance, etc."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "body": "In MOET, the animal is either mated with an elite bull or artificially inseminated. The fertilized eggs are collected to transfer to surrogate mothers. Which among these statements are incorrect.",
+      "choices": {
+        "a": "Fertilized eggs is collected at 8-32 cells stage and no need of surgery.",
+        "b": "Fertilized egg is collected at 8-32 cells stage and surgery is done for it.",
+        "c": "Fertilized egg is collected at only 4 cells stage and it is done by surgery.",
+        "d": "Fertilized egg is collected at 64 cells stage and surgery is done for it."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "body": "Which one of the following statement pertaining to pollutants is correct?",
+      "choices": {
+        "a": "DDT is a non-biodegradable pollutant.",
+        "b": "Excess cadmium in drinking water causes osteoporosis.",
+        "c": "Excess cadmium in drinking water causes \"Itai Itai\" disease",
+        "d": "Methylmercury in water may cause \"Itai Itai\" disease."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ]
+}

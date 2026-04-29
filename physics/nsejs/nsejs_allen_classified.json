@@ -1,0 +1,3170 @@
+{
+  "paper": "allen",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "A point particle of mass m is attached to one end of a massless rigid non-conducting rod of length l. Another point particle of same mass is attached to the other end of the rod. The two particles carry equal charges + q and - q respectively. This arrangement is held in a region of uniform electric field E such that the rod makes an angle with the field direction:",
+      "choices": {
+        "a": "The tension in rod remains constant",
+        "b": "If angle is very small, the rod executes simple harmonic motion of period 2π√(ml/2qE)",
+        "c": "At every instant, net force on the system is zero",
+        "d": "Both (2) and (3) are correct"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "electric_field",
+      "subtopic_name": "Electric Field and Forces",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 2,
+      "body": "A point mass m and charge q is connected with massless spring of natural length L. Initially spring is in its natural length. If a horizontal uniform electric field E is switched on (shown in figure), the maximum separation between the point mass and the wall is: (Assume all surfaces are frictionless).",
+      "choices": {
+        "a": "L + 2qE/k",
+        "b": "L + qE/k",
+        "c": "L",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "electric_field",
+      "subtopic_name": "Electric Field and Forces",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 3,
+      "body": "In the previous problem, the separation of the point mass and wall at the equilibrium position of the mass is:",
+      "choices": {
+        "a": "L + qE/k",
+        "b": "L - qE/k",
+        "c": "qE/k - L",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "electric_field",
+      "subtopic_name": "Electric Field and Forces",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 4,
+      "body": "A copper ball of density ρc and diameter d is immersed in oil of density ρ0. What charge should be present on the ball, so that it could be suspended in the oil, if a homogeneous electric field E is applied vertically upward?",
+      "choices": {
+        "a": "Q = πd²(ρc - ρ0)g/6E",
+        "b": "Q = πd³(ρc - ρ0)g/6E",
+        "c": "Q = πd³(ρc - ρ0)g/E",
+        "d": "None of these"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "electric_field",
+      "subtopic_name": "Electric Field and Forces",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 5,
+      "body": "An electron is projected with velocity 10⁷ m/s at an angle θ (= 30°) with horizontal in a region of uniform electric field of 5000 N/C vertically upwards. The maximum distance covered by an electron in vertical direction above its initial level is:",
+      "choices": {
+        "a": "14.2 mm",
+        "b": "15 mm",
+        "c": "12.6 mm",
+        "d": "14.2 cm"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "projectile_motion",
+      "subtopic_name": "Projectile Motion in Electric Field",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 6,
+      "body": "If a point charge +q of mass m is released from rest in a region where only electric field is present then:",
+      "choices": {
+        "a": "It follows a line of force",
+        "b": "It must follow a line of force, if electric field is uniform",
+        "c": "It may follow a line of force, if field is uniform",
+        "d": "None of the above"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "electric_field_lines",
+      "subtopic_name": "Electric Field Lines",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 7,
+      "body": "Select the wrong statement:",
+      "choices": {
+        "a": "The electric field calculated by Gauss's law is the field due to the charges inside the Gaussian surface",
+        "b": "The electric field calculated by Gauss's law is the resultant field due to all the charges inside and outside the closed surface",
+        "c": "The Gauss's law is equivalent to Coulomb's law",
+        "d": "The Gauss's law can also be applied to calculate gravitational field but with some modifications"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "gauss_law",
+      "subtopic_name": "Gauss's Law",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 8,
+      "body": "A point charge q = 2 × 10^-7 C is placed at the centre of a spherical cavity of radius 3 cm in a metal piece. Points a and b are situated at distances 1.5 cm and 4.5 cm respectively from the centre of cavity. The electric intensities at a and b are:",
+      "choices": {
+        "a": "8 × 10^6 N/C and zero",
+        "b": "Zero and zero",
+        "c": "Zero and 8.9 × 10^5 N/C",
+        "d": "None of the above"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "gauss_law",
+      "subtopic_name": "Gauss's Law and Conductors",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 9,
+      "body": "If the potential at each point on a conductor is same to each other, then:",
+      "choices": {
+        "a": "Electric lines of force may begin or end on the same conductor",
+        "b": "No electric lines of force can begin or end on the same conductor",
+        "c": "The electric field inside the conductor may be non-zero",
+        "d": "None of the above"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "conductors",
+      "subtopic_name": "Properties of Conductors",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 10,
+      "body": "Four identical charges are placed at the points (1, 0, 0), (0, 1, 0), (-1, 0, 0) and (0, -1,0):",
+      "choices": {
+        "a": "The potential at the origin is zero",
+        "b": "The field at the origin is zero",
+        "c": "The potential at all points on the z-axis, other than the origin, is zero",
+        "d": "None of the above"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "potential",
+      "subtopic_name": "Electric Potential and Field",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 11,
+      "body": "In the shown figure, the charge appears on the sphere is:",
+      "choices": {
+        "a": "q",
+        "b": "-qd/R",
+        "c": "-qR/d",
+        "d": "0"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "induction",
+      "subtopic_name": "Electrostatic Induction",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "body": "Two points are at distance r₁ and r₂ (r₁ < r₂) from a long string having charge per unit length σ. The potential difference between the points is proportional to:",
+      "choices": {
+        "a": "r₂ - r₁",
+        "b": "log(r₂/r₁)",
+        "c": "1/σ",
+        "d": "r₂/r₁"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "potential",
+      "subtopic_name": "Electric Potential",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 13,
+      "body": "Three concentric spherical metallic shells A, B and C of radii a, b and c (a < b < c) have charge densities σ, -σ and σ respectively. If the shells A and C are at same potential, then the relation between a, b and c is:",
+      "choices": {
+        "a": "a + b + c = 0",
+        "b": "a + c = b",
+        "c": "a + b = c",
+        "d": "a = b + c"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "potential",
+      "subtopic_name": "Electric Potential",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 14,
+      "body": "An electric dipole, made up of positive and negative charges, each of 1 μC and placed at a distance 2 cm apart. If the dipole is placed in an electric field of 10^5 N/C then the maximum torque which the field can exert on the dipole, if it is turned from a position θ = 0° to θ = 180° is:",
+      "choices": {
+        "a": "2 × 10^-3 N-m",
+        "b": "3 × 10 N-m",
+        "c": "4 × 10 N-m",
+        "d": "2.8 × 10^-3 N-m"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "dipole",
+      "subtopic_name": "Electric Dipole",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 15,
+      "body": "The force of interaction of two dipoles, if the two dipole moments are parallel to each other and placed at a distance x apart:",
+      "choices": {
+        "a": "3p₁p₂/4πε₀x⁴",
+        "b": "p₁p₂/4πε₀x³",
+        "c": "p₁p₂/2πε₀x⁴",
+        "d": "p₁p₂/3πε₀x³"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "dipole",
+      "subtopic_name": "Electric Dipole",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 16,
+      "body": "P is a point on an equipotential surface S. The field at P is E then:",
+      "choices": {
+        "a": "E must be perpendicular to S in all cases",
+        "b": "E cannot have a component along a tangent to S",
+        "c": "E may have a non-zero component along a tangent to S, if S is a curved surface",
+        "d": "Both (1) and (2) are correct"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "equipotential",
+      "subtopic_name": "Equipotential Surfaces",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 17,
+      "body": "Mark correct option or options:\n(1) In the absence of an electric field, electrons move in straight lines between collisions\n(2) Relaxation time is of order 10^-14 second\n(3) Resistivity is inversely proportional to relaxation time when number of electrons per unit volume of material remains constant\n(4) All the above",
+      "choices": {
+        "a": "(1) In the absence of an electric field, electrons move in straight lines between collisions",
+        "b": "(2) Relaxation time is of order 10^-14 second",
+        "c": "(3) Resistivity is inversely proportional to relaxation time when number of electrons per unit volume of material remains constant",
+        "d": "(4) All the above"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "conduction",
+      "subtopic_name": "Electrical Conduction in Metals",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 18,
+      "body": "Identify the correct statement related to the properties of conductor.\n(1) Since volume charge exists inside a conductor, therefore, E inside conductor is zero.\n(2) E inside a conductor is non zero.\n(3) Since conductor is an equipotential surface, therefore, E = 0 inside a conductor is zero.\n(4) All the above",
+      "choices": {
+        "a": "(1) Since volume charge exists inside a conductor, therefore, E inside conductor is zero.",
+        "b": "(2) E inside a conductor is non zero.",
+        "c": "(3) Since conductor is an equipotential surface, therefore, E = 0 inside a conductor is zero.",
+        "d": "(4) All the above"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "conductors",
+      "subtopic_name": "Properties of Conductors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 19,
+      "body": "Identify the correct statement related to the properties of conductor.\n(1) The amount of charge on a surface is inversely proportional to the radius of curvature.\n(2) The surface charge density is proportional to the radius of curvature.\n(3) The surface charge density is inversely proportional to the curvature of the surface.\n(4) None of these.",
+      "choices": {
+        "a": "(1) The amount of charge on a surface is inversely proportional to the radius of curvature.",
+        "b": "(2) The surface charge density is proportional to the radius of curvature.",
+        "c": "(3) The surface charge density is inversely proportional to the curvature of the surface.",
+        "d": "(4) None of these."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "conductors",
+      "subtopic_name": "Properties of Conductors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 20,
+      "body": "If the number of free electrons is 5 × 10^28 m^-3 then the drift velocity of electron in a conductor of area of cross-section 10^-6 m^2 for a current of 1.2 A is:\n(1) 1.5 × 10^-2 m/s\n(2) 1.5 × 10^-3 m/s\n(3) 1.5 × 10^-4 m/s\n(4) 1.5 × 10^-6 m/s",
+      "choices": {
+        "a": "1.5 × 10^-2 m/s",
+        "b": "1.5 × 10^-3 m/s",
+        "c": "1.5 × 10^-4 m/s",
+        "d": "1.5 × 10^-6 m/s"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "drift_velocity",
+      "subtopic_name": "Drift Velocity",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 21,
+      "body": "Under which of the following conditions will a convex mirror of focal length f produce an image that is erect, diminished and virtual ?\n(1) Only when 2f > u > f\n(2) Only when u = f\n(3) Only when u < f\n(4) Always",
+      "choices": {
+        "a": "Only when 2f > u > f",
+        "b": "Only when u = f",
+        "c": "Only when u < f",
+        "d": "Always"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Geometrical Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Spherical Mirrors",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 22,
+      "body": "The image of an object, formed by a plano-convex lens at a distance of 8 m behind the lens, is real and is one-third the size of the object. The wavelength of light inside the lens is 2/3 times the wavelength in free space. The radius of the curved surface of the lens is :-\n(1) 1 m\n(2) 2 m\n(3) 3 m\n(4) 6 m",
+      "choices": {
+        "a": "1 m",
+        "b": "2 m",
+        "c": "3 m",
+        "d": "6 m"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Geometrical Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Thin Lenses",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 23,
+      "body": "Refractive index of air is 1.0003. The correct thickness of air column which will have one more wavelength of yellow light (6000 Å) than in the same thickness in vacuum is :-\n(1) 2 mm\n(2) 2 cm\n(3) 2 m\n(4) 2 km",
+      "choices": {
+        "a": "2 mm",
+        "b": "2 cm",
+        "c": "2 m",
+        "d": "2 km"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Wave Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refractive Index",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 24,
+      "body": "A ray of light is incident at an angle i from denser to rarer medium. The reflected and the refracted rays are mutually perpendicular. The angle of reflection and the angle of refraction are respectively r and r', then the critical angle will be :-\n(1) sin^-1 (sin r)\n(2) sin^-1 (tan r')\n(3) sin^-1 (tan i)\n(4) tan^-1 (sin i)",
+      "choices": {
+        "a": "sin^-1 (sin r)",
+        "b": "sin^-1 (tan r')",
+        "c": "sin^-1 (tan i)",
+        "d": "tan^-1 (sin i)"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Geometrical Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 25,
+      "body": "A diver in a swimming pool wants to signal his distress to a person lying on the edge of the pool by flashing his water proof flash light :-\n(1) He must direct the beam vertically upwards\n(2) He has to direct the beam horizontally\n(3) He has to direct the beam at an angle to the vertical which is slightly less than the critical angle of incidence\n(4) He has to direct the beam at an angle to the vertical which is slightly more than the critical angle of incidence for the total internal reflection.",
+      "choices": {
+        "a": "He must direct the beam vertically upwards",
+        "b": "He has to direct the beam horizontally",
+        "c": "He has to direct the beam at an angle to the vertical which is slightly less than the critical angle of incidence",
+        "d": "He has to direct the beam at an angle to the vertical which is slightly more than the critical angle of incidence for the total internal reflection."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Geometrical Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 26,
+      "body": "With respect to air critical angle in a medium for light of red colour [λ₁] is θ. Other facts remaining same, critical angle for light of yellow colour [λ₂] will be :-\n(1) θ\n(2) More than θ\n(3) Less than θ\n(4) θλ₁/λ₂",
+      "choices": {
+        "a": "θ",
+        "b": "More than θ",
+        "c": "Less than θ",
+        "d": "θλ₁/λ₂"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Geometrical Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 27,
+      "body": "Material A has critical angle iA and material B has critical angle iB(iB > iA). Then which of the following is true :- (i) Light can be totally internally reflected when it passes from B to A (ii) Light can be totally internally reflected when it passes from A to B (iii) Critical angle for total internal reflection is iB - iA (iv) Critical angle between A and B is sin^-1(sin iA / sin iB)",
+      "choices": {
+        "a": "(i) and (iii)",
+        "b": "(i) and (iv)",
+        "c": "(ii) and (iii)",
+        "d": "(ii) and (iv)"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 28,
+      "body": "A ray of light passes through four transparent media with refractive indices μ1,μ2,μ3 and μ4 as shown in the figure. The surfaces of all media are parallel. If the emergent ray CD is parallel to the incident ray AB, we must have:-",
+      "choices": {
+        "a": "μ1 = μ2",
+        "b": "μ2 = μ3",
+        "c": "μ3 = μ4",
+        "d": "μ1 = μ4"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction through Multiple Media",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the diagram showing the ray path through four media"
+    },
+    {
+      "number": 29,
+      "body": "White light is incident on the interface of glass and air as shown in the figure. If green light is just totally internally reflected then the emerging ray in air contains :-",
+      "choices": {
+        "a": "Yellow, orange, red",
+        "b": "Violet, indigo, blue",
+        "c": "All colours",
+        "d": "All colours except green"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Dispersion and Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 30,
+      "body": "A plastic hemisphere has a radius of curvature of 8 cm and an index of refraction of 1.6. On the axis halfway between the plane surface and the spherical one (4 cm from each) is a small object O. The distance between the two images when viewed along the axis from the two sides of the hemisphere is approximately :-",
+      "choices": {
+        "a": "1.0 cm",
+        "b": "1.5 cm",
+        "c": "3.75 cm",
+        "d": "2.5 cm"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Spherical Refraction",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "body": "A lens is placed between a source of light and a wall. It forms images of area A1 and A2 on the wall for its two different positions. The area of the source of light is :-",
+      "choices": {
+        "a": "(A1 + A2)/2",
+        "b": "[1/A1 + 1/A2]^-1",
+        "c": "sqrt(A1*A2)",
+        "d": "[sqrt(A1) + sqrt(A2)/2]^2"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Lens Formula and Magnification",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 32,
+      "body": "A lens of refractive index n is put in a liquid of refractive index n' of focal length of lens in air is f, its focal length in liquid will be :-",
+      "choices": {
+        "a": "fn'(n-1)/(n'-n)",
+        "b": "f(n'-n)/(n'(n-1))",
+        "c": "n'(n-1)/(f(n'-n))",
+        "d": "fn'n/(n-n')"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Lens in Different Media",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 33,
+      "body": "Let fv and fr are the focal lengths of a convex lens for violet and red lights respectively. If Fv and Fr are the focal lengths of a concave lens for violet and red light respectively, then :-",
+      "choices": {
+        "a": "fv < fr and |Fv| > |Fr|",
+        "b": "fv < fr and |Fv| < |Fr|",
+        "c": "fv > fr and |Fv| > |Fr|",
+        "d": "fv > fr and |Fv| < |Fr|"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "dispersion",
+      "subtopic_name": "Chromatic Aberration",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 34,
+      "body": "The angle of minimum deviation measured with a prism is 30° and the angle of prism is 60°. The refractive index of prism material is:",
+      "choices": {
+        "a": "√2",
+        "b": "2",
+        "c": "3/2",
+        "d": "4/3"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction through prism",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 35,
+      "body": "A ray of monochromatic light is incident on one refracting face of a prism of angle 75°. It passes through the prism and is incident on the other face at the critical angle. If the refractive index of the material of the prism is √2, the angle of incidence on the first face of the prism is :-",
+      "choices": {
+        "a": "30°",
+        "b": "45°",
+        "c": "60°",
+        "d": "0°"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Critical angle and refraction",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 36,
+      "body": "Which of the following diagrams shows correctly the dispersion of white light by a prism ?",
+      "choices": {
+        "a": "Diagram (1)",
+        "b": "Diagram (2)",
+        "c": "Diagram (3)",
+        "d": "Diagram (4)"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "dispersion",
+      "subtopic_name": "Dispersion of light",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine correct answer without seeing the diagrams clearly"
+    },
+    {
+      "number": 37,
+      "body": "The dispersive powers of crown and flint glasses are 0.02 and 0.04 respectively. In an achromatic combination of lenses the focal length of flint glass lens is 40 cm. The focal length of crown glass lens will be :-",
+      "choices": {
+        "a": "-20 cm",
+        "b": "+ 20 cm",
+        "c": "-10 cm",
+        "d": "+ 10 cm"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Achromatic combination",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 38,
+      "body": "For a small angled prism, angle of prism A, the angle of minimum deviation (δ) varies with the refractive index of the prism as shown in the graph :-",
+      "choices": {
+        "a": "Point P corresponds to μ = 1",
+        "b": "Slope of the line PQ = A/2",
+        "c": "Slope = 2A",
+        "d": "None of the above statements is true"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Minimum deviation",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "A point source S is placed at the bottom of different layers as shown in figure. The refractive index of bottommost layer is μ₀. The refractive index of any other upper layer is μ(n) = μ₀ - μ₀/(4n-18) where n = 1, 2,.... A ray of light starts form the source S as shown. Total internal reflection takes place at the upper surface of a layer having n equal to :-",
+      "choices": {
+        "a": "3",
+        "b": "5",
+        "c": "4",
+        "d": "6"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Total internal reflection",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "An observer can see through a pin-hole the top end of a thin rod of height h, placed as shown in the figure. The beaker height is 3h and its radius h. When the beaker is filled with a liquid up to a height 2h, he can see the lower end of the rod. Then the refractive index of the liquid is :-",
+      "choices": {
+        "a": "5/2",
+        "b": "√(5/2)",
+        "c": "√(3/2)",
+        "d": "3/2"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction in liquids",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "medium"
+    },
+    {
+      "number": 41,
+      "body": "How many σ bond does B₃ have :-",
+      "choices": {
+        "a": "Zero",
+        "b": "2",
+        "c": "1",
+        "d": "3"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "In which of the following process change in bond angle is maximum :-",
+      "choices": {
+        "a": "NH₃ + H⁺ → NH₄⁺",
+        "b": "PH₃ + H⁺ → PH₄⁺",
+        "c": "BF₃ + F⁻ → BF₄⁻",
+        "d": "H₂O + H⁺ → H₃O⁺"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "body": "Which of the following molecule is having least dipole moment ?",
+      "choices": {
+        "a": "NH₃",
+        "b": "NI₃",
+        "c": "H₂O",
+        "d": "NF₃"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "body": "PCl₍ₓ₎F₍₅₋ₓ₎ mol. will be polar and non-polar for what value of 'x' respectively :-",
+      "choices": {
+        "a": "(2,3,5) → polar and (0,4,1) → non-polar",
+        "b": "(0,2,5) → polar and (3,1,4) → non-polar",
+        "c": "(4,3,0) → polar and (2,0,4) → non-polar",
+        "d": "(2,1,4) → polar and (3,0,5) → non-polar"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "body": "Which of the following reaction would not proceed in the forward direction spontaneously :-",
+      "choices": {
+        "a": "Xe + He⁺ → Xe⁺ + He",
+        "b": "Si + Cl⁺ → Si⁺ + Cl",
+        "c": "F⁻ + I → F + I⁻",
+        "d": "Be⁻ + B → B⁻ + Be"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "Select the incorrect relation :-",
+      "choices": {
+        "a": "I.E. of F > E.A. of Cl",
+        "b": "I.E. of F + E.A. of Cl > I.E. of Cl + E.A of F",
+        "c": "E.N. of F + E.A of Cl < E.N. of Cl + E.A of F",
+        "d": "I.E. of F + I.E. of Cl > E.A. of F + E.A. of Cl"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "body": "Which of the following combination gives maximum number of nodal planes :-",
+      "choices": {
+        "a": "(circular orbital symbol) – (figure-8 orbital symbol)",
+        "b": "(figure-8 orbital symbol) – (double figure-8 orbital symbol)",
+        "c": "(orbital symbol) + (orbital symbol)",
+        "d": "(circular orbital symbol) + (circular orbital symbol)"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the orbital diagrams clearly"
+    },
+    {
+      "number": 48,
+      "body": "Which of the following pair of mol. have identical Cl – X – Cl bond angle [where X → central atom]",
+      "choices": {
+        "a": "CCl₄, SiCl₄",
+        "b": "POCl₃, SO₂Cl₂",
+        "c": "BCl₃, AlCl₃",
+        "d": "SOCl₂, COCl₂"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "body": "Both p𝓏 – p𝓏 and p𝓏 – d𝓏 bonding occurs in the :-",
+      "choices": {
+        "a": "Anionic part of solid Cl₂O₆",
+        "b": "Cationic part of solid N₂O₅",
+        "c": "Cationic part of solid Cl₂O₆",
+        "d": "Anionic part of solid I₂"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "body": "Delocalised molecular orbitals are found in :-",
+      "choices": {
+        "a": "H₂",
+        "b": "HS⁻",
+        "c": "CH₄",
+        "d": "CO₃²⁻"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "Which of the following molecule posses only trigonal bipyramidal geometry in all the three states of matter ?",
+      "choices": {
+        "a": "PBr₅",
+        "b": "PCl₅",
+        "c": "PF₅",
+        "d": "All of these"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "body": "The E.N. of four elements A, B, C & D are 4, 3.17, 0.7 and 2.85 respectively then which of the following does not act as an acid :-",
+      "choices": {
+        "a": "H–O–A",
+        "b": "H–O–B",
+        "c": "H–O–C",
+        "d": "H–O–D"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "body": "In IF₇⁻¹ and TeF₅⁻¹, sum of axial d-orbitals which are used in hybridisation in both species ?",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "3",
+        "d": "2"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "body": "Total no. of Electron pairs [σ bond + ℓp] = 5, q = 1, 4, s = 2, 5, t. Then calculate the value of :- (p + q + r – s – t)",
+      "choices": {
+        "a": "4",
+        "b": "3",
+        "c": "2",
+        "d": "5"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the complete table structure clearly"
+    },
+    {
+      "number": 55,
+      "body": "The nodal plane of π-bond of ethene is located in :-",
+      "choices": {
+        "a": "A plane parallel to the molecular plane",
+        "b": "The molecular plane",
+        "c": "A plane perpendicular to the molecular plane",
+        "d": "A plane perpendicular to the molecular plane which contain the (C-C) σ-bond"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "Select the incorrect statement :-",
+      "choices": {
+        "a": "Pure overlapping of two different d-orbitals along x-axis result in the formation of π-bond.",
+        "b": "In PH₃ molecule lone pair at central atom is present in almost pure s-orbital.",
+        "c": "(2p_z-3d_z) is stronger than (2p_z - 3p_z) bond",
+        "d": "Number of P_z - d_z bond in SO₃ and ClO₄⁻ are same"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "body": "Which of the following combination of bond pair (bp) and lone pair (ℓp) give same shape :- (a) 3bp + 1ℓp  (b) 2bp + 2ℓp (c) 2bp + 1ℓp  (d) 2bp + 0ℓp (e) 3bp + 2ℓp  (f) 2bp + 3ℓp",
+      "choices": {
+        "a": "b and c",
+        "b": "d & e",
+        "c": "c & d",
+        "d": "e & f"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "body": "In which of the following species 2π & (1/2)σ bond is present :-",
+      "choices": {
+        "a": "O₂²⁺",
+        "b": "N₂²⁺",
+        "c": "O₂¹⁻",
+        "d": "C₂"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "body": "Among the following, the least acidic is :-",
+      "choices": {
+        "a": "P₄O₆",
+        "b": "P₄O₁₀",
+        "c": "As₄O₆",
+        "d": "As₄O₁₀"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "body": "Total number of species which has/have symmetrical electronic distribution in their HOMO and also paramagnetic :- N₂,O₂²⁺,C₂,O₂,B₂,C₂²⁺,N₂²⁺",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "3",
+        "d": "6"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "body": "What is the IUPAC name for :- [shows benzene ring with OH and Br substituents and a ketone group]",
+      "choices": {
+        "a": "p-Hydroxy-m-bromo acetophenone",
+        "b": "1-[3-Bromo-4-Hydroxy phenyl] propan-1-one",
+        "c": "2-Bromo-4-propanoyl phenol",
+        "d": "2-Hydroxy-5-propanoyl bromo benzene"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine IUPAC name without seeing the exact structure and substituent positions"
+    },
+    {
+      "number": 62,
+      "body": "IUPAC name of the following compound :- [shows cyclohexane ring with substituents]",
+      "choices": {
+        "a": "5-ethyl-1-methyl-2-propyl cyclohexane",
+        "b": "1-ethyl-3-methyl-4-propyl cyclohexane",
+        "c": "4-ethyl-1-methyl-2-propyl cyclohexane",
+        "d": "1-ethyl-4-methyl-2-propyl cyclohexane"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine IUPAC name without seeing the exact structure and substituent positions"
+    },
+    {
+      "number": 63,
+      "body": "Which is wrong IUPAC name:-",
+      "choices": {
+        "a": "CH₃CH₂CH₂COOCH₂CH₃ (Ethyl butanoate)",
+        "b": "CH₃-C(H)CH₂CHO (3-Methylbutanal) with CH₃ branch",
+        "c": "CH₃-C(H)CH₂CH₃ (2-Methyl-3-butanol) with OH CH₃ groups",
+        "d": "CHCHCOCH₂CH₃ (2-Methyl-3-pentanone) with CH₃ branch"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "body": "Which of the following pairs are correctly indicated?",
+      "choices": {
+        "a": "OCH₂CH₃ and OH-CH-CH₃ benzene rings (Metamers)",
+        "b": "CH₂OH and OH-CH₃ benzene rings (Functional isomers)",
+        "c": "OH and OH benzene rings with CH₃H₃C groups (Positional isomers)",
+        "d": "OH-CH₃ and CH₂OH benzene rings (Homologous)"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot properly classify isomer types without seeing the exact structures clearly"
+    },
+    {
+      "number": 65,
+      "body": "Which of the following pairs of molecules are NOT structural isomers?",
+      "choices": {
+        "a": "H3C-CH2-CH2-CH3 and H3C-CH(CH3)-CH3",
+        "b": "H3C-CO-CH3 and H3C-CH(OH)-CH3 with cyclopropane",
+        "c": "Square with H3C-C≡C-CH3",
+        "d": "H3C-CH2-OCH3 and HO-CH2-CH=CH-OH"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "body": "How many 1°-amines are possible for C4H11N?",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "9"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "body": "Which of the following isomeric relationship is correctly matched?",
+      "choices": {
+        "a": "Cyclohexene structures (Positional isomers)",
+        "b": "Ester structures (Functional group isomers)",
+        "c": "Alkane chain structures (Identical)",
+        "d": "Chain structures (Chain isomers)"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "body": "Which one of the following is the most stable conformer?",
+      "choices": {
+        "a": "Chair conformation with HO, H, OH, CH3 substituents",
+        "b": "Chair conformation with H, CH3, OH, OH substituents",
+        "c": "Chair conformation with H, OH, OH, CH3 substituents",
+        "d": "Chair conformation with H, CH3, OH, CH3 substituents"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "body": "Identify (A) and (B) in Newman's projection of 2, 3-dimethyl pentane",
+      "choices": {
+        "a": "-CH3, -CH3",
+        "b": "-H, -C2H5",
+        "c": "-C3H7, -CH3",
+        "d": "-C2H5, -C2H5"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "body": "Which of the following doesn't show conformational isomerism :-",
+      "choices": {
+        "a": "CH3=CH-CH=CH3",
+        "b": "CH3-Br",
+        "c": "CH3-NH2",
+        "d": "1 & 2 both"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 71,
+      "body": "Identify alkene showing both geometrical as well as optical isomerism.",
+      "choices": {
+        "a": "Structure 1",
+        "b": "Structure 2",
+        "c": "Structure 3",
+        "d": "Structure 4"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot determine structures without seeing the molecular diagrams"
+    },
+    {
+      "number": 72,
+      "body": "Which of the following is Z-isomer?",
+      "choices": {
+        "a": "H3C-C=N-H structure",
+        "b": "H-C=C-F with D and CH=CH2 substituents",
+        "c": "Me-C=N-OH with Et substituent",
+        "d": "None of these"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "body": "Find out total number of geometrical isomer in given compound :- CH3-CH=CH-CH2-CH=N-OH",
+      "choices": {
+        "a": "6",
+        "b": "4",
+        "c": "5",
+        "d": "3"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "body": "Chair conformations shown are :-",
+      "choices": {
+        "a": "Conformer",
+        "b": "Geometrical isomer",
+        "c": "Identical",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine relationship without seeing the specific chair conformations"
+    },
+    {
+      "number": 75,
+      "body": "Convert following Sawhorse projection in Fischer projection:-",
+      "choices": {
+        "a": "Structure (1) with CH3-OH, H-Br, CH3 groups",
+        "b": "Structure (2) with Br-H, CH3 groups",
+        "c": "Structure (3) with OH-H, H-Br, CH3 groups",
+        "d": "Structure (4) with H-Br, H-OH, CH3 groups"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the structural diagrams showing the sawhorse and Fischer projections"
+    },
+    {
+      "number": 76,
+      "body": "Which of the following compounds are optically active?",
+      "choices": {
+        "a": "CH3CH(OH)COOH",
+        "b": "Structure with C=C=C bonds and Cl, H substituents",
+        "c": "Dibromobenzene structure",
+        "d": "Cyclohexane with two OH groups"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the structural diagrams to determine chirality"
+    },
+    {
+      "number": 77,
+      "body": "The absolute configuration of above molecule will be :-",
+      "choices": {
+        "a": "2R, 3S",
+        "b": "2S, 3R",
+        "c": "2S, 3S",
+        "d": "2R, 3R"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the structural diagram to determine R/S configuration"
+    },
+    {
+      "number": 78,
+      "body": "Which of the following can form 'meso' :-",
+      "choices": {
+        "a": "CH3-CH-CH-CH3 with Br, Cl substituents",
+        "b": "CH3-CH-CH-CH2-CH3 with OH, OH substituents",
+        "c": "CH3-CH-CH-CH3 with OH, OH substituents",
+        "d": "CH3-CH-COOH with OH substituent"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "body": "The S-ibuprofen is responsible for its pain relieving property. Which one of the structure shown is S-ibuprofen.",
+      "choices": {
+        "a": "Structure with Me group and COOH, showing specific stereochemistry",
+        "b": "Structure with Me group and COOH, different stereochemistry",
+        "c": "Structure with different arrangement of Me and COOH groups",
+        "d": "Structure with different stereochemical arrangement"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the structural diagrams to determine S-configuration"
+    },
+    {
+      "number": 80,
+      "body": "Which of the following have plane of symmetry?",
+      "choices": {
+        "a": "Structure (1) with triangular arrangements",
+        "b": "Structure (2) with triangular arrangements",
+        "c": "Structure (3) with triangular arrangements",
+        "d": "All of these"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the structural diagrams to identify planes of symmetry"
+    },
+    {
+      "number": 81,
+      "body": "How many of the following diseases are protozoan?\nFilariasis, Common cold, Malaria, Ascariasis, Typhoid, Gonorrhoea, Amoebiasis",
+      "choices": {
+        "a": "Four",
+        "b": "Two",
+        "c": "Five",
+        "d": "One"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "body": "Type of acquired immunity which is slow and takes time to show full effective response also exhibit following feature except :-",
+      "choices": {
+        "a": "No participation of immune system of host.",
+        "b": "Shows immunological memory.",
+        "c": "Used for prophylaxis.",
+        "d": "More effective on second exposure of antigen."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "body": "Identify the correct match from the columns I, II and III\nColumn-I: 1. Bacteria, 2. Virus, 3. Protozoa, 4. Helminth\nColumn-II: (a) Plasmodium, (b) Wuchereria bancrofti, (c) Haemophilus influenzae, (d) Rhino virus\nColumn-III: i. Infection of lungs, ii. Fever with chill, iii. Inflammation of lower limbs, iv. Infection of upper respiratory tract",
+      "choices": {
+        "a": "2–c–i, 1–d–iv, 3–a–ii, 4–b–iii",
+        "b": "3–a–ii, 4–b–iii, 2–c–iv, 1–d–i",
+        "c": "4–b–iii, 3–a–ii, 1–c–i, 2–d–iv",
+        "d": "4–b–iii, 3–a–i, 1–c–ii, 2–d–iv"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 84,
+      "body": "Read the following statement:\n(A) AIDS is congenital disease\n(B) Sloughed cell of malignant tumour reaches distant site this is called metastasis\n(C) CT scan uses strong magnetic field to detect pathological changes in living tissue\n(D) Proto oncogene is responsible for abnormal cellular division\nHow many of above statements are correct?",
+      "choices": {
+        "a": "4",
+        "b": "2",
+        "c": "3",
+        "d": "1"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 85,
+      "body": "Several genes called _______ have been identified in normal cells which when activated will turn into _______ and under certain conditions could lead to cancerous transformation of cells. Complete the above paragraph by selecting correct sequence of words.",
+      "choices": {
+        "a": "oncogenes, proto oncogenes",
+        "b": "cellular oncogenes, proto oncogenes",
+        "c": "proto oncogenes, oncogenes",
+        "d": "oncogen, proto oncogenes"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "body": "Which set of disease are caused by bacteria?",
+      "choices": {
+        "a": "Cholera, typhoid, tetanus, pneumonia",
+        "b": "Cholera, AIDS, tetanus, typhoid",
+        "c": "Typhoid, tetanus, Influenza, Rabies",
+        "d": "Rabies, AIDS, Mumps, pneumonia"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "body": "Non specific immunity includes all of the except:-",
+      "choices": {
+        "a": "Lysozyme",
+        "b": "Interferons",
+        "c": "Immunoglobulin",
+        "d": "Neutrophils"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 88,
+      "body": "Match these columns:-\nColumn-I: a) Down's syndrome, b) Turner's syndrome, c) Cri du chat syndrome, d) Klinefelter's syndrome\nColumn-II: i) Partial deletion of short arm of 5th chromosome, ii) AA + XXY, iii) 21st Trisomy, iv) AA + XO",
+      "choices": {
+        "a": "a - iii, b - iv, c - ii, d - i",
+        "b": "a - iii, b - iv, c - i, d - ii",
+        "c": "a - iii, b - ii, c - iv, d - i",
+        "d": "a - iv, b - iii, c - ii, d - i"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 89,
+      "body": "It is genetic disorder. The individuals are born without T-cells and B-cells this disorder is found in new-born children. Identify the disease:-",
+      "choices": {
+        "a": "Thalassemia",
+        "b": "AIDS",
+        "c": "SCID",
+        "d": "Sickle cell Anaemia"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "body": "How many disease in the list given below are transmitted through droplet infection?\nTuberculosis, Typhoid, Pertusis, Dengue, Filariasis, Cholera, Polio, Influenza, Rabies, Hepatitis, common cold",
+      "choices": {
+        "a": "6",
+        "b": "4",
+        "c": "3",
+        "d": "1"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "body": "Which is correct about following chemical ?\n\n[Chemical structure showing a molecule with OH groups]\n\n(1) Morphine-act as a depressant\n(2) Cannabinoid - effect on cardiovascular system\n(3) Cocain - euphoria and increases energy\n(4) Opioid - obtained from poppy plant",
+      "choices": {
+        "a": "Morphine-act as a depressant",
+        "b": "Cannabinoid - effect on cardiovascular system",
+        "c": "Cocain - euphoria and increases energy",
+        "d": "Opioid - obtained from poppy plant"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 92,
+      "body": "Correct statement for thalassemia is :-\n(1) α-chain is less synthesised\n(2) β-chain is less synthesised\n(3) Correctly sequenced β-chain is less synthesised\n(4) Both α and β-chains are less synthesised",
+      "choices": {
+        "a": "α-chain is less synthesised",
+        "b": "β-chain is less synthesised",
+        "c": "Correctly sequenced β-chain is less synthesised",
+        "d": "Both α and β-chains are less synthesised"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 93,
+      "body": "Match the columns :-\n\nColumn-I\na LSD\nb Nicotine\nc Morphine\nd Cocaine\n\nColumn-II\ni CNS/Stimulant\nii Raise blood pressure\niii Sedative and Analgesic\niv Hallucinogen",
+      "choices": {
+        "a": "iv ii iii i",
+        "b": "iv iii ii i",
+        "c": "iv i ii iii",
+        "d": "iv i iii ii"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 94,
+      "body": "A disease caused by an autosomal primary non-disjunction is :\n(1) Klinefelter's Syndrome\n(2) Turner's Syndrome\n(3) Sickel Cell Anemia\n(4) Down's Syndrome",
+      "choices": {
+        "a": "Klinefelter's Syndrome",
+        "b": "Turner's Syndrome",
+        "c": "Sickel Cell Anemia",
+        "d": "Down's Syndrome"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 95,
+      "body": "Which of the following is not a sexually transmitted disease ?\n(1) Acquired Immuno Deficiency Syndrome (AIDS)\n(2) Trichomoniasis\n(3) Encephalitis\n(4) Syphilis",
+      "choices": {
+        "a": "Acquired Immuno Deficiency Syndrome (AIDS)",
+        "b": "Trichomoniasis",
+        "c": "Encephalitis",
+        "d": "Syphilis"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 96,
+      "body": "Pedigree for autosomal dominant trait :-\n\n[Pedigree chart with circles and squares showing inheritance pattern]\n\nThe genotype of A, B and C individual is respectively.\n(1) AA, Aa, aa\n(2) AA, AA, AA\n(3) aa, Aa, aa\n(4) Aa, aa, aa",
+      "choices": {
+        "a": "AA, Aa, aa",
+        "b": "AA, AA, AA",
+        "c": "aa, Aa, aa",
+        "d": "Aa, aa, aa"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine genotypes without being able to interpret the pedigree symbols and their relationships"
+    },
+    {
+      "number": 97,
+      "body": "A Drosophila heterozygous for both body colour and eye colour will be :-\n(1) Only male\n(2) Only female\n(3) Mostly male\n(4) Either male or female",
+      "choices": {
+        "a": "Only male",
+        "b": "Only female",
+        "c": "Mostly male",
+        "d": "Either male or female"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 98,
+      "body": "What is the genotype of II (3) ?\n\n[Pedigree chart with three generations labeled I, II, III showing inheritance pattern]\n\n(1) AA\n(2) aa\n(3) x^c y\n(4) Aa",
+      "choices": {
+        "a": "AA",
+        "b": "aa",
+        "c": "x^c y",
+        "d": "Aa"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine genotype without being able to interpret the pedigree chart symbols and inheritance pattern"
+    },
+    {
+      "number": 99,
+      "body": "Study the pedigree chart given below –\n\n[Pedigree chart showing inheritance pattern]\n\nWhat does it show ?\n(1) Inheritance of a recessive sex-linked disease like haemophilia\n(2) Inheritance of a sex-linked inborn error of metabolism like phenylketonuria\n(3) Inheritance of a condition like phenylketonuria as an autosomal recessive trait\n(4) The pedigree chart is wrong as this is not possible",
+      "choices": {
+        "a": "Inheritance of a recessive sex-linked disease like haemophilia",
+        "b": "Inheritance of a sex-linked inborn error of metabolism like phenylketonuria",
+        "c": "Inheritance of a condition like phenylketonuria as an autosomal recessive trait",
+        "d": "The pedigree chart is wrong as this is not possible"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot analyze inheritance pattern without being able to interpret the pedigree chart symbols"
+    },
+    {
+      "number": 100,
+      "body": "Study the given pedigree carefully, the trait indicated is :-",
+      "choices": {
+        "a": "Autosomal recessive",
+        "b": "X-linked recessive",
+        "c": "Maternal inheritance",
+        "d": "Paternal inheritance"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the pedigree diagram"
+    },
+    {
+      "number": 101,
+      "body": "Grain colour in wheat is determined by three pairs of polygenes. Following cross AABBCC (dark colour) x aabbcc (light colour), in F2 generation what proportion of the progeny is likely to resemble either parent ?",
+      "choices": {
+        "a": "None",
+        "b": "Less than 5 per cent",
+        "c": "One third",
+        "d": "Half"
+      },
+      "correct": null,
+      "subject": "biology"
+    },
+    {
+      "number": 102,
+      "body": "If dominant C and P genes are essential for the development of purple colour in sweet pea flowers, what would be the ratio of white and purple colour in a cross between CcPpx Ccpp",
+      "choices": {
+        "a": "5 : 3",
+        "b": "9 : 7",
+        "c": "2 : 6",
+        "d": "6 : 2"
+      },
+      "correct": null,
+      "subject": "biology"
+    },
+    {
+      "number": 103,
+      "body": "Dominant phenotype/trait is produced by :-",
+      "choices": {
+        "a": "Unmodified allele only",
+        "b": "Modified alleles only",
+        "c": "Both unmodified and equivalent modified alleles",
+        "d": "Every modified and unmodified allele."
+      },
+      "correct": null,
+      "subject": "biology"
+    },
+    {
+      "number": 104,
+      "body": "How many types of gametes will be produced by a tetrahybrid individual, where last two genes are completely linked ?",
+      "choices": {
+        "a": "Eight",
+        "b": "Four",
+        "c": "Six",
+        "d": "Two"
+      },
+      "correct": null,
+      "subject": "biology"
+    },
+    {
+      "number": 105,
+      "body": "The Part of β chain of haemoglobin of a person suffering from sickle cell anaemia is given. The blank circle represents.",
+      "choices": {
+        "a": "same as 1",
+        "b": "same as 2",
+        "c": "same as 3",
+        "d": "same as 5"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the diagram showing the chain sequence"
+    },
+    {
+      "number": 106,
+      "body": "Fruit color in squash is example of :-",
+      "choices": {
+        "a": "Recessive Epistasis",
+        "b": "Dominant Epistasis",
+        "c": "Complementary genes",
+        "d": "Inhibitory genes"
+      },
+      "correct": null,
+      "subject": "biology"
+    },
+    {
+      "number": 107,
+      "body": "Which of the following options gives the correct category of organisms and their pattern of sex determination ?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the table showing organisms and their sex determination patterns"
+    },
+    {
+      "number": 108,
+      "body": "Identify the correct match from the columns I, II and III",
+      "choices": {
+        "a": "Hypertrichosis",
+        "b": "G-6 PD deficiency",
+        "c": "Xeroderma pigmentosum",
+        "d": "DMD"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the complete table showing all three columns"
+    },
+    {
+      "number": 109,
+      "body": "Progeny 7 : 1 : 1 : 7. Such deviation of ratio from 1 : 1 : 1 : 1 to 7 : 1 : 1 : 7 is due to variability of :-",
+      "choices": {
+        "a": "Gametic variability",
+        "b": "Random fertilisation",
+        "c": "Genotypic variability",
+        "d": "Phenotypic variability"
+      },
+      "correct": null,
+      "subject": "biology",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the genetic cross diagram shown"
+    },
+    {
+      "number": 110,
+      "body": "Which of the following combination is directly proportional to linkage ?\n\n(1) Temperature - Age - Heterochromatin\n(2) Distance between Genes - Age - Heterochromatin\n(3) Closeness of genes - Age - Heterochromatin\n(4) Length of chromosome - Distance of genes - Sex",
+      "choices": {
+        "a": "Temperature - Age - Heterochromatin",
+        "b": "Distance between Genes - Age - Heterochromatin",
+        "c": "Closeness of genes - Age - Heterochromatin",
+        "d": "Length of chromosome - Distance of genes - Sex"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 111,
+      "body": "A roan bull is bred to three cows. Cow A has the same genotype as the roan bull. cow B is red and cow C is white. what proportions of roan cows are expected in the offsprings of each group of cows :-",
+      "choices": {
+        "a": "2,1,1",
+        "b": "1,2,1",
+        "c": "1,1,2",
+        "d": "3,1"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 112,
+      "body": "Any male can't receive gene of DMD from",
+      "choices": {
+        "a": "Maternal grand father",
+        "b": "Maternal grand mother",
+        "c": "Paternal grand father",
+        "d": "Paternal grand mother"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 113,
+      "body": "Calvin Bridges stated that instead of XY chromosomes, sex is determined by the genic balance. What would be the sex of drosophila having XX + 3A & XY + 3A karyotype respectively:-",
+      "choices": {
+        "a": "Inter sex & Metafemale",
+        "b": "Metafemale & Intersex",
+        "c": "Intersex & Normal male",
+        "d": "Intersex & Meta male"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 114,
+      "body": "A women carrier for albinism as well as colourblindness will produce how many types of gametes :-",
+      "choices": {
+        "a": "Two",
+        "b": "Three",
+        "c": "Four",
+        "d": "One"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 115,
+      "body": "In a cross in Drosophila, the heterozygous member with grey body (b+) and long wings (vg+)was crossed with black body and vestigial wings, the progeny had the following ratio : grey vestigial - 24 : grey long - 126 : Black long-26, Black vestigial - 124. What is the frequency of recombinant in the population ?",
+      "choices": {
+        "a": "15.8 %",
+        "b": "16.7 %",
+        "c": "17.5 %",
+        "d": "14.5 %"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 116,
+      "body": "Two genes A & B present on same chromosome show 20% crossover, then what will be the percentage of gamete (Ab) for the plant having genotype AaBb in cis configuration ?",
+      "choices": {
+        "a": "40 %",
+        "b": "80 %",
+        "c": "20 %",
+        "d": "10 %"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 117,
+      "body": "A person with unknow blood group under ABO system, has suffered much blood loss in an accident and needs immediate blood transfusion. His one friend who has a valid certificate of his own blood type, offers for blood donation without delay. What would have been the type of blood group of the donor friend ?",
+      "choices": {
+        "a": "Type B",
+        "b": "Type AB",
+        "c": "Type O",
+        "d": "Type A"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 118,
+      "body": "Cytological observation on meiotic cell division and Mendel's concept on inheritance were combined together to propose.",
+      "choices": {
+        "a": "Laws of inheritance",
+        "b": "Chromosome theory of inheritance",
+        "c": "Law of segregation",
+        "d": "Law of sex determination"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 119,
+      "body": "Polygenic genes show :-",
+      "choices": {
+        "a": "Identical phenotype",
+        "b": "Identical biochemistry",
+        "c": "Different phenotype",
+        "d": "Identical genotype"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 120,
+      "body": "Which is incorrect for Drosophila melanogaster ?",
+      "choices": {
+        "a": "They could be grown on simple synthetic medium",
+        "b": "Single mating could produce a large number of progeny",
+        "c": "They complete their life cycle in about 7 weeks",
+        "d": "There is a clear differentiation of the sexes."
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 121,
+      "body": "Assertion :- The electrostatic field is of conservative nature.\n\nReason :- The line integral of electrostatic field ∮E⃗.dr⃗ along closed path is always zero.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "field_properties",
+      "subtopic_name": "Electric Field Properties",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 122,
+      "body": "Assertion :- Electrostatic potential is a relative physical quantity.\n\nReason :- Electric potential difference is a absolute physical quantity.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "potential",
+      "subtopic_name": "Electric Potential",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 123,
+      "body": "Assertion :- An electric field line may form closed loop.\n\nReason :- An induced electric field is of non conservative in nature.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Fields",
+      "subtopic_code": "field_lines",
+      "subtopic_name": "Electric Field Lines",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 124,
+      "body": "Assertion :- A positive test charge placed in external electric field tend to move due to electric force. The path traced by test charge is called electric field line. This is correct when field lines are straight.\n\nReason :- In uniform electric field motion of the charge is along field line if the charge was initially at rest.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Fields",
+      "subtopic_code": "field_lines",
+      "subtopic_name": "Electric Field Lines and Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 125,
+      "body": "Assertion :- Electric field intensity at surface of a uniformly charged spherical shell is E. If shell is punctured at a point then intensity at punctured point becomes E/2.\n\nReason :- Electric field intensity due to a spherical charge distribution can be found out by using Gauss law.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Gauss Law",
+      "subtopic_code": "field_calculation",
+      "subtopic_name": "Electric Field Calculations",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 126,
+      "body": "Assertion :- If X-ray is allowed to fall on uncharged gold leaf in evacuated glass chamber of electroscope, leaves will diverge.\n\nReason :- Uncharged gold leaves will get charged positively when x-ray falls on it.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "modern",
+      "topic_name": "Modern Physics",
+      "subtopic_code": "photoelectric",
+      "subtopic_name": "Photoelectric Effect",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 127,
+      "body": "A point charge is placed inside the hollow spherical conducting shell.\n\nAssertion :- On displacing the charge in the shell from centre the electric field pattern outside the shell does not change.\n\nReason :- The configuration of charge on outer surface of shell is independent of location of q charge in shell.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "conductors",
+      "subtopic_name": "Conducting Shell",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 128,
+      "body": "Assertion : A bird sitting on a high power line (say 11kV) is not affected practically.\n\nReason : Because no current flows through birds body, the circuit being incomplete.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "current_flow",
+      "subtopic_name": "Electric Current",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 129,
+      "body": "Assertion : When charges are shared between two bodies, there occurs no loss of charge, but there does occur a loss of energy.\n\nReason : In case of sharing of charges energy of conservation fails.",
+      "choices": {
+        "a": "If both Assertion & Reason are True & the Reason is a correct explanation of the Assertion.",
+        "b": "If both Assertion & Reason are True but Reason is not a correct explanation of the Assertion.",
+        "c": "If Assertion is True but the Reason is False.",
+        "d": "If both Assertion & Reason are False."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "charge_conservation",
+      "subtopic_name": "Charge and Energy Conservation",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 130,
+      "body": "In the given figure there is uniformly charged hemi spherical shell having centre O.\n\nAssertion :- At the given point A electric field due to shell is perpendicular to plane containing points of O & A as well as perpendicular to line OA.\nReason :- Point O may have more potential than A.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "electric_field",
+      "subtopic_name": "Electric Field",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the figure showing the hemi spherical shell and point A"
+    },
+    {
+      "number": 131,
+      "body": "Assertion :- When an object is placed between two plane parallel mirrors, then all the images found are of equal intensity.\nReason :- In case of plane parallel mirrors, only two images are possible.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Plane Mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 132,
+      "body": "Assertion :- The size of a mirror affects the nature of image.\nReason :- Small mirrors always form a virtual image.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Mirror Properties",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 133,
+      "body": "Assertion :- Within a glass slab, a double convex air bubble is formed. This air bubble behaves like a converging lens.\nReason :- Refractive index of air is more than the refractive index of glass.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction and Lenses",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 134,
+      "body": "Assertion :- The images formed by total internal reflections are much brighter than those formed by mirrors or lenses.\nReason :- There is very less loss of intensity in total internal reflection.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 135,
+      "body": "Assertion :- If the angles of the base of a prism are equal, then in the position of minimum deviation, the refracted ray will pass parallel to the base of prism.\nReason :- In the case of minimum deviation, the angle of incidence is equal to the angle of emergence.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "prism",
+      "subtopic_name": "Refraction Through Prism",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 136,
+      "body": "Assertion :- Spherical aberration occurs in mirror of larger aperture.\nReason :- The two rays, paraxial and marginal rays focus at different points.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "aberrations",
+      "subtopic_name": "Spherical Aberration",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 137,
+      "body": "Assertion :- The mirrors used in search lights are parabolic and not concave spherical.\nReason :- In a concave spherical mirror the image formed is always virtual.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Concave Mirrors and Applications",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 138,
+      "body": "Assertion :- Air bubble shines in water.\nReason :- Air bubble in water shines due to reflection of light.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 139,
+      "body": "Assertion :- Stars twinkle while the planets do not.\nReason :- Stars are much bigger in size than the planets.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "atmospheric_refraction",
+      "subtopic_name": "Atmospheric Refraction",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 140,
+      "body": "Assertion :- The formula connecting u, v and f for a spherical mirror is valid only for mirrors whose sizes are very small compared to their radii of curvature.\nReason :- Laws of reflection are strictly valid for plane surfaces, but not for large spherical surface.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "mirror_formula",
+      "subtopic_name": "Mirror Formula and Approximations",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "correct_source": "ai_solved",
+      "correct_confidence": "high"
+    },
+    {
+      "number": 141,
+      "body": "Assertion :- N₂ and NO²⁺ both are diamagnetic substances.\nReason :- NO²⁺ is isoelectronic with N₂.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 142,
+      "body": "Assertion :- C₃O₂ has linear structure.\nReason :- Each 'C' atom in C₃O₂ is sp-hybridised.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 143,
+      "body": "Assertion :- Bond order can +ve, -ve or zero.\nReason :- Higher the B.O., shorter is the B.L. and greater is the bond energy.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 144,
+      "body": "Assertion :- CCl₄ is a non-polar molecule.\nReason :- CCl₄ has polar bonds.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 162,
+      "body": "Assertion :- Withdrawal of drug is characterised by anxiety, shakiness, nausea, and sweating etc. Reason :- The body functions became dependent with regular use of drugs.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 163,
+      "body": "Assertion :- Smoking makes oxygen less available to the body. Reason :- In presence of CO, O2 binds less with haemoglobin.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 164,
+      "body": "Assertion :- Injection and syringes should be used only after sterilization. Reason :- Infectious like Hepatitis-B and HIV may spread.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 165,
+      "body": "Assertion :- HIV is a retrovirus containing ss-RNA covered by envelope. Reason :- Viral RNA form viral DNA inside host cell and produce viral particles containing viral RNA.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 166,
+      "body": "Assertion :- Gonorrhoea is a bacterial disease. Reason :- It cannot be cure completely even if it is detected at early stage.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 167,
+      "body": "Assertion :- Mendel conducted artificial pollination experiments using several true-breeding pea lines. Reason :- Mendel selected 14 true-breeding pea plant varieties.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 168,
+      "body": "Assertion :- Genes are the units of inheritance. Reason :- They contain the information that is required to express a particular trait in an organism.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 169,
+      "body": "Assertion :- Simply looking at the phenotype of a dominant trait, it is not possible to know the genotype composition. Reason :- Mendel performed reciprocal crosses to know the genotype of dominant organism.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 170,
+      "body": "Assertion :- Multiple alleles can be observed or studies in an organism, when its complete genome is known. Reason :- Multiple alleles is a rare phenomenon.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 171,
+      "body": "Assertion :- Round seeds in pea plant may have large sized or intermediate sized starch grains. Reason :- It is an example of pleiotropy, multiple alleles and incomplete dominance.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 172,
+      "body": "Assertion :- According to Mendel, factors are stable & discrete units that control the expression of traits. Reason :- He could not provide any physical proof for the existence of factors.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 173,
+      "body": "Assertion :- In birds, the females have one Z and one W chromosome, whereas males have a pair of Z-chromosomes besides autosomes. Reason :- In birds, sex of the offsprings is decided by the temperature of surroundings when they are released.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 174,
+      "body": "Assertion :- In human genetics, pedigree study provides a strong tool, which is utilized to trace the inheritance of a specific trait, abnormality or disease. Reason :- The controlled crosses that can be performed in pea plant or some other organisms, are not possible in case of human beings.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 175,
+      "body": "Assertion :- An X-linked recessive trait shows transmission from carrier male to female progeny. Reason :- X-linked recessive trait shows non-criss-cross inheritance.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 176,
+      "body": "Assertion :- Sickle-cell anaemia is caused by the substitution of glutamic acid by valine at the sixth position of the beta globin chain of the haemoglobin molecule. Reason :- It is due to the single base substitution at the sixth codon of the beta globin gene from GUG to GAG.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 177,
+      "body": "Assertion :- According to Mendelism, contrasting traits did not show any blending. Reason :- Only one of the parental traits was expressed in the F1, while at the F2 stage both the traits were expressed in the proportion of 1 : 1.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 178,
+      "body": "Assertion :- The segregation of alleles is a random process and so there is a 50% chance of a gamete containing either allele.\n\nReason :- By the process of mitosis, the alleles of the parental pair separates from each other & only one allele in transmitted to a gamete.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": "general",
+      "topic_name": "genetics",
+      "subtopic_code": "inheritance",
+      "subtopic_name": "allele segregation",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 179,
+      "body": "Assertion :- Dominance is not an autonomous feature of a gene or its product.\n\nReason :- It depends on gene product or on the particular phenotype that we choose to examine, when more than one phenotype is influenced by the same gene.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": "general",
+      "topic_name": "genetics",
+      "subtopic_code": "dominance",
+      "subtopic_name": "genetic dominance",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 180,
+      "body": "Assertion :- On the basis of Punnett square, the F2 generation of dihybrid plant will produce 16 different types of genotypes.\n\nReason :- In F1 generation plant, there are four genotypes of gametes with a frequency of 25% of total gametes produced.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "subject": "biology",
+      "topic_code": "general",
+      "topic_name": "genetics",
+      "subtopic_code": "dihybrid",
+      "subtopic_name": "dihybrid cross",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 181,
+      "body": "Certain words are given below in question. All are similar in nature except one which is different. Pick out the odd one.\n\nMars, Sky, Jupiter, Moon, Sun",
+      "choices": {
+        "a": "Sun",
+        "b": "Mars",
+        "c": "Moon",
+        "d": "Sky"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "classification",
+      "subtopic_code": "astronomy",
+      "subtopic_name": "celestial objects",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 182,
+      "body": "Arrange the given words in the sequence in which they occur in the dictionary.\n\n1. Exception\n2. Exceptional\n3. Exchanging\n4. Exchanged\n5. Excess",
+      "choices": {
+        "a": "12543",
+        "b": "21453",
+        "c": "42531",
+        "d": "32154"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "language",
+      "subtopic_code": "dictionary",
+      "subtopic_name": "alphabetical order",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 183,
+      "body": "If 'cat' and 'boat' are written as 'xzg' and 'ylzg' respectively in a code language then how is 'egg' to be written in the same language?",
+      "choices": {
+        "a": "vss",
+        "b": "urr",
+        "c": "vtt",
+        "d": "utf"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "reasoning",
+      "subtopic_code": "coding",
+      "subtopic_name": "letter coding",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 184,
+      "body": "Points out the letter which represents Indians and historians but not politicians on the basis of these three circles ?",
+      "choices": {
+        "a": "b",
+        "b": "c",
+        "c": "e",
+        "d": "f"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "reasoning",
+      "subtopic_code": "venn",
+      "subtopic_name": "venn diagrams",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the Venn diagram showing the three circles for Indians, Historians, and Politicians"
+    },
+    {
+      "number": 185,
+      "body": "If 6a1 = 70, 2a3 = 50 and 4a5 = 90, then find the value of 1a4 = ?",
+      "choices": {
+        "a": "50",
+        "b": "30",
+        "c": "10",
+        "d": "60"
+      },
+      "correct": null,
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "algebra",
+      "subtopic_code": "pattern",
+      "subtopic_name": "number patterns",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 186,
+      "body": "A shopper in a mart loads his trolley and walks 30 m through an alley which is going South, then he turns to his left and walks 10 m, then he turns North and walks another 10 m, then he turns West and walks 45 m and then he turns North and walks 20 m. Where is he now with reference to his starting position?",
+      "choices": {
+        "a": "35 m West",
+        "b": "55 m West",
+        "c": "35 m East",
+        "d": "55 m East"
+      },
+      "correct": null,
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "geometry",
+      "subtopic_code": "direction",
+      "subtopic_name": "direction and distance",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 187,
+      "body": "Question given below consists of a statement, followed by two arguments numbered I and II. You have to decide which of the arguments is a 'strong' argument and which is a 'weak' argument.\n\nStatement: The educated people should work in villages.\n\nArguments:\nI : Yes, because they can revolutionize agriculture and revamp the rural atmosphere.\nII : No, because their education might wastes there in villages.",
+      "choices": {
+        "a": "Only argument I is strong",
+        "b": "Only argument II is strong",
+        "c": "Both the arguments are strong",
+        "d": "Neither I nor II is strong"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "reasoning",
+      "subtopic_code": "argument",
+      "subtopic_name": "argument evaluation",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 188,
+      "body": "From the positions of a cube shown below, which letter will be on the face opposite to face with 'A'?",
+      "choices": {
+        "a": "F",
+        "b": "D",
+        "c": "C",
+        "d": "B"
+      },
+      "correct": null,
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Spatial reasoning",
+      "subtopic_code": "cube_folding",
+      "subtopic_name": "Cube folding and visualization",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 189,
+      "body": "Which of the following figures represents the best relationship among the three terms used in the question. Country, State, Chief Minister",
+      "choices": {
+        "a": "[Overlapping circles figure]",
+        "b": "[Concentric circles figure]",
+        "c": "[Three separate circles figure]",
+        "d": "[Two overlapping circles figure]"
+      },
+      "correct": null,
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Logical reasoning",
+      "subtopic_code": "venn_diagrams",
+      "subtopic_name": "Venn diagram relationships",
+      "difficulty": "easy",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 190,
+      "body": "If a mirror is placed on the line MN, then which of the answer figures is the right image of the given figure?",
+      "choices": {
+        "a": "[Mirror image option 1]",
+        "b": "[Mirror image option 2]",
+        "c": "[Mirror image option 3]",
+        "d": "[Mirror image option 4]"
+      },
+      "correct": null,
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Spatial reasoning",
+      "subtopic_code": "mirror_images",
+      "subtopic_name": "Mirror image identification",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 191,
+      "body": "\"Train 18\", India's first indigenous semi-high speed train was renamed as which of the following?",
+      "choices": {
+        "a": "Garibrath Express",
+        "b": "Jai Bharat Express",
+        "c": "Hindustan Express",
+        "d": "Vande Bharat Express"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Current affairs",
+      "subtopic_code": "transportation",
+      "subtopic_name": "Indian Railways",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 192,
+      "body": "Which team won the 85th Ranji Trophy title held in 2018-19?",
+      "choices": {
+        "a": "Karnataka",
+        "b": "Saurashtra",
+        "c": "Vidarbha",
+        "d": "Mumbai"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Sports",
+      "subtopic_code": "cricket",
+      "subtopic_name": "Domestic cricket",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 193,
+      "body": "Who won women's singles title of Indonesia Masters Badminton Tournament 2019?",
+      "choices": {
+        "a": "P.V. Sindhu",
+        "b": "Saina Nehwal",
+        "c": "Carolina Marin",
+        "d": "Ankita Raina"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Sports",
+      "subtopic_code": "badminton",
+      "subtopic_name": "International badminton",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 194,
+      "body": "Which country is the 2nd largest consumer and importer of the LPG in the world?",
+      "choices": {
+        "a": "France",
+        "b": "Russia",
+        "c": "China",
+        "d": "India"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Geography",
+      "subtopic_code": "energy",
+      "subtopic_name": "Energy consumption",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 195,
+      "body": "What is the rank of India in Global Corruption Index 2018 released by the Transparency International?",
+      "choices": {
+        "a": "72",
+        "b": "75",
+        "c": "78",
+        "d": "80"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Current affairs",
+      "subtopic_code": "indices",
+      "subtopic_name": "International rankings",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 196,
+      "body": "The National Voters Day is observed every year on which date?",
+      "choices": {
+        "a": "January 24",
+        "b": "January 25",
+        "c": "January 28",
+        "d": "January 30"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Important days",
+      "subtopic_code": "national_days",
+      "subtopic_name": "National observances",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 197,
+      "body": "Who has been chosen for 2019 Padma Vibhushan award?",
+      "choices": {
+        "a": "Dr Bhupen Hazarika",
+        "b": "Nanaji Deshmukh",
+        "c": "Teejan Bai",
+        "d": "Bachendri Pal"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Awards",
+      "subtopic_code": "padma_awards",
+      "subtopic_name": "Padma awards",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 198,
+      "body": "Which company got the title of world's most valued IT services brand according to Brand Finance?",
+      "choices": {
+        "a": "TCS",
+        "b": "Accenture",
+        "c": "IBM",
+        "d": "HCL"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Business",
+      "subtopic_code": "corporate",
+      "subtopic_name": "Corporate rankings",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 199,
+      "body": "What is the full form of FSSAI?",
+      "choices": {
+        "a": "Food Safety and Standards Authority of India",
+        "b": "Food Sales and Standards Authority of India",
+        "c": "Food Safety and Sales Authority of India",
+        "d": "Food Sales and Safety Authority of India"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "Abbreviations",
+      "subtopic_code": "govt_agencies",
+      "subtopic_name": "Government agencies",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 200,
+      "body": "Where is the headquarters of International Energy Agency (IEA)?",
+      "choices": {
+        "a": "Vienna",
+        "b": "London",
+        "c": "Paris",
+        "d": "Geneva"
+      },
+      "correct": null,
+      "subject": "general",
+      "topic_code": "general",
+      "topic_name": "International organizations",
+      "subtopic_code": "headquarters",
+      "subtopic_name": "Organization headquarters",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ]
+}

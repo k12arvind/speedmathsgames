@@ -1,0 +1,1319 @@
+{
+  "paper": "2015_16_v2",
+  "paper_code": "",
+  "source_pdf": "",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Which of the following graphs is correct for a particle moving in a circle of radius r at a speed of v (where 'a' is magnitude of acceleration)?",
+      "choices": {
+        "a": "[graph showing |a| vs v with horizontal line]",
+        "b": "[graph showing |a| vs v with curved upward line]",
+        "c": "[graph showing |a| vs v with curved line]",
+        "d": "[graph showing |a| vs v with curved downward line]"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Circular Motion",
+      "subtopic_code": "centripetal_acceleration",
+      "subtopic_name": "Centripetal Acceleration",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the specific graphs shown"
+    },
+    {
+      "number": 2,
+      "body": "Electronic configuration of Na+ is (2,8) and that of sodium element is (2,8,1). Choose the correct statements.\ni. Na+(g) is more stable than Na(g).\nii. Na+(g) is less stable than Na(g).\niii. Na+(aq) is more stable than Na(aq).\niv. Na+(aq) is less stable than Na(aq).",
+      "choices": {
+        "a": "ii, iii",
+        "b": "i, iii",
+        "c": "ii, iv",
+        "d": "i, iv"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "body": "What will be the remainder if the number 7^2015 is divided by 25?",
+      "choices": {
+        "a": "1",
+        "b": "7",
+        "c": "18",
+        "d": "24"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "body": "In humans, the digestion of carbohydrates happens/takes place in the following parts of the digestive system:",
+      "choices": {
+        "a": "Mouth, stomach and small intestine",
+        "b": "Mouth and small intestine",
+        "c": "Small intestine alone",
+        "d": "Stomach and small intestine"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "body": "Light travels from medium X to medium Y as shown in the adjacent figure.",
+      "choices": {
+        "a": "both the speed and frequency decrease",
+        "b": "speed increases and frequency decreases",
+        "c": "the speed decreases and wavelength decrease",
+        "d": "the speed decreases and wavelength increases"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Refraction",
+      "subtopic_code": "refraction_properties",
+      "subtopic_name": "Properties of Refraction",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the refraction diagram"
+    },
+    {
+      "number": 6,
+      "body": "Heat evolved in the combustion of one mole C(s) in excess oxygen is x kJ/mol, and that for the combustion of H2(g) is y kJ/mol and for that of C6H6(l) is z kJ/mol. Therefore, the heat change (kJ/mol) involved in the formation one mole of C6H6(l) from the given equation is",
+      "choices": {
+        "a": "x+y+z",
+        "b": "6x+3y-z",
+        "c": "6x+3y+z",
+        "d": "x+y-z/6"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "body": "If A(p, q + r), B(q, r + p) and C(r, p + q) are points then area of triangle ABC",
+      "choices": {
+        "a": "p^2 + q^2 + r^2",
+        "b": "(p + q + r)^2",
+        "c": "1/2 (pq + qr + rp)",
+        "d": "zero"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "Photosynthesis in plants is carried out in",
+      "choices": {
+        "a": "leaves",
+        "b": "leaves and stems",
+        "c": "leaves, stems and aerial roots",
+        "d": "stems and roots"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "body": "A particle moves along the x-axis according to the equation x = 6t^2 where x is displacement in meters and t is time in seconds. Therefore",
+      "choices": {
+        "a": "the acceleration of the particle is 6 ms^-2",
+        "b": "the particle follows a parabolic path",
+        "c": "each second the velocity of the particle changes by 9.8 ms^-1",
+        "d": "the velocity of the particle is 6 ms^-1 at t = 0.5 s"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "body": "What occurs when H2O(l) evaporates\n(i) Covalent bonds are broken.\n(ii) Only dipole-dipole forces are overcome.\n(iii) Heat is absorbed by water from the surroundings.\n(iv) It becomes oxygen and hydrogen gas.",
+      "choices": {
+        "a": "Only (i) and (iii) occurs",
+        "b": "Only (ii) and (iii) occurs",
+        "c": "(i), (iii) and (iv) occurs",
+        "d": "(i), (ii), (iii) and (iv) take place"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "body": "3/4 + 3/28 + 3/70 + 3/130 + ... + 3/9700 = ?",
+      "choices": {
+        "a": "0.97",
+        "b": "0.99",
+        "c": "1",
+        "d": "1.03"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "body": "The following technique that can be used for deciphering the arrangement of nucleotides in genes.",
+      "choices": {
+        "a": "karyotyping",
+        "b": "nucleic acid sequencing",
+        "c": "DNA finger printing",
+        "d": "transcription"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "The \"reaction\" force does not cancel the \"action\" force because",
+      "choices": {
+        "a": "the action force is greater than the reaction force",
+        "b": "the reaction force exists only after the action force is removed",
+        "c": "the reaction force is greater than the action force",
+        "d": "they act on different bodies"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "laws_of_motion",
+      "subtopic_name": "Laws of Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "body": "Which of the following Lewis dot structures best describes the structure of peroxide ion of sodium peroxide?",
+      "choices": {
+        "a": "Two oxygen atoms with X marks around them and dots for electrons from sodium",
+        "b": "Two oxygen atoms with X marks around them and dots for electrons from sodium",
+        "c": "Two oxygen atoms with X marks around them and dots for electrons from sodium",
+        "d": "Two oxygen atoms with X marks around them and dots for electrons from sodium"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the Lewis dot structure diagrams shown in options a, b, c, d"
+    },
+    {
+      "number": 15,
+      "body": "What is the sum of all three digit even numbers divisible by seventeen?",
+      "choices": {
+        "a": "18846",
+        "b": "18684",
+        "c": "14688",
+        "d": "16848"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "body": "When a red blood cell was placed in an animal cell (RBC) in 3 different solutions, the following morphological observations were made under a microscope.\n\nSolution 1: Normal morphology\nSolution 2: Swollen and hemolysed\nSolution 3: Shrunken or cremated\n\nThe above three solutions can be classified in the order of",
+      "choices": {
+        "a": "isotonic, hypotonic and hypertonic",
+        "b": "hypotonic, isotonic and hypertonic",
+        "c": "hypotonic, hypertonic and isotonic",
+        "d": "isotonic, hypertonic and hypotonic"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "body": "A stone is thrown horizontally and follows the XYZ path as shown in the adjacent figure. The direction of the acceleration of the stone at point Y is",
+      "choices": {
+        "a": "↓",
+        "b": "→",
+        "c": "↘",
+        "d": "↙"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "body": "Ionization Energy is defined as 'the energy required for removing the most loosely bound electron from an isolated gaseous atom or ion'.\n\nA(g) → A+(g) + e- 1st Ionization Energy\nA+(g) → A2+(g) + e- 2nd Ionization Energy\nA2+(g) → A3+(g) + e- 3rd Ionization Energy\nand so on...\n\nMolar Ionization Energy for Element 'A': 1st: 1086.5, 2nd: 2352.6, 3rd: 4620.5, 4th: 6222.7, 5th: 37831, 6th: 47277 (kJ/mol)\n\nIdentify element A.",
+      "choices": {
+        "a": "Nitrogen",
+        "b": "Oxygen",
+        "c": "Carbon",
+        "d": "Fluorine"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "body": "The adjacent sides of a parallelogram are 30 cm and 20 cm. The length of one of the diagonal is 40 cm. What is the length of the other diagonal?",
+      "choices": {
+        "a": "60 cm",
+        "b": "10√10 cm",
+        "c": "20√5 cm",
+        "d": "8√30 cm"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Geometry",
+      "subtopic_code": "parallelogram",
+      "subtopic_name": "Parallelogram properties",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "body": "Genetic material (DNA) in plants occurs in which of the following cell organelles?",
+      "choices": {
+        "a": "Nucleus",
+        "b": "Nucleus and chloroplast",
+        "c": "Nucleus, chloroplast and mitochondria",
+        "d": "Chloroplast and mitochondria"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "body": "The diagram shows total internal reflection. Which of the following statement is not true?",
+      "choices": {
+        "a": "Angle AON is the incident angle",
+        "b": "∠AON = ∠BON",
+        "c": "∠AON is the critical angle",
+        "d": "the speed of light in medium 2 is greater than that in medium 1"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "total_internal_reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "body": "A chemist's report on a batch of pharmaceutical products, Aspirin (C₉H₈O₄) (250mg tablets) and Paracetamol (C₈H₉NO₂) (500mg tablets) indicated a '+0.5%' weight error in each tablet. Due to this error, the consumer gets extra 'x' molecules of aspirin per tablet and extra 'y' molecules of paracetamol per tablet. Choose the 'best' relation between x and y.",
+      "choices": {
+        "a": "x=y",
+        "b": "x>y",
+        "c": "y>x",
+        "d": "x=2y"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "(41)¹⁶ - (14)¹⁶ is a multiple of",
+      "choices": {
+        "a": "1485",
+        "b": "1584",
+        "c": "1845",
+        "d": "1854"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Number Theory",
+      "subtopic_code": "modular_arithmetic",
+      "subtopic_name": "Modular Arithmetic",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "The equation given below represents the process of photosynthesis. 6CO₂ + (i) chlorophyll/sunlight → C₆H₁₂O₆ + (ii) → Identify (i) and (ii).",
+      "choices": {
+        "a": "(i) 6H₂O, (ii) 6O₂",
+        "b": "(i) 6O₂, (ii) 6H₂O",
+        "c": "(i) 4H₂O, (ii) 4O₂",
+        "d": "(i) 4O₂, (ii) 4H₂O"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "The centre of gravity of a body coincides with the center of mass",
+      "choices": {
+        "a": "always",
+        "b": "never",
+        "c": "if the acceleration due to gravity is uniform over the body",
+        "d": "if the body has a uniform distribution of mass"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "center_of_mass",
+      "subtopic_name": "Center of Mass and Gravity",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "body": "Sodium reacts with excess oxygen to form sodium oxide. A student wants to prepare 1.24g of sodium oxide. While doing the calculations, he uses atomic number of sodium instead of atomic mass. What is the approximate percentage error in the mass of sodium oxide obtained due to this mistake?",
+      "choices": {
+        "a": "11%",
+        "b": "23%",
+        "c": "48%",
+        "d": "60%"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "body": "What will be the remainder if the number (1000000)^3 is divided by 143?",
+      "choices": {
+        "a": "9",
+        "b": "6",
+        "c": "1",
+        "d": "0"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "body": "Which of the following sequence depicts the flow of blood in human circulatory system?",
+      "choices": {
+        "a": "Lungs → Left atrium → Left ventricle → Aorta to body tissue → Right atrium → Right ventricle",
+        "b": "Lungs → Right ventricle → Left atrium → Right ventricle → Right atrium → Aorta to body tissue",
+        "c": "Aorta to body tissue → Left ventricle → Left atrium → Lungs → Right ventricle → Right atrium",
+        "d": "Aorta to body tissue → Left atrium → Left ventricle → Right atrium → Right ventricle → Lungs"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "body": "A body is in equilibrium under the combined action of several forces then",
+      "choices": {
+        "a": "all the forces must be applied at the same point",
+        "b": "all the forces form pairs of equal and opposite forces",
+        "c": "the sum of the torques about any point must always be equal to zero",
+        "d": "the lines of action of all the forces must pass through the centre of gravity of the body"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "equilibrium",
+      "subtopic_name": "Static Equilibrium",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "body": "From the following pool of molecules (showing 8 structural diagrams labeled (i) through (viii)) How many isomers are represented above",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Organic Chemistry",
+      "subtopic_code": "isomerism",
+      "subtopic_name": "Structural Isomers",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question cannot be solved without the molecular structure diagrams showing carbon chain arrangements"
+    },
+    {
+      "number": 31,
+      "body": "How many four digit numbers divisible by twenty nine have the sum of their digits 29?",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "13",
+        "d": "none of these"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Number Theory",
+      "subtopic_code": "divisibility",
+      "subtopic_name": "Divisibility Rules",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "body": "Choose the right combination of heart types and animals.",
+      "choices": {
+        "a": "2 chamber - Sardine fish, 3 chamber - Amphibians, 4 chamber - Reptiles",
+        "b": "2 chamber - Sardine fish, 3 chamber - Gharial reptiles, 4 chamber - Owl / birds",
+        "c": "2 chamber - Gharial reptiles, 3 chamber - Birds / owl, 4 chamber - Human",
+        "d": "2 chamber - Birds, 3 chamber - Gharial reptiles, 4 chamber - Fish sardine"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": "general",
+      "topic_name": "Animal Physiology",
+      "subtopic_code": "circulation",
+      "subtopic_name": "Circulatory System",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "body": "A photo frame can be hung on the wall with string in three different ways as shown in the adjacent figure below. The tension in the string is",
+      "choices": {
+        "a": "least in I",
+        "b": "greatest in II",
+        "c": "greatest in III",
+        "d": "least in III"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Force and Motion",
+      "subtopic_code": "tension",
+      "subtopic_name": "String Tension",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question cannot be solved without the diagram showing three different string configurations for hanging the frame"
+    },
+    {
+      "number": 34,
+      "body": "Ionic radii of following species are",
+      "choices": {
+        "a": "Si^4+ > P^5+ > S^6+ > Cl^7+",
+        "b": "S^6+ > P^5+ > Si^4+ > Al^3+",
+        "c": "N^3- >O^2- >F^- >Na^1+",
+        "d": "Mg^2+ > Na^1+ >F^- > O^2-"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "body": "How many triangles are there in this figure?",
+      "choices": {
+        "a": "50",
+        "b": "70",
+        "c": "84",
+        "d": "91"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without counting triangles in the given figure"
+    },
+    {
+      "number": 36,
+      "body": "Raju Sharma, a 10th standard student participated in 100 meter sprint. During running he developed painful muscle contraction and fell down. The physical education teacher rushed to him and gave a hot water massage. Raju Sharma slowly recovered from the cramp. The teacher explained the physiology behind the cramp and the sudsequent relief. Identify the right explanation.",
+      "choices": {
+        "a": "Because of the quick movement, the muscles looses its elasticity and are stressed. The inflammation developed during this process causes cramp. After hot water massage the inflammation subsides and the pain gets relieved.",
+        "b": "During vigorous physical activity, aerobic respiration in the muscles increases which leads to the accumulation of more CO2 in the muscles. This causes cramps. Later CO2 was relieved upon hot water massage resulting in pain relief.",
+        "c": "During vigorous physical activity, lactic acid accumulates in the muscles due to anaerobic respiration. This causes the cramps. Hot water massage improves the circulation of blood and O2 in the muscles. As a result lactic acid is converted into CO2 and water. Thus the pain gets relieved.",
+        "d": "During quick movements, the nerves will not co-operate with the muscles. There is a stimulus which is taken to spinal cord and the effector function was done by motor neurons which cause cramp. On hot water massage the stimulus was subsided. Thus the pain gets relieved."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "If a force acting is conservative only when",
+      "choices": {
+        "a": "work done by this force is zero when the particle moves once around any closed path",
+        "b": "it obeys Newton's third law",
+        "c": "its work is the change in the K.E of the particle",
+        "d": "it is not a frictional force"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "work-energy",
+      "subtopic_name": "Work and Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "body": "Sati was studying neutralisation reaction. She accidentally dropped 'x' grams of a sodium carbonate monohydrate into a 100 mL solution of HCl whose concentration was 0.25 M. 10mL from this final solution was taken and titrated against 0.05M NaOH solution to yield a titre value of 20mL. What is the value of 'x'.",
+      "choices": {
+        "a": "186mg",
+        "b": "93mg",
+        "c": "1860mg",
+        "d": "930mg"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "8888888 * 8888888 this fifteen digit number is divisible by 22. Find the eighth digit in the number.",
+      "choices": {
+        "a": "1",
+        "b": "3",
+        "c": "5",
+        "d": "8"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "The various parts of the human respiratory system are given below:\n(i) Nasal passage    (ii) Pharynx    (iii) Wind pipe\n(iv) Bronchus    (v) Bronchioles    (vi) Alveoli\nIdentify the right sequence of air passage during exhalation.",
+      "choices": {
+        "a": "vi, v, ii, iv, iii, i",
+        "b": "vi, iv,v, iii, ii, i",
+        "c": "vi, v, iv, iii, ii, i",
+        "d": "vi, v, ii, iii, iv, i"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "body": "A lift is moving up at constant speed. Consider the following statements:\nI. The tension in the string is constant\nII. The K.E of the elevator is constant\nIII. The gravitational P.E of the earth lift system is constant\nIV. The acceleration of the elevator is zero.\nV. The mechanical energy of the earth – lift system is constant.\nChoose the correct option",
+      "choices": {
+        "a": "Only II and V are true",
+        "b": "Only IV and V are true",
+        "c": "Only I, II and III are true",
+        "d": "Only I, II and IV are true"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "energy",
+      "subtopic_name": "Energy and Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "Amongst the sixteen ✓ and ✗ marks, how many cases are incorrect?\n\nStrip of Metal | 0.5M MgSO₄ | 0.5M ZnSO₄ | 0.5M PbSO₄ | 0.5M FeSO₄\ni) Mg          | ✗          | ✓          | ✗          | ✓\nii) Zn         | ✗          | ✗          | ✗          | ✗\niii) Fe        | ✓          | ✓          | ✓          | ✗\niv) Pb         | ✓          | ✓          | ✓          | ✓\n\n✓means displacement reaction occurs\n✗ means no displacement reaction occurs",
+      "choices": {
+        "a": "7",
+        "b": "11",
+        "c": "10",
+        "d": "9"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "body": "In the adjoining figure segment AD, BE and CF are the altitudes of triangle ABC. Find AD × BC if AB × AC = 409.6, BE × CF = 202.5.",
+      "choices": {
+        "a": "225",
+        "b": "256",
+        "c": "288",
+        "d": "312"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "body": "The testes of men lie in a small muscular pouch called scrotum located outside the abdominal cavity; choose the correct reason.",
+      "choices": {
+        "a": "Sperm formation in testes requires a higher temperature than the normal body temperature.",
+        "b": "Seminal vesicles requires lower temperature to produce nutrients for sperm.",
+        "c": "Sperm formation in testes requires a lower temperature than the normal body temperature.",
+        "d": "Sperm produced in scrotum is easily released out without going into abdominal cavity."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "body": "Two toy cars (a and b) fixed with spring at front, collide as shown in the figure below. 'a' has a mass of 200 g and is initially moving to the right. Car 'b' has a mass of 300 g and is initially at rest. When the separation between the cars is minimum,",
+      "choices": {
+        "a": "car b is at rest",
+        "b": "car a has come to rest",
+        "c": "both cars have the same kinetic energy (K.E)",
+        "d": "the K.E of the system is at a minimum"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "collision",
+      "subtopic_name": "Collision and Conservation",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "What is the ratio of number of electrons gained by acidified KMnO4 and acidified K2Cr2O7 in the reaction given below\nKMnO4 ---H+---> Mn2+\nK2Cr2O7 ---H+---> Cr3+",
+      "choices": {
+        "a": "5:6",
+        "b": "6:5",
+        "c": "3:5",
+        "d": "5:3"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "body": "If √338 - √288 = m then m = ?",
+      "choices": {
+        "a": "√50",
+        "b": "√32",
+        "c": "√18",
+        "d": "√2"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "body": "Which of the following is NOT produced by microbial activity?",
+      "choices": {
+        "a": "Yoghurt",
+        "b": "Bread",
+        "c": "Vinegar",
+        "d": "Antiseptics"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "body": "A concave spherical mirror has a focal length of 12 cm. if an object is placed 6 cm in front of it, the position of the image is",
+      "choices": {
+        "a": "4 cm behind the mirror",
+        "b": "4 cm in front of the mirror",
+        "c": "12 cm behind the mirror",
+        "d": "12 cm in front of the mirror"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Spherical Mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "body": "Methylcyclobutane is a saturated alkane. What is its molecular formula?",
+      "choices": {
+        "a": "C5H10",
+        "b": "C5H8",
+        "c": "C5H12",
+        "d": "C5H6"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "5901AB04 is an eight digit number divisible by 792. Find A + B = ?",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "9"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "body": "Among the following, which is not true about vaccines?",
+      "choices": {
+        "a": "Vaccines contain dead microbial cells or their parts.",
+        "b": "Vaccines contain antibiotics to prevent diseases.",
+        "c": "",
+        "d": ""
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": "Question appears incomplete - only two choices visible"
+    },
+    {
+      "number": 53,
+      "body": "The current I in the branch shown in the adjacent figure is",
+      "choices": {
+        "a": "3.0A",
+        "b": "2.5A",
+        "c": "4.0A",
+        "d": "4.5A"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Current and Circuits",
+      "subtopic_code": "kirchhoff",
+      "subtopic_name": "Kirchhoff's Laws",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing current values at different branches"
+    },
+    {
+      "number": 54,
+      "body": "A closed circuit shown in the adjacent figure includes a resistor of resistance 20.0Ω and battery of emf 3.0V and internal resistance of 1Ω. The internal resistance of the battery can be considered in series with it. The voltage drop across the resistor of resistance 20Ω is",
+      "choices": {
+        "a": "2.857 V",
+        "b": "3.000 V",
+        "c": "2.500 V",
+        "d": "1.567 V"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Current and Circuits",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance and Ohm's Law",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "body": "A circuit which is used for charging a battery is shown in the adjacent figure. The battery 'B' has emf 6V and internal resistance of 2Ω. The charging battery 'A' has an emf of 9V and internal resistance of 1Ω. The voltage across the points P and Q",
+      "choices": {
+        "a": "8V",
+        "b": "7V",
+        "c": "4V",
+        "d": "4.2V"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Current and Circuits",
+      "subtopic_code": "battery",
+      "subtopic_name": "Battery Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "The circuit shown in adjacent figure consists of an external resistance of 10.0Ω connected across two batteries of emfs 6.0V and 9.0V with internal resistance of 1.0Ω each. Find the power dissipated by the 10.0Ω resistor.",
+      "choices": {
+        "a": "6.5W",
+        "b": "5.1W",
+        "c": "3.5W",
+        "d": "5.5W"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Current and Circuits",
+      "subtopic_code": "power",
+      "subtopic_name": "Electric Power",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "body": "Choose the correct sets which represent the oxides as acidic:basic:neutral:amphoteric respectively\n(i) CO2: MgO: N2O: H2O    (iii) P2O5: ZnO: NO: Al2O3\n(ii) SO2: NO: CO: Al2O3    (iv) SO3: CaO : N2O : PbO",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Chemical Properties",
+      "subtopic_code": "oxides",
+      "subtopic_name": "Acidic and Basic Oxides",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "body": "What is the smallest natural number when multiplied by 15 and divided by 63 gives remainder 21?",
+      "choices": {
+        "a": "13",
+        "b": "14",
+        "c": "17",
+        "d": "20"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Number Theory",
+      "subtopic_code": "modular",
+      "subtopic_name": "Modular Arithmetic",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "body": "Gram positive bacteria will have one of the specific characters. Identify it.",
+      "choices": {
+        "a": "They have more peptidoglycan in their cell walls.",
+        "b": "They show red colour on gram staining.",
+        "c": "Flagella found all over the body.",
+        "d": "They will have mesosomes as the extension of cell membrane."
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "body": "A silver article turns black when kept open in air for few days. The article when rubbed with toothpaste again starts shining because",
+      "choices": {
+        "a": "Hydrogen peroxide present in the toothpaste reacts to give silver sulphate.",
+        "b": "Hydrated silica present in the toothpaste reacts to give silver oxide.",
+        "c": "Aluminium hydroxide present in the toothpaste reacts to give silver hydroxide.",
+        "d": "Calcium carbonate present in the toothpaste reacts to give silver carbonate."
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "body": "The sum of first four terms of an A.P is 56. The sum of last four terms of same A.P is 112. The first term of the A.P is 11. Find the number of terms in that A.P.",
+      "choices": {
+        "a": "7",
+        "b": "8",
+        "c": "11",
+        "d": "13"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Arithmetic Progression",
+      "subtopic_code": "ap",
+      "subtopic_name": "Sum of Terms",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "body": "Mitochondrial equivalent in prokaryotic bacterial cell is",
+      "choices": {
+        "a": "ribosomes",
+        "b": "thylakoid",
+        "c": "cytoplasmic plasma membrane",
+        "d": "cyanosomes"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "body": "A compound 'A' when treated with a dilute mineral acid gives a gas which when passed through a solution of B regenerates A. Further, a gas (C) that is obtained from the addition of Concentrated HCl to KMnO₄ crystals is used to react with B to give D. Identify A, B, C and D.",
+      "choices": {
+        "a": "Na₂CO₃, NaOH, O₂, Na₂O.",
+        "b": "MgCO₃, Mg(OH)₂, OCl₂, Mg(OCl)₂",
+        "c": "CaCO₃ Ca(OH)₂, Cl₂, CaOCl₂",
+        "d": "Al₂(CO₃)₃, Al(OH)₃, Cl₂, Al₂O₃."
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "body": "If a : b = c : d then how many of the following statements are true?\n(i) c(a + b) = a(c + d)\n(ii) d(a - b) = b(c - d)\n(iii) (a² + b²) (ac - bd) = (a² - b²) (ac + bd)\n(iv) (a²/b²) + (c²/d²) = (2ac/bd)",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "All"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Proportion",
+      "subtopic_code": "ratio",
+      "subtopic_name": "Properties of Ratios",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "body": "Endemic species refers to",
+      "choices": {
+        "a": "threatened wild animals and plants which belong to different areas.",
+        "b": "species which are capable of inter breeding.",
+        "c": "those species of flora and fauna which are found exclusively in a particular area.",
+        "d": "all the plants and animals mentioned in the red data book."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "body": "5 g of a gas at 27°C occupied the same volume as 0.250 g of dihydrogen at 17°C at the same pressure. Find out molecular weight of the gas.",
+      "choices": {
+        "a": "41.37",
+        "b": "20.68",
+        "c": "25.80",
+        "d": "39.87"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Gas Laws",
+      "subtopic_code": "ideal_gas",
+      "subtopic_name": "Ideal Gas Law",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "body": "Select any three distinct digits. Form a three digit number. Form the another number by reversing the digits. Find the difference of these two numbers. What is the G.C.D of all such differences?",
+      "choices": {
+        "a": "9",
+        "b": "11",
+        "c": "33",
+        "d": "99"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "body": "Which of the following option is not true about the viruses?",
+      "choices": {
+        "a": "Viruses have either DNA or RNA as these genetic material.",
+        "b": "Viruses will not infect bacteria, fungi and algae.",
+        "c": "Viruses use host machinery to produce their own proteins.",
+        "d": "Viruses are useful in the preparation of vaccines."
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "body": "The coefficient of linear thermal expansion of steel is 11X10^-6/°C. The percentage change in the length of the rod when temperature changes by 70°C.",
+      "choices": {
+        "a": "0.077%",
+        "b": "0.085%",
+        "c": "0.0576%",
+        "d": "0.00077%"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Expansion",
+      "subtopic_code": "linear_expansion",
+      "subtopic_name": "Linear Thermal Expansion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "body": "An acid-base titration is a technique where a solution of known concentration of acid/base is used to determine the concentration of an unknown solution of acid/base. These titrations typically use a pH indicator solution to denote the end point of the reaction. A pH indicator is a compound added in small quantities to a solution to indicate the pH visually (generally by appearance/disappearance or change in colour). A typical procedure is as follows: A certain volume 'V1' of unknown concentration 'M1' of HCl is taken in a conical flask, to which a few drops of phenolphthalein indicator solution is added. The solution remains colourless. From a burette (a graduated dropper) a solution of NaOH, whose concentration is known, 'M2', is added dropwise into the conical flask until a pale pink colour is obtained and is termed as the end point. The amount of solution dispensed from the burette to obtain the end point is noted as 'V2'. Phenolphthalein indicator changes its colour to pink only when the pH of the solution is above 9.5. Similarly, another indicator, methyl orange, is red in colour below pH 3.7 and yellow above. Given below is a graph of pH of the solution in the conical flask and the reading of the burette in the course of the titration. The equivalent point is theoretically defined as the point in the graph where the number of moles HCl in the conical flask becomes equal to the number of moles of NaOH run down the burette. Note the difference between end point and equivalence point.",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Acid-Base Titrations",
+      "subtopic_code": "titration",
+      "subtopic_name": "pH Titration Curves",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "This appears to be an incomplete question that requires analysis of the accompanying pH titration curve figure to answer properly."
+    },
+    {
+      "number": 71,
+      "body": "There are ten numbers in a certain A.P. The sum of first three terms is 321. The sum of last three numbers is 405. Find the sum of all the ten numbers.",
+      "choices": {
+        "a": "1165",
+        "b": "1210",
+        "c": "1221",
+        "d": "1252"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 72,
+      "body": "Regeneration in animal kingdom is observed in which of the following animals?",
+      "choices": {
+        "a": "Frog",
+        "b": "Planaria",
+        "c": "Birds",
+        "d": "Snakes"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "body": "A cube of side 4 cm made of wood is floating in water of density 1.00gcc^-1. When a small steel ball is embedded in the cube it just immerses in water. If density of wood is 0.76gcc^-1, then mass of the steel ball is",
+      "choices": {
+        "a": "12.65g",
+        "b": "3.84g",
+        "c": "15.36g",
+        "d": "22.98g"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Fluid Mechanics",
+      "subtopic_code": "buoyancy",
+      "subtopic_name": "Buoyancy and Flotation",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "body": "Given below is the pH vs volume curve for titration of Na2CO3 (in conical flask) with HCl.",
+      "choices": {
+        "a": "The curve shows two equivalence points",
+        "b": "The curve shows one equivalence point",
+        "c": "The curve shows no equivalence points",
+        "d": "The curve is invalid for this titration"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the pH vs volume curve shown in the figure"
+    },
+    {
+      "number": 75,
+      "body": "How many three digit numbers are divisible by 13 and having middle digit 5?",
+      "choices": {
+        "a": "5",
+        "b": "7",
+        "c": "10",
+        "d": "13"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 76,
+      "body": "In biology, Polymerase Chain Reaction (PCR) refers to which of the following option?",
+      "choices": {
+        "a": "In vitro multiplication of nucleic acids molecules.",
+        "b": "In vivo multiplication of nucleic acids molecules.",
+        "c": "Continuous protein synthesis from peptide.",
+        "d": "Synthesis of mRNA from DNA in vitro."
+      },
+      "correct": "a",
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 77,
+      "body": "A swing playing with small amplitude can be considered as a simple pendulum. Such a swing is set to oscillate with an amplitude a and frequency f. When it is at its mean position, a box of same mass as that of the seat of the swing is dropped on it and its starts moving with the swing. Choose the correct statement",
+      "choices": {
+        "a": "Amplitude is reduced to half its initial value and frequency is doubled",
+        "b": "Amplitude is reduced to half its initial value and frequency is unchanged",
+        "c": "Amplitude doubles and frequency is unchanged",
+        "d": "Amplitude remains same and frequency is half its initial value"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Oscillations and Waves",
+      "subtopic_code": "shm",
+      "subtopic_name": "Simple Harmonic Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "body": "The pH of the 10^-8 M HCl solution is",
+      "choices": {
+        "a": "Greater than 7 and less than 8",
+        "b": "Exactly 8",
+        "c": "Exactly 6",
+        "d": "Greater than 6 less than 7"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "body": "Two parallel chords 96 cm and 28 cm long are on the opposite side of the centre of the circle with radius 50 cm. Find the area of the quadrilateral whose vertices are the end points of the chords.",
+      "choices": {
+        "a": "3488",
+        "b": "3848",
+        "c": "3844",
+        "d": "3484"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "body": "Each chromosome contains",
+      "choices": {
+        "a": "one long DNA molecule",
+        "b": "one long RNA molecule",
+        "c": "one long sequence of amino acids",
+        "d": "a single gene for a protein"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ]
+}
