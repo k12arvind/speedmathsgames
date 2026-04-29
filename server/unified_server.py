@@ -232,6 +232,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             self.handle_physics_book_asset(path)
             return
 
+        # NSEJS figure images for figure-dependent practice questions
+        # /static/NSEJSFigures/<slug>/<file>
+        if path.startswith('/static/NSEJSFigures/'):
+            self.handle_nsejs_figure_asset(path)
+            return
+
         # API endpoints
         if path.startswith('/api/'):
             self.handle_api_get(path, query_params)
@@ -3554,6 +3560,35 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             self.send_response(400); self.end_headers(); return
 
         root = (Path.home() / 'saanvi' / 'PhysicsBooksHTML').resolve()
+        target = (root / rel).resolve()
+        try:
+            target.relative_to(root)
+        except ValueError:
+            self.send_response(403); self.end_headers(); return
+        if not target.is_file():
+            self.send_response(404); self.end_headers(); return
+
+        ctype, _ = mimetypes.guess_type(str(target))
+        ctype = ctype or 'application/octet-stream'
+        self.send_response(200)
+        self.send_header('Content-Type', ctype)
+        self.send_header('Content-Length', str(target.stat().st_size))
+        if target.suffix.lower() in ('.jpg', '.jpeg', '.png'):
+            self.send_header('Cache-Control', 'public, max-age=86400')
+        self.end_headers()
+        with open(target, 'rb') as f:
+            self.wfile.write(f.read())
+
+    def handle_nsejs_figure_asset(self, path: str):
+        """Serve NSEJS practice question figures from ~/saanvi/NSEJSFigures/."""
+        import mimetypes
+        from urllib.parse import unquote
+        prefix = '/static/NSEJSFigures/'
+        rel = unquote(path[len(prefix):])
+        if '..' in rel.split('/'):
+            self.send_response(400); self.end_headers(); return
+
+        root = (Path.home() / 'saanvi' / 'NSEJSFigures').resolve()
         target = (root / rel).resolve()
         try:
             target.relative_to(root)

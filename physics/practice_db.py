@@ -165,6 +165,9 @@ class PhysicsPracticeDB:
                 official_solution    TEXT,
                 difficulty_band      TEXT DEFAULT 'medium',
                 parse_status         TEXT DEFAULT 'ok',
+                figure_image_path    TEXT,
+                correct_source       TEXT,   -- 'official' | 'ai_solved' | NULL
+                correct_confidence   TEXT,   -- 'high' | 'medium' | 'low' | NULL
                 added_at             TEXT NOT NULL,
                 updated_at           TEXT
             );
@@ -172,6 +175,8 @@ class PhysicsPracticeDB:
                 ON physics_questions(source_book_id, chapter_number);
             CREATE INDEX IF NOT EXISTS idx_physics_questions_diff
                 ON physics_questions(difficulty_band);
+            CREATE INDEX IF NOT EXISTS idx_physics_questions_status
+                ON physics_questions(parse_status);
 
             CREATE TABLE IF NOT EXISTS physics_question_topics (
                 tag_id               INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -187,6 +192,19 @@ class PhysicsPracticeDB:
             CREATE INDEX IF NOT EXISTS idx_physics_qtopics_topic
                 ON physics_question_topics(topic_code, is_active);
             """)
+
+            # Lightweight migration: add columns introduced after the table
+            # was first created. SQLite doesn't error on `ADD COLUMN` if we
+            # check first via PRAGMA.
+            existing_cols = {row[1] for row in c.execute(
+                "PRAGMA table_info(physics_questions)").fetchall()}
+            for col, ddl in [
+                ('figure_image_path', 'ALTER TABLE physics_questions ADD COLUMN figure_image_path TEXT'),
+                ('correct_source',    'ALTER TABLE physics_questions ADD COLUMN correct_source TEXT'),
+                ('correct_confidence','ALTER TABLE physics_questions ADD COLUMN correct_confidence TEXT'),
+            ]:
+                if col not in existing_cols:
+                    c.execute(ddl)
 
     # ----------------------------------------------------------------- books
     def upsert_book(self, *, book_id: str, title: str, pdf_filename: Optional[str],
@@ -359,7 +377,8 @@ class PhysicsPracticeDB:
                           requested_count: int,
                           user_id: str) -> List[Dict[str, Any]]:
         del user_id
-        where = ["q.parse_status != 'failed'"]
+        # Exclude both hard-failed parses and questions flagged for review
+        where = ["q.parse_status NOT IN ('failed', 'needs_review')"]
         params: List[Any] = []
         joins = ''
         if topic_filter or subtopic_filter:
@@ -411,6 +430,7 @@ class PhysicsPracticeDB:
                        a.answered_at,
                        q.problem_number, q.source_book_id, q.chapter_number,
                        q.difficulty_band,
+                       q.figure_image_path, q.correct_source, q.correct_confidence,
                        q.question_text, q.choice_a, q.choice_b, q.choice_c, q.choice_d, q.choice_e,
                        b.title AS book_title,
                        ch.title AS chapter_title,

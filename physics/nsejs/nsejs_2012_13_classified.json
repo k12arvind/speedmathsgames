@@ -708,7 +708,8 @@
       "difficulty": "medium",
       "has_figure": true,
       "skip_reason": "Cannot solve without the velocity-time graphs shown in options A, B, C, D",
-      "solution": "time before v = 0, t = u/g = 20/10 = 2 sec."
+      "solution": "time before v = 0, t = u/g = 20/10 = 2 sec.",
+      "figure_image_path": "/static/NSEJSFigures/2012_13/p061.jpg"
     },
     {
       "number": 42,
@@ -921,8 +922,11 @@
       "subtopic_name": "Force and Equilibrium",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the figure showing the spring balance setup",
-      "solution": "2N"
+      "skip_reason": null,
+      "solution": "2N",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2012_13/p079.jpg"
     },
     {
       "number": 55,
@@ -1021,8 +1025,11 @@
       "subtopic_name": "Resistor networks and power",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the circuit diagram",
-      "solution": "I = 10/(10 + 100R/(100 + R))\nPower consumed by 10Ω is P₁ = I²(10)\nPower consumed by parallel combination is P₂ = I² × 100R/(100 + R)\nPower is same, P₁ = P₂\n10 = 100R/(100 + R)\n100 + R = 10 R\nR = 100/9 = 11.11Ω"
+      "skip_reason": null,
+      "solution": "I = 10/(10 + 100R/(100 + R))\nPower consumed by 10Ω is P₁ = I²(10)\nPower consumed by parallel combination is P₂ = I² × 100R/(100 + R)\nPower is same, P₁ = P₂\n10 = 100R/(100 + R)\n100 + R = 10 R\nR = 100/9 = 11.11Ω",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2012_13/p080.jpg"
     },
     {
       "number": 61,

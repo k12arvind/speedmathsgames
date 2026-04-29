@@ -84,13 +84,16 @@ def delete_existing_for_year(c: sqlite3.Connection, year: int):
 
 
 def insert_one_question(c: sqlite3.Connection, year: int, q: dict):
+    parse_status = q.get('parse_status') or 'ok'
     cur = c.execute("""
         INSERT INTO physics_questions
             (source_book_id, chapter_number, problem_number,
              question_text, choice_a, choice_b, choice_c, choice_d, choice_e,
              correct_choice, official_solution,
-             difficulty_band, parse_status, added_at, updated_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'ok', ?, ?)
+             difficulty_band, parse_status,
+             figure_image_path, correct_source, correct_confidence,
+             added_at, updated_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, (
         'nsejs_papers',
         year,
@@ -104,6 +107,10 @@ def insert_one_question(c: sqlite3.Connection, year: int, q: dict):
         (q.get('correct') or '').upper() or None,
         q.get('solution') or None,
         q.get('difficulty') or 'medium',
+        parse_status,
+        q.get('figure_image_path') or None,
+        q.get('correct_source') or None,
+        q.get('correct_confidence') or None,
         _now(), _now(),
     ))
     qid = cur.lastrowid
@@ -122,6 +129,14 @@ def insert_one_question(c: sqlite3.Connection, year: int, q: dict):
 def main(paper_id: str = '2019_20', year: int = 2019,
          paper_label: str = 'NSEJS 2019-20 (Code 52)'):
     db_path = Path(__file__).resolve().parent.parent.parent / 'physics_practice.db'
+
+    # Trigger schema migration (adds figure_image_path/correct_source/etc. on
+    # DBs that pre-date those columns). Cheap; idempotent.
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
+    from physics.practice_db import PhysicsPracticeDB
+    PhysicsPracticeDB(str(db_path))
+
     classified_path = Path(__file__).parent / f'nsejs_{paper_id}_classified.json'
 
     if not classified_path.exists():
@@ -134,7 +149,10 @@ def main(paper_id: str = '2019_20', year: int = 2019,
     physics_qs = [q for q in qs if q.get('subject') == 'physics']
     answerable = [
         q for q in physics_qs
-        if not q.get('skip_reason') and q.get('correct')
+        # Keep questions that either don't need a figure, OR do but have one
+        # rendered (figure_image_path set). Must always have an answer.
+        if q.get('correct')
+        and (not q.get('skip_reason') or q.get('figure_image_path'))
     ]
     skipped_fig = len(physics_qs) - len(answerable)
 

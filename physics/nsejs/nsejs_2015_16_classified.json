@@ -366,7 +366,7 @@
         "c": "4.0A",
         "d": "4.5A"
       },
-      "correct": "c",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Current Electricity",
@@ -374,7 +374,10 @@
       "subtopic_name": "Kirchhoff's Laws",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing current values at different branches"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/2015_16/p108.jpg"
     },
     {
       "number": 24,
@@ -706,7 +709,7 @@
         "c": "greatest in III",
         "d": "least in III"
       },
-      "correct": "c",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Statics",
@@ -714,8 +717,11 @@
       "subtopic_name": "Tension in Strings",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the figure showing the three different hanging configurations",
-      "solution": "2Tcos θ = mg\n⇒ T = mg/2cosθ"
+      "skip_reason": null,
+      "solution": "2Tcos θ = mg\n⇒ T = mg/2cosθ",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2015_16/p111.jpg"
     },
     {
       "number": 44,
@@ -851,8 +857,11 @@
       "subtopic_name": "Refraction and Total Internal Reflection",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot determine which statement is not true without clearly seeing the diagram showing the angles and ray paths",
-      "solution": "In figure, that is the position of TIR, So angle of incidence must be greater than critical angle."
+      "skip_reason": null,
+      "solution": "In figure, that is the position of TIR, So angle of incidence must be greater than critical angle.",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2015_16/p112.jpg"
     },
     {
       "number": 52,
@@ -1202,8 +1211,11 @@
       "subtopic_name": "Circular Motion",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot determine the correct answer without seeing the graphs clearly",
-      "solution": "Since |a| = v²/r a ∝ v⁴, it is the equation of parabola"
+      "skip_reason": null,
+      "solution": "Since |a| = v²/r a ∝ v⁴, it is the equation of parabola",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2015_16/p115.jpg"
     },
     {
       "number": 72,
@@ -1268,8 +1280,11 @@
       "subtopic_name": "Refraction",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot determine the refractive properties without seeing the ray diagram showing the path of light from medium X to Y",
-      "solution": "Medium y is denser, so speed will decrease, frequency depends on source so λ will decrease by relation V = nλ"
+      "skip_reason": null,
+      "solution": "Medium y is denser, so speed will decrease, frequency depends on source so λ will decrease by relation V = nλ",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2015_16/p116.jpg"
     },
     {
       "number": 76,

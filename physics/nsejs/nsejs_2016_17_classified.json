@@ -542,7 +542,7 @@
         "c": "C",
         "d": "D"
       },
-      "correct": "b",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -550,7 +550,10 @@
       "subtopic_name": "Refraction",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the ray diagrams A, B, C, D"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2016_17/p122.jpg"
     },
     {
       "number": 34,
@@ -617,8 +620,11 @@
       "subtopic_name": "Plane Mirrors",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Question requires the diagram showing the mirror configuration and object position to determine the triangle area",
-      "solution": "Area of triangle\n= 1/2 × B × H\n= 1/2 × 4 × 4 = 8 cm²"
+      "skip_reason": null,
+      "solution": "Area of triangle\n= 1/2 × B × H\n= 1/2 × 4 × 4 = 8 cm²",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2016_17/p123.jpg"
     },
     {
       "number": 38,
@@ -813,7 +819,7 @@
         "c": "F1 and F3 are in opposite directions",
         "d": "F5 is negative"
       },
-      "correct": "c",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -821,8 +827,11 @@
       "subtopic_name": "Kinematics and Dynamics",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the velocity-time graph",
-      "solution": "Force F1 is increasing the velocity, whereas force F2 is decreasing the velocity; they both are in opposite direction."
+      "skip_reason": null,
+      "solution": "Force F1 is increasing the velocity, whereas force F2 is decreasing the velocity; they both are in opposite direction.",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2016_17/p125.jpg"
     },
     {
       "number": 50,
@@ -972,8 +981,11 @@
       "subtopic_name": "Static Equilibrium",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the wire configuration and angles",
-      "solution": "Relation at one end is T = W/(2cos θ) cos θ = 0 Tension = W/(2cos θ) = ∞ Tension in wire is much greater than W/2"
+      "skip_reason": null,
+      "solution": "Relation at one end is T = W/(2cos θ) cos θ = 0 Tension = W/(2cos θ) = ∞ Tension in wire is much greater than W/2",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2016_17/p126.jpg"
     },
     {
       "number": 58,
@@ -1041,7 +1053,8 @@
       "difficulty": "medium",
       "has_figure": true,
       "skip_reason": "Cannot be solved without the diagrams showing object and image positions relative to the concave mirror",
-      "solution": "Since object is between pole and focus, image will be magnified."
+      "solution": "Since object is between pole and focus, image will be magnified.",
+      "figure_image_path": "/static/NSEJSFigures/2016_17/p063.jpg"
     },
     {
       "number": 62,

@@ -20,7 +20,10 @@
       "subtopic_name": "Centripetal Acceleration",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the specific graphs shown"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2015_16_v2/p004.jpg"
     },
     {
       "number": 2,
@@ -84,7 +87,10 @@
       "subtopic_name": "Properties of Refraction",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the refraction diagram"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2015_16_v2/p004.jpg"
     },
     {
       "number": 6,
@@ -540,7 +546,7 @@
         "c": "greatest in III",
         "d": "least in III"
       },
-      "correct": "c",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Force and Motion",
@@ -548,7 +554,10 @@
       "subtopic_name": "String Tension",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Question cannot be solved without the diagram showing three different string configurations for hanging the frame"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2015_16_v2/p009.jpg"
     },
     {
       "number": 34,
@@ -860,7 +869,7 @@
         "c": "4.0A",
         "d": "4.5A"
       },
-      "correct": "c",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Current and Circuits",
@@ -868,7 +877,10 @@
       "subtopic_name": "Kirchhoff's Laws",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing current values at different branches"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/2015_16_v2/p013.jpg"
     },
     {
       "number": 54,

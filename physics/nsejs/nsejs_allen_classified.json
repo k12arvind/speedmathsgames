@@ -577,7 +577,7 @@
         "c": "μ3 = μ4",
         "d": "μ1 = μ4"
       },
-      "correct": null,
+      "correct": "d",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -585,7 +585,10 @@
       "subtopic_name": "Refraction through Multiple Media",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the diagram showing the ray path through four media"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/allen/p005.jpg"
     },
     {
       "number": 29,
@@ -741,7 +744,7 @@
         "c": "Diagram (3)",
         "d": "Diagram (4)"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -749,7 +752,10 @@
       "subtopic_name": "Dispersion of light",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot determine correct answer without seeing the diagrams clearly"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/allen/p006.jpg"
     },
     {
       "number": 37,
@@ -2209,7 +2215,7 @@
         "c": "C",
         "d": "D"
       },
-      "correct": null,
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electrostatics",
@@ -2217,7 +2223,10 @@
       "subtopic_name": "Electric Field",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the figure showing the hemi spherical shell and point A"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/allen/p016.jpg"
     },
     {
       "number": 131,

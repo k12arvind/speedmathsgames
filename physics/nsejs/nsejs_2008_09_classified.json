@@ -440,7 +440,7 @@
         "c": "[Graph C shown]",
         "d": "[Graph D shown]"
       },
-      "correct": "a",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -448,8 +448,11 @@
       "subtopic_name": "Distance-Time Graphs",
       "difficulty": "easy",
       "has_figure": true,
-      "skip_reason": "Cannot determine correct answer without seeing the actual graphs",
-      "solution": "decelerated curve finally body comes to rest. constant velocity accelerated curve"
+      "skip_reason": null,
+      "solution": "decelerated curve finally body comes to rest. constant velocity accelerated curve",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2008_09/p049.jpg"
     },
     {
       "number": 27,

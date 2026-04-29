@@ -83,7 +83,7 @@
         "c": "[linear graph showing s vs v]",
         "d": "[linear graph showing s vs v with different slope]"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -91,7 +91,10 @@
       "subtopic_name": "Motion Graphs",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the specific graph options"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/mock_1/p002.jpg"
     },
     {
       "number": 6,

@@ -57,6 +57,19 @@
       font-size:1.04rem; line-height:1.65; color: var(--text-primary);
       margin-bottom:18px; white-space:pre-wrap; word-wrap:break-word;
     }
+    .qfigure {
+      background:#fff; border-radius:8px; padding:8px;
+      margin: 0 0 18px; max-width:100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .qfigure img { display:block; max-width:100%; height:auto; }
+    .ai-badge {
+      display:inline-block; margin-left:10px;
+      background: rgba(245,158,11,0.10); color:#fbbf24;
+      border:1px solid rgba(245,158,11,0.35);
+      padding:1px 8px; border-radius:6px; font-size:0.65rem;
+      letter-spacing:0.04em; text-transform:uppercase; font-weight:600;
+    }
 
     .choices { display:flex; flex-direction:column; gap:10px; }
     .choice {
@@ -229,10 +242,17 @@
       const flag = document.getElementById('flag');
       flag.classList.toggle('on', s.flagged);
       flag.textContent = s.flagged ? '⚐ Flagged' : '⚐ Flag';
+      const figureHtml = a.figure_image_path
+        ? `<div class="qfigure"><img src="${a.figure_image_path}" alt="Question figure" loading="lazy"></div>`
+        : '';
+      const aiBadge = (a.correct_source && a.correct_source.startsWith('ai_'))
+        ? `<span class="ai-badge" title="Correct option was inferred by AI — flag if it looks wrong">AI-derived</span>`
+        : '';
       document.getElementById('card').innerHTML = `
         <div class="qcard">
-          <div class="qmeta">${a.difficulty_band || 'medium'}${a.subtopic_name ? ' · ' + a.subtopic_name : ''}</div>
+          <div class="qmeta">${a.difficulty_band || 'medium'}${a.subtopic_name ? ' · ' + a.subtopic_name : ''} ${aiBadge}</div>
           <div class="qtext">${escapeHtml(a.question_text)}</div>
+          ${figureHtml}
           <div class="choices">${choices}</div>
         </div>`;
       if (window.MathJax && window.MathJax.typesetPromise) {

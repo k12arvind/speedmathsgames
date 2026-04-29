@@ -284,7 +284,7 @@
         "c": "dispersion but no deviation",
         "d": "neither deviation nor dispersion"
       },
-      "correct": "d",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -292,8 +292,11 @@
       "subtopic_name": "Dispersion through prism",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the diagram showing the hollow glass prism configuration",
-      "solution": "As when the light will pass through the arms of hollow prism, the arm will behave like simple glass slab so there will be no dispersion as well no deviation"
+      "skip_reason": null,
+      "solution": "As when the light will pass through the arms of hollow prism, the arm will behave like simple glass slab so there will be no dispersion as well no deviation",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2011_12/p066.jpg"
     },
     {
       "number": 18,
@@ -339,7 +342,7 @@
         "c": "60 watt",
         "d": "40 watt"
       },
-      "correct": "c",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Current and Circuits",
@@ -347,8 +350,11 @@
       "subtopic_name": "Power in Resistor Combinations",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Circuit diagram is essential for solving this problem",
-      "solution": "As I²R = 40 W in the given combination, Req = 3R/2 ⇒ Pmax which can be safely derived = I² × (3R/2) = 3/2 × I²R = 3/2 × 40 = 60 W"
+      "skip_reason": null,
+      "solution": "As I²R = 40 W in the given combination, Req = 3R/2 ⇒ Pmax which can be safely derived = I² × (3R/2) = 3/2 × I²R = 3/2 × 40 = 60 W",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2011_12/p067.jpg"
     },
     {
       "number": 21,
@@ -678,7 +684,7 @@
         "c": "n = 1.8, n = 1.5",
         "d": "n = 1.8, n = 1.5"
       },
-      "correct": "b",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Light",
@@ -686,8 +692,11 @@
       "subtopic_name": "Refraction",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot determine correct refraction without seeing the ray diagrams",
-      "solution": "(B) Because refracted ray in denser medium should move towards the normal."
+      "skip_reason": null,
+      "solution": "(B) Because refracted ray in denser medium should move towards the normal.",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2011_12/p069.jpg"
     },
     {
       "number": 41,
@@ -990,8 +999,11 @@
       "subtopic_name": "Electric Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the circuit diagram showing resistor values and voltage source",
-      "solution": "(D) In such set up, it becomes wheat stone bridge and A, B come at same potential so no current flows through it."
+      "skip_reason": null,
+      "solution": "(D) In such set up, it becomes wheat stone bridge and A, B come at same potential so no current flows through it.",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2011_12/p070.jpg"
     },
     {
       "number": 59,

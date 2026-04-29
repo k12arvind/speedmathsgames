@@ -170,7 +170,7 @@
         "c": "0.8 A",
         "d": "- 0.8 A"
       },
-      "correct": "b",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Circuits",
@@ -178,8 +178,11 @@
       "subtopic_name": "Circuit Analysis",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Circuit diagram is essential for solving this problem",
-      "solution": "The circuit can be simplified as follows [Circuit diagram showing resistors and voltage sources]. Applying KCL at junction A: I3 = I1 + I2 .....(i). Applying Kirchoff's voltage law for the loop ABCDA: -30I1 - 40I3 + 40 = 0 => -30I1 - 40(I1 + I2) + 40 = 0 => 7I1 + 4I2 = 4 .....(ii). Applying Kirchoff's voltage law for the loop ADEFA: -40I2 - 40I3 + 80 + 40 = 0 => -40I2 - 40(I1 + I2) = -120 => I1 + 2I2 = 3 ......(iii). On solving equation (ii) and (iii) I1 = -0.4A."
+      "skip_reason": null,
+      "solution": "The circuit can be simplified as follows [Circuit diagram showing resistors and voltage sources]. Applying KCL at junction A: I3 = I1 + I2 .....(i). Applying Kirchoff's voltage law for the loop ABCDA: -30I1 - 40I3 + 40 = 0 => -30I1 - 40(I1 + I2) + 40 = 0 => 7I1 + 4I2 = 4 .....(ii). Applying Kirchoff's voltage law for the loop ADEFA: -40I2 - 40I3 + 80 + 40 = 0 => -40I2 - 40(I1 + I2) = -120 => I1 + 2I2 = 3 ......(iii). On solving equation (ii) and (iii) I1 = -0.4A.",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/mock_4/p003.jpg"
     },
     {
       "number": 10,
@@ -230,7 +233,7 @@
         "c": "9.0 N",
         "d": "14.4 N"
       },
-      "correct": "b",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Fluid Mechanics",
@@ -238,8 +241,11 @@
       "subtopic_name": "Fluid Pressure",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Diagram showing vessel dimensions is essential for solving",
-      "solution": "Force acting on the base F = P × A = hdgA = 0.4 × 900 × 10 × 2 × 10^-3 = 7.2N"
+      "skip_reason": null,
+      "solution": "Force acting on the base F = P × A = hdgA = 0.4 × 900 × 10 × 2 × 10^-3 = 7.2N",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/mock_4/p003.jpg"
     },
     {
       "number": 13,

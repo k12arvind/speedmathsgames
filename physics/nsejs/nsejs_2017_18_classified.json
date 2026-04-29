@@ -340,7 +340,7 @@
         "c": "acceleration of 'b' is greater than acceleration of 'a'",
         "d": "acceleration of 'a' equals acceleration of 'b'. Both accelerations are zero."
       },
-      "correct": "d",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Motion",
@@ -348,8 +348,11 @@
       "subtopic_name": "Kinematics",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the position-time diagram showing the blocks' positions",
-      "solution": "Block - a v₁ = (6-2)/0.2 = 4/0.2 v₂ = (10-6)/0.2 = 4/0.2 Block - b v₁ = (11-0)/0.2 = 11/0.2 v₂ = (22-11)/0.2 = 11/0.2 a_A = 0 a_B = 0"
+      "skip_reason": null,
+      "solution": "Block - a v₁ = (6-2)/0.2 = 4/0.2 v₂ = (10-6)/0.2 = 4/0.2 Block - b v₁ = (11-0)/0.2 = 11/0.2 v₂ = (22-11)/0.2 = 11/0.2 a_A = 0 a_B = 0",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/2017_18/p132.jpg"
     },
     {
       "number": 22,
@@ -388,8 +391,11 @@
       "subtopic_name": "DC Circuits",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing resistor values and connections",
-      "solution": "I = 120/40 = 3 Amp. I = I₁ + I₂ + I₃ = 1 Amp"
+      "skip_reason": null,
+      "solution": "I = 120/40 = 3 Amp. I = I₁ + I₂ + I₃ = 1 Amp",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/2017_18/p132.jpg"
     },
     {
       "number": 24,
@@ -400,7 +406,7 @@
         "c": "I & IV",
         "d": "None"
       },
-      "correct": "b",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Motion",
@@ -408,8 +414,11 @@
       "subtopic_name": "Kinematics",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the four graphs (Fig. I, II, III, IV) showing different motion characteristics",
-      "solution": "Slope of x - t gives v which is constant in OA & AB both. But slope of AB is less than OA so correct v - t graph will be fig. III."
+      "skip_reason": null,
+      "solution": "Slope of x - t gives v which is constant in OA & AB both. But slope of AB is less than OA so correct v - t graph will be fig. III.",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2017_18/p132.jpg"
     },
     {
       "number": 25,
@@ -500,7 +509,7 @@
         "c": "looking from end A, current in coil AB will be clockwise and looking from end D, the direction of current in coil CD will be anticlockwise",
         "d": "looking from end A, current in coil AB will be clockwise and looking from end D, the direction of current in coil CD will be clockwise"
       },
-      "correct": "a",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "magnetism",
       "topic_name": "Magnetism",
@@ -508,8 +517,11 @@
       "subtopic_name": "Electromagnetic Induction",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the magnet and coils arrangement",
-      "solution": "By lenz's law"
+      "skip_reason": null,
+      "solution": "By lenz's law",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2017_18/p133.jpg"
     },
     {
       "number": 30,
@@ -620,7 +632,7 @@
         "c": "55°",
         "d": "60°"
       },
-      "correct": "b",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -628,8 +640,11 @@
       "subtopic_name": "Reflection",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the geometry of mirrors and ray paths.",
-      "solution": "90° - θ = 180° - (2 × 70°)\n90° - θ = 180° - 140° = 40°\nθ = 90° - 40° = 50°"
+      "skip_reason": null,
+      "solution": "90° - θ = 180° - (2 × 70°)\n90° - θ = 180° - 140° = 40°\nθ = 90° - 40° = 50°",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2017_18/p134.jpg"
     },
     {
       "number": 36,

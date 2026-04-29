@@ -39,8 +39,11 @@
       "subtopic_name": "Force and Equilibrium",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the force diagram showing the directions and angles of the forces",
-      "solution": "|F₁| = |F₂| angle between F₁ and F₂ is 120° resultant will be P along x-axis. Force necessary to keep the body resist will be P in -x direction"
+      "skip_reason": null,
+      "solution": "|F₁| = |F₂| angle between F₁ and F₂ is 120° resultant will be P along x-axis. Force necessary to keep the body resist will be P in -x direction",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2010_11/p057.jpg"
     },
     {
       "number": 3,
@@ -290,8 +293,11 @@
       "subtopic_name": "Combination of Lenses",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the lens diagram showing distances",
-      "solution": "For convex lens object is placed between F and 2F so image will be inverted and magnified. This image will behave as an object for concave lens, it will form virtual, erect and diminished image. So final image will be virtual, inverted and diminished with respect to object."
+      "skip_reason": null,
+      "solution": "For convex lens object is placed between F and 2F so image will be inverted and magnified. This image will behave as an object for concave lens, it will form virtual, erect and diminished image. So final image will be virtual, inverted and diminished with respect to object.",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/2010_11/p059.jpg"
     },
     {
       "number": 17,
@@ -368,8 +374,11 @@
       "subtopic_name": "Resistance in Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the exact position of points A and B and angle between them",
-      "solution": "In figure 6Ω, 30Ω are connected in parallel, so R_AB = (6×30)/(6+30) = 5Ω"
+      "skip_reason": null,
+      "solution": "In figure 6Ω, 30Ω are connected in parallel, so R_AB = (6×30)/(6+30) = 5Ω",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2010_11/p059.jpg"
     },
     {
       "number": 21,
@@ -485,7 +494,7 @@
         "c": "3 ohm",
         "d": "zero"
       },
-      "correct": "c",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -493,8 +502,11 @@
       "subtopic_name": "Resistance and circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Circuit diagram is essential for solving this problem",
-      "solution": "If switch is closed then no current will flow through 1Ω resistance, hence equivalent resistance is 3Ω"
+      "skip_reason": null,
+      "solution": "If switch is closed then no current will flow through 1Ω resistance, hence equivalent resistance is 3Ω",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2010_11/p060.jpg"
     },
     {
       "number": 28,
@@ -505,7 +517,7 @@
         "c": "V1 < V2 and I1 > I2",
         "d": "V1 < V2 and I1 < I2"
       },
-      "correct": "b",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -513,8 +525,11 @@
       "subtopic_name": "Circuit analysis",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Circuit diagrams are essential for comparing the readings",
-      "solution": "In first figure Ra = R₁ + R₂\nIn second figure Rp = R₁R₂/(R₁ + R₂) which is\nless than Ra\nI₁ = E/(Ra + r), I₂ = E/(Rp + r),\nSO, I₂ > I₁\nV₁ = ERa/(Ra + r) = E/(1 + (r/Ra)), V₂ = E/(1 + (r/Rp))\nSo, V₁ > V₂\nAnswer (B)"
+      "skip_reason": null,
+      "solution": "In first figure Ra = R₁ + R₂\nIn second figure Rp = R₁R₂/(R₁ + R₂) which is\nless than Ra\nI₁ = E/(Ra + r), I₂ = E/(Rp + r),\nSO, I₂ > I₁\nV₁ = ERa/(Ra + r) = E/(1 + (r/Ra)), V₂ = E/(1 + (r/Rp))\nSo, V₁ > V₂\nAnswer (B)",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2010_11/p060.jpg"
     },
     {
       "number": 29,

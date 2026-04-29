@@ -367,7 +367,7 @@
         "c": "Graph C",
         "d": "Graph D"
       },
-      "correct": "a",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -375,8 +375,11 @@
       "subtopic_name": "Kinematics",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the position-time graphs shown in options A, B, C, D",
-      "solution": "initially acc. is +ve and constant so s = ut + 1/2 aot^2 and then particle decelerates so\ns = ut - 1/2 aot^2\nposition"
+      "skip_reason": null,
+      "solution": "initially acc. is +ve and constant so s = ut + 1/2 aot^2 and then particle decelerates so\ns = ut - 1/2 aot^2\nposition",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2013_14/p086.jpg"
     },
     {
       "number": 23,

@@ -187,7 +187,10 @@
       "subtopic_name": "Motion Graphs",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without examining the displacement-time graphs shown in the figure"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2009_10/p053.jpg"
     },
     {
       "number": 12,
@@ -302,7 +305,7 @@
         "c": "Graph showing temperature constant at 0°C, then rising linearly",
         "d": "Graph showing temperature rising linearly from 0°C to higher values"
       },
-      "correct": "b",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "thermal",
       "topic_name": "Heat and Temperature",
@@ -310,7 +313,10 @@
       "subtopic_name": "Phase Changes",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the temperature-time graphs shown in the figure"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2009_10/p054.jpg"
     },
     {
       "number": 19,

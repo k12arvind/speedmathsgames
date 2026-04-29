@@ -54,7 +54,7 @@
         "c": "2.4 A",
         "d": "3 A"
       },
-      "correct": null,
+      "correct": "d",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -62,7 +62,10 @@
       "subtopic_name": "Circuit Analysis",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p003.jpg"
     },
     {
       "number": 4,
@@ -73,7 +76,7 @@
         "c": "35Ω",
         "d": "20/3 Ω"
       },
-      "correct": null,
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -81,7 +84,10 @@
       "subtopic_name": "Equivalent Resistance",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p003.jpg"
     },
     {
       "number": 5,
@@ -92,7 +98,7 @@
         "c": "2r + 4R",
         "d": "5R/2 + 2r"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -100,7 +106,10 @@
       "subtopic_name": "Equivalent Resistance",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p003.jpg"
     },
     {
       "number": 6,
@@ -111,7 +120,7 @@
         "c": "Current density across AB is double that of across BC.",
         "d": "Potential difference across AB is 4 times that of across BC."
       },
-      "correct": null,
+      "correct": "d",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -119,7 +128,10 @@
       "subtopic_name": "Current and Resistance",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the diagram showing the bar configuration"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p003.jpg"
     },
     {
       "number": 7,
@@ -172,7 +184,7 @@
         "c": "θ = 60°",
         "d": "All three"
       },
-      "correct": null,
+      "correct": "d",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Ray Optics",
@@ -180,7 +192,10 @@
       "subtopic_name": "Reflection from Mirrors",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the figure showing the mirror configuration"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p004.jpg"
     },
     {
       "number": 10,
@@ -290,7 +305,7 @@
         "c": "x = -40/3 cm",
         "d": "x = 180/7 cm"
       },
-      "correct": null,
+      "correct": "c",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -298,7 +313,10 @@
       "subtopic_name": "Refraction",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the optical diagram showing beam refraction"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p005.jpg"
     },
     {
       "number": 16,
@@ -330,7 +348,7 @@
         "c": "If the polarities of the sources E1 and E2 were both reversed, the power generated in R1 will be the same.",
         "d": "The ratio of the powers generated in R2 and R3 is 1 : 30."
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Current Electricity",
@@ -338,7 +356,10 @@
       "subtopic_name": "Electrical Circuits",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the circuit diagram"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p005.jpg"
     },
     {
       "number": 18,
@@ -349,7 +370,7 @@
         "c": "If P = P1 + P2, then R < (R1 + R2)/4",
         "d": "If R1 = R2, then it necessarily follows that P = P1 + P2"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Current Electricity",
@@ -357,7 +378,10 @@
       "subtopic_name": "Electrical Circuits",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the circuit diagram"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/part_test_02/p005.jpg"
     },
     {
       "number": 19,

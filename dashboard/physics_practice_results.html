@@ -57,6 +57,19 @@
              border-top:1px solid var(--border-color); }
     .qrow.open .qbody { display:block; }
     .qtext { white-space:pre-wrap; line-height:1.6; margin-bottom:14px; }
+    .qfigure {
+      background:#fff; border-radius:8px; padding:8px;
+      margin: 0 0 14px; max-width:100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    .qfigure img { display:block; max-width:100%; height:auto; }
+    .ai-badge {
+      display:inline-block; margin-left:8px;
+      background: rgba(245,158,11,0.10); color:#fbbf24;
+      border:1px solid rgba(245,158,11,0.35);
+      padding:1px 8px; border-radius:6px; font-size:0.65rem;
+      letter-spacing:0.04em; text-transform:uppercase; font-weight:600;
+    }
     .choice-line {
       padding:8px 12px; margin-bottom:6px; background:var(--bg-input);
       border:1px solid var(--border-color); border-radius:6px; font-size:0.92rem;
@@ -150,7 +163,8 @@
               <div class="reveal">▾ Show</div>
             </div>
             <div class="qbody">
-              <div class="qtext">${escapeHtml(a.question_text)}</div>
+              <div class="qtext">${escapeHtml(a.question_text)}${a.correct_source && a.correct_source.startsWith('ai_') ? ' <span class="ai-badge">AI-derived answer</span>' : ''}</div>
+              ${a.figure_image_path ? `<div class="qfigure"><img src="${a.figure_image_path}" alt="Question figure" loading="lazy"></div>` : ''}
               ${choices}
               ${a.official_solution ? `<div class="solution"><div class="label">Solution (correct: ${a.correct_choice})</div>${escapeHtml(a.official_solution)}</div>` : ''}
             </div>

@@ -263,7 +263,8 @@
       "subtopic_name": "Kinematics",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the velocity-time graph"
+      "skip_reason": "Cannot solve without seeing the velocity-time graph",
+      "figure_image_path": "/static/NSEJSFigures/2014_15_v2/p048.jpg"
     },
     {
       "number": 17,
@@ -274,7 +275,7 @@
         "c": "Minimum in (iii)",
         "d": "Same in all cases"
       },
-      "correct": null,
+      "correct": "d",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -282,7 +283,10 @@
       "subtopic_name": "Friction and equilibrium",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the three orientations of the parallelepiped"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15_v2/p005.jpg"
     },
     {
       "number": 18,
@@ -619,7 +623,7 @@
         "c": "140°",
         "d": "120°"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -627,7 +631,10 @@
       "subtopic_name": "Reflection",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the mirror configuration in the figure"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15_v2/p007.jpg"
     },
     {
       "number": 38,
@@ -699,7 +706,7 @@
         "c": "(c)",
         "d": "(d)"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -707,7 +714,10 @@
       "subtopic_name": "Horizon and Perspective",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the different horizon diagrams"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15_v2/p008.jpg"
     },
     {
       "number": 43,
@@ -1159,7 +1169,7 @@
         "c": "B2,B3 brightest in case (i) and B1 becomes brighter in (ii).",
         "d": "B1 brightest in (i) and B2 becomes brighter in comparison to B3 in (ii)."
       },
-      "correct": null,
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Circuits",
@@ -1167,7 +1177,10 @@
       "subtopic_name": "Circuit Analysis",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Circuit diagram is essential for understanding the configuration of bulbs and resistors"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/2014_15_v2/p012.jpg"
     },
     {
       "number": 71,
@@ -1178,7 +1191,7 @@
         "c": "i,iii,iv & ii",
         "d": "ii,iv,iii & i"
       },
-      "correct": null,
+      "correct": "c",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Circuits",
@@ -1186,7 +1199,10 @@
       "subtopic_name": "Series and Parallel Resistance",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Circuit diagrams showing the four configurations are essential for solving"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15_v2/p012.jpg"
     },
     {
       "number": 72,
@@ -1308,7 +1324,7 @@
         "c": "Along line joining PA and pointing towards A",
         "d": "Along line parallel to AC and pointing towards right"
       },
-      "correct": null,
+      "correct": "d",
       "subject": "physics",
       "topic_code": "magnetism",
       "topic_name": "Magnetism",
@@ -1316,7 +1332,10 @@
       "subtopic_name": "Magnetic Field",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the configuration of wires and point P"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15_v2/p013.jpg"
     },
     {
       "number": 80,

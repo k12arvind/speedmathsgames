@@ -99,8 +99,11 @@
       "subtopic_name": "Electric Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing resistor values and configuration",
-      "solution": "R_equivalent = (30 + 30)30 / (30 + 30) + 30 = 60 × 30 / 90 = 20Ω\n∴ i = V/R = 2/20 = 1/10 ampere"
+      "skip_reason": null,
+      "solution": "R_equivalent = (30 + 30)30 / (30 + 30) + 30 = 60 × 30 / 90 = 20Ω\n∴ i = V/R = 2/20 = 1/10 ampere",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/mock_5/p002.jpg"
     },
     {
       "number": 6,
@@ -328,7 +331,7 @@
         "c": "12 V",
         "d": "14 V"
       },
-      "correct": "b",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Current Electricity",
@@ -336,8 +339,11 @@
       "subtopic_name": "Electric Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing voltmeter placement and component values",
-      "solution": "Current flowing in the circuit i = E/R = (10-4)/(20+10) = 1/5 A\nP.D. across AC = (1/5) × 20 = 4 V\nP.D. across AN = 4 + 4 = 8V"
+      "skip_reason": null,
+      "solution": "Current flowing in the circuit i = E/R = (10-4)/(20+10) = 1/5 A\nP.D. across AC = (1/5) × 20 = 4 V\nP.D. across AN = 4 + 4 = 8V",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/mock_5/p004.jpg"
     },
     {
       "number": 18,

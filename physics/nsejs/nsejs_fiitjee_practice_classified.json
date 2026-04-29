@@ -12,7 +12,7 @@
         "c": "2 V",
         "d": "-2 V"
       },
-      "correct": null,
+      "correct": "c",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -20,7 +20,10 @@
       "subtopic_name": "Electric Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing resistance configuration"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/fiitjee_practice/p002.jpg"
     },
     {
       "number": 2,
@@ -31,7 +34,7 @@
         "c": "0.04 A",
         "d": "1.14 A"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -39,7 +42,10 @@
       "subtopic_name": "Electric Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing battery and resistor configuration"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/fiitjee_practice/p002.jpg"
     },
     {
       "number": 3,
@@ -64,7 +70,7 @@
         "c": "9 V",
         "d": "-9 V"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity",
@@ -72,7 +78,10 @@
       "subtopic_name": "Electric Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing voltage sources and resistor configuration"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/fiitjee_practice/p002.jpg"
     },
     {
       "number": 5,
@@ -125,7 +134,7 @@
         "c": "2 ρd",
         "d": "None of these"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Circuits",
@@ -133,7 +142,10 @@
       "subtopic_name": "Resistance Networks",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing the wire configuration between points A and B"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/fiitjee_practice/p004.jpg"
     },
     {
       "number": 9,
@@ -144,7 +156,7 @@
         "c": "8Ω",
         "d": "10Ω"
       },
-      "correct": null,
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Circuits",
@@ -152,7 +164,10 @@
       "subtopic_name": "Infinite Resistance Networks",
       "difficulty": "hard",
       "has_figure": true,
-      "skip_reason": "Cannot solve without the circuit diagram showing the infinite network configuration"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/fiitjee_practice/p004.jpg"
     },
     {
       "number": 10,

@@ -264,8 +264,11 @@
       "subtopic_name": "Velocity-Time Graphs",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot solve without seeing the velocity-time graph",
-      "solution": "(i) acceleration at 4 sec — given by slop hence negative (2) (ii) Velocity at 4 sec = 0 (c) (iii) v = positive (p)"
+      "skip_reason": null,
+      "solution": "(i) acceleration at 4 sec — given by slop hence negative (2) (ii) Velocity at 4 sec = 0 (c) (iii) v = positive (p)",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15/p095.jpg"
     },
     {
       "number": 17,
@@ -276,7 +279,7 @@
         "c": "Minimum in (iii)",
         "d": "Minimum (i)"
       },
-      "correct": "a",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -284,7 +287,10 @@
       "subtopic_name": "Friction",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the three orientations (i), (ii), and (iii) of the parallelepiped"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15/p096.jpg"
     },
     {
       "number": 18,
@@ -597,7 +603,7 @@
         "c": "120°",
         "d": "140°"
       },
-      "correct": "d",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -605,8 +611,11 @@
       "subtopic_name": "Reflection of Light",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the adjacent figure showing the mirror system",
-      "solution": "∠1 = 180 - (70 + 90 - α) = 20 + α ∠2 = 90 - ∠1 = 90 - 20 - α = 70 - α ∠2 = ∠3 = 70 - α ∠d = 2α + 2(70 - α) = 140"
+      "skip_reason": null,
+      "solution": "∠1 = 180 - (70 + 90 - α) = 20 + α ∠2 = 90 - ∠1 = 90 - 20 - α = 70 - α ∠2 = ∠3 = 70 - α ∠d = 2α + 2(70 - α) = 140",
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15/p098.jpg"
     },
     {
       "number": 38,
@@ -678,7 +687,7 @@
         "c": "[Diagram C showing curved horizon]",
         "d": "[Diagram D showing curved horizon]"
       },
-      "correct": "a",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "general",
       "topic_name": "Earth and Space",
@@ -686,7 +695,10 @@
       "subtopic_name": "Horizon and Curvature",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Cannot be solved without the figure showing the different horizon diagrams"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "medium",
+      "figure_image_path": "/static/NSEJSFigures/2014_15/p099.jpg"
     },
     {
       "number": 43,
@@ -1133,7 +1145,7 @@
         "c": "B1 brightest in (i) and in (ii) B2 and B3 become brighter and B2 dimmer compared to case (i)",
         "d": "B1 brighter in (i) and B3 becomes brighter in comparison to B2 in (ii)"
       },
-      "correct": "c",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electricity and Circuits",
@@ -1141,7 +1153,10 @@
       "subtopic_name": "Electric Circuits",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Circuit diagram is essential for solving this problem"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15/p102.jpg"
     },
     {
       "number": 71,
@@ -1160,7 +1175,10 @@
       "subtopic_name": "Resistance and Resistor Networks",
       "difficulty": "medium",
       "has_figure": true,
-      "skip_reason": "Circuit diagrams showing four different configurations are essential for solving this problem"
+      "skip_reason": null,
+      "correct_source": "ai_solved_figure",
+      "correct_confidence": "high",
+      "figure_image_path": "/static/NSEJSFigures/2014_15/p102.jpg"
     },
     {
       "number": 72,
