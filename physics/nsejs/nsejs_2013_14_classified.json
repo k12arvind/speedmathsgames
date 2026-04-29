@@ -1,0 +1,1420 @@
+{
+  "paper": "NSEJS 2013-14",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "One side of a glass slab is silvered as shown in the figure. A ray of light is incident on the other side at angle of incidence i=45°. Refractive index of glass is given as 1.5. The deviation of the ray of light from its initial path when it comes out of the slab is (Given sin^(-1) sqrt(2)/3 = 28°)",
+      "choices": {
+        "a": "90°",
+        "b": "180°",
+        "c": "120°",
+        "d": "45°"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction and Total Internal Reflection",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "δ = 180 - 2 × 45 = 90"
+    },
+    {
+      "number": 2,
+      "body": "The number 5*sqrt(41) lies between",
+      "choices": {
+        "a": "29 and 30",
+        "b": "30 and 31",
+        "c": "31 and 32",
+        "d": "32 and 33"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "√41 = 6.40 .... 5√41 = 5 × 6.401 = 32.01"
+    },
+    {
+      "number": 3,
+      "body": "Oxidation number and co-ordination number of Pt in cisplatin PtCl2 (NH3)2 are respectively",
+      "choices": {
+        "a": "+4 and 2",
+        "b": "+2 and 4",
+        "c": "0 and 4",
+        "d": "+2 and 6"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "PtCl₂ (NH₃)₂ OS → x - 2 = 0 x = +2 coordination number = no. of ligands that form coordinate bond with central metal atom. ∴ coordination number = 4"
+    },
+    {
+      "number": 4,
+      "body": "In the passage given above there seems to be a factural error with respect to the ant carrying the food to the nest. The most probable reason for this mistake would be",
+      "choices": {
+        "a": "Pea pod is too heavy for an ant to carry to its nest.",
+        "b": "Pea cannot be carried by an ant in the summer because it is a Rabi crop.",
+        "c": "Ant couldn't have passed by easily since it is the favourite food of grasshoppers.",
+        "d": "Grasshoppers avoid coming out in summer and thus there cannot be grasshopper in the story."
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Pea is a kharif crop and it cannot be grown in summer."
+    },
+    {
+      "number": 5,
+      "body": "What could be the most plausible reason that all the ants that toiled and moiled in the summer were happy and content in the winter?",
+      "choices": {
+        "a": "Ants were probably happy since their food was not shared with Grasshopper.",
+        "b": "Ants need not worry to work anymore since they had food stocked.",
+        "c": "Ants were happy since they enjoyed working together in summer.",
+        "d": "Food that was procured was efficiently distributed and managed so that all the ants were fed equally."
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Food was distrubted and fed equally."
+    },
+    {
+      "number": 6,
+      "body": "Grasshopper was at fault in this story mostly because",
+      "choices": {
+        "a": "Of its attitude towards ants who were working tirelessly.",
+        "b": "Of not having a forethought to store food for the upcoming winter season.",
+        "c": "Of chirping and singing to its heart's content in the summer.",
+        "d": "It should have asked ants for the food and managed to surpass the winter somehow."
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Grasshopper has not stored food for future use."
+    },
+    {
+      "number": 7,
+      "body": "An object of mass 1 kg is made to slide down a smooth inclined plane of length 20m. If the kinetic energy possessed by the body at the bottom of the plane is 100 J, then the inclination of the plane with the horizontal is (take g = 10 ms^-2)",
+      "choices": {
+        "a": "45°",
+        "b": "37°",
+        "c": "60°",
+        "d": "30°"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "energy",
+      "subtopic_name": "Energy and Work",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "P.E. = K.E. mgh = 100 mg (20sinθ) = 100 (10) (20sinθ) = 100 sinθ = 1/2 θ = 30°"
+    },
+    {
+      "number": 8,
+      "body": "Two circles each of radius 3 touch each other externally in the plane. In how many ways can a circle of radius 8 be placed in the plane touching each of these tow circles ?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "8"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "2 way Total 6 ways"
+    },
+    {
+      "number": 9,
+      "body": "Which of these elements has the greatest electro negativity?",
+      "choices": {
+        "a": "Br",
+        "b": "N",
+        "c": "O",
+        "d": "S"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "O > N > S > Br [Decreasing order of EN]"
+    },
+    {
+      "number": 10,
+      "body": "An inclined plane of inclination θ is placed in water as shown in figure given below. Consider a small area (ΔA) around point P at a depth h. If Density of water is ρ and acceleration due to gravity is g the force experienced by ΔA due to hydrostatic pressure is",
+      "choices": {
+        "a": "ρgh(ΔA)",
+        "b": "ρgh(ΔA) sinθ",
+        "c": "ρgh(ΔA)",
+        "d": "ρgh(ΔA) secθ"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid",
+      "subtopic_name": "Fluid Mechanics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "F = P(AA) F = p gh(ΔA)"
+    },
+    {
+      "number": 11,
+      "body": "If 3x + 3y – 1, 4x² + y – 5, 4x + 2y are the sides of an equilateral triangle, its area is closest to the integer",
+      "choices": {
+        "a": "84",
+        "b": "85",
+        "c": "86",
+        "d": "87"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "side of an equilateral triangle are 3x + 3y - 1, 4x² + y - 5, 4x + 2y 4x + 2y = 3x + 2y - 1 y = x + 1 4x² + y - 5 = 4x + 2y 4x² - 4x - y = 5 4x² - 4x - x - 1 = 5 4x² - 5x - 6 = 0 x = 2, x = -3/4 (not possible) so x = 2, y = 3 side of triangle (a) = 14 Area of triangle = (sqrt(3)/4) a² = (sqrt(3)/4) × 14² = 84.868 it is nearer to 85"
+    },
+    {
+      "number": 12,
+      "body": "The pH of a 0.025 M solution of KOH is",
+      "choices": {
+        "a": "1.60",
+        "b": "3.69",
+        "c": "10.31",
+        "d": "12.40"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "0.025 KOH solution [OH⁻] = 25 × 10⁻³M pOH = -log [25 × 10⁻³] pOH = -log(5)² + 3log10 pOH = (-2 × 0.6990) + 3 ∴ log 10 = 1 pOH = -1.39 + 3 pOH = 1.602 pH + pOH = 14 pH + 1.602 = 14 pH = 14 - 1.602 pH = 12.398 = 12.40"
+    },
+    {
+      "number": 13,
+      "body": "Consider the following two statements about light & sound. Choose the most appropriate option (i) When light and sound travel air to water, light may bend towards normal while sound may bend away from normal. (ii) Sound is longitudinal wave while light is transverse wave.",
+      "choices": {
+        "a": "Statement (i) is correct while statement (ii) is incorrect",
+        "b": "Statement (i) and statement (ii) are both correct and statement (ii) is not the reason for statement (i)",
+        "c": "Statement (i) and statement (ii) are incorrect",
+        "d": "Statement (i) and statement (ii) are correct and Statement (ii) is the correct reason for statement (i)"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction of Waves",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "xy² = a³, yz² = b³, zx² = c³ on multiplying x³y³z³ = a³b³c³ xyz = abc .....(i) xy/yz = a³/b³ xy/z² = a³/b³ xy = a³z²/b³ .....(ii) substitute in (i) z³ × a³/b³ = abc z³ = abc × b³/a³ z³ = b³c/a² z = ∛(b³c/a²)"
+    },
+    {
+      "number": 14,
+      "body": "If xy² = a², yz² = b⁴ and zx² = c³ then z⁶ equals",
+      "choices": {
+        "a": "bc⁴/a²",
+        "b": "b³c/a²",
+        "c": "b²c⁴/b²",
+        "d": "ab⁴/c³"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "body": "How many H atoms are in 3.4 g of C12H22O11?",
+      "choices": {
+        "a": "6.0 × 10^23",
+        "b": "1.3 × 10^23",
+        "c": "9.8 × 10^22",
+        "d": "6.0 × 10^21"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "nCuH₂O₂ = 3.4/342 = 0.0099 ∴ 1 mole Cu₂H₂O₁₁ = 22 × N₁ H-atoms ∴ 0.0099 mole Cu₂O₂O₁₁ = 22 × 6.023 × 10²³ × 0.0099 = 1.3 × 10²³"
+    },
+    {
+      "number": 16,
+      "body": "Below are the diatoms observed under a microscope by Karthik. Help him to recognise the correct order of sample localities (Viz., Canal, Stream and lake).",
+      "choices": {
+        "a": "A-Mountain stream, B - Sewage Canal, C - Lake",
+        "b": "A - Sewage Canal, B - Lake, C - Mountain Stream",
+        "c": "A - Lake, B - Mountain stream, C - Sewage Canal",
+        "d": "A - Mountain stream, B - Lake, C - Sewage canal"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the microscope image showing diatoms A, B, and C",
+      "solution": "(a) Mountain streams has most fresh water and diatoms grow well in fresh water & it sewage canal gas more pollution so the diatoms will grow less, Lake water has less diversity because of the little pollution."
+    },
+    {
+      "number": 17,
+      "body": "What is the take home message from the above experiment?",
+      "choices": {
+        "a": "Diatoms come in different sizes and shapes",
+        "b": "The difference in size and shapes from different water samples is suggestive of the intensity of water pollution.",
+        "c": "Karthik enjoyed collecting samples from different locations.",
+        "d": "Nothing can be inferred from the above experiment."
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Because of water pollution different varities of diatom will not grow."
+    },
+    {
+      "number": 18,
+      "body": "In the above experiment, difference in sizes and shapes of diatoms should be inferred as",
+      "choices": {
+        "a": "Different species of diatoms",
+        "b": "Different genera of diatoms.",
+        "c": "Different families of diatoms.",
+        "d": "Different orders of diatoms."
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Different species have different structure."
+    },
+    {
+      "number": 19,
+      "body": "The percentage change in acceleration due to gravity at an altitude equal to radius of earth compared to that on the surface of earth is given by",
+      "choices": {
+        "a": "25% increase",
+        "b": "35% decrease",
+        "c": "75% decrease",
+        "d": "25% decrease"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Gravitation",
+      "subtopic_code": "gravity",
+      "subtopic_name": "Gravitational acceleration",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "On Surface of earth gₑ = GM/R² At heating R, gᴿ = GM/(R + R)² (∴h = R) gᴿ = GM/4R² Δg = GM/4R² - GM/R² Δg = gₑ(1/4 - 1) = -3gₑ/4 Percentage change in g is Δg/gₑ ×100 = -3/4 ×100 % = - 75% (decreased by 75%)"
+    },
+    {
+      "number": 20,
+      "body": "Let a, b be two positive real number such that a < b < 1/a and let x = (a + 1/a) - (b + 1/b). Then",
+      "choices": {
+        "a": "x is always greater than zero",
+        "b": "x is always less than zero",
+        "c": "x = 0",
+        "d": "No such definite conclusion can be drawn about x"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "given condition is possible only when 0 < a < 1\n\ntake a = 1/4 and b = 3 then 1/a = 4\nwhich satisfy the condition\na < b < 1/a\n\nx = a + 1/a - (b + 1/b)\nx = a + 1/a - b - 1/b\nx = 4 + 1/4 - 3 - 1/3\nx = 1 - 1/12\nx > 0"
+    },
+    {
+      "number": 21,
+      "body": "Which of the following species has standard enthalpy of formation as 0 kJ mol^-1?",
+      "choices": {
+        "a": "H2O(l)",
+        "b": "Na(g)",
+        "c": "Na(s)",
+        "d": "CO2(g)"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Standard enthalpy of formations 0 kJ/mole for Na(s)"
+    },
+    {
+      "number": 22,
+      "body": "A particle accelerates with a constant acceleration a0 and reaches a maximum velocity and then decelerates with a0 and comes to rest. The position time graph describing the situation is best represented by",
+      "choices": {
+        "a": "Graph A",
+        "b": "Graph B",
+        "c": "Graph C",
+        "d": "Graph D"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the position-time graphs shown in options A, B, C, D",
+      "solution": "initially acc. is +ve and constant so s = ut + 1/2 aot^2 and then particle decelerates so\ns = ut - 1/2 aot^2\nposition"
+    },
+    {
+      "number": 23,
+      "body": "Let m be the number of distinct (non congruent) integer-sided triangles each with perimeter 15 and n be the number of distinct (non congruent) integer sided triangles each with perimeter 16. Then m - n equals",
+      "choices": {
+        "a": "-2",
+        "b": "0",
+        "c": "2",
+        "d": "-4"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "No. of integer sided triangle with perimeter n is given\nclosest integer to n^2/48 , n is even\nclosest integer to (n+3)^2/48 , n is odd\nm = (15+3)^2/48 = 324/48 = 7\nclosest integer = 7\nn = 16^2/48 = 256/48\nclosest integer = 5\nm - n = 7 - 5 = 2"
+    },
+    {
+      "number": 24,
+      "body": "What is the molality of a solution made by dissolving 100 g of bromothymol blue (C27H28Br2O5S) in 1.00 L. of ethanol on a winter's day at a 10°C? The density of ethanol at this temperature is 0.7979 kg L^-1.",
+      "choices": {
+        "a": "0.100 mol kg^-1",
+        "b": "0.128 mol kg^-1",
+        "c": "0.160 mol kg^-1",
+        "d": "0.201 mol kg^-1"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Density (d) = mass/volume = 0.7979 kg\nmolecule mass of solute\n= 27 × 12 + 28 + 2 × 80 + 5 × 16 + 32\n= 624\nNo. of moles of solute\n= 100/624 = 0.16025 moles\nMolality (m)\n= No. of moles of solute/mass of solvent in kg\n= 0.16025/0.7979 = 0.201 mol kg^-1"
+    },
+    {
+      "number": 25,
+      "body": "Two bulbs of specifications 50W, 220 V and a 100W, 200V are connected first (i)in in parallel and then (ii) In series across 220 V power supply. Choose the correct statement",
+      "choices": {
+        "a": "In (i) 50 W will glow brighter and in (ii) 100 W will glow brighter",
+        "b": "In (i) 50 W will glow brighter and (ii) both will glow equally brighter.",
+        "c": "In (i) 100 W will glow brighter and (ii) 50 W will glow brighter",
+        "d": "In both cases the 50 W bulb will glow brighter."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "power",
+      "subtopic_name": "Electrical Power",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "∵ R₆₀ > R₁₀₀\n(I) So in Parallel P = V²/R ⇒ P ∝ 1/R\nso 100W bulb will glow more\n(II) in series P = I²R ⇒ P ∝ R\nso 50 W bulb will glow more."
+    },
+    {
+      "number": 26,
+      "body": "Let T be the number of 4- digit integers, each ending in 3 (in units place) and each divisible by 11.Then",
+      "choices": {
+        "a": "20 ≤ T ≤ 79",
+        "b": "80 ≤ T ≤ 89",
+        "c": "90 ≤ T ≤ 99",
+        "d": "T ≥ 100"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "abc3/11\n(b + 3)       (a + c)\nmax value     max value\n12            18\nmin value     min value\n3             1\n\nNo. of ways | a + c | b + 3\n1 × 1 = 1   | 18    | 7\n2 × 1 = 2   | 17    |\n3 × 1 = 3   | 16    | 5\n4 × 1 = 4   | 15    | 4\n5           | 14    | 3\n            | 7     | 12 | 12\n            | 8     | 11 | 11\n            | 8     | 10 | 10\n            | 9     | 9  | 9\n            | 8     | 8  | 8\n            | 7     | 7  | 7\n            | 6     | 6  | 6\n            | 5     | 5  | 5\n            | 4     | 4  | 4\n            | 3     | 3  | 3\n            | 1     | 1  | 12\n            | 81    |"
+    },
+    {
+      "number": 27,
+      "body": "1.000 mL of 0.1000 mol L^-1 hydrochloric acid was diluted to 100.0 mL with deionised water. 10.00 mL of this solution was diluted to 100.0 mL again using deionised water. What is the pH of the final solution?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "M₁V₁ = M₂V₂\n0.1 × 1 = M₂ × 100\nM₂ = 0.1×1/100\nM₂ = 10⁻³\nM₂V₂ = M₃V₃\n10⁻³ × 10 = M₃ × 100\nM₃ = 10⁻⁴ × 10/100\nM₃ = 10⁻⁶\npH = -log [10⁻⁶]\npH = 4"
+    },
+    {
+      "number": 28,
+      "body": "While playing football, Dimple fell down and was badly wounded on her left. The Doctor prescribed her antibiotics for a week which should have healed her of the wound in a week. However, Dimple's wound did not heal in a week. What among the following could have been the reason for inability of the wound to heal in the prescribed time frame given by the doctor?",
+      "choices": {
+        "a": "Prescribed medicine's date was expired.",
+        "b": "Dimple wouldn't have taken the full course of the antibiotics.",
+        "c": "Both (A) & (B) could be the reason",
+        "d": "Doctor's inability to prescribe the correct medicine for the wound."
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Full course of Antibiotics should be taken to cure the diseases."
+    },
+    {
+      "number": 29,
+      "body": "Which of the following situation is impossible?",
+      "choices": {
+        "a": "A body having velocity and acceleration in opposite directions.",
+        "b": "A body having zero velocity and non zero acceleration",
+        "c": "A body having constant acceleration and variable velocity",
+        "d": "A body having constant velocity and variable acceleration."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "body": "At what time (to the nearest second) immediately after 4 O' clock will angle between the hands of the clock be the same as that at 4 O' clock?",
+      "choices": {
+        "a": "4^h 42^m 50^s",
+        "b": "4^h 43^m 38^s",
+        "c": "4^h 43^m 40^s",
+        "d": "5^h 5^m 27^s"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "At 4 o' clock angle between min and hour hand = 120°\nlet at 4 hours × min angle is 120°\nso angle is 11/2 x° - 30° × 4 = 120°\nx = 480/11\n= 43 7/11 min = 43 min 38 sec"
+    },
+    {
+      "number": 31,
+      "body": "0.5755 g of a compound, containing sulfur and fluorine only, has a volume of 255.0 mL at 288.0 K and 50.01 kPa. What is the molecular formula of this compound?",
+      "choices": {
+        "a": "S₂F₂",
+        "b": "SF₂",
+        "c": "SF₄",
+        "d": "SF₆"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Following\nPV = nRT\nPV = mRT/M\nP = 50.01 KP₁\n= 50.01 × 10³ Pa\n= 50.01×10³/1.01325×10⁵ atm\nV = 255 mL\nV = 255/1000 L\nT = 228 K\nR = 0.0821 L atm K⁻¹ Mol⁻¹\nm = 0.5755 g\n∴ M = mRT/PV\nM = 1.01325×10⁵×1000×0.5755×0.0821×228/50.01×10³×225\n= 108 g\n∴ The molecular formula of compound is SF₄"
+    },
+    {
+      "number": 32,
+      "body": "Given here is a phylogenetic tree (family tree) of greater apes. Which of the following statements cannot be true from the tree? (mya-million years ago)",
+      "choices": {
+        "a": "Humans did not evolve from chimpanzees.",
+        "b": "Humans and chimpanzees are evolutionary cousins.",
+        "c": "Orangutans evolved much earlier then Humans.",
+        "d": "Humans are highly evolved among great apes."
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question requires interpretation of the phylogenetic tree diagram shown",
+      "solution": "(a) Humans didn't evolve from chimpanzees."
+    },
+    {
+      "number": 33,
+      "body": "A liquid (A) of density 1.6gcm^-3 and liquid (B) of unknown density is poured into a U-tube as shown in the figure. The liquids are immiscible. If height of A is hA = 26.0cm and height of B is hB = 50cm the density of B is",
+      "choices": {
+        "a": "0.85 g cm^-3",
+        "b": "3.01 g cm^-3",
+        "c": "0.33 g cm^-3",
+        "d": "1.18 g cm^-3"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Fluid mechanics",
+      "subtopic_code": "hydrostatic",
+      "subtopic_name": "Hydrostatic pressure",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "P₄ = p₀\n1.6 × g × 28.6 = p₁ × g × 50\np₁ = 1.6×28.6/50 = 0.8512"
+    },
+    {
+      "number": 34,
+      "body": "If a and b are two positive real numbers such that (a^2 + b^2)/ab = 6, then a positive value of a/b lines between",
+      "choices": {
+        "a": "2 and 3",
+        "b": "3 and 4",
+        "c": "4 and 5",
+        "d": "5 and 6"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a,b are two positive real numbers\na²+b²/ab = 6\n⇒ a/b + b/a = 6\nLet x = a/b\nx + 1/x = 6\n⇒ x² - 6x + 1 = 0\nx = 6±√32/2×1\nx = 6±4√2/2\nx = 3±2√2\nx = 3+2√2 or x = 3-2√2\nx = 3+2×1.41\nor x = 3-2×1.414\nx = 3+2.82 or x = 3-2.828\nx = 5.82 or x = 0.172\n(not in option)\nSo x = a/b lines between 5 and 6"
+    },
+    {
+      "number": 35,
+      "body": "The isomerism which exists between CH3CH2Cl2 and CH3ClCH2Cl is",
+      "choices": {
+        "a": "chain isomerism",
+        "b": "functional group isomerism",
+        "c": "positional isomerism",
+        "d": "metamerism"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "CH₂=CH-Cl and CH₃-CH₂\n1,1-Dichloroethane    Cl    Cl\n∴ Position of Cl is different ∴ both are position isomers"
+    },
+    {
+      "number": 36,
+      "body": "The term Biodiversity refers to",
+      "choices": {
+        "a": "Species Diversity",
+        "b": "Genetic diversity",
+        "c": "Ecosystem diversity",
+        "d": "All of the above"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(d) Biodiversity means varieties species in a particular area and different species has different gens and different ecosystem."
+    },
+    {
+      "number": 37,
+      "body": "Diagram shows trajectory of a cricket ball. The set of arrows which show the direction of the acceleration of ball at points P and Q respectively is",
+      "choices": {
+        "a": "↓ ↓",
+        "b": "↑ ↓",
+        "c": "↙ ↘",
+        "d": "↗ ↖"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Kinematics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile motion",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "body": "Sucharitha purchases x pencils at Rs x each, y pens at Rs y each and z notebooks at Rs z each. She purchases altogether 50 items and pays Rs.1000. The cost of y pencils, z pens and x notebooks is",
+      "choices": {
+        "a": "Rs.600",
+        "b": "Rs.750",
+        "c": "Rs.500",
+        "d": "Rs.350"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "ATQ\nx²+y²+z² = 1000\n(x+y+z)² = 2500\nx²+y²+z²+2(xy+yz+zx) = 2500\n2(xy+yz+zx) = 1500\nxy+yz+zx = 750"
+    },
+    {
+      "number": 39,
+      "body": "The metal that does not give H2 on treatment with dilute HCl is",
+      "choices": {
+        "a": "Zn",
+        "b": "Fe",
+        "c": "Ag",
+        "d": "Ca"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Ag is less reactive than hydrogen Ag + HCl → No reaction"
+    },
+    {
+      "number": 40,
+      "body": "On a field trip in North America, students noticed that when threatened, Horned lizards (Genus : phrynosoma) squirt blood at the attackers. When the professor asked what could have been the reason behind such behaviour of Horned lizards, one student said that certain sensory receptors had fired and triggered a neuronal reflex culminating in increasing the pressure in their sinus cavities until the blood vessels in the corners of the eyes burst. Another student said that it was just an act to frighten off the predator. Thus it can be said that",
+      "choices": {
+        "a": "The first response is correct, while the second is incorrect",
+        "b": "Both explanations are reasonable and can be scientifically tested.",
+        "c": "The first response is biological, while the second is philosophical.",
+        "d": "The first explanation is testable as a scientific hypothesis, while the second is not."
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(b) Both the explanation for the squirt of horned lizard are correct."
+    },
+    {
+      "number": 41,
+      "body": "If temperature of a certain mass of aluminum having specific heat capacity of 0.8 J/g°C is lowered by 6°C and heat lost is 96J, then mass of aluminum is",
+      "choices": {
+        "a": "16g",
+        "b": "48g",
+        "c": "60g",
+        "d": "20g"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "specific_heat",
+      "subtopic_name": "Specific Heat Capacity",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "ΔQ = mS Δθ\n96 = m × 0.8 × 6\nm = 96/(0.8×6) = 20 g"
+    },
+    {
+      "number": 42,
+      "body": "The number of real values of a for which the cubic equation x³ - 3ax² + 3ax - a = 0 has all real roots, one of which is a itself, is",
+      "choices": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x³ − 3ax² + 3ax − a = 0\na³ − 3a³ + 3a² − a = 0\n− 2a³ + 3a² − a = 0\na(2a² − 3a + 1) = 0\na = 0 or 2a² − 2a − a + 1 = 0\n2a (a − 1) − 1 (a − 1) = 0\n(a − 1) (2a − 1) = 0\na = 0, 1, 1/2\nnumber of value of a is 2 as at a = 1/2 equation does not have all roots real."
+    },
+    {
+      "number": 43,
+      "body": "The maximum number of isomers for an alkene with molecular formula C₄H₈ is",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "2",
+        "d": "3"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Molecular formula = C₅H₈\nIsomers\nCH₂ − CH₂ − CH = CH₂\nH₃C − CH = CH − CH₃\nH₃C − C = CH₂\n     |\nCH₃        CH₃\nTotal 5 isomers"
+    },
+    {
+      "number": 44,
+      "body": "People residing in coastal area usually do not face the problem of Thyroxin hormone deficiency because their food intake will be rich in one of the following minerals.",
+      "choices": {
+        "a": "sodium",
+        "b": "chlorine",
+        "c": "Iodine",
+        "d": "Phosphorus"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(c) Iodine is important for the activation of thyroxin gormone."
+    },
+    {
+      "number": 45,
+      "body": "In photoelectric effect, the maximum kinetic energy (Eₖ) of photoelectrons depends on frequency (f) of light incident on a metal surface of work function (φ). In an experiment f is varied and Eₖ is measured. To determine value for plank's constant (h)",
+      "choices": {
+        "a": "Plot Eₖ against φ and find intercept of best fitted line.",
+        "b": "Plot Eₖ against f and find slop of line best fit.",
+        "c": "Plot Eₖ against φ and find slope of line of best fit.",
+        "d": "Plot Eₖ against f and find intercept of best fitted line."
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "modern",
+      "topic_name": "Modern Physics",
+      "subtopic_code": "photoelectric",
+      "subtopic_name": "Photoelectric Effect",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Ex = hf − ϕ\nOn comparing this with y = mx + c\nSlope m = h & intercept c = −ϕ"
+    },
+    {
+      "number": 46,
+      "body": "Around a lawn which is of semicircular shape a pavement of uniform width is laid. If the ratio of the area of the lawn to the area of the pavement is 25:24, then the ratio of the outer and inner perimeters of the pavement is",
+      "choices": {
+        "a": "7/5",
+        "b": "6/5",
+        "c": "5/4",
+        "d": "5/(2√6)"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Area of lawn/Area of pavement = πr₁²/(πr₂² − πr₁²) = 25/24\n⇒ r₁/r₂ = 7/8\nperimeter_inner/perimeter_outer = πr₁/πr₂ = r₁/r₂ = 7/8"
+    },
+    {
+      "number": 47,
+      "body": "The method that cannot be used for removing permanent hardness of water is",
+      "choices": {
+        "a": "adding sodium carbonate",
+        "b": "distillation",
+        "c": "adding caustic soda",
+        "d": "boiling"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Boiling can remove only temporary hardness."
+    },
+    {
+      "number": 48,
+      "body": "In angiosperm plants, companion cell is associated with which one of the following elements ?",
+      "choices": {
+        "a": "Sieve tube",
+        "b": "Tracheids",
+        "c": "Vessels",
+        "d": "Xylem fibre"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Companion cell and sieve tube originate same mother cell so they are associated with each other."
+    },
+    {
+      "number": 49,
+      "body": "Essential requirement for the operation of a step down transformer is",
+      "choices": {
+        "a": "Laminated iron core",
+        "b": "Electrical connection between primary and secondary coils",
+        "c": "Magnetic interaction between primary and secondary coils",
+        "d": "Non magnetic core."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Electromagnetic Induction",
+      "subtopic_code": "transformer",
+      "subtopic_name": "Transformer",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "body": "Let ABC be a triangle in which AB = AC. Let D be a point on AC such that BD bisects angle B. Value of the ratio AB/BC is between",
+      "choices": {
+        "a": "1.0 and 1.5",
+        "b": "1.5 and 2.0",
+        "c": "2.0 and 2.5",
+        "d": "2.5 and 3.0"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "Consider the following reaction : 4 PCl3 (g) → P4 (g) + 6Cl2(g). if the initial concentration of PCl3(g) is 1.0 M, and 'X' is the equilibrium concentration of P4(g), what is the correct equilibrium relation ?",
+      "choices": {
+        "a": "Kc = 6x^7",
+        "b": "Kc = 6x^7 / (1.0 - x)^4",
+        "c": "Kc = (x)(6x)^6/(1.0 - 4x)^4",
+        "d": "Kc = x^7 (1.0 - x)^4"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "4PCl₅ ⇌ P₄ + 6Cl₂\nt = 0    1    0    0\nt = equi. 1−x   x    6x\nKc = [P₄][Cl₂]⁶/[PCl₅]⁴\nKc = (6x)⁶x/(1−x)⁴"
+    },
+    {
+      "number": 52,
+      "body": "In pregnant women, foetus's physiological functions like nourishment, respiration and excretion are taken up by",
+      "choices": {
+        "a": "Stomach of mother",
+        "b": "Placenta",
+        "c": "Umbilical cord",
+        "d": "Uterus"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Placenta is layer that provides food, respiration and elimination of the waste of the foetus."
+    },
+    {
+      "number": 53,
+      "body": "On a rainy wet day, a thunder is heard 6 second after lightening. If speed of sound is 350ms^-1 the altitude of the clouds is",
+      "choices": {
+        "a": "1.8 km",
+        "b": "1.9 km",
+        "c": "2.1 km",
+        "d": "2.5 km"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Sound Waves",
+      "subtopic_code": "sound_speed",
+      "subtopic_name": "Speed of Sound",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "altitude = 350 × 6 = 2100 m.\n= 2.1 km."
+    },
+    {
+      "number": 54,
+      "body": "A certain principal becomes Rs.96800 in 2 years if compounded annually at a certain rate of interest. The same principal becomes Rs.97240 in two years if compounded half yearly at the same rate of interest. The rate of interest is",
+      "choices": {
+        "a": "8%",
+        "b": "8 1/3",
+        "c": "10%",
+        "d": "12.5%"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "A = P(1 + r/100)²\n96800 = P(1 + r/100)² .....(1)\ncompound half yearly,\n97240 = P(1 + r/100)⁴ .....(2)\nAfter solving we get r = 10%"
+    },
+    {
+      "number": 55,
+      "body": "Which properties of plastics make their disposal difficult : (I) PVC produces harmful combustion products ; (II) polyalkenes are highly flammable ; (III) polyalkenes are non-biodegradable",
+      "choices": {
+        "a": "I and II only",
+        "b": "I and III only",
+        "c": "II and III only",
+        "d": "I, II, III"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Polyalkanes are not inflammable."
+    },
+    {
+      "number": 56,
+      "body": "Suresh accidentally touched silence of his two wheeler while parking and withdrew his leg immediately. Identify the correct order of the flow of message to the brain ?",
+      "choices": {
+        "a": "Receptor → Sensory neuron → CNS → Motor neuron → Effectors",
+        "b": "Sensory neuron → CNS → Motor neuron → Effectors → REceptor",
+        "c": "CNS → Motor neuron → Effectors → Receptor → Sensory neuron",
+        "d": "Effectors → Receptor → Sensory neuron → Motor neuron"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Receptor receive the message that is taken by sensory neuron to the CNS and the reply of the message is given by motor neuron to the effector."
+    },
+    {
+      "number": 57,
+      "body": "There three bodies A, B and C. Body A when brought closer to B, attract. When body B is brought closer to C they repel. We can then conclude",
+      "choices": {
+        "a": "Body A and B should have opposite charges while Body C should have the same charge as B",
+        "b": "Body B and C should have same kind of charge while Body A may have opposite charge.",
+        "c": "Body A and B should have same charge while Body C may have opposite charge.",
+        "d": "Body C is nuetral while Body A and B should have opposite charge."
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "charge_interactions",
+      "subtopic_name": "Charge Interactions",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Body B & C should have same kind of charge while body A may either have opposite charge or be neutral."
+    },
+    {
+      "number": 58,
+      "body": "A pen costs Rs.13 and a note book costs Rs.35 Let m be the maximum number of items that can be bought for Rs.1000 and n be the minimum number of items that can be bought for the same amount. Then m + n is",
+      "choices": {
+        "a": "76",
+        "b": "88",
+        "c": "96",
+        "d": "98"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Equation formed is :\n13x + 36y = 1000\nx ≠ y both should be integer\nSo, x = 16, y = 23\n1st integer value which satisfy the equation next, x = 50, y = 10\nSo maximum of x + y = 60, ie means 60 max. items can be purchased and minimum of x + y = 38\n∴ (x + y) = 38\n(x + y)max = 60 = m\n∴ m + n = 98"
+    },
+    {
+      "number": 59,
+      "body": "When the pH of the environment of a protein is changed, it is said to be denatured. This is due to",
+      "choices": {
+        "a": "breakage of peptide bonds",
+        "b": "breakage of disulfide links",
+        "c": "loss of tertiary structure",
+        "d": "breakdown of R groups"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "It is a biochemistry question and according to concept of chemistry when ph changed it caused loss of tertiary structure."
+    },
+    {
+      "number": 60,
+      "body": "If Brain is controlling unit of an organism, then at cellular level which cell organelle can be comparable to Brain ?",
+      "choices": {
+        "a": "Chloroplast",
+        "b": "Ribosome",
+        "c": "Nucleus",
+        "d": "Lysosome"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Nucleus controls all the cellular activities."
+    },
+    {
+      "number": 61,
+      "body": "Aldebaron, the brightest star in the constellation Taurus rises at local time 7:00 pm of 1st of October. On November 1st the star will rise at",
+      "choices": {
+        "a": "5:00 pm",
+        "b": "6:00 pm",
+        "c": "9:00 pm",
+        "d": "8:34 pm"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "general",
+      "topic_name": "Astronomy",
+      "subtopic_code": "stellar_motion",
+      "subtopic_name": "Stellar Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "body": "In the x-y plane let A be the point (5,0) and L be the line y = x/3. The number of points p on the line L such that triangle OAP is isosceles is (O being the origin)",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "P lies any = x/3 = 50 K = h/3 => h = 3K\nP (3K, K)\nNow ΔOAP is isosceles if\n(i) OP = PA\n(ii) PA = OA\n(iii) OA = OP\nCase (i) OP = PA => OP₁ = PA²\n(3K - 0)² + (K - 0)²\n= (3K - 5)² + (K - 0)²\n9k² + k² = 9k² - 30k + 25 + k²\n=> 30 K = 25\nK = 25/30 => K = 5/6 so P(5/2, 5/6)\nCase (ii)\nPA = OA\nPA² = OA²\n(3K - 5)² + (K - 0)² = 5²\n=> 9K² - 30K + 25 + K² = 25\n=> 10K² - 30K = 0\n=> 30 K (K - 3) = 0\nK = 0/ K = 3\nP (0, 0) (not possible) P (9, 3)\nCase (iii)\nOA² = OP²\n5² = (3k - 0)² + (K - 0)²\n25 = 9k² + k²\n=> 10k² = 25\nK² = 5/2\nK = ±√(5/2)"
+    },
+    {
+      "number": 63,
+      "body": "For the reaction, 2A + B → C which relationship is correct ?",
+      "choices": {
+        "a": "Δ[A] = Δ[C]",
+        "b": "-Δ[A] = Δ[C]",
+        "c": "-2Δ[A] = Δ[C]",
+        "d": "-Δ[A] = 2Δ[C]"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "-4[A] = 2A[C]"
+    },
+    {
+      "number": 64,
+      "body": "In some societies, \"Women were solely held responsible for giving birth to female baby\" assuming no role for men. But scientific advancement has proved men equally responsible for the birth of either sex. Armed with this information which of the following would be the most appropriate scenario for the birth of female child ?",
+      "choices": {
+        "a": "Ovum with X chromosome and Sperm with Y chromosome is FEMALE",
+        "b": "Ovum with Y chromosome and Sperm with Y chromosome is MALE",
+        "c": "Ovum with x chromosome and Sperm with X",
+        "d": "Ovum with X chromosome and Sperm without chromosome is FEMALE"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Ovum has X-chromosome and sperms has X-chromosome so the child will be girl."
+    },
+    {
+      "number": 65,
+      "body": "A block of mass 2 Kg placed on a floor experiences an external force in horizontal direction of 20N, frictional force of 6N and normal force of 20N. The body travels a distance of 10m under the combined effect of all these force. If initially body is at rest then what is the kinetic energy of the body at the end of 4m",
+      "choices": {
+        "a": "140J",
+        "b": "260 J",
+        "c": "56 J",
+        "d": "460 J"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "work_energy",
+      "subtopic_name": "Work and Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Initially, u = 0\na = (F-f)/(m) = (20-6)/2 = 7m/s²\nV² = u² + 2aS\nV² = 0² + 2 × 7 × 4\nV² = 56\nV = √56 m/s\nK.E. = (1/2)mv² = (1/2) × 2 × 56 = 56J"
+    },
+    {
+      "number": 66,
+      "body": "If x^2 = a + 1 and x + (b/x) = a ; then x equals",
+      "choices": {
+        "a": "a(b+1)/(a^2-b)",
+        "b": "ab+1/(a^2-b)",
+        "c": "ab+a+1/(a^2-b)",
+        "d": "ab-a-1/(a^2-b)"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x³ = a + 1     .....(i)\nx + b/x = a\nx² + b = a\nx\nx² - ax + b = 0     .....(ii)\n(i) - (ii) × x\nx³ - a - 1 = 0\nx³ - ax² + bx = 0\n\nax² - bx - a - 1 = 0     .....(iii)\n(iii) - (ii) × a\nax² - bx - a - 1 = 0\nax² - a²x + ab = 0\n- + -\n\n(a² - b)x = ab + a + 1\nx = (ab + a + 1)/(a² - b)"
+    },
+    {
+      "number": 67,
+      "body": "An electrochemical cell constructed for the reaction : Cu^2+(aq) + Mn → Cu(s) + Mn^2+(aq) has an E° = 0.75 V. The standard reduction potential for Cu^2+(aq) is 0.34 V. What is the standard reduction potential for Mn^2+(aq) ?",
+      "choices": {
+        "a": "1.09V",
+        "b": "0.410V",
+        "c": "-0.410V",
+        "d": "-1.09V"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Cu^2+(aq) + M(s) → Cu(s) + M^2+(aq)\nE°cell = E°cathode - E°anode\n0.75 = 0.34 - E°M^2+\nE°M^2+ = 0.34 - 0.75\nE°M^2+ = -0.410 V"
+    },
+    {
+      "number": 68,
+      "body": "Which one of he following is said to produce seeds exposed and they are called naked seed plant",
+      "choices": {
+        "a": "Deodar & Pinus",
+        "b": "Marsilea & Nostoc",
+        "c": "Maize & Garden Pea Plant",
+        "d": "Spirogyra & Funaria"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Deodar and pinus belong to gymnosperms."
+    },
+    {
+      "number": 69,
+      "body": "A body of mass 2 kg moving in the positive X-direction with a speed 4ms^-1 collides head on with an another body of mass 3kg moving in the negative X-direction with a speed of 1ms^-1. During collision a loud sound is heard and they both start moving together. The sound energy cannot be greater than n",
+      "choices": {
+        "a": "12J",
+        "b": "14J",
+        "c": "15J",
+        "d": "17.5J"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "collision",
+      "subtopic_name": "Collision",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "m = 2kg, m = 3kg\nv1 = 4m/s, v2 = 1 m/s\nafter collision: (m1 + m2)/v\nm1 v1 + m2 v2 = (m1 + m2) v\n2 × 4 - 3 × 1 = 5v\nv = 1 m/s\nInitial K.E.\nK1 = 1/2(2)(4)^2 + 1/2(3)(1)^2 = 16 + 3/2 = 17.5 J\nFinal K.E.\nK2 = 1/2(2 + 3)(1)^2 = 5/2 J\nLoss in energy = 17.5 - 2.5 = 15 J"
+    },
+    {
+      "number": 70,
+      "body": "Let a, b, c be positive real numbers such that abc = 1, (ab)^a = (bc)^b = (ca)^c = abc. Then x equals",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4/5"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "given\n(ab)^x = (bc)^x = (ca)^x = abc = k (let)\nab = k^1/x\nbc = k^1/x\nca = k^1/x\nabc = k\nnow\na^2b^2c^2 = k^(1+1+1)/x\n(abc)^2 = k^3/x\nk^2 = k^3/x\n2 = 3/x + 1\nx = 4/5"
+    },
+    {
+      "number": 71,
+      "body": "Which radiation is the easiest to shield ?",
+      "choices": {
+        "a": "alpha",
+        "b": "beta",
+        "c": "gamma",
+        "d": "neutron"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "modern",
+      "topic_name": "Modern Physics",
+      "subtopic_code": "nuclear",
+      "subtopic_name": "Nuclear Physics",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Alpha (due to high mass)"
+    },
+    {
+      "number": 72,
+      "body": "Identify the correct order of sequence from exterior to interior.",
+      "choices": {
+        "a": "Cell → Nucleus → Chromosome → DNA → Protein",
+        "b": "Nucleus → Cell → Chromosome → DNA → Protein",
+        "c": "Cell → Nucleus → DNA → Chromosomes → Protein",
+        "d": "Cell → Nucleus → Protein → DNA → Chromosome"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Cell → Nucleus → Chromosomes → DNA → Protein"
+    },
+    {
+      "number": 73,
+      "body": "In nuclear reactor, the electrons and protons are moving in opposite direction across a small hole in 2 second. If number of electrons and protons are 2 × 10^16 each, the current through the hole is given by",
+      "choices": {
+        "a": "1.6mA",
+        "b": "0mA",
+        "c": "6.4mA",
+        "d": "3.2mA"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "current",
+      "subtopic_name": "Electric Current",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Current due to electrons I1\n= (2×10^18 × 1.6×10^-19)/2\nCurrent due to protons I2\n= (2×10^18 × 1.6×10^-19)/2\nSo total current\nI = I1 + I2 = 2 × 10^18 × 1.6 × 10^-19\n= 3.2 × 10^-1\n= 3.2 mA"
+    },
+    {
+      "number": 74,
+      "body": "The sum 1 - 1/2 - 1/3 - 1/4 - 1/5 - 1/6 + ............... + 1/2012 + 1/2013 equals",
+      "choices": {
+        "a": "1/1006 + 1/1007 + 1/1008 + .......... + 1/2013",
+        "b": "1/1007 + 1/1008 + 1/1009 + .......... + 1/2013",
+        "c": "1/1006 + 1/1007 + 1/1008 + .......... + 1/2012",
+        "d": "1/1007 + 1/1008 + 1/1009 + .......... + 1/2012"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x = 1 - 1/2 + 1/3 - 1/4 + 1/5 - 1/6 +...........\n= -1/2012 + 1/2013\n⇒ x = (1 + 1/3 + 1/5 +.....+ 1/2013) - (1/2 + 1/4 + 1/6 +.....+ 1/2012)\n⇒ x = (1 + 1/2 + 1/3 + 1/4 +.....+ 1/2012 + 1/2013) - 2(1/2 + 1/4 + 1/6 +.....+ 1/2012)\n⇒ x = (1 + 1/2 + 1/3 + 1/4 +.....+ 1/2012 + 1/2013) - (1 + 1/2 + 1/3 +.....+ 1/1006)\n⇒ x = (1 + 1/2 + 1/3 +.....+ 1/1006) + (1/1007 + 1/1008 +.....+ 1/2013) - (1 + 1/2 + 1/3 +.....+ 1/1006)\n⇒ x = 1/1007 + 1/1008 +.....+ 1/2013"
+    },
+    {
+      "number": 75,
+      "body": "Which species below has the same general shape as NH3 ?",
+      "choices": {
+        "a": "SO4^2-",
+        "b": "CO3^2-",
+        "c": "NO3^-",
+        "d": "SO3"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "O-S=O → sp^3\nO-\nDue to presence of lp shape is triangular pyramidal like NH3.\nCO3^2-, NO3^-, SO3 all are sp^2 hybridised."
+    },
+    {
+      "number": 76,
+      "body": "After hearing to an influential lecture on \"how to conserve environment by avoiding usage of plastic\"? Ghan Shyam resolved that he should also contribute towards protecting the environment from plastic menace. Can you suggest him the first step how should he go about doing this effectively?",
+      "choices": {
+        "a": "He should urge his parents to stop using plastic materials at home.",
+        "b": "He should write a letter to the local civic body against selling plastic materials around his locality.",
+        "c": "He should practice minimizing plastic usage himself.",
+        "d": "He should ask his teacher to advice people on his behalf to stop usage of plastics."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "To conserved the environment person should first minimize the use of plastics."
+    },
+    {
+      "number": 77,
+      "body": "Two infinite wires are placed parallel to each other. They carry current I1 and I2 (I2 = I1). The magnetic field is B1 and B2 respectively. Different situation are given in column 1. The comments on the direction and strength of magnetic field are given in column II. Match the following.",
+      "choices": {
+        "a": "1-P, 2-Q, 3-R, 4-S",
+        "b": "1-R, 2-P, 3-S, 4-Q",
+        "c": "1-S, 2-R, 3-P, 4-Q",
+        "d": "1-S, 2-R, 3-Q, 4-P"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "magnetic_field",
+      "subtopic_name": "Magnetic Field due to Current",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "body": "If the radius of the base of a cone is doubled then the slant are becomes 3 times the original slant area. Suppose when the radius of the base of the cone is quadrupled (that is increased to 4 times), the slant area becomes k times the original slant area. Then the integer closest to k is",
+      "choices": {
+        "a": "6",
+        "b": "8",
+        "c": "10",
+        "d": "11"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let radius, height and slant height be r, h and l\nSo, slant area of original cone\n= πrl\nΔ^TQ π2r\nsqrt(h^2 + 4r^2) = 3πrsqrt(h^2 + r^2)\n⇒ 4 (h^2 + 4r^2) = 9(h^2 + r^2)\n⇒ 4h^2 + 16r^2 = 9h^2 + 9r^2\n⇒ 7r^2 = 5h^2\n7r^2/5 = h^2\nNow π4r\nsqrt(h^2 + 16r^2) = K or sqrt(h^2 + r^2)\n16 (h^2 + 16r^2) = K^2 (h^2 + r^2)\nput h^2 = 7r^2/5\n\n⇒ 16 × [7r^2/5 + 16r^2] = K^2 [7r^2/5 + r^2]\n= 16 × 87r^2/5 = K^2 12r^2/5\n⇒ 16 × 87/12 = K^2\n⇒ sqrt(116)\ninteger closest to K is 11"
+    },
+    {
+      "number": 79,
+      "body": "The mass of 0.2 mole of Oxygen molecule is",
+      "choices": {
+        "a": "6.4g",
+        "b": "3.2g",
+        "c": "1.6g",
+        "d": "2.75g"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Mole = Given mass / Gram molecular mass\n0.2 = 6.4/32\nW = 6.4 g"
+    },
+    {
+      "number": 80,
+      "body": "Wuchereria is an example of:",
+      "choices": {
+        "a": "Arthropoda",
+        "b": "Annelida",
+        "c": "Arthropoda",
+        "d": "Nematoda"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Wuchereria is an organisms that belong to nematode phylum."
+    }
+  ]
+}

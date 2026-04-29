@@ -1,0 +1,1361 @@
+{
+  "paper": "NSEJS 2016-17",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Rod AB of radius 2r is joined with rod BC of radius r. They are of same material and are of same length. The combination carries a current I. Choose the correct statement:",
+      "choices": {
+        "a": "V_AB = 4V_BC",
+        "b": "Current per unit area in AB and BC are equal",
+        "c": "Resistance of AB is greater than that of BC",
+        "d": "V_BC = 4V_AB"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Current and Resistance",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance and Ohm's Law",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Since resistance in AB is 4 times less than resistance in BC. ∴ VBC = 4VAB"
+    },
+    {
+      "number": 2,
+      "body": "The statement \"a is not less than 4\" is correct represented by:",
+      "choices": {
+        "a": "a ≤ 4",
+        "b": "a > 4",
+        "c": "a ≥ 4",
+        "d": "a ≤ 4"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a is not less than 4 means a is greater than or equal to 4 i.e. a ≥ 4"
+    },
+    {
+      "number": 3,
+      "body": "A chemist mixes two ideal liquids A and B to form a homogeneous mixture. The densities of the liquids are 2 g/mL for A and 3 g/mL for B. When she drops a small object into the mixture, she finds that the object becomes suspended in the liquid; that is, it neither sinks to the bottom nor does it float on the surface. If the mixture is made of 40% A and 60% B by volume, what is the density of the object?",
+      "choices": {
+        "a": "2.60 g/mL",
+        "b": "2.50 g/mL",
+        "c": "2.40 g/mL",
+        "d": "1.50 g/mL"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "As mentioned, the object becomes suspended in the liquid, it means density of object is equal to the density of the mixture. Density of mixture = (40/100) × 2 + (60/100) × 3 = 0.8 + 1.8 = 2.60 g/mL"
+    },
+    {
+      "number": 4,
+      "body": "How many different compounds can have the formula, C₃H₄?",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "C3H4 can be the formula of the following three compounds: CH2=C=CH2 Propyne, H2C = C = CH2 Propene, Cyclopropene"
+    },
+    {
+      "number": 5,
+      "body": "In the figure shown, the current carrying loop is fixed, where as current carrying straight conductor is free to move. Then straight wire will (ignore gravity):",
+      "choices": {
+        "a": "remain stationary",
+        "b": "move towards the loop",
+        "c": "move away from the loop",
+        "d": "rotate about the axis perpendicular to plane of paper"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetic Effects of Current",
+      "subtopic_code": "force_on_conductor",
+      "subtopic_name": "Force on Current-Carrying Conductor",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "body": "Two friends A and B watched a car from the top of their buildings. Angle of depression for A was 10° more than angle of depression for B then",
+      "choices": {
+        "a": "A's apartment is taller than B's apartment",
+        "b": "B's apartment is taller than A's apartment",
+        "c": "A's apartment and B's apartment have same height",
+        "d": "We cannot compare the heights of the two apartments"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "body": "How many times would a red blood cell pass through the heart during one complete cycle?",
+      "choices": {
+        "a": "Once",
+        "b": "Twice",
+        "c": "4 times",
+        "d": "72 times"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "A gene has two alleles P(dominant) and p(recessive). The homozygous recessive combination leads to death in the embryo stage. If two individuals with genotype Pp are mated, out of the offspring that survive to adulthood, what is the probability of the genotype to be Pp?",
+      "choices": {
+        "a": "0.75",
+        "b": "0.33",
+        "c": "0.5",
+        "d": "0.67"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "body": "A convex mirror of focal length f produces an image of size equal to 1/n times the size of the object t. Then the object distance is:",
+      "choices": {
+        "a": "nf",
+        "b": "f/n",
+        "c": "(n + 1)f",
+        "d": "(n - 1)f"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "m = + 1/n Putting value in 1/f = 1/v + 1/u u = -(n-1) f"
+    },
+    {
+      "number": 10,
+      "body": "Total surface area of a sphere S with radius sqrt(2) + sqrt(3) cm is:",
+      "choices": {
+        "a": "400π(5 + 2√6) sqmm",
+        "b": "π(√2 + √3)² sqcm",
+        "c": "2π(√2 + √3)² sqcm",
+        "d": "40π(5 + 2√6) sqmm"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Surface Area = 4πr² = 4π (√2 + √3)² cm² = 4π(5 + 2√6) cm² = 400 π (5 + 2√6) mm²"
+    },
+    {
+      "number": 11,
+      "body": "There are many elements in the periodic table that are named after the country, where they were first made or obtained. For example, the Latin name for Copper was coined by the Romans because their chief source of copper was from the island of Cyprus. However, there is one country in the world which was named after an element (the Latin name). A long time ago, it is believed that this country had mountains full of a valuable element, however all expeditions to find these mountains failed. But the name stuck on. The element in question is used for many applications today, and many of its compounds are used as catalysts. The ions of this metal have very good anti-microbial property and finds application in water purification. The element is",
+      "choices": {
+        "a": "Sodium",
+        "b": "Gold",
+        "c": "Silver",
+        "d": "Francium"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "The only country named after an element is Argentina (named after silver whose latin name is Argentum)"
+    },
+    {
+      "number": 12,
+      "body": "All of these species have the same number of valence electrons as nitrate ion, except:",
+      "choices": {
+        "a": "Carbonate ion",
+        "b": "Bicarbonate ion",
+        "c": "NF₃",
+        "d": "SO₃"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "No. of valence electrons in carbonate ion (CO3²⁻) = 4 + 6 × 3 + 2 = 24 No. of valence electrons in bicarbonate ion (HCO3⁻) = 1 + 4 + 6 × 3 + 1 = 24 No. of valence electrons in NO2 = 5 + 7 × 3 = 26 No. of valence electrons in SO3 = 6 + 6 × 3 = 24"
+    },
+    {
+      "number": 13,
+      "body": "The angle between the hour arm and the minute arm of a clock at 2:10 a.m. is:",
+      "choices": {
+        "a": "zero",
+        "b": "4°",
+        "c": "5°",
+        "d": "6°"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Angle = |11/2 × minutes - 30 × hour| = |11/2 × 10 - 30 × 2| = 5°"
+    },
+    {
+      "number": 14,
+      "body": "A craft teacher reshapes the wax from a cylinder of candle with section diameter 6 cm and the height 6 cm into a sphere. The radius of this sphere will be:",
+      "choices": {
+        "a": "r = 6√3/2 cm",
+        "b": "r = 6 cm",
+        "c": "r = 3³√3/2 cm",
+        "d": "r = 6³√2 cm"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Volume of sphere = Volume of cylinder\n4/3 πr³ = π × (6/2)² × 6\nr³ = 3π × 6/4\nr = 3√(3/2)"
+    },
+    {
+      "number": 15,
+      "body": "Plants absorb nitrates from the soil, which are most essential to produce:",
+      "choices": {
+        "a": "Proteins",
+        "b": "Carbohydrates",
+        "c": "Fats",
+        "d": "Cell wall"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "body": "The dry mass (mass-excluding water) of a seed in the process of germination:",
+      "choices": {
+        "a": "increase over time until the first leaves appear",
+        "b": "decreases over time until the first leaves appear",
+        "c": "stays constant until the first leaves appear",
+        "d": "first increases and then decreases until the first leaves appear"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "body": "A point object O is kept at origin. What a concave mirror M₁ placed at x = 6 cm, image is formed at infinity. What M₁ is replaced by another concave mirror M₂ at same position, image is formed at x = 30 cm, then ratio of the focal length of M₁ to that of M₂ is",
+      "choices": {
+        "a": "3/4",
+        "b": "4/3",
+        "c": "6",
+        "d": "1/5"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "1/f₁ = 1/v₁ + 1/u₁, 1/f₁ = 1/6 + 1/∞\nf₁ = 6 cm.\nFor mirror M₂,\n1/f₂ = -1/24 + 1/6    f₂ = 8 cm\nf₁ = 6cm, u₂ = 3\nf₂ = 8cm = 4"
+    },
+    {
+      "number": 18,
+      "body": "The number 3^(3¹⁰ + 6²) + 2³ (2¹⁵ + 6²) is:",
+      "choices": {
+        "a": "A perfect square and a perfect cube",
+        "b": "Neither a perfect square nor a perfect cube",
+        "c": "A perfect cube but not a perfect square",
+        "d": "A perfect square but not a perfect cube"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "3⁶ (3¹⁰ + 6⁴) + 2³ (2¹² + 6⁷)\n⇒ 3⁶ × 3¹⁰ + 3⁶ × 2⁶ × 3⁶ + 2³ × 2¹² + 2³ ×\n2⁷ × 3⁷\n⇒ 3¹⁶ + 3 × 2⁶ × 3⁶ × 3⁶ + 3 × 2⁶ × 3⁶ × 2⁶ +\n2¹⁶\n⇒ (3⁹)² + 3.2⁶.3⁶(3⁶ + 2⁶) + (2⁶)³\n⇒ (3⁹ + 2⁶)³\nWhich is perfect cube but not perfect square."
+    },
+    {
+      "number": 19,
+      "body": "Melting point of a substance is 10°C. What does this mean?",
+      "choices": {
+        "a": "The substance is liquid at 10°C.",
+        "b": "The substance is a solid at 10°C.",
+        "c": "There is equilibrium between solid phase and liquid phase at 10°C.",
+        "d": "The substance is 50% solid and 50% liquid at 10°C."
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "At melting point, the solid and liquid phase of a substance co-exists."
+    },
+    {
+      "number": 20,
+      "body": "The following substances have approximately same molecular mass. Which is likely to have the highest boiling point?",
+      "choices": {
+        "a": "n-butane",
+        "b": "isobutane",
+        "c": "n-butanol",
+        "d": "isobutanol"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Among butane, isobutane, butanol and isobutanol, butanol has the highest boiling point as it is straight chain alcohol with a hydroxyl group (-OH) that undergoes hydrogen bonding. Thus, its structure and bonding together contribute to its higher boiling point than others."
+    },
+    {
+      "number": 21,
+      "body": "U-tube contains some amount of mercury. Immiscible liquid X is poured in left immiscible liquid Y is poured in the right arm. Length of liquid X is 8cm, length Y is 10cm and upper levels of X and Y are equal. If density of Y is 3.36g.cm⁻³ and 13.6g.cm⁻³, then density of X is",
+      "choices": {
+        "a": "0.8 g.cm⁻³",
+        "b": "1.2 g.cm⁻³",
+        "c": "1.4 g.cm⁻³",
+        "d": "1.6 g.cm⁻³"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluids",
+      "subtopic_name": "Fluid Statics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Under equilibrium condition\nP₁ = P₂\nρ₁gh₁ + ρ₀gh = ρ₂gh₂\n13.6 × 2 + ρ × 8 = 3.36 × 10\nρ = 0.8 g/cm³"
+    },
+    {
+      "number": 22,
+      "body": "Let the number of rectangles formed by 6 horizontal and 4 vertical lines be n and those formed by 5 vertical and 5 horizontal lines be m then we have",
+      "choices": {
+        "a": "n = m",
+        "b": "n ≥ m + 1",
+        "c": "m ≥ n",
+        "d": "m > n + 5"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Number of rectangle n = 90\nNumber of square m = 100\nm ≥ n\nn = ⁿCᵧ×ʳCᵧ = 90\nm = ᵐCᵧ×ˢCᵧ = 100\n⇒ m > n + 5"
+    },
+    {
+      "number": 23,
+      "body": "In a human cell undergoing meiosis, what are the number of cellular DNA molecules present during Prophase-I",
+      "choices": {
+        "a": "23",
+        "b": "46",
+        "c": "69",
+        "d": "92"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "During gaseous exchange in the alveoli, what happens to nitrogen?",
+      "choices": {
+        "a": "There is no net nitrogen exchange, as nitrogen is filtered out by the alveoli.",
+        "b": "The nitrogen is absorbed by the alveolus to form amino acids.",
+        "c": "The nitrogen is filtered out by the alveolous, as the nitrogen molecule is too large to cross the gaps in the capillaries",
+        "d": "There is not net nitrogen exchange, as the blood is saturated with nitrogen."
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "The effective resistance between A and D in the circuit shown in the adjacent figure is",
+      "choices": {
+        "a": "5 Ω",
+        "b": "10 Ω",
+        "c": "15 Ω",
+        "d": "20 Ω"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance and Circuit Analysis",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Rₑq = 20Ω (After ignoring 6Ω and 5Ω resistance at C & D)"
+    },
+    {
+      "number": 26,
+      "body": "If ABCD is a rhombus and ∠ABC = 60° then",
+      "choices": {
+        "a": "The points A, B, C, D are concyclic",
+        "b": "The quadrilateral has exactly half the area of the square with same sides as ABCD",
+        "c": "The quadrilateral has area (√3/2) AB²",
+        "d": "The diagonals of the quadrilateral ABCD are equal and bisect each other at right angle"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Option (A) is incorrect : Sum of opposite angles of ABCD is not equal to 180°.\nSo A, B, C and D is not concyclic.\nOption (B) is incorrect : Area of ABCD\n= base × height = a × √3a = √3a²/2\nArea of square having same side will be\na² × √3a²/4 = 1/2 a²\nOption (C) is correct.\nArea = a × √3a = √3a² = √3/2 AB²\nOption (D) is incorrect :\nDiagonal of rhombus bisect perpendicularly"
+    },
+    {
+      "number": 27,
+      "body": "Identify the overall change in the following set of reactions.\n1. Carbon dioxide → carbonic acid (H₂CO₃)\n2. Ethanol (alcohol) → Ethanal (aldehyde)\n3. Ethanal (aldehyde) → Ethanol (alcohol)\n4. Sulphuric acid → Sulphur trioxide (SO₃)\nChoose the correct option which best describes these conversions.",
+      "choices": {
+        "a": "oxidation, oxidation, reduction, reduction",
+        "b": "hydration, oxidation, reduction, dehydration",
+        "c": "reduction, dehydration, hydration, oxidation",
+        "d": "reduction, reduction, oxidation, oxidation"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "1. CO₂ + CH₂ → H₂O → H₂CO₃ Hydration\n2. CH₃CH₂OH → H₂ → CH₃CHO Oxidation\n3. CH₃CHO → H₂ → CH₃CH₂OH Reduction\n4. H₂SO₄ → H₂O → SO₃ Dehydration"
+    },
+    {
+      "number": 28,
+      "body": "An element with atomic number 44, is below which element in the periodic table?",
+      "choices": {
+        "a": "Calcium",
+        "b": "Iron",
+        "c": "Argon",
+        "d": "Magnesium"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Element with atomic number 44 is Ruthenium with electronic configuration [Kr] 5s²4d⁶. It belongs to 5th period and 8th group. It is place below Iron with atomic number 26 with configuration [Ar] 4s²3d⁶."
+    },
+    {
+      "number": 29,
+      "body": "Three bulbs B₁, B₂ and B₃ having rated powers 100WQ, 60W and 60W at 250V are connected in a circuit as shown in the adjacent figure. If W₁, W₂ and W₃ are the output powers of the bulbs B₁, B₂, B₃ respectively, then",
+      "choices": {
+        "a": "W₁ > W₂ = W₃",
+        "b": "W₁ > W₂ > W₃",
+        "c": "W₁ < W₂ = W₃",
+        "d": "W₁ < W₂ < W₃"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "power",
+      "subtopic_name": "Electrical Power",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "R₁ = V²/100, R₂ = V²/60, R₃ = V²/60\n\nV₁ = (V²/100)/(V²/100 + V²/60) × 250\n\nV₂ = (V²/60)/(V²/100 + V²/60) × 250\n\nV₃ = 250\n\n∴ W₁ = V₁²/R₁ = 876900/V²\n\nW₂ = V₂²/R₂ = 146484.37/V²\n\nW₃ = 8750000/V²\n\nW₃ > W₂ > W₁"
+    },
+    {
+      "number": 30,
+      "body": "If a, b > 0 then",
+      "choices": {
+        "a": "a + b ≤ √ab",
+        "b": "a + b > √ab",
+        "c": "a + b ≥ √2ab",
+        "d": "None of the above inequalities will hold"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "A.M. ≥ G.M.\n(a + b)/2 ≥ √ab\n≥ 2√ab ⇒ a + b > √ab"
+    },
+    {
+      "number": 31,
+      "body": "Which of the following is true about ATP ?\n(A) It is derivative of one of the nitrogenous bases that from DNA\n(B) It splits into ADP and phosphate, and the energy produced is used by muscle cells to contract\n(C) It is produced in both aerobic and anaerobic conditions.\n(D) All of the above",
+      "choices": {
+        "a": "It is derivative of one of the nitrogenous bases that from DNA",
+        "b": "It splits into ADP and phosphate, and the energy produced is used by muscle cells to contract",
+        "c": "It is produced in both aerobic and anaerobic conditions.",
+        "d": "All of the above"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "body": "Which of the following statements is true regarding communication in neurones?\n(A) Free electrons are moved along the plasma membrane of the axon and control he expression of neurotransmitters\n(B) A chemical signal travels along the axon and is converted into an electric impulse at the synapse\n(C) An electric impulse travels along the length of the axon. The electric impulse is converted to a chemical signal at the synapse\n(D) An electrical signal is converted to a chemical signal by the Myelin sheath before it reached the synnapse",
+      "choices": {
+        "a": "Free electrons are moved along the plasma membrane of the axon and control he expression of neurotransmitters",
+        "b": "A chemical signal travels along the axon and is converted into an electric impulse at the synapse",
+        "c": "An electric impulse travels along the length of the axon. The electric impulse is converted to a chemical signal at the synapse",
+        "d": "An electrical signal is converted to a chemical signal by the Myelin sheath before it reached the synnapse"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "body": "Following diagram shows refraction of parallel beam of light through a spherical surface. Identify the correct ray diagram",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the ray diagrams A, B, C, D"
+    },
+    {
+      "number": 34,
+      "body": "Tenth term in the sequence 12, 18, 20, 28, ........ is –\n(A) 336\n(B) 63\n(C) 216\n(D) 68",
+      "choices": {
+        "a": "336",
+        "b": "63",
+        "c": "216",
+        "d": "68"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "12 = 4² - 2² + 0\n18 = 5² - 3² + 2\n20 = 6² - 4² + 0\n26 = 7² - 5² + 4\n= 8² - 6² + 0\n= 9² - 7² + 7\n= 10² - 8²+0\n= 11² - 9²+12\n= 12² - 10²+0\n68 = 13² - 11²+20"
+    },
+    {
+      "number": 35,
+      "body": "An electron pair donor is a Lewis base and an electron pair acceptor is a Lewis acid. Which among the following statements is correct?\n(A) NH3 is Lewis acid, because nitrogen has only 6 electrons around it\n(B) BF3 is a Lewis base, because fluorine has 8 electrons around it\n(C) NF3 is a Lewis base, because nitrogen has alone electron\n(D) BCl3 is a Lewis acid because it has only 6 electrons around it",
+      "choices": {
+        "a": "NH3 is Lewis acid, because nitrogen has only 6 electrons around it",
+        "b": "BF3 is a Lewis base, because fluorine has 8 electrons around it",
+        "c": "NF3 is a Lewis base, because nitrogen has alone electron",
+        "d": "BCl3 is a Lewis acid because it has only 6 electrons around it"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "BCl₃ acts as Lewis acid as the central atom has six electrons and is electron deficient. Thus, BCl₃ accepts a pair of electron to complete its octet."
+    },
+    {
+      "number": 36,
+      "body": "Greenhouse gases absorb (and trap) outgoing infared radiation (heat) form Earth and contribute to global warming. A molecule that acts as a greenhouse gas, generally has a permanent dipole moment and sometimes for other reason. Going only by the condition of permanent dipole moment, in the list of gases given below how many can be potential greenhouse gases ?\nWater, Sulphur dioxide, Boron trifluoride, carbon monoxide, carbon dioxide, nitrogen, oxygen, methane, hydrogen sulphide, ammonia\n(A) Five\n(B) Six\n(C) Seven\n(D) Four",
+      "choices": {
+        "a": "Five",
+        "b": "Six",
+        "c": "Seven",
+        "d": "Four"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Among H₂O, SO₂, BF₃, CO, CO₂, N₂, O₂, CH₄, H₂S and NH₃, H₂O, SO₂, CO, H₂S and NH₃ have net dipole moment and can be potential greenhouse gases."
+    },
+    {
+      "number": 37,
+      "body": "In the diagram M1 and M2 are two plane mirrors at right angles to each other. O is a luminous point object. Consider two images formed due to first reflection at M1 and M2. The area of the triangle formed by the object and two images is:",
+      "choices": {
+        "a": "4 cm²",
+        "b": "2 cm²",
+        "c": "8 cm²",
+        "d": "16 cm²"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Plane Mirrors",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question requires the diagram showing the mirror configuration and object position to determine the triangle area",
+      "solution": "Area of triangle\n= 1/2 × B × H\n= 1/2 × 4 × 4 = 8 cm²"
+    },
+    {
+      "number": 38,
+      "body": "The probability of a point within an equilateral triangle with side 1-unit lying outside its in-circle (inscribed circle) is:",
+      "choices": {
+        "a": "1 - 1/(2√3)",
+        "b": "1 - π/(3√3)",
+        "c": "1 - π/(2√3)",
+        "d": "1 - 2π/(3√3)"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Area of triangle (Δ) = √3/4 × (1²)\n\n√3(1)²/4 = 1/(3×1) = 1/(2√3)\n\nr = Δ/s = 1/(2√3)\n\nProbability\n= Area of triangle which is not included/Area of triangle\n\n= (√3/4 - (1/(2√3))²)/(√3/4)\n\n= 1 - 1/(3√3)"
+    },
+    {
+      "number": 39,
+      "body": "Penicillin cannot be used to treat influenza because:",
+      "choices": {
+        "a": "It only helps to bring the temperature down, and does not reduce the infection",
+        "b": "The penicillin is broken down by the organism",
+        "c": "Viruses do not have cell walls",
+        "d": "Reproduction of protozoans is not affected by penicillin"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "Thin cuboidal strips are made by slicing a potato. They are all made to be exactly 8 cm long and 2 mm wide. Each strip is placed in sugar solution of different concentration. After soaking it for 5 hours, their lengths are measured again. The following graph shows the results of the experiment. What concentration of sugar solution is isotonic with the contents of the cells of the potato:",
+      "choices": {
+        "a": "0.2",
+        "b": "0.4",
+        "c": "0.6",
+        "d": "0.1"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Question requires the graph to determine at what concentration the potato strip length remains unchanged (isotonic point)"
+    },
+    {
+      "number": 41,
+      "body": "A fishman of highest h is standing on the banks of a lake. A fish in the water perceives his height as h'. Then-",
+      "choices": {
+        "a": "h' > h",
+        "b": "h' < h",
+        "c": "h' = h",
+        "d": "h' > or h' < h depending on position of fish"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "If object is seen from denser to rarer then apparent depth is more than real depth therefore h' > h."
+    },
+    {
+      "number": 42,
+      "body": "A triangle has perimeter 316 and its sides are of integer length. The maximum possible area for such a triangle is achieved for",
+      "choices": {
+        "a": "Single triangle",
+        "b": "Two triangles",
+        "c": "Three triangles",
+        "d": "More than three triangle"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "For maximum possible area sides of the triangle will be 105, 105 and 106 and area of triangle will be 4804.3 square units"
+    },
+    {
+      "number": 43,
+      "body": "Hennig Brand, one of the many alchemists was in pursuit of the philosopher's stone. Brand's method is believed to have consisted of evaporating large quantities of urine to leave a black residue that was then left for a few months. The residue was then heated with sand, driving off variety of gases and oils. The final substance to be driven off, was condensed as a white solid, which he called as \"cold fire\" as it was luminous and glowed in the dark and also caught fire on slight warming and producing a large quantity of light. It has also been called as the \"Bearer of light\". Which elements is \"cold fire\"?",
+      "choices": {
+        "a": "Lithium",
+        "b": "Tungsten",
+        "c": "Phosphorous",
+        "d": "Cesium"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Phosphorus is known as 'cold fire'."
+    },
+    {
+      "number": 44,
+      "body": "When solid KOH is mixed with solid NH4Cl a gas is produced. Which gas is it ?",
+      "choices": {
+        "a": "Chlorine",
+        "b": "hydrogen",
+        "c": "hydrogen",
+        "d": "ammonia"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Alkali reacts with ammonium salts to produce ammonia gas.\nKOH + NH₄Cl → KCl + H₂O + NH₃"
+    },
+    {
+      "number": 45,
+      "body": "Object A is completely immersed in water. True weight of object A is WA. Weight of water with beaker is WB. Let B be the buoyant force. W1 and W2 are scale readings of spring balance and weighing scale respectively",
+      "choices": {
+        "a": "W1 = WA",
+        "b": "W1 = WA + B",
+        "c": "W2 = WB",
+        "d": "W2 = WB + B"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "buoyancy",
+      "subtopic_name": "Buoyancy",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Weight in weighing scale is equal to W₂ + reaction force of B\ntherefore\nW₂ = W₀ + B"
+    },
+    {
+      "number": 46,
+      "body": "Number of numbers less than 40 having exactly four divisors is -",
+      "choices": {
+        "a": "15",
+        "b": "12",
+        "c": "11",
+        "d": "14"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Number less than 40 having 4 divisors will be of form p^3, p1 × p2 (where p, p1, p2 are prime numbers) Cubes less than 40 are 2^3 = 8, 3^3 = 27 Number less than 40 and product of 2 distinct prime number 6 = 3 × 2  10 = 2 × 5  14 = 2 × 7 15 = 3 × 5  21 = 3 × 7  22 = 2 × 11 26 = 13 × 2 33 = 3 × 11  34 = 2 × 17 35 = 5 × 7  38 = 2 × 1939 = 13 × 3 Total values = 14"
+    },
+    {
+      "number": 47,
+      "body": "Antibodices play an important role in defending the body against infections by which of the following mechanisms :",
+      "choices": {
+        "a": "They engulf the bacteria and make them harmless",
+        "b": "They bind of the surface of pathogens, so that they can be easily identified and removed by other cells of the immune system",
+        "c": "They enter the pathogen and prevent cell division",
+        "d": "They are highly reactive and chemical react with the DNA of the pathogen"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "body": "The figure shows a food web, where A, B, C, D etc. are different species. And the direction of the arrows symbolizes the direction of flow of nutrients. An increase in the population of which species is likely to decrease the population of species A",
+      "choices": {
+        "a": "Species D",
+        "b": "Species F",
+        "c": "Species G",
+        "d": "Species E"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the food web diagram"
+    },
+    {
+      "number": 49,
+      "body": "Velocity of a particle moving along a straight line varies with time as shown in the adjacent figure. Net forces acting on the particle are F1, F2, F3, F4, and F5 in the intervals OA, AB, BC, CD and DE respectively. Identify the correct statement",
+      "choices": {
+        "a": "F1 increases with time",
+        "b": "F2 is initially positive and then becomes negative",
+        "c": "F1 and F3 are in opposite directions",
+        "d": "F5 is negative"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics and Dynamics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the velocity-time graph",
+      "solution": "Force F1 is increasing the velocity, whereas force F2 is decreasing the velocity; they both are in opposite direction."
+    },
+    {
+      "number": 50,
+      "body": "If set X consists of three elements then the number of elements in the power set of power set of X is",
+      "choices": {
+        "a": "3^3",
+        "b": "2^3",
+        "c": "3^8",
+        "d": "2^8"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Number of elements in set X = 3 ⇒ Number of elements in power set of X = 2^3 = 8 ⇒ Number of elements in power set of power set of X = 2^8"
+    },
+    {
+      "number": 51,
+      "body": "The heat of neutralization of CH3COOH, HCOOH, HCN and H2S are - 55.2, -56.07, -2.8 and -3.34 . kJ per equivalent respectively. The increasing order of strength of these acids is :",
+      "choices": {
+        "a": "HCOOH < CH3COOH < H2S < HCN",
+        "b": "H2S < HCN < HCOOH < CH3COOH",
+        "c": "HCN < H2S < CH3COOH < HCOOH",
+        "d": "CH3COOH < HCOOH < HCN < H2S"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Higher the heat of neutralization greater will be the acidic strength."
+    },
+    {
+      "number": 52,
+      "body": "Two prevent the formation of oxides, peroxides, and superoxides, alkali metals are sometimes stored in an unreactive atmosphere. Which of the following gases should not be used for lithium ?",
+      "choices": {
+        "a": "Ne",
+        "b": "Ar",
+        "c": "N2",
+        "d": "Kr"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Lithium reacts with nitrogen to produce lithium nitride. 6Li + N2 → 2Li3N"
+    },
+    {
+      "number": 53,
+      "body": "A wooden block (W) is suspended by using a cord from a heavy steel ball (B). The entire system is dropped from a height. Neglecting air resistance, the tension in the cord is :",
+      "choices": {
+        "a": "Zero",
+        "b": "The differences in the masses of B and W",
+        "c": "The differences in the weights of B and W",
+        "d": "The weight of B"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "dynamics",
+      "subtopic_name": "Dynamics and Forces",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "In the condition of free fall tension in the string will be zero, because apparent weight is zero in free fall."
+    },
+    {
+      "number": 54,
+      "body": "In an n-Sided regular polygon, the radius of the circum-circle is equal in length to the shortest diagonal. The number of values of n < 60 for which this can happen is :",
+      "choices": {
+        "a": "0",
+        "b": "1",
+        "c": "10",
+        "d": "2"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let A3 A2 be the shortest diagonal which is equal to the radius of the circumcircle. ⇒ OA3 A2 will be equilateral triangle"
+    },
+    {
+      "number": 55,
+      "body": "Which of the following does NOT contain living cells?",
+      "choices": {
+        "a": "Bone tissue",
+        "b": "Xylem sieve tubes",
+        "c": "Phloem",
+        "d": "Epidermis"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "If DNA was made of 6 nucleotide instead of 4, what are the total number of triplet codons possible?",
+      "choices": {
+        "a": "24",
+        "b": "18",
+        "c": "64",
+        "d": "216"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the polygon has n sides So ∠A3OA1 = 360°/n also OA1 ⊥ A3 A2 ⇒ ∠OA3A2 = 60° So 90° - 360°/n = 60° n = 12 Only 1 value possible"
+    },
+    {
+      "number": 57,
+      "body": "A circus performer of weight W is standing on a wire as shown in the adjacent figure. The tension in the wire is",
+      "choices": {
+        "a": "Approximately W/4",
+        "b": "Approximately W/2",
+        "c": "Much more than W/2",
+        "d": "Much less than W/2"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "equilibrium",
+      "subtopic_name": "Static Equilibrium",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the figure showing the wire configuration and angles",
+      "solution": "Relation at one end is T = W/(2cos θ) cos θ = 0 Tension = W/(2cos θ) = ∞ Tension in wire is much greater than W/2"
+    },
+    {
+      "number": 58,
+      "body": "Number of integers n such that the number 1 + n is a divisor of the number 1 + n² is",
+      "choices": {
+        "a": "0",
+        "b": "1",
+        "c": "4",
+        "d": "2"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(n^2 + 1)/(n + 1) = n - 1 + 2/(n + 1) n + 1 is a divisor of n^2 + 1 when n + 1 divides 2 So, n + 1 = ± 1, ± 2 ⇒ n = 0, 1, -3, -2"
+    },
+    {
+      "number": 59,
+      "body": "When 1 gram of a mixture of aluminium and zinc was treated with HCl, a gas was liberated. At the end of the reaction, the volume of the liberated gas was found to be 524 cm³, under STP conditions. The individual weights of aluminium and zinc in the mixture, respectively, are:",
+      "choices": {
+        "a": "0.2 g and 0.8g",
+        "b": "0.8 g and 0.2 g",
+        "c": "0.5 g and 0.5 g",
+        "d": "0.322 g and 0.678g"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let Al be 'x'g and Zn be '1 - x' g. 2Al + 6HCl → 2AlCl3 + 3H2 2 mol Al produce mol H2 ∴ x/27 mol Al produce x/18 mol H2. Zn + 2HCl → ZnCl2 + H2 1 mol Zn produce 1 mol H2 ∴ (1-x)/65 mol Zn produce (1-x)/65 mol H2. Total mol. of H2 = x/18 + (1-x)/65. Total vol. of gas produced = (x/18 + (1-x)/65) × 22.4 = 0.524 L at STP Solving for 'x', x = 0.199 g ∴Al is 0.2 g and Zn 0.8 g in the given mixture."
+    },
+    {
+      "number": 60,
+      "body": "Choose that element which is most different from the other three:",
+      "choices": {
+        "a": "Carbon",
+        "b": "Nitrogen",
+        "c": "Silicon",
+        "d": "Phosphorous"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Silicon is different from Carbon, Nitrogen and Phosphorus as it is a metalloid."
+    },
+    {
+      "number": 61,
+      "body": "In the following diagrams O is point object and I is its image formed by concave mirror. Identify the diagram in which position of image I is nearly correct.",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Concave Mirrors",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the diagrams showing object and image positions relative to the concave mirror",
+      "solution": "Since object is between pole and focus, image will be magnified."
+    },
+    {
+      "number": 62,
+      "body": "If for x, y > 0 we have 1/x + 1/y = 2 then the minimum value of xy is",
+      "choices": {
+        "a": "2",
+        "b": "1",
+        "c": "4",
+        "d": "√2"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "G.M. of x, y = sqrt(xy)\nH. M. of x, y = 2/(1/x + 1/y)\nG.M. ≥ HM\nsqrt(xy) ≥ 2/(1/x + 1/y)\nsqrt(xy) ≥ 2xy/(x+y)\nxy ≥ 1"
+    },
+    {
+      "number": 63,
+      "body": "Which of these is a mollusc?",
+      "choices": {
+        "a": "Lobster",
+        "b": "Scorpion",
+        "c": "Crab",
+        "d": "Octopus"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "body": "What is the mechanism used by the kidneys to remove waste products from the body?",
+      "choices": {
+        "a": "Nephrons convert nitrogenous waste to uric acid and pass it out a urine",
+        "b": "Nephrons actively transport uric acid and other nitrogenous waste Â into the proximal and distal convoluted tubules, from where it is collected to form unrine.",
+        "c": "The blood is filtered to retain cells and large proteins within the blood. The remaining filtrate passes through the proximal and distal convoluted tubules, where needed substances are reabsorbed by active transport.",
+        "d": "Nephrones filter out the nitrogenous waste which is passed through the proximal and distal convoluted tubules and collected by the collecting duct as urine."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "body": "Two bodies A and B are charge with equal magnitude of charge but A with positive charge and B with negative. If MA and MB are masses before charging and M'A and M'B are the masses after charging, then (m0 is some constant mass)",
+      "choices": {
+        "a": "M'A = MA + m0 and M'B = MB - m0",
+        "b": "M'A = MA - m0 and M'B = MB + m0",
+        "c": "M'A = M'B",
+        "d": "M'A = MA - m0/2 and M'B = MB + m0"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "charge",
+      "subtopic_name": "Electric Charge",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "If normal masses are MA & MB. If MA will be positive charged then\nMA' = MA - m0 & MB' = MB + m0"
+    },
+    {
+      "number": 66,
+      "body": "The number of natural number n ≤ 30 for which √n + √n + √n + ... is a natural number is",
+      "choices": {
+        "a": "30",
+        "b": "zero",
+        "c": "6",
+        "d": "5"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let sqrt(x + sqrt(x + sqrt(x...))) = p,\nwhere p ∈ N\n⇒ sqrt(x + p) = p\n⇒ x + p = p²\n⇒ p² - p = x\n⇒ p (p-1) = x\nFor x ∈ N and x ≤ 30 p = {2, 3, 4, 5, 6}"
+    },
+    {
+      "number": 67,
+      "body": "Elements A, B and C have atomic numbers, X, X+1 and X +2, respectively. 'C' is an alkali metal. 'A' reacts with another elements 'Y' to form the compound 'AY'. 'A' and 'Y' belong to the same group. 'AY' possesses and",
+      "choices": {
+        "a": "ionic bond",
+        "b": "covalent bond",
+        "c": "metallic bonding",
+        "d": "coordinate bond"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "According to the atomic number given 'A' belongs to group 17. In order to combine with another element of its own group to form Inter-halogen compound, it will form covalent bond with it."
+    },
+    {
+      "number": 68,
+      "body": "Air has three major components : nitrogen, oxygen, and argon. Given that one mole of air at sea level is made up of 78% nitrogen, 21% oxygen, and 1% argon, by volume. What is the density of air? Assume that gases behave in an ideal manner. (Atomic mass of argon is 40 amu)",
+      "choices": {
+        "a": "14.62 g/L",
+        "b": "1.3 g/L",
+        "c": "29g/L",
+        "d": "0.65 g/L"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Average gram molecular mass of air = (78×28 + 21×32 + 1×20)/100 = 28.96.\nVol. of 1 mol air = 22.4 L at STP\n∴ Density of air in g/L = 28.96/22.4 = 1.3 g/L"
+    },
+    {
+      "number": 69,
+      "body": "A conductor of length L has a varying cross section with area 2A at P and A at Q as shown in the adjacent figure. If it carries a steady current I, then",
+      "choices": {
+        "a": "Net charge per unit volume near P is more than net charge per unit volume near Q.",
+        "b": "Net charge per unit volume near Q is less than net charge per unit volume",
+        "c": "Current per unit area near P is more than current per unit area near Q.",
+        "d": "Current per unit area near P is less than current per unit area near Q."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "current",
+      "subtopic_name": "Electric Current",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Surface area at P is more as compared to surface area at Q.\n∴ Net current per unit area at P will be less than current per unit area near Q."
+    },
+    {
+      "number": 70,
+      "body": "The number of natural number n ≤ 30 for which √n + √n + √n + .... is a prime number is",
+      "choices": {
+        "a": "Three",
+        "b": "Zero",
+        "c": "Nine",
+        "d": "Two"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let sqrt(n + sqrt(n + sqrt(n + ...))) = P\nP is Prime\n⇒ sqrt(n + P) = P\n⇒ n + P = P²\n⇒ P² - P = n\nFor n ∈ N & n ≤ 30\nP = (2, 3, 5)"
+    },
+    {
+      "number": 71,
+      "body": "Rhodoferax fermentans is species of photosynthetic bacterial. From you knowledge about bacteria in general, identify the components that CANNOT be present in this organism.",
+      "choices": {
+        "a": "Chloroplasts",
+        "b": "ATP",
+        "c": "Ribosomes",
+        "d": "Cell well"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 72,
+      "body": "If atmospheric humidity decreases, transpiration rate",
+      "choices": {
+        "a": "Decreases because the concentration gradient the mesophyll and the atmospheric decreases.",
+        "b": "Stays the same because active transport does not depend on humidity",
+        "c": "Increases because of the higher concentration gradient between the air spaces of the mesophyll and the atmosphere.",
+        "d": "Decreases because the concentration of water vapour decreases."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "body": "Vessels A and B are made of conducting material. Both contain water. Vessel A floats in B. Vessel B is now heated at a uniform rate, then",
+      "choices": {
+        "a": "Water in A boils first.",
+        "b": "Water in A boils some time after water in B starts boiling.",
+        "c": "Water in both A & B start boiling simultaneously.",
+        "d": "Water in A does not boil."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "phase_change",
+      "subtopic_name": "Phase Changes",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Water in both A and B start boiling simultaneously."
+    },
+    {
+      "number": 74,
+      "body": "The number of squares formed by 5 vertical and 4 horizontal lines (all are equispaced) is",
+      "choices": {
+        "a": "60",
+        "b": "20",
+        "c": "40",
+        "d": "46"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Total number of squares formed = 20"
+    },
+    {
+      "number": 75,
+      "body": "If 0.50 mole of a monovalent metal (M*+) halide is mixed with 0.2 mole of a divalent metal (L*+) phosphate, the maximum number of moles of M3PO4 that can be formed is",
+      "choices": {
+        "a": "0.25",
+        "b": "0.30",
+        "c": "0.16",
+        "d": "0.20"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "6MX + La (PO4)2 → 2M3PO4 + 3LaX3\nDetermining limiting reagent\n= 0.5/6 < 0.2/1\n∴ MX acts as LR.\nApplying stoichiometry\n6 mol MX produce 2 mol M3PO4.\n∴0.5 mol MX will produce 0.16 mol M3PO4."
+    },
+    {
+      "number": 76,
+      "body": "Every major city in India has a pollution control board to monitor air and water pollutions. The following data from three different localities in Bangalore city from the year 2016.\n\nLocality | Annual average of SO2 in the air (volume/volume)\nP | 16.9 m1/m3\nY | 16.3 ppb (m3/m3)\nZ | 16.3 ppm (m3/m3)\n\nPpb stands for parts per billion and ppm stands for parts per million. These are different units to express concentration. They are very similar to percentage (which is actually parts per hundred). Based on the above data, which place will you choose to live in?",
+      "choices": {
+        "a": "All localities are equally polluted, so I have no preference",
+        "b": "P is the more polluted than Y and Z, hence I will live in either Y or Z",
+        "c": "Locality Y is least polluted, hence I will live in Y.",
+        "d": "Z and Y are more polluted than P, hence I will live in P"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Converting concentration of pollutant in same unit, we get\nP = 16.3 × 10^-8 (m³/m³)\nY = 16.3 × 10^-8 (m³/m³)\n2 = 16.3 × 10^-6 (m³/m³)\nHence, Y is least polluted"
+    },
+    {
+      "number": 77,
+      "body": "A body thrown vertically up reaches a maximum height and returns back. It e acceleration is",
+      "choices": {
+        "a": "Downward during both ascent and descent",
+        "b": "Downward at all positions except at the highest point, where it is zero",
+        "c": "Upward during both ascent and descent",
+        "d": "Downward during ascent and upward during descent"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Since force of gravitation is always acting downwards, acceleration is downward during both ascent and descent."
+    },
+    {
+      "number": 78,
+      "body": "The number of integers a, b, c for which a³ + b³ − 8c = 3 is",
+      "choices": {
+        "a": "2",
+        "b": "Infinite",
+        "c": "0",
+        "d": "4"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a^3 + b^3 = 8c = 3\na^3 + b^3 = 8c + 3\nWhen RHS is divided by 8 it has remainder 3\n= It is of the form (8K + 3)\nLHS = a^3 + b^3\nWhen a perfect square is divided by 8 possible remainder are 0, 1 and 4\nSo, by using this it is not possible to have remainder (3) when a^3 + b^3 is divided by 8\nSo, No solution possible"
+    },
+    {
+      "number": 79,
+      "body": "Which of the following is NOT produced by the endoplasmic reticulum ?",
+      "choices": {
+        "a": "Lipids",
+        "b": "Proteins",
+        "c": "Monosaccharides",
+        "d": "Hormones"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "body": "Vaccines prevent infections by pathogens by :",
+      "choices": {
+        "a": "Presenting the body's immune system with antigens in a controlled manner, so that it is prepared to counter the pathogen producing it when it attempts to infect the body",
+        "b": "Affecting the reproductive cycle of the invading pathogen",
+        "c": "Binding to antigens on the surface of the pathogen and inactivating it",
+        "d": "Affecting the metabolic pathways of the pathogen"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ]
+}

@@ -1,0 +1,1374 @@
+{
+  "paper": "NSEJS 2012-13",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Charring of sugar in concentrated sulphuric acid is due to",
+      "choices": {
+        "a": "Oxidation of sugar",
+        "b": "Reduction of sugar",
+        "c": "Hydrolysis of sugar",
+        "d": "Dehydration of sugar"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "General Chemistry",
+      "subtopic_code": "reactions",
+      "subtopic_name": "Chemical Reactions",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "C17H32O11 --CuO,HgSO4--> 12C + H2O (dehydration)\n\nx^2 + y^2 + z^2 + 2 (xy + yz + zx) = 729\nx + y + z = 27\nEq (4) - EQ (1)\ny^2 + z^2 + 2yz + xy + zx = 594\n(y +z)^2 + x(y + z) = 594\n(y + z) (x + y + z) = 594\n\ny + z = 594/(x + y + z)\ny + z = 594/27\ny + z = 22\nSimilarly\nx + z = 14 and x + y = 18\nSolving above equations\nx = 5, y = 13, z = 9\nSo x^2 + y^2 + z^2 = 275\nAns. (c)"
+    },
+    {
+      "number": 2,
+      "body": "Two wires made of same material have length/and 2l. If the masses of the wires are same, the ratio of the resistance of shorter wire to that of longer wire is",
+      "choices": {
+        "a": "1/2",
+        "b": "2",
+        "c": "1/4",
+        "d": "4"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "ℓ1 = ℓ, ℓ2 = 2ℓ\nρ1 = ρ, ρ2 = ρ\nm1 = m, m2 = m\n\nR1/R2 = (ρℓ1/A1)/(ℓ2/A2) = (ℓ1/ℓ2) × (A2/A1)\n\nR1/R2 = (ℓ1/ℓ2) × (A2/A1) × (ℓ1/ℓ2)\n\nR1/R2 = (ℓ1/ℓ2)^2 × (A2/A1) × (ℓ2/ℓ1)\n\ndensity of booth wire will be same then\nvolume will be same then,\n\nR1/R2 = (ℓ1/ℓ2)^2 = 1/4"
+    },
+    {
+      "number": 3,
+      "body": "Find x^2 + y^2 + z^2 if x^2 + x + xz = 135, y^2 + yz + yx = 351 and z^2 + zx + zy = 243",
+      "choices": {
+        "a": "225",
+        "b": "250",
+        "c": "275",
+        "d": "300"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Given:\nx^2 + xy + xz = 135 .....(1)\ny^2 + yz + yx = 351 .....(2)\nz^2 + zx + zy = 243 .....(3)\nOn adding (1) (2) and (3)"
+    },
+    {
+      "number": 4,
+      "body": "Current passing through a wire increases by 20%. Due to joule heating the resistance increases by 20%. The percentage increase in the power is",
+      "choices": {
+        "a": "72.8%",
+        "b": "44%",
+        "c": "33%",
+        "d": "40%"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "power",
+      "subtopic_name": "Electric Power",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "I' = 1.2 I\nR' = 1.2 R\nΔP/P = (I')^2R'-(I)^2R/I^2R ×100\n= [(1.2)^2(1.2) - 1]/1 ×100\n= 72.8 %"
+    },
+    {
+      "number": 5,
+      "body": "In a certain number system 363 + 1056 = 1452. Find the value of (654 - 456) in the same number system",
+      "choices": {
+        "a": "156",
+        "b": "165",
+        "c": "178",
+        "d": "198"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "body": "A radioactive element 90R^232 emits one alpha (α) particle and then two beta (β) particles. The daughter will have",
+      "choices": {
+        "a": "Atomic no 90, Mass No. 228",
+        "b": "Atomic no. 90, Mass no. 232",
+        "c": "Atomic no. 88, Mass No. 228",
+        "d": "Atomic no. 88, Mass no. 232"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "modern",
+      "topic_name": "Modern Physics",
+      "subtopic_code": "radioactivity",
+      "subtopic_name": "Radioactivity",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "^238R → ^234X → ^230Y"
+    },
+    {
+      "number": 7,
+      "body": "Dwarfness is desirable agronomic character since such cereals:",
+      "choices": {
+        "a": "Produce grains faster",
+        "b": "Produce grains of better quality",
+        "c": "Prove easier to harvest",
+        "d": "Require lesser nutrients and water"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "The combination of the following structures possessing a single set of genome is: i. Ovary ii. Anther iii. Egg iv. Zygote v. sepal vi. Petal vii. Pollen",
+      "choices": {
+        "a": "i,ii, iv, and vi",
+        "b": "ii, iii, iv and vii",
+        "c": "only iii and vii",
+        "d": "only ii, iii and vii"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the number be in base x.\n3x^4 + 0x + 3 + x^3 + 5x + 6\n= x^3 + 4x^2 + 5x + 2\nx^3 + 3x^3 + 11x + 9\n= x^3 + 4x^2 + 5x + 2\nx^3 - 6x - 7 = 0\n(x - 7)(x + 1) = 0\nx = 7 or x = -1\nSo, number is in base 7\nSubtraction in base 7: 654 - 466 = 165\nAns. (b)"
+    },
+    {
+      "number": 9,
+      "body": "The equilibrium constant for the gaseous reaction N2 + O2 → 2NO is k. the equilibrium constant for the formation of one mole of NO will be",
+      "choices": {
+        "a": "k/2",
+        "b": "k",
+        "c": "2k",
+        "d": "√k"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "General Chemistry",
+      "subtopic_code": "equilibrium",
+      "subtopic_name": "Chemical Equilibrium",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "∴ 2 mole = K\n∴ 1 mole = √K"
+    },
+    {
+      "number": 10,
+      "body": "A bar magnet is placed on a table. There are n number of field lines connecting North pole to South pole of the magnet. Another identical magnet is placed on the first magnet with North Pole on North pole and south pole on south pole. The number of field lines are now",
+      "choices": {
+        "a": "n",
+        "b": "n^2",
+        "c": "n/2",
+        "d": "2n"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "field_lines",
+      "subtopic_name": "Magnetic Field Lines",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "M = m ℓ\nm' = 2m\nM' = m' ℓ = 2m ℓ = 2M\nM.F. Lines will be\ndouble → 2n"
+    },
+    {
+      "number": 11,
+      "body": "What is the radius of the circumcircle of a triangle whose sides are 30cm, 36cm and 30cm in length?",
+      "choices": {
+        "a": "18 cm",
+        "b": "18.25cm",
+        "c": "18.50cm",
+        "d": "18.75cm"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a = 30 cm, b = 36 cm, c = 30 cm\nS = (30 + 36 + 30)/2 = 96/2 = 48 cm\nA = √48×(48-30)×(48-36)×(48-30)\n= √48×18×12×18\n= 18×4×6\n= 432 sq. cm.\nCircumradius = ABC/4A\n= (30×36×30)/(4×432)\n= 18.75 cm\nAns. (d)"
+    },
+    {
+      "number": 12,
+      "body": "A conducting wire shown in the figure carries current I. Segments AB, BC and CD are of same length. The direction of the magnetic field at point P is given by",
+      "choices": {
+        "a": "into the plane of the paper",
+        "b": "out of the plane of the paper",
+        "c": "towards right",
+        "d": "towards left"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "magnetic_field",
+      "subtopic_name": "Magnetic Field due to Current",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Direction of magnetic field will be given by right hand thumb rule. According to this rule magnetic field will be out of the plane of paper."
+    },
+    {
+      "number": 13,
+      "body": "In the adjoining figure AQ = 2, QB = 4, BP = 3, PC = 5, CR = 6 and RA = 4. Find the area of triangle PQR.",
+      "choices": {
+        "a": "4.8",
+        "b": "5.2",
+        "c": "5.8",
+        "d": "6.2"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Geometry",
+      "subtopic_code": "coordinate_geometry",
+      "subtopic_name": "Coordinate Geometry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Area of △ABC\n= (1/2) × 6 × 8 = 24 sq. unit\n\nArea of △AQR\n= (2/6) of area of △ABR\n= (1/3) of (4/10) of area of △ABC\n= (1/3) × (2/5) × 24 = 16/5 sq. unit.\n\narea of △CRP\n= (5/8) of area of △BRC\n= (5/8) of (6/10) of area of △ABC\n= (5/8) × (6/10) × 24 = 9 sq. unit.\n\narea of △BQP\n= (4/6) or area or △APB\n= (4/6) × (6/8) × 24\n= 6 sq. unit.\n\narea of △PQR = area of △ABC -(area of △AQR + area of △PRC + area of △BQP)\n= 24 - (6 + 9 + 3.2)\n= 24 - 18.2 = 5.8 sq. unit.\nAns. (c)"
+    },
+    {
+      "number": 14,
+      "body": "The solubility of a salt B₂D₃ is X mole L⁻¹. Its solubility product is",
+      "choices": {
+        "a": "X⁵",
+        "b": "6X⁵",
+        "c": "36X⁵",
+        "d": "108X⁵"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "B₂D₃ ⇌ 2B³⁺ + 3D²⁻\nLet solubility = s\n2s  3s\nKsp = [B³⁺]²[D²⁻]³\n= [2s]²[3s]³\n= 4s² × 27s³\n= 108s⁵"
+    },
+    {
+      "number": 15,
+      "body": "If and when proteins are oxidized during respiration the energy yield is lesser than when carbohydrates or lipids are oxidized. This is primarily due to the fact that they have.",
+      "choices": {
+        "a": "relatively more oxygen",
+        "b": "relatively less carbon",
+        "c": "nitrogen that is not oxidized",
+        "d": "relatively less hydrogen"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "body": "8 grams of oxygen at NTP contain",
+      "choices": {
+        "a": "1.5 × 10²³ molecules",
+        "b": "3.0 × 10²³ molecules",
+        "c": "6.023 × 10²³ molecules",
+        "d": "1.5 × 10²³ molecules"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "n = 8/32 = 1/4\n∴ 1 mole = 6.023 × 10^23 molecule\n∴ 1/4 mole = 6.023 × 10^23 × 1/4 = 1.5 × 10^23 molecules"
+    },
+    {
+      "number": 17,
+      "body": "In a nuclear reactor the fission process of each U-atom gives out energy of 200MeV. According to Einstein's equation the amount of mass getting converted to energy in this process is",
+      "choices": {
+        "a": "3.55X10⁻²⁹ Kg",
+        "b": "3.55X10⁻²⁸ Kg",
+        "c": "3.55X10⁻²⁶ Kg",
+        "d": "3.55X10⁻²⁷ Kg"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "modern",
+      "topic_name": "Modern Physics",
+      "subtopic_code": "nuclear_physics",
+      "subtopic_name": "Nuclear Physics",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Energy = 200 MeV = 200 × 10^6 × 1.6 × 10^-19 Joule\nAccording to Einstein energy mass relation, E = mc^2\n(m is reduced mass, c is speed of light)\nm = E/c^2 = (200×10^6 × 1.6 × 10^-19)/((3×10^8)^2) kg\nm = 0.355 × 10^-29 kg\nm = 3.55 × 10^-30 kg"
+    },
+    {
+      "number": 18,
+      "body": "If sin x + sin y = a and cos x - cos y = b. Then find the value of (1/2)(2 - a² - b²)",
+      "choices": {
+        "a": "cos(x + y)",
+        "b": "cos(x - y)",
+        "c": "sin(x + y)",
+        "d": "sin(x - y)"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "sinx + siny = a .....(1)\ncosx - cosy = b .....(2)\nAdding the square of (1) & (2)\nsin^2x + sin^2y + 2 sinx siny + cos^2x + cos^2y - 2 cosx cosy = a^2 + b^2\n(sin^2x + cos^2 x) + (sin^2y + cos^2 y) + 2(sinx siny - cosx cos y) = a^2 + b^2\n1 + 1 - 2 cos (x + y) = a^2 + b^2\n2 - a^2 - b^2 = 2 cos (x + y)\n1/2 (2 - a^2 - b^2) = cos (x + y)"
+    },
+    {
+      "number": 19,
+      "body": "A ball is projected at an angle of 45° with horizontal. In the absence of air resistance, the ball follows",
+      "choices": {
+        "a": "Elliptical orbit",
+        "b": "sinusoidal path",
+        "c": "parabolic path",
+        "d": "linear path"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile_motion",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Projectile motion\nSo, parabolic path (C)"
+    },
+    {
+      "number": 20,
+      "body": "A circle is inscribed in an isosceles trapezium ABCD in which AB is parallel DC. If AB = 10 and DC = 30. Find the area of the circle.",
+      "choices": {
+        "a": "45π",
+        "b": "50π",
+        "c": "60π",
+        "d": "75π"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "AD^2 = AB^2 + DE^2\n(20)^2 = 4r^2 + (10)^2\n4r^2 = 400 - 100\n4r^2 = 300\nr^2 = 300/4\nr^2 = 75\n∴ Area of circle = πr^2 = 75π"
+    },
+    {
+      "number": 21,
+      "body": "When 1g of CaCO3 reacts with 60 ml of 0.1 M HCl, the volume of CO2 produced is",
+      "choices": {
+        "a": "11.2 mL",
+        "b": "22.4 mL",
+        "c": "112 mL",
+        "d": "224 mL"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "CaCO3 + 2HCl → CaCl2 + H2O + CO2\n50 × 0.1/100 mol    1000 mol\n∴ L.R. = HCl\n∴ 2 mol HCl ≡ 22.4ℓ Co2\n∴ (50 × 0.1)/1000 mol CaCO3\n= (50 × 0.1)/1000 × 22.4/2 ℓCO2\n= 0.056 ℓ = 56 mℓ"
+    },
+    {
+      "number": 22,
+      "body": "Neoteny or larva becoming large and developing into adult retaining larval features is common in amphibians since they are adapted to survive:",
+      "choices": {
+        "a": "in fresh water bodies where temperature and/or iodine content is less",
+        "b": "on insects that fail to supply enough nutrients",
+        "c": "on a high protein diet that induces early maturation",
+        "d": "in dark places and lack of light induces early sexual maturation"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "Cheese is a colloidal system of",
+      "choices": {
+        "a": "Gas in solid",
+        "b": "Gas in liquid",
+        "c": "Liquid in gas",
+        "d": "Liquid in solid"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "60g of ice at 0 °C is added to 20g of water at 40 °C. The final temperature gained by the mixture is (given latent heat of melting of ice is 80 cal/g and specific heat of water is 1 cal/g °C)",
+      "choices": {
+        "a": "0 °C",
+        "b": "20 °C",
+        "c": "10 °C",
+        "d": "5 °C"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "phase_change",
+      "subtopic_name": "Phase Changes and Latent Heat",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Heat required to convert 60 g ice at 0°C to 60 g eater at 0°C\n= 60 × 80\n= 4800\nHeat given : 20 g water at 40°\n= 20 × 1 × 40\n= 800\nsince heat required is more then neat given so ice will not melt completely. So final temperature = 0°C"
+    },
+    {
+      "number": 25,
+      "body": "Y varies inversely as x. If x is increased by 25%, then the value of percentage change to y is",
+      "choices": {
+        "a": "80%",
+        "b": "75%",
+        "c": "60%",
+        "d": "62.5%"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Given\ny ∝ 1/x ⇒ xy = k (constant)\nNow x increased by 25%\nSo, 5/4 x y' = k\n5/4 x y' = xy\ny' = 4/5 y\nSo, % change to y is 80%."
+    },
+    {
+      "number": 26,
+      "body": "Wavelength is (i) The distance travelled by the wave in one period of oscillation of particles in the medium. (ii) The distance between two particles, which are in the same phase? (iii) Half of the distance between two particles which are in the same phase? The correct definitions are",
+      "choices": {
+        "a": "(i) and (iii)",
+        "b": "(i) and (ii)",
+        "c": "(i), (ii) and (iii)",
+        "d": "(ii) and (iii)"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "wave_properties",
+      "subtopic_name": "Wave Properties and Definitions",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "body": "Find the value 2/15 + 2/35 + 2/63 + 2/99 + .......+ 2/9999",
+      "choices": {
+        "a": "8/33",
+        "b": "2/11",
+        "c": "98/303",
+        "d": "222/909"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "2/15 + 2/35 + 2/63 + 2/99 + 2/9999 = [1/3 - 1/5 + 1/5 - 1/7 + 1/7 - 1/9 + 1/9 - 1/11 + ... + 1/99 - 1/101] = 1/3 - 1/101 = (101-3)/(3×101) = 98/303. Ans. (c)"
+    },
+    {
+      "number": 28,
+      "body": "When a dilute solution of sulphuric acid is electrolysed using platinum electrodes the gas evolved at the positive electrode is",
+      "choices": {
+        "a": "SO2",
+        "b": "SO3",
+        "c": "H2",
+        "d": "O2"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "H2SO4 ⇌ 2H+ + SO4²⁻, 2H2O ⇌ 2H+ + 2OH⁻. discharge potential of OH⁻ is less. So OH⁻ discharge first. At positive electrode 2OH⁻ → H2O + 1/2 O2 + 2e⁻"
+    },
+    {
+      "number": 29,
+      "body": "To avoid damage to electricity cables tree's are often trimmed before monsoon. Excessive trimming leaving only trunk often leads to death of a tree. The most probable reason is that:",
+      "choices": {
+        "a": "no food can be synthesized",
+        "b": "no buds are left to grow into new shoots",
+        "c": "no auxins (growth promoters) can be synthesized",
+        "d": "they succumb to the excessive trauma of wounds"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "body": "If equal weights of oxygen and nitrogen are kept in seperate containers at the same temperature then.",
+      "choices": {
+        "a": "Both the containers have the same number of molecules.",
+        "b": "More molecules are present in the oxygen container.",
+        "c": "The pressure of the nitrogen container is greater than that of the oxygen container.",
+        "d": "The pressure of the oxygen container is greater than that of nitrogen container"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "body": "A boy is standing on a truck which is moving with constant speed along a straight road. On a day when wind is negligible, the boy throws a ball vertically up with some velocity. The ball comes back and falls",
+      "choices": {
+        "a": "Into boy's hand",
+        "b": "Behind the boy",
+        "c": "In Front to the boy",
+        "d": "Behind or in front of the boy depending on the speed of the truck and ball."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Into boy's hand since horizontal velocity will be same for both boys & ball."
+    },
+    {
+      "number": 32,
+      "body": "If sqrt(75) = sqrt(45) + sqrt(15) = 0, then which of the statement is true",
+      "choices": {
+        "a": "x + y = 2z",
+        "b": "x + y = 3z",
+        "c": "x - y = 2z",
+        "d": "x - y = 3Z"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "General Mathematics",
+      "subtopic_code": "algebra",
+      "subtopic_name": "Algebra",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x√75 = √45 = √15 = a, √75 = a, 1/75¹ = a, 1/x log 75 = log a, x = log 75/log a = log 75². = 2 log₃² + log₃¹ .....(1), y√45 = a, 45¹ = a, 1/y log 45 = log a, y = log₃⁴ = 2 log₃² + log₃⁵ .....(2), z√15 = a, 15¹ = a, 1/z log 15 = log a, z = log 15/log a, z = log₃¹⁵ = log₃² + log₃⁵ .....(3)"
+    },
+    {
+      "number": 33,
+      "body": "The pressure at the bottom of the four vessels filled with water to the same level is P1, P2, P3 and P4 respectively. Then which of the following conclusion is correct.",
+      "choices": {
+        "a": "P1 > P2 > P3 > P4",
+        "b": "P1 < P2 < P3 < P4",
+        "c": "P1 = P4 = P2 > P3",
+        "d": "P1 = P2 = P3 = P4"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid",
+      "subtopic_name": "Fluid Mechanics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Add (1) and (2) x + y = 3 log₃² + 3 log₃² = 3[log₃² + log₃²], x + y = 3z. Ans. (b). In all containers fluid is same so density is also same and height of liquid is same and pressure = dgh, then, P₁ = P₂ = P₃ = P₄"
+    },
+    {
+      "number": 34,
+      "body": "x + y + z = 1 : x * z : x, y, z are real number and = m. How many of he following values of m are always possible. (i) m = 6, (ii) m = 8, (iii) m = 10 (iv) m = 12",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "all"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "General Mathematics",
+      "subtopic_code": "algebra",
+      "subtopic_name": "Algebra",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x + y + z = 1, 1/x + 1/y + 1/z = m. Applying A.M. & H.M. (x + y + z)/3 > 3/(1/x + 1/y + 1/z), (1/x + 1/y + 1/z)(x + y + z) > 9, m > 9. So, m = 10 and m = 12 is possible. Ans. (b)"
+    },
+    {
+      "number": 35,
+      "body": "Two liters of oxygen gas diffused through a membrane in 600 seconds. 0.6 liter of an unknown, gas diffused through the same membrane in half the time required for oxygen to diffuse. The molecular weight of the unknown gas is",
+      "choices": {
+        "a": "16",
+        "b": "44",
+        "c": "89",
+        "d": "64"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "General Chemistry",
+      "subtopic_code": "kinetic",
+      "subtopic_name": "Kinetic Theory",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "v₁/v₂ · t₂/t₁ = √(m₃/m₁), 2/600 · 300/0.6 = √(m₃/32), 10/6 = √(m₃/32), 100/36 = m₃/32, m₃ = (100 × 32)/36 = 88.88 ≈ 89"
+    },
+    {
+      "number": 36,
+      "body": "Which of the following is not true about his observation?",
+      "choices": {
+        "a": "Most cells are in interphase",
+        "b": "Most cells are in the metaphase",
+        "c": "No cells are in anaphase or telophase",
+        "d": "Chromosomes could be observed better than a slide prepared without colchicines treatment."
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "Why did the student choose root tips of onion",
+      "choices": {
+        "a": "Roots grow fast and considerable length of tips can be used.",
+        "b": "Root tips- are easy to smear and stain.",
+        "c": "Root tips have meristematic tissue.",
+        "d": "Cell division occurs only at the root tips in plants"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "body": "What might be the purpose of the student?\n(i) Observing chromosomes\n(ii) Observing stages of cell division\n(iii) Comparing number of cells in various stages of cell division\n(iv) Preventing further growth of the root tips.",
+      "choices": {
+        "a": "(i) and (ii)",
+        "b": "(ii) and (iii)",
+        "c": "(i) and (iv)",
+        "d": "(iii) and (iv)"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "Considering the action of colchicine, it may be considered for the treatment of:",
+      "choices": {
+        "a": "Hairfall",
+        "b": "Anemia",
+        "c": "Cancer",
+        "d": "Bacterial infection"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "The element with electronic configuration 1s², 2s², 2p⁶, 3s² is a/an",
+      "choices": {
+        "a": "Metal",
+        "b": "Non-metal",
+        "c": "Metalloid",
+        "d": "Inert gas"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "body": "A ball is thrown up vertically in still air with a velocity of 20ms⁻¹. It comes back to ground. The velocity - time graph is (g = 10ms⁻²).",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the velocity-time graphs shown in options A, B, C, D",
+      "solution": "time before v = 0, t = u/g = 20/10 = 2 sec."
+    },
+    {
+      "number": 42,
+      "body": "The sixty sixth Independence Day was on Wednesday. After how many years the Independence Day will be on Wednesday?",
+      "choices": {
+        "a": "6 years",
+        "b": "7 years",
+        "c": "11 years",
+        "d": "28 years"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Sixty sixth Independence Day was on 15 Aug. 2012. 15 Aug. 2012 is Wednesday. Next Wednesday on 15 Aug. will come in 2018. So after 6 years is the answer. Ans. (a)"
+    },
+    {
+      "number": 43,
+      "body": "Sound waves traveling in air enter water at an angle i with the normal. It gets refracted at angle r with",
+      "choices": {
+        "a": "i > r",
+        "b": "r > i",
+        "c": "i = r",
+        "d": "Sound waves do not get refracted"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Wave Optics and Sound",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction of Sound Waves",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Sound waves moves from air to water and we know that speed of sound in water is greater than in air. So water is rarer medium for sound than air then sound wave is moving from denser to rare medium then angle of refraction is greater than angle of incidence."
+    },
+    {
+      "number": 44,
+      "body": "What will be the remainder if the number 7^2012 is divided by 25?",
+      "choices": {
+        "a": "24",
+        "b": "18",
+        "c": "7",
+        "d": "1"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "siX → 2, 8, 18, 3\n1s²2s²2p⁶3s²3p⁶3d¹⁰4s⁴4p¹\nn\n4    1    -1   +1/2"
+    },
+    {
+      "number": 45,
+      "body": "The last electron of the element of atomic member 31 will have the following quantum numbers",
+      "choices": {
+        "a": "n=3, l=0, m=0, s=-1/2",
+        "b": "n=3, l=1, m=1, s=+1/2",
+        "c": "n=4, l=1, m=-1, s=-1/2",
+        "d": "n=4, l=0, m=0, s=+1/2"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "Which of the following are tertiary consumers?",
+      "choices": {
+        "a": "Snake, toads and spiders",
+        "b": "Foxes, Hawks and Snakes",
+        "c": "Rabbit, Squirrels and Mice",
+        "d": "Spiders, Predacious insects and herbivorous insects"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Requires interpreting the food web diagram to determine trophic levels"
+    },
+    {
+      "number": 47,
+      "body": "The shortest and the longest food chains have ____ and ____ number of organisms respectively.",
+      "choices": {
+        "a": "2 and 6",
+        "b": "2 and 5",
+        "c": "3 and 5",
+        "d": "3 and 6"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Requires analyzing the food web diagram to count organisms in food chains"
+    },
+    {
+      "number": 48,
+      "body": "An insecticide is sprayed to protect the plants. Which of the following statements is true?",
+      "choices": {
+        "a": "Toads and insectivorous birds will prosper as they will get ample supply of dead insects.",
+        "b": "Herbivores will be greatly affected, plants will be safe and carnivores will move to other areas and will not be affected greatly.",
+        "c": "Some insects will die, some will become resistant and prolifer more and top carnivore will be affected most.",
+        "d": "Some insects will die, but there will be no long term effects as the pesticides will get washed away."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "body": "What should be the preferred food of snakes to ensure minimum loss of solar energy?",
+      "choices": {
+        "a": "Mice",
+        "b": "Toads",
+        "c": "Insectivorous birds",
+        "d": "Foxes"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "body": "Organisms having low chances of survival produce larger number of off springs to ensure their survival. Which of the following can be a characteristic feature of such organisms?",
+      "choices": {
+        "a": "Short lifecycle",
+        "b": "Better defense strategies",
+        "c": "Large body size",
+        "d": "Good parental care"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "The compound which contains both ionic and covalent bonds is",
+      "choices": {
+        "a": "KCl",
+        "b": "CS2",
+        "c": "CaH2",
+        "d": "KCN"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "K⁺ -C = N"
+    },
+    {
+      "number": 52,
+      "body": "A particle of mass 0.5kg traveling with a velocity of 2ms^-1 experiences acceleration of 2ms^-2 for 9s. The work done by the force on the particle during this period is",
+      "choices": {
+        "a": "99J",
+        "b": "101J",
+        "c": "190J",
+        "d": "396J"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "work_energy",
+      "subtopic_name": "Work and Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "v = 2 + 2 × 9\n⇒ v = 20 m/s\nw = Δk = 1/2(0.5)[(20)² - 2²]\n= 1/4 × 396 = 99J"
+    },
+    {
+      "number": 53,
+      "body": "The product of three consecutive natural numbers is 124850054994. What is their average?",
+      "choices": {
+        "a": "4993",
+        "b": "4994",
+        "c": "4997",
+        "d": "4998"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the three consecutive natural no. are x, x + 1, x + 2\nThe average = (x + x + 1 + x + 2)/3 = x + 1\nNow: x (x + 1) (x + 2) = 124850054994 = 4997 × 4998 × 4999\n∴ x + 1 = 4998\nAns. (d)"
+    },
+    {
+      "number": 54,
+      "body": "What is the reading of the spring balance shown in the figure below?",
+      "choices": {
+        "a": "0",
+        "b": "2N",
+        "c": "4N",
+        "d": "6N"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "force",
+      "subtopic_name": "Force and Equilibrium",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the figure showing the spring balance setup",
+      "solution": "2N"
+    },
+    {
+      "number": 55,
+      "body": "If ABCD is a cyclic quadrilateral. AB = 204, BC = 104, CD = 195, DA = 85 and BD = 221. Then find AC",
+      "choices": {
+        "a": "205",
+        "b": "210",
+        "c": "220",
+        "d": "225"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "By Ptolemy theorem\nAC × BD = AB × CD + BC × AD\nAC × 221 = 204 × 195 + 85 × 104\nAC = (39780 + 8840)/221 = 48620/221 = 220\nAns. (c)"
+    },
+    {
+      "number": 56,
+      "body": "Molality of a solution is the number of",
+      "choices": {
+        "a": "moles of the solute per 1000 mL of the solution.",
+        "b": "moles of the solute per 1000 mL of the solvent.",
+        "c": "moles of the solute per 1000 g of the solvent.",
+        "d": "moles of the solute per 100g of the solvent."
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "body": "A scientist wanted to check the effect of a certain hair straightening procedure on the tensile strength of hair. The scientist could take only 20 samples. Which of the following sampling pattern should she use to ensure that maximum parameters are controlled and the results reflect the effect of the straightening process alone?",
+      "choices": {
+        "a": "10 girls and 10 boys of age 18 before and after the straightening procedure.",
+        "b": "10 girls and 10 boys one each of age 15, 16, 17, and so on upto 25 before and after the procedure.",
+        "c": "10 girls and 10 boys of age 18 after the straightening procedure and another similar set of sample group who did not undergo the procedure.",
+        "d": "10 girls and 10 boys one each of age 15, 16, 17, and so on upto 25 after the procedure and another similar set of sample group who did not undergo the procedure."
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "body": "A lady has 4 kids with blood group AB and 1 pid with O. If the father of these kids have blood group B, what is the possible genotype of the lady?",
+      "choices": {
+        "a": "I^A I^B",
+        "b": "I^A I^O",
+        "c": "I^A I^A",
+        "d": "I^B I^B"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "body": "The pH of blood is maintained within the range 7.36-7.42 by",
+      "choices": {
+        "a": "CH3COONH4",
+        "b": "CH3COONa/CH3COOH",
+        "c": "HCO3-/CO3",
+        "d": "CH3COOH"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Buffer systems",
+      "subtopic_code": "buffers",
+      "subtopic_name": "Biological buffers",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "body": "An ideal cell of emf 10V is connected across the network of resistors as shown in the figure. The value of the resistance R for which he power dissipated by the parallel combination is same as that in 10 resistances is.",
+      "choices": {
+        "a": "20Ω",
+        "b": "30",
+        "c": "22.22",
+        "d": "11.11"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrical circuits",
+      "subtopic_code": "resistor_networks",
+      "subtopic_name": "Resistor networks and power",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the circuit diagram",
+      "solution": "I = 10/(10 + 100R/(100 + R))\nPower consumed by 10Ω is P₁ = I²(10)\nPower consumed by parallel combination is P₂ = I² × 100R/(100 + R)\nPower is same, P₁ = P₂\n10 = 100R/(100 + R)\n100 + R = 10 R\nR = 100/9 = 11.11Ω"
+    },
+    {
+      "number": 61,
+      "body": "If one of the roots of the equation x^2 - px + q = 0 is m times the other root then m/(1 + m^2) is equal to",
+      "choices": {
+        "a": "q/(p^2 - 2q)",
+        "b": "p/(q^2 - 2p)",
+        "c": "q/(q^2 - 2p)",
+        "d": "p/(p^2 - 2q)"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x² - px + q = 0\nα + β = p\nαβ = q\nGiven : α = mβ\nm = α/β\nTo find : m/(1 + m²) = α/β / (1 + α²/β²) = αβ/(α² + β²) = αβ/((α + β)² - 2αβ) = q/(p² - 2q)\nAns. (a)"
+    },
+    {
+      "number": 62,
+      "body": "Three particles each of mass m are placed at the vertices of a triangle of side r. The force experienced by each mass is",
+      "choices": {
+        "a": "sqrt(3)(Gm^2/r^2)",
+        "b": "sqrt(2)(Gm^2/r^2)",
+        "c": "Gm^2/r^2",
+        "d": "2(Gm^2/r^2)"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Gravitation",
+      "subtopic_code": "gravitational_force",
+      "subtopic_name": "Multiple particle systems",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "F1 = Gm²/r² = F₂\nFnet = √(F₁² + F₂² + 2F₁F₂ cos60)\n= √(2F² + 2F² × 1/2) = √3F² = √3 Gm²/r² (a)"
+    },
+    {
+      "number": 63,
+      "body": "If a + b + c = 1, a^2 + b^2 + c^2 = 21 and abc = 8 then find the value of (1-a)(1-b)(1-c)",
+      "choices": {
+        "a": "-10",
+        "b": "-18",
+        "c": "-24",
+        "d": "-30"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "This question is bonus in CODE 578 but it is correct in code 514 (Q.71) and Code 556 (Q.78).\na + b + c = 1\na² b² + c² = 21\nabc = 8\n(1 - a) (1 - b) (1 - c)\n= (1 - a - b + ab) (1 - c)\n= 1 - a - b + ab - c + ac + bc - abc\n= 1 - (a + b + c) + (ab + bc + ac) - abc\n= 1 - 1 + ab + bc + ac - 8\n= ab + bc + ac - 8\na + b + c = 1\n= a² + b² + c² + 2(ab + bc + ca) = 1\n= 21 + 2(ab + bc + ca) = 1\n= 2(ab + bc + ca) = -20\nab + bc + ca = -10\n∴ (1 - a) (1 - b) (1 - c) = -10 - 8 = -18"
+    },
+    {
+      "number": 64,
+      "body": "An alkaline solution of K2HgI4 is called",
+      "choices": {
+        "a": "Fehling's reagent",
+        "b": "Benedict's reagent",
+        "c": "Nessler's reagent",
+        "d": "Tollen's reagent"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Analytical chemistry",
+      "subtopic_code": "reagents",
+      "subtopic_name": "Chemical reagents",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "body": "A film of oil on every water surface arrests the growth in mosquito population since:",
+      "choices": {
+        "a": "it blocks sunlight and mosquito larvae cannot get food",
+        "b": "mosquito larvae suffocate",
+        "c": "mosquito eggs cannot float on oil",
+        "d": "mosquitoes fail to mate if water surface is not available"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "body": "At constant temperature and pressure which of the following statement is true for the reaction. CO2(g) + ½ O2 (g) → CO2 (g)",
+      "choices": {
+        "a": "ΔE = ΔH",
+        "b": "ΔE > ΔH",
+        "c": "ΔE < ΔH",
+        "d": "ΔH and ΔE are independent of each other"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Thermochemistry",
+      "subtopic_code": "enthalpy_energy",
+      "subtopic_name": "Enthalpy vs internal energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "body": "When a car turns on a curved road, you are pushed against one of the doors of the car because of",
+      "choices": {
+        "a": "inertia",
+        "b": "the centripetal force",
+        "c": "the centrifugal force",
+        "d": "the frictional force"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Circular motion",
+      "subtopic_code": "centripetal_force",
+      "subtopic_name": "Forces in circular motion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "body": "The distance between two spots A & B on the same bank of the river is 75km. Speed of the boat in still water is twice as much as that of the speed of the water current of river. The boat travels in the river from A to B and returns back to the spot in 16 hour. What is the speed of the boat in still water?",
+      "choices": {
+        "a": "12.5kmph",
+        "b": "15kmph",
+        "c": "16kmph",
+        "d": "18kmph"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Motion in fluids",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Distance = 75 km\nLet speed of water current = x km/hr\nATP\n75/(2x - x) = 75/3x = 16\n75/x = 75/3x = 16\n1/x (75 + 25) = 16\nx = 100/16 = 25/4\nSo, speed of boat in still water\n= 2x\n= 2 × 25/4 = 12\n5 km/hr.\nAns. (a)"
+    },
+    {
+      "number": 69,
+      "body": "Michael Faraday a book binder got an opportunity to work with a scientist and later succeeded him. Name of the scientist is",
+      "choices": {
+        "a": "Hans Christian oersted",
+        "b": "Humphrey davy",
+        "c": "Heinrich Lenz",
+        "d": "James Clerk Maxwell"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "general",
+      "topic_name": "General Physics",
+      "subtopic_code": "history",
+      "subtopic_name": "History of Physics",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "body": "Find the equation of the line parallel to 4x + 3y = 5 and having x-intercept (-3)",
+      "choices": {
+        "a": "3x + 4y + 12 = 0",
+        "b": "3x + 4y = 12",
+        "c": "4x + 3y -12 = 0",
+        "d": "4x + 3y + 12 = 0"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Eq. of line parallel to 4x + 3y = 5 is 4x + 3y = k.\nx/k/4 + y/k/3 = 1\nGiven : x intercept = -3\nk/4 = -3\nk = -12\nEq. is 4x + 3y = -12 or 4x + 3y + 12 = 0\nAns. (d)"
+    },
+    {
+      "number": 71,
+      "body": "The green coloured substance produced during the burning of ammonium dichromate in fireworks is",
+      "choices": {
+        "a": "CrO3",
+        "b": "Cr2O3",
+        "c": "CrO(O2)2",
+        "d": "Cr(OH)3"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(NH₄)₂Cr₂O₇ → Cr₂O₃ + N₂ + 4H₂O (green)"
+    },
+    {
+      "number": 72,
+      "body": "Mud flats with mangrove plants export a lot of organic matter to waters in contact. This is primarily because: (A) there are fewer consumers in mangrove community (B) excreta of animals in mangrove community is richer in fibers (C) detritivores are lacking in mangrove community (D) aerobic decomposers cannot survive in waterlogged mud",
+      "choices": {
+        "a": "there are fewer consumers in mangrove community",
+        "b": "excreta of animals in mangrove community is richer in fibers",
+        "c": "detritivores are lacking in mangrove community",
+        "d": "aerobic decomposers cannot survive in waterlogged mud"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "+1 Cl\nO\nCa -1 Cl\nAverage O.S = (+1) + (-1)/2 = 0\nor CaOCl₂\n2 - 2 + 2x = 0\n2x = 0\nx = 0"
+    },
+    {
+      "number": 73,
+      "body": "The oxidation number of chlorine in CaOCl2 is",
+      "choices": {
+        "a": "0",
+        "b": "-1",
+        "c": "+1",
+        "d": "+3"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "body": "The real image of an extended object placed in front of a concave mirror is formed at a distance of 40 cm from the object. If the image is 3 times bigger than the object, the magnitude of focal length of the mirror is,",
+      "choices": {
+        "a": "15 cm",
+        "b": "10 cm",
+        "c": "20 cm",
+        "d": "5 cm"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Spherical mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "u = -x\nv = -(40 + x)\nm = v/u = (40 + x)/x\nm = -3 = 40 + x/x\nx = 20\n∴ u = -20, v = -60\n1/v + 1/u = 1/f\n1/-20 + 1/-60 = 1/f\n-3-1/60 = 1/f\nf = -15 cm"
+    },
+    {
+      "number": 75,
+      "body": "If cos^2θ(1-3secθ + 2sec^2θ) = 1",
+      "choices": {
+        "a": "120°",
+        "b": "210°",
+        "c": "300°",
+        "d": "330°"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Cot²θ (1 - 3secθ + 2sec²θ) = 1\nθ > 90°\nThis is true when θ = 300°\nCot² 300° (1-3sec300+2sec²300)\n= (-1/√3)² [1-3×(+2)+2(+2)²]\n= 1/3 [1-6+8]\n= 3/3 = 1\nAns. (c)"
+    },
+    {
+      "number": 76,
+      "body": "A person suffering from short sightedness is advised to wear spectacles having concave lens of power 1.25D. What is the farthest distance he can see clearly without spectacles?",
+      "choices": {
+        "a": "60cm",
+        "b": "100cm",
+        "c": "120cm",
+        "d": "80cm"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "vision",
+      "subtopic_name": "Human eye and vision defects",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "f = 100/1.25 = 80 cm\n1/∞ - 1/u = 1/-80\nu = 80 cm"
+    },
+    {
+      "number": 77,
+      "body": "Consider triangles having integer sides such that no side is greater than 4 units. How many such triangles are possible?",
+      "choices": {
+        "a": "13",
+        "b": "17",
+        "c": "24",
+        "d": "64"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "body": "Green house effect is related to",
+      "choices": {
+        "a": "Ozone layer depletion",
+        "b": "Carbon dioxide emission and absorption",
+        "c": "Nitrogen radiation",
+        "d": "Oxygen radiation"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "environment",
+      "subtopic_name": "Environmental physics",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "body": "What is the major difference between Bacteria and Virus",
+      "choices": {
+        "a": "Viruses are precursors to bacteria",
+        "b": "Viruses lack proteins that are present in bacteria",
+        "c": "Viruses use host machinery to reproduce unlike bacteria",
+        "d": "Viruses have proteins whereas bacteria do not"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "body": "Of the following the combination of processes related to sexual reproduction are:\ni. Conjugation\nii. Fragmentation\niii. Gamete formation\niv. Zygote",
+      "choices": {
+        "a": "i, iii and iv",
+        "b": "i, ii and iv",
+        "c": "ii, iii and iv",
+        "d": "only iii and iv"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ]
+}

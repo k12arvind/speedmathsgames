@@ -1,0 +1,704 @@
+{
+  "paper": "NSEJS 2008-09",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Vernier callipers have 20 divisions on its vernier scale which coincide with 19 divisions on the main scale. Least count of the instrument is 0.1 mm. The main scale division is:",
+      "choices": {
+        "a": "0.5 mm",
+        "b": "1 mm",
+        "c": "2 mm",
+        "d": "0.25 mm"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "general",
+      "topic_name": "Measurement and Units",
+      "subtopic_code": "vernier",
+      "subtopic_name": "Vernier Calipers",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Least count = value of 1 division of main scale/Total division of vernier scale\n0.1 = x/20 => x = 2 mm\n= (1 - (sin^2 A + cos^2 A - 2 sin A cos A))/cos A sin A\n= (2 sin A cos A)/sin A cos A = 2."
+    },
+    {
+      "number": 2,
+      "body": "L, M and N are mid points of sides AB, BC and CA of triangle ABC. If area of triangle ABC is 48 sq. units, the area of triangle LMN will be:",
+      "choices": {
+        "a": "6 units",
+        "b": "8 units",
+        "c": "12 units",
+        "d": "24 units"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "LN = (1/2)BC [by mid-point theorem]\nΔABC ~ ΔMNL [By AA similarity]\nArea ΔABC/Area ΔMNL = (BC/LN)^2 = (2)^2 = 4\narea ΔLMN = area ΔABC/4 = 48/4 = 12 sq.unit."
+    },
+    {
+      "number": 3,
+      "body": "The expression (1 - tan A + sec A) (1 - cot A + cosec A) has value:",
+      "choices": {
+        "a": "-1",
+        "b": "0",
+        "c": "+1",
+        "d": "+2"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(1 - tan A + sec A) (1 - cot A + cosec A)\n= (1 - sin A/cos A + 1/cos A)(1 - cos A/sin A + 1/sin A)\n= (cos A - sin A + 1)/cos A × (sin A - cos A + 1)/sin A\n= (1 - (sin A - cos A))(1 + (sin A - cos A))/cos A sin A\n= (1^2 - (sin A - cos A)^2)/cos A sin A"
+    },
+    {
+      "number": 4,
+      "body": "When a sample of copper with impurity of zinc is to be purified by electrolysis, the appropriate electrodes are: Cathode - Anode",
+      "choices": {
+        "a": "pure zinc - pure copper",
+        "b": "impure sample - pure copper",
+        "c": "impure zinc - impure sample",
+        "d": "pure copper - impure sample"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "body": "On mixing certain alkane with chlorine and irradiating with ultraviolet light, it forms only one monochloroalkane. This alkane could be:",
+      "choices": {
+        "a": "propane",
+        "b": "pentane",
+        "c": "isopentane",
+        "d": "neopentane"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Neopentance contain only one type of H i.e. only (1° H)\nCH₃\n|\nH₃C-C-CH₃\n|\nCH₃"
+    },
+    {
+      "number": 6,
+      "body": "Podocytes are exclusively located in:",
+      "choices": {
+        "a": "liver",
+        "b": "heart",
+        "c": "kidney",
+        "d": "spleen"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "body": "Testes descend down the scrotum through:",
+      "choices": {
+        "a": "oviductor canal",
+        "b": "inguinal canal",
+        "c": "vertebral canal",
+        "d": "vertebra arterial canal"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "Pteridophytes are characterized by _____ venation in their leaves.",
+      "choices": {
+        "a": "multicostate, reticulate divergent",
+        "b": "unicostate, parallel",
+        "c": "forked",
+        "d": "unicostate, reticulate"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "body": "The depth of ocean at any place can be measured (estimated) with the help of:",
+      "choices": {
+        "a": "X rays",
+        "b": "ultrasonic waves",
+        "c": "radio waves",
+        "d": "ultraviolet rays"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Wave Motion",
+      "subtopic_code": "sound",
+      "subtopic_name": "Sound Waves and Applications",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "body": "A certain force acting on a body of mass 2 kg increases its velocity from 6 m/s to 15 m/s in 2 s. The work done by the force during this interval is:",
+      "choices": {
+        "a": "27 J",
+        "b": "3 J",
+        "c": "94.5 J",
+        "d": "189 J"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "work_energy",
+      "subtopic_name": "Work and Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Work done = Change in kinetic energy =\n(1/2) × 2 × 25 - (1/2) × 2 × 36 = 189 J"
+    },
+    {
+      "number": 11,
+      "body": "A person on the top of a tower observes a scooter moving with uniform velocity towards the base of the tower. He finds that the angle of depression changes from 30° to 60° in 18 minutes. The scooter will reach the base of the tower in next :",
+      "choices": {
+        "a": "9 minutes",
+        "b": "18 / (√3 - 1) minutes",
+        "c": "6 √3 minutes",
+        "d": "the time depends upon the height of the tower"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the speed of the scooter = v m/min.\nDistance BC = 18 v and Distance CD = t v.\nIn ΔACD\ntan 60° = AD/CD\n√3 = h/(t v)\nh = √3 t v"
+    },
+    {
+      "number": 12,
+      "body": "Among the following factors the most important in making fluorine the strongest oxidizing agent is",
+      "choices": {
+        "a": "electron affinity",
+        "b": "ionization energy",
+        "c": "hydration enthalpy",
+        "d": "bond dissociation energy"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "The ratio of amounts of H₂S needed to precipitate all the metal ions from 100 ml of 1 M AgNO₃ and 100 ml of 1 m CuSO₄ will be",
+      "choices": {
+        "a": "1 : 2",
+        "b": "2 : 1",
+        "c": "1 : 1",
+        "d": "indefinite"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "2AgNO₃(aq.)+H₂S(g) → Ag₂S(s) + 2HNO₃(aq.)\nCuSO₄ (aq.)+ H₂S (g) → CuS (s) + H₂SO₄(aq.)\nAccording to the equations, ratio of the amounts of H₂S needed for precipitation is 1:2."
+    },
+    {
+      "number": 14,
+      "body": "6.02 × 10²³ molecules of urea are present in 100 ml of its solution. The concentration of urea solution is :",
+      "choices": {
+        "a": "0.001 M",
+        "b": "0.01 M",
+        "c": "0.02 M",
+        "d": "0.1 M"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "M = (no.of moles of solute × 1000) / V(ml)\n= (6.02 × 10²⁰ × 1000) / (6.02 × 10²³ × 100) = 0.01M"
+    },
+    {
+      "number": 15,
+      "body": "P, Q and R are three natural numbers such that P and Q are primes and Q divides PR. Then out of the following the correct statement is :",
+      "choices": {
+        "a": "Q divides R",
+        "b": "P divides R",
+        "c": "P divides QR",
+        "d": "P divides PQ"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "P, Q → prime number\nPR is divisible by Q. R is a multiple of Q.\nOption A → Q divides R is correct.\nOption B → P is not a multiple or R.\n∴ wrong\nOption C →\nP is prime & R is not multiple of P\n∴ wrong\nOption D → P divides PQ is correct."
+    },
+    {
+      "number": 16,
+      "body": "An image of the size same as that of the object CANNOT be produced by :",
+      "choices": {
+        "a": "a plane mirror",
+        "b": "a concave mirror",
+        "c": "a convex mirror",
+        "d": "a convex lens"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors_lenses",
+      "subtopic_name": "Mirrors and Lenses",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "body": "Out of the following statements the one that is NOT true in case of lines of magnetic induction is",
+      "choices": {
+        "a": "these lines are closed curves",
+        "b": "they cannot be parallel",
+        "c": "these lines indicate the direction of magnetic field at a point",
+        "d": "these lines indicate the strength of magnetic field at a point"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "magnetic_field",
+      "subtopic_name": "Magnetic Field",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "body": "A cylinder of radius 6 cm and height h cm is filled with ice cream. The ice cream is then distributed among 10 children in identical cones having hemispherical tops. The radius of the base of the cone is 3 cm and its height is 12cm. Then the height h of the cylinder must be :",
+      "choices": {
+        "a": "100/7 cm",
+        "b": "18 mc",
+        "c": "15 cm",
+        "d": "200/ 11 cm"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Volume of icecream in cylinder\n= volume of icecream in 12 cones\nπ(6)² × h = 10[1/3 π(3)² × 12 + 2/3 π(3)³]\n36 h = 10 [36 + 18]\nh = 15 cm."
+    },
+    {
+      "number": 19,
+      "body": "The number of isosceles triangles with integer sides such that no side is greater than 4 units is :",
+      "choices": {
+        "a": "8",
+        "b": "9",
+        "c": "16",
+        "d": "12"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Isosceles triangles\nMaximum side = 4 units\na < b + c\nb < a + c\nc < a + b\nPossible combinations:\n4, 4, 1    3, 3, 4    2, 2, 3\n4, 4, 2    3, 3, 2    2, 2, 1\n4, 4, 3    3, 3, 1    2, 2, 2\n4, 4, 4    3, 3, 3    1, 1, 1\n12 such combinations are possible."
+    },
+    {
+      "number": 20,
+      "body": "A red solid is insoluble in water. However it becomes soluble if some KI is added to water. Heating the red solid in a test tube results in liberation of some violet coloured fumes and droplets of metal appear on the cooler parts of the test tube. The red solid is :",
+      "choices": {
+        "a": "(NH₄)₂ Cr₂O₇",
+        "b": "HgI₂",
+        "c": "HgO",
+        "d": "PbO₄"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "body": "Out of the following the one that undergoes reaction with 50% NaOH solution to give corresponding alcohol and acid is :",
+      "choices": {
+        "a": "phenol",
+        "b": "benzaldehyde",
+        "c": "butanol",
+        "d": "benzoic acid"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "C₂H₅CHO + C₂H₅CHO --60%/NaOH--> C₂H₅CH₂ - OH + C₂H₅COOH"
+    },
+    {
+      "number": 22,
+      "body": "Ripened follicle in the ovary is called :",
+      "choices": {
+        "a": "corpus albicans",
+        "b": "corpus luteum",
+        "c": "mature follicle",
+        "d": "Graafian follicle"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "Lateral meristem includes :",
+      "choices": {
+        "a": "fascicular cambium and cork cambium",
+        "b": "phellogen and protoderm",
+        "c": "procambium and interfascicular cambium",
+        "d": "dermatogen and ground meristem"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "When a cell is fully turgid, which of the following will be zero ?",
+      "choices": {
+        "a": "turgor pressure",
+        "b": "wall pressure",
+        "c": "suction pressure",
+        "d": "osmotic pressure"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "A ray of light is incident at an angle α on the boundary separating two transparent media. It is transmitted. When angle α is increased very slightly (by negligible amount), the ray suffers a total internal reflection. The difference between the angles of deviation in two cases is :",
+      "choices": {
+        "a": "2α",
+        "b": "90° - α",
+        "c": "180° - α",
+        "d": "180° - 2α"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "reflection",
+      "subtopic_name": "Total Internal Reflection",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "δ₁ - δ₂ = 180 - 2α - 90 + α = 90 - α"
+    },
+    {
+      "number": 26,
+      "body": "A car starts from point A. travels on a straight road and stops at its destination B. The distance - time graph of this journey has nature.",
+      "choices": {
+        "a": "[Graph A shown]",
+        "b": "[Graph B shown]",
+        "c": "[Graph C shown]",
+        "d": "[Graph D shown]"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Distance-Time Graphs",
+      "difficulty": "easy",
+      "has_figure": true,
+      "skip_reason": "Cannot determine correct answer without seeing the actual graphs",
+      "solution": "decelerated curve finally body comes to rest. constant velocity accelerated curve"
+    },
+    {
+      "number": 27,
+      "body": "Occurrence of tall and dwarf plants in the F2 generation of pea plant indicates that:",
+      "choices": {
+        "a": "both the traits were present in the parent plant",
+        "b": "both the traits were present in the F1",
+        "c": "tall is dominant over dwarf",
+        "d": "tall and dwarf traits have equal effect in expression"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "body": "The becian valve is present :",
+      "choices": {
+        "a": "in between left atrium and left ventricle",
+        "b": "in between right atrium and right ventricle",
+        "c": "in the middle part of right atrium",
+        "d": "at the base of inferior vena cava"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "body": "Among the following mixtures, dipole-dipole as the major interaction is present in :",
+      "choices": {
+        "a": "benzene and ethanol",
+        "b": "acetonitrile and acetone",
+        "c": "KCl and water",
+        "d": "benzene and carbon tetrachloride"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "body": "A man throws a ball making an angle of 60° with the horizontal. He runs on a level ground and catches the ball. If he had thrown the ball with speed v, then his speed must be :",
+      "choices": {
+        "a": "v",
+        "b": "v/2",
+        "c": "2v",
+        "d": "√v"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "R = v² 2sinθ cosθ/g\nT = 2v sinθ/g\nman cause the range with constant speed\nv' = R/T\nR = 2v² sin θcosθ/g\n= v cos θₛ = v cos 60° = v/2\nv' = v cosθ = vcos60 = v/2"
+    },
+    {
+      "number": 31,
+      "body": "The basic event in evolution is:",
+      "choices": {
+        "a": "change in DNA",
+        "b": "change in habitat",
+        "c": "change in nature of food",
+        "d": "change in climate"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "body": "The metal/s that would liberate hydrogen on reaction with dilute hydrochloric acid is/are:",
+      "choices": {
+        "a": "zinc",
+        "b": "copper",
+        "c": "silver",
+        "d": "magnesium"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Zn + dil HCl → ZnCl2 + H2 ↑\nMg + dil HCl → MgCl2 + H2 ↑"
+    },
+    {
+      "number": 33,
+      "body": "There are four resistors of 12 ohm each. Which of the following values is/are possible by their combinations (series and/or parallel)?",
+      "choices": {
+        "a": "9 ohm",
+        "b": "16 ohm",
+        "c": "12 ohm",
+        "d": "30 ohm"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "resistor_networks",
+      "subtopic_name": "Resistor Networks",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Circuit analysis with resistors:\n(i) R = 12Ω in series\n(ii) Parallel combination: 4Ω + 12Ω = 16Ω\n(iii) Series-parallel combination: 5Ω + 6 = 30Ω\n(iv) Complex resistor network = 9Ω"
+    },
+    {
+      "number": 34,
+      "body": "A body floats on water and also on an oil of specific gravity 0.8. Which of the following is/are true?",
+      "choices": {
+        "a": "Body loses less weight in oil than in water.",
+        "b": "Volume of water displaced is 0.8 times that in oil.",
+        "c": "It experiences equal up thrust from water and oil.",
+        "d": "For the body to just sink, 0.8 times of extra load is required in water than in oil."
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "buoyancy",
+      "subtopic_name": "Buoyancy and Flotation",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "body": "If p, q and r are positive real numbers, then the quantity (p + r)/(q + r) is",
+      "choices": {
+        "a": "> (p/q) if p > q",
+        "b": "< (p/q) if p > q",
+        "c": "> (p/q) if p < q",
+        "d": "< (p/q) if p < q"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "p, q, r are positive real numbers.\nDifference = (p+r)/(q+r) - p/q\n= (pq + rq - pq - rp)/(q(q+r)) = r(q-p)/(q(q+r))\np, q, r is positive.\nHence, the difference is positive, if q > p\nand negative when p < q.\nHence, A & D is the solution."
+    },
+    {
+      "number": 36,
+      "body": "Medulla oblongata of the brain contains.",
+      "choices": {
+        "a": "cardiac centre",
+        "b": "respiratory centre",
+        "c": "vaso - constriction centre",
+        "d": "thirst centre"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "The expression (5a − 3b)³ + (3b − 7c)³ − (5a − 7c)³ is divisible by",
+      "choices": {
+        "a": "(5a + 3b + 7c)",
+        "b": "(5a − 3b − 7c)",
+        "c": "(3b − 7c)",
+        "d": "(7c − 5a)"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(5a - 3b)³ + (3b - 7c)³ - (5a - 7c)³\nLet 5a - 3b = x, 3b - 7c = y\nand 7c - 5a = z\nx³ + y³ + z³ = 3 xyz, if x + y + z = 0.\nx + y + z = 5a - 3b + 3b - 7c + 7c - 5a = 0\n(5a - 3b)³ + (3b - 7c)³ + (7c - 5a)³\n= 3(5a - 3b)(3b - 7c)(7c - 5a)\n∴ It is divisible by\n5a - 3b, 3b - 7c, 7c - 5a"
+    },
+    {
+      "number": 38,
+      "body": "In the figure shown:",
+      "choices": {
+        "a": "α + β = 110°",
+        "b": "α = β = 55°",
+        "c": "θ = 110°",
+        "d": "θ = 140°"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the geometric figure showing the angle relationships",
+      "solution": "Circle with points A, B, C, D, O\n∠ACB = (1/2)∠AOB\n∠ACB = 70°\nABCD is cyclic quadrilateral\n∴ ∠ADB + ∠ACB = 180°\n∠ADB = 180° - 70° = 110°\nSo, θ = 110°\n□AOBD\n∠OAD + ∠O + ∠OBD + ∠D = 360°\nα + 140° + β + 110° = 360°\n∴ α + β = 110°"
+    },
+    {
+      "number": 39,
+      "body": "The figure shows positions of object O and its diminished image I. This is possible if:",
+      "choices": {
+        "a": "a convex mirror is placed to the right of I",
+        "b": "a convex mirror is placed between O and I",
+        "c": "a concave mirror is placed to the right of I",
+        "d": "a concave lens is placed between O and I"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Mirrors and Image Formation",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "body": "A carboxylic acid will evolve CO2 when reacted with",
+      "choices": {
+        "a": "NaHCO3",
+        "b": "HCl",
+        "c": "NaHSO3",
+        "d": "Na2CO3"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "R-COOH + NaHCO3 →\nR-COONa + H2O + CO2 ↑\n2R-COOH + Na2CO3 →\n2R-COONa + H2O + CO2 ↑"
+    }
+  ]
+}

@@ -1,0 +1,681 @@
+{
+  "paper": "NSEJS 2009-10",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "A beaker containing water is placed on the platform of a digital weighing machine. It reads 1100 g. A metal body of density 8g /cc and mass 200 g is suspended in water in the beaker (without touching the walls of the beaker). It is attached by a suitable string fixed to some support. Now the reading of weighing machine will be :",
+      "choices": {
+        "a": "1100g",
+        "b": "1125 g",
+        "c": "1275",
+        "d": "1300 g"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "buoyancy",
+      "subtopic_name": "Buoyancy and Archimedes' Principle",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "As m = 200g, ρ = 8 g/cm³, V = m/ρ = 200/8 = 25 cm³, so volume displaced = 25 cm³, mass = V × ρ = 25 × 1 = 25 g, total reading = 1100 + 25 = 1125 g. 1 = r(√2 + r), r = 1/(√2 + 1)"
+    },
+    {
+      "number": 2,
+      "body": "The sum of all natural numbers less than 400 which are NOT divisible by 6, is :",
+      "choices": {
+        "a": "13266",
+        "b": "66534",
+        "c": "79800",
+        "d": "93066"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Sum of all natural no less the 400: S₁ = 1 + 2 + 3 + 4 + ........... 399 = (399 × 400)/2 = 79800. Sum of all natural number divisible by six: S₁ = 6 + 12 + 18 + ........ 396. No of terms 396 = 6 + (n-1)6, n = 66, ∴ Sum = (66/2) × 6 + (66-1)6] = S₂ = 13266, ∴ S₁ - S₂ = 79800 - 13266 = 66534."
+    },
+    {
+      "number": 3,
+      "body": "In the figure shown, the bigger circle has radius 1 unit. Therefore, the radius of smaller circle must be",
+      "choices": {
+        "a": "sqrt(2) + 1",
+        "b": "1/2",
+        "c": "1/sqrt(2)",
+        "d": "1/(sqrt(2) + 1)"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the geometric figure showing the relationship between the circles",
+      "solution": "In ABC triangle with inscribed circle, AB² = BC² + AC², (1-r)² = r² + r², (1-r)² = 2r², 1-r = √2 r"
+    },
+    {
+      "number": 4,
+      "body": "Three containers A, B and C of equal volume contain N2, NO2 and CO2 respectively at the same temperature and pressure. The ascending order of their masses is :",
+      "choices": {
+        "a": "A, C, B",
+        "b": "C, A, B",
+        "c": "B, C, A",
+        "d": "C, B, A"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "N₁ = 28g, NO₂ = 46g, CO₂ = 44g, ∴ Ascending order = A, C, B"
+    },
+    {
+      "number": 5,
+      "body": "A 3.7 litre 1.0 M NaOH solution is mixed with another 5 litre 0.30 M NaOH solution. The molarity of the resulting solution is :",
+      "choices": {
+        "a": "0.80 M",
+        "b": "0.10 M",
+        "c": "0.73 M",
+        "d": "0.59 M"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "M₁V₁ + M₂V₂ = M₃V₃, 1 × 3.7 + 0.3 × 5 = M₃ × 8.7, M₃ = 0.5977"
+    },
+    {
+      "number": 6,
+      "body": "The animal body is formed of many cells, but the cells show no coordination to form tissues in :",
+      "choices": {
+        "a": "protozoans",
+        "b": "coelenterates",
+        "c": "sponges",
+        "d": "flat worms"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "body": "An indicator of SO2 pollution is :",
+      "choices": {
+        "a": "moss",
+        "b": "lichens",
+        "c": "algae",
+        "d": "pteridophytes"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "The one that CANNOT be used for DNA fingerprints is :",
+      "choices": {
+        "a": "leucocytes",
+        "b": "erythrocytes",
+        "c": "hair bulbs",
+        "d": "sperma"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "body": "A rainbow has circular shape because :",
+      "choices": {
+        "a": "the earth is spherical.",
+        "b": "rain drops are spherical",
+        "c": "the sun is spherical",
+        "d": "none of these"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction and Dispersion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "body": "An observer in a car P moving towards north with speed v observes that another car Q is moving towards east with the same speed v. The true velocity of Q is:",
+      "choices": {
+        "a": "v towards east",
+        "b": "sqrt(2) v towards north-east",
+        "c": "v towards south-east",
+        "d": "v sqrt(2) towards south-west"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Kinematics",
+      "subtopic_code": "relative_motion",
+      "subtopic_name": "Relative Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "body": "A body describes uniform, accelerated motion along a straight line. Which of the following displacement time graphs shown represent the motion correctly?",
+      "choices": {
+        "a": "(I) only",
+        "b": "(I) and (IV) only",
+        "c": "(I), (III) and (IV) only",
+        "d": "All"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Kinematics",
+      "subtopic_code": "motion_graphs",
+      "subtopic_name": "Motion Graphs",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without examining the displacement-time graphs shown in the figure"
+    },
+    {
+      "number": 12,
+      "body": "Transition metal ion in amethyst is:",
+      "choices": {
+        "a": "Cr3+",
+        "b": "Fe3+",
+        "c": "Mn2+",
+        "d": "Co2+"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "Among the following the most powerful oxidizing agent is -",
+      "choices": {
+        "a": "O2",
+        "b": "KClO4 + O2",
+        "c": "H2O",
+        "d": "O3"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "body": "The half-life period of radioactive element is 14 hours. The fraction of the radioactive element that disintegrates in 56 hours is:",
+      "choices": {
+        "a": "0.125",
+        "b": "0.625",
+        "c": "0.9025",
+        "d": "0.9375"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "modern",
+      "topic_name": "Nuclear Physics",
+      "subtopic_code": "radioactivity",
+      "subtopic_name": "Radioactive Decay",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Half-life of element = 14 hours, Time period = 56 hours, No. of half-lives = 4. N = N₀(1/2)ⁿ, N = N₀(1/2)⁴ = N₀/16 (taking N₀ as 1g) = 0.0625 g, ∴ The fraction of substance that disintegrates = 1 - 0.0625 = 0.9375 g"
+    },
+    {
+      "number": 15,
+      "body": "Three line segments in a plane have lengths a, b and c. No two of these are parallel. If sqrt(a) + sqrt(b) = sqrt(c), then:",
+      "choices": {
+        "a": "can form an acute angled triangle.",
+        "b": "can form a right angled triangle.",
+        "c": "can form an isosceles triangle",
+        "d": "cannot form a triangle."
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "√a + √b = √c, squaring both side a + b + 2√ab = c......(i) [For any triangle A a + b > c] [2√ab is a positive quantity] Which contradict equation (i) Hence, no triangle formed."
+    },
+    {
+      "number": 16,
+      "body": "A cell, an ammeter and a voltmeter are all connected in series. The ammeter reads a current I and the voltmeter a potential difference V. If a torch bulb is connected across the voltmeter, then.",
+      "choices": {
+        "a": "both I and V will increase",
+        "b": "both I and V will decrease",
+        "c": "I will increase but V will decrease",
+        "d": "I will decrease but V will increase"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electric Circuits",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "body": "Dispersion of white light into its constituent colours occurs during",
+      "choices": {
+        "a": "reflection at a plane mirror",
+        "b": "reflection at a concave mirror.",
+        "c": "internal reflection inside a spherical drop of water",
+        "d": "refraction at the boundary of a transparent medium."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Light",
+      "subtopic_code": "dispersion",
+      "subtopic_name": "Dispersion of Light",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "body": "Ice at 0°C is put in a closed container and heat is supplied to it continuously at a uniform rate. Which of the following graphs gives the temperature variation with time correctly?",
+      "choices": {
+        "a": "Graph showing temperature rising linearly from 0°C",
+        "b": "Graph showing temperature constant at 100°C, then rising",
+        "c": "Graph showing temperature constant at 0°C, then rising linearly",
+        "d": "Graph showing temperature rising linearly from 0°C to higher values"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Temperature",
+      "subtopic_code": "phase_change",
+      "subtopic_name": "Phase Changes",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the temperature-time graphs shown in the figure"
+    },
+    {
+      "number": 19,
+      "body": "Two circles of radii 2 and 3 cm touch each other externally. The length of direct common tangent to the two circles will be:",
+      "choices": {
+        "a": "2√6 cm",
+        "b": "√26 cm",
+        "c": "6 cm",
+        "d": "2.4 cm"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "OOOA is a right angle triangle. OA = BC length of direct common tangent. OO' = 2 + 3 = 5, 6² = 1² + x², x = √24 = x = 2√6."
+    },
+    {
+      "number": 20,
+      "body": "Formalin is 40% aqueous solution of:",
+      "choices": {
+        "a": "formic acid",
+        "b": "freon gas",
+        "c": "formaldehyde",
+        "d": "a mixture of formic acid and formaldehyde in a ratio 1:1"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "body": "\"Green fuel\" means",
+      "choices": {
+        "a": "fuel obtained from plant leaves",
+        "b": "green coloured fuel",
+        "c": "chemicals used for the growth of plants",
+        "d": "fuel obtained from plastic waste"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "body": "Which one of the following is a true fruit?",
+      "choices": {
+        "a": "Pear",
+        "b": "Coconut",
+        "c": "Apple",
+        "d": "Cashewnut"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "The number of chromosomes can be counted at:",
+      "choices": {
+        "a": "anaphase",
+        "b": "interphase",
+        "c": "metaphase",
+        "d": "prophase"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "Which one of the following is true fish?",
+      "choices": {
+        "a": "Star fish",
+        "b": "Gold fish",
+        "c": "Silver fish",
+        "d": "Hag fish"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "Newton deduced the inverse square law of gravitation:",
+      "choices": {
+        "a": "by observing motion of an apple falling from a tree.",
+        "b": "by using kepler's laws of planetary motion.",
+        "c": "by studying motion of different objects in the laboratory.",
+        "d": "by using data obtained from Cavendish experiment."
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Gravitation",
+      "subtopic_code": "universal_gravitation",
+      "subtopic_name": "Universal Law of Gravitation",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "body": "If D = a² + b² + c² where a and b are consecutive integers and c = ab, then √D is:",
+      "choices": {
+        "a": "always an even integer.",
+        "b": "always an odd integer.",
+        "c": "an integer, odd or even",
+        "d": "sometimes an irrational number"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "D = a² + b² + c² and c = ab. Let a = x and b = x + 1. D = (x)² + (x + 1)² + [x (x + 1)]² = x² + x² + 2x + 1 + x²(x² + 2x + 1) = 2x² + 2x + 1 + x⁴ + 2x³ + x² = x⁴ + 2x³ + 3x² + 2x + 1 Which is always a square of odd numbers. So, √D is always an odd number."
+    },
+    {
+      "number": 27,
+      "body": "If a^3 + 2b = 7, b^2 + 4c = -7 and c^3 + 6a = -14, then the value of (a^3 + b^2 + c^3) is -",
+      "choices": {
+        "a": "14",
+        "b": "25",
+        "c": "36",
+        "d": "47"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a² + 2b = 7, b² + 4c = -7 and c² + 6a = -14 ∴ a² + 2b + b² + 4c + c² + 6a = 7 + (-7) + (-14) (a² + 6a + 9) + (b² + 2b + 1) + (c² + 4c + 4) = -14 + 9 + 1 + 4 (a + 3)² + (b + 1)² + (c + 2)² = 0 It is possible only when a = -3, b = -1 and c = -2. So, a² + b² + c² = (-3)² + (-1)² + (-2)² = 9 + 1 + 4 = 14."
+    },
+    {
+      "number": 28,
+      "body": "The part of the digestive system that digests lipids in the food is:",
+      "choices": {
+        "a": "stomach",
+        "b": "duodenum",
+        "c": "ilium",
+        "d": "large intestine"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "body": "One mole of oxalic acid is equivalent to:",
+      "choices": {
+        "a": "0.5 mole of NaOH",
+        "b": "1 mole of NaOH",
+        "c": "1.5 mole of NaOH",
+        "d": "2 mole of NaOH"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "One mole of oxalic acid is neutralised by two moles of NaOH."
+    },
+    {
+      "number": 30,
+      "body": "The trigonometric equation is: cot^2θ [secθ-1]/[1+sinθ] + secotθ [sinθ-1]/[1+secθ] has the value:",
+      "choices": {
+        "a": "-1",
+        "b": "0",
+        "c": "1",
+        "d": "2"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "cot²θ[secθ-1/1+sinθ] + sec²θ[secθ-1/1+sinθ] = cos²θ/sin²θ[1-cosθ/cosθ(1+sinθ)] + 1/cos²θ[sinθ-1/1+cosθ]cosθ = cosθ/sin²θ[1-cosθ/1+sinθ] + 1/cosθ[sinθ-1/1+cosθ] = cosθ/sin²θ[(1-cosθ)/1+sinθ] + 1-sinθ/1-sinθ"
+    },
+    {
+      "number": 31,
+      "body": "During contraction of muscle fiber:",
+      "choices": {
+        "a": "I bands get reduced in length",
+        "b": "A bands retain the length",
+        "c": "I bands retain the length",
+        "d": "A bands get reduced in length"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "body": "Out of the following the salt/s that has/have pH value higher that 7.5 is/are:",
+      "choices": {
+        "a": "sodium hydrogen carbonate",
+        "b": "sodium sulphate",
+        "c": "sodium chloride",
+        "d": "sodium carbonate"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Sodium hydrogen carbonate and sodium carbonate both are salts of weak acid (H₂CO₃) and strong base (NaOH). Thus their aqueous solutions are alkaline with pH higher than 7."
+    },
+    {
+      "number": 33,
+      "body": "In case of the circuit shown below, which of the following statements is/are true?",
+      "choices": {
+        "a": "R1, R2 and R3 are in series.",
+        "b": "R2 and R3 are in series.",
+        "c": "R2 and R3 are in parallel.",
+        "d": "the equivalent resistance of the circuit is R1 + R2R3/(R2 + R3)"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance Networks",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "RAB = R₁ + R₂R₃/R₂+R₃ Here R₂ and R₃ are in parallel"
+    },
+    {
+      "number": 34,
+      "body": "Which of the following statements is/are true in case of waves?",
+      "choices": {
+        "a": "Transverse vibrations are set on the string of a guitar.",
+        "b": "As compared to light, a sound wave produced on the moon will take a time about 10^4 times longer to reach the earth.",
+        "c": "A sound note of wavelength 1 cm in air cannot be heard by a man.",
+        "d": "Sound travels faster in water than in air."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "properties",
+      "subtopic_name": "Wave Properties",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "body": "In a rectangle ABCD the lengths of sides AB, BC, CD and DA are (5x + 2y + 2) cm, (x + y + 4) cm, (2x + 5y - 7) cm and (3x + 2y - 11) cm respectively. Which of the following statements is/are true?",
+      "choices": {
+        "a": "One of the sides of the rectangle is 15 cm long.",
+        "b": "Each diagonal of the rectangle is 39 cm long.",
+        "c": "Perimeter of the rectangle is 102 cm.",
+        "d": "Area of the rectangle is 560 cm²"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Geometry",
+      "subtopic_code": "rectangle",
+      "subtopic_name": "Rectangle properties",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "AB = CD ∴ 5x + 2y + 2 = 2x + 5y - 7 3x - 3y + 9 = 0 x - y + 3 = 0 .....(i) AD = CB"
+    },
+    {
+      "number": 36,
+      "body": "What is true about white muscles?",
+      "choices": {
+        "a": "Number of mitochondria is few.",
+        "b": "They possess very small quantity of myoglobin.",
+        "c": "The amount of sarcoplasmic reticulum is high",
+        "d": "They depend on anaerobic process of energy."
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "If U = {X | X is a point on straight line AB}, P = {M | M is a point on ray AB}, Q = {N | N is a point on ray BA} and R = {L | L is point on segment AB}, then which of the following statements is/are true?",
+      "choices": {
+        "a": "P ∩ Q = R",
+        "b": "P ∪ Q = Q ∪ P",
+        "c": "P ∪ Q] = R",
+        "d": "P ∩ Q' = P ∪ Q"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": "general",
+      "topic_name": "Set Theory",
+      "subtopic_code": "sets",
+      "subtopic_name": "Set operations",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "3x + 2y - 11 = x + y + 4\n2x + y - 15 = 0\nUsing (i) & (2) x = 4, y = 7\nSo, length of rectangle = 5(4) + 2(7) + 2 = 36 cm.\nBreadth of rectangle = 4 + 7 + 4 = 15 cm.\nArea if rectangle = 15 × 36 = 540 sq. cm.\nDiagonal of rectangle = sqrt(15^2 + 36^2) = 39 cm.\nPerimeter of rectangle = 2(15 + 36) = 102 cm.\n\nU = (X|X is a point on straight line AB),\nP = (M|M is a point on ray AB),\nQ = (N|N is a (oint on ray BA),\nR = (L|L is point on segment AB),\nOption A : P ∩ Q\n: M is a point on ray AB ∩ N is a point on ray BA\n: Point on segment AB.\nSo, option (A) is true.\nOption B : P ∪ Q' = Q ∪ P\n: (P ∩ Q)' [By Dmorgans law]\n: Not a point on segment AB.\nSo, option (B) is false.\nOption C : [P ∪ Q'] = R\n: [(P ∩ Q)'] [By Dmorgans law]\n: M is a Point on ray AB ∩ N is a point on ray BA.\n\n: Point on segment AB.\nSo, option (C) is true.\nOption D : P ∩ Q'\n: Point on ray AB and not a point on ray BA.\nP ∪ Q\n: Not a point on ray AB and Point on ray BA.\nSo, option (D) is false."
+    },
+    {
+      "number": 38,
+      "body": "In bacterial photosynthesis, usually:",
+      "choices": {
+        "a": "CO₂ is not fixed",
+        "b": "O₂ is not released",
+        "c": "H₂O is oxidized",
+        "d": "chlorophyll taps light"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "A body traveling along a straight line with a uniform acceleration has velocities 5m/s at a point A and 15 m/s at a point B respectively. If M is the midpoint of AB, then:",
+      "choices": {
+        "a": "the ratio of times taken by the body to cover distance MB and AM is (√5 - 1)/2",
+        "b": "the velocity at M is 5√5 m/s",
+        "c": "average velocity over AM is 5(√5 - 1)/2 m/s",
+        "d": "the product of the acceleration and the distance AB is 100 m²/s²"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Kinematics",
+      "subtopic_code": "motion",
+      "subtopic_name": "Uniformly accelerated motion",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(i) Velocity at middle point will be\nsqrt((u^2 + v^2)/2) = sqrt((5^2 + 15^2)/2) = 5sqrt(5) answer is (B)\n(ii) v = u + at\n5sqrt(5) = 5 + at₁\n15 = 5sqrt(5) + at₂\nt₁/t₂ = (15 - 5sqrt(5))/(5sqrt(5) - 5) = (3 - sqrt(5))/(sqrt(5) - 1)\n= (3 - sqrt(5))/(sqrt(5) - 1) × (sqrt(5) + 1)/(sqrt(5) + 1) = (sqrt(5) - 1)/2 answer is (A) also\n(ii) (v^2 - u^2)/2 = as\n(225 - 25)/2 = as\n∴ as = 100 m²/s² answer is (D) also"
+    },
+    {
+      "number": 40,
+      "body": "Out of the following the metals, the one/s that is/are sonorous is/are:",
+      "choices": {
+        "a": "Zn",
+        "b": "Na",
+        "c": "Hg",
+        "d": "Cu"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Na, Hg is not sonorous, since Na is very soft and Hg is liquid."
+    }
+  ]
+}

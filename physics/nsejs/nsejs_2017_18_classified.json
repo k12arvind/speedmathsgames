@@ -1,0 +1,1439 @@
+{
+  "paper": "NSEJS 2017-18",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Rajiv, Nikhil, Shubha and Nilima wanted to establish a relationship between loss in weight of a solid with weight of water displaced by immersing it in tap water and sea water. After performing their experiment, they noted observations for the same solid as follows. Rajiv : Loss of weight of solid is more in tap water. Nikhil : Loss of weight of solid is more in sea water. Shubha : Loss of weight of solid is equal in the tap water and the sea water. Nilima : Loss of weight of solid may be more in tap water or sea water, depending upon how deeply it is immersed. Identify the correct observation.",
+      "choices": {
+        "a": "Nikhil",
+        "b": "Nilima",
+        "c": "Shubha",
+        "d": "Rajiv"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Fluid Mechanics",
+      "subtopic_code": "buoyancy",
+      "subtopic_name": "Archimedes Principle",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "According to Archimede's principle: loss of weight = boyuant force (Fb) Since, solid is immersed in water, so Fb ∝ density of liquid. As density of sea water is more in compare to density of tap water, loss of weight of solid is more in sea water."
+    },
+    {
+      "number": 2,
+      "body": "The ratio of atoms present in 4g of magnesium and 4 g of sulphur is (Mg = 24; S = 32)",
+      "choices": {
+        "a": "1 : 1",
+        "b": "2 : 1",
+        "c": "3 : 2",
+        "d": "3 : 4"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Given mass of Mg = 4 g Atomic weight of Mg = 24 g Moles = 4/24 = 1/6 No. of atoms = NA/6 Given Mass of S = 4g Atomic weight of S = 32 g Moles = 4/32 = 1/8 No. of atoms = NA/8 ∴ Ratio of atoms of sulphur is to magnesium is NA/8 / NA/6 = 6/8 = 3/4 ⇒ 3:4"
+    },
+    {
+      "number": 3,
+      "body": "If Z = 10 the valency of the element is",
+      "choices": {
+        "a": "zero",
+        "b": "one",
+        "c": "two",
+        "d": "three"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Atomic No. (Z) = 10 Its configuration is 2, 8. It is the configuration of noble gas. Hence its valency is zero."
+    },
+    {
+      "number": 4,
+      "body": "The average atomic mass of an element X is 80u. The percent of isotopes 79Xas and 82Xas in the sample is -",
+      "choices": {
+        "a": "90.99 and 9.01",
+        "b": "80.8 and 19.2",
+        "c": "66.67 and 33.34",
+        "d": "60 and 50"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the % of 79Xe be x and that of other be (100 – x). Average atomic mass = (79 x + 82 x (100 – x))/100 80 = (79x + 8200 – 82x)/100 8000 = 8200 + 79x – 82x 82x – 79x = 8200 – 8000 3x = 200 x = 200/3 = 66.66 % i.e. percentage of 79Xe is 66.66 & that of 82Xe is (100 – 66.67) = 33.34"
+    },
+    {
+      "number": 5,
+      "body": "An aqueous solution used to preserve biological specimen is -",
+      "choices": {
+        "a": "Methane",
+        "b": "Methanol",
+        "c": "Methanal",
+        "d": "Methonoic acid"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "An aqueous solution used to preserve biological specimen is methanal HCHO → formaldehyde or methanal."
+    },
+    {
+      "number": 6,
+      "body": "The molecular formulae of some organic compounds are given below, which of these compounds contains a Ketone group ?",
+      "choices": {
+        "a": "C2H6O2",
+        "b": "C5H10O",
+        "c": "C4H8O",
+        "d": "C3H6O"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "The molecular formula of a ketone containing 8 carbon atom is C8H14O\nH3C-C-CH3\n    ||\n    O"
+    },
+    {
+      "number": 7,
+      "body": "'Duralumin' is an alloy of aluminium with -",
+      "choices": {
+        "a": "iron, manganese and magnesium",
+        "b": "copper, manganese and magnesium",
+        "c": "copper, chromium and magnesium",
+        "d": "iron, nickel and magnesium"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Duralumin is an alloy of aluminium with copper, manganese and magnesium."
+    },
+    {
+      "number": 8,
+      "body": "Tooth decay starts when the pH around tooth is around-",
+      "choices": {
+        "a": "7.5",
+        "b": "7",
+        "c": "6.5",
+        "d": "5.5"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Tooth decay starts when the pH of the mouth is lower than 5.5."
+    },
+    {
+      "number": 9,
+      "body": "What will happen if a copper piece is dipped in aqueous solution of silver nitrate for quite some time ? (i) Solution will remain colourless (ii) Solution will turn blue (iii) Silver will deposit on the copper piece (iv) Bubbles of brown gas will be formed around copper piece",
+      "choices": {
+        "a": "(i) and (iv)",
+        "b": "(ii) and (iv)",
+        "c": "(ii) and (iii)",
+        "d": "(iii) and (iv)"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "CuO + AgNO3(aq) → Cu(NO3)2(aq) + Ag\nIt is a displacement reaction. Cu(NO3)2 solution is blue in colour. Silver will deposit on the copper piece."
+    },
+    {
+      "number": 10,
+      "body": "Neeta mixed 10 mL of 0.1 M HCl solution with 15 mL of 0.067 M NaOH solution. She checked the pH of the resulting solution using pH paper. The colour obtained was",
+      "choices": {
+        "a": "Green",
+        "b": "Yellow",
+        "c": "Pale Blue",
+        "d": "Violet"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Millimoles of\nHCl = 0.1 × 10 = 1\nMillimoles of\nNaOH = 0.067 × 15 = 1.005\nSo, concentration of\nOH^- = (1.005 - 1)/25\n⇒ [OH^-] = 2 × 10^-4\npOH = 4 - log 2 = 3.7\npH + pOH = 14\npH = 14 - pOH\n= 14 - 3.7 = 10.3\nThe pH range of 8-11 is of weak base and it gives pale blue colour."
+    },
+    {
+      "number": 11,
+      "body": "(I) Zn + CuSO₄ (aq) → Reaction occurs\n(II) Zn + Al₂(SO₄)₃ (aq) → Reaction does not occur\n(III) Zn + AgNO₃ (aq) → Reaction does not occur\n(IV) Zn + PbNO₃ (aq) → Reaction occurs\nWhich of the above statements is not correct?",
+      "choices": {
+        "a": "I",
+        "b": "II",
+        "c": "III",
+        "d": "IV"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(I) Zn + CuSO4 → ZnSO4 + Cu\nReaction occur because Zn is more reactive than Cu.\n(II) Zn + Al2(SO4)3 →\nReaction does not occur because Al is more reactive than Zinc.\n(III) Zn + 2AgNO3 → Zn(NO3)2 + 2Ag\nIt is a displacement reaction Zn is more reactive than Ag. So It displaces the Ag from AgNO3\n(IV) Zn + 2PbNO3 → Zn(NO3)2 + 2Pb\nReaction occur because Zn is more reactive than Pb\nNow according to question (III) is not correct."
+    },
+    {
+      "number": 12,
+      "body": "An open vessel contains air at 27°C. The vessel is heated till two-fifth of the air in it has been expelled. Assuming the volume of the vessel remains constant, find the temperature to which the vessel has to be heated?",
+      "choices": {
+        "a": "750 K",
+        "b": "700 K",
+        "c": "550 K",
+        "d": "500 K"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "gas_laws",
+      "subtopic_name": "Gas Laws",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "P1 = P    P2 = P  [Open vessel]\nV1 = V    V2 = V\nn1 = n    n2 = n - (2/5)(n) = 3n/5\nT1 = 300 K\nT2 = ?\nP1V1 = n1RT1\nP2V2 = n2RT2\n⇒ n1T1 = n2T2\n⇒ n × 300 = (3/5) × n × T2\n⇒ T2 = (300 × 5)/3\nT2 = 1500/3 = 500 K"
+    },
+    {
+      "number": 13,
+      "body": "A teacher wanted to give acid base titration to her students. For that she prepared (i) HCl solution by dissolving 73 g of hydrochloric acid in one litre of water and (ii) sodium hydroxide solution by dissolving 0.46 g of sodium metal in one litre of water. Find the volume of the hydrochloric acid solution required for complete neutralisation of sodium hydroxide solution. (Cl = 35.5; Na=23.0; O = 16.0)",
+      "choices": {
+        "a": "20 mL",
+        "b": "10 mL",
+        "c": "46 mL",
+        "d": "5 mL"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Molarity ⇒ HCl = 73/(36.5 × 1) = 2\n2 Na + 2H2O → 2NaOH + H2\n2moles        2 moles\n0.46/(23) = 0.02 mole  0.02 mole\nHCl + NaOH → NaCl + H2O\nMole   1     1\n⇒ 0.02 mole of NaOH required 0.02 mole HCl\nSince molarity of HCl = 2 M\nM × V = no. of moles\n2 × V = 0.02\nV = 0.02/(2×100)\nV = 1/100 Litre\nV = 10 ml"
+    },
+    {
+      "number": 14,
+      "body": "What would be the atomic number of the next halogen element, if discovered in future? (Periodic table provided Page-2)",
+      "choices": {
+        "a": "103",
+        "b": "115",
+        "c": "117",
+        "d": "121"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Atomic number of the next halogen element is 117.\nAtomic no. of At (Astatine) = 85\nAtomic no. of next halogen\n= 85 + 32 = 117"
+    },
+    {
+      "number": 15,
+      "body": "A white solid known to be a compound of sodium, gives rise to water vapour and a colourless gas on heating. The residual white powder is dissolved in water and when the solution is added to alum solution, a white gelatinous precipitate is obtained. The original solid was",
+      "choices": {
+        "a": "Sodium carbonate",
+        "b": "Sodium bicarbonate",
+        "c": "Sodium hydroxide",
+        "d": "Sodium nitrate"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "2NaHCO3 → Na2CO3 + H2O + CO2 ↑ CO2\n(Sodium bicarbonate) (Sodium Carbonate)\nis a colourless and colourless gas When\nNa2CO3 dissolved in water it will give alkaline solution.\nWhen we add this solution in alum solution white gelatinous ppt of Al(OH)3 is obtained"
+    },
+    {
+      "number": 16,
+      "body": "Harsha was trying to neutralize phosphoric acid using various bases. Those available were caustic soda, lime water and hydrated alumina. If Harsha took 1 equivalent of phosphoric acid each time, what will be the ratio for moles of each of the above bases required for complete neutralization?",
+      "choices": {
+        "a": "1 : 1 : 1",
+        "b": "1 : 0.5 : 0.33",
+        "c": "1 : 2 : 3",
+        "d": "1 : 0.33 : 0.5"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Assume Caustic soda (NaOH) is a monoacidic base, Calcium hydroxide Ca(OH)₂ is diacidic base, Hydrated alumina Al(OH)₃ is triacidic base. For neutralization with one equivalent of phosphoric acid (tribasic acid) each time (Molecules × (V.F.) base = Eq. of acid). The ratio of moles of bases required will be NaOH : Ca(OH)₂ : Al(OH)₃ = 1 : 0.5 : 0.33"
+    },
+    {
+      "number": 17,
+      "body": "A flask containing SO₂ gas was weighed at a particular temperature and pressure. The flask was then flushed and filled with oxygen gas at the same temperature and pressure. The weight of SO₂ in the flask will be about:",
+      "choices": {
+        "a": "same as that of oxygen",
+        "b": "one-fourth that of oxygen",
+        "c": "four times that of oxygen",
+        "d": "twice that of oxygen"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let mass of SO₂ be x & that of O₂ be y. Since, volume is same therefore no of moles of SO₂ & O₂ are also same. Now no. of moles = Given Mass / Mol. Mass Now Mol. Mass of O₂ = 32 g & Mol. Mass of SO₂ = 64 g Moles of O₂ = y/32 Moles of SO₂ = x/64 Since, no. of moles is same. x/64 = y/32 32 x = 64 y ⟹ x = 2y therefore, the wt. of SO₂ is twice that of oxygen."
+    },
+    {
+      "number": 18,
+      "body": "Arun needs 1.71 g of cane sugar (C₁₂H₂₂O₁₁) to sweeten his tea. What would be the number of carbon atoms consumed through sugar in the tea?",
+      "choices": {
+        "a": "3.66 × 10²²",
+        "b": "7.2 × 10²¹",
+        "c": "5 × 10²¹",
+        "d": "6.6 × 10²²"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "C₁₂ H₂₂ O₁₁ = 342 gm. mole = Given mass / GMM = 1.17g / 342g = 0.005 mole No. of carbon atoms = 0.005 × 6.02 × 10²³ × 12 = 3.61 × 10²²"
+    },
+    {
+      "number": 19,
+      "body": "Choose the correct sets which represent the oxides as → Acidic : basic : neutral : amphoteric respectively\n(i) CO₂ : MgO : N₂O : H₂O\n(ii) SO₂ : NO : CO : Al₂O₃\n(iii) P₂O₅ : ZnO : NO : Al₂O₃\n(iv) SO₃ : CaO : N₂O : PbO",
+      "choices": {
+        "a": "(i) & (ii)",
+        "b": "(ii) & (iii)",
+        "c": "(iii) & (iv)",
+        "d": "(i) & (iv)"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(i) CO₂ : MgO : N₂O : H₂O (Acidic) (Basic) (Neutral) (Amphoteric) (ii) SO₂ : NO : CO : Al₂O₃ (Acidic) (Neutral) (Neutral) (Amphoteric) (iii) P₂O₅ : ZnO : NO : Al₂O₃ (Acidic)(Amphoteric)(neutral)(Amphoteric) (iv) SO₃ : CaO : N₂O : PbO (Acidic) (Basic) (Neutral) (Amphoteric) Therefore, the correct order is in (i) & (iv)."
+    },
+    {
+      "number": 20,
+      "body": "During a meteorite shower a few meteorites fell into a water body having pH around 7. The pH of the water body was measured after meteorite shower and found to be",
+      "choices": {
+        "a": "> 7",
+        "b": "< 7",
+        "c": "= 7",
+        "d": "no change in pH of water due to the meteorite shower"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "The pH will become less that 7 due to increases in carbon content as the combustion of meteors will occur when it enters the earth's atmosphere due to friction. Due to meteorite shower temperature of water body increases as a result pH decreases."
+    },
+    {
+      "number": 21,
+      "body": "The positions of two blocks at successive 0.20 - second time intervals are represented by the numbered squares in the figure below. The blocks are moving towards right. The accelerations of the blocks are related as follows:",
+      "choices": {
+        "a": "acceleration of 'a' is greater than acceleration of 'b'",
+        "b": "acceleration of 'a' equals acceleration of 'b'. Both accelerations are greater than zero.",
+        "c": "acceleration of 'b' is greater than acceleration of 'a'",
+        "d": "acceleration of 'a' equals acceleration of 'b'. Both accelerations are zero."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Motion",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the position-time diagram showing the blocks' positions",
+      "solution": "Block - a v₁ = (6-2)/0.2 = 4/0.2 v₂ = (10-6)/0.2 = 4/0.2 Block - b v₁ = (11-0)/0.2 = 11/0.2 v₂ = (22-11)/0.2 = 11/0.2 a_A = 0 a_B = 0"
+    },
+    {
+      "number": 22,
+      "body": "In rural areas, an indigenous way of keeping kitchen materials cool is to put them in a box and wrap the box with wet blanket; the blanket is kept wet as tap is allowed to drip in to its corner. Choose the correct statement:",
+      "choices": {
+        "a": "This method works because the water from the tap is cold. If one uses room temperature water, it will not work.",
+        "b": "Method will work only if the box is a bad conductor of heat. If one uses tin box, it will not work.",
+        "c": "Method doesn't work.",
+        "d": "This method works because the latent heat necessary for evaporation of water in the blanket is taken from the box so the box and its content remain cool."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Temperature",
+      "subtopic_code": "phase_change",
+      "subtopic_name": "Phase Changes",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "This method works because the latent heat necessary for evaporation of water in the blanket is taken from the box so the box and its content remain cool."
+    },
+    {
+      "number": 23,
+      "body": "In the adjacent circuit what is the current flowing from N to K?",
+      "choices": {
+        "a": "3 A",
+        "b": "2 A",
+        "c": "1 A",
+        "d": "0.5 A"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Circuits",
+      "subtopic_code": "dc_circuits",
+      "subtopic_name": "DC Circuits",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the circuit diagram showing resistor values and connections",
+      "solution": "I = 120/40 = 3 Amp. I = I₁ + I₂ + I₃ = 1 Amp"
+    },
+    {
+      "number": 24,
+      "body": "If x, v and t represent displacement (m), velocity (m/s) and time (s) respectively for a certain particle then which pair of the following figures can be best correlated to each other.",
+      "choices": {
+        "a": "I & II",
+        "b": "I & III",
+        "c": "I & IV",
+        "d": "None"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Motion",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the four graphs (Fig. I, II, III, IV) showing different motion characteristics",
+      "solution": "Slope of x - t gives v which is constant in OA & AB both. But slope of AB is less than OA so correct v - t graph will be fig. III."
+    },
+    {
+      "number": 25,
+      "body": "The take-off speed of Airbus A340 is 288 km/hr. From the taxi track it comes to the main runway and waits for a while for the final clearance from Air Traffic Control. The aircraft then achieves this speed within 60 seconds. Neglecting the effect of the wind direction and friction, what should be the minimum length of main runway decided by civil engineers for this aircraft for a take-off?",
+      "choices": {
+        "a": "1800 m",
+        "b": "2000 m",
+        "c": "2200 m",
+        "d": "2400 m"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "u = 0\nv = 288 km/hr = 288 × 5/18 = 80 m/s\nt = 50 sec\nS = (u + v)/2 × t = (0 + 80)/2 × 50\n= 2000 m"
+    },
+    {
+      "number": 26,
+      "body": "An empty office chair is at rest on a floor. Consider the following forces:\nI. A downward force of gravity.\nII. An upward force exerted by the floor.\nIII. A net downward force exerted by the air.\nThen, which of the force(s) is (are) acting on the office chair?",
+      "choices": {
+        "a": "I only",
+        "b": "I and II",
+        "c": "I, II and III",
+        "d": "None of the forces. (Since the chair is at rest there are no forces acting upon it)"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "forces",
+      "subtopic_name": "Forces and Newton's Laws",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Due to air net force will be negligible and in upward direction."
+    },
+    {
+      "number": 27,
+      "body": "The ability of eye of focus both near and distant objects, by adjusting its focal lengths, is called",
+      "choices": {
+        "a": "Myopia",
+        "b": "Hypermetropia",
+        "c": "accommodation of eye",
+        "d": "Tyndall effect"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "human_eye",
+      "subtopic_name": "Human Eye and Vision",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Power of accommodation of eye"
+    },
+    {
+      "number": 28,
+      "body": "In bringing an α-particle towards another α-particle, the electrostatic potential energy of the system",
+      "choices": {
+        "a": "increases",
+        "b": "decreases",
+        "c": "remains unchanged",
+        "d": "becomes zero"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "potential_energy",
+      "subtopic_name": "Electric Potential Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "We need to do work against electrostatic repulsion force."
+    },
+    {
+      "number": 29,
+      "body": "A magnet is placed between two coils AB and CD as shown. It is being moved in the direction as shown by the arrow, then which of the following statements is correct:",
+      "choices": {
+        "a": "looking from end A, current in coil AB will be anticlockwise and looking from end D, the direction of current in coil CD will be anticlockwise",
+        "b": "looking from end A, current in coil AB will be anticlockwise and looking from end D, the direction of current in coil CD will be clockwise",
+        "c": "looking from end A, current in coil AB will be clockwise and looking from end D, the direction of current in coil CD will be anticlockwise",
+        "d": "looking from end A, current in coil AB will be clockwise and looking from end D, the direction of current in coil CD will be clockwise"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "electromagnetic_induction",
+      "subtopic_name": "Electromagnetic Induction",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the figure showing the magnet and coils arrangement",
+      "solution": "By lenz's law"
+    },
+    {
+      "number": 30,
+      "body": "A boy throws a steel ball straight up. Consider the motion of the ball only after it has left the boy's hand but before it touches the ground and assume that forces exerted by the air are negligible. For these conditions, the force(s) acting on the ball is (are):",
+      "choices": {
+        "a": "a downward force of gravity along with a steadily decreasing upward force.",
+        "b": "a steadily decreasing upward force from the moment it leaves the boy's hand until it reaches its highest point; on the way down there is a steadily increasing downward force of gravity as the object gets closer to the earth.",
+        "c": "constant downward force of gravity along with an upward force that steadily decreases until the ball reaches its highest point; on the way down there is only a constant downward force of gravity.",
+        "d": "constant downward force of gravity only."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile_motion",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "After leaving from hand, there will be only gravitation force on the body, which always acts in downward direction."
+    },
+    {
+      "number": 31,
+      "body": "A large truck collides head-on with a small compact car. During the collision:",
+      "choices": {
+        "a": "the truck exerts a greater force on the car than the car than the car exerts on the truck.",
+        "b": "the car exerts a greater force on the truck than the truck exerts on the car.",
+        "c": "the truck exerts a force on the car but the car does not exerts a force on the truck.",
+        "d": "the truck exerts the same force on the car as the car exerts on the truck."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "newton_laws",
+      "subtopic_name": "Newton's Laws",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "From Newton's third law."
+    },
+    {
+      "number": 32,
+      "body": "A common hydrometer has a uniform scale and its stem is graduated downwards from 0 to 20. While floating in water, it reads 0 and while floating in a liquid of density 1.40 g/cm³, it reads 20. Then the density of the liquid in which it will read 10 is:",
+      "choices": {
+        "a": "0.7 g/cm³",
+        "b": "0.85 g/cm³",
+        "c": "1.17 g/cm³",
+        "d": "2.8 g/cm³"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid_mechanics",
+      "subtopic_name": "Fluid Mechanics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "When hydrometer is floating in water, Let its x length is inside water.\nIn all three cases given in question buoyant force will balance weight of hydrometer.\nFB = ρw g (x + 20) A\n= 1.4 g(x) A = ρi g (x + 10) A ......... (i)\nx + 20 = 1.4 x\nx = 50\nNow on using value of x in equation (i)\n50 + 20 = ρi (50 + 10)\nρi = 70/60 = 1.166g/cm³ ≡ 1.17 g/cm³"
+    },
+    {
+      "number": 33,
+      "body": "For the same angle of incidence, the angle of refraction in three different media A, B, C are 15°, 25° and 35° respectively. Then which statement is correct? (μA is refractive index of A)",
+      "choices": {
+        "a": "μA is maximum and velocity of light is maximum in medium A.",
+        "b": "μA is minimum and velocity of light is maximum in medium A.",
+        "c": "μA is maximum and velocity of light is minimum in medium A.",
+        "d": "μA is minimum and velocity of light is minimum in medium A."
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "μA < 1/sin r < μB > μC\nμA < 1/√ωA < νB < νC"
+    },
+    {
+      "number": 34,
+      "body": "A liquid, whose density doesn't change during the motion, is flowing steadily through a pipe of varying cross sectional area as shown in the adjacent figure. If a₁, a₂ are the cross sectional areas, v₁, v₂ are the values of velocities (or speeds) at L and H respectively, then the correct relation between a₁, a₂ and v₁, v₂ is:",
+      "choices": {
+        "a": "a₁v₂ = a₂v₁",
+        "b": "a₁v₁ = a₂v₂",
+        "c": "a₁²v₁ = a₂²v₁",
+        "d": "a₁v₁² = a₂v₂²"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid_mechanics",
+      "subtopic_name": "Fluid Mechanics",
+      "difficulty": "easy",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "From continuity equation :\na₁v₁ = a₂v₂"
+    },
+    {
+      "number": 35,
+      "body": "As shown in adjacent figure, two plane mirrors M1 and M2 are inclined to each other at an angle 70° (angle M1OM2). Incident ray AB makes an angle of incidence θ on M1. This ray after reflection at B on M1 and further at C on M2 travels along the direction CD, such that path CD is parallel to M1. Then angle θ is:",
+      "choices": {
+        "a": "45°",
+        "b": "50°",
+        "c": "55°",
+        "d": "60°"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "reflection",
+      "subtopic_name": "Reflection",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot be solved without the figure showing the geometry of mirrors and ray paths.",
+      "solution": "90° - θ = 180° - (2 × 70°)\n90° - θ = 180° - 140° = 40°\nθ = 90° - 40° = 50°"
+    },
+    {
+      "number": 36,
+      "body": "A copper disc of radius a₀ has a hole of radius b₀ at the centre, at 0°C. The disc is now heated and maintained at 200°C. The new radii of disc and whole are a₁ and b₁ respectively. For the heated disc it can be concluded that:",
+      "choices": {
+        "a": "a₀ < a₁, b₀ < b₁ and density of disc decreases",
+        "b": "a₀ < a₁, b₀ > b₁ and density of disc decreases",
+        "c": "a₀ < a₁, b₀ < b₁ and density of disc increases",
+        "d": "a₀ < a₁, b₀ > b₁ and density of disc increases"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "expansion",
+      "subtopic_name": "Thermal Expansion",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "On heating expansion occurs so every linear dimension increases and since mass is same, density will decreased."
+    },
+    {
+      "number": 37,
+      "body": "A concave mirror of radius of curvature 1 m is placed at the bottom of a water tank. The mirror forms an image of the sun when it is directly overhead. If the depth of water in the tank is 80 cm, then the distance of the image formed is ______. (refractive index of water is 1.33)",
+      "choices": {
+        "a": "on surface of water",
+        "b": "110 cm above mirror",
+        "c": "50 cm above mirror",
+        "d": "image cannot be formed"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Spherical Mirrors",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "When object is at infinity, rays come parallel to the principal axis, converges at focus of the concave mirror after reflection and image will form there. Rays entering the water surface will not suffer any deviation as they strike the surface normally.\n100 cm\n60 cm\nSo, image will form at focus which is\nf = R/2 = 100/2 = 50 cm above the concave mirror inside water"
+    },
+    {
+      "number": 38,
+      "body": "The equivalent resistance of two resistances in series is 'S'. These resistances are now joined in parallel. The parallel equivalent resistance is 'P'. If S = n P. Then the minimum possible value of n is:",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance Combinations",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "S = nP\n(R₁ + R₂)² = nR₁R₂\nMinimum occurs for\nR₁ = R₂\n(R₁ + R₁)² = nR₁²\n4R₁² = nR₁²\nn = 4"
+    },
+    {
+      "number": 39,
+      "body": "An electron and α-particle enter a region of uniform magnetic field (of induction B) with equal velocities. The direction of B is perpendicular and into the plane of the paper. Then qualitatively identify the direction of paths of electron and the α-particle.",
+      "choices": {
+        "a": "I for α-particle, II for electron",
+        "b": "I for electron, II for α-particle",
+        "c": "I for α-particle, III for electron",
+        "d": "I for electron, III for α-particle"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "charged_particles",
+      "subtopic_name": "Motion of Charged Particles in Magnetic Field",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "From Fleming's left hand rule, positive charge will move in left direction and negative charge in right direction."
+    },
+    {
+      "number": 40,
+      "body": "Two wave pulses I and II have the same wavelength. They are travelling in the directions as shown by the single headed arrows. The resultant sketch of the two wave pulses at some instant of time when P coincides with R is______.",
+      "choices": {
+        "a": "[wave pulse diagram]",
+        "b": "[wave pulse diagram]",
+        "c": "[wave pulse diagram]",
+        "d": "[wave pulse diagram]"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "superposition",
+      "subtopic_name": "Wave Superposition",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "Resultant amplitude is given by A = sqrt(a1^2 + a2^2 + 2a1a2 cos θ) θ = 180° A = sqrt(a^2 + (2a)^2 + 2 × a × 2a cos180°) = sqrt(a^2 + 4a^2 - 4a^2) = a"
+    },
+    {
+      "number": 41,
+      "body": "Ravi mixed two substances A and B in a vessel and left it as it is. After few hours he detected an alcoholic smell emanating from the vessel. Identify what A and B are:",
+      "choices": {
+        "a": "Salt solution and Lactobacillus",
+        "b": "Fruit juice and Saccharomyces",
+        "c": "Fruit juice and Lactobacillus",
+        "d": "Salt solution and Saccharomyces"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Alcohol is produced due to fermentation of fruit juices by Saccharomyces."
+    },
+    {
+      "number": 42,
+      "body": "Which amongst the following shows the characters of both plants and animals: i. Anabaena ii. Paramecium iii. Euglena iv. Amoeba",
+      "choices": {
+        "a": "i and iv",
+        "b": "iii",
+        "c": "ii",
+        "d": "i and iii"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Euglena shows characters of both plants and animals. Plant characters - Photosynthesis Animal characters - Motility, presence of flagellum"
+    },
+    {
+      "number": 43,
+      "body": "Which amongst the following are not plastids:",
+      "choices": {
+        "a": "Leucoplasts",
+        "b": "Chromoplasts",
+        "c": "Amyloplasts",
+        "d": "Tonoplasts"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Tonoplast is not a plastid, it is the membrane of vacuole."
+    },
+    {
+      "number": 44,
+      "body": "During a study the number of cells was recorded to increase as follows: 64 → 128 → 266 → 512 → 1024. This represents:",
+      "choices": {
+        "a": "Budding",
+        "b": "Meiosis",
+        "c": "Binary fission",
+        "d": "Fragmentation"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Binary fission as in this one cell gives rise to two daughter cells."
+    },
+    {
+      "number": 45,
+      "body": "A plant kept in a box with only a hole for entry of light shows bending, the process called phototropism. It occurs due to:",
+      "choices": {
+        "a": "Synthesis and diffusion of cytokinin in the leaves",
+        "b": "Breakdown of auxin in the shoot",
+        "c": "Synthesis and diffusion of abscisic acid",
+        "d": "Synthesis and diffusion of auxin in the shoot"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Synthesis and diffusion of auxins promotes phototropism"
+    },
+    {
+      "number": 46,
+      "body": "What would be the minimum required length of codon to encode 400 amino acids, if there existed three purines and pyrimidines each?",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Minimum required length of codon to encode 400 amino acids is 4."
+    },
+    {
+      "number": 47,
+      "body": "A 'life-style' disorder among these is:",
+      "choices": {
+        "a": "Hypertension",
+        "b": "Presbyopia",
+        "c": "Herpes",
+        "d": "Scurvy"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Hypertension or high blood pressure is a life-style disorder as certain habits like smoking, obesity and lack of physical activity play a major role in development of Hypertension"
+    },
+    {
+      "number": 48,
+      "body": "Metamerism is a characteristic of:",
+      "choices": {
+        "a": "Hirudinaria",
+        "b": "Taenia",
+        "c": "Asterias",
+        "d": "Pila"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Hirudinaria belongs to phyllum-Annelida and its body is segmented showing Metamerism."
+    },
+    {
+      "number": 49,
+      "body": "Health is all about 'eating-fasting' balance. When you fast for extended periods, your cells clean out and recycle the intracellular garbage. The organelles responsible for this are:",
+      "choices": {
+        "a": "Microtubules",
+        "b": "Microfilaments",
+        "c": "Golgi Apparatus",
+        "d": "Lysosomes"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Lysosomes are cleaners of the cell."
+    },
+    {
+      "number": 50,
+      "body": "A plant may not exchange CO₂ or O₂ with air at:",
+      "choices": {
+        "a": "twilight",
+        "b": "mid-night",
+        "c": "late hours in the morning",
+        "d": "noon"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "During twilight, at the time of dawn and dusk, light is dim so photosynthesis is less. Rate of photosynthesis < Rate of respiration. so, plants may not exchange gases at twilight."
+    },
+    {
+      "number": 51,
+      "body": "If a small part of the esophagus of a person is excised, the consequence would be the person will have to eat:",
+      "choices": {
+        "a": "larger portion of food with large time interval",
+        "b": "small portions of food at small time interval",
+        "c": "small portions of food at large time interval",
+        "d": "majorly subsist on liquid diet"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "So, small portions of food will move is small interval of time due to the length of esophagus being less now. due to this person might feel full earlier. This is the reason why he has to eat small portions of food at small time interval."
+    },
+    {
+      "number": 52,
+      "body": "When heated, the hydrogen bonds between the complementary strands of DNA break and the 2 strands separate in a process called melting. Which of the following pieces of DNA will require maximum temperature for melting?",
+      "choices": {
+        "a": "3' AAGGTATACAT 5'",
+        "b": "3' GAGCUAUCCGAG 5', 5' TTCCATATGTTA 3', 5' CUCGAUAGGCUC 3'",
+        "c": "3' ACGTCCGCTGCG 5'",
+        "d": "3' ATTAGCTAGCAA 5', 5' TGCAGGCGACGC 3', 5' TAATCGATCGTT 3'"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "There exist a double bond between A = T, A = U and a tripple bond between C ≡ G. So, the maximum temperature required for melting will be in the one which has maximum number of tripple bonds."
+    },
+    {
+      "number": 53,
+      "body": "In a self-pollinated plant, what would be minimum number of meiotic divisions required for setting 400 seeds?",
+      "choices": {
+        "a": "100",
+        "b": "200",
+        "c": "400",
+        "d": "500"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "For the formation of 400 seeds 400 pollen grains and 400 egg cells are required. 400 pollen grains will be formed from 100 meiotic divisions. 400 egg cells will be formed from 400 meiotic divisions as each embryo sac contains 1 egg cell. So, formation of 400 seeds would require 500 meiotic divisions."
+    },
+    {
+      "number": 54,
+      "body": "If a flower is producing a large number of minute and smooth pollen, the agency for cross pollination is most likely to be:",
+      "choices": {
+        "a": "Air",
+        "b": "Water",
+        "c": "Insects",
+        "d": "Bats"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Large number of minute and smooth pollens are pollinated by Air."
+    },
+    {
+      "number": 55,
+      "body": "To meet the increasing demand for food, there have been several 'revolutions'. Which of the following revolutions is likely to have contributed most to global warming?",
+      "choices": {
+        "a": "Green",
+        "b": "White",
+        "c": "Blue",
+        "d": "Silver"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Green revolution, as Wheat, Rice, Soyabean has led to increase in C in atmosphere (CO2) which is a green house gas."
+    },
+    {
+      "number": 56,
+      "body": "A mammal adapted to desert conditions is likely to have large:",
+      "choices": {
+        "a": "Nostrils",
+        "b": "Pinnae",
+        "c": "Muzzle",
+        "d": "Nails"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Large muzzle increases the surface area of animal body. So, it lets heat escape from the body of desert animals. Though, pinnae are also larger in desert animals but it is not so in case of all desert mammals like camels."
+    },
+    {
+      "number": 57,
+      "body": "Which of the following feature indicates omnivorous feeding of human species?\n(A) Presence of canines as well as premolars and molars\n(B) Presence of appendix\n(C) Presence of 11th and 12th pair of ribs\n(D) Presence of opposable thumb",
+      "choices": {
+        "a": "Presence of canines as well as premolars and molars",
+        "b": "Presence of appendix",
+        "c": "Presence of 11th and 12th pair of ribs",
+        "d": "Presence of opposable thumb"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Canines are present in carnivores for tearing flesh and premolars and molars are present in Herbivores for chewing and grinding. Presence of both of these in humans shows its omnivorous nature."
+    },
+    {
+      "number": 58,
+      "body": "In a dihybrid cross, what is the proportion of organisms with dihybrid genotype?",
+      "choices": {
+        "a": "2/16",
+        "b": "6/16",
+        "c": "4/16",
+        "d": "9/16"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Out of 16 chances, there are 4 chances of plants with dihybrid genotype."
+    },
+    {
+      "number": 59,
+      "body": "If the cell is using less oxygen molecules than the molecules of carbon dioxide evolved in respiration, the substrate for respiration has to be:",
+      "choices": {
+        "a": "simple sugars",
+        "b": "organic acids",
+        "c": "fatty acids",
+        "d": "cholesterol"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Organic acids as its respiratory quotient is more than one. RQ = CO2 eliminated / O2 consumed"
+    },
+    {
+      "number": 60,
+      "body": "Panting is a means of thermoregulation in dogs. This is due to:",
+      "choices": {
+        "a": "high specific heat of water",
+        "b": "high vapour pressure of water",
+        "c": "high latent heat of vapourization",
+        "d": "high specific gravity of water"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Due to high latent heat of vapourization, panting acts as a method of Thermoregulation."
+    },
+    {
+      "number": 61,
+      "body": "How many four digit numbers are there such that when they are divided by 101, they have 99 as remainder?",
+      "choices": {
+        "a": "90",
+        "b": "98",
+        "c": "100",
+        "d": "101"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Minimum four digit number = 1000 & maximum four digit number = 9999. Now, 101/1000 = 0, -909, 91. First number (a1) = 1000 - 91 + 99 = 1008 & 101/9999 = 99, -9091, 909 × 09 ×. Last number (an) = 9999 - 2 = 9997. Here d = 101. an = a1 + (n - 1) d, 9997 = 1008 + (n - 1) (101), 8989 = (n - 1) 101, n - 1 = 89, n = 90"
+    },
+    {
+      "number": 62,
+      "body": "If x = (sqrt(21) - sqrt(20)) and y = (sqrt(18) - sqrt(17)), then -",
+      "choices": {
+        "a": "x = y",
+        "b": "x < y",
+        "c": "x > y",
+        "d": "x + y = 0"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x = sqrt(21) - sqrt(20), 1/x = 1/(sqrt(21) - sqrt(20)) = (sqrt(21) + sqrt(20))/(21 - 20) = sqrt(21) + sqrt(20), 1/x = sqrt(21) + sqrt(20), y = sqrt(18) - sqrt(17), 1/y = 1/(sqrt(18) - sqrt(17)) = (sqrt(18) + sqrt(17))/(18 - 17) = sqrt(18) + sqrt(17). Here, sqrt(21) + sqrt(20) > sqrt(18) + sqrt(17) ⇒ 1/x > 1/y ⇒ x < y"
+    },
+    {
+      "number": 63,
+      "body": "What is the sum of all odd numbers between 500 and 600?",
+      "choices": {
+        "a": "26000",
+        "b": "27000",
+        "c": "27500",
+        "d": "29500"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Here a1 = 501, an = 599, d = 2, n = 50. Sn = n/2 [2a + (n - 1)d] or = n/2 [a1 + an] = 50/2 [501 + 599] = 25 × 1100 = 27,500"
+    },
+    {
+      "number": 64,
+      "body": "1/2 + 1/6 + 1/12 + 1/20 + 1/30 + .... + 1/380 = _______",
+      "choices": {
+        "a": "20.25",
+        "b": "20.05",
+        "c": "19.95",
+        "d": "19.85"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "1/2 + 1/6 + 1/12 + 1/20 + ... + 1/380 = 1 + 1/2 + 1 + 1/6 + 1 + 1/12 + 1 + 1/20 + ... + 1 + 1/380 = 1 + 1/(1×2) + 1 + 1/(2×3) + 1 + 1/(3×4) + 1 + 1/(4×5) + ... + 1 + 1/(19×20) = 1 × 19 + [1/(1×2) + 1/(2×3) + 1/(3×4) + 1/(4×5) + ... + 1/(19×20)] = 19 + [1 - 1/2 + 1/2 - 1/3 + 1/3 - 1/4 + 1/4 - 1/5 + ... + 1/19 - 1/20] = 19 + [1 - 1/20] = 19 + 19/20 = 19 + 0.95 = 19.95"
+    },
+    {
+      "number": 65,
+      "body": "A train is running at a speed of 54 km/hr. It is not stopping at a certain station. It crosses the person showing green flag in 20 seconds and crosses the platform in 36 seconds. What is the length of the train?",
+      "choices": {
+        "a": "240 m",
+        "b": "300 m",
+        "c": "320 m",
+        "d": "360 m"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Kinematics",
+      "subtopic_code": "relative_motion",
+      "subtopic_name": "Relative Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Speed = 54 km/hr = 54 × 5/18 m/sec = 15 m/sec\n\nNow,\nCase-I : When train passes through platform\nTotal Distance (Platform + Train) = 15 × 36 m = 540 m\n\nCase-II : When train passes through person\nDistance (Man + Train) = 15 × 20 = 300 m\n& length of platform = 540 - 300 = 240\nNow, length of train = 300 m"
+    },
+    {
+      "number": 66,
+      "body": "In triangle ABC, segment AD, segment BE and segment CF are altitudes. If AH X AC = 172.8 cm² and BE X CF = 108.3 cm² then AD X BC = ______.",
+      "choices": {
+        "a": "136.8 cm²",
+        "b": "132.4 cm²",
+        "c": "129.2 cm²",
+        "d": "128.6 cm²"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Area of △ABC = 1/2 × 1/2 × AB×AC×BE×CF\n\nArea of △ABC = 1/2 √172.8×108.3\nArea of △ABC = 1/2 √18714.24\nArea of △ABC = 1/2 × 136.8 cm²\n\nFrom (3) & (4), we get\n1/2 × BC × AD = 1/2 × 136.8\nBC × AD = 136.8 cm²"
+    },
+    {
+      "number": 67,
+      "body": "Diagonals of a quadrilateral bisect each other. Therefore the quadrilateral must be a ______.",
+      "choices": {
+        "a": "parallelogram",
+        "b": "rhombus",
+        "c": "rectangle",
+        "d": "square"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Diagonals of a parallelogram bisects each other. Also, rhombus, rectangle & square are parallelogram."
+    },
+    {
+      "number": 68,
+      "body": "If (a + b + c + d) = 4, then 1/((1-a)(1-b)(1-c)) + 1/((1-b)(1-c)(1-d)) + 1/((1-c)(1-d)(1-a)) + 1/((1-d)(1-a)(1-b)) = ______.",
+      "choices": {
+        "a": "0",
+        "b": "0.25",
+        "c": "1",
+        "d": "4"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a + b + c + d = 4\nNow,\n1/((1-a)(1-b)(1-c)) + 1/((1-b)(1-c)(1-d)) + 1/((1-c)(1-d)(1-a)) + 1/((1-d)(1-a)(1-b))\n= ((1-d)+(1-a)+(1-b)+(1-c))/((1-a)(1-b)(1-c)(1-d))\n= (4-(a+b+c+d))/((1-a)(1-b)(1-c)(1-d))\n= (4-4)/((1-a)(1-b)(1-c)(1-d)) = 0"
+    },
+    {
+      "number": 69,
+      "body": "The sum of two numbers is 13 and the sum of their cubes is 1066. Find the product of those two numbers:",
+      "choices": {
+        "a": "26",
+        "b": "27",
+        "c": "28",
+        "d": "29"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the number be a & b\nHere, a + b = 13 ...(1)\n(a)² + (b)² = 1066 ...(2)\nUse (1) in (2),\na² + (13 - a)² = 1066"
+    },
+    {
+      "number": 70,
+      "body": "By which smallest number we should divide 198396198 to get a perfect square?",
+      "choices": {
+        "a": "14",
+        "b": "18",
+        "c": "22",
+        "d": "28"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "198396198 = 2 × 3×3 × 11×11 × 11 × 7×7 × 13×13. The number should be divided by 2 × 11 i.e. 22 to make it a perfect square."
+    },
+    {
+      "number": 71,
+      "body": "What will be the remainder if the number (7)^907 is divided by 25?",
+      "choices": {
+        "a": "1",
+        "b": "7",
+        "c": "18",
+        "d": "24"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Remainder = (7^2011/25) = 7.7^2016/25 = 7.(49)^1008/25 = 7.(50-1)^1008/25. Remainder = 7"
+    },
+    {
+      "number": 72,
+      "body": "If □ ABCD is a cyclic quadrilateral, AB = 204, BC = 104, CD = 195, DA = 85 and BD = 221, then AC = ___.",
+      "choices": {
+        "a": "210",
+        "b": "220",
+        "c": "225",
+        "d": "240"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "AB = 204, BC = 104, CD = 195, DA = 85, BD = 221. By ptolemy's theorem AC × BD = AB × CD + BC × AD. AC × 221 = (204 × 195) + (104 × 85). AC = 39780 + 8840/221. AC = 220"
+    },
+    {
+      "number": 73,
+      "body": "If x² + xy + xz = 135, y² + yz + xy = 351 and z² + xz + yz = 243, then x² + y² + z² = ___.",
+      "choices": {
+        "a": "225",
+        "b": "250",
+        "c": "275",
+        "d": "300"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x² + xy + xz = 135....(1), y² + yz + xy = 351....(2), z² + xz + yz = 243....(3). On adding x² + y² + z² + 2 (xy + yz + xz) = 729. (x + y + z)² = 729. x + y + z = 27. From (1) x (x + y + z) = 135, x = 135/(x + y + z) = 135/27 = 5, ⇒ x = 5. From (2) y (y + z + x) = 351, y = 351/(y + z + x) = 351/27 = 13, ⇒ y = 13. From (3) z (z + x + y) = 243, z = 243/(z + x + y) = 243/27 = 9, ⇒ z = 9. ∴ x² + y² + z² = 25 + 169 + 81 = 275"
+    },
+    {
+      "number": 74,
+      "body": "What is the radius of the circumcircle of a triangle whose sides are 30 cm, 36 cm and 30 cm.",
+      "choices": {
+        "a": "15 cm",
+        "b": "16 cm",
+        "c": "17 cm",
+        "d": "18 cm"
+      },
+      "correct": null,
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a = 30, b = 30, c = 36. Radius of circumcircle = abc/4Δ"
+    },
+    {
+      "number": 75,
+      "body": "On seventy first 'Independence day' there was Tuesday. After how many years there will be Tuesday on 'Independence day'?",
+      "choices": {
+        "a": "4 yrs.",
+        "b": "5 yrs.",
+        "c": "6 yrs.",
+        "d": "7 yrs."
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "71st Independence day → 2017\nday → Tuesday\nor 15-Aug-2017 → Tuesday\n∴ for same calendar we have to work on\nodd number of days.\n\nYear → 2017 2018 2019 2020 2021 2022 Total\nOdd day 1 1 1 2 1 1 7\n\n∴ In 2023, the independence day will\noccur on Tuesday i.e. after 6 year."
+    },
+    {
+      "number": 76,
+      "body": "If p + q + r = 2, p² + q² + r² = 80 and pqr = 10, the value of (1 - p) (1 - q) (1 - r) will be -",
+      "choices": {
+        "a": "-18",
+        "b": "-24",
+        "c": "-27",
+        "d": "-35"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "p + q + r = 2 ...(1)\np² + q² + r² = 30 ...(2)\npqr = 10 ...(3)\n(1 - p)(1 - q)(1 - r) = ?\n⇒ (1 - p)(1 - q - p + pq)\n⇒ 1 - q - p + pq - r + rq + rp - pqr\n⇒ 1 - (p + q + r) + pq + qr + pr - pqr\n⇒ 1 - 2 + pq + qr + pr - 10 ...(4)\nfrom (1)\np + q + r = 2\nSquaring\np² + q² + r² + 2(pq + qr + pr) = 4\n30 + 2(pq + qr + pr) = 4\n⇒ pq + qr + pr = -13\nFrom (4)\n(1 - p)(1 - q)(1 - r)\n= 1 - 2 - 13 - 10 = -24"
+    },
+    {
+      "number": 77,
+      "body": "The mean of the following frequency distribution is ______.",
+      "choices": {
+        "a": "25",
+        "b": "28",
+        "c": "30",
+        "d": "32"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": null,
+      "topic_name": null,
+      "subtopic_code": null,
+      "subtopic_name": null,
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the frequency distribution table data",
+      "solution": "Now Δ = √s(s-a)(s-b)(s-c)\n& s = (30+30+36)/2 = 48\n∴ Δ = √48(18)(18)(12) = 432\n∴ radius of circumcircle\n= (30×30×36)/(4×432) = 18.75\n\n[Table showing CI, Mid point (x_i), f_i, x_if_i with values and summations]\n\nx̄ = Σx_if_i/Σf_i = 1200/40 = 30"
+    },
+    {
+      "number": 78,
+      "body": "If the roots of the equation (x^2 - bx)/(ax - c) = (m - 1)/(m + 1) are equal and of opposite signs, then the value of 'm' is",
+      "choices": {
+        "a": "(a - b)/(a + b)",
+        "b": "(a + b)/(a - b)",
+        "c": "ab/(a - b)",
+        "d": "(a + b)/ab"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": "algebra",
+      "topic_name": "Algebra",
+      "subtopic_code": "quadratic",
+      "subtopic_name": "Quadratic Equations",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x²-bx/ax-c = m-1/m+1\n⇒ (m+1)x² - b(m+1)\nx = a(m-1)x + c\n⇒ (m+1)x² + c-bm - b - am + a)x - c = 0\nAcc. to question\n⇒ sum of roots = 0\n⇒ -bm - b - am + a/(m+1) = 0\n⇒ -m(a+b) - b + a = 0\n⇒ m = (a-b)/(a+b)"
+    },
+    {
+      "number": 79,
+      "body": "If (x + 1/x) = 5, then (x^4 + 1/x^4) - 5(x^2 + 1/x^2) + (x + 1/x) =",
+      "choices": {
+        "a": "0",
+        "b": "5",
+        "c": "-5",
+        "d": "10"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "topic_code": "algebra",
+      "topic_name": "Algebra",
+      "subtopic_code": "algebraic_expressions",
+      "subtopic_name": "Algebraic Expressions",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x + 1/x = 5\n(x + 1/x)² = 125\nx² + 1/x² + 3.x(1/x)(x + 1/x) = 125\nx² + 1/x² = 125 - 15 = 110\nx² + 1/x² = 25 - 2 = 23\n∴ (x² + 1/x²) - 5(x² + 1/x²) + (x + 1/x)\n= 110 - 5×23 + 5\n= 110 - 115 + 5\n= 0"
+    },
+    {
+      "number": 80,
+      "body": "If x^2 - 3x + 2 is a factor of x^4 - px^3 + q, then p, q are:",
+      "choices": {
+        "a": "2, 3",
+        "b": "4, 5",
+        "c": "5, 4",
+        "d": "0, 0"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "topic_code": "algebra",
+      "topic_name": "Algebra",
+      "subtopic_code": "polynomials",
+      "subtopic_name": "Polynomials",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "P(x) = x^4 - 3x + 2\n= x^4 - 2x - x + 2\n= x(x^3 - 2) - 1(x - 2)\nP(x) = (x - 1)(x - 2)\n⇒ (x - 1) & (x - 2) are also the factors of\nf(x) = x^4 - px^3 + q\nAccording to Question\nf(1) = 0\n⇒ 1 - p + q = 0\n\n⇒ p - q = 1 .......(1)\nf(2) = 0\n⇒ 16 - 4p + q = 0\n⇒ 4p - q = 16 .......(2)\nEq^n(1) - (2) -3p = -15\n⇒ p = 5\n∴ 5 - q = 1\n⇒ q = 4\np, q are 5, 4"
+    }
+  ]
+}

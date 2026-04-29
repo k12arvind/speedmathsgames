@@ -1,0 +1,1354 @@
+{
+  "paper": "NSEJS 2011-12",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Let the electrostatic force between to electrons (Fe) be x times the gravitational force (Fg) between them. Then, x is of the order of",
+      "choices": {
+        "a": "10^40",
+        "b": "10^42",
+        "c": "10^38",
+        "d": "10^37"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electrostatics",
+      "subtopic_code": "coulomb_law",
+      "subtopic_name": "Coulomb's Law",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "F₂/F₁ = Ke⁴/GM₁m₂ = (9×10⁹×1.6×1.6×10⁻³⁸)/(6.67×10⁻¹¹×9.1×9.1×10⁻³¹) = 1/20 ×10⁴⁴ ×10⁴²"
+    },
+    {
+      "number": 2,
+      "body": "In the figure shown below, m ∠ABD = 2x, m ∠ADB = 3x, m ∠APB = 4x and m ∠CBQ = 7x. Therefore, m ∠BCD is",
+      "choices": {
+        "a": "90°",
+        "b": "85°",
+        "c": "72°",
+        "d": "96°"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the geometric figure showing the circle and points A, B, C, D, P, Q",
+      "solution": "7x = 3x + ∠CDB, ∠CDB = 4x, ∠BAC = ∠CDB = 4x, ∠APB = ∠PAD + ∠ADP, 4x = ∠PAD + 3x, ∠PAD = x. In ΔBAD 2x + 3x + 6x = 180, 10x = 180, x = 180/10 = 18, ∠BAD = 6x = 18×6 = 90, ∠BCD = 180 - 90 = 90"
+    },
+    {
+      "number": 3,
+      "body": "An arrow shot vertically upwards loses its initial speed by 60% in 3 seconds. The maximum height reached by the arrow is (g = 9.8 ms^-2)",
+      "choices": {
+        "a": "122.5 m",
+        "b": "44.1 m",
+        "c": "100 m",
+        "d": "45 m"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Kinematics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Vertical Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let initial speed be v. So, after 3 second speed will be = (2/5)v. From first equation of motion, v = u - gt, (2/5)v = v - g×3 ⇒ v = 5g ....(i). From third equation of motion, v² = u² - 2ga. Since at maximum height, v = 0. So, 0 = v² - 2gH, H = v²/2g. From equation (i) H = (5g)²/2g = 122.5m"
+    },
+    {
+      "number": 4,
+      "body": "Bromine can be liberated from KBr solution by the action of",
+      "choices": {
+        "a": "iodine solution",
+        "b": "chlorine water",
+        "c": "NaCl",
+        "d": "KI"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(B) KBr(aq) + Cl₂(aq) → KCl(aq) + Br₂(aq). More reactive non-metal displaces less reactive non-metal from its salt solution."
+    },
+    {
+      "number": 5,
+      "body": "A certain force applied to a body A gives it an acceleration of 10 ms^-2. The same force applied to body B gives it an acceleration of 15 ms^-2. If the two bodies are joined together and same force is applied to the combination, the acceleration will be",
+      "choices": {
+        "a": "6 ms^-2",
+        "b": "25 ms^-2",
+        "c": "12.5 ms^-2",
+        "d": "9 ms^-2"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Newton's Laws",
+      "subtopic_code": "force_mass",
+      "subtopic_name": "Force and Mass",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "If, m_A = F/10, m_B = F/15 ⇒ a = F/(m_A + m_B) = F/(F/10 + F/15) = F/(150/25) = 6m/s²"
+    },
+    {
+      "number": 6,
+      "body": "Oxygen exhibits (-1) oxidation state in",
+      "choices": {
+        "a": "OF2",
+        "b": "H2O",
+        "c": "H2O2",
+        "d": "HClO"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(C) Oxygen exhibits (−1) oxidation state in peroxides, (−2) in water and hypochlorous acid and (+2) in oxygen fluoride. +1 −1 −1 +1 −1 +2 −1 +1 −2 +1 +1 −2 +1 H − O − O − H, F − O − F, H − O − H, Cl − O − H"
+    },
+    {
+      "number": 7,
+      "body": "The process involved in healing of the wound is",
+      "choices": {
+        "a": "Meiosis I and II",
+        "b": "mitosis",
+        "c": "Meiosis I",
+        "d": "meiosis II"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "The family pedigree of Queen Victoria shows a number of haemophilic descendents as",
+      "choices": {
+        "a": "she herself was haemophilic",
+        "b": "haemophilia is autosomal recessive disorder.",
+        "c": "haemophilia is sex linked recessive disorder and Queen Victoria was a carrier.",
+        "d": "haemophilia is caused by contact and therefore it was seen in the royal family descendents."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "body": "A ball is dropped from a height of 7.2 m. It bounces back to 3.2 m after striking the floor. The ball remains in contact with the floor for 20 ms. Given that g = 10 ms^-2, the average acceleration of the ball during the contact is",
+      "choices": {
+        "a": "100 ms^-2",
+        "b": "200 ms^-2",
+        "c": "600 ms^-2",
+        "d": "1000 ms^-2"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Kinematics",
+      "subtopic_code": "collision",
+      "subtopic_name": "Collision and Impact",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "If mass is m of body As at the impact k₁ = 72 m = 1/2 mu² ⇒ u = − 12 m/s (down ward) k₁ = 32 m = 1/2 mv² ⇒ v = 8 m/s (up ward) ⇒ ΔP = m (v−u) ⇒ ΔP = m [8 − (− 12)] = 20 m Impulse, F• t = ΔP ⇒ m × aₐᵥₑ × 20 × 10⁻³ = 20m ⇒ aₐᵥₑ = 1000 m/s²"
+    },
+    {
+      "number": 10,
+      "body": "In ΔABC, D is a point on side AC such that ∠ABD = ½ ∠ABC. If AB = 36, BC = 48, CD = 28, then the length DA will be",
+      "choices": {
+        "a": "20",
+        "b": "21",
+        "c": "22",
+        "d": "24"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "In ΔABC, BD works as a angle bisector so by angle bisector theorem AB/BC = AD/DC 36/48 = x/28 x = 3/4 × 28 = 21"
+    },
+    {
+      "number": 11,
+      "body": "Human body cannot digest carbohydrate in the form of",
+      "choices": {
+        "a": "sugars",
+        "b": "starch",
+        "c": "cellulose",
+        "d": "glycogen"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "body": "Unsaturated fatty acids contain",
+      "choices": {
+        "a": "atleast one double bond",
+        "b": "two double bonds",
+        "c": "more than two double bonds",
+        "d": "no double bond"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(A) For unsaturation at least one double bond is required. Hence unsaturated fatty acids contain minimum one double bond."
+    },
+    {
+      "number": 13,
+      "body": "A loaded bus (mass m₁) and an unloaded bus (mass m₂) are both moving with the same kinetic energy. Brakes are applied to both the buses so as to exert equal retarding force. If S₁ and S₂ are the distances covered by the two buses respectively, before coming to rest, then S₁/S₂ is.",
+      "choices": {
+        "a": "1",
+        "b": "m₁/m₂",
+        "c": "√(m₁/m₂)",
+        "d": "√(m₁²/m₂²)"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Work, Energy and Power",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "m₂ > m₁ K₂ = K₁ If both comes to rest then, ⇒ ΔK₂ = ΔK₁ As F₂ = F₁ = F So, W₂ = W₁ ⇒ F × s₁ = F × s₂ ⇒ s₁ = s₂ ⇒ s₁/s₂ = 1"
+    },
+    {
+      "number": 14,
+      "body": "The centre of a clock is taken as origin. At 4.30 pm, the equation of line along minute hand is x = 0. Therefore at this instant the equation of line along the hour hand will be",
+      "choices": {
+        "a": "x - y = 0",
+        "b": "x + y = 0",
+        "c": "y = √3x",
+        "d": "y = x/√2"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "equation of line along hour hand x = −y x + y = 0"
+    },
+    {
+      "number": 15,
+      "body": "Heterosis is the",
+      "choices": {
+        "a": "superiority of male percent over the hybrid",
+        "b": "superiority of female parent over the hybrid",
+        "c": "superiority of hybrid over the parents",
+        "d": "superiority of both the parents over the hybrid"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "body": "An equilateral triangle has area A cm². A regular hexagon of maximum area is cut off from the triangle. If the area of the hexagon is 320 cm², the area A is",
+      "choices": {
+        "a": "640 cm²",
+        "b": "480 cm²",
+        "c": "600 cm²",
+        "d": "400 cm²"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Area of hexagon = 6 √3/4 (a/3)² = 320 6 × √3/4 × a²/9 = 320 √3/4 a² = 320 × 9/6 Area of triangle ABC = 480 cm²"
+    },
+    {
+      "number": 17,
+      "body": "A ray of light is incident on a hollow glass prism as shown. Then the ray will undergo",
+      "choices": {
+        "a": "deviation and dispersion both",
+        "b": "deviation but no dispersion",
+        "c": "dispersion but no deviation",
+        "d": "neither deviation nor dispersion"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "prism",
+      "subtopic_name": "Dispersion through prism",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the diagram showing the hollow glass prism configuration",
+      "solution": "As when the light will pass through the arms of hollow prism, the arm will behave like simple glass slab so there will be no dispersion as well no deviation"
+    },
+    {
+      "number": 18,
+      "body": "In a neon discharge tube 2.8 × 10¹⁸ Ne⁺ ions move to the right per second while 1.2 × 10¹⁸ electrons move to the left per second. Therefore, the current in the discharge tube is",
+      "choices": {
+        "a": "0.64 A towards right",
+        "b": "0.256 A towards right",
+        "c": "0.64 A towards left",
+        "d": "0.256 A towards left"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "current",
+      "subtopic_name": "Electric Current",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "As current is considered as the flow of positive charge so, net flow of charge towards right or net flow of positive charge = ne Δs I = ne/t, here t = 1 s So, I = (1.2 + 2.8) × 10¹⁸ × 1.6 × 10⁻¹⁹ A = 0.64 A (towards right)"
+    },
+    {
+      "number": 19,
+      "body": "Genome of a sexually reproducing organism is",
+      "choices": {
+        "a": "all the chromosomes present in the diploid cell",
+        "b": "total number of chromosomes present in the haploid cell",
+        "c": "total number of genes present in a cell",
+        "d": "totality of DNA present in the haploid cell"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "body": "Three equal resistances are connected as shown in the figure. Maximum power that can be dissipated by each resistance is 40 watt. Therefore, the maximum power that can be safely dissipated in the combination is",
+      "choices": {
+        "a": "120 watt",
+        "b": "80 watt",
+        "c": "60 watt",
+        "d": "40 watt"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electric Current and Circuits",
+      "subtopic_code": "power_resistors",
+      "subtopic_name": "Power in Resistor Combinations",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Circuit diagram is essential for solving this problem",
+      "solution": "As I²R = 40 W in the given combination, Req = 3R/2 ⇒ Pmax which can be safely derived = I² × (3R/2) = 3/2 × I²R = 3/2 × 40 = 60 W"
+    },
+    {
+      "number": 21,
+      "body": "The compound has both ionic and covalent bonds is",
+      "choices": {
+        "a": "boric acid (H3BO3)",
+        "b": "sodium chloride (NaCl)",
+        "c": "ethyl alcohol (C2H5OH)",
+        "d": "sodium phenolate (C6H5ONa)"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(D) Boric acid (H₃BO₃) and ethyl alcohol (C₂H₅OH) both contain covalent bonds. Sodium chloride (NaCl) contains ionic bond. Sodium phenolate (C₆H₅ONa) contains both covalent and ionic bonds."
+    },
+    {
+      "number": 22,
+      "body": "The colonial form of algae is",
+      "choices": {
+        "a": "Chlamydomonas",
+        "b": "Chara",
+        "c": "Porphyra",
+        "d": "Volvox"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "An object is place at a distance x1 from the focus of a concave mirror. Its real image is formed at a distance x2 from the focus. Hence, the focal length of the mirror is",
+      "choices": {
+        "a": "x1x2/(x1 + x2)",
+        "b": "sqrt(x1x2)",
+        "c": "(x1 + x2)/2",
+        "d": "|x1 - x2|"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "spherical_mirrors",
+      "subtopic_name": "Concave Mirror",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "In ΔA'B'F, ΔFP'N, both are similar so, A'B'/NP = A'F'/AB = x₁/f .....(i) also, in ΔABF and ΔMPF both are similar so, PM/AB = A'B'/AB = f/x₂ .....(ii) ⇒ x₁/f = f/x₂ ⇒ f = √(x₁x₂)"
+    },
+    {
+      "number": 24,
+      "body": "If (b + c - a)/a = (c + a - b)/b and (a + b - c)/c are in A.P. and a + b + c ≠ 0, then",
+      "choices": {
+        "a": "b = 2ac/(a - c)",
+        "b": "b = 2ac/(a + c)",
+        "c": "b = (a + c)/2",
+        "d": "b = sqrt(ac)"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(b+c-a)/a, (c+a-b)/b and (a+b-c)/c are in A.P. ∴ (b+c-a)/a + 2, (c+a-b)/b + 2 and (a+b-c)/c + 2 are also in AP ∴ (a+b+c)/a, (a+b+c)/b and (a+b+c)/c are in AP ∴ 1/a + 1/b and 1/c are in AP ∴ 1/a = 1/c, 1/b = 1/a = 1/c ⇒ 2/b = (a+c)/(ac) ⇒ b = 2ac/(a+c)"
+    },
+    {
+      "number": 25,
+      "body": "The metal that dissolves in liquid ammonia giving dark blue coloured solution is",
+      "choices": {
+        "a": "Sn",
+        "b": "Pb",
+        "c": "Na",
+        "d": "Ag"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(C) Sodium dissolves in liquid ammonia giving dark blue coloured solution."
+    },
+    {
+      "number": 26,
+      "body": "How much water should be filled ina container 21 cm in height, so that it appears half filled when viewed from the top of the container? [Refractive index of water = 4/3]",
+      "choices": {
+        "a": "8 cm",
+        "b": "10.5 cm",
+        "c": "12 cm",
+        "d": "14 cm"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Ray Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction and Apparent Depth",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Here apparent depth = 21 - x real depth = x ⇒ μ = R.D./A.D. = x/(21-1) ⇒ 4/3 = x/(21-x) ⇒ 4 × 21 - 4x = 3x 4 × 21' = 7x x = 21"
+    },
+    {
+      "number": 27,
+      "body": "An electron moving to the east in a horizontal plane is deflected towards south by a magnetic field. The direction of this magnetic field is",
+      "choices": {
+        "a": "towards north",
+        "b": "towards west",
+        "c": "downwards",
+        "d": "upwards"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetic Effects of Current",
+      "subtopic_code": "magnetic_force",
+      "subtopic_name": "Force on Moving Charge in Magnetic Field",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(C) By applying fleming's left hand rule, direction of magnetic field comes downward."
+    },
+    {
+      "number": 28,
+      "body": "The figure shows a ray of light incident on a convex lens, parallel to its principal axis. Obviously the emergent ray passes through the principal focus F. Which of the following statements is correct?",
+      "choices": {
+        "a": "The ray bends downwards only once inside the lens.",
+        "b": "The ray bends downwards at each surface.",
+        "c": "The ray bends downwards at the first surface and upwards at the second surface.",
+        "d": "The ray bends upwards at the first surface and downwards at the second surface."
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction through lenses",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "body": "Hydrogen fluoride is a liquid at room temperature due to",
+      "choices": {
+        "a": "dimerisation",
+        "b": "dissociation followed by aggregation",
+        "c": "association",
+        "d": "polymerisation"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(C) Hydrogen fluoride is a liquid at room temperature due to association of HF molecules (H₂F₂) through H-bonding."
+    },
+    {
+      "number": 30,
+      "body": "In usual course, the progeny varies from its parents due to",
+      "choices": {
+        "a": "mutation",
+        "b": "pleiotropic effect",
+        "c": "chromosomal recombination",
+        "d": "independent assortment."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "body": "If the eight digit number 2575d568 is divisible by 54 and 87, the value of the digit 'd' is",
+      "choices": {
+        "a": "4",
+        "b": "7",
+        "c": "0",
+        "d": "8"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "25754568 sum of digit = 2 + 5 + 7 + 5 + 4 + 5 + 6 + 8 = 38 + d as no. is divisible by 54 i.e. it is divisible by 9 also, so d = 7"
+    },
+    {
+      "number": 32,
+      "body": "Which of the following hydroxides is NOT an alkali?",
+      "choices": {
+        "a": "Ammonium hydroxide",
+        "b": "Calcium hydroxide",
+        "c": "Copper hydroxide",
+        "d": "Sodium hydroxide"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(C) Ammonium hydroxide, calcium hydroxide and sodium hydroxide are soluble in water. Copper hydroxide gives pale blue precipitate in water."
+    },
+    {
+      "number": 33,
+      "body": "When the polynomial (6x^4 + 8x^3 + 17x^2 + 21x + 7) is divided by (3x^2 + 4x + 1), the remainder is (ax - b) therefore,",
+      "choices": {
+        "a": "a = 1, b = 2",
+        "b": "a = 1, b = -2",
+        "c": "a = 2, b = 1",
+        "d": "a = -1, b = -2"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "body": "The most basic oxide among MnO3, MnO2, MnO2 and Mn2O7 is",
+      "choices": {
+        "a": "MnO",
+        "b": "MnO2",
+        "c": "Mn2O3",
+        "d": "Mn2O7"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(A) MnO is most basic oxide among MnO, MnO2, Mn2O3 and Mn2O7. The basic nature of the oxides decreases as the oxidation state increases."
+    },
+    {
+      "number": 35,
+      "body": "BCG vaccine is used to prevent",
+      "choices": {
+        "a": "tuberculosis",
+        "b": "blood cancer, cholera and gonorrhoea.",
+        "c": "leprosy.",
+        "d": "goitre."
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "3x² + 4x + 1\n2x² + 5\n√(6x⁴ + 8x³ + 17x² + 21x + 7)\n6x⁴ + 8x³ + 2x²\n15x² + 21x + 7\n15x² + 20x + 5\nx + 2\nx + 2 = ax - b\n∴ a = 1\nb = -2"
+    },
+    {
+      "number": 36,
+      "body": "The metal which cannot displace hydrogen from acid is",
+      "choices": {
+        "a": "silver",
+        "b": "sodium",
+        "c": "calcium",
+        "d": "magnesium"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(A) Silver metal cannot displace hydrogen from dilute acid as it is less reactive than hydrogen"
+    },
+    {
+      "number": 37,
+      "body": "In the figure shown below, DE||BC and AD = 3x - 2, AE = 6x - 4, BD = 7x - 5 and CE = 5x - 3. There- fore, the value of x is",
+      "choices": {
+        "a": "only 1",
+        "b": "only 7/10",
+        "c": "1 or 7/10",
+        "d": "10/7"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "In ΔABC\nDE || BC\nso by BPT\nAD/BD = AE/CE\n(3x - 2)/(7x - 5) = (5x - 4)/(5x - 3)\n(3x - 2)(5x - 3) = (5x - 4)(7x - 5)\n15x² - 9x - 10x + 6 = 35x² - 25x - 28x + 20\n20x² - 34x + 14 = 0\n10x² - 17x + 7 = 0\n10x² - 10x - 7x + 7 = 0\n10x(x - 1) - 7(x - 1) = 0\n(10x - 7)(x - 1) = 0\nx = 7/10 or 1\nby put x = 7/10 we get AE = 5x - 4 = -0.5\nwhich is not possible so x = 1"
+    },
+    {
+      "number": 38,
+      "body": "Down's syndrome is a result of",
+      "choices": {
+        "a": "XO genotype",
+        "b": "XXY genotype",
+        "c": "Trisomy (chromosome 12)",
+        "d": "Trisomy (chromosome 21)"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "Sudden decrease in the intermolecular forces of attraction occurs most efficiently in",
+      "choices": {
+        "a": "evaporation",
+        "b": "melting",
+        "c": "condensation",
+        "d": "sublimation"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "phase_transitions",
+      "subtopic_name": "Phase Transitions",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(D) In sublimation, solid changes directly into gaseous state. Hence sudden decrease in the intermolecular forces of attraction occurs most efficiently."
+    },
+    {
+      "number": 40,
+      "body": "Which of the following does NOT represent correct refraction?",
+      "choices": {
+        "a": "n = 1.3, n = 1.5",
+        "b": "n = 1.3, n = 1.5",
+        "c": "n = 1.8, n = 1.5",
+        "d": "n = 1.8, n = 1.5"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Light",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Refraction",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot determine correct refraction without seeing the ray diagrams",
+      "solution": "(B) Because refracted ray in denser medium should move towards the normal."
+    },
+    {
+      "number": 41,
+      "body": "Correct formula of dolomite is",
+      "choices": {
+        "a": "CaCO₃. MgCO₃",
+        "b": "CaCO₃. ZnCO₃",
+        "c": "MgCO₃. ZnCO₃",
+        "d": "FeCO₃. CaCO₃"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "The figure shows graphical representation of a sound wave. The quantities on X and Y axes respectively are",
+      "choices": {
+        "a": "time and displacement",
+        "b": "distance and pressure",
+        "c": "distance and change in density",
+        "d": "density and pressure"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "sound_waves",
+      "subtopic_name": "Sound Waves",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "body": "A certain amount of heat is required to raise the temperature of x gram of a substance through t₁ °C. The same amount of heat when taken away from y gram of water, it cools through t₂ °C. Therefore, the specific heat of the substance is",
+      "choices": {
+        "a": "yt₁/xt₁",
+        "b": "xt₂/yt₁",
+        "c": "yt₂/xt₁",
+        "d": "xt₁/yt₁"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "specific_heat",
+      "subtopic_name": "Specific Heat",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Given:\nQ = xs₁t₁, Q = y × (1 cal)/(g°C) t₂\nxs₁t₁ = yt₂\ns₁ = yt₂/xt₁"
+    },
+    {
+      "number": 44,
+      "body": "An aeroplane is flying horizontally at a height of 3150 m above a horizontal plane ground. At a particular instant it passes another aeroplane vertically below it. At this instant, the angles of elevation of the planes from a point on the ground are 30° and 60°. Hence, the distance between the planes at that instant is",
+      "choices": {
+        "a": "1050 m.",
+        "b": "2100 m.",
+        "c": "4200 m.",
+        "d": "5250 m."
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "In ΔADC\ntan 60° = AC/DC\n√3 = 3150/DC\nDC = 3150/√3\nΔDBC\ntan 30° = BC/DC\n1/√3 = BC/(3150/√3)\nBC = (3150/√3) × (1/√3) = 3150/3 = 1050 m\ndistance between the plane\n= AB = AC - BC\n= 3150 - 1050\n= 2100"
+    },
+    {
+      "number": 45,
+      "body": "Which of the following is NOT a usual floral pigment?",
+      "choices": {
+        "a": "Betacyanins",
+        "b": "Anthocyanins",
+        "c": "Carotenes",
+        "d": "Betaxanthins"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "The element that is NOT present in the compound BARYTA is",
+      "choices": {
+        "a": "B",
+        "b": "O",
+        "c": "H",
+        "d": "Ba"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(A) Ba(OH)2 is also known as Baryta. It does not contain element boron."
+    },
+    {
+      "number": 47,
+      "body": "With reference to human beings, the correct order of taxonomical classification is",
+      "choices": {
+        "a": "chordata, primata, mammalia, hominidae.",
+        "b": "chordata, mammalia, primata, hominidae.",
+        "c": "chordata, primata, hominidae, mammalia.",
+        "d": "chordata, mammalia, hominidae, primata."
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "body": "A boy throws a stone (mass 100g) vertically upwards. It reaches a height of 10 m and then falls to the ground. The work done by the boy is (g = 10 m/s^2)",
+      "choices": {
+        "a": "10 J.",
+        "b": "20 J.",
+        "c": "zero.",
+        "d": "-10 J."
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "work_energy",
+      "subtopic_name": "Work and Energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Work is done by the body against the force of gravitation when it moves upwards, W = mgh\nW = Fs cosθ = mgh cosθ°\n= 100g × 1.0 m/s² × 10\n= 0.1 × 100 = 10J"
+    },
+    {
+      "number": 49,
+      "body": "The compound used to remove carbon dioxide from air is",
+      "choices": {
+        "a": "sodium carbonate",
+        "b": "sodium hydroxide.",
+        "c": "sodium nitrate",
+        "d": "sodium chloride"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(B) Sodium hydroxide reacts with CO2 and forms sodium carbonate.\nNaOH(aq) + CO2(g) → Na2CO3(aq)"
+    },
+    {
+      "number": 50,
+      "body": "A conical vessel of radius 6 cm and height 8 cm is completely filled with water. A metal sphere is now lowered into the water. The size of the sphere is such that when it touches the inner surface, it just gets immersed. The fraction of water that overflows from the conical vessel is",
+      "choices": {
+        "a": "3/8",
+        "b": "5/8",
+        "c": "7/8",
+        "d": "5/16"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid_statics",
+      "subtopic_name": "Fluid Statics",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "h = 8\n\nΔABE ~ ΔADC\nAB/AD = BE/DC = AE/AC\nAB/8 = R/6 = AE/10\nAB/8 = R/6 = AE/10\nAE = 10R/6 = 5R/3\nAD = AE + DE\n8 = 5R/3 + R\n8 = 8R/3\nR = 3\nFunction of water flow\n= volume of sphere/volume of cone\n= (4/3)πR³/((1/3)πr²h) = (4(3)³)/(6² × 8) = 3/8"
+    },
+    {
+      "number": 51,
+      "body": "Which of the following does NOT involve friction ?",
+      "choices": {
+        "a": "Writing on a paper using a pencil",
+        "b": "Turning a car to the left on a horizontal road.",
+        "c": "A car at rest parked on a sloping ground",
+        "d": "Motion of a satellite around the earth."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "friction",
+      "subtopic_name": "Friction",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "body": "Sting of a honeybee represents modification of",
+      "choices": {
+        "a": "Ovipositor",
+        "b": "Abdominal bristles",
+        "c": "Abdominal appendage",
+        "d": "Motion of a satellite around the earth"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "body": "The property which is characteristic of an electrovalent compound is that",
+      "choices": {
+        "a": "it is easily vaporized",
+        "b": "it has a high melting point",
+        "c": "it is a weak electrolyte.",
+        "d": "it often exists as a liquid."
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(B) Due to strong electrostatic force of attraction in electrovalent compounds they have high melting points."
+    },
+    {
+      "number": 54,
+      "body": "Out of the following, the correct activity series of the metals is",
+      "choices": {
+        "a": "K > Na > Ca > Mg",
+        "b": "Na > K > Ca > Mg",
+        "c": "Mg > Ca > Na > K",
+        "d": "Mg > Na > Ca > K"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "body": "If the glands in the pharyngeal bulb of earthworm are inactivated, digestion of which of the following is affected ?",
+      "choices": {
+        "a": "proteins",
+        "b": "carbohydrates",
+        "c": "lipids",
+        "d": "nucleic acids"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "Which of the following group elements from the periodic table form electron deficient molecules ?",
+      "choices": {
+        "a": "Group IV",
+        "b": "Group V",
+        "c": "Group III",
+        "d": "Group I"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(C) Group III elements B, Al etc. shares three electrons with atoms of other elements. They are two electrons short to complete their octet. Hence they are electron deficient molecules."
+    },
+    {
+      "number": 57,
+      "body": "Which of the following elements forms polyatomic molecules ?",
+      "choices": {
+        "a": "Nitrogen",
+        "b": "Chlorine",
+        "c": "Argon",
+        "d": "Boron"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(D) Nitrogen and chlorine forms diatomic molecules. Argon is monoatomic. Boron forms polyatomic molecules."
+    },
+    {
+      "number": 58,
+      "body": "In the circuit arrangement shown, if the point A and B are joined by a wire the current in this wire will be",
+      "choices": {
+        "a": "1A.",
+        "b": "2A.",
+        "c": "4A.",
+        "d": "zero."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Electric Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the circuit diagram showing resistor values and voltage source",
+      "solution": "(D) In such set up, it becomes wheat stone bridge and A, B come at same potential so no current flows through it."
+    },
+    {
+      "number": 59,
+      "body": "Given sqrt(600) = 24.49, the value of (sqrt(2) + sqrt(3))/(sqrt(3) - sqrt(2)) is",
+      "choices": {
+        "a": "9.978",
+        "b": "9.989",
+        "c": "9.989",
+        "d": "9.898"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "√3 + √2/√3 - √2 × √3 + √2/√3 + √2\n= (3 + 2 + 2√6)/(3 - 2) = (5 + 2√6)/1 = 5 + 2 × 2.449\n= 5 + 4.898 = 9.898"
+    },
+    {
+      "number": 60,
+      "body": "Besides drip irrigation, an effective way of economizing farm irrigation without hampering metabolic processes of plants would be the use of",
+      "choices": {
+        "a": "humidifiers.",
+        "b": "sun screen nettings",
+        "c": "organic fertilizers / manures.",
+        "d": "antitranspirant sprays"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "body": "Mixture of ethyl alcohol and water can be easily separated by using",
+      "choices": {
+        "a": "separating funnel",
+        "b": "fractional distillation.",
+        "c": "filter paper",
+        "d": "None of the above"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(B) Ethyl alcohol and water have very less difference in their boiling points, so they can be easily separated by using fractional distillation."
+    },
+    {
+      "number": 62,
+      "body": "If x < 0 and log (x^2 - 5x - 65) = 0, then x is",
+      "choices": {
+        "a": "-13",
+        "b": "-11",
+        "c": "-6",
+        "d": "-5"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "log₃ (x² - 5x - 66) = 0\nx² - 5x - 66 = 7°\nx² - 5x - 66 = 0\nx² - 11x + 6x - 66 = 0\nx(x - 11) + 6 (x - 11) = 0\n(x + 6) (x - 11) = 0\nx = -6, 11\nas x < 0\n∴ x = -6"
+    },
+    {
+      "number": 63,
+      "body": "Pressure of a certain volume V of an ideal gas is increased by four times its initial pressure whereas the temperature is reduced to 50% of its initial temperature. The resulting volume of the gas is",
+      "choices": {
+        "a": "10V",
+        "b": "0.1V",
+        "c": "0.5V",
+        "d": "0.25V"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "ideal_gas",
+      "subtopic_name": "Ideal Gas Laws",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the initial pressure, temperature and volume of gas are P₁, T₁, V₁.\nThen P₂ = 5 P₁, T₂ = T₁/2 and V₂ = ?\n∴ P₁V₁/T₁ = 5P₁ × V₂/(T₁/2)\nV₂ = V₁/10 = 0.1 V₁"
+    },
+    {
+      "number": 64,
+      "body": "If 2^(2x+1) + 2^(1-2x) = 2, then the value of x is",
+      "choices": {
+        "a": "0.5",
+        "b": "-0.5",
+        "c": "1",
+        "d": "0"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "2^2x-1 + 2^1-2x = 2\n2^2x/2 + 2/2^2x = 2\nLet 2^2x = y\ny/2 + 2/y = 2\ny^2 + 4/2y = 2\ny^2 + 4 = 4y\ny^2 - 4y + 4 = 0\n(y - 2)^2 = 0\ny = 2\n2^2x = y\n2^2x = 2\n2x = 1\nx = 1/2"
+    },
+    {
+      "number": 65,
+      "body": "Like sickle cell anemia, the other genetic disorder related to blood pigment is",
+      "choices": {
+        "a": "leukemia",
+        "b": "phenylketonuria",
+        "c": "thalassemia",
+        "d": "xeroderma pigmentosis"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "body": "Consider points A, B, C, D on a horizontal cardboard equidistant from centre O as shown in the figure. A copper wire perpendicular to the cardboard passes through the centre O and carries an electric current flowing upwards. Deflection of magnetic needle will be maximum when it is kept at the point",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "current_magnetic_field",
+      "subtopic_name": "Magnetic Field due to Current",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "(C) At point C, the resultant magnetic field will be the greatest as Earth's magnetic field is in the same direction as of magnetic field due to the wire."
+    },
+    {
+      "number": 67,
+      "body": "If a^2 + b^2 + c^2 + d^2 = 25, out of the following statement the correct one is",
+      "choices": {
+        "a": "ab + bc + cd + da ≤ 25",
+        "b": "ab + bc + cd + da ≥ 25",
+        "c": "ab + bc + cd + da ≤ 25/2",
+        "d": "ab + bc + cd + da ≥ 25/2"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "As AM ≥ GM\n∴ (a + b)/2 ≥ √ab\na + b ≥ 2√ab\n(a + b)^2 ≥ 4ab\na^2 + b^2 ≥ 2ab\n.....(1)\nin the same way\nb^2 + c^2 ≥ 2bc\n.....(2)\nc^2 + d^2 ≥ 2cd\n.....(3)\nd^2 + a^2 ≥ 2ad\n.....(4)\nby (1) + (2) + (3) + (4)\n2(a^2 + b^2 + c^2 + d^2) ≥ 2(ab + bc + cd + da)\n2a + ab + bc + cd + da"
+    },
+    {
+      "number": 68,
+      "body": "The release of chemical messenger at nerve - muscle end plate is under the influence of the ions",
+      "choices": {
+        "a": "Cl^-",
+        "b": "Fe^2+ and S^2+",
+        "c": "Ca^2+",
+        "d": "Mg^2+ and Sr^2+"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "body": "Given that a (a + b) = 36 and b (a + b) = 64, where a and b are positive, (a - b) equals",
+      "choices": {
+        "a": "2.8",
+        "b": "3.2",
+        "c": "-2.8",
+        "d": "-2.5"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a(a + b) = 36, b(a + b) = 64\na/b = 36/64 = 9/16\na = 9x\nb = 16x\n∴ a (a + b) = 36\n9x (25x) = 36\nx^2 = 36/(9×25)\nx = 2/5\na - b = 9x - 16x = -7x = -7 × 2/5 = -2.8"
+    },
+    {
+      "number": 70,
+      "body": "A sphere and cube have equal surface areas. The ratio of their volumes is",
+      "choices": {
+        "a": "π/6",
+        "b": "6/π",
+        "c": "sqrt(6/π)",
+        "d": "sqrt(π/3)"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "4πr^2 = 6a^2\n(r/a)^2 = 6/4π = 3/2π\nr/a = √(3/2π)\nV_sphere/V_cube = (4πr^3/3)/a^3 = (4/3)(r/a)^3\n= (4π/3)(r/a)^2(r/a)\n= (4π/3) × (3/2π) × √(3/2π)\n= 2√(3/2π)\n= √(4×3/2π) = √(6/π)"
+    },
+    {
+      "number": 71,
+      "body": "An equilateral triangle has area A sqrt(3). Three circles are drawn with their centers at the vertices of the triangle. Diameter of each circle is equal to the length of each side of the triangle. The area of the triangle NOT included in any of the three circles is",
+      "choices": {
+        "a": "A(sqrt(3) - π/6)",
+        "b": "A(π - sqrt(3))",
+        "c": "A(3π - sqrt(3))",
+        "d": "A(sqrt(3) - π/2)"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "A√3 = √5/4 a^2\na^2 = 4A\na = 2√A\nr = 2√A/2 = √A"
+    },
+    {
+      "number": 72,
+      "body": "In a school, the average score of all 1400 students at an examination was found to be 69.5 the average score of boys in the school was 68 and that of girls was 72. Hence, the number of boys and the number of girls respectively are",
+      "choices": {
+        "a": "680 and 720",
+        "b": "720 and 680",
+        "c": "875 and 525",
+        "d": "800 and 600"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "B + G = 1400\n.....(1)\n69.5 = sum/(B+G)\nSum = 69.5 × 1400 = 97300\n68 = sum(B)/B\nSum (B) = 68 × B\n72 = sum(G)/G\nSum (G) = 72 × G\nSum (B) + Sum (G) = Sum\n68B + 72 G = 97300\n.....(2)\n(1) × 68\n68 B + 68 G = 68 × 1400\n.....(3)\n(3) – (2)\n68 B + 68 G = 95200\n68 B + 72 G = 97300\n–4G = – 2100\nG = 525\nB = 1400 – G\n1400 – 525\n= 875"
+    },
+    {
+      "number": 73,
+      "body": "The biochemical analysis to confirm CAM in a given plant is",
+      "choices": {
+        "a": "titratable acid number",
+        "b": "iodine number",
+        "c": "activity of transaminases",
+        "d": "total reducing power"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "body": "If a, b, c are positive, (a+c)/(b+c) is",
+      "choices": {
+        "a": "always smaller than a/b",
+        "b": "always greater than a/b",
+        "c": "greater than a/b only if a > b",
+        "d": "greater than a/b only if a < b"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Option (d) is correct\nbecause c = x% of a = y % of b\nx = c/a ×100\ny = c/b ×100\nas b > a ∴ x > y"
+    },
+    {
+      "number": 75,
+      "body": "Two vectors of equal magnitude are inclined to each other at an angle θ. Keeping the direction of one of them fixed the other is rotated through an equal angle θ. Now, the resultant of these vectors has the same magnitude as each of the two vectors.",
+      "choices": {
+        "a": "90°",
+        "b": "30°",
+        "c": "45°",
+        "d": "60°"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "vectors",
+      "subtopic_name": "Vectors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "A = sqrt(A² + A² + 2A² cos(2θ))\nA = sqrt(2A² + 2A² + cos(2θ))\nif and only if, cos 2θ = – 1/2\nthe 2θ = 120°\nθ = 60°"
+    },
+    {
+      "number": 76,
+      "body": "Consider the point A(a, b + c), B(b, c + a) and C(c, a + b). The area of ΔABC is",
+      "choices": {
+        "a": "2(a² + b² + c²)",
+        "b": "(a² + b² + c²)/6",
+        "c": "2(ab + bc + ca)",
+        "d": "none of these"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Area of Δ = 1/2 [a(c + a – a – b) + b"
+    },
+    {
+      "number": 77,
+      "body": "Plants with inferior ovary always bear",
+      "choices": {
+        "a": "pseudocarps",
+        "b": "berries",
+        "c": "aggregate fruits",
+        "d": "seedless fruits"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "body": "Which of the following hydroxides on heating decomposes to liberate oxygen as one of the products?",
+      "choices": {
+        "a": "Mercury hydroxide",
+        "b": "Copper hydroxide",
+        "c": "Sodium hydroxide",
+        "d": "Zinc hydroxide"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "(a + b - b - c) + c (b + c - c - a)\n= 1/2 [a(c - b) + b(a - c) + c (b - a)]\n= 1/2 [ac - ab + ba - bc + cb - ca]\n= 1/2 [0]\n= 0\n\n(A) Copper hydroxide and zinc hydroxide on heating decomposes to liberate water. Sodium hydroxide melts on heating. Mercury hydroxide decomposes on heating to liberate oxygen"
+    },
+    {
+      "number": 79,
+      "body": "A child having protruding belly, bulging eyes, thin and curved legs and peeling skin is likely to be suffering from",
+      "choices": {
+        "a": "kwashiorkor",
+        "b": "rickets",
+        "c": "marasmus",
+        "d": "xerophthalmia"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "body": "If α, β, γ are the roots of the equation (x - 2)(x^2 + 6x - 11) = 0, therefore, (α + β + γ) equals:",
+      "choices": {
+        "a": "-4",
+        "b": "23/6",
+        "c": "13",
+        "d": "-8"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ]
+}

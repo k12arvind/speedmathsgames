@@ -1,0 +1,1333 @@
+{
+  "paper": "NSEJS 2010-11",
+  "paper_code": "",
+  "source_pdf": "NSEJS-previous-year-papers-2006-to-2019-pdf.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Which one of the following statements is INCORRECT?\n(A) If the net force on a body is zero, its velocity is constant or zero\n(B) If the net force on a body is zero, its acceleration is constant and non-zero\n(C) If the velocity of a body is constant, its acceleration is zero\n(D) A body may have a varying velocity yet a constant speed",
+      "choices": {
+        "a": "If the net force on a body is zero, its velocity is constant or zero",
+        "b": "If the net force on a body is zero, its acceleration is constant and non-zero",
+        "c": "If the velocity of a body is constant, its acceleration is zero",
+        "d": "A body may have a varying velocity yet a constant speed"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "newton_laws",
+      "subtopic_name": "Newton's Laws of Motion",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "body": "Two forces each of magnitude P act on a body placed at a point O as shown. The force necessary to keep the body at rest is of magnitude.",
+      "choices": {
+        "a": "P along + X axis",
+        "b": "P along - X axis",
+        "c": "2P along + X axis",
+        "d": "P/2 along - X axis"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "force_equilibrium",
+      "subtopic_name": "Force and Equilibrium",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the force diagram showing the directions and angles of the forces",
+      "solution": "|F₁| = |F₂| angle between F₁ and F₂ is 120° resultant will be P along x-axis. Force necessary to keep the body resist will be P in -x direction"
+    },
+    {
+      "number": 3,
+      "body": "Two spheres having masses 10 g and 25 g are projected horizontally from the same height with velocities v₁ and v₂ and they fall to the ground in time intervals t₁ and t₂ respectively. If the ratio v₁ : v₂ is 1 : 3, the ratio t₁ : t₂ will be",
+      "choices": {
+        "a": "10 : 25",
+        "b": "25 : 10",
+        "c": "1 : 1",
+        "d": "1 : 3"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "projectile",
+      "subtopic_name": "Projectile Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "t = sqrt(2h/g), here h is same, so t₁, t₂ = 1 : 1"
+    },
+    {
+      "number": 4,
+      "body": "The SI unit of temperature is",
+      "choices": {
+        "a": "degree Fahrenheit (°F)",
+        "b": "degree Celsius (°C)",
+        "c": "degree Kelvin (°K)",
+        "d": "None of the above"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "temperature",
+      "subtopic_name": "Temperature and Heat",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "body": "A convex lens L₁ forms an image of the same size as that of the object at a distance of 24 cm. If the lens L₁ is replaced by another convex lens L₂, the image formed is magnified and erect. Therefore, the focal length of L₂ is",
+      "choices": {
+        "a": "less than 12 cm",
+        "b": "12 cm",
+        "c": "between 12 cm and 24 cm",
+        "d": "more than 24 cm"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Lenses",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Image formed by lens L₁ is of same size so 2f₁ = 24 cm ⟹ v for second lens L₂, u = -24 cm, image is magnified and erect it is only possible when object is between pole and F, so focal length of L₂ will be greater than 24 cm."
+    },
+    {
+      "number": 6,
+      "body": "A wooden ball of density 0.8 g/cm³ is placed in water. The ratio of the volume above the water surface to that below the water surface is",
+      "choices": {
+        "a": "0.25",
+        "b": "0.20",
+        "c": "2.0",
+        "d": "4.0"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "fluid_mechanics",
+      "subtopic_name": "Fluid Mechanics",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Total volume of solid = v₁ Density of solid, D = 0.8 g/cm³ emerged volume of solid = v₂ Density of water, d = 1 g/cm³ ∴ v₁/V = D/d ⟹ V/v₁ = d/V = 1 ⟹ V-v₁/v₁ = d-D/D = Volume outside water/Volume insidewater = (d-D)/D = (1-0.8)/0.8 = 0.25"
+    },
+    {
+      "number": 7,
+      "body": "The order of corrosion of metals, namely aluminum, iron, tin and zinc is",
+      "choices": {
+        "a": "Fe > Sn > Al > Zn",
+        "b": "Sn > Fe > Al > Zn",
+        "c": "Al > Zn > Fe > Sn",
+        "d": "Fe > Zn > Sn > Al"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "body": "A stone is released from an elevator moving upwards with an acceleration a. The acceleration of the stone after the release is",
+      "choices": {
+        "a": "a upwards",
+        "b": "(g-a) upwards",
+        "c": "(g-a) downwards",
+        "d": "g downwards"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "relative_motion",
+      "subtopic_name": "Relative Motion",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "body": "a converging beam of light falls on a convex mirror of radius of curvature 20 cm, the point of convergence being 10 cm behind the mirror. The image is",
+      "choices": {
+        "a": "virtual and formed 10 cm in front of the mirror",
+        "b": "real and formed in front of the mirror",
+        "c": "formed at infinity",
+        "d": "virtual and formed 10 cm behind the mirror"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Spherical Mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Converging point is behind the mirror, u = +10 cm f = 10 cm ∴ 1/f = 1/v + 1/u = 1/v + 1/10 ⟹ 1/v = 1/10 - 1/10 ⟹ V = ∞ image will be at ∞"
+    },
+    {
+      "number": 10,
+      "body": "[O2-] ion is represented as",
+      "choices": {
+        "a": "[Xe]2-",
+        "b": "[Ar]2-",
+        "c": "[Kr]2-",
+        "d": "[C]2-"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "body": "The different coloured dyes present in black ink can be separated by",
+      "choices": {
+        "a": "evaporation",
+        "b": "distillation",
+        "c": "centrifugation",
+        "d": "chromatography"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "body": "Bacteria cannot survive in a highly salted pickle because",
+      "choices": {
+        "a": "they become plasmolysed and consequently die.",
+        "b": "they do anaerobic respiration.",
+        "c": "water is not available to them.",
+        "d": "of all the reasons mentioned above."
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "body": "In the absence of atmospheric refraction",
+      "choices": {
+        "a": "both the sunrise and the sunset would be delayed",
+        "b": "both the sunrise and the sunset would occur earlier",
+        "c": "the sunrise would be delayed and the sunset would occur earlier",
+        "d": "the sunrise would occur earlier the sunset would be delayed"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "refraction",
+      "subtopic_name": "Atmospheric Refraction",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "body": "When a sound wave moves through air along X axis, there is a variation in density of air in this direction. The graphical representation of this variation for two sound waves A and B is as shown. Which of the following statements is correct?",
+      "choices": {
+        "a": "Frequency of A is greater than that of B",
+        "b": "Velocity of B is greater than that of A",
+        "c": "Wavelength of B is greater than that of A",
+        "d": "Loudness of A is greater than that of B"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "waves",
+      "topic_name": "Wave Motion",
+      "subtopic_code": "sound_waves",
+      "subtopic_name": "Sound Waves",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "body": "Cycas is classified as gymnosperm because of (i) presence of naked seeds. (ii) lack of vessels in the xylem. (iii) presence of sieve tubes. (iv) fruit formation. The correct reason is",
+      "choices": {
+        "a": "(i) and (iv)",
+        "b": "(i) and (iii)",
+        "c": "(i) and (ii)",
+        "d": "(ii) and (iii)"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "body": "In the figure shown below, each of the lenses has a focal length of 10 cm. Therefore, the image formed by the combination of lenses is",
+      "choices": {
+        "a": "virtual, erect and magnified",
+        "b": "virtual, inverted and diminished",
+        "c": "virtual, erect and diminished",
+        "d": "real, erect and diminished"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Combination of Lenses",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the lens diagram showing distances",
+      "solution": "For convex lens object is placed between F and 2F so image will be inverted and magnified. This image will behave as an object for concave lens, it will form virtual, erect and diminished image. So final image will be virtual, inverted and diminished with respect to object."
+    },
+    {
+      "number": 17,
+      "body": "A convex mirror used as the rear view mirror of a motor vehicle has a warning written on it - 'Objective in this mirror are nearer than they appear'. The reason for this warning is that",
+      "choices": {
+        "a": "the image is diminished",
+        "b": "the image distance is less than the focal length of the mirror",
+        "c": "the image distance is less than the object distance",
+        "d": "the image distance is more than the object distance"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Convex Mirrors",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "body": "While picking up a pair of eye glasses dropped by a friend, you notice that they form an inverted image of the background and that the image is stretched horizontally as well. Your friend suffers from",
+      "choices": {
+        "a": "only myopia",
+        "b": "only hypermetropia",
+        "c": "only astigmatism",
+        "d": "hypermetropia as well as astigmatism"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "eye_defects",
+      "subtopic_name": "Eye Defects",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Image in inverted so lens is convex. which is used for correction of hypermetropia, Image is stretched so, defect is astigmatism hence answer is (D)."
+    },
+    {
+      "number": 19,
+      "body": "In additive primary colour processes, which of the following is NOT possible?",
+      "choices": {
+        "a": "(red + green + blue) gives white",
+        "b": "(blue + green) gives cyan",
+        "c": "(red + cyan) gives white",
+        "d": "(green + cyan) gives white"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "color",
+      "subtopic_name": "Color Addition",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "body": "A uniform wire of resistance 36 ohm is bent into a circle. A battery is connected between points A and B as shown. The effective resistance between A and B is",
+      "choices": {
+        "a": "36 ohm",
+        "b": "30 ohm",
+        "c": "6 ohm",
+        "d": "5 ohm"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Current Electricity",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance in Circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without seeing the exact position of points A and B and angle between them",
+      "solution": "In figure 6Ω, 30Ω are connected in parallel, so R_AB = (6×30)/(6+30) = 5Ω"
+    },
+    {
+      "number": 21,
+      "body": "When 2.8 g of nitrogen reacts with 0.6 g of hydrogen, 3.4 g of ammonia gas is produced. If 5.8 g of nitrogen is allowed to react with 0.6 g of hydrogen, then the amount of ammonia produced is",
+      "choices": {
+        "a": "1.7 g",
+        "b": "3.4 g",
+        "c": "4.7 g",
+        "d": "7.4 g"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "N₂ + 3H₂ ⇌ 2NH₃\n1 mole 3 mole 2 mole\n5.6/28 = 0.2, 0.6/6 = 0.3\n0.2/1 = 0.2, 0.3/3 = 0.1\nmeans H₂ is L.R.\n6 g H₂ gives 34g of NH₃\n0.6g H₂ gives = 34 × 0.6/6 × 1 = 3.4 g"
+    },
+    {
+      "number": 22,
+      "body": "Which one of the following is NOT poisonous?",
+      "choices": {
+        "a": "spider",
+        "b": "platypus",
+        "c": "millipede",
+        "d": "centipede"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "body": "On North Pole, when the surface of sea gets frozen due to cold weather, eskimos can still fish by cutting a portion of ice at the surface to find water underneath. This is possible because water",
+      "choices": {
+        "a": "has low thermal conductivity",
+        "b": "has high specific heat",
+        "c": "has high surface tension",
+        "d": "shows anomalous behaviour"
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "thermal_properties",
+      "subtopic_name": "Thermal Properties of Matter",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "body": "A DC current flows through a vertical wire in the downward direction. For an observer looking at the wire, the direction of magnetic field at a point between him and the wire is",
+      "choices": {
+        "a": "upward",
+        "b": "to the right",
+        "c": "to the left",
+        "d": "downward"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "magnetic_field",
+      "subtopic_name": "Magnetic field due to current",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "body": "The valencies of two elements A and B are +2 and +3 respectively. Then, the formulae of sulphate of B and chloride of A respectively are",
+      "choices": {
+        "a": "B2(SO4)3 and ACl2",
+        "b": "B2(SO4)3 and ACl2",
+        "c": "BSO4 and A3Cl",
+        "d": "B2SO4 and ACl"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "A² B²\n3 : 2\nsulphate of B = B(SO₄)\n= B₂ (SO₄)₃\n2 : 1\nchloride of A = A(Cl)\n= ACl₂"
+    },
+    {
+      "number": 26,
+      "body": "A number of electric bulbs of rating 220 volt, 100 watt are to be connected in parallel to a 220 volt supply. If a 5 A fuse wire is used for this arrangement to bulbs, the maximum number of bulbs that can be included in the arrangement will be",
+      "choices": {
+        "a": "10",
+        "b": "11",
+        "c": "22",
+        "d": "44"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "power",
+      "subtopic_name": "Electric power and energy",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Current drawn by each bulb,\nI = P/V = 100/220 = 5/11 A\nNow number of bulb is n, so\nn × 5/11 = 5 ⇒ n = 11 bulbs"
+    },
+    {
+      "number": 27,
+      "body": "In the circuit given below, AB is a thick copper wire and S is a switch. When the switch is closed, the effective resistance of the circuit will be",
+      "choices": {
+        "a": "5 ohm",
+        "b": "6/5 ohm",
+        "c": "3 ohm",
+        "d": "zero"
+      },
+      "correct": "c",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "resistance",
+      "subtopic_name": "Resistance and circuits",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Circuit diagram is essential for solving this problem",
+      "solution": "If switch is closed then no current will flow through 1Ω resistance, hence equivalent resistance is 3Ω"
+    },
+    {
+      "number": 28,
+      "body": "In figure (1) ammeter reads I1 and voltmeter reads V1. Similarly, in figure (2) ammeter reads I2 while voltmeter reads V2. Then which of the following statements is correct?",
+      "choices": {
+        "a": "V1 > V2 and I1 > I2",
+        "b": "V1 > V2 and I1 < I2",
+        "c": "V1 < V2 and I1 > I2",
+        "d": "V1 < V2 and I1 < I2"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Circuit analysis",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Circuit diagrams are essential for comparing the readings",
+      "solution": "In first figure Ra = R₁ + R₂\nIn second figure Rp = R₁R₂/(R₁ + R₂) which is\nless than Ra\nI₁ = E/(Ra + r), I₂ = E/(Rp + r),\nSO, I₂ > I₁\nV₁ = ERa/(Ra + r) = E/(1 + (r/Ra)), V₂ = E/(1 + (r/Rp))\nSo, V₁ > V₂\nAnswer (B)"
+    },
+    {
+      "number": 29,
+      "body": "Copper sulphate is the salt of",
+      "choices": {
+        "a": "a weak acid and a strong base",
+        "b": "a weak acid and a weak base",
+        "c": "a strong acid and a weak base",
+        "d": "a strong acid and a strong base"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Upon hydrolysis CuSO₄ gives weak base & strong acid\nCuSO₄ + 2H₂O → Cu(OH)₂ + H₂SO₄\nWB SA"
+    },
+    {
+      "number": 30,
+      "body": "The correct order of evolutionary advancement among the plants is",
+      "choices": {
+        "a": "spirogyra → diatom hornwort → fern",
+        "b": "blue green alga → liverwort → fern → seed bearing plant",
+        "c": "liverwort → cyanobacterium → moss → gymnosperm",
+        "d": "red alga → fern → moss → liverwort"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "body": "A solution having pH 2 is mixed with excess of solution of washing soda, the pH of mixture is",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "8"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Acids and Bases",
+      "subtopic_code": "pH",
+      "subtopic_name": "pH calculations",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Washing soda Na₂CO₃.10H₂O is salt of SB & WA therefore by the mixing of washing soda pH will be increased."
+    },
+    {
+      "number": 32,
+      "body": "If the altitudes of a triangle are in the ratio 2 : 3 : 4, then the lengths of the corresponding sides are in the ratio:",
+      "choices": {
+        "a": "2 : 3 : 4",
+        "b": "6 : 4 : 3",
+        "c": "3 : 2 : 4",
+        "d": "3 : 2 : 1"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let AD = h₁ BE = h₂\nCF = h₃\nArea of ΔABC = 1/2 ah₁ = 1/2 bh₂ = 1/2 ch₃\n⇒ ah₁ = bh₂ = ch₃\nGiven : h₁ : h₂ : h₃ = 2 : 3 : 4\n⇒ ∴ h₁ = 2k, h₂ = 3k and h₃ = 4k\nSo, a(2k) = b(3k) = c(4k)\n2a = 3b = 4c\nDividing by 12\n⇒ a/6 = b/4 = c/3."
+    },
+    {
+      "number": 33,
+      "body": "In case of a right circular cylinder the radius of base and height are in the ratio 2 : 3. Therefore, the ratio of lateral surface area to the total surface area is:",
+      "choices": {
+        "a": "5 : 3",
+        "b": "3 : 5",
+        "c": "2 : 5",
+        "d": "2 : 3"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Given, r : h = 2 : 3\nSo, r = 2k, h = 3k\n∴ LSA/TSA = 2πrh/(2πr(h + r))\n= h/(h + r) = 3k/(3k + 2k) = 3k/5k = 3:5"
+    },
+    {
+      "number": 34,
+      "body": "Number of molecule present in a given amount of CO2 and O2 is the same at STP. If the weight of CO2 is 5.5g, then the weight of O2 is",
+      "choices": {
+        "a": "5.5 g",
+        "b": "4.4 g",
+        "c": "4.0 g",
+        "d": "2.0 g"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Mole Concept",
+      "subtopic_code": "molecular_weight",
+      "subtopic_name": "Molecular weight calculations",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "If the no. of moles are same then no. of molecules also same.\nnCO₂ = 5.5/44\n= 0.125 mole\n1 mole of O₂ = 32 g\n0. 125 mole of O₂ = 32 × 0.125 = 4g"
+    },
+    {
+      "number": 35,
+      "body": "Lamina of a palm tree is dissected so as to adapt to",
+      "choices": {
+        "a": "intense light",
+        "b": "high wind velocity",
+        "c": "scarcity of moisture",
+        "d": "high temperature"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "body": "Isotope used as a fuel in the reactors of nuclear power plants for generating electricity is",
+      "choices": {
+        "a": "As-74",
+        "b": "U-235",
+        "c": "Co-60",
+        "d": "I-131"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Nuclear Chemistry",
+      "subtopic_code": "isotopes",
+      "subtopic_name": "Nuclear isotopes",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "body": "If sin θ + cosec θ = 2, then [sin^8 θ + cosec^8 θ] will have the value",
+      "choices": {
+        "a": "2",
+        "b": "2^4",
+        "c": "2^8",
+        "d": "2^6"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "sin θ + cosecθ = 2\nsquaring both sides\nsin²θ + cosec²θ + 2sinθ cosecθ = 4\nsin²θ + cosec²θ = 4 - 2 = 2\nSimilarly,\nsin⁴θ + cosec⁴θ\n= 2 and sin⁶θ + cosec⁶θ = 2"
+    },
+    {
+      "number": 38,
+      "body": "Which of the following pigments is different from others?",
+      "choices": {
+        "a": "cyanoglobin",
+        "b": "myoglobin",
+        "c": "haemoglobin",
+        "d": "cytochrome"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "body": "The mass of one molecule of phosphorus (^31P) is",
+      "choices": {
+        "a": "31 g",
+        "b": "2.059 × 10^-22 g",
+        "c": "5.147 × 10^-23 g",
+        "d": "124 g"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "Mole Concept",
+      "subtopic_code": "molecular_mass",
+      "subtopic_name": "Molecular mass calculations",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Mass of 6.023 × 10²³ molecules of phosphorus = 31 × 4g\nmass of 1 molecules of phosphorus\n= (31 × 4)/(6.023 × 10²³) = 2.050 × 10⁻²²g"
+    },
+    {
+      "number": 40,
+      "body": "All the three sides of a △ ABC have lengths in integral units, with AB = 2001 units and BC = 1002 = units. The possible number of triangles with this condition is:",
+      "choices": {
+        "a": "2001",
+        "b": "2002",
+        "c": "2003",
+        "d": "2004"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the third side of triangle be x unit\nSo, x + 1002 > 2001\nx > 999\nAlso, x < 2001 + 1002\nx < 3003\n∴ 999 < x < 3003\nSo, possible no. of triangles\n= 3003 - 999 - 1 = 2003."
+    },
+    {
+      "number": 41,
+      "body": "The fragrance of burning incense stick spreads all around due to",
+      "choices": {
+        "a": "the sublimation of incense stick",
+        "b": "the vaporization of incense stick",
+        "c": "the sublimation of fragrance matter into the air",
+        "d": "the diffusion of its smoke into the air"
+      },
+      "correct": "d",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "States of Matter",
+      "subtopic_code": "diffusion",
+      "subtopic_name": "Diffusion and sublimation",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "body": "In the familiar decimal number system the base is 10. In another number system using base 4, the counting proceeds as 1, 2, 3, 10, 11, 12, 13, 20, 21 .... The twentieth number in this system will be",
+      "choices": {
+        "a": "40",
+        "b": "320",
+        "c": "210",
+        "d": "110"
+      },
+      "correct": "d",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "4 | 20\n4 | 5  0\n4 | 1  1\n  | 0  1\n\n(20) = (110)₄"
+    },
+    {
+      "number": 43,
+      "body": "The boiling point of water at STP is",
+      "choices": {
+        "a": "100 K",
+        "b": "373 K",
+        "c": "273 K",
+        "d": "373° C"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "topic_code": "general",
+      "topic_name": "States of Matter",
+      "subtopic_code": "phase_changes",
+      "subtopic_name": "Boiling point",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "body": "If 4a – 18b + 13c = 0 and 3a + 3b – 4c = 0, then the ratio a : b : c will be:",
+      "choices": {
+        "a": "3 : 6 : 5",
+        "b": "5 : 3 : 6",
+        "c": "3 : 5 : 6",
+        "d": "5 : 6 : 3"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "If 4a - 18b + 13c = 0\nand 3a + 3a - 4c = 0\nThen\na/(72-39) = -b/(-16-39) = c/(12+54)\na/33 = b/55 = c/66\na/3 = b/5 = c/6\n∴ a : b : c = 3 : 5 : 6."
+    },
+    {
+      "number": 45,
+      "body": "The feature indicating omnivorous nature of man is",
+      "choices": {
+        "a": "presence of canines and molars",
+        "b": "long intestine and vestigial appendix",
+        "c": "ability to taste salty and sweet material",
+        "d": "spacious stomach and caecum"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "body": "Considering the root system, the plant that has adapted to the arid conditions is",
+      "choices": {
+        "a": "hydrilla",
+        "b": "sunflower",
+        "c": "hibiscus",
+        "d": "khus"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "body": "The random motion of visible particles caused by the much smaller invisible particles of water is an example of",
+      "choices": {
+        "a": "Brown motion",
+        "b": "Brownian motion",
+        "c": "Brownmat motion",
+        "d": "Brown's motion"
+      },
+      "correct": "b",
+      "subject": "physics",
+      "topic_code": "general",
+      "topic_name": "General Physics",
+      "subtopic_code": "kinetic_theory",
+      "subtopic_name": "Kinetic Theory",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "body": "The graph of the equation y = 2x^2 + 4x + 3 has its lowest point at:",
+      "choices": {
+        "a": "(-1, 9)",
+        "b": "(1, 9)",
+        "c": "(-1, 1)",
+        "d": "(0, 3)"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "y = 2x² + 4x + 3\ny = 2[x² + 2x + (3/2)]\ny = 2[(x + 1)² - 1 + (3/2)]\ny = 2[(x + 1)² + (1/2)]\n∴ Lowest point will be at x = -1, y = 1\nSo, lowest point (-1, 1)."
+    },
+    {
+      "number": 49,
+      "body": "When a cell fails to communicate with other cells in multicellular organism, it",
+      "choices": {
+        "a": "becomes cancerous",
+        "b": "enters mitotic phase",
+        "c": "chooses to die",
+        "d": "is eaten up by other cells"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "body": "A desert room cooler cools better on hot and dry day due to",
+      "choices": {
+        "a": "increase in the rate of evaporation",
+        "b": "decrease in the rate of evaporation",
+        "c": "decrease in the rate of vapourization",
+        "d": "increase in the rate of diffusion"
+      },
+      "correct": "a",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "phase_change",
+      "subtopic_name": "Phase Changes",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "body": "If a, b, c are in continued proportion, the expression (a^2 + ab + b^2)/(b^2 + bc + c^2) can be simplified to:",
+      "choices": {
+        "a": "(a + c)/(a + b)",
+        "b": "a/c",
+        "c": "c/a",
+        "d": "(a - c)/b"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a, b, c are in continued proportion.\n∴ a/b = b/c = k\na = bk, b = ck and a = ck²\na² + ab + b² = b²k² + b²k + b² = b²(k² + k + 1)\nb² + bc + c² = c²k² + c²k + c² = c²(k² + k + 1)\n= b²/c² = k² = a/c = k²"
+    },
+    {
+      "number": 52,
+      "body": "The body of hydra is cut transversely into three pieces and the middle piece is keptupside down on the substratum. Then,",
+      "choices": {
+        "a": "it fails to regenerate into an independent hydra.",
+        "b": "it would form tentacles and foot in the same locations as oriented.",
+        "c": "it would form tentacles and foot at the original upper and lower ends.",
+        "d": "it will form a hydra with tentacles at both the ends."
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "body": "Unacceptable odour of water can be removed by filtering it through",
+      "choices": {
+        "a": "sand",
+        "b": "activated charcoal",
+        "c": "alum",
+        "d": "saw dust"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "body": "The latent heat of fusion of a solid is the quantity of heat in joules required to convert",
+      "choices": {
+        "a": "1mg of the solid to liquid, without any change in temperature.",
+        "b": "1g of the solid to liquid, without any change in temperature.",
+        "c": "100g of the solid to liquid, without any change in temperature.",
+        "d": "1000g of the solid to liquid, without any change in temperature."
+      },
+      "correct": "d",
+      "subject": "physics",
+      "topic_code": "thermal",
+      "topic_name": "Heat and Thermodynamics",
+      "subtopic_code": "latent_heat",
+      "subtopic_name": "Latent Heat",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "body": "The signal for mitotic division is generated when the ratio of volume of nucleus to that of cell becomes",
+      "choices": {
+        "a": "less than a certain value.",
+        "b": "greater than a certain value.",
+        "c": "reaches a certain value.",
+        "d": "closer to one."
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "body": "Ammonium chloride is purified by",
+      "choices": {
+        "a": "sublimation",
+        "b": "crystallization",
+        "c": "fractional crystallization",
+        "d": "distillation"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "body": "The diameter of a solute particle in a solution is:",
+      "choices": {
+        "a": "≤ 10^-9 m",
+        "b": "> 10^-9 m",
+        "c": "≤ 10^-3 m",
+        "d": "< 10^-4 m"
+      },
+      "correct": "a",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "body": "AD, BE and CF are the medians of △ABC. The sum of lengths of segments BE and CF is:",
+      "choices": {
+        "a": "< (3/2)BC",
+        "b": "> (3/2)BC",
+        "c": "> (2/3)BC",
+        "d": "< (2/3)BC"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "By mid point theorem\nEF = (1/2) BC\nIn ΔBGC\nBG + GC > BC .....(i)\nIn ΔGFE\nFG + GE > FE .....(ii)\nAdd (i) and (ii) we get\nBE + CF > BC + FE\nBE + CF > BC + BC/2 [FE = BC/2]\nBE + CF > 3BC/2"
+    },
+    {
+      "number": 59,
+      "body": "In the figure shown, chord ED is parallel to diameter AC of a circle. If ∠CBE = 60°, then ∠DEC must be:",
+      "choices": {
+        "a": "15°",
+        "b": "30°",
+        "c": "10°",
+        "d": "20°"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": null,
+      "solution": "∠BAC = ∠EBC = 60° [Angles on the same segment of circle]\n∠AEC = 90° [Angles in a semicircle]\n∴ In Δ AEC\n∠ ACE = 180° - (60° + 90°) = 30°\nNow, ∠ CBD = ∠ ACE = 30°"
+    },
+    {
+      "number": 60,
+      "body": "Maximum vitamin A content is likely to be found in the extract of",
+      "choices": {
+        "a": "sprout of pulse",
+        "b": "cod liver",
+        "c": "white muscles",
+        "d": "rose petals"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "body": "Soaps do not clean clothes in hard water because",
+      "choices": {
+        "a": "hard water contains sodium and potassium ions.",
+        "b": "soluble soap is formed in hard water.",
+        "c": "the precipitate of soap adheres on to the fibre of the cloth as gummy mass.",
+        "d": "sodium or potassium soap is formed in hard water."
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Hard water gives ppt due to the presence of carbonate, sulphate of Ca & Mg"
+    },
+    {
+      "number": 62,
+      "body": "Complete digestive juice having enzymes to digest all types of organic materials is secreted by –",
+      "choices": {
+        "a": "salivary gland and pancreatic gland.",
+        "b": "gastric gland and pancreatic gland.",
+        "c": "salivary gland and intestinal gland.",
+        "d": "pancreatic gland and intestinal gland"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "body": "If the pressure of a given mass of a gas is reduced to half and temperature is doubled simultaneously, the volume will be:",
+      "choices": {
+        "a": "the same as above",
+        "b": "twice as before",
+        "c": "four times as before",
+        "d": "one forth as before"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "P1V1/T1 = P2V2/T2\nv2 = 2p×v×2T/P×T\nv2 = 4v"
+    },
+    {
+      "number": 64,
+      "body": "If a² + b² + c² = 1 and p = ab + bc + ca, then",
+      "choices": {
+        "a": "(1/2) ≤ p ≤ 2",
+        "b": "-(1/2) ≤ p ≤ (1/2)",
+        "c": "-(1/2) ≤ p ≤ 1",
+        "d": "-1 ≤ p ≤ (1/2)"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "We know AM ≥ GM\n(a+b)/2 ≥ √ab\na + b ≥ 2√ab\nSquaring both sides\na² + b² + 2ab ≥ 4 ab\na² + b² ≥ 2 ab\nSo, b² + c² ≥ 2bc\nc² + a² ≥ 2ac\nBy adding (i), (ii), (iii)\n2(a² + b² + c²) ≥ 2(ab + bc + ca)\n2(1) ≥ 2(ab + bc + ca)\n1 ≥ P\nAnd (a + b + c)² ≥ 0\na² + b² + c² + 2(ab + bc + ca ) ≥ 0\n1 + 2 P ≥ 0\nP ≥ -1/2\nFrom (iv) & (v)\n-1/2 ≤ P ≤ 1"
+    },
+    {
+      "number": 65,
+      "body": "The animal in which coelomic fluid has a significant role in locomotion is",
+      "choices": {
+        "a": "earthworm",
+        "b": "leech",
+        "c": "crab",
+        "d": "sea cucumber"
+      },
+      "correct": "a",
+      "subject": "biology",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "body": "Oxygen exhibits (-1) oxidation state in",
+      "choices": {
+        "a": "OF₂",
+        "b": "H₂O",
+        "c": "H₂O₂",
+        "d": "HClO"
+      },
+      "correct": "c",
+      "subject": "chemistry",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "H2O2\n2x + 1 + 2x = 0\n2 + 2x = 0\n2x = -2\nx = -1"
+    },
+    {
+      "number": 67,
+      "body": "The hypotenuse of a right angled triangle is 10 cm and the radius of its inscribed circle is 1cm. Therefore, perimeter of the triangle is :",
+      "choices": {
+        "a": "22 cm",
+        "b": "24 cm",
+        "c": "26 cm",
+        "d": "30 cm"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a² + b² = 100\nalso,"
+    },
+    {
+      "number": 68,
+      "body": "The tissue whose activity is important in vegetative propagation of a plant grafting is –",
+      "choices": {
+        "a": "meristem",
+        "b": "phloem",
+        "c": "cambium",
+        "d": "pith"
+      },
+      "correct": "c",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "body": "If x^2 – 5x + 1 = 0, then (x^10 + 1)/x^5 has the value",
+      "choices": {
+        "a": "2524",
+        "b": "2525",
+        "c": "2424",
+        "d": "2010"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "ar ΔOAB + ar ΔOBC + ar ΔOCA = ar Δ ABC\n1/2×1×a + 1/2×1×b + 1/2×1×10 = 1/2 ab\na +b + 10 = ab\nperimeter = ab\na + b = ab - 10\nSquaring both sides\na² + b² + 2ab = a²b² + 100 - 20 ab\n100 + 22ab = a²b² + 100\na²b² = 22 ab\n∴ ab = 22\nSo, perimeter = 22 cm.\n\nx² - 5x + 1 = 0\nx² + 1 = 5x\nx + 1/x = 5\nTo find :\nx¹⁰ + 1/x⁵ = x⁵ + 1/x⁵\n(x + 1/x)⁵ = ⁵C₀ x⁵ + ⁵C₁ x⁴ · 1/x + ⁵C₂ x³\nx · 1/x² + ⁵C₃ x x² · 1/x³ + ⁵C₄ x\nx · 1/x⁴ + ⁵C₅ · 1/x⁵\n= x⁵ + 5x³ + 10x + 10/x + 5/x³ + 1/x⁵\n(5)⁵ = (x⁵ + 1/x⁵) + 5(x³ + 1/x³) + 10(x + 1/x)\n3125 = x⁵ + 1/x⁵ + 5\n[(x + 1/x)³ - 3(x + 1/x)] + 10(5)\n3125 - 50 - 5 [(5)³ - 3(5)] = x⁵ + 1/x⁵\n∴ x⁵ + 1/x⁵ = 3125 - 50 - 550\nx⁵ + 1/x⁵ = 2525."
+    },
+    {
+      "number": 70,
+      "body": "Which of the following hydroxides is NOT an alkali ?",
+      "choices": {
+        "a": "ammonium hydroxide",
+        "b": "calcium hydroxide",
+        "c": "copper hydroxide",
+        "d": "sodium hydroxide"
+      },
+      "correct": "b",
+      "subject": "chemistry",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Calcium hydroxide is water insoluble"
+    },
+    {
+      "number": 71,
+      "body": "The area of the circle is double when its radius r is increased by a. Therefore, radius r equals.",
+      "choices": {
+        "a": "(sqrt(2) + 1)a",
+        "b": "(sqrt(2) – 1)a",
+        "c": "a",
+        "d": "(2 – sqrt(2))a"
+      },
+      "correct": "a",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "Let the radius of circle is r. Then, new radius = r + a ∴ 2πr² = π (r + a)² 2r² = (r + a)² (√2r)² = (r+a)² r = a/(√2-1) r = (√2+1)a"
+    },
+    {
+      "number": 72,
+      "body": "The product of the roots of the equation 3√(5 + x) + 3√(5 – x) = 1 is",
+      "choices": {
+        "a": "– 21",
+        "b": "– 189",
+        "c": "9",
+        "d": "– 5"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "hard",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "√8+x + √8-x = 1 √8+x = 1-√8-x Cubing both sides 8 + x = 1 - 8 + x - 3 ∛8-x (1-√8+x) 15 = -3 ∛8-x (√8-x) -5 = ∛64-x² Cubing both sides -125 = 64-x² x² - 189 = 0 Product of roots = -189."
+    },
+    {
+      "number": 73,
+      "body": "An animal with chitinous exoskeleton, haemocoel and gills belongs to",
+      "choices": {
+        "a": "aschelminthes",
+        "b": "Arthropoda",
+        "c": "echinodermata",
+        "d": "urochordate"
+      },
+      "correct": "b",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "body": "The sides of a triangle are in the ratio 6 : 8 : 9. Therefore :",
+      "choices": {
+        "a": "Angles of the triangle are in the ratio 6 : 8 : 9",
+        "b": "It is an acute angled triangle",
+        "c": "It is a right angled triangle",
+        "d": "It is an obtuse angled triangle"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "a : b : c = 6 : 8 : 9 ∴ a² + b² > c² 6² + 8² > 9² So, △ABC is an acute angled triangle."
+    },
+    {
+      "number": 75,
+      "body": "The perimeter of an isosceles right angled triangle is 2p. Its area is",
+      "choices": {
+        "a": "(2 + sqrt(2))p^2",
+        "b": "(2 – sqrt(2))p^2",
+        "c": "(3 – 2sqrt(2))p^2",
+        "d": "(3 + 2sqrt(2))p^2"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "x + x + √2 x = 2P x = 2p/(2+√2) Area = (1/2)x² = (1/2)(2p/(2+√2))² = (1/2) × 4p²/(4+2+4√2) = 2p²/(6+4√2) = p²/(3+2√2)"
+    },
+    {
+      "number": 76,
+      "body": "A point P is outside a circle at a distance of 13 cm from its centre. A secant from P cuts the circle in Q and R such that QR = 7 cm and the segment PQ of the secant exterior to the circle is 9 cm. Therefore, the radius of circle is :",
+      "choices": {
+        "a": "3 cm",
+        "b": "4 cm",
+        "c": "5 cm",
+        "d": "6 cm"
+      },
+      "correct": "c",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": false,
+      "skip_reason": null,
+      "solution": "OP = 13 PT = 13 - r PS = 13 + r PQ = 9 PR = 16 As we know PT × PS = PQ × PR (13 - r)(13 + r) = 9 × 16 169 - r² = 144 r² = 25 r = 5 cm."
+    },
+    {
+      "number": 77,
+      "body": "The ointment prescribed for burns usually contains, among other ingredients,",
+      "choices": {
+        "a": "vitamin A",
+        "b": "vitamin B",
+        "c": "vitamin D",
+        "d": "vitamin E"
+      },
+      "correct": "d",
+      "subject": "biology",
+      "difficulty": "easy",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "body": "In the figure shown AB is parallel to DE. The difference between angles x and y is :",
+      "choices": {
+        "a": "0°",
+        "b": "4°",
+        "c": "10°",
+        "d": "12°"
+      },
+      "correct": "b",
+      "subject": "maths",
+      "difficulty": "medium",
+      "has_figure": true,
+      "skip_reason": "Cannot solve without the geometric figure showing angles x and y",
+      "solution": "∠1 = 35° [Alternate interior Angles] ∴ x = 180 - (53 + 35) = 92° y = 180 - x [Linear pair] = 180 - 92 = 88 ∴ x - y = 92° - 88° = 4°"
+    }
+  ]
+}
