@@ -308,13 +308,17 @@ class PhysicsPracticeDB:
     # ---------------------------------------------------------------- topics
     def topic_tree(self) -> List[Dict[str, Any]]:
         with self._conn() as c:
+            # Counts must match what practice can actually serve, so exclude
+            # rows the practice selector skips (failed parses, needs_review).
             rows = c.execute("""
-                SELECT topic_code, topic_name, subtopic_code, subtopic_name,
+                SELECT t.topic_code, t.topic_name, t.subtopic_code, t.subtopic_name,
                        COUNT(*) AS n
-                FROM physics_question_topics
-                WHERE is_active = 1
-                GROUP BY topic_code, subtopic_code
-                ORDER BY topic_name, subtopic_name
+                FROM physics_question_topics t
+                JOIN physics_questions q ON q.question_id = t.question_id
+                WHERE t.is_active = 1
+                  AND q.parse_status NOT IN ('failed', 'needs_review')
+                GROUP BY t.topic_code, t.subtopic_code
+                ORDER BY t.topic_name, t.subtopic_name
             """).fetchall()
         topics: Dict[str, Dict[str, Any]] = {}
         for r in rows:
@@ -649,5 +653,5 @@ class PhysicsPracticeDB:
 
     def total_question_count(self) -> int:
         with self._conn() as c:
-            r = c.execute("SELECT COUNT(*) AS n FROM physics_questions WHERE parse_status != 'failed'").fetchone()
+            r = c.execute("SELECT COUNT(*) AS n FROM physics_questions WHERE parse_status NOT IN ('failed','needs_review')").fetchone()
         return int(r['n']) if r else 0
