@@ -22,7 +22,8 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 2,
@@ -163,7 +164,7 @@
         "c": "2 : 1",
         "d": "3 : 1"
       },
-      "correct": "b",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "thermal",
       "topic_name": "Heat and Thermodynamics",
@@ -172,7 +173,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -216,7 +217,7 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 11,
@@ -402,7 +403,8 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 20,
@@ -423,7 +425,7 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 21,

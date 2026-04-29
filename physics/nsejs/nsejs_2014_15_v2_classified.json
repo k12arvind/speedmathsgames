@@ -123,7 +123,7 @@
         "c": "20.6%",
         "d": "24.5%"
       },
-      "correct": "c",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -132,7 +132,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -813,7 +813,8 @@
       "has_figure": true,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 49,
@@ -1058,7 +1059,7 @@
         "c": "both will run at same rate as earth",
         "d": "both will run at equal faster rate than earth."
       },
-      "correct": "a",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -1067,8 +1068,8 @@
       "difficulty": "hard",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_source": "ai_solved_revalidated",
+      "correct_confidence": "high"
     },
     {
       "number": 64,

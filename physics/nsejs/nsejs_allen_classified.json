@@ -22,7 +22,7 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 2,
@@ -64,7 +64,8 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 4,
@@ -106,7 +107,7 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 6,
@@ -117,7 +118,7 @@
         "c": "It may follow a line of force, if field is uniform",
         "d": "None of the above"
       },
-      "correct": "a",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electrostatics",
@@ -126,7 +127,7 @@
       "difficulty": "easy",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -169,7 +170,7 @@
       "has_figure": true,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 9,
@@ -272,7 +273,7 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 14,
@@ -314,7 +315,8 @@
       "has_figure": true,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 16,
@@ -377,7 +379,7 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "medium"
     },
     {
       "number": 19,
@@ -388,7 +390,7 @@
         "c": "(3) The surface charge density is inversely proportional to the curvature of the surface.",
         "d": "(4) None of these."
       },
-      "correct": "c",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electrostatics",
@@ -397,7 +399,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -409,7 +411,7 @@
         "c": "1.5 × 10^-4 m/s",
         "d": "1.5 × 10^-6 m/s"
       },
-      "correct": "b",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Current Electricity",
@@ -418,7 +420,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -461,7 +463,7 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 23,
@@ -472,7 +474,7 @@
         "c": "2 m",
         "d": "2 km"
       },
-      "correct": "c",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Wave Optics",
@@ -481,7 +483,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -535,7 +537,7 @@
         "c": "Less than θ",
         "d": "θλ₁/λ₂"
       },
-      "correct": "b",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Geometrical Optics",
@@ -544,8 +546,8 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_source": "ai_solved_revalidated",
+      "correct_confidence": "high"
     },
     {
       "number": 27,
@@ -556,7 +558,7 @@
         "c": "(ii) and (iii)",
         "d": "(ii) and (iv)"
       },
-      "correct": "b",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -565,8 +567,8 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_source": "ai_solved_revalidated",
+      "correct_confidence": "high"
     },
     {
       "number": 28,
@@ -609,7 +611,7 @@
       "has_figure": true,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "high"
     },
     {
       "number": 30,
@@ -670,7 +672,8 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 33,
@@ -681,7 +684,7 @@
         "c": "fv > fr and |Fv| > |Fr|",
         "d": "fv > fr and |Fv| < |Fr|"
       },
-      "correct": "a",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -690,7 +693,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -702,7 +705,7 @@
         "c": "3/2",
         "d": "4/3"
       },
-      "correct": "c",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Optics",
@@ -711,7 +714,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -835,7 +838,8 @@
       "has_figure": true,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "medium"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 41,
@@ -2047,7 +2051,7 @@
         "c": "If Assertion is True but the Reason is False.",
         "d": "If both Assertion & Reason are False."
       },
-      "correct": "c",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electrostatics",
@@ -2056,7 +2060,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -2089,7 +2093,7 @@
         "c": "If Assertion is True but the Reason is False.",
         "d": "If both Assertion & Reason are False."
       },
-      "correct": "a",
+      "correct": "d",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Electric Fields",
@@ -2098,7 +2102,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -2110,7 +2114,7 @@
         "c": "If Assertion is True but the Reason is False.",
         "d": "If both Assertion & Reason are False."
       },
-      "correct": "a",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Gauss Law",
@@ -2119,7 +2123,7 @@
       "difficulty": "hard",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -2173,7 +2177,7 @@
         "c": "If Assertion is True but the Reason is False.",
         "d": "If both Assertion & Reason are False."
       },
-      "correct": "c",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "electricity",
       "topic_name": "Current Electricity",
@@ -2182,7 +2186,7 @@
       "difficulty": "easy",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -2321,7 +2325,7 @@
         "c": "C",
         "d": "D"
       },
-      "correct": "a",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Ray Optics",
@@ -2330,7 +2334,7 @@
       "difficulty": "hard",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -2363,7 +2367,7 @@
         "c": "C",
         "d": "D"
       },
-      "correct": "d",
+      "correct": "c",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Ray Optics",
@@ -2372,7 +2376,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -2394,7 +2398,8 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 139,
@@ -2405,7 +2410,7 @@
         "c": "C",
         "d": "D"
       },
-      "correct": "d",
+      "correct": "b",
       "subject": "physics",
       "topic_code": "optics",
       "topic_name": "Ray Optics",
@@ -2414,7 +2419,7 @@
       "difficulty": "easy",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {

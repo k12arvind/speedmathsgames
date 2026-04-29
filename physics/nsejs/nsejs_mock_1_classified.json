@@ -58,7 +58,8 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 4,
@@ -296,7 +297,7 @@
         "c": "Magnitude of acceleration of both the particles are different.",
         "d": "Magnitude of acceleration of A is double of that of B."
       },
-      "correct": "d",
+      "correct": "a",
       "subject": "physics",
       "topic_code": "mechanics",
       "topic_name": "Mechanics",
@@ -305,7 +306,7 @@
       "difficulty": "medium",
       "has_figure": false,
       "skip_reason": null,
-      "correct_source": "ai_solved",
+      "correct_source": "ai_solved_revalidated",
       "correct_confidence": "high"
     },
     {
@@ -327,7 +328,8 @@
       "has_figure": false,
       "skip_reason": null,
       "correct_source": "ai_solved",
-      "correct_confidence": "high"
+      "correct_confidence": "low",
+      "parse_status": "needs_review"
     },
     {
       "number": 20,
