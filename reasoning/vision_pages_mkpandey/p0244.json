@@ -1,0 +1,156 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "In an exhibition the timings for entry are 10 AM to 3 PM and 4 PM to 8 PM. There are 5 batches in each session of one hour duration. The tickets used for entry are coded seven words, which gets rearranged for different batches following a definite rule. Which is described below: Rule 1 (10 AM - 11 AM): you all are welcomed in this exhibition. Rule 2 (11 AM - 12 AM): at call this welcomed exhibition in you. Batch 3 (12AM - 1 PM): this all in welcomed you exhibition gre. Output (**) of the first batch.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "If Step VII of an input is 'over the pre bone', what is step VI of that input?",
+      "choices": {
+        "a": "bone the pre over new",
+        "b": "the bone pre over new",
+        "c": "the bone over new",
+        "d": "None of these",
+        "e": "the pre over new"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement",
+      "body": "What will be the following arrangement? Input: 'syn reach lad photo cat' Arrangement: reach lad photo syn cat",
+      "choices": {
+        "a": "VI",
+        "b": "VII"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "If Step VI of a given input be 'map ind pak rus eng', what would be that input?",
+      "choices": {
+        "a": "ind map pak rus eng",
+        "b": "ind map eng rus pak",
+        "c": "eng rus map ind pak",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "Given the following input, what would be step VIII of the input? Input: bank cris attract with prize",
+      "choices": {
+        "a": "prize win cris attract bank",
+        "b": "cris bank prize win attract",
+        "c": "prize win bank attract with",
+        "d": "cris bank attract win prize",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement",
+      "body": "In which step will we get the same arrangement as the input?",
+      "choices": {
+        "a": "VIII",
+        "b": "2(IX",
+        "c": "3) X",
+        "d": "4) XI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "code_arrangement",
+      "subtopic_name": "Code Arrangement",
+      "body": "If the code on the ticket of sixth batch is 'enjoy your life equally after be marriage', which of the following would be the code on the ticket of the third batch?",
+      "choices": {
+        "a": "the your equally after marriage enjoy life",
+        "b": "the your after equally enjoy marriage life",
+        "c": "your after equally enjoy marriage life",
+        "d": "the after equally life marriage enjoy your",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "code_arrangement",
+      "subtopic_name": "Code Arrangement",
+      "body": "If the code of ticket of the batch between 8 and 9 PM in the evening be 'Amit Roop Chaudhary is my best friend', which of the following would be the code on the ticket of the batch between 10 and 11 Am in the morning session?",
+      "choices": {
+        "a": "Shifting",
+        "b": "best is my friend Anand"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 244
+}

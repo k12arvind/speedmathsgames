@@ -1,0 +1,237 @@
+{
+  "page_type": "questions",
+  "chapter_number": 15,
+  "chapter_title": "Practice Corner 15.2",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 7-11) Study the following information to answer the given questions. Eight friends, A, B, C, D, E, F, G and H are sitting in a circle facing the centre, not necessarily in the same order. D sits third to the left of A. E sits to the immediate right of A. B is third to the left of D. G is second to the right of C who is an immediate neighbour of B. C is third to the left of H.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Five persons are sitting facing centre of a circle. Pramod is sitting to the right of Ranjan. Raju is sitting between Brejesh and Naveen. Raju is to the left of Brejesh and Ranjan is to right of Brejesh. Who is sitting to the left of Naveen?",
+      "choices": {
+        "a": "Pramod",
+        "b": "Raju",
+        "c": "Brejesh",
+        "d": "Rajan"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Six persons are sitting in a circle facing the centre of the circle. Parikh is between Babita and Navendra. Asha is between Chitra and Pankaj. Chitra is to the immediate left of Babita. Who is to the immediate right of Babita?",
+      "choices": {
+        "a": "Parikh",
+        "b": "Pankaj",
+        "c": "Navendra",
+        "d": "Chitra"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Four girls A, B, C and D are sitting around a circle facing the centre. B and C are in front of each other, which of the following is definitely true?",
+      "choices": {
+        "a": "A and D are in front of each other",
+        "b": "A is not between B and C",
+        "c": "D is to the left of A",
+        "d": "A is to the left of C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_table",
+      "subtopic_name": "Circular Table",
+      "body": "Six persons are sitting around a circular table. Ajay is facing Hemant who is sitting to the left of Arvind and right of Sanjay. Suman is to the right of Arvind. Manoj is facing Arvind. If Hemant and Manoj, Arvind and Sanjay mutually exchange their positions, who is now sitting to the right of Manoj?",
+      "choices": {
+        "a": "Arvind",
+        "b": "Ajay",
+        "c": "Suman",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_opposite",
+      "subtopic_name": "Circular Facing Opposite",
+      "body": "Eight persons A, B, C, D, E, F, G and H are sitting around the circle as given in the figure. They are facing the direction opposite to centre. If they move upto three places anti-clockwise, then",
+      "choices": {
+        "a": "B will face West",
+        "b": "E will face East",
+        "c": "H will face North-West",
+        "d": "A will face South"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "round_table",
+      "subtopic_name": "Round Table",
+      "body": "Five people A, B, C, D and E are seated about a round table. Every chair is spaced equidistant from adjacent chairs. I. C is seated next to A. II. A is seated two seats from D. III. B is not seated next to A. Which of the following must be true? Select the correct answer from the codes given below.",
+      "choices": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Who amongst the following is sitting exactly between F and D?",
+      "choices": {
+        "a": "C",
+        "b": "E",
+        "c": "H",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Three of the following four are alike in a certain way based on the information given above and so form a group. Which is the one that does not belong to that group?",
+      "choices": {
+        "a": "DC",
+        "b": "AH",
+        "c": "EF",
+        "d": "CB"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Who amongst the following is sitting second to the left of H?",
+      "choices": {
+        "a": "E",
+        "b": "B",
+        "c": "A",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Who amongst the following are immediate neighbours of G?",
+      "choices": {
+        "a": "CA",
+        "b": "AF",
+        "c": "DC",
+        "d": "DF"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_facing_center",
+      "subtopic_name": "Circular Facing Center",
+      "body": "Who amongst the following is sitting third to the right of A?",
+      "choices": {
+        "a": "F",
+        "b": "H",
+        "c": "B",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 492
+}

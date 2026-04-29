@@ -1,0 +1,642 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [
+    {
+      "passage_text": "Direction (Q. Nos. 62-63) In each of the following questions, three sequences of letters/numbers are given which corresponds to each other in some way. In each question, you have to find out the letter / number that come in the vacant place marked by question mark (?). These are given as one of the four alternative under the question. Choose the correct answer as instructed.",
+      "has_figure": false,
+      "topic_code": "series"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 64-94) What comes in place of question mark (?) in the series given below?",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [
+    {
+      "number": 62,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_number_series",
+      "subtopic_name": "Letter Number Series",
+      "body": "A_B A C_D_B C D C\n_3_2_1_4 ? ? ?\nd c__b d c b___\n",
+      "choices": {
+        "a": "1,3,4,3",
+        "b": "1,4,3,4",
+        "c": "2,3,2,4,3",
+        "d": "3,4,1,4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_number_series",
+      "subtopic_name": "Letter Number Series",
+      "body": "B__E__C_D_B_? ? ? ?\n5_7 8_5 6_7 8_6 6__5\n_t u__s_u___t_u v_",
+      "choices": {
+        "a": "CEBD",
+        "b": "DECB",
+        "c": "ECBD",
+        "d": "CDEB"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AZ, BY, CX, ?",
+      "choices": {
+        "a": "EW",
+        "b": "EU",
+        "c": "GH",
+        "d": "DW"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AC, FH, K?, ?, PR, UW",
+      "choices": {
+        "a": "L",
+        "b": "J",
+        "c": "M",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AMN, BOP, CQR, ?",
+      "choices": {
+        "a": "BAS",
+        "b": "DST",
+        "c": "EQP",
+        "d": "FRS"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "DKY, FJW, HIU, JHS, ?",
+      "choices": {
+        "a": "LFQ",
+        "b": "LGQ",
+        "c": "KGR",
+        "d": "KFR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "B E H, K N Q, T W Z, ?",
+      "choices": {
+        "a": "C F I",
+        "b": "D G H",
+        "c": "P R S",
+        "d": "F I J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "C, U, R, E, G, T, W, ?",
+      "choices": {
+        "a": "X",
+        "b": "E",
+        "c": "F",
+        "d": "Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "passage_index": 1,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "Z, U, Q, ?, L",
+      "choices": {
+        "a": "I",
+        "b": "K",
+        "c": "M",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 71,
+      "passage_index": 1,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AC, FH, KM, PR, ?",
+      "choices": {
+        "a": "UX",
+        "b": "TV",
+        "c": "UW",
+        "d": "VW"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 72,
+      "passage_index": 1,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "OAC, PBD, QCE, RDF, ?",
+      "choices": {
+        "a": "SGH",
+        "b": "SHI",
+        "c": "SEG",
+        "d": "SIJ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "passage_index": 1,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AI, BJ, CK, ?",
+      "choices": {
+        "a": "DC",
+        "b": "DM",
+        "c": "DL",
+        "d": "CM"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "passage_index": 1,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AHL, ?, CFI, DEJ",
+      "choices": {
+        "a": "BGK",
+        "b": "BKG",
+        "c": "GKB",
+        "d": "GBK"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 75,
+      "passage_index": 1,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "BCD, BDC, CBD, ?, DCB",
+      "choices": {
+        "a": "CDB",
+        "b": "CCD",
+        "c": "CDE",
+        "d": "DC3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 76,
+      "passage_index": 1,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "CEG, IKM, OQS, ?",
+      "choices": {
+        "a": "VXZ",
+        "b": "TVX",
+        "c": "TUV",
+        "d": "UWY"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 77,
+      "passage_index": 1,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "A, R, C, S, E, T, G, ?, ?",
+      "choices": {
+        "a": "X, Z",
+        "b": "U, I",
+        "c": "W, Y",
+        "d": "V, B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "passage_index": 1,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AEI, BFJ, CGK, ?",
+      "choices": {
+        "a": "DHL",
+        "b": "DLH",
+        "c": "EIM",
+        "d": "LPT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "passage_index": 1,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "BDF, HJL, NPR, ?",
+      "choices": {
+        "a": "OQS",
+        "b": "TUV",
+        "c": "TVX",
+        "d": "UWW"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "passage_index": 1,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "ABCD, BCDA, CDAB, ?, ABCD",
+      "choices": {
+        "a": "BADC",
+        "b": "DABC",
+        "c": "DBAC",
+        "d": "DACB"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 81,
+      "passage_index": 1,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "YVP, WTN, URL, ?",
+      "choices": {
+        "a": "VSP",
+        "b": "SRJ",
+        "c": "SPJ",
+        "d": "TQL"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "passage_index": 1,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AIBICK??",
+      "choices": {
+        "a": "EM",
+        "b": "EL",
+        "c": "DL",
+        "d": "DM"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "passage_index": 1,
+      "seq_in_passage": 20,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "NZ, OY, PX, QW, RV, ?",
+      "choices": {
+        "a": "FS",
+        "b": "SU",
+        "c": "UF",
+        "d": "TU"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 84,
+      "passage_index": 1,
+      "seq_in_passage": 21,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AMV, BNW, COX, ?, EQZ",
+      "choices": {
+        "a": "DMO",
+        "b": "DPY",
+        "c": "DYP",
+        "d": "DLZ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 85,
+      "passage_index": 1,
+      "seq_in_passage": 22,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "XWA, VTC, SPF, OKJ, ?",
+      "choices": {
+        "a": "JDN",
+        "b": "JEO",
+        "c": "LPN",
+        "d": "JDP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "passage_index": 1,
+      "seq_in_passage": 23,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "BEAG, DGCI, FIEK, ?",
+      "choices": {
+        "a": "HMIE",
+        "b": "HKGM",
+        "c": "HGKJ",
+        "d": "HKGI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "passage_index": 1,
+      "seq_in_passage": 24,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "bc, cde, de, efg, fg, ?",
+      "choices": {
+        "a": "ghi",
+        "b": "fgh",
+        "c": "hij",
+        "d": "ijk"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 88,
+      "passage_index": 1,
+      "seq_in_passage": 25,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "PQRS, QPRS, RPQS, ?",
+      "choices": {
+        "a": "SQPR",
+        "b": "RPQS",
+        "c": "QSPR",
+        "d": "SQPR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 89,
+      "passage_index": 1,
+      "seq_in_passage": 26,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "TSMD, TSDM, TMDS, ?",
+      "choices": {
+        "a": "TSDM",
+        "b": "SDTM",
+        "c": "TMDS",
+        "d": "SDMT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "passage_index": 1,
+      "seq_in_passage": 27,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AFJ, JOR, MRU, ?",
+      "choices": {
+        "a": "GJN",
+        "b": "HMP",
+        "c": "PMO",
+        "d": "RJL"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "passage_index": 1,
+      "seq_in_passage": 28,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "AGMSY, CIQU A, EKQWC, ? , IOUAG, KQWCI",
+      "choices": {
+        "a": "GMSYE",
+        "b": "FMSYE",
+        "c": "GNSYD",
+        "d": "FMYES"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 92,
+      "passage_index": 1,
+      "seq_in_passage": 29,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "STARE, ASSET, TASTE, SAUTE, STAVE, WASTE, TAXES, ?",
+      "choices": {
+        "a": "FAEST",
+        "b": "FEAST",
+        "c": "YEAST",
+        "d": "WESAT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 252
+}

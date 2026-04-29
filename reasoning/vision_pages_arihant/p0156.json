@@ -1,0 +1,55 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 64,
+      "solution": "(c) As, J→N, I→L, P→O, N→E, R→S and A→U, U→G, G→I, I→S, S→T, I→V, V→O, O→F, F→O, O→N, N→M. Similarly, G→U, U→E, E→S, S→T, T→∴ GUEST ⇒ FQSMN"
+    },
+    {
+      "number": 65,
+      "solution": "(c) As, E→O, A→P, R→M, T→Z, H→S and H→S, E→Q, A→P, R→M, T→Z ∴ HEART ⇒ SOPMZ"
+    },
+    {
+      "number": 66,
+      "solution": "(d) As, A→M, N→S, U→N and V→P, I→L, N→S, A→M, Y→Z. Similarly, A→M, N→S, U→N, V→P, I→L ∴ ANUM ⇒ MSNPL"
+    },
+    {
+      "number": 67,
+      "solution": "(d) As, A→P, P→O, P→O, L→R, E→S, R→A, I→B, S→C and M→T, A→P, N→X, G→Y, O→Z. Similarly, R→A, O→Z, S→C, E→S ∴ ROSE ⇒ AZCS"
+    },
+    {
+      "number": 68,
+      "solution": "(c) As, P→F, R→L, I→O, N→W, C→E, E→R and P→F, R→L, I→O, N→W, C→E, E→R, S→S, S→S. Similarly, S→S, L→L, O→I, W→N, E→C, R→E, S→S ∴ SLOWERS ⇒ SRINCES"
+    },
+    {
+      "number": 69,
+      "solution": "(c) As, O→C, R→B, G→D, A→W, N→L, I→Q, S→J, A→W, T→Y, I→O, O→C, N→L and O→C, P→X, E→F, R→B, A→W, T→Y, I→O, O→C, N→L. Similarly, S→J, E→F, P→X, A→W, R→B, A→W, T→Y, I→O, O→C, N→L ∴ SEPARATION ⇒ JFXWBWYOCL"
+    },
+    {
+      "number": 70,
+      "solution": "(d) As, Z→P, O→Q, O→O, M→N and R→O, O→Q, A→B, D→E. Similarly, N→M, O→Q, M→N, P→Z ∴ NOMP ⇒ MONZ"
+    },
+    {
+      "number": 71,
+      "solution": "(b) As, F→Q, I→H, R→O, E→E and M→Z, O→M, V→W, E→E. Similarly, O→M, V→W, E→E, R→O ∴ OVER ⇒ MWEO"
+    },
+    {
+      "number": 72,
+      "solution": "(b) As, S→F, T→N, O→B, V→L, E→K and similarly, V→L, O→B, T→N, E→K, S→F ∴ VOTES ⇒ LBNKF"
+    },
+    {
+      "number": 73,
+      "solution": "(c) As, C→E, R→T, A→I, N, X→U, G→Z, G→M and S→E, O→Q, E→N, C→E, H→V, U→E, V→M, X→V. Similarly, R→E, Q→U, I→R, E→D, I→V, J→F, R→I, V→W ∴ REQUIRED ⇒ IVJFRIWW. The letters given here are opposite letters to each other."
+    },
+    {
+      "number": 74,
+      "solution": "(b) As, 23→1, 20→5, 18→9 similarly, 6→9, 18→5, W→A, T→E, R→F, I→R, E→+1, +2, +4, +2, +1, -2, -2, -2, -2. Y→C, V→G, T→25, 3→22, 7→20, H→K, T→G, 8→11, 20→7 ∴ HKTG ⇒ FIRE"
+    }
+  ],
+  "answers": [],
+  "_page": 156
+}

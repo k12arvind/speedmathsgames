@@ -1,0 +1,160 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [],
+  "questions": [
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which of the following must be true of the sales representative's schedule for the day?",
+      "choices": {
+        "a": "She visits M before Q",
+        "b": "She visits N before R",
+        "c": "She visits P before M",
+        "d": "She visits P before R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If the sales representative visits S first, which company must she visit second?",
+      "choices": {
+        "a": "M",
+        "b": "N",
+        "c": "P",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which of the following could be true of the sales representative's schedule?",
+      "choices": {
+        "a": "She visits M 3rd",
+        "b": "She visits R 6th",
+        "c": "She visits P 1st",
+        "d": "She visits Q 2nd"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If the sales representative visits Q immediately before R and immediately after S, she must visit Q",
+      "choices": {
+        "a": "1st",
+        "b": "2nd",
+        "c": "4th",
+        "d": "5th"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If the sales representative visits S 6th, which of the following could be her 1st and 2nd visits, respectively?",
+      "choices": {
+        "a": "M and Q",
+        "b": "M and R",
+        "c": "N and M",
+        "d": "Q and P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "The sales representative could visit any of the following companies immediately after P except?",
+      "choices": {
+        "a": "M",
+        "b": "N",
+        "c": "Q",
+        "d": "R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) Play P will be staged in April."
+    },
+    {
+      "number": 2,
+      "solution": "(b) Except play P, all others will be staged in month having 31 days."
+    },
+    {
+      "number": 3,
+      "solution": "(c) Play M will be staged in May."
+    },
+    {
+      "number": 4,
+      "solution": "(c) Four plays L, P, M and K will be staged before play N."
+    },
+    {
+      "number": 5,
+      "solution": "(b) English presentation made on Monday."
+    },
+    {
+      "number": 6,
+      "solution": "(d) Botany"
+    },
+    {
+      "number": 7,
+      "solution": "(c) Rakesh make his presentation on Thursday."
+    }
+  ],
+  "answers": [],
+  "_page": 622
+}

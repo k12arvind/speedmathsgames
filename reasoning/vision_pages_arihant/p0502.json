@@ -1,0 +1,235 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Sitting Arrangement",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully to answer the given questions. Six people A, B, C, D, E and F are sitting on the ground in a hexagonal shape. All the sides of the hexagon, so formed are of same length. A is not adjacent to B or C. D is not adjacent to C or E. B and C are adjacent. F is in the middle of D and C.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is 4th to the left of V?",
+      "choices": {
+        "a": "Y",
+        "b": "R",
+        "c": "T",
+        "d": "Q",
+        "e": "W"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "position_based",
+      "subtopic_name": "Position Based",
+      "body": "What is the position of Q in respect of R?",
+      "choices": {
+        "a": "Immediate left",
+        "b": "Second to the left",
+        "c": "Third to the left",
+        "d": "Third to the right",
+        "e": "Immediate right"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "group_formation",
+      "subtopic_name": "Group Formation",
+      "body": "Four out of following five are some how same and therefore they form a group. Which one of the following does not come into this group?",
+      "choices": {
+        "a": "Y",
+        "b": "W",
+        "c": "V",
+        "d": "R",
+        "e": "P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "position_based",
+      "subtopic_name": "Position Based",
+      "body": "Who is third to the right of W?",
+      "choices": {
+        "a": "R",
+        "b": "S",
+        "c": "Q",
+        "d": "Y",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "counting",
+      "subtopic_name": "Counting",
+      "body": "How many people are there between T and Q?",
+      "choices": {
+        "a": "None",
+        "b": "1",
+        "c": "2",
+        "d": "3",
+        "e": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "hexagonal_arrangement",
+      "subtopic_name": "Hexagonal Arrangement",
+      "body": "Which of the following is not a correct neighbour pair?",
+      "choices": {
+        "a": "A and F",
+        "b": "D and F",
+        "c": "B and E",
+        "d": "C and F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "distance_based",
+      "subtopic_name": "Distance Based",
+      "body": "Who is at the same distance from D as E is from D?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "D",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "Which of the following group has the correct order of arrangement?",
+      "choices": {
+        "a": "A, F, B",
+        "b": "F, A, E",
+        "c": "B, C, F",
+        "d": "D, A, B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "neighbour_identification",
+      "subtopic_name": "Neighbour Identification",
+      "body": "If one neighbour of A is D, who is the other one?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "E",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Sitting Arrangement",
+      "subtopic_code": "opposite_position",
+      "subtopic_name": "Opposite Position",
+      "body": "Who is placed opposite to E?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "D",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Arrangement according to the question is as follows. Clearly, Radha and Seeta are sitting opposite to each other."
+    },
+    {
+      "number": 2,
+      "solution": "Arrangement according to the question is as follows. Clearly, Geeta is sitting opposite to Bose."
+    },
+    {
+      "number": 3,
+      "solution": "Following sitting arrangement is formed from the given information. Clearly, Deepak is sitting to right of Mohit."
+    }
+  ],
+  "answers": [],
+  "_page": 502
+}

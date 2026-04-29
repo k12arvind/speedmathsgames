@@ -1,0 +1,288 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. I. There is a group of five girls. II. Kamini is second in height but younger than Rupa. III. Pooja is taller than Monika but younger in age. IV. Rupa and Monika are of the same age but Rupa is tallest between them. V. Neelam is taller than Pooja and elder to Rupa.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. A blacksmith has five iron articles A, B, C, D and E each having a different weight. I. A weighs twice as much as B. II. B weighs four and half times as much as C. III. C weighs half as much as D. IV. D weighs half as much as E. V. E weighs less than A but more than C.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. Sunita is taller than Seema and Renu. Renu is shorter than Radha and Gauri. Bina is taller than Radha and shorter than Sunita. Sunita is not the tallest and Renu is not the shortest.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "ordering",
+      "subtopic_name": "Height Ordering",
+      "body": "If they are arranged in the ascending order of height, who will be in the third position?",
+      "choices": {
+        "a": "Monika",
+        "b": "Monika or Rupa",
+        "c": "Rupa",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "ordering",
+      "subtopic_name": "Age Ordering",
+      "body": "If they are arranged in descending order of their ages, who will be in the fourth position?",
+      "choices": {
+        "a": "Monika or Rupa",
+        "b": "Monika",
+        "c": "Kamini",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "ordering",
+      "subtopic_name": "Data Sufficiency",
+      "body": "To answer the question, \"Who is the youngest person in the group\", which of the following statements is superfluous?",
+      "choices": {
+        "a": "Only I",
+        "b": "Only V",
+        "c": "Only II",
+        "d": "Either I or IV"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "money_comparison",
+      "subtopic_name": "Money Comparison",
+      "body": "There are four persons A, B, C and D. The total amount of money with A and B together is equal to the total amount of money with C and D together but the total amount of money with B and D together is more than the amount of money with A and C together. The amount of money with A is more than that with B. Who has the least amount of money?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "D",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "money_comparison",
+      "subtopic_name": "Money Comparison",
+      "body": "Each of A, B, C, D and E has different amount of money. C has more money only than E, B and A. Who has the maximum amount of money?",
+      "choices": {
+        "a": "C",
+        "b": "D",
+        "c": "E",
+        "d": "Data inadequate",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "weight_comparison",
+      "subtopic_name": "Weight Comparison",
+      "body": "Which of the following is the lightest in weight?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "weight_comparison",
+      "subtopic_name": "Weight Comparison",
+      "body": "E is lighter in weight than which of the other two articles?",
+      "choices": {
+        "a": "A, B",
+        "b": "D, C",
+        "c": "A, C",
+        "d": "D, B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "weight_comparison",
+      "subtopic_name": "Weight Comparison",
+      "body": "E is heavier than which of the following two articles?",
+      "choices": {
+        "a": "D, B",
+        "b": "D, C",
+        "c": "A, C",
+        "d": "A, B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "weight_comparison",
+      "subtopic_name": "Weight Comparison",
+      "body": "Which of the following is the heaviest in weight?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "weight_comparison",
+      "subtopic_name": "Weight Comparison",
+      "body": "Which of the following represents the descending order of weights of the articles?",
+      "choices": {
+        "a": "A, B, E, D, C",
+        "b": "B, D, E, A, C",
+        "c": "A, B, C, D, E",
+        "d": "C, D, E, B, A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "In a row at a bus stop, A is 7th from the left and B is 9th from the right. They both interchange their positions. Now, A becomes 11th from the left. How many people are there in the row?",
+      "choices": {
+        "a": "10",
+        "b": "20",
+        "c": "19",
+        "d": "18"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Who is the tallest?",
+      "choices": {
+        "a": "Sunita",
+        "b": "Bina",
+        "c": "Gauri",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Who is the shortest?",
+      "choices": {
+        "a": "Radha",
+        "b": "Renu",
+        "c": "Bina",
+        "d": "Seema"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 305
+}

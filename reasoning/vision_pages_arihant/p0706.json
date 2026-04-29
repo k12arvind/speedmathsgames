@@ -1,0 +1,59 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Completion of Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(e) Number of lines in each of the successive figures is increased by one and also the number of segments inside the figure is increased by one in subsequent figures."
+    },
+    {
+      "number": 2,
+      "solution": "(d) The middle sign does not change, the top left sign rotates 90° clockwise in each of the subsequent figures, the top right sign rotates 180° after every two figures, the bottom right sign rotates 90° clockwise after every third figure and the bottom left rotates 90° clockwise after every fourth figure."
+    },
+    {
+      "number": 3,
+      "solution": "(d) From problem figure (1) to (2), the top left symbol is reversed, line segment on the top right symbol moves half side and rotates 45°, line segment on the bottom left symbol moves half side and similar changes occur from problem figure (3) to (4)."
+    },
+    {
+      "number": 4,
+      "solution": "(e) The sequence of the problem figure (2) to (3) is [Description includes a diagram showing N = New design with directional arrows]. Similar rule follows from problem figure (4) to answer figure."
+    },
+    {
+      "number": 5,
+      "solution": "(b) In every alternate step, the whole figure rotates 90° anti-clockwise and in alternate steps two arcs are added on the anti-clockwise side."
+    },
+    {
+      "number": 6,
+      "solution": "(c) Line segment outside the hexagon rotates anti-clockwise with an addition of one line after every second figure, the line segment inside the hexagon rotates clockwise with an addition of one line after every second figure."
+    },
+    {
+      "number": 7,
+      "solution": "(b) In each problem figure all designs slip one place in clockwise direction and a new design comes in each problem figure."
+    },
+    {
+      "number": 8,
+      "solution": "(a) In one step, the middle element rotate through 180° and in the next step, the other two elements rotate through 180°. The two steps are repeated alternately."
+    },
+    {
+      "number": 9,
+      "solution": "(d) In alternate steps the elements shift one side and a half side clockwise while one of the elements beginning from the anti-clockwise end gets replaced by a new one in each step one by one."
+    },
+    {
+      "number": 10,
+      "solution": "(c) In each problem figure design 'Δ' rotates 90°, 135°, 180° and 225° in clockwise direction. Design '=' rotates 45° in clockwise direction in each problem figure. Design 'O' rotates 45°, 90°, 135° and 180° in clockwise direction."
+    },
+    {
+      "number": 11,
+      "solution": "(b) The whole figure rotates by 45°, 90°, 135°, 180°, ..., clockwise in subsequent steps. While a petal is added on the clockwise side in each step, the shaded petal changes side in each step."
+    },
+    {
+      "number": 12,
+      "solution": "(a) In each step, the quadrilateral rotates 90° anti-clockwise while it shifts half a side clockwise in alternate steps. Also, the circle is half shaded and one-fourth shaded alternately."
+    }
+  ],
+  "answers": [],
+  "_page": 706
+}

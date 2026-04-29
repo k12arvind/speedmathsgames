@@ -1,0 +1,172 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In the following questions, the symbols @, $, *, # and δ are used with the following meaning as illustrated below:\n'P $ Q' means 'P is not smaller than Q'.\n'P # Q' means 'P is neither greater than nor equal to Q'.\n'P * Q' means 'P is not greater than Q'.\n'P @ Q' means 'P is neither smaller than nor equal to Q'.\n'P δ Q' means 'P is neither greater than nor smaller than Q'.\nNow, in each of the following questions assuming the given statements to be true, find which of the four Conclusions I, II, III and IV given below them is/are definitely true and give your answer accordingly.",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    },
+    {
+      "passage_text": "In each of the following question, find the relationship that can definitely be deduced on the basis of the relations given. The symbols used to define the relationship are as follows.\n@ means 'greater than'\n* means 'not equal to'\n# It eans 'less than'\n% means 'equal to'",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    }
+  ],
+  "questions": [
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbol_based",
+      "subtopic_name": "Symbol Based Inequalities",
+      "body": "Statements H @ T, T # F, Fδ E, E * V\nConclusions I. V $ F    II. E @ T\n           III. H @ F    IV. T # V",
+      "choices": {
+        "a": "I, II and III are true",
+        "b": "I, II and IV are true",
+        "c": "II, III and IV are true",
+        "d": "I, III and IV are true",
+        "e": "All are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbol_based",
+      "subtopic_name": "Symbol Based Inequalities",
+      "body": "Statements D # R, R * K, K @ F, F $ J\nConclusions I. J # R    II. J # K\n           III. R # F    IV. K @ D",
+      "choices": {
+        "a": "I, II and III are true",
+        "b": "II, III and IV are true",
+        "c": "I, III and IV are true",
+        "d": "All are true",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbol_based",
+      "subtopic_name": "Symbol Based Inequalities",
+      "body": "Statements N δ B, B $ W, W # H, H * M\nConclusions I. M @ W    II. H @ N\n           III. Wδ N    IV. M # D",
+      "choices": {
+        "a": "Only I is true",
+        "b": "Only III is true",
+        "c": "Only IV is true",
+        "d": "Either III or IV is true",
+        "e": "Either III or IV and I are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbol_based",
+      "subtopic_name": "Symbol Based Inequalities",
+      "body": "Statements R * D, D $ J, J # M, M @ K\nConclusions I. K # J    II. D @ M\n           III. R # M    IV. D @ K",
+      "choices": {
+        "a": "None is true",
+        "b": "Only I is true",
+        "c": "Only II is true",
+        "d": "Only III is true",
+        "e": "Only IV is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbol_based",
+      "subtopic_name": "Symbol Based Inequalities",
+      "body": "Statements M $ K, K @ N, N * R, R # W\nConclusions I. W @ K    II. M $ R\n           III. K @ W    IV. M @ N",
+      "choices": {
+        "a": "I and II are true",
+        "b": "I, II and III are true",
+        "c": "III and IV are true",
+        "d": "II, III and IV are true",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbol_based",
+      "subtopic_name": "Symbol Based Inequalities",
+      "body": "If it is given that, 3 M % 2 N and N % 30, then",
+      "choices": {
+        "a": "@ M",
+        "b": "M #",
+        "c": "2 % M",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbol_based",
+      "subtopic_name": "Symbol Based Inequalities",
+      "body": "If it is given that, N @ P, P # 0, 0 @ M and N % M, then",
+      "choices": {
+        "a": "O @ N",
+        "b": "O # N",
+        "c": "O $ N",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "According to the question,\nM % T ⇒ M< T\nT $ K ⇒ T> K\nK © D ⇒ K$ D\n\nOn combining the statements (i), (ii) and (iii), we get\nM< T> K$ D\nConclusions I. T $ D ⇒ T> D (false)\n           II. D $ M ⇒ D> M (false)\nSo, it is clear that neither Conclusion I nor II is true."
+    }
+  ],
+  "answers": [],
+  "_page": 339
+}

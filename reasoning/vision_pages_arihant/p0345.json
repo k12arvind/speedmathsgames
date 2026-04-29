@@ -1,0 +1,302 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos 2-3) In these questions, relationship between different elements is shown in the statements are followed by two conclusions. Give answer (a) if only Conclusion I follows (b) if only Conclusion II follows (c) if either Conclusion I or II follows (d) if neither Conclusion I nor II follows (e) if both Conclusions I and II follow",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 9-11) If '–' denotes '×', '+' denotes '+' and '×' denotes '–', then what will be the value of the following?",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 12-15) In each of these questions, relationship between different elements is shown in the statements. The statements are followed by two conclusions. Give answer (a) if only Conclusion I is true (b) if only Conclusion II is true (c) if either Conclusion I or II is true (d) if neither Conclusion I nor II is true (e) if both the Conclusions I and II are true",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "symbol_operation",
+      "subtopic_name": "Symbol Operation",
+      "body": "If '+' mean '–', '–' means '×', '×' means '÷' and '÷' means '+' then the value of 16 × 6 ÷ 25 = 7 – 4 is",
+      "choices": {
+        "a": "104",
+        "b": "5",
+        "c": "22",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "basic_statement_conclusion",
+      "subtopic_name": "Basic Statement and Conclusion",
+      "body": "Statement E < F ≤ G = H > S Conclusions I. G > S II. F ≤ H",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "basic_statement_conclusion",
+      "subtopic_name": "Basic Statement and Conclusion",
+      "body": "Statement P ≤ Q < W = L Conclusions I. L > P II. Q ≤ L",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_operation",
+      "subtopic_name": "Symbol Operation",
+      "body": "Find the correct group of signs to solve the equation. 24 * 16 * 8 * 32",
+      "choices": {
+        "a": "+ – =",
+        "b": "– + =",
+        "c": "× + =",
+        "d": "+ – ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "symbol_operation",
+      "subtopic_name": "Symbol Operation",
+      "body": "If 'P' denotes '–', 'Q' denotes '÷', 'R' denotes '×' and 'W' denotes '+', then 48 Q 12 R 10 P 8 W ?",
+      "choices": {
+        "a": "56",
+        "b": "40",
+        "c": "52",
+        "d": "44",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "symbol_operation",
+      "subtopic_name": "Symbol Operation",
+      "body": "If '÷' means 'divided by', '–' means 'added to', '×' means 'subtracted from' and '÷' means 'multiplied by', then 18 × 12 + 4 – 8 ÷ 2 = ?",
+      "choices": {
+        "a": "216",
+        "b": "31",
+        "c": "04",
+        "d": "102/3",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_manipulation",
+      "subtopic_name": "Number Manipulation",
+      "body": "Which of the following interchanges of numbers would make the given equation correct? 8 × 20 + 3 + 9 – 5 = 38",
+      "choices": {
+        "a": "3, 8",
+        "b": "8, 9",
+        "c": "3, 5",
+        "d": "3, 9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_operation",
+      "subtopic_name": "Sign Operation",
+      "body": "Find the group of mathematical signs in the place of * in the given equation 7*7*2*1 = 12.",
+      "choices": {
+        "a": "× – +",
+        "b": "+ – ×",
+        "c": "× – +",
+        "d": "+ × –"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_operation",
+      "subtopic_name": "Symbol Operation",
+      "body": "7. + 3 – 10 + 15 + 2",
+      "choices": {
+        "a": "56",
+        "b": "59",
+        "c": "52",
+        "d": "61",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_operation",
+      "subtopic_name": "Symbol Operation",
+      "body": "12 – 3 + 14 + 5",
+      "choices": {
+        "a": "38",
+        "b": "25",
+        "c": "23",
+        "d": "27",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_operation",
+      "subtopic_name": "Symbol Operation",
+      "body": "8 + 9 + 7 + 6 – 3",
+      "choices": {
+        "a": "21",
+        "b": "24",
+        "c": "28",
+        "d": "30",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "basic_statement_conclusion",
+      "subtopic_name": "Basic Statement and Conclusion",
+      "body": "Statements P > R, R < S ≤ X, Y = X Conclusions I. P < S II. Y > R",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "basic_statement_conclusion",
+      "subtopic_name": "Basic Statement and Conclusion",
+      "body": "Statements Z = C, B < A = N, C < B Conclusions I. Z < B II. N > Z",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "basic_statement_conclusion",
+      "subtopic_name": "Basic Statement and Conclusion",
+      "body": "Statements T < V = W, X ≥ Y, W > X Conclusions I. V > Y II. V < X",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "basic_statement_conclusion",
+      "subtopic_name": "Basic Statement and Conclusion",
+      "body": "Statements J ≥ K > P = R < N = S Conclusions I. S ≥ P II. J < R",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 345
+}

@@ -1,0 +1,287 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Data Sufficiency",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 40-50) Each of these question is followed by two statements numbered I and II. Decide whether the data given in the statements are sufficient to answer the question. Mark answer as\nGive answer\n(a) if Statement I alone is sufficient but Statement II alone is not sufficient to answer the question\n(b) if Statement II alone is sufficient but Statement I alone is not sufficient to answer the question\n(c) if both Statements I and II together are sufficient to answer the question but neither statement alone is sufficient\n(d) if Statements I and II together are not sufficient to answer the question",
+      "has_figure": false,
+      "topic_code": "data_sufficiency"
+    }
+  ],
+  "questions": [
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Six peoples S, T, U, V, W and X are sitting around a circular table facing the centre. What is T's position with respect to X?",
+      "choices": {
+        "a": "Only two people sit between U and W, X is second to the left of W, V and T are immediate neighbours of each other.",
+        "b": "T is to the immediate right of V. There are only two people between T and S. X is an immediate neighbour of S but not of V."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "age_ratio",
+      "subtopic_name": "Age Ratio",
+      "body": "The ages of Aashima and Apsara are in the ratio 9 : 8. What is the age of Aashima?",
+      "choices": {
+        "a": "The ages of Aashima and Arpita are in the ratio 3 : 2.",
+        "b": "After 6 yr the ratio of Aashima's and Apsara's ages will be 11 : 10."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship",
+      "subtopic_name": "Family Relationship",
+      "body": "D is the sister of C. How is D related to A?",
+      "choices": {
+        "a": "A is sister of B.",
+        "b": "B is the brother of C."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "word_coding",
+      "subtopic_name": "Word Coding",
+      "body": "What is the code for 'she' in the code language?",
+      "choices": {
+        "a": "In the code language 'she walks fast' is written as 'ka re pa'.",
+        "b": "In the code language 'do it fast' is written as 'jo ta re'."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "Tower 'A' is in which direction with respect to tower D?",
+      "choices": {
+        "a": "Tower B is to the South of tower A and to the East of tower C.",
+        "b": "Tower C is to the South of tower D."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "word_coding",
+      "subtopic_name": "Word Coding",
+      "body": "How is 'light' coded in the code language?",
+      "choices": {
+        "a": "'more light than dark' is coded as '3 2 1 7', 'no more dark here' is coded as '9 1 4 3'.",
+        "b": "'no more than that' is coded as '3 0 4 7' and 'no than and that' is coded as '4 5 0 7'."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "counting",
+      "subtopic_name": "Counting",
+      "body": "How many rooms does your house have?",
+      "choices": {
+        "a": "The number of rooms is the same as the number of family members in our house.",
+        "b": "The number is sufficient to accommodate our family members."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "comparison",
+      "subtopic_name": "Comparison",
+      "body": "Who is the best salesman in the company?",
+      "choices": {
+        "a": "Rohit sold maximum number of air conditioners this summer.",
+        "b": "The company made the highest profit this year."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "color_property",
+      "subtopic_name": "Color Property",
+      "body": "What is the colour of the curtains on the stage?",
+      "choices": {
+        "a": "The curtains have the same colour as the walls of the hall.",
+        "b": "The colour of the curtains is quite appealing."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "comparison",
+      "subtopic_name": "Comparison",
+      "body": "Who is a better artist-Abid or Hussain?",
+      "choices": {
+        "a": "Abid had more art exhibitions.",
+        "b": "The number of paintings sold by Hussain is more."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "typing_speed",
+      "subtopic_name": "Typing Speed",
+      "body": "Who types at a faster rate, Navin or Sapan?",
+      "choices": {
+        "a": "The difference between their typing rates is 10 words per minute",
+        "b": "Sapan types at a constant rate of 80 words per minute."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "reading_time",
+      "subtopic_name": "Reading Time",
+      "body": "If we assume a constant reading rate, can Joel finish the book in 6 h?",
+      "choices": {
+        "a": "Joel reads 54 pages an hour.",
+        "b": "In 2 h, he reads half the book."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "packing_counting",
+      "subtopic_name": "Packing Counting",
+      "body": "In a certain packing houses, grapefruit are packed in bags and the bags are packed in cases. How many grapefruits are in each case, that is packed?",
+      "choices": {
+        "a": "The grapefruits always packed 5 to a bag and the bags are always packed 8 to a case.",
+        "b": "Each case is always 80% full."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "batting_average",
+      "subtopic_name": "Batting Average",
+      "body": "How many hits must a batsman get to raise his batting average to 300?",
+      "choices": {
+        "a": "He has batted, 56 times.",
+        "b": "He has 14 hits now."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "price_calculation",
+      "subtopic_name": "Price Calculation",
+      "body": "For a certain bottle and cork, what is the price of the cork?",
+      "choices": {
+        "a": "The combined price of the bottle and the cork is ₹ 95.",
+        "b": "The price of the bottle is ₹ 75 more than the price of the cork."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 662
+}

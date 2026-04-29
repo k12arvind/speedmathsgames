@@ -1,0 +1,101 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "This item asks you to describe the logical structure of the argument. The author cites the position of those who oppose government regulations and then cites some of the reasons they give for their positions. Then the author introduces an example in which regulation was essential and specifically mentions how legislators failed to respond to such instances.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_structure",
+      "subtopic_name": "Logical Structure Analysis",
+      "body": "As for (B), when you attack the motives of an opponent, as opposed to the argument of the opponent, you make what is called an ad hominem attack, but the speaker here doesn't make such an attack. As for (C), though the author does attack the position he cites, he does so by counter-example, not by pointing to any contradiction. As for (D), the author never relates the issue of what constitutes a proper mode of argumentation. Without any such theoretical justification, he simply launches his attack by counter-example. Finally, as for (E), the author never suggests that any of the terms of judgments involved are based on anything but objective, economic facts.",
+      "choices": {
+        "a": "...",
+        "b": "...",
+        "c": "...",
+        "d": "...",
+        "e": "..."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "argument_structure",
+      "subtopic_name": "Argument Structure",
+      "body": "This item is about what the author states this writer's real fate will. This is why the author quotes T. S. Eliot, who, somewhat ironically, points out that even most people who claim to be writers aren't really successful writers.",
+      "choices": {
+        "a": "...",
+        "b": "...",
+        "c": "...",
+        "d": "...",
+        "e": "..."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "causal_linkage",
+      "subtopic_name": "Causal Linkage",
+      "body": "This question asks you to look for an alternative causal linkage. The passage implies that, given the legal actions to stop poaching, the elephant population should not have declined, but it did. What would explain that? (E) gives a very good explanation - another cause was working at the same time.",
+      "choices": {
+        "a": "...",
+        "b": "...",
+        "c": "...",
+        "d": "...",
+        "e": "..."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "deductive_argument",
+      "subtopic_name": "Deductive Arguments",
+      "body": "This is a problem involving deductive arguments. Assume that the initial statements are true. Then test each choice. I is not necessarily true. For example, even though it is true that when it is raining, there are clouds in the sky, you cannot conclude from the fact that there are clouds in the sky that it is raining. III makes the same error. II, however, is inferable. It's like reasoning as follows: When there are no clouds in the sky, it is not raining. It is raining; therefore, there are clouds in the sky.",
+      "choices": {
+        "a": "...",
+        "b": "...",
+        "c": "...",
+        "d": "...",
+        "e": "..."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 86
+}

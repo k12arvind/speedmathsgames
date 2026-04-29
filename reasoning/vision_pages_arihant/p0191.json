@@ -1,0 +1,251 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 20-25) In each question below, is given a group of letters followed by four combinations of digits/symbols numbered (a), (b), (c) and (d). You have to find out which of the four combinations correctly represents the group of letters based on the following coding system and the conditions that follow and mark the number of that combination as your answer. If none of the combinations correctly represents the group of letters, mark (e), i.e., 'None of these', as your answer.\n\nLetter: B A D E F H J K M I U O W F P\nDigit/Symbol code: 6 $ 7 8 # 1 2 × % 3 © 4 9 @ 5\n\n(i) If the first letter is a vowel and the last letter is a consonant, their codes are to be interchanged.\n(ii) If both the first and the last letters are consonants, both are to be coded as ©.\n(iii) If the first letter is a consonant and the last letter is a vowel, both are to be coded as the code for the vowel.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 26-27) In each question below, is given a group of letters followed by four combinations of digits/symbols numbered (a), (b), (c) and (d). You have to find out which of the four combinations correctly represents the group of letters based on the following coding system and the conditions that follow and mark the number of that combination as your answer. If none of the combinations correctly represents the group of letters, mark (e), i.e., 'None of these', as your answer.\n\nLetter: E R C F L N H K P T A S G\nCode: % 3 2 5 @ 7 # 6 1 8 4 × 9\n\n(i) If the first letter is a vowel and the last letter is a consonant, both are to be coded as 0.\n(ii) If the first letter is a consonant and the last letter is a vowel, both are to be coded as 0.\n(iii) If the first letter as well as the last letter are vowels, both are to be coded as the code of the last letter.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_number_coding",
+      "subtopic_name": "Letter-Number Coding",
+      "body": "What will be the code for 36250098?",
+      "choices": {
+        "a": "$PLIIG€",
+        "b": "#PLIIG@",
+        "c": "#PLIIG€",
+        "d": "$PLIIG@",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_number_coding",
+      "subtopic_name": "Letter-Number Coding",
+      "body": "SQRLJH@ could be the code for which of the following numbers?",
+      "choices": {
+        "a": "8465032",
+        "b": "8456037",
+        "c": "8465034",
+        "d": "6475031",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_number_coding",
+      "subtopic_name": "Letter-Number Coding",
+      "body": "QLPJRNJ is the code for which of the following numbers?",
+      "choices": {
+        "a": "6580470",
+        "b": "4780650",
+        "c": "6580470",
+        "d": "Data inadequate",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "PBDMI",
+      "choices": {
+        "a": "5×#@78",
+        "b": "1×#@78",
+        "c": "6×#@78",
+        "d": "1×#@71",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "JMEIUD",
+      "choices": {
+        "a": "8×$3@6",
+        "b": "2%$3@2",
+        "c": "7%$3@7",
+        "d": "2%$3@7",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "PEJDWU",
+      "choices": {
+        "a": "582790",
+        "b": "8©2798",
+        "c": "©82790",
+        "d": "582795",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "DMEAKJ",
+      "choices": {
+        "a": "7%$5×2",
+        "b": "2%$5×7",
+        "c": "7%$5×7",
+        "d": "8%$5×6",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "IBHWPO",
+      "choices": {
+        "a": "361954",
+        "b": "461953",
+        "c": "361953",
+        "d": "461954",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "UKPDMI",
+      "choices": {
+        "a": "©5×7%3",
+        "b": "3×57%6",
+        "c": "3×57%©",
+        "d": "©×5%73",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "NFRSCA",
+      "choices": {
+        "a": "753%20",
+        "b": "053%24",
+        "c": "0232%0",
+        "d": "053%20"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "ARFTHE",
+      "choices": {
+        "a": "%358#%",
+        "b": "4358#%",
+        "c": "4358#4",
+        "d": "%385#%"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 191
+}

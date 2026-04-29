@@ -1,0 +1,259 @@
+{
+  "page_type": "questions",
+  "chapter_number": 19,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Read the given information carefully and then answer the questions that follow. Six members of a family A, B, C, D, E and F are psychologist, manager, advocate, jeweller, doctor and engineer but not in the same order. I. Doctor is the grandfather of F who is a psychologist. II. Manager D is married to A. III. C, who is a jeweller, is married to advocate. IV. B is the mother of F and E. V. There are two married couples in the family.",
+      "has_figure": true,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Study the following information carefully and then answer the questions based on. I. P, Q, R, S, T and U are six members of a three generation family in which there are two married couples. II. R, a male member, is neither lightest nor the heaviest in the family but he is the grandfather of this family. III. T is lighter than R and R is lighter than Q. P, the grandmother in the family, is the lightest. IV. S is the sister of U. Both S and U are heavier than Q. V. Q is the mother of S and heavier than T.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Tree Puzzles",
+      "subtopic_code": "profession_family",
+      "subtopic_name": "Profession and Family Relations",
+      "body": "What is the profession of E?",
+      "choices": {
+        "a": "Manager",
+        "b": "Psychologist",
+        "c": "Engineer",
+        "d": "Doctor"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Tree Puzzles",
+      "subtopic_code": "counting_members",
+      "subtopic_name": "Counting Family Members",
+      "body": "How many male members are there in the family?",
+      "choices": {
+        "a": "Two",
+        "b": "Three",
+        "c": "Four",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Tree Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is A related to E?",
+      "choices": {
+        "a": "Father",
+        "b": "Grandmother",
+        "c": "Wife",
+        "d": "Grandfather"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Tree Puzzles",
+      "subtopic_code": "profession_family",
+      "subtopic_name": "Profession and Family Relations",
+      "body": "What is the profession of A?",
+      "choices": {
+        "a": "Manager",
+        "b": "Engineer",
+        "c": "Advocate",
+        "d": "Doctor"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Tree Puzzles",
+      "subtopic_code": "married_couples",
+      "subtopic_name": "Married Couples Identification",
+      "body": "Who are the two couples in the family?",
+      "choices": {
+        "a": "AD and CB",
+        "b": "AB and CD",
+        "c": "AE and DE",
+        "d": "AC and BD"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Tree Puzzles",
+      "subtopic_code": "counting_members",
+      "subtopic_name": "Counting Family Members",
+      "body": "How many maximum male or female members can this family has?",
+      "choices": {
+        "a": "2",
+        "b": "6",
+        "c": "4",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Weight Puzzles",
+      "subtopic_code": "counting_members",
+      "subtopic_name": "Counting Family Members",
+      "body": "How many female members are there in the family?",
+      "choices": {
+        "a": "Data inadequate",
+        "b": "Two",
+        "c": "Four",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Weight Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is T related to U?",
+      "choices": {
+        "a": "Grandfather",
+        "b": "Sister",
+        "c": "Mother",
+        "d": "Father"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Weight Puzzles",
+      "subtopic_code": "married_couples",
+      "subtopic_name": "Married Couples Identification",
+      "body": "Which of the following is a pair of married couple?",
+      "choices": {
+        "a": "PS",
+        "b": "QR",
+        "c": "PQ",
+        "d": "QT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Weight Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is R related to S?",
+      "choices": {
+        "a": "Brother",
+        "b": "Grandfather",
+        "c": "Uncle",
+        "d": "Cousin"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Family Weight Puzzles",
+      "subtopic_code": "weight_ordering",
+      "subtopic_name": "Weight Ordering",
+      "body": "Who among the following will be at 2nd place, if all the members in the family are arranged in the descending order of their weights?",
+      "choices": {
+        "a": "S",
+        "b": "P",
+        "c": "R",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 28,
+      "solution": "Gender of U and T is unknown. So, total number of male members in the family cannot be determined."
+    },
+    {
+      "number": 29,
+      "solution": "P is grandfather of T."
+    },
+    {
+      "number": 30,
+      "solution": "P is a manager."
+    },
+    {
+      "number": 31,
+      "solution": "PS and RQ are the two married couples in the family."
+    }
+  ],
+  "answers": [],
+  "_page": 624
+}

@@ -1,0 +1,191 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 34-39) Read the following information carefully and answer the questions that follow. I. Seven students P, Q, R, S, T, U and V take a series of tests. II. No two students get similar marks. III. V always scores more than P. IV. P always scores more than Q. V. Each time either R scores the highest and T gets the least or alternatively S scores the highest and U or Q scores the least.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score Ranking",
+      "body": "The person who scored the maximum scored 13 marks more than F's marks. Which of the following can be D's score?",
+      "choices": {
+        "a": "94",
+        "b": "60",
+        "c": "89",
+        "d": "78",
+        "e": "81"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "rank_analysis",
+      "subtopic_name": "Rank Analysis",
+      "body": "If V is ranked fifth, which of these must be true?",
+      "choices": {
+        "a": "S scores the highest",
+        "b": "R is ranked second",
+        "c": "T is ranked third",
+        "d": "Q is ranked fourth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "rank_analysis",
+      "subtopic_name": "Rank Analysis",
+      "body": "If R gets the most, V should be ranked not lower than",
+      "choices": {
+        "a": "second",
+        "b": "third",
+        "c": "fourth",
+        "d": "fifth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "rank_analysis",
+      "subtopic_name": "Rank Analysis",
+      "body": "If S is ranked second, which of the following can be true?",
+      "choices": {
+        "a": "P gets more than R",
+        "b": "V gets more than S",
+        "c": "P gets more than S",
+        "d": "U gets more than V"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "rank_analysis",
+      "subtopic_name": "Rank Analysis",
+      "body": "If S is ranked sixth and Q is ranked fifth, which of the following can be true?",
+      "choices": {
+        "a": "V is ranked fifth or fourth",
+        "b": "R is ranked second or third",
+        "c": "P is ranked second or fourth",
+        "d": "U is ranked third or fourth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "rank_analysis",
+      "subtopic_name": "Rank Analysis",
+      "body": "If R is ranked second and Q is ranked fifth, which of these must be true?",
+      "choices": {
+        "a": "S is ranked third",
+        "b": "P is ranked third",
+        "c": "V is ranked fourth",
+        "d": "T is ranked sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "information_analysis",
+      "subtopic_name": "Information Analysis",
+      "body": "Information given in which of the statement is superfluous?",
+      "choices": {
+        "a": "Only II",
+        "b": "Only I",
+        "c": "Only IV",
+        "d": "All are needed"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) According to the question, sequence is as follows (Deepti) > Sweta > Seema > Sohan > Seeta So, Deepti is the eldest."
+    },
+    {
+      "number": 2,
+      "solution": "(d) According to the question, Anil > Sunny Baby > Sunny Anil > Sunny > Bose Anil > Baby On arranging the above data, we get Anil > Baby > Sunny > Bose So, shortest person is Bose."
+    },
+    {
+      "number": 3,
+      "solution": "(d) According to the question, Rakesh > Mukesh > Suresh Amar > Rakesh> Harish The relation between Harish and Suresh cannot be established from the given information. So, it is not possible to find out the shortest person."
+    },
+    {
+      "number": 4,
+      "solution": "(e) According to the question, A/Q > T > P/B But P is not the shortest. ∴ A/Q > T > P > B So, tallest is either A or Q."
+    },
+    {
+      "number": 5,
+      "solution": "(c) According to the question, B > D A/C > E B > D > A/C > E Clearly, shortest = E"
+    },
+    {
+      "number": 6,
+      "solution": "(b) According to the question, A > D C > B > A ∴ C > B > A > D So, highest building is C."
+    },
+    {
+      "number": 7,
+      "solution": "(c) According to the question, N > M Y > M N > X > Y On arranging the above data, we get N > X > Y > M So, N is the most intelligent among them."
+    },
+    {
+      "number": 8,
+      "solution": "(b) The information given in the question may be arranged as follows Bipul > Krishna > Barun > Sanjay So, Bipul is the tallest."
+    }
+  ],
+  "answers": [],
+  "_page": 294
+}

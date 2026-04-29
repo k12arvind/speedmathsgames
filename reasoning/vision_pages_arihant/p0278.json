@@ -1,0 +1,134 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Inserting the Missing Character",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 37-38) In each of these questions, choose the missing terms out of the given alternatives.",
+      "has_figure": false,
+      "topic_code": "missing_character"
+    }
+  ],
+  "questions": [
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "grid_pattern",
+      "subtopic_name": "Grid Pattern",
+      "body": "Find the missing character in the given grid pattern.",
+      "choices": {
+        "a": "J 15",
+        "b": "K 8",
+        "c": "K 15",
+        "d": "L 10"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "geometric_pattern",
+      "subtopic_name": "Geometric Pattern",
+      "body": "Find the missing character in the given geometric pattern.",
+      "choices": {
+        "a": "J and 80",
+        "b": "O and 83",
+        "c": "N and 7",
+        "d": "P and 85"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "geometric_figure",
+      "subtopic_name": "Geometric Figure",
+      "body": "Choose the missing terms out of the given alternatives.",
+      "choices": {
+        "a": "Y and 40",
+        "b": "U and 36",
+        "c": "W and 64",
+        "d": "X and 81"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "circular_pattern",
+      "subtopic_name": "Circular Pattern",
+      "body": "Choose the missing terms out of the given alternatives.",
+      "choices": {
+        "a": "U and 28",
+        "b": "I and 26",
+        "c": "E and 27",
+        "d": "A and 25"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(b) Moving clockwise, each next letter is 3 letters forward of the previous letter."
+    },
+    {
+      "number": 2,
+      "solution": "(c) According to the English alphabet."
+    },
+    {
+      "number": 3,
+      "solution": "(d) LO, CX, GT and FU are pair of opposite letters. Similarly, the letter opposite to H is S. Hence, option (a) is the correct answer."
+    },
+    {
+      "number": 4,
+      "solution": "(c) Starting from A in clockwise direction, add 2 in each letter to obtain the next letter. As, A + 2 = C, C + 2 = E, E + 2 = G, G + 2 = I, I + 2 = K, K + 2 = M. Similarly, M + 2 = O. Hence, option (c) is the correct answer."
+    },
+    {
+      "number": 5,
+      "solution": "(b) Each letter has been denoted by its position in English alphabet."
+    },
+    {
+      "number": 6,
+      "solution": "(d) In each box, letters of English alphabet and their corresponding positions are given. As, position of B in alphabetical series is 2, Position of J in alphabetical series is 10, Position of Q in alphabetical series is 17, Similarly, position of E in alphabetical series is 5 and letter H is present at 8th position in alphabetical series. Number = 5, Letter = H"
+    },
+    {
+      "number": 7,
+      "solution": "(c) The vowels zigzag from top to bottom and the numbers are their respective positions in the backward order of alphabet, i.e., Z = 1, Y = 2, X = 3 and so on. Then, A = 26,E = 22, I = 18, O = 12 and U = 6. U, 6"
+    },
+    {
+      "number": 8,
+      "solution": "(b) The letters move from numerator to denominator and have gaps of 1, 2, 3, 4 and 5 letters. The numbers are their respective position numbers in backward order. 4, W"
+    },
+    {
+      "number": 9,
+      "solution": "(c) In each figure, the letter moves from numerator to denominator with a gap of 1 letter. Its corresponding position is also present. X, 24"
+    }
+  ],
+  "answers": [],
+  "_page": 278
+}

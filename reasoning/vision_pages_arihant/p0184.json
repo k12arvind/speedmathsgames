@@ -1,0 +1,82 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [
+    {
+      "passage_text": "Under this pattern, some words are given in one column and their codes are given in another column. But the given codes are not in the same order of words given. Candidates are required to find out the codes of words on the basis of comparison of their properties, traits etc.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "comparison_coding",
+      "subtopic_name": "Coding by Comparison",
+      "body": "In the given table, some words are given in Column I and their codes are given in Column II. The code of the words given in Column II are not given in the order of given words. Find the corresponding codes of words and answer the following question. Find the code for the word 'GREAT':",
+      "choices": {
+        "a": "dip",
+        "b": "dead",
+        "c": "right",
+        "d": "sector"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 21,
+      "solution": "(d) risk also large → nu fu ro"
+    },
+    {
+      "number": 22,
+      "solution": "(e) very → gi"
+    },
+    {
+      "number": 23,
+      "solution": "(b) associated → ta"
+    },
+    {
+      "number": 24,
+      "solution": "(d) 'di' stands for either 'damaging' or 'inherent'"
+    },
+    {
+      "number": 25,
+      "solution": "(b) that is low → po mi se"
+    },
+    {
+      "number": 26,
+      "solution": "(e) It is clear that money ⇒ la"
+    },
+    {
+      "number": 27,
+      "solution": "(e) According to the question, code for supply ⇒ 'mo' or 'ta'"
+    },
+    {
+      "number": 28,
+      "solution": "(a) According to the question, demand ⇒ mo/ta, only ⇒ ne/ki. So, according to option (a) code for 'more' will be xi. Hence, demand only more ⇒ xi ne mo"
+    },
+    {
+      "number": 29,
+      "solution": "(b) According the the question, and ⇒ pa, money ⇒ la. In option (a) third code is 'ga', which is either for 'is' or 'not'. So, it is incorrect. In option (b) third code is 'lu', which is not for any other word in question. So, 'lu' is for 'work'. Hence, the possible code for 'work and money' will be 'pa la lu'."
+    },
+    {
+      "number": 30,
+      "solution": "(d) It is clear that makes ⇒ zi"
+    },
+    {
+      "number": 25,
+      "solution": "(c) As in Column I 'GREAT' is the only word having five letters and in Column II 'right' is the only word having five letters. Therefore, code for 'GREAT' is 'right'."
+    }
+  ],
+  "answers": [],
+  "_page": 184
+}

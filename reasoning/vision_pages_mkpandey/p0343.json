@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 22,
+      "solution": "Test each of the choices to determine whether or not it describes a legitimate possibility.\n(1) No. T must be called fourth, not sixth.\n(2) No. T and V, must be called fourth.\n(3) No. X must come before W, so W cannot be first.\n(4) No. X must be called before W and so because V can X cannot be called fifth. (X can be called no later than third.)\n(5) Yes. The only restriction on Y is that Y precedes Y, so Y can apparently be first.\nAt this point, we should raise a question about our strategy. Our analysis of (5) suggests that (5) is correct simply because it does not contain an obvious violation of the initial conditions. We did not, however, construct a scenario in which Y is actually first. We could have done so for example:\nY X V T W Z\nIf you do this, you will confirm that it is possible to call Y first, but of course, working out a possible order takes time. Once you have eliminated (1) through (4), you need not bother to work out a complete order to prove that (5) is possible."
+    },
+    {
+      "number": 23,
+      "solution": "Set up a rough diagram to keep track of the additional information and your further deductions:\n1 2 3 4 5 6\nZ\nAbove we learned that X as well as W and Y must be called before V. This means that X, W and Y must be first, second and third (though not necessarily in that order) and that V must be fifth.\n1 2 3 4 5 6\nT V Z\nRemember, to save time you want to avoid working out all these possibilities. Once you have explained to yourself why T cannot be called third, mark (1) and go to the next item.\nEnter the additional information on a diagram:\n1 2 3 4 5 6\nZ\nNow, look for further conclusions. We know that W, X and Y must be called before V, so V must be sixth:\n1 2 3 4 5 6\nZ T V\nSince X must be called before W, there are three possible orders:\n1 2 3 4 5 6\nZ X W T V Y\nZ X Y T W V\nZ Y X T W V\nSo, the fifth and sixth witnesses can only be Y and V or W and V, in that order."
+    },
+    {
+      "number": 24,
+      "solution": "The question stem stipulates an order for X, Y, and Z: Y>X>Z. There is only one place for three consecutive letters:\n1 2 3 4 5 6\nY X Z T W V\nNext, we reason that W and V must be called fifth and sixth and that W must come before V:\n1 2 3 4 5 6\nY X Z T W V"
+    },
+    {
+      "number": 25,
+      "solution": "V must be called later than W and Y and X. So (since T is called fourth) V can be called no earlier than fifth. That the other four witnesses could be called third (immediately before T) is demonstrated by the following diagrams:"
+    }
+  ],
+  "answers": [],
+  "_page": 343
+}

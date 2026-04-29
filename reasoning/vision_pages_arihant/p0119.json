@@ -1,0 +1,357 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Following questions are based on the five three-digit numbers given below. 118 516 935 453 620",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Following questions are based on the five three-digit numbers given below. 813 261 458 732 694 [Uttaranchal GBC 2012]",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Following questions are based on the five three-digit numbers given below. 528 739 846 492 375 [RO (WO) 2010]",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "These questions are based on the following six numbers. [SBI (Clerk) 2009] 382 473 568 728 847 629",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations",
+      "body": "If it is possible to form a three digit number which is a perfect square of a two digit odd number with the third, the fifth and the eighth digits of the number 532784691. Which of the following will be the second digit of that two digit odd number? If more than one such number can be formed, give (a) as the answer and if no such number can be formed, give (c) as the answer.",
+      "choices": {
+        "a": "1",
+        "b": "7",
+        "c": "9",
+        "d": "@"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations",
+      "body": "If it is possible to make a three digit number, which is a perfect square of a two digit number from the second, the fourth and the eighth digits of 31792056, using each digit only once, what is the two digit number? If the perfect square cannot be formed, answer is 'N' and if more than one such number can be formed, your answer is 'X'.",
+      "choices": {
+        "a": "14",
+        "b": "16",
+        "c": "12",
+        "d": "X"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations",
+      "body": "If the first and last digits of the following numbers are interchanged, then find the sum of the largest and the smallest numbers. 435 851 311 128 980",
+      "choices": {
+        "a": "1000",
+        "b": "945",
+        "c": "815",
+        "d": "910"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations",
+      "body": "If the following numbers are arranged in ascending order, then what will be the square of the digits sum of the second number from the left end of the new arrangement? 315 117 472 301 256",
+      "choices": {
+        "a": "324",
+        "b": "196",
+        "c": "169",
+        "d": "121"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "Which of the following represents the sum of the first two digits of the highest number?",
+      "choices": {
+        "a": "7",
+        "b": "10",
+        "c": "12",
+        "d": "13",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If the positions of the first and the second digits of each number are interchanged, which of the following will be third digit of the second lowest number?",
+      "choices": {
+        "a": "8",
+        "b": "9",
+        "c": "6",
+        "d": "2",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If the positions of the first and the third digits of each number are interchanged, which of the following will be the middle digit of the third highest number?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "9",
+        "e": "7"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "prime_digits",
+      "subtopic_name": "Prime Digits",
+      "body": "How many numbers have more than one prime digits?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "percentage_calculation",
+      "subtopic_name": "Percentage Calculation",
+      "body": "What will be the 25% of the second largest number?",
+      "choices": {
+        "a": "155",
+        "b": "145",
+        "c": "90",
+        "d": "135"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If the positions of the first and the third digits are interchanged in each of these numbers, then which of these will be an odd number?",
+      "choices": {
+        "a": "261",
+        "b": "694",
+        "c": "813",
+        "d": "732"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If all the three digits are rearranged in ascending order (from left to right) within the number, in each of these numbers, then which of these will be the second highest?",
+      "choices": {
+        "a": "458",
+        "b": "813",
+        "c": "732",
+        "d": "694"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_operations",
+      "subtopic_name": "Digit Operations",
+      "body": "What is the difference between the sum of the three digits of the highest and that of the second highest number?",
+      "choices": {
+        "a": "5",
+        "b": "8",
+        "c": "12",
+        "d": "0"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If the positions of the second and the third digits are interchanged in each of these numbers, then which of these will be exactly divisible by 5?",
+      "choices": {
+        "a": "694",
+        "b": "458",
+        "c": "261",
+        "d": "732"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If the first and the second digits are interchanged in each of these numbers, then which of the following will be the second smallest number?",
+      "choices": {
+        "a": "732",
+        "b": "261",
+        "c": "458",
+        "d": "813"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If the second and the third digits of each number are interchanged, which number will be the third lowest?",
+      "choices": {
+        "a": "629",
+        "b": "382",
+        "c": "473",
+        "d": "568",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "digit_arrangement",
+      "subtopic_name": "Digit Arrangement",
+      "body": "If the first and the third digits of each number are interchanged, which number will be the third highest?",
+      "choices": {
+        "a": "473",
+        "b": "728",
+        "c": "847",
+        "d": "629",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 119
+}

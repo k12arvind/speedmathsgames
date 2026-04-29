@@ -1,0 +1,57 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Clocks",
+  "passages": [],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "faulty_clocks",
+      "subtopic_name": "Faulty Clocks",
+      "body": "Two clocks are set correctly at 9 am on Monday. Both the clocks gain 3 min and 5 min respectively in an hour. What time will the second clock register, if the first clock which gains 3 min in an hour shows the time as 27 min past 6 pm on the same day?",
+      "choices": {
+        "a": "6 : 27 pm",
+        "b": "6 : 45 pm",
+        "c": "6 : 25 pm",
+        "d": "6 : 50 pm",
+        "e": "None of these"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "time_gained_lost",
+      "subtopic_name": "Time Gained or Lost by Clock",
+      "body": "The minute hand of a clock overtakes the hour hand at intervals of 63 min of the correct time. How much does a clock gain or loose in a day?",
+      "choices": {
+        "a": "54 8/11 min (gain)",
+        "b": "56 8/11 min (gain)",
+        "c": "53 8/11 min (loss)",
+        "d": "53 5/11 min (gain)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "According to the question, First clock gains = 3 min/h and second clock gains = 5 min/h So, the difference in minutes between these two clocks in one hour = (5 - 3) min = 2 min Total time from 9 pm to 6 pm on Monday = 9 h. So, first clock gains in 9 h = (9 × 3) min = 27 min and shows the time as 6:27 pm Also, the second clock gains in 9 h = (9 × 5) min = 45 min and shows the time as 6 : 45 pm."
+    }
+  ],
+  "answers": [],
+  "_page": 422
+}

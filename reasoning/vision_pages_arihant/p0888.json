@@ -1,0 +1,75 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "(b) Number of cubes having three faces painted = Number of corner (vertex) cubes = 8 (always)"
+    },
+    {
+      "number": 6,
+      "solution": "(c) Clearly, red is opposite to black, green is opposite to blue and brown is opposite to white. Hence, the colour opposite to brown is white."
+    },
+    {
+      "number": 7,
+      "solution": "(b) Number of smaller cubes having atleast two faces painted = (Number of smaller cubes having 2 faces painted) + (Number of smaller cubes having 3 faces painted) = Number of middle cubes + Number of corner cubes ∴ Number of middle cubes = 12(n - 2) = 12(5 - 2) = 12 × 3 = 36 (here, n = 5) Number of corner (vertex) cubes = 8 ∴ Required number of cubes = 36 + 8 = 44"
+    },
+    {
+      "number": 8,
+      "solution": "(b) Total number of smaller cubes = 27 Clearly, cubes in middle layer are unpainted ∴ Smaller cubes in middle layer = 27/3 = 9"
+    },
+    {
+      "number": 9,
+      "solution": "(d) From the given figure, it is very much clear that the four corner cubes in the second layer have one face painted with white and one face painted with yellow."
+    },
+    {
+      "number": 10,
+      "solution": "(c) As we know that, central cubes have only one face painted. ∴ Number of central cubes = 6(n - 2)³ = 6(3 - 2)² = 6 (here, n = 3)"
+    },
+    {
+      "number": 11,
+      "solution": "(b) Number of smaller cubes = (n)³ ⇒ 27 = (n)³ ⇒ n = ∛27 = 3 ∴ Number of smaller cubes having two faces painted = 12(n - 2) = 12(3 - 2) = 12"
+    },
+    {
+      "number": 12,
+      "solution": "(b) From the figure, there is no such cube which is painted red only on two sides."
+    },
+    {
+      "number": 13,
+      "solution": "(c) Number of smaller cubes with no surface painted = (n - 2)³ = (4 - 2)³ = 8 (∵ n = 4)"
+    },
+    {
+      "number": 14,
+      "solution": "(c) Number of smaller cubes with atleast two surfaces painted = Number of cubes with three surfaces painted + Number of cubes with two surfaces painted = 8 + (n - 2) × 12 = 8 + (4 - 2) × 12 = 8 + 24 = 32"
+    },
+    {
+      "number": 15,
+      "solution": "(c) Number of smaller cubes with two surfaces painted = (n - 2) × 12 = (4 - 2) × 12 = 24"
+    },
+    {
+      "number": 16,
+      "solution": "(d) Number of smaller cubes with three surfaces painted = 8"
+    },
+    {
+      "number": 17,
+      "solution": "(c) Since all the surfaces of the big cube are painted with some colours, therefore, number of smaller cubes with only one surface painted = 6 × (n - 2)² = 6 × (4 - 2)² = 24"
+    },
+    {
+      "number": 18,
+      "solution": "(c) Number of smaller cubes with no surface painted = (n - 2)³ = (2)³ = 8"
+    },
+    {
+      "number": 19,
+      "solution": "(d) Number of smaller cubes with less than three surfaces painted = Number of cubes with two surfaces painted + Number of cubes with one surface painted = (n - 2) × 12 + (n - 2)² × 6 = (4 - 2) × 12 + (4 - 2)² × 6 = 24 + 24 = 48"
+    },
+    {
+      "number": 20,
+      "solution": "(b) Number of smaller cubes with three surfaces painted = 8"
+    }
+  ],
+  "answers": [],
+  "_page": 888
+}

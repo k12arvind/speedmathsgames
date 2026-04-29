@@ -1,0 +1,114 @@
+{
+  "page_type": "questions",
+  "chapter_number": 2,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-18) In each of the following questions, there are four figures (i), (ii), (iii) and (iv) which constitute the problem set and answer figures marked (a), (b), (c), (d) and (e) each consisting of two figures marked (i) and (iv) which constitute the answer set. Select a figure from the answer sets the contents of which best substitute (?) in the problem sets such that figure (iii) is related to figure (iv) in same way as figure (i) is related to figure (ii).",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 35,
+      "solution": "From section (i) to section (ii) of the problem figure, the figure gets inverted and becomes small in size."
+    },
+    {
+      "number": 36,
+      "solution": "From section (i) to section (ii) of the problem figure, an identical figure appears on the other side of the figure and existing figure gets shaded. Hence, figure (b) is the correct alternate to replace section (i) and (v) of the problem figure."
+    },
+    {
+      "number": 37,
+      "solution": "From section (i) to section (ii) of the problem figure, one segment (lower) of the existing figure is removed."
+    }
+  ],
+  "answers": [],
+  "_page": 775
+}

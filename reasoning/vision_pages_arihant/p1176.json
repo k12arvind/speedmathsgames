@@ -1,0 +1,204 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 39-50) In each of the questions below are given three statements followed by four conclusions numbered I, II, III and IV. You have to take the given statements to be true even, if they seem to be at variance from commonly known facts. Read all the conclusions and then decide which of the given conclusion(s) logically follow(s) from the given statements disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 39,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some dogs are rats. All rats are trees. Some trees are not dogs. Conclusions: I. Some trees are dogs. II. All dogs are trees. III. All rats are dogs. IV. No tree is dog.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "I and II follow",
+        "d": "II and III follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All peacocks are lions. Some tigers are peacocks. Conclusions: I. Some lions are not tiger. II. All tigers are lions. III. Some tigers are lions. IV. All peacocks are tigers.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Only IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All bricks are flowers. Some houses are flowers. All pens are houses. Conclusions: I. Some houses are bricks. II. Some pens are flowers. III. Some flowers are bricks. IV. No pen is flower.",
+      "choices": {
+        "a": "Either I or IV and III follow",
+        "b": "Either II or IV and I follow",
+        "c": "Either I or III and IV follow",
+        "d": "None follows",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some dogs are rats. All rates are trees. Some trees are not dogs. Conclusions: I. Some trees are dogs. II. All dogs are trees. III. All rats are dogs. IV. No tree is dog.",
+      "choices": {
+        "a": "None follow",
+        "b": "Only I follows",
+        "c": "I and II follow",
+        "d": "II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All rocks are balls. Some balls are rings. Al rings are stones. Conclusions: I. Some stones are rocks. II. Some rings are rocks. III. Some balls are rocks. IV. No stone is rock.",
+      "choices": {
+        "a": "I and III follow",
+        "b": "III and IV follow",
+        "c": "Either I or IV and III follow",
+        "d": "Either I or IV follows",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All books are papers. All pencils are papers. All tables are papers. Conclusions: I. Some books are pencils. II. Some pencils are tables. III. Some tables are books. IV. Some papers are tables.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Only IV follows",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some desks are mirrors. Some mirrors are combs. Some combs are pins. Conclusions: I. Some pins are desks. II. Some combs are desks. III. Some pins are mirrors. IV. Some pins are either desks or mirrors.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only I follows",
+        "d": "Only IV follows",
+        "e": "Only III follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All blades are hammers. All hammers are rods. All rods are buckets. Conclusions: I. Some buckets are hammers. II. Some rods are blades. III. All hammers are buckets. IV. All blades are rods.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "II and III follow",
+        "c": "I, II and III follow",
+        "d": "II, III and IV follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All trees are chairs. No chair is flower. Some flowers are bangles. Conclusions: I. No tree is bangle. II. No chair is bangle. III. Some flowers are trees. IV. Some bangles are trees.",
+      "choices": {
+        "a": "None follows",
+        "b": "Either I or IV follows",
+        "c": "Either II or III follows",
+        "d": "I and II follow",
+        "e": "III and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1176
+}

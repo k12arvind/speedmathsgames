@@ -1,0 +1,207 @@
+{
+  "page_type": "questions",
+  "chapter_number": 19,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "A, B, C, D, E, F and G are the names of two rivers, three canals and two valleys. B, G and D are not canals. E and F are not rivers. C is a canal but A is a valley. B, F and G are not valleys.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Rajneesh, Kavita, Suresh, Gambhir and Mahesh are friends and good players. Rajneesh and Kavita are good in hockey and volleyball. Suresh and Rajneesh are good in hockey and tennis. Gambhir and Kavita are good in cricket and volleyball. Suresh, Gambhir and Mahesh are good in football and tennis.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Ravish and Kamlesh like hockey and volleyball. Suresh and Ravish likes hockey and badminton. Giri and Kamlesh like chess and volleyball. Suresh, Giri and Mukesh likes football and badminton.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "classification",
+      "subtopic_name": "Classification",
+      "body": "Which are the two rivers?",
+      "choices": {
+        "a": "A and D",
+        "b": "B and D",
+        "c": "B and G",
+        "d": "A and G"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "classification",
+      "subtopic_name": "Classification",
+      "body": "Which are the three canals?",
+      "choices": {
+        "a": "A, C and E",
+        "b": "C, E and F",
+        "c": "A, C and F",
+        "d": "E, F and G"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "classification",
+      "subtopic_name": "Classification",
+      "body": "Which are the two valleys?",
+      "choices": {
+        "a": "A and D",
+        "b": "D and E",
+        "c": "D and G",
+        "d": "A and B"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "selection",
+      "subtopic_name": "Selection",
+      "body": "Who is good in hockey, volleyball and cricket?",
+      "choices": {
+        "a": "Rajneesh",
+        "b": "Suresh",
+        "c": "Kavita",
+        "d": "Gambhir"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "selection",
+      "subtopic_name": "Selection",
+      "body": "Who is good in tennis, cricket, volleyball and football?",
+      "choices": {
+        "a": "Suresh",
+        "b": "Kavita",
+        "c": "Rajneesh",
+        "d": "Gambhir"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "selection",
+      "subtopic_name": "Selection",
+      "body": "Who is good in tennis, volleyball and hockey?",
+      "choices": {
+        "a": "Gambhir",
+        "b": "Kavita",
+        "c": "Suresh",
+        "d": "Rejneesh"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "selection",
+      "subtopic_name": "Selection",
+      "body": "Who likes chess, hockey and volleyball?",
+      "choices": {
+        "a": "Suresh",
+        "b": "Kamlesh",
+        "c": "Ravish",
+        "d": "Giri"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "selection",
+      "subtopic_name": "Selection",
+      "body": "Who likes badminton, chess, football and volleyball?",
+      "choices": {
+        "a": "Suresh",
+        "b": "Kamlesh",
+        "c": "Giri",
+        "d": "Ravish"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "selection",
+      "subtopic_name": "Selection",
+      "body": "Who likes hockey, volleyball and badminton?",
+      "choices": {
+        "a": "Suresh",
+        "b": "Kamlesh",
+        "c": "Ravish",
+        "d": "Giri"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 600
+}

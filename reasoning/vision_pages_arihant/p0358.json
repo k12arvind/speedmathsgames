@@ -1,0 +1,94 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Venn Diagram",
+  "passages": [],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "class_relationships",
+      "subtopic_name": "Class Relationships",
+      "body": "The given Venn diagram shows that two separate classes belong to the class of third.",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_depiction",
+      "subtopic_name": "Relationship Depiction",
+      "body": "Which of the following diagrams best depicts the relationship between Table, Chair, Furniture?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "overlapping_classes",
+      "subtopic_name": "Overlapping Classes",
+      "body": "When two classes or groups belong to the class of third such that some items of each of these two groups are common, then the diagram will be as follows",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_depiction",
+      "subtopic_name": "Relationship Depiction",
+      "body": "Which of the following diagram best depicts the relationship between Females, Mothers and Sisters?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "All doctors come under the group of human beings but all human beings do not come under the group of doctors and cats are entirely different from doctors and human beings. The relation can be expressed by the diagram as given in option (c)."
+    },
+    {
+      "number": 9,
+      "solution": "No table can be chair and also no chair can be table. But both table and chair come under the group of furniture. This can be expressed as given in option (b)."
+    },
+    {
+      "number": 10,
+      "solution": "Some mothers are sisters and some sisters are mother. Also, both mothers and sisters are females. This relationship can be expressed as given in option (d)."
+    }
+  ],
+  "answers": [],
+  "_page": 358
+}

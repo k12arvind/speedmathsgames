@@ -1,0 +1,59 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Dice",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 21,
+      "solution": "(b) If there is one triangle at the bottom, there would be three triangles on the top."
+    },
+    {
+      "number": 22,
+      "solution": "(d) From the figures (i) and (ii), it is clear that the two surfaces are common to both figures i.e., 4 and 5. So, the surfaces left contains 3 and 6 dots, which are opposite to each other."
+    },
+    {
+      "number": 23,
+      "solution": "(d) From positions II and III, Common dots = 2 and 5 So, face opposite to the face having 1 dot will be the face having 6 dots."
+    },
+    {
+      "number": 24,
+      "solution": "(d) From positions I and III. Common points = 2 [at the common (right) face] So, face opposite to the face having 1 dot will be the face having 6 dots."
+    },
+    {
+      "number": 25,
+      "solution": "(c) From positions I, II and IV. Adjacent faces of the face having 3 dots = 1 2, 4 and 6 So, face opposite to the face having 3 dots will be the face having 5 dots."
+    },
+    {
+      "number": 26,
+      "solution": "(d) Looking at the first two figures we see that 2 is opposite to 6 and 3 is opposite to 4. The third figure tells us that 5 is opposite to 1. Thus, the numbers A and B, which are adjacent to 5 could be any of the following four: 6 and 4, 4 and 2, 2 and 3, and 3 and 6. out of these only 2 and 3 is given as a option, so (a) is the right answer."
+    },
+    {
+      "number": 27,
+      "solution": "(c) Common letter = J [at the same (right) face] Clearly, S is opposite to V."
+    },
+    {
+      "number": 28,
+      "solution": "(c) From positions II and III, Common letters = P and Y Clearly, A is opposite to L."
+    },
+    {
+      "number": 29,
+      "solution": "(c) In a cube, any pair of adjoining sides will have two common adjoining sides which will be opposite to each other. In the given question, these two sides are A and H. Hence, it is opposite to A."
+    },
+    {
+      "number": 30,
+      "solution": "(c) From, positions I and II, Common letters = M and S Clearly, W is opposite to D."
+    },
+    {
+      "number": 31,
+      "solution": "(c) From both the positions I and II, Common colour = White [at different faces] From position I (clokwise): White, Blue, Green; From position II: White, Yellow, Black. Clearly, green is opposite to black. It means green is at the bottom, and black is at the top."
+    },
+    {
+      "number": 32,
+      "solution": "(d) From the given four positions of a single dice. Faces adjacent to face having green colour = Orange, red, white, silver Clearly, violet is opposite to green."
+    }
+  ],
+  "answers": [],
+  "_page": 910
+}

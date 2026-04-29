@@ -1,0 +1,80 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube Folding",
+      "subtopic_code": "cube_unfolding",
+      "subtopic_name": "Cube Unfolding",
+      "body": "Question Figure [cube pattern shown]",
+      "choices": {
+        "a": "cube view",
+        "b": "cube view",
+        "c": "cube view",
+        "d": "cube view"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube Views",
+      "subtopic_code": "cube_views",
+      "subtopic_name": "Cube Views",
+      "body": "Three views of the same cube are given. All the faces of the cube are numbered from 1 to 6. Select one figure which will result when the cube is unfolded.",
+      "choices": {
+        "a": "unfolded pattern",
+        "b": "unfolded pattern",
+        "c": "unfolded pattern",
+        "d": "unfolded pattern"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(C) According to the question. So, ☐ is opposite to ☐, ○ is opposite to ☐, and ☒ is opposite to ○. Clearly, only the cube in figure (a) is correct because when unfolded dice will be folded, this figure will be formed."
+    },
+    {
+      "number": 2,
+      "solution": "(b) According to the question. So, ☐ is opposite to ☒, ☐ is opposite to ○, and ☐ is opposite to ☐. Hence, only the cube in figure (b) is correct because when unfolded dice will be folded, only this figure will be formed."
+    },
+    {
+      "number": 3,
+      "solution": "(b) As per the question. So, ○ is opposite to ☐, ± is opposite to ☐, and ♦ is opposite to ◇. Hence, option (b) will be the correct answer."
+    },
+    {
+      "number": 4,
+      "solution": "(b) According to the question. So, two blank faces are opposite to each other"
+    },
+    {
+      "number": 5,
+      "solution": "(c) According to the question. So, ☐ is opposite to ○, ☐ is opposite to ○, and × is opposite to ※. Now, it is clear that only option (d) shows the correct figure of unfolded dice."
+    },
+    {
+      "number": 6,
+      "solution": "(c) According to the question. So, two blank faces of cube are opposite to two another blank faces, and × is opposite to ☒. Clearly, only option (c) is the correct answer."
+    },
+    {
+      "number": 7,
+      "solution": "(b) According to the question. So, A is opposite to D, B is opposite to F, and C is opposite to E. Hence, only the cube in figure (b) is the correct answer."
+    }
+  ],
+  "answers": [],
+  "_page": 919
+}

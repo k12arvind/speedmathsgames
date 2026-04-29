@@ -1,0 +1,143 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 4 Miscellaneous Problems",
+  "passages": [
+    {
+      "passage_text": "Study the following information to answer the following questions. A number arrangement machine when given an input line of numbers, rearranges them following a particular rule in each step. The following is an illustration of input and steps of arrangement.\nInput: '35 261 15 812 12 127\nStep I 53 126 51 281 21 712\nStep II 305 2061 105 8012 102 1027\nStep III 53 612 51 128 21 271\nStep IV 326 1 81 1 12\nStep V 350 2610 150 8120 120 1270",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "Step V 160 850 900 750 590. Find out the input.",
+      "choices": {
+        "a": "150 850 900 750 590",
+        "b": "85 16 90 75 59",
+        "c": "16 85 90 75 59",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "Input 72 25 85 97 43 91. What would be the Step IV?",
+      "choices": {
+        "a": "7 2 8 9 4 9",
+        "b": "2 5 5 7 3 1",
+        "c": "9 4 9 8 2 7",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "Step II 204 5018 800 902 401 6017. What would be the input?",
+      "choices": {
+        "a": "20 51 80 90 40 60",
+        "b": "24 518 80 92 41 617",
+        "c": "617 41 92 80 518 24",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "Step IV 2 29 1 92 35 48. Find out the input?",
+      "choices": {
+        "a": "29 292 15 925 352 483",
+        "b": "28 296 18 928 356 482",
+        "c": "22 293 17 923 355 486",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "Step I 39 44 68 58 18 182. Find out the input.",
+      "choices": {
+        "a": "93 44 86 85 81 812",
+        "b": "93 39 44 68 58 182",
+        "c": "93 44 85 86 81 812",
+        "d": "93 44 85 8186 812",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "(D) Step IV = (Each number of input)²"
+    },
+    {
+      "number": 7,
+      "solution": "(D) As Step VI = (Each number of Input × 2)² ⇒ Each number of input = √Step VI / 2"
+    },
+    {
+      "number": 8,
+      "solution": "(D) As Step V = (Each number of input − 1)²"
+    },
+    {
+      "number": 9,
+      "solution": "(e) As Step II = (Each number of input) + 9 ⇒ Each number of input = (Step II) − 9 Hence, it is clear that out of the given options (a), (b), (c) and (d), no one can be correct."
+    },
+    {
+      "number": 10,
+      "solution": "(C) As Step VI = (Each number of input × 2)²"
+    }
+  ],
+  "answers": [],
+  "_page": 585
+}

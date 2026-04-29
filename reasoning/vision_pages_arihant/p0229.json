@@ -1,0 +1,46 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In this type of questions, a series of numbers is given which follow a certain pattern and one of its term is incorrect and does not fit into the series. The candidate is required to identify the pattern involved in the formation of series and then find out that number which does not follow the specific pattern of the series. This particular number is the wrong term in the series and is your required answer.",
+      "has_figure": false,
+      "topic_code": "series"
+    },
+    {
+      "passage_text": "Directions (Example Nos. 28-30) In the following number series, only one number is wrong. Find out the wrong number.",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 65,
+      "solution": "(d) The pattern is as follows: 3 → 11 → 36 → 111 → 360 → 900. +3 → -3 → -6 → +30 → +50. ∴ ? = 900"
+    },
+    {
+      "number": 66,
+      "solution": "(b) The pattern is as follows: 8 → 16 → 28 → 44 → 64. +8 → +12 → +16 → +20. +4 → +4 → +4. ∴ ? = 64"
+    },
+    {
+      "number": 67,
+      "solution": "(c) We put 17 in between 14 and 19 and the following pattern is obtained: 18 11 15 14 17 19 16 10 12 20. -4 → +2 → +4. 18 11 15 14 17 19 16 10 12 20. +6 → -5. 18 11 15 14 17 19 16 10 12 20. +6 → -7"
+    },
+    {
+      "number": 28,
+      "solution": "(d) The pattern is as follows: 9050 → 5675 → 3478 → 2147 → 1418 → 1077 → 950. -(15)² → -(13)² → -(11)² → -(9)² → -(7)² → -(5)². Hence, 1077 is wrong number and should be replaced by 1075."
+    },
+    {
+      "number": 29,
+      "solution": "(c) The pattern is as follows: 6 → 91 → 2935 → 11756 → 35277 → 70558. (6 × 7) + 7 → (91 × 6) + 6 → (582 × 5) + 5 → (2935 × 4) + 4 → (11756×3) + 3 → (35277×2) + 2. Hence, 584 is wrong number and should be replaced by 582."
+    },
+    {
+      "number": 30,
+      "solution": "(d) The pattern is as follows: 1 → 4 → 27 → 256 → 3125 → 46656 → 823543. (1)¹ → (2)² → (3)³ → (4)⁴ → (5)⁵ → (6)⁶ → (7)⁷. Hence, 25 is wrong number and should be replaced by 27."
+    }
+  ],
+  "answers": [],
+  "_page": 229
+}

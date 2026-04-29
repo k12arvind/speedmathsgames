@@ -1,0 +1,137 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 58-59) In the following questions, four pairs of numbers are given, which all except one are similar in some manner and hence they form a group. You have to find the pair which is different and therefore discarded from the group of similar pair.",
+      "has_figure": false,
+      "topic_code": "classification"
+    }
+  ],
+  "questions": [
+    {
+      "number": 55,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "increasing_decreasing_order",
+      "subtopic_name": "Classification Based on Increasing/Decreasing Order of Digits",
+      "body": "Take out the odd one.",
+      "choices": {
+        "a": "456",
+        "b": "234",
+        "c": "123",
+        "d": "312"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "increasing_decreasing_order",
+      "subtopic_name": "Classification Based on Increasing/Decreasing Order of Digits",
+      "body": "Find the odd one.",
+      "choices": {
+        "a": "345",
+        "b": "321",
+        "c": "876",
+        "d": "654"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "addition_digits",
+      "subtopic_name": "Classification Based on Addition of Digits",
+      "body": "Find the odd one.",
+      "choices": {
+        "a": "345",
+        "b": "821",
+        "c": "236",
+        "d": "182"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "pair_group_numbers",
+      "subtopic_name": "Classification Based on Pair or Group of Digits/Numbers",
+      "body": "",
+      "choices": {
+        "a": "4-16",
+        "b": "3-12",
+        "c": "7-28",
+        "d": "5-15"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "pair_group_numbers",
+      "subtopic_name": "Classification Based on Pair or Group of Digits/Numbers",
+      "body": "",
+      "choices": {
+        "a": "22-12",
+        "b": "32-22",
+        "c": "62-22",
+        "d": "52-42"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "group_three_numbers",
+      "subtopic_name": "Classification Based on Group of Three Numbers",
+      "body": "",
+      "choices": {
+        "a": "25, 50, 56",
+        "b": "20, 40, 46",
+        "c": "18, 36, 40",
+        "d": "12, 24, 30"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 87
+}

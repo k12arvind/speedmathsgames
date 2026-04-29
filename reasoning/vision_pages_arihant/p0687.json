@@ -1,0 +1,101 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Each of the questions consists of five figures marked 1, 2, 3, 4 and 5 named as the problem figures and is followed by five answer figures marked (a), (b), (c), (d) and (e). Select a figure from the answer figures which will continue the series as established by the five problem figures.",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "pattern_continuation",
+      "subtopic_name": "Pattern Continuation",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "pattern_continuation",
+      "subtopic_name": "Pattern Continuation",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "pattern_continuation",
+      "subtopic_name": "Pattern Continuation",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "pattern_continuation",
+      "subtopic_name": "Pattern Continuation",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 687
+}

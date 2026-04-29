@@ -1,0 +1,604 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In each of the following questions, continuous pattern series is given. Some of the letters of the series are missing. These missing letters are given in that order as one of the four alternatives below the series. Find out the correct alternatives.",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    },
+    {
+      "passage_text": "What value should come in place of the question mark (?) in the series given below?",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [
+    {
+      "number": 93,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "ST, ND, RD, TH, ?, ?",
+      "choices": {
+        "a": "TH, TH",
+        "b": "VW, SW",
+        "c": "RW, KH",
+        "d": "ST, MN"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 94,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "URY, NUS, RTH, ARS, TER, URN, NUS, UNE, ?",
+      "choices": {
+        "a": "UTO",
+        "b": "UFO",
+        "c": "NET",
+        "d": "FSO"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 95,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "ab_cabb_caa_bccab_cab_cc",
+      "choices": {
+        "a": "abbcc",
+        "b": "baabc",
+        "c": "bccbb",
+        "d": "bcaac",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 96,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "adb_ac_da_cddcb_dbc_cbda",
+      "choices": {
+        "a": "bccba",
+        "b": "cbbaa",
+        "c": "ccbba",
+        "d": "bbcad"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 97,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "c_bba_cab_ac_ab_ac",
+      "choices": {
+        "a": "b, c, b, a, c",
+        "b": "c, a, b, c, b",
+        "c": "a, c, c, b, c",
+        "d": "a, c, b, c, b"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 98,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "b_acbda_bd_cb_a_",
+      "choices": {
+        "a": "baadc",
+        "b": "dcadc",
+        "c": "cbdca",
+        "d": "cdacb"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 99,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "ab _ d bc a _ c _ ab _ d",
+      "choices": {
+        "a": "cadbdc",
+        "b": "cabccd",
+        "c": "abbcdd",
+        "d": "caddbc"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 100,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "c_abbcc_bb_cab_c_abb",
+      "choices": {
+        "a": "abcca",
+        "b": "babac",
+        "c": "cbbca",
+        "d": "cacbc"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 101,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "bc_bca_cab_ab_a_ca",
+      "choices": {
+        "a": "abcab",
+        "b": "cabac",
+        "c": "abcdb",
+        "d": "cabca"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 102,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "mc_m_a_ca_ca_c_mc",
+      "choices": {
+        "a": "acmmma",
+        "b": "camcam",
+        "c": "aaacmm",
+        "d": "acmmmc"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 103,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "a_a_abab_ba",
+      "choices": {
+        "a": "abab",
+        "b": "baab",
+        "c": "abba",
+        "d": "bbab"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 104,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "aa_aaa_aaaa_aaaa_b",
+      "choices": {
+        "a": "baaa",
+        "b": "bbaa",
+        "c": "bbbbb",
+        "d": "bbba"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 105,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "a_cdaab_cc_daa_bbb_ccddd",
+      "choices": {
+        "a": "bdbda",
+        "b": "bddca",
+        "c": "abcdb",
+        "d": "bbdac"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 106,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "ab_bcbca_ _ c _ bab",
+      "choices": {
+        "a": "aabc",
+        "b": "baaa",
+        "c": "abcc",
+        "d": "ccaa"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 107,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "missing_letters",
+      "subtopic_name": "Missing Letters",
+      "body": "_A _ A _ _ B A B _ B _ B A B A",
+      "choices": {
+        "a": "BBABAA",
+        "b": "BBBAAAA",
+        "c": "ABABBA",
+        "d": "BBAABB"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 108,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "E-5, G-7, I-9, K-11, M-13, ?",
+      "choices": {
+        "a": "N-14",
+        "b": "N-15",
+        "c": "O-15",
+        "d": "O-17"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 109,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "D-23, E-22, F-21, G-20, H-19, ?",
+      "choices": {
+        "a": "I-18",
+        "b": "I-9",
+        "c": "I-20",
+        "d": "I-15"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 110,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "2B, 4C, 8E, 14H, ?",
+      "choices": {
+        "a": "16 K",
+        "b": "20I",
+        "c": "20L",
+        "d": "22L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 111,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "2, A, 9, B, 6, C, 13, D, ?",
+      "choices": {
+        "a": "9",
+        "b": "10",
+        "c": "12",
+        "d": "19"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 112,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "128, 61, Y, 64, 63, S, 32, 65, N, 16, 67, ?, 8, 69, G, ?, ?, ?",
+      "choices": {
+        "a": "2, 70, J",
+        "b": "3, 70, E",
+        "c": "4, 70, E",
+        "d": "4, 71, E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 113,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "N5V, K7T, ?, E14P, B19N",
+      "choices": {
+        "a": "I-9R",
+        "b": "H10Q",
+        "c": "H10R",
+        "d": "I10R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 114,
+      "passage_index": 1,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "DF-9, FC-9, LP-28, GT-?",
+      "choices": {
+        "a": "35",
+        "b": "8",
+        "c": "27",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 115,
+      "passage_index": 1,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "CD-12, LB-24, BP-32, NE-?",
+      "choices": {
+        "a": "70",
+        "b": "75",
+        "c": "45",
+        "d": "95"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 116,
+      "passage_index": 1,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "Q1, P2, R6, N24, V120, ?",
+      "choices": {
+        "a": "W600",
+        "b": "X720",
+        "c": "F720",
+        "d": "F600"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 117,
+      "passage_index": 1,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "alphanumeric_series",
+      "subtopic_name": "Alphanumeric Series",
+      "body": "A1Z, E2V, I6R, M21N, Q88J, ?",
+      "choices": {
+        "a": "F 445 U",
+        "b": "U 445 F",
+        "c": "G342 C",
+        "d": "V441 G",
+        "e": "T 267 N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 118,
+      "passage_index": 1,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "alphanumeric_series",
+      "subtopic_name": "Alphanumeric Series",
+      "body": "Y4X9, W16V25, ?, S64R81",
+      "choices": {
+        "a": "U39T49",
+        "b": "U36T49",
+        "c": "U32T48",
+        "d": "N36T46"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 119,
+      "passage_index": 1,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "alphanumeric_series",
+      "subtopic_name": "Alphanumeric Series",
+      "body": "W-144, ?, S-100, Q-81, O-64",
+      "choices": {
+        "a": "U-121",
+        "b": "U-122",
+        "c": "V-121",
+        "d": "V-128"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 120,
+      "passage_index": 1,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "alphanumeric_series",
+      "subtopic_name": "Alphanumeric Series",
+      "body": "X24C3, Y22E5, T20G7, ?",
+      "choices": {
+        "a": "R16I17",
+        "b": "R17I9",
+        "c": "R18I9",
+        "d": "R19I0"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 121,
+      "passage_index": 1,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "alphanumeric_series",
+      "subtopic_name": "Alphanumeric Series",
+      "body": "BD3FH, AC5EG, JL7NP, ?",
+      "choices": {
+        "a": "IK9MO",
+        "b": "IK11MO",
+        "c": "IK13MO",
+        "d": "IK17MO"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 253
+}

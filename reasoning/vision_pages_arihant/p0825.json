@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "(D) The figure in question may be labeled as shown in the following figure\n\nSmallest triangles = ΔAEF, ΔEPR, ΔFSQ, ΔPRD, ΔRSD, ΔSQD = 6\nSingle triangles = ΔPRD, ΔQDC, ΔEFD = 3\nTriangles formed with two triangles = ΔPSD, ΔQDC, ΔFDQ, ΔFDP = 4\nTriangles formed with three or four triangles = ΔABC, ΔPDC, ΔBDE, ΔPQD = 4\nLargest triangle = ΔABC = 1\n∴Total triangles = 6 + 3 + 4 + 4 + 1 = 18"
+    },
+    {
+      "number": 12,
+      "solution": "(D) The figure in question may be marked at different points as shown in the following figure\n\nSmallest triangles = ΔNGQ, ΔQHR, ΔPDQ, ΔNDP, Δ JIC, ΔICK = 6\nSingle triangles = ΔEMJ, ΔKLF, ΔRIF, ΔEQI, ΔPHI, ΔPGI = 6\nTriangle formed with two triangles = ΔAEI, ΔBHJ, ΔDQI, ΔDRJ, ΔCJK, ΔGHI, ΔDEI, ΔDIF = 9\nTriangles formed with three triangles = ΔADC, ΔDBC = 2\nLargest triangles = ΔABC, ΔEDF = 2\n∴. Total triangles = 6 + 6 + 9 + 2 + 2 = 25"
+    },
+    {
+      "number": 13,
+      "solution": "(D) There are total 27 triangles in the given figure.\n\nFrom this figure it is clear that,\nTriangles formed by single units = ΔABC, ΔBDE, ΔBCE, ΔCEF, ΔDGH, ΔDHE, ΔHEI, ΔEIF, ΔFIJ, ΔGKL, ΔGIH, ΔLHM, ΔHMI, ΔMIN, ΔINJ and ΔNJO i.e., 16 triangles.\nTriangles formed by combining four triangles are ΔADF, ΔBGI, ΔCHJ, ΔDKM, ΔLEN, ΔMFO and ΔDFM i.e., 7 triangles.\nTriangle formed by combining 9 triangles are ΔAGJ, ΔBKN and ΔCLO i.e., 3 triangles. One triangle ΔAKO formed by complete figure.\nSo, total number of triangles = 16 + 7 + 3 + 1 = 27"
+    },
+    {
+      "number": 14,
+      "solution": "(D) The figure may be marked as shown in the following diagram\n\nThe triangles in the figures are as follows\nSmallest triangles = ΔAFE, ΔEFC, ΔALN, ΔCOM, ΔNHG, ΔGHO, ΔLBP, ΔMQD, ΔIPJ, ΔJIQ = 10\nSingle triangles = ΔAFH, ΔCFH, ΔBJK, ΔDJK = 4\nTriangles formed with two small triangles = ΔAEC, ΔNOH, ΔGJM, ΔPQJ, ΔECH, ΔAEH, ΔLJG = 7\nTriangles formed with three or four small triangles = ΔAHC, ΔLMJ, ΔBDK = 3\n∴. Total triangles = 10 + 4 + 7 + 3 = 24"
+    }
+  ],
+  "answers": [],
+  "_page": 825
+}

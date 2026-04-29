@@ -1,0 +1,99 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 114,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "figure_series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "pattern_completion",
+      "subtopic_name": "Pattern Completion",
+      "body": "Problem Figures - Find the missing figure in the series.",
+      "choices": {
+        "a": "Option A",
+        "b": "Option B",
+        "c": "Option C",
+        "d": "Option D",
+        "e": "Option E"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 115,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "figure_series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "pattern_completion",
+      "subtopic_name": "Pattern Completion",
+      "body": "Problem Figures - Find the missing figure in the series.",
+      "choices": {
+        "a": "Option A",
+        "b": "Option B",
+        "c": "Option C",
+        "d": "Option D",
+        "e": "Option E"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 116,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "figure_series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "pattern_completion",
+      "subtopic_name": "Pattern Completion",
+      "body": "Problem Figures - Find the missing figure in the series.",
+      "choices": {
+        "a": "Option A",
+        "b": "Option B",
+        "c": "Option C",
+        "d": "Option D",
+        "e": "Option E"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(a) From problem figure (2) to (1), upper right design inside the circle comes to lower right side, lower left design goes to upper right side and upper left side design goes to lower left side and the new design takes place at upper left corner. Similarly, the same rule follows from problem figure (4) to answer figure (3)."
+    },
+    {
+      "number": 2,
+      "solution": "(c) From figure (2) to (1) second element from top rotates 90° clockwise, enlarges in size and becomes first from left. Fourth element rotates 90° clockwise and occupies second position. First element rotates 90° clockwise, enlarges in size and occupies third position. Third element rotates 90° clockwise and occupies fourth position."
+    },
+    {
+      "number": 3,
+      "solution": "(c) From problem figure (1) to (2), upper design comes in middle position with 90° anti-clockwise rotation, middle design comes in lower side with 90° clockwise rotation and lower design comes in upper side with 180° rotation. In the same manner answer figure (4) is obtained from problem figure (3)."
+    },
+    {
+      "number": 4,
+      "solution": "(b) From fig (2) to (1), the changes in position of elements is given as follows: Hence, option (b) is the correct answer."
+    },
+    {
+      "number": 5,
+      "solution": "(b) From problem figure (2) to (1), each design moves one place clockwise direction and rotates in a certain pattern. Similarly, answer figure (3) is obtained from problem figure (4)."
+    },
+    {
+      "number": 6,
+      "solution": "(c) The pattern of problem figure (2) to (1) is as follows. Similar rule is followed to obtain answer figure (3) from problem figure (4)."
+    }
+  ],
+  "answers": [],
+  "_page": 793
+}

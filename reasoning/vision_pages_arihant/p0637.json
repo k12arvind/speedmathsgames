@@ -1,0 +1,252 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Three of the following four are alike in a certain way based upon the given parking arrangement and so form a group. Which is the one that does not belong to that group?",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the following information and answer the following questions. A, B, C, D, E, G and I are seven friends who study in three different standards namely 5th, 6th and 7th such that not less than two friends study in the same standard. Each friend also has a different favourite subject namely History, Civics, English, Marathi, Hindi, Maths and Economics but not necessarily in the same order. A likes Maths and studies in the 5th standard with only one other friend who likes Marathi. I studies with two other friends. Both the friends who study with I like languages (here, languages include only Hindi, Marathi and English). D studies in the 6th standard with only one person and does not like Civics. E studies with only one friend. The one who likes History does not study in 5th or 6th standard. E does not like English, Hindi or Civics. C does not like English, Hindi or Civics.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Consider the following statements and answer Q. Nos. 85 and 86 on the basis of these statements. I. A guest house has six rooms A, B, C, D, E and F. Among these A and C can accommodate two persons each, the rest can accommodate only one each. II. Eight guests P, Q, R, S, T, U, W and X are to be kept in these rooms. Q, T and X are females while the others are males. The two sexes cannot be put together in the same room. So man is willing to stay in room C or F. III. P wants to be alone but does not want to stay in room B or D. S needs a partner but is not ready to stay with U or W. X does not want to share her room.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 74,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following cars are parked at extreme ends of the rows?",
+      "choices": {
+        "a": "Landrover, Punto",
+        "b": "Innova, Punto",
+        "c": "Polo, Accord",
+        "d": "Landrover, Innova"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 75,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following car faces Polo?",
+      "choices": {
+        "a": "Mercedes",
+        "b": "Civic",
+        "c": "Landrover",
+        "d": "Punto"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 76,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following is true regarding Figo?",
+      "choices": {
+        "a": "A driver seated in the parked Figo would face North",
+        "b": "Swift is parked second to the right of the car facing Figo",
+        "c": "Punto and Ferrari are parked immediately next to Figo",
+        "d": "Mercedes and Accord are parked at the extreme ends of the row in which Figo is parked"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 77,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "",
+      "choices": {
+        "a": "Ferrari",
+        "b": "Civic",
+        "c": "Swift",
+        "d": "Mercedes"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "",
+      "choices": {
+        "a": "Polo-Figo",
+        "b": "Accord-Landrover",
+        "c": "Figo-Innova",
+        "d": "Mercedes-City"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Which combination represents E's favourite subject and the standard in which he studies?",
+      "choices": {
+        "a": "Civics and 7th",
+        "b": "Economics and 5th",
+        "c": "Civics and 6th",
+        "d": "History and 7th",
+        "e": "Economics and 7th"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Which of the following is I's favourite subject?",
+      "choices": {
+        "a": "History",
+        "b": "Civics",
+        "c": "Marathi",
+        "d": "Either English or Marathi",
+        "e": "Either English or Hindi"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 81,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Who amongst the following studies in the 7th standard?",
+      "choices": {
+        "a": "G",
+        "b": "C",
+        "c": "E",
+        "d": "E",
+        "e": "Either D or B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Which of the following combinations is definitely correct?",
+      "choices": {
+        "a": "I and Hindi",
+        "b": "G and English",
+        "c": "C and Marathi",
+        "d": "B and Hindi",
+        "e": "E and Economics"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Which of the following subjects does G like?",
+      "choices": {
+        "a": "Either Maths or Marathi",
+        "b": "Either Hindi or English",
+        "c": "Either Hindi or Civics",
+        "d": "Either Hindi or Marathi",
+        "e": "Either Civics or Economics"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 84,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_reasoning",
+      "subtopic_name": "Logical Reasoning",
+      "body": "Abdul, Mala and Chetan went for bird watching. Each of them saw one bird that none of the others did. Each pair saw one bird that the third did not. One bird was seen by all three. Of the birds Abdul saw, two were yellow. Of the birds Mala saw, three were yellow. Of the birds Chetan saw, four were yellow. How many yellow birds were seen in all ? How many non-yellow birds were seen in all?",
+      "choices": {
+        "a": "7 yellow birds and 3 non-yellow birds",
+        "b": "5 yellow birds and 2 non-yellow birds",
+        "c": "4 yellow birds and 3 non-yellow birds",
+        "d": "3 yellow birds and 2 non-yellow birds"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 637
+}

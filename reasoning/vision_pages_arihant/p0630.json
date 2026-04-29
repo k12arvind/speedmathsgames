@@ -1,0 +1,194 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "A, B, C, D, E and F stay at the different floor of a building. Ground floor is number 1, First floor is number 2 and so on. A stays at even number floor. There are two floors between the floor on which D and F stay. F stays on the floor above D. D does not live on number 2 floor. B does not live on odd number floor. C does not live on any floor under F. E stays neither immediately above B nor immediately under B.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "P, Q, R, S, T and X are six persons who decided to start a partnership business in computer hardware. Q, R and T are ladies and the rest are men. P, Q, R and X are well versed in hardware but the other do not know much about the hardware. Q, X and S know marketing but others do not know anything about marketing.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Four political parties W, X, Y and Z decided to set up a joint candidate for the coming parliamentary elections. The formula agreed by them was the acceptance of a candidate by most of the parties. Four aspiring candidate A, B, C and D approached the parties for their tickets. A was acceptable to W but not to Z. B was acceptable to Y but not to X. C was acceptable to W and Y. D was acceptable to W and X. When candidate B was preferred by W and Z, candidate C was preferred by X and Z and candidate A was acceptable to X but not to Y, who got the ticket?",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Five experts on nano technology involved in an 'international research project' hold a quarterly review meeting in Singapore. There are certain limitations on their language skills. Expert R1 knows only Japanese and Hindi; R2 is good at Japanese and English; R3 is good at English and Hindi; R4 knows French and Japanese quite well and R5 an Indian known Hindi, English and French.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "Who live exactly in between D and F?",
+      "choices": {
+        "a": "E, B",
+        "b": "C, B",
+        "c": "E, C",
+        "d": "A, E",
+        "e": "B, A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "On which floor does B stay?",
+      "choices": {
+        "a": "6th",
+        "b": "4th",
+        "c": "2nd",
+        "d": "5th",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "partnership_analysis",
+      "subtopic_name": "Partnership Analysis",
+      "body": "The male partner who knows marketing but does not know computer hardware.",
+      "choices": {
+        "a": "S",
+        "b": "P",
+        "c": "X",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "partnership_analysis",
+      "subtopic_name": "Partnership Analysis",
+      "body": "The female partner who is well versed in computer hardware but does not know marketing is",
+      "choices": {
+        "a": "X",
+        "b": "Q",
+        "c": "T",
+        "d": "R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "partnership_analysis",
+      "subtopic_name": "Partnership Analysis",
+      "body": "The female partner who neither knows hardware nor marketing is",
+      "choices": {
+        "a": "R",
+        "b": "Q",
+        "c": "T",
+        "d": "X"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "political_analysis",
+      "subtopic_name": "Political Analysis",
+      "body": "who got the ticket?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "language_skills",
+      "subtopic_name": "Language Skills",
+      "body": "Besides R5 which of the following can converse with R4 without an interpreter?",
+      "choices": {
+        "a": "Only R1",
+        "b": "Only R2",
+        "c": "Only R3",
+        "d": "Both R1 and R2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "language_skills",
+      "subtopic_name": "Language Skills",
+      "body": "Which of the following cannot converse without an interpreter?",
+      "choices": {
+        "a": "R2 and R5",
+        "b": "R1 and R2",
+        "c": "R1 and R3",
+        "d": "R3 and R4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 630
+}

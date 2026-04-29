@@ -1,0 +1,75 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 27,
+      "solution": "(b) All the 4 cubes present on the corners will have four faces painted and two faces unpainted."
+    },
+    {
+      "number": 28,
+      "solution": "(c) 8 cubes from the upper and lower surfaces surrounded by 1 cm boundary will have two surfaces painted and remaining unpainted."
+    },
+    {
+      "number": 29,
+      "solution": "(d) 8 smaller cubes from cube (A) and one smaller cube from cube (B) will have none of its surface painted i.e., a total of 9 cubes will have none of its surface painted."
+    },
+    {
+      "number": 30,
+      "solution": "(b) 4 smaller cubes each from cubes (A) and (B) will have red, white and blue colours on one face each."
+    },
+    {
+      "number": 31,
+      "solution": "(d) 24 cubes from (A) and 11 cubes from (B) will not have red colours on any of their faces."
+    },
+    {
+      "number": 32,
+      "solution": "(d) 32 smaller cubes from (A) and 15 smaller cubes from (B) will have atleast one face red."
+    },
+    {
+      "number": 33,
+      "solution": "(c) 8 smaller cubes from (A) and four smaller cubes from (B) i.e., a total 12 cubes will have one face white and one face red and no face blue."
+    },
+    {
+      "number": 34,
+      "solution": "(c) 12 smaller cubes from (A) and 6 smaller cubes from (B) i.e., a total of 18 cubes are coloured blue, red or white on two faces each and not coloured on any other face."
+    },
+    {
+      "number": 35,
+      "solution": "(b) 16 smaller cubes from (A) and 6 smaller cubes from (B) i.e., a total of 22 cubes are coloured red, white or blue on one face each and have no other face coloured."
+    },
+    {
+      "number": 36,
+      "solution": "(b) 28 cubes from (A) and 15 cubes from (B) are coloured blue on atleast one of their face."
+    },
+    {
+      "number": 37,
+      "solution": "(c) 28 cubes from (A) and 18 cubes from (B) are coloured blue on atleast one of their face."
+    },
+    {
+      "number": 38,
+      "solution": "(d) (n – 2) × 12 = (4 – 2) × 12 = 24 cubes from (A) and (n – 2) × 12 = (3 – 2) × 12 = 12 cubes from (B) i.e., total 36 cubes are coloured on two faces only."
+    },
+    {
+      "number": 39,
+      "solution": "(a) Clearly, the four colours adjacent to green red, black, brown and white."
+    },
+    {
+      "number": 40,
+      "solution": "(c) There are four layers from the top to bottom. 1st layer has 1 block, 2nd layer has 5 blocks, 3rd layer has 3 rows of 3 blocks each, 4th layer has 4 blocks. ∴ Total blocks = 1 + 5 + 3 × 3 + 4 = 10 + 9 = 19 blocks"
+    },
+    {
+      "number": 41,
+      "solution": "(g) Clearly, the four colours adjacent to green are- red, black, brown and white. (c) 91 cubes. Method I: You can see three faces at once. You can see one face only of 25 blocks on each of the three faces, for a total of 75 blocks. You can see two faces of 5 blocks along each of the three edges visible, for a total of 15 blocks. Finally, you can see three sides of the one corner block that is facing you. The total number of blocks you can see is = 75 + 15 + 1 = 91. Method II: If you remove all of the blocks you can see, you are left with a 5 × 5 × 5 cube that you cannot see. There are 6 × 6 × 6 = 216 blocks in all and you cannot see 5 × 5 × 5 = 125 of them. So, you can see = 216 – 125 = 91 blocks."
+    },
+    {
+      "number": 42,
+      "solution": "(b) The bottom layer require 3 blocks, so that it can be turned into 4 × 4 block. Second layer from bottom will need 10 blocks similarly, third layer from bottom and top layer require 13 blocks and 15 blocks respectively. ∴ Total blocks required = 3 + 10 + 13 + 15 = 41 blocks"
+    }
+  ],
+  "answers": [],
+  "_page": 894
+}

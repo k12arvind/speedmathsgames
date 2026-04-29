@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "We can summarise the conditions in the following way: The 'must be together' groups - A, D ; S, T ; B, R ; Q (+) Q ; C, S ; (-) Q ; Now let us read the questions one by one.\n\nQ.1 There are five boys. We see that B and E can never be together. Hence, there are only two ways of selecting five boys from ABCDEPQR and they are ABCDP and ABCDQ. But the first possibility is not possible because I and P would go but I should also go, and if C goes then Q should also go. Hence, ABCDPQ cannot be selected. The only possibility in which case ABCDPQ is selected is ABCDPQ. Correct answer: (b)\n\nQ.2 There are three girls including P. P is there, so D must not be there. It is not there, A would not be there. So, two boys A and D are eliminated. Since the team should have only six members, hence to select six boys from three boys. Two boys A and D are eliminated. Hence, the possibilities of selecting three boys are: BCE, BCF, BEF, CEF. But B and F cannot go together. Hence, the remaining possibilities are BCF, CEF. Now, B must be with Q. C must be with Q. Hence, we have BRCQF and CQEF. Hence, including P, the two possibilities are PBRCQF and PCQEF. To the second possibility there is no girl. I can't add I since T can't go without S without S. Conversely, we can't add either. Hence this possibility is also eliminated. Hence, the only possible choice is PBRCQF. Correct answer: (a)."
+    }
+  ],
+  "answers": [],
+  "_page": 318
+}

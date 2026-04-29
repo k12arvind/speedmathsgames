@@ -1,0 +1,134 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "A combination of three colours is being chosen to decorate a room. The colour must be chosen from a group of seven colours— A, B, C, D, E, F and G according to the following conditions.\nI. If A or B is chosen, the other must also be chosen.\nII. C and D cannot be chosen together.\nIII. Either C or A or both must be chosen.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "conditioning_grouping",
+      "subtopic_name": "Conditioning and Grouping",
+      "body": "Which of the following combination of colours confirms to the conditions?",
+      "choices": {
+        "a": "A, C, D",
+        "b": "A, E, F",
+        "c": "B, C, G",
+        "d": "C, E, G"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "conditioning_grouping",
+      "subtopic_name": "Conditioning and Grouping",
+      "body": "If D is chosen, which of the following pair of colours must also be chosen?",
+      "choices": {
+        "a": "A and B",
+        "b": "A and G",
+        "c": "B and C",
+        "d": "C and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "conditioning_grouping",
+      "subtopic_name": "Conditioning and Grouping",
+      "body": "If E is chosen, which of the following pair of colours could also be chosen?",
+      "choices": {
+        "a": "A and C",
+        "b": "A and F",
+        "c": "B and C",
+        "d": "C and F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 66,
+      "solution": "(d) B and E"
+    },
+    {
+      "number": 67,
+      "solution": "(c) C and D"
+    },
+    {
+      "number": 68,
+      "solution": "(d) A"
+    },
+    {
+      "number": 69,
+      "solution": "(c) Malls A and C earn mostly from electronics items and artificial jewellery but not from cosmetics and footwear."
+    },
+    {
+      "number": 70,
+      "solution": "(d) Mall E earns most from sports and electronics but not from cosmetics and furniture."
+    },
+    {
+      "number": 71,
+      "solution": "(b) Mall B does not earn much from ladies garments and artificial jewellery but gets maximum from footwear and furniture."
+    },
+    {
+      "number": 72,
+      "solution": "(b) Kunal is good in hockey, cricket and volleyball."
+    },
+    {
+      "number": 73,
+      "solution": "(c) Gaurav is good in baseball, cricket, volleyball and football."
+    },
+    {
+      "number": 74,
+      "solution": "(d) Sagar is good in baseball and football but not in hockey, volleyball and cricket."
+    },
+    {
+      "number": 75,
+      "solution": "(b) G is sitting second to the right of E."
+    },
+    {
+      "number": 76,
+      "solution": "(d) K is the professor."
+    },
+    {
+      "number": 77,
+      "solution": "(c) Except J-Engineer, in all other options, there are three persons between first and second person."
+    },
+    {
+      "number": 78,
+      "solution": "(b) The position of L with respect to the scientist is second to the right."
+    },
+    {
+      "number": 79,
+      "solution": "(c) Only Statement (a) is true."
+    }
+  ],
+  "answers": [],
+  "_page": 610
+}

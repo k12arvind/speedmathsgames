@@ -1,0 +1,94 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Completion of Series",
+  "passages": [
+    {
+      "passage_text": "In this type of questions, a series of six figures is given starting from unnumbered figure which is followed by five numbered figures. This series of six figures follows a certain rule if any two of the figures, except the first unnumbered figure which marks the beginning of the series, are interchanged then the earlier of these two figures is your answer and if no change is required then answer is marked as per the direction of question given.",
+      "has_figure": false,
+      "topic_code": "series"
+    },
+    {
+      "passage_text": "Directions (Example Nos. 29-35) Each of the following questions consists of a series of six figures; except the first figure, five figures are marked as (a), (b), (c), (d) and (e). Out of these five figures, position of two figures are interchanged. The number of first of these two figures is your answer. If no figure needs to be interchanged, then your answer is (e).",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 37,
+      "solution": "All shaded portion rotates 90° in clockwise direction in each square except top right square in which shaded portion rotates 90° anti-clockwise in such a way that it touches every side of square one by one in the subsequent figures."
+    },
+    {
+      "number": 38,
+      "solution": "From problem figure (1) to (2), first and second figures interchange their positions and are reversed at the new position and at the same time, the third figure remains unchanged. From problem figure (2) to (3), second and third figures interchange their positions and are reversed at the new positions and the figure (1) remains unchanged. The same pattern is repeated alternatively."
+    },
+    {
+      "number": 39,
+      "solution": "First, second, third and fourth symbols from the top become first, second, fourth and third from the bottom. The symbol in I shape rotates 90° clockwise in each successive figure. The P-shaped figure is first inverted and then reversed, alternatively."
+    },
+    {
+      "number": 40,
+      "solution": "The main figure rotates through an angle of 90° anti-clockwise in every second figure. The symbol inside the main figure rotates clockwise one step and is replaced by a new symbol in every alternate figure."
+    },
+    {
+      "number": 41,
+      "solution": "The flag rotates 45° anti-clockwise, 90° anti-clockwise, 135° anti-clockwise, 180° anti-clockwise, ... sequentially. Clearly, after Fig. (d), the flag should rotate 180° anti-clockwise."
+    },
+    {
+      "number": 42,
+      "solution": "Clearly, one line segment is added to the RHS of the figure in each step. Hence, Fig. (d) is the answer."
+    },
+    {
+      "number": 43,
+      "solution": "The number of cubes increases by one in each step. Hence, Fig. (e) is the answer."
+    },
+    {
+      "number": 44,
+      "solution": "The number of sides in the figure increases by one in each step."
+    },
+    {
+      "number": 45,
+      "solution": "In one step, a line segment is lost from one set of slanting lines and in the next step, a line segment is lost from the other set of slanting lines."
+    },
+    {
+      "number": 46,
+      "solution": "In every successive step, the line with the circle is increased by one on the left side in opposite direction and a small line appears in every odd numbered figure."
+    },
+    {
+      "number": 47,
+      "solution": "In each step, the four elements on the circumference of the large circle interchange positions in an anti-clockwise direction; the element that reaches the upper position gets shaded and the element that reaches the LHS position gets unshaded."
+    },
+    {
+      "number": 48,
+      "solution": "In each step, the central element (comprising of the circle and a radius) rotates 90° clockwise while the small black circle moves to the adjacent corner of the square in an anti-clockwise direction."
+    },
+    {
+      "number": 49,
+      "solution": "In each step, the figure rotates through 90° clockwise."
+    },
+    {
+      "number": 50,
+      "solution": "The figure rotates 90° anti-clockwise in every successive step and the circle moves one block in clockwise direction."
+    },
+    {
+      "number": 51,
+      "solution": "The arrow rotates 45° clockwise in each step."
+    },
+    {
+      "number": 52,
+      "solution": "In each step, the symbols move in the sequence as shown below"
+    },
+    {
+      "number": 53,
+      "solution": "In each step, the cross '+' moves one space clockise and the dot moves one space anti-clockwise.The central element changes from triangle to square in one step and from square to triangle in the next step."
+    },
+    {
+      "number": 29,
+      "solution": "The number of squares is increasing by one in each step. In order to establish such series, figure (b) and (c) are interchanged."
+    }
+  ],
+  "answers": [],
+  "_page": 708
+}

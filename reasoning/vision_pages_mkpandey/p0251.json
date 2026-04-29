@@ -1,0 +1,39 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 24,
+      "solution": "We have to find 4 → 0. Look at the table, P₁ → P₁ correct answer. From given table, we see that P₁ ← 4, 0 → P₁ → P₁ in step 1. So correct answer is (a) P₁ (choice)"
+    },
+    {
+      "number": 25,
+      "solution": "We have to find 9 → 3. Look at the table and see that P₂ → P₂ in 0 → 3. So, first try step II yourself (using choice)"
+    },
+    {
+      "number": 26,
+      "solution": "We have to find 5 → ?, ? → 7 in step II by golden rule, a multiple of 2 (as case) can be reduced from left side only. But 5 (= 5 + 4) from 9 ÷ 2 = 4.5. From that, we have 5 → 4 + ?, 7 ÷ 7 = 1. Hence, assume that 'from' one... 'to' 'let' low... 'to' 'to low...' as we see that '5 finds... step IV we find 5 → ?"
+    },
+    {
+      "number": 27,
+      "solution": "From 'one... low' to 'to low...' out 'We see that we move on P₃ only in 0 → 2 which means that step III or step IV is not a correct one on the given table, we have P₃ in 0 → 2. That means, step II or step III or step IV is not a correct one. We try step III in 0 → 2, which is 3, 5 → 4 + 1. So, 0 → 5 + 0 → 5 and hence our reach step IV to be input and finding P₁ in 9 position. In this step I and step III and step IV. In step I: P₁ → P₁, P₂ and step P₃ → P₃. In step III while 0 → 10 means P₃ → P₃. Hence it is 2-step is correct answer."
+    },
+    {
+      "number": 28,
+      "solution": "We see that in 0 → 1, P₁ → P₁. P₁ → P₁ in 1 → 2, P₂ → P₂ in 2 → 3. P₂ → P₂. But 3 → 7. But 3 → 7 ← 3 → 4, 4 → 3 in 7 golden rule assume 'IV step ... for step' as step III. We see that 3 → 3 but in P₃ in step III. Again, assuming it as input and finding in step II. We see that in 0 → 3, P₁ → P₁. So, since given P₁ in step IV which shows in which and to it olds we must because we have a different places in all (in all the choices.)"
+    },
+    {
+      "number": 29,
+      "solution": "We have to find 8 + 5 = 1, 5 + 5 = 6 + 4. So, assume 'div st' as step III. Its step I can easily be found from the given table, P₁ + P₁ and so on. We have that from 'first div...' out 'to 'find out...' out 'it' → P₁ + 1. Similarly, 0 → 6 + 0 → 4, 0 → 3 and 0 → 7 + 0 → 3. This means that step V, step VI and step VII can be found by finding that IV from input, assuming this step IV to be input again and finding step I and step III, respectively."
+    },
+    {
+      "number": 30,
+      "solution": "We note that from 'Addition... sum' on 'sub' (the output) ... cont'd). Shifting input ... 'from' reach... out 'to 'reach out... out' P₃ → P₃. Now for P₃ = (0 → 2, i.e., P₃ in 0 → 3, 0, again, P₂ → P₂. But, P₃ and P₃ in step IV and not P₄. Now, let us try step V and step VI."
+    }
+  ],
+  "answers": [],
+  "_page": 251
+}

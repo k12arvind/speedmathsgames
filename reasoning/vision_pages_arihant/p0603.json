@@ -1,0 +1,291 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the information carefully and then answer the questions given below. Shalu, Charu, Lata, Tom and Sandy help themselves to take some sweets from bowl. Four of them each take a gulab jamun. Charu and Tom don't take a burfy as all the others do. Infact, Charu takes only one sweet, which is a laddu. Laddu is not taken by others apart from Charu, only Shalu and Sandy do not take peda.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Study the following information carefully and answer the given questions. Seven persons namely Prem, Tirkey, Madan, Jagan, Virendar, Raghubir and Waris are good friends and are studying in MBA, engineering and medical courses. Three are doing MBA course, two are in engineering course and another two are in medical course. Each of them has a very distinct and favourite colour choice ranging from blue, red, yellow, white, black, pink and brown but not necessarily in the same orde. None doing MBA likes either red or black. Madan is doing engineering and he likes blue. Raghubir is doing medical and likes brown. Jagan is doing MBA and likes yellow. Prem who does not like red is in the same discipline of Raghubir. Tirkey is in the same discipline of Madan. Virendar does not like pink.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Study the following information carefully and answer the given questions. Seven friends A, B, C, D, E, F and G studied in colleges X, Y and Z are currently in different professions, namely medicines, fashion designing, engineering, business, acting, teaching and architecture (not necessarily in the same order). At least two and not more than three friends had studied in the same college. C is an architect and studied in college Y. E is not a businessman. Only G amongst the seven friends studied in college X along with E. F is an engineer and did not study in college Y. B is an actor and did not study in the same college as F. A did not study in college Z. Those who studied in college X are neither fashion designers nor teachers. None of those who studied in college Y is a teacher.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "city_arrangement",
+      "subtopic_name": "City Arrangement",
+      "body": "A, B, C, D and E belong to five different cities P, Q, R, S and T (not necessarily in that order). Each one of them comes from a different city. Further it is given that\nI. B and C do not belong to Q.\nII. B and E do not belong to P and R.\nIII. A and C do not belong to R, S and T.\nIV. D and E do not belong to Q and T.\nWhich one of the following statements is not correct?",
+      "choices": {
+        "a": "C belongs to P",
+        "b": "D belongs to R",
+        "c": "A belongs to Q",
+        "d": "B belongs to S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement_puzzle",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "Who only had a peda and a gulab jamun?",
+      "choices": {
+        "a": "Charu",
+        "b": "Sandy",
+        "c": "Shalu",
+        "d": "Tom"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement_puzzle",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "Who takes three sweets?",
+      "choices": {
+        "a": "Charu",
+        "b": "Sandy",
+        "c": "Shalu",
+        "d": "Lata"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement_puzzle",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "Who are the two people taking the same number and same type of sweets?",
+      "choices": {
+        "a": "Shalu and Lata",
+        "b": "Sandy and Lata",
+        "c": "Shalu and Sandy",
+        "d": "Tom and Sandy"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement_puzzle",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "In total, how many sweets were taken by the group?",
+      "choices": {
+        "a": "11",
+        "b": "12",
+        "c": "9",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Which of the following groups is doing MBA?",
+      "choices": {
+        "a": "Jagan, Raghubir and Madan",
+        "b": "Virendar, Waris and Tirkey",
+        "c": "Jagan, Virendar and Waris",
+        "d": "Jagan, Prem and Raghubir"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "What is the colour combination choice of those who are in medical discipline?",
+      "choices": {
+        "a": "Brown and pink",
+        "b": "Black and white",
+        "c": "Black and brown",
+        "d": "Yellow and black"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Which colour does Virendar like?",
+      "choices": {
+        "a": "Yellow",
+        "b": "Pink",
+        "c": "White",
+        "d": "Brown"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Who amongst the following have studied in college Z?",
+      "choices": {
+        "a": "B, A",
+        "b": "C, F",
+        "c": "B, D, F",
+        "d": "A, D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Which of the following groups represents the students of college Y?",
+      "choices": {
+        "a": "C, E, G",
+        "b": "A, C, D",
+        "c": "A, B, C",
+        "d": "D, B, C",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "What is the profession of F?",
+      "choices": {
+        "a": "Engineering",
+        "b": "Business",
+        "c": "Medicines",
+        "d": "Acting",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Who amongst the following is in the profession of medicine?",
+      "choices": {
+        "a": "E",
+        "b": "G",
+        "c": "A",
+        "d": "D",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "What is the profession of A?",
+      "choices": {
+        "a": "Teaching",
+        "b": "Medicine",
+        "c": "Business",
+        "d": "Fashion designing",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 603
+}

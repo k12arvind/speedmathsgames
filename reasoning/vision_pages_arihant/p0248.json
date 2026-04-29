@@ -1,0 +1,563 @@
+{
+  "page_type": "questions",
+  "chapter_number": 5,
+  "chapter_title": "Practice Corner 5.5",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-25) In each of the following letter series, some of the letters are missing which are given in that order as one of the alternatives below it. Select the correct alternative.",
+      "has_figure": false,
+      "topic_code": "series"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 26-27) In each of the following questions, three sequence of letters/ numerals are given which corresponds to each other in some way. In each question, you have to find out the letter/numerals that come in the vacant place marked by question mark (?) These are given as one of the four alternative under the question. Choose the correct answer as instructed.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "ac_ga_eg_ce_",
+      "choices": {
+        "a": "dbag",
+        "b": "ecag",
+        "c": "deag",
+        "d": "ebdg"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "ba_b_aab_a_b",
+      "choices": {
+        "a": "abaa",
+        "b": "abba",
+        "c": "baab",
+        "d": "babb"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_c_ba_ca_cb",
+      "choices": {
+        "a": "abcc",
+        "b": "acba",
+        "c": "bcaa",
+        "d": "bcba"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "b_ab_b_aab_b",
+      "choices": {
+        "a": "abbb",
+        "b": "abba",
+        "c": "baaa",
+        "d": "aaba"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "ac_cab_baca_aaa_aba",
+      "choices": {
+        "a": "aabc",
+        "b": "aacb",
+        "c": "babb",
+        "d": "bcbb"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_cacbc_baca_ _b",
+      "choices": {
+        "a": "baba",
+        "b": "babc",
+        "c": "abab",
+        "d": "cacb"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "cccbb_aa_cc_bbbaa_c",
+      "choices": {
+        "a": "acbc",
+        "b": "baca",
+        "c": "baba",
+        "d": "aaba"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "_OPQ N_PQ NQ_Q NOP_",
+      "choices": {
+        "a": "ONQP",
+        "b": "NOQP",
+        "c": "NOPQ",
+        "d": "PONQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_ba__bb_ab__a",
+      "choices": {
+        "a": "baab",
+        "b": "aaba",
+        "c": "abab",
+        "d": "baaa"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "_bc_ca_aba_c_ca",
+      "choices": {
+        "a": "bcbba",
+        "b": "babac",
+        "c": "bbcba",
+        "d": "abcbb"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "_b_baaaab_a_ _bb_a_",
+      "choices": {
+        "a": "abbaaba",
+        "b": "ababbbaa",
+        "c": "babaaba",
+        "d": "baabaab"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "_sr_tr_srs_r_srst_",
+      "choices": {
+        "a": "ttssrr",
+        "b": "tsrtsr",
+        "c": "strrts",
+        "d": "tstttr"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "ab_aa_aaa_a_ab_a",
+      "choices": {
+        "a": "abbab",
+        "b": "abaaa",
+        "c": "aabba",
+        "d": "abbaa"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_b_ba_ _b_ba",
+      "choices": {
+        "a": "bbaab",
+        "b": "bbabb",
+        "c": "aabab",
+        "d": "aabba"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_b_abb_ab_a_bba",
+      "choices": {
+        "a": "bbaab",
+        "b": "babba",
+        "c": "baaba",
+        "d": "aabba"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "_bb_c_bg_b__g",
+      "choices": {
+        "a": "cbgbc",
+        "b": "cgbcb",
+        "c": "cgbcc",
+        "d": "gbcbb"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "_A'B_BAA'__BB'__A",
+      "choices": {
+        "a": "A'BAB'",
+        "b": "A'B'AB",
+        "c": "ABAB",
+        "d": "AB'AB"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_ba_c_aad_aa_ea",
+      "choices": {
+        "a": "babbb",
+        "b": "babbd",
+        "c": "babbc",
+        "d": "bacde"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "_zy_zxy_yxzx_zyx_xy",
+      "choices": {
+        "a": "yxzyz",
+        "b": "zyxzy",
+        "c": "yxzyx",
+        "d": "xyxzy"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 20,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "aa_aabb_b_aa_aabb_bb",
+      "choices": {
+        "a": "bbbaa",
+        "b": "bbbba",
+        "c": "aabbb",
+        "d": "babba"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 21,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_b_a_ _n__bb__abbn",
+      "choices": {
+        "a": "abnabb",
+        "b": "bnbban",
+        "c": "bnbbna",
+        "d": "babban"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 22,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "a_b_c_a__bc_b__cb",
+      "choices": {
+        "a": "acbcab",
+        "b": "ccbcca",
+        "c": "ccaccb",
+        "d": "cacabe"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 23,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "pqr_ _ rs _ rs _ _ s_ q_",
+      "choices": {
+        "a": "spqpprr",
+        "b": "pqrrppq",
+        "c": "sqppqpr",
+        "d": "sqprrqr"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 24,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "mnononqopqrs _ _ _ _ _ _",
+      "choices": {
+        "a": "mnopqr",
+        "b": "oqrstu",
+        "c": "pqrstu",
+        "d": "qrstup"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 25,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "abc_yabc_xw abcdev_",
+      "choices": {
+        "a": "zdu",
+        "b": "dxu",
+        "c": "cdu",
+        "d": "zyw",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "C_B_D_A_RBDD\n2_ _4_ _3_4_? ? ?\n_ a_ c_b_a_ d _ _ _ _",
+      "choices": {
+        "a": "2,2,1,1",
+        "b": "2,2,3,3",
+        "c": "3,3,4,4",
+        "d": "3,3,1,1"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "_ADACB_ _BDCC\n1 3 _ _ 1242 _ _ _ _\na _ _ b_ _ c d ? ? ? ?",
+      "choices": {
+        "a": "a,c,d,d",
+        "b": "a,d,c,c",
+        "c": "c,a,d,d",
+        "d": "d,c,a,a"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 248
+}

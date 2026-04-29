@@ -1,0 +1,164 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q.Nos. 1-7) Study the following information carefully and then answer the questions given below it. A word arrangement machine when given on input line of words rearranges them following a particular rule in each step. The following is an illustration of the input and rearrangement.\n\nInput Zeal for and yellow bench state goal on\nStep I and zeal for yellow bench state goal on\nStep II and bench zeal for, yellow state goal on\nStep III and bench for zeal yellow state goal on\nStep IV and bench for goal zeal yellow state on\nStep V and bench for goal on zeal yellow state\nStep VI and bench for goal on state zeal yellow\nStep VII and bench for goal on state yellow zeal\n\nAnd Step VII is the last step.\nAs per the rule followed in the above steps, find out in each of the following questions, the appropriate steps for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'ginger year town sour cat bring ink pot'. Which of the following steps will be the last but one?",
+      "choices": {
+        "a": "IV",
+        "b": "V",
+        "c": "VII",
+        "d": "VIII",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'your job is not very important to him'. Which of the following steps will be the last?",
+      "choices": {
+        "a": "VIII",
+        "b": "VII",
+        "c": "VI",
+        "d": "IX",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Step II of an input is car down table pen jug water fall sign. How many more steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Four",
+        "b": "Five",
+        "c": "Three",
+        "d": "Six",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Step III of an input is ball elephant goat trade over horse never there. Which of the following is definitely the input?",
+      "choices": {
+        "a": "goat ball trade elephant over horse never there",
+        "b": "trade horse ball goat elephant over never there",
+        "c": "horse trade ball goat elephant over never there",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Step II of an input is crown divine victory sky force take lane honey. Which of the following will be Step V?",
+      "choices": {
+        "a": "crown divine force honey lane take victory sky",
+        "b": "crown divine force honey lane victory sky take",
+        "c": "crown divine force honey victory sky take lane",
+        "d": "crown divine force victory sky take lane honey",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'carry over there until you are held down'. Which of the following will be Step IV?",
+      "choices": {
+        "a": "are carry down over there until you held",
+        "b": "are carry down held over there until you",
+        "c": "are carry over there until you held down",
+        "d": "there will be no such step",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'he was getting ready to start for office'. How many steps will be required to complete the arrangement?",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "3",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 588
+}

@@ -1,0 +1,169 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q.Nos. 15-19) Study the following information carefully and answer the given questions. A word and number arrangement machine when given an input line of words an numbers rearranges them following a particular rule in each step. The following is an illustration of input and rearrangement. (All the numbers given in the arrangement are two digit numbers)\n\nInput 'gone over 35 69 test 72 park 27'\nStep I 27 gone over 35 69 test 72 park\nStep II 27 test gone over 35 69 72 park\nStep III 27 test 35 gone over 69 72 park\nStep IV 27 test 35 park gone over 69 72\nStep V 27 test 35 park 69 gone over 72\nStep VI 27 test 35 park 69 over gone 72\nStep VII 27 test 35 park 69 over 72 gone\n\nand Step VII is the last step of the rearrangement of the above input as the desired arrangement is obtained.\nAs per the rules followed in the above steps, find out in each of the following questions the appropriate step for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "Directions (Q.Nos. 20-26) Study the following information carefully to answer the questions given below it. A number sorting machine, when given an input of numbers, rearranges the numbers in a particular manner step by step as indicated below, till all the numbers are arranged in a particular order. Given below is an illustration of this arrangement.\n\nInput 39 121 48 18 76 112 14 45 63 96\nStep I 14 39 121 48 18 76 112 45 63 96\nStep II 14 18 39 121 48 76 112 45 63 96\nStep III 14 18 39 45 121 48 76 112 63 96\nStep IV 14 18 39 45 48 121 76 112 63 96\n\nand so on till all the numbers get arranged in ascending order.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input '86 open shut door 31 49 always 45'. How many steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Five",
+        "b": "Six",
+        "c": "Seven",
+        "d": "Four",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step III of an input is 25 yes 37 enemy joy defeat 52 46 Which of the following is definitely the input?",
+      "choices": {
+        "a": "enemy 25 joy defeat yes 52 37 46",
+        "b": "37 enemy 25 joy yes defeat 52 46",
+        "c": "enemy joy defeat 25 52 yes 37 46",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step II of an Input is 18 win 71 34 now if victory 61 How many more steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Three",
+        "b": "Four",
+        "c": "Five",
+        "d": "Six",
+        "e": "More than six"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input 'where 47 59 12 are they going 39' Which of the following steps will be the last but one?",
+      "choices": {
+        "a": "VII",
+        "b": "IV",
+        "c": "V",
+        "d": "VIII",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step II of an input 33 store 81 75 full of goods 52 Which of the following will be Step VI?",
+      "choices": {
+        "a": "33 store 52 of 75 81 full goods",
+        "b": "33 store 52 of 75 full 81 goods",
+        "c": "33 store 52 of 75 goods 81 full",
+        "d": "There will be no such step",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "If following is the fifth step of an input, what will be the third step? Step V 17, 32, 43, 82, 69, 93, 49, 56, 99, 106",
+      "choices": {
+        "a": "17, 32, 43, 82, 69, 93, 49, 56, 99, 106",
+        "b": "17, 32, 82, 69, 43, 93, 49, 56, 99, 106",
+        "c": "17, 32, 82, 69, 93, 43, 49, 56, 99, 106",
+        "d": "17, 32, 82, 69, 43, 93, 56, 49, 99, 106",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "How many steps will be required for getting the final output for the following input? Input '101, 85, 66, 49, 73, 39, 142, 25, 115, 74'",
+      "choices": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 577
+}

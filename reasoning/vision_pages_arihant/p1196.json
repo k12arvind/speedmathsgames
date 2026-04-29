@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 39,
+      "solution": "(d) Method I\n\nComputers\nCalculators\nCameras\nNotebooks\nDiaries\n\nConclusions\nI. Some notebooks are calculators. (✓)\nII. Some calculators are computers. (✓)\nIII. All notebooks are computers. (✓)\nIV. Some diaries are cameras. (✗)\n\nMethod II\nSome cameras are calculators. (I-type)\nSome calculators are diaries. (I-type)\nAll notebooks are diaries. (A-type)\nAll diaries are computers. (A-type)\nFrom Statement 2 and aligning by IEA Rule,\nAll notebooks are diaries. (A-type)\nSome diaries are calculators. (I-type)\nA + I = Not a valid conclusion.\nHence, Conclusion I does not follow.\nFrom Statements 2 and 4,\nSome calculators are diaries. (I-type)\nAll diaries are computers. (A-type)\nI + A = I-type conclusion\n∴ Some calculators are computers = Conclusion II\nFrom Statements 3 and 4,\nA + A = A-type conclusion\nAll notebooks are computers = Conclusion III\nFrom Statements 1 and 2,\nI + I = Not a valid conclusion\n∴ Conclusion IV is not valid.\nHence, Conclusions II and III follow."
+    },
+    {
+      "number": 40,
+      "solution": "(c)\n\nCards\nJournals\nBooks\nBoards\nPapers\n\nConclusions\nI. Some papers are books. (✓)\nII. Some papers are boards. (✓)\nIII. Some boards are journals. (✗)\nIV. Some boards are books. (✗)"
+    },
+    {
+      "number": 41,
+      "solution": "(d)\n\nGrapes\nBananas\nApples\nGuavas\nPomegranates\n\nConclusions\nI. No grapes are pomegranates. (✗)\nII. Some guavas are grapes. (✗)\nIII. Some guavas are apples. (✓)\nIV. No bananas are pomegranates. (✓)"
+    },
+    {
+      "number": 42,
+      "solution": "(e)\n\nDoors\nFloors\nWindows\nWalls\nRooms\n\nConclusions\nI. All walls are rooms. (✓)\nII. Some rooms are doors. (✓)\nIII. Some rooms are walls. (✓)\nIV. Some floors are doors. (✓)"
+    },
+    {
+      "number": 43,
+      "solution": "(c)\n\nShirts\nBlazer\nUmbrellas\nRaincoats\nSuits\n\nConclusions\nI. Some girls are definitely mads. (✓)\nII. Most of the mads are foolish. (✓)\nIII. Atleast some girls are men. (✓)\nIV. All foolish except few are girls. (✓)"
+    }
+  ],
+  "answers": [],
+  "_page": 1196
+}

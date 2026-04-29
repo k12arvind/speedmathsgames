@@ -1,0 +1,103 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 22,
+      "solution": "(b) The pattern is as follows\n8    24    12    36    18    54\n  ×3  ÷2  ×3  ÷2  ×3\n∴ ? = 36"
+    },
+    {
+      "number": 23,
+      "solution": "(d) Here, the pattern is as follows\nDivide by 2, multiple by 3 and the same process is repeated\n48 ÷ 2 = 24 ; 24 × 3 = 72\n72 ÷ 2 = 36 ; 36 × 3 = 108\n108 ÷ 2 = 54\n∴ ? = 54"
+    },
+    {
+      "number": 24,
+      "solution": "(c) Keep subtracting the next larger perfect cube i.e., 1, 8, 27, 64, 125, 216, 343\n∴ ? = 434 - 343 = 91"
+    },
+    {
+      "number": 25,
+      "solution": "(b) The given series is the series of prime numbers.\n3,5,7,11,13,17,19,23\n∴ ? = 11"
+    },
+    {
+      "number": 26,
+      "solution": "(b) The sequence is 7¹, 6², 5³, 4⁴, 3⁵, 2⁶, 1⁷\n∴ ? = 3⁵ = 9"
+    },
+    {
+      "number": 27,
+      "solution": "(d) The pattern is as follows\n14    16    35    109    441    2211\n×1+2  ×2+3  ×3+4  ×4+5  ×5+6\n∴ ? = 2211"
+    },
+    {
+      "number": 28,
+      "solution": "(c) The pattern of series is as follows\n4    18    48    100    180    294\n2²×1  3²×2  4²×3  5²×4  6²×5  7²×6\n∴ ? = 48"
+    },
+    {
+      "number": 29,
+      "solution": "(d) The pattern is as follows\n3    22    134    673    2696    8093\n×7+1  ×6+2  ×5+3  ×4+4  ×3+5\n∴ ? = 134"
+    },
+    {
+      "number": 30,
+      "solution": "(d) The pattern of series is as follows\n4×2+1=9; 9×2+2=20\n20×2+3=43; 43×2+4=90\n∴ ? = 90"
+    },
+    {
+      "number": 31,
+      "solution": "(b) The pattern is as follows\n5    11    23    47    95    191\n×(1×6)  ×(2×6)  ×(4×6)  ×(8×6)  ×(16×6)\n∴ ? = 191"
+    },
+    {
+      "number": 32,
+      "solution": "(d) The pattern is as follows\n1    3    7    15    31    63\n×2+1  ×2+1  ×2+1  ×2+1  ×2+1\n∴ ? = 63"
+    },
+    {
+      "number": 33,
+      "solution": "(d) The pattern is as follows\n7+1²=8, 8+4²=24\n24+9²=105, 105+16²=361\n361+25²=986\n∴ ? = 986"
+    },
+    {
+      "number": 34,
+      "solution": "(c) The pattern is as follows\n2+3+4=9, 3+4+5=12, 4+5+6=15, 5+6+7=18"
+    },
+    {
+      "number": 35,
+      "solution": "(b) The pattern is as follows\n+1    +1    +1\n2    29    38    47    56\n-1    -1    -1\nSo, the correct alternative is 56."
+    },
+    {
+      "number": 36,
+      "solution": "(c) There are three alternative series 2, 3, 4, ... (consecutive numbers), 9, 8, 7 ... (consecutive number in descending order) and 23, 25, 27, ... Hence, 7 will come in place of the missing number."
+    },
+    {
+      "number": 37,
+      "solution": "(d) The pattern is as follows\n13×13=169 ⇒ 169-1=168\n14×13=182 ⇒ 182-1=181\n15×13=195\n195-1=194"
+    },
+    {
+      "number": 38,
+      "solution": "(b) The pattern is as follows\n1²+1²=1+1=2; 2²+2²=4+4=8\n3²+3²=9+9=18; 4²+4²=16+16=32\n5²+5²=25+25=50;\n6²+6²=36+36=72\n∴ ? = 72"
+    },
+    {
+      "number": 39,
+      "solution": "(b) The pattern is as follows\n21\n6    7    9    13    26    31    69\n+1  +2  +4  +8  +16  +32\nHence, 21 should come in place of 26 in the series."
+    },
+    {
+      "number": 40,
+      "solution": "(b) Series moves from the right end with addition of 0, 3, 8, 15, 24 and 35 i.e., with a difference of numbers, which are one less than the square of successive natural numbers. Therefore, number 54 should be replaced by 52."
+    },
+    {
+      "number": 41,
+      "solution": "(b) The pattern is as follows\n82\n22    37    52    67    84    97\n+15  +15  +15  +15  +15\nSo, 84 is the incorrect term, it should be 82."
+    },
+    {
+      "number": 42,
+      "solution": "(b) In rest of the numbers, one digit is the square of the rest part of the number."
+    },
+    {
+      "number": 43,
+      "solution": "(c) The pattern is as follows\n10→(1)²(0)², 41→(2)²(1)², 94→(3)²(2)²,\n2516→(5)²(4)², 3625→(6)²(5)², 4936→(7)²(6)²\nbut in 1624 it is not so."
+    },
+    {
+      "number": 44,
+      "solution": "(d) The pattern is as follows\n193\n4    7    13    25    49    97    153\n+3  +6  +12  +24  +48  +96\nSo, 153 is the wrong term in the series"
+    }
+  ],
+  "answers": [],
+  "_page": 255
+}

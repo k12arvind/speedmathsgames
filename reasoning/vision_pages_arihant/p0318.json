@@ -1,0 +1,66 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [
+    {
+      "passage_text": "The questions are based on simple mathematical operations that do not come under any of the above given types covered here. These questions can be based on several different patterns. You will get a better idea about the type of questions from the example as given below",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "trick_based",
+      "subtopic_name": "Trick Based Mathematical Operations",
+      "body": "If 9 × 5 × 2 = 529 and 4 × 7 × 2 = 724, then 3 × 9 × 8 = ?",
+      "choices": {
+        "a": "983",
+        "b": "839",
+        "c": "938",
+        "d": "893"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "trick_based",
+      "subtopic_name": "Trick Based Mathematical Operations",
+      "body": "If 5 ★ 3 = 16, 9 ★ 8 = 73 and 6 ★ 7 = 43, then 7 ★ 8 is equal to",
+      "choices": {
+        "a": "72",
+        "b": "58",
+        "c": "85",
+        "d": "57"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 8,
+      "solution": "As, 9 × 5 × 2 = 5 2 9 and 4 × 7 × 2 = 7 2 4. Similarly, 3 × 9 × 8 = 9 8 3. ∴ ? = 983"
+    },
+    {
+      "number": 9,
+      "solution": "As, 5 ★ 3 = 5 × 3 + 1 = 16, 9 ★ 8 = 9 × 8 + 1 = 73, 6 ★ 7 = 6 × 7 + 1 = 43. Similarly, 7 ★ 8 = 7 × 8 + 1 = 57"
+    }
+  ],
+  "answers": [],
+  "_page": 318
+}

@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 18,
+      "solution": "This is a 'network' set. Begin by drawing the diagram: All normal requests are received by either M or N, and all priority requests are received by M or Q:\nNORMAL    M\n          N\nPRIORITY  M\n          Q\nAll requests processed by M are then sent to T:\nNORMAL  M → T\nPRIORITY M → T\nAll requests processed by N are sent to S:\nNORMAL  N → S\nPRIORITY N → S\nAll requests processed by T are then sent to P; priority requests processed by T are then sent to Q:\nNORMAL  M → T → P\n        N → S\nPRIORITY M → T\n         Q\nNormal requests processed by S are then sent either to T or P:\nNORMAL  M → T → P\n        N → S\nPRIORITY M → T\n         Q\nNormal requests processed by P are then sent to Q and priority requests processed by P are then sent to R:\nNORMAL  M → T → P → Q\n        N → S\nPRIORITY M → T    R\n         Q       P"
+    },
+    {
+      "number": 24,
+      "solution": "The diagram shows that Q cannot send a request to Q, though he can send one to P, who in turn can send one to Q. The diagram also shows that Q can forward a request to P, who in turn can forward it to R. A normal request received by M must be processed by T, P and Q before it goes to R. A priority request received by M must go to both T and Q to get to R, so it is not part of the correct answer. If it is passed to R, Q can forward a priority request directly to R. Note the two shortcuts or routes in the normal requests are M, T, P and N, S, P, Q, R. In each case, a minimum of four stations must handle the request before it gets to R. A normal request can be shifted back and forth between P and Q any number of times. T, however, is not within such a loop. Everything R receives must at some point have passed through station Q, so it is not part of the correct answer. There are certain requests, however, that P does not handle, namely those priority requests forwarded by Q directly to R. Also, there are certain requests that M does not handle, namely those normal requests that begin with N and those priority requests that begin with Q. A normal request that enters at N proceeds to S and then to P (or five stations) before reaching R."
+    },
+    {
+      "number": 25,
+      "solution": "From (iv): B > D > F (intelligence)\nFrom (v): A (intelligence) A > D (weight)\nFrom (vi): F > B > C (weight)\nFrom (vii): E = D (weight), D > F (weight)\nThese can be combined as:\nB > D > F > A (intelligence)\nA > D > F > B > C (weight)\nNote that B is the more intelligent, but A is heavier than all except E. So, E must be the heaviest. Hence, we have:\nE > A > D > F > B > C (weight)\nSo, E is the most intelligent. So, C must be the least intelligent. So we have:\nmost intelligent > A (intelligence)\nC > B > D > F"
+    }
+  ],
+  "answers": [],
+  "_page": 356
+}

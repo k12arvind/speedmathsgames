@@ -1,0 +1,128 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Direction and Distance",
+  "passages": [],
+  "questions": [
+    {
+      "number": 42,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "card_game_directions",
+      "subtopic_name": "Card Game Directions",
+      "body": "Roshan, Vaibhav, Vinay and Sumit are playing cards. Roshan and Vaibhav are partners. Sumit faces towards North. If Roshan faces towards West, then who faces towards South?",
+      "choices": {
+        "a": "Vinay",
+        "b": "Vaibhav",
+        "c": "Sumit",
+        "d": "Data is inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "path_tracking",
+      "subtopic_name": "Path Tracking",
+      "body": "Kate walks 4 km towards South. She, then turns towards her left and walks 8 km more. After that she turns left again and walks another 8 km. Here, she meets her friend coming from the opposite direction and they both stop here. Which direction would she be facing?",
+      "choices": {
+        "a": "North",
+        "b": "South",
+        "c": "East",
+        "d": "West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "path_tracking",
+      "subtopic_name": "Path Tracking",
+      "body": "A boy was misdirected from his way while returning to his home from his school. In order to reach his home, he first moved 3 km in south direction and then turned to his left and moved 2 km in straight direction on the road leading to the East. From there he moved to his left and walked 3 km. After this, he again turned to his left and moved 1 km. Finally he reached his home. The home of the boy was in which direction from his school?",
+      "choices": {
+        "a": "South",
+        "b": "West",
+        "c": "North",
+        "d": "East"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "Rani and Sarita started from a place X. Rani went West and Sarita went North, both travelling with the same speed. After sometime, both turned their left and walked a few steps. If they again turned to their left, in which directions the faces of Rani and Sarita will be with respect to X?",
+      "choices": {
+        "a": "North and East",
+        "b": "North and West",
+        "c": "West and North",
+        "d": "East and South"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "path_tracking",
+      "subtopic_name": "Path Tracking",
+      "body": "Sumi ran a distance of 40m towards the South. She then turned to the right and ran for about 15m, turned right again and ran 50m. Turning to right, then she ran 15m. Finally she turned to the left an angle of 45° and ran. In which direction was she running finally?",
+      "choices": {
+        "a": "South-East",
+        "b": "South-West",
+        "c": "North-East",
+        "d": "North-West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(D) According to the question, Rashmi's path is as follows. Clearly, Rashmi is facing East."
+    },
+    {
+      "number": 2,
+      "solution": "(C) According to the question, the direction diagram will be as follows. Clearly, man is facing East."
+    },
+    {
+      "number": 3,
+      "solution": "(d) According to the question, the diagram will be as follows. Therefore, the direction of city A in respect of B cannot be determined."
+    },
+    {
+      "number": 4,
+      "solution": "(d) According to the question, the direction diagram is as follows. Hence, city K is located in the South-East direction."
+    }
+  ],
+  "answers": [],
+  "_page": 456
+}

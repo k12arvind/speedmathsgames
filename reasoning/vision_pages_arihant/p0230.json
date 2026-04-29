@@ -1,0 +1,606 @@
+{
+  "page_type": "questions",
+  "chapter_number": 5,
+  "chapter_title": "Practice Corner 5.2",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-49) In each of the following questions, one number is wrong in the series. Find out the wrong number.",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "1, 2, 5, 14, 41, 124",
+      "choices": {
+        "a": "2",
+        "b": "5",
+        "c": "14",
+        "d": "124"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "1, 2, 6, 24, 120, 620, 5040",
+      "choices": {
+        "a": "5040",
+        "b": "620",
+        "c": "120",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "4, 10, 22, 40, 84, 94, 130",
+      "choices": {
+        "a": "22",
+        "b": "40",
+        "c": "64",
+        "d": "84"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "4, 19, 49, 93, 154, 229, 319",
+      "choices": {
+        "a": "93",
+        "b": "229",
+        "c": "319",
+        "d": "19"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "3, 12, 36, 144, 431, 1728, 5184",
+      "choices": {
+        "a": "5184",
+        "b": "36",
+        "c": "144",
+        "d": "431"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "3, 5, 7, 12, 17, 19, 23",
+      "choices": {
+        "a": "23",
+        "b": "19",
+        "c": "17",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "3, 2, 8, 9, 13, 22, 18, 32, 23, 42",
+      "choices": {
+        "a": "22",
+        "b": "13",
+        "c": "9",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "1, 3, 8, 19, 42, 88, 184",
+      "choices": {
+        "a": "3",
+        "b": "8",
+        "c": "19",
+        "d": "88"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "2, 4, 8, 16, 48, 64, 128, 256",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "16",
+        "d": "48"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "385, 462, 572, 396, 427, 671, 264",
+      "choices": {
+        "a": "385",
+        "b": "427",
+        "c": "671",
+        "d": "264"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "4, 5, 7, 10, 14, 18, 25, 32",
+      "choices": {
+        "a": "7",
+        "b": "14",
+        "c": "18",
+        "d": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "1, 5, 9, 15, 25, 37, 49",
+      "choices": {
+        "a": "25",
+        "b": "37",
+        "c": "9",
+        "d": "15"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "2, 10, 18, 54, 162, 486, 1458",
+      "choices": {
+        "a": "18",
+        "b": "54",
+        "c": "162",
+        "d": "10",
+        "e": "486"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "2, 6, 12, 72, 865, 62208",
+      "choices": {
+        "a": "72",
+        "b": "12",
+        "c": "62208",
+        "d": "865",
+        "e": "6"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "66, 91, 120, 153, 190, 233, 276",
+      "choices": {
+        "a": "120",
+        "b": "233",
+        "c": "153",
+        "d": "276",
+        "e": "190"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "33, 321, 465, 537, 573, 590, 600",
+      "choices": {
+        "a": "321",
+        "b": "465",
+        "c": "573",
+        "d": "537",
+        "e": "590"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "225, 289, 338, 374, 397, 415, 424",
+      "choices": {
+        "a": "415",
+        "b": "289",
+        "c": "338",
+        "d": "397"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "8424, 4212, 2106, 1051, 526.5, 263.25, 131.625",
+      "choices": {
+        "a": "131.625",
+        "b": "1051",
+        "c": "4212",
+        "d": "8424",
+        "e": "263.25"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "8, 27, 64, 125, 218, 343",
+      "choices": {
+        "a": "27",
+        "b": "64",
+        "c": "125",
+        "d": "218",
+        "e": "343"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 20,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "7.5, 47.5, 87.5, 157.5, 247.5, 357.5, 487.5",
+      "choices": {
+        "a": "357.5",
+        "b": "87.5",
+        "c": "157.5",
+        "d": "7.5",
+        "e": "47.5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 21,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "6, 12, 21, 32, 45, 60",
+      "choices": {
+        "a": "6",
+        "b": "12",
+        "c": "21",
+        "d": "35"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 22,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "8, 27, 125, 343, 1331",
+      "choices": {
+        "a": "8",
+        "b": "343",
+        "c": "1331",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 23,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "56, 72, 90, 110, 132, 150",
+      "choices": {
+        "a": "72",
+        "b": "90",
+        "c": "110",
+        "d": "150",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 24,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "1236, 2346, 3456, 4566, 5686",
+      "choices": {
+        "a": "1236",
+        "b": "3456",
+        "c": "4566",
+        "d": "5686",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 25,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "9, 16, 25, 36, 49, 61",
+      "choices": {
+        "a": "16",
+        "b": "9",
+        "c": "49",
+        "d": "61"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 26,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "9, 14, 19, 25, 32, 40",
+      "choices": {
+        "a": "14",
+        "b": "25",
+        "c": "32",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 27,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "17, 36, 53, 68, 83, 92",
+      "choices": {
+        "a": "92",
+        "b": "53",
+        "c": "68",
+        "d": "83"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 28,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "10, 14, 28, 32, 64, 68, 132",
+      "choices": {
+        "a": "28",
+        "b": "32",
+        "c": "64",
+        "d": "132"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 29,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Number Series",
+      "subtopic_code": "wrong_number",
+      "subtopic_name": "Find Wrong Number in Series",
+      "body": "2, 8, 3, 27, 4, 64, 5, 225",
+      "choices": {
+        "a": "27",
+        "b": "8",
+        "c": "225",
+        "d": "64"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 230
+}

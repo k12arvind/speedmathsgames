@@ -1,0 +1,209 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Mrs Sharma has a house which she wants to convert to a hostel and rent it out to students of a nearby women's college. The house is a two storey building and each floor has eight rooms. When one looks from the outside, three rooms are found facing North, three found facing East, three found facing West and three found facing South. Expecting a certain number of students, Mrs Sharma wanted to follow certain rules while giving the 16 rooms on rent.\nI. All sixteen rooms must be occupied.\nII. No room can be occupied by more than three students.\nIII. Six rooms facing North is called North wing. Similarly, six rooms facing East, West and South are called as East wing, West wing and South wing. Each corner room would be in more than one wing. Each of the wings must have exactly 11 students. The first floor must have twice as many students as the ground floor.\nIV. However, Mrs Sharma found that three fewer students have come to rent the rooms. Still, Mrs Sharma could manage to allocate the rooms according to the rules.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Surinder, Prem, Wasim, Bishamber and Chauhan are five players of a college cricket team and their home towns are Sikandrabad, Panipat, Warangal, Banaras and Chennai (not in the order of their names). The five specialist slots of spinner, pace-bowler, wicket-keeper, batsman and captain are held by them (not in order of their names stated above). Their names, home towns and specialities don't start with the same letter. Neither Prem nor Wasim is the captain and they don't belong to either Sikandrabad or Banaras. Panipat is not Bishamber's home town. The player who hails from Banaras is a wicket-keeper. The captain's home town is Panipat while the batsman does not hail from Warangal. Surinder is neither a wicket-keeper nor a batsman.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "There were four participants from Delhi, UP, Jharkhand and MP taking part in a beauty contest.\nI. All the participants were sitting in a row.\nII. All of them were wearing sarees of different colours i.e. blue, black, orange and red.\nIII. One who was wearing the black saree won the contest.\nIV. There was one runner up and she was sitting beside Miss MP. The runner up was wearing blue saree.\nV. Miss Jharkhand was not seated on the extreme ends and was not the runner up.\nVI. The winner and the runner up were not seated adjacent to each other.\nVII. Miss MP was wearing the orange saree.\nVIII. Miss Delhi was not wearing the blue saree.\nIX. Participants wearing black saree and orange saree were seated at the extreme ends.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "room_allocation",
+      "subtopic_name": "Room Allocation",
+      "body": "How many students turned up for renting the rooms?",
+      "choices": {
+        "a": "24",
+        "b": "27",
+        "c": "30",
+        "d": "33"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "room_allocation",
+      "subtopic_name": "Room Allocation",
+      "body": "If Mrs Sharma allocates the North-West corner room on the ground floor to 2 students, then the number of students in the corresponding room on the first floor and the number of students in the middle room in the first floor of the East wing are",
+      "choices": {
+        "a": "2 and 1 respectively",
+        "b": "3 and 1 respectively",
+        "c": "3 and 2 respectively",
+        "d": "Both should have 3 students",
+        "e": "Such an arrangement is not possible"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "room_allocation",
+      "subtopic_name": "Room Allocation",
+      "body": "If all the students that Mrs Sharma expected initially had come to rent the rooms and if Mrs Sharma had allocated the North-West corner room in the ground floor to 1 student, then the number of students in the corresponding room on the first floor and the number of students in the middle room in the first floor of the East wing would have been",
+      "choices": {
+        "a": "1 and 2 respectively",
+        "b": "2 and 3 respectively",
+        "c": "3 and 1 respectively",
+        "d": "Both should have students",
+        "e": "Such an arrangement is not possible"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_arrangement",
+      "subtopic_name": "Team Arrangement",
+      "body": "Who is the wicket-keeper?",
+      "choices": {
+        "a": "Wasim",
+        "b": "Bishamber",
+        "c": "Chauhan",
+        "d": "Surinder"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_arrangement",
+      "subtopic_name": "Team Arrangement",
+      "body": "The spinner's home town is",
+      "choices": {
+        "a": "Chennai",
+        "b": "Banaras",
+        "c": "Warangal",
+        "d": "Panipat"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_arrangement",
+      "subtopic_name": "Team Arrangement",
+      "body": "Who is the pace bowler?",
+      "choices": {
+        "a": "Prem",
+        "b": "Bishamber",
+        "c": "Surinder",
+        "d": "Chauhan"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who was the runner up?",
+      "choices": {
+        "a": "Miss Delhi",
+        "b": "Miss MP",
+        "c": "Miss UP",
+        "d": "Miss Jharkhand"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which saree was worn by Miss Delhi?",
+      "choices": {
+        "a": "Blue",
+        "b": "Black",
+        "c": "Orange",
+        "d": "Red"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who was wearing the red saree?",
+      "choices": {
+        "a": "Miss Jharkhand",
+        "b": "Miss UP",
+        "c": "Miss Delhi",
+        "d": "Miss MP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 615
+}

@@ -1,0 +1,191 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some boys are girls. All girls are cute. Conclusions: I. Some boys are cute. II. Some cute are girls. III. Some cute are girls. IV. No cute are girls.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only III follows",
+        "c": "Either I or II follows",
+        "d": "Either III or IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some copies are desks. No desks are pens. Conclusions: I. Some copies are pens. II. Some copies are not pens. III. Some pens are desks. IV. Some pens are not desks.",
+      "choices": {
+        "a": "Only II follows",
+        "b": "II and III follow",
+        "c": "Either I or II follows",
+        "d": "II and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All books are pens. Some books are pencils. Conclusions: I. Some pens are books. II. No pens are books. III. Some books are pencils. IV. Some books are not pencils.",
+      "choices": {
+        "a": "I and III follow",
+        "b": "Only I follows",
+        "c": "Either I or II follows",
+        "d": "Either I or II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No systems are desks. All desks are books. Conclusions: I. Some systems are books. II. Some systems are not books. III. Some books are systems. IV. Some books are not systems.",
+      "choices": {
+        "a": "Only II follows",
+        "b": "Only IV follows",
+        "c": "II and IV follow",
+        "d": "I and either III or IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some singers are rockers. All rockers are westerners. Conclusions: I. Some rockers are singers. II. Some westerners are rockers. III. Some singers are westerners. IV. Some singers are not westerners.",
+      "choices": {
+        "a": "Either I or II and either III or IV follow",
+        "b": "Either I or III follow",
+        "c": "Either III or IV and I follow",
+        "d": "I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: III and IV follow. III and IV follow. All cats are bulls. Conclusions: I. Some bulls are dogs. II. Some cats are dogs. III. No cats are dogs. IV. Some bulls are cats.",
+      "choices": {
+        "a": "Only IV follows",
+        "b": "Only III follows",
+        "c": "Only II follows",
+        "d": "IV and either II or III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All bars are books. Some bars are books. Conclusions: I. Some books are bars. II. Some books are coins. III. Some books are not bars. IV. Some books are not coins.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I and II follow",
+        "c": "Either I or III follows",
+        "d": "Either II or IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some birds are elephants. All stars are not elephants. Conclusions: I. All stars are elephants. II. All stars are elephants. III. Some elephants are not stars. IV. All elephants are stars.",
+      "choices": {
+        "a": "Either I or II and either III or IV follow",
+        "b": "Only I follows",
+        "c": "Either I or IV follows",
+        "d": "I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No book is a book. All books are birds. Conclusions: I. Some birds are not books. II. Some birds are books. III. Some books are not birds. IV. Some books are birds.",
+      "choices": {
+        "a": "Either I or II and either III or IV follow",
+        "b": "Either I or II and III follow",
+        "c": "Either III or IV and I follow",
+        "d": "I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 187
+}

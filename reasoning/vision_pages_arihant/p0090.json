@@ -1,0 +1,175 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Classification",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 27,
+      "solution": "(c) : 272 = 2 + 7 + 2 = 11, 210 = 2 + 1 + 0 = 3, 240 = 2 + 4 + 0 = 6, 304 = 3 + 0 + 4 = 7. The sum of digit of all numbers except 240 is a prime number, whereas sum of digits of the number 240 is a non-prime. Hence, it is different from all others."
+    },
+    {
+      "number": 28,
+      "solution": "(c) All others are perfect square of natural number."
+    },
+    {
+      "number": 29,
+      "solution": "(d) All others are divisible by 12."
+    },
+    {
+      "number": 30,
+      "solution": "(e) All others are divisible by 13."
+    },
+    {
+      "number": 31,
+      "solution": "(e) Only 75 is divisible by 15."
+    },
+    {
+      "number": 32,
+      "solution": "(d) Except '64', none of the numbers is a square or a cube."
+    },
+    {
+      "number": 33,
+      "solution": "(c) Except '87', all are prime numbers 87 is divisible by 3."
+    },
+    {
+      "number": 34,
+      "solution": "(d) In all other options, digit at the second place is the difference from first and third digits."
+    },
+    {
+      "number": 35,
+      "solution": "(c) All others are divisible by 13."
+    },
+    {
+      "number": 36,
+      "solution": "(b) Except '841', all are even numbers."
+    },
+    {
+      "number": 37,
+      "solution": "(d) In all other options, sum of the digits is 20."
+    },
+    {
+      "number": 38,
+      "solution": "(d) 3216 ⇒ 3 + 2 + 6 − 1 = 10, 2338 ⇒ 2 + 3 + 8 − 3 = 10, 3205 ⇒ 3 + 2 + 5 − 0 = 10, 2015 ⇒ 2 + 0 + 5 − 1 = 6. Therefore, 2015 is different from the other three."
+    },
+    {
+      "number": 39,
+      "solution": "(d) In all other options, digit in the middle is the sum of the other two digits."
+    },
+    {
+      "number": 40,
+      "solution": "(d) All others are complete squares."
+    },
+    {
+      "number": 41,
+      "solution": "(b) In all others first and last two digits are same."
+    },
+    {
+      "number": 42,
+      "solution": "(d) Except '64, 73' all are having difference of 11."
+    },
+    {
+      "number": 43,
+      "solution": "(c) In all others, 2nd number is 2 more than the first."
+    },
+    {
+      "number": 44,
+      "solution": "(b) In all others, 2nd number = 1st number + 6."
+    },
+    {
+      "number": 45,
+      "solution": "(b) In all other, 2nd number = (1st number)/3."
+    },
+    {
+      "number": 46,
+      "solution": "(d) 8 + 3 = 11, 1 + 3 = 4, 7 + 3 = 10, 3 + 3 = 6 ≠ 5."
+    },
+    {
+      "number": 47,
+      "solution": "(b) In all other numbers the sum of the digits is 17."
+    },
+    {
+      "number": 48,
+      "solution": "(b) All other pairs consist of prime number only."
+    },
+    {
+      "number": 49,
+      "solution": "(c) In all other pairs, the difference between the two numbers is a multiple of 9."
+    },
+    {
+      "number": 50,
+      "solution": "(c) 5-2 = 3, 19-16 = 3, 27-23 = 4, 31-23 = 3."
+    },
+    {
+      "number": 51,
+      "solution": "(b) In all others, 2nd number = (2 × 1st number) + 2."
+    },
+    {
+      "number": 52,
+      "solution": "(d) Second number is the next prime number to the first number."
+    },
+    {
+      "number": 53,
+      "solution": "(c) Second number is the reverse of the first number."
+    },
+    {
+      "number": 54,
+      "solution": "(d) Each digit of second number is the square of the respective digit of the first number."
+    },
+    {
+      "number": 55,
+      "solution": "(c) Second number is the difference of the square of the digits of the first number."
+    },
+    {
+      "number": 56,
+      "solution": "(c) 5 +16→ 21, 29 +16→ 45, 71 +16→ 87, 48 +20→ 68. So, '48 − 68' is different from other three."
+    },
+    {
+      "number": 57,
+      "solution": "(b) Except '9, 64', all numbers are consecutive squares."
+    },
+    {
+      "number": 58,
+      "solution": "(c) [includes figure showing number patterns with arrows]. So, except option (c) all have the same rule or pattern for swapping. Hence, '475, 574' is different from other three."
+    },
+    {
+      "number": 59,
+      "solution": "(c) In all the given numbers, the middle digit is twice in second group."
+    },
+    {
+      "number": 60,
+      "solution": "(c) Only option (c) has difference of 7, rest have difference of 8 between first and second number."
+    },
+    {
+      "number": 61,
+      "solution": "(c) Except 8-15, in all the options, both of the numbers are the squares of consecutive natural numbers."
+    },
+    {
+      "number": 62,
+      "solution": "(c) 9 − 2 = 7 → 7² = 49, 13 − 2 = 11 → 11² = 121, 10 − 2 = 8 → 8² = 64 ≠ 61, 7 − 2 = 5 → 5² = 25."
+    },
+    {
+      "number": 63,
+      "solution": "(c) Except option (c) in all the other options, all numbers are divisible by a particular number as option (a) by 7, option (b) by 8 and option (d) by 7."
+    },
+    {
+      "number": 64,
+      "solution": "(d) 14 + 3 = 17 → 17 + 6 = 23, 19 + 3 = 22 → 22 + 6 = 28, 17 + 3 = 20 → 20 + 6 = 26, 21 + 2 = 23 → 23 + 7 = 30."
+    },
+    {
+      "number": 65,
+      "solution": "(b) In all the options except (b), second and third numbers are the square and cube of first number respectively."
+    },
+    {
+      "number": 66,
+      "solution": "(c) Except (a) in all the other options, numbers are even numbers but in option (a) all numbers are prime numbers."
+    },
+    {
+      "number": 67,
+      "solution": "(d) In the other options except (d), second number is obtained by the addition of 1 in first number and third number is obtained by the addition of 10 in second number."
+    }
+  ],
+  "answers": [],
+  "_page": 90
+}

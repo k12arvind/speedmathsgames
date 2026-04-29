@@ -1,0 +1,257 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully to answer the given questions.\nI. Six plays are to be organised from Monday to Sunday, one play each day with one day when there is no play. 'no play' day is not Monday or Sunday.\nII. The plays are held in sets of 3 plays each in such a way that 3 plays are held without any break, i.e., 3 plays are held in such a way that there is no 'no play' day between them but immediately before this set or immediately after this set it is 'no play' day.\nIII. Play Z was held on 26th and play X was held on 31st of the same month.\nIV. Play B was not held immediately after play A (but was held after A, not necessarily immediately) and play M was held immediately before Q.\nV. All the six plays were held in the same month.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information given below to answer the questions.\nA, B, C, D, E, F and G are standing in a straight line facing North with equal distances between them, not necessarily in the same order.\nEach one is pursuing a different profession—actor, reporter, doctor, engineer, lawyer, teacher and painter not necessarily in the same order.\nG is fifth to the left of C. The reporter is third to the right of G. F is fifth to the right of A. E is second to the left of B. The engineer is second to the right of D. There are only three people between the engineer and the teacher. The doctor is to the immediate left of the engineer. The lawyer is to the immediate right of the teacher.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "In five flats, one above the other, live five professionals. The professor has to go up to meet his IAS officer friend. The doctor is equally friendly to all and has to go up as frequently as go down. The engineer has to go up to meet his MLA friend above whose flat lives the professor's friend.\nFrom the ground floor to the top floor, in what order do the five professionals live?",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which play was organised on Monday?",
+      "choices": {
+        "a": "Z",
+        "b": "M",
+        "c": "Q",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which day was play Z organised?",
+      "choices": {
+        "a": "Tuesday",
+        "b": "Monday",
+        "c": "Wednesday",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which date was a 'no play' day?",
+      "choices": {
+        "a": "26th",
+        "b": "28th",
+        "c": "29th",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following is true?",
+      "choices": {
+        "a": "Play B is held immediately before play M",
+        "b": "Play Z is held after play B",
+        "c": "There was a gap after 2 plays and then 4 plays were organised",
+        "d": "First play was organised on the 25th",
+        "e": "Play B was held on Friday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which day was play Q organised?",
+      "choices": {
+        "a": "Friday",
+        "b": "Wednesday",
+        "c": "Saturday",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "What is A's profession?",
+      "choices": {
+        "a": "Painter",
+        "b": "Doctor",
+        "c": "Teacher",
+        "d": "Actor",
+        "e": "Engineer"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following statements is true according to the given arrangement?",
+      "choices": {
+        "a": "F is the teacher",
+        "b": "F is third to the left of E",
+        "c": "The painter is to the immediate left of B",
+        "d": "The lawyer is standing in the exact middle of the arrangement",
+        "e": "None of the given statements is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who among the following is the actor?",
+      "choices": {
+        "a": "E",
+        "b": "F",
+        "c": "C",
+        "d": "B",
+        "e": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "What is D's position with respect to the painter?",
+      "choices": {
+        "a": "Third to the left",
+        "b": "Second to the right",
+        "c": "Fourth to the right",
+        "d": "Third to the right",
+        "e": "Second to the left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Four of the following five are alike in a certain way based on the given standing arrangement and so form a group. Which of the following does not belong to the group?",
+      "choices": {
+        "a": "AED",
+        "b": "DFC",
+        "c": "GDB",
+        "d": "EBF",
+        "e": "BFC"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "From the ground floor to the top floor, in what order do the five professionals live?",
+      "choices": {
+        "a": "Engineer, Professor, Doctor, IAS officer, MLA",
+        "b": "Professor, Engineer, Doctor, IAS officer, MLA",
+        "c": "IAS officer, Engineer, Doctor, Professor, MLA",
+        "d": "Professor, Engineer, Doctor, MLA, IAS officer"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 633
+}

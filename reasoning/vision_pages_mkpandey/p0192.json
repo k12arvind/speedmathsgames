@@ -1,0 +1,157 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-25): Below are given three statements, a, b and c, followed by four conclusions. You have to take the given statements to be true even if they appear to be at variance with commonly known facts and then decide which of the conclusions logically follow(s) from the given statements. For each question, mark an appropriate answer choice that you think is correct.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 49,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some snakes are cute. All cute are wicked. Conclusions: I. Some cute are snakes. II. No cute is a snake. III. Some wicked are snakes. IV. All wicked are cute.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only either I or II follows",
+        "c": "Only either III or IV follows",
+        "d": "Only either I or II follows",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some bricks are not sockets. No socket is a pouch. Conclusions: I. No brick is a pouch. II. Some pouches are not bricks. III. Some sockets are bricks. IV. No socket is a brick.",
+      "choices": {
+        "a": "Only either III or IV follows",
+        "b": "Only II and III follow",
+        "c": "Only I and III follow",
+        "d": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some greens are teens. All teens are cleans. Conclusions: I. All greens are cleans. II. Some greens are cleans. III. Some cleans are teens. IV. All teens are greens.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only either I or II and I, II and III follow",
+        "c": "Only II follows",
+        "d": "Only II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All girls are cute. All cute are westernised. Conclusions: I. Some girls are girls. II. No cute is a girl. III. Some westernised are girls. IV. All westernised are girls.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either I or II follows",
+        "c": "Either III or IV follows",
+        "d": "Only I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some biscuits are pens. Some pens are pouches. Conclusions: I. Some biscuits are pouches. II. Some pouches are pens. III. Some pouches are not pens. IV. Some biscuits are not pouches.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either III or IV follow",
+        "c": "Only either I or III follow",
+        "d": "Only I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "a. If only III follows b. Either I or IV follows c. If either either I or IV follow Statements: Some girls are brunettes. No brunette is wicked. Conclusions: I. Some brunettes are girls. II. Some wicked are girls. III. Some girls are not wicked. IV. All wicked are not girls.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "Either I or IV follows",
+        "c": "Only I follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All tractors are scooters. Some scooters are boys. Conclusions: I. All boys are scooters. II. All boys are tractors. III. Some tractors are boys. IV. No tractor is a boy.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either II or III follows",
+        "c": "Either III or IV follows",
+        "d": "Either I or IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 192
+}

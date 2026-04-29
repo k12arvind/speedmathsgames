@@ -1,0 +1,334 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n225  289  338  374  399  397  415  424\n+64  +49  +36  +25  +16   +9\n(8)²  (7)²  (6)²  (5)²  (4)²  (3)²\nHence, number 397 is wrong and should be replaced by 399.",
+      "choices": {
+        "d": "The pattern is as follows"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n8424  4212  2106  1053  526.5  263.25 131.625\n÷2    ÷2    ÷2    ÷2     ÷2     ÷2\nHence, number 1051 is wrong and should be replaced by 1053.",
+      "choices": {
+        "b": "The pattern is as follows"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n8   27   64   125  218  343\n2³  3³   4³   5³   6³   7³\nHence, number 218 is wrong and should be replaced by 216.",
+      "choices": {
+        "d": "The pattern is as follows"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n7.5   37.5   87.5   157.5   247.5   267.5   487.5\n+30   +50    +70    +90     +110    +130\nHence, number 47.5 is wrong and should be replaced by 37.5.",
+      "choices": {
+        "e": "The pattern is as follows"
+      },
+      "correct": "e",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n6    12    21    32    45    60\n+7   +9    +11   +13   +15\nHence, number 6 is wrong and should be replaced by 5.",
+      "choices": {
+        "c": "The pattern is as follows"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The numbers are cubes of prime numbers i.e., 2³, 3³, 5³, 7³, 11³. Clearly, none is wrong.",
+      "choices": {
+        "d": "The numbers are cubes of prime numbers"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The numbers are\n7 × 8, 8 × 9, 9 × 10, 10 × 11, 11 × 12 and 12 × 13.\nHence, number 150 is wrong and must be replaced by (12 × 13) i.e., 156.",
+      "choices": {
+        "d": "The numbers are"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The first digits of the numbers form the series 1, 2, 3, 4, 5, the second digits form the series 2, 3, 4, 5, 6 and the third digits form the series 3, 4, 5, 6, 7 while the last digit in each of the numbers is 6.\nHence, number 5686 is wrong and must be replaced by 5676.",
+      "choices": {
+        "d": "The first digits of the numbers form the series"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n9    16    25    36    49    64\n(3)²  (4)²  (5)²  (6)²  (7)²  (8)²\nHence, number 61 is wrong and should be replaced by 64.",
+      "choices": {
+        "d": "The pattern is as follows"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n10   14   19   25   32   40\n+4   +5   +6   +7   +8\nHence, number 9 is wrong and should be replaced by 10.",
+      "choices": {
+        "d": "The pattern is as follows"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n17   36   53   68   81   92\n+19  +17  +15  +13\nHence, number 83 is wrong and should be replaced by 81.",
+      "choices": {
+        "d": "The pattern is as follows"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n10   14   28   32   64   68   136\n+4   ×2   +4   ×2   +4   ×2\nHence, number 132 is wrong and should be replaced by 136.",
+      "choices": {
+        "d": "The pattern is as follows"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern of the series is\n2³ = 8, 3³ = 27, 4³ = 64, 5³ = 125\nHence, number 225 is wrong and should be replaced by 125.",
+      "choices": {
+        "c": "The pattern of the series is"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The given sequence is a combination of two series\nI. 1, 5, 7, 11, 12        II. 5, 9, 11, 15, 17\nThe pattern in both I and II is + 4, + 2, + 4 + 2.\nHence, number 12 is wrong and must be replaced by (11 + 2) i.e., 13.",
+      "choices": {
+        "b": "The given sequence is a combination of two series"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n20   40   200   400   2000   4000   6000\n×10       ×10        ×10        ×10\nHence, number 8000 is wrong and should be replaced by 20000.",
+      "choices": {
+        "c": "The pattern is as follows"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "Series follows the pattern 2 × 1 + 1 = 3, 3 × 2 + 2 = 8, 8 × 3 + 3 = 27, 27 × 4 + 4 = 112 and so on.\nHence, the number 9 is wrong and should be replaced by 8.",
+      "choices": {
+        "b": "Series follows the pattern"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n75   79   72   80   69   83   66\n+3   -3   +3   -3   +3   -3\nHence, number 79 is wrong and should be replaced by 77.",
+      "choices": {
+        "c": "The pattern is as follows"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n100   97   90   86   78   71   62   56\n-3    -7   -4   -8   -7   -9   -6   55\nHence, number 55 is wrong and should be replaced by 56.",
+      "choices": {
+        "c": "The pattern is as follows"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "The pattern is as follows\n1    4    8    16    31    64    127    256\n×2+2  ×2-1  ×2+2  ×2-1  ×2+2  ×2-1  ×2+2",
+      "choices": {
+        "c": "The pattern is as follows"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 233
+}

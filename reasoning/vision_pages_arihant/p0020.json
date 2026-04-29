@@ -1,0 +1,177 @@
+{
+  "page_type": "questions",
+  "chapter_number": 13,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "In such type of analogical problems, two pairs of words are given and the words in the first pair are related to each other in a particular way. The candidate is required to find out the relationship between the first two words and pick the word from the given options which bears exactly the same relationship to the third word, as the first two bear. Sometimes, fourth word is given and third word has to be selected from the given alternatives. Directions (Example Nos. 1-10) Find out the relationship between the first two words and choose the missing word from the given alternatives, which bears the same relationship to the third/ fourth word, as the first two bear.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Apple : Fruit :: Potato : ?",
+      "choices": {
+        "a": "Flower",
+        "b": "Fruit",
+        "c": "Sweet",
+        "d": "Root"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Dearth : Scarcity :: Substitute : ?",
+      "choices": {
+        "a": "Rumor",
+        "b": "Assume",
+        "c": "Replace",
+        "d": "Destroy"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Chaos : Peace :: Lanky : ?",
+      "choices": {
+        "a": "Short",
+        "b": "Lengthy",
+        "c": "Great",
+        "d": "Fine"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Thunder : Rain :: ? : Night",
+      "choices": {
+        "a": "Dus",
+        "b": "Dark",
+        "c": "Evening",
+        "d": "Dusk"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Page : Book :: Leaf : ?",
+      "choices": {
+        "a": "Forest",
+        "b": "Root",
+        "c": "Red",
+        "d": "Tree"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Eye : See :: Leg : ?",
+      "choices": {
+        "a": "Write",
+        "b": "Breath",
+        "c": "Walk",
+        "d": "Hear"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Tadpole : ? :: Caterpillar : Butterfly [SSC (Steno) 2013]",
+      "choices": {
+        "a": "Crow",
+        "b": "Goose",
+        "c": "Fish",
+        "d": "Frog"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogous_pair_completion",
+      "subtopic_name": "Analogous Pair Completion",
+      "body": "Plant : Seed :: ? : Bud",
+      "choices": {
+        "a": "Leaf",
+        "b": "Twig",
+        "c": "Flower",
+        "d": "Fruit"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 20
+}

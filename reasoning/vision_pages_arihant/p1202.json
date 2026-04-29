@@ -1,0 +1,206 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [
+    {
+      "passage_text": "In each question below are given two statements numbered I and II. You have to take the two given statements as true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions and then decide which of the given conclusions logically follow from the given statements, disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    },
+    {
+      "passage_text": "Some statements followed by some conclusions are given below in each of the question. You are required to check the validity of each of the conclusion on the basis of the given statements and mark your answer choice accordingly.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 41,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "I. All vegetables have gravy. II. All lunch has vegetable.",
+      "choices": {
+        "a": "All lunch has gravy",
+        "b": "All gravy has lunch",
+        "c": "Both (a) and (b)",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "I. Some blues are green. II. Pink is green.",
+      "choices": {
+        "a": "Some blue is pink",
+        "b": "Some green is pink",
+        "c": "Either 'a' or 'b' follows",
+        "d": "Some pink are blues"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "I. All boys are tall. II. All Punjabi are tall.",
+      "choices": {
+        "a": "All boys are Punjabi",
+        "b": "Some boys are Punjabi",
+        "c": "Both of the above",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements I. Some red are yellow. II. No yellow is green. Conclusions I. Some yellow are red. II. Some green are red. III. Some red are not green. IV. All green are red.",
+      "choices": {
+        "a": "II and III follow",
+        "b": "I and II follow",
+        "c": "Either III our IV follow",
+        "d": "Only I follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements I. Some years are decades. II. All centuries are decades. Conclusions I. Some centuries are years. II. Some decades are years. III. No century is a year.",
+      "choices": {
+        "a": "Conclusion I and II follow",
+        "b": "Conclusion I and III follow",
+        "c": "Only Conclusion I follows",
+        "d": "Only Conclusion II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "validity_check",
+      "subtopic_name": "Validity Check",
+      "body": "Statements All cricketers are football players. Some hockey players are cricketers. No football player is a basketball player. No basketball player is a hockey player. Conclusions I. Some hockey players are football players. II. No basketball player is a cricketer. III. Some hockey players are basketball players IV. Some football players are cricketers.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I, II and IV follow",
+        "c": "I and IV follow",
+        "d": "I and II follow",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "validity_check",
+      "subtopic_name": "Validity Check",
+      "body": "Statements Some pearls are gems. All gems are diamonds. No diamond is stone. Some stones are corals. Conclusions I. Some stones are pearls. II. Some corals are diamonds. III. No stone is pearl.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Either I or III follows",
+        "d": "I and II follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "validity_check",
+      "subtopic_name": "Validity Check",
+      "body": "Statements Some rocks are bricks. Some bricks are sands. No sand is cement. Conclusions I. Some rocks are cements. II. Some rocks are sands. III. Some sands are bricks. IV. No brick is cement.",
+      "choices": {
+        "a": "None follows",
+        "b": "I and II follow",
+        "c": "I and III follow",
+        "d": "II and III follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "validity_check",
+      "subtopic_name": "Validity Check",
+      "body": "Statements Some cups are slates. All slates are apples. No apple is a car. Conclusions I. Some cars are slates. II. Some cups are cars. III. Some apples are cups. IV. No car is a cup.",
+      "choices": {
+        "a": "Only II follows",
+        "b": "Only IV follows",
+        "c": "Only III follows",
+        "d": "Either II or IV and III follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1202
+}

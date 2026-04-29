@@ -1,0 +1,95 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Response & Interpretations (Master Exercise)",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) Here, series moves with the addition of 6, 12, 24, 48, 96 and 192, respectively. Hence, the missing number is 202."
+    },
+    {
+      "number": 2,
+      "solution": "(d) The series is as follows 10, 33, 102, 309, 930 with pattern +3*3, +3*3, +3*3, +3*3. ∴ ? = 930"
+    },
+    {
+      "number": 3,
+      "solution": "(d) Here, series is written in descending order with a difference of 9, 8, 7, 6 and 5, respectively. Hence, the missing number will be 104."
+    },
+    {
+      "number": 4,
+      "solution": "(b) The pattern is as follows 3, 11, 23, 39, 59 with differences +8, +12, +16, +20. ∴ ? = 59"
+    },
+    {
+      "number": 5,
+      "solution": "(d) The pattern is as follows 31, 13, 45, 54, 36, 63 with Interchange patterns. ∴ ? = 36"
+    },
+    {
+      "number": 6,
+      "solution": "(d) The pattern is as follows 8, 27, 64, 125 which are (2³), (3³), (4³), (5³). ∴ ? = 125"
+    },
+    {
+      "number": 7,
+      "solution": "(b) The pattern is as follows 1, 3, 7, 13, 21, 31, 43, 57 with differences +2, +4, +6, +8, +10, +12, +14. ∴ ? = 57"
+    },
+    {
+      "number": 8,
+      "solution": "(c) The pattern is as follows 975, 864, 753, 642, 531 with differences -111, -111, -111, -111. ∴ ? = 531"
+    },
+    {
+      "number": 9,
+      "solution": "(d) Every third element is the sum of its previous two elements. 3 + 4 = 7, 4 + 7 = 11, 7 + 11 = 18, 11 + 18 = 29, 18 + 29 = 47. ∴ ? = 47"
+    },
+    {
+      "number": 10,
+      "solution": "(d) Since, each term is obtained by adding two previous term, ∴ ? = 13 + 21 = 34"
+    },
+    {
+      "number": 11,
+      "solution": "(c) The pattern is as follows 285, 253, 221, 189, 157 with differences -32, -32, -32, -32. ∴ ? = 157"
+    },
+    {
+      "number": 12,
+      "solution": "(b) The pattern is as follows 7, 8, 11, 16, 23, 32 with differences +1, +3, +5, +7, +9. ∴ ? = 32"
+    },
+    {
+      "number": 13,
+      "solution": "(b) The pattern is as follows 3, 9, 6, 36, 30, 900 with pattern +3, -3, ×6, -6, ×30. ∴ ? = 30"
+    },
+    {
+      "number": 14,
+      "solution": "(d) The pattern is as follows 26, 37, 50, 65, 82, 101 with differences +11, +13, +15, +17, +19. ∴ ? = 82"
+    },
+    {
+      "number": 15,
+      "solution": "(b) Deduct the middle digit each time to obtain the next number. 758 - 5 = 753; 753 - 5 = 748; 748 - 4 = 744; 744 - 4 = 740; 740 - 4 = 736; 736 - 3 = 733. ∴ ? = 733"
+    },
+    {
+      "number": 16,
+      "solution": "(c) The pattern is as follows 6, 42, 252, 1260, 5040, 15120, 30240 with pattern ×7, ×6, ×5, ×4, ×3, ×2. ∴ ? = 252"
+    },
+    {
+      "number": 17,
+      "solution": "(d) The pattern is as follows 17, 43, 81, 131, 193 with differences +26, +38, +50, +62. ∴ ? = 193"
+    },
+    {
+      "number": 18,
+      "solution": "(b) The pattern is as follows 30, 68, 130, 222, 350, 520, 738 with complex pattern involving +38, +62, +92, +128, +170, +218. ∴ ? = 350"
+    },
+    {
+      "number": 19,
+      "solution": "(d) Here, the series is a palindromic sequence where the series looks similar when seen from either end."
+    },
+    {
+      "number": 20,
+      "solution": "(b) The pattern is as follows 15, 17, 20, 22, 27, 29, 36, 38 with differences +2, +3, +2, +5, +2, +7, +2. ∴ First ? = 36 and second ? = 38. ∴ Required answer = 36, 38"
+    },
+    {
+      "number": 21,
+      "solution": "(b) When the digits of the numbers are reversed these are the perfect squares 09, 16, 25, 36, 49, 64, 81 consecutive. ∴ ? = Reverse of 64 = 46"
+    }
+  ],
+  "answers": [],
+  "_page": 254
+}

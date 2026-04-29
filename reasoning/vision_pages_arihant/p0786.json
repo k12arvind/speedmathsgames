@@ -1,0 +1,188 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 62-65) In the following questions, find the best substitute from the answer figure which replaces the sign of question marks such that figure (iii) is related to figure (iv) in the same ways as figure (i) is related to figure (ii).",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 66-87) The second figure in the first part of the problem figures bears a certain relationship to the first figure. Similarly, one of the figures in answer figures bears the same relationship to the first figure in the second part. You have to select the figure from the set of answer figures which would replace the sign of question mark (?).",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 62,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Problem Figure",
+      "choices": {
+        "a": "E_⌐ : -d ⌐| ↓_⌐ : -d ⌐|",
+        "b": "E_⌐ : -d ⌐| E_⌐ : O- ⌐|",
+        "c": "E_⌐ : -d ⌐|",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 786
+}

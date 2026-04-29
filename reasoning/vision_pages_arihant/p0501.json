@@ -1,0 +1,164 @@
+{
+  "page_type": "questions",
+  "chapter_number": 15,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 6-12) Read the following information carefully to answer the given questions. [Andhra Bank (PO) 2010] Eights friends P, Q, R, S, T, V, W and Y are sitting around a square table. Out of eight, four persons are sitting at the corners of the table and the other four are sitting at the mid-points of each side of the table. Persons at the corners are facing the centre while the persons at the mid-points of side are facing outside. S is third to the right of P. P is facing the centre. Y is not sitting beside P or S. T is third to the right of R. R is not sitting at the mid-point of any side of the table. V is also not beside Y. There is only one person between P and V. Q is not sitting beside V.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "rectangular_table",
+      "subtopic_name": "Rectangular Table Seating",
+      "body": "Radha, Sheela, Mahima and Seeta are sitting along a rectangular table. Radha is to the right of Sheela. Mahima is to the left of Seeta. Which of the persons given in the options are sitting opposite to each other?",
+      "choices": {
+        "a": "Sheela-Seeta",
+        "b": "Radha-Seeta",
+        "c": "Radha-Sheela",
+        "d": "Mahima-Radha"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "square_table",
+      "subtopic_name": "Square Table Seating",
+      "body": "Four boys and four girls are sitting around a square facing the centre. One person is sitting at each corner and at the mid-point of each side of the square. Madhu is sitting diagonally opposite to Usha who is to the right of Geeta. Ram who is to the left of Geeta is diagonally opposite to Gopi who is to the left of Bose. Position of Suma is not to the right of Madhu but in front of Prema. Who is sitting opposite to Bose? [MAT 2009]",
+      "choices": {
+        "a": "Geeta",
+        "b": "Prema",
+        "c": "Suma",
+        "d": "Madhu"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "triangular_arrangement",
+      "subtopic_name": "Triangular Seating",
+      "body": "Three friends Ravi, Deepak and Mohit are sitting along the corners of a triangular field facing the centre. Ravi is to the left of Mohit. Who is sitting to right of Mohit?",
+      "choices": {
+        "a": "Ravi",
+        "b": "Deepak",
+        "c": "Mohit",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "pentagonal_arrangement",
+      "subtopic_name": "Pentagonal Seating",
+      "body": "Five children A, B, C, D and E are sitting along the corners of a pentagonal table facing the centre. B is between E and C. D is to the right of E. Who is to the left of C?",
+      "choices": {
+        "a": "B",
+        "b": "A",
+        "c": "D",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "octagonal_arrangement",
+      "subtopic_name": "Octagonal Seating",
+      "body": "Some friends are sitting at an octagonal place. Each person is sitting at one corner facing the centre. Mahima is sitting slantly in front of Ram. Ram is to the right of Sushma. Ravi is sitting beside Sushma and in front of Giridhar. Giridhar is to the left of Chandra. Savitri is not to the right of Mahima but is in front of Shalini. Who is sitting to the right of Shalini? [SSC (CPO) 2010]",
+      "choices": {
+        "a": "Ravi",
+        "b": "Mahima",
+        "c": "Giridhar",
+        "d": "Ram"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "square_table_mixed",
+      "subtopic_name": "Square Table Mixed Seating",
+      "body": "If all the persons are made to sit in alphabetical order in clockwise direction starting from P, then the position of how many persons remains the same (excluding P)?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three",
+        "e": "Four"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "square_table_mixed",
+      "subtopic_name": "Square Table Mixed Seating",
+      "body": "Which of the following is true regarding Y?",
+      "choices": {
+        "a": "T is not sitting beside Y",
+        "b": "Y is sitting at the mid-point of a side",
+        "c": "R is second to the left of Y",
+        "d": "P and V are beside Y",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 12,
+      "solution": "Arrangement according to the question is as follows. [Includes octagonal diagram showing positions of A, C, F, G, B, D, E, H] Clearly, F is third to the left of D."
+    }
+  ],
+  "answers": [],
+  "_page": 501
+}

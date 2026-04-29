@@ -1,0 +1,387 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Eight friends A, B, C, D, E, F, G and H are sitting in a circle facing the center. B is sitting between G and D. H is third to the left of A. C is sitting between A and G and B and E are not sitting opposite to each other.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Eight friends A, B, C, D, E, F, G and H are seated in a circle facing the centre. D is between B and G and F is between A and H. E is second to the right of A.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "A, B, C, D, E and F are standing in a circular space facing the centre. A and C are together and also E and B are together. B is standing to the left of F. There are two persons between D and F. A and B are not together.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "In each question given below, four options out of five are somehow same and therefore they form a group. Find the option which is not member of this group",
+      "has_figure": false,
+      "topic_code": "classification"
+    },
+    {
+      "passage_text": "Six girls are sitting in a circle. Sonia is sitting opposite to Radhika. Poonam is sitting right of Radhika but left of Deepti. Monika is sitting left of Radhika. Kamini is sitting right of Sonia and left of Monika. Now, Deepti and Kamini and Monika and Radhika mutually exchange their positions.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Six persons are sitting in a circle. A is facing B. B is to the right of E and left of C. C is to the left of D. F is to the right of A. Now, D exchanges his seat with F and E with B.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is third to the left of D?",
+      "choices": {
+        "a": "F",
+        "b": "E",
+        "c": "A",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following statements is not correct?",
+      "choices": {
+        "a": "D and A are sitting opposite to each other",
+        "b": "C is third to the right of D",
+        "c": "E is sitting between A and D",
+        "d": "A is sitting between C and F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following is A's position?",
+      "choices": {
+        "a": "Left of F",
+        "b": "Right of F",
+        "c": "Between E and F",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following information is not required to ascertain the position of C?",
+      "choices": {
+        "a": "I",
+        "b": "Either II or III",
+        "c": "III",
+        "d": "All required"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following is C's position?",
+      "choices": {
+        "a": "Between E and F",
+        "b": "Between G and E",
+        "c": "Second to the left of B",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "If we move anti-clockwise from F to E, then how many persons are there between F and E?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is sitting immediate left of E?",
+      "choices": {
+        "a": "C",
+        "b": "B",
+        "c": "F",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_one_out",
+      "subtopic_name": "Odd One Out",
+      "body": "",
+      "choices": {
+        "a": "BA",
+        "b": "BD",
+        "c": "CF",
+        "d": "DE",
+        "e": "FC"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_one_out",
+      "subtopic_name": "Odd One Out",
+      "body": "",
+      "choices": {
+        "a": "BEC",
+        "b": "CAD",
+        "c": "FDA",
+        "d": "DFB",
+        "e": "ADF"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 3,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_one_out",
+      "subtopic_name": "Odd One Out",
+      "body": "",
+      "choices": {
+        "a": "AC",
+        "b": "EB",
+        "c": "CE",
+        "d": "AF",
+        "e": "DA"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 4,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who will be opposite to Sonia?",
+      "choices": {
+        "a": "Radhika",
+        "b": "Monika",
+        "c": "Kamini",
+        "d": "Sonia"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 4,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who will be sitting left of Kamini?",
+      "choices": {
+        "a": "Poonam",
+        "b": "Deepti",
+        "c": "Radhika",
+        "d": "Sonia"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 4,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who will be sitting left of Deepti?",
+      "choices": {
+        "a": "Sonia",
+        "b": "Monika",
+        "c": "Radhika",
+        "d": "Poonam"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 5,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who will be sitting to the left of D?",
+      "choices": {
+        "a": "B",
+        "b": "D",
+        "c": "E",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 5,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who will be sitting to the left of C?",
+      "choices": {
+        "a": "E",
+        "b": "F",
+        "c": "A",
+        "d": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 5,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who will be sitting opposite of A?",
+      "choices": {
+        "a": "E",
+        "b": "F",
+        "c": "D",
+        "d": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 5,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who will be sitting opposite to C?",
+      "choices": {
+        "a": "C",
+        "b": "D",
+        "c": "B",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 493
+}

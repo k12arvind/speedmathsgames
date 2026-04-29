@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 554,
+      "solution": "(c) 100 = 1 × 2³ + 0 × 2² + 0 × 2¹ = 4 + 0 + 0 = 4 (Four)\n(d) 1000 = 1 × 2³ + 1 × 2² + 1 × 2¹ + 0 × 2⁰ = 16 + 0 + 0 + 0 = 16 (Sixteen)\n(e) 111000 = 1 × 2⁵ + 1 × 2⁴ + 1 × 2³ + 0 × 2² + 0 × 2¹ + 0 × 2⁰ = 64 + 32 + 16 + 0 + 0 + 0 = 114 (Hundred Fourteen)\n\nTable I: List of powers of 2\nPower | Value\n2⁰ | 1\n2¹ | 2=2\n2² | 4=2×2\n2³ | 8=2×2×2\n2⁴ | 16=2×2×2×2\n\nPower | Value\n2⁰ | 32=2×2×2×2×2\n2¹ | 64=2×2×2×2×2×2\n2² | 128=2×2... 7 twos\n2³ | 256=2×2... 8 twos\n2⁴ | 512=2×2... 9 twos\n\nFor a quicker conversion of binary numbers to decimal numbers, remember the above-mentioned table by heart. Thus, we can save our time in directly writing the value to be multiplied (for example, instead of writing 2⁴ we can directly write 16 × 8). Now, since anything multiplied by 1 gives the same number and since anything multiplied by 0 gives zero, we can further save time by writing (1) only the value of the power of 2 wherever it has to be multiplied by 1 and (2) zero wherever it has to be multiplied by zero. Thus, in Ex 2, instead of writing 10 we may directly write as 1 × 2³ + 1 × 2¹ or 8 + 2 (because other terms to be multiplied by 0 and give 0 in any case). Thus, we can develop the following quicker method for conversion of binary into decimal numbers:\n\nQuicker method for converting binary numbers to decimal:\nStep I: Starting from the rightmost digit of the given binary number, write 1, 2, 4, 8, 16, 32... and so on below each digit as you proceed towards the left.\nStep II: Ignore the numbers below the 0s (zeroes). Add all the remaining numbers to get the result.\nEx. 4: Solve Ex. 3 by quicker method.\nSoln: (a) 1010\nStep I: Starting from right we write 1, 2, 4 and 8 below the digits. We get:\n1 | 0 | 1 | 0\n8 | 4 | 2 | 1\nStep II: 4 and 1 fall below the zeroes. We ignore them and add the remaining. We get 8 + 2 = 10 (Ten)."
+    },
+    {
+      "number": 555,
+      "solution": "Coded Binary Numbers\n\n(a) It all fell below the right, we write 1, 2, 4, and 8 below the digits. We get:\n1 | 1 | 1 | 1\n8 | 4 | 2 | 1\n\nStep II: All numbers fall below 1s. So, we add all of them to get 8 + 4 + 2 + 1 = 15 (fifteen)\n\n(b) It all Starting from right, we write 1, 2 and 4 below the digits. We get:\n1 | 0 | 1\n4 | 2 | 1\n\nStep II: 1 and 2 fall below the zeroes, we ignore them. This leaves 4 (four).\n\n(c) It all Starting from right, we write 1, 2, 4, 8 and 16 below the digits. We get:\n1 | 0 | 1 | 0 | 0\n16 | 8 | 4 | 2 | 1\n\nStep II: 1, 2, 4, 8 fall below the zeroes. Ignore them. That leaves 16. (Sixteen)\n\n(d)110010\nStarting from right, we write 1, 2, 4, 8, 16, 32 and 64 below the digits. We get:\n1 | 1 | 1 | 0 | 0 | 1 | 0\n64 | 32 | 16 | 8 | 4 | 2 | 1\n\nStep II: We ignore 8, 4 and 1 as they fall below the zeroes. Adding the rest, 64 + 32 + 16 + 2 we get 114 (One hundred and fourteen)\n\nII.32. Converting decimal numbers into binary\nA decimal number is converted into binary by the method of successive division. A decimal number, say the dividend is divided by 2. The remainder is noted and the quotient becomes the next dividend, which is again divided by 2. This process is repeated until no more division is possible.\nWe will explain it by the following example.\nEx.5: Convert 17 into a binary number:\nSoln: Step I: We divide 17 by 2. The remainder is 1 and the dividend is 8.\n(See below)\n17 |\n8 | 1\n\nStep II: In the previous step, the dividend was 8. That is, our new quotient. We divide it again by 2. Now, the remainder is 0 and dividend is 4. (See below)"
+    }
+  ],
+  "answers": [],
+  "_page": 284
+}

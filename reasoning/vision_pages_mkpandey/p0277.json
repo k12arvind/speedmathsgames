@@ -1,0 +1,230 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-4): Read the following information carefully and answer the questions given below. P > Q means P is the father of Q P = Q means P is the mother of Q P - Q means P is the brother of Q P × Q means P is the sister of Q",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. 5-6): Read the following information to answer these questions. (i) A∩B means A is mother of B. (ii) A©B means A is sister of B. (iii) A*B means A is father of B. (iv) A⊕B means A is brother of B.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. 7-12): Read the following information carefully and then answer the questions given below. ∩A⊕B means A is mother of B. ii) A*B means A is sister of B iii) A*B means A is father of B iv) A⊕B means A is brother of B.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "If A + B = C - D, then A is D's",
+      "choices": {
+        "a": "sister",
+        "b": "grandfather",
+        "c": "father",
+        "d": "grandmother",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "If A × B = C - D + E, which of the following is A in E's",
+      "choices": {
+        "a": "great-aunt",
+        "b": "brother",
+        "c": "mother",
+        "d": "None of these",
+        "e": "maternal uncle"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "Which of the following shows that A is the aunt of E?",
+      "choices": {
+        "a": "A × B ∩ C × D ∩ E",
+        "b": "A ∩ B + C × D ∩ E",
+        "c": "A + B ∩ C × D ∩ E",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "A ∩ Q is son of P and P © Q means P is brother of Q, P ⊕ Q means P is sister of P, and P © Q means P is the brother of Q. Which of the following definitely TRUE about N × K - M + L?",
+      "choices": {
+        "a": "K is father of L and M.",
+        "b": "L is the daughter of K and is the niece of her uncle N.",
+        "c": "K is the father of M and L - his son and daughter respectively.",
+        "d": "M is the uncle of K's brother N.",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "Which of the following means the uncle of Y?",
+      "choices": {
+        "a": "X©Z©KA)*©Y",
+        "b": "X©NA⊕P",
+        "c": "©CACK*Y",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "Which of the following means R is grandfather of Q?",
+      "choices": {
+        "a": "QA©*©R",
+        "b": "R*©©TAQ",
+        "c": "R©©MA©Q",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "A⊕B means A is mother of B. ii) A*B means A is sister of B iii) A*B means A is father of B iv) A⊕B means A is brother of B",
+      "choices": {
+        "a": "A⊕B means A is mother of B.",
+        "b": "A*B means A is sister of B.",
+        "c": "A*B means A is father of B",
+        "d": "A⊕B means A is brother of B."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "Which of the following means R is uncle of T?",
+      "choices": {
+        "a": "R*©©SQ©T",
+        "b": "R*©©RUBT",
+        "c": "R*©©Q©S*T",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "Which of the following means L is paternal grandfather of O?",
+      "choices": {
+        "a": "L*R©M⊕K⊕O",
+        "b": "R*LA©R©*O",
+        "c": "L*R©M*K⊕O",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relationships",
+      "body": "Which of the following means X is mother of U?",
+      "choices": {
+        "a": "XAYUZ*K⊕U",
+        "b": "RX⊕QRU",
+        "c": "PXXAY⊕OU",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 277
+}

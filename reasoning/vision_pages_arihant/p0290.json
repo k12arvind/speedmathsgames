@@ -1,0 +1,66 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [
+    {
+      "passage_text": "While solving problems, under this section, use of the following symbols is required\n1. Greater/Heavier/Taller/Higher/More (>)\n   A > B means\n   A is greater than B.\n\n2. Smaller/Lighter/Shorter/Lower/Less (<)\n   A < B means\n   A is smaller than B.\n\nOn the basis of above mentioned two symbols, following two sequences are used while solving problems.\n\nAscending Order Sequence\nIn this sequence, the persons, are arranged in ascending order of their heights, weight, ages etc.\nLet us see                    A < B < C < D\n\nDescending Order Sequence\nIn this sequence, the persons are arranged in descending order of their heights, weights, ages etc.\nLet us see                    A > B > C > D\n\nComparison Based on Length or Height\nIn this type of questions, comparison of lengths or heights of different persons/objects is given separately. We have to arrange the data in the meaningful order and answer the related question.\n\nThe examples given below will help you to understand such the type of questions",
+      "has_figure": true,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Vinay is taller than Hansika, Hansika is taller than Abhay, Aalok is taller than Ashok and Ashok is taller than Vinay. Who is the shortest in the group?",
+      "choices": {
+        "a": "Aalok",
+        "b": "Ashok",
+        "c": "Hansika",
+        "d": "Abhay"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "In a group of five persons Kamal is the tallest while Lata is the shortest. Rashmi is shorter than Kamal but taller than Vandana and Prem. Prem is second shortest person in the group. Who is the third tallest?",
+      "choices": {
+        "a": "Vandana",
+        "b": "Rashmi",
+        "c": "Prem",
+        "d": "Lata"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) Vinay > Hansika ; Hansika > Abhay\nAalok > Ashok ; Ashok > Vinay\nOn arranging the above data, we get\nAalok > Ashok > Vinay > Hansika > Abhay\nClearly, Abhay is the shortest."
+    },
+    {
+      "number": 2,
+      "solution": "(a) Kamal → Tallest and Lata → Shortest\nKamal > Rashmi > Vandana and Prem ; Prem / 2nd shortest > Lata\nOn arranging the above data, we get\nKamal > Rashmi > Vandana > Prem > Lata\nClearly, Vandana is the third tallest."
+    }
+  ],
+  "answers": [],
+  "_page": 290
+}

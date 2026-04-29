@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Problems Based on Mathematical Operation",
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 11-15) Study the following information carefully and answer the given questions. A number arrangement machine, when given as input line of number rearranges them following a particular rule in each step. The following is the illustration of the input and the steps of arrangement.\n\nInput: 25, 22, 15, 36, 29, 99\nStep I: 7, 4, 6, 9, 11, 18\nStep II: 10, 4, 5, 18, 18, 81\nStep III: 625, 484, 225, 1296, 841, 9801\nStep IV: 15625, 10648, 3375, 46656, 24389, 970299\nStep V: 5, 4.4, 3, 7.2, 9.76, 19.8\nStep VI: 7, 4, 6, 9, 2, 9\nStep VII: 27, 24, 17, 38, 31, 101\nStep VIII: 20, 17, 10, 31, 24, 94\nStep IX: 75, 66, 45, 108, 87, 297\nStep X: 14, 8, 12, 18, 22, 36\nStep XI: 3, 0, 4, 3, 7, 0\nStep XII: -3, 0, -4, -3, -7, 0\nStep XIII: 49, 16, 36, 81, 121, 324",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "If Input is 11, 15, 19, 12, 14, then find the Step XIII for this input.",
+      "choices": {
+        "a": "36, 4, 100, 9, 25",
+        "b": "4, 36, 100, 9, 25",
+        "c": "2, 6, 10, 3, 5",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "If Step I of a given input is as follows '7, 9, 6, 15, 16, 18', then find the input.",
+      "choices": {
+        "a": "25, 63, 42, 96, 88, 99",
+        "b": "52, 36, 24, 69, 88, 99",
+        "c": "25, 36, 24, 96, 88, 99",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "If Step V is '6, 9, 12, 75, 8', then find the input.",
+      "choices": {
+        "a": "30, 45, 60, 375, 40",
+        "b": "24, 54, 26, 78, 56",
+        "c": "40, 375, 60, 45, 30",
+        "d": "10, 13, 16, 79, 12",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "If input is '35, 95, 43, 45, 98, 81', then find Step XII.",
+      "choices": {
+        "a": "- 2, 4, - 1, 1, - 1, 7",
+        "b": "- 2, 4, 1, - 1, 1, 7",
+        "c": "2, 6, 5, 4, 3, 2",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "If input is '78, 12, 27, 16, 87, 45', then find the Step II.",
+      "choices": {
+        "a": "56, 2, 14, 6, 56, 20",
+        "b": "15, 3, 9, 7, 15, 9",
+        "c": "76, 9, 25, 14, 85, 43",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 582
+}

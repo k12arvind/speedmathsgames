@@ -1,0 +1,84 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "In a queue of boys, Sandeep is 10th from left and Lalit is 5th from right. The places of Sandeep and Lalit are interchanged. If the new position of Sandeep is 15th from left, then the new position of Lalit from right is",
+      "choices": {
+        "a": "10th",
+        "b": "11th",
+        "c": "12th",
+        "d": "13th"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "In a queue of girls, Akanksha is 9th from left and Mona is 17th from right. If the positions of Akanksha and Mona are interchanged, then new position of Akanksha is 15th from left. Find the number of girls between Mona and Akanksha.",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "7"
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "alternate_arrangement",
+      "subtopic_name": "Alternate Arrangement",
+      "body": "At a ticket counter there are 17 persons in a queue. If every second person in the queue is a female and also in the starting and at the end there is a female, then the total number of males in the queue is",
+      "choices": {
+        "a": "7",
+        "b": "10",
+        "c": "8",
+        "d": "9"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 12,
+      "solution": "New position of Lalit from right end = [Difference of the two positions of Sandeep] + [Initial position of Lalit] (15 - 10) + 5 = 5 + 5 = 10th position"
+    },
+    {
+      "number": 13,
+      "solution": "Total number of persons between Mona and Akanksha = 15 - 9 - 1 = 5"
+    },
+    {
+      "number": 14,
+      "solution": "Queue of the 17 persons can be shown as F M F M F M F M F M F M F M F M F ∴ Total number of males = 8"
+    }
+  ],
+  "answers": [],
+  "_page": 299
+}

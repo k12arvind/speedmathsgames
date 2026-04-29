@@ -1,0 +1,323 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 16-19) Read the following information and answer the questions that follow. In a study of five brands of pain relieving tablets P, Q, R, S and T, the brands were tested and ranked against each other as more or less effective per dose. The following results were obtained. I. P was more effective than Q. II. The effectiveness of R was less than that of S. III. T was the least effective brand tested. IV. Q and R were equally effective. V. The effectiveness of S was greater than that of Q.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 20-25) Read the following information carefully and answer the questions that follow. Six compounds are being tested for possible use in a new anti-poison, 'Sweet 'N' Deadly'. I. U is sweeter than V and more deadly than Z. II. V is sweeter than Y and less deadly than Z. III. W is less sweet than X and less deadly than U. IV. X is less sweet and more deadly than Y. V. Y is less sweet and more deadly than U. VI. Z is sweeter than U and less deadly than W.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "position_ranking",
+      "subtopic_name": "Position Ranking",
+      "body": "What is the position of Radha from the shorter end?",
+      "choices": {
+        "a": "Fourth",
+        "b": "Second",
+        "c": "Third",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "statement_analysis",
+      "subtopic_name": "Statement Analysis",
+      "body": "Which of the following statements is definitely correct?",
+      "choices": {
+        "a": "Bina occupies the third position from the top",
+        "b": "Seema is taller than Renu",
+        "c": "Gauri is shorter than Radha",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "effectiveness_ranking",
+      "subtopic_name": "Effectiveness Ranking",
+      "body": "If the above statements are true, which of the following must also be true?",
+      "choices": {
+        "a": "P and S were equally effective",
+        "b": "P was the most effective",
+        "c": "S was the most effective",
+        "d": "R was less effective than P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "statement_derivation",
+      "subtopic_name": "Statement Derivation",
+      "body": "All the informations in the results given above can be derived from which of the following groups of statements?",
+      "choices": {
+        "a": "Statements I, II and III",
+        "b": "Statements I, III and IV",
+        "c": "Statements I, II and V",
+        "d": "Statements I, II, III and IV"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "conditional_ranking",
+      "subtopic_name": "Conditional Ranking",
+      "body": "If a sixth brand M is tested and found to be more effective than S, then which of the following must be true, if the findings of the study are correct?",
+      "choices": {
+        "a": "M is the most effective of all the six brands tested",
+        "b": "Atleast four of the six brands tested are less effective than M",
+        "c": "M is more effective than P",
+        "d": "M is less effective than P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "cost_effectiveness",
+      "subtopic_name": "Cost Effectiveness Analysis",
+      "body": "If R is more expensive per dose than P and T is less expensive per dose than R, which of the following must be true, according to the study, for a consumer, who wishes to buy a pain reliever with the greatest effectiveness for the amount spent per dose?",
+      "choices": {
+        "a": "P should be purchased instead of R",
+        "b": "P should be purchased instead of T",
+        "c": "T should be purchased instead of R",
+        "d": "Q should be purchased instead of R, if Q is of the same price as S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "sweetness_ranking",
+      "subtopic_name": "Sweetness Ranking",
+      "body": "Which is the sweetest?",
+      "choices": {
+        "a": "U",
+        "b": "W",
+        "c": "X",
+        "d": "Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "dual_criteria_ranking",
+      "subtopic_name": "Dual Criteria Ranking",
+      "body": "Which of the following is/are both sweeter and more deadly than V?",
+      "choices": {
+        "a": "Only U",
+        "b": "Only W",
+        "c": "Only Z",
+        "d": "U and Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "information_analysis",
+      "subtopic_name": "Information Analysis",
+      "body": "Which of the following statement adds no new information about sweetness to the statements that precede it?",
+      "choices": {
+        "a": "I",
+        "b": "III",
+        "c": "IV",
+        "d": "V"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "dual_criteria_ranking",
+      "subtopic_name": "Dual Criteria Ranking",
+      "body": "Which of the following is/are sweeter than Y and more deadly than W?",
+      "choices": {
+        "a": "Only U",
+        "b": "Only V",
+        "c": "Only Z",
+        "d": "U and V"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "deadliness_ranking",
+      "subtopic_name": "Deadliness Ranking",
+      "body": "Which is the least deadly?",
+      "choices": {
+        "a": "U",
+        "b": "V",
+        "c": "W",
+        "d": "Y"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "deadliness_ranking",
+      "subtopic_name": "Deadliness Ranking",
+      "body": "Which is the most deadly?",
+      "choices": {
+        "a": "Z",
+        "b": "W",
+        "c": "Y",
+        "d": "X"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Mukesh is taller than Suresh but shorter than Rakesh. Rakesh is taller than Harish but shorter than Amar. Who among them is the shortest with regards to height?",
+      "choices": {
+        "a": "Mukesh",
+        "b": "Suresh",
+        "c": "Harish",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Roshan is taller than Hardik who is shorter than Sushil. Niza is taller than Harry but shorter than Hardik. Sushil is shorter than Roshan. Who is the tallest?",
+      "choices": {
+        "a": "Roshan",
+        "b": "Sushil",
+        "c": "Hardik",
+        "d": "Harry"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Among five boys, Vasant is taller than Manohar but not as tall as Raju. Jayant is taller than Dutta but shorter than Manohar. Who is the tallest in the group?",
+      "choices": {
+        "a": "Raju",
+        "b": "Manohar",
+        "c": "Vasant",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 306
+}

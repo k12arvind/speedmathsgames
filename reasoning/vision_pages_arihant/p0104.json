@@ -1,0 +1,137 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [],
+  "questions": [
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_substitution",
+      "subtopic_name": "Letter Substitution",
+      "body": "The letters in the word 'MORTIFY' are changed in such a way that the vowels are replaced by the previous letter in the English alphabet and the consonants are replaced by the next letter in the English alphabet. Which of the following will be the third letter from the right end of the new set of letters?",
+      "choices": {
+        "a": "S",
+        "b": "H",
+        "c": "G",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_arrangement",
+      "subtopic_name": "Letter Arrangement",
+      "body": "How many such letters are there in the word 'TIGER' which remain same in its position, if the letters are arranged in ascending order alphabetically?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_substitution",
+      "subtopic_name": "Letter Substitution",
+      "body": "Each vowel in the word 'JOURNEY' is replaced by the previous letter in the English alphabet and each consonant is replaced by the next letter in the English alphabet. Then, the substitute letters are arranged in alphabetical order. Which of the following will be the 5th from the left end? [PNB (PO) 2009]",
+      "choices": {
+        "a": "S",
+        "b": "T",
+        "c": "N",
+        "d": "O",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) Position of S from left = 19\n∴ Position of S from right = 27 – 19 = 8"
+    },
+    {
+      "number": 2,
+      "solution": "(d) From CFILOR UX, Position of L from left = 12"
+    },
+    {
+      "number": 3,
+      "solution": "(c) 7th letter from right = (27 – 7) th = 20th letter from left = T"
+    },
+    {
+      "number": 4,
+      "solution": "(d) 16th letter from right = (27 – 16) th = 11th letter from left = K"
+    },
+    {
+      "number": 5,
+      "solution": "(b) Required letter = (27 – 6) th = 21st letter from left = Q"
+    },
+    {
+      "number": 6,
+      "solution": "(d) 5th letter to the left of M in the backward order\n= 5th letter to the right of M in forward order\n= 5th letter after M in the forward order\n= (13 + 5) th letter in the forward order\n= 18th letter in the forward order = R\nPosition of M in forward order alphabet = 13"
+    },
+    {
+      "number": 7,
+      "solution": "(d) Position of R from left = 18\n∴ 5th letter to the left of R = 5th letter before R\n= (18 – 5) th = 13th letter = M"
+    },
+    {
+      "number": 8,
+      "solution": "(d) 7th letter to the right of K in backward order\n= 7th letter to the left of K in forward order\n= 7th letter before K in forward order\n= (11 – 7) th letter in the forward order\n= 4th letter in the forward order = D"
+    },
+    {
+      "number": 9,
+      "solution": "(b) 7th letter from left = G\n∴ 8th letter to the right of G = (7 + 8) th letter from left\n= 15th letter from left = O"
+    },
+    {
+      "number": 10,
+      "solution": "(d) 6th letter from left = F\n∴ 14th letter to the right of F = (6 + 14) th letter from left\n= 20th letter from left = T"
+    },
+    {
+      "number": 11,
+      "solution": "(d) Position of K = 11\nPosition of V = 22\n11 12 13 14 15 16 17 18 19 20 21 22\nK L M N O P Q R S T U V\nNo middle letter"
+    },
+    {
+      "number": 12,
+      "solution": "(c) 7th letter from right = (27 – 7) th = 20th letter from left\n∴ Required middle letter = (8 + 20)/2 = 14th letter from left = N"
+    },
+    {
+      "number": 13,
+      "solution": "(c) 18th letter from left = R\n∴ 10th letter to the left of R = 10th letter before R\n= (18 – 10) th = 8th letter from left = H"
+    },
+    {
+      "number": 14,
+      "solution": "(c) 10th letter to the left of 10th letter from right in reverse order =\n10th letter to the right of 10th letter in forward order.\n= 10th letter after 10th letter in forward order\n= (10 + 10) th letter = 20th letter in forward order = T"
+    },
+    {
+      "number": 15,
+      "solution": "(c) 11th letter from right in reverse order\n= 11th letter in forward order = K\nNow, 7th letter to the left of K in reverse order\n= 7th letter to the right of K in forward order\n= 7th letter after K in forward order\n= Position of K in forward order + 7\n= (11 + 7) th letter in forward order\n= 18th letter in forward order\n= R"
+    },
+    {
+      "number": 16,
+      "solution": "(c) 11th letter form left in the reverse order\n= (27 – 11) th letter from left in forward order\n= 16th letter from left in forward order\n= P\nNow, 7th letter to the left of 16th letter in reverse order\n= 7th letter to the right of 16th letter in forward order\n= 7th letter after 16th letter in forward order\n= (16 + 7) th letter in forward order\n= 23rd letter in forward order = W"
+    }
+  ],
+  "answers": [],
+  "_page": 104
+}

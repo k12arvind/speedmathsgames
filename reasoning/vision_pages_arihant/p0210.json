@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 25,
+      "solution": "(d) As, CHAMBER coded as opposite letters showing pattern. Similarly, WLFYOV → DOUBLE"
+    },
+    {
+      "number": 26,
+      "solution": "(d) As, TROUPER coded with +2, -2, +2, -2, +2 pattern. Similarly, SIGHT → UGIFY"
+    },
+    {
+      "number": 27,
+      "solution": "(b) Each letter is coded with its corresponding letter position in the English alphabet. As, MANUAL → 13 1 14 21 1 12 and TRIANGLE → 20 18 9 1 14 7 12 5"
+    },
+    {
+      "number": 28,
+      "solution": "(c) Each letter is coded with its backward order corresponding letter position in English alphabet. Let us see As, GOD → 20 12 12 23 and ONE → 12 13 22. Similarly, FRUIT → 21 9 6 18 7. ∴ FRUIT ⇒ 2196187"
+    },
+    {
+      "number": 29,
+      "solution": "(d) 1 ② 3 → I am Servant ... (i), ② 7 9 → servant always miserable ... (ii), 6 8 4 → poverty is curse ... (iii). From Eqs. (i) and (ii), 2 ⇒ servant. ∴ 1 ⇒ I/am, 3 ⇒ I/am, 7 ⇒ always/miserable, 9 ⇒ always/miserable. ∴ miserable ⇒ 7 or 9. Clearly, it cannot be definitely said how will 'miserable' be written."
+    },
+    {
+      "number": 30,
+      "solution": "(c) 4 ⑨ 3 → Friendship Big Challenge ... (i), ⑨ 6 ① → Struggle Big Exam ... (ii), ① 7 8 → Exam Confidential Subject ... (iii). From Eqs. (i) and (ii), 9 ⇒ Big. From Eqs. (ii) and (iii), 1 ⇒ Exam. ∴ 7 ⇒ Confidential/Subject, 8 ⇒ Confidential/Subject. ∴ Confidential ⇒ 7 or 8"
+    }
+  ],
+  "answers": [],
+  "_page": 210
+}

@@ -1,0 +1,84 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [],
+  "questions": [
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "backward_order",
+      "subtopic_name": "Place of Letter in Completely Backward Order",
+      "body": "If English alphabet is written in backward order, then what will be the 13th letter to the left of the 3rd letter from right?",
+      "choices": {
+        "a": "P",
+        "b": "N",
+        "c": "R",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "first_half_backward",
+      "subtopic_name": "Place of a Letter When First Half is in Backward Order",
+      "body": "If 1st half of the English alphabet is written in backward order, then what will be the 7th letter to the left of the 10th letter from your right?",
+      "choices": {
+        "a": "C",
+        "b": "E",
+        "c": "D",
+        "d": "J"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "second_half_backward",
+      "subtopic_name": "Place of a Letter When Second Half is in Backward Order",
+      "body": "If 2nd half of the English alphabet is written in backward order, then what will be the 7th letter to the right of 13th letter from your left?",
+      "choices": {
+        "a": "T",
+        "b": "U",
+        "c": "V",
+        "d": "S"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "Backward order is written as Z Y X W V U T S R Q P O N M L K J I H G F E D C B A. The 13th letter to the left of the 3rd letter from right is P."
+    },
+    {
+      "number": 3,
+      "solution": "Let us see M L K J I H G F E D C B A N O P Q R S T U V W X Y Z. The 7th letter to the left of 10th letter from our right is D."
+    },
+    {
+      "number": 4,
+      "solution": "Let us see A B C D E F G H I J K L M Z Y X W V U T S R Q P O N. The 7th letter to the right of 13 th letter from our left is T."
+    }
+  ],
+  "answers": [],
+  "_page": 98
+}

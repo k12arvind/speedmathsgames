@@ -1,0 +1,103 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Rearrangement of Symbols\nIn this type of questions, the symbols of the first figure of one pair interchange their places with each other following a certain rule with or without producing a new symbol to obtain the second figure of the pair. By following the same rule, the missing figure of another pair is to be found out.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Type 1 Choosing One Element of a Similarly Related Pair\nIn this type of questions, two sets of figures namely problem figures and answer figures are given. The set of problem figures consists of two pairs. The first pair comprises of two figures which have some relationship between them on the basis of certain rule. The second part comprises one figure and a sign of '?'. To solve this type of questions, candidates are required to select one figure from the set of answer figures which replaces the sign of '?'. In this case always remember that it bears same relationship with the other figure as first figure of the first part bears with second figure of the same part.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Directions (Example Nos. 6-13) In the following questions, the first and second figure of the problem figures have certain relation between them and the same relation exists between the third figure and one of the five answer figures (a), (b), (c), (d) and (e). Find that answer figure from the options that will replace '?' from problem figures.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "symbol_rearrangement",
+      "subtopic_name": "Rearrangement of Symbols",
+      "body": "Find the figure from the answer figure that will replace the question mark (?) from the problem figure.",
+      "choices": {
+        "a": "×/#/=",
+        "b": "#/×/+",
+        "c": "×/#/=",
+        "d": "+/#/×",
+        "e": "+/×/#"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "(d) By careful analysis of first part of the problem figure, we find that from first to second figure, each symbol moves one step downward and the lower most symbol become the topmost symbol. Similarly from third to fourth figure, each symbol moves one step downward and the lowermost symbol become the topmost symbol as given in option (d)."
+    },
+    {
+      "number": 6,
+      "solution": "(c) From problem figure (1) to (2), the pin rotates 90° clockwise, the trapezium is inverted and the third figure rotates 135° anti-clockwise. The same rule will apply to obtain figure (4) from figure (3)."
+    },
+    {
+      "number": 7,
+      "solution": "(a) From problem figure (1) to (2), the pentagon rotates 90° clockwise and a square (having four sides) covers it. Similarly, from figure (3) to (4) the square (having four sides) rotates 90° clockwise and will be covered by a triangle (having three sides)."
+    }
+  ],
+  "answers": [],
+  "_page": 739
+}

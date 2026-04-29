@@ -1,0 +1,346 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In each of the following questions, four addresses are given. Choose the address which is different from the other three addresses.",
+      "has_figure": false,
+      "topic_code": "classification"
+    }
+  ],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Azra Travels Call-3984260",
+      "choices": {
+        "a": "Fax-394365 (a) 1 and 2",
+        "b": "Pin-394365 (b) 2 and 3",
+        "c": "Fax-394365 (c) 3 and 4",
+        "d": "Fax-394365 (d) 1 and 4"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Azumi Jaan Ontinent Cargo Burkut-31394",
+      "choices": {
+        "a": "(a) 1 and 2",
+        "b": "(b) 2 and 3",
+        "c": "(c) 3 and 4",
+        "d": "(d) 2 and 4"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Barbosa Salon CM Metha St Cuff Parade-95",
+      "choices": {
+        "a": "(a) 1 and 2",
+        "b": "(b) 2 and 3",
+        "c": "(c) 3 and 4",
+        "d": "(d) 1 and 3"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Chabidas Zanja Keval Wadi-3 Satara-48",
+      "choices": {
+        "a": "(a) 1 and 2",
+        "b": "(b) 1 and 3",
+        "c": "(c) 1 and 4",
+        "d": "(d) 2 and 4"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Deepal Shaw 11/16, Link Road Chandigarh-64",
+      "choices": {
+        "a": "(a) 1 and 2",
+        "b": "(b) 2 and 3",
+        "c": "(c) 3 and 4",
+        "d": "(d) 2 and 4"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Reinhal Mesmer Country Beverages Call-7393525",
+      "choices": {
+        "a": "Reinhal Mesmer Country Beverages Call-7393525",
+        "b": "Reinhal Mesmer Country Beverages Call-7393525",
+        "c": "Reinhal Mesmer Country Beverages Call -7393525",
+        "d": "Reinhal Mesmer Country Beverages Call-7393525"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Morgam Photos JVPD Scheme Sahar-403916",
+      "choices": {
+        "a": "Morgam Photos JVPD Scheme Sahar-403916",
+        "b": "Morgan Photos JVPD Scheme Sahar-403916",
+        "c": "Morgan Photos JVPD Scheme Sahar-403916",
+        "d": "Morgan Photos JVPD Scheme Sahar-403916"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Hussain Shaikh Kapadia Nagar Mumbai-400093",
+      "choices": {
+        "a": "Hussain Shaikh Kapadia Nagar Mumbai-400093",
+        "b": "Hussain Shaikh Kapadia Nagar Mumbai-400093",
+        "c": "Hussain Shaikh Cepadia Nagar Mumbai-400093",
+        "d": "Hussain Shaikh Kapadia Nagar Mumbai-400093"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Vishal Rathor W 15, H16 Ph. V Bhubaneswar4",
+      "choices": {
+        "a": "Vishal Rathor W 15, H16 Ph. V Bhubaneswar4",
+        "b": "Vishal Rathor W 15, H16 Ph. V Bhubaneswar 4",
+        "c": "Vishal Rathor W15, H 16 Ph. V Bhubaneswar 4",
+        "d": "Vishal Rathor W15, H16 Ph. IV Bhuvaneswari 4"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Aman Kumar Hatri Sr. Mngr. Textile Mob. -9821334065",
+      "choices": {
+        "a": "Aman Kumar Hatri Sr. Mngr. Textile Mob. -9821334065",
+        "b": "Aman Kumar Hatri Sr. Mngr. Textile Mob. -982134056",
+        "c": "Aman Kumar Hatri Sr. Mngr. Textile Mob. -9821334065",
+        "d": "Aman Kumar Hatri Sr. Mngr. Textile Mob. -9821334065"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Rajneesh S. Jose 127, Shivaji Nagar Nashik-425976",
+      "choices": {
+        "a": "Rajneesh S. Jose 127, Shivaji Nagar Nashik-425976",
+        "b": "Rajnish S. Jose 127, Shivaji Nagar Nashik-425976",
+        "c": "Rajneesh S. Jose 127, Shivaji Nagar Nashik-425976",
+        "d": "Rajneesh S. Jose 127, Shivaji Nagar Nashik-425976"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Lacelle Gibbons Florida Travels Mob. -9689231542",
+      "choices": {
+        "a": "Lacelle Gibbons Florida Travels Mob. -9689231542",
+        "b": "Lacelle Gibbons Florida Travels Mob. -9689231542",
+        "c": "Lacelle Gibbons Florida travels Mob. -9689231542",
+        "d": "Lacelle Gibbons Floreda Travels Mob. -9689231542"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "address_classification",
+      "subtopic_name": "Address Classification",
+      "body": "Aanchal Sarees G. M. Mehta Marg Ghatkopar",
+      "choices": {
+        "a": "Aanchal Sarees G. M. Mehta Marg Ghatkopar (East)",
+        "b": "Aanchal Sarees G. M. Mehta Marg Ghatkopar (East)",
+        "c": "Aanchal Sarees G. M. Metha Marg Ghatkopar (West)",
+        "d": "Aanchal Sarees G. M. Mehta Marg Ghatkopar (East)"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "a"
+    },
+    {
+      "number": 2,
+      "correct": "b"
+    },
+    {
+      "number": 3,
+      "correct": "d"
+    },
+    {
+      "number": 4,
+      "correct": "d"
+    },
+    {
+      "number": 5,
+      "correct": "c"
+    },
+    {
+      "number": 6,
+      "correct": "b"
+    },
+    {
+      "number": 7,
+      "correct": "d"
+    },
+    {
+      "number": 8,
+      "correct": "b"
+    },
+    {
+      "number": 9,
+      "correct": "d"
+    },
+    {
+      "number": 10,
+      "correct": "b"
+    },
+    {
+      "number": 11,
+      "correct": "a"
+    },
+    {
+      "number": 12,
+      "correct": "c"
+    },
+    {
+      "number": 13,
+      "correct": "d"
+    },
+    {
+      "number": 14,
+      "correct": "b"
+    },
+    {
+      "number": 15,
+      "correct": "b"
+    },
+    {
+      "number": 16,
+      "correct": "d"
+    },
+    {
+      "number": 17,
+      "correct": "c"
+    }
+  ],
+  "_page": 673
+}

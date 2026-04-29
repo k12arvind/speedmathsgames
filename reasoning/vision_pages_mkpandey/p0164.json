@@ -1,0 +1,220 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: Assume that the given statement is true, irrespective of what you know to be true from the real world. For each statement, the four alternatives are definitely true or definitely false or uncertain. Read each statement carefully.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    },
+    {
+      "passage_text": "Directions: In each of the following questions, a statement is given followed by four inferences A, B, C and D. Which of these definitely follows from the given statement?",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "All Indians eat curry. a) Some Indians eat curry. b) Some Europeans eat curry. c) No non-Indian eats curry. d) Curry is eaten by all and sundry.",
+      "choices": {
+        "a": "Some Indians eat curry.",
+        "b": "Some Europeans eat curry.",
+        "c": "No non-Indian eats curry.",
+        "d": "Curry is eaten by all and sundry."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "All students are not genius. a) Many students are not genius. b) Every student is a non-genius. c) Every non-student is a genius. d) Many students are genius.",
+      "choices": {
+        "a": "Many students are not genius.",
+        "b": "Every student is a non-genius.",
+        "c": "Every non-student is a genius.",
+        "d": "Many students are genius."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "Only liberals are fair-minded. a) All who are liberals are fair-minded. b) All who are fair-minded are liberals. c) No non-liberal is fair-minded. d) None of these is liberal.",
+      "choices": {
+        "a": "All who are liberals are fair-minded.",
+        "b": "All who are fair-minded are liberals.",
+        "c": "No non-liberal is fair-minded.",
+        "d": "None of these is liberal."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "Conservatives are never intolerant. a) Whoever is conservative is intolerant. b) Many conservatives are intolerant. c) A few conservatives are tolerant. d) All conservatives are tolerant.",
+      "choices": {
+        "a": "Whoever is conservative is intolerant.",
+        "b": "Many conservatives are intolerant.",
+        "c": "A few conservatives are tolerant.",
+        "d": "All conservatives are tolerant."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "Draft lodgers will be prosecuted. a) At least one draft lodger will not be prosecuted. b) Most draft lodgers will be prosecuted. c) Few draft lodgers will be prosecuted. d) Draft lodgers may escape prosecution.",
+      "choices": {
+        "a": "At least one draft lodger will not be prosecuted.",
+        "b": "Most draft lodgers will be prosecuted.",
+        "c": "Few draft lodgers will be prosecuted.",
+        "d": "Draft lodgers may escape prosecution."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "Adults do not often lose their cool. a) No one who fails to lose his cool is an adult. b) Whoever loses his cool is other than an adult. c) Few persons other than adults fail to lose their cool d) Everyone who fails to lose his cool is a non-adult.",
+      "choices": {
+        "a": "No one who fails to lose his cool is an adult.",
+        "b": "Whoever loses his cool is other than an adult.",
+        "c": "Few persons other than adults fail to lose their cool",
+        "d": "Everyone who fails to lose his cool is a non-adult."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "No book is read by an illiterate. a) All books that are read are read by graduates. b) Some books that are read are read by graduates. c) Some books are not read by illiterates. d) No illiterate ever reads a book.",
+      "choices": {
+        "a": "All books that are read are read by graduates.",
+        "b": "Some books that are read are read by graduates.",
+        "c": "Some books are not read by illiterates.",
+        "d": "No illiterate ever reads a book."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "syllogism",
+      "subtopic_name": "Syllogism",
+      "body": "Peaceful demonstrations frequently lead to violence a) Peaceful demonstrations may remain non-violent as well. b) All peaceful demonstrations lead to violence. c) No peaceful demonstration leads to violence. d) Some peaceful demonstrations do not lead to violence.",
+      "choices": {
+        "a": "Peaceful demonstrations may remain non-violent as well.",
+        "b": "All peaceful demonstrations lead to violence.",
+        "c": "No peaceful demonstration leads to violence.",
+        "d": "Some peaceful demonstrations do not lead to violence."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "inference",
+      "subtopic_name": "Inference",
+      "body": "'Soldiers serve their country.' A) Those who serve their country are soldiers. B) Women do not serve their country because they are not soldiers. C) Men generally serve their country. D) Some men who are soldiers serve their country.",
+      "choices": {
+        "a": "Those who serve their country are soldiers.",
+        "b": "Women do not serve their country because they are not soldiers.",
+        "c": "Men generally serve their country.",
+        "d": "Some men who are soldiers serve their country."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "inference",
+      "subtopic_name": "Inference",
+      "body": "Most of the students are of outstanding merit. A) Some of the students are of outstanding merit. B) There are no students who are not of outstanding merit.",
+      "choices": {
+        "a": "Some of the students are of outstanding merit.",
+        "b": "There are no students who are not of outstanding merit."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 164
+}

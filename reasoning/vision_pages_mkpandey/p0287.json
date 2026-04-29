@@ -1,0 +1,101 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-9): Study the following information and answer the questions given below: In a certain code, the symbol for 0 (zero) is * and that for 1 is ∆. There are no other symbols for any other numbers greater than one. The numbers greater than 1 are to be written only by using the two symbols given above. The value of the symbol for 1 doubles itself every time it shifts one place to the left. Study the following examples: '0' is written as * '1' is written as ∆ '2' is written as ∆* '3' is written as ∆∆ '4' is written as ∆** and so on.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding and Decoding",
+      "subtopic_code": "binary_coding",
+      "subtopic_name": "Binary Number Coding",
+      "body": "Which of the following numbers will be represented by ∆∆*∆?",
+      "choices": {
+        "a": "1321",
+        "b": "2127",
+        "c": "3929",
+        "d": "4923",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding and Decoding",
+      "subtopic_code": "binary_coding",
+      "subtopic_name": "Binary Number Coding",
+      "body": "Which of the following will represent the multiplication of *∆ and ∆∆?",
+      "choices": {
+        "a": "∆***∆∆",
+        "b": "∆**∆∆",
+        "c": "∆***∆∆",
+        "d": "∆***",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding and Decoding",
+      "subtopic_code": "binary_coding",
+      "subtopic_name": "Binary Number Coding",
+      "body": "Which of the following will represent 8 + 5 + 2 + 3?",
+      "choices": {
+        "a": "∆***∆∆",
+        "b": "∆*∆∆∆",
+        "c": "∆∆∆*∆∆",
+        "d": "None of these",
+        "e": null
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding and Decoding",
+      "subtopic_code": "binary_coding",
+      "subtopic_name": "Binary Number Coding",
+      "body": "Which of the following will represent the HCF of 10, 20 and 15?",
+      "choices": {
+        "a": "∆*∆",
+        "b": "∆∆∆",
+        "c": "∆**",
+        "d": "∆***∆",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 287
+}

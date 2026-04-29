@@ -1,0 +1,167 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Two adjacent faces of a solid cube are painted in red, opposite of these adjacent faces are painted in black while the remaining faces are painted in green and then this painted cube is cut into 64 smaller cubes. Solve the following questions based on this information.",
+      "has_figure": false,
+      "topic_code": "cubes"
+    },
+    {
+      "passage_text": "If a cube is painted on its surfaces in such a way that one pair of opposite surfaces is left unpainted.",
+      "has_figure": false,
+      "topic_code": "cubes"
+    },
+    {
+      "passage_text": "A cube of side 4 cm is painted red on one pair of opposite surfaces, green on another pair of opposite surfaces and one pair of opposite surfaces is left unpainted. Now, the cube is divided into 64 smaller cubes of side 1 cm each.",
+      "has_figure": true,
+      "topic_code": "cubes"
+    }
+  ],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "(i) How many cubes have no surface painted?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "8",
+        "d": "16"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "(ii) How many cubes have only one surface painted?",
+      "choices": {
+        "a": "18",
+        "b": "24",
+        "c": "36",
+        "d": "48"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "(iii) How many cubes have two faces painted?",
+      "choices": {
+        "a": "18",
+        "b": "24",
+        "c": "36",
+        "d": "48"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "(iv) How many cubes have three faces painted?",
+      "choices": {
+        "a": "8",
+        "b": "16",
+        "c": "24",
+        "d": "32"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "(v) How many cubes have colour on one face and black colour on the opposite face?",
+      "choices": {
+        "a": "0",
+        "b": "8",
+        "c": "24",
+        "d": "36"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "(vi) How many cubes have red or black colour on two adjacent faces?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "8"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "Total number of smaller cubes = (n)³ = 64 = (n)³\n∴ n = ∛64 = 4\n(i) (c) Number of smaller cubes having no faces painted = (n - 2)³ = (4 - 2)³ = (2)³ = 8\n(ii) (b) Number of smaller cubes having one face painted = 6(n - 2)² = 6(4 - 2)² = 6 × (2)² = 6 × 4 = 24\n(iii) (b) Number of smaller cubes having two faces painted = 12(n - 2) = 12(4 - 2) = 12 × 2 = 24\n(iv) (a) As three faces painted cubes are always 8.\n(v) (a) As there are no such cubes.\n(vi) (d) There are 8 cubes which have red or black colour on its adjacent faces i.e., 4 cubes on edge BE and 4 cubes edge DH."
+    }
+  ],
+  "answers": [],
+  "_page": 883
+}

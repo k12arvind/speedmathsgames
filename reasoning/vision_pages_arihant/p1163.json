@@ -1,0 +1,332 @@
+{
+  "page_type": "questions",
+  "chapter_number": 8,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-28) In each of the questions below are given two statements followed by two conclusions numbered I and II. You have to take the two given statements to be true even if they seem to be at variance from commonly known facts and decide which of the given conclusion(s) logically follow(s) from the two given statements, disregarding commonly known facts.\n\nGive answer\n(a) if only Conclusion I follows\n(b) if only Conclusion II follows\n(c) if either I or II follows\n(d) if neither I nor II follows\n(e) if both I and II follow",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: All cars are balls. All balls are tables.\nConclusions: I. Some tables are balls. II. Some tables are cars.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: Some rats are cats. All cats are bats.\nConclusions: I. No rats are cats. II. Some rats are bats.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: Some schools are factories. All factories are shops.\nConclusions: I. All shops are factories. III. Some shops are schools.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: Latha is a beautiful and intelligent girl. She is very good.\nConclusions: I. All beautiful girls are intelligent. II. Beauty and intelligence are the factors of goodness.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: All writers are lawyers. All readers are lawyers.\nConclusions: I. Some lawyers are readers. II. Some readers are writers.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: No colour is a paint. No paint is a brush.\nConclusions: I. No colour is a brush. II. All brushes are colours.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: All stars are planets. All planets are galaxies.\nConclusions: I. All galaxies are planets. II. All stars are galaxies.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: Some bags are hots. All hots are cakes.\nConclusions: I. All cakes are bags. II. All bags are cakes.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: All players are doctors. Some doctors are actors.\nConclusions: I. Some doctors are players as well as actors. II. All actors are doctors.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: Some exams are tests. No exam is a question.\nConclusions: I. No question is a test. II. Some tests are exams.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: No house is an apartment. Some apartments are bungalows.\nConclusions: I. No house is a bungalow. II. All bungalows being houses is a possibility.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: All plants are animals. All insects are plants.\nConclusions: I. All insects being animals is a possibility. II. There is a possibility that some animals are neither insects nor plants.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: All pens are ink. No ink is an eraser.\nConclusions: I. No pen is an eraser. II. Some erasers are pens.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: Some gears are wheels. All wheels are brakes.\nConclusions: I. No brake is gear. II. Atleast some gears are brakes.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical",
+      "subtopic_name": "Categorical Syllogisms",
+      "body": "Statements: No month is a year. No year is a second.\nConclusions: I. All months are seconds. II. No second is month.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1163
+}

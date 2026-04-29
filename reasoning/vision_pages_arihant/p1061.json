@@ -1,0 +1,126 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 18-21) In each question below, is given a statement followed by three assumptions numbered I, II and III. An assumption is something supposed or taken for granted, you have to consider the statement and the assumptions and decide which of the assumption(s) is/are implicit in the statement.\nGive answer\n(a) if only Assumption I is implicit\n(b) if only Assumption II is implicit\n(c) if either Assumption I or II is implicit\n(d) if neither Assumption I nor II is implicit\n(e) if both Assumptions I and II are implicit",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 22-26) In each question below is given a statement followed by two assumptions numbered I and II. An assumption is something supposed or taken for granted. You have to consider the statement and the following assumptions and decide which of the assumption(s) is/are implicit in the statement.\nGive answer\n(a) if only Assumption I is implicit\n(b) if only Assumption II is implicit\n(c) if either Assumption I or II is implicit\n(d) if neither Assumption I nor II is implicit\n(e) if both Assumptions I and II are implicit",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "basic_assumption",
+      "subtopic_name": "Basic Assumption",
+      "body": "The question below has a statement followed by two assumptions. You have to decide whether the assumption is implied in the statement. Indicate your answer.\nStatement Rich people are more prone to have heart attacks.",
+      "choices": {
+        "a": "Only I is implicit",
+        "b": "Only II is implicit",
+        "c": "Both I and II are implicit",
+        "d": "Neither I nor II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement \"Do not lean out of the moving train\", a warning in the railway compartment.\nAssumptions\nI. Such warning will have some effect.\nII. Leaning out of a moving train is dangerous.\nIII. It is the duty of railway authorities to take care of passengers' safety.",
+      "choices": {
+        "a": "I and II are implicit",
+        "b": "II and III are implicit",
+        "c": "Only II is implicit",
+        "d": "I and III are implicit",
+        "e": "All are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement Training must be given to all the employees for increasing productivity and profitability.\nAssumptions\nI. Training is an essential component of productivity.\nII. Employees cannot function effectively without proper training.\nIII. Profitability and productivity are supplementary to each other.",
+      "choices": {
+        "a": "None is implicit",
+        "b": "All are implicit",
+        "c": "Only III is implicit",
+        "d": "I and II are implicit",
+        "e": "I and III are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement The situation of this area still continues to be tense and out of control. People are requested to be in their homes only.\nAssumptions\nI. There had been some serious incidents.\nII. People will not go to the office.\nIII. Normality will its be restored shortly.",
+      "choices": {
+        "a": "All are implicit",
+        "b": "None is implicit",
+        "c": "Only I is implicit",
+        "d": "I and III are implicit",
+        "e": "I and II are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement \"If you are a first class graduate with atleast 65% marks, you are eligible to apply for the post of officer in our organisation.\" an advertisement for recruitment of officers.\nAssumptions\nI. There may be adequate number of applicants who will fulfil the stipulated educational qualifications.\nII. Those graduates who have secured less than 65% marks may not perform well in the job.\nIII. Those candidates who have secured 65% or more marks in graduation are likely to perform well on the job.",
+      "choices": {
+        "a": "All are implicit",
+        "b": "I and II are implicit",
+        "c": "II and III are implicit",
+        "d": "I and III are implicit",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1061
+}

@@ -1,0 +1,138 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Assertion and Reason",
+  "passages": [
+    {
+      "passage_text": "Each of these questions has an Assertion (A) and a Reason (R). Give answer (a) if both 'A' and 'B' are true and 'R' is the correct explanation of 'A' (b) if both 'A' and 'R' are true but 'R' is not the correct explanation of 'A' (c) if 'A' is true but 'R' is false (d) if 'A' is false but 'R' is true",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Assertion and Reason",
+      "subtopic_code": "assertion_reason",
+      "subtopic_name": "Assertion and Reason",
+      "body": "Assertion (A) A body weighs less when immersed in water. Reason (R) Newton's law explains the above phenomenon.",
+      "choices": {
+        "a": "if both 'A' and 'B' are true and 'R' is the correct explanation of 'A'",
+        "b": "if both 'A' and 'R' are true but 'R' is not the correct explanation of 'A'",
+        "c": "if 'A' is true but 'R' is false",
+        "d": "if 'A' is false but 'R' is true"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Assertion and Reason",
+      "subtopic_code": "assertion_reason",
+      "subtopic_name": "Assertion and Reason",
+      "body": "Assertion (A) The steam engine was invented by James Watt. Reason (R) There was a problem of taking out water from flooded mines.",
+      "choices": {
+        "a": "if both 'A' and 'B' are true and 'R' is the correct explanation of 'A'",
+        "b": "if both 'A' and 'R' are true but 'R' is not the correct explanation of 'A'",
+        "c": "if 'A' is true but 'R' is false",
+        "d": "if 'A' is false but 'R' is true"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Assertion and Reason",
+      "subtopic_code": "assertion_reason",
+      "subtopic_name": "Assertion and Reason",
+      "body": "Assertion (A) We feel colder on mountains than on plains. Reason (R) Temperature decreases with altitude.",
+      "choices": {
+        "a": "if both 'A' and 'B' are true and 'R' is the correct explanation of 'A'",
+        "b": "if both 'A' and 'R' are true but 'R' is not the correct explanation of 'A'",
+        "c": "if 'A' is true but 'R' is false",
+        "d": "if 'A' is false but 'R' is true"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Assertion and Reason",
+      "subtopic_code": "assertion_reason",
+      "subtopic_name": "Assertion and Reason",
+      "body": "Assertion (A) The colour of light with the shortest wavelength is violet. Reason (R) One can notice this colour of light on one end of the rainbow which has seven colours of different wavelengths.",
+      "choices": {
+        "a": "if both 'A' and 'B' are true and 'R' is the correct explanation of 'A'",
+        "b": "if both 'A' and 'R' are true but 'R' is not the correct explanation of 'A'",
+        "c": "if 'A' is true but 'R' is false",
+        "d": "if 'A' is false but 'R' is true"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Assertion and Reason",
+      "subtopic_code": "assertion_reason",
+      "subtopic_name": "Assertion and Reason",
+      "body": "In the following question, there are two statements labelled as Assertion (A) and Reason (R). Assertion (A) Autism is a development disability. Reason (R) Heredity and lower development of brain are the causes of the Autism.",
+      "choices": {
+        "a": "'A' is false and 'R' is true",
+        "b": "Both 'A' and 'R' are false",
+        "c": "Both 'A' and 'R' are true",
+        "d": "'A' is true and 'R' is false"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "A is true and R is false. A body weighs less when immersed in water but this law was given by Archimedes', not by Newton."
+    },
+    {
+      "number": 4,
+      "solution": "Both A and R are true and R is the correct explanation of A. The problem of pumping out water from the flooded mines required the need of a self-working engine which led James Watt to invent the same."
+    },
+    {
+      "number": 5,
+      "solution": "Both A and R are true and R is the correct explanation of A. Above the sea level, temperature decreases with an increase in altitude which makes mountain peaks colder."
+    },
+    {
+      "number": 6,
+      "solution": "Both A and R are true but R is not the correct explanation of A."
+    },
+    {
+      "number": 7,
+      "solution": "Both A and R are true."
+    }
+  ],
+  "answers": [],
+  "_page": 1126
+}

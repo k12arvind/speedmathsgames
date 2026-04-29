@@ -1,0 +1,95 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "(d) Number of smaller cubes which are unpainted = 8 cubes from inside + 10 cubes from two adjacent unpainted surfaces = 18 cubes"
+    },
+    {
+      "number": 7,
+      "solution": "(c) 28 cubes from two adjacent surfaces painted red will have atleast red colour on their surfaces."
+    },
+    {
+      "number": 8,
+      "solution": "(d) 32 cubes from two opposite surfaces painted blue will have atleast one surface painted blue."
+    },
+    {
+      "number": 9,
+      "solution": "(b) 12 cubes present on the four edges common to blue and red surfaces will have two surfaces painted one with red colour and the other with blue colour."
+    },
+    {
+      "number": 10,
+      "solution": "(c) Only 2 cubes from the two corners will have three surfaces painted."
+    },
+    {
+      "number": 11,
+      "solution": "(d) Number of cubes having one face painted = Number of central cubes = 6 (n - 2)² = 6 (4 - 2)² = 6 × 4 = 24"
+    },
+    {
+      "number": 12,
+      "solution": "(b) Number of cubes having two faces painted = Number of middle cubes = 12(n - 2) = 12(4 - 2) = 12 × 2 = 24"
+    },
+    {
+      "number": 13,
+      "solution": "(c) Three faces painted cubes are always 8."
+    },
+    {
+      "number": 14,
+      "solution": "(d) It is clear from the figure that cubes having four faces painted = 0"
+    },
+    {
+      "number": 15,
+      "solution": "(c) Required cubes = Inner central cubes = (n - 2)³ = (4 - 2)³ = 8"
+    },
+    {
+      "number": 16,
+      "solution": "(c) Number of cubes having atleast one face painted in red = Number of cubes having one face painted in red + Number of cubes having two faces painted in red = 24 + 4 = 28"
+    },
+    {
+      "number": 17,
+      "solution": "(c) Number of cubes having one or two faces painted = Number of cubes having one face painted + Number of cubes having two faces painted = 24 + 24 = 48"
+    },
+    {
+      "number": 18,
+      "solution": "(b) Required number of cubes = (Number of cubes painted in green + black) + (Number of cubes painted in green + red) = (4 × 2) + (4 × 2) = 8 + 8 = 16"
+    },
+    {
+      "number": 19,
+      "solution": "(b) Required number of cubes = Number of cubes painted in red on two adjacent faces + Number of cubes painted in black on two adjacent faces = 2 + 2 = 4"
+    },
+    {
+      "number": 20,
+      "solution": "(d) It is clear from the figure that required number of cubes are zero in the given case."
+    },
+    {
+      "number": 21,
+      "solution": "(d) The total number of cubes have only one colour = (2 × 4) + (1 × 2) = 8 + 2 = 10"
+    },
+    {
+      "number": 22,
+      "solution": "(b) The total number of cubes have no colour = 2 × 1 = 2"
+    },
+    {
+      "number": 23,
+      "solution": "(c) The total number of cubes have any two colours = (4 × 2) + (8 × 1) = (8 + 8) = 16"
+    },
+    {
+      "number": 24,
+      "solution": "(d) All the 16 cubes present on the boundary of this block will have atleast two colours."
+    },
+    {
+      "number": 25,
+      "solution": "(d) 24 smaller cubes will be formed."
+    },
+    {
+      "number": 26,
+      "solution": "(c) A total of 16 cubes will be left, if cubes with black as well as green colours are removed."
+    }
+  ],
+  "answers": [],
+  "_page": 893
+}

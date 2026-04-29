@@ -1,0 +1,400 @@
+{
+  "page_type": "questions",
+  "chapter_number": 2,
+  "chapter_title": "Choosing the Odd Pair of Words",
+  "passages": [
+    {
+      "passage_text": "In each of the following questions, certain pairs of words are given, out of which the words in all pairs except one, bear a certain common relationship. Choose the odd pair.",
+      "has_figure": false,
+      "topic_code": "classification"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Clerk : File\n(c) Doctor : Patient",
+      "choices": {
+        "a": "Clerk : File",
+        "b": "Lawyer : Client",
+        "c": "Doctor : Patient",
+        "d": "Shopkeeper : Customer"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Seldom : Often\n(c) Honest : Cheat",
+      "choices": {
+        "a": "Seldom : Often",
+        "b": "Good : Nice",
+        "c": "Honest : Cheat",
+        "d": "Extravagant : Thrifty"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Petrol : Car\n(c) Garbage : Dustbin",
+      "choices": {
+        "a": "Petrol : Car",
+        "b": "Ink : Pen",
+        "c": "Garbage : Dustbin",
+        "d": "Lead : Pencil"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Crime : Punishment\n(c) Enterprise : Success",
+      "choices": {
+        "a": "Crime : Punishment",
+        "b": "Judgement : Advocate",
+        "c": "Enterprise : Success",
+        "d": "Exercise : Health"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Needle : Prick\n(c) Auger : Bore",
+      "choices": {
+        "a": "Needle : Prick",
+        "b": "Gun : Fire",
+        "c": "Auger : Bore",
+        "d": "Chisel : Carve"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Lion : Roar\n(c) Bees : Hum\n(e) Dog : Bark",
+      "choices": {
+        "a": "Lion : Roar",
+        "b": "Snake : Hiss",
+        "c": "Bees : Hum",
+        "d": "Frog : Bleat",
+        "e": "Dog : Bark"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Oil : Lamp\n(c) Oxygen : Life",
+      "choices": {
+        "a": "Oil : Lamp",
+        "b": "Water : Tap",
+        "c": "Oxygen : Life",
+        "d": "Petrol : Machine"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Cat : Mouse\n(c) Cow : Hen",
+      "choices": {
+        "a": "Cat : Mouse",
+        "b": "Lion : Deer",
+        "c": "Cow : Hen",
+        "d": "Hawk : Snake"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Captain : Team\n(c) Prime Minister : Cabinet",
+      "choices": {
+        "a": "Captain : Team",
+        "b": "Boss : Gang",
+        "c": "Prime Minister : Cabinet",
+        "d": "Artist : Troupe"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Hard : Soft\n(c) Sweet : Sour\n(e) Day : Night",
+      "choices": {
+        "a": "Hard : Soft",
+        "b": "Pointed : Blunt",
+        "c": "Sweet : Sour",
+        "d": "Long : High",
+        "e": "Day : Night"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Ice cube : Cold\n(c) Marble : Smooth",
+      "choices": {
+        "a": "Ice cube : Cold",
+        "b": "Iron : Hard",
+        "c": "Marble : Smooth",
+        "d": "Purse : Money"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Petrol : Car\n(c) Ink : Pen\n(e) Pen : Paper",
+      "choices": {
+        "a": "Petrol : Car",
+        "b": "Electricity : Television",
+        "c": "Ink : Pen",
+        "d": "Dust : Vacuum cleaner",
+        "e": "Pen : Paper"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Man : Garage\n(c) Horse : Stable",
+      "choices": {
+        "a": "Man : Garage",
+        "b": "Pig : Sty",
+        "c": "Horse : Stable",
+        "d": "Cow : Shed"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Water : Thirst\n(c) Food : Hunger",
+      "choices": {
+        "a": "Water : Thirst",
+        "b": "Talent : Education",
+        "c": "Food : Hunger",
+        "d": "Air : Suffocation"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Tree : Stem (b) Face : Eye\nFlower",
+      "choices": {
+        "a": "Tree : Stem",
+        "b": "Face : Eye",
+        "c": "Chair : Sofa",
+        "d": "Plant : Flower"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Light : Heavy\n(c) Short : Long",
+      "choices": {
+        "a": "Light : Heavy",
+        "b": "Crime : Blame",
+        "c": "Short : Long",
+        "d": "Man : Woman"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Principal : School\n(c) Artist : Troupe",
+      "choices": {
+        "a": "Principal : School",
+        "b": "Soldier : Barrack",
+        "c": "Artist : Troupe",
+        "d": "Singer : Chorus"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Death : Disease\n(c) Grape : Wine",
+      "choices": {
+        "a": "Death : Disease",
+        "b": "Milk : Butter",
+        "c": "Grape : Wine",
+        "d": "Water : Oxygen"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_pair_words",
+      "subtopic_name": "Odd Pair of Words",
+      "body": "(a) Orange, Apple, Guava\n(c) Rice, Pulses, Cotton",
+      "choices": {
+        "a": "Orange, Apple, Guava",
+        "b": "Brinjal, Pomegranate, Wheat",
+        "c": "Rice, Pulses, Cotton",
+        "d": "Cumin, Coriander, Millet"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 74
+}

@@ -1,0 +1,229 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully to answer these questions. Five friends namely Kiran, Geeta, Honey, Ramesh and Jagan have very good characteristics and are being considered for various awards. Geeta, Kiran and Honey are sincere. Kiran, Ramesh and Jagan are very brave. Ramesh, Honey and Jagan are very truthful. Kiran, Geeta and Jagan are courteous.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions which follow. A, B, C, D, E and F live on different floors in the same building having six floors numbered one to six (the ground floor is numbered one, the floor above it is numbered two and so on and the topmost floor is numbered 6). A lives on an even-numbered floor. There are two floors between the floors on which D and F live. F lives on a floor above D's floor. D does not live on the floor numbered two. B does not live on an odd-numbered floor. C does not live on any of the floors below F's floor. E does not live on a floor immediately above or immediately below the floor on which B lives.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the information given below carefully and then answer the questions that follow. Eight people A, B, C, D, E, F, G and H work in three different companies X, Y and Z. Out of these, two are females who work in different companies and have different specialisations. Two of them are specialists in Finance, two in HR, two in marketing and one each is an engineer and a computer specialist. D, working in a company X has specialised in HR and her friend G, a finance specialist is working in company Z. H, an HR specialist, is working with B, a marketing specialist and does not work in company Y. C is not a computer specialist. No two people with the same specialisation work together. F is a specialist in marketing working in company Y and his friend, A has specialist in finance and is working in company X with only another specialist. Not more than three of them work in any company. No female is an engineer or computer specialist.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 51,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "email_coding",
+      "subtopic_name": "Email Account Coding",
+      "body": "The man who works in Wipro has an e-mail account with?",
+      "choices": {
+        "a": "Sancharnet",
+        "b": "Yahoo",
+        "c": "Rediffmail",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "email_coding",
+      "subtopic_name": "Email Account Coding",
+      "body": "Which of the following e-mail, place of posting and person combination is correct?",
+      "choices": {
+        "a": "Kabeer-kolkata-Rediffmail",
+        "b": "Alok-Bengaluru-Indiatimes",
+        "c": "Amit-Noida-Yahoo",
+        "d": "Raghu-Ranchi-Gmail"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "email_coding",
+      "subtopic_name": "Email Account Coding",
+      "body": "Which of the following is true?",
+      "choices": {
+        "a": "Amit is posted at Ranchi",
+        "b": "Raghu is posted at Jamshedpur",
+        "c": "Kabeer has an e-mail id with Yahoo",
+        "d": "Rahul has an e-mail id with Indiatimes"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "sequence_coding",
+      "subtopic_name": "Sequence Representation",
+      "body": "Which of the following sequences of location represent Alok, Kabeer, Anup, Rahul, Raghu and Amit in the same order?",
+      "choices": {
+        "a": "Bengaluru, Noida, Pune, Jamshedpur, Ranchi, Kolkata",
+        "b": "Bengaluru, Kolkata, Jamshedpur, Pune, Noida, Ranchi",
+        "c": "Kolkata, Bengaluru, Jamshedpur, Pune, Noida, Ranchi",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "email_coding",
+      "subtopic_name": "Email Account Coding",
+      "body": "People who have e-mail account with Indiatimes, Sancharnet and Yahoo work for which companies, in the same sequence as the e-mail accounts mentioned?",
+      "choices": {
+        "a": "Usha Martin, HCL, Wipro",
+        "b": "Tisco, Wipro, Usha Martin",
+        "c": "HCL, Tisco, Wipro",
+        "d": "Tisco, HCL, Usha Martin"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Reasoning",
+      "subtopic_code": "characteristics",
+      "subtopic_name": "Character Analysis",
+      "body": "Which of the following persons is neither brave nor courteous?",
+      "choices": {
+        "a": "Honey",
+        "b": "Geeta",
+        "c": "Kiran",
+        "d": "Ramesh"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Reasoning",
+      "subtopic_code": "characteristics",
+      "subtopic_name": "Character Analysis",
+      "body": "Which of the following persons is neither truthful nor brave but is courteous?",
+      "choices": {
+        "a": "Honey",
+        "b": "Ramesh",
+        "c": "Kiran",
+        "d": "Geeta"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Reasoning",
+      "subtopic_code": "characteristics",
+      "subtopic_name": "Character Analysis",
+      "body": "Which combination of friends is not 'brave' but 'sincere'?",
+      "choices": {
+        "a": "Geeta and Kiran",
+        "b": "Jagan and Honey",
+        "c": "Honey and Ramesh",
+        "d": "Geeta and Honey"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "Who among the following live on the floors exactly between E and F?",
+      "choices": {
+        "a": "E, B",
+        "b": "C, B",
+        "c": "E, C",
+        "d": "A, E",
+        "e": "B, A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "On which of the following floors does B live?",
+      "choices": {
+        "a": "Sixth",
+        "b": "Fourth",
+        "c": "Second",
+        "d": "Fifth",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 635
+}

@@ -1,0 +1,222 @@
+{
+  "page_type": "questions",
+  "chapter_number": 10,
+  "chapter_title": "Venn Diagram",
+  "passages": [
+    {
+      "passage_text": "Each of the questions given below contains three groups of items. You are required to choose one of the four numbered diagrams (a), (b), (c) and (d) that depicts the correct relationship among the three groups of items in each of the question.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Which of the following diagrams best represents the relationship among given words.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_relationship",
+      "subtopic_name": "Basic Relationship",
+      "body": "Which of the following diagrams represents pens and pencils?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_relationship",
+      "subtopic_name": "Basic Relationship",
+      "body": "Which of the following diagrams represents a relationship between players and footballers?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_groups",
+      "subtopic_name": "Three Groups Relationship",
+      "body": "Moon, Earth, Universe",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_groups",
+      "subtopic_name": "Three Groups Relationship",
+      "body": "India, Pakistan, Asia",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_groups",
+      "subtopic_name": "Three Groups Relationship",
+      "body": "Batsman, Cricketer, Stick",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_groups",
+      "subtopic_name": "Three Groups Relationship",
+      "body": "Book, Pen, Pencil",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_groups",
+      "subtopic_name": "Three Groups Relationship",
+      "body": "House, Bedroom, Bathroom.",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Woman, Teacher, Student",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Elephant, Wolf, Animal",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Red, Green, Colour",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 362
+}

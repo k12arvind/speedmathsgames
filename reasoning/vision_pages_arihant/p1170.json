@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [
+    {
+      "passage_text": "In the question below are given three statements followed by two conclusions numbered I and II. You have to take the two given statements to be true even if they seem to be at variance from commonly known facts and decide which of the given conclusion(s) logically follow (s) from the three given statements. Give answer (a) if only Conclusion I follows (b) if only Conclusion II follows (c) if either Conclusion I or II follows (d) if neither Conclusion I nor II follows (e) if both Conclusions I and II follow",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "three_statement_syllogism",
+      "subtopic_name": "Three Statement Syllogism",
+      "body": "Statements: All boys are jokers. Some men are boys. All jokers are caps. Conclusions: I. Some caps are boys. II. Some men are caps.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "Solution Through Mediate/Immediate Inference Table. The two statements syllogism is again the base for the solution of three statement syllogism. Here, we will solve the same three statement syllogism what we have solved through Venn diagram above. Let us see: Statements - All bags are caps. Some pens are bags. No caps are desks. Conclusions - I. Some pens are caps. II. No desks are bags. III. Some pens are desks. IV. Some caps are bags. Sol. The first step in solving these questions is to select two statements for each of the conclusions in such a way that subject and predicate of the conclusion should be present in these statements and importantly, these statements should be linked with the common term. For Conclusion I 'Some pens are caps', we can take Statements 1 and 2 because these two statements have subject 'pens' and predicate 'caps' of the statements and are linked with the common term 'bags'. Now, to draw mediate inference these two statements have to be aligned in such a way that predicate of the first statement is the subject of the second statement. Hence, these two statements can be aligned as follows. Some pens are bags. (I-type) All bags are caps. (A-type) From the table of mediate inference, we know that I + A = I. Therefore, conclusion will be 'Some pens are caps'. Hence, Conclusion I is valid. Conclusion II Statements 1 and 3 are relevant for conclusion II 'No desks are bags'. These two statements are already aligned. All bags are caps. (A-type) No caps are desks. (E-type) We know that, A + E = E. Therefore, from these two statements, conclusion 'No bags are desks' are valid. But our conclusion is 'No desks are bags'. We know that, E-type proposition can be converted into E-type proposition, i.e., No bags are desks ⇒ No desks are bags. Hence, Conclusion II is valid. Conclusion III For this conclusion, we cannot choose any two statements because out of three, no two statements containing subject and predicate of the conclusion are linked with the common term. Therefore, all the three statements are relevant to test this inference. For this, we should write the three statements in such a way that the predicate of the first is the subject of second and predicate for second is the subject of the third. Some pens are bags. (I-type) All bags are caps. (A-type) No caps are desks. (E-type) From the combination of all these three statements, we find that I + A + E = (I + A) + E = I + E = O. Thus, a valid conclusion would be of O-type, i.e., 'Some pens are not desks'. Hence, Conclusion III 'Some pens are desks' is not valid conclusion. Conclusion IV Conclusion IV 'Some caps are bags' is immediate inference drawn from statement 1. From the rule of conversion, we know All bags are caps ⇒ Some caps are bags. Hence, Conclusion IV is valid."
+    }
+  ],
+  "answers": [],
+  "_page": 1170
+}

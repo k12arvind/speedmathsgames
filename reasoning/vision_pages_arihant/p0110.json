@@ -1,0 +1,85 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Word Formation and Letter Rearrangement",
+  "passages": [],
+  "questions": [
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Word Formation and Letter Rearrangement",
+      "subtopic_code": "changing_letters",
+      "subtopic_name": "Changing Letters of a Meaningful Word",
+      "body": "If in the word 'CONGREGATION', 1st and 3rd letters are interchanged, 2nd and 4th letters are interchanged, 5th and 7th letters are interchanged and this interchange goes on in the same manner, then find the 10th letter from right in the new arrangement.",
+      "choices": {
+        "a": "E",
+        "b": "C",
+        "c": "G",
+        "d": "P"
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Word Formation and Letter Rearrangement",
+      "subtopic_code": "forming_word_selected_letters",
+      "subtopic_name": "Forming a Meaningful Word with Selected Letters of a Word",
+      "body": "If it is possible to make only one meaningful word with the 3rd, the 6th, the 8th and the 11th letters of the word 'COMPUTERISE'; using each letter only once in the word, last letter of the word is your answer. If no such word can be formed, your answer is 'X' and if more than one such word can be formed, your answer is 'Z'.",
+      "choices": {
+        "a": "M",
+        "b": "T",
+        "c": "R",
+        "d": "X",
+        "e": "Z"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Word Formation and Letter Rearrangement",
+      "subtopic_code": "forming_words_different_letters",
+      "subtopic_name": "Forming Meaningful Word(s) with the Different Letters of a Meaningful Word",
+      "body": "How many words can be formed using letters of the word 'DESIGN' unconditionally?",
+      "choices": {
+        "a": "More than 4",
+        "b": "Less than 3",
+        "c": "Exactly 4",
+        "d": "More than 8"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "The correct letter is C. Alternate Method: 10th letter from right in the original word = (13 - 10) = 3rd letter from left in original word = N. As, N is interchanged with C in the new arrangement ∴ 10th letter from right in the new arrangement = C"
+    },
+    {
+      "number": 15,
+      "solution": "Let us see: From letters M, T, R and E, the only word TERM can be formed. ∴ Last letter of the word 'TERM' = M"
+    },
+    {
+      "number": 16,
+      "solution": "Let us see Required words = DEN, DIG, DING, SIN, SING, SIGN, SIDE DIE, SEND"
+    }
+  ],
+  "answers": [],
+  "_page": 110
+}

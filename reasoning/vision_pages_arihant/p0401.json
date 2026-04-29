@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "(D) By applying the above decoding method for (P @ Q $ M # T), we draw the following family diagram\n\nMarried couple D♀ ←→ F♂     Married couple P♂ ←→ Q♀\n\nDaughter R♀ connects to Mother H, where P is the paternal grandfather of T, and R is the sister of H. Mother connects to Father M♂, then to T.\n\nHence, P is the paternal grandfather of T."
+    },
+    {
+      "number": 10,
+      "solution": "(C) By applying above decoding method, we can check all the options for the required relationship\n(a) (R $ D @ F # H) = Rejected\n\nR♂ connects to Mother, then D♂ Married couple ←→ F♂\n\nNow, F cannot be related with H as according to given condition for F # H, F must be a male.\n(b) (H % D @ F $ R) = Rejected\n\nMarried couple D♀ ←→ F♂, with Daughter connecting to Mother H♀, then to R\n\nHere, gender of R is not known. So, this option is also rejected.\n(c) (R % D @ F $ H) = Selected\n\nMarried couple R♂ ←→ F♂, with Daughter connecting to Mother, then Sister connecting to H\n\nHence, no need to check other options."
+    },
+    {
+      "number": 11,
+      "solution": "(D) By applying above decoding method for (F @ D % K # H), we draw the following family diagram\n\nK♂ connects as Daughter to Married couple F♂ ←→ D♀, with Sister H connecting.\n\nF is the brother-in-law of H.\n\nHence, F the brother-in-law of H."
+    },
+    {
+      "number": 12,
+      "solution": "(C) By applying above decoding method, we can check all the options for the required relationship\n(a) (N % F @ D $ H) = Rejected\n\nMarried couple F♀ ←→ D♂, with Daughter N♀ connecting to Mother H\n\nHere, gender of H is not known. So, cannot be determined\n(b) (N % F @ D % H) = Rejected\n\nH connects as Daughter, with Married couple F♀ ←→ D♂, then Daughter N♀\n\nHere, gender of H is not known and H can be either grandfather or grandmother of N.\n(c) (N % F @ D $ H # R) = Selected\n\nMarried couple F♀ ←→ D♂, with Daughter N♀ connecting to Mother H♀, then Father R\n\nH is the brother of N\n\nTherefore, there is no need to check other options because we have already obtained the answer."
+    },
+    {
+      "number": 13,
+      "solution": "(C) By applying above decoding method, we can check all the options for the required relationship\n(a) (H + J + T)\n\nH♀ connects as Father to J♂, then Father to T, where H is the paternal grandfather of T\n\nHence, there is no need to check other options, as we have already obtained the answer."
+    }
+  ],
+  "answers": [],
+  "_page": 401
+}

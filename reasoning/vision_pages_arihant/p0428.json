@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Clocks",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 15,
+      "solution": "(d) From the figure, we find that min hand is 25 min spaces behind the hour hand. In order to coincide, it has to again 25 min spaces. Now, 55 min are gained by minute hand in 60 min. ∴ 25 min will be gained in 60/55 × 25 = 27 3/11 min. So, the hands will coincide at 27 3/11 min past 5."
+    },
+    {
+      "number": 16,
+      "solution": "(c) Both the hands are 15 min spaces apart at 9 O'clock. To be together between 9 and 10, min O' clock hand has to gain 45 min. Now, minute hand gains 55 min in 60 min. ∴ It will gain 45 min in 60/55 × 45 = 49 1/11 min. Therefore, the hands will be together at 49 1/11 min past 9."
+    },
+    {
+      "number": 17,
+      "solution": "(b) ∴ Angle traced by hour hand per minute = (1/2)°. Angle traced by hour hand in 5 h 15 min = (5 × 60 + 15) × 1°/2 = 315 × 1°/2 = 157 1/2°. ∴ Angle traced by minute hand per minute = 6°. ∴ Angle traced by minute hand in 15 min = 15 × 6° = 90°. ∴ Required angle = 157 1/2° - 90° = 67 1/2°"
+    },
+    {
+      "number": 18,
+      "solution": "(c) ∴ Angle traced by hour hand in 1 min = (1/2)°. Angle traced by hour hand in 1 h 20 min = 360° - [(11 × 60) + 20] × (1/2)° = 360° - 680 × 1°/2 = 360° - 340° = 20°. ∴ Angle traced by minute hand in 1 min = 6°. ∴ Angle traced by minute hand 20 min = 20 × 6° = 120°. ∴ Required angle = 120° + 20° = 140°"
+    },
+    {
+      "number": 19,
+      "solution": "(b) Time from 8 am of a particular day to 1 pm on the following day = 29 h. Now, the clock gains 10 min in 24 h. It means that 24 h 10 min of this clock is equal to 24 h of the correct clock. i.e., 145/6 h of this clock = 24 h of the correct clock. ∴ 29 h of this clock = 24/145 × 6 × 29 = 28 h 48 min of correct clock. 29 h of this clock = 28 h 48 min of the correct clock. It means that the clock in question is 12 min faster than the correct clock. Therefore, when clock indicates 1 pm, the correct time will be 48 min past 12 i.e., 12 : 48 pm."
+    }
+  ],
+  "answers": [],
+  "_page": 428
+}

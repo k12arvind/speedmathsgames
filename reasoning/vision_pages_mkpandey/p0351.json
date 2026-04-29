@@ -1,0 +1,39 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 79,
+      "solution": "It is not possible to exactly find the sex, marital status and relative rank (talkativeness) of F and C because sufficient data is not given."
+    },
+    {
+      "number": 83,
+      "solution": "Just test each choice by the initial conditions. First, the student must select from at least two different areas, and all of the choices pass this test. Next, he cannot take a course in both English and Fine Arts and select choice (1). Next, if he takes a Science course, he must also take a Maths course, and vice versa, so we eliminate (3). Finally, if he takes a Social Studies course, he must take a course in Fine Arts, and we can eliminate (2). By the process of elimination, (5) is the correct choice."
+    },
+    {
+      "number": 85,
+      "solution": "This question is the mirror image of the first. Just test each choice by the initial conditions. All are acceptable on the basis of the first condition (that he take courses in at least two different areas) and the second condition (English and Fine Arts cannot be taken together). (3), however, runs afoul of the third condition. For there we have a Maths course without an accompanying Science course. (You can check the other choices and see that they do respect the final condition.)"
+    },
+    {
+      "number": 86,
+      "solution": "If the student takes Social Studies, then he must take a course in Fine Arts. With a course in Fine Arts, he cannot take a course in English; and with two courses scheduled (Social Studies and Fine Arts), he cannot take either Maths or Science (for those must go together). He can, however, take another Fine Arts course or (1) suggests) or another Social Studies course."
+    },
+    {
+      "number": 87,
+      "solution": "If the student takes a course in Maths, he must also take a course in Science, so his third course must be Science."
+    },
+    {
+      "number": 88,
+      "solution": "If you simply screen choices by the initial conditions, it seems that all of the pairs taken in isolation are acceptable. This means that one trick for the question must be what happens to the third course. As for (1) and (2), Maths requires Science and vice versa, and a schedule of Maths, Science, and Fine Arts is acceptable. As for (3) and (5), Maths require Science."
+    },
+    {
+      "number": 91,
+      "solution": "Let us separate the statements regarding investments on one side and those regarding losses on the other. Investment: Statement (ii) implies: A→B, C→D, E→F. Statement (v) implies: B→F and G→D. A>B>E; C>G. Looking at loss, note that D invested the least. The exact height is not known. Now let us consider the aspect of height. From the above it is obvious that either A or C is the biggest investor, but it cannot be said whether A or C should stand. [Look at statement (iii).] (i) invested the least, so he stands fourth. Also, D invested the least which means that at second position C is positioned. Again, A>B>E→(ii) is not the tallest while F is not the shortest. Taking these conditions into account the following are established: C->F; E->F; D; B->E->F; B->E."
+    }
+  ],
+  "answers": [],
+  "_page": 351
+}

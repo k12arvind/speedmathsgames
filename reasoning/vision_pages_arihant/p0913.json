@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 906,
+      "solution": "Now, the common digit (6) in both the positions will be written at the face second from the top which is between left and right faces. Let us see\n\n[Figure showing cube with 6 positioned]\n\nNow, going anti-clockwise direction from the common digit 6 of position I, we get 4 first and after that, we get 2. Let us see\n\n[Figure showing sequence of cubes with positions I]\n\nAt the unfolded faces, 4 and 2 are written as following way\n\n[Figure showing unfolded pattern with 2, 6, 4]\n\nAgain, going towards anti-clockwise direction from the common digit 6 of position II, we get 3 first and after that 5. Let us see\n\n[Figure showing sequence of cubes with positions II]\n\nAt the unfolded faces, 3 and 5 are written as follows\n\n[Figure showing unfolded pattern with 2, 3, 6, 4, 5]\n\nNow, the remaining blank face is filled up with the hidden digit 1 and now all the unfolded faces look like as below\n\n[Final figure showing complete unfolded pattern: 2, 3, 6, 4, 5, 1]"
+    }
+  ],
+  "answers": [],
+  "_page": 913
+}

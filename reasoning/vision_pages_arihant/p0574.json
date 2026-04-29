@@ -1,0 +1,139 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "A word arrangement machine when given an input line of words, rearranges them following a particular rule in each step. The following is the illustration of the input and the steps of arrangement.\nInput vani is the most beautiful girl on earth\nStep I beautiful vani is the most girl on earth\nStep II beautiful earth vani is the most girl on\nStep III beautiful earth girl vani is the most on\nStep IV beautiful earth girl is vani the most on\nStep V beautiful earth girl is most vani the on\nStep VI beautiful earth girl is most on vani the\nStep VII beautiful earth girl is most on the vani\nSince the words are already arranged, the machine stops after this step. Otherwise the machine may carry on its logic until the words get fully arranged. Study the logic and answer the questions that follow",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'is you are again famous on this'. Find the Step III.",
+      "choices": {
+        "a": "again are famous is you on this",
+        "b": "on this you is famous are again",
+        "c": "this on you is famous are again",
+        "d": "famous this on you is are again",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "If given, Step IV 'option pen rose Seema tape yolk', what will be the input?",
+      "choices": {
+        "a": "pen option rose tape Seema yolk",
+        "b": "yolk Seema tape rose option pen",
+        "c": "tape Seema yolk rose option pen",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'no gum to sum fame game'. Find the Step I.",
+      "choices": {
+        "a": "game no gum to sum fame",
+        "b": "gum no to sum fame game",
+        "c": "game gum no to sum fame",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'He is a great Indian cricketer'. Find out the last step for this input.",
+      "choices": {
+        "a": "VII",
+        "b": "VI",
+        "c": "IV",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Input 'when men ten gain rain'. What would be the second step for this input?",
+      "choices": {
+        "a": "gain when men ten rain",
+        "b": "gain men when ten rain",
+        "c": "rain ten men when gain",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "Input 'is you are again famous on this'\nStep I again is you are famous on this\nStep II again are is you famous on this\nStep III again are famous is you on this\nHence, option (a) is the correct answer.\nQuicker Method\nApplying 'Rule D', we pick first three words in forward alphabetical order (again, are, famous) and place them before the remaining words that gives:\nStep III again are famous is you on this"
+    },
+    {
+      "number": 7,
+      "solution": "Option (d) is the correct answer as in the arrangement problem previous steps cannot be determined. (see Rule B)"
+    },
+    {
+      "number": 8,
+      "solution": "Input no gum to sum fame game\nStep I fame no gum to sum game\nHence, option (e) is the correct answer."
+    },
+    {
+      "number": 9,
+      "solution": "Input He is a great Indian cricketer\nStep I a He is great Indian cricketer\nStep II a cricketer he is great Indian\nStep III a cricketer great he is Indian\nStep IV a cricketer great he Indian is\nHence, option (c) is correct.\nQuicker Method\nThe complete arrangement will take almost 6 - 1 = 5 steps"
+    }
+  ],
+  "answers": [],
+  "_page": 574
+}

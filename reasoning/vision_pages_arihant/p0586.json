@@ -1,0 +1,143 @@
+{
+  "page_type": "questions",
+  "chapter_number": 18,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Study the following informations to answer the given questions. A number arrangement machine when given an input line of numbers, rearranges them following a particular rule in each step. The following is an illustration of input and steps of arrangement:\nInput    23 132 38 27 430 287\nStep I   2 13 3 2 43 28\nStep II  3 32 8 7 30 87\nStep III 32 231 83 72 034 782\nStep IV  3 2 4 3 5 3\nStep V   34 233 49 38 531 388",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "What will be Step V for the following input?\nInput '135, 88, 24, 215, 16'",
+      "choices": {
+        "a": "236, 99, 35, 316, 27",
+        "b": "136, 99, 25, 216, 17",
+        "c": "17, 216, 25, 99, 136",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "If Step II is '16, 9, 22, 416, 25, 67',\nthen find the input.",
+      "choices": {
+        "a": "18, 11, 24, 418, 27, 69",
+        "b": "11, 18, 24, 418, 27, 69",
+        "c": "69, 27, 418, 24, 11, 18",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "What will be the Step III for the following input?\nInput '777, 29, 435, 115, 61, 37'",
+      "choices": {
+        "a": "777, 92, 436, 116, 62, 37",
+        "b": "777, 92, 534, 16, 511, 73",
+        "c": "777, 92, 534, 511, 16, 73",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "If Step I of an input is '4, 16, 121, 8, 17',\nthen find the input.",
+      "choices": {
+        "a": "45, 163, 1217, 87, 178",
+        "b": "46, 163, 1213, 85, 172",
+        "c": "41, 161, 1216, 82, 176",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "What will be Step IV for the following input?\n220, 197, 15, 37, 89, 75",
+      "choices": {
+        "a": "3, 2, 2, 4, 9, 8",
+        "b": "1, 8, 6, 8, 10, 6",
+        "c": "6, 10, 8, 6, 8, 1",
+        "d": "8, 9, 4, 2, 2, 3",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 16,
+      "solution": "(c) 0 is removed from the end of every number."
+    },
+    {
+      "number": 17,
+      "solution": "(a) Last digit from every number is removed."
+    },
+    {
+      "number": 18,
+      "solution": "(b) 0 after the 1st digit is removed."
+    },
+    {
+      "number": 19,
+      "solution": "(d) It is not possible to find out last digits and hence input cannot be determined."
+    },
+    {
+      "number": 20,
+      "solution": "(a) 1st digit becomes last in two-digit numbers and middle digit becomes 1st in three-digit numbers."
+    }
+  ],
+  "answers": [],
+  "_page": 586
+}

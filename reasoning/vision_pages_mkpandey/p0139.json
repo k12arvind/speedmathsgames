@@ -1,0 +1,30 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "strengthening_weakening",
+      "subtopic_name": "Strengthening and Weakening Arguments",
+      "body": "Choice A strengthens the argument because it gives weight to the supporting premise; if the normal rate is .01% then 39% is surely an alarming number. Choice B weakens the argument by contradiction.",
+      "choices": {
+        "a": "Many of the world's problems can be solved only by highly specialised experts working on specific problems.",
+        "b": "Relatively few generalists are needed to coordinate the work of the many specialists.",
+        "c": "Specialisation does not necessarily entail losing the ability to see the broad picture."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 139
+}

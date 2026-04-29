@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "In the given series, previous element is multiplied by 3 to obtain the next element and therefore the ratio between two consecutive elements is same. 4 → 12 → 36 → 108 → 324 → 972. ×3 → ×3 → ×3 → ×3 → ×3. ∴ ? = 972"
+    },
+    {
+      "number": 6,
+      "solution": "In the given series, the ratio between two consecutive elements is in increasing order and elements are multiplied by the numbers in increasing order. 3 → 4.5 → 9 → 22.5 → 67.5. ×1.5 → ×2 → ×2.5 → ×3. ∴ ? = 67.5"
+    },
+    {
+      "number": 7,
+      "solution": "In the given series, previous element is divided by 2 to get the next element. 336 → 168 → 84 → 42 → 21 → 10.5. ÷2 → ÷2 → ÷2 → ÷2 → ÷2. ∴ ? = 10.5"
+    },
+    {
+      "number": 8,
+      "solution": "In the given series, elements are divided by 2, 3, 4, 5 and 6 respectively to obtain the next elements. 7200 → 3600 → 1200 → 300 → 60 → 10. ÷2 → ÷3 → ÷4 → ÷5 → ÷6. ∴ ? = 10"
+    }
+  ],
+  "answers": [],
+  "_page": 218
+}

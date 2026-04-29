@@ -1,0 +1,84 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Island of Growth was witnessing a rapid increase in GDP. Its citizens had become wealthier in recent times and there had been a considerable improvement in the standards of living. However, this rapid growth had increased corruption and nepotism in the Island. In the recent times, a fear had gripped the population that corruption would destroy the inclusive nature of the society and hinder economic progress. However, most citizens had kept quiet because (i) they had benefitted from the corruption indirectly, if not directly (ii) they did not have the time and energy to protest (iii) they did not have courage to rise against the established power centres There was a need to remove corruption but no one was willing to stick his neck out. Many politicians, bureaucrats and private organisations were corrupt. Media and intellectuals kept quiet, as they benefitted indirectly from corruption. The common man was scared of state's retribution and the youngsters feared insecure future. Against this background, an old, unmarried and illiterate gentleman of high moral and ethical authority, Shambhu, decided to take on the issue of corruption. He sat on a hunger strike in the heart of the capital city of the Island. Shambhu demanded that the Government should constitute new laws to punish the corrupt across all walks of life. Media and the citizens of the Island gave massive support to Shambhu. Buckling under the pressure, the Government promised to accept Shambhu's demands. He ended the hunger strike immediately following the Government's announcement. Shambhu became the darling of the media. He used this opportunity to inform to spread the message that only citizens with an unblemished character should be allowed to hold a public office. A few months later, it was found that the Government had not fulfilled any of its promises made to Shambhu. Infuriated, he was thinking of launching another Island-wide protest. However, this time he sensed that not many people and media persons were willing to support him.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    },
+    {
+      "passage_text": "Marathe is a Vice-President in a construction equipment company in the city of Mumbai. One day, his subordinate Bhonsle requested that Kale, a project manager, be transferred to the Chennai office from the Mumbai office. In Chennai, Kale would work alone as a researcher. Bhonsle gave the following reasons for his request \"Kale is known to frequently fight with his colleagues. 'Kale is conscientious and dedicated only when working alone. He is friendly with seniors but refuses to work with colleagues, in a team. He cannot accept criticism and feels hostile and rejected. He is over bearing and is generally a bad influence on the team.' Marathe called upon Gore, another project manager and sought further information on Kale. Gore recalled that a former colleague, Lakhote (who was also Kale's former boss) had made a few remarks on his appraisal report about Kale. In his opinion, Kale was not fit for further promotion as he was emotionally unstable to work in groups though he had seven years of work experience. Lakhote had described Kale as too authoritative to work under anyone. Lakhote had further told Gore that Kale had an ailing wife and an old mother, who does not want to stay with his wife.",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    }
+  ],
+  "questions": [
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "statement_analysis",
+      "subtopic_name": "Statement Analysis",
+      "body": "Read the following statements I. People's latent anger against corruption. II. Shambhu's moral courage. III. Hungry media looking to raise issues. IV. Rising income level. In your opinion, which combination of the above statements is the most unlikely reason for Shambhu's initial success?",
+      "choices": {
+        "a": "I, II and IV",
+        "b": "III and IV",
+        "c": "I and III",
+        "d": "I, III and IV",
+        "e": "All of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "cause_effect_analysis",
+      "subtopic_name": "Cause and Effect Analysis",
+      "body": "Which of the following could be the most likely reason for decline in public support for Shambhu?",
+      "choices": {
+        "a": "The common man had become sick and tired of Government's inaction against rising corruption",
+        "b": "Shambhu was old and he lacked the energy to garner the same support that he enjoyed from the media and the public in the initial stages",
+        "c": "The general public may have realised that Shambhu was focusing too much on 'indirect involvement' in past incidences of corruption. Common men found it difficult to live up to the high standards set by Shambhu",
+        "d": "Shambhu's colleagues were misleading him",
+        "e": "Shambhu came from a village, while most of his supporters were city dwellers"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "decision_sequence",
+      "subtopic_name": "Decision Sequence",
+      "body": "Consider the following solutions to the problem mentioned above I. Marathe should transfer Kale to Chennai office. II. Marathe should try and verify the facts from other sources as well. III. Kale should be sacked. IV. Kale should be demoted. V. Marathe should suggest Kale to visit a family counselor. Which of the following would be the most appropriate sequence of decisions in terms of immediacy starting from immediate to a longer term solution?",
+      "choices": {
+        "a": "II, I and V",
+        "b": "I, V and II",
+        "c": "II, III and IV",
+        "d": "II, V and I"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 543
+}

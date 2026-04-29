@@ -1,0 +1,323 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 62-71): Read the information given below and answer the questions that follow. There is a group of seven persons A, B, C, D, E, F and G. There are four males, three females, two married couples and three unmarried persons in the group. The seven persons are seated in a row on the bench. Their professions are: engineer, teacher, doctor, psychologist, businessman, architect and student. B is not married and another person, the psychologist, is the most intelligent. The engineer is married to the teacher, who is the least intelligent of the group. D is an architect. He is sitting on the leftmost corner. The student is sitting on the rightmost corner of the bench. The doctor is married to C. C is the second most intelligent of the group followed by her husband. The least intelligent of the group is sitting on the immediate right of D, followed by the most intelligent. There are as many more intelligent persons than the engineer as there are less intelligent. On the bench, followed by D there are three females sitting in succession. The psychologist is a female.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 57,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "position_ranking",
+      "subtopic_name": "Position and Ranking",
+      "body": "The president of the RWA is",
+      "choices": {
+        "a": "U",
+        "b": "V",
+        "c": "P",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "position_ranking",
+      "subtopic_name": "Position and Ranking",
+      "body": "The fourth-ranking person in the RWA is",
+      "choices": {
+        "a": "V",
+        "b": "P",
+        "c": "U",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "position_ranking",
+      "subtopic_name": "Position and Ranking",
+      "body": "The officer in the RWA 1. outranks the Secretary II. outranks the Convenor III. is outranked by the Organiser IV. is outranked by the Cashier",
+      "choices": {
+        "a": "I and IV",
+        "b": "III and I",
+        "c": "I and II",
+        "d": "III and IV",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "position_ranking",
+      "subtopic_name": "Position and Ranking",
+      "body": "If U is ordered to vacate his house and move to the house occupied by a person two places lower to him, which of the following is true? 1) The officer has to vacate his house for R. 2) The organiser and the convenor exchange houses. 3) The Cashier and U exchange houses. 4) V has to vacate his house for R. 5) All of these",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "position_ranking",
+      "subtopic_name": "Position and Ranking",
+      "body": "How many of the RWA outrank the convenor?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "None",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is the student? The student is more intelligent than the architect, who is more intelligent than the person Neither A nor G is a female. Who is sitting on the immediate right of D?",
+      "choices": {
+        "a": "F",
+        "b": "E",
+        "c": "C",
+        "d": "Cannot say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "What is the profession of A?",
+      "choices": {
+        "a": "Engineer",
+        "b": "Doctor",
+        "c": "None of these",
+        "d": "Teacher"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Can I say what is the profession of F?",
+      "choices": {
+        "a": "Doctor",
+        "b": "Engineer",
+        "c": "Teacher",
+        "d": "Can I say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which one are sitting together?",
+      "choices": {
+        "a": "David E",
+        "b": "F",
+        "c": "Can I say",
+        "d": "Teacher and businessman"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "The engineer is not more intelligent than 1) Student 2) Architect 3) Teacher 1) Businessman 3) Can say",
+      "choices": {
+        "a": "Engineer and doctor",
+        "b": "Can I say",
+        "c": "The engineer is not more intelligent than",
+        "d": "Teacher"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which is the married couple?",
+      "choices": {
+        "a": "A-F",
+        "b": "B-F",
+        "c": "None of these",
+        "d": "G-F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of these cannot be a married couple?",
+      "choices": {
+        "a": "A-F",
+        "b": "G",
+        "c": "None of these",
+        "d": "G-F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is the student?",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "D",
+        "d": "Can't say",
+        "e": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of these represents the correct order of intelligence (in the decreasing sequence)?",
+      "choices": {
+        "a": "BF",
+        "b": "CF",
+        "c": "None of these",
+        "d": "Bt"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 71,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the given statement is definitely superfluous?",
+      "choices": {
+        "a": "BCF",
+        "b": "vt",
+        "c": "w",
+        "d": "Information given below and then answer"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 327
+}

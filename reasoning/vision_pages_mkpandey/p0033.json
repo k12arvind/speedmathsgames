@@ -1,0 +1,116 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Assumptions",
+  "passages": [
+    {
+      "passage_text": "Type III : Exercise 3C\nDirections: Each of the following items asks you to pick up the hidden premise(assumption) of an argument. Mark the best answer.",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "hidden_assumption",
+      "subtopic_name": "Hidden Assumption Identification",
+      "body": "Edward was just elected president of the Student Senate, so he must be a senior.\nThe statement above makes which of the following assumptions?",
+      "choices": {
+        "a": "Only seniors can be members of the Student Senate.",
+        "b": "Only seniors can be president of the Student Senate.",
+        "c": "Only members of the Student Senate can be seniors.",
+        "d": "II only",
+        "e": "I, II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "hidden_assumption",
+      "subtopic_name": "Hidden Assumption Identification",
+      "body": "If these cabinets were built after 1975, they were not made of oak plywood.\nThe statement above depends upon which of the following assumptions?",
+      "choices": {
+        "a": "All cabinets made after 1975 were made of oak plywood.",
+        "b": "All cabinets made in 1975 or earlier were made of oak plywood.",
+        "c": "Only cabinets made of oak plywood were built in 1975 or earlier.",
+        "d": "No cabinets made in 1975 or earlier were made of oak plywood.",
+        "e": "No cabinets made after 1975 were made of oak plywood."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "hidden_assumption",
+      "subtopic_name": "Hidden Assumption Identification",
+      "body": "Max: \"Every painting done by Picasso is a masterpiece.\"\nErnst: \"That's not true. Several masterpieces by David and Delacroix hang in the Louvre in Paris.\"\nErnst apparently assumes that Max said that",
+      "choices": {
+        "a": "only masterpieces were painted by Picasso.",
+        "b": "all masterpieces were painted by either David or Delacroix.",
+        "c": "only masterpieces by Picasso hang in the Louvre.",
+        "d": "only masterpieces by David and Delacroix hang in the Louvre.",
+        "e": "some of Picasso's masterpieces do not hang in the Louvre."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "hidden_assumption",
+      "subtopic_name": "Hidden Assumption Identification",
+      "body": "Students at Duns Scotus just got a better education than students at Erasmus High because the grade point average of students at Duns Scotus High is higher than that of students at Erasmus High.\nThe claim above depends upon which of the following assumptions?",
+      "choices": {
+        "a": "The average grade earned by students is a good measure of the quality of education that a student receives.",
+        "b": "Extracurricular activities at Duns Scotus High are given more emphasis than at Erasmus High.",
+        "c": "The grading standards at the two high schools are roughly the same.",
+        "d": "I only",
+        "e": "I, II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "hidden_assumption",
+      "subtopic_name": "Hidden Assumption Identification",
+      "body": "A government survey released today shows that 80 per cent of the people who fly are satisfied with the service they receive from the airlines in this country. Three interviewers stood outside a major airport and asked people leaving the terminal, \"Do you have any complaints about the flight you",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": "Question text appears incomplete"
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 33
+}

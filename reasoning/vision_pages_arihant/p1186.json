@@ -1,0 +1,227 @@
+{
+  "page_type": "questions",
+  "chapter_number": 8,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In each question below are four statements followed by two conclusions numbered I and II. You have to take the four given statements to be true even if they seem to be at variance with commonly known facts and then decide which of the given conclusions logically follows from the four statements disregarding commonly known facts. Give answer (a) if only Conclusion I follows (b) if only Conclusion II follows (c) if either Conclusion I or II follows (d) if neither Conclusion I nor II follows (e) if both Conclusions I and II follow",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some schools are colleges. Some colleges are universities. All universities are institutes. All institutes are classes. Conclusions: I. Some colleges are classes. II. All universities are classes.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some umbrellas are raincoats. All raincoats are shirts. No shirt is a blazer. Some blazers are suits. Conclusions: I. Some shirts are umbrellas. II. Some suits are raincoats.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some computers are boards. Some boards are chalks. All chalks are bulbs. No bulb is tubelight. Conclusions: I. Some bulbs are computers. II. No chalk is a tubelight.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All doors are floors. Some floors are tiles. All tiles are paints. Some paints are stones. Conclusions: I. Some floors are paints. II. Some doors are tiles.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some leaves are petals. Some petals are flowers. All flowers are fruits. Some fruits are nuts. Conclusions: I. Some nuts are flowers. II. No nut is flower.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All pictures are paintings. All paintings are photographs. Some photographs are designs. Some designs are movies. Conclusions: I. Some paintings are designs. II. Some photographs are movies.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some tablets are capsules. All capsules are syrups. Some syrups are medicines. All medicines are powders. Conclusions: I. Some syrups are powders. II. Some syrups are tablets.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All jungles are trees. All trees are roads. All roads are houses. All houses are buildings. Conclusions: I. All trees are houses. II. Some buildings are roads.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All tablets are packets. No packet is bag. Some bags are toys. All toys are puppets. Conclusions: I. Some puppets are tablets. II. Some puppets are bags.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some desks are tables. Some tables are chairs. Some chairs are benches. Some benches are cots. Conclusions: I. Some chairs are desks. II. Some cots are tables.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1186
+}

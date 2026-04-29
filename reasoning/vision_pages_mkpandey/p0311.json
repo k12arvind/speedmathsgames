@@ -1,0 +1,121 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: Read the following informations and answer the questions that follow it. Six students P, Q, R, S, T, U and V take a series of tests. The following students get the same marks. P always scores more than F. Q always scores more than O. R always scores more than N. Each time either R scores the highest and T gets the least, or alternatively Q scores the highest and U or O scores the least.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score-based Ranking",
+      "body": "If S is ranked sixth and Q is ranked fifth, which of the following can be true?",
+      "choices": {
+        "a": "U is ranked first or fourth",
+        "b": "R is ranked second or third",
+        "c": "P is ranked second or fifth",
+        "d": "R is ranked third or fourth",
+        "e": "T is ranked fourth or fifth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score-based Ranking",
+      "body": "If V should be ranked not lower than fourth, which of the following must be true?",
+      "choices": {
+        "a": "S is ranked second and Q is ranked fifth",
+        "b": "Third",
+        "c": "Fourth",
+        "d": "Fifth",
+        "e": "Sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score-based Ranking",
+      "body": "If R is ranked third and T is ranked sixth, which of the following can be true?",
+      "choices": {
+        "a": "U is ranked third",
+        "b": "T is ranked sixth",
+        "c": "P is ranked sixth",
+        "d": "V is ranked fourth",
+        "e": "U is ranked sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score-based Ranking",
+      "body": "If S is ranked second, which of the following can be true?",
+      "choices": {
+        "a": "U gets more than V",
+        "b": "V gets more than R",
+        "c": "P gets more than V",
+        "d": "T gets more than Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score-based Ranking",
+      "body": "If V is ranked fifth, which of the following must be true?",
+      "choices": {
+        "a": "Q scores the highest",
+        "b": "R is ranked second",
+        "c": "T is ranked third",
+        "d": "Q is ranked fourth",
+        "e": "U scores the least"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 311
+}

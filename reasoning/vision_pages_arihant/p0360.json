@@ -1,0 +1,80 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Venn Diagram",
+  "passages": [],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_representation",
+      "subtopic_name": "Relationship Representation",
+      "body": "Which of the following diagrams best depicts the relationship between Professor, Author and Infants?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "independent_groups",
+      "subtopic_name": "Independent Groups",
+      "body": "If L and M are two independent groups, then which of the following does not represent them?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "geographical_relationship",
+      "subtopic_name": "Geographical Relationship",
+      "body": "Which of the following represents a correct relationship between India and Uttar Pradesh?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 13,
+      "solution": "(d) Some professors can be authors and some authors can be professors but the class of infants is entirely different from these two. This relationship can be expressed as given in option (d)."
+    },
+    {
+      "number": 14,
+      "solution": "(c) Option (c) has some part common to both the circles. It means both the groups represented by the two circles have certain relationship between them and hence cannot be independent from each other."
+    }
+  ],
+  "answers": [],
+  "_page": 360
+}

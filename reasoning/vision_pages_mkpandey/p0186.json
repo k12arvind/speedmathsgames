@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: In each question below, there are two or three statements followed by four conclusions numbered I, II, III and IV. You have to take the given statements to be true even if they seem to be at variance with commonly known facts and then decide which of the given conclusions logically follow from the given statements.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 81,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some clips are small. All small are big. Conclusions: I. All big are small. II. All small are clips.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All windows are doors. No door is a wall. Conclusions: I. No window is a wall. II. No wall is a door.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All stones are diamonds. Some diamonds are pearls. Conclusions: I. Some pearls are stones. II. All diamonds are pearls.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 84,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All scholars are genius. No woman is a scholar. Conclusions: I. No woman is a genius. II. All genius are men.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 85,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some rivers are lakes. All lakes are ponds. Conclusions: I. All ponds are lakes. II. Some rivers are ponds.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some flies are ants. All insects are ants. Conclusions: I. All flies are ants. II. Some ants are insects.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some cups are cups. Some cups are black. Conclusions: I. Some blacks are not cups. II. Some blacks are cups.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 186
+}

@@ -1,0 +1,123 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Counting of Figures",
+  "passages": [
+    {
+      "passage_text": "If in the given figure, no two adjacent areas can have the same colour, find the least number of colour to be needed to fill the figure/areas.",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "squares_formation",
+      "subtopic_name": "Squares Formation",
+      "body": "In the adjoining figure, if the centres of all the circles are joined by horizontal and vertical lines, then find the number of squares that can be formed.",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "1"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "coloring_figures",
+      "subtopic_name": "Coloring Figures",
+      "body": "",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "coloring_figures",
+      "subtopic_name": "Coloring Figures",
+      "body": "",
+      "choices": {
+        "a": "8",
+        "b": "4",
+        "c": "3",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "coloring_figures",
+      "subtopic_name": "Coloring Figures",
+      "body": "",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Clearly shown that, total number of circles = 7"
+    },
+    {
+      "number": 2,
+      "solution": "Clearly shown that, total number of circles = 8"
+    },
+    {
+      "number": 3,
+      "solution": "Clearly shown that, total number of circles = 6"
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "c"
+    },
+    {
+      "number": 2,
+      "correct": "b"
+    },
+    {
+      "number": 3,
+      "correct": "c"
+    }
+  ],
+  "_page": 836
+}

@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 23,
+      "solution": "Passage: All those who have pride for their country and love for their motherland will not tolerate the remarks of the journalist.\n1st Inference: Some people will find the remarks of the journalist intolerable.\nExplanation: We may safely assume that some (may be not all) people do love their country and motherland. Now, all such people will not tolerate the remarks of the journalist. Hence, it can be inferred that the inference is definitely true.\n2nd Inference: Everyone will find the remarks of the journalist intolerable.\nExplanation: This inference would have been definitely true, provided it could be assumed that everyone has pride for their country and love for their motherland. But, this is not the case. Although this point is debatable, we may assume that there are some who have no feelings for their motherland. In this light, the given inference is definitely false."
+    },
+    {
+      "number": 24,
+      "solution": "Passage: Although the government has raised taxes, the tax revenue has dropped.\nInference: A rise in taxes usually results in a rise in tax revenue.\nExplanation: The use of the word 'although' implies that tax revenue was expected to rise after the raise in taxes. This means that it was assumed that usually tax rise implies a rise in tax revenue. This means that the given inference is definitely true.\n2nd Inference: A raise in taxes always results in a rise in tax revenue.\nExplanation: By the very background this inference has to be definitely false. The given passage itself, where the taxes were raised and yet the revenue dropped, contradicts it.\n3rd Inference: Sometimes, the collections drop when taxes are raised.\nExplanation: By the very background this inference has to be definitely true as the given passage itself provides supporting evidence.\n4th Inference: The collections always drop when taxes are raised.\nExplanation: Although the given passage gives supporting evidence by giving one case where collections dropped when taxes were raised, we cannot take this inference to be true. The reason is the use of the word 'although' in the passage. This key word implies that it was assumed that usually a rise in taxes results in a rise in revenue. The inference is definitely false."
+    },
+    {
+      "number": 25,
+      "solution": "Passage: Because the government raised taxes, the collections improved.\nInference: Usually, when taxes are raised, collections improve.\nExplanation: Definitely true.\n2nd Inference: Sometimes, collections drop when taxes are raised.\nExplanation: Uncertain or Data Inadequate. The passage says that collections improved because taxes were raised, but there is no hint about its certainty, that is, no hint is given that the collections always improve when taxes are raised. They may (or may not) drop. Hence, data inadequate.\n3rd Inference: The collections had to improve as the taxes were raised.\nExplanation: Definitely false. This case is slightly different from the previous one. Here, the use of the emphatic words 'had to' implies that tax raise 'has to' result in a rise in collections; it is an absolute must. Hence, the given inference is definitely false."
+    },
+    {
+      "number": 26,
+      "solution": "Passage: The collections may improve only if the government raises taxes."
+    }
+  ],
+  "answers": [],
+  "_page": 65
+}

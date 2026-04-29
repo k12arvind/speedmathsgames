@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "In class of 45 students rank of Ayush is 15 from top, then rank of Ayush from bottom is\n(a) 30 (b) 32 (c) 31 (d) 35\n\nSol. (c)\n\nAyush's rank from the bottom = Total number of students – Rank of Ayush from top + 1 = 45 – 15 + 1 = 31"
+    },
+    {
+      "number": 7,
+      "solution": "In a row of 40 girls, when Komal was shifted to her left by 4 places, her place from the left end of the row became 10. What is the position of Swati from the right end of the row, if Swati was three places to the right of Komal's original position?\n(a) 22 (b) 23 (c) 25 (d) 24 (e) None of these\n\nSol. (d) On shifting 4 places to the left, Komal is 10th from the left end of the row. Thus, Komal's original position was 14th from the left end.\nSwati is 3 places to the right of Komal's original position. Clearly, Swati is 17th from the left end.\nThis can be easily understood from the following figure\n\nNow, Swati's position from right = (Total number of girls – Swati's position from left) + 1 = 40 – 17 + 1 = 23 + 1 = 24\nSo, Swati is 24th from the right end of the row."
+    },
+    {
+      "number": 8,
+      "solution": "In a class of students, Sandeep is 25th from top and 32nd from bottom in a class, then total number of students in the class is\n(a) 56 (b) 50 (c) 57 (d) 58\n\nSol. (a) The information given in the question can be represented as shown below\n\nTotal number of persons in a row or queue = (Position (or rank) of a person from the left end (or top or front) ) + Position (or rank) of the person from the right end (or bottom or last) –1."
+    }
+  ],
+  "answers": [],
+  "_page": 297
+}

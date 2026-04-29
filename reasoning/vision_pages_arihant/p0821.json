@@ -1,0 +1,28 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Horizontal lines = AB + HF + DC = 3\nVertical lines = AD + EG + BC = 3\nSlant lines = AC + BD = 2\n∴ Total lines = 3 + 3 + 2 = 8"
+    },
+    {
+      "number": 2,
+      "solution": "Smallest triangles = ΔAOD, ΔAOE, ΔCOE, ΔBOD, ΔBOC = 5\nTriangles formed with two triangles\n= ΔAOC (ΔAOE + ΔCOE ), ΔAOB (ΔAOD + ΔBOD), ΔBCD (ΔBOD + ΔBOC),\nΔBCE (ΔBOC + ΔCOE ) = 4\nTriangles formed with three triangles\n= ΔACD (ΔAOD + ΔAOE + ΔCOE ), ΔABE (ΔBOD + ΔAOD + ΔAOE ) = 2\nLargest triangle = ΔABC = 1\n∴ Total triangles = 5 + 4 + 2 + 1 = 12"
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "b"
+    },
+    {
+      "number": 2,
+      "correct": "d"
+    }
+  ],
+  "_page": 821
+}

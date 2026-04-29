@@ -1,0 +1,211 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 93-97): Study the following information carefully and answer the questions given below it: The strongest six boys A, B, C, D, E and F and the tallest five girls P, Q, R, S and T, a team of six is to be selected under the following conditions: 1) A and D have to be together. 2) C cannot go with S. 3) S and T have to be together. 4) A cannot be teamed with E. 5) D cannot go with P. 6) B and R have to be together. 7) C and Q have to be together.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Directions (Q. 94-102): Read the following information carefully and answer the questions given below it: There are six persons A, B, C, D, E and F in a school. Each of the teachers teaches two subjects, one compulsory subject and the other optional subject. D's optional subject was History and compulsory subject was Chemistry but D didn't have it as compulsory. E and F have Physics as one of their subjects. F's compulsory subject is Mathematics which is an optional subject of both C and E. History and English are A's subjects but in terms of compulsory and optional subject, they are just reverse of those of D's. Chemistry is an optional subject of only one of them. The only female teacher in the school has English as her compulsory subject.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 92,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "subject_analysis",
+      "subtopic_name": "Subject Analysis",
+      "body": "Who is intelligent in Political Science, History and Biology?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 93,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If there are five boys in the team, the lone girl member is",
+      "choices": {
+        "a": "P",
+        "b": "Q",
+        "c": "R",
+        "d": "S",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 94,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If including P, Q, C, the team has three girls, the members are",
+      "choices": {
+        "a": "BCFQR",
+        "b": "ADEQST",
+        "c": "AFQRST",
+        "d": "BEFQR",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 95,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If the team excluding A consists of four boys, the members of the team other than C are",
+      "choices": {
+        "a": "ADEQR",
+        "b": "ADFQR",
+        "c": "DEFEQ",
+        "d": "BEFRQ",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 96,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If four members including E have to be boys, the members other than E are",
+      "choices": {
+        "a": "ABCQRS",
+        "b": "AEFQST",
+        "c": "BCFQR",
+        "d": "ACDFQ",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 97,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If four members have to be girls, the members of the team are",
+      "choices": {
+        "a": "ADFPRST",
+        "b": "ABCQRST",
+        "c": "BCFQRT",
+        "d": "None of these",
+        "e": null
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 98,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "subject_assignment",
+      "subtopic_name": "Subject Assignment",
+      "body": "What is C's compulsory subject?",
+      "choices": {
+        "a": "History",
+        "b": "Physics",
+        "c": "Chemistry",
+        "d": "English",
+        "e": "Mathematics"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 99,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "subject_assignment",
+      "subtopic_name": "Subject Assignment",
+      "body": "Who is a female member in the group?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 100,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "subject_assignment",
+      "subtopic_name": "Subject Assignment",
+      "body": "Which of the following has the same compulsory and optional subject as those of F's?",
+      "choices": {
+        "a": "D",
+        "b": "B",
+        "c": "A",
+        "d": "C",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 336
+}

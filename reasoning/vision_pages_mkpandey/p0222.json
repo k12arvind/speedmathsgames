@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "This means that the words are being arranged (in alphabetically increasing order) as per last step. In this, I6 replaces I5 and goes in the last place. I5 is the largest number. In the second step, I5 replaces at I3 to get first and last place and I5 is the second largest number. This means that the numbers are being arranged (in increasing order). Look at the first place. In this, af (which is alphabetically the first word of the sentence) moves to the first place. And after that words are 'pushed' to the next place."
+    },
+    {
+      "number": 2,
+      "solution": "Similarly, in 2nd step, her (which is the second word after of in the sentence) moves to the second place. Hence this is also a case of arrangement. Here, first step, war goes to the last place and remaining letters are 'pushed' to the left. In second step, at goes to the first place and remaining letters are 'pushed' to its right. In the third step, looking goes to the second last place and remaining letters are 'pushed' to the left. Note that war and looking are alphabetically the last and the second last words respectively while at is the first word of the sentence. This means that the sentence is basically being reorganised in alphabetically increasing order."
+    },
+    {
+      "number": 3,
+      "solution": "Please note that arrangement can be done in many ways leading to the same result. We can pick the alphabetically first, second words and put them at the first, second place (let them be the smallest and largest and second largest... numbers and put them in the last, second last places (as in Q5), or we can say that the word in the last place, then put the smallest at the first place (as in Q7). Specially note how the same objective of arranging in alphabetical order is achieved in Q7 and Q9 in two different ways."
+    },
+    {
+      "number": 4,
+      "solution": "Q6, Q8 Shifting: In first step, first two words are interchanged and remaining words are unchanged. (Let us call it operation One). In second step, first two words remain unchanged, third word becomes fourth, fourth becomes fifth, fifth becomes third. (Let us call it Operation Two). Then Operation One and Operation Two follow alternately."
+    },
+    {
+      "number": 5,
+      "solution": "So here, we have words being shifted from particular places to particular places according to a fixed rule; repeatedly. Therefore, it is shifting. In first step, third word becomes first, first becomes second, second becomes third, and the fourth and fifth words interchange (Let us call it operation one). In second step, interchanging is done on a fixed pattern) repeatedly. Here on, Therefore, it is shifting."
+    },
+    {
+      "number": 6,
+      "solution": "In first step, third and fifth numbers interchange and remaining numbers remain unchanged. (Let us Call it operation one). In second step, first and third words interchange, second and fourth words interchange while the fifth word remains unchanged. (Let us call it operation two). These two operations of shifting goes on repeatedly. Hence, it is a case of shifting."
+    }
+  ],
+  "answers": [],
+  "_page": 222
+}

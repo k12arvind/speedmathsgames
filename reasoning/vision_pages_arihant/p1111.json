@@ -1,0 +1,30 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "\"Now the question of the freedom of the press becomes an important question in view of the fact that the press vast potentialities for both good and evil. The press is as much a passion rouser as it is a peacemaker. In the days of discords and dissensions, it bars the door to reconciliation or at least the quarrel is prolonged beyond its limits. Knowledge is not always good and sometimes ignorance is bliss.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "There is more bad news on food front. It now appears certain that there will be a shortfall of about 9 million tonnes in the food production in the current Kharif season, which in turn means 5 million tonnes less than the production achieved in the last Kharif season. However, rice procurement may only be partially affected, since Paschim Bangal and Andhra Pradesh have had sufficient rainfall while Punjab, the major contributor to the central pool, is less dependent on rainfall. Still the overall availability of rice may go down by more than 4 million tonne. There may be worse news ahead.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "Probably False\nThis is similar to the one applied in the case of probably true. Whenever, the conclusion is not definitely false it is so because there exists little chance of its being true. In such cases, the conclusion is said to be probably false. Here, the swing seems to be towards falsity and the conclusion is termed probably false.\n\nPassage 4\nConclusion: Knowledge is good.\nSol. Though the conclusion contradicts the statement of the passage that knowledge is not always good, yet the conclusion cannot be taken for as definitely false. All the same, the use of word 'always' in the statement reduces the chance of the conclusion being definitely true and these is an apparent swing towards falsity. Hence, the given conclusion is probably false."
+    },
+    {
+      "number": 5,
+      "solution": "Data Inadequate\nData inadequate is one of the answer options given in the question. It means the candidate doesn't have enough information to arrive at a conclusion.\n\nPassage 5\nConclusion: Last year, there was deficit production of rice by 5 million tonnes.\nSol. It is only given in the passage that this year, there is 5 million tonnes less production than the last season."
+    }
+  ],
+  "answers": [],
+  "_page": 1111
+}

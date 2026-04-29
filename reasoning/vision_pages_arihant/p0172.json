@@ -1,0 +1,59 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 44,
+      "solution": "As, A = 1 and A/J, N/T → 20. Similarly, J/B, A/T → 20. 1 + 14 + 20 = 35, 16 + 1 + 20 = 37. ∴ PAT ⇒ 37"
+    },
+    {
+      "number": 45,
+      "solution": "As, E = 5 and E/Y, V/E, N → 5, 22, 5, 14. 5 + 22 + 5 + 14 = 46. Similarly, R/N, T/E, R → 14, 20, 5, 18. 5 + 14 + 20 + 5 + 18 = 62. ∴ ENTER = 62"
+    },
+    {
+      "number": 46,
+      "solution": "As, A = 1 and I/O, T → 12, 15, 20. Similarly, M/A, T → 13, 1, 20. 12 + 15 + 20 = 47, 13 + 1 + 20 = 34. ∴ MAT ⇒ 34"
+    },
+    {
+      "number": 47,
+      "solution": "As, M = 13 and M/A → 13, 1, 20. Similarly, W/A, X → 23, 1, 24. 13 + 1 + 20 = 34, 23 + 1 + 24 = 48. ∴ WAX ⇒ 48"
+    },
+    {
+      "number": 48,
+      "solution": "As, E = 5 and A/M, E/N, D/M, E/N, T → 1, 13, 5, 14, 4, 13, 5, 14, 20. 1 + 13 + 5 + 14 + 4 + 13 + 5 + 14 + 20 = 89. Similarly, S/E, C/R, E/T, A/R, Y → 19, 5, 3, 18, 5, 20, 1, 18, 25. 19 + 5 + 3 + 18 + 5 + 20 + 1 + 18 + 25 = 114. ∴ SECRETARY ⇒ 114"
+    },
+    {
+      "number": 49,
+      "solution": "As, A = 1 and A/N → 22, 1, 14. Similarly, F/A, T → 6, 1, 20. 22 + 1 + 14 = 37, 6 + 1 + 20 = 27. ∴ FAT = 27"
+    },
+    {
+      "number": 50,
+      "solution": "As, C = 3 and P/O, L/I, S/H → 16, 15, 12, 9, 19, 8. 16 + 15 + 12 + 9 + 19 + 8 = 79. Similarly, P/O, I/N, T/E, R → 16, 15, 9, 14, 20, 5, 18. 16 + 15 + 9 + 14 + 20 + 5 + 18 = 97. ∴ POINTER ⇒ 97"
+    },
+    {
+      "number": 51,
+      "solution": "As, A = 1 and A/N, D → 1, 14, 4. Similarly, C/A, T → 3, 1, 20. 1 + 14 + 4 = 56, 3 + 1 + 20 = 60. ∴ CAT ⇒ 60"
+    },
+    {
+      "number": 52,
+      "solution": "As, P = 16 and P/U, T → 16, 21, 20. Similarly, P/I, C/K → 16, 9, 3, 11. 16 + 21 + 20 = 6720, 16 + 9 + 3 + 11 = 4752. ∴ PICK ⇒ 4752"
+    },
+    {
+      "number": 53,
+      "solution": "As, P = 16 and T/A, P → 20, 1, 16. Similarly, C/U, P → 3, 21, 16. 20 + 1 + 16 = 37, 3 + 21 + 16 = 40. ∴ CUP ⇒ 40"
+    },
+    {
+      "number": 54,
+      "solution": "As, N = 14 and N/O, T → 14, 15, 20. 14 + 15 + 20 = 4200. Similarly, N/A, M/E → 14, 1, 13, 5. 14 + 1 + 13 + 5 = 910. ∴ NAME ⇒ 910"
+    },
+    {
+      "number": 55,
+      "solution": "As, E = 5 and H/E, N → 8, 5, 14. Similarly, P/E, T → 16, 5, 20. 8 + 5 + 14 = 27, 16 + 5 + 20 = 41. ∴ PET ⇒ 41"
+    }
+  ],
+  "answers": [],
+  "_page": 172
+}

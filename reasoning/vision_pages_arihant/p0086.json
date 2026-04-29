@@ -1,0 +1,180 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Classification",
+  "passages": [],
+  "questions": [
+    {
+      "number": 48,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_numbers",
+      "subtopic_name": "Classification Based on Odd Numbers",
+      "body": "Find the odd one out of the given options.",
+      "choices": {
+        "a": "145",
+        "b": "158",
+        "c": "151",
+        "d": "143"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "prime_numbers",
+      "subtopic_name": "Classification Based on Prime Numbers",
+      "body": "Find out the odd one.",
+      "choices": {
+        "a": "19",
+        "b": "17",
+        "c": "13",
+        "d": "12"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "composite_numbers",
+      "subtopic_name": "Classification Based on Non-Prime (Composite) Numbers",
+      "body": "Find the number different from others.",
+      "choices": {
+        "a": "345",
+        "b": "133",
+        "c": "225",
+        "d": "216"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "squares",
+      "subtopic_name": "Classification Based on Squares",
+      "body": "Find the odd one out of the numbers given below.",
+      "choices": {
+        "a": "100",
+        "b": "9",
+        "c": "225",
+        "d": "120"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "cubes",
+      "subtopic_name": "Classification Based on Cubes of Numbers",
+      "body": "Find the odd one.",
+      "choices": {
+        "a": "216",
+        "b": "33",
+        "c": "8",
+        "d": "64"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "divisibility",
+      "subtopic_name": "Classification Based on Divisibility/Multiplication",
+      "body": "Find the odd one.",
+      "choices": {
+        "a": "75",
+        "b": "45",
+        "c": "25",
+        "d": "15"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "divisibility",
+      "subtopic_name": "Classification Based on Divisibility/Multiplication",
+      "body": "Find the odd one.",
+      "choices": {
+        "a": "40",
+        "b": "20",
+        "c": "30",
+        "d": "33"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 48,
+      "solution": "All except '158' are odd numbers."
+    },
+    {
+      "number": 49,
+      "solution": "All except '12' are prime numbers."
+    },
+    {
+      "number": 50,
+      "solution": "All except '133' are non-prime numbers."
+    },
+    {
+      "number": 51,
+      "solution": "All except '120' are squares of natural numbers."
+    },
+    {
+      "number": 52,
+      "solution": "All except '33' are cubes of natural numbers."
+    },
+    {
+      "number": 53,
+      "solution": "All except '25' are divisible by 3."
+    },
+    {
+      "number": 54,
+      "solution": "Except (d) all numbers are multiple of 10."
+    }
+  ],
+  "answers": [],
+  "_page": 86
+}

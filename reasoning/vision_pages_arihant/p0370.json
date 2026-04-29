@@ -1,0 +1,146 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Venn Diagram",
+  "passages": [
+    {
+      "passage_text": "Study the following diagram to answer these questions.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_interpretation",
+      "subtopic_name": "Basic Interpretation",
+      "body": "Find out the number that lies only inside the triangle.",
+      "choices": {
+        "a": "4",
+        "b": "3",
+        "c": "8",
+        "d": "1"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "intersection_analysis",
+      "subtopic_name": "Intersection Analysis",
+      "body": "What are the numbers that lie inside any two figures?",
+      "choices": {
+        "a": "5, 1",
+        "b": "4, 3, 1",
+        "c": "8, 3",
+        "d": "4, 9, 2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "universal_intersection",
+      "subtopic_name": "Universal Intersection",
+      "body": "Find out the number that lies inside all the figures.",
+      "choices": {
+        "a": "5",
+        "b": "8",
+        "c": "9",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "logical_statements",
+      "subtopic_name": "Logical Statements",
+      "body": "See the following diagram carefully to answer the question that follows. Which of the following statements is correct according to the diagram given above?",
+      "choices": {
+        "a": "A and B lie in all the three figures",
+        "b": "E, A, B and C lie in all the three figures",
+        "c": "F, C, D, B and A lie in all the three figures",
+        "d": "Only B lies in all the three figures"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "classification_problems",
+      "subtopic_name": "Classification Problems",
+      "body": "See the given diagram and then find out the youth who does job but not educated.",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "6",
+        "d": "7"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "academic_subjects",
+      "subtopic_name": "Academic Subjects Classification",
+      "body": "Identify the region that represents students who study Biology and computer but not Mathematics.",
+      "choices": {
+        "a": "6",
+        "b": "2",
+        "c": "7",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 27,
+      "solution": "Number 2 represents educated women who neither have Government job nor have private job because it lies in the space which is common to square and circle."
+    },
+    {
+      "number": 28,
+      "solution": "Ratio of drinkers = 15 out of 30 = 15/30 = 1/2 nd part of the whole. This condition is best depicted by the figure given in option (b)."
+    }
+  ],
+  "answers": [],
+  "_page": 370
+}

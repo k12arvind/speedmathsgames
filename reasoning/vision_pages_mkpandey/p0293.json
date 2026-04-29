@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "Thus, the simple rule to derive a conclusion from a combined inequality is: make the common term disappear.\nEx. 5: Derive a conclusion from the following combined inequality:\n(i) x > y > z\nSoln: (i) x > z\n(ii) x < z\nEx. 6: However, when we have '≥' signs in the combined inequality, the process is a bit more thought-provoking. For example, consider the following combined inequality.\nx ≥ y ≥ z\nHere, x is either greater than y or equal to y. Therefore, the minimum case for x is equal to y.\nBut 'y' is always greater than z. (because even when x attains its least value it is equal to y which is always greater than z). Therefore, x will always be greater than z). Hence, the inequality as conclusion is:\nx > z"
+    },
+    {
+      "number": 7,
+      "solution": "Ex. 7: Now, consider the combined inequality\nx > y ≥ z\nHere, x is always greater than y and y is either greater than z or equal to z.\nIf 'When y is greater than z, x will obviously be greater than z. Even when y is equal to z, x will be greater z because x is always greater than y.\nHence, in all cases, our conclusion is:\nx > z"
+    },
+    {
+      "number": 8,
+      "solution": "Ex. 8: Now, consider the combined inequality\nx ≥ y ≥ z.\nHere, x is either greater than y or equal to y. When x is greater than y we have: x > y ≥ z which gives the conclusion x > z... (a) [see Ex. 7]\nWhen x is equal to y; we have:\nx = y ≥ z which gives the conclusion x ≥ z ... (b)\nCombining conclusion (a) and (b), we have\nx ≥ z\nWhat lessons do we learn from Ex.5, 6, 7 and 8? It is pretty obvious. The lesson we learn is our Golden Rule # 3.\n\nThird Golden rule (for deriving a conclusion from a combined inequality)\nThe conclusion-inequality will have an '>' sign (or a '≥' sign) if (and only if) both the signs in the combined inequality were '>' (or '≥', as the case may be).\nTo understand this golden rule, look at examples 5, 6, 7, and 8 given above and the examples below:\nEx. 5: x > y > z\nEx. 6: x ≥ y ≥ z"
+    }
+  ],
+  "answers": [],
+  "_page": 293
+}

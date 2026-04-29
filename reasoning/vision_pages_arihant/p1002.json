@@ -1,0 +1,170 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Figure Matrix",
+  "passages": [],
+  "questions": [
+    {
+      "number": 43,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Matrix",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Matrix",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Matrix",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Matrix",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(c) In each row, the number of dots in the second figure is thrice the number in the first figure."
+    },
+    {
+      "number": 2,
+      "solution": "(c) In each row, all the three shapes i.e., triangle, square and pentagon are present."
+    },
+    {
+      "number": 3,
+      "solution": "(b) The second figure in each row is obtained by joining the lower part of first figure with its upper part."
+    },
+    {
+      "number": 4,
+      "solution": "(b) Starting with the top left figure, one line is increasing in clockwise direction. So, four lines will come in fourth part."
+    },
+    {
+      "number": 5,
+      "solution": "(c) Second figure in each row consists of first arrow of the first figure as such and the second one in an inverted form. The third figure is obtained by inverting the arrows of second figure."
+    },
+    {
+      "number": 6,
+      "solution": "(b) In each row, two, three and four similar squares are present."
+    },
+    {
+      "number": 7,
+      "solution": "(c) In each column, three figures with one circle and one square each are present in such a way that three different patterns of both the circle and square are present in all columns."
+    },
+    {
+      "number": 8,
+      "solution": "(c) As we move from left to right in each row, the figure rotates through an angle of 135° anti-clockwise at each step."
+    },
+    {
+      "number": 9,
+      "solution": "(b) In each row, from left to right, directions are changing and the quantities are either increasing or decreasing."
+    },
+    {
+      "number": 10,
+      "solution": "(c) The number of objects increases by 1 at each step from left to right in each row."
+    },
+    {
+      "number": 11,
+      "solution": "(c) Moving row wise the number of horizontal lines increases by one in each step."
+    },
+    {
+      "number": 12,
+      "solution": "(b) In each row from left to right the ratio of the number of circles is 1:2:3 or 3:2:1."
+    },
+    {
+      "number": 13,
+      "solution": "(b) The central figure of the matrix is formed by combining rest of the figures."
+    },
+    {
+      "number": 14,
+      "solution": "(c) In each row, third figure is obtained when in the second figure the first figure is placed and in the first figure again, second figure is placed reducing its size."
+    },
+    {
+      "number": 15,
+      "solution": "(c) Each row of the matrix contains one circle with two bars, one with three bars and one circle with four bars."
+    },
+    {
+      "number": 16,
+      "solution": "(b) The line inside the square moves from one corner to another, clockwise, as we move from left to right in a row."
+    },
+    {
+      "number": 17,
+      "solution": "(b) The number of each type of figures decreases by 1 at each step from left to right in each row."
+    },
+    {
+      "number": 18,
+      "solution": "(b) The increase in the number of squares follows the pattern +1 in first row, +2 in second row and +3 in third row."
+    },
+    {
+      "number": 19,
+      "solution": "(c) In each row, the number of smaller figures increases by one at each step from left to right."
+    }
+  ],
+  "answers": [],
+  "_page": 1002
+}

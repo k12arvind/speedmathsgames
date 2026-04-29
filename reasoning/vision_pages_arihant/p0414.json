@@ -1,0 +1,60 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Clocks",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "angle_between_hands",
+      "subtopic_name": "Angle Between the Hands of Clock",
+      "body": "When the minute hand covers a distance of 1h 20 min, then what is the angular distance covered by it?",
+      "choices": {
+        "a": "310°",
+        "b": "192°",
+        "c": "480°",
+        "d": "420°"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "angle_between_hands",
+      "subtopic_name": "Angle Between the Hands of Clock",
+      "body": "What is the angle traced by hour hand in15 min?",
+      "choices": {
+        "a": "7.5°",
+        "b": "8°",
+        "c": "6.5°",
+        "d": "5°"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Total minute spaces = 1h + 20 min = 60 min + 20 min = 80 min\n1 min space = 6°\n∴ 80 min spaces = 80 × 6° = 480°"
+    },
+    {
+      "number": 2,
+      "solution": "Angle traced by hour hand in 1 min = (1/2)°\n∴ Angle traced by hour hand in 15 min = 15 × 1°/2 = 7.5°"
+    }
+  ],
+  "answers": [],
+  "_page": 414
+}

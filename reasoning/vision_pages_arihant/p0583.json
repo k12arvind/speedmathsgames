@@ -1,0 +1,143 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 18,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information to answer the following questions. A number arrangement machine, when given a particular input, rearranges it following a particular rule. The following is the illustration of the input and the steps of the arrangement.",
+      "has_figure": true,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "What will be the 4th step of the following input?\nInput '24, 88, 22, 34, 81, 90, 38'",
+      "choices": {
+        "a": "30, 94, 28, 40, 87, 92, 40",
+        "b": "30, 94, 28, 40, 87, 96, 44",
+        "c": "44, 96, 87, 40, 28, 94, 30",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "The second step of a given input is 45, 27, 35, 28, 42, 15.\nWhat will be Step VII for the input?",
+      "choices": {
+        "a": "49, 31, 39, 32, 46, 19",
+        "b": "50, 31, 40, 22, 37, 19",
+        "c": "19, 46, 32, 39, 31, 49",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "In how many steps would the following arrangement be yielded by the given input?\nInput         '91, 45, 67, 51, 32, 17'\nArrangement  100, 81, 169, 36, 25, 64",
+      "choices": {
+        "a": "VI",
+        "b": "III",
+        "c": "V",
+        "d": "VII",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "What will be the Step V of the following input?\nInput '37, 48, 91, 22, 49'",
+      "choices": {
+        "a": "10, 12, 10, 4, 13",
+        "b": "4, 4, 1, 3, 1",
+        "c": "1, 3, 1, 4, 4",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "Find the Step III of the following input.\nInput '17, 50, 37, 23, 35'",
+      "choices": {
+        "a": "51, 150, 111, 69, 105",
+        "b": "8, 5, 10, 6, 8",
+        "c": "150, 51, 111, 69, 105",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "(b) (Digits sum of each number of input)²"
+    },
+    {
+      "number": 12,
+      "solution": "(c) As it is very obvious."
+    },
+    {
+      "number": 13,
+      "solution": "(a) ∵ Step V = Each number of the input/5\n∴ Each number of the input = (Step V) × 5"
+    },
+    {
+      "number": 14,
+      "solution": "(b) (1st digit - 2nd digit) of each number of the input."
+    },
+    {
+      "number": 15,
+      "solution": "(a) Product of digits of each number of the input.\nThe above example gives you an idea about the type of mathematical/arithmetical operations that can take place in such problems."
+    }
+  ],
+  "answers": [],
+  "_page": 583
+}

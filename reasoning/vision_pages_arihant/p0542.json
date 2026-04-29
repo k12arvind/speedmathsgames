@@ -1,0 +1,189 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Decision Making",
+  "passages": [
+    {
+      "passage_text": "Read the following statements\nStatements I. Online store accounted for 50% of the sales at B and C and the ratio of super market sales and book store sales is 12.\nII. Initial cost is allocated in the ratio of sales.\nIf you want to calculate the profit/loss from the different retail formats, then",
+      "has_figure": false,
+      "topic_code": "decision_making"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 10-13) Read the following caselet carefully and answer the questions that follow.\nA teacher wanted to administer a multiple choice (each question having six choices) based quiz of high difficulty level to a class of sixty students. The quiz had sixty questions. The probability of selecting the correct answer for a good student and a brilliant student was 0.2 and 0.25, respectively. The poor students had no learning advantage. The teacher did not want students to cheat but does not have time and resources to monitor. All students were seated serially in 10 rows and 6 columns.",
+      "has_figure": false,
+      "topic_code": "decision_making"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "profit_loss_analysis",
+      "subtopic_name": "Profit/Loss Analysis",
+      "body": "",
+      "choices": {
+        "a": "Statement I alone is sufficient to calculate the profit/loss",
+        "b": "Statement II alone is sufficient to calculate the profit/loss",
+        "c": "Both Statements I and II are required to calculate the profit/loss",
+        "d": "Either of the two statements is sufficient to calculate the profit/loss",
+        "e": "Neither Statement I nor Statement II is sufficient to calculate the profit/loss"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "profit_loss_calculation",
+      "subtopic_name": "Profit/Loss Calculation",
+      "body": "What is the profit/loss from 'online' sales?",
+      "choices": {
+        "a": "0",
+        "b": "-310",
+        "c": "20",
+        "d": "450",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "retail_format_analysis",
+      "subtopic_name": "Retail Format Analysis",
+      "body": "Which retail format is least profit making for B and C?",
+      "choices": {
+        "a": "Online",
+        "b": "Super market",
+        "c": "Book store",
+        "d": "All formats are loss making",
+        "e": "All formats are profit making"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "retail_format_analysis",
+      "subtopic_name": "Retail Format Analysis",
+      "body": "Which retail format gives the highest profit for B and C?",
+      "choices": {
+        "a": "Book store",
+        "b": "Super market",
+        "c": "Online",
+        "d": "All are equally profitable",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "cheating_detection",
+      "subtopic_name": "Cheating Detection",
+      "body": "Is it possible for the teacher to detect cheating without monitoring? Choose the statement that best describes your opinion.",
+      "choices": {
+        "a": "It is not at all possible, teacher will have to introduce technology, if there is no human support",
+        "b": "It is always possible but teacher has to calculate the exact answer",
+        "c": "It is possible when many students sitting next to each other have the same incorrect answers for multiple questions. However, there can be a small error in judgement",
+        "d": "It is possible when many student sitting next to each other have the same correct answers for multiple questions. However, there can be a small error in judgement",
+        "e": "It is possible only for poor students but not for good and brilliant students. However, there can be a small error in judgement"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "probability_calculation",
+      "subtopic_name": "Probability Calculation",
+      "body": "Three good students were seated next to each other. What is the probability of them having the same incorrect choice for four consecutive questions?",
+      "choices": {
+        "a": "256/390625",
+        "b": "256/3125",
+        "c": "4/3125",
+        "d": "1/3125",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "data_analysis",
+      "subtopic_name": "Data Analysis",
+      "body": "Students from four sections of a class accompanied by respective class teachers planned to go for a field trip. There were nineteen people in all. However, on the scheduled day one of the four teachers and a few students could not join the rest. Given, below are some statements about the group of people who ultimately left for the trip.\nI. Section A had the largest contingent.\nII. Section B had fewer students than section A.\nIII. Section C's contingent was smaller than section B.\nIV. Section D had the smallest contingent.\nV. The product of the number of student from each section is a multiple of 10.\nVI. The number of students from section C is more than 2.\nVII. The product of the number of students from each section is a multiple of 24.\nVIII. The largest contingent has more than 4 students.\nIX. Each section contributed different number of students.\n\nThe statements that taken together can give us the exact number of students from each section",
+      "choices": {
+        "a": "I, II, III, IV, VI",
+        "b": "I, VI, VII, IX",
+        "c": "I, II, III, IV, V, VI",
+        "d": "I, II, III, IV, VI, VII",
+        "e": "I, IV, VI, VII, IX"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "ranking_analysis",
+      "subtopic_name": "Ranking Analysis",
+      "body": "There is a lot of interest in the first five ranks for Class XI students. One student guessed the rank order as Ankita, Bhagyashree, Chanchal, Devroopa and Esha. Later upon announcement of the results, it was found that not only did he get each student out off her true position, none of the students in his ranking correctly followed her immediate predecessor. Another student guessed Devroopa, Ankita, Esha, Chanchal and Bhagyashree. Even his guess was wrong. It was found that he had got two positions correct and two students in his ranking correctly followed their immediate predecessors.\n\nWhich of the following is true about the correct rank order?",
+      "choices": {
+        "a": "Ankita got the third position",
+        "b": "Bhagyashree got the fourth position",
+        "c": "Chanchal got the second position",
+        "d": "Devroopa stood first"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 542
+}

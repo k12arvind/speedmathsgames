@@ -1,0 +1,175 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Each question given below consists of five or six statements followed by options consisting of three statements put together in a specific order. Choose the option which indicates a valid argument containing logically related statements that is, where the third statement is a conclusion drawn from the preceding two statements.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    },
+    {
+      "passage_text": "In each of the question sets below are two/three statements followed by two conclusions numbered I and II. You have to take the given statements to be true even, if they seem to be at variance from commonly known facts and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some tigers are horses. All horses are goats. All goats are dogs. Some dogs are cats. Conclusions: I. Some cats are tigers. II. Some dogs are horses. III. Some goats are tigers.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "I, II and III follow",
+        "c": "II and III follow",
+        "d": "II, III and IV follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "logical_sequence",
+      "subtopic_name": "Logical Sequence",
+      "body": "A : All synopses are poets. B : Some synopses are mentors. C : Some X are not mentors. D : All X are poets. E : All synopses are mentors. F : All synopses are X.",
+      "choices": {
+        "a": "ACB",
+        "b": "AEC",
+        "c": "FEC",
+        "d": "DFA"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "logical_sequence",
+      "subtopic_name": "Logical Sequence",
+      "body": "A : All heroines are pretty. B : Some heroines are popular. C : Sweta is pretty. D : Sweta is a popular heroine. E : Some popular girls are pretty.",
+      "choices": {
+        "a": "ABE",
+        "b": "ACD",
+        "c": "DCA",
+        "d": "EDC"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "There are three statements, followed by three conclusions, you have to determine which of these conclusion follow. Statements: All kids like to play. Some kids like ice-cream. Some kids look like their mothers. Conclusions: I. All kids who like ice-cream look like their mothers. II. Kids who like ice-cream also like to play. III. Kids who like to play do not look like their mothers.",
+      "choices": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "II and III",
+        "d": "None can be a fact"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some symbols are figures. All symbols are graphics. No graphic is a picture. Conclusions: I. Some graphics are figures. II. No symbol is a picture.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some mobiles are telephones. All telephones are pagers. No pager is a camera. Conclusions: I. Some mobiles are definitely pagers. II. No mobile is a camera.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All countries are streets. No street is flag. Some flags are avenues. Conclusions: I. Some avenues being streets is a possibility. II. Some countries are flags.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Conclusions: I. No avenue is a country. II. Some streets are flags.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1201
+}

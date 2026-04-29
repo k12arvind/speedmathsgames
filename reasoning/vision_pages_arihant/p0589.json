@@ -1,0 +1,169 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully and then answer the question given below it. A word and number arrangement machine when given on input line of words and numbers rearranges them following a particular rule in each step. The following is an illustration of input and rearrangement.\n\nInput 'Past back 32 47 19 own fear 25'\nStep I 19 past back 32 47 own fear 25\nStep II 19 past 25 back 32 47 own fear\nStep III 19 past 25 own back 32 47 fear\nStep IV 19 past 25 own 32 back 47 fear\nStep V 19 past 25 own 32 fear back 47\nStep VI 19 past 25 own 32 fear 47 back\n\nAnd Step VI is the last step.\nAs per rules followed in the above steps, find out in each of the following questions, the appropriate step for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "Study the following information carefully and answer the given questions. A word and number arrangement machine when given an input line of words and numbers rearranges them following a particular rule in each step. The following is an illustration of input and rearrangement. (All the numbers are two-digit numbers)\n\nInput 'tall 48 13 rise alt 99 76 32 wise jar high 28 56 barn'\nStep I 13 tall 48 rise 99 76 32 wise jar high 28 56 barn alt\nStep II 28 13 tall 48 rise 99 76 32 wise jar high 56 alt barn\nStep III 32 28 13 tall 48 rise 99 76 wise jar 56 alt barn high\nStep IV 48 32 28 13 tall rise 99 76 wise 56 alt barn high jar\nStep V 56 48 32 28 13 tall 99 76 wise alt barn high jar rise\nStep VI 76 56 48 32 28 13 99 wise alt barn high jar rise tall\nStep VII 99 76 56 48 32 28 13 alt barn high jar rise tall wise\n\nAnd Step VII is the last step of the above input, as the desired arrangement is obtained.\nAs per the rules followed in the above steps, find out in each of the following questions the appropriate step for the given input.\nInput 84 why sit 14 32 not best ink feet 51 27 vain 68 92 (All the numbers are two-digit numbers)",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Which of the following will be Step VI?",
+      "choices": {
+        "a": "21 win 39 tyre 46 file case 51",
+        "b": "21 win 39 tyre 46 file 51 case",
+        "c": "21 win 39 tyre file 46 51 case",
+        "d": "21 win 39 tyre 46 case file 51",
+        "e": "There will be no such step"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input 83 42 bench lower 13 upper floor 37. Which of the following will be Step III?",
+      "choices": {
+        "a": "13 upper 37 83 42 bench lower floor",
+        "b": "13 upper 37 lower 83 42 bench floor",
+        "c": "13 83 42 bench lower upper floor 37",
+        "d": "13 upper 83 42 bench lower floor 37",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step II of an input is 27 ultra open case 45 35 now 12. Which of the following is definitely the input?",
+      "choices": {
+        "a": "ultra open 27 case 45 35 now 12",
+        "b": "open case ultra 27 45 35 now 12",
+        "c": "open case 27 45 35 now 12 ultra",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input Case over 12 36 49 long ago 42. Which of the following steps will be the last but one?",
+      "choices": {
+        "a": "V",
+        "b": "VI",
+        "c": "VII",
+        "d": "VIII",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input Judge retire home 62 53 41 34 task. How many steps will be required to complete the arrangement?",
+      "choices": {
+        "a": "6",
+        "b": "5",
+        "c": "4",
+        "d": "7",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step IV of an input is 24 step 27 pick 94 85 76 bring down. How many more steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step III of an input is 17 vice 22 85 and cat oil 42. How many more steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 589
+}

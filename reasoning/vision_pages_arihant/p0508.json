@@ -1,0 +1,207 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Sitting Arrangement",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully to answer these questions.\nNIFT (PG) 2013\nI. P, Q, R, S, T, U and V are sitting along a circle facing the centre.\nII. P is between V and S.\nIII. R, who is 2nd to the right of S, is between Q and U.\nIV. Q is not the neighbour of T.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow.\nA, B, C, D, E, F and G are playing cards sitting in a circle.\nI. F is 2nd to the right of G.\nII. B is the neighbour of F but not of E.\nIII. E, the neighbour of G, is 4th to the right of G.\nIV. D is between E and A.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow.\nThe above building plan shows an office block for six officers A, B, C, D, E and F. Both B and C occupy offices to the right of the corridor (as one enters the office block) and A occupies an office to the left of the corridor. E and F occupy offices on opposite sides of the corridor but their offices do not face each other. The offices of C and D face each other. E does not have a corner office. F's office is further down the corridor than A's but on the same side.",
+      "has_figure": true,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 54,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following is a correct statement?",
+      "choices": {
+        "a": "V is between P and S",
+        "b": "S is 2nd to the left of V",
+        "c": "R is third to the left of P",
+        "d": "P is to the immediate left of S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Seating",
+      "body": "What is the position of T?",
+      "choices": {
+        "a": "Between R and V",
+        "b": "To the immediate left of V",
+        "c": "2nd to the left of R",
+        "d": "2nd to the left of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is fourth to the left of G?",
+      "choices": {
+        "a": "D",
+        "b": "E",
+        "c": "C",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is to the left of G?",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "B",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Seating",
+      "body": "Who are the neighbours of F?",
+      "choices": {
+        "a": "E and C",
+        "b": "F and B",
+        "c": "A and B",
+        "d": "C and B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "office_arrangement",
+      "subtopic_name": "Office Layout",
+      "body": "If E sits in his office and faces the corridor, whose office is to his left?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "office_arrangement",
+      "subtopic_name": "Office Layout",
+      "body": "Whose office faces A's office?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "D",
+        "d": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "office_arrangement",
+      "subtopic_name": "Office Layout",
+      "body": "Who is/are F's neighbour/(s)?",
+      "choices": {
+        "a": "Only A",
+        "b": "A and D",
+        "c": "Only C",
+        "d": "B and C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "office_arrangement",
+      "subtopic_name": "Office Layout",
+      "body": "D was heard telling someone to go further down the corridor to the last office on the right. To whose room, was he trying to direct that person?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 508
+}

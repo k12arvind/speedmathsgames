@@ -1,0 +1,90 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Circular Arrangement",
+  "passages": [
+    {
+      "passage_text": "Four ladies A, B, C and D and four gentlemen E, F, G and H are sitting in a circle around a table facing each other.\nI. No two ladies or two gentlemen are sitting side-by-side.\nII. C, who is sitting between G and E, is facing D.\nIII. F is between D and A and is facing G.\nIV. H is to the right of B.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is sitting to the left of A?",
+      "choices": {
+        "a": "E",
+        "b": "F",
+        "c": "G",
+        "d": "H"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "E is facing whom?",
+      "choices": {
+        "a": "F",
+        "b": "B",
+        "c": "G",
+        "d": "H"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who are immediate neighbours of B?",
+      "choices": {
+        "a": "G and H",
+        "b": "E and F",
+        "c": "E and H",
+        "d": "F and H"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "(b) Clearly, F is sitting to the left of A."
+    },
+    {
+      "number": 6,
+      "solution": "(d) Clearly, E is facing H."
+    },
+    {
+      "number": 7,
+      "solution": "(d) G and H are immediate neighbours of B."
+    }
+  ],
+  "answers": [],
+  "_page": 491
+}

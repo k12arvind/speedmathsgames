@@ -1,0 +1,137 @@
+{
+  "page_type": "questions",
+  "chapter_number": 5,
+  "chapter_title": "Alpha-Numeric Series",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-23) What should come in the place of question mark (?) in the following alpha-numeric series?",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alpha-Numeric Series",
+      "subtopic_code": "combined_series",
+      "subtopic_name": "Combined Alpha-Numeric Series",
+      "body": "C-3, E-5, G-7, I-9, ?, ?",
+      "choices": {
+        "a": "X-24, M-21",
+        "b": "K-11, M-13",
+        "c": "O-15, X-24",
+        "d": "M-18, K-14"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alpha-Numeric Series",
+      "subtopic_code": "combined_series",
+      "subtopic_name": "Combined Alpha-Numeric Series",
+      "body": "2B, 4C, 8E, 14H, ?",
+      "choices": {
+        "a": "22 L",
+        "b": "16 K",
+        "c": "20 L",
+        "d": "22 L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alpha-Numeric Series",
+      "subtopic_code": "combined_series",
+      "subtopic_name": "Combined Alpha-Numeric Series",
+      "body": "3F, 6G, 11I, 18L,?",
+      "choices": {
+        "a": "27P",
+        "b": "25N",
+        "c": "27Q",
+        "d": "21'O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alpha-Numeric Series",
+      "subtopic_code": "combined_series",
+      "subtopic_name": "Combined Alpha-Numeric Series",
+      "body": "P3C, R5F, T8I, V12L, ?",
+      "choices": {
+        "a": "X16O",
+        "b": "Y17O",
+        "c": "X17M",
+        "d": "X 17'O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alpha-Numeric Series",
+      "subtopic_code": "combined_series",
+      "subtopic_name": "Combined Alpha-Numeric Series",
+      "body": "1CV, 5FU, 9IT, ? 17OR",
+      "choices": {
+        "a": "11LS",
+        "b": "14JS",
+        "c": "15JS",
+        "d": "13LS"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alpha-Numeric Series",
+      "subtopic_code": "combined_series",
+      "subtopic_name": "Combined Alpha-Numeric Series",
+      "body": "C4X, F9U, I16R, ?",
+      "choices": {
+        "a": "L25P",
+        "b": "K25P",
+        "c": "L27P",
+        "d": "L25O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 244
+}

@@ -1,0 +1,114 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Statement and Arguments",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-31) In making decisions about important questions, it is desirable to be able to distinguish between 'strong' arguments and 'weak' arguments. 'Strong' arguments are those which are both important and directly related to the question. 'Weak' arguments are those which are of minor importance and also may not be directly related to the question or may be related to a trivial aspect of the question. Each question below is followed by two arguments numbered I and II. You have to decide which of the arguments is a 'strong' argument and which is a 'weak' argument?\n\nGive answer\n(a) if only Argument I is strong\n(b) if only Argument II is strong\n(c) if either I or II is strong\n(d) if neither I nor II is strong\n(e) if both I and II are strong",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "strong_weak_args",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Should school education be made free in India?\nArguments I. Yes, this is the only way to improve the level of literacy.\nII. No, it will add to the already heavy burden on the exchequer.",
+      "choices": {
+        "a": "if only Argument I is strong",
+        "b": "if only Argument II is strong",
+        "c": "if either I or II is strong",
+        "d": "if neither I nor II is strong",
+        "e": "if both I and II are strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "strong_weak_args",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Should there be complete ban on manufacture of fire crackers in India?\nArguments I. No, this will render thousands of workers jobless.\nII. Yes, the fire cracker manufacturers use child labour to a large extent.",
+      "choices": {
+        "a": "if only Argument I is strong",
+        "b": "if only Argument II is strong",
+        "c": "if either I or II is strong",
+        "d": "if neither I nor II is strong",
+        "e": "if both I and II are strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "strong_weak_args",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Should young entrepreneurs be encouraged?\nArguments I. Yes, they will help in the industrial development of the country.\nII. Yes, they will reduce the burden on the employment market.",
+      "choices": {
+        "a": "if only Argument I is strong",
+        "b": "if only Argument II is strong",
+        "c": "if either I or II is strong",
+        "d": "if neither I nor II is strong",
+        "e": "if both I and II are strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "strong_weak_args",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Should luxury hotels be banned in India?\nArguments I. Yes, these are places from where international criminals operate.\nII. No, affluent foreign tourists will have no place to stay.",
+      "choices": {
+        "a": "if only Argument I is strong",
+        "b": "if only Argument II is strong",
+        "c": "if either I or II is strong",
+        "d": "if neither I nor II is strong",
+        "e": "if both I and II are strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 25,
+      "solution": "(a) Argument I is strong as female foeticide is undesirable. Argument II is weak. Which right are we talking about? Right to know the gender of the unborn child ? No. Parents can wait till the child's birth."
+    },
+    {
+      "number": 26,
+      "solution": "(e) Argument I is strong on humanitarian grounds. Argument II is strong on economic grounds."
+    },
+    {
+      "number": 27,
+      "solution": "(b) Argument I is a weak argument as it is not relevant to 'complete ban'. Argument II is strong as banning in such a scenario will lead us into great trouble."
+    }
+  ],
+  "answers": [],
+  "_page": 1018
+}

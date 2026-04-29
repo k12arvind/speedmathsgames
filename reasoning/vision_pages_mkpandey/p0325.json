@@ -1,0 +1,179 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "How is C related to D?\n1) Sister\n2) Grandmother\n3) Mother\n4) Cousin\n5) None of these",
+      "choices": {
+        "a": "Sister",
+        "b": "Grandmother",
+        "c": "Mother",
+        "d": "Cousin",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_arrangement",
+      "subtopic_name": "Team Arrangement",
+      "body": "Which of the following is a pair of married couples?\nDAD\n2) BC\n3) AC\n4) BE\n5) None of these",
+      "choices": {
+        "a": "AD",
+        "b": "BC",
+        "c": "AC",
+        "d": "BE",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "position_determination",
+      "subtopic_name": "Position Determination",
+      "body": "Which among the following will be in the second place if all the members of the family are arranged in the descending order of their weight?\n1) J\n2) A\n3) C\n4) Data inadequate\n5) None of these",
+      "choices": {
+        "a": "J",
+        "b": "A",
+        "c": "C",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "Which of the following pairs of students could be on the same team as John?\n1) B and E\n2) E and F\n3) K and C\n4) K and L\n5) J and M",
+      "choices": {
+        "a": "B and E",
+        "b": "E and F",
+        "c": "K and C",
+        "d": "K and L",
+        "e": "J and M"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "Any of the following pairs of students could be on the Blue Team EXCEPT\n1) B and M\n2) D and E\n3) E and J\n4) J and M\n5) M and F",
+      "choices": {
+        "a": "B and M",
+        "b": "D and E",
+        "c": "E and J",
+        "d": "J and M",
+        "e": "M and F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_assignment",
+      "subtopic_name": "Team Assignment",
+      "body": "If B and M are on the Red Team, then which of the following must be true?\n1) C is on the Blue Team.\n2) D is on the Blue Team.\n3) D is on the Green Team.\n4) K is on the Blue Team.\n5) M is on the Green Team.",
+      "choices": {
+        "a": "C is on the Blue Team",
+        "b": "D is on the Blue Team",
+        "c": "D is on the Green Team",
+        "d": "K is on the Blue Team",
+        "e": "M is on the Green Team"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_assignment",
+      "subtopic_name": "Team Assignment",
+      "body": "If F is the only male on his team, which of the following pairs could be other members of his team?\n1) K and J\n2) L and M\n3) L and K\n4) M and J\n5) M and K",
+      "choices": {
+        "a": "K and J",
+        "b": "L and M",
+        "c": "L and K",
+        "d": "M and J",
+        "e": "M and K"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_assignment",
+      "subtopic_name": "Team Assignment",
+      "body": "If B and F are on the Red Team, then which of the following is NOT an acceptable assignment of students for the other two teams?\nBlue Team    Green Team\n1) C,E,L     D,J,M\n2) E,J,L     C,D,M\n3) L,E,K     C,D,J\n4) L,M,E     J,C,D\n5) K,L,E     M,D,C",
+      "choices": {
+        "a": "C,E,L / D,J,M",
+        "b": "E,J,L / C,D,M",
+        "c": "L,E,K / C,D,J",
+        "d": "L,M,E / J,C,D",
+        "e": "K,L,E / M,D,C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 325
+}

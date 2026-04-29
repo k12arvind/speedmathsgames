@@ -1,0 +1,66 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Water Image",
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 1-4) Find the water image of the object given in the question figure denoted by (A), out of the figures given in the answer choices. (a), (b), (c) and (d).",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Water Image",
+      "subtopic_code": "water_image",
+      "subtopic_name": "Water Image of Figure/Symbol/Sign",
+      "body": "Ex 1",
+      "choices": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d"
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Water Image",
+      "subtopic_code": "water_image",
+      "subtopic_name": "Water Image of Figure/Symbol/Sign",
+      "body": "Ex 2",
+      "choices": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(b) The figure in option (b) represents the correct water image of figure (A) as shown below"
+    },
+    {
+      "number": 2,
+      "solution": "(c) The figure in option (c) represents the correct water image of figure (A) as shown below"
+    }
+  ],
+  "answers": [],
+  "_page": 972
+}

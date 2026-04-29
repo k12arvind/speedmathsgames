@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 438,
+      "solution": "Flow chart I: Identification of 1-Step/2-Step type:\n\nCompare the change from Input to Step I with the Change from Step I to Step II. Are they same?\n\nYes → 1-Step type\nNo → Compare the change from Input to Step I with the change from Step II to Step III. Are they same?\n\nYes → 2-Step type\nNo → 3-Step type or 4 or more step type\n\nTime saving tip: When you use the above mentioned flowchart to judge first at 1-Step or 2-Step etc; you need not take all the words or numbers of the given input. You can take only two or three words and see their movement to understand the various changes. See the following example to understand.\n\nEx. 3: By using the flowchart I and the tip given above identify the type of shifting given in the example of Ex 2.\n\nSoln: To compare the changes we will monitor only the first two words (and all the time saving tip above) and not the entire sentence.\n\n(a) In Input to Step I, first word becomes second and second word becomes first. Again, in Step I to Step II; first word becomes second and second becomes first. Hence, by virtue of our flowchart (being the changes being similar) it is a 1-Step type shifting.\n\n(b)In Input to Step I, first and second words interchange. In Step II to Step III, first and second words do not interchange. Hence, by virtue of our flowchart it is not a 1-Step type case. Again, when the movement of the first two words from Step I to Step III. Here first two words interchange. Hence, by virtue of our flowchart it is a 2-Step type case."
+    },
+    {
+      "number": 439,
+      "solution": "Output (…contd.): Shifting\n\nAs per Step I, first and second words interchange. First and second words still interchange in Step II to Step III to continue the first interchanged sequence, by virtue of our flowchart, it is a case of neither a 1-step nor a 2-step type. But, In Step III to Step IV, first and second words do not interchange. Hence, by virtue of our flowchart, it is a 3-Step type case.\n\nA terminology for convenience\nUseful for steps: Sometimes, for convenience sake we shall use the following short input.\n1 in place of Step I\n2 in place of Step II  \n3 in place of Step III\n\nAgain, sometimes we shall write a long phrase like \"the change in going from Step I to Step II\" in a shorter way as \"1 → 2\". For example, we can write \"2 → 3\" to mean \"the change in going from Step II to Step III.\"\n\nHere I → 4 to write the word-equivalent for\n(i) 0 to 4    (ii) 4 to 0    (iii) 5 to 10\n\nSoln: (i) Write the following symbolically:\n(i) the change from Step I to Step V\n(ii) the change from Step V to Input\n(iii) the change from Step V to Step X\n(iv) 0 (i.e 0 to 4 means) = the change from Step I to Step IV\n(v) the change from Step V to Input\n(vi) the change from Step V to Step\n(vii) 5 to X     (viii) 3 to 0\n\nNow, we have seen that sometimes similar kind of change is effected between a pair of steps. For example, in Ex 1, Input to Step I carries the same change as that from Step II to Step III. (In both of these, the change is characterized by interchanging the first and the last word and the second and the third word). We can write this in words as:\n\n\"The change in going from Input to Step I is the same as the change in going from Step II to Step III.\"\n\nOk, we can write it more concisely as\n0 to 1 = 2 to 3\n\nInput's Exercise 3:\n(a) Write the meaning of the following into words:\n(i) 0 = 4 = 6 to 10\n(ii) 2 to 1 = 6 to 5\n\n(b) Write the following symbolically:\n(i) Similar changes are effected in going to Step III from Step I and in going from Step V to Step III.\n(ii) The change in going from Input to Step IV is the same as the change in going from Step II to Step VI."
+    }
+  ],
+  "answers": [],
+  "_page": 226
+}

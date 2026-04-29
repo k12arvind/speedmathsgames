@@ -1,0 +1,37 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "combining_inequalities",
+      "subtopic_name": "Combining Inequalities",
+      "body": "State which of the following inequalities can be combined and which not? Write the combined form, if possible.\ni) A > B, B > C\nii) B < A, B ≥ C\niii) A ≥ B, B < C\niv) A ≥ B, B ≤ C\nv) A > B, C > D",
+      "choices": {
+        "a": "ii) A ≥ B, C > B",
+        "b": "iv) A ≥ B, C > B",
+        "c": "vi) B < A, B ≤ C",
+        "d": "vii) B ≤ A, B ≤ C",
+        "e": "x) A ≤ B, M ≥ N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "By first golden rule, no combination is possible in case of (ix) and (x) because they have four terms each. [(ix) has A, B, C and D while (x) has A, B, M and N]. Thus, they do not have a common term."
+    }
+  ],
+  "answers": [],
+  "_page": 292
+}

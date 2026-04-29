@@ -1,0 +1,131 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 23-27): Study the following machine to answer the questions: A word rearrangement machine, when given an input of words, rearranges them in a particular step. The following is an illustration of the input and the steps of rearrangement: Input: Overcome pain one crow easy to Steps: (I) put over you crow easy to me (II) crow put over you to me easy (III) over crow put to me easy you (IV) to over crow put easy you me and so on. As per the rule followed in the above steps, find out in the given input in the following questions:",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "Directions (Q. 28-32): A word arrangement machine, when given a particular input, rearranges it following a particular rule. The following is the illustration of the input and the steps of arrangement: Input: Put pocket hand watch for them Step I: Put for the watch pocket them",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "Directions (Q. 33-37): A word arrangement machine, when given a particular input, rearranges it following a particular input. The following is the illustration of the input and the steps of arrangement: Input: cri cad yam stu the Step I: yam che cri end stu Step II: yam che stu end cri Step III: stu cri yam che end Step IV: stu cri end che yam And so on goes the machine. Study the logic and answer the questions that follow:",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If Step II of an input is 'go su bu he for game free', what would be Step I for but free he game su?",
+      "choices": {
+        "a": "go free for but game su he",
+        "b": "he go su but game free for",
+        "c": "free go for but game su he",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If step IV of an input is 'blue navy kit lime se get out', which of the following would definitely be the input?",
+      "choices": {
+        "a": "navy get lime out kit se blue",
+        "b": "lime navy get kit se blue out",
+        "c": "lime blue navy kit get se out",
+        "d": "navy se get out lime",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Input: 'but calm free not eat so not eat'. Which of the following will be the 3rd step for this input?",
+      "choices": {
+        "a": "so free but calm eat not",
+        "b": "but calm free not eat so",
+        "c": "are but calm free not eat so",
+        "d": "but so free eat are not calm",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If step V of an input is 'put down col in as much as', what would be step?",
+      "choices": {
+        "a": "down in put much as as col",
+        "b": "in put down col much as as",
+        "c": "much as down as col",
+        "d": "col put down as much as",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Input: 'trim bye call kin to low'. Which of the following would be 'to low trim to bye kin call'?",
+      "choices": {
+        "a": "VIth",
+        "b": "Vth",
+        "c": "VIIth",
+        "d": "IIIrd",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 243
+}

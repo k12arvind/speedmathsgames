@@ -1,0 +1,215 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 13-28) In each of the questions below are given four statements followed by three conclusions numbered I, II, and III. You have to take the given statements to be true even, if they seem to be at variance with commonly known facts. Read all the conclusion(s) and then decide which of the given conclusions logically follow(s) from the given statements disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "All bangles are rings. All rings are bracelets. Some bracelets are jewels. Some jewels are stones.",
+      "choices": {
+        "a": "I. Some stones are bangles.",
+        "b": "II. Some jewels are rings."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "All trousers are pants. Some pants are shirts. All shirts are buttons. Some buttons are threads.",
+      "choices": {
+        "a": "I. Some threads are pants.",
+        "b": "II. Some buttons are trousers."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Some pens are sticks. Some sticks are canes. All canes are scales. No scale is weight.",
+      "choices": {
+        "a": "Either I or II follows",
+        "b": "Either I or II and III follow",
+        "c": "Either I or II and III follow",
+        "d": "All I, II and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Some folders are boxes. Some boxes are bags. All bags are containers. Some bags are sacks.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "Only II follow",
+        "c": "I and III follows",
+        "d": "All follow",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Some insects are pests. All pests are birds. No bird is amphibian. All amphibians are animals.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "II and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Some shoes are socks. All socks are towels. All towels are bedsheets. No bedsheet is blanket.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "II and III follow",
+        "c": "I and III follow",
+        "d": "All follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Some fruits are flowers. Some flowers are buds. No bud is leaf. All leaves are plants.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "II and III follow",
+        "d": "Only III follows",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Some pearls are gems. Some gems are diamonds. All diamonds are rings. All rings are bangles.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I and II follow",
+        "c": "I and III follow",
+        "d": "All follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "All chairs are tables. All tables are telephones. All telephones are cell phones. No cell phone is computer.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Either II or III follows",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Some rocks are hills. All hills are mountains. All mountains are rivers. No river is canal.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1187
+}

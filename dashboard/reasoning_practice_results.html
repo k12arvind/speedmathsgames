@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Practice Results · Reasoning</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:920px; margin:0 auto; padding:22px 18px 60px; }
+    .head { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+            margin-bottom:18px; align-items:center; }
+    .head h1 { font-family:'Playfair Display',serif; margin:0; font-size:clamp(1.3rem,3vw,1.7rem); }
+    .nav a { padding:7px 13px; background:var(--bg-input); color:var(--text-secondary);
+             border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+             font-weight:600; text-decoration:none; }
+    .nav a:hover { color:#f59e0b; border-color:#f59e0b; }
+
+    .summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+               gap:10px; margin-bottom:18px; }
+    .stat { background:var(--bg-card); border:1px solid var(--border-color);
+            border-radius:10px; padding:14px; text-align:center; }
+    .stat-val { font-size:1.4rem; font-weight:700; }
+    .stat-lbl { font-size:0.72rem; color:var(--text-muted); text-transform:uppercase;
+                letter-spacing:0.05em; margin-top:3px; }
+
+    .qrow { background:var(--bg-card); border:1px solid var(--border-color);
+            border-radius:10px; padding:14px 16px; margin-bottom:8px; }
+    .qrow.correct { border-left: 4px solid var(--accent-success); }
+    .qrow.wrong   { border-left: 4px solid var(--accent-danger); }
+    .qrow.skipped { border-left: 4px solid var(--text-muted); }
+    .qhead { display:flex; gap:10px; align-items:center; cursor:pointer; }
+    .qhead .num { font-weight:700; font-size:1rem; min-width:36px; }
+    .qhead .badge { padding:3px 9px; border-radius:6px; font-size:0.72rem; font-weight:600;
+                    text-transform:uppercase; letter-spacing:0.04em; }
+    .qhead .badge.ok { background:rgba(74,222,128,0.15); color:var(--accent-success); }
+    .qhead .badge.no { background:rgba(248,113,113,0.15); color:var(--accent-danger); }
+    .qhead .badge.skip { background:rgba(168,168,168,0.15); color:var(--text-muted); }
+    .qhead .topic { color:var(--text-muted); font-size:0.85rem; flex:1; }
+    .qhead .reveal { font-size:0.78rem; color:#f59e0b; }
+    .qbody { display:none; padding-top:14px; margin-top:10px;
+             border-top:1px solid var(--border-color); }
+    .qrow.open .qbody { display:block; }
+
+    .passage { background: rgba(245,158,11,0.06);
+               border:1px solid rgba(245,158,11,0.30);
+               border-left:4px solid #f59e0b;
+               padding:12px 14px; border-radius:8px; margin-bottom:14px;
+               font-size:0.9rem; line-height:1.55; white-space:pre-wrap; }
+    .passage .label {
+      font-size:0.7rem; color:#f59e0b; text-transform:uppercase;
+      letter-spacing:0.06em; font-weight:700; margin-bottom:6px;
+    }
+    .passage img { display:block; max-width:100%; height:auto; margin-top:10px;
+                   background:#fff; border-radius:6px; padding:6px; }
+    .qtext { white-space:pre-wrap; line-height:1.6; margin-bottom:14px; }
+    .qfigure { background:#fff; border-radius:8px; padding:8px;
+               margin: 0 0 14px; max-width:100%;
+               box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+    .qfigure img { display:block; max-width:100%; height:auto; }
+    .ai-badge { display:inline-block; margin-left:8px;
+                background: rgba(245,158,11,0.10); color:#fbbf24;
+                border:1px solid rgba(245,158,11,0.35);
+                padding:1px 8px; border-radius:6px; font-size:0.65rem;
+                letter-spacing:0.04em; text-transform:uppercase; font-weight:600; }
+    .choice-line { padding:8px 12px; margin-bottom:6px; background:var(--bg-input);
+                   border:1px solid var(--border-color); border-radius:6px; font-size:0.92rem; }
+    .choice-line.correct { border-color: var(--accent-success); background: rgba(74,222,128,0.05); }
+    .choice-line.user-wrong { border-color: var(--accent-danger); background: rgba(248,113,113,0.05); }
+    .choice-line .L { font-weight:700; margin-right:8px; }
+    .solution { margin-top:10px; padding:12px 14px;
+                background:rgba(245,158,11,0.05); border:1px dashed rgba(245,158,11,0.3);
+                border-radius:8px; line-height:1.6; white-space:pre-wrap; }
+    .solution .label { font-weight:700; color:#f59e0b; margin-bottom:6px; font-size:0.85rem;
+                       text-transform:uppercase; letter-spacing:0.04em; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <h1>📊 Session Results</h1>
+      <div class="nav">
+        <a href="reasoning_practice_setup.html">↻ New session</a>
+        <a href="reasoning_progress.html">📈 Progress</a>
+        <a href="reasoning_hub.html">← Hub</a>
+      </div>
+    </div>
+    <div class="summary" id="summary"></div>
+    <div id="qlist"></div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    const sid = new URLSearchParams(location.search).get('sid');
+    function userId() {
+      const override = new URLSearchParams(location.search).get('user_id');
+      if (override) return override;
+      try {
+        const u = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser')||'{}');
+        return u.user_id || 'saanvi';
+      } catch(e){ return 'saanvi'; }
+    }
+    function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+    function fmtTime(s) { s=s||0; if (s<60) return s+'s'; return Math.floor(s/60)+'m '+(s%60)+'s'; }
+
+    async function load(){
+      const r = await fetch(API + '/api/reasoning/session/' + encodeURIComponent(sid) + '/full?user_id=' + encodeURIComponent(userId()));
+      const sess = await r.json();
+      const correct = sess.correct_count || 0;
+      const wrong = sess.wrong_count || 0;
+      const skipped = sess.skipped_count || 0;
+      const total = sess.served_count || (sess.attempts||[]).length;
+      const acc = total ? Math.round((correct / total) * 100) : 0;
+      document.getElementById('summary').innerHTML = `
+        <div class="stat"><div class="stat-val" style="color:var(--accent-success);">${correct}</div><div class="stat-lbl">Correct</div></div>
+        <div class="stat"><div class="stat-val" style="color:var(--accent-danger);">${wrong}</div><div class="stat-lbl">Wrong</div></div>
+        <div class="stat"><div class="stat-val" style="color:var(--text-muted);">${skipped}</div><div class="stat-lbl">Skipped</div></div>
+        <div class="stat"><div class="stat-val" style="color:#f59e0b;">${acc}%</div><div class="stat-lbl">Accuracy</div></div>
+        <div class="stat"><div class="stat-val">${fmtTime(sess.elapsed_seconds||0)}</div><div class="stat-lbl">Total time</div></div>
+      `;
+
+      const qlist = document.getElementById('qlist');
+      // Track which passages we've already rendered to avoid repetition across sub-Qs
+      const passageRendered = new Set();
+      qlist.innerHTML = (sess.attempts || []).map((a, i) => {
+        const cls = a.is_correct ? 'correct' : (a.user_choice ? 'wrong' : 'skipped');
+        const badge = a.is_correct ? '<span class="badge ok">Correct</span>'
+          : (a.user_choice ? '<span class="badge no">Wrong</span>' : '<span class="badge skip">Skipped</span>');
+        const ans = a.user_choice ? `Your answer: <strong>${a.user_choice}</strong>` : 'Skipped';
+        const src = [a.source_book && a.source_book.toUpperCase(),
+                     a.chapter_title || (a.chapter_number ? 'Ch '+a.chapter_number : null),
+                     a.problem_number ? 'Q'+a.problem_number : null].filter(Boolean).join(' · ');
+
+        const showPassage = a.passage_text && !passageRendered.has(a.passage_id);
+        if (a.passage_id) passageRendered.add(a.passage_id);
+        const passageBlock = showPassage
+          ? `<div class="passage"><div class="label">Passage / Setup</div>${escapeHtml(a.passage_text)}${a.passage_figure_path ? `<img src="${a.passage_figure_path}" alt="">` : ''}</div>`
+          : (a.passage_text ? `<div style="color:var(--text-muted);font-size:0.78rem;margin-bottom:8px;">↑ same passage as previous</div>` : '');
+
+        const choices = ['A','B','C','D','E'].map(L => {
+          const t = a['choice_' + L.toLowerCase()];
+          if (!t) return '';
+          let ccl = 'choice-line';
+          if (L === a.correct_choice) ccl += ' correct';
+          else if (L === a.user_choice) ccl += ' user-wrong';
+          return `<div class="${ccl}"><span class="L">${L}.</span>${escapeHtml(t)}</div>`;
+        }).join('');
+
+        const aiBadge = (a.correct_source && a.correct_source.startsWith('ai_'))
+          ? '<span class="ai-badge">AI-derived</span>' : '';
+
+        return `
+          <div class="qrow ${cls}" id="qr-${i}">
+            <div class="qhead" onclick="document.getElementById('qr-${i}').classList.toggle('open')">
+              <div class="num">${i+1}.</div>
+              ${badge}
+              <div class="topic">${src}${a.topic_name?' · '+a.topic_name:''}${a.subtopic_name?' / '+a.subtopic_name:''}  ·  ${ans}  ·  ${fmtTime(a.time_spent_seconds||0)}</div>
+              <div class="reveal">▾ Show</div>
+            </div>
+            <div class="qbody">
+              ${passageBlock}
+              <div class="qtext">${escapeHtml(a.question_text)}${aiBadge}</div>
+              ${a.figure_image_path ? `<div class="qfigure"><img src="${a.figure_image_path}" alt="" loading="lazy"></div>` : ''}
+              ${choices}
+              ${a.official_solution ? `<div class="solution"><div class="label">Solution (correct: ${a.correct_choice})</div>${escapeHtml(a.official_solution)}</div>` : ''}
+            </div>
+          </div>`;
+      }).join('');
+    }
+    load();
+  </script>
+</body>
+</html>

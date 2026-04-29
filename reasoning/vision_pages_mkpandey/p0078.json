@@ -1,0 +1,136 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING - Evaluating Inferences",
+  "passages": [
+    {
+      "passage_text": "The above statement implies all of the following EXCEPT:",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Which of the following best summarises the argument?",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Which of the following, if true, cannot be inferred from the above?",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Which of the following conclusions may not be inferred from the above information?",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Which of the following conclusions best describes the views of the writer of the above passage?",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "statement_inference",
+      "subtopic_name": "Statement and Inference",
+      "body": "Average family income is right where it was 20 years ago, even though most families have dogs, husbands and wives are working.",
+      "choices": {
+        "a": "Even though nominal family income may have increased, inflation has risen at an equal rate.",
+        "b": "More husbands and wives are working today than 20 years ago.",
+        "c": "It was more prevalent for one spouse to work 20 years ago than today.",
+        "d": "Wives earn more than husbands today.",
+        "e": "The price level was lower 20 years ago."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "argument_summary",
+      "subtopic_name": "Argument Summary",
+      "body": "In 1980, global service exports totalled about $370 billion, approximately 20 per cent of world trade. Still, no coherent system of rules, principles and procedures exist to govern trade in services.",
+      "choices": {
+        "a": "Regulatory systems lag behind reality.",
+        "b": "A regulatory system ought to reflect the importance of services exports.",
+        "c": "World trade totalled $1850 billion in 1980.",
+        "d": "Service trade legislation is a veritable wasteland.",
+        "e": "While trade legislation exists, it is uncoordinated."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "negative_inference",
+      "subtopic_name": "What Cannot Be Inferred",
+      "body": "Every town with a pool hall has its share of unsavoury characters. This is because the pool hall attracts gamblers and all gamblers are unsavoury.",
+      "choices": {
+        "a": "All gamblers are unsavoury.",
+        "b": "All pool halls attract gamblers.",
+        "c": "Every town has unsavoury characters.",
+        "d": "All gamblers are attracted by pool halls.",
+        "e": "An explanation of what attracts gamblers."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "invalid_conclusion",
+      "subtopic_name": "Invalid Conclusion",
+      "body": "Team sports like baseball display strong socialist tendencies in their requirement of individual subordination to the authority of coaches and managers.",
+      "choices": {
+        "a": "All team sports are authoritarian.",
+        "b": "All team players are subordinate to their coaches.",
+        "c": "Without employee subordination to managerial authority, production for profit would not be possible."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 4,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "author_view",
+      "subtopic_name": "Author's View",
+      "body": "More and more organisations in the world today are prepared to carry out criminal acts that involve the taking of innocent people as hostages. One of the most urgent problems on the agenda of most Western European governments is terrorism and how to deal with it. In handling the situations that arise, all agree that swift and effective action must be taken to combat the terrorist, but, for some reason, when terrorism arrives on their doorstep too quickly in the form of hijacked airplanes, for example, some governments give in all too easily to the demands of the terrorist. It is understandable that innocent people must act to safeguard the welfare of their citizens and other innocent people caught up in the criminal act. However, what the governments seem to ignore is that if you give in to the terrorist once, he or she will play upon your weakness and therefore be encouraged to indulge in terrorist acts on future occasions.",
+      "choices": {
+        "a": "There is a subtle but certain difference between state terrorism and terrorist acts carried out by individuals or members of illegal terrorist groups."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 78
+}

@@ -1,0 +1,108 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "letter_classification",
+      "subtopic_name": "Letter Classification Based on Position",
+      "body": "Which of the following is the odd letters group?",
+      "choices": {
+        "a": "DFH",
+        "b": "JLN",
+        "c": "PRT",
+        "d": "VWX"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "letter_classification",
+      "subtopic_name": "Four Letters Classification",
+      "body": "Find the odd one out of the options given below.",
+      "choices": {
+        "a": "ACDE",
+        "b": "FHIJ",
+        "c": "KMNO",
+        "d": "PQRS"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "letter_classification",
+      "subtopic_name": "Letter Classification Based on First and Third Position",
+      "body": "Pick the odd group of letters.",
+      "choices": {
+        "a": "ABDE",
+        "b": "FGIJ",
+        "c": "KLMN",
+        "d": "OPRS"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "letter_classification",
+      "subtopic_name": "Letter Classification Based on Second and Third Position",
+      "body": "Find the odd group of letters.",
+      "choices": {
+        "a": "ABDE",
+        "b": "FGIJ",
+        "c": "KLOP",
+        "d": "QRTU"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 29,
+      "solution": "All except 'VWX' have a difference of two positions between first and second and second and third letters."
+    },
+    {
+      "number": 30,
+      "solution": "All except 'PQRS' have a difference of two positions between first and second letter."
+    },
+    {
+      "number": 31,
+      "solution": "All except 'KLMN' have a difference of three positions between first and third letter."
+    },
+    {
+      "number": 32,
+      "solution": "All except 'KLOP' have a difference of two positions between second and third letter."
+    }
+  ],
+  "answers": [],
+  "_page": 79
+}

@@ -1,0 +1,82 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Lectures A, B, C, D, E and F are to be organised in a span of seven days from Sunday to Saturday, only one lecture on each day in accordance with the following. I. A should not be organised on Thursday. II. C should be organised immediately after F. III. There should be a gap of two days between E and D. IV. One day there will be no lecture (Friday is not that day), first before that day D will be organised. V. B should be organised on Tuesday and should not be followed by D.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles Based on Sequential Order of Events",
+      "subtopic_code": "sequential_order",
+      "subtopic_name": "Sequential Order of Events",
+      "body": "On which day, there is no lecture?",
+      "choices": {
+        "a": "Monday",
+        "b": "Friday",
+        "c": "Sunday",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles Based on Sequential Order of Events",
+      "subtopic_code": "sequential_order",
+      "subtopic_name": "Sequential Order of Events",
+      "body": "How many lectures are organised between C and D?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 38,
+      "solution": "(C) Chauhan is the wicket-keeper."
+    },
+    {
+      "number": 39,
+      "solution": "(C) Warangal is spinner's home town."
+    },
+    {
+      "number": 40,
+      "solution": "(D) Bishamber is the pace bowler."
+    },
+    {
+      "number": 41,
+      "solution": "(C) Miss UP was the runner UP."
+    },
+    {
+      "number": 42,
+      "solution": "(D) Black saree was won by Miss Delhi."
+    },
+    {
+      "number": 43,
+      "solution": "(C) Miss Jharkhand was wearing Red saree."
+    }
+  ],
+  "answers": [],
+  "_page": 618
+}

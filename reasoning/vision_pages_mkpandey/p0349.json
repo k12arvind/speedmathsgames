@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 72,
+      "solution": "that the three persons after D are females. Hence, the psychologist must be a female. Hence, statement (xiii) was not needed. All other statements are needed. For example, (i) is needed because otherwise we could not have known that C is a businessman. (ii) is needed because we must know whether there is one woman or two women in a circular seating arrangement. (vi) is needed because otherwise we could not know whether the two couples are. (xv) is needed because otherwise we could not have found that E is a female (and hence the psychologist). Start from our initial arrangement can be placed in a group. Start from the information: F < Th G < I (J ≠) < H K = F You might notice that there is one further conclusion to be drawn. Since K and F must be scheduled for the same day, and since F come before L, we can infer that K also comes before L. Apart from this, there do not appear to be any further important inferences to be drawn, so we go to the questions."
+    },
+    {
+      "number": 73,
+      "solution": "Since the question supplies no additional information, we just apply each condition to the answer choices, eliminating those that fail to respect one or more conditions. The first condition states that there are two appointments for Monday, Tuesday and Wednesday and one appointment on the other two days. On this basis, we eliminate (3) and (5) because it is not possible to schedule two appointments on Thursday and Friday. The second condition states that H must be seen on Thursday, and our remaining choices reflect that. Then, the next condition states that anyone who is seen on a day before that on which I has his appointment and our remaining choices respect this condition. Next, the fourth condition states that H must be seen on a day before Thursday and our remaining choices are (1), (2) and (4). This leaves us with (2) as the correct choice. You might want to confirm that (2) does respect this condition: K and F are both scheduled for the same day."
+    },
+    {
+      "number": 74,
+      "solution": "This question allows us to talk about strategy. One way of proving that a particular order is possible is to construct an example of a permissible order and compare it. Thus, the following example proves that (1) is possible (and, therefore, not the correct answer to this question): M K L H F J R The difficulty with this approach is that constructing an example for each choice is time-consuming. Instead of trying to construct an exact order for each choice, a better strategy is to look for an answer choice that is not likely to be correct because M is not under any specific restriction. This is valid up to point A; for (2), though K is under a certain restriction, the import of that restriction is that K come earlier in the week — as (F2) suggests. So (2) is probably not the correct answer. New look at (3). L is under the restriction that he be scheduled for a day not later than K, so well. This doesn't push L towards the later part of the week. This choice, however, has L early in the week. So, this choice seems fairly promisy. The way to determine whether it is possible for L to have an appointment on Tuesday is to assume that he can and see whether that assumption is consistent with the initial conditions. If L is on Tuesday that both J and F must be scheduled for Monday. But then can't be, as K would also have to be scheduled for Monday. This demonstrates that (3) cannot be true. As for (4) and (5), you can construct schedules that show that they are possible."
+    }
+  ],
+  "answers": [],
+  "_page": 349
+}

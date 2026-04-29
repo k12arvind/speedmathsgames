@@ -1,0 +1,253 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Practice Corner 9.5",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-6) In the following questions, the symbols, ©, %, $ and @ are used with the following meaning as illustrated below.\nP © 0 means P is either smaller than or equal to Q.\nP % Q means P is smaller than Q.\nP @ Q means P is equal to Q.\nP * Q means P is either greater than or equal to Q.\nP $ Q means P is greater than Q.\nNow, in each of the following questions, assuming the given statements to be true, find which of the two Conclusions I and II given below them is/are definitely true?\nGive answer\n(a) if only Conclusion I is true\n(b) if only Conclusion II is true\n(c) if either Conclusion I or II is true\n(d) if neither Conclusion I nor II is true\n(e) if both Conclusion I and II are true",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 7-11) In the following questions, the symbols @, $, #, © and % are used with the following meaning as illustrated below.\n'P $ Q' means 'P is not smaller than Q'.\n'P # Q' means 'P is neither smaller than nor equal to Q'.\n'P @ Q' means 'P is neither greater than nor smaller than Q'.\n'P © Q' means 'P is neither greater than nor equal to Q'.\n'P % Q' means 'P is not greater than Q.'\nNow, in each of the following questions, assuming the given statements to be true, find which of the four Conclusions I, II, III and IV given below them is/are definitely true and give your answer accordingly.",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements M % T, T $ K, K © D\nConclusions I. T $ D    II. D $ M",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusion I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements F @ B, B % N, N $ H\nConclusions I. N $ F    II. H $ F",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusion I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements R * M, M @ K, K © J\nConclusions I. J $ M    II. J @ M",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusion I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements B $ N, N * R, R @ K\nConclusions I. K © N    II. B $ K",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusion I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements J © K, K $ N, N * D\nConclusions I. J % N    II. D % K",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusion I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements R @ D, D © M, M $ T\nConclusions I. T % D    II. M * R",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusion I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements R # J, J $ D, D @ K, K % T\nConclusions I. T # D    II. T @ D\n          III. J $ T    IV. J $ T",
+      "choices": {
+        "a": "Either I or II is true",
+        "b": "Only III is true",
+        "c": "II and IV are true",
+        "d": "Either I or II and III are true",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements T % R, R $ M, M @ D, D © H\nConclusions I. D % R    II. H # R\n          III. T © M    IV. T % D",
+      "choices": {
+        "a": "Only I is true",
+        "b": "I and IV are true",
+        "c": "I and II are true",
+        "d": "II and IV are true",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements M @ B, B # N, N $ R, R © K\nConclusions I. K # B    II. R © B\n          III. M $ R    IV. N © M",
+      "choices": {
+        "a": "I and III are true",
+        "b": "I and III are true",
+        "c": "I, III and IV are true",
+        "d": "II, III and IV are true",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements F # H, H @ M, M © E, E $ J\nConclusions I. J © M    II. E # H\n          III. M © F    IV. F # E",
+      "choices": {
+        "a": "I and II are true",
+        "b": "I and III are true",
+        "c": "I, II and III are true",
+        "d": "II, III and IV are true",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "symbolic_inequalities",
+      "subtopic_name": "Symbolic Inequalities",
+      "body": "Statements D % A, A @ B, B © K, K % M\nConclusions I. B $ D    II. K # A\n          III. M # B    IV. A © M",
+      "choices": {
+        "a": "I, II and IV are true",
+        "b": "I, II and III are true",
+        "c": "II, III and IV are true",
+        "d": "I, III and IV are true",
+        "e": "All are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 336
+}

@@ -1,0 +1,108 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "cube_addition",
+      "subtopic_name": "Cube Addition Series",
+      "body": "What comes in place of question mark (?) in the series given below? 1, 2, 10, 37, 101, ?",
+      "choices": {
+        "a": "226",
+        "b": "215",
+        "c": "218",
+        "d": "229"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "prime_number",
+      "subtopic_name": "Prime Number Series",
+      "body": "What replaces the question mark (?) in the following number series? 2, 3, 5, 7, 11, ?",
+      "choices": {
+        "a": "14",
+        "b": "15",
+        "c": "13",
+        "d": "17"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "digital_operation",
+      "subtopic_name": "Digital Operation of Number Series",
+      "body": "What replaces question mark (?) in the series given below? 88, 64, 24, ?",
+      "choices": {
+        "a": "8",
+        "b": "6",
+        "c": "2",
+        "d": "5"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "digital_operation",
+      "subtopic_name": "Digital Operation of Number Series",
+      "body": "What comes in place of question mark (?) in the given number series? 4, 24, 6, 48, 8, 80, ?",
+      "choices": {
+        "a": "8",
+        "b": "9",
+        "c": "10",
+        "d": "4"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 22,
+      "solution": "In the given series, following pattern is used. 1→2→10→37→101→(226). The pattern shows: +(1)³, +(2)³, +(3)³, +(4)³, +(5)³. Therefore ? = 226"
+    },
+    {
+      "number": 23,
+      "solution": "Each next element is the next prime number. 2→3→5→7→11→(13). Prime number after 2, Prime number after 3, Prime number after 5, Prime number after 7, Prime number after 11. Therefore ? = 13"
+    },
+    {
+      "number": 24,
+      "solution": "In the given series, following pattern is used. 88→64→24→(8). The pattern shows: 8×8, 6×4, 2×4. Therefore ? = 8"
+    },
+    {
+      "number": 25,
+      "solution": "In the given series, following pattern is used. 4→24→6→48→8→80→(10). The pattern shows: 4×6, 6×8, 8×10 with +2 increment. Therefore ? = 10"
+    }
+  ],
+  "answers": [],
+  "_page": 222
+}

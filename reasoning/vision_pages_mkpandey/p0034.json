@@ -1,0 +1,116 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Colonel Mustard did not commit the murder in the dining room with the candlestick. Therefore, Mrs. Peacock committed the murder. The argument above depends upon which of the following assumptions? I. The murder was committed either with the candlestick or with the knife in the conservatory. II. The murder was committed either by Colonel Mustard or by Mrs. Peacock. III. The murder was either committed by Colonel Mustard in the dining room with the candlestick or by Mrs Peacock in the conservatory with the knife.",
+      "choices": {
+        "a": "I only",
+        "b": "IV only",
+        "c": "I and III only",
+        "d": "II, III and IV",
+        "e": null
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "An efficiency expert made the following suggestion to the manager of a shirt factory: \"Purchase larger spools of sewing thread. With more thread to a spool, your operators will not need to stop production as often to change spools. This will reduce your labour cost.\" The efficiency expert apparently assumes that A) thread wound on larger spools is not as strong as thread wound on smaller spools. B) sewing machines do not break down and do not require routine maintenance. C) workers in the factory are paid by the hour rather than on a piecework basis. D) machine operators are not allowed to leave their machines during the work period. E) speeding up production will improve the quality of shirts made at the factory.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "A major insurance company reported that approximately 80 per cent of traffic accidents never result in an insurance claim. So, we can conclude that about 80 per cent of all losses due to theft also go unreported. The argument above assumes that I. Statistics of automobile insurance claims are applicable to claims for theft losses. II. Traffic accidents represent a more serious danger to the individual than do thefts. III. The average dollar value of a traffic accident claim is equal to the average dollar value of a theft claim.",
+      "choices": {
+        "a": "I only",
+        "b": "I and II only",
+        "c": "III only",
+        "d": "I and III only",
+        "e": "I, II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "The controller of a major bank argued that computers represent a serious threat to the privacy of the individual. Recently, we have seen numerous examples of espionage and other 'hackers' breaking the security codes of stores and banks and obtaining sensitive financial information of customers. The argument above depends upon which of the following assumptions? I. People who obtain sensitive financial information about others will not share it. II. It is not possible to develop a security system for a computer that cannot be broken. III. Computers are not more efficient than other systems of recordkeeping.",
+      "choices": {
+        "a": "I only",
+        "b": "II only",
+        "c": "III only",
+        "d": "I and III only",
+        "e": "II and III only"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "The need for drug and sex counselling for teenagers has been over-emphasised. Instead, we should channel the money spent on these programmes into marriage counselling and other programmes designed to hold the family together. Lower the rate of family dissolution and you will reduce the incidence of teen drug abuse and pregnancies. The author makes which of the following assumptions? I. Marriage counselling and other programmes are effective in maintaining the unity of the family. II. Family dissolution contributes to problems of teen drugs and sex. III. People presently working in teen-counselling programmes can be re-employed as marriage counsellor.",
+      "choices": {
+        "a": "I only",
+        "b": "II only",
+        "c": "I and II only",
+        "d": "II and III only",
+        "e": "I, II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 34
+}

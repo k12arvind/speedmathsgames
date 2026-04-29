@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Counting of Figures",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 8,
+      "solution": "Smallest squares = ABIH, BCDI, DEFI, FGHI = 4\nSquare formed with four squares (the largest square) = ACEG = 1\n∴ Total number of squares = 4 + 1 = 5"
+    },
+    {
+      "number": 9,
+      "solution": "Total number of squares\nAccording to the formula = (3 × 3) + (2 × 2) + (1 × 1) + (0 × 0)\n= 9 + 4 + 1 + 0 = 14\n(here, R = 3 and C = 3)"
+    }
+  ],
+  "answers": [],
+  "_page": 828
+}

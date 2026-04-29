@@ -1,0 +1,67 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Based on Three Courses of Action",
+  "passages": [
+    {
+      "passage_text": "In this type of questions, a statement is given followed by three courses of action numbered I, II and III. The candidate is required to assess the given situation and take the administrative decision with regard to the given problem and provide the requisite course of action to be taken to lesson the extremities of the problem. Directions (Example Nos. 4-5) A statement is given followed by three courses of action. A course of action is taken for improvement, follow-up etc. Read the statement carefully and pick the correct answer choice.",
+      "has_figure": false,
+      "topic_code": "course_of_action"
+    }
+  ],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "three_courses",
+      "subtopic_name": "Three Courses of Action",
+      "body": "Statement: The police has failed to protect the elderly citizens of the society. Only last week three old persons were killed at three different places.\nCourses of Action: I. The police should be asked to take special care of women and children.\nII. The Government should bring a legislation against the killing of elderly people.\nIII. Criminals who are accused of killing elderly people should be prosecuted by the state.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "three_courses",
+      "subtopic_name": "Three Courses of Action",
+      "body": "Statement: Many political activists have decided to stage demonstrations and block traffic movement in the city during peak hours to protest against the steep rise in prices of essential commodities. [Canara Bank (PO) 2010]\nCourses of Action: I. The Government should immediately ban all forms of agitations in the country.\nII. The police authority of the city should deploy additional forces all over the city to help traffic movement in the city.\nIII. The state administration should carry out preventive arrests of the known criminals staying in the city.",
+      "choices": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Only III",
+        "d": "Both I and II",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "I is invalid as the given statement talks about elderly people and not women and children. II and III are proper courses of action, yet they do not follow because such provisions are already there. Infact killing elderly people is a punishable offence under Sec 302 of IPC while murderers as a rule are prosecuted by the state. Therefore, II and III are not new suggestions. Infact, they are already in practice. Hence, I, II and III all are invalid."
+    },
+    {
+      "number": 5,
+      "solution": "I is not feasible in a democracy. III does not follow because the problem is not concerned with 'criminals'. II is the only course of action the authorities can resort to."
+    }
+  ],
+  "answers": [],
+  "_page": 1096
+}

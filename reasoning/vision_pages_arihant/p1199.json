@@ -1,0 +1,187 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Each question below are given two statements followed by two conclusions numbered I and II. You have to take the two given statements to be true even, if they seem to be at variance from commonly known facts and decide which of the given conclusions logically follows from the two given statements, disregarding commonly known facts. Give answer (a) if only Conclusion I follows (b) if only Conclusion II follows (c) if either I or II follows (d) if neither I nor II follows",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    },
+    {
+      "passage_text": "In each of the questions below are given some statements followed by some conclusions. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some onions are pumpkins. All pumpkins are gingers. Some gingers are apples. Conclusions: I. Atleast some onions are definitely gingers. II. Apples are gingers. III. All apples except a few are gingers.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I and III follow",
+        "c": "Only II follows",
+        "d": "I and II follow",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some pens are tables. All tables are inks. Some inks are apples. Conclusions: I. Some apples are pens. II. Some apples are tables. III. Some inks are pens.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All fruits are vegetables. All pens are vegetables. All vegetables are rains. Conclusions: I. All fruits are rains. II. All pens are rains. III. Some rains are vegetables.",
+      "choices": {
+        "a": "None follows",
+        "b": "I and II follow",
+        "c": "II and III follow",
+        "d": "I and III follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some flowers are skies. Some skies are rooms. Some rooms are windows. Conclusions: I. Some windows are skies. II. Some rooms are flowers. III. No sky is window.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either I or II follows",
+        "c": "Either II or III follows",
+        "d": "Either I or III follows",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some books are papers. No copies are papers. Conclusions: I. Some books are not copies. II. No books are copies.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some cups are plates. Some plates are jugs. Conclusions: I. Some cups are jugs. II. All cups are jugs.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All petals are flowers. Some flowers are buds. Some buds are leaves. All leaves are plants. Conclusions: I. Some petals are buds. II. Some flowers are plants. III. No flower is plant.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either II or III follows",
+        "c": "I and II follow",
+        "d": "Only III follows",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All rockets are poles. Some poles are trams. Some trams are ropes. All ropes are tents. Conclusions: I. Some tents are trams. II. Some ropes are rockets. III. Some trams are rockets. IV. Some poles are rockets.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "I, II and III follow",
+        "c": "I and III follow",
+        "d": "I and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1199
+}

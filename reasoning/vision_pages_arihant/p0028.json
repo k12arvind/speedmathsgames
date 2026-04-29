@@ -1,0 +1,57 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Direct or Simple Analogy",
+  "passages": [
+    {
+      "passage_text": "In the following questions, two words are given which are related to each other in a particular manner and you have to find the word from the given alternatives which bears exactly same relationship to the third word, as the first two bear.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "direct_analogy",
+      "subtopic_name": "Direct or Simple Analogy",
+      "body": "'Hate' is related to 'Love' in the same way as 'Create' is related to",
+      "choices": {
+        "a": "Make",
+        "b": "Renovate",
+        "c": "Destroy",
+        "d": "Build"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "direct_analogy",
+      "subtopic_name": "Direct or Simple Analogy",
+      "body": "'Bull' is related to 'Cow' in the same way as 'Horse' is related to",
+      "choices": {
+        "a": "Animal",
+        "b": "Mare",
+        "c": "Stable",
+        "d": "Ment"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 28
+}

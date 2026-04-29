@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 11,
+  "chapter_title": "How to solve syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 318,
+      "solution": "Explanation of some selected questions\n1. If A is true, B is true (Table 3).\n6. If O is true, E is false (Table 3).\n28. All imperfect are uncertain (Table 3). Given statement is off type.\n58. Statement: All Intelligent are students.\nNo man is perfect → All men are imperfect → on convention.\nTherefore: All men are uncertain.\n23. 'Imperfect are different'.\n26. 'Women are not inferior' does not imply that 'Women are superior'. It may also imply that 'Women are equally good' as superior from the given conclusion false.\n29. Given statement is of type Q. This may be depicted by the following diagram.\n\nSystem\nWe see that all the four examples have two statements where one term is the subject of both the statements (depicted by bold letters). Thus, boys, men and girls are the subjects in Ex.1, Ex.2, Ex.3 and Ex.4 respectively.\nAfter properly aligned pair of propositions we mean that the two statements are written in such a way that the common term is the subject of the first proposition and the subject of the second.\nTo properly align these statements in any order. The statements given above are properly aligned while those given in Ex.6 are not.\nAs certain lumps are books.\nIt: No book is readable.\nThe predicate of the first statement is the subject of the second. Hence, these statements are improperly aligned.\nEx Statement: I. Some books are crooks.\nII. Some books are books.\n(The predicate of the first statement is not the subject of the second. Hence, the sentences are not aligned.)\nHow do we align the sentences? If the statements are not already aligned then we can be aligned by\n(a) changing the order of the sentences and/or\n(b) converting one of the sentences.\nAs: Align all the pair of statements given in Ex.1 to Ex.6 above.\nSolution:\nEx.1 Statement: I. All boys are goodlooking.\nII. Some boys are Indian.\nWe can align this by\n(a) converting the first statement: _______. Some goodlooking are boys.\nHence, the aligned pair is: [Some goodlooking are boys.\nSome boys are Indian.]\n(b) converting the second statement and changing the order of the sentences.\nThe aligned are will be:\n[Some Indian are boys (converted form of second statement).\nAll boys are goodlooking.]\nEx.2 Statement: I. Some girls are cute.\nII. Some Americans are cute.\nWe can align this pair by\n(a) converting the first statement and changing the order of the statements.\nThe aligned pair will be:\n[Some Americans are cute.\nSome cute are girls (converted form of first statement).]\n(b) converting the second statement, the aligned pair will be:\n[Some girls are cute.\nSome cute are Americans (converted form of second statement).]"
+    }
+  ],
+  "answers": [],
+  "_page": 166
+}

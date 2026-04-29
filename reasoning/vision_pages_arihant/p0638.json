@@ -1,0 +1,271 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 87-90) In a game,'words' (meaningful or meaningless) consist of any combination of atleast five letters of the English alphabets. A 'sentence' consists of exactly six words and satisfies the following conditions:\n\nThe six words are written from left to right on a single line in alphabetical order. The sentence can start with any word and successive word is formed by applying exactly one of three operations to the preceding word: delete one letter, add a letter, replace one letter with another. At the most three of the six words can begin with the same letter. Except for the first word, each word is formed by a different operation used for the preceding word.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 91-95) Read the following information carefully and answer the following questions.\n\nSeven members of a family V, W, X, Y, T, R and Z are travelling to seven destinations Chennai, Delhi, Hyderabad, Bengaluru, Jaipur, Pune and Bhopal not necessarily in the same order. Each one of them has a different profession doctor, engineer, consultant, banker, professor, businessman and sportsman not necessarily in the same order.\n\nW is banker and he travels to Delhi. Z is a sportsman and he does not travel to Jaipur or Chennai. T is not a doctor or professor and travels to Hyderabad. Consultant does not travel to Hyderabad or Bengaluru. Businessman travels to Pune. R travels to Bengaluru. X, the doctor travels to Chennai. Y is not a businessman.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 96-100) Study the following information carefully to answer these questions.\n\nTen persons A, B, C, D, E, F, G, H, I and J go for a trip, planning to travel in three cars X,Y and Z. Atleast three persons travel in each car. Out of the ten persons, three are couples and the men and women are equal in number. Both the members of each couple travel in the same car.\n\nA, who travels in car Y is son of C who travels in car X with E who is father of J who is sister of I. C who is a married woman is sister of G, the husband of F who travels in car Z. I, who is the daughter of H travels in car Z, A and D travel in the same car.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 85,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Room Arrangement",
+      "body": "Who among the following will stay in room E ?",
+      "choices": {
+        "a": "U",
+        "b": "W",
+        "c": "P",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Room Arrangement",
+      "body": "'X' will stay in which of the room ?",
+      "choices": {
+        "a": "C",
+        "b": "E",
+        "c": "B",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "word_game",
+      "subtopic_name": "Word Game",
+      "body": "Which one of the following could be a sentence in the word game?",
+      "choices": {
+        "a": "baeak blaeak laeak paeak paea paean",
+        "b": "doteam goleam goloan oloan omean omman",
+        "c": "crotek croetk roetk soetk sxoetk xoetk",
+        "d": "feted freted reted seted seteg aseteg",
+        "e": "forod forol forols forpis opis mropis"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 88,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "word_game",
+      "subtopic_name": "Word Game",
+      "body": "If 'clean' is the first word in a sentence and 'learn' is another word in the sentence, then which one of the following is a complete and accurate list of the positions 'learn' could occur?",
+      "choices": {
+        "a": "Third",
+        "b": "Second, third, fourth",
+        "c": "Third, fourth",
+        "d": "Third, fourth, fifth",
+        "e": "Third, fourth, fifth, sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 89,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "word_game",
+      "subtopic_name": "Word Game",
+      "body": "If the first word in a sentence consists of five letters, then the maximum number of letters that the fifth word in the sentence could contain is",
+      "choices": {
+        "a": "seven",
+        "b": "four",
+        "c": "eight",
+        "d": "five",
+        "e": "six"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "word_game",
+      "subtopic_name": "Word Game",
+      "body": "The last letter of the English alphabet that the first word of a sentence in the word game can begin with is",
+      "choices": {
+        "a": "t",
+        "b": "w",
+        "c": "x",
+        "d": "y",
+        "e": "z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Who travels to Pune?",
+      "choices": {
+        "a": "V",
+        "b": "Y",
+        "c": "R",
+        "d": "Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 92,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Who is the professor?",
+      "choices": {
+        "a": "V",
+        "b": "R",
+        "c": "X",
+        "d": "Y"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 93,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Which of the following combinations of profession, person and place is correct?",
+      "choices": {
+        "a": "Consultant-Y-Jaipur",
+        "b": "Consultant-X-Jaipur",
+        "c": "Businessman-W-Pune",
+        "d": "Businessman-Y-Pune"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 94,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Who travels to Bhopal?",
+      "choices": {
+        "a": "X",
+        "b": "Y",
+        "c": "V",
+        "d": "Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 95,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "What is T's profession?",
+      "choices": {
+        "a": "Businessman",
+        "b": "Engineer",
+        "c": "Consultant",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 96,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_travel",
+      "subtopic_name": "Family Travel",
+      "body": "Four persons travel in which car?",
+      "choices": {
+        "a": "X",
+        "b": "Y",
+        "c": "Z",
+        "d": "X or Y"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 638
+}

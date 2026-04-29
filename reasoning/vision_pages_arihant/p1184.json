@@ -1,0 +1,48 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Four Statements and Two or More Conclusions",
+  "passages": [
+    {
+      "passage_text": "Direction (Example No.9) In the question below are given four statements followed by two Conclusions I and II. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. Read all the conclusions and then decide which of the given conclusion(s) logically follow(s) from given statements disregarding commonly known facts.\nGive answer\n(a) if only Conclusion I follows\n(b) if only Conclusion II follows\n(c) if either Conclusion I or II follows\n(d) if both Conclusions I and II follow\n(e) if neither Conclusion I nor II follows",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    },
+    {
+      "passage_text": "Direction (Example No.10) In the question below are given four statements followed by three Conclusions I, II and III. You have to take the given statements to be true even if they seem to be at variance from commonly known facts. Read all the conclusions and then decide which of the given conclusion(s) logically follow(s) from given statements disregarding commonly known facts.\nGive answer\n(a) Only I follows\n(b) Only II follows\n(c) Only III follows\n(d) I and II follow",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "four_statements_conclusions",
+      "subtopic_name": "Four Statements and Conclusions",
+      "body": "Statements: Some scissors are cats. Some cats are tigers. All tigers are birds. No bird is dog.\nConclusions: I. Some cats are birds. II. No dog is bird.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if both Conclusions I and II follow",
+        "e": "if neither Conclusion I nor II follows"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "By using mediate/immediate inferences table, From second and third statements, Some cats are tigers. All tigers are birds. I + A = I-type of conclusions = Some cats are birds = Conclusion I From last statement, No bird is dog. Conversion: No dog is bird = Conclusion II"
+    }
+  ],
+  "answers": [],
+  "_page": 1184
+}

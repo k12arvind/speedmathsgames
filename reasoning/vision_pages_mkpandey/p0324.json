@@ -1,0 +1,426 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Questions (20-26): During a trial, an attorney is planning to call to the stand to testify six different witnesses - T, V, W, X, Y and Z. She will call each witness exactly one time and the order in which she calls them is subject to the following conditions: The fourth witness must be T. W and V must both be called before V. X must be called before W.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "E, the grandson of F, is the least intelligent. Is the grandfather, is the second most intelligent in the family.",
+      "choices": {
+        "a": "F",
+        "b": "E",
+        "c": "G",
+        "d": "H"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "The mother of B is less intelligent than B.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "C among the married topped the I.Q. test.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "The grandmother of G has two sons, one of whom is D, who is less intelligent than his brother but less intelligent than his wife.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Nobody is a widow or a widower in the family.",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Who among them is a married couple?",
+      "choices": {
+        "a": "AF",
+        "b": "AD",
+        "c": "AC",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "How is G related to D?",
+      "choices": {
+        "a": "cousin",
+        "b": "daughter",
+        "c": "daughter-in-law",
+        "d": "niece",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Who is the third most intelligent in the family?",
+      "choices": {
+        "a": "C",
+        "b": "B",
+        "c": "D",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "How are C and A related?",
+      "choices": {
+        "a": "daughter-in-law and mother-in-law",
+        "b": "daughter-in-law and father-in-law",
+        "c": "sisters-in-law",
+        "d": "mother and daughter",
+        "e": "Can't say"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Who among the following is not of the same generation as others?",
+      "choices": {
+        "a": "D",
+        "b": "B",
+        "c": "C",
+        "d": "A",
+        "e": "Can't say"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "The one who is the most intelligent is not a",
+      "choices": {
+        "a": "granddaughter",
+        "b": "daughter",
+        "c": "niece",
+        "d": "sister",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Who is less intelligent than all but E?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "Can't say"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Who is B married to?",
+      "choices": {
+        "a": "A",
+        "b": "D",
+        "c": "C",
+        "d": "Can't say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "ordering_arrangement",
+      "subtopic_name": "Ordering and Arrangement",
+      "body": "which of the following could be the order in which the attorney calls the witnesses?",
+      "choices": {
+        "a": "X, Y, T, Z, V",
+        "b": "Y, W, V, T, Z",
+        "c": "X, V, W, T, Z, Y",
+        "d": "T, X, Y, W, V, Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "ordering_arrangement",
+      "subtopic_name": "Ordering and Arrangement",
+      "body": "which of the following must be true of the order in which the attorney calls the witnesses?",
+      "choices": {
+        "a": "She calls V before T.",
+        "b": "She calls Z before V.",
+        "c": "She calls Z before X.",
+        "d": "She calls Z before T."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "ordering_arrangement",
+      "subtopic_name": "Ordering and Arrangement",
+      "body": "If the following could be true of the order in which the witnesses are called?",
+      "choices": {
+        "a": "V is called sixth.",
+        "b": "V is called fourth.",
+        "c": "V is called first.",
+        "d": "V is called fifth."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "ordering_arrangement",
+      "subtopic_name": "Ordering and Arrangement",
+      "body": "If the attorney calls Z last, which witness must be called fifth?",
+      "choices": {
+        "a": "T",
+        "b": "V",
+        "c": "W",
+        "d": "Y"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "ordering_arrangement",
+      "subtopic_name": "Ordering and Arrangement",
+      "body": "If the attorney calls X immediately after T and immediately before Z, she must call",
+      "choices": {
+        "a": "first",
+        "b": "second",
+        "c": "third",
+        "d": "fifth",
+        "e": "sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "ordering_arrangement",
+      "subtopic_name": "Ordering and Arrangement",
+      "body": "The attorney could call any of the following witnesses immediately before T, EXCEPT",
+      "choices": {
+        "a": "V",
+        "b": "W",
+        "c": "X",
+        "d": "Y",
+        "e": "Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "ordering_arrangement",
+      "subtopic_name": "Ordering and Arrangement",
+      "body": "If the attorney calls Z first, which of the following could be her fifth and sixth witnesses?",
+      "choices": {
+        "a": "T and X",
+        "b": "T and V",
+        "c": "V and V",
+        "d": "Y and V",
+        "e": "Y and X"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 324
+}

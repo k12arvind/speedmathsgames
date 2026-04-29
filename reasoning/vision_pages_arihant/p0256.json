@@ -1,0 +1,83 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 45,
+      "solution": "(d) The pattern is as follows\n1 → 3 → 10 → 36 → 152 → 760 → 4632\n×1+2 → ×2+4 → ×3+6 → ×4+8 → ×5+10 → ×6+12\nFrom above, we can say that 760 is wrong in the given series. 770 should come in place of 760."
+    },
+    {
+      "number": 46,
+      "solution": "(d) The pattern is as follows\n258 → 130 → 66 → 34 → 18 → 10 → 6\n÷2+1 → ÷2+1 → ÷2+1 → ÷2+1 → ÷2+1 → ÷2+1\nHence, number 8 is wrong and should be replaced by 10."
+    },
+    {
+      "number": 47,
+      "solution": "(b) The pattern is as follows\n2 → 6 → 25 → 96 → 285 → 568 → 567\n×6-6 → ×5-5 → ×4-4 → ×3-3 → ×2-2 → ×1-1\nHence, number 24 is wrong and should be replaced by 25."
+    },
+    {
+      "number": 48,
+      "solution": "(c) The pattern is as follows\n4 → 5 → 14 → 39 → 88 → 169 → 290\n+(1)² → +(3)² → +(5)² → +(7)² → +(9)² → +(11)²\nHence, number 103 is wrong and should be replaced by 88."
+    },
+    {
+      "number": 49,
+      "solution": "(d) The pattern is as follows\n2 → 3 → 6 → 15 → 45 → 157.5 → 630\n×1.5 → ×2 → ×2.5 → ×3 → ×3.5 → ×4\nHence, number 37.5 is wrong and should be replaced by 45."
+    },
+    {
+      "number": 50,
+      "solution": "(b) The pattern is as follows\n2 → 5 → 12 → 27 → 58 → 121 → 248\n×2+1 → ×2+2 → ×2+3 → ×2+4 → ×2+5 → ×2+6\nHence, number 11 is wrong and should be replaced by 12."
+    },
+    {
+      "number": 51,
+      "solution": "(c) The pattern is as follows\n1 → 2 → 6 → 21 → 88 → 445 → 2676\n×1+1 → ×2+2 → ×3+3 → ×4+4 → ×5+5 → ×6+6\nHence, number 86 is wrong and should be replaced by 88."
+    },
+    {
+      "number": 52,
+      "solution": "(d) The pattern is as follows\n644 → 324 → 164 → 84 → 44 → 24 → 14\n÷2+2 → ÷2+2 → ÷2+2 → ÷2+2 → ÷2+2 → ÷2+2\nHence, number 328 is wrong and should be replaced by 324."
+    },
+    {
+      "number": 53,
+      "solution": "(a) The pattern is as follows\n157.5 → 45 → 15 → 6 → 3 → 2 → 1\n÷3.5 → ÷3 → ÷2.5 → ÷2 → ÷1.5 → ÷1\nFrom above, 2 should come in place of 1 in given series."
+    },
+    {
+      "number": 54,
+      "solution": "(c) The pattern is as follows\n5555 → 5531 → 5496 → 5428 → 5304 → 5135 → 4819 → 4621\n-24 → -35² → -11² → -13² → -15² → -17²\nFrom above, we can say that 5531 is wrong in the series. 5555 should come in place of 5531."
+    },
+    {
+      "number": 55,
+      "solution": "(c) Pattern of the series from the right end follows the rule 6×2+4=16, 16×2+8=40, 40×2+12=92, 92×2+16=200 and so on.\nTherefore, number 96 should be replaced by 92."
+    },
+    {
+      "number": 56,
+      "solution": "(c) The series is written using the pattern 4×2+4=12, 12×2+6=30, 30×2+8=68, 68×2+10=146, 146×2+12=304, 304×2+14=622\nTherefore, number 302 should be replaced by 304."
+    },
+    {
+      "number": 57,
+      "solution": "(c) Pattern of the series is 3×1.5=4.5, 4.5×2=9, 9×2.5=22.5, 22.5×3=67.5, 67.5×3.5=236.25\nTherefore, number 6 should be replaced by 4.5."
+    },
+    {
+      "number": 58,
+      "solution": "(c) The pattern is as follows\n6072 → 1010 → 200 → 48 → 14 → 5 → 3\n÷6-2 → ÷5-2 → ÷4-2 → ÷3-2 → ÷2-2 → ÷1-2\nHence, number 1008 is wrong and should be replaced by 1010."
+    },
+    {
+      "number": 59,
+      "solution": "(c) The pattern is as follows\n10 → 13 → 26 → 37 → 85 → 154\n+16 → +13² → +11² → +48 → +69\nHence, number 51 is wrong and should be replaced by 58."
+    },
+    {
+      "number": 60,
+      "solution": "(d) The pattern is as follows\n895 → 870 → 821 → 740 → 619 → 450 → 225\n-(5)² → -(7)² → -(9)² → -(11)² → -(13)² → -(15)²\nHence, number 445 is wrong and should be replaced by 450."
+    },
+    {
+      "number": 61,
+      "solution": "(d) The pattern is as follows\n4 → 3 → 9 → 34 → 96 → 219 → 433\n+1²-2 → +2²-2 → +3²-2 → +4²-2 → +5²-2 → +6²-2\nFrom above, we can say that 435 is wrong in the given series. 433 should come in place of 435."
+    },
+    {
+      "number": 62,
+      "solution": "(b) By analysing and comparing the positions of the elements of all the three sequences given in the question, we get A=d=2, B=a=1, C=b=4, D=c=3\nSo, BCDC corresponds to 1434.\n∴ Required answer = 1, 4, 3, 4"
+    }
+  ],
+  "answers": [],
+  "_page": 256
+}

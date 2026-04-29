@@ -1,0 +1,38 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 6-9) Read the following caselet carefully and answer the questions that follow.\n\nThe Big and colourful company\n\nYou are running 'Big and Colourful (B and C)' company that sells books to customers through three retail formats.\n(i) You can buy books from bookstores.\n(ii) You can buy books from supermarket.\n(iii) You can order books over the internet (online).\n\nYour manager has an interesting way of classifying expenses. Some of the expenses are classified in terms of size; big, small and medium and others are classified in terms of the colours; red, yellow, green and violet. The company has a history of categorising overall costs into initial costs and additional costs. Additional costs are equal to the sum of big, small and medium expenses. There are two types of margins, contribution (sales minus initial costs) and profit (contribution minus additional costs). Given below is the data about sales and costs of B & C.\n\nSales: 60000\nInitial costs: 39000\nContribution (sales-initial costs): 21000\nAdditional costs:\nBig: 9300\nSmall: 3000\nMedium: 3500\nTotal: 15800\nProfit (Contribution-additional cost): 5200\n\nEach of the big, small and medium cost is categorised by the manager into red, yellow, green and violet costs. Breakdown of the additional costs under these headings is shown in the table below.\n\nExpenses | Total | Red | Yellow | Green | Violet\nBig | 9300 | 5100 | 1200 | 1400 | 1600\nSmall | 3000 | - | 400 | 2000 | 600\nMedium | 3500 | 400 | 1500 | 1400 | 200\nTotal | 15800 | 5500 | 3100 | 4800 | 2400\n\nRed, yellow, green and violet costs are allocated to different retail formats. These costs are apportioned in the ratio of number of units consumed by each retail format. The number of units consumed by each retail format is given in the table below\n\nRetail format | Red | Yellow | Green | Violet\nOnline | 200 | 50 | 50 | 50\nSuper market | 65 | 20 | 21 | 21\nBook store | 10 | 30 | 9 | 9\nTotal | 275 | 100 | 80 | 80",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    }
+  ],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "medical_argument",
+      "subtopic_name": "Medical Argument Analysis",
+      "body": "Gastric bypass surgery has been shown to be effective at helping extremely obese people lose weight. Some patients have lost as much as 300 pounds after undergoing the surgery, thereby substantially prolonging their lives. Despite the success of the treatment, most doctors have not embraced the surgery.\n\nWhich of the following statements, if true, best accounts for the lukewarm reaction of the medical community to gastric bypass surgery?",
+      "choices": {
+        "a": "Gastric bypass surgery carries a high risk of serious complications, including death",
+        "b": "Obesity is one of the leading contributors to heart disease and hypertension two leading causes of death",
+        "c": "Incidences of obesity among the Indian urban middle class population have been increasing consistently for the last three decades",
+        "d": "Many patients report that losing weight through diets is ineffective, since they usually gain the weight back within six months",
+        "e": "Most health insurance plans will cover the cost of gastric bypass surgery for morbidly obese patients at high risk of heart disease"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 541
+}

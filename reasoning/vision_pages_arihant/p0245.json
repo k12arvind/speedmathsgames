@@ -1,0 +1,39 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "In this series, every letter is given its alphabetical position number and one letter is skipped in between each term. Hence, the missing terms are K-11 and M-13."
+    },
+    {
+      "number": 2,
+      "solution": "Pattern of given alpha-numeric series is as follows\n+1    +2    +3    +4\n2 → B → 4 → C → 8 → E → 14 → H → 22 → L\n     +2     +4     +6     +8\n∴ ? = 22 L"
+    },
+    {
+      "number": 3,
+      "solution": "Pattern of given alpha-numeric series is as follows\n+3     +5     +7     +9\n3 → F → 6 → G → 11 → J → 18 → L → 27 → P\n     +1     +2     +3     +4\n∴ ? = 27P"
+    },
+    {
+      "number": 4,
+      "solution": "Pattern of given alpha-numeric series is as follows\n16 → P → 3 → C → R → 5 → F → T → 8 → I → V → 12 → L → X → 17 → Q\n+2        +2      +2     +2     +3     +3     +3     +3\n+2     +2     +2     +2\n∴ ? = X17Q"
+    },
+    {
+      "number": 5,
+      "solution": "Pattern of given alpha-numeric series is as follows\n1 → +4 → 5 → +4 → 9 → +4 → 13 → +4 → 17\n3 → +3 → 6 → +3 → 9 → +3 → 12 → +3 → 15\nC → F → I → L → O\n22 → -1 → 21 → -1 → 20 → -1 → 19 → -1 → 18\nV → U → T → S → R\n∴ ? = 13 LS"
+    },
+    {
+      "number": 6,
+      "solution": "Pattern of given alpha-numeric series is as follows\n3 → +3 → 6 → +3 → 9 → +3 → 12\nC → F → I → L\n4 → +5 → 9 → +7 → 16 → +9 → 25\n24 → -3 → 21 → -3 → 18 → -3 → 15\nX → U → R → O\n∴ ? = L 25 O"
+    },
+    {
+      "number": 7,
+      "solution": "Pattern of given alpha-numeric series is as follows\n1 → -2 → -1 → -2 → -3 → -2 → 1 → -2 → -1\nK → H → G → E → C\n13 → +3 → 16 → +3 → 19 → +3 → 22 → +3 → 25\nM → P → S → V → Y\n5 → +3 → 8 → +3 → 11 → +3 → 14 → +3 → 17\n∴ ? = C Y 17"
+    }
+  ],
+  "answers": [],
+  "_page": 245
+}

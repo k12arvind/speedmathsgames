@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 37,
+      "solution": "Since P is older than S, and since R is older than V: 60 61 62 63 64 65 S Y P O S T So, if P is older than O, there is only one possible order in which the group could have been born. Q. 37-43: Begin by summarising the information: N < (J + O) J < M K < 3 There is one further conclusion that can be drawn. Since N is to be played before J and J before M, N must be played before M."
+    },
+    {
+      "number": 38,
+      "solution": "At the outset, we defined one further conclusion: that N must come before M. That the other choices are not logically necessary can be shown by citing the following possible order: I 2 3 4 5 6 N J K L M O"
+    },
+    {
+      "number": 39,
+      "solution": "As for (1), J cannot be played last because J is played before M. As for (2), K must be played third, not first. As for (3), M cannot be played second, because (as we learned above) both J and N must be played before M. As for (4), it is K that must be played third<197>not N. (5), however, is a possibility, as shown by the diagram: I 2 3 4 5 6 N J K L M O"
+    },
+    {
+      "number": 40,
+      "solution": "Enter the additional information in a diagram: I 2 3 4 5 6 L K N must be played before J and O and also M. And this means that N must be played second: I 2 3 4 5 6 L N K Then the order of the other three pieces is not fixed, but these further conclusions are sufficient to answer the question asked."
+    },
+    {
+      "number": 41,
+      "solution": "With K as the third piece, there is only one place to accommodate a series of three pieces: I 2 3 4 5 6 K L M O Then, since N comes before J, the order must be: I 2 3 4 5 6 N J K L M O So, J must be played second."
+    },
+    {
+      "number": 42,
+      "solution": "Enter the additional information on a diagram: I 2 3 4 5 6 K L Since N must be played before J, O and M, N must be first: I 2 3 4 5 6 N K L Now, given that J must precede M, there are only three possibilities: I 2 3 4 5 6 N J K M O L N J K O M L N O K J M L So, the first and second pieces could be N and J, or N and O."
+    },
+    {
+      "number": 43,
+      "solution": "N must be played before three other pieces (J, O and M), so given that K is played third N cannot be played later than second. So, N cannot be played after K. It is possible, however, to play the others immediately after K: I 2 3 4 5 6 N K J L M O or N J K L M O or N J K M L O or N K O M L"
+    },
+    {
+      "number": 44,
+      "solution": "Here is another selection set. Begin by summarising the information: Q = Entertainment L = M J ≠ K M ≠ O So far, the first condition, that Q serves on the Entertainment Committee, has been set out. Using the second condition, that L and M must serve on the same committee (2). Using the third condition, that J cannot serve on the same committee, we eliminate (1). Finally, using that last condition, we eliminate the condition, therefore, the only acceptable committee listed is (5)."
+    },
+    {
+      "number": 45,
+      "solution": "You may find it helpful to start with J and M together: If you put L and M on the Food Committee along with J (note that which places both N and R on the Games Committee), this violates the fourth condition. Since L and M cannot serve on different committees, this means L and M cannot both be on the Games Committee."
+    }
+  ],
+  "answers": [],
+  "_page": 358
+}

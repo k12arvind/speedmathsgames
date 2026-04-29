@@ -1,0 +1,287 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully to answer these questions. There are six employees sitting in a competitive examination, namely K, L, M, N, O and P. K and L are from Dehradun while M, N, O and P are from Mangalore. N and P are tall while rest are short. L, O and P are males while rest of them are females.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer these questions. There are six books/volumes kept in a steel rack/shelf and are labelled as L, M, N, O, P and Q. M, P, N and Q have blue covers while others have red covers. L, M and O are new volumes while the rest are old volumes. L, M and N are law books while the rest are engineering books.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Study the following information carefully to answer the given questions. Twelve cars viz. Mercedes, Swift, Santro, Accord, Innova, Polo, Punto, Figo, Civic, City, Ferrari and Landrover are parked in two parallel rows containing six cars each, in such a way that there is an equal distance between adjacent cars. The cars parked in row I are parked in such a manner the driver seated in the cars would face the South. In row 2, cars are parked in such a manner that the drivers seated in these cars would face the North. Therefore, in the given parking arrangement each car parked in a row faces another car of the other row. I. Mercedes being a big car must be parked at one of the extreme ends. Mercedes is parked second to the left of Santro. Santro faces Figo. II. Punto and Innova are parked immediately next to each other. Neither is parked next to Figo or Santro. III. Civic is parked in such a manner that in the given row when seated in the parked car would face South. Civic is parked third to the left of Polo. IV. City is parked in such a manner that it faces Ferrari. Ferrari is parked second to the left of Landrover. Landrover faces North and is not parked next to Figo. V. Swift is parked third to the right of Ferrari and faces Innova. ※ Left and right parking directions are with reference to the driver as, if the driver is seated in the car.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 61,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "employees_work",
+      "subtopic_name": "Employee Work Arrangement",
+      "body": "In which two companies do the HR specialist work?",
+      "choices": {
+        "a": "X and Y",
+        "b": "Y and Z",
+        "c": "X and Z",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "specialists",
+      "subtopic_name": "Specialists Identification",
+      "body": "Who is the computer specialist?",
+      "choices": {
+        "a": "C",
+        "b": "E",
+        "c": "H",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "gender_identification",
+      "subtopic_name": "Gender Identification",
+      "body": "Which of the following represents the two females?",
+      "choices": {
+        "a": "DB",
+        "b": "DH",
+        "c": "DG",
+        "d": "Either (a), (b) or (c)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "speciality",
+      "subtopic_name": "Speciality Identification",
+      "body": "Which of the following is the speciality of H?",
+      "choices": {
+        "a": "Marketing",
+        "b": "Finance",
+        "c": "HR",
+        "d": "Engineer"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "company_work",
+      "subtopic_name": "Company Work Arrangement",
+      "body": "In which company does C work?",
+      "choices": {
+        "a": "Y",
+        "b": "Z",
+        "c": "X",
+        "d": "Y or Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "location_gender",
+      "subtopic_name": "Location and Gender Based Arrangement",
+      "body": "Who is the tall female from Mangalore?",
+      "choices": {
+        "a": "M",
+        "b": "P",
+        "c": "O",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "location_gender",
+      "subtopic_name": "Location and Gender Based Arrangement",
+      "body": "Who is the short female from Dehradun?",
+      "choices": {
+        "a": "M",
+        "b": "L",
+        "c": "K",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "location_gender",
+      "subtopic_name": "Location and Gender Based Arrangement",
+      "body": "Who is the tall male from Mangalore?",
+      "choices": {
+        "a": "O",
+        "b": "P",
+        "c": "M",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "books_arrangement",
+      "subtopic_name": "Books Classification and Arrangement",
+      "body": "Which two volumes are old engineering books having blue covers?",
+      "choices": {
+        "a": "P and N",
+        "b": "P and O",
+        "c": "P and Q",
+        "d": "Q and L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "books_arrangement",
+      "subtopic_name": "Books Classification and Arrangement",
+      "body": "Which new volume engineering book has a red cover?",
+      "choices": {
+        "a": "L",
+        "b": "O",
+        "c": "Q",
+        "d": "P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 71,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "books_arrangement",
+      "subtopic_name": "Books Classification and Arrangement",
+      "body": "Which new volume law book has a blue cover?",
+      "choices": {
+        "a": "P",
+        "b": "N",
+        "c": "L",
+        "d": "M"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 72,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Seating Arrangement",
+      "body": "How many cars are parked between Santro and Civic?",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Both cars are parked in different rows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "analogy_pattern",
+      "subtopic_name": "Analogy and Pattern Recognition",
+      "body": "Polo is related to Ferrari in the same way as Innova is related to Accord. To which of the following city related to, following the same pattern?",
+      "choices": {
+        "a": "Mercedes",
+        "b": "Innova",
+        "c": "Santro",
+        "d": "Punto"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 636
+}

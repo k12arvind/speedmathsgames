@@ -1,0 +1,352 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [
+    {
+      "passage_text": "If the given interchanges are made in signs and numbers, then which one of the four equations would be correct?",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Read each statement carefully and answer the following questions.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "In the following questions, some equations are solved on the basis of a certain system. On the same basis, find out the correct answer for the unsolved equation.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_interchange",
+      "subtopic_name": "Sign Interchange",
+      "body": "Which of the following interchange of signs would make the given equation correct? (20 – 4) × 4 + 16 = 36",
+      "choices": {
+        "a": "+ and –",
+        "b": "– and ×",
+        "c": "× and +",
+        "d": "+ and –"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_interchange",
+      "subtopic_name": "Sign Interchange",
+      "body": "Which of the following interchange of signs would make the given equation correct? 2 × 3 + 6 – 12 ÷ 4 = 7",
+      "choices": {
+        "a": "× and +",
+        "b": "+ and –",
+        "c": "+ and +",
+        "d": "– and +"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_placement",
+      "subtopic_name": "Sign Placement",
+      "body": "Put the correct mathematical signs in the following equation from the given alternatives. 33 ? 11 ? 3 ? 6 = 115",
+      "choices": {
+        "a": "+, –, ×",
+        "b": "×, +, –",
+        "c": "+, ×, ×",
+        "d": "–, ×, +"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_number_interchange",
+      "subtopic_name": "Sign and Number Interchange",
+      "body": "Given interchanges signs '+' and '–', numbers '5' and '8'.",
+      "choices": {
+        "a": "82 – 35 + 55 = 102",
+        "b": "50 + 35 + 55 = 102",
+        "c": "65 – 38 + 85 = 132",
+        "d": "52 – 35 + 55 = 72"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_number_interchange",
+      "subtopic_name": "Sign and Number Interchange",
+      "body": "Given interchanges signs '+' and '×', numbers '3' and '7'.",
+      "choices": {
+        "a": "23 + 17 × 73 = 1241",
+        "b": "37 + 73 × 12 = 112",
+        "c": "23 × 17 + 37 = 428",
+        "d": "23 + 17 × 73 = 388"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "equation_balancing",
+      "subtopic_name": "Equation Balancing",
+      "body": "Select the correct combination of mathematical signs to replace * signs and to balance the given equation. 15 * 24 * 3 * 6 * 17",
+      "choices": {
+        "a": "+ × – =",
+        "b": "+ × = +",
+        "c": "– × = +",
+        "d": "– + + ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "logical_expression",
+      "subtopic_name": "Logical Expression",
+      "body": "Which of the following expressions will be true, if the expression R > 0 = A > S < T is definitely true?",
+      "choices": {
+        "a": "O > T",
+        "b": "S < R",
+        "c": "T > A",
+        "d": "S = 0",
+        "e": "T < R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_replacement",
+      "subtopic_name": "Symbol Replacement",
+      "body": "Which of the following symbols should replace the question mark (?) in the given expression in order to make the expressions 'P > A' as well as 'T < L' definitely true? P > L ? A ≥ N = T",
+      "choices": {
+        "a": "≤",
+        "b": ">",
+        "c": "<",
+        "d": "≥",
+        "e": "Either ≤ or <"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_placement",
+      "subtopic_name": "Symbol Placement",
+      "body": "Which of the following symbols should be placed in the blank spaces, respectively (in the same order from left to right) in order to complete the given expression in such a manner that makes the expressions 'B > N' as well as 'D ≤ L' definitely true? B _ L _ O _ N _ D",
+      "choices": {
+        "a": "=, =, ≥, ≥",
+        "b": "≥, ≥, = >",
+        "c": ">, <, =, ≤",
+        "d": "=, =, ≥, ≥",
+        "e": ">, =, ≥, >"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_placement",
+      "subtopic_name": "Symbol Placement",
+      "body": "Which of the following should be placed in the blank spaces, respectively (in the same order from left to right) in order to complete the given expression in such a manner that makes the expression 'A < P' definitely false? _ ≤ _ < _ > _",
+      "choices": {
+        "a": "I, N, P, A",
+        "b": "L, A, P, N",
+        "c": "A, L, P, N",
+        "d": "N, A, P, L",
+        "e": "P, N, A, L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_placement",
+      "subtopic_name": "Symbol Placement",
+      "body": "Which of the following symbols should be placed in the blank spaces, respectively (in the same order from left to right) in order to complete the given expression in such a manner that makes the expressions 'F > N' and 'U > D' definitely false? F_ O _ U _ N _ D",
+      "choices": {
+        "a": "<, <, >, =",
+        "b": "<, =, =, >",
+        "c": "<, =, =, <",
+        "d": "≥, =, =, ≥",
+        "e": ">, >, =, <"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_solving",
+      "subtopic_name": "Pattern Solving",
+      "body": "If 5 × 6 × 4 = 456 and 3 × 6 × 5 = 536, then 4 × 8 × 7 = ?",
+      "choices": {
+        "a": "748",
+        "b": "478",
+        "c": "847",
+        "d": "784"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_solving",
+      "subtopic_name": "Pattern Solving",
+      "body": "If 782 = 20 and 671 = 17, then 884 = ?",
+      "choices": {
+        "a": "32",
+        "b": "19",
+        "c": "26",
+        "d": "23"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_interpretation",
+      "subtopic_name": "Symbol Interpretation",
+      "body": "Identify one response which would be a correct inference from the given premises stated according to the following symbols 'A' stands for not greater than 'B' stands for equal to 'C' stands for less than 'D' stands for not less than 'E' stands for not equal to 'F' stands for greater than Premises (2 M B N) and (2N A 3K)",
+      "choices": {
+        "a": "2M D 3K",
+        "b": "2N B 3K",
+        "c": "2M C 3K",
+        "d": "2K B 3N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "equation_solving",
+      "subtopic_name": "Equation Solving",
+      "body": "Find the correct group of signs to solve the equation 24 * 16 * 8 * 32",
+      "choices": {
+        "a": "+ – =",
+        "b": "+ – =",
+        "c": "× – = +",
+        "d": "× + ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "equation_balancing",
+      "subtopic_name": "Equation Balancing",
+      "body": "Select the correct combination of mathematical signs to replace '*' signs and to balance the given equation. 9 * 7 * 2 * 3 * 10",
+      "choices": {
+        "a": "+ × + =",
+        "b": "– + + =",
+        "c": "+ – × =",
+        "d": "– + × ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 346
+}

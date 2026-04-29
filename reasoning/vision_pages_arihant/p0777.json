@@ -1,0 +1,168 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Original Pair",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "? : ○○○:: △/△ : ?",
+      "choices": {
+        "a": "○○ △",
+        "b": "○○ △",
+        "c": "△ △○",
+        "d": "○ ○ △△△",
+        "e": "○ △"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Figure Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "? : □ :: △ : ?",
+      "choices": {
+        "a": "□ /",
+        "b": "△ ▽",
+        "c": "□ /",
+        "d": "○ ▽",
+        "e": "↑ ↑"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Figure Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "? : ⊕ :: □ : ?",
+      "choices": {
+        "a": "○ ×",
+        "b": "○ ×",
+        "c": "○ ◊",
+        "d": "○ ⊞",
+        "e": "× ○"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Figure Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "? : ← :: ≡ : ?",
+      "choices": {
+        "a": "↓↓↓ ↓",
+        "b": "← ↑↑↑",
+        "c": "↑↑↑ ↓",
+        "d": "↑↑↑ ↑",
+        "e": "↑ ↑↑↑"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) Both the figures interchange positions."
+    },
+    {
+      "number": 2,
+      "solution": "(b) The upper and lower halves of the figure get inverted at their positions."
+    },
+    {
+      "number": 3,
+      "solution": "(a) The figure rotates through 90° clockwise and a new figure with number of sides one less than that of the original figure comes outside it."
+    },
+    {
+      "number": 4,
+      "solution": "(c) The figure is divided into two halves through a vertical line and the right half comes inside the left half of the figure."
+    },
+    {
+      "number": 5,
+      "solution": "(b) The lowermost figure shifts to the uppermost position and all other figures shift one step downwards in such a way that every figure is laterally reversed at the new position."
+    },
+    {
+      "number": 6,
+      "solution": "(b) The figure rotates through 90° clockwise in such a way that two parallel lines inside the figure join together and vertical line is removed and the resultant figure appears in pairs."
+    },
+    {
+      "number": 7,
+      "solution": "(c) The figure rotates through 90° anti-clockwise in such a way that semicircle is converted into a full circle, gets shaded and shifts to the opposite side of the figure."
+    },
+    {
+      "number": 8,
+      "solution": "(d) From section (i) to (ii) of the problem figure, one fourth portion of the circle appearing in each quadrant of both axes is converted into a full circle. The same process will be repeated from section (iii) to (iv) of the problem figures."
+    },
+    {
+      "number": 9,
+      "solution": "(c) The figure rotates through 90° clockwise in such a way that an identical figure appears on upper side of the original figure."
+    },
+    {
+      "number": 10,
+      "solution": "(d) The figure rotates through 90° clockwise and two similar concentric figures appear inside it in such a way that the innermost figure gets shaded."
+    },
+    {
+      "number": 11,
+      "solution": "(e) Black leaf and white leaf rotate through 90° each, anti-clockwise and clockwise, respectively."
+    },
+    {
+      "number": 12,
+      "solution": "(c) From section (i) to section (ii) the figure gets laterally inverted. The same pattern follows from section (iii) to section (iv)."
+    },
+    {
+      "number": 13,
+      "solution": "(d) The figure rotates through 90° anti-clockwise in such a way that the black portion becomes white and the white portion becomes black."
+    },
+    {
+      "number": 14,
+      "solution": "(e) The design inside the figure gets inverted and shifts to the opposite side, dot inside the figure shifts to the opposite side and arrow outside the figure shifts to the other side."
+    },
+    {
+      "number": 15,
+      "solution": "(d) From section (i) to section (ii), all the three figures get arranged in a straight line."
+    },
+    {
+      "number": 16,
+      "solution": "(c) From section (i) to (ii) of the problem figures, the right half of the figure gets inverted."
+    },
+    {
+      "number": 17,
+      "solution": "(c) From section (i) to (ii) of the problem figures, all the lines outside the main figure shift inside and join together and four small figures identical to the main figure are attached to the ends of the lines."
+    },
+    {
+      "number": 18,
+      "solution": "(d) Two arrows, out of three arrows, are removed and the remaining arrow rotates through 90° anti-clockwise."
+    }
+  ],
+  "answers": [],
+  "_page": 777
+}

@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "Here, number of smaller cubes = (n)³ = 64 ⇒ n = ³√64 = 4\nn = Side of bigger cube/Side of smaller cube ⇒ 4 = 24/Side of smaller cube\n∴ Side of smaller cube = 24/4 = 6 cm"
+    },
+    {
+      "number": 3,
+      "solution": "(i) (b) n = Side of bigger cube/Side of smaller cube = 12/3 = 4\n∴ Total number of smaller cubes = (n)³ = (4)³ = 64\n(ii) (c) As total number of corner cubes is always 8\n(iii) (c) Number of middle cubes = 12(n - 2) = 12(4 - 2) = 12 × 2 = 24\n(iv) (d) Total number of central cubes = 6(n - 2)² = 6(4 - 2)² = 6(2)² = 24\n(v) (c) Total number of inner central cubes = (n - 2)³ = (4 - 2)³ = (2)³ = 8"
+    }
+  ],
+  "answers": [],
+  "_page": 875
+}

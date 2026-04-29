@@ -1,0 +1,75 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Response & Interpretations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) The pattern is as follows: 1→2→5→14→41→122. +1→+3→+9→+27→+81. Hence, number 124 is wrong and should be replaced by 122."
+    },
+    {
+      "number": 2,
+      "solution": "(b) The pattern is as follows: 1→2→6→24→120→720→5040. ×2→×3→×4→×5→×6→×7. Hence, number 620 is wrong and should be replaced by 720."
+    },
+    {
+      "number": 3,
+      "solution": "(d) The pattern is as follows: 1→10→22→40→64→94→130. +9→+12→+18→+24→+30→+36. Hence, number 84 is wrong and should be replaced by 64."
+    },
+    {
+      "number": 4,
+      "solution": "(d) The pattern is as follows: 4→19→49→94→154→229→319. +15→+30→+45→+60→+75→+90. Hence, number 93 is wrong and should be replaced by 94"
+    },
+    {
+      "number": 5,
+      "solution": "(d) The pattern is as follows: 3→12→36→144→432→1728→5184. ×4→×3→×4→×3→×4→×3. Hence, number 431 is wrong and should be replaced by 432."
+    },
+    {
+      "number": 6,
+      "solution": "(d) The pattern is as follows: 3→5→7→12→17→19→23. +2→+2→+5→+5→+2→+2. Hence, number 23 is wrong and should be replaced by 21."
+    },
+    {
+      "number": 7,
+      "solution": "(c) The given sequence is the combination of two series. 1. 3, 8, 13, 18, 23 2. 2, 9, 22, 32, 42 12. The pattern in (1) is (+5) and the pattern in (2) is (+10). So, in (2), number 9 is wrong and should be replaced by (2+10), i.e., 12."
+    },
+    {
+      "number": 8,
+      "solution": "(d) The pattern is as follows: 1→3→8→19→42→89→184. +2→+5→+11→+23→+47→+95. +3→+6→+12→+24→+48. Hence, number 88 is wrong and should be replaced by 89."
+    },
+    {
+      "number": 9,
+      "solution": "(d) The pattern is as follows: 2→4→8→16→32→64→128→256. ×2→×2→×2→×2→×2→×2→×2. Hence, number 48 is wrong and should be replaced by 32."
+    },
+    {
+      "number": 10,
+      "solution": "(b) In this series, all the numbers are the multiples of 11, except the number 427 which is not a multiple of 11. Hence, number 427 is wrong and should be replaced by the multiple of 11."
+    },
+    {
+      "number": 11,
+      "solution": "(c) The pattern is as follows: 4→5→7→10→14→19→25→32. +1→+2→+3→+4→+5→+6→+7. Hence, number 18 is wrong and should be replaced by 19."
+    },
+    {
+      "number": 12,
+      "solution": "(d) The pattern is as follows: 1→5→9→17→25→37→49. 1²→(2²+1)→3²→(4²+1)→5²→(6²+1)→7². Hence, number 15 is wrong and should be replaced by 17."
+    },
+    {
+      "number": 13,
+      "solution": "(d) The pattern is as follows: 2→6→18→54→162→486→1458. ×3→×3→×3→×3→×3→×3. Hence, number 10 is wrong and should be replaced by 6."
+    },
+    {
+      "number": 14,
+      "solution": "(d) The pattern is as follows: 2→6→12→72→864→62208. ×3→×2→×6→×12→×72. Here, 3×2=6, 6×2=12, 12×6=72. Hence, number 865 is wrong and should be replaced by 864."
+    },
+    {
+      "number": 15,
+      "solution": "(b) The pattern is as follows: 66→91→120→153→190→231→276. +25→+29→+33→+37→+41→+45. Hence, number 233 is wrong and should be replaced by 231."
+    },
+    {
+      "number": 16,
+      "solution": "(e) The pattern is as follows: 33→321→465→537→573→591→600. +288→+144→+72→+36→+18→+9. Hence, number 590 is wrong and should be replaced by 591."
+    }
+  ],
+  "answers": [],
+  "_page": 232
+}

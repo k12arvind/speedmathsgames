@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "(e) Venn diagram shows Holders, Chocolates, Lamps, Pens, and Desk circles. Conclusions: I. Some pens are holders (✗) Complementary pair (I-E), II. Some desks are lamps (✓), III. No pen is a holder (✗) Complementary pair (I-E), IV. Some pens are chocolates (✗)"
+    },
+    {
+      "number": 12,
+      "solution": "(b) Venn diagram shows Desks, Chairs, Cats, Tables, Benches circles. Conclusions: I. Some lanterns are planes (✗), II. Some ducks are rooms (✓), III. Some rooms are glasses (✓), IV. Some ducks are glasses (✗)"
+    },
+    {
+      "number": 13,
+      "solution": "(c) Venn diagram shows Sweets, Cashews, Almonds, Pistachios circles. Conclusions: I. All almonds are pistachios (✗), II. Some pistachios are sweets (✗), III. Some sweets are cashews (✗), IV. All almonds are either sweets or cashews (✗)"
+    },
+    {
+      "number": 14,
+      "solution": "(b) Venn diagram shows Fruits, Plants, Seeds, Trees circles. Conclusions: I. Some plants are seeds (✗) Complementary pair (I-E), II. Some plants are fruits (✗), III. Some trees are fruits (✓), IV. No plant is a seed (✗) Complementary pair (I-E)"
+    },
+    {
+      "number": 15,
+      "solution": "(c) Venn diagram shows Accepted Offers, Agreements, Contractors circles. So, all contracts are accepted offers is the correct."
+    },
+    {
+      "number": 16,
+      "solution": "(c) Venn diagram shows GD, BW, A circles where BW: Beautiful Women, A: Actresses, GD: Good Dancers. Some beautiful women are good dancers but there are some good dancers who are not actresses."
+    },
+    {
+      "number": 17,
+      "solution": "(e) Venn diagram shows Fighters, Lighter, Animals, Tigers circles. Conclusions: I. None of the lighter is tiger, II. Some tigers are definitely not lighters (✓), III. Most of the lighters are animals (✓)"
+    },
+    {
+      "number": 18,
+      "solution": "(b) Venn diagram shows Pumpkins, Onions, Apples, Gingers circles. Conclusions: I. At least some onions are definitely gingers, II. Apples are gingers (✗), III. All apples except a few are gingers (✓)"
+    },
+    {
+      "number": 19,
+      "solution": "(c) Venn diagram shows Pens, Tables, Apples, Inks circles. Conclusions: I. Some apples are pens (✗), II. Some apples are tables (✗), III. Some inks are pens (✓)"
+    }
+  ],
+  "answers": [],
+  "_page": 1205
+}

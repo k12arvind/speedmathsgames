@@ -1,0 +1,75 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 33,
+      "solution": "(d) Input 03 25 12 48 22 07\nStep I 48 03 25 12 22 07\nStep II 48 03 22 25 12 07\nStep III 48 03 22 07 25 12"
+    },
+    {
+      "number": 34,
+      "solution": "(b) Input 05 27 50 14 24 09\nStep I 50 05 27 14 24 09\nStep II 50 05 24 27 14 09"
+    },
+    {
+      "number": 35,
+      "solution": "(b) Input 25 08 35 11 88 67 24 78\nStep I 88 25 08 35 11 67 24 78\nStep II 88 11 25 08 35 67 24 78\nStep III 88 11 78 25 08 35 67 24"
+    },
+    {
+      "number": 36,
+      "solution": "(c) Input show 51 36 new for 81 46 goal\nStep I 81 show 51 36 new far 46 goal\nStep II 81 for show 51 36 new 46 goal\nStep III 81 for 51 show 36 new 46 goal\nStep IV 81 for 51 goalshow 36 new 46\nStep V 81 for 51 goal 46 show 36 new\nStep VI 81 for 51 goal 46 new show 36\nStep VII 81 for 51 goal 46 new 36 show\n∴ Step VI will be last but one."
+    },
+    {
+      "number": 37,
+      "solution": "(e) Input home turf 39 24 86 44 roll over\nStep I 86 home turf 39 24 44 roll over\nStep II 86 home 44 turf 39 24 roll over\nStep III 86 home 44 over turf 39 24 roll\nStep IV 86 home 44 over 39 turf 24 roll\nStep V 86 home 44 over 39 roll turf 24\nStep VI 86 home 44 over 39 roll 24 turf\nClearly, last step = Step VI"
+    },
+    {
+      "number": 38,
+      "solution": "Step II 76 ask 12 32 begin over join 42\nStep III 76 ask 42 12 32 begin over join\nStep IV 76 ask 42 begin 12 32 over join\nStep V 76 ask 42 begin 32 12 over join\nStep VI 76 ask 42 begin 32 join 12 over\nClearly, after Step II, four more steps are required to complete the arrangement."
+    },
+    {
+      "number": 39,
+      "solution": "(b) Step IV 58 box 47 dew 15 21 town pot\nStep V 58 box 47 dew 21 15 town pot\nStep VI 58 box 47 dew 21 pot 15 town\nClearly, last step = Step VI"
+    },
+    {
+      "number": 40,
+      "solution": "(d) We cannot processed back in the arrangement problem."
+    },
+    {
+      "number": 41,
+      "solution": "(e) Input buy win task 52 38 43 door 12\nStep I 52 buy win task 38 43 door 12\nStep II 52 by 43 win task 38 door 12\nStep III 52 buy 43 door win task 38 12\nStep IV 52 buy 43 door 38 win task 12"
+    },
+    {
+      "number": 42,
+      "solution": "(e) The word 'for' is at the 5th position from the left in Step II"
+    },
+    {
+      "number": 43,
+      "solution": "(b) for —-2—→ 65, 97 —-2—→ 71\nSimilarly, wall —-12—→ hat"
+    },
+    {
+      "number": 44,
+      "solution": "(d) In Step II, 'T1' is third from the left."
+    },
+    {
+      "number": 45,
+      "solution": "(e) There will be no such step"
+    },
+    {
+      "number": 46,
+      "solution": "(d) Step III is '65 27 14 side wall for hat gun bat 97 81 71'."
+    },
+    {
+      "number": 47,
+      "solution": "(c) The word 'hat' is at the 7th position from the right is Step V."
+    },
+    {
+      "number": 48,
+      "solution": "(c) VI steps are required to complete the arrangement."
+    }
+  ],
+  "answers": [],
+  "_page": 596
+}

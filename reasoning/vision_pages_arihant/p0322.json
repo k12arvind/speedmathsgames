@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 17,
+      "solution": "(d) Let us check all options one by one.\nFrom option (a),\n17 - 3 × 6 = 45\n⇒ 17 × 3 ÷ 6 = 45 (using VBODMAS rule)\n⇒ 51 ÷ 39 ⇒ LHS ≠ RHS\nSo, option (a) is incorrect.\nFrom option (b),\n17 - 3 × 6 = 45\n⇒ 17 - 3 × 6 = 45 (using VBODMAS rule)\n⇒ 17 - 18 = 45 ⇒ -1 = 45\n∴ LHS ≠ RHS\nSo, option (b) is incorrect.\nFrom option (c),\n17 - 3 × 6 = 45\n⇒ 17 = 3 × 6 = 45 (using VBODMAS rule)\n⇒ 17 = 18 - 45 ⇒ 17 = -27\n∴ LHS ≠ RHS\nSo, option (c) is incorrect.\nFrom option (d),\n17 - 3 × 6 = 45\n⇒ 17 × 3 ÷ 6 = 45 (using VBODMAS rule)\n⇒ 51 ÷ 6 = 45 ⇒ 45 = 45\n∴ LHS = RHS\nSo, option (d) is correct."
+    },
+    {
+      "number": 18,
+      "solution": "(d) Let us check all the options one-by-one.\nFrom option (a), 3 + 2 × 1 = 7\n⇒ 3 × 2 + 1 = 7 (using VBODMAS rule)\n⇒ 6 + 1 = 7 ⇒ 7 = 7\n∴ LHS = RHS\nAs option (a) gives us correct answer, there is no need to check remaining options."
+    },
+    {
+      "number": 19,
+      "solution": "(b) Let us check all the options one by one.\nFrom option (a),\n6 - 5 + 4 = 34 (using VBODMAS rule)\n⇒ 10 - 5 = 34 ⇒ 5 = 34\n∴ LHS ≠ RHS\nSo, option (a) is incorrect.\nFrom option (b),\n6 × 5 + 4 = 34 (using VBODMAS rule)\n⇒ 30 + 4 = 34 ⇒ 34 = 34\n⇒ LHS = RHS\nSo, option (b) gives us the correct answer and hence, there is no need to check remaining options."
+    },
+    {
+      "number": 20,
+      "solution": "(c) Let us check all the options one-by-one.\nFrom option (a),\n7 - 4 × 8 × 2 = 24 (using VBODMAS rule)\n⇒ 7 - 64 = 24 ⇒ -57 = 24\n∴ LHS ≠ RHS\nSo, option (a) is incorrect.\nFrom option (b),\n7 - 4 × 8 ÷ 2 = 24 (using VBODMAS rule)\n⇒ 7 - 4 × 4 = 24 ⇒ 7 - 16 = 24\n⇒ -9 = 24 ⇒ LHS ≠ RHS\nSo, option (b) is incorrect.\nFrom option (c),\n7 × 4 - 8 ÷ 2 = 24 (using VBODMAS rule)\n⇒ 7 × 4 - 4 = 24 ⇒ 28 - 4 = 24\n⇒ 24 = 24 ⇒ LHS = RHS\nSo, option (c) is correct and hence, there is no need to check option (d)."
+    },
+    {
+      "number": 21,
+      "solution": "(c) Let us check all the options one by one.\nFrom option (a),\n65 - 40 + 11 = 36 ⇒ 76 - 40 = 36\n⇒ 36 = 36 ⇒ LHS = RHS\nSo, option (a) is correct and hence there is no need to check remaining options."
+    },
+    {
+      "number": 22,
+      "solution": "(d) 8 ÷ 4 × 6 × 5 = 8/4 × 6 × 5 = 2 × 6 × 5 = 60"
+    },
+    {
+      "number": 23,
+      "solution": "(b) Given, 7 + 7 + 2 • 1 = 12\nLet us check all the options one by one.\nFrom option (a), putting the signs in given equation, we get\n7 × 7 - 2 + 1 = 12 ⇒ 7 × 7 - 2 = 12\n⇒ 49 - 2 = 12 ⇒ 47 = 12\n⇒ LHS ≠ RHS\nSo, option (a) is incorrect.\nFrom option (b), putting the signs in given equation, we get\n7 + 7 - 2 × 1 = 12 ⇒ 7 + 7 - 2 = 12\n⇒ 14 - 2 = 12 ⇒ 12 = 12\nHence, option (b) is correct and there is no need to check remaining options."
+    },
+    {
+      "number": 24,
+      "solution": "(b) 1 ? K K K = 24\nAccording to the question,\n? + ? + 4 + 4 + 4 = 24\n⇒ ? = 24 - 19 = 5 = O\nHence, O is the missing symbol in the block."
+    },
+    {
+      "number": 25,
+      "solution": "(c) Given equation, (16 - 4) × 6 ÷ 2 + 8 = 30\nLet us check all the options one by one.\nFrom option (a), after interchanging signs, we get\n(16 + 4) × 6 - 2 + 8 = 30 ⇒ 4 × 6 - 2 + 8 = 30\n⇒ 24 - 2 + 8 = 30 ⇒ 32 - 2 = 30\n⇒ 30 = 30\nSo, option (a) is correct and there is no need to check remaining options."
+    }
+  ],
+  "answers": [],
+  "_page": 322
+}

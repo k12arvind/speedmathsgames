@@ -1,0 +1,101 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 12-13) In making decisions about important questions, it is desirable to be able to distinguish between 'strong' arguments and 'weak' arguments. 'Strong' arguments must be both important and directly related to the question. 'Weak' arguments may not be directly related to the question and may be of minor importance or may be related to the trivial aspects of the question. Each question below is followed by four arguments numbered I, II, III and IV. You have to decide which of the arguments is a 'strong' argument and which is a 'weak' argument?",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    }
+  ],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "argument_evaluation",
+      "subtopic_name": "Argument Evaluation",
+      "body": "Statement: Should road repair work in big cities be carried out only late at night?\nArguments I. No, this way the work will never get completed.\nII. No, there will be unnecessary use of electricity.\nIII. Yes, the commuters will face a lot of problems due to repair work during the day.",
+      "choices": {
+        "a": "None is strong",
+        "b": "Only I is strong",
+        "c": "Only III is strong",
+        "d": "I and III are strong",
+        "e": "I and II are strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "argument_evaluation",
+      "subtopic_name": "Argument Evaluation",
+      "body": "Statement: Should all the deemed universities be derecognised and attached to any of the Central or state universities in India?\nArguments I. Yes, many of these deemed universities do not conform to the required standards of a full-fledged university and hence, the level of education is compromised with.\nII. No, these Deemed Universities have been able to introduce innovative courses suitable to the requirement of various industries as they are free from strict Government controls.\nIII. Yes, many such universities are basically money spinning activities and education takes a backseat in these institutions.",
+      "choices": {
+        "a": "I and II are strong",
+        "b": "II and III are strong",
+        "c": "Only are strong",
+        "d": "All are strong",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "strong_weak_arguments",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Statement: Should the rule of wearing helmet for both driver and pillion rider while driving a motor bike be enforced strictly?\nArguments I. Yes, it is a rule and should be followed strictly by all.\nII. No, each individual knows how to protect his own life and it should be left to his discretion.\nIII. No, it does not ensure safety as only the head is protected and rest of the body is not.\nIV. Yes, it is a necessity as head, being the most sensitive organ, is protected by the helmet.",
+      "choices": {
+        "a": "None is strong",
+        "b": "I and III are strong",
+        "c": "I and IV are strong",
+        "d": "II and IV are strong",
+        "e": "All are strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Arguments",
+      "subtopic_code": "strong_weak_arguments",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Statement: Should all the management institutes in the country be brought under government control?\nArguments I. No, the government does not have adequate resources to run such institutes effectively.\nII. No, each institute should be given freedom to function on its own.\nIII. Yes, this will enable to have standardised education for all the students.\nIV. Yes, only then the quality of education would be improved.",
+      "choices": {
+        "a": "None is strong",
+        "b": "I, II and III are strong",
+        "c": "I and II are strong",
+        "d": "All are strong",
+        "e": "Only III is strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1025
+}

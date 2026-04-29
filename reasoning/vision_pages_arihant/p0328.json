@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 12,
+      "solution": "(a) 1st Row 58 17 5 ⇒ 58 + 17 = 75\n⇒ 75 - 5 = 70\n= n\n2nd Row 85 5 n ⇒ 85 + 5 = 90\n⇒ 90 - n = 85 + 5 = 17\n⇒ 17 × 15 = 255\n∴ Resultant of second row = 255"
+    },
+    {
+      "number": 13,
+      "solution": "(b) 1st Row 24 64 15 ⇒ 64 - 24 = 40\n⇒ 40 + 15 = 55\n= m\n2nd Row m 11 15 ⇒ 55 11 15\n⇒ 55 + 11 = 66\n⇒ 66 ÷ 5 × 15 = 75\n∴ Resultant of second row = 75"
+    },
+    {
+      "number": 14,
+      "solution": "(c) 1st Row 7 21 3 ⇒ 7 × 21 = 147\n⇒ 147 + 3 = 49 = d"
+    },
+    {
+      "number": 15,
+      "solution": "(d) 1st Row 73 34 13 ⇒ 73 - 34 = 39\n⇒ 39 + 13 = 3 = p\n2nd Row 32 p 15 ⇒ 32 3 15\n⇒ 32 + 3 = 35\n⇒ 35 × 15 = 525\n∴ Resultant of second row = 525"
+    },
+    {
+      "number": 16,
+      "solution": "(d) 1st Row 14 5 9 ⇒ 14 + 5 = 19\n⇒ 19 × 9 = 171\n= w\n2nd Row 24 w 88 ⇒ 24 171 88\n⇒ 24 + 171 = 195\n⇒ 195 - 88 = 107\n∴ Resultant of second row = 107"
+    },
+    {
+      "number": 17,
+      "solution": "(e) 1st Row 16 7 25 ⇒ 16 × 7 = 112\n⇒ 112 - 25 = 87\n2nd Row m 23 22 ⇒ 87 23 22\n⇒ 87 + 23 = 110\n⇒ 110 - 22 = 5\n∴ Resultant of second row = 5"
+    },
+    {
+      "number": 18,
+      "solution": "(c) 1st Row 97 45 71 ⇒ 97 - 45 = 142\n⇒ 142 + 71 = 2\n2nd Row 48 8 11 ⇒ 48 + 8 = 6\n⇒ 6 × 11 = 66\n∴ Required sum = 2 + 66 = 68"
+    },
+    {
+      "number": 19,
+      "solution": "(b) 1st Row 125 64 33 ⇒ 125 - 64 = 61\n⇒ 61 + 33 = 94\n= x\n2nd Row 282 x 39 ⇒ 282 94 39\n⇒ 282 + 94 = 3\n⇒ 3 + 39 = 42\n∴ Resultant of second row = 42"
+    },
+    {
+      "number": 20,
+      "solution": "(b) 1st Row 84 14 13 ⇒ 84 + 14 = 6\n⇒ 6 × 13 = 78\n2nd Row 360 24 17 ⇒ 360 + 24 = 15\n⇒ 15 + 17 = 32\n∴ Required difference = 78 - 32 = 46"
+    },
+    {
+      "number": 21,
+      "solution": "(c) 1st Row 24 7 81 ⇒ 24 × 7 = 168\n⇒ 168 - 81 = 87\n= x\n2nd Row x 27 19 ⇒ 87 27 19\n⇒ 87 + 27 = 114\n⇒ 114 ÷ 19 = 6\n∴ Resultant of second row = 6"
+    }
+  ],
+  "answers": [],
+  "_page": 328
+}

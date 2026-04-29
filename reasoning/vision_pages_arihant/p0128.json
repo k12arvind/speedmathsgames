@@ -1,0 +1,348 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 4-6) In the following questions, from the given alternatives words, select the word which cannot be formed using the letters of the given word.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 7-10) In each of the following question a word is given followed by four other words, one of which cannot be formed by using the letters of given word. Find that particular word.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 15-19) Answer these questions referring to the symbol letter number sequence given below. 2 P J @ 8 5 L B 1 V # 0 6 8 6 W 9 K C D 3 © * £ 5 F R 7 A Y 4",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "If it is possible to make a meaningful word with the 2nd, the 6th and the 12th letters of the word 'CONTRIBUTION', which of the following will be the last letter of that word? If more than one such word can be formed, give 'M' as the answer and if no such word is there, give 'X' as the answer.",
+      "choices": {
+        "a": "T",
+        "b": "O",
+        "c": "N",
+        "d": "M"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "If the following scrambled letters are rearranged to form the name of city, which letter will appear in the middle? AIDMURA",
+      "choices": {
+        "a": "M",
+        "b": "R",
+        "c": "U",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Letter Rearrangement",
+      "body": "If the 2nd half of the letters of the word 'TRANSPORTATIONAL' are reversed and placed before 1st half of the letters, which letter will be the third to the right of the 13th letter from the right?",
+      "choices": {
+        "a": "R",
+        "b": "N",
+        "c": "L",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "Reasonable",
+      "choices": {
+        "a": "Bones",
+        "b": "Brain",
+        "c": "Arson",
+        "d": "Noble"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "Attraction",
+      "choices": {
+        "a": "Caution",
+        "b": "Traction",
+        "c": "Ration",
+        "d": "Carton"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "Workshop",
+      "choices": {
+        "a": "Show",
+        "b": "Crow",
+        "c": "Work",
+        "d": "Pork"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "EDUCATIONAL",
+      "choices": {
+        "a": "NATIONAL",
+        "b": "NEAT",
+        "c": "DEAN",
+        "d": "LION"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "PERMANENT",
+      "choices": {
+        "a": "REMNANT",
+        "b": "TRAMP",
+        "c": "MENTOR",
+        "d": "AMPERE"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "MORTGAGE",
+      "choices": {
+        "a": "AROMA",
+        "b": "GEAR",
+        "c": "ROAM",
+        "d": "GRATE"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "SPECIFICATION",
+      "choices": {
+        "a": "PACIFIC",
+        "b": "FACTION",
+        "c": "FAINTING",
+        "d": "TONIC"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "anagram",
+      "subtopic_name": "Anagram Formation",
+      "body": "In the following question a word is given followed by four different words, one of which can be formed by using the letter of the given word find the word. 'IMMEDIATELY'",
+      "choices": {
+        "a": "DIALECT",
+        "b": "LIMITED",
+        "c": "DIAMETER",
+        "d": "DICTATE",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "letter_count",
+      "subtopic_name": "Letter Counting",
+      "body": "In the following letter series, how many BCN occur in such a way, that C is in the middle and B and N are on any one side? BCMXNCXNBXNCBNCBYBCXNBCNABQNM ZCB",
+      "choices": {
+        "a": "4",
+        "b": "2",
+        "c": "5",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "Study the number series given below and answer the question that follows. 78976534289724592976647 How many 7's are preceded by 9 and followed by 6?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "letter_count",
+      "subtopic_name": "Letter Counting",
+      "body": "How many M's occur in the following series such that it is preceded by W and followed by V? XUVMRSTMWNWVMWPMVUVMWACWMVH PNVWMWTUN",
+      "choices": {
+        "a": "3",
+        "b": "2",
+        "c": "1",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "symbol_counting",
+      "subtopic_name": "Symbol Counting",
+      "body": "How many symbols and numbers are there in the sequence which are either immediately preceded or immediately followed by the letter which is from the first half of the English alphabet?",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "Four of the following five are similar in relation to their positions in the above sequence and hence form a group. Which one does not belong to that group?",
+      "choices": {
+        "a": "QK5",
+        "b": "L6D",
+        "c": "PLB",
+        "d": "1G@"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 128
+}

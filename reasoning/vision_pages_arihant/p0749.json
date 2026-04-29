@@ -1,0 +1,37 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Finding the Odd Pair of Figures",
+  "passages": [
+    {
+      "passage_text": "In this type of questions, five pairs of figures are given. All the pairs except one follow a certain rule on the basis of which a relationship between two figures in each of the pairs is established. One pair out of five pairs does not show this relationship and this pair is to be selected by the candidate as the answer. Following examples will illustrate the type of such extension of analogy. Directions (Example Nos. 14-18) In the following questions, element (ii) is related to element (i) in a particular way in four pairs of figures out of the given five. Find out the pair of figures in which the element (ii) is not related to element (i).",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "(c) In all pairs of figures except pair (c), the inner figure is divided into two halves and each half is reversed at the same position and the outer figure comes between the two halves."
+    },
+    {
+      "number": 15,
+      "solution": "(e) The symbol at the top shifts to bottom position and a new symbol replaces the symbol at the top position. All other symbols shift one step upward. The pair (e) does not follow this rule."
+    },
+    {
+      "number": 16,
+      "solution": "(e) First figure, counting from bottom, occupies third position and second and third figures occupy first and second positions respectively and are laterally inverted at new positions. All the pairs except pair (e) follow this rule."
+    },
+    {
+      "number": 17,
+      "solution": "(c) Two symbols in clockwise direction interchange positions and the third symbol moves one step in the clockwise direction and gets changed to a new element. (c) does not follow this rule"
+    },
+    {
+      "number": 18,
+      "solution": "(e) In each pair of figures, except pair (e), the design on the boundary of the main figure moves one and half side anti-clockwise and is converted into new shaded design in such a way that design outside the boundary remains outside and design inside the boundary remains inside. Pair (e) does not follow this rule."
+    }
+  ],
+  "answers": [],
+  "_page": 749
+}

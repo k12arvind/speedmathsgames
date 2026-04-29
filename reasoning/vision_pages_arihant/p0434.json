@@ -1,0 +1,84 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Calendar",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "same_calendar_year",
+      "subtopic_name": "Finding Same Calendar Year",
+      "body": "Which year will have the same calendar as that of 2012?",
+      "choices": {
+        "a": "2020",
+        "b": "2040",
+        "c": "2025",
+        "d": "2031"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "same_calendar_year",
+      "subtopic_name": "Finding Same Calendar Year",
+      "body": "Which of the given years will have the same calendar as that of year 2003?",
+      "choices": {
+        "a": "2013",
+        "b": "2014",
+        "c": "2015",
+        "d": "2016"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_finding",
+      "subtopic_name": "Finding Day on Particular Date",
+      "body": "If 15th August, 2011 was Monday, what day of the week was on 17th September, 2011?",
+      "choices": {
+        "a": "Saturday",
+        "b": "Sunday",
+        "c": "Friday",
+        "d": "Thursday"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Since, 2012 is a leap year ∴ 2012 + 28 = 2040 So, year 2040 will have the same calendar a that of 2012. (as we know that, a leap year repeats itself after 28 yr)"
+    },
+    {
+      "number": 2,
+      "solution": "To have the same calendar as that year 2003, we must have 0 odd days between 2003 and the required year. Total odd days = 1 + 2 + 1 + 1 + 1 + 1 + 2 + 1 + 1 + 1 + 2 + 1 = 14 odd days = 2 complete weeks or 0 odd day Therefore, calendar for the year 2014 will be same as that of year 2003."
+    },
+    {
+      "number": 3,
+      "solution": "Here, total days in August, 2011 = 31 – 15 = 16 and total days in September, 2011 (1st to 17th) = 17 Total days = 33 ∴ 33 ÷ 7 = 7) 33 (4 28 5 33 days = (4 × 7 + 5) days = 4 weeks + 5 odd days ∴ Number of odd days = 5 Required day = Monday + 5 = Saturday"
+    }
+  ],
+  "answers": [],
+  "_page": 434
+}

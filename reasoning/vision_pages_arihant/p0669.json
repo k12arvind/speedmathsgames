@@ -1,0 +1,137 @@
+{
+  "page_type": "questions",
+  "chapter_number": 21,
+  "chapter_title": "Type 2 Based on Name, Phone Number, Address and Pin Code",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-12) In each of the following questions, a combination of name and address is given in the first unnumbered column at the left, followed by four such combinations, one each under the column (a), (b), (c) and (d). You have to find out the combination which is exactly the same as the combination in the first unnumbered column. The number of that column which contains that correct combination is the answer.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "name_address_matching",
+      "subtopic_name": "Name and Address Matching",
+      "body": "Akhili Bhargawa G-15, Vazirpur Shimala-171001",
+      "choices": {
+        "a": "Akhali Bhargawa G-15, Vazirpur Shimala-171001",
+        "b": "Akhali Bhargawa G-15, Vazirpur Shimala-171010",
+        "c": "Akhili Bhargawa G-15, Vazirpur Shimala-171001",
+        "d": "Akhili Bhargawa G-15, Bazirpur Shimala-171001"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "name_address_matching",
+      "subtopic_name": "Name and Address Matching",
+      "body": "Anil Santhosh Kumar 3 West Club Road, Secunderabad -560003",
+      "choices": {
+        "a": "Anil Santhosh Kumar 8 West Club Road, Secunderabad -560003",
+        "b": "Anil Santhosh Kumar 3 East Club Road, Secunderabad -560003",
+        "c": "Anil Santhosh Kumar 3 West Club Road, Secunderabad -550003",
+        "d": "Anil Santhosh Kumar 3 West Club Road, Secunderabad -560003"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "name_address_matching",
+      "subtopic_name": "Name and Address Matching",
+      "body": "B Prakash Reddy House No. 24/91 Near Fatima College of Edn Warangal 463836",
+      "choices": {
+        "a": "B Prakash Reddy House No. 24/91 Near Fatima College of Edn Warangal 463836",
+        "b": "B Prakash Reddy House No. 24/91 Near Fatima College of Edn Warangal 463836",
+        "c": "B. Prakash Reddy House No. 24/91 Near Fatima College of Edn Warangal 463836",
+        "d": "B Prakash Reddy House No. 24/91 Near Fatema College of Edn Warangal 463836"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "name_address_matching",
+      "subtopic_name": "Name and Address Matching",
+      "body": "Dr D Raja Ganesan 3/27 Seventh Are, Malyands, Australia W A 6051",
+      "choices": {
+        "a": "Dr D Raja Ganesan 3/27 Seventh Are, Malyands, Australia W A 6051",
+        "b": "Dr D Raja Ganesan 3/27 Seventh Are, Malyands, Australia W A 6052",
+        "c": "Dr D Raja Ganesan 6/27 Seventh Are, Malyands, Australia W A 6051",
+        "d": "Dr D Raja Ganesan 3/27 Seventh Are, Malyands, Australia W A 6051"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "name_address_matching",
+      "subtopic_name": "Name and Address Matching",
+      "body": "Himanshu Govil 13/72 Bapal Lane Hoshangabad-36087",
+      "choices": {
+        "a": "Himanshu Govil 13/72 Bapal Lane Hoshangabad-36087",
+        "b": "Himanshu Govil 3/72 Bapal Lane Hoshagabad-36087",
+        "c": "Himanshu Govil 13/72 Bapal Lane Hoshangabd-36087",
+        "d": "Himanshu Govel 13/72 Bapal Lane Hoshangabd-36087"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "name_address_matching",
+      "subtopic_name": "Name and Address Matching",
+      "body": "Indira Eshwarappa Mandi Merchant Beemasamudra Chitradurga",
+      "choices": {
+        "a": "Indira Eshahwarapa Mandi Merchant Beemasamudra Chitradurga",
+        "b": "Indira Eshwarappa Mandi Merchant Beemasumudra Chitradurga",
+        "c": "Indira Eshwarappa Mandi Merchant Beemasamudra Chitradurga",
+        "d": "Indira Eshwarappa Mandi Merchant Baamasamudra Chitradurga"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 669
+}

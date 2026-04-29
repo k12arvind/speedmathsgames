@@ -1,0 +1,177 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. A word is represented by only one set of numbers as given in anyone of the alternatives. The set of numbers given in the alternatives are represented by two classes of alphabets as in the two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II from 5 to 9. A letter can be represented first by its row and next by its column number. e.g., 'N' can be represented by 02, 21, etc. 'O' can be represented by 65, 96 etc. Similarly, you have to identify the correct set for the word given in each question.",
+      "has_figure": true,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "PENS",
+      "choices": {
+        "a": "12, 67, 21, 30",
+        "b": "43, 56, 13, 23",
+        "c": "43, 56, 21, 42",
+        "d": "31, 57, 21, 42"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "HIPS",
+      "choices": {
+        "a": "85, 41, 24, 11",
+        "b": "66, 21, 24, 11",
+        "c": "67, 41, 24, 42",
+        "d": "78, 34, 23, 04"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "SORROW",
+      "choices": {
+        "a": "23, 86, 69, 88, 65, 33",
+        "b": "23, 43, 14, 33, 65, 78",
+        "c": "11, 66, 69, 65, 59, 97",
+        "d": "42, 65, 95, 88, 77, 44"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "WEAR",
+      "choices": {
+        "a": "44, 68, 67, 87",
+        "b": "44, 87, 98, 69",
+        "c": "20, 86, 67, 87",
+        "d": "32, 87, 78, 95"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "DUST",
+      "choices": {
+        "a": "00, 76, 86, 59",
+        "b": "13, 76, 98, 89",
+        "c": "21, 69, 55, 65",
+        "d": "12, 57, 67, 58"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "CAMP",
+      "choices": {
+        "a": "02, 57, 04, 34",
+        "b": "14, 68, 42, 34",
+        "c": "21, 75, 11, 41",
+        "d": "40, 99, 42, 12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "PUMP",
+      "choices": {
+        "a": "03, 69, 03, 54",
+        "b": "41, 88, 23, 02",
+        "c": "10, 57, 23, 34",
+        "d": "22, 95, 43, 41"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "PAST",
+      "choices": {
+        "a": "10, 56, 41, 58",
+        "b": "22, 68, 55, 66",
+        "c": "34, 75, 67, 58",
+        "d": "41, 99, 98, 88"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 201
+}

@@ -1,0 +1,118 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 7 Coded Inequalities",
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 24-28) In the questions that follow, the symbols are used as follows. A © B means A is greater than B. A = B means A is equal to B. A @ B means A is either smaller than or equal to B. A ⊕ B means A is either greater than or equal to B. A @ B means A is smaller than B. Now, in each of the following questions, assuming the three statements to be true, state which of the two Conclusions I and II given below is definitely true. Give answer (a) if only Conclusion I is true (b) if only Conclusion II is true (c) if either Conclusion I or II is true (d) if neither Conclusion I nor II is true (e) if both Conclusions I and II are true",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    }
+  ],
+  "questions": [
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: Q @ R, R @ M, M © D Conclusions: I. D © R II. D @ Q",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: M @ K, K © R, R © P © D Conclusions: I. P @ K II. P @ M",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: T © M, M = P, P © R Conclusions: I. R @ T II. T © R",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": "e",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: P @ Q, Q © K, K@ M Conclusions: I. M = Q II. M ⊕ Q",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 24,
+      "solution": "According to the question, Q @ R ⇒ Q < R, R @ M ⇒ R < M, M © D ⇒ M > D. On combining the statements (i), (ii) and (iii), we get Q < R < M > D. Conclusions I. D © R ⇒ D > R (false), II. D @ Q ⇒ D < Q (false). So, it is clear that neither Conclusion I nor II is true."
+    },
+    {
+      "number": 25,
+      "solution": "According to the question, M @ K ⇒ M < K, K © R ⇒ K > R, R © P © D ⇒ R > P > D. On combining the statements (i), (ii) and (iii), we get M < K > R > P. Conclusions I. P @ K ⇒ P < K (true), II. P @ M ⇒ P < M (false). So, it is clear that only Conclusion I is true."
+    },
+    {
+      "number": 26,
+      "solution": "According to the question, T © M ⇒ T > M, M = P ⇒ M = P, P © R ⇒ P > R. On combining the statements (i), (ii) and (iii), we get T > M = P > R. Conclusions I. R @ T ⇒ R < T (true), II. T © R ⇒ T > R (true). So, it is clear that both Conclusions I and II are true."
+    },
+    {
+      "number": 27,
+      "solution": "According to the question, P @ Q ⇒ P < Q, Q © K ⇒ Q > K, K @ M ⇒ K < M. On combining the statements (i), (ii) and (iii), we get P < Q > K < M. Conclusions I. M = Q ⇒ M = Q (false), II. M ⊕ Q ⇒ M ≥ Q (false). So, it is clear that neither Conclusion I nor II is true."
+    }
+  ],
+  "answers": [],
+  "_page": 335
+}

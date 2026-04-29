@@ -1,0 +1,148 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q.1-17): Read the information given below and answer the questions that follow: There are five villages, viz. A, B, C, D and E. Two of these villages have post offices, three have schools and five are accessible by road. Two have electricity. Not more than 5000 each, two have population between 2000 and 5000 each, but one has a population of less than 2000. Two of these villages have post addition to certain other facilities such as school and accessibility by road. One village with a population more than 2000 also has a school but one has a post office nor is accessible by road. Out of the two villages having a population of more than 5000, both have schools. Of the two villages having a population between 2000 and 5000, only one has a post office and is accessible by road. A is accessible by road but does not have a post office, while D has a school but is not accessible by road.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Directions (Q.18-24): An information processing system consists of seven stations; A, B, C, D, E, F, G and H. Each request is classified as either normal or priority. Requests for information are processed in the following ways: (i) All normal requests are received by either M or N, and all priority requests are received by M or Q. (ii) All requests processed by M are then sent to T. (iii) All requests processed by N are then sent to S. (iv) All normal requests processed by T are then sent to P; priority requests processed by T are then sent to O. (v) All requests processed by S are then sent to either T or P. (vi) Normal requests processed by P are then sent to Q, and priority requests processed by P are then sent to R. (vii) All requests processed by Q are then sent to either P or R. (viii) R is the station which issues a final response.",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    }
+  ],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "village_analysis",
+      "subtopic_name": "Village Analysis",
+      "body": "Which village has a school and also a post office?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "village_analysis",
+      "subtopic_name": "Village Analysis",
+      "body": "Which village does not have any of the facilities available to other villages?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "village_analysis",
+      "subtopic_name": "Village Analysis",
+      "body": "Which two villages have electricity?",
+      "choices": {
+        "a": "A, B",
+        "b": "B, C",
+        "c": "B, D",
+        "d": "C, D",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "village_analysis",
+      "subtopic_name": "Village Analysis",
+      "body": "Which three villages are accessible by road?",
+      "choices": {
+        "a": "A, B, D",
+        "b": "A, D, E",
+        "c": "A, D, F",
+        "d": "B, D, E",
+        "e": "A, B, C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "village_analysis",
+      "subtopic_name": "Village Analysis",
+      "body": "Which village has a population of less than 2000?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "D",
+        "d": "E",
+        "e": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "information_processing",
+      "subtopic_name": "Information Processing",
+      "body": "Any of the following can be true EXCEPT",
+      "choices": {
+        "a": "M sends a request to T.",
+        "b": "S sends a request to T.",
+        "c": "S sends a request to P.",
+        "d": "S sends a request to Q.",
+        "e": "Q sends a request to P."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 331
+}

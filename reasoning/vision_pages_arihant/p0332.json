@@ -1,0 +1,295 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 6-10) In these questions, relationships between different elements is shown in the statement. The statement is followed by two conclusions. Study the conclusions based on the given statement and select the appropriate answer.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 14-18) In these questions, relationship between different elements is shown in the statements. These statements are followed by two conclusions. Give answer (a) if only Conclusion I is true (b) if only Conclusion II is true (c) if either Conclusion I or II is true (d) if neither Conclusion I nor II is true (e) if both Conclusions I and II are true",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statement: K > I ≥ T ≥ E; 0 < R < K\nConclusions: I. R < E\n             II. 0 < T",
+      "choices": {
+        "a": "Neither Conclusion I nor II follows",
+        "b": "Both Conclusions I and II follow",
+        "c": "Only Conclusion II follows",
+        "d": "Either Conclusion I or II follows",
+        "e": "Only Conclusion I follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statement: C < L < 0 = U = D ≥ S > Y\nConclusions: I. 0 > Y\n             II. L < D",
+      "choices": {
+        "a": "Neither Conclusion I nor II follows",
+        "b": "Both Conclusions I and II follow",
+        "c": "Only Conclusion I follows",
+        "d": "Only Conclusion II follows",
+        "e": "Either Conclusion I or II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statement: K ≥ L > M ≥ N\nConclusions: I. N ≤ K\n             II. N < K",
+      "choices": {
+        "a": "Both Conclusions I and II follow",
+        "b": "Neither Conclusion I nor II follows",
+        "c": "Either Conclusion I or II follows",
+        "d": "Only Conclusion I follows",
+        "e": "Only Conclusion II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statement: Z ≥ Y = W ≤ X\nConclusions: I. W < Z\n             II. W = Z",
+      "choices": {
+        "a": "Only Conclusion II follows",
+        "b": "Only Conclusion I follows",
+        "c": "Neither Conclusion I nor II follows",
+        "d": "Either Conclusion I or II follows",
+        "e": "Both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statement: B > A > S < I > C > L > Y\nConclusions: I. B > L\n             II. A > Y",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Either Conclusion I or II follows",
+        "d": "Neither Conclusion I nor II follows",
+        "e": "Both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Which of the following expressions will be true, if the given expression K ≥ G > H ≤ F is definitely true?",
+      "choices": {
+        "a": "F ≥ K",
+        "b": "H < K",
+        "c": "F < G",
+        "d": "K ≥ H",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "In which of the following expressions will the expression 'A < D' be definitely true?",
+      "choices": {
+        "a": "A ≥ B = C < D",
+        "b": "A > B = C ≥ D",
+        "c": "A < B = C ≤ D",
+        "d": "A > B < C ≤ D",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "In which of the following expressions does the expression 'M > R' does not hold true?",
+      "choices": {
+        "a": "M = P > Q > R",
+        "b": "M > P ≥ Q = R",
+        "c": "R = P < Q < M",
+        "d": "R < Q ≤ P = M",
+        "e": "M = P < Q = R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements: H ≥ I = J > K ≤ L\nConclusions: I. K < H\n            II. L ≥ I",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements: S > C ≥ 0, P < C\nConclusions: I. 0 < P\n            II. S > P",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements: A = B ≤ C, A > R\nConclusions: I. B > R\n            II. R < C",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements: D > E ≤ F, J < F\nConclusions: I. D > J\n            II. E < J",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements: P < Q > T, R ≥ Q\nConclusions: I. R > P\n            II. T < R",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 332
+}

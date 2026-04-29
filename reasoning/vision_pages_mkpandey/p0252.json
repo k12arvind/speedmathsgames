@@ -1,0 +1,39 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 37,
+      "solution": "Since it is a 2-step case, complete rearrangement of input will be done at a step that is a multiple of 2. (Imp.) This eliminates choices 2 and 4. We see that P₁ → P₂ in 0 → 4 and P₃ → P₄ in 0 → 4. Hence, step IV is ruled out. Now, consider step X. 0 → 2 Now, P₁ → P₄ in 0 → 2. (Since Q. 36-47: We see that P₁ ← P₄, P₃ ← P₂, P₄ ← P₃. (P₁ ← P₄ means P₁ is indeed a corrector of P₄.) Hence, it is a 1-step case. But, 4 → 1 ⟹ 4 ← 3, 3 ← 1 or 4 ← 2, 3 ← 2 (1 ← 2) ⟹ (3 ← 2) ← 4 ← 1. So, assuming your 1½ step I to be step III. Find step II. Hence, in step II to be step III and find its step I. Let us consider using (P₁) as in different positions in different choices. Now, in 3 → 2, P₁ → P₃. So, employing L.N.F., (3 → 2) 1 ← P₁ ← P₃. So, enjoy in P₁ is the answer."
+    },
+    {
+      "number": 38,
+      "solution": "8 to 9 PM is the 10th batch starting and 10 to 11 AM is the next of next morning. We can also take 10 to 11 AM as (10 + 9-11) batch because it comes after 10th batch. So, we have to find 10=11 batch by golden rule: 10 ⇒ 11 ⟹ (14 ⇒ 9 ⇒ 1) ⇒ (11 ⇒ 9 ⇒ 1) ⇒ 4 vs Correct in choice 4. 'Keep ...' is batch 1 and find last batch is ..."
+    },
+    {
+      "number": 39,
+      "solution": "Same as Q. 39."
+    },
+    {
+      "number": 40,
+      "solution": "1 PM to find step 1. Now, batch 4 has Divyjjay as P₁. So batch has have Divyjjay as P₁. (Since 4 → 1 ⟹ (4 ⟹ 1) ⇒ (3 ⟹ 1) ⇒ 3 → 1 And P₁ → P₄ in 3 → 1, and P₁ → P₃ in 3 → 2. So, Divyjjay will be in batch 1 and 3 of the 5th batch."
+    },
+    {
+      "number": 41,
+      "solution": "Between 2 to 3 PM, the 5th batch is issued. So, we have to find 5→5. But, 8 → 5 ⟹ 4 → 1. As seen in Q. 41, correct choice can be found."
+    },
+    {
+      "number": 42,
+      "solution": "We see that in 0 → 1, P₁ → P₃, P₂ → P₄, P₃ → P₁, in 1 → 2, P₁ → P₂, P₂ → P₁, P₃ → P₄, P₄ → P₃, in 2 → 3, P₁ → P₄, P₄ → P₁, P₂ → P₃, P₃ → P₂, in 3 → 4, P₁ → P₁, P₂ → P₂, P₃ → P₃, P₄ → P₄. Hence, it is a 4-step case."
+    },
+    {
+      "number": 43,
+      "solution": "We have to find 2 → 7. Let us consider one (P₁) and you (P₂) as these are the different pairs of places in different choices. We have, 2 → 7 ⟹ 2 → 3, 5 → 7. But 5 → 7 ⟹ 5 → 4 ⟹ 7 ← 4 ⟹ 1 ← 3. So, 2 → 5 ⟹ 7 ⟹ 2 → 5, 1 → 3. Now, in 2 → 5 P₁ → P₃, P₄ → P₅."
+    }
+  ],
+  "answers": [],
+  "_page": 252
+}

@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Direction and Distance",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "According to the question, the direction diagram is drawn as shown in adjacent figure. IO = 10 m, OP = 30 m, PF = 50 m. QI = OP = 30 m, PQ = IO = 10 m. OF = PF - PQ = 50 - 10 = 40 m. F represents the final position. Required distance, IF = √[(QI)² + (OF)²] = √[(30)² + (40)²] = √[900 + 1600] = √2500 = 50 m"
+    },
+    {
+      "number": 15,
+      "solution": "Let A and B started from point O. A towards West and B towards East and atlast they reached N and Q, respectively. Distance of A from O, ON = √[(OM)² + (MN)²] = √[3² + 4²] = 5 km. Distance of B from O, OQ = √[(OP)² + (PQ)²] = √[4² + 3²] = 5 km. So, A and B are both at a distance of 5 km from the starting point."
+    },
+    {
+      "number": 16,
+      "solution": "According to the question, the direction diagram is as shown below. Distance between starting and ending point, AE = AB - EB = 75 - 40 = 35m (∵ EB = DC)"
+    }
+  ],
+  "answers": [],
+  "_page": 462
+}

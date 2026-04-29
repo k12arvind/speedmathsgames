@@ -1,0 +1,492 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "A pair of word is given in each question bearing a certain relationship. Based on that find the pair from options that will bear the same relationship.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Each question has four analogies from a to d. Mark all correct analogies.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 109,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Russia : Moscow",
+      "choices": {
+        "a": "India : Mumbai",
+        "b": "Norway : Oslo",
+        "c": "China : Shanghai",
+        "d": "Pakistan : Faislabad"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 110,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Error : Mistake",
+      "choices": {
+        "a": "Connection : Retaliation",
+        "b": "Literature : Poetry",
+        "c": "Music : Art",
+        "d": "Doubt : Suspicion"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 111,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Ass : Bray",
+      "choices": {
+        "a": "Flies : Squeak",
+        "b": "Hen : Mew",
+        "c": "Fox : Snout",
+        "d": "Sheep : Bleat"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 112,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Cigarette : Tobacco",
+      "choices": {
+        "a": "Coffee : Caffeine",
+        "b": "Milk : Bottle",
+        "c": "Cigar : Filter",
+        "d": "Shoes : Socks"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 113,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Traveller : Destination",
+      "choices": {
+        "a": "Beggar : Donation",
+        "b": "Accident : Hospital",
+        "c": "Teacher : Education",
+        "d": "Refugee : Shelter"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 114,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Apostate : Religion",
+      "choices": {
+        "a": "Teacher : Education",
+        "b": "Traitor : Country",
+        "c": "Potentate : Kingdom",
+        "d": "Jailer : Law"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 115,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Light : Glint",
+      "choices": {
+        "a": "Tide : Wave",
+        "b": "Scent : Whiff",
+        "c": "Colour : Shade",
+        "d": "Sound : Blare"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 116,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Racism : Apartheid",
+      "choices": {
+        "a": "Sexism : Chauvinism",
+        "b": "Parochialism : Linguism",
+        "c": "Nationalism : Identity",
+        "d": "Communalism : Religion"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 117,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Patriotism : Citizens",
+      "choices": {
+        "a": "Morality : Truthfulness",
+        "b": "Character : Values",
+        "c": "Concentration : Students",
+        "d": "Homage : Martyrs"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 118,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Surgeon : Scalpel",
+      "choices": {
+        "a": "Musician : Instrument",
+        "b": "Carpenter : Cabinet",
+        "c": "Sculptor : Chisel",
+        "d": "Baker : Oven"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 119,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Horns : Bull",
+      "choices": {
+        "a": "Mane : Lion",
+        "b": "Wattles : Turkey",
+        "c": "Hoofs : Horse",
+        "d": "Antlers : Stag"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 120,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Spider : Web",
+      "choices": {
+        "a": "Ink : Pen",
+        "b": "Cock : Hen",
+        "c": "Teacher : Student",
+        "d": "Poet : Poetry"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 121,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Jew : Synagogue",
+      "choices": {
+        "a": "Parsis : Temple",
+        "b": "Jains : Fire Temple",
+        "c": "Buddhists : Pagoda",
+        "d": "Hindus : Vedas"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 122,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "'Steel' is related to 'Alloy' in the same way as 'Zinc' is related to",
+      "choices": {
+        "a": "Non-metal",
+        "b": "Halogen",
+        "c": "Alloy",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 123,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "multiple_analogy",
+      "subtopic_name": "Multiple Analogy",
+      "body": "(a) Murrey : Black :: Magenta : Red\n(b) Inter : Exhume :: Prebald : Homogenous\n(c) Effete : Fructuous :: Chapfallen : Effervescent\n(d) Selenology : Moon :: Epistemology : Knowledge",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 124,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "multiple_analogy",
+      "subtopic_name": "Multiple Analogy",
+      "body": "(a) Polyglot : Languages :: Polyphagous : Food\n(b) Escutcheon : Scutcheon :: Fabulist : Liar\n(c) Scurvy : Vitamin C :: Kwashiorkor : Protein\n(d) Apothecary : Drugs :: Cruciverualist : Crosswords",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 125,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "M/AC : N/AD :: O/AE : ?",
+      "choices": {
+        "a": "P/AF",
+        "b": "Q/AB",
+        "c": "R/AC",
+        "d": "R/AD"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 126,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_series",
+      "subtopic_name": "Letter Series",
+      "body": "If JOS : LNV, then JRM : ?",
+      "choices": {
+        "a": "OKS",
+        "b": "MOP",
+        "c": "NIP",
+        "d": "MOQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 127,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "24 : 126 :: 48 : ?",
+      "choices": {
+        "a": "433",
+        "b": "192",
+        "c": "240",
+        "d": "344"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 128,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "(32, 24, 8)",
+      "choices": {
+        "a": "(26, 32, 42)",
+        "b": "(34, 24, 14)",
+        "c": "(24, 16, 8)",
+        "d": "(42, 34, 16)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 129,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "(81, 77, 69)",
+      "choices": {
+        "a": "(56, 52, 44)",
+        "b": "(64, 61, 53)",
+        "c": "(75, 71, 60)",
+        "d": "(92, 88, 79)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 130,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Valueless : Invaluable",
+      "choices": {
+        "a": "Costly : Cut-rate",
+        "b": "Miserly : Philanthropic",
+        "c": "Frugality : Wealth",
+        "d": "Thriftiness : Cheap"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 131,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Thrust : Spear",
+      "choices": {
+        "a": "Gabbard : Sword",
+        "b": "Mangle : Iron",
+        "c": "Bow : Arrow",
+        "d": "Fence : Epee"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 132,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Money : Transaction",
+      "choices": {
+        "a": "Life : Death",
+        "b": "Water : Drink",
+        "c": "Ideas : Exchange",
+        "d": "Language : Conversation"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 59
+}

@@ -1,0 +1,113 @@
+{
+  "page_type": "questions",
+  "chapter_number": 8,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "position_from_ends",
+      "subtopic_name": "Position from ends",
+      "body": "Rashmi is 14th from the right end in a row of 40 girls. What is her position from the left end?",
+      "choices": {
+        "a": "25th",
+        "b": "27th",
+        "c": "21st",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "class_ranking",
+      "subtopic_name": "Class ranking",
+      "body": "Kavi ranked 9th from the top and 38th from the bottom in a class. How many students are there in the class?",
+      "choices": {
+        "a": "45",
+        "b": "42",
+        "c": "46",
+        "d": "44"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "multiple_rows",
+      "subtopic_name": "Multiple rows arrangement",
+      "body": "In a row of boys, Jeevan is 7th from the start and 11th from the end. In another row of boys, Vikas is 10th from the start and 12th from the end. How many boys are there in both the rows together?",
+      "choices": {
+        "a": "38",
+        "b": "40",
+        "c": "32",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "position_change",
+      "subtopic_name": "Position change",
+      "body": "37 boys are standing in a row facing the school building. Ashwini is 15th from the left end. If he is shifted six places to the right, what is his position from the right end?",
+      "choices": {
+        "a": "16th",
+        "b": "21st",
+        "c": "20th",
+        "d": "18th",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "position_exchange",
+      "subtopic_name": "Position exchange",
+      "body": "In a row of girls, Kamya is fifth from the left and Preeti is sixth from the right. When they exchange their positions, then Kamya becomes thirteenth from the left. What will be Preeti's position from the right?",
+      "choices": {
+        "a": "7th",
+        "b": "14th",
+        "c": "11th",
+        "d": "18th"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 300
+}

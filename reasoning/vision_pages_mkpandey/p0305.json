@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 33,
+      "solution": "Statements: G = K, F > I, K ≥ Q, Q ≥ F\nConclusions: I. K = F\nII. F < K\nFrom K ≥ Q and Q ≥ F we get K ≥ Q ≥ F so F ≤ K ≥ F"
+    },
+    {
+      "number": 34,
+      "solution": "Statements: I. T > K, S ≤ Z, U ≥ W, S = R\nConclusions: I. U > K\nCombining U ≥ W and W > S we get U > W > S which gives U > S\nS = K gives U > K. So, I follows. From, K < Z and S = K we get S < Z which is different from Z > S."
+    },
+    {
+      "number": 35,
+      "solution": "Statements: G = E, D < K, E < S, K ≤ G\nConclusions: I. S > D\nII.D < E\nFrom, G = E and K < G we have K ≤ E. With K ≤ E and D < K, we get D < K ≤ E to get D < E. So, II follows. Now, D < E and E < S gives D < S. So, I follows."
+    },
+    {
+      "number": 36,
+      "solution": "Statements: W ≥ K, S ≤ Z, X ≥ W, S = K\nConclusions: I. K < Z\nII. X > K\nI is not true as there are no equalities with Z in the given statement (Tip 7: quick method). II follows from X ≥ W and W ≥ K."
+    },
+    {
+      "number": 37,
+      "solution": "Statements: L ≥ R, N = M, L < M, N ≤ P\nConclusions: I. N ≤ R\nII. R ≤ P\nFrom L < M and L ≥ R; It follows. II must be wrong as P is not smaller than any quantity in the given statements. (Tip 8(i): quick method)."
+    },
+    {
+      "number": 38,
+      "solution": "Statements: P < Q, W ≥ N, P ≥ N, T < N\nConclusions: I. P ≥ W\nII. Q < W\nI must be wrong as there are no equalities in the given statements (Tip 7: quick method). II must be wrong as Q is not less than any number in the given statements. (Tip 8(i): quick method)."
+    },
+    {
+      "number": 39,
+      "solution": "Statements: D ≤ S, N > V, D = R, R < V\nConclusions: I. S ≥ V\nII.D > N\nCombining D ≤ S and D = R we get R ≤ S. Now, combining R < S and R > N we get V < S to get V < S. II must be wrong because (Tip 8(i): quick method) D is not greater than anything in the given statement."
+    },
+    {
+      "number": 40,
+      "solution": "Statements: I. K = H, K ≥ M, E < M\nConclusions: I. M > P\nII. M = P\nFrom K = P and K ≥ M we have P ≤ M. By check 3, either I or II follows."
+    },
+    {
+      "number": 41,
+      "solution": "Statements: T < G, L < T, C = L, S > C\nConclusions: I. G > L\nII. L < S\nFrom, T ≤ G and L < T; I follows. II follows from C = L and S > C."
+    },
+    {
+      "number": 42,
+      "solution": "Statements: J > P, S ≥ J, A = S, K < A\nConclusions: I. A > J\nII. A > J\nFrom A = S and S ≥ J; we have A ≥ J. By check 3, either I or II follows."
+    }
+  ],
+  "answers": [],
+  "_page": 305
+}

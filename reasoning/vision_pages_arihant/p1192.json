@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "Method II\nSome leaves are petals. (I-type)\nSome petals are flowers. (I-type)\nAll flowers are fruits. (A-type)\nSome fruits are nuts. (I-type)\nFrom Statements 3 and 4,\nA + I = Not a valid conclusion.\nSo, Conclusions I does not follow\nBut, Conclusions I and II has both subject and predicate same and form (E-I) pair\nHence, either Conclusion I or II follows.\n(d)"
+    },
+    {
+      "number": 7,
+      "solution": "Conclusions I. Some paintings are designs. (X)\nII. Some photographs are movies. (X)\n(e)"
+    },
+    {
+      "number": 8,
+      "solution": "Conclusions I. All trees are houses. (✓)\nII. Some buildings are roads. (✓)\n(e)"
+    },
+    {
+      "number": 9,
+      "solution": "Conclusions I. Some puppets are tablets. (X)\nII. Some puppets are bags. (✓)\n(b)"
+    },
+    {
+      "number": 10,
+      "solution": "(d)"
+    },
+    {
+      "number": 11,
+      "solution": "Conclusions I. Some stones are bangles. (X)\nII. Some jewels are rings. (X)\n(d)"
+    },
+    {
+      "number": 12,
+      "solution": "Conclusions I. Some threads are pants. (X)\nII. Some buttons are trousers. (X)\n(d)"
+    },
+    {
+      "number": 13,
+      "solution": "Conclusions I. Some sticks are scales. (✓)\nII. No stick is scale. (X)\nIII. No cane is weight. (X)\n(b)"
+    },
+    {
+      "number": 14,
+      "solution": "Method I\nConclusions I. No folder is bag. (X)\nII. Some boxes are containers. (✓)\nIII. Some sacks are containers. (✓)\n(b)"
+    }
+  ],
+  "answers": [],
+  "_page": 1192
+}

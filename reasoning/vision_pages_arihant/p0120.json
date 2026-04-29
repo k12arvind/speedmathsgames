@@ -1,0 +1,148 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [],
+  "questions": [
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_interchange",
+      "subtopic_name": "Digit Interchange",
+      "body": "If the first and the second digits of each number are interchanged, which number will be the second highest?",
+      "choices": {
+        "a": "568",
+        "b": "473",
+        "c": "847",
+        "d": "382",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_operations",
+      "subtopic_name": "Digit Operations",
+      "body": "If 382 is written as 238, 473 as 347 and so on, then which of the following two numbers will have least difference between them?",
+      "choices": {
+        "a": "473 and 382",
+        "b": "629 and 728",
+        "c": "629 and 568",
+        "d": "728 and 847"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_operations",
+      "subtopic_name": "Digit Operations",
+      "body": "If the first and the third digits of each number are interchanged and one is added to the second digit of each number, then which of the following pairs of numbers will have highest total of their numerical value?",
+      "choices": {
+        "a": "847 and 629",
+        "b": "568 and 728",
+        "c": "728 and 847",
+        "d": "568 and 847",
+        "e": "629 and 473"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_operations",
+      "subtopic_name": "Digit Operations",
+      "body": "If the first digit of each number replaces the third digit of that number, third digit replaces the second digit and the second digit replaces the first digit and then the numbers thus formed are arranged in the descending order, then which number will be the third?",
+      "choices": {
+        "a": "568",
+        "b": "382",
+        "c": "473",
+        "d": "847",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_operations",
+      "subtopic_name": "Digit Operations",
+      "body": "If one is added to the second digit of each number and one is subtracted from the third digit of each number and then if the first and third digits of each number are interchanged, then which number will be lowest?",
+      "choices": {
+        "a": "473",
+        "b": "568",
+        "c": "382",
+        "d": "847",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(D) Let us see\nThe given number 5 3 2 6 9 7 1 8\nAscending order arrangement 1 2 3 5 6 7 8 9\nSo, position of only one digit remains unchanged."
+    },
+    {
+      "number": 2,
+      "solution": "(C) Let us see\nThe given number 5 9 1 6 4 8 2 3\nDescending order arrangement 9 8 6 5 4 3 2 1\nSo, position of two digits remain unchanged."
+    },
+    {
+      "number": 3,
+      "solution": "(C) Let us see\nThe given number 6 2 5 9 1 4 8 3\nAscending order arrangement 1 2 3 4 5 6 8 9\nHence, two digits remain at the same place from the beginning."
+    },
+    {
+      "number": 4,
+      "solution": "(D) Let us see\nThe given number 5 2 3 4 8 1 6\nDescending order arrangement 8 6 5 4 3 2 1\n∴ Required pairs = (53), (23), (34) and (24)"
+    },
+    {
+      "number": 5,
+      "solution": "(C) Let us see\nThe given number 5 3 6 1 4 2\nAscending order arrangement 1 2 3 4 5 6\nSo, there are two required pair of digits."
+    },
+    {
+      "number": 6,
+      "solution": "(C) Let us see\nThe given number 8 2 4 7 5 3 1\nAscending order arrangement 1 2 3 4 5 7 8\nSo, position of two digits remain unchanged."
+    },
+    {
+      "number": 7,
+      "solution": "(d) Original number 8 6 4 3 5 1 9 2\nAscending order 1 2 3 4 5 6 8 9\nFrom left 4th, From 2nd right\n∴ Required difference = 8 - 4 = 4"
+    },
+    {
+      "number": 8,
+      "solution": "(C) Let us see\nOriginal number 9 2 5 8 1 4 7 3\nAscending order 1 2 3 4 5 7 8 9\nFrom left 3rd, From right 4th\n∴ Required sum = 5 + 3 = 8"
+    }
+  ],
+  "answers": [],
+  "_page": 120
+}

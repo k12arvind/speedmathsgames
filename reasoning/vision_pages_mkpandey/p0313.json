@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 8,
+      "solution": "Backtracking: For questions like Ex 8 and Ex 9 it is best to 'backtrack' i.e. start with the last information and proceed backwards. For example, if it is given that he is the son of the mother of my grandfather's daughter, then we proceed with the last information: 'grandfather's daughter'. Grandfather's daughter means aunt (sister of father). Now, 'mother of my grandfather's daughter' becomes 'mother of my aunt'. Mother of my aunt is my grandmother. Hence, he is the son of the mother of my grandfather's daughter because son of my grandmother' which is father or uncle. Soln to Ex 8: His brother's father is only son of my grandfather ⟹ His brother's father is my father (Since only son of my grandfather = my father) Now, is brother's father is my father ⟹ His brother is my brother ⟹ He is my brother. Answer: (c)"
+    }
+  ],
+  "answers": [],
+  "_page": 313
+}

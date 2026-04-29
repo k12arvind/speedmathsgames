@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 15,
+      "solution": "Choice 2 is wrong as here M is a mother and hence a female. So, 3 and 4, the gap between M and R is 0 + 0 = 0. Respectively. So, choice 1 and 4 are wrong. Let us try for choice 2: M(+) → K(-) Indeed M is maternal uncle of B. Choice 1 is wrong as sex of M is male and maternal uncle between. Gap between M and B is 0 + 1 + 1 = 2 in choice 2, 0 + 1 = 1 in choice 3, 0 + 1 = 1 in choice 4. So, choice 3 and 4 could be possibly correct. But, common sense tells us that if M was to be an uncle of P, M must be brother of someone who is a father or P. Since choice 3 does not give us whether M is a father or not, we settle for choice 4. Drawing its family tree we see that it is correct choice. M(+) → K(+) T(-) → P"
+    },
+    {
+      "number": 16,
+      "solution": "Choice 1 is wrong as sex of M is unknown. Gap between M and B is 0 + 1 + 1 = 2 in choice 2, 0 + 1 = 1 in choice 3, 0 + 1 = 1 in choice 4. So, choice 3 and 4 could be possibly correct. But, common sense tells us that if M was to be an uncle of P, M must be brother of someone who is a father or P. Since choice 3 does not give us whether M is a father or not, we settle for choice 4. Drawing its family tree we see that it is indeed correct choice."
+    },
+    {
+      "number": 17,
+      "solution": "Q(+) ⟷ R(-) P(-) R is mother of P"
+    },
+    {
+      "number": 18,
+      "solution": "R P(+) → Q(-) P is son of R Q(+) → R P is niece of R P(-)"
+    },
+    {
+      "number": 19,
+      "solution": "Q(+) → R P is son of R P(-)"
+    },
+    {
+      "number": 20,
+      "solution": "Try yourself"
+    },
+    {
+      "number": 21,
+      "solution": "Try yourself"
+    },
+    {
+      "number": 22,
+      "solution": "Choice 1, 2 is not correct as sex of S is not known. Let us try the tree for choice 3: K(-) ⟷ R(+) P(-) ⟷ Q(+) S(-) → L Indeed S is granddaughter of L."
+    },
+    {
+      "number": 23,
+      "solution": "Try yourself"
+    },
+    {
+      "number": 24,
+      "solution": "If P is to be grandmother of Q, P and Q should have a generation gap of 2 between them. Now, out of the given four relationships only one of them (father) has a relationship that has some gap. So, a correct answer should have exactly 2 + sign between P and Q. This eliminates choice 1."
+    }
+  ],
+  "answers": [],
+  "_page": 281
+}

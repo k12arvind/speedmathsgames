@@ -1,0 +1,275 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Sitting Arrangement",
+  "passages": [
+    {
+      "passage_text": "Study the information carefully and answer the question. S, T, U, V, W, X, Y and Z are sitting around a circle area, with equal distance amongst each other but not necessarily in the same order. Only two people face the centre and the rest face outside (i.e., in a direction opposite to the centre). Y sits second to left of W. S sits second to left of Y. Only one person sits between S and Z. T sits to immediate right of S. T is not an immediate neighbour of Y. V is not an immediate neighbour of Y. Both the immediate neighbours of X face the centre.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer the questions given below. Eight friends P, Q, R, S, T, U, V and W are sitting around a circular table facing centre. Q is sitting between V and S. W is third to the left of Q and second to the right of P. R is sitting between P and V. Q and T are not sitting opposite to each other.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the given information and answer the given questions. Six people—K, L, M, N, O and P live on six different floors of a building not necessarily in the same order. The lower most floor of the building is numbered 1, the one above is numbered 2 and so on till the top most floor numbered 6. L lives on an even numbered floor. L lives immediately below K's floor and immediately above M's floor. P lives immediately above N's floor. P lives on an even numbered floor. O does not live on floor number 4.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "conditional_seating",
+      "subtopic_name": "Conditional Seating",
+      "body": "If Ratan would have exchanged seats with a person four places to his left, which of the following would have been true after the exchange?",
+      "choices": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "I and II",
+        "d": "II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "pair_arrangement",
+      "subtopic_name": "Pair Arrangement",
+      "body": "If each person is placed directly opposite of his/her spouse, which of the following pair must be married?",
+      "choices": {
+        "a": "Ratan and Manisha",
+        "b": "Madhuri and Dhirubhai",
+        "c": "Urmila and Jackie",
+        "d": "Ratan and Madhuri"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is sitting to immediate right of Z?",
+      "choices": {
+        "a": "Y",
+        "b": "V",
+        "c": "T",
+        "d": "X",
+        "e": "W"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following is true regarding U as per the given sitting arrangement?",
+      "choices": {
+        "a": "X sits second to left of U",
+        "b": "Only three people sit between U and Y",
+        "c": "Z is one of the immediate neighbours of U",
+        "d": "U faces the centre",
+        "e": "S sits to immediate left of U"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "What is T's position with respect of Y?",
+      "choices": {
+        "a": "Second to the right",
+        "b": "Second to the left",
+        "c": "Fifth to the left",
+        "d": "Fourth to the right",
+        "e": "Third to the left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following groups represents the immediate neighbours of X?",
+      "choices": {
+        "a": "WY",
+        "b": "VW",
+        "c": "TZ",
+        "d": "VZ",
+        "e": "SU"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Four of the following five are alike in a certain way based on the given seating arrangement and so form a group. Which is the one that does not belong to that group?",
+      "choices": {
+        "a": "Z",
+        "b": "T",
+        "c": "Y",
+        "d": "V",
+        "e": "X"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following statements is not correct?",
+      "choices": {
+        "a": "S and P are sitting opposite to each other.",
+        "b": "V and Q are not sitting opposite to each other.",
+        "c": "R and T are sitting opposite to each other.",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is third to the left of S?",
+      "choices": {
+        "a": "U",
+        "b": "P",
+        "c": "T",
+        "d": "S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "Four of the following five are alike in a certain way based on the given arrangement and hence form a group. Which of the following does not belong to that group?",
+      "choices": {
+        "a": "MN",
+        "b": "OL",
+        "c": "KM",
+        "d": "LP",
+        "e": "PK"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "Who amongst the following lives on floor number 2?",
+      "choices": {
+        "a": "K",
+        "b": "P",
+        "c": "L",
+        "d": "M",
+        "e": "O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "On which floor does N live?",
+      "choices": {
+        "a": "4",
+        "b": "3",
+        "c": "5",
+        "d": "1",
+        "e": "2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 506
+}

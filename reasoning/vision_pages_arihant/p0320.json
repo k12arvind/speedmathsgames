@@ -1,0 +1,457 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 17-21) What should be the correct signs to balance the following equations?",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "equation_solving",
+      "subtopic_name": "Equation Solving",
+      "body": "If 5 • 6 • 7 = 789, 4 • 2 • 5 = 647, 5 • 1 • 7 = 739, then 3 • 6 • 2 = ?",
+      "choices": {
+        "a": "584",
+        "b": "484",
+        "c": "251",
+        "d": "473"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "16 (27) 43, 29 (?) 56, 36 (12) 48",
+      "choices": {
+        "a": "23",
+        "b": "33",
+        "c": "27",
+        "d": "37"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "10 (150) 15, 14 (224) 16, 13 (?) 15",
+      "choices": {
+        "a": "205",
+        "b": "195",
+        "c": "178",
+        "d": "197"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_balancing",
+      "subtopic_name": "Sign Balancing",
+      "body": "17 – 3 × 6 = 45",
+      "choices": {
+        "a": "×, = and –",
+        "b": "–, × and =",
+        "c": "=, × and –",
+        "d": "×, – and ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_balancing",
+      "subtopic_name": "Sign Balancing",
+      "body": "3 + 2 × 1 = 7",
+      "choices": {
+        "a": "×, +, and =",
+        "b": "+, × and =",
+        "c": "=, × and +",
+        "d": "×, = and +"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_balancing",
+      "subtopic_name": "Sign Balancing",
+      "body": "6 5 4 = 34",
+      "choices": {
+        "a": "– and +",
+        "b": "× and +",
+        "c": "+ and ×",
+        "d": "× and –"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_balancing",
+      "subtopic_name": "Sign Balancing",
+      "body": "7 4 8 2 = 24",
+      "choices": {
+        "a": "–, × and ×",
+        "b": "–, × and +",
+        "c": "×, – and +",
+        "d": "×, + and –"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_balancing",
+      "subtopic_name": "Sign Balancing",
+      "body": "65 40 11 = 36",
+      "choices": {
+        "a": "– and +",
+        "b": "× and +",
+        "c": "+ and +",
+        "d": "+ and ×"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "operation_placement",
+      "subtopic_name": "Operation Placement",
+      "body": "Place appropriate mathematical operations in the shaded boxes to get the answer. All calculations are to be performed from left to right. [8 □ 4 □ 6 □ 5] = 80",
+      "choices": {
+        "a": "–, +, +",
+        "b": "×, +, ×",
+        "c": "×, +, –",
+        "d": "+, ×, ×"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_replacement",
+      "subtopic_name": "Symbol Replacement",
+      "body": "Which sequence of mathematical symbols can replace * in the given equation to balance the equation? 7 * 7 * 2 * 1 = 12",
+      "choices": {
+        "a": "× – +",
+        "b": "+ – ×",
+        "c": "× – +",
+        "d": "+ × –"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "missing_symbol",
+      "subtopic_name": "Missing Symbol",
+      "body": "Given, B = 8, L = 7, O = 5, C = 9 and K = 4. Using the given total, find out the missing symbol in the block. [L ? K × K = 24]",
+      "choices": {
+        "a": "L",
+        "b": "O",
+        "c": "B",
+        "d": "K"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_interchange",
+      "subtopic_name": "Sign Interchange",
+      "body": "Which interchange of signs will make the following equation correct? (16 – 4) × 6 + 2 + 8 = 30",
+      "choices": {
+        "a": "+ and –",
+        "b": "+ and ×",
+        "c": "– and +",
+        "d": "× and +"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_solving",
+      "subtopic_name": "Pattern Solving",
+      "body": "If 73 + 82 = 14, 91 + 21 = 11, then 86 + 24 = ?",
+      "choices": {
+        "a": "9",
+        "b": "62",
+        "c": "8",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_substitution",
+      "subtopic_name": "Sign Substitution",
+      "body": "In the following question, * stands for any of the mathematical signs at different places, which are given as choices under each question. Select the choice with the correct sequence of signs which when substituted for the question as a correct equation. 24 * 4 * 5 * 4",
+      "choices": {
+        "a": "+ + =",
+        "b": "= × +",
+        "c": "+ + × =",
+        "d": "= + ×"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_combination",
+      "subtopic_name": "Sign Combination",
+      "body": "Select the correct combination of mathematical signs to replace* signs and to balance the given equation. 16 * 6 * 4 * 24",
+      "choices": {
+        "a": "+ = ×",
+        "b": "× = ÷",
+        "c": "= ÷ +",
+        "d": "× = ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_combination",
+      "subtopic_name": "Sign Combination",
+      "body": "Select the correct combination of mathematical signs to replace* signs and to balance the given equation. 91 * 3 * 3 * 3 * 6",
+      "choices": {
+        "a": "+ × – =",
+        "b": "+ – × =",
+        "c": "– + + =",
+        "d": "× + – ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_combination",
+      "subtopic_name": "Sign Combination",
+      "body": "Select the correct combination of mathematical signs to replace* signs and to balance the given equation. 8 * 6 * 96 * 2 = 0",
+      "choices": {
+        "a": "× + –",
+        "b": "× – ÷",
+        "c": "– × +",
+        "d": "+ = –"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "number_interchange",
+      "subtopic_name": "Number Interchange",
+      "body": "Which of the following interchange of numbers would make the given equation correct? 8 × 20 + 3 + 9 – 5 = 38",
+      "choices": {
+        "a": "3, 9",
+        "b": "3, 8",
+        "c": "8, 9",
+        "d": "3, 5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_number_interchange",
+      "subtopic_name": "Sign and Number Interchange",
+      "body": "Which of the following interchange of signs or numbers would make the given equation correct? (18 ÷ 9) + 3 × 5 = 45",
+      "choices": {
+        "a": "× +",
+        "b": "+ +",
+        "c": "18 and 5",
+        "d": "3 and 9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_interchange",
+      "subtopic_name": "Sign Interchange",
+      "body": "Which of the following interchange of signs would make the given equation correct? 5 + 6 + 3 – 12 × 2 = 17",
+      "choices": {
+        "a": "+ and ×",
+        "b": "+ and ×",
+        "c": "+ and +",
+        "d": "+ and –"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "sign_number_interchange",
+      "subtopic_name": "Sign and Number Interchange",
+      "body": "Which one of the four interchange in signs and numbers would make the given equation correct? 6 × 4 + 2 = 16",
+      "choices": {
+        "a": "+ and ×, and 4",
+        "b": "+ and ×, 2 and 4",
+        "c": "+ and ×, 4 and 6",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_solving",
+      "subtopic_name": "Pattern Solving",
+      "body": "If 264 * 2 = 6, 870 * 3 = 11, then what should 735 * 5 be?",
+      "choices": {
+        "a": "05",
+        "b": "12",
+        "c": "16",
+        "d": "03"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 320
+}

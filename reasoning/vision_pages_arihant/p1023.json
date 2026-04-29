@@ -1,0 +1,85 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In making decisions about important questions, it is desirable to be able to distinguish between 'strong' arguments and 'weak' arguments. 'Strong' arguments must be both important and directly related to the question. 'Weak' arguments may not be directly related to the question and may be of minor importance or may be related to the trivial aspects of the question. Each question below is followed by three arguments numbered I, II and III. You have to decide which of the arguments is a 'strong' argument and which is a 'weak' argument?",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "strong_weak_argument",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Statement: Should smoking cigarettes and drinking alcohol by the actors be completely banned in the movies in India?\nArguments I. Yes, this will significantly reduce the trend of smoking cigarettes and drinking alcohol among the youth in India.\nII. No, there should be no such ban on the creative pursuits of the filmmaker.\nIII. No, the films portray the society and hence such scenes should be an integral part of the movie, if the storyline demands so.",
+      "choices": {
+        "a": "None is strong",
+        "b": "I and II are strong",
+        "c": "II and III are strong",
+        "d": "I and III are strong",
+        "e": "All are strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "strong_weak_argument",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Statement: Should sale of vital human organs be made legal in India?\nArguments I. No, it goes against our culture.\nII. No, this will lead to unhealthy practices.\nIII. Yes, this will bring an end to the illegal trading of human organs.",
+      "choices": {
+        "a": "Only I is strong",
+        "b": "Only II is strong",
+        "c": "I and II are strong",
+        "d": "Either I or II is strong",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "strong_weak_argument",
+      "subtopic_name": "Strong and Weak Arguments",
+      "body": "Statement: Should the conscription of citizens for defence services be made compulsory in India?\nArguments I. Yes, this is the only way to tackle the serious shortage of manpower in defence services.\nII. No, instead the compensation package be made comparable to other job sectors to attract people to join defence services.\nIII. Yes, many other countries have made this compulsory.",
+      "choices": {
+        "a": "Only I is strong",
+        "b": "Only II is strong",
+        "c": "I and II are strong",
+        "d": "Either I or II is strong",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 30,
+      "solution": "Argument I is not strong due to the word 'only'. Argument II is not strong because it is baseless and Argument III is strong because there is no confirmed evidence that such products have adverse effects on human body. What other countries are doing, we should not follow that blindly. So, Argument IV is not strong."
+    }
+  ],
+  "answers": [],
+  "_page": 1023
+}

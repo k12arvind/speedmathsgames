@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "(e) According to the question, D $ A ⇒ D≤ A, A @ B ⇒ A = B, B © K ⇒ B< K, K % M ⇒ K≤ M. On combining the statements (i), (ii), (iii) and (iv), we get D≤ A= B< K≤ M. Conclusions I. B $ D ⇒ B≥ D (true), II. K # A ⇒ K> A (true), III. M # B ⇒ M> B (true), IV. A © M ⇒ A< M (true). So, it is clear that all the Conclusions I, II, III and IV are true."
+    },
+    {
+      "number": 12,
+      "solution": "(c) Clearly, the meaning of the given symbols X ∅ Y + Z ⇒ X < Y + Z. Using the proper mathematical symbols in option (c), we get X ∆ Y ∅ Z ⇒ X + Y < Z, X < Y + Z. Therefore, X ∅ Y + Z ⇒ X ∆ Y ∅ Z"
+    },
+    {
+      "number": 13,
+      "solution": "(c) Clearly, the meaning of the given symbols, X ∅ Y – Z ⇒ X ÷ Y = Z. Using the proper symbols in option (c), we get X + Y × Z ⇒ X + Y ÷ Z ⇒ X ÷ Y = Z. Therefore, X ∅ Y – Z ⇒ X + Y × Z"
+    },
+    {
+      "number": 14,
+      "solution": "(c) Clearly, the meaning of the given symbols, X – Y + Z ⇒ X = Y + Z. Using the proper symbols in option (c), we get X – Y ∅ Z ⇒ X – Y ÷ Z ⇒ X = Y + Z. Therefore, X – Y + Z ⇒ X – Y ∅ Z"
+    },
+    {
+      "number": 15,
+      "solution": "(b) Clearly, the meaning of the given symbols, X – Y ÷ Z ⇒ X × Y > Z. Using the proper symbols in option (b), we get X ∆ Y × Z ⇒ X × Y ÷ Z ⇒ X = Y > Z. Therefore, X – Y ÷ Z ⇒ X ∆ Y × Z"
+    },
+    {
+      "number": 16,
+      "solution": "(b) Clearly, the meaning of the given symbols, X = Y – Z ⇒ X > Y > Z i.e., X > Y. Using the proper symbols in option (b), we get Z ∅ Y ∅ X ⇒ Z < Y < X ⇒ X > Y > Z. Therefore, X = Y – Z ⇒ Z ∅ Y ∅ X"
+    },
+    {
+      "number": 17,
+      "solution": "(d) According to the question, D # K ⇒ D≥ K, K @ T ⇒ K> T, T $ M ⇒ T≤ M, M % J ⇒ M= J. On combining the statements (i), (ii), (iii) and (iv), we get D≥ K> T≤ M= J. Conclusions I. J @ T ⇒ J> T (neither I or II is true), II. J % T ⇒ J= T, III. D @ T ⇒ D> T (true). So, it is clear that either Conclusion I or II and III are true."
+    },
+    {
+      "number": 18,
+      "solution": "(c) According to the question, R @ N ⇒ R> N, N © D ⇒ N< D, D $ J ⇒ D≤ J, J # B ⇒ J≥ B. On combining the statements (i), (ii), (iii) and (iv), we get R> N< D≤ J≥ B. Conclusions I. K @ J ⇒ R> J (false), II. J @ N ⇒ J> N (true), III. B @ D ⇒ B> D (false). So, it is clear that only Conclusion II is true."
+    },
+    {
+      "number": 19,
+      "solution": "(c) According to the question, W © B ⇒ W< B, B % V ⇒ B= V, V $ R ⇒ V≤ R, R @ K ⇒ R> K. On combining the statements (i), (ii), (iii) and (iv), we get W< B= V≤ R> K. Conclusions I. K © B ⇒ K< B (false), II. R # B ⇒ R≥ B (true), III. V @ W ⇒ V> W (true). So, it is clear that both Conclusions II and III are true."
+    },
+    {
+      "number": 20,
+      "solution": "(b) According to the question, H $ M ⇒ H≤ M, M # T ⇒ M≥ T, T @ D ⇒ T> D, D © R ⇒ D< R. On combining the statements (i), (ii), (iii) and (iv), we get H≤ M≥ T> D< R. Conclusions I. D © M ⇒ D< M (true), II. R @ M ⇒ R> M (false), III. H $ T ⇒ H≤ T (false). So, it is clear that only Conclusion I is true."
+    }
+  ],
+  "answers": [],
+  "_page": 341
+}

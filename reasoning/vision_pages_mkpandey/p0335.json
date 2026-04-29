@@ -1,0 +1,357 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 83-87): Read the following information carefully and answer the questions given below it: In a group of six persons A, B, C, D, E and F in a family: 1) There is a Psychologist, Manager, Lawyer, Jeweller, Doctor and Engineer. 2) They are: a) The Manager is the grandfather of F who is a Psychologist. b) The Manager D is married to A. c) The Lawyer is B is the mother of F and E. d) E is the mother of F and E. e) There are two married couples in the family. f) What is the profession of E?",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Directions (Q. 78-82): Study the following information carefully and answer the questions given below it: A sales representative plans to visit each of the six companies M, N, P, Q, R and S exactly once during the course of one day. She is setting up her schedule for the day according to the following conditions: 1) She must visit M before N and R. 2) She must visit N before Q. 3) The third company she visit must be P. 4) She visits P before S 5) She visits Q before R",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    },
+    {
+      "passage_text": "Directions (Q. 88-92): Study the following information carefully and answer the questions given below it: In a group of five persons A, B, C, D and E, 1) B and C are intelligent in Mathematics and Geography. 2) A and D are intelligent in Political Science and Geography. 3) C and D are intelligent in Political Science and Biology. 4) D and E are intelligent in Biology, History and Political Science. 5) E is intelligent in Political Science, Geography and Biology?",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 76,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Which cars are on the immediate either sides of the Camaro? 1) Ambassador and Maruti 2) Ambassador and Mercedes 3) Fiat and Mercedes 4) Ambassador and Fargo",
+      "choices": {
+        "1": "Ambassador and Maruti",
+        "2": "Ambassador and Mercedes",
+        "3": "Fiat and Mercedes",
+        "4": "Ambassador and Fargo"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 77,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement",
+      "body": "Which of the following is definitely true? 1) Maruti is to the immediate left of Ambassador. 2) Bedford is to the immediate left of Fiat. 3) Bedford is at one of the ends. 4) Fiat is second to the right of Maruti. 5) None of these",
+      "choices": {
+        "1": "Maruti is to the immediate left of Ambassador",
+        "2": "Bedford is to the immediate left of Fiat",
+        "3": "Bedford is at one of the ends",
+        "4": "Fiat is second to the right of Maruti",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which of the following must be true of the sales representative's schedule? 1) She visits M before Q 2) She visits N before R 3) She visits P before M 4) She visits P before S 5) She visits Q before R",
+      "choices": {
+        "1": "She visits M before Q",
+        "2": "She visits N before R",
+        "3": "She visits P before M",
+        "4": "She visits P before S",
+        "5": "She visits Q before R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If the sales representative visits S first, which company must she visit second? 1) M 2) N 3) P 4) Q 5) R",
+      "choices": {
+        "1": "M",
+        "2": "N",
+        "3": "P",
+        "4": "Q",
+        "5": "R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "The sales representative could visit any of the following companies immediately after P except 1) S 2) R 3) Q 4) N 5) M",
+      "choices": {
+        "1": "S",
+        "2": "R",
+        "3": "Q",
+        "4": "N",
+        "5": "M"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 81,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If the sales representative visits Q immediately before R and immediately after S, she must visit Q 1) First 2) Second 3) Fourth 4) Fifth 5) Sixth",
+      "choices": {
+        "1": "First",
+        "2": "Second",
+        "3": "Fourth",
+        "4": "Fifth",
+        "5": "Sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which of the following could be the order in which the sales representative visits the six companies? 1) M, S, P, N, R, Q 2) Q, N, P, R, S, M 3) M, R, N, Q, P, S 4) P, S, M, R, Q, N 5) P, R, M, N, Q, S",
+      "choices": {
+        "1": "M, S, P, N, R, Q",
+        "2": "Q, N, P, R, S, M",
+        "3": "M, R, N, Q, P, S",
+        "4": "P, S, M, R, Q, N",
+        "5": "P, R, M, N, Q, S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "What is the profession of E? 1) Manager 2) Jeweller 3) Manager 4) Psychologist 5) None of these",
+      "choices": {
+        "1": "Manager",
+        "2": "Jeweller",
+        "3": "Manager",
+        "4": "Psychologist",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 84,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "How is A related to E? 1) Brother 2) Uncle 3) Father 4) Grandfather 5) None of these",
+      "choices": {
+        "1": "Brother",
+        "2": "Uncle",
+        "3": "Father",
+        "4": "Grandfather",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 85,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "How many members are there in the family? 1) Two 2) Three 3) Four 4) Five",
+      "choices": {
+        "1": "Two",
+        "2": "Three",
+        "3": "Four",
+        "4": "Five"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "What is the profession of A? 1) Doctor 2) Lawyer 3) Jeweller 4) Manager 5) None of these",
+      "choices": {
+        "1": "Doctor",
+        "2": "Lawyer",
+        "3": "Jeweller",
+        "4": "Manager",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Which of the following is one of the pairs of couples in the family? 1) AB 2) AC 3) None of these 4) Can't be determined",
+      "choices": {
+        "1": "AB",
+        "2": "AC",
+        "3": "None of these",
+        "4": "Can't be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 88,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "subject_intelligence",
+      "subtopic_name": "Subject Intelligence",
+      "body": "Who is intelligent in Mathematics, Political Science and Geography? 1) E 2) C 3) D 4) D 5) E",
+      "choices": {
+        "1": "E",
+        "2": "C",
+        "3": "D",
+        "4": "D",
+        "5": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 89,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "subject_intelligence",
+      "subtopic_name": "Subject Intelligence",
+      "body": "Who is intelligent in Mathematics and History but not in Geography? 1) A 2) B 3) D 4) C 5) E",
+      "choices": {
+        "1": "A",
+        "2": "B",
+        "3": "D",
+        "4": "C",
+        "5": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "subject_intelligence",
+      "subtopic_name": "Subject Intelligence",
+      "body": "Who is intelligent in Mathematics, Geography and History? 1) C 2) D 3) C 4) E 5) B",
+      "choices": {
+        "1": "C",
+        "2": "D",
+        "3": "C",
+        "4": "E",
+        "5": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "subject_intelligence",
+      "subtopic_name": "Subject Intelligence",
+      "body": "Who is intelligent? 1) E 2) A",
+      "choices": {
+        "1": "E",
+        "2": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 335
+}

@@ -1,0 +1,91 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 17,
+      "solution": "(b) As, 1234 : 10\n1 + 2 + 3 + 4 = 10\nSimilarly, 6789 : 30\n6 + 7 + 8 + 9 = 30"
+    },
+    {
+      "number": 18,
+      "solution": "(b) As,\n66 - 2 = 64 → √64 = 8\nSimilarly, 38 - 2 = 36 → √36 = 6"
+    },
+    {
+      "number": 19,
+      "solution": "(c) Taking option (c),\nAs sum of digits of 583 = 5 + 8 + 3 = 16\nand sum of digits of 488 = 4 + 8 + 8 = 20\nSimilarly, sum of digits of 293 = 2 + 9 + 3 = 14\nand Sum of digits of 378 = 3 + 7 + 8 = 18\nHere, difference of both are (20 - 16) = (18 - 14) = 4\n∴ ? = 378"
+    },
+    {
+      "number": 20,
+      "solution": "(c) As, 85 [40] Similarly, 77 [49]\n8×5 = 7×7"
+    },
+    {
+      "number": 21,
+      "solution": "(c) Second is the square of the first number.\nAs, 11² = 121\nSimilarly, 25² = 625"
+    },
+    {
+      "number": 22,
+      "solution": "(c) Second number is the digit sum of the 1st number.\nAs, 5 + 5 = 10\nSimilarly, 8 + 8 = 16"
+    },
+    {
+      "number": 23,
+      "solution": "(d) First number is multiplied by 5 to get second number.\nAs, 14 × 5 = 70\nSimilarly, 75 × 5 = 375"
+    },
+    {
+      "number": 24,
+      "solution": "(d) The relationship is a³ : a².\nAs,\n27 : 9 Similarly, 729 : 81\n↓   ↓           ↓    ↓\n3³   3²          9³   9²"
+    },
+    {
+      "number": 25,
+      "solution": "(c) As, 5 + 2 + 5 = 12\n8 + 1 + 3 = 12\n7 + 1 + 4 = 12\nSimilarly, 6 + 0 + 6 = 12"
+    },
+    {
+      "number": 26,
+      "solution": "(d) The difference between the 1st and 2nd digit of the numbers is 5."
+    },
+    {
+      "number": 27,
+      "solution": "(d) The numbers are perfect square.\nLet us see\nAs, 144 = 12², 256 = 16², 324 = 18²"
+    },
+    {
+      "number": 28,
+      "solution": "(d) All are prime numbers.\nSimilarly, 625 = 25²"
+    },
+    {
+      "number": 29,
+      "solution": "(c) All the numbers are perfect cubes.\nLet us see\nAs, 8 = 2³\n1331 = 11³\n4913 = 17³\nSimilarly, 64 = 4³"
+    },
+    {
+      "number": 30,
+      "solution": "(c) Here, 32   24   8\n            ↓    ↓   ↓\n          -8   -16\nSimilarly,  24   16   0\n           ↓    ↓   ↓\n         -8   -16"
+    },
+    {
+      "number": 31,
+      "solution": "(c) Set of consecutive odd prime numbers."
+    },
+    {
+      "number": 32,
+      "solution": "(c) In (12, 20, 28), every next number is obtained by adding 8 with the previous number and similarly, in (18, 30, 42), every next number is obtained by adding 12 with the previous number."
+    },
+    {
+      "number": 33,
+      "solution": "(b) As, 6  12  18\n        ↓   ↓   ↓\n      +6  +6\nSimilarly, 12 24  36\n          ↓  ↓   ↓\n        +12 +12"
+    },
+    {
+      "number": 34,
+      "solution": "(c) In each set\n2nd number = 1st number × 7\nand 3rd number = 1st number × 8\nLet us see\nAs, 14 = 2 × 7\nand 16 = 2 × 8\nSimilarly, 21 = 3 × 7\nand 24 = 3 × 8"
+    },
+    {
+      "number": 35,
+      "solution": "(b) Each set is made of the digits 2, 4, 6, 8."
+    },
+    {
+      "number": 36,
+      "solution": "(c) In each set,\n2nd number = 1st number + 101\n3rd number = 2nd number + 101\nLet us see\nAs, 223 + 101 = 324\nand 324 + 101 = 425\nSimilarly, 554 + 101 = 655\nand 655 + 101 = 756"
+    }
+  ],
+  "answers": [],
+  "_page": 53
+}

@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 17.6,
+      "solution": "We are now in a position to lay down our integrated approach towards a solution. That is:\nStep I: Eliminate all wrong choices by the quick method discussed earlier.\nStep II: Draw family-tree for the remaining choices and pick the correct answer."
+    },
+    {
+      "number": 17.7,
+      "solution": "Quick methods\n1. Check sex: If T is to be a nephew, T must be a male. But in all the choices, sex of T is uncertain. So, eliminate all choices. Hence, correct answer is 5) None of these.\n2. If S has to have a blood relationship with T and looking at the feeling clue, we see there need to check either the sex of S or the gap between S and T. We are drawing our family tree:\n1) S(+) ⇔ R(-)\n2) T(-) ⇔ Q(+)\nClearly, S is mother of T.\nA relationship of mother-son is clearly a blood-relation and we have found our answer. Correct choice is 1.\nBut let us have a look at the other options, merely for academic interest:\n2) S(+) ⇔ Q(-) (S is mother-in-law of T)\n3) S(-) → R(+) ⇔ T(-) → Q(+) (S is sister-in-law of T)\n4) S(+) ⇔ Q(-) → R(-) → T(+) (S is brother-in-law of T)"
+    },
+    {
+      "number": 17.8,
+      "solution": "Ex.6: P ∝ Q means P is the sister of Q; P ∘ Q means P is the father of Q; P ⊕ Q means P is the aunt of Q; P is the mother of Q. Which of the following means S is the aunt of T?\n1) T ∗ M + S\n2) S + T ∗ M\n3) S ∗ M + T\n4) S ∗ M + R - T\n5) None of these\n\nSoln: If A ⊕ B means A is the son of B, A - B means A is the husband of B, A ∘ B means A is the sister of B, then which of the following shows the relation that Q is the maternal uncle of P?\n1) P + B ∘ Q\n2) P ∘ B + R ∘ Q\n3) P + B ∘ R + Q\n4) P ∗ B - R + Q\n5) None of these\n\nSoln: If Q is to be maternal uncle of P, Q must be a male and Q must be one generation over P. Now.\n\nCheck sex: (By our rule, there must not be a ∗ sign immediately after Q as ∗ stands for a sister i.e. a female. There must instead be a + or - sign immediately after Q as + or - stand for 'son' and 'husband' respectively, which are male relations). But in all four choices there are no signs after Q this means sex of Q is uncertain. But Q must certainly be a male in order to be a maternal uncle. Correct choice: (5).\n\nEx.8: If A ⊕ B means A is the brother of B; A + B means A is the son of B and A - B means A is the daughter of B, which of the following means C is the niece of D?\n1) D - C\n2) D ∗ P - C\n3) C - P ∗ D\n4) P + D - C\n5) P + P - C\n\nSoln: If C is to be a niece of D; C must be a female and C must be one generation below D. Now,\nCheck sex: (By our rule, immediately after C there must be a + (mother) or - (daughter) signs.) This eliminates choices (1), (2), (4) and (5).\nThe only choice left is (3). Correct choice: (3)."
+    }
+  ],
+  "answers": [],
+  "_page": 275
+}

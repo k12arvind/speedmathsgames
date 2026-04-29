@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 442,
+      "solution": "In a word rearrangement problem, the question reads \"Have I done anything wrong with you? yes\" will be written symbolically. For such problems, the key is to find a given word and then the input for Step I and Step III to Step IV are having same given 'yes', but Step II and Step IV to Step V are having same element. Now, the question reads — 'If Step XIV is 'you are only mine' was, then What will you apply the golden rule of reduction. Soln: (A) I. Assuming a 1-Step case. (a) 4 to 6 = (4 - 1 × 4) to (6 - 1 × 4) = 0 to 2. Note that we can't reduce it any further because less than 0 is not possible. (b) 8 to 4 = (8 - 1 × 4) to (4 - 1 × 3) = 0 to 4. Similarly, for the next few questions we can write them up quickly. (c) 14 to 18 = (14 - 2) to (18 + 1 × 4) from both numbers. (d) 12 to 7 = 5 to 0 [Reduce 1 × 7 from both numbers]. (e) 9 to 6 = 3 to 0 [Reduce 1 × 6 from both numbers]. II. Assuming a 2-Step case (a) 4 to 6 = (4 - 1 × 2) to (6 - 2) = 0 to 2. Note that any more reduction is not possible as less than 0 is not possible. (b) 5 to 7 = (3 - 2) to (7 - 2) = 1 to 5. Note that any more reduction is not possible because we can't subtract 2 from 1. (c) 14 to 18 = (14 - 2 × 2) to (18 - 2 × 7) = 10 to 4. Similarly, we can answer the next two questions quickly. (d) 12 to 7 = 6 to 1 [Reduce 2 × 3 from both numbers]. (e) 9 to 6 = 3 to 0 [Reduce 2 × 3 from both numbers]. III. Assuming a 3-Step case (a) 4 to 6 = (4 - 3) to (6 - 3) = 1 to 3. Note that any more reduction is not possible as we can't subtract 3 from 1. (b) 5 to 6 = 2 to 3 [Reducing 3 from both numbers]. (c) 14 to 18 = (14 - 3 × 4) to (18 - 3 × 4) = 2 to 6. Note that any more reduction is not possible as we can't subtract 3 from 2. (d) 12 to 7 = 6 to 1 [Reduce 3 × 2 from both numbers]. (e) 9 to 6 = 3 to 0 [Reduce 3 × 2 from both numbers]. (B) The second line clearly indicates that the pattern is of two different types of operations repeating alternately. Hence, it is a 2-step case."
+    }
+  ],
+  "answers": [],
+  "_page": 228
+}

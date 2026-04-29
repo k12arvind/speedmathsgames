@@ -1,0 +1,184 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-2): Read the information given below and answer the questions that follow: In a question paper, there are 12 questions in all, out of which only six are to be answered. Six questions have one alternative each. Each question has four parts, only three of which are to be answered.",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    }
+  ],
+  "questions": [
+    {
+      "number": 98,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "note_series",
+      "subtopic_name": "Musical Note Series",
+      "body": "If exactly two notes separate F and I, then which of the following must be true? 1) F is the lowest note. 2) I is the fifth note. 3) K is higher than I. 4) F is somewhere between G and K.",
+      "choices": {
+        "1": "F is the lowest note",
+        "2": "I is the fifth note",
+        "3": "K is higher than I",
+        "4": "F is somewhere between G and K"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 99,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "note_series",
+      "subtopic_name": "Musical Note Series",
+      "body": "If J is the second highest note and I and J could be which of the following? I. 4 and 3 II. 5 and 3 III. 5 and 4 1) I only 2) III only 3) I and III only 4) I and III only 5) I, II and III only",
+      "choices": {
+        "1": "I only",
+        "2": "III only",
+        "3": "I and III only",
+        "4": "I and III only",
+        "5": "I, II and III only"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 100,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "note_series",
+      "subtopic_name": "Musical Note Series",
+      "body": "If F and J are separated by exactly one note, which of the following must be true? 1) G is note 4. 2) K is note 5. 3) J is lower than I. 4) J is lower than K. 5) J is between F and I.",
+      "choices": {
+        "1": "G is note 4",
+        "2": "K is note 5",
+        "3": "J is lower than I",
+        "4": "J is lower than K",
+        "5": "J is between F and I"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "question_selection",
+      "subtopic_name": "Question Selection Strategy",
+      "body": "How many questions (including parts) are there in the question paper? 1) 24 2) 48 3) 72 4) 96 5) 36",
+      "choices": {
+        "1": "24",
+        "2": "48",
+        "3": "72",
+        "4": "96",
+        "5": "36"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "question_selection",
+      "subtopic_name": "Question Selection Strategy",
+      "body": "Of these, how many are to be answered? 1) 6 2) 12 3) 15 4) 18 5) 24",
+      "choices": {
+        "1": "6",
+        "2": "12",
+        "3": "15",
+        "4": "18",
+        "5": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "queue_arrangement",
+      "subtopic_name": "Queue Position",
+      "body": "In a queue, Sohan is 9th from the back. Ramesh's place is 8th from the front. Radhey is standing between the two. What could be the minimum number of boys standing in the queue? 1) 20 2) 18 3) 19 4) 12 5) 14",
+      "choices": {
+        "1": "20",
+        "2": "18",
+        "3": "19",
+        "4": "12",
+        "5": "14"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Suresh is older than Ramesh and Mohan is younger than Surender. Murat is younger than Mohan but older than Suresh. Who is the youngest? 1) Suresh 2) Ramesh 3) Murat 4) Mohan 5) Surender",
+      "choices": {
+        "1": "Suresh",
+        "2": "Ramesh",
+        "3": "Murat",
+        "4": "Mohan",
+        "5": "Surender"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "Seven boys are sitting in a row. Sayendra is on the left of Khalid and Madhukar is on the left of Balan and right of Khalid. Rehman is between Sayendra and Ahmed and Kutty is at the extreme right. Who is in the middle? 1) Rehman 2) Sayendra 3) Khalid 4) Madhukar 5) Balan",
+      "choices": {
+        "1": "Rehman",
+        "2": "Sayendra",
+        "3": "Khalid",
+        "4": "Madhukar",
+        "5": "Balan"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 330
+}

@@ -1,0 +1,182 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Each of these questions, given below consists of a statement followed by two assumptions numbered as I and II. Decide which of the assumption (s) is/are implicit from the statement and then decide which of the answer is correct. Give answer (a) if only Assumption I is implicit (b) if only Assumption II is implicit (c) if neither Assumption I nor II is implicit (d) if both Assumptions I and II are implicit",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    },
+    {
+      "passage_text": "In each of the questions below, a statement is followed by two assumptions numbered I and II. Consider the statement and the assumptions given to decide which of the assumption(s) is/are implicit in the statement. Give answer (a) if only Assumption I is implicit (b) if either Assumption I or II is implicit (c) if only Assumption II is implicit (d) if neither Assumption I nor II is implicit",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 59,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: The Government announced a heavy compensation package for all the victims of the terrorist attacks. Assumptions: I. Such incidents of terror may not occur in near future. II. Compensation may mitigate the anger among the citizens against the current Government.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: Many organisations have switched over to online mode of examinations. Assumptions: I. Candidates from all parts of the country may be well versed using computers. II. Online mode of examinations helps in recruiting more capable personnel.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: Government has decided to relocate all the factories from the city with immediate effect to reduce pollution. Assumptions: I. Pollution in the city is being caused only because of the factories existing there. II. People may be able to manage travelling daily to the relocated factories.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: Gambling through lotteries is banned by the Central Government in all the states with immediate effect. Assumptions: I. This may save innocent citizens from getting cheated of their hard earned money. II. The citizens may not gamble in any other way, if the lotteries are banned.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: Most people who stop smoking gain weight. Assumptions: I. If one stops smoking, one will gain weight. II. If one does not stop smoking, one will not gain weight.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if only Assumption II is implicit",
+        "c": "if neither Assumption I nor II is implicit",
+        "d": "if both Assumptions I and II are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: Warning : Smoking is injurious to health. Assumptions: I. Non-smoking promotes health. II. Really, this warning is not necessary.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if only Assumption II is implicit",
+        "c": "if neither Assumption I nor II is implicit",
+        "d": "if both Assumptions I and II are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: Like a mad man, I decided to follow him. Assumptions: I. I am not a mad man. II. I am a mad man.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if either Assumption I or II is implicit",
+        "c": "if only Assumption II is implicit",
+        "d": "if neither Assumption I nor II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: If it is easy to become an engineer I do not want to be an engineer. Assumptions: I. An individual aspires to be a professional. II. One desires to achieve a thing which is hard earned.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if either Assumption I or II is implicit",
+        "c": "if only Assumption II is implicit",
+        "d": "if neither Assumption I nor II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption",
+      "body": "Statement: All the employees are notified that the organisation will provide transport facilities at half the cost from the nearby railway station to the office except for those who have been provided with travelling allowance. Assumptions: I. Most of the employees will travel by the office transport. II. Those who are provided with travelling allowance will not read such notice.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if either Assumption I or II is implicit",
+        "c": "if only Assumption II is implicit",
+        "d": "if neither Assumption I nor II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1047
+}

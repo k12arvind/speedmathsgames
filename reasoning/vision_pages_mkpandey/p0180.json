@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Statements: Some tables are watches. Some watches are fans. Conclusions: Some tables are not fans. Some fans are not tables. Analysis: 'Some tables are watches' may be represented as: [Venn diagram with T and W circles overlapping]. Now, we have to combine fig VI and fig VII to get the answer figure. This can be done as: [Two alternative Venn diagrams showing T, W, and F circles]. Interpreting these two figures, we infer that both the conclusions are wrong. Sometimes we fail to get the correct answer by using Venn's diagrams. When this happens with some trickier questions, we give a simplified method for solving such diagrams as given in section 11.4.2. In first step, you have to draw tables for both the statements and check whether it is true in all possible cases. Obviously, this is easy. The second step is to form two figures in all possible ways. It is here you have to commit a mistake by not drawing all possible combinations. III is merely a step of interpreting from your figure. Students make a mistake in this step also. They assume that a conclusion is false if it is contradicted by some combination obtained in step II. A conclusion will be false only if it is supported by all the combination figures obtained in step II. Hence, we re-emphasise that if you have combined the two diagrams in all possible ways and then carefully done the interpretation, there is no way you can get a wrong answer."
+    }
+  ],
+  "answers": [],
+  "_page": 180
+}

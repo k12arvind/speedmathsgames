@@ -1,0 +1,119 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. On certain day six passengers from Chennai, Bengaluru, Kochi, Mumbai and Hyderabad boarded the New Delhi bound Rajdhani Express from Tata Nagar. The following facts are known about these six passengers. I. The persons from Kochi and Chennai are less than 36 yr of age. II. Person Z, the youngest among all is a doctor. III. The oldest person is from Kolkata and his/her profession is same as that of the person who got down at Mughal Sarai. IV. The persons from Bengaluru, Chennai, Hyderabad and Mumbai got down at four different stations. The eldest among these four got down at Koderma and the youngest at Kanpur. The person who got down at New Delhi is older than the person who got down at Mughal Sarai. V. The engineer from Bengaluru is older than the engineer from Chennai. VI. While arranging the teachers in increasing order of age, it was observed that the middle person is as old as the engineer from Chennai. VII. Person Y who got down at Mughal Sarai is less than 34 yr old. VIII. The teacher from Kochi is 4 yr older than the 31 yr old doctor who is not from Mumbai.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 117,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "tournament_ranking",
+      "subtopic_name": "Tournament/Match Results",
+      "body": "The only team(s) that won both matches in stage II is (are)",
+      "choices": {
+        "a": "B",
+        "b": "E and F",
+        "c": "A, E and F",
+        "d": "B, E and F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 118,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "tournament_ranking",
+      "subtopic_name": "Tournament/Match Results",
+      "body": "The teams that won exactly two matches in the event are",
+      "choices": {
+        "a": "A, D and F",
+        "b": "D and E",
+        "c": "E and F",
+        "d": "D and F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 119,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "tournament_ranking",
+      "subtopic_name": "Tournament/Match Results",
+      "body": "The team(s) with the most wins in the event is(are)",
+      "choices": {
+        "a": "A",
+        "b": "A and C",
+        "c": "F",
+        "d": "B and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 120,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Which of the following options is true?",
+      "choices": {
+        "a": "The person from Chennai is older than the person from Kochi",
+        "b": "The oldest teacher is from Mumbai",
+        "c": "The person from Mumbai is older than atleast one of the engineers",
+        "d": "The person from Kochi got down at Mughal Sarai and was an engineer",
+        "e": "The person who got down at New Delhi is older than Y, who in turn is older than the person from Hyderabad"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 121,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "If W is neither the youngest nor the oldest among the travellers from her profession, which of the following is true about her?",
+      "choices": {
+        "a": "She got down at Koderma",
+        "b": "She is 36 yr old",
+        "c": "She got down at Mughal Sarai",
+        "d": "She is from Kochi",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 641
+}

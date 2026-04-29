@@ -1,0 +1,80 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Cause and Effect",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-15): Given below are pairs of events 'A' and 'B'. You have to read both the events 'A' and 'B' and decide their nature of relationship. You have to assume that the information given in 'A' and 'B' is true and you will not assume anything beyond the given information in deciding the answer. Mark answer\n1) If 'A' is the effect and 'B' is immediate and principal cause\n2) If 'A' is the immediate and principal cause and 'B' is its effect\n3) If 'A' is an effect but 'B' is not its immediate and principal cause\n4) If 'B' is an effect but 'A' is not its immediate and principal cause\n5) None of these",
+      "has_figure": false,
+      "topic_code": "cause_effect"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "event_relationship",
+      "subtopic_name": "Event Relationship Analysis",
+      "body": "Event A: Madan died while on way to the hospital. Event B: A car dashed into the motorcycle Madan was driving.",
+      "choices": {
+        "a": "A is the effect and B is immediate and principal cause",
+        "b": "A is the immediate and principal cause and B is its effect",
+        "c": "A is an effect but B is not its immediate and principal cause",
+        "d": "B is an effect but A is not its immediate and principal cause",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "event_relationship",
+      "subtopic_name": "Event Relationship Analysis",
+      "body": "Event A: Major Dayal was educated in one of the best educational institutions of India. Event B: Major Dayal has extremely fluent speaking power.",
+      "choices": {
+        "a": "A is the effect and B is immediate and principal cause",
+        "b": "A is the immediate and principal cause and B is its effect",
+        "c": "A is an effect but B is not its immediate and principal cause",
+        "d": "B is an effect but A is not its immediate and principal cause",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "event_relationship",
+      "subtopic_name": "Event Relationship Analysis",
+      "body": "Event A: People of Taslinganj eat a lot of fruits and vegetables. Event B: It has been noticed that the people of Taslinganj have lower hypertension and related problems than the rest of the state.",
+      "choices": {
+        "a": "A is the effect and B is immediate and principal cause",
+        "b": "A is the immediate and principal cause and B is its effect",
+        "c": "A is an effect but B is not its immediate and principal cause",
+        "d": "B is an effect but A is not its immediate and principal cause",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 153
+}

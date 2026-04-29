@@ -1,0 +1,368 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 55-56) Study the following information carefully to answer the given questions.\nPoint P is 9 m towards the East of point Q. Point R is 5 m towards the South of point P. Point S is 3 m towards the West of point R. Point T is 5 m towards the North of point S. Point V is 7 m towards the South of point S.",
+      "has_figure": false,
+      "topic_code": "direction_sense"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 57-58) Study the following formation carefully to answer the given questions.\nPoint B is 12 m South of point A. Point C is 24 m East of point B. Point D is 8 m South of point C. Point E is 12 m East of point E and point F is 8 m North of point E.",
+      "has_figure": false,
+      "topic_code": "direction_sense"
+    }
+  ],
+  "questions": [
+    {
+      "number": 42,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "How far is point F from point A?",
+      "choices": {
+        "a": "43 m",
+        "b": "4 m",
+        "c": "3 m",
+        "d": "7 m",
+        "e": "5 m"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_direction",
+      "subtopic_name": "Distance and Direction",
+      "body": "How far and in which direction is point G from point A?",
+      "choices": {
+        "a": "3 m North",
+        "b": "5 m North",
+        "c": "4 m North",
+        "d": "4 m South",
+        "e": "3 m South"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "path_tracing",
+      "subtopic_name": "Path Tracing",
+      "body": "Ram goes 15 m North, then turns right and walks 20 m, then again turns right and walks 10 m, then again turns right and walks 20 m. How far is he from his original position?",
+      "choices": {
+        "a": "5",
+        "b": "10",
+        "c": "15",
+        "d": "20"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "path_tracing",
+      "subtopic_name": "Path Tracing",
+      "body": "A house faces North. A man coming out of his house walked straight for 10 m, turned left and walked 25 m. He then turned right and walked 5 m and again turned right and walked 25 m. How far is he from his house?",
+      "choices": {
+        "a": "15 m",
+        "b": "55 m",
+        "c": "60 m",
+        "d": "65 m"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Shiela and Belah start from their office and walk in opposite directions each travelling 30 km. Shiela then turns left and walks 10 km. Belah turns right and walks 10 km. How far are they now from each other?",
+      "choices": {
+        "a": "60 m",
+        "b": "5 km",
+        "c": "8 km",
+        "d": "2 km"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "A and B both are walking away from point X. A walked 3 m and B walked 4 m from it, then A walked 4 m North of X and B walked 5 m South of A. What is the distance between them now?",
+      "choices": {
+        "a": "9.5 m",
+        "b": "9 m",
+        "c": "16 m",
+        "d": "11.40 m"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "John's house is 100 m North of his uncle's office. His uncle's house is located 200 m West of his f(uncle's) office. Kabir is the friend of John and he stays 100 m East of John's house. The office of Kabir is located 100 m South of his house. Then, how far is his uncle's house from Kabir's office?",
+      "choices": {
+        "a": "200 m",
+        "b": "300 m",
+        "c": "400 m",
+        "d": "500 m"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "One day, Nita left home and cycled 10 km Southwards, turned right and cycled 5 km and turned right and cycled 10 km and turned left and cycled 10 km. How many kilometres will she have to cycle to reach her home straight?",
+      "choices": {
+        "a": "10 km",
+        "b": "15 km",
+        "c": "20 km",
+        "d": "25 km"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Rajat moves from his office to the canteen straight at a distance of 12 m. Then he turned left and walked for 2 m. Then he turns left again and walks straight for 12 m. How far is he from his office?",
+      "choices": {
+        "a": "10 m",
+        "b": "12 m",
+        "c": "8 m",
+        "d": "2 m"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Nassebah runs for 10 km in the Eastern direction. She then turns left and starts walking for 6 km. Again, she turns left and starts running for 6 km. Then, she turns left and walks again for 6 km. How far is she from the starting point?",
+      "choices": {
+        "a": "4 km",
+        "b": "5 km",
+        "c": "6 km",
+        "d": "3 km"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_direction",
+      "subtopic_name": "Distance and Direction",
+      "body": "Rachel starts walking towards North. After walking 15 m, she turns towards South and walks 20 m. She then turns towards East and walks 10 m. Then, again she walks 5 m towards North. How far is she from her starting point and in which direction?",
+      "choices": {
+        "a": "10 m, West",
+        "b": "5 m, East",
+        "c": "5 m, North",
+        "d": "10 m, East"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Rohan walks a distance of 3 km towards North, then turns to his left and walks for 2 km, he again turns to his left and walks for 3 km. At this point he turns to his left and walks for 3 km. How many kilometres is he from the starting point?",
+      "choices": {
+        "a": "1 km",
+        "b": "2 km",
+        "c": "3 km",
+        "d": "4 km"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Seema walks 30 m North. Then, she turns right and walks 30 m then she turns right and walks 55 m. Then, she turns left and walks 20 m. Then, she again turn left and walks 25 m. How many metres away is she from her original position?",
+      "choices": {
+        "a": "45 m",
+        "b": "50 m",
+        "c": "66 m",
+        "d": "55 m"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "position_analysis",
+      "subtopic_name": "Position Analysis",
+      "body": "If a person walks in a straight line for 8 m towards West from point R, which of the following points would he cross the first?",
+      "choices": {
+        "a": "V",
+        "b": "Q",
+        "c": "T",
+        "d": "S",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "straight_line",
+      "subtopic_name": "Straight Line",
+      "body": "Which of the following points are in a straight line?",
+      "choices": {
+        "a": "P, R, V",
+        "b": "S, T, Q",
+        "c": "P, T, V",
+        "d": "V, T, R",
+        "e": "S, V, T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "shortest_distance",
+      "subtopic_name": "Shortest Distance",
+      "body": "If a man has to travel to point E from point A (through these points by the shortest distance), which of the following points will he pass through first?",
+      "choices": {
+        "a": "Point C",
+        "b": "Point D",
+        "c": "Point F",
+        "d": "Point B",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_direction",
+      "subtopic_name": "Distance and Direction",
+      "body": "If a man is standing facing North at point C, how far and in which direction is point F?",
+      "choices": {
+        "a": "12 m, West",
+        "b": "24 m, East",
+        "c": "12 m, East",
+        "d": "24 m, West",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 467
+}

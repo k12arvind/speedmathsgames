@@ -1,0 +1,207 @@
+{
+  "page_type": "questions",
+  "chapter_number": 12,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_correction",
+      "subtopic_name": "Clock Correction Problems",
+      "body": "A clock becomes 12 s fast in every 3 h. If it is made correct at 3 O'clock in the afternoon of Sunday, then what time will it show at 10 O'clock Tuesday morning?",
+      "choices": {
+        "a": "2 min 52 s past 10",
+        "b": "2 min 54 s past 10",
+        "c": "2 min 50 s past 10",
+        "d": "2 min 48 s past 20"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_correction",
+      "subtopic_name": "Clock Correction Problems",
+      "body": "A clock becomes 15 min fast every day. If it is made correct at 12 O'clock in the afternoon, then what time will it show at 4 O'clock in the morning?",
+      "choices": {
+        "a": "4 : 10",
+        "b": "4 : 15",
+        "c": "O 4 : 20",
+        "d": "4 : 30"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_correction",
+      "subtopic_name": "Clock Correction Problems",
+      "body": "A clock is set right at 5 am. The clock loses 16 min in 24 h. What will be the right time when the clock indicates 10 pm on the 3rd day?",
+      "choices": {
+        "a": "11 : 5 pm",
+        "b": "11 pm",
+        "c": "12 pm",
+        "d": "12 : 30 pm"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_correction",
+      "subtopic_name": "Clock Correction Problems",
+      "body": "A watch, which gains uniformly is 2 min slow at noon on Monday and is 4 min, 48s fast at 2 pm on the following Monday. At what time it was correct?",
+      "choices": {
+        "a": "2 pm Tuesday",
+        "b": "3 pm Wednesday",
+        "c": "3 pm Thursday",
+        "d": "1 pm on Friday",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_correction",
+      "subtopic_name": "Clock Correction Problems",
+      "body": "A clock, which loses uniformly, is 15 min fast at 9 am on 3rd of the December and is 25 min less than the correct time at 3 pm on 6th of the same month. At what time it was correct?",
+      "choices": {
+        "a": "2 : 15 am on 3rd",
+        "b": "2 : 15 pm on 4th",
+        "c": "2 : 15 pm on 3rd",
+        "d": "2 : 15 am on 4th"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_relative_speed",
+      "subtopic_name": "Relative Speed of Clocks",
+      "body": "Two clocks are set correctly at 10 am on Sunday. One clock loses 3 min in an hour while the other gains 2 min in an hour. By how many minutes do the two clocks differ at 4 pm on the same day?",
+      "choices": {
+        "a": "25 min",
+        "b": "20 min",
+        "c": "35 min",
+        "d": "30 min"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "hand_movements",
+      "subtopic_name": "Clock Hand Movements",
+      "body": "The minute hand of a clock overtakes the hour hand at intervals of 65 min of the correct time. How much does a clock gain or lose in a day?",
+      "choices": {
+        "a": "10 10/143 min (gain)",
+        "b": "10 10/143 min (loss)",
+        "c": "9 10/143 min (gain)",
+        "d": "9 10/143 min (loss)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "hand_movements",
+      "subtopic_name": "Clock Hand Movements",
+      "body": "The minute hand of a clock overtakes the hour hand at intervals of 58 min of the correct time. How much does a clock gain or lose in a day?",
+      "choices": {
+        "a": "185 25/319 min (loss)",
+        "b": "185 25/319 min (gain)",
+        "c": "184 25/319 min (loss)",
+        "d": "184 25/319 min (gain)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "hand_movements",
+      "subtopic_name": "Clock Hand Movements",
+      "body": "The minute hand of a clock overtakes the hour hand at intervals of 62 min of the correct time. How much does a clock gain or lose in a day?",
+      "choices": {
+        "a": "81 80/341 min (loss)",
+        "b": "81 80/341 min (gain)",
+        "c": "80 80/341 min (loss)",
+        "d": "80 80/341 min (gain)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "hand_movements",
+      "subtopic_name": "Clock Hand Movements",
+      "body": "The minute hand of a clock overtakes the hour hand at intervals of 76 min of the correct time. How much does a clock gain or lose in a day?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 423
+}

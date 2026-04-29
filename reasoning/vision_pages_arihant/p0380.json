@@ -1,0 +1,231 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Venn Diagram",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 44-47) In the following questions, answers are based on the diagram given below\n\nI. The rectangle represents Government employees\nII. The triangle represents urban people\nIII. The circle represents graduates\nIV. The square represents clerks",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 48-49) In the following diagram represents a group of persons. The triangle represents educated persons, the rectangle represents the administrative persons, the square represents the businessman and the circle represents income tax payers.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 51-55) In the following diagram, the circle stands for insurance agents, the square stands for hard working, the triangle stands for rural people and the rectangle stands for graduates. Study the diagram carefully and answer the questions that follow.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 43,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_representation",
+      "subtopic_name": "Set Representation",
+      "body": "The diagram shows the survey on a sample of 1000 persons with reference to their knowledge of English, Hindi and Marathi. 105 people know ... languages.",
+      "choices": {
+        "a": "Marathi, Hindi",
+        "b": "English, Hindi",
+        "c": "Marathi, English",
+        "d": "Hindi, Marathi, English"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_analysis",
+      "subtopic_name": "Set Analysis",
+      "body": "Which of the following statements is true?",
+      "choices": {
+        "a": "All Government employees are clerks",
+        "b": "Some Government employees are graduates as well as clerks",
+        "c": "All Government employees are graduates",
+        "d": "All clerks are Governments employees but not graduates"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_analysis",
+      "subtopic_name": "Set Analysis",
+      "body": "Choose the correct statement",
+      "choices": {
+        "a": "some clerks are Government employees",
+        "b": "no clerk is from urban areas",
+        "c": "all graduates are from urban areas",
+        "d": "all graduates are Government employees"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "numerical_analysis",
+      "subtopic_name": "Numerical Analysis",
+      "body": "Which of the following numbers represents urban Government employees, who are graduate but not clerk?",
+      "choices": {
+        "a": "9",
+        "b": "4",
+        "c": "10",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "numerical_analysis",
+      "subtopic_name": "Numerical Analysis",
+      "body": "Which number represents clerks, who are Government employees but are neither graduates nor live in urban areas?",
+      "choices": {
+        "a": "4",
+        "b": "2",
+        "c": "9",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "From the above figure, it can be concluded that",
+      "choices": {
+        "a": "all businessmen pay income tax",
+        "b": "some administrative persons are income tax payers",
+        "c": "all income tax payers are educated",
+        "d": "educated persons which are not in administrative service do not pay income tax",
+        "e": "all businessmen are educated"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "According to the given figure, it can be inferred that",
+      "choices": {
+        "a": "none of the income tax payer is educated",
+        "b": "all the administrative persons are income tax payers",
+        "c": "none of the income tax payer is administrative person",
+        "d": "some of the persons who are neither businessman nor income tax payers are educated persons",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "numerical_analysis",
+      "subtopic_name": "Numerical Analysis",
+      "body": "In the diagram given below, the circle represents young persons, the triangle represents uneducated persons and the rectangle represents employed persons. Which number represents young, uneducated and unemployed persons?",
+      "choices": {
+        "a": "6",
+        "b": "3",
+        "c": "2",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_identification",
+      "subtopic_name": "Set Identification",
+      "body": "Non-rural and hard working insurance agents who are graduates are indicated by the region",
+      "choices": {
+        "a": "5",
+        "b": "7",
+        "c": "9",
+        "d": "10",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_identification",
+      "subtopic_name": "Set Identification",
+      "body": "Insurance agents who are neither graduates nor hard working but rural are represented by the region",
+      "choices": {
+        "a": "8",
+        "b": "10",
+        "c": "11",
+        "d": "12",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 380
+}

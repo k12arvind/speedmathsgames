@@ -1,0 +1,91 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 8,
+  "chapter_title": "Response & Interpretations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) According to the question,\n1 + 2 = 3\n2 + 6 = 8\n6 + 1 = 7\nClearly, it is not a standard dice.\n∴ Digit at the opposite face of 2 = 3 or 4 or 5"
+    },
+    {
+      "number": 2,
+      "solution": "(c) According to the question,\n5 + 1 = 6\n1 + 3 = 4\n3 + 5 = 8\nClearly, it is a standard dice.\n∴ Digit at the face opposite to 1 = 7 - 1 = 6"
+    },
+    {
+      "number": 3,
+      "solution": "(b) According to the question,\n5 + 1 = 6\n1 + 3 = 4\n3 + 5 = 8\nClearly, it is a standard dice.\n∴ Digit at the face opposite to 3 = 7 - 3 = 4"
+    },
+    {
+      "number": 4,
+      "solution": "(b) According to the question,\n3 + 5 = 8\n5 + 6 = 11\n6 + 3 = 9\nClearly, it is a standard dice.\n∴ Digit at the face opposite to 5 = 7 - 5 = 2"
+    },
+    {
+      "number": 5,
+      "solution": "(d) According to the question,\n4 + 3 = 7\n4 + 2 = 6\n3 + 2 = 5\nClearly, it is not a standard dice.\n∴ Digit opposite 4 = 1 or 5 or 6"
+    },
+    {
+      "number": 6,
+      "solution": "(d) The invisible number is 4 and it is opposite to number 2."
+    },
+    {
+      "number": 7,
+      "solution": "(d) Dice I → 2 3 4\nDice II → 2 1 4\nSo, opposite side of 1 is 3."
+    },
+    {
+      "number": 8,
+      "solution": "(c) In both the positions, 5 is at common face (front face).\nSo, digit 3 at the side face in position I will be opposite to the side face having digit 4 in position II."
+    },
+    {
+      "number": 9,
+      "solution": "(b) In the given two dices two numbers are common i.e., 3 and 5. So, remaining two numbers are opposite to each other Hence, number 2 is opposite to the number 4."
+    },
+    {
+      "number": 10,
+      "solution": "(b) From the two views of blocks it is clear that when 10 is at the bottom, number 12 will be at the top."
+    },
+    {
+      "number": 11,
+      "solution": "(b) From dice II and III, 3 and 5 are two common numbers. Hence, 6 and 4 are opposite to each other.\nor\nFrom second method (Dice I and II) (since, 3 is common)\n[Figure showing dice arrangement with numbers 2, 4, 3, 6, 5, 1]\n1 is opposite to 3.\n4 is opposite to 6.\n2 is opposite to 5."
+    },
+    {
+      "number": 12,
+      "solution": "(b) From positions II and III\nPosition II (clockwise) 5, 4, 2\nPosition III 5, 3, 1\nClearly, digit opposite to 3 = 4"
+    },
+    {
+      "number": 13,
+      "solution": "(a) From positions I and III,\nCommon digits = 2 and 3\n∴ Digit opposite to 6 = 1"
+    },
+    {
+      "number": 14,
+      "solution": "(a) Expanded form of the dice is\n[Figure showing expanded dice with numbers 3, 4, 6, 1, 5, 2]\nThus, X = 3"
+    },
+    {
+      "number": 15,
+      "solution": "(c) From positions II and IV,\nCommon digit 6 is at the same (side) face in both the positions.\n∴ Digit opposite to 3 = 4"
+    },
+    {
+      "number": 16,
+      "solution": "(d) From the four views of the cube it is clear that\n4 lies opposite 6.\n2 lies opposite 5.\n3 lies opposite 1.\nTherefore, the number 3 will be in the place of question mark."
+    },
+    {
+      "number": 17,
+      "solution": "(d) It is quite clear from the positions I, II and IV that except 5, all numbers (6, 4, 3 and 1) are on adjacent faces of 2. Hence, 5 and 2 are opposite to each other."
+    },
+    {
+      "number": 18,
+      "solution": "(c) In both the positions, 5 dots are common at the same (Right) face. So, face having 4 dots will be opposite to face having 3 dots."
+    },
+    {
+      "number": 19,
+      "solution": "(b) In both the positions, 2 dots are common at the same (top) face. So, face having 1 dot will be opposite to the face having 6 dots."
+    },
+    {
+      "number": 20,
+      "solution": "(a) In both the positions, 4 dots are common at the same (top) face. So, face having 6 dots will be opposite to the face having 3 dots according to the clockwise direction."
+    }
+  ],
+  "answers": [],
+  "_page": 909
+}

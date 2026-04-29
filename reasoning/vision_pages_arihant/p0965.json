@@ -1,0 +1,114 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Mirror Image of Letters and Numbers",
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 10-13) In each of the following questions you are given a combination of letter's and/or numbers followed by four alternatives (a), (b), (c) and (d). Choose the alternative which most closely resembles the mirror image of the given combination.",
+      "has_figure": false,
+      "topic_code": "non_verbal"
+    }
+  ],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "non_verbal",
+      "topic_name": "Mirror Image",
+      "subtopic_code": "mirror_image",
+      "subtopic_name": "Mirror Image of Letters and Numbers",
+      "body": "FUN",
+      "choices": {
+        "a": "ИUF",
+        "b": "ᴎᴎN",
+        "c": "ИUᴎ",
+        "d": "NUᴎ"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "non_verbal",
+      "topic_name": "Mirror Image",
+      "subtopic_code": "mirror_image",
+      "subtopic_name": "Mirror Image of Letters and Numbers",
+      "body": "12698",
+      "choices": {
+        "a": "Iᘔ698",
+        "b": "86ᘔSI",
+        "c": "12968",
+        "d": "Iᘔ698"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "non_verbal",
+      "topic_name": "Mirror Image",
+      "subtopic_code": "mirror_image",
+      "subtopic_name": "Mirror Image of Letters and Numbers",
+      "body": "76MP03J",
+      "choices": {
+        "a": "JE0ИM6ᘔ",
+        "b": "LE0M96ᘔ",
+        "c": "LE0ИMᘔᘔ",
+        "d": "LE0ИMᘔ7"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "non_verbal",
+      "topic_name": "Mirror Image",
+      "subtopic_code": "mirror_image",
+      "subtopic_name": "Mirror Image of Letters and Numbers",
+      "body": "PRAYER",
+      "choices": {
+        "a": "ᴙᴙAYᴙ",
+        "b": "ᴙᴙᴎAᴙ",
+        "c": "ᴙᴙYAᴙᴎ",
+        "d": "ᴙᴙAYᴙ"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 10,
+      "solution": "The correct mirror image is obtained as shown below FUN ↔ ИUᴎ"
+    },
+    {
+      "number": 11,
+      "solution": "The correct mirror image will be 12698 ↔ 86ᘔSI"
+    },
+    {
+      "number": 12,
+      "solution": "The correct mirror image will be 76MP03J ↔ LE0ИMᘔᘔ"
+    },
+    {
+      "number": 13,
+      "solution": "The correct mirror image will be PRAYER ↔ ᴙᴙYAᴙᴎ"
+    }
+  ],
+  "answers": [],
+  "_page": 965
+}

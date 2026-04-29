@@ -1,0 +1,217 @@
+{
+  "page_type": "questions",
+  "chapter_number": 13,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Type 3 Finding a Week Day on the Basis of Another Week Day\n\nIn such questions, a week day is to be found out on the basis of some reference day of the week.\n\nImportant Concepts Regarding Days\n(i) Yesterday = Today - 1 day\n(ii) Tomorrow = Today + 1 day\n(iii) Day after yesterday = Today\n(iv) Day before yesterday = Today - 2 days\n(v) Day after tomorrow = Today + 2 days\n(vi) Day before tomorrow = Today\n(vii) Day after the day before yesterday = (Yesterday - 1 day) + 1 day = Yesterday = Today - 1 day\n(viii) Day before the day after tomorrow = (Tomorrow + 1 day) - 1 day = Tomorrow = Today + 1 day\n(ix) Day before the day after yesterday = (Yesterday + 1 day) - 1 day = Yesterday = Today - 1 day\n(x) Day after the day before tomorrow = (Tomorrow - 1 day) + 1 day = Tomorrow = Today + 1 day",
+      "has_figure": false,
+      "topic_code": "calendar_clock"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "2 days before yesterday was Friday, then what day of the week will be day after tomorrow?",
+      "choices": {
+        "a": "Monday",
+        "b": "Sunday",
+        "c": "Saturday",
+        "d": "Wednesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If a day before yesterday was Thursday, then when will Sunday fall?",
+      "choices": {
+        "a": "Today",
+        "b": "2nd day after today",
+        "c": "Tomorrow",
+        "d": "A day after tomorrow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If day after tomorrow is Tuesday, then what day of the week will it be on 2 days after the day after tomorrow?",
+      "choices": {
+        "a": "Monday",
+        "b": "Wednesday",
+        "c": "Saturday",
+        "d": "Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If day before yesterday was Thursday, then when will be the Monday?",
+      "choices": {
+        "a": "Day after tomorrow",
+        "b": "Today",
+        "c": "Tomorrow",
+        "d": "Two days after days"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If a day before yesterday was Wednesday, then when will Sunday fall?",
+      "choices": {
+        "a": "3rd days after today",
+        "b": "Tomorrow",
+        "c": "Today",
+        "d": "A day after tomorrow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If Tuesday falls 3 days after today, then what day of the week was it on 4 days before yesterday?",
+      "choices": {
+        "a": "Monday",
+        "b": "Tuesday",
+        "c": "Wednesday",
+        "d": "Sunday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If Thursday falls 2 days after tomorrow, then what day of the week was it on three days before yesterday?",
+      "choices": {
+        "a": "Monday",
+        "b": "Tuesday",
+        "c": "Wednesday",
+        "d": "Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If day after tomorrow is Sunday, then what day of the week was it on day before yesterday?",
+      "choices": {
+        "a": "Wednesday",
+        "b": "Friday",
+        "c": "Saturday",
+        "d": "Monday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If a day before yesterday was Tuesday, then what day of the week will it be on a day after tomorrow?",
+      "choices": {
+        "a": "Monday",
+        "b": "Wednesday",
+        "c": "Friday",
+        "d": "Saturday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "week_day_finding",
+      "subtopic_name": "Finding Week Day",
+      "body": "If day before yesterday was Saturday, then what day of the week will it be after tomorrow?",
+      "choices": {
+        "a": "Friday",
+        "b": "Thursday",
+        "c": "Wednesday",
+        "d": "Tuesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 441
+}

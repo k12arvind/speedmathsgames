@@ -1,0 +1,105 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "Study the following informations carefully and answer the questions given below it: Five friends A,B,C,D and E are sitting on a bench. (1) A is sitting next to B. (2) C is sitting next to D.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Directions(Q. 1 to 5): Read the following information carefully and answer the questions given below it: In an exhibition, seven different companies, viz. Cadillac, Ambassador, Fiat, Maruti, Mercedes, Bedford and Fargo, were displayed in a row, facing east on that. (1) Cadillac car was to the immediate right of Fargo. (2) Fargo was fourth to the right of Fiat. (3) Maruti car was between Ambassador and Bedford. (4) Fiat, which was third to the left of Ambassador car, was at one of the ends.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 604,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "(1) D is not sitting with E. (2) E is on the left end of the bench. (3) C is on the second position from the right. (4) A is on the right of B and E. (5) A and C are sitting together. Question: Where is A sitting ? (a) Between B and D (b) Between D and C (c) Between E and D (d) Between C and E (e) Between B and C",
+      "choices": {
+        "a": "Between B and D",
+        "b": "Between D and C",
+        "c": "Between E and D",
+        "d": "Between C and E",
+        "e": "Between B and C"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 605,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is sitting in the centre ? (a) A (b) B (c) C (d) D (e) E",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following was the correct position of the Mercedes ? (a) Immediate left of Bedford (b) Fourth to the right of Maruti (c) Between Bedford and Fargo (d) None of these",
+      "choices": {
+        "a": "Immediate left of Bedford",
+        "b": "Fourth to the right of Maruti",
+        "c": "Between Bedford and Fargo",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following was definitely true ? (a) Fargo car is between Ambassador and Fiat. (b) Cadillac car is to the immediate left of Mercedes. (c) Fargo is to the immediate right of Cadillac. (d) Maruti is fourth to the right of Mercedes. (e) None of these",
+      "choices": {
+        "a": "Fargo car is between Ambassador and Fiat.",
+        "b": "Cadillac car is to the immediate left of Mercedes.",
+        "c": "Fargo is to the immediate right of Cadillac.",
+        "d": "Maruti is fourth to the right of Mercedes.",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 309
+}

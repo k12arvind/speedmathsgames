@@ -1,0 +1,26 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In the question below are given three statements followed by three conclusions numbered I, II and III. You have to take the three given statements to be true even if they seem to be at variance from commonly known facts and decide which of the given conclusion(s) logically follow (s) from the three given statements.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "Statements: All rooms are hotels. All hotels are buildings. All buildings are mountains. Conclusions: I. Some mountains are hotels. II. Some buildings are rooms. III. Some mountains are rooms. Sol. (d) [Venn diagram showing concentric circles with Hotels innermost, then Rooms, then Buildings, then Mountains outermost] Conclusions: I. Some mountains are hotels. (✓) II. Some buildings are rooms. (✓) III. Some mountains are rooms. (✓)"
+    }
+  ],
+  "answers": [
+    {
+      "number": 7,
+      "correct": "d"
+    }
+  ],
+  "_page": 1171
+}

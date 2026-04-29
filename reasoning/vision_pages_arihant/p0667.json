@@ -1,0 +1,75 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 39,
+      "solution": "(b) As given in Statement II, the number of paintings sold by Hussain is more, hence he is the better artist. So, Statement II alone is sufficient to answer the question."
+    },
+    {
+      "number": 40,
+      "solution": "(d) Both statements taken together are not sufficient to answer the question."
+    },
+    {
+      "number": 41,
+      "solution": "(b) Statement I is not sufficient because the number of pages in the book is not given. Statement II is sufficient because in 2 h half of the book is read. ∴ 1 book = 2 × 2 = 4 h < 6 h"
+    },
+    {
+      "number": 42,
+      "solution": "(a) A bag has 5 grape fruits at a time and there are 8 such bags in a case. ∴ Total number of grape fruits in a case = 5 × 8 = 40 Statement I alone is sufficient to answer the question but Statement II alone is not sufficient."
+    },
+    {
+      "number": 43,
+      "solution": "(d) For batting average total score of the batsman should be known. So, neither Statement I nor Statement II is sufficient."
+    },
+    {
+      "number": 44,
+      "solution": "(c) From Statement II, Let the price of cork be ₹ x. Then, price of bottle = ₹ (x + 75) Now, From Statement I, Combined price bottle and cork = ₹ 95 ∴ x + (x + 75) = 95 (from Statements I and II) ⇒ 2x + 75 = 95 ⇒ 2x = 20 ∴ x = ₹ 10 ∴ Price of cork = ₹ 10 So, both statements are necessary to answer the question."
+    },
+    {
+      "number": 45,
+      "solution": "(d) Average age depends on the total age of all the men and number of men there but from both the statements we can not find the total age of all the men, so both statements are not sufficient."
+    },
+    {
+      "number": 46,
+      "solution": "(c) Let the age of Sunita = x yr Then, age of John = (x + 4) yr From Statement I, 5(x – 9) = (x + 4) – 9 ⇒ 5x – 45 = x + 4 – 9 ⇒ 5x – x = –5 + 45 ⇒ 4x = 40 ∴ x = 40/4 ∴ Age of John = (x + 4) = 10 + 4 = 14 yr So, Statement I alone is sufficient to answer the question, while Statement II alone is not sufficient."
+    },
+    {
+      "number": 47,
+      "solution": "(c) Statement I says clock is 12 min fast at 6 : 00. Statement II says clock become fast by 40 s after each hour. Thus, by combining these two equations we can find that how many minutes will the clock lose in 24 h. So, both the Statements I and II together are sufficient to answer the question but neither statement alone is sufficient."
+    },
+    {
+      "number": 48,
+      "solution": "(d) From Statements I and II together, there are two possibilities. [Diagram showing: 20 people → Ram → 16 people → 20 people, Esha → 5 people or 20 people → Esha → 14 people, Ram → 20 people] ∴ Total people in line = 14 + 1 + 5 + 1 + 14 = 35. ∴ Total people in line = 20 + 1 + 5 + 1 + 20 = 47 So, both statements taken together are not sufficient to answer the question."
+    },
+    {
+      "number": 49,
+      "solution": "(c) Statement I says how much time computer takes in solving first problem. So, we cannot find the time taken by computer in solving 150 problems. Statement II: We don't need the efficiency of work of computer because there is no relation between efficiency of work of man and work of computer. So, neither Statement I nor II is sufficient."
+    },
+    {
+      "number": 50,
+      "solution": "(c) If x is a multiple of y and y ≠ 1 (necessary to prove y = 2) Also, x + 2 is also a multiple of y. Then, y is definitely = 2 So, both statements are required together to answer the question."
+    },
+    {
+      "number": 51,
+      "solution": "(c) From Statement II, T is the husband of W i.e., T and W are a married couple. From Statement III, Out of 3 children of T, one is a boy i.e., he has two daughters and one son. By combining Statements II and III, W has two daughters. So, Statements II and III are sufficient to answer the question."
+    },
+    {
+      "number": 52,
+      "solution": "(c) By combining Statements I and II, [Diagram showing positions E, B, A, C with 'Increasing tallness' label] Hence, E is the tallest. So, only Statements I and II are sufficient to answer the question."
+    },
+    {
+      "number": 53,
+      "solution": "(e) From Statement I, [Direction diagram showing West-North-East-South positions] From Statement II, [Another direction diagram] By combining Statement I and II, [Combined direction diagram showing J is in South-West direction from village W] Clearly, J is in South-West direction from village W. So, Statements I and II are required to answer the question"
+    },
+    {
+      "number": 54,
+      "solution": "(c) From Statement I and III, now or never again → tom ka na sa again @ now or never → na @ ka sa tom ∴ go = na So, Statements I and III are sufficient to answer the question."
+    }
+  ],
+  "answers": [],
+  "_page": 667
+}

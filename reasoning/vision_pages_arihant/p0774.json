@@ -1,0 +1,100 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "In the following questions, find the best substitute from the answer figures which replaces the sign of question marks such that figure (iii) is related to figure (iv) in same way as figure (i) relates to figure (ii).",
+      "has_figure": true,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 23,
+      "solution": "The dot inside the figure and lines outside the figure move one step clockwise."
+    },
+    {
+      "number": 24,
+      "solution": "From section (1) to section (2) of the problem figure, the shaded block moves in upper row one step right side, shaded blocks in the middle and lower rows move one step left side and dot inside the figure moves one step upwards."
+    },
+    {
+      "number": 25,
+      "solution": "Both the symbols on left side interchange positions in such a way that the first symbol, from left, gets inverted and the second symbol gets reversed at their new positions, respectively. Both the symbols on the right side interchange positions in such a way that first symbol on the right side rotates through 90° anti-clockwise and second symbol is replaced by a new symbol at the new position."
+    },
+    {
+      "number": 26,
+      "solution": "From section (1) to section (2), the figure remains the same except one of the arrows which comes from below in inverted form on the top of figure."
+    },
+    {
+      "number": 27,
+      "solution": "From problem figure (1) to (2), the main figure rotates through 90° anti-clockwise in such a way that the line segment attached to one side of the figure shifts to other side and gets reversed, the shading of the dot on top of the figure gets changed."
+    },
+    {
+      "number": 28,
+      "solution": "From problem figure (1) to (2), the triangle rotates through 90° anti-clockwise, three pins and crossed arrow interchange positions in such a way that the three pins change their order and the crossed arrow rotates through 45° anti-clockwise and the dot (.) also moves one side in clockwise direction."
+    },
+    {
+      "number": 29,
+      "solution": "From problem figure (1) to (2), the main figure rotates through 180°, the blank square on the top of the figure shifts one side in anticlockwise direction and gets shaded and two blank circles are added outside the figure."
+    },
+    {
+      "number": 30,
+      "solution": "From problem figure (1) to (2), the main figure rotates through 180°."
+    },
+    {
+      "number": 33,
+      "solution": "From section (i) to section (ii) of the problem figure, all the squares rotate 90° anti-clockwise and the same process repeats from section (iii) to section (iv)."
+    },
+    {
+      "number": 34,
+      "solution": "From section (i) to section (ii) of the problem figure, the main figure gets inverted in such a way design on the head of the figure is changed into new design. The same process is repeated from section (iii) to section (iv) of the problem figure."
+    }
+  ],
+  "answers": [],
+  "_page": 774
+}

@@ -1,0 +1,170 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 127-131): Study the following information and answer the questions given below it: A training college has to conduct a refresher course for teachers of different subjects - Mechanics, Psychology, Philosophy, Sociology, Economics, Science and Engineering - from 22nd July to 29th July. 1) The course should start with Psychology. 2) 23rd July, being Sunday, should be a holiday. 3) Science should be on the previous day of Engineering. 4) The course should end with Mechanics. 5) Philosophy should be immediately after the holiday. 6) There should be a gap of one day between Economics and Engineering. 7) The refresher course will start with which one of the following subject.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    },
+    {
+      "passage_text": "Directions (Q. 132-135): Study the following information carefully and answer the questions given below it: Prashant Arora has three children - Sangeeta, Vimal and Ashish. Ashish married Monika, the eldest daughter of Mr and Mrs Roy. The Roys married their youngest daughter to the eldest son of Mr and Mrs Sharma, and they have two children named Amit and Shashi. The Roys have two more children, Roshan and Vandana, both older than Veena. Sameer and Ajay are the sons of Ashish and Monika. Rashmi is the daughter of Amit.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. 140-144): Read the following statements and answer the questions that follow - A, B, C, D, E and F --- being considered here. One is from 19th century, three from 19th and one to the 20th. Four belonged to 19th century, four to great novelists and three as great dramatists. One belonged to Tamil writer, two to Hindi, two to Marathi were recognised as devoted to literary criticism were great literature. One contributed only and contributed to dramatists. One wrote poetry while others belonged to the 19th century. Marathi literature was the only Tamil writer belonged to the 20th century.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 127,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "The refresher course will start with which one of the following subject.",
+      "choices": {
+        "a": "Psychology",
+        "b": "Mechanics",
+        "c": "Philosophy"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 128,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "Which subject will be on Tuesday?",
+      "choices": {
+        "a": "Mechanics",
+        "b": "Engineering",
+        "c": "Economics",
+        "d": "Psychology",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 129,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "Which subject precedes Mechanics?",
+      "choices": {
+        "a": "Economics",
+        "b": "Engineering",
+        "c": "Philosophy",
+        "d": "Science",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 130,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "How many days' gap is there between Science and Philosophy?",
+      "choices": {
+        "a": "None",
+        "b": "Two",
+        "c": "Three",
+        "d": "No gap",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 131,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "Which subject is followed by Science?",
+      "choices": {
+        "a": "Engineering",
+        "b": "Psychology",
+        "c": "Philosophy",
+        "d": "Economics",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 132,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree",
+      "body": "What is the surname of Rashmi?",
+      "choices": {
+        "a": "Sharma",
+        "b": "Roy",
+        "c": "Arora"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 133,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree",
+      "body": "How is Sameer related to the father of Monika?",
+      "choices": {
+        "a": "Grandson",
+        "b": "Son",
+        "c": "Cousin",
+        "d": "Son-in-law",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 338
+}

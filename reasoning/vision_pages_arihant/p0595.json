@@ -1,0 +1,71 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 18,
+      "solution": "(C) Sixth from left."
+    },
+    {
+      "number": 19,
+      "solution": "(d) We cannot determine the input for the given step as original position of numbers in input cannot be determined."
+    },
+    {
+      "number": 20,
+      "solution": "(c) Input 16 13 400 26 150 200 19\nStep I 13 16 400 26 150 200 19\nStep II 13 400 16 26 150 200 19"
+    },
+    {
+      "number": 21,
+      "solution": "(d) Input 100 500 2 400 20 3 800 1 999 666\nStep I 1 500 2 400 20 3 800 100 999 666"
+    },
+    {
+      "number": 22,
+      "solution": "(d) Input 10 4 1 9 8 12\nStep I 1 4 10 9 8 12\nStep II 1 12 10 9 8 4\nStep III 1 12 4 9 8 10\nStep IV 1 12 4 10 9 9"
+    },
+    {
+      "number": 23,
+      "solution": "(b)\nInput 15 19 90 3 50 16 4 99 91\nStep I 3 19 90 15 50 16 4 99 91\nStep II 3 99 90 15 50 16 4 19 91\nStep III 3 99 4 15 50 16 90 19 91\nStep IV 3 99 4 91 50 16 90 19 15\nStep V 3 99 4 91 15 16 90 19 50"
+    },
+    {
+      "number": 24,
+      "solution": "(e) Input 20 10 50 55 40 19 12\nStep I 10 20 50 55 40 19 12\nStep II 10 55 50 20 40 19 12\nStep III 10 55 12 20 40 19 50"
+    },
+    {
+      "number": 25,
+      "solution": "(b) Input train 59 47 25 over burden 63 sky\nStep I burden train 59 47 25 over 63 sky\nStep II burden 25 train 59 47 over 63 sky\nStep III burden 25 over train 59 47 63 sky\nStep IV burden 25 over 47 train 59 63 sky\nStep V burden 25 over 47 sky train 59 63\nStep VI burden 25 over 47 sky 59 train 63\nAs last step = Step VI\n∴ Last but one step = Step V"
+    },
+    {
+      "number": 26,
+      "solution": "(e) Input service 46 58 96 of there desk 15\nStep I desk service 46 58 96 of there 15\nStep II desk 15 service 46 58 96 of there\nStep III desk 15 of service 46 58 96 there\nStep IV desk 15 of 46 service 58 96 there\nStep V desk 15 of 46 service 58 there 96.\n∴ Last step = Step V\nSo, there will be no step VI."
+    },
+    {
+      "number": 27,
+      "solution": "(c) This is a problem based on arrangement and in arrangement problems previous step/input cannot be determined."
+    },
+    {
+      "number": 28,
+      "solution": "(d) Step III art 24 days 83 71 54 star power\nStep IV art 24 day 54 83 71 star power\nStep V art 24 days 54 power 83 71 star\nStep VI art 24 day 54 power 71 83 star\nStep VII art 24 day 54 power 71 star 83\n∴ Last step = Step VII"
+    },
+    {
+      "number": 29,
+      "solution": "(c) Step II cold 17 wave 69 never desk 52 43\nStep III old 17 desk wave 69 never 52 43\nStep IV cold 17 desk 43 wave 69 never 52\nStep V cold 17 desk 43 never wave 69 52\nStep VI cold 17 desk 43 never 52 wave 69\n∴ Last step = Step VI\n∴ After Step II, four more steps are required to complete the arrangement."
+    },
+    {
+      "number": 30,
+      "solution": "(e) Input 89 24 44 25 09 14 5 2\nStep I 44 89 24 25 09 14 5 2\nStep II 44 05 89 24 25 09 14 2\nStep III 44 05 24 89 25 09 14 2\nSince, none of the options contains the correct input as shown by Step III, hence, the correct answer is option (e)."
+    },
+    {
+      "number": 31,
+      "solution": "(d) If we keep arranging the steps from Step III onward as in the previous question, we get the final arrangement of the input in Step VII as below\nStep VII 44 05 24 09 14 25 2 89"
+    },
+    {
+      "number": 32,
+      "solution": "(d) We cannot determine the input for the given step because exact placement of the numbers in input cannot be known. As a result, option (a) and (b) both reflect the probable input."
+    }
+  ],
+  "answers": [],
+  "_page": 595
+}

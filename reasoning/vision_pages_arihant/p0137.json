@@ -1,0 +1,60 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Letter Coding",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_rearrangement",
+      "subtopic_name": "Letter Rearrangement",
+      "body": "If in a certain code language 'RAMESH' is written as 'HSEMAR', then how will 'CREATE' be written in that language?",
+      "choices": {
+        "a": "TEACRE",
+        "b": "ETAECR",
+        "c": "ETAERC",
+        "d": "ETACRE"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_rearrangement",
+      "subtopic_name": "Letter Rearrangement",
+      "body": "If in a coded language 'BRINJAL' is written as 'LAJNIRB', then how will 'LADYFINGER' be written in that code?",
+      "choices": {
+        "a": "RNEGIFYDAL",
+        "b": "RJNEGIFYDAL",
+        "c": "REGNIFYDAL",
+        "d": "REGNIFYDAL"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "As, RAMESH → HSEMAR (1 2 3 4 5 6 → 6 5 4 3 2 1). Similarly, CREATE → ETAERC (1 2 3 4 5 6 → 6 5 4 3 2 1). ∴ CREATE = ETAERC"
+    },
+    {
+      "number": 2,
+      "solution": "As, BRINJAL → LAJNIRB (8 R I N J A L → L A J N I R B with numbered positions 1 1 1 1 1 1 1). Similarly, LADYFINGER → REGNIFYDAL with corresponding pattern shown in diagram. ∴ LADYFINGER ⇒ REGNIFYDAL"
+    }
+  ],
+  "answers": [],
+  "_page": 137
+}

@@ -1,0 +1,192 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Five cities P, Q, R, S and T are connected by different modes of transport as follows.\n• P and Q are connected by boat as well as rail.\n• Q and T are connected by air only.\n• T and R are connected by rail and bus.\n• S and R are connected by bus and boat.\n• P and R are connected by boat only.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Four men are waiting at Delhi airport for a Mumbai flight. Two are doctors and the other two are businessmen. Two speak Gujarati and two speak Tamil. No two of the same profession speak the same language. Two are Muslims and two are Christian. No two of the same religion are of the same profession, nor do they speak the same language. The Tamil-speaking doctor is a Christian.\nI. The Christian-businessman speaks Gujarati.\nII. The Gujarati-speaking doctor is a Muslim.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Five friends A, B, C, D and E travelled to five different cities of India from Mumbai. They went to Chennai, Kolkata, Delhi, Bengaluru and Hyderabad by different modes of transport, i.e., by bus, train, aeroplane, car and boat. Mumbai is not connected by bus to Delhi and Chennai. The person who travelled to Delhi did not make use of the boat. 'C' went to Bengaluru by car and 'B' went to Kolkata by aeroplane. 'D' travelled by boat while 'E' travelled by train.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Six friends Rahul, Kabeer, Anup, Raghu, Amit and Alok were engineering graduates. All six of them were placed in six different companies and were posted in six different locations namely Tisco-Jamshedpur, Telco-Pune, Wipro- Bengaluru, HCL-Noida, Mecon-Ranchi and Usha Martin- Kolkata. Each of them has their personal e-mail id's with different e-mail providers i.e., gmail, Indiatimes, Rediffmail, Yahoo, Hotmail, Sancharnet though not necessarily in the same order.\nII. The one having e-mail account with Sancharnet works in Noida and the one having an e-mail account with Indiatimes works for Tisco.\nIII. Amit does not stay in Bengaluru and does not work for Mecon, the one who works for Mecon has an e-mail id with gmail.\nIV. Rahul has an e-mail id with Rediffmail and works at Pune.\nV. Alok does not work for Mecon and the one who works for Wipro does not have an e-mail account with Yahoo.\nVI. Kabeer is posted in Kolkata and does not have an account with Hotmail.\nVII. Neither Alok nor Raghu work in Noida.\nVIII. The one who is posted in Ranchi has an e-mail id which is not an account of Rediffmail or Hotmail.\nIX. Anup is posted in Jamshedpur.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "transportation_network",
+      "subtopic_name": "Transportation Network",
+      "body": "Which mode of transport would help one to reach R starting from Q but without changing the mode of transport?",
+      "choices": {
+        "a": "Boat",
+        "b": "Rail",
+        "c": "Bus",
+        "d": "Air"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "transportation_network",
+      "subtopic_name": "Transportation Network",
+      "body": "If a person visits each of the places starting from P and gets back to P, which of the following places must he visit twice?",
+      "choices": {
+        "a": "Q",
+        "b": "R",
+        "c": "S",
+        "d": "T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "transportation_network",
+      "subtopic_name": "Transportation Network",
+      "body": "Which of the following pairs of cities is connected by any of the routes directly without going to any other city?",
+      "choices": {
+        "a": "P and T",
+        "b": "T and S",
+        "c": "Q and R",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "transportation_network",
+      "subtopic_name": "Transportation Network",
+      "body": "Between which two cities among the pairs of cities given below are there maximum travel options available?",
+      "choices": {
+        "a": "Q and S",
+        "b": "P and R",
+        "c": "P and T",
+        "d": "Q and R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_language_religion",
+      "subtopic_name": "Profession Language Religion",
+      "body": "Which of the above statements is/are correct conclusion/conclusions?",
+      "choices": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Both I and II",
+        "d": "Neither I nor II"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_mode_assignment",
+      "subtopic_name": "Person Mode Assignment",
+      "body": "Which of the following combinations of person and mode is not correct?",
+      "choices": {
+        "a": "D - Boat",
+        "b": "B - Aeroplane",
+        "c": "E - Aeroplane",
+        "d": "C - Car"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_mode_assignment",
+      "subtopic_name": "Person Mode Assignment",
+      "body": "Which of the following combinations is true for 'D'?",
+      "choices": {
+        "a": "Delhi-Bus",
+        "b": "Chennai-Bus",
+        "c": "Chennai-Boat",
+        "d": "Chennai-Car"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_mode_assignment",
+      "subtopic_name": "Person Mode Assignment",
+      "body": "Who among the following travelled to Delhi?",
+      "choices": {
+        "a": "C",
+        "b": "D",
+        "c": "E",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 634
+}

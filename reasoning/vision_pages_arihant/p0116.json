@@ -1,0 +1,148 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_gap_pattern",
+      "subtopic_name": "Letter Gap Pattern",
+      "body": "Number of letters skipped in between adjacent letters in the series decreases by one. Which of the following series is observing the rule?",
+      "choices": {
+        "a": "BGKNPR",
+        "b": "CINRTU",
+        "c": "EJNQST",
+        "d": "LQUXAP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_gap_pattern",
+      "subtopic_name": "Letter Gap Pattern",
+      "body": "Number of letters skipped in between adjacent letters in the series increases by one. Which of the following series observes this rule?",
+      "choices": {
+        "a": "CPTOV",
+        "b": "HCFKP",
+        "c": "HJHQV",
+        "d": "IKNRW"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_gap_pattern",
+      "subtopic_name": "Letter Gap Pattern",
+      "body": "Which of the following series observes the rule, \"skip in between adjacent letters, increasing one letter more each time to build a set of letters\"?",
+      "choices": {
+        "a": "ACFILQ",
+        "b": "BDGKPV",
+        "c": "CEHLQV",
+        "d": "HILPUZ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_gap_pattern",
+      "subtopic_name": "Letter Gap Pattern",
+      "body": "Number of letters skipped in between the adjacent letters in the series are consecutive odd number. Which of the following series observes this rule?",
+      "choices": {
+        "a": "FINUD",
+        "b": "FHLRZ",
+        "c": "FINUC",
+        "d": "FHLSZ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(C) Let us see R V Z D H L with gaps +4 +4 +4 +4 +4. Now, it is clear that option (c) is correct answer."
+    },
+    {
+      "number": 2,
+      "solution": "(C) From the given question, U R O L I F with gaps -3 -3 -3 -3 -3. Clearly, only option (c) has the required group of letters."
+    },
+    {
+      "number": 3,
+      "solution": "(D) Let us see M O R T Y X with gaps +2 +3 +2 +5 -1. Clearly, only option (D) is having the group of letters which is not according to the general rule."
+    },
+    {
+      "number": 4,
+      "solution": "(D) As per the question, O M J F A with gaps -2 -3 -4 -5. Clearly, only option (b) follows the given rule."
+    },
+    {
+      "number": 5,
+      "solution": "(d) According to the question, S D H K with gaps -15 +4 +3. Clearly, only option (d) is having the letters according to the given rule."
+    },
+    {
+      "number": 6,
+      "solution": "(d) From the given question, D B Y U P with gaps -2 +23 -4 -5. Now, it is clear that only option P is a group of letters which follows the given rule."
+    },
+    {
+      "number": 7,
+      "solution": "(d) From the given question, K M P T Y with gaps +2 +3 +4 +5. Clearly, only KMPTY having the series according to the given rule."
+    },
+    {
+      "number": 8,
+      "solution": "(a) From the given question, A D F I K N with gaps +3 +2 +3 +2 +3. Clearly, only option (a) is having the given pattern in the question."
+    },
+    {
+      "number": 9,
+      "solution": "(a) According to the question, N O X B E with gaps +1 +9 +4 +3. Here, general rule is followed by only option (a)."
+    },
+    {
+      "number": 10,
+      "solution": "(b) From the given question, S U X B G M with gaps +2 +3 +4 +5 +6. Clearly, only option (b) is having the series according to the given rule."
+    },
+    {
+      "number": 11,
+      "solution": "(c) According to the question, E J N Q S T with gaps +5 +4 +3 +2 +1. So, option (c) is having the group of letters which follows the given rule."
+    },
+    {
+      "number": 12,
+      "solution": "(c) Only option (d) is correct which follows the given pattern as given below J K N R W with gaps +1 +3 +4 +5."
+    },
+    {
+      "number": 13,
+      "solution": "(b) According to the question, B D G K P V with gaps +2 +3 +4 +5 +6. Hence, only option (b) is following the given pattern."
+    },
+    {
+      "number": 14,
+      "solution": "(a) As per the question given, F I N U D with gaps +3 +5 +7 +9. Hence, option (a) is having the series according to the given rule."
+    }
+  ],
+  "answers": [],
+  "_page": 116
+}

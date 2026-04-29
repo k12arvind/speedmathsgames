@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 29,
+      "solution": "(a) According to the question,\nR⊕B ⇒ R>B\nB⊕M ⇒ B>M\nOn combining the statements (i) and (ii), we get\nR>B>M\nConclusions I.R⊕M ⇒ R>M (true)\nII.R⊕M ⇒ R>M (false)\nSo, it is clear that only Conclusion I is true."
+    },
+    {
+      "number": 30,
+      "solution": "(c) According to the question,\nM⊕R ⇒ M>R\nQ⊗P ⇒ Q>P\nP≡R ⇒ P=R\nOn combining statements (i), (ii) and (iii), we get\nM>R=P≡Q\nConclusions I.M⊕P ⇒ M>P (Either I or II is true)(may be)\nII.M≡P ⇒ M>P (may be)\nSo, it is clear that either Conclusion I or II is true."
+    },
+    {
+      "number": 31,
+      "solution": "(b) According to the question,\nM⊕N ⇒ M>N\nN⊕R ⇒ N>R\nOn combining the statements (i) and (ii), we get\nM>N>R\nConclusions I.R⊕M ⇒ R>M (false)\nII.R⊕M ⇒ R>M (true)\nSo, it is clear that only conclusion II is true."
+    },
+    {
+      "number": 32,
+      "solution": "(a) According to the question, P⊕Q ⇒ P>Q\nQ⊕M ⇒ Q>M\nM⊕T ⇒ M>T\nOn combining the statements (i), (ii) and (iii), we get\nP>Q>M>T\nConclusions I.P⊕T ⇒ P>T (false)\nII.P⊗T ⇒ P≡T (false)\nSo, it is clear that neither conclusion I nor II is true."
+    },
+    {
+      "number": 33,
+      "solution": "(b) According to the question,\nB⊕V ⇒ B>V\nK⊕C ⇒ K>C\nC⊗B ⇒ C>B\nOn combining the statements (i), (ii) and (iii), we get\nK>C>B>V\nConclusions I.V⊕C ⇒ V>C (false)\nII.B⊕K ⇒ B>K (true)\nSo, it is clear that only Conclusion II is true. Given that, P⊕Q ⇒ P>Q i.e., ⊕ represents >\nP⊕Q ⇒ P>Q i.e., ⊕ represents ≥\nP⊗Q ⇒ P<Q i.e., ⊗ represents <\nP⊗Q ⇒ P≤Q i.e., ⊗ represents ≤\nP≡Q ⇒ P=Q i.e., ≡ represents =\nConclusions I.S⊕T ⇒ S>T (true)\nII.T≡R ⇒ T=R (false)\nSo, it is clear that only Conclusion I is true."
+    },
+    {
+      "number": 34,
+      "solution": "(a) According to the question,\nK⊕T ⇒ K>T\nS≡K ⇒ S=K\nT⊗R ⇒ T<R\nOn combining the statements (i), (ii) and (iii), we get\nS=K>T<R"
+    },
+    {
+      "number": 35,
+      "solution": "(c) According to the question,\nU≡M ⇒ U=M\nP⊕U ⇒ P>U\nM⊗B ⇒ M>B\nOn combining the statements (i), (ii) and (iii), we get\nP>U=M>B\nConclusions I.P≡B ⇒ P=B (either I or II is true)(may be)\nII.P⊕B ⇒ P>B (may be)\nSo, it is clear that either Conclusion I or II is true."
+    },
+    {
+      "number": 36,
+      "solution": "(b) According to the question,\nH⊕T ⇒ H>T\nT≠F ⇒ T<F\nF⊗E ⇒ F=E\nE*V ⇒ E≤V\nOn combining the statements (i), (ii), (iii) and (iv), we get\nH>T<F=E≤V\nConclusions I.V⊗F ⇒ V≥F (true)\nII.E⊕T ⇒ E>T (true)\nIII.H⊕V ⇒ H>V (false)\nIV.T≠V ⇒ T<V (true)\nSo, it is clear that Conclusions I, II and IV are true."
+    }
+  ],
+  "answers": [],
+  "_page": 343
+}

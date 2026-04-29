@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 34,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 34,
+      "solution": "2nd lot: amb dek dah poi con sem ned\n3rd lot: amb con dek dah\n4th lot: amb con dah dek poi sem ned\nYou can't work backward. [See Rule 2]\n3rd lot: ato fir har waj neh rus nus\n4th lot: ato fir har nus waj neh\n5th lot: ato fir har noi neh waj rus\n1st lot: fod tex til ide noi lux ros\n2nd lot: ide noi tex til noi lux ros\n3rd lot: ide lux noi tex til noi\n4th lot: ide lux noi noi tex til ros\nHere, the rule followed is: members are getting arranged in some order. The smallest no. interchanges with the first position. Next, the largest no. interchanges with the last position. Next, the second smallest no. interchanges with the second position. And so on.\nStepII: 182 317 67 249 417 91 293\nStepIII: 67 317 182 249 417 91 293\nStepIII: 67 91 182 249 293 417\nInput: 76 172 372 243 361 165\nStepI: 43 172 372 243 361 165\nStepII: 43 172 165 243 361 372\nStepIII: 43 172 165 76 243 361 372\nStepIII: 43 76 165 172 243 361 372\n[Machine will stop after step III.]\nStepII: 46 122 343 56 212 415\nStepIII: 46 48 343 122 212 415\nStepIV: 46 48 212 343 415\nIn such types of questions, we do not require to go in detail considering all steps. The last step will be defined in strictly ascending order.\nIn such types of settings, provision step can't be determined. [See Rule 3]\nStepII: 23 142 348 96 400 240 410\nStepII: 23 96 348 142 400 240 410\nStepIII: 23 96 142 348 240 400 410\nStepV: 23 96 142 348 240 400 410"
+    },
+    {
+      "number": 35,
+      "solution": "You can't work backward. [See Rule 2]"
+    },
+    {
+      "number": 36,
+      "solution": "1. 3rd lot: ato fir har waj neh rus nus\n4th lot: ato fir har nus waj neh\n5th lot: ato fir har noi neh waj rus\n1st lot: fod tex til ide noi lux ros\n2nd lot: ide noi tex til noi lux ros\n3rd lot: ide lux noi tex til noi\n4th lot: ide lux noi noi tex til ros\nHere, the rule followed is: members are getting arranged in some order. The smallest no. interchanges with the first position. Next, the largest no. interchanges with the last position. Next, the second smallest no. interchanges with the second position. And so on."
+    },
+    {
+      "number": 37,
+      "solution": "5. 1st lot: fod tex til ide noi lux ros\n2nd lot: ide noi tex til noi lux ros\n3rd lot: ide lux noi tex til noi\n4th lot: ide lux noi noi tex til ros"
+    },
+    {
+      "number": 38,
+      "solution": "1. Input: 182 317 67 249 417 91 293\nStepI: 67 317 182 249 417 91 293\nStepII: 67 317 182 249 293 417\nStepIII: 67 91 182 249 293 417"
+    },
+    {
+      "number": 39,
+      "solution": "4. Input: 76 172 372 243 361 165\nStepI: 43 172 372 243 361 165\nStepII: 43 172 165 243 361 372\nStepIII: 43 172 165 76 243 361 372\nStepIII: 43 76 165 172 243 361 372\n[Machine will stop after step III.]"
+    },
+    {
+      "number": 40,
+      "solution": "2. StepII: 46 122 343 56 212 415\nStepIII: 46 48 343 122 212 415\nStepIV: 46 48 212 343 415"
+    },
+    {
+      "number": 41,
+      "solution": "3. In such types of questions, we do not require to go in detail considering all steps. The last step will be defined in strictly ascending order."
+    },
+    {
+      "number": 42,
+      "solution": "4. In such types of settings, provision step can't be determined. [See Rule 3]"
+    },
+    {
+      "number": 43,
+      "solution": "3. StepII: 23 142 348 96 400 240 410\nStepII: 23 96 348 142 400 240 410\nStepIII: 23 96 142 348 240 400 410\nStepV: 23 96 142 348 240 400 410"
+    }
+  ],
+  "answers": [],
+  "_page": 263
+}

@@ -1,0 +1,33 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Letter Puzzles",
+  "passages": [
+    {
+      "passage_text": "In this type of problems, the arrangement of the letters of the English alphabet is done according to a certain pattern that may involve addition/subtraction of the positional values of letters, operations on the positional values of the letters from the end of English Alphabet etc. The candidate is required to find out the rule and the missing character from the arrangement based on that rule. Following examples will give you a clear idea about such types of problems. Directions (Example Nos. 10-13) In each of the following questions, which character when placed at the sign of interrogation (?) shall complete the given pattern.",
+      "has_figure": false,
+      "topic_code": "missing_character"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 10,
+      "solution": "Moving clockwise, starting with AZ, each quadrant is having a pair of opposite letters in succession. A + Z = 1 + 26 = 27, B + Y = 2 + 25 = 27, C + X = 3 + 24 = 27. Similarly, D + W = 4 + 23 = 27. Hence, option (b) is the correct answer."
+    },
+    {
+      "number": 11,
+      "solution": "According to English alphabet, A→D (+3), D→G (+3), D→I (+5), I→N (+5), I→P (+7), P→? (+7). So, the missing character is W."
+    },
+    {
+      "number": 12,
+      "solution": "According to English alphabet, B→G (+5), G→N (+7), D→J (+6), J→R (+8), G→N (+7), N→? (+9). So, the missing character is W."
+    },
+    {
+      "number": 13,
+      "solution": "According to English alphabet, Moving columnwise R→S (+1), S→T (+1), Q→P (-1), P→? (-1), L→M (+1), M→N (+1). So, the missing character is O."
+    }
+  ],
+  "answers": [],
+  "_page": 274
+}

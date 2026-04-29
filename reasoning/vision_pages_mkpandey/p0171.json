@@ -1,0 +1,76 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "Statement: Some pens are tables. No table is blue. Conclusion: I. Some tables are pens. II. No pen is blue."
+    },
+    {
+      "number": 10,
+      "solution": "Statement: All books are pencils. All pencils are flowers. Conclusion: I. All books are flowers. II. Some pencils are not books."
+    },
+    {
+      "number": 11,
+      "solution": "Statement: Some crows are jackals. No fox is a crow. Conclusion: I. Some jackals are foxes. II. Some jackals are not foxes."
+    },
+    {
+      "number": 12,
+      "solution": "Statement: Some crows are jackals. All foxes are crows. Conclusion: I. Some jackals are foxes. II. Some jackals are not foxes."
+    },
+    {
+      "number": 13,
+      "solution": "Statement: All radios are electric goods. All table-lamps are electric goods. Conclusion: I. Some radios are table-lamps. II. Some table-lamps are radios."
+    },
+    {
+      "number": 14,
+      "solution": "Statement: No man is a monkey. John is a man. Conclusion: I. John is not a monkey. II. John may or may not be a monkey."
+    },
+    {
+      "number": 15,
+      "solution": "Statement: A graduate is a man. This thief is a graduate. Conclusion: I. This thief is a man. II. Some men are thieves."
+    },
+    {
+      "number": 16,
+      "solution": "Statement: Only first divisioners are admitted. Ram is a first divisioner. Conclusion: I. Ram is admitted. II. Only Ram is admitted."
+    },
+    {
+      "number": 17,
+      "solution": "Statement: Men are sinners. Saints are men. Conclusion: I. Saints are sinners. II. Sinners are saints."
+    },
+    {
+      "number": 18,
+      "solution": "Statement: All businessmen except Bhimji are dishonest. All educated people smoke. Conclusion: I. All businessmen except Bhimji smoke. II. Bhimji smokes."
+    },
+    {
+      "number": 19,
+      "solution": "Statement: Only cats are animals. No historian is an animal."
+    }
+  ],
+  "answers": [
+    {
+      "number": 15,
+      "correct": "a"
+    },
+    {
+      "number": 16,
+      "correct": "b"
+    },
+    {
+      "number": 17,
+      "correct": "a"
+    },
+    {
+      "number": 18,
+      "correct": "b"
+    },
+    {
+      "number": 19,
+      "correct": "a"
+    }
+  ],
+  "_page": 171
+}

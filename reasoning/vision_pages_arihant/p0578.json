@@ -1,0 +1,227 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully to answer the questions below. An electronic device, when fed with the numbers, rearranges them in a particular order following certain rules. The following is step by step process of rearrangements for the given input of numbers.\n\nInput: 75, 9, 312, 55, 16, 61\nStep I: 312, 9, 75, 55, 16, 61\nStep II: 312, 75, 9, 55, 16, 61\nStep III: 312, 75, 61, 55, 16, 9\n\nFor the given input Step III is the last step.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "Which of the following will be the third step for the following input?\nInput '45, 78, 97, 132, 28, 16, 146, 54, 99, 112'",
+      "choices": {
+        "a": "16, 28, 45, 78, 97, 146, 54, 99, 112, 132",
+        "b": "16, 28, 45, 97, 78, 54, 99, 112, 132, 146",
+        "c": "16, 28, 45, 78, 97, 132, 99, 112, 146",
+        "d": "16, 28, 45, 97, 78, 132, 99, 54, 112, 146",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "If the second step for an input is as given below, what will be the fifth step for the same input?\nStep II 22, 49, 32, 88, 69, 132, 101, 185",
+      "choices": {
+        "a": "22, 32, 49, 88, 69, 101, 132, 185",
+        "b": "22, 32, 69, 49, 88, 101, 132, 185",
+        "c": "22, 32, 49, 69, 101, 88, 132, 185",
+        "d": "22, 32, 49, 88, 69, 132, 101, 185",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "What will be the Step II for the following input?\nInput '47, 62, 17, 92, 86, 42, 24, 79'",
+      "choices": {
+        "a": "17, 24, 47, 62, 86, 42, 79, 92",
+        "b": "17, 47, 62, 86, 42, 24, 79, 92",
+        "c": "17, 24, 47, 62, 92, 86, 42, 79",
+        "d": "17, 47, 62, 86, 24, 42, 79, 92",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "What will be the last step for the following input?\nInput '138 63 49 93 89 122 32 71'",
+      "choices": {
+        "a": "32, 49, 71, 63, 89, 93, 122, 138",
+        "b": "32, 49, 63, 71, 93, 89, 122, 138",
+        "c": "32, 49, 63, 71, 89, 93, 122, 138",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "What will be the Step III for the following input?\nInput '68, 182, 39, 93, 129, 46, 21, 58'",
+      "choices": {
+        "a": "21, 39, 68, 93, 129, 46, 58, 182",
+        "b": "21, 39, 68, 129, 93, 46, 58, 182",
+        "c": "21, 68, 39, 93, 129, 46, 58, 182",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "Input '88 172 15 105 412 25', find Step III of this input.",
+      "choices": {
+        "a": "172 412 15 105 88 25",
+        "b": "412 172 15 105 88 25",
+        "c": "412 172 105 88 15 25",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "If Step III of an input is as follows\n525 175 118 107 112 99 100, then find the input.",
+      "choices": {
+        "a": "525 118 107 175 112 99 100",
+        "b": "118 525 107 112 175 99 100",
+        "c": "99 100 175 112 107 525 118",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "Input '177 390 85 188 522 765'\nWhat will be the last step for this input?",
+      "choices": {
+        "a": "IV",
+        "b": "V",
+        "c": "VII",
+        "d": "VI",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "Step IV of an input is 832 722 701 645 85 517 615\nFind Step II for that input",
+      "choices": {
+        "a": "832 722 645 701 85 517 615",
+        "b": "832 722 701 85 645 517 615",
+        "c": "832 722 615 517 645 85 701",
+        "d": "832 722 615 85 645 701 517",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_sequence",
+      "subtopic_name": "Step Sequence",
+      "body": "Input '87 98 77 115 67 220 135'\nFind the last output for this input.",
+      "choices": {
+        "a": "220 135 115 98 87 77 67",
+        "b": "220 135 115 98 77 87 67",
+        "c": "220 135 115 77 98 87 67",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 578
+}

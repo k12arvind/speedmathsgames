@@ -1,0 +1,97 @@
+{
+  "page_type": "questions",
+  "chapter_number": 21,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-9) Among the given alternatives, which two addresses are exactly same. Mark the correct answer.",
+      "has_figure": false,
+      "topic_code": "classification"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "name_address_comparison",
+      "subtopic_name": "Name and Address Comparison",
+      "body": "M Ramakrishna 312,\nSector 2/IV Ukkunagar\nVisakhapatnam\n(1)\n\nM Ramakrishna 312,\nSector 2/VI Ukkunagar\nVisakhapatnam\n(2)\n\nM Ramakrishna 321,\nSector 2/IV Ukkunagar\nVisakhapatnam\n(3)\n\nM Ramakrishna 312,\nSector 2/IV Ukkunagar\nVisakhapatnam\n(4)",
+      "choices": {
+        "a": "1 and 4",
+        "b": "1 and 3",
+        "c": "2 and 4",
+        "d": "2 and 3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "name_address_comparison",
+      "subtopic_name": "Name and Address Comparison",
+      "body": "RJ Vijayan A/1C\nByrants 2 Tirupati 57\n(1)\n\nRJ Vijayan A/C1\nByrants 2 Tirupati 57\n(2)\n\nRJ Vijayan A/1C\nByrants 6 Tirupati 57\n(3)\n\nRJ Vijayan A/1C\nByrants 2 Tirupati 75\n(4)",
+      "choices": {
+        "a": "1 and 2",
+        "b": "1 and 3",
+        "c": "3 and 4",
+        "d": "2 and 3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "name_address_comparison",
+      "subtopic_name": "Name and Address Comparison",
+      "body": "Rupal Agencies\nTel-26853104\nFax-26894132\n(1)\n\nRupal Agencies\nTel-26853105\nFax-26894132\n(2)\n\nRupal Agenoies\nTel-26853104\nFax-26894132\n(3)\n\nRupal Agencies\nTel-26853104\nFax-26894132\n(4)",
+      "choices": {
+        "a": "2 and 4",
+        "b": "1 and 2",
+        "c": "2 and 4",
+        "d": "1 and 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "name_address_comparison",
+      "subtopic_name": "Name and Address Comparison",
+      "body": "Abdulla Rehman\nShaukat Ali\nSt. Alibaug-317259\n(1)\n\nAbdulla Rehman\nShaukat Ali\nSt. Alibaug-312759\n(2)\n\nAdbulla Rehman\nShaukat Ali\nSt. Alibaug-312759\n(3)\n\nAbdulla Rehman\nShaukat Ali\nSt. Alibaug-312759\n(4)",
+      "choices": {
+        "a": "1 and 2",
+        "b": "2 and 3",
+        "c": "3 and 4",
+        "d": "1 and 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 672
+}

@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 12,
+      "solution": "The 1st sentence and the 6th sentence are U.S.I. Let us begin with the 1st sentence because it has a parent-child relationship. The diagram is: B (?, ?) [B is the sister of T and E] Now, we should look for another sentence that involves B or F or I. We see that the only such sentence is the 2nd which gives some information about F. Please note that if the doctor is the grandfather of F and if B is the mother of F, then B must be the daughter-in-law of the doctor. The diagram becomes: ? (+, Doc) [The doctor is the grandfather of F; who is a psychologist] ? B (+, ?) F (?, Psy) (?, ?)"
+    },
+    {
+      "number": 13,
+      "solution": "U.S.I. So is the last sentence. The third, fourth and fifth sentences make up a parent-child relationship. The diagram is: Q (+, Eng) [Q is an engineer and the father of T.] T (?, ?)"
+    }
+  ],
+  "answers": [],
+  "_page": 316
+}

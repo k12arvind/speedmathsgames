@@ -1,0 +1,40 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "Statements: I. No table is chair. II. Some doors are tables. We can align this pair by changing the order of the statements. The aligned pair will be: [Some doors are tables. No table is chair.]"
+    },
+    {
+      "number": 4,
+      "solution": "Statements: I. Some books are parts. II. No parts are wordy. The sentences are already aligned."
+    },
+    {
+      "number": 5,
+      "solution": "(Proceed as in Ex 4 above.)"
+    },
+    {
+      "number": 6,
+      "solution": "(Proceed as in Ex 3 above.) An important note: You may have seen that in order to align sentences, conversion is necessary when the common term is either a subject in both sentences or a predicate in both the sentences (see Ex 2 and Ex 3 in particular). In such cases, we have to convert one of the sentences and choose the appropriate position (major or minor) for two statements to choose from this, remember the rule of IEA. That is, given a pair of to-be-aligned statements, the priority should be given, while converting, to I-type statement and then to A-type statement, in that order. Hence, if it is a case that one sentence is of type I and the other of type A, then the I-type sentence should be converted. After step I (which involved aligning the two sentences) has been completed, we are left with the easy and self-explanatory table 6 which can be used to draw conclusions."
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "a"
+    },
+    {
+      "number": 2,
+      "correct": "b"
+    },
+    {
+      "number": 3,
+      "correct": "c"
+    }
+  ],
+  "_page": 167
+}

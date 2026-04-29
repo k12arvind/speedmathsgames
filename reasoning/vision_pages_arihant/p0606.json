@@ -1,0 +1,272 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Gurgaon is an important part of the National Capital Region (NCR Delhi) and is a very progressive town of Haryana State. Of late, it has come to be known as town of malls and high rise buildings. Now, it can easily be compared to Dubai. The malls in Gurgaon have become very popular and daily footfall is around 1 lakh which goes up to 1.5 lakh during first week of the month. A survey conducted on five prominent malls as the four vital items on which the sale amounts to more than 60% of total revenue, revealed the following information. Mall A earns from ladies garments, artificial jewellery, cosmetics and electronics. Mall B earns mostly from furniture, cosmetics, sports and footwear. Mall C's greatest earnings are from electronics, sports, artificial jewellery and ladies garments. Mall D's main revenues are from furniture, footwear, ladies garments and cosmetics. Mall E's main earning departments are electronics, artificial jewellery, ladies garments and sports.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Ravi and Kunal are good in hockey and volleyball. Sachin and Ravi are good in hockey and baseball. Gaurav and Kunal are good in volleyball and cricket. Sachin, Gaurav and Sagar are good in baseball and football.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Eight people—E, F, G, H, J, K, L and M are sitting around a circular table facing the centre. Each of them is of a different profession Chartered Accountant, Columnist, Doctor, Engineer, Financial Analyst, Lawyer, Professor and Scientist but not necessarily in the same order. F is sitting second to the left of K. The Scientist is an immediate neighbour of K. There are only three people between the Scientist and E. Only one person sits between the Engineer and E. The Columnist is to the immediate right of the Engineer. M is second to the right of K. H is the immediate neighbours of each other. Neither G nor J is an Engineer. The Financial Analyst is to the immediate left of F. The Lawyer is second to the right of the Columnist. The Professor is immediate neighbour of the Engineer. G is second to the right of the Chartered Accountant.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 68,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "basic_puzzle",
+      "subtopic_name": "Basic Puzzle",
+      "body": "Which student opted for colleges X and Y but did not opt for T and Z?",
+      "choices": {
+        "a": "D",
+        "b": "C",
+        "c": "B",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "data_analysis",
+      "subtopic_name": "Data Analysis",
+      "body": "Which pair of malls earns mostly from electronic items and artificial jewellery but not from furniture and footwear?",
+      "choices": {
+        "a": "A and B",
+        "b": "C and D",
+        "c": "A and C",
+        "d": "B and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "data_analysis",
+      "subtopic_name": "Data Analysis",
+      "body": "Which of the following malls earns most from sports and electronics but not from cosmetics and furniture?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "D",
+        "d": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 71,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "data_analysis",
+      "subtopic_name": "Data Analysis",
+      "body": "Which mall does not earn much from ladies garments and artificial jewellery but gets maximum from footwear and furniture?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 72,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "sports_skills",
+      "subtopic_name": "Sports Skills",
+      "body": "Who is good in hockey, cricket and volleyball?",
+      "choices": {
+        "a": "Sachin",
+        "b": "Kunal",
+        "c": "Sagar",
+        "d": "Ravi"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "sports_skills",
+      "subtopic_name": "Sports Skills",
+      "body": "Who is good in baseball, cricket, volleyball and football?",
+      "choices": {
+        "a": "Sachin",
+        "b": "Kunal",
+        "c": "Gaurav",
+        "d": "Sagar"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "sports_skills",
+      "subtopic_name": "Sports Skills",
+      "body": "Who is good in football and baseball but not good in hockey, volleyball and cricket?",
+      "choices": {
+        "a": "Sagar",
+        "b": "Sachin",
+        "c": "Ravi",
+        "d": "Gaurav"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 75,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is sitting second to the right of E?",
+      "choices": {
+        "a": "Lawyer",
+        "b": "G",
+        "c": "Engineer",
+        "d": "F",
+        "e": "K"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 76,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who amongst the following is the professor?",
+      "choices": {
+        "a": "F",
+        "b": "L",
+        "c": "M",
+        "d": "K",
+        "e": "J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 77,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Four of the following five are alike in a certain way based on the given arrangement and hence form a group. Which of the following does not belong to that group?",
+      "choices": {
+        "a": "Chartered Accountant - H",
+        "b": "M-Doctor",
+        "c": "J-Engineer",
+        "d": "Financial Analyst-L",
+        "e": "Lawyer - K"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "What is the position of L with respect to the scientist?",
+      "choices": {
+        "a": "Third to the left",
+        "b": "Second to the right",
+        "c": "Second to the left",
+        "d": "Third to the right",
+        "e": "Immediate right"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following statements is true according to the given arrangement?",
+      "choices": {
+        "a": "The Lawyer is second to the left of the Doctor",
+        "b": "E is an immediate neighbour of the Financial Analyst",
+        "c": "H sits exactly between F and the Financial Analyst",
+        "d": "Only four people sit between the Columnist and F",
+        "e": "All of the given statements are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 606
+}

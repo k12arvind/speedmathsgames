@@ -1,0 +1,190 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Directions (Q.Nos 7-10) Study the following information carefully and answer the given questions. A word and number arrangement machine when given an input line of words and numbers rearranges them following a particular rule in each step. The following is an illustration of input and rearrangement.\n\nInput 'sale data 18 23 for 95 then 38'\nStep I data sale 18 23 for 95 then 38\nStep II data 95 sale 18 23 for then 38\nStep III data 95 for sale 18 23 then 38\nStep IV data 95 for 38 sale 18 23 then\nStep V data 95 for 38 sale 23 18 then\nStep VI data 95 for 38 sale 23 then 18\n\nand step VI is the last step of the rearrangement of the above input.\nAs per the rules followed in the above steps, find out in each of the following questions the appropriate step for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "Directions (Q.Nos. 11-14) Study the following information to answer the given questions. A word arrangement machine, when given an input line of words, rearranges them following a particular rule in each step. The following is an illustration of input and the steps of rearrangement.\n\nInput 'As if it on as zoo figure Of in at'\nStep I as As if it on zoo figure Of in at\nStep II as As at if it on zoo figure Of in\nStep III as As at figure if it on zoo Of in\nStep IV as As at figure if in it on zoo Of.\nStep V as As at figure if in it Of on zoo\n\nand Step V is the last step for this input.\nAs per the rules followed in the above steps, find out in the questions below, the appropriate steps for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_rearrangement",
+      "subtopic_name": "Word and Number Rearrangement",
+      "body": "Input 'year 39 stake 47 house full 94 55'\nHow many steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Five",
+        "b": "Six",
+        "c": "Four",
+        "d": "Seven",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_rearrangement",
+      "subtopic_name": "Word and Number Rearrangement",
+      "body": "Step II of an input is car 83 lost ever 32 46 74 now\nHow many more steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Three",
+        "b": "Four",
+        "c": "Five",
+        "d": "Six",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_rearrangement",
+      "subtopic_name": "Word and Number Rearrangement",
+      "body": "Step III of an input is and 79 code 27 18 new goal 34\nWhich of the following will definitely be the input?",
+      "choices": {
+        "a": "code and 79 27 18 new goal 34",
+        "b": "code 27 18 new goal 34 and 79",
+        "c": "code 27 and 18 79 new goal 34",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_rearrangement",
+      "subtopic_name": "Word and Number Rearrangement",
+      "body": "Input 'water full never 35 78 16 height 28'\nWhich of the following steps will be the last?",
+      "choices": {
+        "a": "VI",
+        "b": "VII",
+        "c": "VIII",
+        "d": "IX",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "Input 'you are at fault on this'—Which of the following steps would be 'are at fault on you this'?",
+      "choices": {
+        "a": "I",
+        "b": "II",
+        "c": "III",
+        "d": "IV",
+        "e": "V"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "Input 'am ace all if Is'—Which of the following will be the IInd step?",
+      "choices": {
+        "a": "all am ace if Is",
+        "b": "ace all am Is if",
+        "c": "ace all am if Is",
+        "d": "Is if am ace all",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "If IVth step is 'an apple at cot was red on one side'—Which of the following will definitely be the input?",
+      "choices": {
+        "a": "apple at an cot was red on one side",
+        "b": "cot an at apple was red on one side",
+        "c": "was cot red an on at one apple side",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "Input 'Him and His either of her', which step will be the last step for this input?",
+      "choices": {
+        "a": "I",
+        "b": "II",
+        "c": "III",
+        "d": "V",
+        "e": "VI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 576
+}

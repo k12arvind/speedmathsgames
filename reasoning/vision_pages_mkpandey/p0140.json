@@ -1,0 +1,38 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Strengthening and Weakening Arguments",
+  "passages": [
+    {
+      "passage_text": "Directions: Do as directed in each of the following questions. Landmark preservation laws unfairly impinge on the freedom of owners to develop their own property as they see fit. In some cases, owners of hotels and office buildings designated as landmarks have been forbidden to make changes in the original facades or interiors, even though they reasonably believe that the changes would enhance the structures and make them more valuable. Which of the following statements, if true, seriously weakens the author's argument?",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "weakening_argument",
+      "subtopic_name": "Weakening Arguments",
+      "body": "Which of the following statements, if true, seriously weakens the author's argument?",
+      "choices": {
+        "a": "Altering the appearance of a historic structure sometimes does not enhance its beauty or value.",
+        "b": "In traditional legal doctrine, ownership of a property implies the right to alter it at will.",
+        "c": "Only buildings over 75 years old are normally affected by landmark preservation laws.",
+        "d": "Landmark designations must be approved by a local regulatory body before taking effect.",
+        "e": "Historic buildings represent a cultural heritage which the community has a legitimate stake in preserving."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 140
+}

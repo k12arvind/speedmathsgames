@@ -1,0 +1,133 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_coloring",
+      "subtopic_name": "Cube Coloring",
+      "body": "A cube has six faces each of a different colour. The red face is opposite to black. The green face is in between red and black. The blue face is adjacent to white and brown face is adjacent to blue. The four colours adjacent to green are",
+      "choices": {
+        "a": "red, black, brown and white",
+        "b": "red, black, brown and blue",
+        "c": "red, black, blue and white",
+        "d": "red, brown, blue and white"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_counting",
+      "subtopic_name": "Cube Counting",
+      "body": "If the stack of blocks pictured here looks the same from all four directions, what is the maximum number of blocks that could be used to build it, based on what you can see from this angle?",
+      "choices": {
+        "a": "16",
+        "b": "18",
+        "c": "19",
+        "d": "21"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_counting",
+      "subtopic_name": "Cube Counting",
+      "body": "A 6 × 6 × 6 cube is formed by gluing together 216 wooden blocks that are 1 × 1 × 1. If the cube is resting on a table, what is the maximum number of 1 × 1 × 1 blocks that you can see from any angle at any one time? (If you can see even one face of a 1 × 1 × 1 block, then count it.)",
+      "choices": {
+        "a": "46",
+        "b": "86",
+        "c": "91",
+        "d": "126"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_completion",
+      "subtopic_name": "Cube Completion",
+      "body": "What is the fewest number of blocks you need to add to make this shape into a cube?",
+      "choices": {
+        "a": "30",
+        "b": "41",
+        "c": "50",
+        "d": "51"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "The central cube of each face will have only one face painted. Thus, there are six such cubes."
+    },
+    {
+      "number": 2,
+      "solution": "The central cube of middle row will be without paint."
+    },
+    {
+      "number": 3,
+      "solution": "The cubes of middle row will have no red colour ⟹ 9 Cubes. The central cube will have no colour. Now, out of 8 cubes, 4 cubes have both yellow and white colour."
+    },
+    {
+      "number": 4,
+      "solution": "There are four cubes in Layer I and four cubes in Layer IV which have only one face painted red and all other faces not painted at all. Thus there are eight such cubes."
+    },
+    {
+      "number": 5,
+      "solution": "In layer I, the nine central cubes have only one face painted, four cubes at the corner have three faces painted and the remaining 12 cubes have two faces painted. In each of the layers II, III and IV, the nine central cubes have no face painted, the four cubes at the corner have two faces painted and the remaining 12 cubes have one face painted. In layer V, the nine central cubes have only one face painted, the four cubes at the corner have three faces painted and the remaining 12 cubes have two faces painted. Thus, the number of cubes having three faces painted = 4 + 4 = 8"
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "b"
+    },
+    {
+      "number": 2,
+      "correct": "b"
+    },
+    {
+      "number": 3,
+      "correct": "c"
+    },
+    {
+      "number": 4,
+      "correct": "b"
+    },
+    {
+      "number": 5,
+      "correct": "c"
+    }
+  ],
+  "_page": 892
+}

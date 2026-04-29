@@ -1,0 +1,163 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 19-23) In these questions, relationship between different elements is shown in the statements. The statements are followed by two conclusions. Give answer (a) if only Conclusion I is true (b) if only Conclusion II is true (c) if either Conclusion I or II is true (d) if neither Conclusion I nor II is true (e) if both Conclusions I and II are true",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    }
+  ],
+  "questions": [
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "chain_inequalities",
+      "subtopic_name": "Chain Inequalities",
+      "body": "Statement F ≥ G = H; G ≥ J ≥ K Conclusions I. F ≥ K II. K < H",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "chain_inequalities",
+      "subtopic_name": "Chain Inequalities",
+      "body": "Statement P < Q = R ≥ S ≥ T Conclusions I. T ≤ Q II. R > P",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "chain_inequalities",
+      "subtopic_name": "Chain Inequalities",
+      "body": "Statement A ≤ B < C; A ≥ D; C ≤ F Conclusions I. D < C II. F ≥ D",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "chain_inequalities",
+      "subtopic_name": "Chain Inequalities",
+      "body": "Statement U > A = I ≤ O < E Conclusions I. I ≤ E II. O > U",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "chain_inequalities",
+      "subtopic_name": "Chain Inequalities",
+      "body": "Statement L = M ≥ N; M > P; L < K Conclusions I. K > P II. N < K",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(e) Given that, L > M ... (i) M > N ... (ii) N > P ... (iii) On combining all the three statements, we get L > M > N > P Conclusions I. L > P (true) II. M > P (true) So, it is clear that both Conclusions I and II follow from the given statements."
+    },
+    {
+      "number": 2,
+      "solution": "(e) Given that, A > B ... (i) B = H ... (ii) H > G ... (iii) On combining the statements (i), (ii) and (iii), we get A > B = H > G Conclusions I. A > G (true) II. A > H (true) So, it is clear that both Conclusions I and II follow from the given statements."
+    },
+    {
+      "number": 3,
+      "solution": "(d) Given that, H < J ... (i) F < H ... (ii) I ≤ J = K ... (iii) On combining the statements (i), (ii) and (iii), we get F < H < J = I ≤ I Conclusions I. H > I (false) II. I ≥ F (false) So, it is clear that neither Conclusion I nor II follows from the given statements."
+    },
+    {
+      "number": 4,
+      "solution": "(e) Given that, A < B < C ≤ D = E Here, statements are already combined. Conclusions I. B ≤ E (false) II. B < E (true) So, it is clear that only Conclusion II follow from the given statements."
+    },
+    {
+      "number": 5,
+      "solution": "(b) Given that, P > M > Q ... (i) Q > Z > N ... (ii) On combining the statements (i) and (ii) we get P > M > Q > Z > N Conclusions I. M ≥ Z (false) II. N < P (true) So, it is clear that only Conclusion II follows from the given statements."
+    },
+    {
+      "number": 6,
+      "solution": "(c) K > I ≥ T ≥ E; O < R < K On combining both the statements, we get ⇒ O < R < K > I ≥ T ≥ E Conclusions I. R < E (false) II. O < T (false) Thus, neither Conclusion I nor II follows."
+    },
+    {
+      "number": 7,
+      "solution": "(b) C < L < Q = U = D ≥ S > Y Here, statements are already combined. Conclusions I. Q > Y (true) II. C < D (true) Thus, both Conclusions I and II follow."
+    },
+    {
+      "number": 8,
+      "solution": "(e) K ≥ L > M ≥ N Here, statements are already combined. Conclusions I. N ≤ K (false) II. N < K (true) Thus, only Conclusion II follows."
+    },
+    {
+      "number": 9,
+      "solution": "(c) Z ≥ Y = W ≤ X Here, statements are already combined. Conclusion I W < Z (may be true) OR Conclusion II W = Z (may be true) Thus, either Conclusion I or II follows."
+    },
+    {
+      "number": 10,
+      "solution": "(d) B > A > S < I > C > L > Y Here, statements are already combined. Conclusions I. B > L (false) II. A > Y (false) Thus, neither Conclusion I nor II follows."
+    }
+  ],
+  "answers": [],
+  "_page": 333
+}

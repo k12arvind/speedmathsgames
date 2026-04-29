@@ -1,0 +1,60 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Counting of Figures",
+  "passages": [],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "circle_counting",
+      "subtopic_name": "Circle Counting",
+      "body": "How many circles are there in the figure given below?",
+      "choices": {
+        "a": "10",
+        "b": "14",
+        "c": "12",
+        "d": "18"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "colour_counting",
+      "subtopic_name": "Counting Method of Colour",
+      "body": "Consider the figure given below and find the least number of colours to be used to fill the figure, if not two adjacent area can have the same colour?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "3",
+        "d": "6"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 13,
+      "solution": "In the given questions figure, we start counting of circles and mark them as 1, 2 and so on and finally we end on getting 12 number of circles as shown in the following figure."
+    },
+    {
+      "number": 14,
+      "solution": "So, there are only 3 colours needed to fill the figure."
+    }
+  ],
+  "answers": [],
+  "_page": 834
+}

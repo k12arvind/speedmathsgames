@@ -1,0 +1,143 @@
+{
+  "page_type": "questions",
+  "chapter_number": 18,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully and answer the given questions. A word and number arrangement machine when given an input line of words and numbers rearranges them following a particular rule in each step. The following is an illustration of input and rearrangement.\nInput 'gone 93 over 46 84 now for 31'\nStep I 31 gone 93 over 46 84 now for\nStep II 31 over gone 93 46 84 now for\nStep III 31 over 46 gone 93 84 now for\nStep IV 31 over 46 now gone 93 84 for\nStep V 31 over 46 now 84 gone 93 for\nand Step V is the last step of the rearrangement of the above input.\nAs per the rules followed in the above steps, find out in each of the following questions the appropriate step for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step III of an input 15 window 29 93 86 sail tower buy\nWhich of the following will be Step VI?",
+      "choices": {
+        "a": "15 window 29 tower 86 sail 93 buy",
+        "b": "15 window 29 tower 86 93 sail buy",
+        "c": "15 window 29 tower 93 86 sail buy",
+        "d": "There will be no such step",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input 'station hurry 39 67 all men 86 59'\nHow many steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Four",
+        "b": "Five",
+        "c": "Six",
+        "d": "Three",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step II of an input is 49 zone car battery 56 87 71 down\nWhich of the following is definitely the input?",
+      "choices": {
+        "a": "car 49 battery zone 56 87 71 down",
+        "b": "zone 49 car battery 56 87 71 down",
+        "c": "battery car 49 zone 56 87 71 down",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input 'news 79 53 glory for 46 29 task'\nWhich of the following will be step IV?",
+      "choices": {
+        "a": "29 task 46 news 53 glory 79 for",
+        "b": "29 task 46 news 53 79 glory for",
+        "c": "29 task 46 news 79 53 glory for",
+        "d": "29 news 79 53 glory for 46 task",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step III of an input is 27 tube 34 gas chamber row 74 53\nWhich of the following steps will be the last but one?",
+      "choices": {
+        "a": "VI",
+        "b": "VII",
+        "c": "VIII",
+        "d": "V",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step II of an input is 19 years 85 74 near gone 26 store\nHow many more steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Three",
+        "b": "Four",
+        "c": "Two",
+        "d": "Five",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 575
+}

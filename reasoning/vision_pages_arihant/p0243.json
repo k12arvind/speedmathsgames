@@ -1,0 +1,67 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 28,
+      "solution": "The pattern is as follows\nA→+4→E→+4→I→+4→M\nZ→-2→X→-2→V→-2→T\nY→-2→W→-2→U→-2→S\n∴ ? = MTS"
+    },
+    {
+      "number": 29,
+      "solution": "The pattern is as follows\n[Shows a pattern with numbers 34, 32, 25, 26, 25, 34 arranged in a zigzag pattern with connecting lines]\n24 26 25 25 24 26\n∴ ? = YXZ"
+    },
+    {
+      "number": 30,
+      "solution": "The pattern is as follows\n[Shows a sequence with letters D K M, F J P, H I S, J H V, L G Y with +1, +2, +3 increments]\n∴ ? = LGY"
+    },
+    {
+      "number": 31,
+      "solution": "The pattern is as follows\nB F G    H L M    N R S    T X Y\n[Shows pattern with +6 increments]\n∴ ? = TXY"
+    },
+    {
+      "number": 32,
+      "solution": "The pattern is as follows\nF→+2→H→+2→J→+2→L\nU→-2→S→-2→Q→-2→O\nG→+2→I→+2→K→+2→M\nT→-2→R→-2→P→-2→N\n∴ ? = LOMN"
+    },
+    {
+      "number": 33,
+      "solution": "The pattern is as follows\n25   21   17   13    9    5\nY    U    Q    M     I    E\n[Shows decreasing pattern by 4]\n∴ First (?) = U and second (?) = Q\n∴ Required answer = U, Q"
+    },
+    {
+      "number": 34,
+      "solution": "The pattern is as follows\nW    T    P    M    I    F    B    Y    U\n[Shows pattern with -3, -4, -3, -4, -3, -4, -3, -4]\n∴ Required answer = Y, U"
+    },
+    {
+      "number": 35,
+      "solution": "The pattern is as follows\n1st Letter: A→+3→D→+3→G→+3→J→+3→M\n2nd Letter: 26→-2→24→-2→22→-2→20→-2→18\n           : Z      Y      X      U      S\n3rd Letter: 2→+3→5→+3→8→+3→11→+3→14\n          : B     E     H     K     N\n4th Letter: 26→-2→24→-2→22→-2→20→-2→18\n          : Z     Y     X     T     R\n5th Letter: 3→+3→6→+3→9→+3→12→+3→15\n          : C     F     I     L     O\n∴ ? = MONRO"
+    },
+    {
+      "number": 36,
+      "solution": "There are two interwoven series.\nThe pattern is as follows\n1    26    3    24    5    22\nA    Z     C    X     E    V\n[Shows +2 and -2 alternating pattern]\n∴ ? = V"
+    },
+    {
+      "number": 37,
+      "solution": "There are two interwoven series.\nThe pattern is as follows\n[Shows pattern with +1 increments and connections]\nA B C D E F G H I\n[Shows +2 pattern below]\n∴ Required answer = S, I"
+    },
+    {
+      "number": 38,
+      "solution": "The series progresses as D (eight) j (klmno) P (qrstu) v (wxyzabc). The capital letters are repeated twice, while small letters are repeated thrice."
+    },
+    {
+      "number": 39,
+      "solution": "The series is: Q(rstuwr) x (yzabc) D (efgh) (jk) M (no) P."
+    },
+    {
+      "number": 40,
+      "solution": "The pattern is as follows\n[Shows complex pattern with arrows and letters]\nS(TU) V (WX) Y (ZA)B\n→ n (mlk) j (ihg) f (edo)c\n→ K(JI) H (GF) E (DC) B\n∴ Required answer = KJY"
+    },
+    {
+      "number": 41,
+      "solution": "The pattern is as follows\n[Shows pattern with letters and connections]\np L Y o D w Q o U\n→ p (qr) s (tuv) w (xyza) b\nL (MN)(OP) Q (RST) U\n∴ Required answer = INb"
+    }
+  ],
+  "answers": [],
+  "_page": 243
+}

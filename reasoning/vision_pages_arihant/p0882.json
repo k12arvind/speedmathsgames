@@ -1,0 +1,31 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "A cube of side 4 cm is painted black on one pair of opposite surfaces, blue on another pair of opposite surfaces and red on the remaining pair of opposite surfaces. The cube is now divided into smaller cubes of equal side of 1 cm each.",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 10,
+      "solution": "(i) Number of smaller cubes with three surfaces painted = 8 (these smaller cubes will have all three surfaces painted with different colours—blue, black and red). (ii) Number of smaller cubes with two surfaces painted = 24 (a) Number of cubes with two surfaces painted with black and blue colours = 8 (b) Number of cubes with two surfaces painted with blue and red colours = 8 (c) Number of cubes with two surfaces painted with black and red colours = 8 (iii) Number of smaller cubes with one surface painted = 24 and out of these, (a) Number of cubes with one surface painted with black colour = 8 (b) Number of cubes with one surface painted with blue colour = 8 (c) Number of cubes with one surface painted with red colour = 8"
+    }
+  ],
+  "answers": [],
+  "_page": 882
+}

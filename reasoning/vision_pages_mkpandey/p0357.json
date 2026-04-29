@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 700,
+      "solution": "Note: The exact position of E in terms of intelligence cannot be found from the data. All that we can say is that E is less intelligent than C because C is the most intelligent.\n25.2    26.3    28.4\n29.3: Rank of D is not known if rank of E is not known.\nQ.30-36: Summarise the information:\nP > S\nR > T and R > V\nO = T + 2\nP = 62 or 63"
+    },
+    {
+      "number": 30,
+      "solution": "Using the first condition (P is older than S), we eliminate (5). Using the second condition (R is older than both T and V), we eliminate (1). Using the third condition (O is two years older than T), we eliminate (2) and (3). We are left with (4) which must be the one correct listing."
+    },
+    {
+      "number": 31,
+      "solution": "Here, you will probably want to use a diagram:\n60 61 62 63 64 65\nO    P    T\nSince P was born in 1962, there are only two possible places on the diagram for O and T:\n60 61 62 63 64 65\nO    P    T\nAs for the first possibility, R (who is older than T) was born in 1960, with S and V born in 1964 and 1965, though not necessarily respectively:\n60 61 62 63 64 65\nR    O    P    S/V S/V\nAs for the second possibility, S (who is younger than P) was born in 1964, and R and V were born in 1960 and 1961, respectively:\n60 61 62 63 64 65\nR    V    P    O    S    T\nUnder either scenario, Ram was born in 1960."
+    },
+    {
+      "number": 32,
+      "solution": "Use a diagram to keep track of the logic:\n60 61 62 63 64 65\nO\nThen T was born in 1962 and P in 1963:\n60 61 62 63 64 65\nO         T    P\nThis means that R, who is older than T and V, was born in 1961:\n60 61 62 63 64 65\nO    R    T    P\nS and V were born in 1964 and 1965, though not necessarily respectively. So, only (1) is necessarily true."
+    }
+  ],
+  "answers": [],
+  "_page": 357
+}

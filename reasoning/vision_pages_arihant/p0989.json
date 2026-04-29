@@ -1,0 +1,132 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Recognition",
+      "subtopic_code": "matrix_pattern",
+      "subtopic_name": "Matrix Pattern Completion",
+      "body": "Find the missing pattern in the 3x3 matrix.",
+      "choices": {
+        "a": "(1, 5, 9), (2, 4, 7), (3, 6, 8)",
+        "b": "(2, 6, 8), (1, 5, 9), (3, 4, 7)",
+        "c": "(4, 3, 7), (2, 6, 9), (1, 5, 8)",
+        "d": "(1, 2, 3), (4, 5, 6), (7, 8, 9)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Recognition",
+      "subtopic_code": "house_pattern",
+      "subtopic_name": "House Pattern Completion",
+      "body": "Find the missing pattern in the house-shaped figures.",
+      "choices": {
+        "a": "(1, 7), (2, 4), (3, 5), (6, 8)",
+        "b": "(1, 4), (2, 7), (3, 5), (6, 8)",
+        "c": "(1, 3), (2, 7), (6, 8), (4, 5)",
+        "d": "(1, 4), (3, 6), (3, 5), (7, 8)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Recognition",
+      "subtopic_code": "geometric_pattern",
+      "subtopic_name": "Geometric Pattern Completion",
+      "body": "Find the missing pattern in the geometric figures.",
+      "choices": {
+        "a": "(1, 2, 6), (3, 4, 7), (5)",
+        "b": "(1, 3), (2, 6), (4, 5, 7)",
+        "c": "(1, 2, 6, 7), (3), (4, 5)",
+        "d": "(1, 3), (2, 4, 5), (6, 7)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Recognition",
+      "subtopic_code": "matrix_pattern",
+      "subtopic_name": "Matrix Pattern Completion",
+      "body": "Find the missing pattern in the 3x3 matrix.",
+      "choices": {
+        "a": "(4, 7, 9), (2, 5, 8), (1, 3, 6)",
+        "b": "(1, 3, 8), (2, 4, 6), (5, 7, 9)",
+        "c": "(1, 4, 6), (2, 3, 7), (5, 8, 9)",
+        "d": "(3, 5, 4), (1, 6, 9), (2, 7, 8)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Recognition",
+      "subtopic_code": "matrix_pattern",
+      "subtopic_name": "Matrix Pattern Completion",
+      "body": "Find the missing pattern in the 3x3 matrix.",
+      "choices": {
+        "a": "(1, 5, 9), (3, 6, 7), (2, 4, 8)",
+        "b": "(2, 3, 6), (4, 8, 9), (1, 5, 7)",
+        "c": "(3, 6, 8), (2, 4, 9), (1, 5, 7)",
+        "d": "(2, 5, 8), (1, 7, 9), (3, 4, 6)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Recognition",
+      "subtopic_code": "matrix_pattern",
+      "subtopic_name": "Matrix Pattern Completion",
+      "body": "Find the missing pattern in the 3x3 matrix.",
+      "choices": {
+        "a": "(1, 4, 8), (2, 5, 7), (3, 9, 6)",
+        "b": "(1, 4, 6), (2, 5, 8), (3, 7, 9)",
+        "c": "(1, 4, 6), (2, 5, 7), (3, 8, 9)",
+        "d": "(1, 2, 3), (4, 5, 6), (7, 8, 9)",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 989
+}

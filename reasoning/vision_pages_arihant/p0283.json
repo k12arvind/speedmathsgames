@@ -1,0 +1,291 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number in the grid: 16 25 9, 36 64 81, 10 13 ?",
+      "choices": {
+        "a": "14",
+        "b": "11",
+        "c": "12",
+        "d": "13"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number in the grid: 4 3 6, 2 5 4, 3 7 ?, 24 105 120",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "6",
+        "d": "7"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "circular_pattern",
+      "subtopic_name": "Circular Number Pattern",
+      "body": "Find the missing number in the circular pattern with numbers 25, 7, 9, 35, 38, ?, 26, 35, 34, 24, 13, 11",
+      "choices": {
+        "a": "28",
+        "b": "36",
+        "c": "81",
+        "d": "49"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "triangle_pattern",
+      "subtopic_name": "Triangle Number Pattern",
+      "body": "Find the missing number: ? 45/29, 15/17 21",
+      "choices": {
+        "a": "8",
+        "b": "10",
+        "c": "14",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "box_pattern",
+      "subtopic_name": "Box Number Pattern",
+      "body": "Find the missing number in the pattern: 4, 5, 10, 4, 6, 1, 8, 3, 7, 2, 29, 4, 3, 19, ?",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "1",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "circular_pattern",
+      "subtopic_name": "Circular Number Pattern",
+      "body": "Find the missing number in the circular pattern with numbers 2, 3, 7, 11, 52, ?",
+      "choices": {
+        "a": "99",
+        "b": "680",
+        "c": "77",
+        "d": "425"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "triangle_pattern",
+      "subtopic_name": "Triangle Number Pattern",
+      "body": "Find the missing number: 5, 2, ?, 7, 4, 8, 1044, 6",
+      "choices": {
+        "a": "1678",
+        "b": "415",
+        "c": "8210",
+        "d": "702"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number: ? 13 49, 9 17 69, 13 11 59",
+      "choices": {
+        "a": "9",
+        "b": "5",
+        "c": "10",
+        "d": "21"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number: 1 2 3, 11 7 5, 120 45 ?",
+      "choices": {
+        "a": "15",
+        "b": "16",
+        "c": "17",
+        "d": "18"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number: 11 6 8, 17 12 ?, 25 34 19, 19 28 11",
+      "choices": {
+        "a": "13",
+        "b": "15",
+        "c": "16",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number: 1 3 7, 5 12 14, 25 ? 28, 125 192 56",
+      "choices": {
+        "a": "40",
+        "b": "48",
+        "c": "56",
+        "d": "64"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number: 14 28 42, 2 4 6, 36 112 246, 18 56 ?",
+      "choices": {
+        "a": "120",
+        "b": "201",
+        "c": "123",
+        "d": "303"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "number_grid",
+      "subtopic_name": "Number Grid Pattern",
+      "body": "Find the missing number: 4 5 3 2 0, 7 3 4 4 21, 6 4 4 5 22, 9 6 5 5 ?",
+      "choices": {
+        "a": "34",
+        "b": "42",
+        "c": "44",
+        "d": "45"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "star_pattern",
+      "subtopic_name": "Star Number Pattern",
+      "body": "Find the missing number in the star pattern with numbers 2, 6, 38, 48, 4, 15, 9, ?, 5, 3",
+      "choices": {
+        "a": "20",
+        "b": "23",
+        "c": "25",
+        "d": "28"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 283
+}

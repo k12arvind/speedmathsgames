@@ -1,0 +1,87 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 103,
+      "solution": "(d) Here, in the series letters 'ab' are repeated. ab/ab/ab/ab/ab/ab = bbab ∴ ? = bbab"
+    },
+    {
+      "number": 104,
+      "solution": "(d) Series pattern : aab/aaab/aaaab/aaaaab Clearly, the number of 'a' is increasing by one in the successive sequence. ∴ Required answer = bbaa"
+    },
+    {
+      "number": 105,
+      "solution": "(d) Series pattern : bcd/aab bcc dd/aa abbb cccddd Clearly, each letter of first sequence is repeated two times in the second sequence and three times in the third sequence. ∴ Required answer = bbdac"
+    },
+    {
+      "number": 106,
+      "solution": "(d) Series pattern : ab cbc/bca c a/c abab Clearly, the series consists of three sequences, the first sequence begins with a, the second with b and the third with c. Each sequence consists of a letter followed by the pair of other two letters repeated twice. ∴ Required answer = ccaa"
+    },
+    {
+      "number": 107,
+      "solution": "(b) Here in the series word 'BABA' is repeated BABABABABABABABA So, the missing letters are BBBAAA"
+    },
+    {
+      "number": 108,
+      "solution": "(c) The letters in the given series are alternate and the numbers indicate their position in the English alphabetical series from beginning. ∴ ? = O-15"
+    },
+    {
+      "number": 109,
+      "solution": "(c) The letters in the given series are in continuous sequence of forward order English alphabet with each letter showing its backward order position in the alphabet. ∴ ? = I - 18"
+    },
+    {
+      "number": 110,
+      "solution": "(d) The pattern is as follows Numbers 2→+2→4→+4→8→+6→14→+8→22 Letters B→+1→C→+2→E→+3→H→+4→L ∴ ? = 22 L"
+    },
+    {
+      "number": 111,
+      "solution": "(b) The given sequence has two parts. Part I 2, 9, 6, 13 Part II A, B, C, D Series pattern of part I is as follows 2→+7→9→-3→6→+7→13→-3→10 ∴ ? = 10"
+    },
+    {
+      "number": 112,
+      "solution": "(d) There are three interwoven sequences here. 128, 64, 32, 16, 8, 4 (dividing each time by 2) 61, 63, 65, 67, 69, 71 (adding 2 each time) Y, S, N, J, G, E (move letters backward then 5, then 4, 3, 2)"
+    },
+    {
+      "number": 113,
+      "solution": "(c) The pattern is as follows 1st letter N→-3→K→-3→H→-3→E→-3→B Middle number 5→+2→7→+3→10→+4→14→+5→19 3rd letter 22→-2→20→-2→18→-2→16→-2→14 ∴ ? = H10R"
+    },
+    {
+      "number": 114,
+      "solution": "(c) Letter positions are added. 4+5=9  6+3=9 D E    F C 12+16=28  7+20=27 L P     G T ∴ ? = 27"
+    },
+    {
+      "number": 115,
+      "solution": "(c) Letter positions are multiplied. 3×4=12   12×2=24 C D      L B 2×16=32   14×5=70 B P      N E ∴ ? = 70"
+    },
+    {
+      "number": 116,
+      "solution": "(c) The letters move back and forth by powers of 2 starting from 2⁰, 2¹ and so on. i.e., -1, +2, -4, +8, -16 The numbers multiply each time by a number one higher i.e., ×2, ×3, ×4, ×5, ×6."
+    },
+    {
+      "number": 117,
+      "solution": "(b) The pattern is as follows A1 2, E2 V, I6 R, M21 N, Q88 J, U445 F [diagram showing pattern] ∴ ? = U445F"
+    },
+    {
+      "number": 118,
+      "solution": "(b) The pattern is as follows [diagram showing sequence] T49 S 64, R81 Q 100, P121 O 144, S 64 R 81 [additional pattern elements] ∴ ? = U36T49"
+    },
+    {
+      "number": 119,
+      "solution": "(c) The pattern is as follows Numbers 23→-2→21→-2→19→-2→17→-2→15 W→→→U→→→S→→→Q→→→O Letters (12)²→(11)²→(10)²→(9)²→(8)² 144→121→100→81→64 ∴ ? = U-12O"
+    },
+    {
+      "number": 120,
+      "solution": "(c) The pattern is as follows [diagram showing +2 pattern] X 24C3→V 22E5→T 20G7→R 18 I9 -2→-2→-2 ∴ ? = R18I9"
+    },
+    {
+      "number": 121,
+      "solution": "(c) The pattern is as follows [diagram showing +2 pattern] B D 3 F H→A C 5 E G→J L 7 N P→I K 9 M O +2→+2→+2→+2 ∴ ? = IK9MO"
+    }
+  ],
+  "answers": [],
+  "_page": 259
+}

@@ -1,0 +1,362 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. A cube of 4 cm has been painted on its surfaces in such a way that two opposite surfaces have been painted blue and two adjacent surfaces have been painted red. Two remaining surfaces have been left unpainted. Now, the cube is cut into smaller cubes of side 1 cm each.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. Two adjacent faces of a solid cube have been painted red and the faces just opposite to the red painted faces have been painted black while the remaining faces have been painted green. After painting this cube has been divided into 64 smaller cubes.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "The cube given below has been painted by three different colours. The opposite surfaces have been painted by the same colour. Next, the cube has been cut into 27 equal parts. How many such small cubes will be there whose only one surface is painted?",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "8",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "Wooden little cubes each with an edge of one inch are put together to form a solid cube with an edge of three inches. This big cube is then painted red all over the outside. When the big cube is broken-up into the original little ones, how many cubes will be without paint?",
+      "choices": {
+        "a": "0",
+        "b": "1",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "In a solid cube made up of 27 small cubes, two opposite sides are painted red, two opposite sides yellow and two other sides white. How many small cubes have the colours yellow and white along in them?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "12",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "A solid cube of 4 inches has been painted red, green, and black on pair of opposite faces. It has been cut into one inch cubes. How many cubes have only one face painted that too only red?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "18",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "A solid red coloured cube is painted yellow on all sides. The cube is cut into 125 equal cubes. How many cubes will have 3 sides yellow?",
+      "choices": {
+        "a": "10",
+        "b": "4",
+        "c": "8",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have no side painted?",
+      "choices": {
+        "a": "18",
+        "b": "16",
+        "c": "22",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have atleast red colour on its surfaces?",
+      "choices": {
+        "a": "20",
+        "b": "22",
+        "c": "28",
+        "d": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have atleast blue colour on its surfaces?",
+      "choices": {
+        "a": "20",
+        "b": "8",
+        "c": "24",
+        "d": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have only two surfaces painted with red and blue colours, respectively?",
+      "choices": {
+        "a": "8",
+        "b": "12",
+        "c": "24",
+        "d": "30"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have three surface coloured?",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "2",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have only one face painted?",
+      "choices": {
+        "a": "12",
+        "b": "16",
+        "c": "20",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have only two faces painted?",
+      "choices": {
+        "a": "20",
+        "b": "24",
+        "c": "32",
+        "d": "48"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have three surface painted?",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "8",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have four faces painted?",
+      "choices": {
+        "a": "0",
+        "b": "2",
+        "c": "8",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have no faces painted?",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "8",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have atleast one face painted in red?",
+      "choices": {
+        "a": "20",
+        "b": "16",
+        "c": "28",
+        "d": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 7,
+      "subject": "non_verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have one or two faces painted but they have no three faces painted?",
+      "choices": {
+        "a": "16",
+        "b": "32",
+        "c": "48",
+        "d": "60"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 890
+}

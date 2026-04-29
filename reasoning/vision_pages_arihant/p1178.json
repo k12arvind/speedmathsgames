@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "From Statement 2, All stems are branches → Some branches are stems = Conclusion II. Hence, both Conclusions I and II follow. (C) Method I: Machines ↔ Chalks ↔ Computers ↔ Chalks ↔ Boards or Computers ↔ Boards ↔ Machines ↔ Chalks ↔ Machines or Boards ↔ Chalks ↔ Machines ↔ Computers ↔ Boards. I. Some chalks are computers (✗) II. No chalk is a computer (✗) Complementary pair (I-E) Method II: Some computers are machines (I-type), Some machines are boards (I-type), All boards are chalks (A-type). From Statements 1, 2 and 3, it + I) + A = Not a valid conclusion. Hence, Conclusion I does not follow. From Statements 1 and 2, I + A = I-type conclusion: Some locks are metals → Some metals are locks = Conclusion II. Hence, only Conclusion II follows."
+    },
+    {
+      "number": 5,
+      "solution": "(b) Method I: Keys ↔ Locks ↔ Metals ↔ Cards or Keys ↔ Locks ↔ Metals ↔ Cards or Locks ↔ Keys ↔ Metals ↔ Locks. I. Some cards are keys (✗) II. Some metals are locks (✗) Method II: Some locks are keys, All keys are metals, Some metals are cards. From Statements 2 and 3, A + I = Not a valid conclusion. Hence, Conclusion I does not follow. From Statements 1 and 2, I + A = I-type conclusion: Some locks are metals → Some metals are locks = Conclusion II. Hence, only Conclusion II follows."
+    },
+    {
+      "number": 6,
+      "solution": "(c) Method I: Bricks ↔ Gates ↔ Tyres ↔ Roots or Bricks ↔ Gates ↔ Tyres ↔ Roots. I. Some tyres are gates (✗) II. No gate is a tyre (✗) Complementary pair (I-E) Method II: Some bricks are gates, Some gates are roofs, All tyres are bricks. Aligning the above statement following IEA rule: All tyres are bricks (A-type), Some bricks are gates (I-type), Some gates are roofs (I-type). From Statements 1 and 2, A + I = Not a valid conclusion. Hence, Conclusion I is invalid. Conclusion II is also invalid. But from Conclusion I, Some tyres are gates → Some gates are tyres, and from Conclusion II, No gate is tyre. Since, both subject and predicate of Conclusions I and II are same, they form (I-E) complementary pair. Hence, either Conclusion I or II follows."
+    }
+  ],
+  "answers": [],
+  "_page": 1178
+}

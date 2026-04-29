@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "We prepare a table from the given data as under:",
+      "has_figure": true,
+      "topic_code": "data_sufficiency"
+    }
+  ],
+  "questions": [
+    {
+      "number": 88,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "table_analysis",
+      "subtopic_name": "Table Analysis",
+      "body": "Clearly, from the table D is intelligent in Political Science, Geography and Biology.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 89,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "table_analysis",
+      "subtopic_name": "Table Analysis",
+      "body": "B is intelligent in Mathematics, Political Science and Geography.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "table_analysis",
+      "subtopic_name": "Table Analysis",
+      "body": "A is intelligent in Mathematics and History but not in Geography.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "table_analysis",
+      "subtopic_name": "Table Analysis",
+      "body": "C is intelligent in Political Science, History and Biology.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 92,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "table_analysis",
+      "subtopic_name": "Table Analysis",
+      "body": "E is intelligent in Political Science, History and Biology.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 93,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "logical_analysis",
+      "subtopic_name": "Logical Analysis",
+      "body": "Try yourself - Ex 14, study material.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 98,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "logical_analysis",
+      "subtopic_name": "Logical Analysis",
+      "body": "The given information can be analysed as follows. Let 'O' denote optional and 'C' denote compulsory:",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 360
+}

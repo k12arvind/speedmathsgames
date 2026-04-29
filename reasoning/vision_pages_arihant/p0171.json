@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 36,
+      "solution": "(b) As, E→3, A→1, T→8 and C→2, H→4, A→1, E→3, R→6. Similarly, T→8, E→3, A→1, C→2, H→4, E→3, R→6. ∴ TEACHER ⇒ 8312436"
+    },
+    {
+      "number": 37,
+      "solution": "(c) As, O C A M E L I T O N with positions 2 5 1 6 0 6 7 9 3 and T I R E D positions 4 7 8 6. In these three words each letter is represented by a specific digit. Therefore, E L I T E positions 0 6 7 4 0. Hence, ELITE is coded as 06740."
+    },
+    {
+      "number": 38,
+      "solution": "(d) As, P A T K positions 20 1 12 11. Similarly, P A T N A positions 16 1 20 14 1 with +1 +1 +1 +1 +1, giving 21 2 13 12 and 17 2 21 15 2. ∴ PATNA ⇒ 17221152"
+    },
+    {
+      "number": 39,
+      "solution": "(d) Each letter is coded with its backward order letter position. As, G R A D U A T E ⇒ 20 9 26 23 6 26 7 22. Similarly, A R I H A N T ⇒ 26 9 18 19 26 13 7. ∴ ARIHANT ⇒ 26918192613"
+    },
+    {
+      "number": 40,
+      "solution": "(d) Backward order corresponding positions of letters are added. As, P E R F E C T ⇒ 11+22+9+21+22+24+7 = 116. Similarly, C O M P A C T ⇒ 24+12+14+11+26+24+7 = 118. ∴ COMPACT ⇒ 118"
+    },
+    {
+      "number": 41,
+      "solution": "(b) Backward order letter positions are multiplied. As, T R U E ⇒ 7×9×6×22 = 8316. Similarly, T A P ⇒ 7×26×11 = 2002. ∴ TAP ⇒ 2002"
+    },
+    {
+      "number": 42,
+      "solution": "(c) Letters are coded with their backward order letter positions. As, S O N ⇒ 8 12 13 and L I F E ⇒ 15 18 21 22. Similarly, N E V E R ⇒ 13 22 5 22 9. ∴ NEVER ⇒ 13225229"
+    },
+    {
+      "number": 43,
+      "solution": "(c) Required answer = Sum of the corresponding letter positions. As, J P L ⇒ [9 + 16 + 12] = 37"
+    }
+  ],
+  "answers": [],
+  "_page": 171
+}

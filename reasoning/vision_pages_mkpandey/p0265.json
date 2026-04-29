@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 516,
+      "solution": "4 + 3 = 1.33. Omit fractional part, we get 1."
+    },
+    {
+      "number": 517,
+      "solution": "Taking digits-sum of given numbers. Input: 53 47 25 17 68. Explanation: 53 gives 5 + 3 = 8, 11 + 68 gives 6 + 8 = 14 and so on. Ex 7: Taking digit-sum repeatedly. Input: 83 47 25 17 68. Step I: 14 13 7 8 14. Explanation: 83 gives 8 + 3 = 11, 81 gives 1 + 1 = 2... and so on. Starting with given digit-sum (... and may be adding or subtracting number too). Ex 8: Squaring digit-sum. Input: 83 47 25 17 68. Step I: 121 25 49 64 196. Explanation: 83 gives 8 + 3 = 11, 11² = 121... Ex 9: Cubing digit-sum and adding 50. Input: 19 4 18 29 6. Step I: 1000 114 611 1100 1266. Explanation: 19 gives 1 + 9 = 10, 10³ = 1000, 1000 + 50 = 1050, 29 gives 2+9=11, 11³ = 1331, 1331 + 50 = 1381... Adding or subtracting the square or cubes of natural numbers. Ex 10: Adding squares (1², 2², 3²...) of natural numbers to the given number. Input: 14 17 12 10 9. Step I: 15 21 21 26 34. Explanation: 14 + 1², 17 + 2², 12 + 3²... Ex 11: Subtracting cubes of natural numbers from given numbers. Input: 171 69 481 95 168. Step I: 170 61 454 31 43. Explanation: (171 - 1³, 69 - 2³, 481 - 3³...). Note: There can be many more cases. The above is just an indication that the reader is advised to apply himself while solving the problem."
+    },
+    {
+      "number": 1,
+      "solution": "What will be the sixth step of the following input? Input: 8, 11, 25, 18, 21, 6, 32. 1) 25, 32, 74, 55, 62, 10, 98. 2) 25, 34, 76, 55, 63, 20, 98. 3) 24, 31, 75, 34, 63, 20, 98. 4) 25, 34, 76, 54, 63, 20, 98. 5) None of these. If the fifth step of a given input is 8, 14, 42, 28, 34, 4, 56 what will be the input? 1) 9, 12, 26, 19, 22, 7, 33. 2) 10, 12, 19, 26, 7, 23, 34. 3) 11, 18, 12, 9, 21, 23, 41. 4) 7, 10, 26, 22, 19, 32, 47. 5) None of these"
+    }
+  ],
+  "answers": [],
+  "_page": 265
+}

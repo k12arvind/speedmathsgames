@@ -1,0 +1,138 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information to answer the given questions. A word arrangement machine when given as input line of words, rearranges them following a particular rule in each step. The following is an illustration of input and steps of arrangement.\n\nInput every now and then same\nStep I every ow nd hen ame\nStep II ever no an the sam\nStep III vry nw nd thn sm\nStep IV ee o a e ae\nStep V ery w d en me",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "What will be the Step V for the following input?\nInput you are the one great person",
+      "choices": {
+        "a": "u e e e eat rson",
+        "b": "e e u e eat rson",
+        "c": "yo ar te gr pe",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "If Step IV of an input is 'e i a oo ou', then find the input.",
+      "choices": {
+        "a": "get will an spoon you",
+        "b": "left wit at noon you",
+        "c": "net wit at noon you",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "Find Step II for the following input.\nInput 'you must be agree'.",
+      "choices": {
+        "a": "ou ust e gree",
+        "b": "yu mst b ee",
+        "c": "yo mus b agre",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "What will be Step IV for the input given below?\nInput items are very good",
+      "choices": {
+        "a": "ie ae e oo",
+        "b": "ie ar ve go",
+        "c": "ms ar ry od",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) In Step V, leftmost and rightmost digits of each number of input increase by 1."
+    },
+    {
+      "number": 2,
+      "solution": "(d) In Step II, rightmost digit of each number of input gets disappeared but it is impossible to get rightmost digits of the numbers of input from Step II."
+    },
+    {
+      "number": 3,
+      "solution": "(c) In Step III, leftmost and rightmost digits of each number of input are interchanged."
+    },
+    {
+      "number": 4,
+      "solution": "(d) In Step I, rightmost digit of each number of input gets disappeared but practically it is impossible to find out rightmost digit of input from Step I."
+    },
+    {
+      "number": 5,
+      "solution": "(d) ∴ Step IV = Leftmost digit of each number of input + 1"
+    },
+    {
+      "number": 6,
+      "solution": "(d) As in Step V, first two letters in each word of input get disappeared."
+    },
+    {
+      "number": 7,
+      "solution": "(d) It is very obvious."
+    },
+    {
+      "number": 8,
+      "solution": "(c) As in Step II, last letter in each word of input gets disappeared."
+    },
+    {
+      "number": 9,
+      "solution": "(d) As in Step IV, consonants in each word of input get disappeared."
+    }
+  ],
+  "answers": [],
+  "_page": 587
+}

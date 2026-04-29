@@ -1,0 +1,66 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [
+    {
+      "passage_text": "Type 2 Letters Pair Problem\n\nIf between any two letters of a word, there exist as same number of letters as in the English alphabet, then these two letters are called a letter pair. In this type of questions, a word is given and it is asked to find the different letter pair the word can have.\n\nImportant Points about Letter Pair\n(i) A word may have more than one letter pair.\n(ii) A letter in a word can make more than one letter pair.\n(iii) If you are asked to find letter pairs, according to the English alphabet, you have to count both ways i.e., from left to right and right to left or forward and backward order.\n(iv) If you are asked to find letter pairs according to the sequence of alphabet, then you have to count only from left to right or forward order.",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_pairs",
+      "subtopic_name": "Letter Pairs",
+      "body": "How many such pairs of letters are there in the word 'SOUTHERN' each of which has as many letters between them as in the English alphabet?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 36,
+      "solution": "Clearly, P will be fourth from the right. R A | | M E N | A E V W N R |. Hence, there are three such type of letters"
+    },
+    {
+      "number": 37,
+      "solution": "F A | | N T S A F | | W S T. Clearly, there are two letters of such type."
+    },
+    {
+      "number": 38,
+      "solution": "Original word, D Q L P H I N. New arrangement, D H I L N O P. From left 1 2 3 4 5. Here, N is not present in any option, so (d) is the correct answer."
+    },
+    {
+      "number": 39,
+      "solution": "(D)"
+    },
+    {
+      "number": 40,
+      "solution": "T I G E R E G I R T. So, none of the letters have same position."
+    },
+    {
+      "number": 41,
+      "solution": "Given word, J O U R N E Y. On substituting, K N T S O D Z. Alphabetical order, D K N O S T Z. From left 1 2 3 4 5. Fifth from left"
+    },
+    {
+      "number": 13,
+      "solution": "Let us see S O U T H E R N. So, letter pairs are SU and TU. Hence, option (c) is correct answer."
+    }
+  ],
+  "answers": [],
+  "_page": 106
+}

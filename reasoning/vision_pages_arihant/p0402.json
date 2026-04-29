@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Blood Relations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "(D) By applying above decoding method, we can check all the options for the required relationship\n(a) (M + K – T) = Rejected\nM is the maternal aunt of T\n(b) (M × K – T) = Selected\nM is the Maternal uncle of T\nHence, there is no need to check other options."
+    },
+    {
+      "number": 15,
+      "solution": "(C) By applying above decoding method for (P +R + S + Q), we draw the following family diagram\nR is Daughter, P is Sister, S is Father\nP is the aunt of Q\nHence, P is the aunt of Q."
+    },
+    {
+      "number": 16,
+      "solution": "(D) By applying above decoding method for (P – R + Q), we draw the following family diagram\nP is Married couple, R is Father\nP is the mother of Q\nHence, P is the mother of Q."
+    },
+    {
+      "number": 17,
+      "solution": "(C) By applying above decoding method for (P × R + Q), we draw the following family diagram\nP is the son of Q\nDaughter, Sister\nHence, P is the son of Q."
+    },
+    {
+      "number": 18,
+      "solution": "(C) By applying above decoding method for (P × R – Q), we get draw the following family diagram\nMarried couple, Brother\nP is the brother-in-law of Q\nTherefore, P is the brother-in-law of Q."
+    },
+    {
+      "number": 19,
+      "solution": "(C) By applying above decoding method for (P + R + Q), we draw the following family diagram\nMarried couple\nFather\nTherefore, P is the husband of Q."
+    },
+    {
+      "number": 20,
+      "solution": "(C) By applying above decoding method (P – R × Q), we draw the following family diagram\nMarried couple, Brother\nP is sister-in-law of Q\nTherefore, P is sister-in-law of Q."
+    },
+    {
+      "number": 21,
+      "solution": "(D) N × K – M + L, according to the given information,\nN is Brother, K is Son, M is Sister, L\nFrom the figure above, it is clear that L is the daughter of K and niece of uncle N."
+    },
+    {
+      "number": 22,
+      "solution": "(C) The best method to follow is the option method.\nWe have to check which option represents M is the grandfather of T.\nFor M to be the grandfather of T, we have to see the given statements i.e., if P – Q means Q is the father of P.\nWe need two (–) symbols make the correct answer but none of the options has two symbols (–)."
+    }
+  ],
+  "answers": [],
+  "_page": 402
+}

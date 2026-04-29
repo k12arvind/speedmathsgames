@@ -1,0 +1,103 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 80,
+      "solution": "(D) In the following series, the next term is obtained by shifting the first letter of the previous term to the last place. ∴ ? = DABC"
+    },
+    {
+      "number": 81,
+      "solution": "(C) The pattern is as follows [diagram with YYP WTN URL SPJ and -2 operations] ∴ ? = SPJ"
+    },
+    {
+      "number": 82,
+      "solution": "(C) The pattern is as follows [diagram with A, B, C, D circles with +1 operations] ∴ First ? = D, Second ? = L ∴ Required answer = D,L"
+    },
+    {
+      "number": 83,
+      "solution": "(D) Here, the pattern is as follows [diagram with NZ QY PX QW RV SU and +1 operations]"
+    },
+    {
+      "number": 84,
+      "solution": "(D) The pattern is as follows [diagram with AMV BNW COX DPY EQZ and +1 operations] ∴ ? = DPY"
+    },
+    {
+      "number": 85,
+      "solution": "(D) The pattern is as follows: 1st Letter: X +2→ Z +3→ C +4→ G +5→ L, 2nd Letter: W +3→ Z +4→ D +5→ I +6→ O, 3rd Letter: A +2→ C +3→ F +4→ J +5→ O ∴ ? = JEO"
+    },
+    {
+      "number": 86,
+      "solution": "(D) The pattern is as follows: B +2→ D +2→ F +2→ H, E +2→ G +2→ I +2→ K, A +2→ C +2→ E +2→ G, G +2→ I +2→ K +2→ M ∴ ? = HKGM"
+    },
+    {
+      "number": 87,
+      "solution": "(C) There are two interwoven series here. bc, de, fg, (Each next term is formed by next two letters) cde, efg, ghi (last letter of the previous term starts the new term and next two letters are included in the same term) ∴ ? = ghi"
+    },
+    {
+      "number": 88,
+      "solution": "(C) From element first to second first two letters get reversed, from second to third, first three letters get reversed and from third to last, all the four letters get reversed. ∴ Required answer = SQPR"
+    },
+    {
+      "number": 89,
+      "solution": "(C) From element first to second last two letters are written in reverse order, from element second to third, last three letters are written in reverse order and from element third to fourth, all the four letters are written in reverse order. ∴ Required answer = SDMT"
+    },
+    {
+      "number": 90,
+      "solution": "(D) The pattern followed in each term is First letter + 5 = Second letter and second letter + 3 = Third letter As, A +5→ F +3→ I, J +5→ O +3→ R and M +5→ R +3→ U Similarly, H +5→ M +3→ P ∴ ? = HMP"
+    },
+    {
+      "number": 91,
+      "solution": "(C) The pattern is as follows 1st Letter: A +2→ C +2→ E +2→ G +2→ I, 2nd Letter: G +2→ I +2→ K +2→ M +2→ O, 3rd Letter: M +2→ O +2→ Q +2→ S +2→ U, 4th Letter: S +2→ U +2→ W +2→ Y +2→ A, 5th Letter: Y +2→ A +2→ C +2→ E +2→ G ∴ ? = GMSYE"
+    },
+    {
+      "number": 92,
+      "solution": "(C) These are anagrams of SEAT with one extra letter added. The letters added, in order are R, S, T, U, V, W, X, Y"
+    },
+    {
+      "number": 93,
+      "solution": "(C) This sequence consists of the last pair of letters in the words FIRST, SECOND, THIRD, FOURTH, FIFTH, SIXTH."
+    },
+    {
+      "number": 94,
+      "solution": "(C) These are the last three letters of the names of the planets in our solar system. MERCURY, VENUS, EARTH, MARS, JUPITER, SATURN, URANUS, NEPTUNE, PLUTO"
+    },
+    {
+      "number": 95,
+      "solution": "(C) Series pattern : abbcabbcc / aabbcc/abbcabbcc ∴Required answer = bcbbb"
+    },
+    {
+      "number": 96,
+      "solution": "(D) In the above series, the letters are equidistant from the beginning and the end. abbcaccbabccdbcbgdbcacbda Hence, the missing letter are cbbaa."
+    },
+    {
+      "number": 97,
+      "solution": "(C) Series pattern : cab/bac/cab/bac/cab/bac ∴ Required answer = acbcb"
+    },
+    {
+      "number": 98,
+      "solution": "(D) Series pattern : bdac/bdac/bdac/bdac ∴ Required answer = dcadc"
+    },
+    {
+      "number": 99,
+      "solution": "(C) Here, in the series letters 'abcd' are repeated abcd/a bcd/abcd/abcd So, the missing letters are cadbdc."
+    },
+    {
+      "number": 100,
+      "solution": "(C) Series pattern : ccabb/ccabb/ccabb/ccabb ∴Required answer = cacbc"
+    },
+    {
+      "number": 101,
+      "solution": "(C) Series pattern : bc/abc/abc/abc/abc/abca ∴ Required = abccb"
+    },
+    {
+      "number": 102,
+      "solution": "(C) Series pattern : mca /mca/mca/mca/mca/mca/mc ∴ Required answer = acmcmma"
+    }
+  ],
+  "answers": [],
+  "_page": 258
+}

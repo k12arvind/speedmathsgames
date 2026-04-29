@@ -1,0 +1,307 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "A, B, C, D and E are five members of a family. There are two fathers, two sons, two wives, three males and two females in the family. Teacher is the wife of a lawyer who is the son of a doctor. E is not a male, neither also a wife of a professional. C is the youngest in the family while D is the eldest in the family. B is a male.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "I. J, K, L, M, N and O are six family members having different professions.\nII. There are two married couples in the family.\nIII. M is a doctor and his wife is an engineer.\nIV. J is the granddaughter of O and sister of L, who is a typist.\nV. K is the grandfather of L and is married to a teacher.\nVI. J's mother, who is an engineer, is the daughter-in-law of a lawyer.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "I. There is a family of six persons representing three generations.\nII. There are two married couples and both the wives are housewives.\nIII. Pratap, the lawyer, is father of Prashant and has one grandchild.\nIV. Pooja, the doctor, is the sister of the teacher.\nV. Madhu's daughter-in-law Sumati is married to a teacher.\nVI. Bindu, granddaughter of one of the housewives is studying in 9th standard.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "How is D related to E?",
+      "choices": {
+        "a": "Husband",
+        "b": "Son",
+        "c": "Father",
+        "d": "Wife"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Who are the females in this group?",
+      "choices": {
+        "a": "C and E",
+        "b": "C and D",
+        "c": "E and A",
+        "d": "D and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "Who's wife is a teacher?",
+      "choices": {
+        "a": "C",
+        "b": "D",
+        "c": "A",
+        "d": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "profession_family",
+      "subtopic_name": "Profession and Family Relations",
+      "body": "What is the profession of J?",
+      "choices": {
+        "a": "Teacher",
+        "b": "Lawyer",
+        "c": "Engineer",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "profession_family",
+      "subtopic_name": "Profession and Family Relations",
+      "body": "Which of the following is one of the married couples?",
+      "choices": {
+        "a": "KN",
+        "b": "MO",
+        "c": "NM",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "profession_family",
+      "subtopic_name": "Profession and Family Relations",
+      "body": "Who is the wife of M?",
+      "choices": {
+        "a": "N",
+        "b": "O",
+        "c": "J",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "profession_family",
+      "subtopic_name": "Profession and Family Relations",
+      "body": "How many male members are there in the family?",
+      "choices": {
+        "a": "Two",
+        "b": "Three",
+        "c": "Four",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "profession_family",
+      "subtopic_name": "Profession and Family Relations",
+      "body": "Which of the following pairs of persons belong to the second generation?",
+      "choices": {
+        "a": "Teacher and Doctor",
+        "b": "Lawyer and Typist",
+        "c": "Engineer and Doctor",
+        "d": "Engineer and Teacher"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "three_generation",
+      "subtopic_name": "Three Generation Family",
+      "body": "What is the profession of Prashant?",
+      "choices": {
+        "a": "Student",
+        "b": "Teacher",
+        "c": "Lawyer",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "three_generation",
+      "subtopic_name": "Three Generation Family",
+      "body": "Who among the following is one of the married couples?",
+      "choices": {
+        "a": "Pratap-Bindu",
+        "b": "Madhu-Pratap",
+        "c": "Prashant-Bindu",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "three_generation",
+      "subtopic_name": "Three Generation Family",
+      "body": "Who are the children of Madhu?",
+      "choices": {
+        "a": "Pooja and Prashant",
+        "b": "Sumati and Pooja",
+        "c": "Prashant and Sumati",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "three_generation",
+      "subtopic_name": "Three Generation Family",
+      "body": "Which of the following statements is not true?",
+      "choices": {
+        "a": "Pratap has one grandchild",
+        "b": "Madhu has one son and one daughter",
+        "c": "Prashant has one child",
+        "d": "Sumati has one son and one daughter"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "three_generation",
+      "subtopic_name": "Three Generation Family",
+      "body": "How many male members are there in the family?",
+      "choices": {
+        "a": "Two",
+        "b": "Three",
+        "c": "Four",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "profession_analysis",
+      "subtopic_name": "Profession Analysis",
+      "body": "In a group of five persons A, B, C, D and E, one person is a professor, one is a doctor and one is lawyer. A and D are unmarried females who don't work. There is a married couple in the group in which E is the husband, B is the brother of A who is neither doctor nor a lawyer. Who is professor?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "A",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 625
+}

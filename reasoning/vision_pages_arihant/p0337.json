@@ -1,0 +1,247 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 12-16) In the questions given below, some relationship have been expressed through symbols as show below. Study the meaning of these symbols and pickup the correct answer from the answer choices for each of the questions below.\n\n⌀ means 'less than'\n∆ means 'not greater than'\n~ means 'equal to'.\n+ means 'not equal to'\n× means 'not less than'\n= means 'greater than'.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 17-22) In the following questions, the symbols @, ©, $, % and # are used with the following meaning as illustrated below.\n\n'P $ Q' means 'P is not greater than Q.'\n'P @ Q' means 'P is neither smaller than nor equal to Q'.\n'P # Q' means 'P is not smaller than Q.'\n'P © Q' means 'P is neither greater than nor equal to Q.'\n'P % Q' means 'P is neither smaller than nor greater than Q'\n\nNow, in each of the following questions, assuming the given statements to be true, find which of the three Conclusions I, II and III given below them is/are definitely true and give your answer accordingly?",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 23-27) In the following questions, the symbols @, ©, $, % and # are used with the following meaning as illustrated below.\n\n'A $ B' means 'A is not smaller than B'.\n'A # B' means 'A is not greater than B'.\n'A @ B' means 'A is neither smaller than nor equal to B'.\n'A © B' means 'A is neither smaller than nor greater than B.'\n'A % B' means 'A is neither greater than nor equal to B'.\n\nNow, in each of the following questions, assuming the given statements to be true, find which of the three Conclusions I, II and III given below them is/are definitely true and give your answer accordingly?",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "X ⌀ Y + Z implies",
+      "choices": {
+        "a": "X ~ Y = Z",
+        "b": "X × Y ~ Z",
+        "c": "X ∆ Y ⌀ Z",
+        "d": "X + Y = Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "X ⌀ Y ~ Z implies",
+      "choices": {
+        "a": "X × Y ~ Z",
+        "b": "X ~ Y × Z",
+        "c": "X + Y × Z",
+        "d": "X × Y = Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "X ~ Y + Z implies",
+      "choices": {
+        "a": "X + Y + Z",
+        "b": "X ⌀ Y ~ Z",
+        "c": "X ~ Y ⌀ Z",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "X ~ Y = Z implies",
+      "choices": {
+        "a": "X + Y + Z",
+        "b": "X ∆ Y × Z",
+        "c": "X + Y ⌀ Z",
+        "d": "X + Y × Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "X = Y = Z does not implies",
+      "choices": {
+        "a": "X = Y × = Z",
+        "b": "Z ⌀ Y ⌀ X",
+        "c": "Z ⌀ X = Y",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_logic",
+      "subtopic_name": "Symbol Logic",
+      "body": "Statements D # K, K @ T, T $ M, M % J\nConclusions I. J @ T    II. J % T    III. D @ T",
+      "choices": {
+        "a": "Only I is true",
+        "b": "Only II is true",
+        "c": "Either I or II is true",
+        "d": "Either I or II and III are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_logic",
+      "subtopic_name": "Symbol Logic",
+      "body": "Statements R @ N, N © D, D $ J, J # B\nConclusions I. R @ J    II. J @ N    III. B @ D",
+      "choices": {
+        "a": "None is true",
+        "b": "Only I is true",
+        "c": "Only II is true",
+        "d": "Only III is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_logic",
+      "subtopic_name": "Symbol Logic",
+      "body": "Statements W © B, B % V, V $ R, R @ K\nConclusions I. K © B    II. R # B    III. V @ W",
+      "choices": {
+        "a": "I and II are true",
+        "b": "I and III are true",
+        "c": "II and III are true",
+        "d": "All III are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_logic",
+      "subtopic_name": "Symbol Logic",
+      "body": "Statements H $ M, M # T, T @ D, D © R\nConclusions I. D © M    II. R @ M    III. H $ T",
+      "choices": {
+        "a": "None is true",
+        "b": "Only I is true",
+        "c": "Only II is true",
+        "d": "Only III is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_logic",
+      "subtopic_name": "Symbol Logic",
+      "body": "Statements B %, J @ K, K © T, T $ F\nConclusions I. F @ K    II. B @ K    III. B @ F",
+      "choices": {
+        "a": "I and II are true",
+        "b": "I and III are true",
+        "c": "II and III are true",
+        "d": "All are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "symbol_logic",
+      "subtopic_name": "Symbol Logic",
+      "body": "Statements F # B, B $ M, M @ K, K © N\nConclusions I. N @ M    II. F $ M    III. K © B",
+      "choices": {
+        "a": "Only I is true",
+        "b": "Only II is true",
+        "c": "Only III is true",
+        "d": "None is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 337
+}

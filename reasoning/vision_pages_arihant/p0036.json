@@ -1,0 +1,351 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "In such type of questions, the candidate is required to find out the common feature among the given words and pick the alternative that mentions the properties common to the given words. Some solved examples given below will give a better idea about this format",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Directions (Example Nos. 42-45) Find out the common feature among the given words and pick the alternative that mentions the properties common to the given words.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Crocodile : Lizard : Chameleon",
+      "choices": {
+        "a": "Whale",
+        "b": "Lion",
+        "c": "Snake",
+        "d": "Hen"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Pen : Pencil : Rubber",
+      "choices": {
+        "a": "Page",
+        "b": "Cell",
+        "c": "Pillow",
+        "d": "TV"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Dhoni : Tendulkar : Sehwag",
+      "choices": {
+        "a": "Saniya",
+        "b": "Shahrukh",
+        "c": "Dravid",
+        "d": "Aadvani"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Sapphire : Emerald : Diamond",
+      "choices": {
+        "a": "Ruby",
+        "b": "Bronze",
+        "c": "Gold",
+        "d": "Silver"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "LBW : Slip : Cover",
+      "choices": {
+        "a": "Dence",
+        "b": "Dribble",
+        "c": "Corner",
+        "d": "Chinaman"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Lahore : Faislabad : Islamabad",
+      "choices": {
+        "a": "Kabul",
+        "b": "Ahmedabad",
+        "c": "Sialkot",
+        "d": "Dhaka"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Radiology : Pathology : Cardiology",
+      "choices": {
+        "a": "Biology",
+        "b": "Zoology",
+        "c": "Geology",
+        "d": "Hematology"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Release : Liberate : Emancipate",
+      "choices": {
+        "a": "Pardon",
+        "b": "Ignore",
+        "c": "Quit",
+        "d": "Free"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogy_detection",
+      "subtopic_name": "Analogy Detection",
+      "body": "Nose : Eyes : Ears",
+      "choices": {
+        "a": "They are internal part of human body",
+        "b": "They are not the external part of human body",
+        "c": "They are parts of the body below waist",
+        "d": "They are parts of the body above neck"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "analogy_detection",
+      "subtopic_name": "Analogy Detection",
+      "body": "Dhoni : Yuvraj : Dravid",
+      "choices": {
+        "a": "Cricketers",
+        "b": "Athlete",
+        "c": "Politicians",
+        "d": "Singers"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) All are the sounds produced by animals."
+    },
+    {
+      "number": 2,
+      "solution": "(c) All are metals."
+    },
+    {
+      "number": 3,
+      "solution": "(d) All are human sense organs."
+    },
+    {
+      "number": 4,
+      "solution": "(d) All are internal organs of human body."
+    },
+    {
+      "number": 5,
+      "solution": "(b) All are the measuring units of electricity."
+    },
+    {
+      "number": 6,
+      "solution": "(d) All are food crops."
+    },
+    {
+      "number": 7,
+      "solution": "(c) All are parts of tree."
+    },
+    {
+      "number": 8,
+      "solution": "(d) All are sounds produced by animals."
+    },
+    {
+      "number": 9,
+      "solution": "(c) All are wild animals."
+    },
+    {
+      "number": 10,
+      "solution": "(c) All are young ones of animals."
+    },
+    {
+      "number": 11,
+      "solution": "(d) All are industrial towns famous for steel plants."
+    },
+    {
+      "number": 12,
+      "solution": "(d) All are classical forms of Indian dance."
+    },
+    {
+      "number": 13,
+      "solution": "(c) All are dwelling places of animals."
+    },
+    {
+      "number": 14,
+      "solution": "(c) All are female animals."
+    },
+    {
+      "number": 15,
+      "solution": "(c) All are the names of Hindu goddesses."
+    },
+    {
+      "number": 16,
+      "solution": "(c) All are the cities of Uttar Pradesh."
+    },
+    {
+      "number": 17,
+      "solution": "(c) All are European countries."
+    },
+    {
+      "number": 18,
+      "solution": "(b) All are natural calamities."
+    },
+    {
+      "number": 19,
+      "solution": "(c) All are terms related to quantitative measurement."
+    },
+    {
+      "number": 20,
+      "solution": "(b) All are alloys."
+    },
+    {
+      "number": 21,
+      "solution": "(c) All are rodents."
+    },
+    {
+      "number": 22,
+      "solution": "(c) All are the sounds produced by animals."
+    },
+    {
+      "number": 23,
+      "solution": "(c) All are reptiles."
+    },
+    {
+      "number": 24,
+      "solution": "(c) All are stationery goods."
+    },
+    {
+      "number": 25,
+      "solution": "(c) All are Indian cricketers."
+    },
+    {
+      "number": 26,
+      "solution": "(c) All are precious stones."
+    },
+    {
+      "number": 27,
+      "solution": "(c) All are terms of cricket."
+    },
+    {
+      "number": 28,
+      "solution": "(c) All are Pakistan cities."
+    },
+    {
+      "number": 29,
+      "solution": "(d) All are branches of medical sciences."
+    },
+    {
+      "number": 30,
+      "solution": "(d) All are synonyms."
+    },
+    {
+      "number": 42,
+      "solution": "(d) 'Nose', 'Eyes' and 'Ears' are the parts of human body above neck."
+    },
+    {
+      "number": 43,
+      "solution": "(a) It is clear that the common feature among Dhoni, Yuvraj and Dravid is that they are cricketers."
+    }
+  ],
+  "answers": [],
+  "_page": 36
+}

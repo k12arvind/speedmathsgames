@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "(C) 1st Row 37 12 21 ⇒ 37 + 12 = 49 [rule (iv)] ⇒ 49 + 21 = 70 [rule (i)] 2nd Row 38 81 14 ⇒ 81 - 38 = 43 [rule (ii)] ⇒ 43 + 14 = 57 [rule (v)] ∴ Required difference = 70 - 57 = 13"
+    },
+    {
+      "number": 3,
+      "solution": "(d) 1st Row 16 8 32 ⇒ 16 × 8 = 128 [rule (v)] ⇒ 128 - 32 = 96 [rule (iii)] = X 2nd Row 132 11 X² ⇒ 132 - 11 = 16 [rule (iii)] ⇒ 12 × 16 = 192 [rule (v)] ∴ Resultant of second row = 192"
+    },
+    {
+      "number": 4,
+      "solution": "(c) 2nd Row 45 17 81 ⇒ 45 + 17 = 62 [rule (ii)] ⇒ 81 - 62 = 19 [rule (ii)] = X 1st Row 345 23 X ⇒ 345 - 23 = 19 [rule (iii)] ⇒ 345 + 23 = 15 [rule (i)] ⇒ 15 + 19 = 34 ∴ Resultant of first row = 34"
+    },
+    {
+      "number": 5,
+      "solution": "(e) 1st Row 12 28 84 ⇒ 12 × 28 = 336 [rule (v)] ⇒ 336 + 84 = 4 [rule (iii)] 2nd Row 37 22 18 ⇒ 37 + 22 = 59 [rule (iv)] ⇒ 59 + 18 = 77 [rule (v)] ∴ Required sum = 4 + 77 = 81"
+    },
+    {
+      "number": 6,
+      "solution": "(d) 1st Row 15 8 21 ⇒ 15 - 8 = 7 [rule (v)] ⇒ 7 + 21 = 28 [rule (i)] = p 2nd Row p 3 27 ⇒ 28 - 3 = 31 [rule (ii)] ⇒ 31 + 27 = 58 [rule (i)] ∴ Resultant of second row = 58"
+    },
+    {
+      "number": 7,
+      "solution": "(e) 1st Row 12 64 17 ⇒ 64 - 12 = 52 [rule (iii)] ⇒ 52 + 17 = 69 [rule (iv)] = m 2nd Row 20 m 16 ⇒ 20 + 69 = 16 [rule (ii)] ⇒ 89 - 16 = 73 [rule (v)] ∴ Resultant of second row = 73"
+    },
+    {
+      "number": 8,
+      "solution": "(b) 1st Row 85 17 35 ⇒ 85 + 17 = 5 [rule (v)] ⇒ 5 + 35 = 40 [rule (i)] = r 2nd Row 16 19 r ⇒ 16 + 19 = 35 [rule (ii)] ⇒ 35 - 40 = -5 [rule (v)] ∴ Resultant of second row = -5"
+    },
+    {
+      "number": 9,
+      "solution": "(c) 1st Row 24 15 3 ⇒ 24 + 15 = 39 [rule (ii)] ⇒ 39 + 3 = 13 [rule (iv)] = d 2nd Row d 6 15 ⇒ 13 - 6 = 7 [rule (v)] ⇒ 7 + 15 = 22 [rule (i)] ∴ Resultant of second row = 22"
+    },
+    {
+      "number": 10,
+      "solution": "(c) 1st Row 28 49 15 ⇒ 49 - 28 = 21 [rule (iii)] ⇒ 21 + 15 = 36 [rule (i)] = h 2nd Row h 3 12 ⇒ 36 - 3 = 12 [rule (ii)] ⇒ 36 + 3 = 39 [rule (v)] ⇒ 39 - 12 = 27 ∴ Resultant of second row = 27"
+    },
+    {
+      "number": 11,
+      "solution": "(c) 1st Row 36 15 3 ⇒ 36 + 15 = 51 [rule (ii)] ⇒ 51 + 3 = 17 [rule (iv)] = n 2nd Row 12 3 n ⇒ 12 + 3 = 17 [rule (ii)] ⇒ 12 + 3 = 15 [rule (iv)] ⇒ 15 + 17 = 15/17 ∴ Resultant of second row = 15/17"
+    }
+  ],
+  "answers": [],
+  "_page": 327
+}

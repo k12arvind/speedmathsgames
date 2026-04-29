@@ -1,0 +1,162 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning - Evaluating Inferences",
+  "passages": [
+    {
+      "passage_text": "The Election Commission has imposed controls on three Ps - persons, public space and payment to the voter. Stressing upon persons, the Election Commission and evolving a code of conduct applies. First, the ceiling on election expenses (fixed) to make it realistic in the light of number of constituencies involved in running. (The ceiling for one MP is 50,000 which was fixed in 1984 was found to be too low to comply in a constituency which has a population between 75,000 and seven spread over 200-300 sq km). This has helped many candidates, according to the Election Commission and also present realistic accounts. The ceiling on election expenses now stands at Rs 1.5 lakh. Candidates are required to present accounts of their spending in detail (according to Rs. 1984). Candidates have to submit accounts in order to get votes. People's Representative Act was passed in 1984. Almost no candidate has been sticking to the ceiling on expenses fixed by the Election Commission.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Then came the Tehri Dam evacuees. The Forest Department recently decided to acquire about 46 hectares of land in the Patri division of Haridwar district and rehabilitate these 33 families there. Besides, as compensation for uprooting them once more, the department is willing to distribute Rs 26 lakh among them. In addition, the department also plans to acquire 63 hectares in the Rajwallah cantonment, including the army ammunition dump. The fact that the army has no objection is at hand and the fact that the tab of bullets a new ammunition dump will be loaded up. These proposals are being pursued by Mr M Dhawan, chief conservator of Rajaji National Park. Tehri Dam evacuees have not been compensated. The Tehri Dam evacuees in the Patri division will not shift easily. The amount of Rs 26 lakh to be given as compensation by the Forest Department is adequate. The army has not agreed to shift Rajwallah cantonment. Mr M Ahsan has introduced a set of forestry reforms in India.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "How far a seismic facility can eavesdrop does not depend on the distance from the test but on the seismic characteristics of its location. It faultlines which run for thousands of kilometres are effective conveyor belts is right to the ground for sounds of nuclear activity from as far as Lop Nor in China. The US may have extracted a major concession from Pakistan.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 102,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Candidates are required to present accounts of their spending in an election.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 103,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The Sunda-Gandhi have been trying to woo the voters in order to get votes.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 104,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "People's Representative Act was passed in 1984.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 105,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Almost no candidate has been sticking to the ceiling on expenses fixed by the Election Commission.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 106,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Tehri Dam evacuees have not been compensated.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 107,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The evacuees in the Patri division will not shift easily.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 108,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The amount of Rs 26 lakh to be given as compensation by the Forest Department is adequate.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 109,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The army has not agreed to shift Rajwallah cantonment.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 110,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Mr M Ahsan has introduced a set of forestry reforms in India.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 75
+}

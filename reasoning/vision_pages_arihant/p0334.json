@@ -1,0 +1,63 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "(b) Given that, K ≥ G > H ≤ F\nNow, we can check all the options one by one\n(a) F ≥ K (false)\n(b) H < K (true)\n(c) F < G (false)\n(d) K ≥ H (false)\nIt is clear that option (b) is true."
+    },
+    {
+      "number": 12,
+      "solution": "(c) From the expression A < B = C ≤ D, A < D will be definitely true"
+    },
+    {
+      "number": 13,
+      "solution": "(e) We can check all the options one by one.\nFrom option (a),\nM = P > Q = R ⇒ M > R\nSo, expression M > R holds true for option (a).\nFrom option (b),\nM > P ≥ Q = R ⇒ M > R\nSo, expression M > R holds true for option (b).\nFrom option (c),\nR = P < Q < M ⇒ R < M\nSo, expression M > R holds true for option (c).\nFrom option (d),\nR < Q ≤ P = M ⇒ R < M\nSo, expression M > R holds true for option (d).\nFrom option (e),\nM = P < Q = R ⇒ M < R\nSo, expression M > R does not hold true for option (e)."
+    },
+    {
+      "number": 14,
+      "solution": "(d) Given that, H ≥ I = J > K ≤ L\nHere, statements are already combined.\nConclusions I. K < H (true)\nII. L ≥ I (false)\nSo, it is clear that only Conclusion I follows from the given statements."
+    },
+    {
+      "number": 15,
+      "solution": "(b) Given that, S > C ≥ O ...(i)\nand P < C ...(ii)\nOn combining the statements (i) and (ii), we get\nS > C > P and P < C ≥ O\nConclusions I. O < P (false)\nand II. S > P (true)\nSo, it is clear that only Conclusion II follow from the given statements."
+    },
+    {
+      "number": 16,
+      "solution": "(e) Given that, A = B ≤ C ...(i)\nand A > R ...(ii)\nOn combining the statements (i) and (ii), we get\nR < A = B ≤ C\nConclusions I. B > R (true)\nII. R < C (true)\nSo, it is clear that both Conclusions I and II follow from the given statements."
+    },
+    {
+      "number": 17,
+      "solution": "(d) Given that, D > E ≤ F ...(i)\nand J < F ...(ii)\nOn combining the statements (i) and (ii), we get\nD > E ≤ F > J\nConclusions I. D > J (false)\nII. E < J (false)\nSo, it is clear that neither Conclusion I nor II is true."
+    },
+    {
+      "number": 18,
+      "solution": "(e) Given that, P < Q > T ...(i)\nand R ≥ O ...(ii)\nOn combining the statements (i) and (ii), we get\nP < Q ≤ R and R ≥ O > T\nConclusions I. R > P (true)\nII. T < R (true)\nSo, it is clear that both Conclusions I and II are true."
+    },
+    {
+      "number": 19,
+      "solution": "(b) Statement F ≥ G = H; G > J ≥ K\nOn combining both the statements, we get\nF ≥ G = H > J ≥ K\nConclusions I. F ≥ K (false)\nII. K ≤ H (true)\nHence, only Conclusion II is definitely true."
+    },
+    {
+      "number": 20,
+      "solution": "(e) Statement P < Q = R ≥ S ≥ T\nConclusions I. T ≤ Q (ture)\nII. R > P (true)\nHence, both conclusions are definitely true."
+    },
+    {
+      "number": 21,
+      "solution": "(c) Statement A ≤ B < C; A ≥ D; C ≤ F\nOn combining both the statements, we get\nD ≤ A ≤ B < C ≤ F\nConclusions I. D < C (true)\nII. F ≥ D (false)\nHence, only conclusion I is definitely true."
+    },
+    {
+      "number": 22,
+      "solution": "(d) Statement U > A = I ≤ O < E\nConclusions I. I ≤ E (false)\nII. O > U (false)\nHence, neither Conclusion I nor II is definitely true."
+    },
+    {
+      "number": 23,
+      "solution": "(b) Statement L = M ≥ N; M > P; L < K\nOn combing both the statements, we get\nP < L = M ≥ N < K\nConclusions I. K > P (false)\nII. N < K (true)\nHence, only Conclusion II is definitely true."
+    }
+  ],
+  "answers": [],
+  "_page": 334
+}

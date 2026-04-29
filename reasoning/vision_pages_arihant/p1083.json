@@ -1,0 +1,162 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Direction (Q. No. 1) On the basis of statements given below, choose the option which is the correct conclusion.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 2 - 7) In each of these questions, a statement is given followed by two conclusions numbered I and II. You have to assume everything in the statement to be true and then consider the two conclusions together to decide which of them logically follows beyond a reasonable doubt from the information given in the statement.\n\nGive answer\n(a) if only Conclusion I follows\n(b) if only Conclusion II follows\n(c) if both the Conclusions I and II follow\n(d) if neither Conclusion I nor II follows",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements A. All the students in my class are intelligent.\nB. Surbhi is not intelligent.",
+      "choices": {
+        "a": "Surbhi should do hard labour",
+        "b": "Surbhi is not the student of my class",
+        "c": "Some students are not intelligent",
+        "d": "Surbhi is the student of my class"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Statement Most Indians are aware that they have a great heritage, but few would include science in it.\n[SSC (CGL) April 2014]\n\nConclusions I. Many Indians consider science to have made Indian heritage great.\nII. Many Indians are not aware that India has a great scientific heritage.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if both the Conclusions I and II follow",
+        "d": "if neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Statements Leaders are human beings. All human beings need rest.\n[SSC (Steno) 2013]\n\nConclusions I. All human beings are not leaders.\nII. Leaders need rest.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if both the Conclusions I and II follow",
+        "d": "if neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Statement This world is neither good nor evil; each man manufactures a world for himself.\n\nConclusions I. Some people find this world quite good.\nII. Some people find this world quite bad.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if both the Conclusions I and II follow",
+        "d": "if neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Statement Reacting to the news of suicides by the farmers, the Prime Minister stated that his government will make every possible effort for the upliftment of poor farmers and farmhands.\n\nConclusions I. Only farmers are attempting suicides due to poverty and debt.\nII. No serious effort has been made till now for the upliftment of any section of society.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if both the Conclusions I and II follow",
+        "d": "if neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Statement Workers feel highly motivated when they get sense of involvement by participating in the management of companies.\n\nConclusions I. Workers should be motivated to produce more.\nII. Workers should be allowed to participate in the management of companies.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if both the Conclusions I and II follow",
+        "d": "if neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Statement Power consumption in every family has been doubled during the last five years.\n\nConclusions I. There is a lot of development in the society.\nII. Power rates have become cheaper.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if both the Conclusions I and II follow",
+        "d": "if neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1083
+}

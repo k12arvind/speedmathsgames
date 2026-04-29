@@ -1,0 +1,84 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "middle_letter",
+      "subtopic_name": "Middle Letter between Two Letters",
+      "body": "Which letter is in the middle of 7th letter from left and 10th letter from right in the English alphabet?",
+      "choices": {
+        "a": "L",
+        "b": "P",
+        "c": "M",
+        "d": "Q"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "same_position_alphabetical",
+      "subtopic_name": "Same Position of Alphabet after Arranging Alphabetically",
+      "body": "How many such letters are there in the word 'CADMP' which remain same in their position, if they are arranged in an alphabetical order?",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "same_position_alphabetical",
+      "subtopic_name": "Same Position of Alphabet after Arranging Alphabetically",
+      "body": "If the vowels of the word 'ROUTINE' are 1st arranged in alphabetical order, followed by the consonants in the alphabetical order, which of the following will be 4th from the right end after the rearrangement?",
+      "choices": {
+        "a": "N",
+        "b": "U",
+        "c": "T",
+        "d": "O"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 10,
+      "solution": "Let us see: 7th letter from left is G, 10th letter from right is Q. Letter between G and Q is L. Alternate Method: 10th letter from right = 27 - 10 = 17th letter from left. Required middle letter = (7 + 17)/2 = 24/2 = 12th letter from left = L"
+    },
+    {
+      "number": 11,
+      "solution": "Original word: C A D M P, Rearrangement: A C D M P. So, such type of letters are D, M and P."
+    },
+    {
+      "number": 12,
+      "solution": "Original word: R O U T I N E, Rearrangement: E I O U N R T. From right: 1-T, 2-R, 3-N, 4-U. Hence, U is the correct answer."
+    }
+  ],
+  "answers": [],
+  "_page": 101
+}

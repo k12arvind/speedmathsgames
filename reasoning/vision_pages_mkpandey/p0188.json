@@ -1,0 +1,195 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some blankets are pillows. All pillows are books. Conclusions: I. Some books are blankets. II. Some blankets are pillows. III. No book is a pillow. IV. Some blankets are not books.",
+      "choices": {
+        "a": "Only I and IV follow",
+        "b": "I and either II or III follow",
+        "c": "Either I or II and III follow",
+        "d": "Either I or TV and II",
+        "e": "Either I or II or III follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No girl is an Indian. No American is an Indian. Conclusions: I. Some girls are Americans. II. Some Americans are not Indians. III. All girls are Americans. IV. No girls are Americans.",
+      "choices": {
+        "a": "Only II follows",
+        "b": "Either I or II follows",
+        "c": "None of these",
+        "d": "Either III or IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All classes are glasses. All brasses are glasses. Conclusions: I. Some classes are brasses. II. Some brasses are glasses. III. Some brasses are classes. IV. Some classes are above.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I and II follow",
+        "c": "All follow",
+        "d": "Only II follows",
+        "e": "II and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No Indian is an Asian. Some Americans are Indians. Conclusions: I. Some Indians are not Asians. II. Some Asians are not Americans. III. Some Americans are not Asians. IV. All Americans are Asians.",
+      "choices": {
+        "a": "Either III or IV follows",
+        "b": "I and III follow",
+        "c": "None of the above",
+        "d": "Either II or III follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Only red are blues. All reds are yellows. Conclusions: I. Some blues are yellows. II. No blues are yellows. III. Some yellows are reds. IV. Some yellows are not reds.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only III follows",
+        "c": "II and III follow",
+        "d": "Only II follows",
+        "e": "I, II and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Only I follows Either I or II follows All and III follow Some throngs are longs. Conclusions: I. Some songs are longs. II. No songs are throngs. III. Only longs are songs. IV. Only songs are longs.",
+      "choices": {
+        "a": "Only III follows",
+        "b": "Either III or IV follows",
+        "c": "Either I and either III or IV follow",
+        "d": "Either I or either III or IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some books are helmets. Only copies are helmets. Conclusions: I. Some books are copies. II. All helmets are copies. III. All copies are helmets. IV. Some copies are not helmets.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "II and either III or IV follow",
+        "c": "I, II and either III or IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some states are capitals. No brass capitals. Conclusions: I. Some states are not pens. II. All states are pens. III. Some pens are not states. IV. All pens are not states.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either I or II follows",
+        "c": "I and III follow",
+        "d": "Only III follows",
+        "e": "Either III or IV and I follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No pen is a pencil. All pencils are streets. Conclusions: I. No pen is a street. II. No street is a pen. III. Some streets are not pens. IV. Some pens are not streets.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only III follows",
+        "c": "III and III follow",
+        "d": "Only II follows",
+        "e": "I, II and V follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 188
+}

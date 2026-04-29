@@ -1,0 +1,294 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Answer the following questions based on the statements given below.\nI. There are 3 poles on each side of the road.\nII. These six poles are labelled A, B, C, D, E and F.\nIII. The poles are of different colours namely golden, silver, metallic, black, bronze and white.\nIV. The poles are of different heights.\nV. E, the tallest pole, is exactly opposite to the golden coloured pole.\nVI. The shortest pole is exactly opposite to the metallic coloured pole.\nVII. F, the black coloured pole, is located between A and D.\nVIII. C, the bronze coloured pole, is exactly opposite to A.\nIX. B, the metallic coloured pole, is exactly opposite to F.\nX. A, the white coloured pole, is taller than C but shorter than D and B.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below.\nA group of seven friends A, B, C, D, E, F and G work as economist, agriculture officer, IT officer, terminal operator, clerk, forex officer and research analyst, for banks L, M, N, P, Q, R and S but not necessarily in the same order. C works for bank N and is neither a research analyst nor a clerk. E is an IT officer and works for bank R. A works as a forex officer and does not work for bank L or Q. The one who is an agriculture officer works for bank M. The one who works for bank L works as a terminal operator. F works for bank Q. G works for bank P as a research analyst. D is not an agriculture officer.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer these questions.\nA kala manch has six performing ladies consisting of four vocal musicians, two dancers, one actress and three violinists. Gauri and Vandana are among the violinists while Jaya and Shailja do not know playing on violin. Shailja and Tanya are the dancers. Jaya, Shailja, Vandana and Tanya are all vocal musicians and two of them are also violinists. Pooja is an actress.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement_puzzle",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "What is the colour of the pole diagonally opposite to the bronze coloured pole?",
+      "choices": {
+        "a": "White",
+        "b": "Silver",
+        "c": "Metallic",
+        "d": "Golden"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement_puzzle",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "Which is the second tallest pole?",
+      "choices": {
+        "a": "A",
+        "b": "D",
+        "c": "B",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement_puzzle",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "Which is the colour of the tallest pole?",
+      "choices": {
+        "a": "Golden",
+        "b": "Silver",
+        "c": "Bronze",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Who amongst the following works as an agriculture officer?",
+      "choices": {
+        "a": "C",
+        "b": "B",
+        "c": "F",
+        "d": "D",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "For which bank does D work?",
+      "choices": {
+        "a": "Q",
+        "b": "L",
+        "c": "N",
+        "d": "S",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "What is the profession of C?",
+      "choices": {
+        "a": "Terminal operator",
+        "b": "Agriculture officer",
+        "c": "Economist",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Who amongst the following works as a clerk?",
+      "choices": {
+        "a": "C",
+        "b": "B",
+        "c": "F",
+        "d": "D",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Which of the following combinations of person, profession and bank is correct?",
+      "choices": {
+        "a": "A-Forex officer-M",
+        "b": "D-Clerk-L",
+        "c": "F-Agriculture officer-Q",
+        "d": "B-Agriculture officer-S",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "What is the profession of the person who works for bank S?",
+      "choices": {
+        "a": "Clerk",
+        "b": "Agriculture officer",
+        "c": "Terminal operator",
+        "d": "Forex officer",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 1,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "For which bank does B work?",
+      "choices": {
+        "a": "M",
+        "b": "S",
+        "c": "L",
+        "d": "Either M or S",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Who amongst these performing artists is both a vocalist and a violinist?",
+      "choices": {
+        "a": "Shailja",
+        "b": "Pooja",
+        "c": "Vandana",
+        "d": "Jaya"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Who amongst these lady artists is a dancer, a vocal musician and a violinist?",
+      "choices": {
+        "a": "Shailja",
+        "b": "Jaya",
+        "c": "Tanya",
+        "d": "Vandana"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "Who amongst these artists is a violinist only?",
+      "choices": {
+        "a": "Jaya",
+        "b": "Tanya",
+        "c": "Gauri",
+        "d": "Shailja"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 602
+}

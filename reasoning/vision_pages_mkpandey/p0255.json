@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "Input: star players don't abandon\nStep I: players don't abandon star\nStep II: don't abandon players star\n...and so on.\nLeft-right alternate\nSometimes, the same task of arranging (in say, increasing order), is achieved by putting the first word at first place, then alphabetically at last place, then alphabetical second word at second place. Really, it's on. In other words, words are rearranged from the left and from the alternatively. See the following examples."
+    },
+    {
+      "number": 5,
+      "solution": "Input: star players don't abandon\nStep I: abandon star players don't\nStep II: abandon players don't star\nStep III: abandon don't players star"
+    },
+    {
+      "number": 6,
+      "solution": "Input: star players don't abandon\nStep I: players don't abandon star\nStep II: abandon players don't star\nStep III: abandon don't players star\nIncreasing or decreasing order\nSince a comes before b which comes before c in the dictionary, a word starting with a would come before a word starting with b which would come before a word starting with c. Thus, if you have words like cat, ant, bat, cut alphabetically the third, ass is first, while bat is alphabetically the second word in the dictionary. Therefore, if we have (cat, ass, bat, cut), this is a alphabetically increasing sequence while (cat, bat, ass) is alphabetically decreasing sequence. Similarly, (5, 7, 9) is an increasing sequence while (9, 7, 5) is a decreasing sequence. Now, we can have a machine that arranges in increasing sequence or we can have one that arranges in a decreasing sequence."
+    },
+    {
+      "number": 7,
+      "solution": "Input: star players don't abandon\nStep I: abandon star players don't\nStep II: abandon don't star players\n...and so on.\nThe above is an example of arranging in an increasing sequence."
+    },
+    {
+      "number": 8,
+      "solution": "Input: don't players star abandon\nStep I: star don't players abandon\nStep II: star players don't abandon\n[This above is an example of decreasing sequence because alphabetically last word has occupied first place while abandon (which is alphabetically first) occupied last place.]\nEx. 9: Input: 15 19 11 17\nStep I: 11 15 19 17\nStep II: 11 15 17 19\n(Above is an example of arranging in an increasing order.)"
+    },
+    {
+      "number": 9,
+      "solution": "Input: 15 19 11 17\nStep I: 11 15 19 17\nStep II: 11 15 17 19\n(Above is an example of arranging in an increasing order.)\nArrangement is in decreasing order.\nIn each step, the machine does same ordering. This is done by putting one word (or number) in its rightful place, at a time. When a word is put at a right place, what happens to the word that was previously occupying that position. There are two answers. The earlier word either quietly shifts (see Ex. 13) or it interchanges position with its replacing word (Ex. 13). In the second case, it looks as if the new word has simply jumped from its place, and it is new and one place and given the remaining words a push. In the third case, it is a case of interchange.\nEx. 10: Input: star players don't abandon\nStep I: abandon star players don't\nStep II: don't abandon star\n[abandon is alphabetically first and it comes to first place. Other remaining one place right. Then don't comes to second place and the remaining one place further towards right.]\nEx. 11: Input: star players don't abandon\nStep I: don't abandon players star\nStep II: don't abandon players star\n[Arrangement is in increasing order, filling are 'right-only'. So, alphabetically last word star comes to last place other words are shifted to the left. (star, players comes to the second last place and remaining words are shifted to the left.)]\nEx. 12: Input: players don't abandon\nStep I: abandon players don't star\nStep II: abandon don't players star\n[abandon is brought to the first place, and the word that was previously at first place interchanges position with abandon. In the next step, we bring don't at the second place. Earlier, players was at second place. So, don't and players interchanges places.]\nNote: Student must check and realise that Ex. 1 is based on interchange while Ex. 2 is based on push."
+    }
+  ],
+  "answers": [],
+  "_page": 255
+}

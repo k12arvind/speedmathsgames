@@ -1,0 +1,146 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Statement and Direction Based Questions",
+  "passages": [
+    {
+      "passage_text": "Below in the questions are given two statements A and B. These statements may be either independent causes or may be effects of independent causes or a common cause. One of these statements may be the effect of the other statement. Read both the statements and decide which of the following answer choices correctly depicts the relationship between these two statements.\nGive answer\n(a) if Statement A is the cause and Statement B is the effect\n(b) if Statement B is the cause and Statement A is the effect\n(c) if both the Statements A and B are independent causes\n(d) if both the Statements A and B are effects of independent causes\n(e) if both the Statements A and B are effects of common cause",
+      "has_figure": false,
+      "topic_code": "cause_effect"
+    },
+    {
+      "passage_text": "In each of these questions, two Statements I and II are given. These may have a cause and effect relationship or may have independent causes or be the effects of independent causes.\nGive answer\n(a) if Statement I is the causes and Statement II is its effect\n(b) if Statement II is the cause and Statement I is its effect\n(c) if both Statements I and II are effects of independent causes\n(d) if both Statements I and II are effects of some common cause",
+      "has_figure": false,
+      "topic_code": "cause_effect"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "statement_direction",
+      "subtopic_name": "Statement and Direction Based",
+      "body": "A. Police resorted to lathi charge to disperse the unlawful gathering of large number of people.\nB. The citizen's forum called a general strike in protest against the police atrocities.",
+      "choices": {
+        "a": "if Statement A is the cause and Statement B is the effect",
+        "b": "if Statement B is the cause and Statement A is the effect",
+        "c": "if both the Statements A and B are independent causes",
+        "d": "if both the Statements A and B are effects of independent causes",
+        "e": "if both the Statements A and B are effects of common cause"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "statement_direction",
+      "subtopic_name": "Statement and Direction Based",
+      "body": "A. There is increase in water level of all water tanks supplying drinking water to the city during the last fort night.\nB. Most of the trains were cancelled last week due to water logging on the tracks.",
+      "choices": {
+        "a": "if Statement A is the cause and Statement B is the effect",
+        "b": "if Statement B is the cause and Statement A is the effect",
+        "c": "if both the Statements A and B are independent causes",
+        "d": "if both the Statements A and B are effects of independent causes",
+        "e": "if both the Statements A and B are effects of common cause"
+      },
+      "correct": "e",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "statement_direction",
+      "subtopic_name": "Statement and Direction Based",
+      "body": "A. Earnings of all the government employees have gone up with the revision of pay scales.\nB. Salaries of employees in the private companies are being revised from time to time.",
+      "choices": {
+        "a": "if Statement A is the cause and Statement B is the effect",
+        "b": "if Statement B is the cause and Statement A is the effect",
+        "c": "if both the Statements A and B are independent causes",
+        "d": "if both the Statements A and B are effects of independent causes",
+        "e": "if both the Statements A and B are effects of common cause"
+      },
+      "correct": "e",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "statement_direction",
+      "subtopic_name": "Statement and Direction Based",
+      "body": "I. The prices of petroleum products dropped marginally last week.\nII. The State Government reduced the tax on petroleum products last week.",
+      "choices": {
+        "a": "if Statement I is the causes and Statement II is its effect",
+        "b": "if Statement II is the cause and Statement I is its effect",
+        "c": "if both Statements I and II are effects of independent causes",
+        "d": "if both Statements I and II are effects of some common cause"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "cause_effect",
+      "topic_name": "Cause and Effect",
+      "subtopic_code": "statement_direction",
+      "subtopic_name": "Statement and Direction Based",
+      "body": "I. Many people visited the religious place during the weekend.\nII. Few people visited the religious place during the week days.",
+      "choices": {
+        "a": "if Statement I is the causes and Statement II is its effect",
+        "b": "if Statement II is the cause and Statement I is its effect",
+        "c": "if both Statements I and II are effects of independent causes",
+        "d": "if both Statements I and II are effects of some common cause"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Clearly, the people's mass protest against the police might have instigated the latter to indulge in lathi charge to disperse the people. Hence, A is the cause and B is its effect. Thus, option (a) is the correct."
+    },
+    {
+      "number": 2,
+      "solution": "The problems discussed in both the statements are clearly the result of heavy rain in the area. Hence, A and B both are effects of common cause. Therefore, option (e) is correct."
+    },
+    {
+      "number": 3,
+      "solution": "Both the Statements A and B are effect of some common causes."
+    },
+    {
+      "number": 4,
+      "solution": "State Government reduced the tax on petroleum products last week, that is why the price of petroleum products dropped marginally, so Statement II is the cause and Statement I is the effect."
+    },
+    {
+      "number": 5,
+      "solution": "Both statements are effects of independent causes."
+    }
+  ],
+  "answers": [],
+  "_page": 1133
+}

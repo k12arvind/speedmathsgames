@@ -1,0 +1,84 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 15,
+      "solution": "Conclusions: I. Some forces are definitely not powers. (✓) II. No heat is force. (✓) Conclusions: I. No energy is heat. (✓) II. Some forces being heat is a possibility. (✓)"
+    },
+    {
+      "number": 16,
+      "solution": "Conclusions: I. No energy is heat. (✓) II. Some forces being heat is a possibility. (✓)"
+    },
+    {
+      "number": 17,
+      "solution": "Conclusions: I. No coin is plastic. (✓) II. All plastics being metals is a possibility. (✓)"
+    },
+    {
+      "number": 18,
+      "solution": "Conclusions: I. No metal is plastic. (✓) II. All metals being plastics. (✗)"
+    },
+    {
+      "number": 19,
+      "solution": "I. Some apples are carrots. (✗) II. Some bananas are brinjals. (✓) III. Some bananas are carrots. (✗)"
+    },
+    {
+      "number": 20,
+      "solution": "I. Some cars are locks. (✓) II. Some bangles are keys. (✓) III. Some cars are keys. (✓)"
+    },
+    {
+      "number": 21,
+      "solution": "I. Some houses are fruits. (✗) II. Some trees are fruits. (✗) III. No house is a fruit. (✗) Complementary pair (I-E)"
+    },
+    {
+      "number": 22,
+      "solution": "I. Some glasses are mirrors. (✓) II. Some chairs are tables. (✗) III. Some mirrors are tables. (✗)"
+    },
+    {
+      "number": 23,
+      "solution": "I. Some machines are boxes. (✗) II. Some taps are calculators. (✓) III. Some boxes are calculators. (✓)"
+    }
+  ],
+  "answers": [
+    {
+      "number": 15,
+      "correct": "b"
+    },
+    {
+      "number": 16,
+      "correct": "c"
+    },
+    {
+      "number": 17,
+      "correct": "e"
+    },
+    {
+      "number": 18,
+      "correct": "d"
+    },
+    {
+      "number": 19,
+      "correct": "b"
+    },
+    {
+      "number": 20,
+      "correct": "e"
+    },
+    {
+      "number": 21,
+      "correct": "c"
+    },
+    {
+      "number": 22,
+      "correct": "c"
+    },
+    {
+      "number": 23,
+      "correct": "c"
+    }
+  ],
+  "_page": 1180
+}

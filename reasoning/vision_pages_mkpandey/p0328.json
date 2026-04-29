@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "There is a group of six persons in a family: A, B, C, D, E and F. There are two married couples in the family. A is the most talkative in the family while D talks less than E or C. B is not as talkative as D or F. F is more talkative in the family is married to the second most talkative in the family. There are three females and three males. Nobody in the widow or a widower. D is an unmarried male; B is a female. A is of the same sex as the unmarried person other than D. F is married and is not of the same sex as A or married to A. The marital status of the most talkative and the least talkative of the family is the same.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 79,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Arrangement Puzzle",
+      "body": "Who is the most talkative member of the family?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Arrangement Puzzle",
+      "body": "Which of the following represents a correct couple?",
+      "choices": {
+        "a": "EB",
+        "b": "AB",
+        "c": "AC",
+        "d": "Can't say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 81,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Arrangement Puzzle",
+      "body": "Who is the third most talkative in the family?",
+      "choices": {
+        "a": "F",
+        "b": "C",
+        "c": "Can't say",
+        "d": "None of these",
+        "e": null
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Arrangement Puzzle",
+      "body": "The marital status of F and the least talkative person are:",
+      "choices": {
+        "a": "Married, Married",
+        "b": "Married, Unmarried",
+        "c": "Unmarried, Married",
+        "d": "Unmarried, Unmarried",
+        "e": null
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Arrangement Puzzle",
+      "body": "Which set of statements is sufficient to find out the least talkative person of the family?",
+      "choices": {
+        "a": "I, II, IV",
+        "b": "II, IV, VII",
+        "c": "III, IV, V, VI, VII, VIII",
+        "d": "II, III, V, VI",
+        "e": "All are sufficient for the upcoming"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 328
+}

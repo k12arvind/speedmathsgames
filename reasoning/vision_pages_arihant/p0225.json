@@ -1,0 +1,104 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(c) The pattern is as follows\n6 → 9 → 12 → 15 → 18 → 21\n+3 +3 +3 +3 +3\n∴ ? = 20"
+    },
+    {
+      "number": 2,
+      "solution": "(c) The pattern is as follows\n15 → 30 → 60 → 120 → 240 → 480\n×2 ×2 ×2 ×2 ×2\n∴ ? = 480"
+    },
+    {
+      "number": 3,
+      "solution": "(b) The pattern is as follows\n360 → 180 → 90 → 45 → 22.5 → 11.25\n÷2 ÷2 ÷2 ÷2 ÷2\n∴ ? = 11.25"
+    },
+    {
+      "number": 4,
+      "solution": "(d) The pattern is as follows\n4 → 5 → 7 → 10 → 14 → 19 → 25\n+1 +2 +3 +4 +5 +6\n∴ ? = 25"
+    },
+    {
+      "number": 5,
+      "solution": "(d) The pattern is as follows\n3.5 → 7 → 10.5 → 14 → 17.5\n+3.5 +3.5 +3.5 +3.5\n∴ ? = 17.5"
+    },
+    {
+      "number": 6,
+      "solution": "(c) The pattern is as follows\n445 → 444 → 442 → 439 → 435 → 430\n-1 -2 -3 -4 -5\n∴ ? = 430"
+    },
+    {
+      "number": 7,
+      "solution": "(c) The pattern is as follows\n12 → 12 → 24 → 72 → 288 → 1440\n×1 ×2 ×3 ×4 ×5\n∴ ? = 1440"
+    },
+    {
+      "number": 8,
+      "solution": "(c) The pattern is as follows\n7 → 12 → 19 → 28 → 39 → 52\n+5 +7 +9 +11 +13\n∴ ? = 52"
+    },
+    {
+      "number": 9,
+      "solution": "(c) The pattern is as follows\n36 → 28 → 24 → 22 → 21\n-8 -4 -2 -1\n∴ ? = 21"
+    },
+    {
+      "number": 10,
+      "solution": "(c) The pattern is as follows\n7 → 9 → 13 → 21 → 37 → 69\n+2 +4 +8 +16 +32\n∴ ? = 69"
+    }
+  ],
+  "answers": [
+    {
+      "number": 55,
+      "correct": "a"
+    },
+    {
+      "number": 56,
+      "correct": "d"
+    },
+    {
+      "number": 57,
+      "correct": "d"
+    },
+    {
+      "number": 58,
+      "correct": "d"
+    },
+    {
+      "number": 59,
+      "correct": "d"
+    },
+    {
+      "number": 60,
+      "correct": "d"
+    },
+    {
+      "number": 61,
+      "correct": "d"
+    },
+    {
+      "number": 62,
+      "correct": "d"
+    },
+    {
+      "number": 63,
+      "correct": "c"
+    },
+    {
+      "number": 64,
+      "correct": "d"
+    },
+    {
+      "number": 65,
+      "correct": "d"
+    },
+    {
+      "number": 66,
+      "correct": "b"
+    },
+    {
+      "number": 67,
+      "correct": "c"
+    }
+  ],
+  "_page": 225
+}

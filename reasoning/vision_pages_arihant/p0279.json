@@ -1,0 +1,83 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 10,
+      "solution": "(c) The numerical sequence is formed by the squares of 1, 2, 3 and 4. The numbers also mark the position of the letters A, D, I and P in the alphabetical series. These numbers and letters are present in zigzag pattern. As, A M 13 2, B S 14 3, N O 18 3 and R C 19 4, S T 20 4. Similarly, E U 21 5, F V 22 6. Hence, V will come in place of question mark."
+    },
+    {
+      "number": 11,
+      "solution": "(a) The pattern is as follows [detailed pattern with numbers and arrows shown]. Hence, option (a) is the correct answer"
+    },
+    {
+      "number": 12,
+      "solution": "(d) Moving columnwise, we have D +2 → F +4 → H and M +3 → P +3 → S. Similarly, V +4 → Z +4 → D. So, missing character is D"
+    },
+    {
+      "number": 13,
+      "solution": "(d) Moving clockwise, the pattern is as follows [detailed pattern with numbers]. So, missing character is D"
+    },
+    {
+      "number": 14,
+      "solution": "(a) As, A +3 → D +4 → 8 and B +3 → F +4 → J. Similarly, K +3 → N +4 → R. Hence, option (a) is the correct answer"
+    },
+    {
+      "number": 15,
+      "solution": "(c) Here, H = 8, B = 2 and 8 × 2 = 16 = P. Similarly, C = 3, F = 6 and 3 × 6 = 18 = R. Now, in column III, E = 5 and T = 20. ∴ ? = D such that 4 × 5 = 20"
+    },
+    {
+      "number": 16,
+      "solution": "(b) Here, G 9 15, H I = O. Similarly, J 10 11 A + J = K, 5 13 18 E + M = R. Hence, option (b) is the correct answer."
+    },
+    {
+      "number": 17,
+      "solution": "(b) In each cell, pair of opposite letters is given. ∴ G +1 → H and opposite letter of H is S. ∴ HS will come in place of question mark."
+    },
+    {
+      "number": 18,
+      "solution": "(d) Consecutive letters occupy alternate positions in each row."
+    },
+    {
+      "number": 19,
+      "solution": "(d) The pattern in the question is Top part = KL (MN) OP Bottom part = DE (FG) HI ∴ H will come in place of question mark."
+    },
+    {
+      "number": 20,
+      "solution": "(c) There are four opposite letter pairs in the question and their sum is equal to 27. Pairs are as follows. AZ, DW, H ? and KP ∴ Letter opposite to H is S. Hence, S will come in place of question mark."
+    },
+    {
+      "number": 21,
+      "solution": "(c) In the given question, first skip one letter, then two letters to form the series in anti-clockwise direction. [diagram showing circular pattern] As, Q - N = 3 Similarly, N - 2 = L ∴ Hence, L will come in place of question mark."
+    },
+    {
+      "number": 22,
+      "solution": "(c) In the given question, the letters zigzag from top to bottom and bottom to top with a gap of one letter each time. Hence, I will come in place of question mark."
+    },
+    {
+      "number": 23,
+      "solution": "(d) The gaps between the top and bottom letters in each domino form the series 4, 6, 8, 10. The final gap will therefore be 10. ∴ ? = E + 10 ? = O"
+    },
+    {
+      "number": 24,
+      "solution": "(b) The letters in the upper half of square have their corresponding position numbers in the second half (bottom) of square. ∴ ? = 13 = M"
+    },
+    {
+      "number": 25,
+      "solution": "(b) The letters zigzag from top to bottom and have gaps of + 1, + 2, + 3, + 4 and + 5. The numbers are their respective position numbers in backward order. ∴ R, S, T, U, V, W, X 5 letters And position of X in backward order is 3. ∴ ? = 3 ? = X"
+    },
+    {
+      "number": 26,
+      "solution": "(c) The letters in the upper half of the circle follow the sequence P (QR) S (TU) V (WX) Y and the numbers represent their respective positions in backward order. ∴ ? = Z"
+    },
+    {
+      "number": 27,
+      "solution": "(d) According to the English alphabet, |(1 + 26) - (3 + 24) = 0| A Z C X (letter X is at 24th position in English alphabet)"
+    }
+  ],
+  "answers": [],
+  "_page": 279
+}

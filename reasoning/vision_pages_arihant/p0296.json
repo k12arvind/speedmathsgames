@@ -1,0 +1,63 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 27,
+      "solution": "(C) According to the question, Priti > Rahul ; Yamuna = Divya, Lokita < Manju ; Rahul > Yamuna, Manju > Divya. ∴ Priti > Rahul > Yamuna = Divya > Manju > Lokita. So, it is clear from the above arrangement, Lokita scored lowest among them."
+    },
+    {
+      "number": 28,
+      "solution": "(C) According to the question, R > P/U ; T/Q > S, T/Q > S ; R > P/U. ∴ 3rd tallest = S"
+    },
+    {
+      "number": 29,
+      "solution": "(d) According to the question, Sita > Kanika, Sita > Ila, Manasa/Kanika > Shempa, Kanika > Manas. ∴ Sita > Ila > Kanika > Manas > Shempa. So, Shempa is youngest among them."
+    },
+    {
+      "number": 30,
+      "solution": "(d) According to the question, Umesh > Satish, Neeraj > Suresh > Umesh. ∴ Neeraj > Suresh > Umesh > Satish. So, Neeraj is tallest among them."
+    },
+    {
+      "number": 31,
+      "solution": "(d) Given, third highest marks = 81 and E's marks = 62. Hence, C's marks lie between 62 and 81. ∴ C's possible marks = 70"
+    },
+    {
+      "number": 32,
+      "solution": "(e) None is true with respect to the given information."
+    },
+    {
+      "number": 33,
+      "solution": "(c) Since, B scored highest marks. ∴ B's marks = F's marks + 13 = 81 + 13 = 94, D scored second highest marks. So, D scored marks between 81 and 94. Hence, D's possible marks = 89"
+    },
+    {
+      "number": 34,
+      "solution": "(d) If V ranks fifth, then P and Q coming after V will occupy sixth and seventh places respectively i.e., Q ranks the least. So, S will score the highest."
+    },
+    {
+      "number": 35,
+      "solution": "(c) If R gets the most, T ranks lowest and occupies seventh place. Since V always ranks above P and Q, so at the maximum, P and Q will occupy fifth and sixth places. Hence, V will not rank lower than fourth."
+    },
+    {
+      "number": 36,
+      "solution": "(d) If S ranks 2nd, R ranks 1st and T ranks lowest. The order V > P > Q will be followed, out of all the given options, only the arrangement given as per option (d) i.e., R > S > U > V > P > Q > T is possible. Clearly, options (a), (b) and (c) cannot follow. So, option (d) is correct."
+    },
+    {
+      "number": 37,
+      "solution": "(d) If S is ranked 6th and Q is ranked 5th, we have O > O > O > O > Q > S > O. In this case, R will rank the highest and thus T will rank the least. We have, R > Q > O > O > O > S > T. Also, the order V > P > Q will be maintained. The possible arrangements are R > U > V > P > Q > S > T or R > V > U > P > Q > S > T or R > V > P > U > Q > S > T. Thus, option (d), i.e., U can be ranked third or fourth is true."
+    },
+    {
+      "number": 38,
+      "solution": "(d) If R is ranked 2nd, S will rank 1st and Q or U lowest but Q ranks 5th. So, U ranks lowest. Also, the order V > P > Q will be followed. ∴ Arrangement S > R > V > P > Q > T > U. Hence, 6th place will be occupied by T."
+    },
+    {
+      "number": 39,
+      "solution": "(d) All are needed."
+    }
+  ],
+  "answers": [],
+  "_page": 296
+}

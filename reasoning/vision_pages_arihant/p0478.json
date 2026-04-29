@@ -1,0 +1,278 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Direction and Distance",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. Four security guards P, Q, R and S have been posted at the four corners of a huge cashew plantations farm as show in the above figure.",
+      "has_figure": true,
+      "topic_code": "direction_sense"
+    }
+  ],
+  "questions": [
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "movement_tracking",
+      "subtopic_name": "Movement Tracking",
+      "body": "Given the condition that none of the corners should be unmanned and both P and R start moving towards diagonally opposite corners, in which direction should S start moving, so that he occupies a corner by travelling the minimum possible distance?",
+      "choices": {
+        "a": "Clockwise",
+        "b": "Anti-clockwise",
+        "c": "Either clockwise or anti-clockwise",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "position_change",
+      "subtopic_name": "Position Change",
+      "body": "From the original position, P and Q move one arm length clockwise and then cross over to the corner diagonally opposite, R and S move one arm length anti-clockwise and cross over to the corner diagonally opposite. The original setting PSQR has now changed to",
+      "choices": {
+        "a": "RSPQ",
+        "b": "SRPQ",
+        "c": "RQSP",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "position_tracking",
+      "subtopic_name": "Position Tracking",
+      "body": "From the original position, P and R move diagonally to opposite corners and then one side each in the clockwise direction. Which of the corners is unmanned at the end?",
+      "choices": {
+        "a": "South-West",
+        "b": "South-East",
+        "c": "North-East",
+        "d": "North-West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "position_tracking",
+      "subtopic_name": "Position Tracking",
+      "body": "After the movement in 25, who is at the North-West corner?",
+      "choices": {
+        "a": "Only P",
+        "b": "Q and R",
+        "c": "P and Q",
+        "d": "S and R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "distance_direction",
+      "subtopic_name": "Distance and Direction",
+      "body": "Kailash faces towards North. Turning to his right, he walks 25 m. He turns to his left and walks 30 m. Next, he moves 25 m to his right. He, then turns to his right again and walks 55 m. Finally, he turns to the right and moves 40 m. In which direction he is now from his starting point?",
+      "choices": {
+        "a": "South-West",
+        "b": "South",
+        "c": "North-West",
+        "d": "South-East"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "shadow_direction",
+      "subtopic_name": "Shadow Direction",
+      "body": "One morning after sunrise, Suraj was standing facing a pole. The shadow of the pole fell exactly to his right. Which direction was Suraj facing?",
+      "choices": {
+        "a": "West",
+        "b": "South",
+        "c": "East",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "direction_tracking",
+      "subtopic_name": "Direction Tracking",
+      "body": "One evening, Raja started to walk towards the Sun. After walking a while, he turned to his right and again to his right. After walking a while, he again turned right. In which direction is he facing?",
+      "choices": {
+        "a": "South",
+        "b": "East",
+        "c": "West",
+        "d": "North"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Five boys A, B, C, D and E are sitting in a park in a circle. A is facing South-West, D is facing South-East, B and E are right opposite A and D respectively and C is equidistant between D and B. Which direction is C facing?",
+      "choices": {
+        "a": "West",
+        "b": "South",
+        "c": "North",
+        "d": "East"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "shadow_direction",
+      "subtopic_name": "Shadow Direction",
+      "body": "Daily in the morning the shadow of Gol Gumbaz falls on Bara Kaman and in the evening the shadow of Bara Kaman falls on Gol Gumbaz exactly. So in which direction is Gol Gumbaz to Bara Kaman?",
+      "choices": {
+        "a": "Eastern side",
+        "b": "Western side",
+        "c": "Northern side",
+        "d": "Southern side"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "relative_direction",
+      "subtopic_name": "Relative Direction",
+      "body": "Y is in the East of X which is in the North of Z. If P is in the South of Z, then in which direction of Y is P?",
+      "choices": {
+        "a": "North",
+        "b": "East",
+        "c": "South-East",
+        "d": "South-West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "direction_tracking",
+      "subtopic_name": "Direction Tracking",
+      "body": "At dusk, Rohit started walking facing the Sun. After a while, he met his friend and both turned to their left. They halted for a while and started moving by turning again to their right. Finally Rohit waved 'good bye' to his friend and took a left turn at a corner. which direction is Rohit moving now?",
+      "choices": {
+        "a": "South",
+        "b": "West",
+        "c": "North",
+        "d": "East"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "direction_tracking",
+      "subtopic_name": "Direction Tracking",
+      "body": "Debu walks towards East, then towards North and turning 45° right walks for a while and lastly turns towards left. In which direction is he walking now?",
+      "choices": {
+        "a": "North",
+        "b": "East",
+        "c": "South-East",
+        "d": "North-West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "direction_tracking",
+      "subtopic_name": "Direction Tracking",
+      "body": "Prakash walked 30 m towards West, took a left turn and walked 20 m. He again took a left turn and walked 30 m, then took a right turn and stopped. Towards which direction was he facing when he stopped?",
+      "choices": {
+        "a": "South",
+        "b": "North",
+        "c": "East",
+        "d": "Data inadequate",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 478
+}

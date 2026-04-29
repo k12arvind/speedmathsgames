@@ -1,0 +1,60 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "If A means '+', B means '÷', C means '×', then find the value of following equation. 46 A 2 B 3 C 4 = ?",
+      "choices": {
+        "a": "34",
+        "b": "23",
+        "c": "17",
+        "d": "11"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "If '+' means '×', '–' means '+', '+' means '+' and '×' means '÷', then what will be the value of 16 + 64 – 4 × 4 + 3 = ?",
+      "choices": {
+        "a": "20",
+        "b": "52",
+        "c": "15",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "According to the question, ? = 46 A 2 B 3 C 4. ⇒ ? = 46 + 2 ÷ 3 × 4 = 23 – 3 × 4 = 23 – 12 = 11 (using VBODMAS rule)"
+    },
+    {
+      "number": 4,
+      "solution": "According to the question, 16 + 64 – 4 × 4 + 3 = ?. So, 16 + 64 ÷ 4 – 4 × 3 = ? ⇒ 16 + 16 – 4 × 3 = ? ⇒ 16 + 16 – 12 = ? ⇒ 32 – 12 = ? ∴ ? = 20 (using VBODMAS rule)"
+    }
+  ],
+  "answers": [],
+  "_page": 312
+}

@@ -1,0 +1,77 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 4 Double Analogy",
+  "passages": [
+    {
+      "passage_text": "In the following questions, find out the correct pair of words which will make an appropriate analogical relationship between the two words to the left of the sign of double colon and the same relationship between the two words to the right of the sign of double colon (::).",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "double_analogy",
+      "subtopic_name": "Double Analogy",
+      "body": "A : Ship :: Platform : B",
+      "choices": {
+        "a": "A. Caption, B. Coolie",
+        "b": "A. Port, B. Station",
+        "c": "A. Quay, B. Train",
+        "d": "A. Shore, B. Bench"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "double_analogy",
+      "subtopic_name": "Double Analogy",
+      "body": "A : Roots :: House : B",
+      "choices": {
+        "a": "A. Branches, B. Walls",
+        "b": "A. Trunk, B. Floor",
+        "c": "A. Flower, B. Walls",
+        "d": "A. Tree, B. Foundation"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "double_analogy",
+      "subtopic_name": "Double Analogy",
+      "body": "A : Square :: Arc : B",
+      "choices": {
+        "a": "A. Line, B. Circle",
+        "b": "A. Perimeter, B. Circumference",
+        "c": "A. Line, B. Diameter",
+        "d": "A. Rectangle, B. Chord"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 33
+}

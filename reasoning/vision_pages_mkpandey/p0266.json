@@ -1,0 +1,110 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-5): A number arrangement machine, when given an input line of numbers, rearranges it following a particular rule. The following is an illustration of the input and the steps of arrangement:\nInput: 44 28 24 35 17 8\nStep I: 8 2 6 1 7 5 4\nStep II: 60 0 32 3 8 21 12\nStep III: 6 0 5 3 9 3 3\nStep IV: 7 4 14 13 34 39 52\nStep V: 15 12 22 21 42 47 60\nStep VI: 6 3 4 3 6 2 6",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "What will be the 4th step of the following input?\nInput: 23, 61, 15, 35, 54, 75, 85",
+      "choices": {
+        "a": "4, 13, 14, 22, 30, 41, 52",
+        "b": "3, 13, 14, 20, 30, 41, 52",
+        "c": "4, 14, 13, 22, 32, 41, 52",
+        "d": "5) None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "In how many steps would the following arrangement be yielded by the given input?\nInput: 61, 23, 21, 52, 31, 81",
+      "choices": {
+        "a": "1, 3, 16, 14, 45, 24, 12",
+        "b": "1V",
+        "c": "11)",
+        "d": "5) None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "The first step of the given Input is 7, 12, 11, 8, 6, 2, 4, 6. What will be the input?",
+      "choices": {
+        "a": "61, 30, 92, 44, 15, 11, 13",
+        "b": "61, 30, 56, 17, 15, 20, 13",
+        "c": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "What will be step IV for the following input?\n10, 11, 12, 13, 14, 15, 16",
+      "choices": {
+        "a": "5, 9, 4, 16, 22, 23, 38",
+        "b": "1, 4, 9, 16, 25, 36",
+        "c": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement Machine",
+      "body": "Soln: Here, the rule followed is:\nStep I: Digit-sum of input.\nStep II: Add 8 to each number of the input.\nStep III: Subtract 2 from each number of the input.\nStep IV: Subtract 10 from each number of the input and square it.\nStep V: Multiply each number of the input by 2 and subtract 10 from it.\nStep VI: Multiply each number of the input by 2 and add 1 to each.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 266
+}

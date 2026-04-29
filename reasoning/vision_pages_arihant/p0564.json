@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully and answer the questions given below it. The admission ticket for an exhibition bears a password which is changed after every clock hour based on set of words chosen for each day. The following is an illustration of the code and steps of rearrangement for subsequent clock hours. The time is 9 am to 3 pm.\n\nBatch I (9 am to 10 am) - is not ready cloth simple harmony burning\nBatch II (10 am to 11 am) - ready not is cloth burning harmony simple\nBatch III (11 am to 12 noon) - cloth is not ready simple harmony burning\nBatch IV (12 noon to 1 pm) - not is cloth ready burning harmony simple\nBatch V (1 pm to 2 pm) and so on - ready cloth is not simple harmony burning",
+      "has_figure": true,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "If the password for batch I was ...... 'rate go long top we let have', then which batch will have the password ...... 'go rate top long have let we'?",
+      "choices": {
+        "a": "II",
+        "b": "III",
+        "c": "IV",
+        "d": "V",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "Day's first password ..... 'camel road no toy say me not'. What will be the password for fourth batch, i.e., 12 noon to 1 pm?",
+      "choices": {
+        "a": "road camel toy no not me say",
+        "b": "no road camel toy not me say",
+        "c": "toy no road camel not me say",
+        "d": "toy camel road no say me not",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "If batch II has the password ...... 'came along net or else key lot', then what could be the password for batch IV i.e., 12 noon to 1 pm?",
+      "choices": {
+        "a": "net or cams along else key lot",
+        "b": "came or net along lot key else",
+        "c": "or net along came lot key else",
+        "d": "along net or came else key lot",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "If the password for 11 am to 12 noon was ..... 'soap shy miss pen yet the she', then what was the password for Batch I?",
+      "choices": {
+        "a": "pen miss shy soap she the yet",
+        "b": "shy miss pen soap yet the she",
+        "c": "soap pen miss shy she the yet",
+        "d": "miss shy soap pen she the yet",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "If the password for batch VI, i.e., 2 pm to 3 pm is ....... 'are trap cut he but say lap', then what will be the password for batch II, i.e., 10 to 11 am?",
+      "choices": {
+        "a": "trap are he cut lap say but",
+        "b": "he cut trap are lap say but",
+        "c": "cut he are trap but say lap",
+        "d": "are he cut trap lap say but",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 564
+}

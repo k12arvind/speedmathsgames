@@ -1,0 +1,67 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Inserting the Missing Character",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 44,
+      "solution": "(b) As, D L\n↓ ↓\n4 + 12 = 16, 16/2 = 8 and 8 + 2 = 10\nIt means, place number of letters are added and divided by 2, and the result thus obtained, is incremented by 2.\nSimilarly, K M\n↓ ↓\n11 + 13 = 24, 24/2 = 12 and 12 + 2 = 14\nP V\n↓ ↓\n16 + 22 = 38, 38/2 = 19 and 19 + 2 = 21\nHence, missing numbers are 14 and 21."
+    },
+    {
+      "number": 45,
+      "solution": "(a) As,\n(6 - 4)² = 2² = 4\n(8 - 5)² = 3² = 9\n(9 - 2)² = 7² = 49\nSimilarly, (7 - 6)² = 1² = 1\nHence, option (a) is the correct answer."
+    },
+    {
+      "number": 46,
+      "solution": "(d) Starting with the top most row, the number at the center of each row is the sum of the other numbers divided by 2\n1st row → (4 + 2) + 2 = 3\n2nd row → (5 + 3 + 1 + 1) + 2 = 5\n3rd row → (6 + 1 + 2 + 3 + 3 + 1) + 2 = 8\n4th row → (7 + 2 + 4 + 3) + 2 = 8\n5th row → (9 + 3) + 2 = 6\n∴ ? = 6"
+    },
+    {
+      "number": 47,
+      "solution": "(b) The top left hand number is obtained by adding the bottom two numbers. The top right hand number is the result of dividing the bottom two numbers.\nThus, 12 + 3 = 15, 12 ÷ 3 = 4,\n22 + 11 = 33, 22 ÷ 11 = 2,\n18 + 9 = 27, 18 ÷ 9 = 2.\nSo, 32 + x = 36 and 32 ÷ x = 8 or x = 4"
+    },
+    {
+      "number": 48,
+      "solution": "(b) Each connected straight line of three numbers totals 20.\n∴ 4 + 7 + ? = 20\n? = 20 - 11\n? = 9"
+    },
+    {
+      "number": 49,
+      "solution": "(d) Each number is the product of the number of sides in the shape enclosing it and its position in the sequence. Since the octagon has 8 sides and is 6th in the sequence, the number inside it should be 8 × 6 = 48.\n∴ ? = 48"
+    },
+    {
+      "number": 50,
+      "solution": "(c) Here, the pattern is as follows\n(Smokestack - Left wheel) x Right wheel = Body\nAs, (13 - 5) × 3 = 8 × 3 = 24\n(18 - 5) × 2 = 13 × 2 = 26\nand (16 - 9) × 4 = 7 × 4 = 28\nSimilarly, (15 - 7) × 2 = 8 × 2 = 16\n∴ ? = 16"
+    },
+    {
+      "number": 51,
+      "solution": "(d) Here, the pattern is\n[Table showing: a | b | c\n(2×c)+1 | (b-c)² | (2×b)+1]\n∴ First number = (25 × 2) + 1 = 51\nSecond number = (30 - 25)² = 25\nand third number = (30 × 2) + 1 = 61\nHence, 51, 25, 61 are the three missing terms."
+    },
+    {
+      "number": 52,
+      "solution": "(b) The letters progress in clockwise direction starting from D and the next letter is obtained by following the below skipping pattern\nD (E) (F) (G) H (I) (J) K L (M) N (O) P (QR) S (T) U. The numbers are their respective positions in backward order.\n∴ ? = 11\nP"
+    },
+    {
+      "number": 53,
+      "solution": "(b) The pattern is 9 × 9 - 5 × 3 = 66\n8 × 4 - 5 × 4 = 12\n9 × 7 - 6 × 2 = 51\nA +5→ F +4→ K +5→ P +5→ U +5→ Z +5→\nE +5→ J +5→ O +5→ T +5→ Y +5→ D\nHence, 51 and Y are the correct answer"
+    },
+    {
+      "number": 54,
+      "solution": "(c) 2 + 9 = 11\n9 - 2 = 7\nAlso, 8 + 5 = 13\n5 - 8 = -3\nNow, 7 + ? = 10\n? = 10 - 7 = 3\nAlso, 4 - 6 = ?\n? = -2\nSo, the correct options are 3 and (-2)."
+    },
+    {
+      "number": 55,
+      "solution": "(c) The numbers at the top left corners decrease by 17, then 15, then 13, etc. The numbers at the top right corners are consecutive primes in descending order. The letters move two letters forward each time.\ni.e., E +2→ G +2→ I +2→ K +2→ M +2→ O +2→ Q\nSo, the correct answer is\n[Triangle diagram showing 67 at top, 7 on right]\nQ"
+    },
+    {
+      "number": 56,
+      "solution": "(c) In rows, the pattern is +3, -7, +2, +19\nIn columns, the pattern is -4, +8, -6, +15\nSo, the correct answer is as given in option (a)."
+    },
+    {
+      "number": 57,
+      "solution": "(b) As, 7² + 2 = 49 + 2 = 51\n6² + 4 = 36 + 4 = 40\nSimilarly, 5² + ? = 28\n? = 3"
+    }
+  ],
+  "answers": [],
+  "_page": 288
+}

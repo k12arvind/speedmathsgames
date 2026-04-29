@@ -1,0 +1,112 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "government_action",
+      "subtopic_name": "Government Action",
+      "body": "Statement: Some newspapers have alleged that some of our senior sportsmen witnessed bribes by their adversary team to gain victory.",
+      "choices": {
+        "1": "I and II follow",
+        "2": "II and III follow",
+        "3": "I and III follow",
+        "4": "II and III follow",
+        "5": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "disciplinary_action",
+      "subtopic_name": "Disciplinary Action",
+      "body": "Statement: The Disciplinary Action Committee of the school has recommended that stern action be taken against students indulging in anti-social behaviour.",
+      "choices": {
+        "1": "Only I follows",
+        "2": "Only II follows",
+        "3": "Only III follows",
+        "4": "II and III follow",
+        "5": "I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "violence_prevention",
+      "subtopic_name": "Violence Prevention",
+      "body": "Statement: Violence on an unprecedented scale is being feared in the next elections.",
+      "choices": {
+        "1": "Only I follows",
+        "2": "Only II follows",
+        "3": "Either II or III follows",
+        "4": "I and II follow",
+        "5": "Only II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "work_improvement",
+      "subtopic_name": "Work Improvement",
+      "body": "Statement: The office working committee has suggested that in view of the poor production in the company, efforts should be made to improve the work culture.",
+      "choices": {
+        "1": "Only I follows",
+        "2": "Either I or II follows",
+        "3": "Either II or III follows",
+        "4": "I and II follow",
+        "5": "Only II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "When the Government takes such an action it is necessary that people are made aware of the consequences they would face if they do not obey the directives. Hence, II follows. I is obvious."
+    },
+    {
+      "number": 2,
+      "solution": "If students are out of the school during school hours, it is a case of sheer indiscipline. Both I and II will tend to solve the problem. Also, both are suitable courses of action and not extreme actions. Both warning and some punishment are necessary; both follow."
+    },
+    {
+      "number": 3,
+      "solution": "I will not solve the problem; the problem is not wastage of money; it is non-performance. Also, it is an extreme action. Hence, I does not follow. II will be a positive action. The first step towards a cure is to know the disease. Hence, II follows."
+    },
+    {
+      "number": 4,
+      "solution": "Against an epidemic, precautionary measures should be taken every year and not every four years. Hence, I does not follow. But II is, of course, a positive step. It is a preventive action and it should be followed. Hence, I does not follow while II does."
+    }
+  ],
+  "answers": [],
+  "_page": 103
+}

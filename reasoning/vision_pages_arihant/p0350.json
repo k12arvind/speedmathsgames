@@ -1,0 +1,67 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 13,
+      "solution": "(e) According to the question,\nZ = C\nB < A = N\nC < B\nOn combining the statements (i), (ii) and (iii), we get\nZ = C< B< A = N\nConclusions I. Z < B (true)\nII. N > Z (true)\nSo, it is clear that both Conclusions I and II are true."
+    },
+    {
+      "number": 14,
+      "solution": "(d) According to the question,\nT < V = W\nX ≥ Y\nW > X\nOn combining statements (i), (ii) and (iii) we get\nT < V = W > X ≥ Y\nConclusions I. V > Y (true)\nII. V < X (false)\nSo, it is clear that only Conclusion I is true."
+    },
+    {
+      "number": 15,
+      "solution": "(b) According to the question,\nJ ≥ K > P = R < N = S\nConclusions I. S ≥ P (false)\nII. J > R (true)\nSo, it is clear that only Conclusion I is true."
+    },
+    {
+      "number": 16,
+      "solution": "(d) (20 – 4) × 4 + 16 = 36\n⇒ (20 ÷ 4) × 4 + 16 = 36\n⇒ 5 × 4 + 16 = 36"
+    },
+    {
+      "number": 17,
+      "solution": "(c) 2 × 3 + 6 – 12 + 4 = 17\n⇒ 2 + 3 × 6 – 12 + 4 = 17\n⇒ 2 + 18 – 3 = 17"
+    },
+    {
+      "number": 18,
+      "solution": "(b) Let us check all the options one by one.\nFrom option (a),\n33 + 11 – 3 × 6 = 115 ⇒ 33 + 11 – 18 = 115\n⇒ 44 – 18 = 115 ⇒ 26 = 115\n∴ LHS ≠ RHS\nSo, option (a) is incorrect.\nFrom option (b),\n33 × 11 + 3 – 6 = 115 ⇒ 33 × 11/3 – 6 = 115\n⇒ 121 – 6 = 115 ⇒ 115 = 115\n∴ LHS = RHS\nSo, option (b) is correct and there is no need to check other options."
+    },
+    {
+      "number": 19,
+      "solution": "(c) Let us check all the options one by one.\nFrom option (a),\n8 2 + 3 5 ÷ 5 5 = 2\n↓ ↓ ↓ ↓ ↓ ↓\n6 + 4 × 8 ÷ 8 8\n⇒ 52 + 38 – 88 = 2 ⇒ 90 – 88 = 2\n⇒ 2 = 2 ⇒ LHS = RHS\nClearly, option (a) is correct and hence there is no need to check remaining options."
+    },
+    {
+      "number": 20,
+      "solution": "(c) Let us check all the options one by one.\nFrom option (a), 2 3 ÷ 1 7 × 1 3 = 1241\n↓ ↓ ↓ ↓\n7 × 3 + 3 7\n⇒ 27 × 13 + 37 = 1241\n⇒ 351 + 37 = 1241\n⇒ 388 = 1241 ⇒ LHS ≠ RHS\nSo, option (a) is incorrect.\nFrom option (b),\n3 7 ÷ 1 3 × 12 = 112\n↓ ↓ ↓ ↓\n7 3 × 3 7 +\n⇒ 73 × 37 + 12 = 112 ⇒ 2701 + 12 = 12\n⇒ 2713 = 112 ⇒ LHS ≠ RHS\nSo, option (b) is incorrect.\nFrom option (c),\n23 × 17 + 3 7 = 428\n↓ ↓ ↓\n7 + 3 × 7 3\n⇒ 27 + 13 × 73 = 428 ⇒ 27 + 949 = 428\n⇒ 956 = 428 ⇒ LHS ≠ RHS\nSo, Option (c) is incorrect.\nFrom option (d), 3 + 17 × 7 3 = 388\n↓ ↓ ↓ ↓\n7 × 3 + 3 7\n⇒ 27 × 13 + 37 = 388 ⇒ 351 + 37 = 388\n⇒ 388 = 388 ⇒ LHS = RHS\nSo, Option (d) is correct."
+    },
+    {
+      "number": 21,
+      "solution": "(c) Let us check all the options one by one.\nFrom option (a),\n15 + 24 ÷ 3 – 6 = 17\n⇒ 15 + 8 – 6 = 17\n⇒ 23 – 6 = 17\n⇒ 17 = 17\n∴ LHS = RHS\nSo, option (a) is correct and hence, there is no need to check other options."
+    },
+    {
+      "number": 22,
+      "solution": "(b) S < R"
+    },
+    {
+      "number": 23,
+      "solution": "(b) After replacing the symbol\nP > L > A > N = T\nHence, P > A and T < L is definitely true."
+    },
+    {
+      "number": 24,
+      "solution": "(c) After placing the symbols,\nB > L = D = N ≥ D\nHence, B > N and D ≤ L, is definitely true."
+    },
+    {
+      "number": 25,
+      "solution": "(e) After placing the letters,\nP ≤ N < A ≥ L\nHence, A < P is false."
+    },
+    {
+      "number": 26,
+      "solution": "(c) After placing the symbols,\nF < O = U = N < D\nHence, F > N and U> D is definitely false."
+    }
+  ],
+  "answers": [],
+  "_page": 350
+}

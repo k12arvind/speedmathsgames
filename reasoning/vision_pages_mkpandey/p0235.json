@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 456,
+      "solution": "This concept and its fantastic uses will be explained by giving a simple pictorial example:\n\nNorth\n↑\nWest ←→ East\n↓\nSouth\n\nImagine that a man is standing at a place. Let the name of the place from (1) moves 1 km North and reaches 2, then he turns right and moves 1 km East and moves 1 km North and reaches 2, then he turns right and moves 1 km East and reaches 3 and so on ... This he is making a round tour of movement in moving 1 km east (call it operation 1) and then, he is moving 1 km North (call it operation 2). These two operations go on alternately.\n\nSince two operations are going on alternately, it is very much like an example of 2-step shifting.\n\n8 ←----- so on ...\n↑\n6 ←--- 7\n↑    ↓\n4 ←--- 5\n↑    ↓\n2 ←--- 3\n↑\n0 --- 1\n\nFig. I\n\nChain-splitting: Now, in the figure above, imagine that a person went East 2 to 7. For convenience sake, write it as:\n2 to 7.\n\nBut another person can say that the person went from 2 to 4 and then from 4 to 7. This also is, of course, correct; and this can be written as:\n2 to 4, 4 to 7.\n\nAnother person can insist that the journey be defined as 2 to 5 and 5 to 7.\nThis can be described as:\n2 to 5, 5 to 7."
+    },
+    {
+      "number": 457,
+      "solution": "Next Question (...contd.): Shifting\n\nBy this time, it must be clear that instead of writing one full sequence, we can split it (or cut sequence) at any convenient point and write a chain of sequences. Thus, in abstraction, we have:\na to b, b to c = a to c; c to d, d to e = c to e;\n4, 1, 2, 3: Application of golden rule:\n\nSometimes, it behaves like a 2-step shifting because two operations are on. For instance, we can expect that the golden rule will also work on this. For example 3 to 7. We see that the journey from 3 to 7 involves two steps:\ngoing 1 km North and then, two; going 1 km East. This can be illustrated as in the figure:\n\n[Figure showing steps with arrows]\n\nFig II A\n\nBut we see that, 3 to 5 also has similar changes and 1 to 3 also has similar changes.\n\n[Figure showing additional steps]\n\nFig II B\n\nTherefore, we can say that the change in going from 5 to 7 is same as the change in going from 3 to 5 which in turn is the same as the change in going from 1 to 3. Symbolically, this can be written as:\n5 to 7 = 3 to 5 = 1 to 3.\n\nSo, we see that\n5 to 7 = (5 - 2) to (7 - 2) = (5 - 2 × 2) to (7 - 2 × 2)\n\nTherefore, in this case, a multiple of 2 can be to or subtracted from both the numbers and the result denotes the same change. In other words, golden rule of reduction is being obeyed here.\n\n4, 1, 2, 3: Base-changing:\n\nEarlier we have seen that 2 to 7 can be written as 2 to 5, 5 to 7. Again, we find that golden rule can be applied to conclude that 5 to 7 = 1 to 3. Instead of these, we can conclude that 2 to 7 = 2 to 5, 1 to 3. What is the logic of this? The meaning is that if we went from 2 to 5 and then assumed that we reached 1 (not 5) and went from this (assumed) 1 to 3, we would finally be reaching 2 to 7. This can be explained by the following explanatory steps:"
+    }
+  ],
+  "answers": [],
+  "_page": 235
+}

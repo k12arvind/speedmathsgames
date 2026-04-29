@@ -1,0 +1,291 @@
+{
+  "page_type": "exercises",
+  "chapter_number": 8,
+  "chapter_title": "Practice Corner 8.1",
+  "passages": [
+    {
+      "passage_text": "Answer the following questions based on the statements given below.\nI. There are 3 poles on each side of the road.\nII. These six poles are labelled A, B, C, D, E and F.\nIII. The poles are of different colours namely— Golden, Silver, Metallic, Black, Bronze and White.\nIV. The poles are of different heights.\nV. E, the tallest pole, is exactly opposite to the golden coloured pole.\nVI. The shortest pole is exactly opposite to the metallic coloured pole.\nVII. F, the black coloured pole, is located between A and D.\nVIII. C, the bronze coloured pole, is exactly opposite to A.\nIX. B, the metallic coloured pole, is exactly opposite to F.\nX. A, the white coloured pole, is taller than C but shorter than D and B.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information given below to answer the questions that follow.\nAmong A, B, C and D, B is heavier than A and C but C is taller than him. D is not as tall as C while A is the shortest. C is not as heavy as A. D is heavier than B but shorter than him.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer the questions that follow.\nI. Anita, Mahima, Rajan, Lata and Deepti are five cousins.\nII. Anita is twice as old as Mahima.\nIII. Rajan is half the age of Mahima.\nIV. Anita is half the age of Deepti.\nV. Rajan is twice the age of Lata.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Seema's younger brother Sohan is older than Seeta. Sweta is younger than Deepti but elder than Seema. Who is the eldest?",
+      "choices": {
+        "a": "Seema",
+        "b": "Sweta",
+        "c": "Seeta",
+        "d": "Deepti"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Anil is taller than Sunny and Sunny is shorter than Baby. Anil is taller than Bose whose height is less than Sunny. Baby is shorter than Anil. Who is the shortest among them?",
+      "choices": {
+        "a": "Anil",
+        "b": "Baby",
+        "c": "Sunny",
+        "d": "Bose"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Mukesh is taller than Suresh but shorter than Rakesh. Rakesh is taller than Harish but shorter than Amar. Who among them is the shortest?",
+      "choices": {
+        "a": "Mukesh",
+        "b": "Suresh",
+        "c": "Harish",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Each of P, Q, T, A and B has different heights. T is taller than P and B but shorter than A and Q. P is not the shortest, who is the tallest?",
+      "choices": {
+        "a": "A",
+        "b": "Q",
+        "c": "P",
+        "d": "P or B",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "A, B, C, D and E each has different heights. D is only shorter than B. E is shorter than A and C. Who is the shortest of them?",
+      "choices": {
+        "a": "E",
+        "b": "A",
+        "c": "C",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "A, B, C and D are four buildings in a residential complex. Each has different heights. A is only higher than D. B is shorter than C but higher than A and D. Which of the following buildings is the highest?",
+      "choices": {
+        "a": "D",
+        "b": "C",
+        "c": "B",
+        "d": "A",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "intelligence_comparison",
+      "subtopic_name": "Intelligence Comparison",
+      "body": "N is more intelligent than M. M is not as intelligent as Y. X is more intelligent than Y but not as good as N. Who is the most intelligent of all?",
+      "choices": {
+        "a": "N",
+        "b": "M",
+        "c": "X",
+        "d": "Y"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Barun is taller than Sanjay. Bipul is taller than Barun. Krishna is also not as tall as Bipul but is taller than Barun. Who is the tallest?",
+      "choices": {
+        "a": "Barun",
+        "b": "Bipul",
+        "c": "Krishna",
+        "d": "Sanjay"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Each of J, K, L, M and N have different heights. M is only shorter than J.K is not as tall as N and N is shorter than L. Who is the shortest of them?",
+      "choices": {
+        "a": "J",
+        "b": "N",
+        "c": "K",
+        "d": "L",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "Which is the second tallest pole?",
+      "choices": {
+        "a": "A",
+        "b": "D",
+        "c": "B",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement Puzzle",
+      "body": "Which is the colour of the tallest pole?",
+      "choices": {
+        "a": "Golden",
+        "b": "Silver",
+        "c": "Bronze",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "weight_height_comparison",
+      "subtopic_name": "Weight and Height Comparison",
+      "body": "Who is the heaviest?",
+      "choices": {
+        "a": "B",
+        "b": "A",
+        "c": "D",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "weight_height_comparison",
+      "subtopic_name": "Weight and Height Comparison",
+      "body": "Who is the tallest?",
+      "choices": {
+        "a": "D",
+        "b": "C",
+        "c": "Either A or D",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 292
+}

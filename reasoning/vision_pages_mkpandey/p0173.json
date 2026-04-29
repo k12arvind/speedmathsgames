@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Step I: Looking at table II.4.2., we draw the standard representation for two statements: A) (C)→(D) B) (D)→(I) Let B = bats, C = cats, T = tables. Step II: Now, combine fig. (A) and fig. (B) in all possible ways. Fig. (A) and (B) can be combined in only one way. That is, (C)→(D)→(I) Step III: We see that both conclusions: Some tables are bats and Some cats are tables are not supported by the combined figure. Hence, both the conclusions do not follow."
+    },
+    {
+      "number": 2,
+      "solution": "Step I: A) (T)→(W) and B) (W)→(L) Let T = tables, W = watches, L = lamps Step II: Combining fig. (A) and fig. (B) in all possible ways. C(i) (T)→(W)→(L) or (T)→(W)→(L) C(ii) C(iii) (T)→(L)→(W) or (L)→(T)→(W) C(iv) Step III: We see that Some tables are lamps is supported by C (ii), C(iii), C(iv) while Some tables are not lamps is supported by C(i), C(iii) and C(iv). At least one of these conclusions is always following. Hence, either I or II follows."
+    }
+  ],
+  "answers": [],
+  "_page": 173
+}

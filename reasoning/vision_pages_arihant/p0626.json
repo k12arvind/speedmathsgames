@@ -1,0 +1,267 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions based on it. In a family of six members, there are three men L, M and N and three women R, S and T. The six persons are architect, lawyer, CA, professor, doctor and engineer by profession but not in the same order. I. There are two married couples and two unmarried persons. II. N is not R's husband. III. The doctor is married to a lawyer. R's grandfather is a professor. IV. M is neither L's son nor he is an architect or a professor. V. The lawyer is T's daughter-in-law. VI. N is T's son and the engineer's father. VII. L is married to the CA.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer the questions that follow. I. A, B, C, D, E and F are the members of a family. II. These members are engineer, doctor, designer, lawyer, manager and professor but not in the same order. III. There are two married couples in the family. IV. C is the designer and is married to lawyer. V. B is either father or mother of F and E. VI. A is married to manager D. VII. F is a professor who is the grandson or granddaughter of doctor. VIII. B is a female while doctor is a male member.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully and then answer the questions based on that. I. In a family of six persons, there are people from three generations. Each person has separate profession and also each one likes different colours. There are two couples in the family. II. Charan is a CA and his wife neither is a doctor nor likes green colour. III. Engineer likes red colour and his wife is a teacher. IV. Vanita is mother-in-law of Namita and she likes orange colour. V. Mohan is grandfather of Raman and Raman, who is a principal, likes black colour. VI. Sarita is granddaughter of Vanita and she likes blue colour. Sarita's mother likes white colour.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "Which among the following is the correct pair of married couples?",
+      "choices": {
+        "a": "AS and NT",
+        "b": "LR and NM",
+        "c": "LT and NS",
+        "d": "SM and NR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "Who among the following are two unmarried persons?",
+      "choices": {
+        "a": "L, S",
+        "b": "L, M",
+        "c": "L, T",
+        "d": "R, M"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "Who is an architect?",
+      "choices": {
+        "a": "R",
+        "b": "M",
+        "c": "N",
+        "d": "L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "How T is related to M?",
+      "choices": {
+        "a": "Mother",
+        "b": "Grandmother",
+        "c": "Wife",
+        "d": "Daughter"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "N belongs to ......... generation.",
+      "choices": {
+        "a": "4th",
+        "b": "2nd",
+        "c": "1st",
+        "d": "3rd"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "Which of the following pairs belongs to the 1st generation?",
+      "choices": {
+        "a": "Doctor and Professor",
+        "b": "Architect and Lawyer",
+        "c": "CA and Professor",
+        "d": "CA and Engineer"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "Which of the following is one of the pairs of couples in the family?",
+      "choices": {
+        "a": "AD",
+        "b": "AC",
+        "c": "AB",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "What is the profession of A?",
+      "choices": {
+        "a": "Doctor",
+        "b": "Lawyer",
+        "c": "Designer",
+        "d": "Manager"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "What is the profession of E?",
+      "choices": {
+        "a": "Professor",
+        "b": "Manager",
+        "c": "Designer",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "How many females are there in the family?",
+      "choices": {
+        "a": "1",
+        "b": "3",
+        "c": "4",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "How is A related to E?",
+      "choices": {
+        "a": "Grandfather",
+        "b": "Father",
+        "c": "Uncle",
+        "d": "Brother"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_puzzle",
+      "subtopic_name": "Family Puzzle",
+      "body": "Who is an engineer?",
+      "choices": {
+        "a": "Sarita",
+        "b": "Vanita",
+        "c": "Namita",
+        "d": "Mohan"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 626
+}

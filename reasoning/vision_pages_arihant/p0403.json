@@ -1,0 +1,262 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully to answer the questions that follow.\nI. Ruchi and Suresh are married couple having two children, Manisha and Divya.\nII. Divya is married to Amit who is the son of Gauri and Tarun.\nIII. Nishi is the daughter of Amit.\nIV. Karuna, who is Amit's sister, is married to Harish and has two sons, Vijay and Parikshit.\nV. Gauri is the grandmother of Parikshit.\nVI. Manisha is the maternal aunt of Nisha.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer the questions given below.\nI. There are six members in a family.\nII. The members are A, B, C, D, E and F.\nIII. D is the daughter of F who is the mother of E.\nIV. E is the daughter of A.\nV. A is the son of C.\nVI. The family consists of one couple who has their parents and their children.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "'A' is B's brother. 'I have as many sisters as brothers', tells 'B' to one of her friends. How many brothers and sisters are there in this family?",
+      "choices": {
+        "a": "Two brothers and two sisters",
+        "b": "One brother and one sister",
+        "c": "One brother and two sisters",
+        "d": "Two brothers and one sister"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Showing the lady in the park, Vineet said, \"She is the daughter of my grandfather's only son.\" How is Vineet related to that lady?",
+      "choices": {
+        "a": "Brother",
+        "b": "Cousin",
+        "c": "Father",
+        "d": "Uncle"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "A man showed a boy next to him and said, \"He is the son of my wife's sister-in-law but I am the only child of my parents.\" How is my son related to him?",
+      "choices": {
+        "a": "Cousin",
+        "b": "Brother",
+        "c": "Uncle",
+        "d": "Nephew"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Pointing towards a girl, Anurag says, \"This girl is the daughter of the only child of my father\". What is the relation of Anurag's wife with the girl?",
+      "choices": {
+        "a": "Sister",
+        "b": "Aunt",
+        "c": "Daughter",
+        "d": "Mother"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Sunil is the son of Kesav. Simran, Kesav's sister, has a son Maruti and daughter Sita. Prem is the maternal uncle of Maruti. How is Sunil related to Maruti?",
+      "choices": {
+        "a": "Cousin",
+        "b": "Uncle",
+        "c": "Brother",
+        "d": "Nephew"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "D is B's father, B is C's sister-in-law and A's daughter. How is A related to D?",
+      "choices": {
+        "a": "Wife",
+        "b": "Mother",
+        "c": "Father",
+        "d": "Husband"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "A's mother is sister of B and daughter of C. D is the daughter of B and sister of E. How is C related to E?",
+      "choices": {
+        "a": "Sister",
+        "b": "Mother",
+        "c": "Father",
+        "d": "Grandmother or grandfather"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "What is the difference between the number of females and the number of males in the second generation?",
+      "choices": {
+        "a": "5",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Which of the following is true?",
+      "choices": {
+        "a": "Tarun is Divya's maternal uncle.",
+        "b": "Vijay is the son of Manisha",
+        "c": "Gauri is Harish's mother-in-law",
+        "d": "Nishi is the cousin of Karuna"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is Karuna related to Divya?",
+      "choices": {
+        "a": "Aunt",
+        "b": "Sister-in-law",
+        "c": "Mother",
+        "d": "Sister"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "What is the relationship between Vijay and Nishi?",
+      "choices": {
+        "a": "Cousins",
+        "b": "Husband-Wife",
+        "c": "Father-Daughter",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Parikshit is the member of which generation?",
+      "choices": {
+        "a": "4th",
+        "b": "1st",
+        "c": "2nd",
+        "d": "3rd"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 403
+}

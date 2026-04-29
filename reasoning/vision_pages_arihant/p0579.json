@@ -1,0 +1,143 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 32-36) Study the given information and answer the following questions. When a word and number arrangement machine is given an input line of words and numbers, it arranges them following a particular rule. The following is an illustration of input and rearrangement. (All the numbers are two digit numbers)\nInput 40 made butter 23 37 cookies salt extra 52 86 92 fell now 19\nStep I butter 19 40 made 23 37 cookies salt extra 52 86 92 fell now\nStep II cookies 23 butter 19 40 made 37 salt extra 52 85 92 fell now\nStep III extra 37 cookies 23 butter 19 40 made salt 52 86 92 fell now\nStep IV fell 40 extra 37 cookies 23 butter 19 made salt 52 86 92 now\nStep V made 52 fell 40 extra 37 cookies 23 butter 19 salt 86 92 now\nStep VI Now 86 made 52 fell 40 extra 37 cookies 23 butter 19 salt 92\nStep VII salt 92 now 86 made 52 fell 40 extra 37 cookies 23 butter 19\nStep VII is the last step of the above arrangement as the intended arrangement is obtained.\nAs per the rules followed in the given steps, find out the appropriate steps for the given input.\nInput '32 proud girl beautiful 49 58 97 rich family 61 72 17 nice life'",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word Number Arrangement",
+      "body": "How many steps will be required to complete the given input?",
+      "choices": {
+        "a": "Five",
+        "b": "Six",
+        "c": "Seven",
+        "d": "Eight",
+        "e": "Nine"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word Number Arrangement",
+      "body": "Which of the following is the third element from the left end of step VI?",
+      "choices": {
+        "a": "Beautiful",
+        "b": "Life",
+        "c": "61",
+        "d": "Nice",
+        "e": "17"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word Number Arrangement",
+      "body": "Which of the following is Step III of the given input?",
+      "choices": {
+        "a": "proud 72 girl 48 family 32 beautiful 17 55 97 rich 61",
+        "b": "life 55 girl 48 family 32 beautiful 17 proud 97 rich 61 72 nice",
+        "c": "girl 48 family 32 beautiful 17 proud 55 97 rich 61 72 nice life",
+        "d": "family 32 beautiful 17 proud girl 48 55 97 rich 61 72 nice life",
+        "e": "girl 49 life 55 family 32 beautiful 17 proud 97 rich 61 72 nice"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word Number Arrangement",
+      "body": "What is the position of 'nice' from the left end in the final step?",
+      "choices": {
+        "a": "Fifth",
+        "b": "Sixth",
+        "c": "Seventh",
+        "d": "Eighth",
+        "e": "Ninth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word Number Arrangement",
+      "body": "Which element is third to the right of 'family' in Step V?",
+      "choices": {
+        "a": "Beautiful",
+        "b": "17",
+        "c": "Proud",
+        "d": "97",
+        "e": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "In the 1st step, the smallest number comes at the first position from left pushing the rest of the line rightward. In Step II, the word coming last in the alphabetical order comes at the 2nd position from left pushing the rest of the line rightward. In step III, the 2nd smallest number comes at the third place from left pushing the remaining line rightward. In Step IV, the word coming last in alphabetical order comes at the fourth position from left pushing the remaining line rightward. Thus, number and words get arranged alternately till the numbers are in ascending order and the words are in reverse alphabetical order."
+    },
+    {
+      "number": 2,
+      "solution": "(D) Input station hurry 39 67 all men 86 59\nStep I 39 station hurry 67 all men 86 59\nStep II 39 station 59 hurry 67 all men 86\nStep III 39 station 59 men hurry 67 all 86\nStep IV 39 station 59 men 67 hurry 86 all\nStep V 39 station 59 men 67 hurry 86 all\nAs last step = Step V\n∴ Total steps = Five"
+    },
+    {
+      "number": 3,
+      "solution": "(C) In arrangement problem, previous steps cannot be determined."
+    },
+    {
+      "number": 4,
+      "solution": "(D) Input news 79 53 glory for 46 29 task\nStep I 29 news 79 53 glory for 46 task\nStep II 29 task news 79 53 glory for 46\nStep III 29 task 46 news 79 53 glory for\nStep IV 29 task 46 news 53 79 glory for"
+    },
+    {
+      "number": 5,
+      "solution": "(C) Step II 27 tube 34 gas chamber row 74 53\nStep IV 27 tube 34 row gas chamber 74 53\nStep V 27 tube 34 row 53 gas chamber 74\nStep VI 27 tube 34 row 53 gas 74 chamber\nAs last step = Step VI\n∴ Last but one step = Step V"
+    }
+  ],
+  "answers": [],
+  "_page": 579
+}

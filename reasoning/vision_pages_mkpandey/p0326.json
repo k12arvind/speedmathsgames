@@ -1,0 +1,189 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 44-50): A candidate for public office plans to visit each of the six cities J, K, L, M, N and O exactly once during one campaign trip according to the following restrictions: The candidate can visit M only after she has visited both J and N. The candidate cannot visit N before J. The second city visited by the candidate must be K. Which of the following could be the order in which the candidate visits the six cities?",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    },
+    {
+      "passage_text": "Directions (Q. 51-55): Read the information below and answer the questions that follow: (1) There is a group of seven persons seated around a table. (2) Their professions are: Housewife, Doctor, Engineer, Teacher, Chemist, Manager, Professor respectively. (3) There are three females including the housewife. The Engineer is not a female. (4) Two of them are husband-wife. The profession of the wife is teaching. Her husband is the oldest of the seven. (5) The youngest of the group is a female. She does not teach and she is not a housewife.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "Which of the following could be the order in which the candidate visits the six cities?",
+      "choices": {
+        "a": "J, L, K, N, L, O, M",
+        "b": "K, J, L, N, M, O",
+        "c": "K, O, N, M, J",
+        "d": "M, K, N, J, L, O",
+        "e": "O, K, M, L, J, N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "Which of the following must be true of the candidate's campaign schedule?",
+      "choices": {
+        "a": "She visits before L",
+        "b": "She visits K before J",
+        "c": "She visits before O",
+        "d": "She visits M before J",
+        "e": "She visits L before J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "If the candidate visits O first, which city could she visit third?",
+      "choices": {
+        "a": "J",
+        "b": "L",
+        "c": "M",
+        "d": "N only",
+        "e": "III only"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "If the candidate visits J immediately after visiting O and immediately before N, then she must visit L",
+      "choices": {
+        "a": "first",
+        "b": "third",
+        "c": "fourth",
+        "d": "fifth",
+        "e": "sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "Which of the following could be true of the candidate's schedule?",
+      "choices": {
+        "a": "She visits J first",
+        "b": "She visits K first",
+        "c": "She visits L sixth",
+        "d": "She visits M fourth",
+        "e": "She visits N first"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "The candidate could visit any of the following immediately after K, EXCEPT",
+      "choices": {
+        "a": "J",
+        "b": "L",
+        "c": "M",
+        "d": "N",
+        "e": "O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "order_arrangement",
+      "subtopic_name": "Order Arrangement",
+      "body": "If the candidate visits O last, which of the following could she visit first and third cities on her schedule, respectively?",
+      "choices": {
+        "a": "J and K",
+        "b": "J and L",
+        "c": "J and O",
+        "d": "N and J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_puzzle",
+      "subtopic_name": "Profession Puzzle",
+      "body": "How many of them have individual ages of the Professor, the Doctor and the Manager are less than the average age of the whole group and how many of them have ages more than the average age of the group increases?",
+      "choices": {
+        "a": "Among the following is the married couple?",
+        "b": "Professor-Chemist",
+        "c": "Teacher-Manager",
+        "d": "Can't be said",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 326
+}

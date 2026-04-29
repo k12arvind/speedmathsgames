@@ -1,0 +1,187 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 30-36): Six people, Ram, Som, Tinu, Viju and Om were all born in the same day of the year, but each was born in a different year during a single six-year period. i) Prem is older than Som. ii) Ram is older than both Tinu and Viju. iii) Om is two years older than Tinu. iv) Prem was born either in 1962 or in 1963. v) The oldest member of the group was born in 1960.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Directions (Q. 37-43): A jazz group plans to play six pieces - J, K, L, M, N and O during a set. Each piece will be played exactly once. The order in which the pieces are to be played is subject to the following conditions: i) must be played before J and before O. ii) M must be played later than J. iii) K must be the third piece. iv) Which of the following could be the order in which the pieces are played? 1) L, N, O, M, J 2) M, O, M, L, K, J 3) N, L, J, O, L, K 4) M, K, J, O, L, N",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "intelligence_rank",
+      "subtopic_name": "Intelligence Ranking",
+      "body": "Who is the most intelligent?",
+      "choices": {
+        "a": "B",
+        "b": "E",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "intelligence_rank",
+      "subtopic_name": "Intelligence Ranking",
+      "body": "What is the rank of E in decreasing order of intelligence?",
+      "choices": {
+        "a": "Second",
+        "b": "Third",
+        "c": "Fourth",
+        "d": "Can't say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "intelligence_rank",
+      "subtopic_name": "Intelligence Ranking",
+      "body": "What is the rank of D in decreasing order of intelligence?",
+      "choices": {
+        "a": "Fourth",
+        "b": "Fifth",
+        "c": "Can't say",
+        "d": "Sixth",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "age_ordering",
+      "subtopic_name": "Age Ordering",
+      "body": "Which of the following must be correct listing of the group from the youngest to the oldest?",
+      "choices": {
+        "a": "Som, Viju, Tinu, Om, Ram",
+        "b": "Som, Viju, Prem, Tinu, Om, Ram",
+        "c": "Viju, Som, Prem, Tinu, Om, Ram",
+        "d": "Som, Viju, Tinu, Prem, Om, Ram",
+        "e": "Viju, Ram, Prem, Tinu, Som, Om"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "age_ordering",
+      "subtopic_name": "Age Ordering",
+      "body": "If Prem was born in 1962, then which of the following must also be true?",
+      "choices": {
+        "a": "Ram was born in 1960.",
+        "b": "Om was born in 1961.",
+        "c": "Som was born in 1961.",
+        "d": "Viju was born in 1963.",
+        "e": "Viju was born in 1965."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "age_ordering",
+      "subtopic_name": "Age Ordering",
+      "body": "If Om is the oldest of the group, then which of the following must be true?",
+      "choices": {
+        "a": "Ram was born in 1961.",
+        "b": "Tinu was born in 1961.",
+        "c": "Prem was born in 1962.",
+        "d": "Som was born in 1964."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "age_ordering",
+      "subtopic_name": "Age Ordering",
+      "body": "If Om was born in 1962, then which of the following must be true?",
+      "choices": {
+        "a": "Viju was born in 1960.",
+        "b": "Ram was born in 1961.",
+        "c": "Tinu was born in 1964.",
+        "d": "Som was born in 1964."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "age_ordering",
+      "subtopic_name": "Age Ordering",
+      "body": "If Prem is younger than Tinu, all of the following must be true EXCEPT",
+      "choices": {
+        "a": "Om was born in 1960.",
+        "b": "Ram was born in 1961.",
+        "c": "Tinu was born in 1962.",
+        "d": "Prem was born in 1963.",
+        "e": "Viju was born in 1964."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 332
+}

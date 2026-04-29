@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 538,
+      "solution": "Ex. 9: If X o Y means X is the wife of Y, X + Y means X is the son of Y, and X Δ Y means X is the daughter of Y, which of the following would mean A is the sister-in-law of B? 1) A * C □ D o B 2) A o C * D □ B 3) A B C o D Δ B None of these Soln: If A is to be the daughter-in-law of B, A must be a female and A must be married to the son of B. Now: Check sex: (By our rule, there must be A o or A Δ) Check relationship (By choice): This eliminates choice (1). Check generation gap: B should be and zero for E1. By this rule, generation gap between them should be E1. In all the remaining choices 2, 3 and 4. So, we draw a family tree for these choices, one by one: Choice 2: D(*) → B(*) A(*) → C(*) ∴ A is niece of B. B(*) A(*) → C(*) ⇔ D(*) Choice 4: A is daughter of B. B(*) ⇔ D(*) A(*) → C(*) ∴ A is daughter of B. Correct choice: 4."
+    },
+    {
+      "number": 539,
+      "solution": "Directions (Ex. 10-11): Answer the questions on the basis of the directions given below: Ex. 10: If (A) P + Q means P is the brother of Q, (B) P × Q means P is the father of Q, (C) P - Q means P is the sister of Q, which of the following represents S is the niece of T? 1) T × M + S - K 2) K - S × M + T 3) T + M × S - K 4) T × S + M - K 5) None of these Ex. 11: To find out the answer to the above question, which of the statement can be dispensed with? 1) A only 2) B only 3) C only 4) A or C only 5) All are necessary Soln: Ex. 10: If S is to be a niece of T, S must be a female and S must be one generation below T. Check sex: There must be a - sign after S. This eliminates choices (2) and (4)."
+    }
+  ],
+  "answers": [],
+  "_page": 276
+}

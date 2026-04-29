@@ -1,0 +1,232 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and give answer of the questions based on this. Seven friends Anu, Beena, Kanika, Mohini, Samina, Easther and Rani study different disciplines such as Arts, Commerce, Science, Engineering, Architecture, Management and Pharmacy, not necessarily in the same order. Each of them belongs to a different state viz. Andhra Pradesh, Uttar Pradesh, Maharashtra, Karnataka, Kerala, Chhattisgarh and Punjab but not necessarily in the same order. Kanika studies Engineering and does not belong to either Uttar Pradesh or Punjab. The one who belongs to Chhattisgarh does not study Architecture or Pharmacy. Anu belongs to Maharashtra. Samina belongs to Kerala and studies Science. The one who belongs to Andhra Pradesh studies Commerce. Mohini studies Management and Rani studies Arts. Beena belongs to Karnataka and does not study Architecture. The one who studies Arts does not belong to Punjab.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully and then answer the questions given below it. P, Q, R, S, T and U are six members of a family, each of them engaged in a different profession – doctor, lawyer, teacher, engineer, nurse and manager. Each of them remains at home on a different day of the week from Monday to Saturday. The lawyer in the family remains at home on Thursday. R remains at home on Tuesday. P, a doctor, does not remain at home either on Saturday or Wednesday. S is neither the doctor nor the teacher and remains at home on Friday. Q is the engineer and T is the manager.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Study the following information carefully and answer the questions given below. L, M, N, O and P are five important cities of our country out of which, three are industrial cities, two are port cities, one is a hill station and three cities have university each. Every hill city has a university but has no port. 'O' is not a port city. No port city has a university. 'M' is a port city. Two industrial cities have universities and 'N' and 'O' are not industrial cities. The industrial cities with universities don't have ports. None of the industrial cities is a hill station. 'O' is a hill station and 'P' has a university.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 44,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_profession",
+      "subtopic_name": "Person and Profession",
+      "body": "Which of the following combinations of person, college and profession is definitely correct?",
+      "choices": {
+        "a": "Anu-Andhon designing",
+        "b": "F-X-Engineering",
+        "c": "A-Y-Businessman",
+        "d": "D-Z-Teaching",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_profession",
+      "subtopic_name": "Person and Profession",
+      "body": "Who amongst the following is a teacher?",
+      "choices": {
+        "a": "A",
+        "b": "D",
+        "c": "E",
+        "d": "G",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_state_subject",
+      "subtopic_name": "Person State and Subject",
+      "body": "Which of the following student and subject combination is correct?",
+      "choices": {
+        "a": "I and II",
+        "b": "II and III",
+        "c": "I and IV",
+        "d": "I and III",
+        "e": "III and IV"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_state_subject",
+      "subtopic_name": "Person State and Subject",
+      "body": "Which of the following state-subject combination is/are correct? I. Chhattisgarh - Engineering II. Punjab - Pharmacy III. Andhra Pradesh - Commerce IV. Andhra Pradesh-Architecture",
+      "choices": {
+        "a": "Anu - Architecture",
+        "b": "Easther - Pharmacy",
+        "c": "Beena - Commerce",
+        "d": "Mohini - Engineering",
+        "e": "Samina-Management"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "person_state_subject",
+      "subtopic_name": "Person State and Subject",
+      "body": "Which of the following student-state combination is/are correct? I. Kanika - Chhattisgarh II. Samina - Andhra Pradesh III. Easther - Karnataka IV. Mohini - Punjab",
+      "choices": {
+        "a": "I and II",
+        "b": "I and III",
+        "c": "I and IV",
+        "d": "II and III",
+        "e": "II and IV"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Which of the following combinations is not correct?",
+      "choices": {
+        "a": "R-Teacher",
+        "b": "Q-Engineer",
+        "c": "T-Manager",
+        "d": "All correct"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Which of the following combinations is correct?",
+      "choices": {
+        "a": "Lawyer-Tuesday",
+        "b": "Teacher-Wednesday",
+        "c": "Manager-Friday",
+        "d": "Nurse-Friday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Who is the nurse?",
+      "choices": {
+        "a": "S",
+        "b": "R",
+        "c": "U",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "Who among them remains at home on the following day on which R stays at home?",
+      "choices": {
+        "a": "Q",
+        "b": "Q or T",
+        "c": "S",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "cities_features",
+      "subtopic_name": "Cities and Features",
+      "body": "Which city has industries as well as a port but does not have a university?",
+      "choices": {
+        "a": "L and O",
+        "b": "O and M",
+        "c": "M",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 604
+}

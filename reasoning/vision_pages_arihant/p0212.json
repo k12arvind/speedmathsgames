@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 42,
+      "solution": "(D) As, what else can you do for me Mr Ajay\n1 2 3 4 5 6 7 8 9\n⇓\nyou Mr what can Ajay else do me for\n4 8 1 3 9 2 5 7 6\nSimilarly,\nanyone else who can do such favour to me\n1 2 3 4 5 6 7 8 9\n⇓\ncan to anyone who me else do favour such\n4 8 1 3 9 2 5 7 6"
+    },
+    {
+      "number": 43,
+      "solution": "(C) 9 7 5 ⟶ throw away garbage ...(i)\n5 (2) 8 ⟶ give away smoking ...(ii)\n(2) 1 3 ⟶ smoking is harmful ...(iii)\nFrom Eqs. (ii) and (iii),\n2 ⇒ smoking"
+    },
+    {
+      "number": 44,
+      "solution": "(d) nee muk pic ⟶ grave and concern ...(i)\nill dic so ⟶ every body else ...(ii)\ntur muk so ⟶ body and soul ...(iii)\nFrom Eqs. (i) and (iii),\nmuk ⇒ and\nFrom Eqs. (ii) and (iii),\nso ⇒ body\ntur ⇒ soul\nBut its not possible to find the codes for 'every', 'grave', 'concern' and 'else'."
+    },
+    {
+      "number": 45,
+      "solution": "(C) pick and choose ⟶ ko ho po ...(i)\npick up and come ⟶ to no ko po ...(ii)\nFrom Eqs. (i) and (ii),\npick ⇒ ko/po\nand ⇒ ko/po\npick ⇒ Either 'ko' or 'po'"
+    },
+    {
+      "number": 46,
+      "solution": "(D) As,\n16 5 1 3 5 ⟶ 16 5 1 3 5\np e a c e\n↓ ↓ ↓ ↓ ↓\n\nSimilarly,\n12 15 22 5 ⟶ 12 15 22 5\nl o v e"
+    },
+    {
+      "number": 47,
+      "solution": "(C) As,\n5 18 9 2 1\nE R I B A\n↓ ↓ ↓ ↓ ↓\n+1\n+1\n+1\n+1\n+1\n+1\n+1\n+1\n\n6 3 10 19 4 20 6 5\nF C J S D T F E\n↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓\n+1\n\nSimilarly,\n3 15 14 19 9 4 5 18\nC O N S I D E R\n↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓\n+1\n+1\n+1\n+1\n+1\n+1\n+1\n+1\n\n19 6 5 10 20 15 16 4\nS F E J T O P D\n↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓\n\n∴ CONSIDER ⇒ SFEJTOPD"
+    },
+    {
+      "number": 48,
+      "solution": "(C) Here, C +1→ D    Similarly, A +1→ B\n          +2→ N              P +2→ R\n      O +3→ R              A +3→ D\n      S +4→ W              R +4→ V\n      E +5→ J              T +5→ Y\n∴ APART ⇒ BRDVY"
+    },
+    {
+      "number": 49,
+      "solution": "(C) As, 12 5 1 4 5 16\nL E A D E R\n+8 +8 +8 +8 +8 +8\n↓ ↓ ↓ ↓ ↓ ↓\n20 13 9 12 13 26\n\nSimilarly, 12 9 7 8 20\nL I G H T\n+8 +8 +8 +8 +8\n↓ ↓ ↓ ↓ ↓\n20 17 15 16 28\n\n∴ LIGHT ⇒ 20-17-15-16-28"
+    },
+    {
+      "number": 50,
+      "solution": "(C) how many books ⟶ sa na na\nmany more days ⟶ ka pa na\n∴ 'Books' can be written as either 'sa' or 'na'."
+    }
+  ],
+  "answers": [],
+  "_page": 212
+}

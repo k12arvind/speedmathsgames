@@ -1,0 +1,203 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully to answer the questions that follow. Five ships J, K, L, M and N are to be unloaded on 5 consecutive days beginning from Monday to Friday. I. Each ship takes exactly one day to unload. II. K must be unloaded before (not necessarily immediately before) the days on which M and N are unloaded. III. L cannot be unloaded on Tuesday. IV. M is the second ship to be unloaded after J is unloaded.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which day will the lecture F be organised?",
+      "choices": {
+        "a": "Thursday",
+        "b": "Friday",
+        "c": "Saturday",
+        "d": "Sunday"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which of the following is the last lecture in the series?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which of the following information is not required in finding the complete sequence of organisation of lectures?",
+      "choices": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "Only V",
+        "d": "All are required"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If M is unloaded on Friday, which one of the following is true?",
+      "choices": {
+        "a": "J is unloaded on Wednesday",
+        "b": "K is unloaded on Tuesday",
+        "c": "L is unloaded on Monday",
+        "d": "L is unloaded on Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If K, M and N are to be unloaded one immediately after the other, the two days on which J can be unloaded are",
+      "choices": {
+        "a": "Monday and Tuesday",
+        "b": "Monday and Friday",
+        "c": "Tuesday and Wednesday",
+        "d": "Wednesday and Friday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If L is unloaded immediately after J, which of the following is true?",
+      "choices": {
+        "a": "J is unloaded on Wednesday",
+        "b": "K is unloaded on Monday",
+        "c": "L is unloaded on Thursday",
+        "d": "M is unloaded on Friday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "If J is unloaded on Monday, then which of the following must be true?",
+      "choices": {
+        "a": "L is unloaded before K",
+        "b": "L is unloaded before M",
+        "c": "K is unloaded on Tuesday",
+        "d": "L is unloaded on Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "N can be unloaded on any day of the week except.",
+      "choices": {
+        "a": "Monday",
+        "b": "Tuesday",
+        "c": "Wednesday",
+        "d": "Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 23,
+      "solution": "According to the question and given conditions, possibilities of unloading are as follows. Mon Tue Wed Thur Fri K/L N/K J L/N M As per condition (iv) M is the second ship to be unloaded after J. Hence, if M is unloaded on Friday, then J will automatically be unloaded on the day falling two days before Friday i.e., Friday – 2 = Wednesday."
+    }
+  ],
+  "answers": [
+    {
+      "number": 18,
+      "correct": "a"
+    },
+    {
+      "number": 19,
+      "correct": "a"
+    },
+    {
+      "number": 20,
+      "correct": "a"
+    },
+    {
+      "number": 21,
+      "correct": "a"
+    },
+    {
+      "number": 22,
+      "correct": "d"
+    }
+  ],
+  "_page": 619
+}

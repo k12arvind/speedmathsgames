@@ -1,0 +1,164 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information to answer the given questions a word and number arrangement machine when given an input line of words and numbers, rearranges them following a particular rule. The following is an illustration of input and rearrangement. (All the numbers are two-digits numbers)\nInput 'at 52 93 46 gate join us 19 to 33 dine 27'\nStep I 19 at 52 46 gate join us to 33 dine 27 93\nStep II 27 19 at 46 gate join us to 33 dine 93 52\nStep III 33 27 19 at gate join us to dine 93 52 46\nStep IV at 33 27 19 gate join to dine 93 52 46 us\nStep V dine at 33 27 19 gate join 93 52 46 us to\nStep VI gate dine at 33 27 19 93 52 46 us to join\nand Step VI is the last step of the arrangement of the above input as the intended arrangement is obtained.\nAs per the rules followed in the above steps, find one in each of the following questions the appropriate steps for the given input, input for the questions.\nInput '71 14 side wall 97 for hat 65 27 gun 81 bat' (All the numbers given in the arrangement are two-digit numbers)",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Which word/number would be at the 5th position from the left in Step I?",
+      "choices": {
+        "a": "Step III",
+        "b": "Step VI",
+        "c": "Step II",
+        "d": "Step V",
+        "e": "There will be no such step"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "In the last step of the arrangement, 'for' is related to '65' following a particular pattern in the same way '97' is related to '71'. 'wall' is related to which of the following if the same pattern is followed?",
+      "choices": {
+        "a": "gun",
+        "b": "hat",
+        "c": "81",
+        "d": "for",
+        "e": "side"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Which of the following represents the position of '71' in Step II of the given input?",
+      "choices": {
+        "a": "Ninth from the right",
+        "b": "Second from the left",
+        "c": "Seventh from the right",
+        "d": "Third from the left",
+        "e": "Fourth from the right"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Which step number would be the following output?\nbat 65 27 14 side gun hat for 97 81 71 wall",
+      "choices": {
+        "a": "97",
+        "b": "27",
+        "c": "side",
+        "d": "hat",
+        "e": "for"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Which of the following would be the Step III?",
+      "choices": {
+        "a": "for bat 65 27 14 hat gun 97 81 71 wall side",
+        "b": "65 27 14 side wall for hat bat gun 97 81 71",
+        "c": "65 27 14 side wall for hat gun bat 71 81 97",
+        "d": "65 27 14 side wall for hat gun for 97 81 71",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Which word/number would be at the 7th position from the right in Step V?",
+      "choices": {
+        "a": "hat",
+        "b": "gun",
+        "c": "for",
+        "d": "side",
+        "e": "14"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "How many steps are required to complete the arrangement?",
+      "choices": {
+        "a": "Four",
+        "b": "Five",
+        "c": "Six",
+        "d": "Seven",
+        "e": "Eight"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 593
+}

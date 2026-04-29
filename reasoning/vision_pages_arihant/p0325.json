@@ -1,0 +1,225 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 6-11) In each of the following questions, two rows of numbers are given. The resultant number in each row is to be worked out separately based on the following rules and the questions below the rows of numbers are to be answered. The operations of numbers progress from left to the right.\n\nRules\n(i) If an odd number is followed by another composite odd number, they are to be added.\n(ii) If an even number is followed by an odd number, they are to be added.\n(iii) If an even number is followed by a number which is the perfect square, the even number is to be subtracted from the perfect square.\n(iv) If an odd number is followed by a prime odd number, the first number is to be divided by the second number.\n(v) If an odd number is followed by an even number, the second one is to be subtracted from the first number.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 12-16) In each of the following questions two rows of numbers are given. The resultant number in each row is to be worked out separately based on the following rules and the questions below the rows of numbers are to be answered. The operations of numbers progress from left to right.\n\nRules\n(i) If an odd number is followed by another composite odd number, they are to be multiplied.\n(ii) If an even number is followed by an odd number, they are to be added.\n(iii) If an even number is followed by a number which is a perfect square, the even number is to be subtracted from the perfect square.\n(iv) If an odd number is followed by a prime odd number, the first number is to be divided by the second number.\n(v) If an odd number is followed by an even number, the second one is to be subtracted from the first one.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "15 8 21\np 3 27\n\nIf 'p' is the resultant of the first row, what will be the resultant of the second row?",
+      "choices": {
+        "a": "58",
+        "b": "76",
+        "c": "27",
+        "d": "82",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "12 64 17\n20 m 16\n\nIf 'm' is the resultant of the first row, what will be the resultant of the second row?",
+      "choices": {
+        "a": "69",
+        "b": "85",
+        "c": "101",
+        "d": "121",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "85 17 35\n16 19 r\n\nIf 'r' is the resultant of the first row, what will be the resultant of the second row?",
+      "choices": {
+        "a": "175",
+        "b": "-5",
+        "c": "75",
+        "d": "210",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "24 15 3\nd 6 15\n\nIf 'd' is the resultant of the first row, what will be the resultant of the second row?",
+      "choices": {
+        "a": "37",
+        "b": "8",
+        "c": "22",
+        "d": "29",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "28 49 15\nh 3 12\n\nIf 'h' is the resultant of the first row, what will be the resultant of the second row?",
+      "choices": {
+        "a": "13",
+        "b": "15",
+        "c": "19",
+        "d": "27",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "36 15 3\n12 3 n\n\nIf 'n' is the resultant of the first row, what will be the resultant of the second row?",
+      "choices": {
+        "a": "15/17",
+        "b": "32",
+        "c": "12/17",
+        "d": "36",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "58 17 5\n85 5 n\n\nIf 'n' is the resultant of the first row, what is the resultant of the second row?",
+      "choices": {
+        "a": "255",
+        "b": "32",
+        "c": "49",
+        "d": "34",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "24 64 15\nm 11 15\n\nIf 'm' is the resultant of the first row, what is the resultant of the second row?",
+      "choices": {
+        "a": "165",
+        "b": "75",
+        "c": "20",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "7 21 3\nd 7 33\n\nIf 'd' is the resultant of the first row, what will be the resultant of the second row?",
+      "choices": {
+        "a": "40",
+        "b": "138",
+        "c": "231",
+        "d": "80",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "number_operations",
+      "subtopic_name": "Number Operations with Rules",
+      "body": "73 34 13",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 325
+}

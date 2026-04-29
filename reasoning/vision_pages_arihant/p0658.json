@@ -1,0 +1,144 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Data Sufficiency",
+  "passages": [],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "direction_sense",
+      "subtopic_name": "Direction and Distance",
+      "body": "Point D is in which direction with respect to point B?\nI. Point A is to the West of point B, point C is to the North of point B, point D is to the South of point C.\nII. Point G is to South of point D. Point G is 4 m from point B. Point D is 9 m from point B.\nIII. Point A is to the West of point B. Point B is exactly midway between point A and E. Point F is to the South of point E. Point D is to the West of point F.",
+      "choices": {
+        "a": "I and III",
+        "b": "II and III",
+        "c": "All required",
+        "d": "I and II"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "age_relation",
+      "subtopic_name": "Age Relations",
+      "body": "How old was Deepak on 30th July, 1996?\nI. Deepak is 6 yr older than his brother Prabir.\nII. Prabir is 29 yr younger than his mother.\nIII. Deepak's mother celebrated her 50th birthday on 15th June, 1996.",
+      "choices": {
+        "a": "I and II",
+        "b": "All I, II and III",
+        "c": "II and III",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "calendar_scheduling",
+      "subtopic_name": "Calendar and Scheduling",
+      "body": "On which day of the last week did Mohan definitely meet Pramod in his office?\nI. Pramod went to Mohan's office on Tuesday and Thursday.\nII. Mohan was absent for three days in the week excluding Sunday.\nIII. Mohan was not absent on any two consecutive days of the week.",
+      "choices": {
+        "a": "I and II",
+        "b": "I and III",
+        "c": "II and III",
+        "d": "Even with all I, II and III, the answer cannot be arrived at"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "coding_decoding",
+      "subtopic_name": "Coding Decoding",
+      "body": "Which of the following represents 'come' in a code language?\nI. 'pit na ja od' means 'you may come here' in that language.\nII. 'ja ta ter' means 'come and go' in that code language.\nIII. 'ha na pit ter' means 'you may go home' in that code language.",
+      "choices": {
+        "a": "I and II or I and III",
+        "b": "I and II",
+        "c": "All I, II and III",
+        "d": "II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "ranking_comparison",
+      "subtopic_name": "Ranking and Comparison",
+      "body": "Who among P, Q, R, S and T is the lightest?\nI. Q is lighter than P and S and heavier than T.\nII. P is heavier than Q and lighter than S.\nIII. R is heavier than Q.",
+      "choices": {
+        "a": "I and II",
+        "b": "I and III",
+        "c": "I, II and III",
+        "d": "II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "blood_relations",
+      "subtopic_name": "Blood Relations",
+      "body": "How is Q related to T?\nI. M and R are brothers.\nII. S has two sons and one daughter, R being one of the sons.\nIII. S is the mother of T and married to Q.",
+      "choices": {
+        "a": "I and III",
+        "b": "Only III",
+        "c": "I and II",
+        "d": "II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(e) Statements I, II and III together are not sufficient as the required day can be anyone of Wednesday, Thursday, Friday and Sunday."
+    },
+    {
+      "number": 2,
+      "solution": "(C) From Statements II and III, it is clear that Rabin's brother was born in 1982, Tarun's brother was born in 1984 and Rabin was born in 1974. From Statement I, it is given that Tarun is six year older than Rabin, hence we know that Tarun was born in 1968. So, all Statements I, II and III are required to answer the question."
+    },
+    {
+      "number": 3,
+      "solution": "(D) From Statement I, Jayesh > Kamlesh > Girish/Prashant Clearly, Statement I alone is insufficient. From Statement III, Girish > Prashant Clearly, Statement III alone is insufficient. From both Statements I and III, Jayesh > Kamlesh > Girish > Prashant Clearly, Prashant is the youngest. So, Statements I and III are required to answer the question."
+    }
+  ],
+  "answers": [],
+  "_page": 658
+}

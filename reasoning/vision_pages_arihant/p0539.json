@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 18,
+      "solution": "If Tina decides to minimize the in between waiting period, the option that she should choose from the options given below will be\n(a) go by train 12801 and return by IT 3347\n(b) go by train 12443 and return by train 12802\n(c) go by AI 9810 and return by train 12802\n(d) go by AI 810 and return by AI 9809\n(e) go by IT 3348 and return by AI 809\n\nSol. (a) In this case, we are not interested in the travel time and work time at all, as the aim is to minimize the waiting time. The waiting time of one hour at the airport is to be considered but the navigation time of 5 min at the railway station is not to be considered.\nAlso, the waiting time will be nothing but the variance between completion of work and time at which she needs to leave from the work site. We need to add 0, 60 or 120 min to this (depending on how many times she travels by flight).\nNow, let us consider each option one by one.\nOption (a)\nSince, she travels by flight once, 60 min will be added to the waiting time.\nIf she goes by train 12801, she will complete the work by 11:25 h. To catch flight IT-3347 which leaves at 17:10 h, she needs to leave at 14:40 h i.e., a wait time of 195 min.\nSo, total wait time = 195 + 60 = 255 min\nHence, option (a) can be rejected.\nOption (b)\nSince, she travels by train twice, 0 min will be added to the waiting time.\nIf she goes by train 12443, she will finish the work by 17 : 10 h. To catch train 12802 which departs at 22 : 20 h, she needs to leave at 21 : 45 h i.e., a wait time of 275 min.\nSo, total wait time = 275 min\nHence, option (b) can be rejected.\nOption (c)\nSince, she travels by flight once, 60 min will be added to the waiting time.\nIf she goes by flight AI 9810, she will complete the work by 17 : 15 h. To catch train 12802 which departs at 22 : 20 h, she needs to leave at 21 : 45 h i.e., a wait time of 270 min.\nSo, total wait time = 270 + 60 = 330 min\nHence, option (c) can be rejected.\nOption (d)\nSince, she travels by flight twice, 120 min will be added to the waiting time.\nIf she goes by flight AI 810, she will complete the work by 00 : 40 h. To catch flight AI 9809 which leaves at 05 : 50 h, she needs to leave at 03 : 20 h i.e., a wait time of 160 min.\nSo, total wait time = 160 + 120 = 280 min\nHence, option (d) can be rejected.\nOption (e)\nSince, she travels by flight twice, 120 min will be added to the waiting time.\nIf she goes by flight IT-3348, she will complete the work by 04 : 35 h. To catch flight AI 809 which departs at 11 : 00 h, she needs to leave at 08 : 30 h i.e., a wait time of 235 min.\nSo, total wait time = 235 + 120 = 355 min\nHence, option (e) can be eliminated."
+    }
+  ],
+  "answers": [],
+  "_page": 539
+}

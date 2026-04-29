@@ -1,0 +1,235 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 44-49): The President of a club is appointing officials - J, K, L, M, N, O, P, Q and R - to serve on five committees to study three different aspects of activities at the club. These are Games Committee, a Food Service Committee and an Entertainment Committee. Her appointments must respect the following: i) Each committee must have exactly three members, ii) No person can serve on more than one committee, iii) L must serve on the Entertainment Committee, iv) Q must serve on the same committee, v) J and K cannot serve on the same committee, vi) N cannot serve on the same committee as R, vii) O must serve on the same committee as K or Q or both A and Q.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Directions (Q. 50-54): Study the following information and answer the questions. There is a family of six persons, viz. A, B, C, D, E and F. They are Lawyer, Doctor, Salesman, Engineer and Accountant. There are two married couples in the family. D, the Salesman, is married to the Lady Teacher. The son of D and E is the Lawyer. F, the Accountant, is the son of B and brother of Lawyer. C, the Lady Teacher, is the daughter-in-law of A. E is the unmarried Engineer and A is grandmother of F.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. 55-59): Read the following information carefully and answer the questions that follow. A family consists of six members, viz. P, Q, R, S, T and U. T is the grandfather of R and is married to couples P and Q each having a nurse, one housewife and two students in the doctor, one contractor, one nurse, one housewife and two students in the family.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "committee_formation",
+      "subtopic_name": "Committee Formation",
+      "body": "Which of the following groups could constitute the Games Committee?",
+      "choices": {
+        "a": "J, K, N",
+        "b": "O, M, P",
+        "c": "L, O, N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "committee_formation",
+      "subtopic_name": "Committee Formation",
+      "body": "If R is on the Entertainment Committee and K is on the Food Service Committee then which of the following must be true?",
+      "choices": {
+        "a": "O is on the Entertainment Committee.",
+        "b": "J is on the Games Committee.",
+        "c": "P is on the Food Service Committee.",
+        "d": "O is on the Games Committee.",
+        "e": "P is on the Games Committee."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "committee_formation",
+      "subtopic_name": "Committee Formation",
+      "body": "Any of the following could serve on the same committee as L, EXCEPT",
+      "choices": {
+        "a": "J",
+        "b": "K",
+        "c": "O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "committee_formation",
+      "subtopic_name": "Committee Formation",
+      "body": "If K and P serve on the Games Committee, which of the following must serve on the Food Service Committee?",
+      "choices": {
+        "a": "J",
+        "b": "M",
+        "c": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "committee_formation",
+      "subtopic_name": "Committee Formation",
+      "body": "If Q serves on the Food service Committee and L serves on the same Committee as Q then which of the following must serve on the Games Committee?",
+      "choices": {
+        "a": "I",
+        "b": "II, P",
+        "c": "III, R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "committee_formation",
+      "subtopic_name": "Committee Formation",
+      "body": "If J is assigned to the Food Service Committee and L is appointed to the Entertainment Committee, then which of the following must be true?",
+      "choices": {
+        "a": "I only",
+        "b": "II only",
+        "c": "I and II only"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree",
+      "body": "How is A related to F?",
+      "choices": {
+        "a": "Grandfather",
+        "b": "None of these",
+        "c": "Brother"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree",
+      "body": "Who is the husband of F?",
+      "choices": {
+        "a": "R",
+        "b": "T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree",
+      "body": "Who is the sister of T?",
+      "choices": {
+        "a": "R",
+        "b": "U"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "profession_relation",
+      "subtopic_name": "Profession Relation",
+      "body": "Information insufficient",
+      "choices": {
+        "a": "What is the profession of F?",
+        "b": "None of these",
+        "c": "Doctor or Nurse"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree",
+      "body": "Which of the following is a married couple?",
+      "choices": {
+        "a": "US, QT",
+        "b": "TS, RU"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 333
+}

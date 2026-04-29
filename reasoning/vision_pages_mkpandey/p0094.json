@@ -1,0 +1,38 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning - Evaluating Given Course of Action",
+  "passages": [
+    {
+      "passage_text": "Directions: In each question below is given a statement followed by two courses of action numbered I and II. A course of action is a step or administrative decision to be taken for improvement, follow-up, or further action in regard to the problem, policy etc. on the basis of the information given in the statement. You have to assume everything in the statement to be true, then decide which of the two given suggested courses of action logically follows for pursuing.\nGive answer (a) if only I follows; (b) if only II follows; (c) if either I or II follows; (d) if neither I nor II follows; and (e) if both I and II follow.",
+      "has_figure": false,
+      "topic_code": "course_of_action"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "evaluating_action",
+      "subtopic_name": "Evaluating Given Course of Action",
+      "body": "Statement: The State Government has decided to declare 'Kala Azar' as a notifiable disease under the Epidemics Act, 1987. Family members or neighbours of the patient are liable to be punished in case they do not inform the State authorities.\nCourses of action: I. Efforts should be made to effectively implement the Act.\nII. The cases of punishment should be propagated through mass media so that more people become aware of the stern action.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 94
+}

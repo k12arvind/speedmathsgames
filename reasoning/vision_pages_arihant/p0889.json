@@ -1,0 +1,83 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 21,
+      "solution": "(b) Green colour is on the top and bottom surfaces of the cube. Hence, two surfaces painted with one surface green and another black or red will be present on the edges on the top and bottom surfaces. ∴ Required number of Cubes = (n – 2) × 8 = 16"
+    },
+    {
+      "number": 22,
+      "solution": "(c) All the smaller cubes present on the top and bottom of the bigger cubes have green colour on atleast one of the surfaces. ∴ Required number of cubes = 16 + 16 = 32"
+    },
+    {
+      "number": 23,
+      "solution": "(d) Smaller cubes with no surface painted will be present inside the cube ∴ Required cubes = (n – 2)³ = (5 – 2)³ = (3)³ = 27"
+    },
+    {
+      "number": 24,
+      "solution": "(c) Smaller cubes with three surfaces coloured yellow will be present on the corners and their number is 8."
+    },
+    {
+      "number": 25,
+      "solution": "(b) Number of smaller cubes with atleast two surfaces coloured yellow = Number of cubes with three surfaces coloured yellow + Number of cubes with two surfaces painted yellow = 8 + (n – 2) × 12 = 8 + 3 × 12 = 44"
+    },
+    {
+      "number": 26,
+      "solution": "(c) No such smaller cubes are present in the bigger cube."
+    },
+    {
+      "number": 27,
+      "solution": "(b) Number of cubes with atleast one face coloured = Number of cubes with three surfaces coloured + Number of cubes with two surfaces coloured + Number of cubes with one surface coloured = 8 + 54 + 36 = 98"
+    },
+    {
+      "number": 28,
+      "solution": "(c) Number of cubes having only one face painted = Number of central cubes = 24"
+    },
+    {
+      "number": 29,
+      "solution": "(c) Number of cubes having only two faces painted = Number of middle cubes = 32"
+    },
+    {
+      "number": 30,
+      "solution": "(c) Number of cubes having three surface painted = Number of corner (vertex) cubes = 8"
+    },
+    {
+      "number": 31,
+      "solution": "(d) Number of cubes having two or more faces painted = Number of cubes having 2 faces painted + Number of cubes having 3 faces painted = 32 + 8 = 40"
+    },
+    {
+      "number": 32,
+      "solution": "(b) Number of cubes having no faces painted = Total number of cubes – Number of cubes with atleast one face painted = 72 – (24 + 32 + 8) = 8"
+    },
+    {
+      "number": 33,
+      "solution": "(c) Number of cubes having atleast one face painted with black colour = 16 smaller cubes + 4 bigger cubes = 20"
+    },
+    {
+      "number": 34,
+      "solution": "(c) Only one face painted cubes will be four on each of the two faces (top and bottom). Hence, there are total 8 cubes."
+    },
+    {
+      "number": 35,
+      "solution": "(b) Number of cubes having only two face painted = 2 each on 8 edges and 1 each on 4 edges = 16 + 4 = 20"
+    },
+    {
+      "number": 36,
+      "solution": "(c) Number of cubes with two or more faces painted = Number of cubes with three faces painted + Number of cubes with two faces painted = 8 + 20 = 28"
+    },
+    {
+      "number": 37,
+      "solution": "(c) Three faces painted cubes will be present on the corners and their number is 8."
+    },
+    {
+      "number": 38,
+      "solution": "(d) Number of cubes with no face painted yellow = 16 (8 each from top and bottom)."
+    }
+  ],
+  "answers": [],
+  "_page": 889
+}

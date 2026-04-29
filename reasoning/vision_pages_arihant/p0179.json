@@ -1,0 +1,178 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In this type of questions, some messages are provided in the code language and some codes are assigned to each word of the messages. The candidates are required to decipher the code of each word by finding the common code for two words and this process is followed to decipher the code for each word thereafter and hence the entire message is decoded. Following example will give you a better idea about the type of questions asked",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "substitution",
+      "subtopic_name": "Substitution Coding",
+      "body": "If 'lily' is called 'lotus', 'lotus' is called 'rose', 'rose' is called 'sunflower' and 'sunflower' is called 'marigold', then which will be the national flower of India?",
+      "choices": {
+        "a": "Lily",
+        "b": "Lotus",
+        "c": "Rose",
+        "d": "Marigold"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "substitution",
+      "subtopic_name": "Substitution Coding",
+      "body": "On another planet, the local terminology for 'earth', 'water', 'light', 'air' and 'sky' are 'sky', 'light', 'air', 'water' and 'earth', respectively. If someone is thirsty there, what would he drink?",
+      "choices": {
+        "a": "Light",
+        "b": "Air",
+        "c": "Sky",
+        "d": "Water"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "substitution",
+      "subtopic_name": "Substitution Coding",
+      "body": "If the animals which can walk are called 'swimmers', animals who crawl are called 'flying', those living in water are called 'snakes' and those which fly in the sky are called 'hunters', then what will a lizard be called?",
+      "choices": {
+        "a": "Swimmers",
+        "b": "Snakes",
+        "c": "Flying",
+        "d": "Hunters"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "fictitious_language",
+      "subtopic_name": "Fictitious Language Coding",
+      "body": "In a certain code language 'he is great' is written as 'ka pa ra' and 'is Ram hungry' is written as 'na sa ka'. Find the code for 'is'.",
+      "choices": {
+        "a": "na",
+        "b": "sa",
+        "c": "ka",
+        "d": "ra"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Colour of 'Lady Finger' is green but here green is called yellow. Hence, colour of 'Lady Finger' is yellow."
+    },
+    {
+      "number": 2,
+      "solution": "'Lion' is a wild animal but here 'lion' is called 'buffalo'. Hence, in this case 'buffalo' is a wild animal."
+    },
+    {
+      "number": 3,
+      "solution": "'Train' is associated with 'railways' but here train is called 'aeroplane'. Hence, in this case 'aeroplane' is associated with railways."
+    },
+    {
+      "number": 4,
+      "solution": "Colour of grass is 'green' but here 'green' is called 'blue'. Hence, in this case colour of grass is 'blue'."
+    },
+    {
+      "number": 5,
+      "solution": "Children study in 'school' but here 'school' is called 'house'. Hence, in this case 'house' is the place where children go to study."
+    },
+    {
+      "number": 6,
+      "solution": "'Glass' is used for drinking water and here 'glass' is called as 'saucer'. Hence, in this case saucer is used for drinking 'water'."
+    },
+    {
+      "number": 7,
+      "solution": "In 'History', we read the story of Shahjahan; but here History is called 'Economics'. Hence, in this case, we read about Shahjahan in Economics."
+    },
+    {
+      "number": 8,
+      "solution": "The colour of clear sky is 'blue' but here 'blue' is called 'green'. Hence, in this case colour of clear sky is 'green'."
+    },
+    {
+      "number": 9,
+      "solution": "Colour of blood is 'red' but here 'red' is called 'white'. Hence, in this case colour of blood is 'white'."
+    },
+    {
+      "number": 10,
+      "solution": "The king of forest is 'lion' but here 'lion' is called 'rat'. Hence, in this case rat is the king of forest."
+    },
+    {
+      "number": 11,
+      "solution": "'Soap' is used for washing 'clothes' and here 'soap' is called 'ink'."
+    },
+    {
+      "number": 12,
+      "solution": "The colour of Turmeric is 'yellow' but here, 'yellow' is called 'black'. Hence, in this case colour of turmeric is 'black'."
+    },
+    {
+      "number": 13,
+      "solution": "'Jewellery' is made of 'gold' but here 'gold' is called 'white'. Hence, in this case jewellery is made of white."
+    },
+    {
+      "number": 14,
+      "solution": "'Parrot' is a bird but here 'parrot' is called 'rat'. Hence, in this case 'rat' is a bird."
+    },
+    {
+      "number": 15,
+      "solution": "Rat is a rodent but here rat is called cat. Hence, in this case cat is a rodent."
+    },
+    {
+      "number": 16,
+      "solution": "Sachin Tendulkar is a cricketer but here cricket is called tennis. Hence, in this case Sachin Tendulkar is associated with tennis."
+    },
+    {
+      "number": 17,
+      "solution": "We know national flower of India is 'Lotus' and here 'Lotus' is called 'Rose'. Hence, in this case 'rose' is the national flower of India."
+    },
+    {
+      "number": 18,
+      "solution": "'Water' quenches thirst and here 'water' is called as 'light'. Hence, in this case 'light' quenches thirst."
+    },
+    {
+      "number": 19,
+      "solution": "Lizard crawls and here 'crawl' is called 'flying'. Hence, in this case, lizard is 'flying'."
+    },
+    {
+      "number": 22,
+      "solution": "he(is)great —> (ka)pa ra\n(is)Ram hungry —> na sa(ka)\nClearly, code for 'is' = ka\nIn the above example, code for 'he' = pa or ra, code for 'great' = pa or ra, code for 'Ram' = na or sa, code for 'hungry' = na or sa"
+    }
+  ],
+  "answers": [],
+  "_page": 179
+}

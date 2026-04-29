@@ -1,0 +1,258 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Analogous Pair Selection",
+  "passages": [
+    {
+      "passage_text": "In such type of problems, a pair of words is given, followed by four pairs of words as options. The candidate is required to pick the pair in which the words bear the same relationship to each other as the words of the given pair do. Examples given below will give a better idea about such type of problems\n\nDirections (Example Nos. 11-20) Find out the pair in which the words bear the same relationship to each other as similar to the words of the given pair bear.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Austria : Vienna",
+      "choices": {
+        "a": "Pakistan : Lahore",
+        "b": "Egypt : Cairo",
+        "c": "USA : Orlando",
+        "d": "Germany : London"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Dog : Bark",
+      "choices": {
+        "a": "Monkey : Roar",
+        "b": "Owl : Chirp",
+        "c": "Horse : Neigh",
+        "d": "Sparrow : Trumpet"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Pig : Sty",
+      "choices": {
+        "a": "Donkey : Bray",
+        "b": "Hen : Chick",
+        "c": "Owl : Barn",
+        "d": "Bird : Asylum"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Horse : Mare",
+      "choices": {
+        "a": "Fox : Vixen",
+        "b": "Bullock : Doe",
+        "c": "Monk : Monkey",
+        "d": "Bee : Hen"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Fish : Shoal",
+      "choices": {
+        "a": "Audience : Theater",
+        "b": "Shark : School",
+        "c": "Elephant : Flock",
+        "d": "Whale : Herd"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Dubious : Certain",
+      "choices": {
+        "a": "Hot : Angry",
+        "b": "Cold : Warm",
+        "c": "Long : Elongated",
+        "d": "Short : Dwar fish"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Indolence : Beaver",
+      "choices": {
+        "a": "Elegence : Peacock",
+        "b": "Ferocity : Lamb",
+        "c": "Passivity : Cow",
+        "d": "Joviality : Hyena"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Horse : Equine",
+      "choices": {
+        "a": "Lion : Carnivorous",
+        "b": null,
+        "c": "Cat : Feline",
+        "d": "Dog : Vulpine"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "Introvert : Extrovert",
+      "choices": {
+        "a": "Angle : Tangent",
+        "b": "Extreme : Interim",
+        "c": "Against : Favour",
+        "d": "Action : Law"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_pair",
+      "subtopic_name": "Word Pair Analogy",
+      "body": "India : Tricolour",
+      "choices": {
+        "a": "China : Sickle and Hammer",
+        "b": "UK : Red Cross",
+        "c": "USA : Stars and Stripes",
+        "d": "None of the above"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "'Viena' is the capital of 'Austria' and in the same way 'Cairo' is the capital of 'Egypt'."
+    },
+    {
+      "number": 12,
+      "solution": "'Bark' is the sound produced by a 'Dog' and similarly, 'Neigh' is the sound produced by a 'Horse'."
+    },
+    {
+      "number": 13,
+      "solution": "A 'Pig' lives in a 'Sty' and in the same way an 'Owl' lives in a 'Barn'."
+    },
+    {
+      "number": 14,
+      "solution": "'Mare' is the female 'Horse' and similarly, 'Vixen' is the female 'Fox'."
+    },
+    {
+      "number": 15,
+      "solution": "A group of 'Fish' is called 'Shoal'. Similarly, a group of elephants is called 'Flock'."
+    },
+    {
+      "number": 16,
+      "solution": "'Dubious' is the antonym of 'Certain' and similarly, 'Cold' is the antonym of 'Warm'."
+    },
+    {
+      "number": 17,
+      "solution": "'Beaver' is known for its 'Indolence' and similarly, 'Peacock' is known for its beauty or 'Elegence'."
+    },
+    {
+      "number": 18,
+      "solution": "Here, Equine is related to or affecting horses or other members of horse family. Similarly, Feline is relating to or affecting cats or other members of cat family."
+    },
+    {
+      "number": 19,
+      "solution": "'Introvert' is antonym of Extrovert. Similarly, Against is antonym of Favour."
+    },
+    {
+      "number": 20,
+      "solution": "Given relation (India : Tricolour) is the relation of country and corresponding national flag."
+    }
+  ],
+  "answers": [],
+  "_page": 24
+}

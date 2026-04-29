@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 43,
+      "solution": "(C) Rocks and Rings diagram shown with Balls and Stones. Conclusions: I. Some stones are rocks. (✗) II. Some rings are rocks. (✗) III. Some balls are rocks. (✓) IV. No stone is rock. (✗) Complementary pair (I-E)"
+    },
+    {
+      "number": 44,
+      "solution": "(d) Books, Tables, and Pencils diagram with Papers. Conclusions: I. Some books are pencils. (✗) II. Some pencils are tables. (✗) III. Some tables are books. (✗) IV. Some papers are tables. (✓)"
+    },
+    {
+      "number": 45,
+      "solution": "(d) Desks, Combs, Mirrors, Pins diagram. Conclusions: I. Some pins are desks. (✗) II. Some combs are desks. (✗) III. Some pins are mirrors. (✗) IV. Some pins are either desks or mirrors. (✗)"
+    },
+    {
+      "number": 46,
+      "solution": "(e) Buckets, Rods, Blades, Hammers diagram. Conclusions: I. Some buckets are hammers. (✓) II. Some rods are blades. (✓) III. All hammers are buckets. (✓) IV. All blades are rods. (✓)"
+    },
+    {
+      "number": 47,
+      "solution": "(d) Trees, Bangles, Chairs, Flowers diagram. Conclusions: I. No tree is bangle. (✗) II. No chair is bangle. (✗) III. Some flowers are trees. (✗) IV. Some bangles are trees. (✗) Complementary pair (E-I)"
+    },
+    {
+      "number": 48,
+      "solution": "(e) Girls, Cycles, Boys, Men diagram. Conclusions: I. Some boys are men. (✓) II. Some boys are cycles. (✗) III. Some boys are not cycles. (✓) IV. No cycle is girl. (✓)"
+    },
+    {
+      "number": 49,
+      "solution": "(e) Method I: Scooters, Books, Girls, Motors diagram. Conclusions: I. Some girls are motors. (✗) II. Some girls are books. (✗) III. Some scooters are girls. (✓) IV. No girl is book. (✗) Complementary pair (I-E) Method II analysis with IEA rule application shows various statement validities and concludes either II or IV and III follow."
+    },
+    {
+      "number": 50,
+      "solution": "(b) Concentric circles diagram showing Dogs inside Rats inside Crows inside Parrots. Conclusions: I. All dogs are parrots. (✓) II. Some parrots are dogs. (✓) III. Some crows are dogs. (✓) IV. All rats are dogs. (✗)"
+    }
+  ],
+  "answers": [],
+  "_page": 1183
+}

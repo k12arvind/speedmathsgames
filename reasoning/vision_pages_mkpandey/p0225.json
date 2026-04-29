@@ -1,0 +1,53 @@
+{
+  "page_type": "questions",
+  "chapter_number": 14,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_shifting",
+      "subtopic_name": "Step Shifting",
+      "body": "Give the input, what would be step V of the input?\nInput: Only you can do all thing right.",
+      "choices": {
+        "a": "you only right thing all do can",
+        "b": "only you thing right all can do",
+        "c": "only thing you right all do can",
+        "d": "thing only you right all do can",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_shifting",
+      "subtopic_name": "Step Shifting",
+      "body": "If step IV of a given input be 'It is last serious warning to you', what would be the input?",
+      "choices": {
+        "a": "you last is to serious it warning",
+        "b": "last you is to warning it serious",
+        "c": "serious last to it warning is you",
+        "d": "warning to serious it is you last",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 225
+}

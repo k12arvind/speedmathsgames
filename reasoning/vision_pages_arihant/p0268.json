@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Inserting the Missing Character",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "The pattern in clockwise direction is 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13. Hence, ? = 13"
+    },
+    {
+      "number": 3,
+      "solution": "As, 13 + 5 = 6 over 3 and 34 + 8 = 14 over 3. Similarly, missing number = 8 + 7 over 3 = 5. Hence, option (c) is the correct answer."
+    },
+    {
+      "number": 4,
+      "solution": "Numbers placed along the sides of the triangle are the squares of the numbers at the centre of the triangle, as shown below: (4)² = 16, (3)² = 9, (9)² = 81. Similarly, √64 = 8, √100 = 10, √49 = 7. So, the missing number = 8107. Hence, option (c) is the correct answer"
+    },
+    {
+      "number": 5,
+      "solution": "As, {(5)² + (4)²} – {(3)² + (2)²} = (25 + 16) – (9 + 4) = 41 – 13 = 28. Similarly, {(8)² + (4)²} – {(8)² + (?)²} = 12 ⇒ (64 + 16) – (64 + (?)²) = 12 ⇒ ?² = 4. So, the missing number = 2. Hence, option (d) is the correct answer."
+    },
+    {
+      "number": 6,
+      "solution": "According to the question, the pattern is as follows. As, 84 + 12 = 7; 7 × 2 = 14 and 81 + 9 = 9; 9 × 2 = 18. Similarly, 88 + 11 = 8 and 8 × 2 = 16. Hence, option (b) is the correct answer"
+    },
+    {
+      "number": 7,
+      "solution": "The pattern is as follows (5 × 2) – 2 = 8, (8 × 2) – 3 = 13, (13 × 2) – 4 = 22, (22 × 2) – 5 = 39, (39 × 2) – 6 = 72. Hence, ? = 72"
+    },
+    {
+      "number": 8,
+      "solution": "As, 7 + 5 over 2 = 6 and 5 + 21 over 2 = 13. Similarly, missing number = 21 + 7 over 2 = 14. Hence, option (d) is the correct answer."
+    },
+    {
+      "number": 9,
+      "solution": "As, (4)² + (2)² + (1)² = 21, (5)² + (3)² + (8)² = 98. Similarly, (6)² + (7)² + (3)² = 94. Hence, option (b) is the correct answer."
+    }
+  ],
+  "answers": [],
+  "_page": 268
+}

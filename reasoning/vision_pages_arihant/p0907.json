@@ -1,0 +1,211 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "cube_views",
+      "subtopic_name": "Different Views of Cube",
+      "body": "The following diagram depicts various views of a cube. Each face has some number, where as in cube 4, one face is blank. From the answer choices select the number that should come in the blank space.",
+      "choices": {
+        "a": "1",
+        "b": "5",
+        "c": "6",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_positions",
+      "subtopic_name": "Dice Positions",
+      "body": "A dice is thrown four times and its different positions are shown below. What number is opposite to face showing 2?",
+      "choices": {
+        "a": "6",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_opposite_face",
+      "subtopic_name": "Opposite Face on Dice",
+      "body": "From the given two positions of a single dice, find the number of dots at the face opposite to the face having 4 dots.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_opposite_face",
+      "subtopic_name": "Opposite Face on Dice",
+      "body": "From the given two positions of a single dice, find the number of dots at the face opposite to the face having 1 dot.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_top_face",
+      "subtopic_name": "Top Face on Dice",
+      "body": "From the given two positions of a single dice, find the number of dots at top face of the dice, if its bottom face has 6 dots.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "cube_positions",
+      "subtopic_name": "Cube Positions",
+      "body": "Two positions of a cubical block are given below, each face having a number of small triangles. In another positoin of the cube. If there is one triangle at the bottom, how many triangles will be there on the top face?",
+      "choices": {
+        "a": "4",
+        "b": "3",
+        "c": "2",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_opposite_face",
+      "subtopic_name": "Opposite Face on Dice",
+      "body": "How many dots will appear on the surface opposite to the surface having 6 dots.",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_opposite_face",
+      "subtopic_name": "Opposite Face on Dice",
+      "body": "From the given three positions of a single dice, find the number of dots at the face opposite to the face having 1 dots.",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_opposite_face",
+      "subtopic_name": "Opposite Face on Dice",
+      "body": "From the given four positions of a single dice, find the number of dots at the face opposite to the face having 1 dot.",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "cubes",
+      "topic_name": "Cubes and Dice",
+      "subtopic_code": "dice_opposite_face",
+      "subtopic_name": "Opposite Face on Dice",
+      "body": "From the given four positions of a single dice, find the number of dots at the face opposite to the face having 3 dots.",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 907
+}

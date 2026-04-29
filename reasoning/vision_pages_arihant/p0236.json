@@ -1,0 +1,84 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "addition_series",
+      "subtopic_name": "Addition Series",
+      "body": "Find the letter in place of question mark (?) in the series given below. A, E, I, M, Q, ?",
+      "choices": {
+        "a": "V",
+        "b": "T",
+        "c": "U",
+        "d": "W"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "addition_series",
+      "subtopic_name": "Addition Series",
+      "body": "What comes in place of question mark (?) in the series given below? B, C, E, H, L, ?",
+      "choices": {
+        "a": "M",
+        "b": "N",
+        "c": "P",
+        "d": "Q"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "subtraction_series",
+      "subtopic_name": "Subtraction Series",
+      "body": "Replace the question mark (?) in the following series with appropriate letter. P, M, J, G, D, ?",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "B",
+        "d": "E"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 31,
+      "solution": "Every next term is obtained by adding 4 to the corresponding position of its previous term (letter). A(1) +4 = E(5), E(5) +4 = I(9), I(9) +4 = M(13), M(13) +4 = Q(17), Q(17) +4 = U(21). Required letter = U"
+    },
+    {
+      "number": 32,
+      "solution": "Every next letter in the series is obtained by adding 1, 2, 3, 4 and 5 respectively to the corresponding position of its previous term (letter). B(2) +1 = C(3), C(3) +2 = E(5), E(5) +3 = H(8), H(8) +4 = L(12), L(12) +5 = Q(17). Required letter = Q"
+    },
+    {
+      "number": 33,
+      "solution": "Every next term is obtained by subtracting 3 from the corresponding position of its previous term (letter). P(16) -3 = M(13), M(13) -3 = J(10), J(10) -3 = G(7), G(7) -3 = D(4), D(4) -3 = A(1). Required letter = A"
+    }
+  ],
+  "answers": [],
+  "_page": 236
+}

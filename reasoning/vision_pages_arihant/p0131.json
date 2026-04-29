@@ -1,0 +1,245 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 50-55) Study the following arrangement carefully and answer the question given below. Indian Bank (PO) 2011\nF 4 © J 2 E % M P 5 W 9 @ I Q R 6 U H 3 2 7 ★ A T B 8 V #\nG $ Y D",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 48,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "digit_manipulation",
+      "subtopic_name": "Digit Manipulation",
+      "body": "If '1' is subtracted from the 1st digit in each number and '1' is added to the 2nd digit in each number, which will be the 3rd digit of the 2nd highest number?",
+      "choices": {
+        "a": "9",
+        "b": "8",
+        "c": "6",
+        "d": "4",
+        "e": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "digit_rearrangement",
+      "subtopic_name": "Digit Rearrangement",
+      "body": "If the position of the 1st and the 2nd digits within each number are interchanged, which of the following will be the highest number?",
+      "choices": {
+        "a": "519",
+        "b": "378",
+        "c": "436",
+        "d": "624",
+        "e": "893"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "arrangement_analysis",
+      "subtopic_name": "Arrangement Analysis",
+      "body": "How many such consonants are there in the above arrangement, each of which is immediately preceded by a number but not immediately followed by a number?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three",
+        "e": "More than three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "position_counting",
+      "subtopic_name": "Position Counting",
+      "body": "Which of the following is the 10th to the right of the 19th from the right end of the above arrangement?",
+      "choices": {
+        "a": "M",
+        "b": "T",
+        "c": "#",
+        "d": "2",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "arrangement_modification",
+      "subtopic_name": "Arrangement Modification",
+      "body": "If all the symbols are dropped from the above arrangement, which of the following will be the 14th from the left end?",
+      "choices": {
+        "a": "R",
+        "b": "Q",
+        "c": "U",
+        "d": "3",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "pattern_identification",
+      "subtopic_name": "Pattern Identification",
+      "body": "What should come in place of the question mark(?) in the following series based on the above arrangement?\nJEM 591 RU3 ?",
+      "choices": {
+        "a": "7AB",
+        "b": "7AT",
+        "c": "★78",
+        "d": "ABV",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "arrangement_analysis",
+      "subtopic_name": "Arrangement Analysis",
+      "body": "How many such symbols are there in the above arrangement, each of which is immediately preceded by number and immediately followed by a letter?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three",
+        "e": "More than three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "Four of the following five are alike in a certain way based on their positions in the above arrangement and so form a group. Which is the one that does not belong to that group?",
+      "choices": {
+        "a": "© 24",
+        "b": "PWM",
+        "c": "R16",
+        "d": "RUQ",
+        "e": "VG8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "word_formation",
+      "subtopic_name": "Word Formation",
+      "body": "From the word 'LAPAROSCOPY', how many independent meaningful English words can be made without changing the order of the letters and using each letter only once?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_arrangement",
+      "subtopic_name": "Letter Arrangement",
+      "body": "If in the word 'DISTURBANCE', the first letter is interchanged with the last letter, the second letter is interchanged with the tenth letter and so on, which letter would come after the letter 'T' in the newly formed word?",
+      "choices": {
+        "a": "I",
+        "b": "U",
+        "c": "N",
+        "d": "S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "letter_gap_series",
+      "subtopic_name": "Letter Gap Series",
+      "body": "Number of letters skipped in between adjacent letters in the series is in the order of 1² + 1, 2² + 2, 3² + 3. Which of the following series observes the rule given above?",
+      "choices": {
+        "a": "BDJV",
+        "b": "BC/V",
+        "c": "BDJU",
+        "d": "BDJV"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 131
+}

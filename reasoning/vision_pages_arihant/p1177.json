@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 48,
+      "solution": "Statements: Some boys are girls. No men are cycles. All girls are men. Conclusions: I. Some boys are men. II. Some boys are cycles. III. Some boys are not cycles. IV. No cycle is girl. Answer: (a) I and III follow"
+    },
+    {
+      "number": 49,
+      "solution": "Statements: Some motors are books. Some scooters are motors. All girls are scooters. Conclusions: I. Some girls are motors. II. Some girls are books. III. Some scooters are girls. IV. No girl is a book. Answer: (a) I and III follow"
+    },
+    {
+      "number": 50,
+      "solution": "Statements: All dogs are rats. All rats are crows. All crows are parrots. Conclusions: I. All dogs are parrots. II. Some parrots are dogs. III. Some crows are dogs. IV. All rats are dogs. Answer: (a) I and II follow"
+    },
+    {
+      "number": 1,
+      "solution": "(d) Method I - Papers Knives diagram analysis with Pens Blades. Method II using mediate/immediate inference table. All pens are papers (A-type), Some papers are blades (I-type), All blades are knives (A-type). From Statements 2 and 3, I + A = I-type conclusion. Some papers are knives - Conversion - Some knives are papers = Conclusion I. From Statements 1 and 2, A + I = Not a valid conclusion. Hence, Conclusion II does not follow. So, only Conclusions I follows."
+    },
+    {
+      "number": 2,
+      "solution": "(d) Method I - Televisions Channels diagram with Fans Radios. Some fans are channels (✓), Some radios are televisions (✓). Method II: All fans are televisions, Some televisions are channels, Some channels are radios. From Statements 1 and 2, A + I = Not a valid conclusion. Hence, Conclusion I does not follow. From Statements 2 and 3, I + I = Not a valid conclusion. Hence, Conclusion II does not follow. So, both Conclusions I and II does not follow."
+    },
+    {
+      "number": 3,
+      "solution": "(e) Method I - Leaves Branches Stems diagram with Roots. Some leaves are roots (✓), Some branches are stems (✓). Method II: Some roots are stems, All stems are branches, All branches are leaves. From Statements 1, 2 and 3, (I + A) + A = I + A = I-type conclusion. Some roots are leaves - Conversion - Some leaves are roots = Conclusion I"
+    }
+  ],
+  "answers": [],
+  "_page": 1177
+}

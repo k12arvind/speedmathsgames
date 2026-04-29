@@ -1,0 +1,40 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_number_matrix",
+      "subtopic_name": "Letter to Number Matrix",
+      "body": "Determine the letter group in the given alternatives which correctly denotes 7 4 2 8 3 5?",
+      "choices": {
+        "a": "JI, BE, CA, HG, DA, AE",
+        "b": "GG, CC, EE, FG, BB, CE",
+        "c": "II, DD, AA, EE, BB, CC",
+        "d": "FH, AD, AC, AE, FG, AB"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 29,
+      "solution": "T can be denoted by 03, 10, 56, 68, 78, 89. E can be denoted by 11, 43, 59, 75, 97. M can be denoted by 21, 31, 32, 58, 69, 79. P can be denoted by 12, 40, 55, 96, 99. T can be denoted by 03, 10, 56, 68, 78, 89. So, the number group which denotes TEMPT is 10, 75, 32, 96, 78."
+    },
+    {
+      "number": 30,
+      "solution": "7 can be denoted by FH, GG, HH, II, JI. 4 can be denoted by AD, BE, CC, DD, EE. 2 can be denoted by AB, BD, CA, DE, EA. 8 can be denoted by FG, GI, HG, IH, JH. 3 can be denoted by AC, BB, CD, DA, ED. 5 can be denoted by AE, BA, CB, DC, EC. Clearly, the letter group JI, BE, CA, HG, DA, AE correctly represents the number 742835."
+    }
+  ],
+  "answers": [],
+  "_page": 195
+}

@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 22,
+      "solution": "(d) Venn diagram shows concentric circles with Foxes outermost, then Cats, Pens, Rats, and Snakes innermost. Conclusions: I. Some snakes are cats (✓), II. All snakes are rats (✗), III. Some cats are pens (✓)"
+    },
+    {
+      "number": 23,
+      "solution": "(d) Venn diagram shows Caps and Shirts as overlapping circles with Socks and Ties as separate circles, Pants encompassing Caps and Shirts. Conclusions: I. No cap is socks (✓), II. Some pants are shirts (✓), III. All caps are pants (✗)"
+    },
+    {
+      "number": 24,
+      "solution": "(c) Venn diagram shows Boxes and Markets as separate circles, with Foxes inside Boxes and Colleges inside Markets, Schools separate. Conclusions: I. No fox is college (✓), II. No college is school (✓), III. No box is fox (✗)"
+    },
+    {
+      "number": 25,
+      "solution": "(e) Venn diagram shows Leaves and Flowers as overlapping circles, Fruits and Stems as overlapping circles, Branches separate. Conclusions: I. Some leaves are stones (✗), II. All leaves are either stems or fruits (✗), III. All stems are either branches or fruits (✗)"
+    },
+    {
+      "number": 26,
+      "solution": "(c) Venn diagram shows Trousers, Umbrellas, Caps, Raincoats, and Jackets with various overlapping relationships. Conclusions: I. Some raincoats are caps (✗), II. Some trousers are umbrellas (✓), III. All raincoats are jackets (✓)"
+    },
+    {
+      "number": 27,
+      "solution": "(c) Venn diagram shows Coolers, Computers, Fans, Machines, and Television with overlapping relationships. Conclusions: I. Some televisions are machines (✓), II. Some machines are fans (✗), III. No machine is fan (✗). Complementary pair (I-E)"
+    },
+    {
+      "number": 28,
+      "solution": "(c) Venn diagram shows Staplers, Erasers, Keys, Sharpeners, and Blades with various relationships. Conclusions: I. Some sharpeners are keys (✗), II. All keys are blades (✓), III. Some erasers are keys (✗)"
+    },
+    {
+      "number": 29,
+      "solution": "(b) Venn diagram shows Branches, Trains, Dresses, Cars, and Nets with overlapping relationships. Conclusions: I. Some dresses are cars (✗), II. Some nets are trains (✓), III. Some branches are trains (✓), IV. Some dresses are trains (✗)"
+    },
+    {
+      "number": 30,
+      "solution": "(c) Method I: Venn diagram shows Jungles, Kites, Pencils, Desks, and Mountains with relationships. Conclusions: I. Some mountains are pencils (✗), II. Some jungles are pencils (✗), III. Some mountains are desks (✓), IV. Some jungles are kites (✓). Method II: Some pencils are kites (I-type), Some kites are desks (I-types), All desks are jungles (A-type), All jungles are mountains (A-type). From Statements 1, 2, 3 and 4, [I + I] + A] + A = Not a valid conclusion. Hence, Conclusion I does not follow."
+    }
+  ],
+  "answers": [],
+  "_page": 1194
+}

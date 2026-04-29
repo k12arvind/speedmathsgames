@@ -1,0 +1,67 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "(c) From Statement I, C lives on an even numbered floor and A lives on floor immediately above C's floor. Also, floor 3 is vacant. So, it is obvious that C lives on 4th floor and A lives on 5th floor.\nHence, Statement I alone is sufficient to answer the question.\nFrom Statement II,\nPeople: B A C — E E\nFloor: 6 5 4 3 2 1\nClearly, A lives on 5th floor.\nHence, Statement II alone is sufficient to answer the question.\nSo, either Statement I or II alone are sufficient to answer the question."
+    },
+    {
+      "number": 15,
+      "solution": "(d) Both the statements are insufficient to answer the question."
+    },
+    {
+      "number": 16,
+      "solution": "(e) It is obvious that Statements I or II alone are not sufficient.\nFrom Statements I and II, P / W > T > M > R\nHence, R is the youngest.\nSo, Statements I and II both are required together to answer the question."
+    },
+    {
+      "number": 17,
+      "solution": "(d) It is obvious that Statements I or II alone are insufficient.\nFrom Statements I and II,\nyou will be gone = ka pa ni sa\nhe will be there = ja da ka ni\nClearly, 'will be' = ka ni\n∴ you gone = pa sa\n∴ gone = pa/sa\nSo, both statements are insufficient to answer the question."
+    },
+    {
+      "number": 18,
+      "solution": "(d) Both the statements are insufficient to answer the question."
+    },
+    {
+      "number": 19,
+      "solution": "(c) From Statement I,\nStarting P: 20m N, 30m W, 20m S\nClearly, P is in South direction with respect to starting point from Statement II.\nN 30m Starting W E 20m point\nS 30m\nClearly, P is in South direction with respect to starting point.\nHence, either Statement I or II alone are sufficient to answer the question."
+    },
+    {
+      "number": 20,
+      "solution": "(e) Statement I alone is insufficient, as K is not available in it and Statement II alone is insufficient, as Z is not available in it.\nFrom Statements I and II,\nZ's mother ← K's father\n[Diagram showing family tree with Mother, Z, Sister relationships]\nK is brother of Z\nClearly, K is the brother of Z.\nSo, both statements are required to answer the question."
+    },
+    {
+      "number": 21,
+      "solution": "(e) It is clear from both the statements that Ramu is the only brother of his two sisters. Hence, he has no brother.\nSo, both the statements are required to answer the question."
+    },
+    {
+      "number": 22,
+      "solution": "(d) Given that, Lal > Nand, Jim > Harry\nFrom Statement I, Jim > Harry/Nand\nAlso, Lal > Nand\nBut no comparison is given between Lal and Jim.\nHence, Statement I alone is insufficient.\nFrom Statement II, Lal > Harry/Nand\nAlso, Jim > Harry\nBut again no comparison is given between Lal and Jim.\nHence, II alone is also insufficient.\nEven it is very obvious from Statements I and II that they are together insufficient to answer the question."
+    },
+    {
+      "number": 23,
+      "solution": "(e) It is very obvious that both the statements alone are insufficient.\nFrom Statements I and II, Navin > Amol = Prabhu > Narayan\nTherefore, Navin is the heaviest.\nHence, Statements I and II both are sufficient to answer the question."
+    },
+    {
+      "number": 24,
+      "solution": "(e) From Statement II, it is clear that T is R's sister and it is given in Statement I that R's father has three daughters it means that L is the father of R and T both.\nHence, L has three daughters.\nSo, both statements are required to answer the question."
+    },
+    {
+      "number": 25,
+      "solution": "(c) Statements I and II are sufficient to answer the question.\nFrom Statement I,\nRajiv's rank from the last = 70 – 17 + 1 = 54th\nFrom Statement II, we can calculate the total number of students in the class = 20 + 51 – 1 = 70.\nNow, we can calculate Rajiv's rank from the last.\nSo, either Statement I or II alone are sufficient to answer the question."
+    },
+    {
+      "number": 26,
+      "solution": "(c) From Statement I, as Yasir was born on 29th February between the year 2005 and 2011, his birth year will definitely be 2008 because 2008 is the only leap year between 2005 and 2011. Hence, from the calender method the day on 29th Feb, 2008 can be found. Hence, Statement I alone is sufficient.\nFrom Statement II, Yasir will complete 4 yr on 29th Feb, 2012. It means he was born on 29th Feb, 2008, 4 yr back. Now, date and year is clear. Hence, again from the calender method the birthday can be calculated. Thus, Statement II alone is also sufficient.\nSo, either Statement I or II alone are sufficient to answer the question."
+    },
+    {
+      "number": 27,
+      "solution": "(c) From Statement I, out of 64, 4 students play only cricket.\nSo, remaining 64 – 4 = 60 and 22 students don't play any game.\n∴ Remaining students = 60 – 22 = 38\nNow, according to the statement 38 play both chess and cricket. So, none plays chess only.\nHence, Statement I alone is sufficient.\nFrom Statement II, out of 64, 10 don't play any game, so remaining 64 – 10 = 54 and according to the statement 38 play both chess and cricket."
+    }
+  ],
+  "answers": [],
+  "_page": 665
+}

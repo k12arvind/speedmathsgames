@@ -1,0 +1,134 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Strengthening and Weakening Arguments",
+  "passages": [
+    {
+      "passage_text": "Which of the following, if true, would tend to weaken the strength of the above conclusion? Each of the world are cold anyway, so a small rise in temperature would have a bad effect.",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    },
+    {
+      "passage_text": "Which of the following, if true, would most weaken the above argument? A) There has been a slowdown in the rate of increase in world death rate from heart disease. Coal over the last 5 years from 10% to 5%.",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    },
+    {
+      "passage_text": "Which of the following will weaken the claim of the proponent of fluoridation?",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    },
+    {
+      "passage_text": "Which of the following, if true, would weaken the above argument?",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    },
+    {
+      "passage_text": "Which of the following, if true, would most seriously weaken opposition to the complex?",
+      "has_figure": false,
+      "topic_code": "statement_argument"
+    }
+  ],
+  "questions": [
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Strengthening and Weakening Arguments",
+      "subtopic_code": "weaken_argument",
+      "subtopic_name": "Weakening Arguments",
+      "body": "B) Carbon dioxide is bad for health. C) Nitrogen dioxide is emitted by automobiles. D) Industry is switching over to synthetic liquid fuel extracted from coal. E) Health in other energy sources would be too costly.",
+      "choices": {
+        "a": "Carbon dioxide is bad for health",
+        "b": "Nitrogen dioxide is emitted by automobiles",
+        "c": "Industry is switching over to synthetic liquid fuel extracted from coal",
+        "d": "Health in other energy sources would be too costly"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Strengthening and Weakening Arguments",
+      "subtopic_code": "weaken_argument",
+      "subtopic_name": "Weakening Arguments",
+      "body": "B) It has been shown for many years that there are vast stocks of oil under Antarctica which are yet to be economically exploited. C) Oil is being used increasingly in place of coal for many industrial domestic uses. D) As coal resources are depleted more marginal supplies, which are more costly to produce and less efficient in use, are being mined. E) None of the above",
+      "choices": {
+        "a": "It has been shown for many years that there are vast stocks of oil under Antarctica which are yet to be economically exploited",
+        "b": "Oil is being used increasingly in place of coal for many industrial domestic uses",
+        "c": "As coal resources are depleted more marginal supplies, which are more costly to produce and less efficient in use, are being mined",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Strengthening and Weakening Arguments",
+      "subtopic_code": "weaken_argument",
+      "subtopic_name": "Weakening Arguments",
+      "body": "A) Fluoridation over a certain prescribed level has been shown to lead to general weakening of teeth. B) There is no record of the long-term effects of drinking fluoridated water. C) The people to be affected by fluoridation claim that they have suffered sufficient opportunity to voice their views. D) Fluoridation is only one part of general dental health. E) Water already contains natural fluoride.",
+      "choices": {
+        "a": "Fluoridation over a certain prescribed level has been shown to lead to general weakening of teeth",
+        "b": "There is no record of the long-term effects of drinking fluoridated water",
+        "c": "The people to be affected by fluoridation claim that they have suffered sufficient opportunity to voice their views",
+        "d": "Fluoridation is only one part of general dental health",
+        "e": "Water already contains natural fluoride"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Strengthening and Weakening Arguments",
+      "subtopic_code": "weaken_argument",
+      "subtopic_name": "Weakening Arguments",
+      "body": "A) Free education is not guaranteed by the Constitution. B) New York, Ohio, Pennsylvania and California have more qualified high school graduates than other states. C) West Virginia and California do not have the tax base that New York, Ohio, Pennsylvania and California have. D) Other states do not have as many high school graduates. E) Quality education cannot be free; it must be paid for.",
+      "choices": {
+        "a": "Free education is not guaranteed by the Constitution",
+        "b": "New York, Ohio, Pennsylvania and California have more qualified high school graduates than other states",
+        "c": "West Virginia and California do not have the tax base that New York, Ohio, Pennsylvania and California have",
+        "d": "Other states do not have as many high school graduates",
+        "e": "Quality education cannot be free; it must be paid for"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 4,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Strengthening and Weakening Arguments",
+      "subtopic_code": "weaken_argument",
+      "subtopic_name": "Weakening Arguments",
+      "body": "",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 145
+}

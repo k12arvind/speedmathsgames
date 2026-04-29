@@ -1,0 +1,407 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. A cube is coloured red on all of its faces. It is then cut into 64 smaller cubes of equal size. The smaller cubes so obtained are now separated.",
+      "has_figure": false,
+      "topic_code": "general"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. A cube is painted red on two adjacent surfaces and black on the surface opposite to red surfaces and green on the remaining faces. Now, the cube is cut into 64 smaller cubes of equal size.",
+      "has_figure": false,
+      "topic_code": "general"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. The outer border of width 1 cm of a cube with side 5 cm is painted yellow on each side and the remaining space enclosed by this 1 cm path is painted pink. This cube is now cut into 125 smaller cubes of each side 1 cm. The smaller cubes so obtained are now separated.",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "A solid cube is formed with 27 smaller cubes. One pair of opposite faces of this cube is painted red, another pair is painted yellow and the third pair of opposite faces is painted white. How many smaller cubes are painted yellow and white only?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "12",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "Pair of opposite faces of a solid cube having sides 3 cm are painted black, blue and yellow, respectively. After the painting this cube is divided into smaller cubes of side 1 cm. How many smaller cubes have only one face painted?",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "9",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "A solid cube is formed with 27 smaller cubes. One pair of opposite faces of this cube is painted red, another pair is painted yellow and the third pair of opposite faces is painted blue. How many smaller cubes have two faces painted?",
+      "choices": {
+        "a": "8",
+        "b": "12",
+        "c": "16",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "A cube which is painted red on the outer surface is of 2 inches height, 2 inches wide and 2 inches across. If it is cut into one inch cubes as shown by dotted lines, then indicate the number of cubes which are painted red only on two sides?",
+      "choices": {
+        "a": "8",
+        "b": "0",
+        "c": "4",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have no face coloured?",
+      "choices": {
+        "a": "24",
+        "b": "16",
+        "c": "8",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes will have atleast two surfaces painted with red colour?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "32",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have two surfaces painted with red colour?",
+      "choices": {
+        "a": "24",
+        "b": "8",
+        "c": "12",
+        "d": "20"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have only 3 surfaces painted with red colour?",
+      "choices": {
+        "a": "0",
+        "b": "12",
+        "c": "24",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have only one surface painted?",
+      "choices": {
+        "a": "8",
+        "b": "16",
+        "c": "24",
+        "d": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes will have no surface painted?",
+      "choices": {
+        "a": "0",
+        "b": "4",
+        "c": "8",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have less than three surfaces painted?",
+      "choices": {
+        "a": "8",
+        "b": "24",
+        "c": "28",
+        "d": "48"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have three surfaces painted?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "16",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes with two surfaces painted have one face green and one of the adjacent faces black or red?",
+      "choices": {
+        "a": "8",
+        "b": "16",
+        "c": "24",
+        "d": "28"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have atleast one surface painted with green colour?",
+      "choices": {
+        "a": "8",
+        "b": "24",
+        "c": "32",
+        "d": "56"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have all the surfaces uncoloured?",
+      "choices": {
+        "a": "0",
+        "b": "9",
+        "c": "18",
+        "d": "27"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have three surfaces coloured yellow?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "8",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have atleast two surfaces coloured yellow?",
+      "choices": {
+        "a": "24",
+        "b": "44",
+        "c": "48",
+        "d": "96"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have one face coloured pink and an adjacent face yellow?",
+      "choices": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes have atleast one face coloured?",
+      "choices": {
+        "a": "27",
+        "b": "98",
+        "c": "48",
+        "d": "121"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 886
+}

@@ -1,0 +1,59 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Practice Exercises",
+  "passages": [
+    {
+      "passage_text": "Directions: We come across many funny incidents related to different walks of life. One of the funny incidents is the punchline or a climax - which is the incident's sudden transformation or twist (into something not expected). It is this punchline which makes the incident funny. Read the following questions, an incident is described but the punchline is missing - indicated by a blank. After the incident, two statements numbered 1 and 2 are given. Considering the incident, you have to decide which of the two statements fits as a punchline.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "punchline_completion",
+      "subtopic_name": "Punchline Completion",
+      "body": "Give answer 'Only I' if you think only statement I fits; 'Only II' if you think only statement II fits; 'both with contrasting ideas' if you think both I and II fit but the ideas are of contrasting ideas; 'both with same ideas' if you think both I and II fit and the ideas are of similar nature; 'Neither' if you think neither of the statements fits. A: \"Do you believe in free speech?\" B: \"........\" A: \"........\"",
+      "choices": {
+        "a": "I. Good. Would you mind if I use your telephone? II. Good. Will you give a speech in our school - free of cost, of course?",
+        "b": "1) Only I",
+        "c": "2) Only II",
+        "d": "3) Both with same idea",
+        "e": "5) Neither"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "punchline_completion",
+      "subtopic_name": "Punchline Completion",
+      "body": "A: \"Is that I am not making any noise, Sir.\" I: \"One cup of coffee, please!\" 1) Only I 2) Both with same idea 3) Only II 4) Both with contrasting ideas 5) Neither",
+      "choices": {
+        "a": "1) Only I",
+        "b": "2) Both with same idea",
+        "c": "3) Only II",
+        "d": "4) Both with contrasting ideas",
+        "e": "5) Neither"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 127
+}

@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 17,
+      "solution": "(C) 2nd July, 1984 means (1983 yrs, 6 months and 2 days)\n1900 yrs have 1 odd day.\n83 years have 20 leap years and 63 ordinary years\n= (40 + 63) odd days\n= 103 = 5 odd days\n\nJan Feb March April May June July\n31  29   31    30   31   30    2\n\n= 184 days = 2 odd days\nTotal number of odd days = (1 + 5 + 2)\n= 8 odd days\n= 1 odd day\nHence, it was Monday on 2nd July, 1984."
+    },
+    {
+      "number": 18,
+      "solution": "(D) First of all, we have to find the day on 1st August, 1980.\n1st August, 1980 means (1979 yrs, 7 months and 1 day)\nNow, 1900 yrs have 1 odd day\n79 yrs have 19 leap years and 60 ordinary years,\nwhich have (19 × 2 + 60 × 1) = 98 odd day = 0 odd day\n7 months and 1 day\n\nJan Feb March April May June July August\n31  29   31    30   31   30   31    1\n\n= 214 days = 4 odd days\nTotal number of odd days = (1 + 0 + 4) = 5\nSo, it was Friday on 1st August, 1980 and 1st Monday of the month was on 4th and subsequent Mondays of the month were on 4th, 11th, 18th and 25th."
+    },
+    {
+      "number": 19,
+      "solution": "(C) First of all, we have to find the day on 1st December, 1984.\n1st December, 1984 means (1983 yrs 11 months and 1 day)\nNow, 1900 yrs have 1 odd day\n83 yrs have (20 leap years and 63 ordinary years)\n= (40 + 63) odd days\n= 103 odd days\n= 5 odd days\n\n11 months and 1 day\nJan Feb March April May June July August\n31  29   31    30   31   30   31    31\n\nSep Oct Nov Dec\n30  31  30   1\n\n= 336 days = 0 odd day\nTotal number of odd days = (1 + 5 + 0) = 6\nHence, it was Saturday on 1st December, 1984 and 1st Sunday was on 2nd December, 1984. Subsequently, Sundays of the month were on 2nd, 9th, 16th, 23rd and 30th."
+    },
+    {
+      "number": 20,
+      "solution": "(D) 1977 is an ordinary year. We know that the calendar of an ordinary year repeats after 6 yrs or 11 yrs. Let us check for the number of odd days in 6th and 11th years.\n\nYear   Number of odd days\n1978   1\n1979   1\n1980   2\n1981   1\n1982   1\n1983   1\n1984   2\n\nYear              1985  1986  1987  1988\nNumber of odd days  1     1     1     2\n\nFrom the above table,\nNumber of odd days from 18.09.1977 to 18.09.1983 = 7,\ni.e., 0 odd day\nIt means that in 1983, 18th September would fall on Sunday.\nFrom the above table, number of odd days from 18.09.1977 to 18.09.1988 = 14, i.e., 0 odd day.\nNow, it is clear that 2 marriage anniversaries would fall on Sunday in the next 15 yr."
+    }
+  ],
+  "answers": [],
+  "_page": 445
+}

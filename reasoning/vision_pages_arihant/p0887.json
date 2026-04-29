@@ -1,0 +1,247 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 28-32) Read the following information carefully and answer the questions given below. There is a solid cuboid, two opposite faces of it are painted black, two opposite faces are painted red and remaining faces are painted green. After painting, this cuboid is divided into 72 cubes so that 64 cubes of smaller size and 8 cubes of bigger size could be obtained. Bigger cubes have no face black.",
+      "has_figure": false,
+      "topic_code": "counting_figures"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 33-38) Read the following information carefully and answer the questions given below. A solid cube has been painted yellow, blue and black on the pair of opposite surfaces. The cube is then cut into 36 smaller cubes such that 32 cubes are of the same size while 4 others are of bigger size. Also, no face of any of the bigger cube is painted blue.",
+      "has_figure": false,
+      "topic_code": "counting_figures"
+    }
+  ],
+  "questions": [
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have only one face painted?",
+      "choices": {
+        "a": "8",
+        "b": "16",
+        "c": "20",
+        "d": "24",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have only two faces painted?",
+      "choices": {
+        "a": "8",
+        "b": "16",
+        "c": "24",
+        "d": "32",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have 3 faces painted?",
+      "choices": {
+        "a": "0",
+        "b": "4",
+        "c": "8",
+        "d": "24",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have two or more faces painted?",
+      "choices": {
+        "a": "16",
+        "b": "32",
+        "c": "48",
+        "d": "40",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have no faces painted?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "16",
+        "d": "32",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have atleast one face painted black?",
+      "choices": {
+        "a": "20",
+        "b": "8",
+        "c": "16",
+        "d": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have only one face painted?",
+      "choices": {
+        "a": "0",
+        "b": "4",
+        "c": "8",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have only two faces painted?",
+      "choices": {
+        "a": "24",
+        "b": "20",
+        "c": "16",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have two or more faces painted?",
+      "choices": {
+        "a": "36",
+        "b": "20",
+        "c": "28",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many cubes have only three faces painted?",
+      "choices": {
+        "a": "8",
+        "b": "4",
+        "c": "2",
+        "d": "0"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "painted_cubes",
+      "subtopic_name": "Painted Cubes",
+      "body": "How many painted cubes do not have any of their faces painted yellow?",
+      "choices": {
+        "a": "0",
+        "b": "4",
+        "c": "8",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 887
+}

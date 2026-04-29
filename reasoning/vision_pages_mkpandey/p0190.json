@@ -1,0 +1,200 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some desks are tables. All tables are icecreams. Some icecreams are drums. Conclusions: I. Some tables are icecreams. II. Some desks are icecreams. III. Some desks are drums. IV. Some desks are not drums.",
+      "choices": {
+        "a": "I, II and III follow",
+        "b": "I, II and IV follow",
+        "c": "I and either III or IV follow",
+        "d": "I, II and either III or IV follow",
+        "e": "II and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No killer is a sweater. No jacket is a sweater. Some jackets are roses. Conclusions: I. Some roses are sweaters. II. Some roses are not sweaters. III. No killer is a jacket. IV. Some jackets are killers.",
+      "choices": {
+        "a": "Either I or II and III follow",
+        "b": "Either II or IV and either I or II follow",
+        "c": "Either II or III follows",
+        "d": "Either I or II and either III or IV follow",
+        "e": "None of the above is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All blondes are beautiful. All brunettes are beautiful. All brunettes are cute. Conclusions: I. Some cute are beautiful. II. Some blondes are cute. III. Some blondes are brunettes. IV. Some brunettes are not cute.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Either II or III follows",
+        "e": "I, II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some boxes are chocolates. Some tables are desks. No box is a desk. Conclusions: I. Some chocolates are desks. II. Some chocolates are not desks. III. Some tables are boxes. IV. Some tables are not boxes.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either I or II, and either III or IV follow",
+        "c": "II and IV follow",
+        "d": "Any three of the above follow",
+        "e": "None of the above is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some drums are baskets. All baskets are gaskets. Conclusions: I. All gaskets are drums. II. Some gaskets are drums. III. Some gaskets are baskets. IV. Some gaskets are not baskets.",
+      "choices": {
+        "a": "Either II or IV follows",
+        "b": "II and III follow",
+        "c": "I and II follow",
+        "d": "Only II follows",
+        "e": "Only I follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No paper is a graper. All grapers are takers. Conclusions: I. Some papers are not takers. II. Some papers are takers. III. Some takers are not papers. IV. All takers are papers.",
+      "choices": {
+        "a": "Either I or II and IV follows",
+        "b": "Either III or IV follows",
+        "c": "Either I or II and III follows",
+        "d": "Only I follows",
+        "e": "Only III follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Many bucks are ducks. All trucks are ducks. Conclusions: I. Some ducks are not bucks. II. Some bucks are trucks. III. Some ducks are trucks. IV. All ducks are trucks.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only III follows",
+        "c": "III and IV follow",
+        "d": "II and III follow",
+        "e": "Only IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All students are patriots. All Indians are patriots. Conclusions: I. Some Indians are Indians. II. Some Indians are students. III. All Indians are students. IV. All students are Indians.",
+      "choices": {
+        "a": "Only I and III follow",
+        "b": "Only II and IV follow",
+        "c": "Only I and II follow",
+        "d": "I and II and either III or IV follow",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some tables are chairs. All tables are lawns. Conclusions: I. Some chairs are lawns. II. Some chairs are not lawns. III. Some tables are lawns. IV. Some tables are not lawns.",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 190
+}

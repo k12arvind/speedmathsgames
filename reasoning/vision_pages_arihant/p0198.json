@@ -1,0 +1,86 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column. e.g., 'A' can be represented by 01, 12, 33 etc., and 'K' can be represented by 57, 68, 85 etc. Identify the set for the word 'EAST'.",
+      "choices": {
+        "a": "00, 12, 76, 58",
+        "b": "32, 34, 76, 68",
+        "c": "41, 20, 77, 59",
+        "d": "24, 02, 55, 76"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The set of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 3 and that of Matrix II are numbered from 4 to 7. A letter from these matrices can be represented first by its row and next by its column. e.g., 'A' can be represented by 00, 76 and 'S' can be represented by 11, 66. Identify the set for the word 'PUSH'.",
+      "choices": {
+        "a": "13, 55, 21, 66",
+        "b": "01, 56, 21, 67",
+        "c": "32, 56, 20, 66",
+        "d": "20, 56, 21, 66"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The set of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column. e.g., 'A' can be represented by 02, 14, 33, etc., and K can be represented by 57, 69, 88 etc. Identify the set for the word 'SOAP'.",
+      "choices": {
+        "a": "10, 66, 45, 03",
+        "b": "30, 11, 54, 10",
+        "c": "10, 45, 66, 75",
+        "d": "01, 54, 66, 57"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The set of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column. e.g., 'T' can be represented by 00, 13, 30 and R can be represented by 56, 79, 87 etc. Identify the set for the word 'DEAL'.",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 198
+}

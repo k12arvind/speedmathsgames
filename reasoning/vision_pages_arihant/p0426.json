@@ -1,0 +1,291 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Clocks",
+  "passages": [],
+  "questions": [
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_angles",
+      "subtopic_name": "Clock Angles",
+      "body": "At what time between 4 and 5 O'clock will the the hands of a clock be at right angle?",
+      "choices": {
+        "a": "30 min past 4",
+        "b": "16 2/11 min past 4",
+        "c": "38 2/11 min past 4",
+        "d": "33 min past 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_hands_coincident",
+      "subtopic_name": "Clock Hands Coincident",
+      "body": "At what time between 5 and 6 are the hands of a clock coincident?",
+      "choices": {
+        "a": "22 min past 5",
+        "b": "30 min past 5",
+        "c": "27 3/11 min past 5",
+        "d": "27 7/11 min past 5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_hands_together",
+      "subtopic_name": "Clock Hands Together",
+      "body": "At what time between 9 and 10 O'clock will the hands of a watch be together?",
+      "choices": {
+        "a": "45 min past 9",
+        "b": "50 min past 9",
+        "c": "49 1/11 min past 9",
+        "d": "48 7/11 min past 9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_angles",
+      "subtopic_name": "Clock Angles",
+      "body": "At what angle the hands of a clock are inclined at 15 min past 5?",
+      "choices": {
+        "a": "72 1/2°",
+        "b": "67 1/2°",
+        "c": "58 1/2°",
+        "d": "64°"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_angles",
+      "subtopic_name": "Clock Angles",
+      "body": "What angle will be formed by the hands of a clock at 11 : 30?",
+      "choices": {
+        "a": "120°",
+        "b": "130°",
+        "c": "140°",
+        "d": "150°"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_problems",
+      "subtopic_name": "Clock Problems",
+      "body": "A clock is set right at 8 am. The clock gains 10 min in 24 h. What will be the right time when the clock indicates 1 pm on the following day?",
+      "choices": {
+        "a": "12:40 pm",
+        "b": "12:48 pm",
+        "c": "12 pm",
+        "d": "10 pm"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_problems",
+      "subtopic_name": "Clock Problems",
+      "body": "A watch is one minute slow at 1 : 00 pm on Tuesday and 2 min fast at 1 : 00 pm on Thursday. When did it show the correct time?",
+      "choices": {
+        "a": "1:00 am on Wednesday",
+        "b": "5:00 am on Wednesday",
+        "c": "1:00 pm on Wednesday",
+        "d": "5:00 pm on Wednesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_problems",
+      "subtopic_name": "Clock Problems",
+      "body": "A clock is set right at 8 am, the clock uniformly loses 24 min in a day. What will be the right time when the clock indicates 4 pm on the next day?",
+      "choices": {
+        "a": "4:50 pm",
+        "b": "4:30 pm",
+        "c": "4:50 am",
+        "d": "4:32 am"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_problems",
+      "subtopic_name": "Clock Problems",
+      "body": "A watch, which gains uniformly, is 3 min slow at 12 noon on Sunday and is 5 min 36 seconds fast at 4 pm on the next Sunday. At what time it was correct?",
+      "choices": {
+        "a": "12 am on same day",
+        "b": "12 pm on Monday",
+        "c": "12 am on Tuesday",
+        "d": "12 am on Wednesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "time_duration",
+      "subtopic_name": "Time Duration",
+      "body": "A class starts at 10 : 00 am lasts till 1 : 27 pm. Four periods are held during this interval. After every period, 5 min rest are given to the students. The exact duration of each period is",
+      "choices": {
+        "a": "40 min",
+        "b": "48 min",
+        "c": "51 min",
+        "d": "53 min"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_coding",
+      "subtopic_name": "Clock Coding",
+      "body": "If each of the twelve digits on a watch is replaced by English vowels a, e, i, o, u in sequence (1 by a, 2 by e, and so on), the hour hand will be between which pair of vowels at 9 : 30 am?",
+      "choices": {
+        "a": "ae",
+        "b": "ei",
+        "c": "io",
+        "d": "ou"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_angles",
+      "subtopic_name": "Clock Angles",
+      "body": "If the time in a clock is 20 min past 2, then find the angle between the hands of the clock.",
+      "choices": {
+        "a": "45°",
+        "b": "50°",
+        "c": "60°",
+        "d": "120°"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_coding",
+      "subtopic_name": "Clock Coding",
+      "body": "A series of letters, digits and symbol is given below L ♦ 4 P ♥ 8 N 7 @ 9 0 6 P ♦ D + EH T L M > 3 # If the digits/numbers of the dial of clock are replaced in such a way that φ takes the place of 6, N takes the place 7 and this arrangement goes on in the same way, then what comes in place of 11?",
+      "choices": {
+        "a": "7",
+        "b": "8",
+        "c": "+",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_coding",
+      "subtopic_name": "Clock Coding",
+      "body": "The digits/numbers from 1 to 24 to be represented by the dial of a clock are replaced by the letters of English alphabet. The replacement is started with the letter C. Find the letter which represent 16 O'clock.",
+      "choices": {
+        "a": "W",
+        "b": "P",
+        "c": "S",
+        "d": "R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 426
+}

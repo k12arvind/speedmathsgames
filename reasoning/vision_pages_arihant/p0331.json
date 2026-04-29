@@ -1,0 +1,122 @@
+{
+  "page_type": "exercises",
+  "chapter_number": 9,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-5) In these questions, relationship between different elements is shown in the statements. These statements are followed by two conclusions.\nGive answer\n(a) if only Conclusion I follows\n(b) if only Conclusion II follows\n(c) if either Conclusion I or II follows\n(d) if neither Conclusion I nor II follows\n(e) if both Conclusions I and II follow",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "mathematical_inequalities",
+      "subtopic_name": "Mathematical Inequalities",
+      "body": "Statements L > M, M > N, N > P\nConclusions I. L > P     II. M > P",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "mathematical_inequalities",
+      "subtopic_name": "Mathematical Inequalities",
+      "body": "Statements A > B, B = H, H > G\nConclusions I. A > G     II. A > H",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "mathematical_inequalities",
+      "subtopic_name": "Mathematical Inequalities",
+      "body": "Statements H < J, F < H, I ≤ J = K\nConclusions I. H > I     II. I ≥ F",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "mathematical_inequalities",
+      "subtopic_name": "Mathematical Inequalities",
+      "body": "Statements A < B < C ≤ D = E\nConclusions I. B ≤ E     II. B < E",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "mathematical_inequalities",
+      "subtopic_name": "Mathematical Inequalities",
+      "body": "Statements P > M > Q, Q > Z > N\nConclusions I. M ≥ Z     II. N < P",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 331
+}

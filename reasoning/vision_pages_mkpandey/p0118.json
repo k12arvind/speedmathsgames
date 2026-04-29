@@ -1,0 +1,87 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 24,
+      "solution": "From this, his present age can be found. From the second statement, we can easily find that Shyam has just completed 58 years of age."
+    },
+    {
+      "number": 25,
+      "solution": "From the two statements, we find that A is taller than both B and C but we cannot find out who is the tallest among B and C, which is also required. Hence, we will need a comparison of the heights of B and C, which is not given."
+    },
+    {
+      "number": 26,
+      "solution": "From the two statements we cannot find who is the shortest. Hence, we cannot say be either B or C and we will need a comparison between the heights of B and C, which is not given."
+    },
+    {
+      "number": 27,
+      "solution": "From the two statements we find that A is shorter than both B and C. A must be the shortest person."
+    },
+    {
+      "number": 28,
+      "solution": "The two statements are different family of letters. Since no answer can be obtained from the first, we find that B is such person from the second, we find that A is a person who is not the tallest. Notice that you are asked to find the persons who are not the tallest. From the first, we find that B is one such person. From the second, we find that A is one such person."
+    },
+    {
+      "number": 29,
+      "solution": "The two statements are insufficient to answer the question. Now, we are asked to find the persons who are not the tallest. From the first statement we find that B is one such person. From the second, we find that A is one such person. Combining the two information, we can conclude that B or A can be the persons who are not the tallest."
+    },
+    {
+      "number": 30,
+      "solution": "If you convert statement I, you will find that its immediate inference is 'some Indians are not honest'. But statement II alone is not sufficient. (Note: For Q. 30 to Q. 40 you are advised to go through the chapter on Syllogisms.)"
+    },
+    {
+      "number": 31,
+      "solution": "On converting, statement II gives the immediate inference: 'Some papers are not flowers'. But we do not get any answer from the first statement."
+    },
+    {
+      "number": 32,
+      "solution": "Since the two statements have the same predicate we will first have to convert them for getting an inference. For this, convert the second sentence to 'Some potatoes are flowers.' Now, we have A + I = no conclusion. Hence, we get no conclusion."
+    },
+    {
+      "number": 33,
+      "solution": "We use the rule I + E = O. Hence, the two statements together give no conclusion. Some papers are not flowers. This answers the question."
+    },
+    {
+      "number": 34,
+      "solution": "We use the rule I + E = O. Hence, the two statements together give no conclusion : Some papers are not flowers. But this does not answer the question fully. Some papers are not flowers but the remaining papers may or may not be flowers. Hence, data insufficient."
+    },
+    {
+      "number": 35,
+      "solution": "We use the rule I + E = O. Hence, the two statements together give no conclusion that 'Some papers are not flowers.' This answers the question."
+    },
+    {
+      "number": 36,
+      "solution": "We cannot get an answer to our question from statement I. But from statement II we get the answer. Since 'No chair is an Indian', the answer that 'Some Indians are chair' must be false. This does not answer the question and the answer remains 'No'."
+    },
+    {
+      "number": 37,
+      "solution": "Using the two statements together we can conclude that 'Some Indians are not honest'. [I + O = I]. Since 'Some Indians are honest' implies that the statement 'No Indian is honest', we may conclude that we do not get an answer to the above question and the answer remains 'No'."
+    },
+    {
+      "number": 38,
+      "solution": "Using the two statements together we can conclude that 'Some Indians are not honest' [I + O = I]. Since 'Some Indians are honest' does not provide complete information, we may conclude that data is insufficient. From 'Some Indians are not honest' we do not know whether the remaining Indians are also honest or not. If the remaining Indians are also dishonest the answer would be 'Yes', otherwise it would be 'No'."
+    },
+    {
+      "number": 39,
+      "solution": "From I, we conclude by immediate inference that 'Some baskets are not glasses'. From II, we conclude by converting that 'All baskets are glasses', which implies automatically that 'Some baskets are glasses.' Hence, both the statements are independently sufficient to answer the question."
+    },
+    {
+      "number": 40,
+      "solution": "We cannot get an answer to our question from the two statements. By the rules of syllogism, we find that A + I = no conclusion."
+    },
+    {
+      "number": 41,
+      "solution": "Both the statements are individually sufficient to answer the question. Since there are only four persons, from I we find that if B is opposite D, the remaining two, viz. A and C, must be facing each other. Again, from II we find that since A is between B and D, C must be opposite A. Hence, both the statements are independently sufficient to answer the question."
+    },
+    {
+      "number": 42,
+      "solution": "We cannot get a concrete answer from the two statements. From statement I we find that B is opposite C and D is opposite E. This implies that the remaining two, viz. F and A must be opposite each other. Now, F is on the immediate left of A. This can be pictorially represented as [FIGURE: Shows a circle with positions marked A, B, C, D, E, F around it] From the figure, it is clear that on the immediate left of A we can have either D or E and hence, the information is insufficient."
+    }
+  ],
+  "answers": [],
+  "_page": 118
+}

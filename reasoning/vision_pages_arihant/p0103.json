@@ -1,0 +1,340 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "alphabet_position",
+      "subtopic_name": "Alphabet Position",
+      "body": "Find the middle letter between 7th letter from start and 14th letter from end in the English alphabet.",
+      "choices": {
+        "a": "H",
+        "b": "I",
+        "c": "J",
+        "d": "K",
+        "e": "No letter possible"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "alphabet_reversal",
+      "subtopic_name": "Alphabet Reversal",
+      "body": "If the 1st half of the English alphabet is reversed and so is the 2nd half, then which letter is 7th to the right of the 12th letter from the left side?",
+      "choices": {
+        "a": "S",
+        "b": "U",
+        "c": "R",
+        "d": "T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "alphabet_position",
+      "subtopic_name": "Alphabet Position",
+      "body": "Find the middle letter between 4th and 16th letters in the English alphabet.",
+      "choices": {
+        "a": "J",
+        "b": "K",
+        "c": "I",
+        "d": "L",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_rearrangement",
+      "subtopic_name": "Letter Rearrangement",
+      "body": "If the first and second letters in the word 'COMMUNICATIONS' were interchanged, also the third and the fourth letters, the fifth and sixth letters, and so on. Which letter would be the tenth letter counting from your right?",
+      "choices": {
+        "a": "U",
+        "b": "A",
+        "c": "T",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_substitution",
+      "subtopic_name": "Letter Substitution",
+      "body": "If every alternate letter in the word 'SOLITARY' starting from the 1st letter is replaced by the previous letter and each of the remaining letters is replaced by the next letter in the English alphabet, which of the following will be the 3rd letter from the right end after the substitution?",
+      "choices": {
+        "a": "R",
+        "b": "S",
+        "c": "Z",
+        "d": "K"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_rearrangement",
+      "subtopic_name": "Letter Rearrangement",
+      "body": "How many such letters are there in the word 'CATEGORY' each of which is as far away from the beginning of the word as when they are arranged in alphabetical order?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three",
+        "e": "More than three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_position_analysis",
+      "subtopic_name": "Letter Position Analysis",
+      "body": "If the letters of the word 'VERTICAL' are arranged alphabetically, how many letters will remain at the same position?",
+      "choices": {
+        "a": "Four",
+        "b": "Three",
+        "c": "Two",
+        "d": "One",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_position_analysis",
+      "subtopic_name": "Letter Position Analysis",
+      "body": "How many such letters are there in the word 'MONKEY' which remain the same in its position, if the letters are arranged in descending order alphabetically?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_position_analysis",
+      "subtopic_name": "Letter Position Analysis",
+      "body": "How many such letters are there in the word 'MARTINA', Which remain same in its position, if they are arranged in alphabetical order?",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_rearrangement",
+      "subtopic_name": "Letter Rearrangement",
+      "body": "If the last four letters of the word 'CONCENTRATION' are written in reverse order followed by next two in reverse order and next three in the reverse order. Counting from the end, which letter would be eighth in the new arrangement?",
+      "choices": {
+        "a": "O",
+        "b": "I",
+        "c": "N",
+        "d": "T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_substitution",
+      "subtopic_name": "Letter Substitution",
+      "body": "If each alphabet in the word 'FRACTION' is arranged in alphabetical order and then each vowel is changed to the next letter in the English alphabetical series and each consonant is changed to previous letter in English alphabetical series, which of the following will be 4th from the right side of the new arrangement thus formed?",
+      "choices": {
+        "a": "M",
+        "b": "T",
+        "c": "P",
+        "d": "L",
+        "e": "O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_substitution",
+      "subtopic_name": "Letter Substitution",
+      "body": "Each consonant in the word 'TIRADES' is replaced by the previous letter and each vowel is replaced by the next letter in the English alphabet and the new letters are rearranged alphabetically which of the following will be the fourth from the right end?",
+      "choices": {
+        "a": "F",
+        "b": "J",
+        "c": "Q",
+        "d": "C",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_substitution",
+      "subtopic_name": "Letter Substitution",
+      "body": "If each consonant in the word 'TOLERANT' is replaced by the previous letter in the English alphabet and each vowel in the word is replaced by the next letter in the English alphabet and a new set of letters is arranged alphabetically, which of the following will be the 4th from the right end after the replacement?",
+      "choices": {
+        "a": "M",
+        "b": "P",
+        "c": "Q",
+        "d": "K",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_position_analysis",
+      "subtopic_name": "Letter Position Analysis",
+      "body": "In case of how many letters of the word 'RAIMENT' will their order in the word remains same when the letters are arranged in the alphabetical order?",
+      "choices": {
+        "a": "Nil",
+        "b": "Three",
+        "c": "One",
+        "d": "Two",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_position_analysis",
+      "subtopic_name": "Letter Position Analysis",
+      "body": "In the case of how many letters of the word 'PAINTS', will their order in the word remains the same when the letters are arranged in the alphabetical order?",
+      "choices": {
+        "a": "Two",
+        "b": "One",
+        "c": "Three",
+        "d": "Nil",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_rearrangement",
+      "subtopic_name": "Letter Rearrangement",
+      "body": "If the letters of the word 'DOLPHIN' are arranged as they appear in the English alphabetical order, which of the following letters will be the 5th from left?",
+      "choices": {
+        "a": "O",
+        "b": "D",
+        "c": "I",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 103
+}

@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 16,
+      "solution": "Statements: P≥Q, M≤N, N<Q\nConclusions: I. P>M\nII. N≥P\nCombining P≥Q and N<Q, we get P>N and P>N≥Q, so P>N follows. But, different from P>N (or N≥P). So, it does not follow. Now, P>N and P>N≥M≤N, so P>M follows."
+    },
+    {
+      "number": 17,
+      "solution": "Statements: D≤X, F>Y, D≤Y\nConclusions: I. X>Y\nII. Y≤D\nCombining F>Y and D≤Y we get D≤F≤Y, so that D≤Y, and Y≥D follows. But, is not the same as X≥Y. So, I does not follow. Now, D≤Y and D≤X we get D≤X≤Y, so that X≥Y follows."
+    },
+    {
+      "number": 18,
+      "solution": "Statements: M≤T≤S≤M\nConclusions: I. S=M\nII. T≤S\nI is wrong as T is not defined by any combining method. II is retained by combining M≤T. M≥T to get T≤M≤T so that T≤T follows."
+    },
+    {
+      "number": 19,
+      "solution": "Statements: U>W≤V, W≤V\nConclusions: I. W≤V\nII. U≤X\nFrom U>W and U<W, I follows. From U>W and X>W we get follows."
+    },
+    {
+      "number": 20,
+      "solution": "Statements: G>H, J≤K, H≤K\nConclusions: I. H>J\nII. J≤H\nFrom I>H and J≤K we get J≤H or H≥J. Now by check 3, either I or II follows."
+    },
+    {
+      "number": 21,
+      "solution": "Statements: H≤A<Z, H≤Z, F>V\nConclusions: I. A=H\nII. H>A\nFrom A<Z and H≤Z we get H≤A. By check 3, I or H follows."
+    },
+    {
+      "number": 22,
+      "solution": "Statements: Q<R, C>D, F≥R, D=F\nConclusions: I. Q≤C\nII. C>F\nFor I, all elements are relevant and need to be used, combining Q<R and F≥R to get Q<F≥R. Now, we eliminate R and get a possible between Q and F. Now, let us put D=F in Q<F to get Q<D. So, we eliminate this initial conclusion between Q and D. Now, Q<D and C>D give Q<C. So, I follows. II follows from C>D and D=F."
+    },
+    {
+      "number": 23,
+      "solution": "Statements: M>N>L\nConclusions: I. N>L\nII. X≤O\nCombining M and M<X we get N>L. Now, N>X and L>X gives >X≥L to give N≤L. Conclusion II must be wrong because X and L are any term in the given statements but conclusion II says X is less than O."
+    },
+    {
+      "number": 24,
+      "solution": "Statements: I>O, R≥L, Z=R, J<Z\nConclusions: I. Z=I\nII. Z>I\nFor a conclusion between Z and I, R≥I and Z=R are relevant statements. They give: Z≥I. By check 3, either follows."
+    }
+  ],
+  "answers": [],
+  "_page": 304
+}

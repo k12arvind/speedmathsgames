@@ -1,0 +1,39 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 32,
+      "solution": "(b) According to the question, the direction diagram will be as follows\n\nC←5 km→B\n   Left    Left 2 km\n         A ← School (Starting point)\n8 km\n\n         F ← (Final position)\n   Left    Left 1 km\nD←5 km\n\nNow, BC = DE = 5 km, CD = BE = 8 km\n      AB = 2 km, EF = 1 km\n∴ Required distance, AF = BE - (AB + EF)\n                        = 8 - (2 + 1) = 8 - 3 = 5 km\n\nFrom the direction diagram, it is clear that the bus is present finally in the South direction of school. So, the driver needs to drive 5 km towards North direction to reach the school."
+    },
+    {
+      "number": 33,
+      "solution": "(c) According to the question, the direction diagram will be as follows\n\nOffice\n(Final\nposition)    20 km         F     D\nE                    1 km   Left  1 km\n                B    Left  C\n                  Right\n\n                      15 km\n\n             A\n      Home (Starting point)\n\nNow, AB = 15 km, CD = BF = 1 km\n     AE = AB + BF = 15 + 1 = 16 km\n     DE = 20 km\n     DF = BC = 8 km\n     EF = DE - DF = 20 - 8 = 12 km\n\n∴ Required distance, AE = √(AF)² + (EF)² = √(16)² + (12)²\n                        = √256 + 144 = √400 = 20 km\n\nSo, his office is 20 km North-West"
+    },
+    {
+      "number": 34,
+      "solution": "(d) According to the question, the direction diagram will be as follows\n\nFinishing\npoint   17 km    C\nD←        ←Left\n        15 km\nStarting     ←Left\npoint      B\nA     17 km\n\nNow,   AB = CD = 17 km and BC = AD = 15 km\n∴ Required distance, AD = 15 km"
+    },
+    {
+      "number": 35,
+      "solution": "(b) According to the question, the direction diagram will be as follows\n\nStarting point\n                F←10 km→D      A\nFinal           \nposition\n                         10 km   10 km\n                    5 km\n              C     B\n\nNow,   AB = DC = 10 km, BC = DA = 5 km, ED = 10 km\n∴ Required distance, EA = ED + DA = 10 + 5 = 15 km"
+    },
+    {
+      "number": 36,
+      "solution": "(b) According to the question, the direction diagram will be as follows\n\nEnd point\n    E\n       100 m\nStarting      F    B\npoint    90 m\nA           20 m\n    D  30 m  C\n\nAE is the distance between the starting point and the end point.\nNow,   CD = FB = 30 m, BC = DF = 20 m, AB = 90 m\n       AF = AB - FB = 90 - 30 = 60 m, ED = 100 m\n       EF = ED - DF = 100 - 20 = 80 m\n\n∴ Required distance,\n       AE = √(AF)² + (EF)²    (by Pythagoras theorem)\n         = √(60)² + (80)² = √3600 + 6400\n         = √10000 = 100 m"
+    },
+    {
+      "number": 37,
+      "solution": "(c) According to the question, the direction diagram will be as follows\n\nA←50 km→B\n40 km         30 km\n↓              ↓\nD←50 km→C\n  10\n\nNow,   AB = CD = 50 km, OA = 40 km\n∴ Required distance, OD = OA - AD = 40 - 30 = 10 km"
+    },
+    {
+      "number": 38,
+      "solution": "(c) According to the question, the direction diagram will be as follows\n\nStarting        Finishing\npoint  D  15 m  E  point\nA               \n           Right\n    25 m      25 m\n    Left  Left\n    B   20 m  C\n\nNow, AB = CD = 25 m, BC = AD = 20 m, DE = 15 m\n∴ Required distance, AE = AD + DE\n                       AE = (20 + 15) = 35 m\n\nAlso, E is to the East of A."
+    }
+  ],
+  "answers": [],
+  "_page": 473
+}

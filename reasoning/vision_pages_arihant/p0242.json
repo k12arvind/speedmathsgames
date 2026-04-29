@@ -1,0 +1,75 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 12,
+      "solution": "(b) The pattern is as follows R O J I H G 7 with +1, -3, -3, -3, -3, -3 pattern. ∴ ? = C"
+    },
+    {
+      "number": 13,
+      "solution": "(c) The pattern is as follows with +1 increments in a grid pattern P Q R (16 17 18), S T U (19 20 21), followed by grid positions. ∴ ? = GHI"
+    },
+    {
+      "number": 14,
+      "solution": "(c) The pattern is as follows A 3 6, B 4 6, C 5 7, D 6 8 with +1, +1, +1 increments. ∴ ? = DFH"
+    },
+    {
+      "number": 15,
+      "solution": "(d) First two letters and last two letters interchange their positions alternately. ∴ ? = KPM"
+    },
+    {
+      "number": 16,
+      "solution": "(c) First and last letters disappear alternately. ∴ ? = IMARIL"
+    },
+    {
+      "number": 17,
+      "solution": "(d) Last and first letters get disappear alternately. ∴ ? = ATUR"
+    },
+    {
+      "number": 18,
+      "solution": "(d) Here, three letters are skipped between each term of the series. CD EfG HI JkL MN OpQ RS with Skipped, Skipped, Skipped pattern. ∴ ? = RS"
+    },
+    {
+      "number": 19,
+      "solution": "(d) The pattern is as follows 25 23 21 19 17 15 13 11 Y W U S Q O M K with -2, -2, -2, -2, -2, -2, -2 pattern. ∴ ? = OQ"
+    },
+    {
+      "number": 20,
+      "solution": "(d) The pattern is as follows +3, +4, +3, +4, +3 D F G J K M N Q R T U X with +4, +3, +4, +3, +4. ∴ ? = UX"
+    },
+    {
+      "number": 21,
+      "solution": "(d) The pattern is as follows 1st Letter: 26 -6 20 -6 14 -6 8, 2nd Letter: 24 -6 18 -6 12 -6 6, 3rd Letter: 22 -6 16 -6 10 -6 4. ∴ ? = HFD"
+    },
+    {
+      "number": 22,
+      "solution": "(d) Pattern shows +1 increments: 16 15 17 16 18 20 22 21 23 25 24 26 P O Q R T V U W Y X Z with +1, +1, +1, +1 pattern. ∴ ? = YXZ"
+    },
+    {
+      "number": 23,
+      "solution": "(c) Considering odd places elements first. 1st Letter: X -3 U -3 R -3 O, 2nd Letter: Z -3 W -3 T -3 Q, 3rd Letter: Z -3 W -3 T -3 Q. Considering even place elements secondly. 1st Letter: A +3 D +3 G, 2nd Letter: C +3 F +3 I, 3rd Letter: C +3 F +3 I. ∴ ? = OPQ"
+    },
+    {
+      "number": 24,
+      "solution": "(a) The pattern is as follows 1st Letter: P +1 Q +1 R +1 S, 2nd Letter: C +2 E +2 G +2 I, 3rd Letter: A +2 C +2 E +2 G"
+    },
+    {
+      "number": 25,
+      "solution": "(b) The pattern is as follows 1st Letter: X -2 V -3 S -4 O -5 J, 2nd Letter: W -3 T -4 P -5 K -6 E, 3rd Letter: A +2 C +3 F +4 J +5 O. ∴ ? = JEO"
+    },
+    {
+      "number": 26,
+      "solution": "(c) The pattern is as follows with +3 increments between positions C I G, F L J, O M, L R P with +3, +3, +3 pattern. ∴ ? = LRP"
+    },
+    {
+      "number": 27,
+      "solution": "(d) The pattern is as follows with +1 increments 10 20 5, 16 21 6, 17 22 7, 18 23 8, 19 24 9 O T E, P U F, Q V G, R W H, S X I with +1, +1, +1, +1 pattern. ∴ ? = SXI"
+    }
+  ],
+  "answers": [],
+  "_page": 242
+}

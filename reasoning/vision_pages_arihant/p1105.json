@@ -1,0 +1,121 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 23-27) In each of the questions below a statement is given followed by three courses of action numbered I, II and III. A course of action is a step or an administrative decision to be taken for improvement, follow-up a further action in regard to the problem, policy etc. On the basis of the information given in the statement, you have to assume everything in the statement to be true, then decide which of the suggested courses of action logically follows worth pursuing.",
+      "has_figure": false,
+      "topic_code": "course_of_action"
+    }
+  ],
+  "questions": [
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "policy_action",
+      "subtopic_name": "Policy Action",
+      "body": "Statement The world will have to feed more than a billion people in the next century, of whom half will be in Asia and will eat rice as their staple food.\nCourses of Action\nI. More funds should immediately be allocated for rice research to help ensure adequate supplies.\nII. The people in Asia should be encouraged to change their food habits.\nIII. The rice should be grown in countries outside Asia to meet the demand.",
+      "choices": {
+        "a": "Both I and II follow",
+        "b": "All follow",
+        "c": "Both II and III follow",
+        "d": "Both I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "disaster_management",
+      "subtopic_name": "Disaster Management",
+      "body": "Statement Occurrences of natural calamities have now increased as compared to the situation five years ago.\nCourses of Action\nI. Government should always be ready with the action plan for disaster management.\nII. Government should not permit development activities which are likely to cause harm to nature.\nIII. Government should appoint a committee of environmentalists and scientists to work out plans to handle various calamities.",
+      "choices": {
+        "a": "Both I and II follow",
+        "b": "Both I and III follow",
+        "c": "Both II and III follow",
+        "d": "All follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "employment_policy",
+      "subtopic_name": "Employment Policy",
+      "body": "Statement Despite increasing BPO jobs in our country, a large number of educated youth are unemployed.\nCourses of Action\nI. Government should give unemployment allowance to all unemployed youth.\nII. Government should introduce various schemes in different areas that will generate employment opportunities.\nIII. Efforts should be made by the society and the Government to encourage the youth for vocational education.",
+      "choices": {
+        "a": "Both I and II follow",
+        "b": "Both II and III follow",
+        "c": "Both I and III follow",
+        "d": "Only II follows",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "health_policy",
+      "subtopic_name": "Health Policy",
+      "body": "Statement Cases of asthama sufferers have been rising, particularly in the big cities.\nCourses of Action\nI. Civic authorities should ensure adequate supply of medicines at normal rates.\nII. Civic authorities need to control the air pollution caused due to emission from vehicles.\nIII. Act of tree-cutting without permission should be severely punished.",
+      "choices": {
+        "a": "Both I and II follow",
+        "b": "Both II and III follow",
+        "c": "Only III follows",
+        "d": "Only II follows",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "education_policy",
+      "subtopic_name": "Education Policy",
+      "body": "Statement Many students at school and degree level are not able to master the subjects even if they have passed out with high scores.\nCourses of Action\nI. Education boards should examine and revise the examination system to tap the real talent.\nII. Examination system at all levels should be so designed as to discourage rote learning.\nIII. Difficulty level of the examination papers should be significantly increased.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Both I and II follow",
+        "d": "Either I or II follows",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1105
+}

@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "(b) Coded with corresponding positions of letters. As, H I G H → 8 9 7 8. Similarly, D E A F → 4 5 1 6. ∴ DEAF ⇒ 4516"
+    },
+    {
+      "number": 4,
+      "solution": "(b) Coded with corresponding positions of letters. As, J K L → 8 1 3 2. Similarly, D E F A → 4 5 6 1. ∴ DEFA ⇒ 4561"
+    },
+    {
+      "number": 5,
+      "solution": "(d) Coded with corresponding positions of letters. As, P A P E R → 16 1 16 5 18. Similarly, B R I N J L → 2 18 9 14 10 12. ∴ BRINJL ⇒ 2189141012"
+    },
+    {
+      "number": 6,
+      "solution": "(d) Letters are coded with their corresponding positions. As, R U N → 18 21 14 and P E N → 16 5 14. Similarly, R A N S O M → 18 1 14 19 15 13. ∴ RANSOM ⇒ 18114191513"
+    },
+    {
+      "number": 7,
+      "solution": "(c) Letters are coded with their corresponding positions. As, G E R M A N Y → 7 5 18 13 1 14 25. Similarly, F R A N C E → 6 18 1 14 3 5. ∴ FRANCE ⇒ 6, 18, 1, 14, 3, 5"
+    },
+    {
+      "number": 8,
+      "solution": "(d) Starting from right, each letter is coded with its corresponding position in English alphabet. As, W I N D → 4 14 9 23 and S A N D → 4 14 1 19. Similarly, F A S H I O N → 14 15 9 8 19 1 6. ∴ FASHION ⇒ 1415981916"
+    },
+    {
+      "number": 9,
+      "solution": "(c) 7 is coded as CBRT 343. 343 is the cube of 7 i.e., (7³ = 343). Similarly, 9 is coded as CBRT 729. 729 is the cube of 9 i.e., (9³ = 729)"
+    },
+    {
+      "number": 10,
+      "solution": "(c) As, S S C → 19 19 3. Similarly, B B C → 2 2 3. ∴ BBC ⇒ 223"
+    },
+    {
+      "number": 11,
+      "solution": "(b) Basic word H E L L O. 'H' has 8th position in the alphabetical order and 'O' has 15th position as in the alphabetical order. Both the positions of numeric form are interchanged as shown in the above figure. Similarly, 'L' has 12th position which is interchanged with 'E' s position i.e., '5' and so on. In the same way. Basic word W H E R E → 5 18 5 8 23"
+    }
+  ],
+  "answers": [],
+  "_page": 168
+}

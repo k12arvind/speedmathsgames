@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 17,
+      "solution": "Q. 17-21: The logic is this: the words get arranged in interchanging places. That is, what occupies the first place goes to the last place, the second word goes to the first place and so on. Input: this west to prepare the domestic industry Step I: domestic industry to prepare the this west Step II: domestic industry to prepare the this west Step III: domestic industry prepare to the this west"
+    },
+    {
+      "number": 18,
+      "solution": "Input: there were several other areas for the country Step I: areas country several other there for the Step II: areas country several other there for the country Step III: areas country for other there several the were"
+    },
+    {
+      "number": 19,
+      "solution": "Input: reviewing commitments already made by previous governments Step I: already by reviewing made commitments previous governments Step II: already by reviewing made commitments previous governments Step III: already by commitments made reviewing previous governments Step IV: already by commitments made reviewing previous governments Step V: already commitments governments made reviewing previous"
+    },
+    {
+      "number": 20,
+      "solution": "Input: the products include milk powder grape wheat Step I: grape include products milk powder the wheat Step II: grape include products milk powder the wheat Step III: grape include milk products powder the wheat Step IV: grape include milk powder products the wheat Hence, Step III will be penultimate."
+    },
+    {
+      "number": 21,
+      "solution": "Input: Samsung proposal to hike stake in the Indian venture Step I: hike in to Samsung stake proposal the Indian venture Step II: hike in to Samsung stake proposal the Indian venture Step III: hike in Indian Samsung stake proposal the to venture Step IV: hike in Indian proposal stake Samsung the to venture"
+    },
+    {
+      "number": 22,
+      "solution": "Q. 22-26: Study the changes very carefully. What happens? Clearly, it is a case of simple arrangement in ascending or descending order. Look at the way 31 and 17 are brought together, so also 33 and 22. Multiple of 11 and then multiples of 11. So the clue: something to do with multiples. What really happens is the following: in case of a composite number, the largest factor (other than the number itself) is taken into account. In the case of a prime number, the number itself is considered. In case there are two multiples, the larger multiple is arranged first. Thus 37 = 37 × 1, 29 = 29 × 1, 17 = 17 × 1, 51 = 17 × 3, 46 = 23 × 2. 22 = 11 × 2, 71 = 71 × 1, 33 = 11 × 3 etc. Now, the underlined parts are what numbers and these are arranged in a descending order. That is why 71 comes after 29 because the key number for 46 is 23, which is less than 29. Also, when a number is arranged, it interchanges its position with the wrongly-placed number."
+    }
+  ],
+  "answers": [],
+  "_page": 262
+}

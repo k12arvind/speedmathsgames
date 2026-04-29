@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "Ramesh's position from left = 30 - 20 + 1 = 10 + 1 = 11th\nMahesh's position from left = 14th\nClearly, there are 2 students in between Ramesh and Mahesh.\nHence, option (b) is the correct answer."
+    },
+    {
+      "number": 10,
+      "solution": "Total persons in the queue = (Sum of positions of Soham from both ends)-1\n= (10+28) -1 = 38 -1 = 37"
+    },
+    {
+      "number": 11,
+      "solution": "Anil's original position from left = 7th\nJack's original position from right = 18th\nAnil's position from left after interchange = 21st\nSince, Anil exchanged his seat with Jack, it means Jack's original position is 21st from the left.\n∴ Total number of people = (Initial position of Jack from the right + Initial position of Jack from the left) - 1\n= 18 + 21 - 1 = 38"
+    }
+  ],
+  "answers": [],
+  "_page": 298
+}

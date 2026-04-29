@@ -1,0 +1,88 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Counting of Figures",
+  "passages": [],
+  "questions": [
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "coloring_regions",
+      "subtopic_name": "Coloring Adjacent Regions",
+      "body": "Consider the figure given below and answer the question that follows\n\nWhat is the minimum number of different colours required to paint the figure given above such that no two adjacent regions have the same colour?",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "counting_circles",
+      "subtopic_name": "Counting Circles",
+      "body": "How many circles appear below?",
+      "choices": {
+        "a": "10",
+        "b": "14",
+        "c": "12",
+        "d": "13"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "counting_different_sized_circles",
+      "subtopic_name": "Counting Different Sized Circles",
+      "body": "How many different sized circles appear below?",
+      "choices": {
+        "a": "10",
+        "b": "13",
+        "c": "18",
+        "d": "19"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "The figure has been labelled as shown in the following figure. It is clear from the figure that the straight lines in the figure are as follow (i) Straight lines from the outer square = AB, BC, CD, AD = 4 (ii) Straight lines in the diagonals = AC, BD = 2 (iii) Other straight lines inside the square = EG, FH, EF, FG, GH, EH, I, KL = 8 Therefore, total number of straight lines is 14."
+    },
+    {
+      "number": 2,
+      "solution": "The figure in the question may be labelled as shown below. There are nine triangles in the upper half of the figure ABFF = △AEI, △AIC, △AEG, △GEO, △GBJ, △BFJ, △GBF, △GOF and △GEF. Similarly, there are nine triangles in the lower half figure i.e., EFCD. There are two more triangles △EGH and △FGH. Hence, there are a total of 20 triangles."
+    },
+    {
+      "number": 3,
+      "solution": "Total 28 triangles are as follow △ABG, △APG, △CHD, △HDE, △BGI, △BCJ, △HCJ, △HGI, △GHJ, △HEJ, △EFJ, △GFJ, △ABF, △CDE, △BGG, △BCH, △HCG, △BHG, △GHE, △HEJ, △GTE, △GHF, △GHF, △AFH, △CDG, △GDE, △EHF and △CGE"
+    },
+    {
+      "number": 4,
+      "solution": "In the given diagram, there are 22 triangles which can be better understood with the help of following diagram. In the above figures, Triangles consisting of 1 unit are △ADG, △AGH, △AHE, △DMF, △FME, △DIB, △IBJ, △JBF, △CFL, △CLK and △CKE i.e., 11 triangles. Triangles consisting of 2 units are △ADH, △AGE, △DFE, △DBJ, △BF, △ECL and △CKF i.e., 7 triangles. Triangles consisting of 3 units are △ADE, △BDF and △CFE i.e., 3 triangles. Triangle consisting of whole figure is △ABC i.e., 1 triangle. So, total number of triangles = 11 + 7 + 3 + 1 = 22"
+    }
+  ],
+  "answers": [],
+  "_page": 840
+}

@@ -65,6 +65,7 @@ from anthropic import Anthropic
 from math_module.math_db import MathDatabase
 from amc10.practice_db import AMC10PracticeDB
 from physics.practice_db import PhysicsPracticeDB
+from reasoning.practice_db import ReasoningPracticeDB
 
 # Import PDF scanner for GK dashboard (includes cross-machine path helpers)
 from server.pdf_scanner import PDFScanner, relative_to_absolute, path_to_relative
@@ -136,6 +137,7 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
     math_db = None
     amc10_db = None
     physics_db = None
+    reasoning_db = None
     pdf_scanner = None
     processing_db = None
     annotation_manager = None
@@ -236,6 +238,12 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
         # /static/NSEJSFigures/<slug>/<file>
         if path.startswith('/static/NSEJSFigures/'):
             self.handle_nsejs_figure_asset(path)
+            return
+
+        # Reasoning figure images
+        # /static/ReasoningFigures/<slug>/<file>
+        if path.startswith('/static/ReasoningFigures/'):
+            self.handle_reasoning_figure_asset(path)
             return
 
         # API endpoints
@@ -493,6 +501,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Physics (Navya's physics) API endpoints
             elif path.startswith('/api/physics/'):
                 self.handle_physics_get(path, query_params)
+            # Reasoning (Saanvi's analytical reasoning) API endpoints
+            elif path.startswith('/api/reasoning/'):
+                self.handle_reasoning_get(path, query_params)
             # GK Dashboard API endpoints (including assessment status)
             elif path.startswith('/api/dashboard') or path.startswith('/api/pdfs/') or \
                  path.startswith('/api/filter/') or path.startswith('/api/stats') or \
@@ -558,6 +569,9 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
             # Physics (Navya's physics) API endpoints
             elif path.startswith('/api/physics/'):
                 self.handle_physics_post(path, data)
+            # Reasoning (Saanvi's analytical reasoning) API endpoints
+            elif path.startswith('/api/reasoning/'):
+                self.handle_reasoning_post(path, data)
             # GK Dashboard API endpoints
             # GK PDF Processing API endpoints
             elif path.startswith('/api/gk/') or path.startswith('/api/revision/'):
@@ -1791,6 +1805,113 @@ class UnifiedHandler(SimpleHTTPRequestHandler):
                 return
 
             self.send_json({'error': f'unknown physics path: {path}'}, 404)
+        except PermissionError as e:
+            self.send_json({'error': str(e)}, 403)
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()}, 500)
+
+    # ----------------------------------------------------------------------
+    # Reasoning (Saanvi's analytical reasoning) endpoints
+    # ----------------------------------------------------------------------
+    def _reasoning_user_id(self, query_params, data=None) -> str:
+        """Resolve user_id with the same parent-override semantics as physics."""
+        session_user = getattr(self, 'current_user_id', None)
+        requested = (query_params or {}).get('user_id', [None])[0] if query_params else None
+        if requested is None and data:
+            requested = data.get('user_id')
+        if session_user:
+            if requested and requested != session_user:
+                role = (getattr(self, 'current_user_role', None) or '').lower()
+                if role in ('admin', 'parent'):
+                    return requested
+            return session_user
+        # Local-dev fallback — Saanvi
+        return requested or 'saanvi'
+
+    def handle_reasoning_get(self, path: str, query_params: dict):
+        try:
+            if path == '/api/reasoning/topics':
+                self.send_json({'topics': self.reasoning_db.topic_tree()})
+                return
+            if path == '/api/reasoning/sources':
+                self.send_json({'sources': self.reasoning_db.list_sources()})
+                return
+            if path == '/api/reasoning/stats':
+                self.send_json({'total_questions': self.reasoning_db.total_question_count()})
+                return
+            if path == '/api/reasoning/sessions':
+                user_id = self._reasoning_user_id(query_params)
+                limit = int((query_params or {}).get('limit', ['25'])[0])
+                self.send_json({'sessions': self.reasoning_db.recent_sessions(user_id, limit)})
+                return
+            if path.startswith('/api/reasoning/session/'):
+                parts = path.split('/')
+                if len(parts) == 5:
+                    sid = parts[4]
+                    user_id = self._reasoning_user_id(query_params)
+                    self.send_json(self.reasoning_db.get_session(sid, user_id, include_correct=False))
+                    return
+                if len(parts) >= 6 and parts[5] == 'full':
+                    sid = parts[4]
+                    user_id = self._reasoning_user_id(query_params)
+                    self.send_json(self.reasoning_db.get_session(sid, user_id, include_correct=True))
+                    return
+            if path == '/api/reasoning/progress':
+                user_id = self._reasoning_user_id(query_params)
+                self.send_json({
+                    'user_id': user_id,
+                    'streak': self.reasoning_db.streak(user_id),
+                    'topic_mastery': self.reasoning_db.topic_mastery(user_id),
+                    'daily_summary': self.reasoning_db.daily_summary(user_id, days=14),
+                    'recent_sessions': self.reasoning_db.recent_sessions(user_id, limit=10),
+                    'total_questions': self.reasoning_db.total_question_count(),
+                })
+                return
+
+            self.send_json({'error': f'unknown reasoning path: {path}'}, 404)
+        except Exception as e:
+            self.send_json({'error': str(e), 'trace': traceback.format_exc()}, 500)
+
+    def handle_reasoning_post(self, path: str, data: dict):
+        try:
+            if path == '/api/reasoning/session/create':
+                user_id = self._reasoning_user_id(None, data)
+                topics = data.get('topics') or None
+                subtopics = data.get('subtopics') or None
+                sources = data.get('sources') or None
+                count = max(1, min(50, int(data.get('count', 10))))
+                time_limit = int(data.get('time_limit_seconds', 0))
+                sess = self.reasoning_db.create_session(
+                    user_id=user_id,
+                    topic_filter=topics if topics else None,
+                    subtopic_filter=subtopics if subtopics else None,
+                    source_filter=sources if sources else None,
+                    requested_count=count,
+                    time_limit_seconds=time_limit,
+                )
+                self.send_json(sess)
+                return
+
+            if path.startswith('/api/reasoning/session/') and path.endswith('/attempt'):
+                sid = path.split('/')[4]
+                user_id = self._reasoning_user_id(None, data)
+                self.send_json(self.reasoning_db.submit_attempt(
+                    session_id=sid, user_id=user_id,
+                    question_id=int(data['question_id']),
+                    user_choice=data.get('choice'),
+                    time_spent_seconds=int(data.get('time_spent_seconds', 0)),
+                    flagged=bool(data.get('flagged', False)),
+                    revealed_solution=bool(data.get('revealed_solution', False)),
+                ))
+                return
+
+            if path.startswith('/api/reasoning/session/') and path.endswith('/finish'):
+                sid = path.split('/')[4]
+                user_id = self._reasoning_user_id(None, data)
+                self.send_json(self.reasoning_db.finish_session(sid, user_id))
+                return
+
+            self.send_json({'error': f'unknown reasoning path: {path}'}, 404)
         except PermissionError as e:
             self.send_json({'error': str(e)}, 403)
         except Exception as e:
@@ -3589,6 +3710,35 @@ IMPORTANT: Provide ONLY the distractors, no explanations or additional text."""
             self.send_response(400); self.end_headers(); return
 
         root = (Path.home() / 'saanvi' / 'NSEJSFigures').resolve()
+        target = (root / rel).resolve()
+        try:
+            target.relative_to(root)
+        except ValueError:
+            self.send_response(403); self.end_headers(); return
+        if not target.is_file():
+            self.send_response(404); self.end_headers(); return
+
+        ctype, _ = mimetypes.guess_type(str(target))
+        ctype = ctype or 'application/octet-stream'
+        self.send_response(200)
+        self.send_header('Content-Type', ctype)
+        self.send_header('Content-Length', str(target.stat().st_size))
+        if target.suffix.lower() in ('.jpg', '.jpeg', '.png'):
+            self.send_header('Cache-Control', 'public, max-age=86400')
+        self.end_headers()
+        with open(target, 'rb') as f:
+            self.wfile.write(f.read())
+
+    def handle_reasoning_figure_asset(self, path: str):
+        """Serve reasoning question/passage figures from ~/saanvi/ReasoningFigures/."""
+        import mimetypes
+        from urllib.parse import unquote
+        prefix = '/static/ReasoningFigures/'
+        rel = unquote(path[len(prefix):])
+        if '..' in rel.split('/'):
+            self.send_response(400); self.end_headers(); return
+
+        root = (Path.home() / 'saanvi' / 'ReasoningFigures').resolve()
         target = (root / rel).resolve()
         try:
             target.relative_to(root)
@@ -6805,6 +6955,11 @@ def main():
     physics_db_path = Path(__file__).parent.parent / 'physics_practice.db'
     UnifiedHandler.physics_db = PhysicsPracticeDB(str(physics_db_path))
     print("✅ Physics practice database initialized")
+
+    # Reasoning practice DB (Saanvi's analytical reasoning)
+    reasoning_db_path = Path(__file__).parent.parent / 'reasoning_practice.db'
+    UnifiedHandler.reasoning_db = ReasoningPracticeDB(str(reasoning_db_path))
+    print("✅ Reasoning practice database initialized")
     
     # Run database health check
     verify_database_health()

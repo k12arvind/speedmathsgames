@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "(d) Clearly, shown that, total number of circles = 13"
+    },
+    {
+      "number": 5,
+      "solution": "(d) Clearly, shown that, total number of circles = 10"
+    },
+    {
+      "number": 6,
+      "solution": "(c) We shall join the centres of all the circles by horizontal and vertical lines and then label the resulting figure as shown. The simplest squares are ABED, BCFE, DEHG, EFIH, GHKJ and HILK, i.e., 6 in number. The squares composed of four simple squares are ACIG and DFLJ, i.e., 2 in number. Thus, 6 + 2 = 8 squares will be formed."
+    },
+    {
+      "number": 7,
+      "solution": "(d) Atleast three colours are needed to fill the figure so, that no two adjacent areas can have the same colour. This can be better understood with the help of following diagram"
+    },
+    {
+      "number": 8,
+      "solution": "(c) Atleast three colours are needed to fill the figure based on trapezium, so that no two adjacent area can have the same colour. The figure based on condition is given below"
+    },
+    {
+      "number": 9,
+      "solution": "(c) We shall label the various regions in the given figure as shown. The regions A, C, E and G can have the same colour say colour 1. The regions B, D, F and H can have the same colour (but different from colour 1) say colour 2. The region I lies adjacent to each one of the regions A, B, C, D, E, F, G and H and therefore it should have a different colour say colour 3. The regions J, L and N can have the same colour (different from colour 3) say colour 1. The regions K, M and O can have the same colour (different from the colours 1 and 3). Thus, these regions will have colour 2. The region P cannot have any of the colours 1 and 2 as it lies adjacent to each one of the regions J, K, L, M, N and O and so it will have colour 3. The region Q can have any of the colours 1 or 2. So, minimum number of colours required is 3."
+    }
+  ],
+  "answers": [],
+  "_page": 837
+}

@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 91,
+      "solution": "Now, since C stands second, he must be the biggest investor. So, the order of investment is: C > A > B > E > F > D. Now, check your answer: 92.3, 92.3, 93.3, 94.4, 95.3"
+    },
+    {
+      "number": 96,
+      "solution": "Begin by summarising the information: J < K, F < G (G is lighter than F ⇒ F is lower than G), H > I > G or G > I > F. There is one further conclusion you should probably note. Since G is higher than F and since I is between F and G, the order for those three notes is: F < I < G."
+    },
+    {
+      "number": 96,
+      "solution": "Test each choice to learn which are possible and which are not. As for (1), G cannot be the second note on the scale because G must be higher than both F and I. You can grasp that the other choices are possible if you think in the following way. Imagine that FIG are consecutive and they may be, though they don't have to be.) If they are, then they could be 1, 2, and 3; or 2, 3 and 4; or even 3, 4, and 5. This will not affect the placement of I and K since we know of those arrangements there will be two spaces left on the scale and K is higher than J."
+    },
+    {
+      "number": 97,
+      "solution": "Enter the additional information on a diagram: 6 H, 5 -, 4 J, 3 -, 2 -, 1 -. Since J is lower than K: 6 H, 5 K, 4 J, 3 -, 2 -, 1 -. Further, G, I, F must be notes 3, 2 and 1: 6 H, 5 K, 4 J, 3 G, 2 I, 1 F"
+    }
+  ],
+  "answers": [],
+  "_page": 352
+}

@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 528,
+      "solution": "Here, first calculate the time taken for each journey and tabulate it to help calculate the requisite values. The timings from Jamshedpur to Delhi and from Delhi to Jamshedpur are\n\n[Table showing train/road/flight schedules between Jamshedpur and Delhi with times]\n\nAlso, the waiting time at the airport, navigation time at the railway station and work duration are\n\nWaiting: Airport 1h (60 min), Railway 5 min\nWork Duration: 6h (360 min)\n\nNow, keep in mind that each flight (in either direction) takes 105 min.\nSo, the time taken from Tina's house to the work site will always remain constant.\nThis will be Jamshedpur to Ranchi by car + Waiting time at airport + Flight time + airport to work site\n= 180 + 60 + 105 + 90 = 435 min i.e., 7 h and 15 min\nThis will stay constant while coming from the work site to Jamshedpur as well.\nSimilarly, the time from Tina's house to the Jamshedpur railway station (excluding train time) will be always be 10 min (5 for travel and 5 for navigation). This will remain uniform even when she return back from Jamshedpur railway station to her house.\nAlso, the time from Delhi railway station to the work site will always be 35 min (30 for travel and 5 for navigation). Again, this will remain constant even when she comes back from the work site to Delhi railway station.\nFinally, work time will always be regular at 360 min\nAlso, total time = Travelling time + Work time + Waiting time\nNow, let us consider each option one by one."
+    }
+  ],
+  "answers": [],
+  "_page": 535
+}

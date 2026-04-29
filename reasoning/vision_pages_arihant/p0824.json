@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Counting of Figures",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "(D) Smallest triangles = ΔBOC, ΔCOD, ΔFOG, ΔGOH, ΔHOA, ΔAOB = 6\nTriangles formed with two small triangles = ΔAOG, ΔAOC = 2\nLargest triangles = ΔACG, ΔEGC = 2\n∴ Total triangles = 6 + 2 + 2 = 10"
+    },
+    {
+      "number": 4,
+      "solution": "(D) Horizontal lines = AB, GO, CD = 3\nVertical lines = AC, EF, BD = 3\nSlant lines = BO, DO, AO, CO, AD, BC = 6\n∴ Total number of lines = 3 + 3 + 6 = 12"
+    },
+    {
+      "number": 5,
+      "solution": "(C) The figure in question looks like as shown below after labelling it.\nSmallest triangles = ΔGAH, ΔHFL, ΔLCI, ΔIDJ, ΔJBK, ΔKEG = 6\nLargest triangles = ΔABC, ΔEFD = 2\n∴ Total triangles = 6 + 2 = 8"
+    },
+    {
+      "number": 6,
+      "solution": "(C) Smallest triangles = ΔABC, ΔACD, ΔADE = 3\nTriangles formed with two triangles = ΔABD, ΔACE, ΔADF = 3\nTriangles formed with three triangles = ΔABE, ΔACF = 2\nLargest triangles = ΔAEF, ΔABF = 2\n∴ Total triangles = 3 + 3 + 2 + 2 = 10"
+    },
+    {
+      "number": 7,
+      "solution": "(D) Smallest triangles = ΔBOC, ΔCOD, ΔFOG, ΔGOH, ΔHOA, ΔAOB = 6\nTriangles formed with two small triangles = ΔAOG, ΔAOC = 2\nLargest triangles = ΔACG, ΔEGC = 2\n∴ Total triangles = 6 + 2 + 2 = 10"
+    },
+    {
+      "number": 8,
+      "solution": "(D) Smallest triangles = ΔABH, ΔBHI, ΔBID, ΔBDC, ΔDIF, ΔDEF, ΔFGH, ΔHIF = 8\nTriangles formed with two triangles = Δ FHB, Δ FBD, ΔBDH, ΔDFH = 4\n∴ Total number of triangles = 8 + 4 = 12"
+    },
+    {
+      "number": 9,
+      "solution": "(D) Given figure can be labelled as follows\nIn the above figure, triangles formed by single units are ΔABE, ΔAEO, ΔAOF, ΔAFC, ΔDEB, ΔDOE, ΔDFO and ΔDCF i.e., 8 triangles.\nTriangles formed by combining 2 units are ΔABO, ΔAEF, ΔAOC, ΔBOD, ΔDEF, ΔDOC, ΔAED and ΔADF i.e., 8 triangles.\nTriangles formed by combining 3 units are ΔABF, ΔAEC, ΔBDF and ΔEDC i.e., 4 triangles.\nTriangles formed by combining 4 units are ΔABC, ΔBCD, ΔABD and ΔACD i.e., 4 triangles.\nSo, total number of triangles = 8 + 8 + 4 + 4 = 24"
+    },
+    {
+      "number": 10,
+      "solution": "(C) The figure in question has been labelled as shown in the following figure\nSmallest triangles = ΔEAP, ΔEDP, ΔAGB, ΔHFG, ΔGBF, ΔPHD = 6\nTriangles formed with two triangles = ΔEAD, ΔAGD, ΔBHF, ΔEHD, ΔAPF, ΔABF = 6\nLargest triangles = ΔBDC, ΔAEF, ΔABD = 3\n∴ Total triangles = 6 + 6 + 3 = 15"
+    }
+  ],
+  "answers": [],
+  "_page": 824
+}

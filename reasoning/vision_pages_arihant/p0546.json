@@ -1,0 +1,101 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Decision Making",
+  "passages": [
+    {
+      "passage_text": "Ms Banerjee, class teacher for 12th standard, wants to send teams (based on past performance) of three students each to District, State, National and International competition in Mathematics. Till now, every student of the class has appeared in 100 school level tests. The students had following distribution of of marks in the tests, in terms of 'average' and 'number of times a student scored cent per cent marks'.\n\nStudent Average Number of times a student scores cent-per cent\n1 70 7\n2 60 15\n3 65 8\n4 70 1\n5 65 6\n6 65 10\n7 65 4\n8 60 12\n9 65 3\n10 60 8\n11 70 1\n12 65 6\n13 70 2\n14 60 20\n15 65 5\n\nMs Banerjee has carefully studied chances of her school winning each of the competitions. Based on in depth calculations, she realised that her school is quite likely to win district level competition but has low chances of winning the international competition. She listed down the following probabilities of wins for different competitions, Prize was highest for international competition and lowest for district level, competition (in that order).\n\nCompetition District State National International\nProbability of win 0.95 0.6 0.1 0.05\n\nAll the students are studying in the school for last 12 yr. She wanted to select the best team for all four competitions (Ms Banerjee had no other information to select students).",
+      "has_figure": false,
+      "topic_code": "decision_making"
+    }
+  ],
+  "questions": [
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "profit_loss_calculation",
+      "subtopic_name": "Profit/Loss Calculation",
+      "body": "If Rao and Reddy decides to launch the product despite unfavorable test marketing, how much profit/loss can the company expect to earn?",
+      "choices": {
+        "a": "13.2crore profit",
+        "b": "36.8 crore profit",
+        "c": "46.8 crore loss",
+        "d": "16 crore loss",
+        "e": "10 crore loss"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "Which of three members should form the team for the international competition?",
+      "choices": {
+        "a": "4, 11, 14",
+        "b": "2, 8, 14",
+        "c": "1, 6, 12",
+        "d": "13, 14, 15",
+        "e": "1, 3, 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "Which of the following members should constitute the team for the district level competition?",
+      "choices": {
+        "a": "4, 11, 14",
+        "b": "1, 4, 11",
+        "c": "4,5, 6",
+        "d": "4, 11, 13",
+        "e": "Any team can win the competition"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "Ms Banerjee has to select the team for national competition after she has selected the team for international competition. A student selected for international competition can not be a part of national competition. Which is the best team for the national competition?",
+      "choices": {
+        "a": "1, 7, 4",
+        "b": "8, 9, 10",
+        "c": "2, 8, 14",
+        "d": "3, 6, 1",
+        "e": "Any of remaining students, as it would not matter"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 546
+}

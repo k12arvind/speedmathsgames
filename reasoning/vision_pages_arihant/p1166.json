@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "(d) From above, it is clear that only Conclusion I follows."
+    },
+    {
+      "number": 10,
+      "solution": "(b) Methods I\nTests\nExams Questions or Exams Questions\nI. No question is a test. (✗)\nII. Some tests are exams (✓)\nSome exams are tests (I-type)\nNo exam is a question. (E-type)\nFirst we align the statements by following IEA Rule.\nSome exams are tests→Conversion→ Some tests are exams.\nSome tests are exams (I-types)\nNo exam is a question. (E-type)\nStatement I = Conclusion II\nI + E = O-type conclusion\ni.e., some tests are not questions.\nHence, Conclusion I does not follows.\nSo, only Conclusion II follows."
+    },
+    {
+      "number": 11,
+      "solution": "(d) Apartment Bungalows\nHouse Bungalows or House Apartment\nHouse\nor\nBungalows Apartment\nI. No house is a bungalow. (✗)\nAll bungalows being houses is a possibility. (✓)"
+    },
+    {
+      "number": 12,
+      "solution": "(e) Insects or Insects Plants Animals Animals\nI. All insects being animals is a possibility. (✓)\nII. There is a possibility that some animals are neither insects nor plant. (✓)"
+    },
+    {
+      "number": 13,
+      "solution": "(c) Ink Pens Eraser\nI. No pen is an eraser. (✓)\nII. Some erasers are pens. (✗)"
+    },
+    {
+      "number": 14,
+      "solution": "(b) Gear Wheel Brake\nSo, only Conclusion II follows."
+    },
+    {
+      "number": 15,
+      "solution": "(d) Month Year Second\nor\nSecond Month Year\nNone follows."
+    },
+    {
+      "number": 16,
+      "solution": "(c) Village City Town\nComplementary pair (E-I)"
+    },
+    {
+      "number": 17,
+      "solution": "(c) Clips Pins\nPins Pens or Clips Pens\nI. Some pins are pens. (✗)\nII. Some pins are not pens. (✗)\nComplementary pair (I-O)"
+    },
+    {
+      "number": 18,
+      "solution": "(e) Method I\nC A D\nI. All Ds are Cs (✓)\nII. Some Ds are As. (✓)"
+    }
+  ],
+  "answers": [],
+  "_page": 1166
+}

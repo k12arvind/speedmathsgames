@@ -1,0 +1,52 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "total_distance",
+      "subtopic_name": "Finding the Total Distance",
+      "body": "Vipul goes Northward 10 m. He turns left and walks 30 m, then the again turns left and walks 50 m, then how much distance Vipul travelled?",
+      "choices": {
+        "a": "60 m",
+        "b": "20 m",
+        "c": "10 m",
+        "d": "90 m"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 43,
+      "solution": "According to the question, we have the following direction diagram. So, Kate is facing towards North."
+    },
+    {
+      "number": 44,
+      "solution": "According to the question, the direction diagram is as follows. The home of boy was in East direction from his school."
+    },
+    {
+      "number": 45,
+      "solution": "According to the question, the direction diagram is as follows. So, Rani is facing towards East and Sarita is facing towards South."
+    },
+    {
+      "number": 46,
+      "solution": "According to the question,the direction diagram is as follows. So, she is running in the North-East direction."
+    },
+    {
+      "number": 13,
+      "solution": "According to the question, the direction diagram is drawn as follows. Total distance = PO + OQ + QR = 10 + 30 + 50 = 90 m"
+    }
+  ],
+  "answers": [],
+  "_page": 461
+}

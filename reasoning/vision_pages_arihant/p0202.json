@@ -1,0 +1,118 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. In the given matrices, a letter can be represented first by its row number and followed by its column number e.g., 'A' is represented by 12, 24 and 'R' by 57, 76 etc. In each of the questions following matrices, identify one set of number pairs out of (a, b, c, d) which represents the given word.",
+      "has_figure": true,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "EAST",
+      "choices": {
+        "a": "32, 31, 02, 04",
+        "b": "20, 43, 33, 11",
+        "c": "13, 12, 14, 10",
+        "d": "44, 32, 21, 03"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "LAKE",
+      "choices": {
+        "a": "85, 31, 77, 44",
+        "b": "97, 00, 77, 12",
+        "c": "66, 12, 58, 40",
+        "d": "77, 43, 76, 31"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "ROSE",
+      "choices": {
+        "a": "86, 67, 33, 44",
+        "b": "88, 76, 31, 32",
+        "c": "95, 75, 02, 32",
+        "d": "57, 87, 32, 33"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) According to the matrices, D — 67, 69, 76, 88, 95; O — 01, 33, 20, 32, 44; R — 04, 11, 23, 30, 42; DOOR ⇒ 57, 13, 32, 23"
+    },
+    {
+      "number": 2,
+      "solution": "(d) According to the matrices, E — 00, 13, 24, 32, 41; A — 01, 12, 20, 33, 44; S — 55, 66, 76, 87, 98; T — 58, 67, 75, 86, 99; ∴ EAST ⇒ 00, 12, 76, 58."
+    },
+    {
+      "number": 3,
+      "solution": "(c) According to the matrices, P — 10; U — 85; S — 11, 69; H — 03, 75; ∴ PUSH ⇒ 10, 45, 66, 75."
+    },
+    {
+      "number": 4,
+      "solution": "(d) According to the matrices, S — 01, 13, 20, 32, 44; O — 55, 67, 79, 86, 98; A — 02, 14, 21, 33, 40; P — 59, 66, 78, 88, 97; ∴ SOAP ⇒ 13, 55, 21, 66."
+    },
+    {
+      "number": 5,
+      "solution": "(b) According to the matrices, D — 61; E — 59, 75; A — 31, 33, 85, 89, 67; L — 68; ∴ DEAL ⇒ 21, 75, 97, 68"
+    },
+    {
+      "number": 6,
+      "solution": "(b) According to the matrices, B — 00, 12, 23, 34, 43; A — 55, 66, 77, 88, 99; L — 56, 67, 78, 89, 95; D — 02, 11, 29, 33, 40; ∴ BALD ⇒ 21, 88, 95, 24"
+    },
+    {
+      "number": 7,
+      "solution": "(b) According to the matrices, P — 58, 69, 75, 86, 97; A — 00, 12, 23, 34, 41; S — 02, 14, 20, 31, 43; T — 59, 65, 76, 87, 98; ∴ PAST ⇒ 86, 12, 31, 76"
+    },
+    {
+      "number": 8,
+      "solution": "(a) According to the matrices, R — 01, 13, 24, 30, 42; A — 00, 12, 23, 34, 41; T — 59, 65, 76, 87, 98; E — 56, 67, 78, 89, 95; ∴ RATE ⇒ 13, 12, 98, 67"
+    },
+    {
+      "number": 9,
+      "solution": "(c) According to the matrices, P — 58, 69, 75, 86, 97; O — 55, 66, 77, 88, 99; E — 56, 67, 78, 89, 95; T — 59, 65, 76, 87, 98; ∴ POET ⇒ 69, 88, 67, 65"
+    },
+    {
+      "number": 10,
+      "solution": "(c) According to the matrices, N — 03, 10, 21, 32, 44; E — 56, 67, 78, 89, 95; S — 02, 19, 20, 31, 43; T — 59, 65, 76, 87, 98; ∴ NEST ⇒ 21, 67, 14, 59"
+    }
+  ],
+  "answers": [],
+  "_page": 202
+}

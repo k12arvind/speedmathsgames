@@ -1,0 +1,302 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Venn Diagram",
+  "passages": [
+    {
+      "passage_text": "Following questions are based on the given diagram. Study the diagram carefully to answer the questions. In the diagram, rectangle represents males, triangles represents educated, square represents public servants and circle represents urban.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Each of the questions below is based on the information given below. Four different sections have been projected with the help of four different figures. Rectangle represents female members, circle represents employees, triangle represents businessman and big triangle represents post graduates. Based on this information, answer the questions given below.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Who among the following are graduates or teachers but not politicians?",
+      "choices": {
+        "a": "B, G",
+        "b": "G, H",
+        "c": "A, E",
+        "d": "E, F"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Who among the following politicians are graduates but not the members of parliament?",
+      "choices": {
+        "a": "B, C",
+        "b": "L, B",
+        "c": "D, L",
+        "d": "A, H, L"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Who among the following politicians are neither teachers nor graduates?",
+      "choices": {
+        "a": "E, F",
+        "b": "D, E",
+        "c": "C, D",
+        "d": "L, H"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Who among the following members of parliament is a graduate as well as a teacher?",
+      "choices": {
+        "a": "G",
+        "b": "F",
+        "c": "C",
+        "d": "H"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_operations",
+      "subtopic_name": "Set Operations and Counting",
+      "body": "Out of the following options, how many educated males are not urban?",
+      "choices": {
+        "a": "10",
+        "b": "4",
+        "c": "11",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_operations",
+      "subtopic_name": "Set Operations and Counting",
+      "body": "Out of the following options, how many persons are urban who are neither public servants nor educated or males?",
+      "choices": {
+        "a": "3",
+        "b": "5",
+        "c": "6",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_operations",
+      "subtopic_name": "Set Operations and Counting",
+      "body": "Out of the following options, how many persons are related to educated males and urban?",
+      "choices": {
+        "a": "4",
+        "b": "2",
+        "c": "5",
+        "d": "11"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Which of the following group of employees represents those employees, who are not businessmen?",
+      "choices": {
+        "a": "e, g, h",
+        "b": "a, g, h",
+        "c": "b, g, e",
+        "d": "a, e, g, h"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Which of the following group represents the section, comprising persons who are either employees or businessmen but not female members?",
+      "choices": {
+        "a": "a, b, d",
+        "b": "a, e, h",
+        "c": "a, g, h",
+        "d": "a, d, e, h"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Who among the following are female members as well as businessmen?",
+      "choices": {
+        "a": "a, h",
+        "b": "b, g",
+        "c": "b, c",
+        "d": "b, h"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Who among the following are businessmen but are neither post graduates nor employees?",
+      "choices": {
+        "a": "b, d, g",
+        "b": "a, d, h",
+        "c": "c, d",
+        "d": "b, e"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "Who among the following are the female members but neither businessmen nor employees?",
+      "choices": {
+        "a": "i, g",
+        "b": "b, c, i, g",
+        "c": "b, i, e",
+        "d": "i"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_operations",
+      "subtopic_name": "Set Operations and Counting",
+      "body": "In the following figure, the boys who are athletes and disciplined are indicated by which number?",
+      "choices": {
+        "a": "4",
+        "b": "2",
+        "c": "6",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "basic_venn",
+      "subtopic_name": "Basic Venn Diagram Analysis",
+      "body": "In the given figure, circle represents persons having car, triangle represents persons having motorcycle, square represents persons having autorickshaw, rectangle represents persons having cycle. Find the region, which represents persons having car, motorcycle, cycle but no autorickshaw.",
+      "choices": {
+        "a": "X",
+        "b": "U",
+        "c": "V",
+        "d": "W"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 374
+}

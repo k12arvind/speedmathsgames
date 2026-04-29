@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 66,
+      "solution": "(b) Required answer = Sum of the corresponding letter positions / 2. As, RAMAN → [18 + 1 + 13 + 1 + 14] ÷ 2 = 47/2 = 23.5. Also, CAP → [3 + 1 + 16] ÷ 2 = 20/2 = 10. Similarly, CAPACITY → [3 + 1 + 16 + 1 + 3 + 9 + 20 + 25] ÷ 2 = 78/2 = 39"
+    },
+    {
+      "number": 67,
+      "solution": "(c) Each letter is coded with its left and right letters positions. As, LOT → KMN PSU. Also, SIP → RTH JOQ. Similarly, GO → FH NP. ∴ GO ⇒ 681416"
+    },
+    {
+      "number": 68,
+      "solution": "(d) Starting from right, each letter is coded with the digits sum of its corresponding position. As, KOMAL → (1+2) (0+1) (1+3) (1+5) (1+1) = 3 1 4 6 2. and POT → (2+0) (1+5) (1+6) = 2 6 7"
+    },
+    {
+      "number": 69,
+      "solution": "(c) Each letter is coded with its right and left letters positions, respectively. As, HUT → LGV TUS. Also, LOG → USP N. Similarly, FOG → GEPNH F. ∴ FOG ⇒ 75161486"
+    },
+    {
+      "number": 70,
+      "solution": "(b) Each letter is coded with the square of its letter positions. As, DEW → (4×4) (5×5) (23×23) = 16 25 529. and FET → (7×7) (6×5) (20×20) = 49 25 400. Similarly, TWO → (20×20) (23×23) (15×15) = 400 529 225. ∴ TWO ⇒ 400529225"
+    },
+    {
+      "number": 71,
+      "solution": "(b) Each letter is coded with the digits sum of its letters positions in English alphabet. Let us see As, TOMATO → (2+0) (1+5) (1+3) (0+1) (2+0) (1+5) = 2 6 4 1 2 6. Also, NET → (1+4) (0+5) (2+0) = 5 5 2"
+    }
+  ],
+  "answers": [],
+  "_page": 174
+}

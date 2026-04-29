@@ -1,0 +1,242 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully to answer the questions that follow. I. P, Q, R, S, T and U are six members of a group, of which three are males and three are females. II. There are two engineers, two lawyers, one teacher and one doctor in the group. III. Q, T, P and R are two married couples and no two persons in this group have the same profession. IV. T, a teacher with blue dress, married a male lawyer with brown dress. V. Colour of the dresses of both the husbands and that of both the wives is the same. VI. Two persons have blue dress, two have brown and the remaining one each has black and green. VII. P is a male engineer whose sister S is also an engineer. VIII. Q is a doctor.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer the questions that follow. There is a family of six members A, B, C, D, E and F. They are lawyer, doctor, teacher, salesman, engineer and accountant not necessarily in that order. There are two married couples in the family. D, the salesman, is married to the lady teacher. The doctor is married to the lawyer. F, the accountant, is the son of B and brother of E. C, the lawyer, is the daughter-in-law of A. E is the unmarried engineer. A is the grandmother of F.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_profession",
+      "subtopic_name": "Family and Profession",
+      "body": "What is the profession of Namita?",
+      "choices": {
+        "a": "Doctor",
+        "b": "Engineer",
+        "c": "Teacher",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "couple_identification",
+      "subtopic_name": "Couple Identification",
+      "body": "Which of the following is the correct pair of two couples?",
+      "choices": {
+        "a": "Mohan—Vanita and Charan—Sarita",
+        "b": "Vanita—Mohan and Charan—Namita",
+        "c": "Charan—Namita and Raman—Sarita",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "counting",
+      "subtopic_name": "Counting Members",
+      "body": "How many ladies are there in the family?",
+      "choices": {
+        "a": "Two",
+        "b": "Three",
+        "c": "Four",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "color_preference",
+      "subtopic_name": "Color Preference",
+      "body": "Which colour is liked by CA?",
+      "choices": {
+        "a": "White",
+        "b": "Blue",
+        "c": "Black",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "dress_color",
+      "subtopic_name": "Dress Color",
+      "body": "What is the colour of U's dress?",
+      "choices": {
+        "a": "Brown",
+        "b": "Black or Green",
+        "c": "Green",
+        "d": "Black"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "relationship",
+      "subtopic_name": "Relationship",
+      "body": "Who is the wife of P?",
+      "choices": {
+        "a": "T",
+        "b": "S",
+        "c": "R",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "Which of the following is a group of female members?",
+      "choices": {
+        "a": "UST",
+        "b": "QTV",
+        "c": "QSU",
+        "d": "QST"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "married_pairs",
+      "subtopic_name": "Married Pairs",
+      "body": "Which of the following is a pair of married ladies?",
+      "choices": {
+        "a": "QT",
+        "b": "TS",
+        "c": "PR",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is E related to F?",
+      "choices": {
+        "a": "Brother",
+        "b": "Sister",
+        "c": "Cousin",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "profession_identification",
+      "subtopic_name": "Profession Identification",
+      "body": "What is the profession of B?",
+      "choices": {
+        "a": "Teacher",
+        "b": "Doctor",
+        "c": "Lawyer",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "couple_identification",
+      "subtopic_name": "Couple Identification",
+      "body": "Which of the following is one of the couples?",
+      "choices": {
+        "a": "F and D",
+        "b": "D and B",
+        "c": "E and A",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 627
+}

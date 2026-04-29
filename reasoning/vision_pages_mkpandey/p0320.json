@@ -1,0 +1,107 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "You can see that although the problems given above are similar to some of the problems earlier discussed, they are slightly different in their own subtle way. We now present three solutions so that you understand the way to solve them. Solution to Ex 15: We see that there are many dimensions attached to each individual in this problem. These dimensions are sex, marital status and favourite sport. Let us take them one by one. Sex: P and S are females. T is a husband, so he must be a male. Q is a brother and so he must be a male. The one remaining is R. Since T is a husband and since the two ladies P and S are unmarried, R must be the wife of T. Hence R is a female. Marital status: P and S are unmarried. R and T are married to each other. Whether Q is married or not is not known. Favourite sport: P and S don't play anything. Out of the remaining three, one plays football, another chess and another hockey. R is a lady and so she plays football or chess. Hence, R plays hockey. Q plays neither chess nor hockey. Hence, Q must be playing football. Hence, T plays the only remaining sport, chess. Now read the questions one by one and check the answers: Q.1. (b) Q.2. (c) Q.3. (c) Q.4. (c) Q.5. (d)",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "From statements 4, 5, 6 and 7 the following figures follow:",
+      "has_figure": true,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "classification_towns",
+      "subtopic_name": "Town Classification",
+      "body": "Which of the following towns is not a capital?",
+      "choices": {
+        "a": "A",
+        "b": "E",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "classification_towns",
+      "subtopic_name": "Town Classification",
+      "body": "Which of the following is the harbour, capital and industrial town?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "E",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "classification_towns",
+      "subtopic_name": "Town Classification",
+      "body": "Which of the following towns have population more than 50 lakh?",
+      "choices": {
+        "a": "A and D",
+        "b": "B and E",
+        "c": "A and C",
+        "d": "C and D",
+        "e": "C and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "classification_towns",
+      "subtopic_name": "Town Classification",
+      "body": "Which one of the following towns is a hill-station as well as a capital?",
+      "choices": {
+        "a": "B",
+        "b": "D",
+        "c": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "You can see that although the problems given above are similar to some of the problems earlier discussed, they are slightly different in their own subtle way. We now present three solutions so that you understand the way to solve them. Solution to Ex 15: We see that there are many dimensions attached to each individual in this problem. These dimensions are sex, marital status and favourite sport. Let us take them one by one. Sex: P and S are females. T is a husband, so he must be a male. Q is a brother and so he must be a male. The one remaining is R. Since T is a husband and since the two ladies P and S are unmarried, R must be the wife of T. Hence R is a female. Marital status: P and S are unmarried. R and T are married to each other. Whether Q is married or not is not known. Favourite sport: P and S don't play anything. Out of the remaining three, one plays football, another chess and another hockey. R is a lady and so she plays football or chess. Hence, R plays hockey. Q plays neither chess nor hockey. Hence, Q must be playing football. Hence, T plays the only remaining sport, chess. Now read the questions one by one and check the answers: Q.1. (b) Q.2. (c) Q.3. (c) Q.4. (c) Q.5. (d)"
+    }
+  ],
+  "answers": [],
+  "_page": 320
+}

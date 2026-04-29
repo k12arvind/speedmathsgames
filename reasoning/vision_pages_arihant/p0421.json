@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 12,
+      "solution": "Angle traced by hour hand in 8 h 30 min = [(8 × 60) + 30] × (1/2)° = [(480 + 30) × 1/2]° = 510 × (1/2)° = 255°. Angle traced by minute hand per minute = 6°. Angle traced by minute hand in 30 min = 30 × 6° = 180°. Required angle = (255° – 180°) = 75°"
+    },
+    {
+      "number": 13,
+      "solution": "We know that hands of a clock coincide once in every hour but between 11 O'clock and 1 O'clock they coincide only once. Therefore, the hands of a clock coincide 11 times in every 12 h. Hence, they will coincide (11 × 2) i.e., 22 times in 24 h."
+    },
+    {
+      "number": 14,
+      "solution": "We know that the hands of a clock are at right angle twice in every hour but between 2 and 4 O' clock there is a common position at 3 O' clock and also between 8 and 10 O' clock there is common position at 9 O' clock. So, they are at right angles 22 times in 12 h and therefore, in 24 h or in a day they are at right angle 44 times."
+    },
+    {
+      "number": 15,
+      "solution": "The hands of a clock are in the same straight line (but opposite in direction) 11 times in every 12 h, because between 5 and 7 they point in opposite direction at 6 O'clock only. Therefore, in a day (24 h) the hands points in the opposite direction (2 × 11) = 22 times."
+    },
+    {
+      "number": 16,
+      "solution": "The hands are in opposite direction (at angular distance of 180°) or coincide (at 0° angular distance) 22 times in every 12h. Hence, in 24 h, hands are straight (coincide or in opposite direction) 22 × 2 = 44 times."
+    },
+    {
+      "number": 17,
+      "solution": "Time period from 1 O'clock afternoon to 10 O'clock night = (10 – 1) h = 9 h. As we know, hands are at right angle 2 times in an hour. Hence, in 9 h they will be at right angle 9 × 2 = 18 times"
+    },
+    {
+      "number": 18,
+      "solution": "At 4 O' clock, hour hand is at 4 and minute hand is at 12. Time = 4 O'clock. To be together with hour hand minute hand will have to gain 20 min. As 55 min are gained by minute hand in 60 min. ∴ 20 min will be gained in (60/55 × 20) min = (60 × 4/11) min = 240/11 min = 21 9/11 min. Hence, the hands will be together at 21 9/11 min past 4."
+    },
+    {
+      "number": 19,
+      "solution": "At 4 O' clock, both the hands are 20 min apart and for the hands to be in the opposite direction they have to be 30 min apart. From Fig. (i) and Fig. (ii) it is clear, that minute hand has to travel (20 + 30) min space in order to be in opposite direction to each other. Now, 55 min space is gained by minute hand in 60 min. Therefore, 50 min space will be gained in (60/55 × 50) min = 54 6/11 min. Hence, the hands of the clock will be in opposite direction at 54 6/11 min past 4."
+    },
+    {
+      "number": 20,
+      "solution": "At 6 O' clock, minute hand is 30 min spaces behind the hour hand. Now, for being at right angle the two hands will have to be 15 min spaces apart. So, they are at right angles in the following cases"
+    }
+  ],
+  "answers": [],
+  "_page": 421
+}

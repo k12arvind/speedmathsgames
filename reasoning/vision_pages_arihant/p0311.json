@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Change of symbols according to the question.\n? = 18 × 5 + 5 + 6 = 18 − 5 + 5 × 6\n(using VBODMAS rule)\n= 18 − 5 + 30 = (18 + 30) − 5 = 43"
+    },
+    {
+      "number": 2,
+      "solution": "Let us check all the options one by one.\nFrom option (a), LHS = 30 − 5 + 4 + 10 × 5\n(using VBODMAS rule)\n= 30 + 5 − 4 × 10 + 5\n= 30 + 5 − 4 × 2 = 30 + 5 − 8\n= 35 − 8 = 27 and RHS = 62\n∴ LHS ≠ RHS"
+    }
+  ],
+  "answers": [],
+  "_page": 311
+}

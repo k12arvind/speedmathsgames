@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 56,
+      "solution": "(C) As, T = 20 and 20/E = A = M. Similarly, 20/18 = E = E, 20 + 5 + 1 + 13 = 39, 20 + 18 + 5 + 5 = 48. ∴ TREE ⇒ 48"
+    },
+    {
+      "number": 57,
+      "solution": "(D) As, M = 13 and 13/1 = A = D. Similarly, 13/15 = 15/4 = M = O = Q = D, 13 × 1 × 4 = 52, 13 × 15 × 15 × 4 = 11700. ∴ MOOD ⇒ 11700"
+    },
+    {
+      "number": 58,
+      "solution": "(D) As, G = 7 and 7/15 = 4 = G = O = D. Similarly, 7/1 = 16 = G = A = P, 7 × 15 × 4 = 420, 7 × 1 × 16 = 112. ∴ GAP ⇒ 112"
+    },
+    {
+      "number": 59,
+      "solution": "(C) As, 13 +6→ 19, A +6→ 7, C +6→ 9, E +6→ 14, G +6→ 15, N +6→ 20, E +6→ 11. Similarly, 0 +6→ 10, A +6→ 7, 14 +6→ 20, N +6→ 20, C +6→ 13, E +6→ 11, 18 +6→ 24, R. ∴ DANGER ⇒ 10-7-20-13-11-24"
+    },
+    {
+      "number": 60,
+      "solution": "(D) As, F → 21, L → 15, A → 26, R → 9, E → 22. Similarly, B → 25, R → 9, E → 22, I → 18, F → 21. ∴ BRIEF ⇒ 25, 9, 22, 18, 21. Each letter is coded with its backward order letter position."
+    },
+    {
+      "number": 61,
+      "solution": "(D) Coded with (Sum of the corresponding positions) × 4. As, N O T I O N → [14 + 15 + 20 + 9 + 15 + 14] × 4 = 87 × 4 = 348"
+    },
+    {
+      "number": 62,
+      "solution": "(G) As, J N U [10 17 21 13 21 06] → Opposite letter position. Similarly, P U S A [16 11 21 06 19 08 01 26] → Opposite letter position. ∴ PUSA ⇒ 161121061908026"
+    },
+    {
+      "number": 63,
+      "solution": "(D) As, G A M E [07 20 01 26 13 14 05 22] → Opposite letter position. Similarly, N O T [14 13 15 12 20 07] → Opposite letter coding. ∴ NOT ⇒ 141315122007"
+    },
+    {
+      "number": 64,
+      "solution": "(D) Corresponding position of each letter is squared. As, (9 × 9) (16 × 16) (12 × 12) 9 16 12 → 81 256 144. Similarly, (2 × 2) (21 × 21) (20 × 20) 2 21 20 → 4 441 400. ∴ BUT ⇒ 4441400"
+    },
+    {
+      "number": 65,
+      "solution": "(G) Backward order letter positions are squared. Let us see As, 20 12 26 7 G O A T → (20 × 20)(12 × 12) (26 × 26) (7 × 7) 400 144 676 49"
+    }
+  ],
+  "answers": [],
+  "_page": 173
+}

@@ -1,0 +1,232 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: In each question below is given a passage followed by several inferences. You have to examine each inference separately in the context of the passage and decide upon its degree of truth or falsity. Mark answer (1) if you think the inference is 'definitely true', (2) if you think the inference is 'probably true' though not definitely true in the light of the facts given; (3) if you think the 'data are inadequate', i.e., from the facts given you cannot say whether the inference is likely to be true or false; (4) if you think the inference is 'probably false' though not definitely false in the light of the facts given; and (5) if you think the inference is 'definitely false', i.e. it contradicts the given facts. Note: The above directions do not apply to Q. 76-80.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "India and other developing countries, while expressing their commitment to the upgradation of labour standards, have been resisting the move to link international trade, not only with labour standards, but also with environmental concerns and human rights. The move was set afoot on the successful conclusion of the Uruguay Round of trade negotiations with a proposal for the inclusion of a social clause in the World Trade Organisation (WTO), which succeeds GATT. Later, on stiff opposition to the move on the ground that the matter did not fall in the area of trade, a proposal was mooted for the inclusion of a social clause in ILO. 1. India has been sidelined on the issue of linking international trade with labour. 2. The effort of linking international trade with labour are being carried out by developed countries. 3. All developed countries appear committed to the cause of upgradation of labour standards. 4. The Uruguay Round concluded successfully. 5. India claims that environmental issue and trade are uncorrelated.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: I. Reading makes a full man, conference a ready man and writing an exact man. II. Extensive reading makes a man complete. Conclusions: I. Pointed and precise expression comes only through extensive writing. II. Extensive reading makes a man complete.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: Pollution is a form of ugliness so intolerable that we have alter it at every six months. Conclusions: I. Fashion designers do not understand people's mind well. II. People, by and large, are highly susceptible to novel things, changes yielding place to new.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: Old order change yielding place to new. Conclusions: I. Change is the law of nature. II. Situations change-new ideas because they are old.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: All those political prisoners were released on bail who had been tried for political dharnas. Bail was not granted to persons involved in murders. Conclusions: I. No persons involved in murders had committed murder. II. Some politicians were not arrested.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: Realization of the criminal's biological make-up and family relations. Conclusions: I. The incidence of crime is higher in identical twins than fraternal twins. II. Families in which parents lack in warmth and affection fail to build a moral conscience in the children.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: The percentage of the national income shared by top 10 per cent of households. Conclusions: I. When an economy grows fast, concentration of wealth in certain pockets of population takes place. II. National income is unevenly distributed in India.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: Good is the enemy of the best. Conclusions: I. You should be good to your best enemy. II. The best do not like the good.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: The essence of one-day cricket is the ability to score runs fast and to bowl with a mixture of control and aggression which can handle adroit, can tie the opponent's hand and foot. Conclusions: I. Kapil Dev won the Presidential Cup for India in 1985, had all the above qualities. II. The other being which participated in the Presidential tournament did not have these abilities.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "validity_assessment",
+      "subtopic_name": "Validity Assessment",
+      "body": "Statement: The best way to escape from a problem is to solve it. Conclusions: I. Your life will be dull if you don't face a problem. II. To escape from problems, you should always have some solutions with you.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "power_structure",
+      "subtopic_name": "Power Structure Analysis",
+      "body": "Statement: In a highly centralised power structure, in which even senior cabinet ministers are prepared to reduce themselves to pathetic yes-men uttering views that are primarily intended to anticipate or reflect the Prime Minister's own performance, there can be no place for consensus building that is quite different from that, can be contrived unanimity of opinion, expressed through a well-orchestrated enforcement of the leader's actions. Conclusions: I. The ministers play safe by not giving anti-government views. II. The Prime Minister does not encourage his colleagues to mould their own views.",
+      "choices": {
+        "a": "Only conclusion I follows",
+        "b": "Only conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 70
+}

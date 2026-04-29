@@ -1,0 +1,77 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Each of the following questions consists of three/four problem figures marked as 1, 2, 3 and 4 followed by four/five answer figures marked as (a), (b), (c), (d) and (e). If one of these answer figures is placed in the place of '?' in the problem figure, a series is established and the figure which should replace the '?' is your answer.",
+      "has_figure": false,
+      "topic_code": "general"
+    },
+    {
+      "passage_text": "In each of the following questions, there are two sets of figures. The figures on upper side are problem figures marked by numbers 1, 2, 3, 4 and 5 and on the lower side are the answer figures marked by letters (a), (b), (c), (d) and (e). A series is established, if one of the five answer figures is placed in place of the sign '?' in the problem figures and that figure is your answer.",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Series",
+      "subtopic_code": "figure_series",
+      "subtopic_name": "Figure Series",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Series",
+      "subtopic_code": "figure_series",
+      "subtopic_name": "Figure Series",
+      "body": "Problem Figures",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 26,
+      "solution": "The figure rotates 90° clockwise in each step. Clearly, Fig. (d) will be obtained by rotating Fig. (3) through 90° clockwise. So, Fig. (d) should replace the question mark in Fig. (4)."
+    },
+    {
+      "number": 27,
+      "solution": "The figure gets laterally inverted in each step. Clearly, Fig. (a) is obtained by the lateral inversion of Fig. (3)."
+    },
+    {
+      "number": 28,
+      "solution": "In each turn, the black circle moves three steps clockwise and the white circle moves two steps clockwise."
+    }
+  ],
+  "answers": [],
+  "_page": 699
+}

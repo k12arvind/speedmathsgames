@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 8,
+  "chapter_title": "Response & Interpretations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(e) Method I\n\nConclusions I. Some colleges are classes. (✓)\nII. All universities are classes. (✓)\n\nMethod II\nSome schools are colleges. (I-type)\nSome colleges are universities. (I-type)\nAll universities are institutes. (A-type)\nAll institutes are classes. (A-type)\n\nFrom Statements 2, 3 and 4,\n(I + A) + A = I + A = I-type conclusion\n∴ Some colleges are classes = Conclusion I\n\nFrom Statements 3 and 4,\nA + A = A-type conclusion\n∴ All universities are classes = Conclusion II\n\nHence, both Conclusions I and II follow."
+    },
+    {
+      "number": 2,
+      "solution": "(d) Method I\n\nConclusions I. Some shirts are umbrellas. (✓)\nII. Some suits are raincoats. (✗)\n\nMethod II\nSome umbrellas are raincoats. (I-type)\nAll raincoats are shirts (A-type)\nNo shirt is a blazer. (E-type)\nSome blazers are suits. (I-type)\n\nFrom Statements 1 and 2,\nI + A = I-type conclusion\n∴ Some umbrellas are shirts → Conversion → Some shirts are umbrellas\n\nSo, Conclusion I follows.\nFrom Statements 2, 3 and 4,\n(A + E) + I = E + I = OR\ni.e., Some suits are not raincoats.\nHence, Conclusion II does not follow.\nSo, only Conclusion I follows."
+    },
+    {
+      "number": 3,
+      "solution": "(c) Method I [Venn diagram showing Computers, Bulbs, Tubelight, Boards, Chalks]\n\nConclusions I. Some bulbs are computers. (✗)\nII. No chalk is tubelight. (✓)\n\nMethod II\nSome computers are boards. (I-type)\nSome boards are chalks. (I-type)\nAll chalks are bulbs. (A-type)\nNo bulb is a tube light. (E-type)\n\nFrom Statements 1, 2 and 3,\nI + I = Not a valid conclusion\nSo, Statement I does not follow.\nFrom Statements 3 and 4,\nA + E = E-type conclusion\nNo chalk is tubelight = Statement 2\nSo, only Conclusion II follows."
+    },
+    {
+      "number": 4,
+      "solution": "(c) Method I [Venn diagram showing Floors, Paints, Stories, Doors, Tiles]\n\nConclusions I. Some floors are paints. (✓)\nII. Some doors are tiles. (✗)\n\nMethod II\nAll doors are floors. (A-type)\nSome floors are tiles. (I-type)\nAll tiles are paints. (A-type)\nSome paints are stories. (I-type)\n\nFrom Statements 2 and 3,\nI + A = I-type conclusion\n∴ Some floors are paints = Conclusion I\nFrom Statements 1 and 2,\nA + I = Not a valid conclusion\nSo, only Conclusion I follows."
+    },
+    {
+      "number": 5,
+      "solution": "(c) Method I\n\nConclusions I. Some nuts are flowers. (✗)\nII. No nut is flower. (✗)\n\nComplementary pair (I-E)"
+    }
+  ],
+  "answers": [],
+  "_page": 1191
+}

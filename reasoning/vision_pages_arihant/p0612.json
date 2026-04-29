@@ -1,0 +1,252 @@
+{
+  "page_type": "questions",
+  "chapter_number": 19,
+  "chapter_title": "Practice Corner 19.2",
+  "passages": [
+    {
+      "passage_text": "There are six students J, K, L, M, N and O. J and K belong to Priya Palace and the rest belong to Nisha Palace. M and O are tall while other students are short. J, L and M are identified by wearing jeans while others are wearing caps.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "A tennis coach is trying to put together a team of four players for the forthcoming tournament. For this 7 players are available males A, B and C and females W, X, Y and Z. All players have equal capability and atleast 2 males will be there in the team. For a team of four, all players must be able to play with each other. But, B cannot play with W, C cannot play with Z and W cannot play with Y.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "In a cycling race, five participants from various nations-Chinese, Nepalese, Indian, Iraqi and English take part. Track 1 is extreme left and track 5 is extreme right. The following conditions exist I. The Nepalese and English are not cycling adjacent to each other. II. The Iraqi is not in any of the extreme tracks. III. The Chinese is to the left of the Indian.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Nine professors — G, H, I, J, K, L, M, N and O are appear on a series of three panels. Each panel will consist of three professors and each professor will appear exactly once. The panel must be arranged according to the following conditions. I. I and N must be on the same panel. II. K and L must be on the same panel. III. O and J cannot be on the same panel. IV. M must appear on the second panel. V. Either J or M or both must appear on the panel with H.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "student_attributes",
+      "subtopic_name": "Student Attributes",
+      "body": "Which two students are not wearing jeans and are short?",
+      "choices": {
+        "a": "L and N",
+        "b": "K and N",
+        "c": "J and N",
+        "d": "K and O"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "student_attributes",
+      "subtopic_name": "Student Attributes",
+      "body": "Which short student of Nisha Palace is wearing a cap?",
+      "choices": {
+        "a": "O",
+        "b": "L",
+        "c": "M",
+        "d": "N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "student_attributes",
+      "subtopic_name": "Student Attributes",
+      "body": "Which tall student of Nisha Palace is wearing jeans?",
+      "choices": {
+        "a": "O",
+        "b": "N",
+        "c": "M",
+        "d": "L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If Y is selected and B is rejected, the team will consist of which one of the following groups?",
+      "choices": {
+        "a": "A, C, W and Y",
+        "b": "A, C, X and Y",
+        "c": "A, C, Y and Z",
+        "d": "A, W, Y and Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If all the three males' are selected, then how many combinations of four member teams are possible?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If B is selected and Y is rejected, the team will consist of which one of the following groups?",
+      "choices": {
+        "a": "A, B, C and W",
+        "b": "A, B, C and Z",
+        "c": "A, B, C and X",
+        "d": "A, W, Y and Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "If the Nepalese is in track 3, the Chinese in track 1, then the Indian could be in",
+      "choices": {
+        "a": "track 4",
+        "b": "track 2",
+        "c": "track 2 or 4",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "If the Nepalese is in track 4 and the Indian is in track 3, then the English could be in",
+      "choices": {
+        "a": "track 1",
+        "b": "track 2",
+        "c": "track 1 or 2",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "If the Iraqi is to the left of the Chinese, then the Iraqi could be in",
+      "choices": {
+        "a": "only track 2",
+        "b": "only track 3",
+        "c": "track 2 or 3",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "panel_arrangement",
+      "subtopic_name": "Panel Arrangement",
+      "body": "Which of the following professors could appear on a panel together?",
+      "choices": {
+        "a": "G, L, O",
+        "b": "G, J, M",
+        "c": "K, I, M",
+        "d": "N, I, J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "panel_arrangement",
+      "subtopic_name": "Panel Arrangement",
+      "body": "Which of the following cannot be true?",
+      "choices": {
+        "a": "I appears on 2nd panel",
+        "b": "H appears on 3rd panel",
+        "c": "O appears on 3rd panel",
+        "d": "J appears on 1st panel and H appears on the 3rd"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 612
+}

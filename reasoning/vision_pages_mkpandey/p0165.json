@@ -1,0 +1,353 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 6-20): In each of the following questions a proposition is to be taken as true, Based on this information, determine the truth value of as True, False or Uncertain.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    },
+    {
+      "passage_text": "Directions (Q. 21-30): In the following questions a statement is given followed by an immediate conclusion. Decide the correctness of the conclusion by marking them as True, False or Uncertain.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_statements",
+      "subtopic_name": "Categorical Statements",
+      "body": "'Most of the pens in that shop are expensive.' A) There are no cheap pens in that shop. B) Some of the pens in that shop are expensive. C) There are cheap pens also in that shop. D) Camlin pens in that shop are expensive.",
+      "choices": {
+        "A": "There are no cheap pens in that shop",
+        "B": "Some of the pens in that shop are expensive",
+        "C": "There are cheap pens also in that shop",
+        "D": "Camlin pens in that shop are expensive"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_statements",
+      "subtopic_name": "Conditional Statements",
+      "body": "'If a person is rich, he has a lot of influence.' A) John has a lot of influence, so he is rich. B) If a person is not rich, he does not have a lot of influence. C) Kasim is rich and so he has a lot of influence. D) Poor people cannot have influence.",
+      "choices": {
+        "A": "John has a lot of influence, so he is rich",
+        "B": "If a person is not rich, he does not have a lot of influence",
+        "C": "Kasim is rich and so he has a lot of influence",
+        "D": "Poor people cannot have influence"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "causal_statements",
+      "subtopic_name": "Causal Statements",
+      "body": "'Many smokers get cancer.' A) Cancer-patients are smokers. B) Smoking may lead to cancer. C) Most smokers get cancer. D) Smoking is injurious to health.",
+      "choices": {
+        "A": "Cancer-patients are smokers",
+        "B": "Smoking may lead to cancer",
+        "C": "Most smokers get cancer",
+        "D": "Smoking is injurious to health"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) Few labour leaders fail to be sympathetic to the problem of unemployment. b) Labour leaders never fail to be sympathetic to the problem of unemployment.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) Peaceful demonstrations frequently lead to violence. b) Peaceful demonstrations always lead to violence.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) A few of the wise lack a formal education. b) Many of the wise do not lack a formal education.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) Every dog has his day. b) Some dogs have their day.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) Never have so few owed so little to so many. b) So few have frequently owed so little to so many.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) All that glitters is not a diamond. b) Only diamonds sparkle.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) All that glitters is not gold. b) Some glittering objects are not gold.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) Every dodo loves to run a caucus race. b) Few dodos love to run a caucus race.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) Rabbits never carry watches in their pockets. b) A few rabbits carry watches in their pockets.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "a) Anyone who falls down a rabbit hole is dreaming. b) At least one person fell down in a rabbit hole who wasn't dreaming.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "d"
+    },
+    {
+      "number": 2,
+      "correct": "a"
+    },
+    {
+      "number": 3,
+      "correct": "b"
+    },
+    {
+      "number": 4,
+      "correct": "c"
+    },
+    {
+      "number": 5,
+      "correct": "c"
+    },
+    {
+      "number": 6,
+      "correct": "u"
+    },
+    {
+      "number": 7,
+      "correct": "u"
+    },
+    {
+      "number": 8,
+      "correct": "t"
+    },
+    {
+      "number": 9,
+      "correct": "t"
+    },
+    {
+      "number": 10,
+      "correct": "f"
+    },
+    {
+      "number": 11,
+      "correct": "t"
+    },
+    {
+      "number": 12,
+      "correct": "t"
+    },
+    {
+      "number": 13,
+      "correct": "f"
+    },
+    {
+      "number": 14,
+      "correct": "f"
+    },
+    {
+      "number": 15,
+      "correct": "f"
+    },
+    {
+      "number": 16,
+      "correct": "u"
+    },
+    {
+      "number": 17,
+      "correct": "t"
+    },
+    {
+      "number": 18,
+      "correct": "u"
+    },
+    {
+      "number": 19,
+      "correct": "t"
+    },
+    {
+      "number": 20,
+      "correct": "f"
+    },
+    {
+      "number": 21,
+      "correct": "u"
+    },
+    {
+      "number": 22,
+      "correct": "u"
+    },
+    {
+      "number": 23,
+      "correct": "t"
+    },
+    {
+      "number": 24,
+      "correct": "f"
+    },
+    {
+      "number": 25,
+      "correct": "u"
+    },
+    {
+      "number": 26,
+      "correct": "u"
+    },
+    {
+      "number": 27,
+      "correct": "t"
+    },
+    {
+      "number": 28,
+      "correct": "u"
+    },
+    {
+      "number": 29,
+      "correct": "u"
+    },
+    {
+      "number": 30,
+      "correct": "t"
+    }
+  ],
+  "_page": 165
+}

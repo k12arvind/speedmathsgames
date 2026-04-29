@@ -1,0 +1,55 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 8,
+      "solution": "step I and find step III. Let us take P₁ → P₂ in → 2 → 4 and P₃ → P₄ in I → 3. From table we see that P₁ → P₂ in 2 → 4, P₃ → P₄ in I → 3. By golden rule 6 → 3 → 3 → I. Correct choice."
+    },
+    {
+      "number": 9,
+      "solution": "We have to find P₁ for 6 → 3. By golden rule 6 → 3 → 3 → I. So P₁ = I. Now we have to find step III. In other words, P₃ → P₄ with P₁ as input. word of input must be P₁ (i.e 3 → 6). That word is not there in the choices. So, we try P₁ of input as P₁ = 3 + 3 = 6. We have to find 3 → 6. We see the table, third is P₃ different in all choices. P₁ is different in all choices. So, we try P₃ of input as from table data or error answer."
+    },
+    {
+      "number": 10,
+      "solution": "We have to find 6 → 4. Look at the table right hand side. We have P₁ → 2 → 3, P₃ → P₄ in 2 → 3. But P₁ → P₂ in 2 → 3, P₃ → P₄ in 3 → 3, P₃ → P₄ in 2 → 3. Hence, 6 is a I-step case."
+    },
+    {
+      "number": 11,
+      "solution": "We have to find last three words of Step II in 6 → 3. We find the first word is different in all the choices. So, we should try I = 6 → 2 can be written as last two words of Step II (by golden rule) (6 - 4) → 6 = 6 → 2. So, we can assume (I x 6) → (2 - I x I) = 4 → 3. Now, P₁ of 6 → 2. So, P₃ = P₄ in (2 + 4) + 3 = 6 → 2. So, we use P₃ in 6 → 2. So, apply P₁ in step II."
+    },
+    {
+      "number": 12,
+      "solution": "Look at the table."
+    },
+    {
+      "number": 13,
+      "solution": "We have to find 4 → 7. By golden rule, 4 → 7 → (4 · 4) → (7 - 6) = 7 → 3. So, we can assume \"Pollution... input\" as input and find its movement of P₁ in I → 3, P₂ in 6 → 3, P₃ in 8 in P₁. So, in our answer all the different choices. We see that in I → 3, P₂ in 6 → 3, P₃ in 8 in P₁. Hence, choices."
+    },
+    {
+      "number": 14,
+      "solution": "We have to find 0 → 3. Look at the table itself. (Hint: Just watch movement of P₁ at 0 → 3. P₂ in 0 → 3. So, the is P₁ in our answer.)"
+    },
+    {
+      "number": 15,
+      "solution": "We have to find 4 → 0. Look at the table to find it. (Hint: Just watch movement of P₁ at 4. Let = 4, P₂ → P₃ from the table. So, it must be P₁ in correct choice.)"
+    },
+    {
+      "number": 16,
+      "solution": "Look at the table step I → 1, P₁ → P₂, P₃ → P₄ and in I → 2, P₁ → P₂ → P₃. So, 0 → 1 → I → 2. So, it is a I-step case."
+    },
+    {
+      "number": 16,
+      "solution": "We have to find 3 → 6. By golden rule, 3 → 6 → 3 + 3 → 6 + 7 = 6 + 1. So, we assume 'night succeed day' ... 'for to be input and find step III. (Hint: Watch movements of to and hard i.e. P₁ and P₂. These two words are at different pairs of places in different choices.)"
+    },
+    {
+      "number": 17,
+      "solution": "5 → 2 = (5 · 1 x I) → (2 · 1 x I) = 4 → 1. So, we may assume = 4 → 1. Similarly, 5 → 3 → 3 → I, 5 → 4 = 2 → 1, 5 → 6 = I → 4"
+    }
+  ],
+  "answers": [],
+  "_page": 250
+}

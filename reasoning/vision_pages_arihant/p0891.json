@@ -1,0 +1,447 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following instruction carefully and answer the questions given below.\nI. There is a rectangular wooden block of length 4 cm, height 3 cm and breadth 3 cm.\nII. The two opposite surface of 4 cm × 3 cm are painted yellow on the outside.\nIII. The other two opposite surface of 4 cm × 3 cm are painted red on the outside.\nIV. The remaining two surface of 3 cm × 3 cm are painted green on the outside.\nV. Now the block is cut in such a way that cubes of 1 cm × 1cm × 1 cm are created.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below.\nA cuboid of dimensions (6 cm × 4 cm × 1 cm) is painted black on both the surfaces of dimensions (4 cm × 1 cm), green on the surfaces of dimensions (6 cm × 4 cm) and red on the surfaces of dimensions (6 cm × 1 cm). Now, the block is divided into various smaller cubes of side 1 cm each. The smaller cubes so obtained are separated.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below.\n91 small cubes of same size are arranged in two cubes of sides 4 cm and 3 cm each. The bigger cube is coloured red on two opposite faces, white on two adjacent faces and blue on the remaining faces while the smaller one is coloured white on two opposite faces, blue on two adjacent faces and red on the remaining faces. Taking both the cubes into consideration, answer the following questions based on the the above information.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have one face painted in green and have black or red colour on the face just adjacent to green face?",
+      "choices": {
+        "a": "12",
+        "b": "16",
+        "c": "20",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have two adjacent faces painted in red or black?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have black colour at the face which is just opposite to the face having red colour?",
+      "choices": {
+        "a": "0",
+        "b": "8",
+        "c": "12",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have only one colour?",
+      "choices": {
+        "a": "10",
+        "b": "12",
+        "c": "14",
+        "d": "18"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have no colour?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "4",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have any two colours?",
+      "choices": {
+        "a": "32",
+        "b": "24",
+        "c": "16",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have atleast two colours?",
+      "choices": {
+        "a": "16",
+        "b": "12",
+        "c": "10",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will be formed?",
+      "choices": {
+        "a": "6",
+        "b": "12",
+        "c": "16",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "If cubes having only black as well as green colour are removed, then how many cubes will be left?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "16",
+        "d": "20"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have 4 coloured sides and 2 sides without colour?",
+      "choices": {
+        "a": "8",
+        "b": "4",
+        "c": "16",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes will have two sides with green colour and remaining sides without any colour?",
+      "choices": {
+        "a": "12",
+        "b": "10",
+        "c": "8",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many smaller cubes are not coloured on any of faces?",
+      "choices": {
+        "a": "1",
+        "b": "4",
+        "c": "8",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes are coloured red, white and blue on one face each?",
+      "choices": {
+        "a": "4",
+        "b": "8",
+        "c": "12",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "Leaving out uncoloured cubes, how many cubes are there without any red face?",
+      "choices": {
+        "a": "36",
+        "b": "40",
+        "c": "42",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have atleast one red face?",
+      "choices": {
+        "a": "35",
+        "b": "44",
+        "c": "45",
+        "d": "47"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have one face white and one face red and no face blue?",
+      "choices": {
+        "a": "8",
+        "b": "10",
+        "c": "12",
+        "d": "15"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 2,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes are coloured blue, red or white on two faces each and not coloured on any other face?",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "18",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 2,
+      "seq_in_passage": 7,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes are coloured red, white or blue on one face each and have no other coloured face?",
+      "choices": {
+        "a": "8",
+        "b": "22",
+        "c": "30",
+        "d": "40"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 2,
+      "seq_in_passage": 8,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes are coloured blue on atleast one face?",
+      "choices": {
+        "a": "41",
+        "b": "43",
+        "c": "45",
+        "d": "47"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 2,
+      "seq_in_passage": 9,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes have atleast one white face?",
+      "choices": {
+        "a": "40",
+        "b": "44",
+        "c": "46",
+        "d": "48"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 2,
+      "seq_in_passage": 10,
+      "subject": "non_verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Cubes and Cuboids",
+      "subtopic_code": "cube_painting",
+      "subtopic_name": "Cube Painting",
+      "body": "How many cubes are coloured on two faces only?",
+      "choices": {
+        "a": "24",
+        "b": "28",
+        "c": "32",
+        "d": "46"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 891
+}

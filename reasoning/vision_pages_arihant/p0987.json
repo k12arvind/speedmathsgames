@@ -1,0 +1,68 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "figure_classification",
+      "subtopic_name": "Figure Classification",
+      "body": "Which of the following answer figures are similar to class 'A' figures?",
+      "choices": {
+        "a": "A and C",
+        "b": "A and B",
+        "c": "B and D",
+        "d": "B and C"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_similarity",
+      "subtopic_name": "Figure Similarity",
+      "body": "Which of the following figures are similar?",
+      "choices": {
+        "a": "1-5",
+        "b": "3-6",
+        "c": "5-8",
+        "d": "4-7"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "Clearly, 1, 4 and 7 comprise of a quadrilateral in which a circle is enclosed. 2, 6 and 9 contain one smaller circle attached to a larger circle. 3, 5 and 8 contain figure in which atleast one curve is present. Thus, the given nine figures may be divided into three groups as (1, 4, 7), (2, 6, 9) and (3, 5, 8)."
+    },
+    {
+      "number": 3,
+      "solution": "1, 4 and 7 form a group of figures in which one triangle is present at the base of figure and the figure as a whole looks like a flask. 2, 5 and 8 are kettle shaped figures. 3, 6 and 9 form a group of figures representing floral design."
+    },
+    {
+      "number": 4,
+      "solution": "Each of the three class 'A' figures is composed of two similar and closed geometrical shapes. Hence, answer figures 'B' and 'C' belong to class 'A'."
+    },
+    {
+      "number": 5,
+      "solution": "Clearly, figures 5 and 8 are similar. So, correct option is (c)."
+    }
+  ],
+  "answers": [],
+  "_page": 987
+}

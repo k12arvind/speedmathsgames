@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 41,
+      "solution": "In every next element 1, 2, 3 and 4 L's are added, respectively to the previous term. L +1L→LL +2L→LLLL +3L→LLLLLLL +4L→LLLLLLLLLLL ∴ ? = LLLLLLLLLLL"
+    },
+    {
+      "number": 42,
+      "solution": "According to the following pattern From 1st to 2nd element, one M is added → MMNO From 2nd to 3rd element, one N is added → MMNNO From 3rd to 4th element, one O is added → MMNNOO From 4th to 5th element, one M is added → MMMNNOO ∴ Required element = MMMNNOO"
+    },
+    {
+      "number": 43,
+      "solution": "The sequence will be as follows mm OO qq SS uu +2 +2 +2 +2 Here, the letters occur in pairs and are written small and capital in alternate manner and in every next term, the letters move two positions forward from the previous term."
+    },
+    {
+      "number": 44,
+      "solution": "Here, the pattern of series is as follows Small letters bC cD dE eF fG Capital letters +1 +1 +1 +1 +1 ∴ Required term = fG"
+    }
+  ],
+  "answers": [],
+  "_page": 239
+}

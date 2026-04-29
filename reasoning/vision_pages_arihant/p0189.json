@@ -1,0 +1,163 @@
+{
+  "page_type": "questions",
+  "chapter_number": 4,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In each question below, is given a group of letters followed by four combinations of digits/symbols numbered (a), (b), (c) and (d). You have to find out which of the four combinations correctly represents the group of letters based on the following coding system and the conditions that follow and mark the number of that combination as your answer. If none of the combinations correctly represents the group of letters, mark (e), i.e., 'None of these', as your answer.\n\nLetter: R E A U M D F P Q I J Q H N W Z B\nDigit/Symbol code: 7 # $ 6 % 8 5 ★ 4 9 @ © 3 d 1 2\n\n(i) If the first letter is a consonant and the third letter is a vowel, their codes are to be interchanged.\n(ii) If the first letter is a vowel and the fourth letter is a consonant, both are to be coded as the code for the vowel.\n(iii) If the second and the third letters are consonants, both are to be coded as the code for the third letter.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "In each of the questions below, a group of numerals is given followed by four groups of symbols/letter combinations labelled (a), (b), (c) and (d). Numerals are to be coded as per the codes and conditions given below. You have to find, out which of the combinations (a), (b), (c) and (d) is correct and indicate your answer accordingly. If none of the four combinations represents the correct code, mark (e) as your answer.\n\nNumerals: 3 5 7 4 2 6 8 1 0 9\nLetter/Symbol code: ★ B E A @ F K % R M\n\n(i) If the first digit, as well as the last digit is odd, both are to be coded as 'X'.\n(ii) If the first digit as well as the last digit is even, both are to be coded as $.\n(iii) If the last digit is 0, it is to be coded as #.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Number/Symbol Coding",
+      "body": "NABAQE",
+      "choices": {
+        "a": "26$3d#",
+        "b": "326$4#",
+        "c": "362$4#",
+        "d": "362$3#",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Number/Symbol Coding",
+      "body": "FWZERA",
+      "choices": {
+        "a": "5d #7$",
+        "b": "5ddd #7$",
+        "c": "d17#$",
+        "d": "511 #7$",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Number/Symbol Coding",
+      "body": "HUBDIN",
+      "choices": {
+        "a": "© 62893",
+        "b": "© 26890%",
+        "c": "© 62890©",
+        "d": "© 62© 9%",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Number/Symbol Coding",
+      "body": "EMIRDP",
+      "choices": {
+        "a": "#%97$★",
+        "b": "#%9#5★",
+        "c": "7%9#5★",
+        "d": "#9%7$★",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Number/Symbol Coding",
+      "body": "QREDHM",
+      "choices": {
+        "a": "@7#8© %",
+        "b": "#7#8© %",
+        "c": "@78#© %",
+        "d": "@7#@© %",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Number/Symbol Coding",
+      "body": "PQIMHZ",
+      "choices": {
+        "a": "★49%@1",
+        "b": "%49★@1",
+        "c": "★49★@1",
+        "d": "949%@1",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "number_coding",
+      "subtopic_name": "Number to Symbol/Letter Coding",
+      "body": "",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": "incomplete_question"
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 189
+}

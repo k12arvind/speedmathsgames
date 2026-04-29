@@ -1,0 +1,45 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Decision Making",
+  "passages": [
+    {
+      "passage_text": "A chemical company X decided to recruit management trainees for its ammonia plant. The company laid down the following criteria for selecting the candidates.\nA. should be a chemical engineering graduate with minimum 65% marks.\nB. should have done atleast a diploma in business management.\nC. should not be less than 21 yr of age and more than 28 yr of age as on 1st July, 2005.\nD. should have secured a minimum of 75% marks in the Common Entrance Test (CET).\nHowever, if the candidate fulfils all the criteria except\n(i) A above but has secured marks above 60% and below 65% and also has a working experience of one year, his case may be referred to the Managing Director (MD).\n(ii) B above and has secured more than 80% marks in CET, his case may be referred to the General Manager (GM) of the plant.\n(iii) D above but has passed the CET examination with atleast 65% marks and has secured more than 70% marks in chemical engineering degree examination, his case may be referred to the Vice-President.",
+      "has_figure": false,
+      "topic_code": "decision_making"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Rohan - All basic conditions are fulfilled. Hence, he will be selected."
+    },
+    {
+      "number": 2,
+      "solution": "Kanchan - Except condition D, all basic conditions are fulfilled. But there is no information about his percentage of marks in the written exam. It means data is inadequate."
+    },
+    {
+      "number": 3,
+      "solution": "Dinkar - All basic conditions are fulfilled. Hence, he will be selected."
+    },
+    {
+      "number": 4,
+      "solution": "Kurpa - All basic conditions, except E are fulfilled. There is no information about deposit of security money. It means data is inadequate in this case."
+    },
+    {
+      "number": 5,
+      "solution": "Jadunath - Basic conditions A, B, C and E are fulfilled. Further, basic condition D is not fulfilled. But additional condition (i) attached with D is fulfilled. Therefore, case will be referred to Chief Manager (CR)."
+    },
+    {
+      "number": 6,
+      "solution": "Chandrakant - Basic conditions A, B, C and E are fulfilled. Further, basic condition D is violated. But additional condition (i) attached with D is fulfilled. Therefore, case will be referred to Chief Manager (CR)."
+    },
+    {
+      "number": 7,
+      "solution": "Deepali - Basic condition C is violated. Hence, she will be rejected."
+    }
+  ],
+  "answers": [],
+  "_page": 524
+}

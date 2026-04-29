@@ -1,0 +1,80 @@
+{
+  "page_type": "questions",
+  "chapter_number": 8,
+  "chapter_title": "Syllogism",
+  "passages": [
+    {
+      "passage_text": "In each of the questions below are given three statements followed by two conclusions numbered I and II. You have to take the three given statements to be true even if they seem to be at variance from commonly known facts and decide which of the given conclusion(s) logically follow(s) from the three given statements. Give answer (a) if only Conclusion I follows (b) if only Conclusion II follows (c) if either Conclusion I or II follows (d) if neither Conclusion I nor II follows (e) if both Conclusions I and II follow",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "three_statement_syllogism",
+      "subtopic_name": "Three Statement Syllogism",
+      "body": "Statements: All pens are papers. Some papers are blades. All blades are knives. Conclusions: I. Some knives are papers. II. Some blades are pens.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "three_statement_syllogism",
+      "subtopic_name": "Three Statement Syllogism",
+      "body": "Statements: All fans are televisions. Some televisions are channels. Some channels are radios. Conclusions: I. Some fans are channels. II. Some radios are televisions.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "three_statement_syllogism",
+      "subtopic_name": "Three Statement Syllogism",
+      "body": "Statements: Some roots are stems. All stems are branches. All branches are leaves. Conclusions: I. Some leaves are roots. II. Some branches are stems.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either Conclusion I or II follows",
+        "d": "if neither Conclusion I nor II follows",
+        "e": "if both Conclusions I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1172
+}

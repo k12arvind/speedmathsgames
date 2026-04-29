@@ -1,0 +1,67 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 36,
+      "solution": "(c) The pattern is as follows\n39\n4    5    12   39   160   805   4836\n+1×1  ×2+2  ×3+3  ×4+4  ×5+5  ×6+6\nHence, number 39 is wrong and should be replaced by 39."
+    },
+    {
+      "number": 37,
+      "solution": "(d) The pattern is as follow\n3    5    13    43    177\n                     176   891   5353\n×1+2  ×2+3  ×3+4  ×4+5  ×5+6  ×6+7\nHence, number 176 is wrong and should be replaced by 177."
+    },
+    {
+      "number": 38,
+      "solution": "(c) The pattern is as follows\n(7)²    (8)²   72   (9)²\n49   56   64   71   81   90   100   110\n      +16      +18      +20\nTerms at odd places are 7², 8², 9², 10² and terms at even places are 56, 72, 90, 110 i.e. with differences of 16, 18 and 20.\nHence, number 71 is wrong and should be replaced by 72."
+    },
+    {
+      "number": 39,
+      "solution": "(c) The pattern is as follows\n4    6    15\n          18   49   201   1011\n×1+2  ×2+3  ×3+4  ×4+5  ×5+6\nHence, number 18 is wrong and should be replaced by 15."
+    },
+    {
+      "number": 40,
+      "solution": "(b) The pattern is as follows\n3535\n18   119   708   3534  14136  42405\n×7-7  ×6-6  ×5-5  ×4-4  ×3-3\nHence, number 3434 is wrong and should be replaced by 3535."
+    },
+    {
+      "number": 41,
+      "solution": "(c) The pattern is as follows\n5    7.5   11.25   17.5   28.75\n                              29.75   50   91.25\n+2.5  +3.75  +6.25  +11.25  +21.25  +41.25\n+1.25  +2.5   +5     +10     +20\n÷2    ÷2     ÷2     ÷2      ÷2\nHence, number 29.75 is wrong and should be replaced by 28.75."
+    },
+    {
+      "number": 42,
+      "solution": "(d) The pattern is as follows\n1236\n35   118   280   600   1236  2504  5036\n×83  ×162  ×320  ×636  ×1268 ×2532\n×2-1  ×2+4  ×2-4  ×2-4  ×2-4\nHence, number 1236 is wrong and should be replaced by 1236."
+    },
+    {
+      "number": 43,
+      "solution": "(g) The pattern is as follows\n1850\n10   12   28   90   368   1840  11112\n×1+2  ×2+4  ×3+6  ×4+8  ×5+10 ×6+12\nHence, number 1840 is wrong and should be replaced by 1850."
+    },
+    {
+      "number": 44,
+      "solution": "(e) The pattern is as follows\n52.5\n7    4    5    9    20   51   160.5\n÷1½   ×1+1  ×1½   ×2+2  ×1⅗  ×3+3\n              2 2          2 2\nHence, number 51 is wrong and should be replaced by 52.5."
+    },
+    {
+      "number": 45,
+      "solution": "(b) The pattern is follows\n108\n1788   892   444   220   112   52   24\n÷2-2   ÷2-2  ÷2-2  ÷2-2  ÷2-2  ÷2-2\nHence, number 112 is wrong and should be replaced by 108."
+    },
+    {
+      "number": 46,
+      "solution": "(d) The pattern is as follows\n7 × 2 − 2 × 1 = 12\n12 × 4 − (4 × 2) = 40\n40 × 6 − (6 × 3) = 222\n222 × 8 − (8 × 4) = 1744\n1744 × 10 − (10 × 5) = 17390\n17390 × 12 − (12 × 6) = 208608\nHence, number 1742 is wrong and should be replaced by 1744."
+    },
+    {
+      "number": 47,
+      "solution": "(c) The pattern is as follows\n23\n80   42   23\n          24   13.5   8.75   6.375   5.1875\n÷1¾  ÷1¾  ÷1¾  ÷1¾  ÷1¾   ÷1¾\n2 2   2 2   2 2   2 2   2 2    2 2\nHence, number 24 is wrong and should be replaced by 23."
+    },
+    {
+      "number": 48,
+      "solution": "(d) The pattern is as follows\n30\n2    9    32   105   436   2195   13182\n×1+(1×7) ×2+(2×6) ×3+(3×5) ×4+(4×4) ×5+(5×3) ×6+(6×2)\nHence, number 32 is wrong and should be replaced by 30."
+    },
+    {
+      "number": 49,
+      "solution": "(c) The pattern is as follows\n6.75\n4    2.5   3.5   6.5   15.5   41.25   126.75\n÷1½   ×1+1  ×1½   ×2+2   ×1⅗   ×3+3\n2 2          2 2          2 2\nHence, number 6.5 is wrong and should be replaced by 6.75."
+    }
+  ],
+  "answers": [],
+  "_page": 234
+}

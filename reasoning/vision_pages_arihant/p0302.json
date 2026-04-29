@@ -1,0 +1,86 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [
+    {
+      "passage_text": "In these questions, the candidate is required to find out a particular day/date on the basis of several statements provided to them. The questions asked from this section neither require a special methodology nor any special formulae. The questions are very basic in nature and require common sense.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Time Sequence",
+      "subtopic_code": "date_finding",
+      "subtopic_name": "Date Finding",
+      "body": "Kamal remembers that his brother Dinu's birthday falls after 20th May but before 28th May, while Garima remembers that Dinu's birthday falls before 22nd May but after 12th May. On what date Dinu's birthday falls?",
+      "choices": {
+        "a": "22nd May",
+        "b": "21st May",
+        "c": "Cannot be determined",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Time Sequence",
+      "subtopic_code": "date_finding",
+      "subtopic_name": "Date Finding",
+      "body": "Radha remembers that her father's birthday is after 16th but before 21st of March, while her brother Mahesh remembers that his father's birthday is before 22nd but after 19th of March. On which date is the birthday of their father?",
+      "choices": {
+        "a": "19th",
+        "b": "20th",
+        "c": "21th",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "(C) Total number of boys after 2 new boys joined = 47\nSince, the rank of the boy dropped by 1, it became 21st\n20th.\n∴His new rank from the end = 47 – 21 + 1 = 27th"
+    },
+    {
+      "number": 12,
+      "solution": "(D) Total students in the class = 47 + 36 – 1= 33 – 1 = 32"
+    },
+    {
+      "number": 13,
+      "solution": "(J) When Rahul was shifted by three places towards his right side, then he occupies the middle position i.e., 13th position.\nThus, his original position from the left end of the row = 13 – 3 = 10th"
+    },
+    {
+      "number": 14,
+      "solution": "(D) Number of letters in the row = 5 + 12 – 1 = 16"
+    },
+    {
+      "number": 15,
+      "solution": "(C) Total number of girls = 11 + 11 – 1 = 22 – 1 = 21"
+    },
+    {
+      "number": 16,
+      "solution": "(b) According to Kamal, Dinu's birthday falls on one of the days — 21st, 22nd, 23rd, 24th, 25th, 26th or 27th May.\nAccording to Garima, Dinu's birthday falls on one of the days 13th, 14th, 15th, 16th, 17th, 18th 19th, 20th or 21st May.\nThe common date in both the group of dates = 21st May\nClearly, Dinu's birthday falls on 21st May."
+    },
+    {
+      "number": 17,
+      "solution": "(b) According to Radha: Possibility of Date 17, 18, 19, 20\nAccording to Mahesh: 20, 21\nHere, 20th is common to both.\nSo, their father's birthday is on 20th March."
+    }
+  ],
+  "answers": [],
+  "_page": 302
+}

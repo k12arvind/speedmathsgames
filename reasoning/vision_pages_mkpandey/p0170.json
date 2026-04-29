@@ -1,0 +1,61 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Learners' Exercise Set VI - Directions: In each question below are given two statements followed by two conclusions numbered I and II. You have to take the two statements to be true even if they seem to be at variance with commonly known facts and then decide which of the given conclusions logically follows from the two statements, disregarding commonly known facts. Give Answer:",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Statements: All cats are bats. All bats are tables. Conclusions: (i) Some tables are bats. (ii) Some bats are cats. Solutions: Step I: Sentences are already aligned. Step II: A + A = A. All cats are tables. Step III: (a) On converting 'All bats are tables' we obtain 'some tables are bats'. (b) On converting the conclusion obtained in step II, we get 'some tables are cats'. From (a) and (b) we infer that both conclusions are true. Step IV: No need because a definite conclusion has already been obtained."
+    },
+    {
+      "number": 2,
+      "solution": "Statements: Some tables are watches. Some watches are lamps. Conclusions: (i) Some tables are lamps. (ii) Some tables are not lamps. Solution: No conclusion is drawn by following step I to step III. Now we see that the conclusions are given in the form of 'some' and 'some not'. Hence, we infer that either I or II follows."
+    },
+    {
+      "number": 3,
+      "solution": "Statements: No tables are watches. Some watches are lamps. Conclusions: (i) Some lamps are tables. (ii) Some lamps are not tables. Solution: Though the answer choice is in the form of 'some' and 'some not', we see that E + I = O gives us 'Some lamps are not tables'. Hence, we obtain a definite conclusion that conclusion II is correct. Hence, step IV becomes unnecessary and we choose the answer where conclusion II follows."
+    },
+    {
+      "number": 4,
+      "solution": "Statements: Some horses are radios. All radios are rooms. Conclusions: I. Some stones are rooms. II. All roads are poles."
+    },
+    {
+      "number": 5,
+      "solution": "Statements: No pole is a house. I. Some roads are houses. Conclusions: II. Some houses are poles."
+    },
+    {
+      "number": 6,
+      "solution": "Statements: All birds are trees. Some trees are hens. Conclusions: I. Some birds are hens. II. Some hens are trees."
+    },
+    {
+      "number": 7,
+      "solution": "Statements: All tables are chalks. All chalks are chairs. Conclusions: I. All chairs are tables. II. All tables are chairs."
+    },
+    {
+      "number": 8,
+      "solution": "Statements: Some girls are flowers. Some flowers are books. Conclusions: I. Some girls are books. II. No book is a flower."
+    },
+    {
+      "number": 9,
+      "solution": "Statements: Some cows are cows. All cows are horses. Conclusions: I. Some horses are hens. II. Some hens are horses."
+    },
+    {
+      "number": 10,
+      "solution": "Statements: Some bats are cats. Some bats are cats. Conclusions: I. Some dogs are cats. II. Some cats are dogs."
+    },
+    {
+      "number": 11,
+      "solution": "Statements: Some poets are goats. Some goats are trees. Conclusions: I. Some poets are trees. II. Some trees are goats."
+    }
+  ],
+  "answers": [],
+  "_page": 170
+}

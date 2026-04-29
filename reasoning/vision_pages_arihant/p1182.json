@@ -1,0 +1,47 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 34,
+      "solution": "Venn diagram showing Desks, Leaves, and Halls with Rooms. Conclusions: I. Some leaves are desks. (X) II. Some halls are desks. (X) III. Some leaves are rooms. (✓)"
+    },
+    {
+      "number": 35,
+      "solution": "Venn diagram showing Doors, Lamps, Candles with Windows. Conclusions: I. Some candles are doors. (X) II. Some candles are windows. (✓) III. Some lamps are doors. (X)"
+    },
+    {
+      "number": 36,
+      "solution": "Venn diagram showing Towns, Lanes, Villages, Hamlets. Conclusions: I. Some hamlets are villages. (X) II. Some lanes are towns. (X) III. Some hamlets are towns. (X)"
+    },
+    {
+      "number": 37,
+      "solution": "Venn diagram showing Towns, Villages, Lanes, Hamlets. Conclusions: I. Some hamlets are villages. (X) II. Some lanes are towns. (X) III. Some hamlets are towns. (X)"
+    },
+    {
+      "number": 38,
+      "solution": "Venn diagram showing Buildings, Pens, Paper with Mirrors. Conclusions: I. Some papers are buildings. (X) II. Some pens are buildings. (X) III. Some papers are mirrors. (X)"
+    },
+    {
+      "number": 39,
+      "solution": "Venn diagram showing Trees, Rats with Dogs. Conclusions: I. Some trees are dogs. (✓) II. All dogs are trees. (X) III. All rats are dogs. (X) IV. No tree is dog. (X)"
+    },
+    {
+      "number": 40,
+      "solution": "Venn diagram showing Peacocks, Tigers with Lions. Conclusions: I. Some lions are not tigers. (X) II. All tigers are lions. (X) III. Some tigers are lions. (✓) IV. All peacocks are tigers. (X)"
+    },
+    {
+      "number": 41,
+      "solution": "Method I and Method II with Venn diagrams showing Bricks, Pens, Houses, Flowers. Conclusions: I. Some houses are bricks. (X) II. Some pens are flowers. (X) III. Some flowers are bricks. (✓) IV. No pen is flower. (X) Complementary pair (I-E) Method II explanation with alignment statements and IEA rule analysis."
+    },
+    {
+      "number": 42,
+      "solution": "Venn diagram showing trees, dogs, rat. Conclusions: I. Some trees are dogs. (✓) II. All dogs are trees. (X) III. All rats are dogs. (X) IV. No tree is dog. (X)"
+    }
+  ],
+  "answers": [],
+  "_page": 1182
+}

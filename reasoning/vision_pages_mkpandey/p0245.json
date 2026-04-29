@@ -1,0 +1,52 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 44,
+      "solution": "If step VI of an input is 'above is the message to you from me', what will be the fifth step?\n1) above from the message to you is me\n2) above the from message to is you me\n3) above the message from to you is me\n4) from the above message to you is me\n5) None of these"
+    },
+    {
+      "number": 45,
+      "solution": "Given the following\nInput: I am talking about you Digvijay Pranay Ashok\nWhat step will be the following arrangement?\nArrangement: about am I talking Digvijay Ashok Pranay you\n1) VII    2) VII    3) VIII    4) IX    5) None of these"
+    },
+    {
+      "number": 46,
+      "solution": "If step VII of an input be 'I am serious about the output', what would be the input?\n1) be I serious to announce are you about\n2) the I to serious conversation am about\n3) serious am the I you to about conversation\n4) serious I the am to about you conversation\n5) None of these"
+    },
+    {
+      "number": 47,
+      "solution": "Given the input, what would be the step VIII of the input?\nInput: I am waiting for your reply in future\n1) for am I waiting reply future in your\n2) for am waiting reply I future in your\n3) reply am your I future in waiting for\n4) am reply your I future for waiting in\n5) None of these"
+    },
+    {
+      "number": 48,
+      "solution": "Questions (Q. 48-52): Study the following information to answer the given questions:\nA word arrangement machine when given an input line of words rearranges them following a particular rule in each step. The following is an illustration of input and steps of rearrangement.\nInput: gale pa tu is wind law\nStep I: is law gale pa tu wind\nII: is law wind tu pa gale\nIII: tu gale is law wind pa\nIV: tu gale pa wind law is\nand so on.....\nAs per the rules followed in the above steps, find out in the given questions the appropriate steps for the given input.\nIf step III of an input is 'low fat say by gain over', what would be the input?\n1) low fat over gain by say\n2) say by fat over low gale\n3) over gain say by fat low\n4) fat low say gain by\n5) None of these"
+    }
+  ],
+  "answers": [
+    {
+      "number": 44,
+      "correct": "c"
+    },
+    {
+      "number": 45,
+      "correct": "a"
+    },
+    {
+      "number": 46,
+      "correct": "d"
+    },
+    {
+      "number": 47,
+      "correct": "a"
+    },
+    {
+      "number": 48,
+      "correct": "b"
+    }
+  ],
+  "_page": 245
+}

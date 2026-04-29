@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 10,
+      "solution": "Sol. (c)\n\nStatements: All lions are tigers. All tigers are leopards. Some leopards are wolves. No wolf is elephant.\n\nConclusions:\nI. No elephant is lion.\nII. Some wolves are lions.\nIII. Some leopards are lions.\n\n[Venn diagrams showing Tigers, Wolves, Leopards, Lions, and Elephants relationships]\n\nConclusions:\nI. No elephant is lion. (✓)\nII. Some wolves are lions. (✗)\nIII. Some leopards are lions. (✓)"
+    },
+    {
+      "number": 11,
+      "solution": "Sol. (c)\n\nStatements: Some roses are flowers. Some flowers are buds. All buds are leaves. All leaves are plants.\n\nConclusions:\nI. Some plants are flowers.\nII. Some roses are buds.\nIII. No leaves are roses.\nIV. No roses are buds.\n\n[Venn diagrams showing relationships between Leaves, Flowers, Roses, Buds, and Plants]\n\nConclusions:\nI. Some plants are flowers. (✓)\nII. Some roses are buds. (✗)\nIII. No leaves are roses. (✗)\nIV. No roses are buds. (✗)\n\nComplementary pair (I-E)\n\n[IDBI (PO) 2013]"
+    }
+  ],
+  "answers": [],
+  "_page": 1185
+}

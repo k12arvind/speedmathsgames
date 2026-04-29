@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "We are presenting a detailed solution of one more fully solved example so that you may understand the method fully.\n\nEx 2: Statements: A. Some bricks are dogs.\n                B. All kicks are sticks.\n                C. No sticks are bricks.\n\nConclusions: I. Some dogs are bricks.\n             II. Some dogs are not bricks.\n             III. Some dogs are kicks.\n             IV. Some dogs are not kicks.\n             V. Some kicks are dogs.\n             VI. No kicks are dogs.\n\n1) Either I or II and either III or IV and either V or VI follow\n2) Either I or II and IV and either V or VI follow\n3) I, IV and either V or VI follow\n4) I, IV and VI follow\n5) Only IV and VI follow\n\nSolution:\nConclusions I and II\nStep I: In both these conclusions, the subject and the predicate are 'dogs' and 'bricks' respectively. We see that 'bricks' and 'dogs' never come together as statement only is statement A. Hence, only statement (A) is even true.\n\nStep II: Since only one statement is relevant, step II is not needed.\n\nStep III (b): We see that \"Some dogs are bricks\" follows from \"Some bricks are dogs\" as immediate inference. Hence, conclusion I is accepted. But conclusion II does not follow from \"Some bricks are dogs\".\n\n(ii) Conclusion I and II make a complementary pair because both have the same subject and the same predicate and they are in I-O relation. But conclusion I has already been accepted; hence \"either of them follows\" is not a correct choice.\n\nConclusions III, IV, V, VI\nStep I: In these conclusions, 'kicks' and 'dogs' appear as subject and predicate. Now, in the given statements, 'dogs' is in statement A and 'kicks' is in statement B. But there is no term common between them.\nB. This means that all the three statements are relevant to us.\n\nStep IV: We write the three statements in the following way:\nAll kicks are sticks (A)\n\nNo sticks are bricks (E)\n        ↓\nSome bricks are dogs. (I)\n\nConclusions I, III, IV: Subject and predicate are \"ducks\" and \"birds\". Hence, the relevant statements are A and C. Now, All birds are swans + All swans are ducks = A + A = A = All birds are ducks. Hence, III is valid. Again, \"All birds are ducks\" gives \"Some ducks are birds\". Hence, I is valid. III and IV"
+    }
+  ],
+  "answers": [],
+  "_page": 178
+}

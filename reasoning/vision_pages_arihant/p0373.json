@@ -1,0 +1,213 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Consider the following Venn diagram and answer the questions that follow.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Read the following information carefully. In the given diagram, the circle represents poor boys, the square represents educated boys, the triangle represents the boys who are employed somewhere and the rectangle represents those who help in the family business. Each section of the diagram is numbered. Now, answer the questions given below on the basis of the diagram.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Figure given below depicts an area where people speak four different languages. The triangle depicts English speaking area, the square depicts Hindi speaking area, the circle stands for Urdu speaking area and the rectangle is for area where people speak Marathi. Each part is numbered. You task is to study the figure and answer the questions that follow",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "In the following figure, the smaller triangle represents the teachers, the big triangle represents the politicians, the circle represents the graduates and the square represents the members of parliament. Different regions are being represented by letters of English alphabet.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "The people possessing all the qualities are represented by",
+      "choices": {
+        "a": "O",
+        "b": "N",
+        "c": "K",
+        "d": "Q",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "In the following diagram, which of the following represents the educated men but not urban?",
+      "choices": {
+        "a": "9",
+        "b": "5",
+        "c": "4",
+        "d": "11"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "In the following diagram, which of the following represents a man who is urban as well as a Government employee?",
+      "choices": {
+        "a": "7",
+        "b": "13",
+        "c": "10",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "Which number represents those poor boys who help in family business but are not educated or employed elsewhere?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "Which number represents the group of educated poor boys who are employed somewhere but do not help in family business?",
+      "choices": {
+        "a": "12",
+        "b": "3",
+        "c": "11",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "Which section does number 3 represent?",
+      "choices": {
+        "a": "Uneducated poor boys who do not help in family business",
+        "b": "Educated poor boys employed in service",
+        "c": "Uneducated boys who help in family business",
+        "d": "Educated poor boys who help in family business"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "Which number depicts the area where the three languages English, Marathi and Urdu are spoken but Hindi is not spoken?",
+      "choices": {
+        "a": "4",
+        "b": "11",
+        "c": "9",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "Number 2 depicts",
+      "choices": {
+        "a": "English and Hindi speaking area",
+        "b": "Only English speaking area",
+        "c": "Hindi and Marathi speaking area",
+        "d": "English and Marathi speaking area"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_interpretation",
+      "subtopic_name": "Set Interpretation",
+      "body": "Which number depicts Marathi, English and Hindi speaking area but Urdu speaking area?",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "9",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 373
+}

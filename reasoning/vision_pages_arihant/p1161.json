@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "According to the question, Dogs Pigs [Venn diagram with overlapping circles for Dogs, Pigs, and Cats]. Clearly, I. Some cats are dogs. (✓) II. Some dogs are pigs. (✓) Solution by using mediate and immediate inference table. Some dogs are cats. (I-type) All cats are pigs. (A-type) I + A = I-type of conclusion = Some dogs are pigs = Conclusion II. Again, Some dogs are cats Conversion→ Some cats are dogs = Conclusion I. Clearly, Conclusions I and II both follow."
+    },
+    {
+      "number": 2,
+      "solution": "(a) [Venn diagram showing Players, Singers, and Tall circles]. Conclusions I. Some players are tall. (✓) II. All players are tall. (✗)"
+    },
+    {
+      "number": 3,
+      "solution": "(a) [Venn diagram showing Stones, Water, and Clean circles]. Conclusions I. Some water are stones. (✓) II. All clean are water. (✗)"
+    }
+  ],
+  "answers": [],
+  "_page": 1161
+}

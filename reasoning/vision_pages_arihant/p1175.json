@@ -1,0 +1,199 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All buildings are mirrors. Some mirrors are pens. No pen is paper. Conclusions: I. Some papers are buildings. II. Some pens are buildings. III. Some papers are mirrors.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some books are trees. All trees are roads. All roads are wheels. Conclusions: I. Some wheels are books. II. Some roads are books. III. Some wheels are trees.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "II and III follow",
+        "c": "I and III follow",
+        "d": "All follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All stones are rivers. All rivers are cars. Some cars are trains. Conclusions: I. Some trains are stones. II. Some cars are stones. III. Some trains are rivers.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some bags are plates. Some plates are chairs. All chairs are tables. Conclusions: I. Some tables are plates. II. Some chairs are bags. III. No chair is bag.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either II or III follows",
+        "c": "I and either II or III follow",
+        "d": "Only III follows",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All desks are rooms. Some rooms are halls. All halls are leaves. Conclusions: I. Some leaves are desks. II. Some halls are desks. III. Some leaves are rooms.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some doors are windows. Some windows are lamps. All lamps are candles. Conclusions: I. Some candles are doors. II. Some candles are windows. III. Some lamps are doors.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "I and II follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some towns are villages. Some villages are lanes. Some lanes are hamlets. Conclusions: I. Some hamlets are villages. II. Some lanes are towns. III. Some hamlets are towns.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some towns are villages. Some villages are lanes. Some lanes are hamlets. Conclusions: I. Some hamlets are villages. II. Some lanes are towns. III. Some hamlets are towns.",
+      "choices": {
+        "a": "Only III follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "None follows",
+        "e": "I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All buildings are mirrors. Some mirrors are pens. No pen is paper. Conclusions: I. Some papers are buildings. II. Some pens are buildings. III. Some papers are mirrors.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1175
+}

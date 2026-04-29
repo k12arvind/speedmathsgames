@@ -1,0 +1,179 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: All pigs are elephants. Some bakers are not pigs. Conclusions: I. Some bakers are not pigs. II. Some pigs are not bakers. III. Some elephants are not bakers. IV. Some bakers are not elephants.",
+      "choices": {
+        "a": "I, II and III follow",
+        "b": "I, II and IV follow",
+        "c": "II, I and IV follow",
+        "d": "III, I and IV follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: All ribs are tips. Many ribs are ribs. Conclusions: I. Some ribs are tips. II. Some tips are ribs. III. All ribs are ribs. IV. Some tips are not ribs.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Either III or IV follows",
+        "d": "I and II follow",
+        "e": "I and II and either III or IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: Some charts are darts. All darts are carts. Some carts are smarts. Conclusions: I. Some charts are carts. II. Some carts are darts. III. Some darts are smarts. IV. Some smarts are charts.",
+      "choices": {
+        "a": "Only I and III follow",
+        "b": "Only II and III follow",
+        "c": "I and I follow",
+        "d": "III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: All boxes are tables. No desk is table. Some desks are curtains. Conclusions: I. No boxes are desks. II. Some boxes are not desks. III. Some curtains are not boxes. IV. Some curtains are boxes.",
+      "choices": {
+        "a": "III and either I or II follow",
+        "b": "I and either III or IV follow",
+        "c": "Either I or II and either III or IV follow",
+        "d": "I and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: Some drops are cops. All cops are docks. No dock is a flop. Conclusions: I. Some drops are not flops. II. Some dockings are drops. III. No cop is a flop. IV. Some flops are not cops.",
+      "choices": {
+        "a": "I, II and III follow",
+        "b": "I, II and IV follow",
+        "c": "II and IV follow",
+        "d": "III, III and IV follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: Some big are small. No small is large. Some large are tiny. Conclusions: I. Some large are not big. II. No big is large. III. Some small are not tiny. IV. Some big are not tiny.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "only III follows",
+        "d": "Only IV follows",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: No student is decent. Some decent are bags. All bags are roses. Conclusions: I. Some bags are not students. II. All bags are students. III. Some decents are roses. IV. All roses are decent.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "I and III follow",
+        "d": "Either I or II follows",
+        "e": "Either I or II, and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "conditional_syllogisms",
+      "subtopic_name": "Conditional Syllogisms",
+      "body": "Statements: Some birds are stones. Some tigers are birds. All stones are grapes. Conclusions: I. Some stones are birds. II. Some stones are not birds. III. Some grapes are birds. IV. Some tigers are stones.",
+      "choices": {
+        "a": "I, II and III follow",
+        "b": "I, III and IV follow",
+        "c": "Either I or II and III follow",
+        "d": "I and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 189
+}

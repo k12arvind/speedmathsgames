@@ -1,0 +1,353 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Sitting Arrangement",
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully to answer the given questions. A, B, C, D, E, F, G and H are seated in straight line facing North. C sits fourth to left of D. D sits second to right of G. Only two people sit between D and A. B and F are immediate neighbours of each other. B is not an immediate neighbour of A. H is not an immediate neighbour of D.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions based on it. Ten students—A, B, C, D, E, F, G, H, I and J are sitting in a row facing West. I. B and F are not sitting on either of the edges. II. G is sitting to the left of D and H is sitting to the right of J. III. There are four persons between E and A. IV. I is to the North of B and F is to the South of D. V. J is in between A and D and G is in between E and F. VI. There are two persons between H and C.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and then answer the questions that follow. A group of seven singers, facing the audience, are standing in a line on the stage as follow. I. D is to the right of C. II. F is standing beside G. III. B is to the left of F. IV. E is to the left of A. V. C and B have one person between them. VI. A and D have one person between them.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and then answer the questions that follow. Eight persons P, M, R, T, Q, U, V and W are sitting in front of one another in two rows. Each row has 4 persons. P is between U and V and facing North. Q, who is to the immediate left of M is facing W. R is between T and M and W is to the immediate right of V.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "In a gathering seven members are sitting in a row. 'C' is sitting left to 'B' but on the right to 'D'. 'A' is sitting right to 'B'. 'F' is sitting right to 'E' but left to 'D'. 'H' is sitting left to 'E'. Find the person sitting in the middle.",
+      "choices": {
+        "a": "C",
+        "b": "D",
+        "c": "E",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who amongst the following sits exactly in the middle of the persons who sit fifth from the left and the person who sits sixth from the right?",
+      "choices": {
+        "a": "C",
+        "b": "H",
+        "c": "E",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who amongst the following sits third to the right of C?",
+      "choices": {
+        "a": "B",
+        "b": "F",
+        "c": "A",
+        "d": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following represents persons seated at the two extreme ends of the line?",
+      "choices": {
+        "a": "C, D",
+        "b": "A, B",
+        "c": "B, G",
+        "d": "D, H"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "What is the position of H with respect to F?",
+      "choices": {
+        "a": "Third to the left",
+        "b": "Immediate right",
+        "c": "Second to right",
+        "d": "Fourth to left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "How many persons are seated between A and E?",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is sitting at the seventh place counting from left?",
+      "choices": {
+        "a": "H",
+        "b": "C",
+        "c": "J",
+        "d": "Either H or C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who among the following is definitely sitting at one of the ends?",
+      "choices": {
+        "a": "C",
+        "b": "H",
+        "c": "E",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who are immediate neighbours of I?",
+      "choices": {
+        "a": "BC",
+        "b": "BH",
+        "c": "AH",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is sitting second left of D?",
+      "choices": {
+        "a": "G",
+        "b": "F",
+        "c": "E",
+        "d": "J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "If G and A interchange their positions, then who become the immediate neighbours of E?",
+      "choices": {
+        "a": "G and F",
+        "b": "Only F",
+        "c": "Only A",
+        "d": "J and H"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is on the extreme right?",
+      "choices": {
+        "a": "D",
+        "b": "F",
+        "c": "G",
+        "d": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "If we start counting from the left, on which number is C?",
+      "choices": {
+        "a": "1st",
+        "b": "2nd",
+        "c": "3rd",
+        "d": "5th"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "two_rows",
+      "subtopic_name": "Two Rows Arrangement",
+      "body": "Who is sitting in front of R?",
+      "choices": {
+        "a": "U",
+        "b": "Q",
+        "c": "V",
+        "d": "P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "two_rows",
+      "subtopic_name": "Two Rows Arrangement",
+      "body": "Who is to the immediate right of R?",
+      "choices": {
+        "a": "M",
+        "b": "U",
+        "c": "M or T",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 3,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "two_rows",
+      "subtopic_name": "Two Rows Arrangement",
+      "body": "In which of the following pairs, persons are sitting in front of each other?",
+      "choices": {
+        "a": "MV",
+        "b": "RV",
+        "c": "TV",
+        "d": "UR",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 488
+}

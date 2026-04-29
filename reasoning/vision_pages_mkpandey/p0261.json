@@ -1,0 +1,64 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 42,
+      "solution": "Following is the step III for an input. What will be the second step for the same input?\nStep III: 45 47 342 121 53 211 414\n1) 45 121 342 47 53 211 414\n2) 45 53 342 121 47 211 414\n3) 45 211 342 121 53 47 414\n4) Can't be determined\n5) None of these"
+    },
+    {
+      "number": 43,
+      "solution": "If 23, 142, 348, 96, 400, 200, 410 is the second step of an input, which of the following steps will be 23, 96, 142, 348, 200, 400, 410?\n1) Third\n2) Fourth\n3) Fifth\n4) Can't be determined\n5) None of these"
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "c"
+    },
+    {
+      "number": 2,
+      "correct": "a"
+    },
+    {
+      "number": 3,
+      "correct": "d"
+    },
+    {
+      "number": 4,
+      "correct": "b"
+    },
+    {
+      "number": 5,
+      "correct": "a"
+    },
+    {
+      "number": 11,
+      "correct": "b"
+    },
+    {
+      "number": 12,
+      "correct": "d"
+    },
+    {
+      "number": 13,
+      "correct": "a"
+    },
+    {
+      "number": 14,
+      "correct": "c"
+    },
+    {
+      "number": 15,
+      "correct": "b"
+    },
+    {
+      "number": 16,
+      "correct": "a"
+    }
+  ],
+  "_page": 261
+}

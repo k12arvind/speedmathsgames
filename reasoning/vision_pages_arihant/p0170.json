@@ -1,0 +1,59 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 24,
+      "solution": "(c) As, P E A R and D I M E with mappings 3 5 1 2 and 6 9 9 5. Similarly, K I N D maps to 2 8 9 6. ∴ KIND ⇒ 2896"
+    },
+    {
+      "number": 25,
+      "solution": "(b) As, C L O U D and R A I N with mappings 5 9 4 3 2 and 1 6 7 8. Similarly, A R O U N D maps to 6 1 4 3 8 2. ∴ AROUND ⇒ 614382"
+    },
+    {
+      "number": 26,
+      "solution": "(b) As, F I R and F I E L D with mappings 7 2 3 5 and 5 6 4 3. Similarly, D I E T maps to 9 2 5 7. ∴ DIET ⇒ 9257"
+    },
+    {
+      "number": 27,
+      "solution": "(b) As, G E A R and R O U T E with mappings 5 9 1 4 and 4 7 2 8 0. Similarly, G A T E maps to 5 1 8 9. ∴ GATE ⇒ 5189"
+    },
+    {
+      "number": 28,
+      "solution": "(d) As, B E A U T I F U L with mappings 5 7 3 0 4 1 2 0 8 and B U T T E R with mappings 5 0 4 4 7 9. Similarly, F U T U R E maps to 2 0 4 0 9 7. ∴ FUTURE ⇒ 204097"
+    },
+    {
+      "number": 29,
+      "solution": "(d) As, S A G E and P E R T with mappings 1 1 6 9 and 7 9 2 8. Similarly, S T E P maps to 4 8 9 7. ∴ STEP ⇒ 4897"
+    },
+    {
+      "number": 30,
+      "solution": "(c) Basic word W has code 23 and position O with code 225. In this 'W' has 23rd position in the alphabetical order, 'D' has 4th position, 'O' has 15th position in the alphabetical order and 225 is the square of number 15. Basic word M has code 13 and E has code 25. 'M' has 13th position, 'T' has 20th position and 'E' has 5th position in alphabetical order and 25 is the square of number 5."
+    },
+    {
+      "number": 31,
+      "solution": "(b) As, A→3, P→6, E→9. Similarly, P→6, E→9, A→3. ∴ PEA ⇒ 693"
+    },
+    {
+      "number": 32,
+      "solution": "(d) As, P→1, A→2, R→3, R→3, O→4, T→5 and S→6, O→4, A→2, T→5. Similarly, R→3, O→4, A→2, S→6, T→5. ∴ ROAST ⇒ 34265"
+    },
+    {
+      "number": 33,
+      "solution": "(c) As, D→2, A→1, S→8, H→4, E→5. Similarly, S→8, H→4, A→1, D→2, E→5. ∴ SHADE ⇒ 84125"
+    },
+    {
+      "number": 34,
+      "solution": "(c) Letters D, I, S, C, A, H, E have Code 8, 7, 4, 9, 3, 5, 0. So, code of HEAD is 5038."
+    },
+    {
+      "number": 35,
+      "solution": "(d) As, D O M E and M E A L with mappings 8 9 4 3 and 4 3 2 1. Similarly, EDAMO maps to 3 8 2 4 9. ∴ 38249 ⇒ EDAMO"
+    }
+  ],
+  "answers": [],
+  "_page": 170
+}

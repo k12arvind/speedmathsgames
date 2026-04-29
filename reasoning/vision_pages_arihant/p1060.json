@@ -1,0 +1,153 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Statement and Assumptions",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the given question. Pets are not allowed in the park premises-A notice put up at the park entrance by the authority that is responsible for maintenance of the park.",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    },
+    {
+      "passage_text": "In the following questions, a statement is given followed by three Assumptions I,II and III. In the context of the questions an assumption is something to be taken for granted. You have to consider the statement and the assumptions and decide which of the assumptions is implicit in the statement, then decide which one of the answers is correct.",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    },
+    {
+      "passage_text": "A statement followed by four assumptions numbered I, II, III and IV are given. An assumption is something supposed or taken for granted. You have to consider the statement and the following assumptions and decide which of the assumptions is implicit in the statement then decide which of the answers (a), (b), (c) or (d) is correct.",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "basic_assumptions",
+      "subtopic_name": "Basic Assumptions",
+      "body": "Statement: Read this book to get detailed and most comprehensive information on this issue.\nAssumptions:\nI. The person who wants this information can read.\nII. There are other books available on this issue.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "basic_assumptions",
+      "subtopic_name": "Basic Assumptions",
+      "body": "Statement: Let us announce attractive incentives for better performance.\nAssumptions:\nI. Incentives schemes don't work in long run.\nII. The performance can be improved.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "basic_assumptions",
+      "subtopic_name": "Basic Assumptions",
+      "body": "Statement: Why don't you invite Anthony for the Christmas party this year?\nAssumptions:\nI. Anthony is not from the same city.\nII. Unless invited, Anthony will not attend the party.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Which of the following can be an assumption according the the given information? (An assumption is something that is supposed or taken for granted).",
+      "choices": {
+        "a": "Atleast some people who visit the park have pets",
+        "b": "This is the only park which does not allow pets",
+        "c": "People who ignored this notice were fined",
+        "d": "There are more than one entrances to the park",
+        "e": "Many people have now stopped visiting the park"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "multiple_assumptions",
+      "subtopic_name": "Multiple Assumptions",
+      "body": "Statement: Prakash decided to get his railway reservation done in the month of May for the journey he wants to undertake in July to Mumbai.\nAssumptions:\nI. The railways open reservation two months in advance.\nII. There is more than one train to Mumbai.\nIII. There will be a vacancy in the desired class.",
+      "choices": {
+        "a": "Both II and III",
+        "b": "Only I",
+        "c": "Both I and II",
+        "d": "Only III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "multiple_assumptions",
+      "subtopic_name": "Multiple Assumptions",
+      "body": "Statement: In a recently held all-India conference, the session on Brand Management in India surprisingly attracted a large number of participants and also received excellent media coverage in the leading newspapers.\nAssumptions:\nI. Nobody expected such an encouraging response to Brand Management.\nII. Brands are not managed properly in India.\nIII. The Media is always very positive towards Brands",
+      "choices": {
+        "a": "Only I",
+        "b": "Both I and II",
+        "c": "Both I and III",
+        "d": "I, II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "four_assumptions",
+      "subtopic_name": "Four Assumptions",
+      "body": "Statement: The companies that showed relatively high import orientation in India were not the ones that benefited the most from Government interventions during the heydays of import substitution.\nAssumptions:\nI. High import companies do not need Government support.\nII. Low import companies received more Government support.\nIII. Import oriented companies are affected by Government prices.\nIV. Exporting of goods get affected by Government.",
+      "choices": {
+        "a": "Only I",
+        "b": "Only III",
+        "c": "Both II and IV",
+        "d": "All four"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1060
+}

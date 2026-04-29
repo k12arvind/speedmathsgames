@@ -1,0 +1,36 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_division",
+      "subtopic_name": "Cube Division",
+      "body": "A cube has each side 6 cm. In how many smaller cubes of each side 1 cm can it be divided?",
+      "choices": {
+        "a": "36",
+        "b": "12",
+        "c": "18",
+        "d": "216"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Each side of bigger cube will be divided into 6 parts. It means, n = Side of bigger cube / Side of smaller cube = 6 / 1 = 6. Required number of smaller cubes = (n)³ = (6)³ = 216"
+    }
+  ],
+  "answers": [],
+  "_page": 874
+}

@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Completion of Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 20,
+      "solution": "All the symbols move anti-clockwise in a triangular order and the symbol on left hand side is replaced by a new symbol which comes at the bottom in the subsequent figure."
+    },
+    {
+      "number": 21,
+      "solution": "The head of arrow travels half distance every time and is reversed in each successive figure. The head of the upper line moves to other side of the line and is reversed from figure (1) to (2) but it does not move from figure (4) to (5), only gets reversed at the same position. It implies that from figure (2) to (3), the head will not move and will be reversed at the same position. The head of the lower line moves half distance and gets reversed at the same position."
+    },
+    {
+      "number": 22,
+      "solution": "The upper triangle rotates through an angle of 90° clockwise in each successive figure, the middle triangle rotates through an angle of 90° clockwise in every second figure and the third triangle rotates through an angle of 180° in every second figure. The line with the black head is inverted at the same position from problem figure (1) to (2) and so it will from figure (3) to (4)."
+    },
+    {
+      "number": 23,
+      "solution": "Two lines, each from upper and lower pairs of squares disappear, in a set order to from each successive figure."
+    },
+    {
+      "number": 24,
+      "solution": "Each symbol of the figure rotates in anti-clockwise direction and a new symbol replaces the symbol at the top which is inverted alternatively in each of the successive figures."
+    },
+    {
+      "number": 25,
+      "solution": "Two symbols, starting from the top, in anti-clockwise direction are interchanged with each other and the main figure rotates 90° in every successive figure."
+    }
+  ],
+  "answers": [],
+  "_page": 698
+}

@@ -1,0 +1,171 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In this type of questions, a statement/statements is/are given followed by some conclusions. Choose the conclusion which follows the given statement. Directions (Example Nos. 9-13) Which of the conclusions can be drawn from the statement.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement: Many business offices located in buildings having two to eight floors. If a building has more than three floors, it has a lift.",
+      "choices": {
+        "a": "All floors may be reached by lifts",
+        "b": "Only floors above the third floor have lifts",
+        "c": "Fifth floor has lifts",
+        "d": "Second floors do not have lifts"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement: All guilty politicians were arrested. Ranjan and Kamlesh were among those arrested.",
+      "choices": {
+        "a": "All politicians are guilty",
+        "b": "All arrested people are politicians",
+        "c": "Ranjan and Kamlesh were not politicians",
+        "d": "Ranjan and Kamlesh were guilty"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement: All the students in my class are intelligent. Kaushik is not intelligent.",
+      "choices": {
+        "a": "Some students are not intelligent",
+        "b": "Non-intelligent are not students",
+        "c": "Kaushik is not a student of my class",
+        "d": "All other than Kaushik are intelligent"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statements: A. Karan Johar is a good director. B. Directors are intelligent.",
+      "choices": {
+        "a": "All intelligent are directors",
+        "b": "Karan Johar is intelligent",
+        "c": "Both (a) and (b)",
+        "d": "None of these"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement: Most of the mobile phones in that shop are costly.",
+      "choices": {
+        "a": "Some of the mobile phones in that shop are costly",
+        "b": "Mobile phone of brand X are costly in that shop",
+        "c": "None of the mobile phones in that shop is cheap",
+        "d": "Some of the mobile phones in that shop are cheap",
+        "e": "None of the above"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 28,
+      "solution": "None of the conclusions follows. 'Animals live on oxygen' does not imply that animals do not need oxygen."
+    },
+    {
+      "number": 29,
+      "solution": "Any written piece is recognised as song when it is sung by a singer. Therefore, only Conclusion I follows."
+    },
+    {
+      "number": 30,
+      "solution": "Neither of the conclusions follows. A room may look beautiful with other decorative items."
+    },
+    {
+      "number": 31,
+      "solution": "None of the conclusions is correct."
+    },
+    {
+      "number": 32,
+      "solution": "Only Conclusion II follows."
+    },
+    {
+      "number": 33,
+      "solution": "Only Conclusion I follows."
+    },
+    {
+      "number": 34,
+      "solution": "Neither of the conclusions follows from the given statement."
+    },
+    {
+      "number": 35,
+      "solution": "The domestic demand of crude oil should be decreased."
+    },
+    {
+      "number": 9,
+      "solution": "It is clear from the given statement."
+    },
+    {
+      "number": 10,
+      "solution": "It is clear from the given statement."
+    },
+    {
+      "number": 11,
+      "solution": "As all the students in my class are intelligent and Kaushik is not intelligent, so Kaushik is not a student of my class."
+    },
+    {
+      "number": 12,
+      "solution": "As directors are intelligent and Karan Johar is good director, so Karan Joahar is intelligent."
+    },
+    {
+      "number": 13,
+      "solution": "From the given statement, the conclusion 'some of the mobile phones in that shop are cheap' follows."
+    }
+  ],
+  "answers": [],
+  "_page": 1077
+}

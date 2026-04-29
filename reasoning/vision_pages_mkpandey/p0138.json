@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "Pakistan and Bangladesh have suffered defeats at the hands of India in cricket teams. So, India must defeat them in tennis as well.\n\nAnalysis:\nType: Argument by analogy\n\n[Table showing Argument breakdown with columns: Break-up, Strengthening Statement, Weakening Statement]\n\nPremise (Support): India has defeated both countries in cricket.\nHidden Assumption: What happens in cricket also happens in tennis.\nConclusion: India will defeat both countries in tennis also.\n\nBreak-up: In fact, India has been defeating them for the past ten years. Cricket and tennis are very similar games.\n\nStrengthening Statement: But India has been losing to them also.\n\nWeakening Statement: It is not necessary that what happens in cricket also happens in tennis.\n\nAbove, we could not have any statement that strengthened or weakened the conclusion directly because the conclusion is in future tense and we cannot support or contradict the future. Let us see one more example."
+    },
+    {
+      "number": 4,
+      "solution": "The government has announced a devaluation of the rupee against the dollar by at least 20%. Economists have criticised the step saying that it would bring inflation into the economy.\n\nAnalysis:\nType: Argument by cause-and-effect relationship.\n\n[Table showing various strengthening and weakening arguments with explanations]\n\nExplanation:\n(i) In Ex.3, we have no strengthening or weakening statements related with the conclusion because it is in future tense and we cannot support or contradict the future.\n(ii) When the argument says that \"economists have criticised\" the move becomes because it will \"bring inflation\" it becomes apparent that the argument assumes (i) that the economists are correct. Otherwise, it would not have quoted the economists to reach its conclusion.\n(ii) that inflation is undesirable. Otherwise, it would not have \"criticised\" the government's move.\nBut all these are secondary assumptions. The argument is based on cause-and-effect relationship and in such cases the major assumption is this: that the effect is inflation. So, the assumption is (c) devaluation leads to inflation. This is the major assumption made by the argument."
+    }
+  ],
+  "answers": [],
+  "_page": 138
+}

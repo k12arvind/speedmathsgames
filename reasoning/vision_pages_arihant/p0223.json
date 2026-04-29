@@ -1,0 +1,377 @@
+{
+  "page_type": "questions",
+  "chapter_number": 5,
+  "chapter_title": "Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-66) In the following series, replace the question mark (?) with the suitable option.",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "6, 9, 12, 15, 18, ?",
+      "choices": {
+        "a": "21",
+        "b": "20",
+        "c": "19",
+        "d": "22"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "15, 30, 60, 120, 240, ?",
+      "choices": {
+        "a": "480",
+        "b": "518",
+        "c": "445",
+        "d": "715"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "360, 180, 90, 45, 22.5, ?",
+      "choices": {
+        "a": "15",
+        "b": "11.25",
+        "c": "20",
+        "d": "10.5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "4, 5, 7, 10, 14, 19, ?",
+      "choices": {
+        "a": "28",
+        "b": "23",
+        "c": "22",
+        "d": "25"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "3.5, 7, 10.5, 14, ?",
+      "choices": {
+        "a": "15.5",
+        "b": "16.5",
+        "c": "18.5",
+        "d": "17.5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "645, 644, 442, 439, 435, ?",
+      "choices": {
+        "a": "427",
+        "b": "418",
+        "c": "430",
+        "d": "425"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "12, 12, 24, 72, 288, ?",
+      "choices": {
+        "a": "1440",
+        "b": "1326",
+        "c": "1456",
+        "d": "1235"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "7, 12, 19, 28, 39, ?",
+      "choices": {
+        "a": "52",
+        "b": "50",
+        "c": "51",
+        "d": "48"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "36, 28, 24, 22, ?",
+      "choices": {
+        "a": "18",
+        "b": "19",
+        "c": "21",
+        "d": "22"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "7, 9, 13, 21, 37, ?",
+      "choices": {
+        "a": "58",
+        "b": "63",
+        "c": "69",
+        "d": "72"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "27, 32, 30, 35, 33, ?",
+      "choices": {
+        "a": "28",
+        "b": "31",
+        "c": "36",
+        "d": "38"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "71, 59, 48, 38, 29, ?",
+      "choices": {
+        "a": "18",
+        "b": "21",
+        "c": "20",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "14, 21, 30, 41, 54, ?",
+      "choices": {
+        "a": "61",
+        "b": "73",
+        "c": "69",
+        "d": "70"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "2, 5, 10, ?, 26",
+      "choices": {
+        "a": "19",
+        "b": "21",
+        "c": "17",
+        "d": "25"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "1, 6, 15, ?, 45, 66, 91",
+      "choices": {
+        "a": "25",
+        "b": "26",
+        "c": "27",
+        "d": "28"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "17, 14, 15, 12, 13, ?, ?",
+      "choices": {
+        "a": "10, 11",
+        "b": "14, 11",
+        "c": "11, 13",
+        "d": "12, 15"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "97, 86, 99, 88, 101, ?, ?",
+      "choices": {
+        "a": "88, 99",
+        "b": "90, 103",
+        "c": "121, 108",
+        "d": "114, 103"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "15, 23, 31, 39, ?, ?, 55, 63",
+      "choices": {
+        "a": "45",
+        "b": "47",
+        "c": "46",
+        "d": "44"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 223
+}

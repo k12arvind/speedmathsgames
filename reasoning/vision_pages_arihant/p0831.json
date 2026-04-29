@@ -1,0 +1,128 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "squares",
+      "subtopic_name": "Counting Squares",
+      "body": "How many squares are there in this figure?",
+      "choices": {
+        "a": "24",
+        "b": "23",
+        "c": "27",
+        "d": "26"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "parallelograms",
+      "subtopic_name": "Counting Parallelograms",
+      "body": "How many parallelograms are there in the following figure?",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "squares",
+      "subtopic_name": "Counting Squares",
+      "body": "Find out the number of squares in the given pattern?",
+      "choices": {
+        "a": "26",
+        "b": "30",
+        "c": "35",
+        "d": "38"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "pentagons",
+      "subtopic_name": "Counting Pentagons",
+      "body": "How many pentagons are there in the following figure?",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "3",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "hexagons",
+      "subtopic_name": "Counting Hexagons",
+      "body": "How many hexagons are there in the following figure?",
+      "choices": {
+        "a": "3",
+        "b": "2",
+        "c": "4",
+        "d": "1"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(c) Smallest and single rectangles = ABFE, EFIH, BCCF, FCJJ = 4 Rectangles formed with two rectangles = ABIH, AFGJC, EGJH, BCJI = 4 Largest rectangle = ACJH = 1 ∴ Total number of rectangles = 4 + 4 + 1 = 9"
+    },
+    {
+      "number": 2,
+      "solution": "(b) The figure in the question has been marked as shown in the following figure. Clearly, there are total nine squares in the figure namely; ABCD, AQSE, GBPS, UUSN, UHMS, OTSR, TPVS, IHKJ and OPLQ. ∴ Total number of squares = 9"
+    },
+    {
+      "number": 3,
+      "solution": "(c) The figure in the question may be labelled as shown in the figure below. In the inner most square, there are five squares namely IXZU, UZXJ, XKWZ, ZWLV and UKL. In the middle square there are five squares namely ETZO, OZRHF, TZSQ, ZSHR and EGHF. In the outer most square there are five square namely APZM, MZNB, PDOZ, ZOCN and ABCD ∴ Total number of squares = 5 + 5 + 5 = 15"
+    },
+    {
+      "number": 4,
+      "solution": "(b)"
+    }
+  ],
+  "answers": [],
+  "_page": 831
+}

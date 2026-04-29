@@ -1,0 +1,163 @@
+{
+  "page_type": "questions",
+  "chapter_number": 19,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Study the following information and answer the questions given below. Six plays K, L, M, N, O and P are to be staged. Each play is to be staged in a different month starting from March to August of the same year. Play K will be staged in a month that has only thirty days. Two plays will be staged between play L and play K. Three plays will be staged between play P and play O. The month in which play P will be staged does not have thirty one days. Play N will not be staged immediately before or immediately after play P.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer the given questions. Five friends Satish, Rajesh, Rehman, Rakesh and Vineet each presents one paper to their class on Physics, Zoology, Botany, English or Geology. One day a week, Monday through Friday. I. Vineet does not present English and does not given his presentation on Tuesday. II. Rajesh makes the Geology presentation and does not do it on Monday or Friday. III. The Physics presentation is made on Thursday. IV. Rehman makes his presentation, which is not on English, on Wednesday. V. The Botany presentation is on Friday and not by Rakesh. VI. Satish makes his presentation on Monday.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "sequencing",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "Which play will be staged in April?",
+      "choices": {
+        "a": "Play K",
+        "b": "Play L",
+        "c": "Play O",
+        "d": "Play P",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "Three of the following four are alike in a certain way based on the given information and hence form a group. Which of the following does not belong to that group?",
+      "choices": {
+        "a": "Play N",
+        "b": "Play P",
+        "c": "Play L",
+        "d": "Play O",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "sequencing",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "Play M will be staged in which of the following months?",
+      "choices": {
+        "a": "August",
+        "b": "April",
+        "c": "June",
+        "d": "May",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "sequencing",
+      "subtopic_name": "Sequential Arrangement",
+      "body": "How many plays will be staged before play N?",
+      "choices": {
+        "a": "One",
+        "b": "Three",
+        "c": "Four",
+        "d": "Two",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "assignment",
+      "subtopic_name": "Assignment Problems",
+      "body": "What day is the English presentation made?",
+      "choices": {
+        "a": "Friday",
+        "b": "Monday",
+        "c": "Tuesday",
+        "d": "Wednesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "assignment",
+      "subtopic_name": "Assignment Problems",
+      "body": "What presentation does Vineet do?",
+      "choices": {
+        "a": "English",
+        "b": "Geology",
+        "c": "Physics",
+        "d": "Botany"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 24,
+      "solution": "(a) According to the question and given conditions, possibilities of un-loading are as follows Case I: Mon-L, Tue-J, Wed-K, Thur-M, Fri-N. Case II: Mon-J, Tue-K, Wed-M, Thur-N, Fri-L. Clearly in Case I, J is unloaded on Tuesday while in Case II, J is unloaded on Monday."
+    },
+    {
+      "number": 25,
+      "solution": "(b) According to the question and given condition, possibilities of unloading are as follows Mon-K, Tue-I, Wed-M, Thur-M, Fri-N. Clearly, K will be unloaded on Monday as K must be unloaded before M and N."
+    },
+    {
+      "number": 26,
+      "solution": "(c) According to the question and given conditions, possibilities of unloading are as follows Mon-J, Tue-K, Wed-M, Thur-L/N, Fri-N/L. Clearly, if J is unloaded on Monday, M will be unloaded on Wednesday (condition IV). Since, K has to always come before M, K will be unloaded on Tuesday."
+    },
+    {
+      "number": 27,
+      "solution": "(a) N cannot be unloaded on Monday as K has to come before N."
+    }
+  ],
+  "answers": [],
+  "_page": 620
+}

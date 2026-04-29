@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 57,
+      "solution": "Statements: K @ T, S = K, T ⊕ R\nConclusions: I. S @ B\nFor conclusion I, all statements are relevant. Combining B ≤ C ≤ D with A > D, We get B ≤ C ≤ D which means B ≤ D. But we can't combine with A > D because both of them B is the smallest and A is the largest (Tip 8 in both cases). Conclusion I is obviously false because C and D are not equal to any thing in the given question. (Tip 7)."
+    },
+    {
+      "number": 58,
+      "solution": "Statements: U = M, P ⊕⊕ U, M ⊕ B\nConclusions: I. P = B"
+    },
+    {
+      "number": 59,
+      "solution": "Statements: L @ N, J ⊕ P, P ⊕ L\nConclusions: I. P = B"
+    },
+    {
+      "number": 60,
+      "solution": "Statements: H @ G, D @ E, H = E\nConclusions: I. D @ N\nFor I, all statements are relevant. Combining H ≤ G with E ≤ H and E = H, we get K = N. This means H is wrong. But K < N and L ≤ K means that either H ≤ K or K ≤ H. (Check 3)\nI is also wrong."
+    },
+    {
+      "number": 1,
+      "solution": "Statements: X > Y, Z ≤ R, Y = Z\nConclusions: I. X > R\nCombining X > Y and Y = Z, we get X > Z. Combining this to Z ≤ R, not possible as the tip is pointed toward Z in both cases; so no conclusions about X and R. If is of course wrong as R is not equal to any element in the given statements (Tip 7)."
+    },
+    {
+      "number": 2,
+      "solution": "Statements: G ≥ F, D = E, E = F\nConclusions: I. E ≤ G\nFrom G ≥ F and E = F, we get G ≥ E which involves that either E < G or E = G."
+    },
+    {
+      "number": 3,
+      "solution": "Statements: J ≤ J, K = J ≤ L, H ≤ J\nConclusions: I. L = H\nThere are no equalities involving L in the given statements so we can't be any equality involving L in any conclusion (Tip 7). So, I is wrong. For H, I ≤ J and H ≤ J are relevant. Combining them we get J = H which gives I as true."
+    },
+    {
+      "number": 4,
+      "solution": "Statements: N < W, L > N, K = L, W = D\nConclusions: I. L = W\nFor I, N < W and L > N are relevant but they can't be combined as W is pointed towards N in both cases. So, I is uncertain. If is true; it follows from D = W > N."
+    }
+  ],
+  "answers": [],
+  "_page": 303
+}

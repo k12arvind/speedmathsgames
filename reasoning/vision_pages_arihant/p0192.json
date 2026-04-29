@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 4,
+  "chapter_title": "Response & Interpretations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(e) Here, none of the condition is applied, so the coding is done as follows.\nN A B A Q E\n| | | | | |\n3 $ 2 $ 4 #\n∴ Code for NABAQE ⇒ 3$2$4#"
+    },
+    {
+      "number": 2,
+      "solution": "(c) When no condition is applied, the coding is done as follows.\nF W Z E R A\n| | | | | |\n5 d 1 # 7 $\nBut here the second and third letters are consonants, therefore condition (iii) is applied here. As condition (iii) is applied here, both the second and third letters are to be coded as the code for the third letter.\nF W Z E R A\n| | | | | |\n5 1 1 # 7 $\n∴ Code for FWZERA ⇒ 511#7$"
+    },
+    {
+      "number": 3,
+      "solution": "(c) Here, none of the condition is applied, so the coding is done as follows.\nH U B D I N\n| | | | | |\n@ 6 2 8 9 3\n∴ Code for HUBDIN ⇒ @62893"
+    },
+    {
+      "number": 4,
+      "solution": "(b) When no condition is applied, the coding is done as follows.\nE M I R D P\n| | | | | |\n# % 9 7 8 ★\nBut here the first letter is a vowel and the fourth letter is a consonant, therefore condition (ii) is applied.\nAs condition (ii) is applied here, both the first and the fourth letters are to be coded as the code for the vowel.\nE M I R D P\n| | | | | |\n# % 9 # 8 ★\n∴ Code for EMIRDP ⇒ #%9#8★"
+    },
+    {
+      "number": 5,
+      "solution": "(d) When no condition is applied, the coding is done as follows.\nO R E D H M\n| | | | | |\n@ 7 # 8 © %\nBut here the first letter is a vowel and the fourth letter is a consonant, therefore condition (ii) is applied. As condition (ii) is applied here, both the first and fourth letters as to be coded as the code for the vowel.\nO R E D H M\n| | | | | |\n@ 7 # @ © %\n∴ Code for OREDHM ⇒ @7#@©%"
+    },
+    {
+      "number": 6,
+      "solution": "(e) When no condition is applied, coding is done as follows.\nP Q I M H Z\n| | | | | |\n★ 4 9 % © 1\nBut here the first letter is a consonant and the third letter is a vowel, therefore condition (i) is applied. As condition (i) is applied here, the codes for first and third letters are to be interchanged.\nP Q I M H Z\n| | | | | |\n9 4 ★ % © 1\n∴ Code for PQIMHZ ⇒ 94★%©1"
+    },
+    {
+      "number": 7,
+      "solution": "(c) When condition is not applied, the coding is done as follows.\n5 4 6 8 3 9\n| | | | | |\nB A F K X X\nBut here the first and the last digits are odd, therefore condition (i) is applied here. As condition (i) is applied here, 5 and 9 will be coded as X.\n5 4 6 8 3 9\n| | | | | |\nX A F K X X\n∴ Code for 546839 ⇒ XAFKXX"
+    },
+    {
+      "number": 8,
+      "solution": "(c) When condition is not applied, the coding is done as follows.\n7 1 3 5 4 0\n| | | | | |\nE % ★ B A R\nBut here the last digit is 0, therefore condition (iii) is applied here. As condition (iii) is applied here, 0 will be coded as #\n7 1 3 5 4 0\n| | | | | |\nE % ★ B A #\n∴ Code for 713540 ⇒ E%★BA#"
+    },
+    {
+      "number": 9,
+      "solution": "(d) Here, none of the condition is applied, so the coding will be done as follows.\n7 6 5 0 8 2\n| | | | | |\nE F B R K @\n∴ Code for 765082 ⇒ EFBRK@"
+    },
+    {
+      "number": 10,
+      "solution": "(d) When condition is not applied, the coding is done as follows.\n4 8 7 6 9 2\n| | | | | |\nA K E F M @\nBut here the first and the last digits are even, therefore condition (ii) is applied here. As condition (ii) is applied here, 4 and 2 will be coded as $.\n4 8 7 6 9 2\n| | | | | |\n$ K E F M $\n∴ Code for 487692 ⇒ $KEFM$"
+    }
+  ],
+  "answers": [],
+  "_page": 192
+}

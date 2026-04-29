@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "Method I\nNumber of days in 1991 (365 - 5) = 360\nNumber of days in January 1992 = 31\nNumber of days in February 1992 = 29 (Leap year)\nNumber of days from 1st to 4th March 1992 = 4\n∴ Total days = 360 + 31 + 29 + 4 = 424\n∴ 424 ÷ 7 = 7)424(60\n                42\n                 4\n∴ 424 days = (60 × 7 + 4)days = 60 weeks + 4 days\n∴ Number of odd days = 4\n∴ Day on 4th March, 1992 = Saturday + 4 = Wednesday\n➥ 29 days have been taken in February as 1992 is exactly divisible by 4 and hence it is a leap year.\n\nMethod II\n(By finding odd days for every segment)\nNumber of odd days in 1991 for (365 - 5 = 360) = 3(360 = 51 × 7 + 3)\nNumber of odd days in January 1992 = 3\nNumber of odd days in February 1992 = 1 (Leap year)\nNumber of odd days from 1st to 4th March, 1992 = 4\n∴ Total odd days = 3 + 3 + 1 + 4 = 11 = 1 week + 4 days = 4 odd days\n∴ Required day = Saturday + 4 = Wednesday\n\nMethod III\n(By finding odd days for every month)\n\n[TABLE showing months from January 1991 to March 1992 with number of odd days for each month, totaling 39 odd days]\n\n∴ 39 ÷ 7 = 7) 39 (5\n              35\n               4\n∴ 39 days = (5 × 7 + 4) days = 5 weeks + 4 days\n∴ Number of odd days = 4\n∴ Required day = Saturday + 4 = Wednesday"
+    }
+  ],
+  "answers": [],
+  "_page": 435
+}

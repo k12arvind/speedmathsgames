@@ -1,0 +1,267 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the diagram given below and answer the questions that follow.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "In the following questions, answers are based on the diagram given below, where the triangle represents doctors, the circle represents players and the rectangle represents the artists.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Study the following diagram carefully and answer the questions based on it.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "family_survey",
+      "subtopic_name": "Family Survey Analysis",
+      "body": "Find out the number of families which have all the four things mentioned in the diagram above.",
+      "choices": {
+        "a": "40",
+        "b": "30",
+        "c": "35",
+        "d": "20"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "family_survey",
+      "subtopic_name": "Family Survey Analysis",
+      "body": "Find out the number of families which have scooters.",
+      "choices": {
+        "a": "145",
+        "b": "100",
+        "c": "188",
+        "d": "240"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "family_survey",
+      "subtopic_name": "Family Survey Analysis",
+      "body": "Find out the number of families which have VCR and TV both.",
+      "choices": {
+        "a": "84",
+        "b": "24",
+        "c": "104",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "family_survey",
+      "subtopic_name": "Family Survey Analysis",
+      "body": "Find out the number of families which have only one thing, i.e., either VCR or TV or scooter or maruti.",
+      "choices": {
+        "a": "160",
+        "b": "184",
+        "c": "200",
+        "d": "254"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "family_survey",
+      "subtopic_name": "Family Survey Analysis",
+      "body": "Find out the number of families which have TV and scooter but have neither VCR nor maruti.",
+      "choices": {
+        "a": "15",
+        "b": "30",
+        "c": "4",
+        "d": "50"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "profession_analysis",
+      "subtopic_name": "Profession Analysis",
+      "body": "In the following diagram, Police Officer represents Circle, Corrupt represents Triangle, Poet represents Square and Married represents Rectangle. The area representing unmarried Police Officers who are not Corrupt but are Poets is",
+      "choices": {
+        "a": "8",
+        "b": "9",
+        "c": "2",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "profession_categories",
+      "subtopic_name": "Profession Categories",
+      "body": "Which numbered space in the diagram represents doctors, who are also players and artists?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "profession_categories",
+      "subtopic_name": "Profession Categories",
+      "body": "Which numbered space in diagram represents artists, who are players?",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "profession_categories",
+      "subtopic_name": "Profession Categories",
+      "body": "Which numbered space in the diagram represents artists, who are neither players nor doctors?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "profession_categories",
+      "subtopic_name": "Profession Categories",
+      "body": "Which numbered space in the diagram represents players, who are neither artists nor doctors?",
+      "choices": {
+        "a": "1, 2",
+        "b": "3, 4",
+        "c": "6, 7",
+        "d": "7, 8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "profession_categories",
+      "subtopic_name": "Profession Categories",
+      "body": "Which numbered space in the diagram represents doctors, who are players but not artists?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "language_survey",
+      "subtopic_name": "Language Survey",
+      "body": "The diagram shows the survey on a sample of 1000 persons with reference to their knowledge of English, Hindi and Marathi. How many persons know all the languages?",
+      "choices": {
+        "a": "78",
+        "b": "175",
+        "c": "105",
+        "d": "85"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 379
+}

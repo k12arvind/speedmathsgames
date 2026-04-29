@@ -1,0 +1,50 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Sitting Arrangement",
+  "passages": [
+    {
+      "passage_text": "Two Row Sequence - In such arrangement, objects/persons are arranged in two different rows facing each other as follows",
+      "has_figure": true,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "two_row",
+      "subtopic_name": "Two Row Arrangement",
+      "body": "8 persons A, B, C, D, E, F, G and H are sitting in two rows opposite to each other. Each row has 4 persons. B and C are sitting in front of each other. C is between D and E. H is sitting to the immediate left of E. H and F are diagonally opposite. G and B are not near to each other. Who is in front of A?",
+      "choices": {
+        "a": "E",
+        "b": "D",
+        "c": "C",
+        "d": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "5 persons A, B, C, D and E are sitting in a row facing North such that D is on the left of C and B is on the right of E. A is on the right of C and B is on the left of D. If E occupies a corner position, then who is sitting in the centre? (a) Arrangement according to the question is as follows - Clearly, D is sitting in the centre."
+    },
+    {
+      "number": 3,
+      "solution": "There are five houses P, Q, R, S and T. P is right of Q and T is left of R and right of P. Q is right of S. Which house is in the middle? (a) According to the question, the houses can be arranged - Clearly, the house P is in the middle of all the houses."
+    },
+    {
+      "number": 4,
+      "solution": "(a) Arrangement of persons, according to the question, is as follows - Clearly, E is in front of A."
+    }
+  ],
+  "answers": [],
+  "_page": 486
+}

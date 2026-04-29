@@ -1,0 +1,60 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Counting of Figures",
+  "passages": [],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "parallelogram_counting",
+      "subtopic_name": "Counting Parallelograms",
+      "body": "How many parallelograms are there in the figure given below?",
+      "choices": {
+        "a": "5",
+        "b": "8",
+        "c": "4",
+        "d": "6"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Counting of Figures",
+      "subtopic_code": "rectangle_counting",
+      "subtopic_name": "Counting Rectangles",
+      "body": "How many rectangles are there in the figure given below?",
+      "choices": {
+        "a": "16",
+        "b": "10",
+        "c": "8",
+        "d": "11"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "Supposing AB as a base, Number of parallelograms = ABDC and ABFE = 2 Supposing CE as a base, Number of parallelogram = CBDE = 1 Supposing CD as a base, Number of parallelogram = CDFE = 1 ∴ Total number of parallelograms = 2 + 1 + 1 = 4"
+    },
+    {
+      "number": 5,
+      "solution": "Smallest rectangles = ABDE, EFJI, ILKH, HGCD, DEIH = 5 Rectangles formed with two rectangles = ABIH, DELK, CGIG, DFJH = 4 Rectangles formed with three rectangles = ABLK, CFIG = 2 ∴ Total number of rectangles = 4 + 2 + 5 = 11"
+    }
+  ],
+  "answers": [],
+  "_page": 826
+}

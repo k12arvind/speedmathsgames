@@ -1,0 +1,68 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Sitting Arrangement",
+  "passages": [],
+  "questions": [
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "triangular_arrangement",
+      "subtopic_name": "Triangular Arrangement",
+      "body": "3 persons A, B and C are sitting along the corners of a triangular table. A is to right of B. Who is sitting to right of C?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "None of these"
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 45,
+      "solution": "(b) Clearly, Ali is on Champa's right. So, statement (b) is correct."
+    },
+    {
+      "number": 46,
+      "solution": "(d) If looked in an anti-clockwise manner, Sita, Ram, Champa, Ali and Niti are seated between Tilak and Farookh."
+    },
+    {
+      "number": 47,
+      "solution": "(d) Clearly, Ali, Champa and Ram are close neighbours."
+    },
+    {
+      "number": 48,
+      "solution": "(c) B and C are not facing centre."
+    },
+    {
+      "number": 49,
+      "solution": "(d) T is sitting third to the left or right of B."
+    },
+    {
+      "number": 50,
+      "solution": "(c) V is fourth to the right of C."
+    },
+    {
+      "number": 51,
+      "solution": "(d) The persons who are not facing centre i.e., B and C are sitting together."
+    },
+    {
+      "number": 52,
+      "solution": "(d) Clearly, A is second to the left of U."
+    },
+    {
+      "number": 8,
+      "solution": "(b) Arrangement according to the question is as follows. Clearly, B is sitting to the right of C."
+    }
+  ],
+  "answers": [],
+  "_page": 498
+}

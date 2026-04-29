@@ -1,0 +1,117 @@
+{
+  "page_type": "questions",
+  "chapter_number": 12,
+  "chapter_title": "Types of problems",
+  "passages": [
+    {
+      "passage_text": "As another example consider the following question. Q.3: Directions (Questions 1 to 5): Read the following information carefully and answer the questions that follow it: On a shelf are placed six volumes, side by side labelled A, B, C, D, E and F. Some volumes have green covers while the other volumes have yellow covers. A, C and E are new volumes while the rest are old volumes. A, C and F have green covers, while the rest are Gazetteers.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "categorization",
+      "subtopic_name": "Categorization",
+      "body": "Which volume is new, yellow-covered and a Gazetteer?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "categorization",
+      "subtopic_name": "Categorization",
+      "body": "Which volumes are old Gazetteers and have green covers?",
+      "choices": {
+        "a": "B, C",
+        "b": "B, E",
+        "c": "E, F",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "categorization",
+      "subtopic_name": "Categorization",
+      "body": "Which is green-covered, old and a law report volume?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "categorization",
+      "subtopic_name": "Categorization",
+      "body": "Which is the yellow-covered new law report volume?",
+      "choices": {
+        "a": "E",
+        "b": "D",
+        "c": "B",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "categorization",
+      "subtopic_name": "Categorization",
+      "body": "Which of the following is the old volume of a Gazetteer?",
+      "choices": {
+        "a": "C",
+        "b": "D",
+        "c": "E",
+        "d": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 308
+}

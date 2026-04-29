@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 686,
+      "solution": "75.5; Start by entering the additional information on a diagram:\nM TU W TH F\nH\nG must come before I:\nM TU W TH F\nGI\nK and F must be scheduled for the same day, which must now be Wednesday:\nM TU W TH F\nGI J KF H\nI must be later in the week than F; however:\nM TU W TH F\nG I KF H L\nSo, J and M must have appointments on Monday and Tuesday, though not necessarily in that order. Our diagram shows that (5) is necessarily true; that (1) and (2) are possibly, though not necessarily true; and that (3) and (4) are false."
+    },
+    {
+      "number": 763,
+      "solution": "Enter the additional information on a diagram:\nM TU W TH F\nKF H\nThis means that F is also scheduled for Wednesday:\nM TU W TH F\nKF H\nI must be seen sometime after F:\nM TU W TH F\nKF H I\nThen, G must be seen before I.\nM TU W TH F\nG I KF H L\nM and I will be seen on Monday and Tuesday, though not necessarily in that order:\nM TU W TH F\nGI/MI KF H L\nor GM/IG KF H L\nOur diagram confirms that statements I and III are true. Statement II, however, is only possibly true and, therefore, not part of the correct choice."
+    },
+    {
+      "number": 773,
+      "solution": "There are two ways to approach this question. You can use a direct approach, in which you work with the initial conditions to track down all of the possibilities. The problem with the direct approach is that you will always worry that you haven't got all the possibilities. The alternative approach is to work backwards from the answer choices. Here's how this approach works. (Note it carefully)"
+    },
+    {
+      "number": 79,
+      "solution": "There are six married couples, three females and three males. Statement III says that statements III and IV make it obvious that statement X or statement Y is false, therefore, obvious that B is the least talkative that G?"
+    }
+  ],
+  "answers": [],
+  "_page": 350
+}

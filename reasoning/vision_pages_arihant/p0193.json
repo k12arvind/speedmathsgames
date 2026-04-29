@@ -1,0 +1,55 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "(e) When condition is not applied, the coding is done as follows. 3 6 4 8 1 9 ↓ ↓ ↓ ↓ ↓ ↓ ★ F A K ¾ M But here the first and the last digits are odd, therefore condition (i) is applied here. As condition (i) is applied here, 3 and 9 will be coded as X. 3 6 4 8 1 9 ↓ ↓ ↓ ↓ ↓ ↓ X F A K ¾ X ∴Code for 364819 ⇒ XFAK¾X"
+    },
+    {
+      "number": 12,
+      "solution": "(e) Here, none of the condition is applied, so the coding is done as follows. M B U V W E ↓ ↓ ↓ ↓ ↓ ↓ # 1 ★ 6 7 5 2 ∴ Code for MBUVWE ⇒ #1★6752"
+    },
+    {
+      "number": 13,
+      "solution": "(c) Here, none of the condition is applied, so the coding is done as follows. A J B M F U ↓ ↓ ↓ ↓ ↓ ↓ 4 9 ★ # 8 0 ∴ Code for AJBMFU ⇒ 49★#80"
+    },
+    {
+      "number": 14,
+      "solution": "(d) When condition is not applied, the coding is done as follows. A E I M V H ↓ ↓ ↓ ↓ ↓ ↓ 4 2 @ # 7 $ But here the second letter is a vowel and the last letter is a consonant, therefore condition (ii) is applied here. As condition (ii) is applied here, both the second and the last letters are to be coded as 8. A E I M V H ↓ ↓ ↓ ↓ ↓ ↓ 4 8 @ # 7 8 ∴ Code for AEIMVH ⇒ 48@#78"
+    },
+    {
+      "number": 15,
+      "solution": "(b) When condition is not applied, the coding is done as follows. T H A F I Q ↓ ↓ ↓ ↓ ↓ ↓ 1 $ 4 8 @ 1 But here both the first and the last letters are consonants, therefore condition (iii) is applied here. As condition (iii) as applied here, the codes for the first and the last letters are interchanged. T H A F I Q ↓ ↓ ↓ ↓ ↓ ↓ 1 $ 4 8 @ 1 ∴ Code for THAFIQ ⇒ 1$48@3"
+    },
+    {
+      "number": 16,
+      "solution": "(d) When condition is not applied, the coding is done as follows. W M E I J U ↓ ↓ ↓ ↓ ↓ ↓ 5 # 2 @ 9 © But here the first letter is a consonant and the fourth letter is a vowel, therefore condition (i) is applied here. As condition (i) is applied here, both the first and the fourth letters are to be coded as consonant codes for the vowel. W M E I J U ↓ ↓ ↓ ↓ ↓ ↓ @ # 2 @ 9 © ∴ Code for WMEIJU ⇒ @#2@9©"
+    },
+    {
+      "number": 17,
+      "solution": "(c) When condition is not applied, the coding is done as follows. 3 6 2 5 0 0 9 8 ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ H R F L T T G £ But here the first digit is odd and the last digit is even, therefore condition (ii) is applied here. As condition (ii) is applied here, 3 is coded as # and 8 is coded as £. 3 6 2 5 0 0 9 8 ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ # R F L T T G £ ∴ Code for 36250098 ⇒ #RFLTTG£"
+    },
+    {
+      "number": 18,
+      "solution": "(e) Q, R, L, H are the codes for 4, 6, 5, 3 respectively. † is the code for 0. So, SQRT†H© shall be the code of a number of the form ?46503?, in which the first digit must be even and the last digit must be odd. Clearly, there is no such number in the given alternatives."
+    },
+    {
+      "number": 19,
+      "solution": "(e) Q, L, P, J, R, N and T are the codes for 4, 5, 8, 0, 6, 7 and 0 respectively. So, the required number is 4580670."
+    },
+    {
+      "number": 20,
+      "solution": "(b) When condition is not applied, the coding is done as follows E K F U D H ↓ ↓ ↓ ↓ ↓ ↓ 8 ★ # © 7 1 But here the first letter is a vowel and the last letter is a consonant, therefore, condition (i) is applied here. As condition (i) is applied here, the codes for the first and the last letters are interchanged. E K F U D H ↓ ↓ ↓ ↓ ↓ ↓ 1 ★ # © 7 8 ∴ Code for EKFUDH ⇒ 1★#©78"
+    },
+    {
+      "number": 21,
+      "solution": "(c) When condition is not applied, the coding is done as follows. J M E I U D ↓ ↓ ↓ ↓ ↓ ↓ 6 ¾ 8 3 6 7 But here both the first and the last letters are consonants, therefore condition (ii) is applied here. As condition (ii) is applied, both the first and the last letters are to be coded as δ. J M E I U D ↓ ↓ ↓ ↓ ↓ ↓ δ ¾ 8 3 6 δ ∴ Code for JMEIUD ⇒ δ¾836δ"
+    }
+  ],
+  "answers": [],
+  "_page": 193
+}

@@ -1,0 +1,38 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Based on Formation of Triangle",
+  "passages": [
+    {
+      "passage_text": "In each of the following questions, five figures are given. Out of them, find the three figures that can be joined to form an equilateral triangle.",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "An equilateral triangle has each angle measure equal to 60° and the lengths of all its three sides are also equal. Now, we cannot measure the exact value of angle and sides but we have to closely approximate these measures and values. So, keeping these points in mind, we first combine figure E and C which will look like as [figure shown]. Now, the missing figure which can fit in the above figure is figure D. So, the complete figure is shown as [figure shown]. So, the correct pair of figures is C, D and E."
+    },
+    {
+      "number": 8,
+      "solution": "As done in above example, we have to closely approximate the different measures. So, first we combine the figures (E) and (A) which will look like as [figure shown]. Now, the missing figure which will complete the above figure is figure (D). The complete figure will be as [figure shown]."
+    }
+  ],
+  "answers": [
+    {
+      "number": 7,
+      "correct": "c"
+    },
+    {
+      "number": 8,
+      "correct": "c"
+    },
+    {
+      "number": 9,
+      "correct": "d"
+    }
+  ],
+  "_page": 951
+}

@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 37,
+      "solution": "(e) According to the question,\nD # R ⇒ D< R ...(i)\nR * K ⇒ R≤ K ...(ii)\nK @ F ⇒ K> F ...(iii)\nF $ J ⇒ F≥ J ...(iv)\nOn combining the statements (i), (ii), (iii) and (iv), we get\nD< R≤ K> F≥ J\nConclusions I. J # R ⇒ J< R (false)\nII. J # K ⇒ J< K (true)\nIII. R # F ⇒ R< F (false)\nIV. K @ D ⇒ K> D (true)\nSo, it is clear that Conclusions II and IV are true."
+    },
+    {
+      "number": 38,
+      "solution": "(e) According to the question,\nN δ B ⇒ N= B ...(i)\nB $ W ⇒ B≥ W ...(ii)\nW # H ⇒ W< H ...(iii)\nH * M ⇒ H≤ M ...(iv)\nOn combining the statements (i), (ii), (iii) and (iv), we get\nN= B≥ W< H≤ M\nConclusions I. M @ W ⇒ M> W (true)\nII. H @ N ⇒ H> N (false)\nIII. W δ N ⇒ W= N (either III or IV is true)\nIV. W # N ⇒ W< N\nSo, it is clear that either Conclusions III or IV and I are true."
+    },
+    {
+      "number": 39,
+      "solution": "(c) According to the question,\nR * D ⇒ R≤ D ...(i)\nD $ J ⇒ D≥ J ...(ii)\nJ # M ⇒ J< M ...(iii)\nM @ K ⇒ M> K ...(iv)\nOn combining the statements (i), (ii), (iii) and (iv), we get\nR≤ D≥ J< M> K\nConclusions I. K # J ⇒ K< J (false)\nII. D @ M ⇒ D> M (false)\nIII. R # M ⇒ R< M (false)\nIV. D @ K ⇒ D> K (false)\nSo, it is clear that none of the conclusion is true."
+    },
+    {
+      "number": 40,
+      "solution": "(e) According to the question,\nM $ K ⇒ M≥ K ...(i)\nK @ N ⇒ K> N ...(ii)\nN * R ⇒ N≤ R ...(iii)\nR # W ⇒ R< W ...(iv)\nOn combining the statements (i), (ii), (iii) and (iv), we get\nM≥ K> N≤ R< W\nConclusions I. W @ K ⇒ W> K (false)\nII. M $ R ⇒ M≥ R (false)\nIII. K @ W ⇒ K> W (false)\nIV. M @ N ⇒ M> N (true)\nSo, it is clear that only Conclusion IV is true."
+    },
+    {
+      "number": 41,
+      "solution": "(c) Given, 3M % 2N and N % 30\n⇒ 3M = 2N and N = 30\n⇒ 3M = 2 × 30\n⇒ 20 = M ⇒ 20 % M"
+    },
+    {
+      "number": 42,
+      "solution": "(c) N @ P, P # O, O @ M and N % M\n⇒ N > P, P < O, O > P and N = M\n⇒ M = N > P < O ⇒ O > M = N\n⇒ O > N ⇒ O @ N"
+    }
+  ],
+  "answers": [],
+  "_page": 344
+}

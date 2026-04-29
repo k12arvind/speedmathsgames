@@ -1,0 +1,44 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Figure Matrix",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "The third figure in each row comprises of parts which are not common to the first two figures."
+    },
+    {
+      "number": 4,
+      "solution": "There are types of arrows—a single-headed arrow, a double-headed arrow and a triple-headed arrow. There are three positions of arrows—upwards, downwards and towards right. The arrows have 3 types of bases-plane, rectangular and circular. Each of these features is used once in each row."
+    },
+    {
+      "number": 5,
+      "solution": "The contents of the third figure in each row (and column) are determined by the contents of the first two figures. Lines are carried forward from the first two figures to the third one, except where two lines appear in the same position, in which they are cancelled out."
+    },
+    {
+      "number": 6,
+      "solution": "In each row (and column), the superimposition of all the three figures results in a darkened circle."
+    }
+  ],
+  "answers": [
+    {
+      "number": 3,
+      "correct": "d"
+    },
+    {
+      "number": 4,
+      "correct": "a"
+    },
+    {
+      "number": 5,
+      "correct": "b"
+    },
+    {
+      "number": 6,
+      "correct": "b"
+    }
+  ],
+  "_page": 996
+}

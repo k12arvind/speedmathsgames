@@ -1,0 +1,312 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "P, Q, R, S, T, W and Z are seven students studying in three different colleges A, B and C. There are three girls among them studying one each in each of these colleges. Two of them study mechanical engineering, two study medicine and one each study biotechnology, pharmacy and electrical engineering. R studies with only her best friend P who studies pharmacy in college B. No girl studies either biotechnology or electrical engineering. T studies mechanical engineering in college A and his brother W studies electrical engineering in college C. None of the two studying medicines in college B. S studies biotechnology along with T and Z.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "The staff of bank are Mr A, Mr B, Mrs C, Miss D, Mr E and Miss F. The positions they occupy are manager, assistant manager, cashier, stenographer, teller and a clerk, though not necessarily in that order. The assistant manager is manager's grandson, cashier is stenographer's son-in-law. Mr A is bachelor. Miss D is teller's step sister and Mr E is manager's neighbour. Mr B cannot have a grandson or son-in-law as he is only 20 yr old.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "The capital New Delhi is the seat of Power of the Central Government. It has over 50 renowned colleges to cater to the needs of 10+2 passed out candidates. The competition for admission still remains very tough. Students look for reputation of college, faculty, members, location, hostel facilities, past alumni and so on. Five studious and intelligent students who scored more than 94% in the XII board exam were asked to give their four options out of seven top colleges of Delhi. Their options in order of preference were as follows Student A opted for U, Y, X and W. Student B for Z, Y, X and T. Student C wanted to join Y, W, Y and U. Student D desired admission in W, U, T and Z. Student E was keen for V, T, Y and X.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 54,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement",
+      "body": "Which city has neither industries nor a university nor a hill station?",
+      "choices": {
+        "a": "M",
+        "b": "N",
+        "c": "L",
+        "d": "P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement",
+      "body": "Which two cities have ports?",
+      "choices": {
+        "a": "L and M",
+        "b": "M and N",
+        "c": "N and O",
+        "d": "N and P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "In which of the colleges do three of them study?",
+      "choices": {
+        "a": "C",
+        "b": "B",
+        "c": "A or C",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "Which of the following pairs of students study medicine?",
+      "choices": {
+        "a": "S, Z",
+        "b": "Z, W",
+        "c": "Z, Q",
+        "d": "T, Q",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "Which of the following is the field of study of Z?",
+      "choices": {
+        "a": "Medicine",
+        "b": "Mechanical",
+        "c": "Electrical",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "Which of the following represent the three girls?",
+      "choices": {
+        "a": "S, Z, Q",
+        "b": "Z, R, Q",
+        "c": "S, R, Q",
+        "d": "Data inadequate",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping",
+      "body": "In which college does Q study?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "A or B",
+        "d": "C",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is the manager?",
+      "choices": {
+        "a": "Mr A",
+        "b": "Mrs C",
+        "c": "Mr E",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is the assistant manager?",
+      "choices": {
+        "a": "Mr A",
+        "b": "Miss F",
+        "c": "Mrs C",
+        "d": "Mr B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is the teller?",
+      "choices": {
+        "a": "Miss F",
+        "b": "Mrs C",
+        "c": "Mr A",
+        "d": "Miss D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is the clerk?",
+      "choices": {
+        "a": "Mr B",
+        "b": "Miss D",
+        "c": "Miss F",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is the cashier?",
+      "choices": {
+        "a": "Either Mr A or Mr B",
+        "b": "Miss F",
+        "c": "Mr B",
+        "d": "Mrs C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "preference",
+      "subtopic_name": "Preference",
+      "body": "Which pair of students opted for colleges V and X but did not want to go to U and W?",
+      "choices": {
+        "a": "B and E",
+        "b": "A and D",
+        "c": "B and C",
+        "d": "B and A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "preference",
+      "subtopic_name": "Preference",
+      "body": "Which pair of students did not opted for college X but both of them opted for college U?",
+      "choices": {
+        "a": "A and C",
+        "b": "B and C",
+        "c": "C and D",
+        "d": "D and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 605
+}

@@ -1,0 +1,56 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Completion",
+      "subtopic_code": "adjacent_parts_inverted",
+      "subtopic_name": "Adjacent Parts are Laterally/Vertically Inverted Images",
+      "body": "Identify the missing part of the question figure and select it from given answer figures.",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Pattern Completion",
+      "subtopic_code": "adjacent_parts_inverted",
+      "subtopic_name": "Adjacent Parts are Laterally/Vertically Inverted Images",
+      "body": "Identify the missing part of the question figure and select it from given answer figure.",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "Here, the upper two adjacent parts i.e., (1) and (2) have designs which are laterally inverted form of each other and the two left side adjacent parts i.e., (1) and (3) have designs which are vertically inverted form of each other. Then, the design in missing part i.e., (4) will be the laterally inverted form of the design in part (3). So, from the answer options given it is clear that design given in option (a) is the correct laterally inverted form of (3) and it will replace the (?) to complete the pattern."
+    }
+  ],
+  "answers": [],
+  "_page": 849
+}

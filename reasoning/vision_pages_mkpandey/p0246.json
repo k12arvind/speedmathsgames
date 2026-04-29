@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "Let us find out the logic. In Step I, the first three words and the last word are arranged in alphabetical order. The fourth word which contains more letters than the first three words is placed in the middle position and changes take place accordingly. In step III, the successive arrangement is complete. From Step III to Step IV: the series gets complete. From Step IV to Step V: this whole series gets a little rearranged. And so on. Now, if we mark the words in the input by digits 1 to 7 starting from left to right, the arrangement will be: Input: 1 2 3 4 5 6 7. Step I: 3 2 1 5 4 7 6. Step II: 2 3 4 5 1 7 6. Step III: 3 2 5 4 7 1 6. Step IV: 5 2 3 7 4 1 6. Step V: 2 5 4 7 3 6 1. Step VI: 5 2 7 4 1 6 3. Step VII: 7 2 3 1 4 5 6."
+    },
+    {
+      "number": 7,
+      "solution": "If you see the table, this is the code for the input itself. Step IV: the load-shedding is to be carried out. Code: 3 5 4 6 7 1 2. For step VII, we arrange the words as 465132. Input: the problem had arisen from overdrawal. Code: 1 2 3 4 5 6. Step III (Code): 3 4 1 6 5 2. Step III: from arisen overdrawal problem the had."
+    }
+  ],
+  "answers": [],
+  "_page": 246
+}

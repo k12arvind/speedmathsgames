@@ -1,0 +1,59 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 22,
+      "solution": "(c) 118 : No prime digit\n516 : One prime digit i.e., 5\n935 : Two prime digits i.e., 3 and 5\n453 : Two prime digits i.e., 3 and 5\n620 : One prime digit i.e., 2\nSo, required numbers are 935 and 453"
+    },
+    {
+      "number": 23,
+      "solution": "(d) 2nd largest number = 620\n∴ 25% of 620 = 25/100 × 620 = 1/4 × 620 = 155"
+    },
+    {
+      "number": 24,
+      "solution": "(d) According to the question,\nOriginal numbers 8 1 3 2 6 1 4 5 8 7 3 2 6 9 4\nNew arrangement 3 1 8 1 6 2 6 5 4 2 3 7 4 9 6\nHere, only number 237 is odd.\n∴ Required number = 732"
+    },
+    {
+      "number": 25,
+      "solution": "(c) According to the question,\nOriginal number     813  261  458  732  694\nNew arrangement     138  126  458  237  469\n                          3rd highest\n∴ Required number = 458"
+    },
+    {
+      "number": 26,
+      "solution": "(c) Highest number = 813\nSecond highest number = 732\n∴ Required difference = (8 + 1 + 3) – (7 + 3 + 2) = 12 – 12 = 0"
+    },
+    {
+      "number": 27,
+      "solution": "(b) According to the question,\nOriginal numbers 8 1 3 2 6 1 4 5 8 7 3 2 6 9 4\nNew arrangement 8 3 1 2 1 6 4 8 5 7 2 3 6 4 9\n                      Divisible by 5\n∴ Required number = 458"
+    },
+    {
+      "number": 28,
+      "solution": "(c) According to the question,\nOriginal number 8 1 3 2 6 1 4 5 8 7 3 2 6 9 4\nNew arrangement 1 8 3 6 2 1 5 4 8 5 7 2 9 6 4\n                      2nd smallest\n∴ Required number = 732"
+    },
+    {
+      "number": 29,
+      "solution": "(d) According to the question,\nOriginal numbers 3 8 2 4 7 3 5 6 8\nNew arrangement 3 2 8 4 3 7 5 8 6\n                      Third lowest"
+    },
+    {
+      "number": 30,
+      "solution": "(b) According to the question,\nOriginal numbers 7 2 8 8 4 7 6 2 9\nNew arrangement 7 8 2 8 7 4 6 9 2\n∴ Required number = 568"
+    },
+    {
+      "number": 31,
+      "solution": "(b) According to the question,\nOriginal numbers 3 8 2 4 7 3 5 6 8 7 2 8\nNew arrangement 8 3 2 7 4 3 6 5 8 2 7 8\n                      2nd highest\nOriginal numbers 8 4 7 6 2 9\nNew arrangement 4 8 7 2 6 9\n∴ Required number = 473"
+    },
+    {
+      "number": 32,
+      "solution": "(c) According to the question,\nOriginal number      382  473  568  728  847  629\nNew arrangement      238  347  856  872  784  962\n(a) 473 – 382 ⇒ 347 – 238 = 109\n(b) 629 – 728 ⇒ 962 – 872 = 90\n(c) 629 – 568 ⇒ 962 – 856 = 106\n(d) 728 – 847 ⇒ 872 – 784 = 88 Least difference\n(e) 629 – 847 ⇒ 962 – 784 = 178\nSo, the required numbers are 728 and 847."
+    },
+    {
+      "number": 33,
+      "solution": "(b) According to the question,\nOriginal numbers 3 8 2 4 7 3 5 6 8 7 2 8\nNew arrangement 2 9 3 3 8 4 8 7 5 8 3 7\nOriginal numbers 8 4 7 6 2 9\nNew arrangement 7 5 8 9 3 6\n(a) 847 + 629 ⇒756 + 936 = 1694\n(b) 568 + 728 ⇒ 875 + 837 = 1712 ← Highest total\n(c) 728 + 847 ⇒837 + 758 = 1595\n(d) 568 + 847 ⇒875 + 758 = 1633\n(e) 629 + 473 ⇒936 + 384 = 1320\nSo, required pair of numbers are 568 and 728."
+    }
+  ],
+  "answers": [],
+  "_page": 122
+}

@@ -1,0 +1,179 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. Some books are bulbs. b. All biscuits are pens. c. No watch is a biscuit. Conclusions: I. Some books are not biscuits. II. Some bulbs are not pens. III. Some books are not pens. IV. Some pens are not books.",
+      "choices": {
+        "a": "I and IV follow",
+        "b": "II and IV follow",
+        "c": "I and II follow",
+        "d": "II and III follow",
+        "e": "II and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. All books are notes. b. Some notes are watches. c. No watch is a pencil. Conclusions: I. Some watches are books. II. Some notes are pencils. III. No watch is a book. IV. Some papers are not pencils.",
+      "choices": {
+        "a": "I and either II or IV follow",
+        "b": "III and IV follow",
+        "c": "II and III follow",
+        "d": "Only I and IV follow",
+        "e": "Either I or III and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. Some professors are Indians. b. Some Asians are blondes. c. No Asian is a brunette. Conclusions: I. Some Indians are Asians. II. Some blondes are brunettes. III. Some brunettes are not blondes. IV. Some blondes are not brunettes.",
+      "choices": {
+        "a": "I and IV follow",
+        "b": "II and III follow",
+        "c": "Only III follows",
+        "d": "Only IV follows",
+        "e": "Either II or IV and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. All rips are tips. b. No coin is a tip. c. Some balls are rips. Conclusions: I. Some balls are coins. II. Some balls are tips. III. Some coins are not balls. IV. Some balls are not coins.",
+      "choices": {
+        "a": "Only II and III follow",
+        "b": "Only II and IV follow",
+        "c": "Either I or IV follows",
+        "d": "Only IV follows",
+        "e": "Either I or IV, and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. All crooks are spooks. b. All books are jokes. c. Some books are crooks. Conclusions: I. Some jokes are crooks. II. Some spooks are jokes. III. Some crooks are jokes. IV. Some spooks are books.",
+      "choices": {
+        "a": "II and III follow",
+        "b": "II and IV follow",
+        "c": "II and IV follow",
+        "d": "III and IV follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. Some papers are nibs. b. No file is a cutter. c. Some files are papers. Conclusions: I. Some files are nibs. II. Some papers are cutters. III. Some files are not nibs. IV. Some papers are not cutters.",
+      "choices": {
+        "a": "Either I or III, and IV follow",
+        "b": "Either I or III, and IV follow",
+        "c": "Either II or IV, and III follow",
+        "d": "Either I or IV, and either I or III follow",
+        "e": "Either I or III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. All gardens are boxes. b. Some gardens are flowers. c. No chocolate is a box. Conclusions: I. Some flowers are chocolates. II. No garden is a chocolate. III. Some flowers are boxes. IV. Some flowers are not chocolates.",
+      "choices": {
+        "a": "II, III and IV follow",
+        "b": "II, III and IV follow",
+        "c": "Only III and either I or IV follow",
+        "d": "Only II, III and either I or IV follow",
+        "e": "Only I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "statement_conclusion",
+      "subtopic_name": "Statement and Conclusion",
+      "body": "Statements: a. Some bulbs are chocolates. b. No fruit is a bulb. c. Only Amul is a chocolate. Conclusions: I. Some fruits are not chocolates. II. Some chocolates are not fruits. III. Some bulbs are Amuls. IV. No bulb is an Amul.",
+      "choices": {
+        "a": "Only II and III follow",
+        "b": "Only II and IV follow",
+        "c": "Either III or IV follows",
+        "d": "Either III or IV and I follow",
+        "e": "Only I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 193
+}

@@ -1,0 +1,307 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 3-6) Each question given below contains three groups of items. You have to choose from the following five numbered diagrams, the diagram that depicts the correct relationship among the three groups of items in each of the question.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 9-13) Each of the questions given below has three items having certain relationship among them. The same relationship is expressed by sets of circles, each circle representing an item irrespective of its size. Match the items with right set of circles.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Which of the following diagrams represents Wild Animals, Lions, Fox?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Which of the following diagrams represents India, Lucknow, USA?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Vegetable, Fruit, Brinjal",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Door, Window, House",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Honest, Intelligent, Poor",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Car, Train, Automobile",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Which of the following diagrams correctly represents the relationship amongst Tiger, Elephant, Animal?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Which diagram will best represent the relationship amongst the three classes Doctor, Teacher, Women?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Rivers, Canals, Perennial source of water",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Rings, Ornaments, Diamond rings",
+      "choices": {
+        "a": "3",
+        "b": "2",
+        "c": "1",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Women, Married persons, Wives who work",
+      "choices": {
+        "a": "1",
+        "b": "3",
+        "c": "4",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Computer skilled, Graduates, Employed",
+      "choices": {
+        "a": "1",
+        "b": "4",
+        "c": "2",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Students, First divisioners, Third divisioners",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Which of the following diagrams represents Granite, Tree and Water?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 376
+}

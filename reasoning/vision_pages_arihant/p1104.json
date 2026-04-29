@@ -1,0 +1,142 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Course of Action",
+  "passages": [
+    {
+      "passage_text": "In each question, a statement is followed by two courses of action numbered I and II. Assume everything in the statement to be true. Decide which of the two given suggested courses of action logically follows for pursuing.",
+      "has_figure": false,
+      "topic_code": "course_of_action"
+    },
+    {
+      "passage_text": "In each question, a statement is followed by three courses of action numbered I, II and III. Assume everything in the statement to be true. Decide which of the three given suggested courses of action logically follows for pursuing.",
+      "has_figure": false,
+      "topic_code": "course_of_action"
+    }
+  ],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "two_courses",
+      "subtopic_name": "Two Course Decision",
+      "body": "Statement: Majority of the students have failed in one paper in the first semester examination. [CMAT 2013]\nCourses of Action\nI. All those student who failed should be asked to drop out of the course.\nII. The faculty teaching the paper should be asked to resign.",
+      "choices": {
+        "a": "If only I follows",
+        "b": "If only II follows",
+        "c": "If both I and II follow",
+        "d": "If neither I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "two_courses",
+      "subtopic_name": "Two Course Decision",
+      "body": "Statement: The Central Bureau of Investigations (CBI) receives the complaint of an officer taking bribe to do the duty he is supposed to. [RPSC 2013]\nCourses of Action\nI. CBI should try to catch the officer red-handed and then take a strict action against him.\nII. CBI should wait for some more complaints about the officer to be sure about the matter.",
+      "choices": {
+        "a": "If only I",
+        "b": "If only II",
+        "c": "both I and II follow",
+        "d": "If either I or II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "three_courses",
+      "subtopic_name": "Three Course Decision",
+      "body": "Statement: In one of the accidents at a railway level crossing, fifty people died when a bus carrying them collided with a running train.\nCourses of Action\nI. The train driver should immediately be suspended.\nII. The driver of the bus should be tried in court for negligence on his part.\nIII. The railway authorities should be asked to man all its level crossings.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only III follows",
+        "c": "Both I and II follow",
+        "d": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "three_courses",
+      "subtopic_name": "Three Course Decision",
+      "body": "Statement: There was a spurt in criminal activities in the city during the recent festival season.\nCourses of Action\nI. The police should immediately investigate into the causes of this increase.\nII. In future the police should take adequate precautions to avoid recurrence of such a situation during festivals.\nIII. The known criminals should be arrested before any such season.",
+      "choices": {
+        "a": "None follows",
+        "b": "Both II and III follow",
+        "c": "Both I and II follow",
+        "d": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "three_courses",
+      "subtopic_name": "Three Course Decision",
+      "body": "Statement: A mass mortality of shrimps in ponds on entire Andhra coast has recently been reported due to the presence of a virus.\nCourses of Action\nI. The water of the ponds affected should immediately be treated for identifying the nature of the virus.\nII. The catching of shrimps from the ponds should temporarily be stopped.\nIII. The fishermen should be asked to watch for the onset of such phenomenon in nature.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "All follow",
+        "c": "Both I and II follow",
+        "d": "Both II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "three_courses",
+      "subtopic_name": "Three Course Decision",
+      "body": "Statement: The weather bureau has through a recent bulletin forecast heavy rainfall during the next week which may cause water logging in several parts of the city.\nCourses of Action\nI. The bulletin should be given wide publicity through the mass media.\nII. The civic authority should keep in readiness the pumping system for removal of water from these parts.\nIII. The people should be advised to stay indoors during period.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only II follows",
+        "c": "Both I and II follow",
+        "d": "Both II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1104
+}

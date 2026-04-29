@@ -1,0 +1,114 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "(Example No. 21) A statement is given followed by four assumptions (a), (b), (c) and (d). You have to consider the statement to be true, even if it seems to be variance from commonly known facts. You are to decide which of the given assumptions can definitely be drawn from the given statement. Indicate your answer. [SSC (CGL) 2008]",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Go and vote out the congress from your constituency, Anna Hazare in his address to the people of Hisar. Assumptions: I. Anna wants congress defeat in Hisar election. II. Anna is supporting BJP. III. People will ignore what Anna said.",
+      "choices": {
+        "a": "Both Assumptions II and III are implicit",
+        "b": "Only Assumption III is implicit",
+        "c": "Both Assumptions I and II are implicit",
+        "d": "Only Assumption I is implicit"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Prakash decided to get the railway reservation in April for the journey he wants to make in July to Mumbai. Assumptions: I. The railways issue reservation three months in advance. II. There are more than one train to Mumbai. III. There will be vacancy in the desired class.",
+      "choices": {
+        "a": "Both Assumptions II and III are implicit",
+        "b": "Only Assumption I is implicit",
+        "c": "All Assumptions are implicit",
+        "d": "Both Assumptions I and II are implicit"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Radha wrote second letter to her father after two months as she did not receive any reply to the first letter. Assumptions: I. Radha's father did not receive the letter. II. The letter generally reaches within a week. III. Her father promptly sends reply to her letters.",
+      "choices": {
+        "a": "Both Assumptions II and III are implicit",
+        "b": "Only Assumption III is implicit",
+        "c": "None Assumption is implicit",
+        "d": "Both Assumptions I and III are implicit"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Television has a strong influence in the young children's development. Assumptions: (a) Children watching TV should be controlled by the parents (b) Young Children should not be allowed to watch TV programmes (c) Television affects the academic progress of the young children (d) While developing TV programmes, educational, developmental and moral aspects of children should be taken care of",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 18,
+      "solution": "I is implicit in 'vote out the congress'. It is not implicit as nothing has been said about BJP directly or indirectly. Infact, It has no connection with the given statement. Again, III is invalid assumption as saying something to an individual or a group does mean assuming desired response. Infact, we cannot address a mass with an assumption that we will be ignored for what we say."
+    },
+    {
+      "number": 19,
+      "solution": "In the statement, it is given that Prakash has decided to get reservation three months in advance. This clearly implies that there exists a provision for getting seat/berth reservations three months in advance. Hence, Assumption I is implicit. But nothing in the statement has been given about number of trains and availability of seats in desired class. Hence, Assumptions II and III do not follow."
+    },
+    {
+      "number": 20,
+      "solution": "It cannot be said definitely that Radha's father did not receive the letter and there may be other reasons for not responding to the letter immediately. Time limit for letter has not been given anywhere in the statement. Hence, Assumptions I and II are not implicit. Since her father use to respond her promptly, therefore after having waited, she had written to her father again. Hence, Assumption II is implicit."
+    },
+    {
+      "number": 21,
+      "solution": "Clearly, assumption (d) is valid. It is mentioned that television has a strong influence in the young children's development. Therefore, while developing TV programmes, educational developmental and moral aspects of children should be taken care of."
+    }
+  ],
+  "answers": [],
+  "_page": 1051
+}

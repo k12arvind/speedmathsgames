@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 458,
+      "solution": "a) We go from 2 to 5\nb) We assume that we have reached 1 not 5.\nc) From this 1, we go to 3\nd) We have actually gone from 2 to 7.\n\nFig.II\nThus, what we actually did in the above operation was that we changed the sequence from 2 to 7 to 2 to 5, 5 to 7 then we applied golden rule in the sequence (of 5 to 7 = 1 to 3) and accordingly changed our base from 5 to 1. Then we applied the reduced change 1 to 3.\nWhat reduces shifting processes? Imagine that our original figure happens to have only five steps. In other words, it ended at 5, as shown in the following figure:\n\nNow, suppose we were asked to find 2 to 7. But our figure didn't show anything after 5. So, in such cases we could break 2 to 7 as 2 to 5, 5 to 7 and reduce 5 to 7 as 1 to 3. Then, we could find 2 to 5, assume this 5 to be 1."
+    },
+    {
+      "number": 459,
+      "solution": "Input-Output (...contd.): Shifting\nNow changing) and then increasing the base from 5 and 1 to 3 are given in brackets. We won't have any difficulty finding both of these. That, the methods of our method lies in the fact that we do not have to find what exists or to draw extra steps and will find our answers with the given diagram itself.\n\n11.7.2.4: Use of above mentioned concepts in shifting problems\nSuppose we have a problem, which reads like this:\nInput: I am going to Patna\nStep I: am I going Patna to\nStep II: am going I Patna to\nStep III: going am I to Patna\nStep IV: going I am to Patna\nStep V: I going I am Patna to\nHere, we see that it is a 2-step shifting because in 0 to 1 (P₁ → P₂)\nP₁ = (P₁ → P₂ → P₃ → P₄ → P₅) and in 1 to 2 (P₁ = P₁, P₂ = P₃, P₃ = P₄, P₄ = P₅, P₅ = P₁)\nSimilarly, in III to IV = 2 to 3 ... etc.\nNow, suppose we were asked to find 2 to 7. That is, suppose a question reads:\nQuestion: 'She was playing with him' what will step VII be?\nThen, to solve this question, If we used the method of reference charts; we would need to draw a chart for step VI and step VII. But we can instead use the cyclic chain-split 2 to 7 as 2 to 5, 5 to 7. That is, we can first find step V for the given step II. This is easy because upto step V is given in our question itself. Once we have found our step V, we can assume that it was not step V as was told but we then assumed step I and then we can find 1 to 3 (or this assumed step 1 to 3). Thus, in the net analysis, we have found 2 to 5, 1 to 3 but 1 to 3 = 5 to 7. So, we have found (2 to 5, 5 to 7) which is 2 to 7.\nLet us work out the above. We see that in the given diagram:\n2 = step II = am going I Patna to.\n5 = step V = I going am Patna to.\nSo, in 2 to 5, I₁ (am) → P₁, P₂ (going) = P₂, P₃(I) → P₃, P₄ (Patna) = P₄, P₅ (to) = P₅.\nSo, we have 5 we have P₁ → P₃, P₂ → P₄, P₃ → P₅, P₄ → P₁, P₅ → P₂ (= P₁ → P₃, etc.)\nSo the base in the given question.\nStep I: am I going Patna to\nStep II: going am I to Patna.\nBut we see that in 1 to 3: (P₁ → P₃, P₂ → P₄, P₃ → P₅, P₄ → P₁, P₅ → P₂) step II becomes step IV and P₃ becomes P₅ in 1 to 3. So, P₁ → P₃, P₂ → P₄, P₃ in 2 to 5 becomes 1 to 3.\nSimilarly, we have: P₁ = P₃ → P₅, P₂ → P₄ → P₁, P₃ → P₅ → P₂, P₄ → P₁ → P₃, P₅ → P₂ in 2 to 5 i.e. I → going, am → to, going → Patna, Patna → I, to → am. I) we get 5 → 7 as: I → going, → I → Patna, going → am, Patna → to, am → I. Hence, 2 to 5 = 2 to 5, 5 to 7 = 2 to 7."
+    }
+  ],
+  "answers": [],
+  "_page": 236
+}

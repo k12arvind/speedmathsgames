@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Blood Relations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "(c) From the given information, following family diagram can be drawn [diagram showing C as daughter, A as sister, D as father, B at bottom] So, it clear that A is the aunt of B."
+    },
+    {
+      "number": 5,
+      "solution": "(c) From the given information, following family diagram can be drawn [diagram showing A married to C as father, B at bottom] Now, it is clear that A is the mother of B."
+    },
+    {
+      "number": 6,
+      "solution": "(c) By applying above method for (R + D × M + N), we draw the following family diagram [diagram showing B at top with Mother, M as grandson of B, D as father, R as brother, N at bottom] Hence, it is clear that M is the grandson of B."
+    },
+    {
+      "number": 7,
+      "solution": "(e) By applying above decoding method, we can check all the options for the required relationship (a) (M + T – R × F) = Rejected [diagram] J is the uncle of F (b) (J + R – T × F) = Rejected [diagram] J is the grandmother of F (c) (J + M – N × F) = Rejected [diagram] J is the uncle of F So, none of the options is correct to answer the question. So, option (e) will follow."
+    },
+    {
+      "number": 8,
+      "solution": "(b) By applying above decoding method, we can check all the options for the required relationship (a) (M + K × T – R) = Rejected [diagram] Here, gender of R is not known. So, R is either niece or nephew of M. (b) (M – J + R – N) = Selected [diagram] R is the niece of M As, we have already obtained the answer, so there is no need to check other options."
+    }
+  ],
+  "answers": [],
+  "_page": 400
+}

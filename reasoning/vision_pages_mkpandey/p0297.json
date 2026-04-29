@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 580,
+      "solution": "Complete Strategy For Solution: A Recapitulation\n\nLet us recapitulate our complete strategy for solving all these problems. The strategy is:\n\nFirst step: Neatly and quickly decode the symbols.\nSecond Step: Take one conclusion at a time and decide which statement series will take each of the questions separately and perform step II and step III.\nThird Step: Use the three golden rules to combine the relevant statements and derive a conclusion from it.\n\nThose three golden rules are:\nRule 1: There must be a common term.\nRule 2: The common term must be less than (or equal to) one term and greater than (or equal to) another.\nRule 3: The conclusion-inequality is obtained by eliminating the common term and it has a '>' or a '<' sign. If and only if both the inequalities in second step have '≥' or a '≤' sign is all other cases, there will be a '>' or a '<' sign in the conclusion.\n\nAfter performing these three steps, if a conclusion is established, verified, well and good. If not, then perform the following two checks. Check 1: Check if the given conclusion directly follows from any one single statement.\nCheck 2: Check if the conclusion- inequality you reach is exactly the same as the given conclusion but written differently.\nCheck 3: If your derived conclusion (or a given statement) is of the type (A ≤ B) then check if the two given conclusions are A > B and (or A < B and A = B). If yes, choose 'either follows' is true.\nCheck 4: If neither of the conclusions has been proved correct till now, check if the given conclusions from a complementary pair. (They form complementary pair in the following four cases:\n(i) A > B and A < B    (ii) A > B and A ≤ B\n(iii) A ≤ B and A > B   (iv) A < B and A ≥ B\nIn such a case, the choice 'either follows' is correct."
+    },
+    {
+      "number": 581,
+      "solution": "A complete and detailed solution to our sample problem:\n\nWe will now demonstrate how to utilise the method above to quickly solve problems of this type.\n\nEx. Let Solve Ex. 1 completely.\nSoln: In first step, we quickly decode the symbols. Thus, we have:\n1. Statements: M > N, L = M, O < N, L ≤ K\n   Conclusions: I. M < K                    II. L > N\n2. Statements: E = F, C < D, P ≥ G D ≥ E\n   Conclusions: I. E > G                    II. C = E\n3. Statements: L ≥ M, O = N, L < H, M = O\n   Conclusions: I. L = N                    II. L > N\n\n[The solution continues with detailed step-by-step analysis including inequalities like Z ≤ Y, Y < L, Y < X, Z > K, etc., and shows how to combine statements and derive conclusions using the golden rules mentioned in problem 580.]"
+    }
+  ],
+  "answers": [],
+  "_page": 297
+}

@@ -1,0 +1,209 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Each of the question below consists of a question and three statements numbered I, II and III given below it. You have to decide whether the data provided in the statement are sufficient to answer the question.",
+      "has_figure": false,
+      "topic_code": "data_sufficiency"
+    }
+  ],
+  "questions": [
+    {
+      "number": 45,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "age_calculation",
+      "subtopic_name": "Age Calculation",
+      "body": "Is the average age of the men less than 32?",
+      "choices": {
+        "a": "One-third of the men are younger than 25.",
+        "b": "One-half of the men are between 25 and 30."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "age_calculation",
+      "subtopic_name": "Age Calculation",
+      "body": "If John is exactly 4 yr older than Sunita, how old is John?",
+      "choices": {
+        "a": "Exactly 9 yr ago John was 5 times as old as Sunita was then.",
+        "b": "Sunita is more than 9 yr old."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "time_calculation",
+      "subtopic_name": "Time Calculation",
+      "body": "How many minutes does the clock lose a day?",
+      "choices": {
+        "a": "The clock reads 6:00 when it is really 5:48.",
+        "b": "The clock is 40 s fast each hour."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "counting",
+      "subtopic_name": "Counting",
+      "body": "Ram and Esha are in a line to purchase tickets. How many people are in the line?",
+      "choices": {
+        "a": "There are 20 people behind Ram and 20 people in front of Esha.",
+        "b": "There are 5 people between Ram and Esha."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "time_calculation",
+      "subtopic_name": "Time Calculation",
+      "body": "How much time will a computer need to solve 150 problems?",
+      "choices": {
+        "a": "The computer needs 50 s to solve the first problem.",
+        "b": "A man needs 6 h to solve the problems."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "number_relations",
+      "subtopic_name": "Number Relations",
+      "body": "If x and y are positive integers and x is a multiple of y is y = 2?",
+      "choices": {
+        "a": "y ≠ 1",
+        "b": "x + 2 is a multiple of y."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How many daughters does of W have?",
+      "choices": {
+        "a": "I and III are sufficient to answer the question",
+        "b": "All I, II and III are required to answer the question",
+        "c": "II and III are sufficient to answer the question",
+        "d": "Question cannot be answered even with all I, II and III",
+        "e": "I and II are sufficient to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Who among A, B, C, D, E and F, each having a different height is the tallest?",
+      "choices": {
+        "a": "I and II are sufficient to answer the question",
+        "b": "I and III are sufficient to answer the question",
+        "c": "II and III are sufficient to answer the question",
+        "d": "All I, II and III are required to answer the question",
+        "e": "All I, II and III even together are not sufficient to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "direction_sense",
+      "subtopic_name": "Direction Sense",
+      "body": "Towards which direction is Village J from Village W?",
+      "choices": {
+        "a": "Only III is sufficient to answer the question",
+        "b": "II and III sufficient to answer the question",
+        "c": "All I, II and III are required to answer the question",
+        "d": "Question cannot be answered even with all I, II and III",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "coding_decoding",
+      "subtopic_name": "Coding Decoding",
+      "body": "How is 'go' written in a code language?",
+      "choices": {
+        "a": "I and III are sufficient to answer the question",
+        "b": "II and III are sufficient to answer the question",
+        "c": "I and II are sufficient to answer the question",
+        "d": "All I, II and III are required to answer the question",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 663
+}

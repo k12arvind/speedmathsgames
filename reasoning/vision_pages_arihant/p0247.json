@@ -1,0 +1,114 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 4 Continuous Pattern Series",
+  "passages": [
+    {
+      "passage_text": "Find the missing term in the following series.",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "continuous_pattern",
+      "subtopic_name": "Continuous Pattern Series",
+      "body": "_ aa_ba_bb_ab_aab",
+      "choices": {
+        "a": "aaabb",
+        "b": "babab",
+        "c": "bbaab",
+        "d": "None of these"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "continuous_pattern",
+      "subtopic_name": "Continuous Pattern Series",
+      "body": "a_bc_c_abb_bca_",
+      "choices": {
+        "a": "abbba",
+        "b": "accba",
+        "c": "cccbc",
+        "d": "cbbac"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "continuous_pattern",
+      "subtopic_name": "Continuous Pattern Series",
+      "body": "l_n_mllm_n_l",
+      "choices": {
+        "a": "mnmn",
+        "b": "mnmn",
+        "c": "mnmm",
+        "d": "nmmn"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "multi_tier_sequential",
+      "subtopic_name": "Multi-tier Sequential Series",
+      "body": "Find the missing term in the following series. CB_D_BABCCB __1243_????  a_ab_c_b____",
+      "choices": {
+        "a": "3, 4, 4, 3",
+        "b": "3, 2, 2, 3",
+        "c": "3, 1, 1, 3",
+        "d": "1, 4, 4, 1"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 47,
+      "solution": "The series is as follows baab/baab/baab/baab ∴ Required answer = bbaab"
+    },
+    {
+      "number": 48,
+      "solution": "The series is as follows aabcc/ccabb/bbcaa ∴ Required answer = accba"
+    },
+    {
+      "number": 49,
+      "solution": "The series is as follows lmn/nml/lmn/nml ∴ Required answer = mnmn The sequence is a repeated pattern of two alternative blocks lmn and nml."
+    },
+    {
+      "number": 50,
+      "solution": "By analysing and comparing the positions of the elements of all the three tiers / sequences given in the question, we get A = b = 2, B = c = 3, C = a = 1, D = d = 4 We find 'a' corresponds to 'C' and '1' corresponds to 'a'. So, 'a' and '1' correspond to 'C'. 'b' corresponds to 'A' and '2' corresponds to b. So, 'b' and '2' correspond to A. Also, we find, '4' corresponds to 'D'. So, the remaining number '3' corresponds to 'B'. CBCADBBA BCCB 1312433 2□□□□ accabdccbaac So, BCCB corresponds to 3113. ∴ Required answer = 3,1,1,3"
+    }
+  ],
+  "answers": [],
+  "_page": 247
+}

@@ -1,0 +1,60 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_hands",
+      "subtopic_name": "Clock Hands Position",
+      "body": "At what time between 7 O'clock and 8 O'clock, will the hands of a clock be in the same straight line but not together?",
+      "choices": {
+        "a": "5 5/11 min past 7",
+        "b": "5 4/11 min past 7",
+        "c": "6 5/11 min past 7",
+        "d": "3 4/11 min past 7"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "clock_hands",
+      "subtopic_name": "Clock Hands Position",
+      "body": "At what time between 3 O'clock and 4 O' clock, will the hands of a clock be 4 min apart?",
+      "choices": {
+        "a": "20 8/11 min past 3 and 12 min past 3",
+        "b": "20 8/11 min past 3 and 13 min past 3",
+        "c": "20 3/7 min past 3 and 12 min past 3",
+        "d": "20 8/9 min past 3 and 14 min past 3"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "Method I\nAt 7 O'clock, minute hand is at 12 while hour hand is at 7 and both the hands are 25 min spaces apart.\nTo be in the same straight line (but not together) both hands will have be 30 min spaces apart.\n∴ Minute hand will have to gain (30 – 25) = 5 min spaces over hour hand.\nAs we know, 55 min spaces are gained in 60 min.\n∴ 5 min spaces will be gained in (60/55 × 5) min = 60/11 min = 5 5/11 min\n\nHence, the hands will be in the same straight line but not together at 5 5/11 min past 7.\n\nMethod II\nIn the given question, x = 7, (x + 1) = 8, x > 6\nAccording to the formula,\nHands will be in the same straight line at (5x – 30) × 12/11 min past x = (5 × 7 – 30) × 12/11 min past 7\n= (35 – 30) × 12/11 min past 7 = 5 × 12/11 min past 7 = 5 5/11 min past 7"
+    },
+    {
+      "number": 6,
+      "solution": "Method I\nAt 3 O'clock, minute hand is 15 min spaces behind the hour hand.\nCase I When the minute hand is 4 min spaces behind the hour hand.\nIn this case, minute hand has to gain (15 – 4) = 11 min spaces over hour hand\n∴ 55 minute are gained in 60 min.\n∴ 11 min are gained in 60×11/55 min = 12 min\nHence, the hands will be 4 min apart at 12 min past 3.\nCase II When the minute hand is 4 min spaces ahead of the hour hand.\nIn this case, minute hand has to gain (15 + 4) = 19 min spaces over hour hand\n∴ 55 min are gained in 60 min\n∴ 19 min are gained in (60/55 × 19) min = (12 × 19)/11 min = 20 8/11 min\n\nHence, the hands will be 4 min apart at 20 8/11 min past 3.\n\nMethod II\nGiven that, x = 3, (x + 1) = 4 and f = 4\nThen, according to the formula, (5x ± f) 12/11 = (5 × 3 ± 4) × 12/11 min = (15 ± 4) × 12/11 min\nSeparating '+' and '–' signs, we have\n(15 + 4) × 12/11 min past 3 and (15 – 4) × 12/11 min past 3 = 19 × 12/11 min past 3 and 11 × 12/11 min past 3\n= 20 8/11 min past 3 and 12 min past 3"
+    }
+  ],
+  "answers": [],
+  "_page": 417
+}

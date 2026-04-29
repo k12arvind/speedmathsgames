@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 8,
+  "chapter_title": "Response & Interpretations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(c) Method I\n\nSolutions by using mediate and immediate inference table:\nAll cars are balls. (A-type)\nAll balls are tables. (A-type)\nA + B = A-type conclusion = All cars are tables.\nAll cars are tables → Conversion → Some tables are cars\n= Conclusion II → Conversion → Some tables are balls\n= Conclusion I\nHence, both Conclusions I and II follow.\nAll balls are tables."
+    },
+    {
+      "number": 2,
+      "solution": "(b) Method I\n\nMethod II\nSome rats are cats. (I-type)\nAll cats are bats. (A-type)\nI + A = I-type conclusion\nSome rats are bats = Conclusion II\nNo rats are cats is invalid because.\nSome rats are cats (Statement I).\nSo, only Conclusion II follows."
+    },
+    {
+      "number": 3,
+      "solution": "(b)\nI. All shops are factories. (✓)\nII. Some shops are schools. (✓)"
+    },
+    {
+      "number": 4,
+      "solution": "(c)\nI. All beautiful girls are intelligent. (✗)\nII. Beauty and intelligence are the factors of goodness. (✓)"
+    },
+    {
+      "number": 5,
+      "solution": "(c)\nI. Some lawyers are readers. (✓)\nII. Some readers are writers. (✗)"
+    },
+    {
+      "number": 6,
+      "solution": "(c)\nI. No colour is a brush. (✗)\nII. All brushes are colours. (✗)"
+    },
+    {
+      "number": 7,
+      "solution": "(b)\nI. All galaxies are planets. (✗)\nII. All stars are galaxies. (✓)"
+    },
+    {
+      "number": 8,
+      "solution": "(c)\nI. All cakes are bags. (✗)\nII. All bags are cakes. (✗)"
+    }
+  ],
+  "answers": [],
+  "_page": 1165
+}

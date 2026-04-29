@@ -1,0 +1,547 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Practice Corner 1.9",
+  "passages": [
+    {
+      "passage_text": "In each of the following questions, there is a certain relationship between two given numbers on one side of (: :) and one number is given on another side of (: :) where another number is to be found from the given alternatives, having the same relationship with this number as the numbers of the given pair bear. Choose the best alternative.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Each of the following questions consists of a pair of numbers that have a certain relationship to each other, followed by four other pair of numbers given as alternatives. Select the pair in which the numbers are similarly related as in the given pair.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "In each of the following questions, choose one number which is similar to the numbers in the given set.",
+      "has_figure": false,
+      "topic_code": "classification"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "4 : 9 : : 8 : ?",
+      "choices": {
+        "a": "2",
+        "b": "13",
+        "c": "31",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "1, 2, 4, 7 : 3, 4, 6, 9 : : ? : 2, 3, 5, 8",
+      "choices": {
+        "a": "0, 1, 3, 6",
+        "b": "2, 4, 5, 8",
+        "c": "1, 3, 4, 7",
+        "d": "3, 5, 6, 8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "17 : 34 : : ? : 10",
+      "choices": {
+        "a": "11",
+        "b": "8",
+        "c": "5",
+        "d": "15"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "20 : 11 : : 102 : ?",
+      "choices": {
+        "a": "49",
+        "b": "52",
+        "c": "61",
+        "d": "98"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "6 : 35 : 7 : ?",
+      "choices": {
+        "a": "48",
+        "b": "42",
+        "c": "34",
+        "d": "13"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "14 : 9 : : 26 : ?",
+      "choices": {
+        "a": "12",
+        "b": "13",
+        "c": "15",
+        "d": "31"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "100 : 121 : : 144 : ?",
+      "choices": {
+        "a": "160",
+        "b": "93",
+        "c": "169",
+        "d": "426"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "3 : 27 : : 4 : ?",
+      "choices": {
+        "a": "16",
+        "b": "64",
+        "c": "32",
+        "d": "28"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "7564 : 5322 : : 4673 : ?",
+      "choices": {
+        "a": "2367",
+        "b": "2451",
+        "c": "2531",
+        "d": "4472"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "63 : 21 : : 27 :?",
+      "choices": {
+        "a": "6",
+        "b": "9",
+        "c": "1",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "64 : 144 : : 256 : ?",
+      "choices": {
+        "a": "16",
+        "b": "32",
+        "c": "400",
+        "d": "336"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "01 : 36 : : 2 : ?",
+      "choices": {
+        "a": "69",
+        "b": "49",
+        "c": "81",
+        "d": "70"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "11: 132 : : ?",
+      "choices": {
+        "a": "15 : 250",
+        "b": "10 : 100",
+        "c": "9 : 90",
+        "d": "13 : 169"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "08 : 28 : : 15 : ?",
+      "choices": {
+        "a": "63",
+        "b": "65",
+        "c": "126",
+        "d": "124"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "1/9 : 1/81 : : 1/13 : ?",
+      "choices": {
+        "a": "1/127",
+        "b": "1/169",
+        "c": "1/125",
+        "d": "1/120"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "25 : 625 :: 35 : ?",
+      "choices": {
+        "a": "1575",
+        "b": "1205",
+        "c": "875",
+        "d": "635"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "1234 : 10 : : 6789 : ?",
+      "choices": {
+        "a": "20",
+        "b": "30",
+        "c": "40",
+        "d": "50"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "08 : 66 : : ? : 38",
+      "choices": {
+        "a": "2",
+        "b": "6",
+        "c": "12",
+        "d": "19"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "583 : 488 :: 293 : ?",
+      "choices": {
+        "a": "581",
+        "b": "291",
+        "c": "378",
+        "d": "487"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 20,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "85 : 40 :: 77 : ?",
+      "choices": {
+        "a": "14",
+        "b": "48",
+        "c": "49",
+        "d": "50"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "11 : 121",
+      "choices": {
+        "a": "5 : 115",
+        "b": "6 : 180",
+        "c": "25 : 625",
+        "d": "26 : 188"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "55 : 10",
+      "choices": {
+        "a": "15 : 5",
+        "b": "18 : 1",
+        "c": "16 : 75",
+        "d": "88 : 16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "14 : 70",
+      "choices": {
+        "a": "75 : 375",
+        "b": "15 : 90",
+        "c": "80 : 480",
+        "d": "19 : 57"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Number Analogy",
+      "subtopic_code": "number_relationship",
+      "subtopic_name": "Number Relationship",
+      "body": "27 : 9",
+      "choices": {
+        "a": "64 : 8",
+        "b": "125 : 5",
+        "c": "135 : 15",
+        "d": "729 : 81"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Number Classification",
+      "subtopic_code": "number_pattern",
+      "subtopic_name": "Number Pattern",
+      "body": "525, 813, 714",
+      "choices": {
+        "a": "353",
+        "b": "329",
+        "c": "606",
+        "d": "520"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Number Classification",
+      "subtopic_code": "number_pattern",
+      "subtopic_name": "Number Pattern",
+      "body": "94, 50, 61",
+      "choices": {
+        "a": "75",
+        "b": "91",
+        "c": "81",
+        "d": "72"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 51
+}

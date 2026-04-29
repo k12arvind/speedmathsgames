@@ -1,0 +1,180 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "How many triangles are there in the figure given below? [SSC (CGL) 2013]",
+      "choices": {
+        "a": "8",
+        "b": "10",
+        "c": "12",
+        "d": "11"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "How many triangles are there in the figure given below?",
+      "choices": {
+        "a": "4",
+        "b": "12",
+        "c": "16",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "How many triangles are there in the following figure?",
+      "choices": {
+        "a": "10",
+        "b": "24",
+        "c": "22",
+        "d": "20"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "How many triangles are there in the following figure?",
+      "choices": {
+        "a": "12",
+        "b": "14",
+        "c": "15",
+        "d": "13"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "How many triangles are there in the following figure?",
+      "choices": {
+        "a": "18",
+        "b": "16",
+        "c": "22",
+        "d": "25"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "How many triangles are there in the following figure?",
+      "choices": {
+        "a": "27",
+        "b": "23",
+        "c": "21",
+        "d": "25"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "Find out the number of triangles in the given pattern. [SSC (Multitasking) 2013]",
+      "choices": {
+        "a": "23",
+        "b": "26",
+        "c": "28",
+        "d": "27"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "counting_figures",
+      "topic_name": "Counting Figures",
+      "subtopic_code": "triangle_count",
+      "subtopic_name": "Triangle Counting",
+      "body": "Count the number of triangles in the figure given below.",
+      "choices": {
+        "a": "15",
+        "b": "19",
+        "c": "22",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(D) Horizontal lines = AC, LD, KE, JF, IG = 5\nVertical lines = AI, BH, CG = 3\nSlant lines = AG, IC = 2\n∴ Total number of straight lines = 5 + 3 + 2 = 10"
+    },
+    {
+      "number": 2,
+      "solution": "(D) Horizontal lines = AB, EF, GH, CD, LM, PQ, ON = 7\nVertical lines = AC, EG, FH, BD, LO, MN = 6\n∴ Total number of straight lines = 7 + 6 = 13"
+    }
+  ],
+  "answers": [],
+  "_page": 823
+}

@@ -1,0 +1,95 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below. Five cities A, B, C, D and E are famous for their lovely garden, fancy jewellery, educational institute, blue pottery and scents but not in the same order. I. A and C are neither educational institutes nor have gardens. II. B and E are not famous for jewellery or pottery. III. Scents and jewellery have nothing to do with A. IV. D and E are not famous for garden and jewellery. V. D is not famous for educational institutes.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "city_features",
+      "subtopic_name": "City Features Matching",
+      "body": "Which of the following city is famous for gardens?",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "D",
+        "d": "B"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "city_features",
+      "subtopic_name": "City Features Matching",
+      "body": "Blue pottery is available in which of the following cities?",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "E",
+        "d": "B"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "city_features",
+      "subtopic_name": "City Features Matching",
+      "body": "City E is famous for which of the following?",
+      "choices": {
+        "a": "Jewellery",
+        "b": "Educational Institutes",
+        "c": "Blue pottery",
+        "d": "Scent"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "These questions can be solved easily with the help of a truth table. Truth table is an arrangement of the components given in a matrix form with one component in row and other component in column. In the question, components given are city and the feature for which each city is famous. First arrange the components in matrix form with cities in column and features in row. From I, cross (✗) the possibility of garden and education institute in front of cities A and C. Also, the possibility of jewellery and pottery is ruled out for cities B and E, from information II. Similarly, city A is crossed for scent and jewellery as given in information III. After using first three informations in the table, we see that only block uncrossed in front of city A is the one related with blue pottery. So, we know that city A is famous for blue pottery. In this block mark (✓) and cross the row and column of this block because one city is famous only for one feature. Using information IV in the table we find that city B is famous for garden and city C for jewellery. Cross row and column of each symbol (✓) obtained each time. This helps to determine one to one matching. Last information helps us to know that city E is famous for educational institutes and city D for scent. The final order of matching of cities and their features is as under. On the basis of the above table, all the questions can be answered. 1. (d) City B is famous for garden. 2. (a) Blue pottery is available in city A. 3. (b) City E is famous for educational institute."
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "d"
+    },
+    {
+      "number": 2,
+      "correct": "a"
+    },
+    {
+      "number": 3,
+      "correct": "b"
+    }
+  ],
+  "_page": 598
+}

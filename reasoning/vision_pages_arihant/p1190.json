@@ -1,0 +1,158 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All bats are cats. No cat is rat. All rats are tigers. Some tigers are fighters.\nConclusions: I. Some tigers are cats. II. Atleast some fighters being rats is a possibility. III. Atleast some cats are definitely bats. IV. None of the fighters is rat.",
+      "choices": {
+        "a": "All follow",
+        "b": "None follows",
+        "c": "Only III follows",
+        "d": "I, II and IV follow",
+        "e": "II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All snakes are eagles. Some eagles are rabbits. All rabbits are birds. Some birds are animals. [UCO Bank (PO) 2009]\nConclusions: I. Some animals are snakes. II. Some birds are snakes. III. Some birds are eagles. IV. All birds are rabbits.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Both II and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some cameras are calculators. Some calculators are diaries. All notebooks are diaries. All diaries are computers. [UCO Bank (PO) 2009]\nConclusions: I. Some notebooks are calculators. II. Some calculators are computers. III. All notebooks are computers. IV. Some diaries are cameras.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Both II and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some books are journals. All journals are papers. Some papers are cards. All cards are boards. [IDBI Bank (PO) 2009]\nConclusions: I. Some papers are books. II. Some papers are boards. III. Some boards are journals. IV. Some boards are books.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "Only I follows",
+        "c": "I, II and III follow",
+        "d": "All follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some grapes are apples. Some apples are bananas. All bananas are guavas. No guava is pomegranate. [IDBI Bank (PO) 2009]\nConclusions: I. No grapes are pomegranates. II. Some guavas are grapes. III. Some guavas are apples. IV. No bananas are pomegranates.",
+      "choices": {
+        "a": "None follows",
+        "b": "II and III follow",
+        "c": "Either I or III follows",
+        "d": "Both III and IV follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some doors are walls. All walls are floors. All floors are rooms. Some rooms are windows. [IDBI Bank (PO) 2009]\nConclusions: I. All walls are rooms. II. Some rooms are doors. III. Some rooms are walls. IV. Some floors are doors.",
+      "choices": {
+        "a": "None follows",
+        "b": "I and II follow",
+        "c": "II and III follow",
+        "d": "II, III and IV follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some men are girls. Some girls are foolish. All foolish are mads. Some mads are bads.\nConclusions: I. Some girls are definitely mads. II. Most of the mads are foolish. III. At least some girls are men. IV. All foolish except few are girls.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "All follow",
+        "e": "II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1190
+}

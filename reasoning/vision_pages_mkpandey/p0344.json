@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 32,
+      "solution": "Now, we take the family tree. The relevant informations are: (i) There are two married couples. (ii) B is the brother of E. (iii) B is the mother of D. (iv) C is a female. Let us start with (iii). It can be represented as: B(•) ↓ D(•) This means female. To this we accommodate (i). Now, it becomes: B(•) ↓ D(•)     F(?) Now, to complete this tree, we have only three additional informations. One, that A is the grandfather, two, that there are two married couples, and three, that C is a female. This, obviously, is insufficient to complete the family tree. A could either be married to B or to C. Or, he may as well be married to E, whose sex is unknown. Thus we see that as far as relations are concerned, we find 'data inadequate' for all the questions. Hence, our answers are: 27.1    28.4    29.5    30.5    31.3 Q. 32-38: Begin by summarising the information: Capts = D, E, F B ≠ C J = F L = B or E or (B + E) L = Blue There don't appear to be any further useful conclusions to be drawn, so go to the questions. 32.3: This question provides no additional information, so just measure each team's choice by the initial conditions. The first condition requires that D, E, and F be captains. Using this condition, you can eliminate (4) and (5), for a team of J, K, and L, and of A and H would lack a captain. Then, the second condition requires that B and C be separated. The remaining choices, however, all respect this condition, so let's pass this. Next, the third condition requires that P and J be separated, and we eliminate (2) for this reason. Finally, the fourth condition requires that L be on a team with either B or E (or both). This eliminates (1). A team of J, B and E is not possible because L would be placed on a team without either B or E."
+    }
+  ],
+  "answers": [],
+  "_page": 344
+}

@@ -1,0 +1,112 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Practice Exercises",
+  "passages": [
+    {
+      "passage_text": "Study the following information and answer the questions that follow. An electronic device when fed with the numbers, rearranges them in a particular order following certain rules. The following is a step-by-step process of rearrangement for the given input of numbers.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "A word arrangement machine, when given an input line of words, rearranges them following a particular rule in each step. The following is an illustration of input and the steps of rearrangement.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement",
+      "body": "Which of the following will be step VI for the given input?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement",
+      "body": "Which of the following will be step III for the given input?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement",
+      "body": "Which of the following will be the last step for the given input?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement",
+      "body": "What of the following will be the last step for the given input?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement",
+      "body": "If step IV of the given input was the input. Step I: 19 92 06 71 63 19 19 06 63 87 71. Which of the following was the input?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Study the following information and answer the questions:",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 257
+}

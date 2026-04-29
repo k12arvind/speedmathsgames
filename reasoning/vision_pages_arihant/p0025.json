@@ -1,0 +1,498 @@
+{
+  "page_type": "questions",
+  "chapter_number": 1,
+  "chapter_title": "Practice Corner 1.2",
+  "passages": [
+    {
+      "passage_text": "The following questions consist of two words each, that have a certain relationship with each other, followed by four lettered pairs of words. Select the letter pair that has the same relationship as the original pair of words.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Pen : Write",
+      "choices": {
+        "a": "Knife : Plate",
+        "b": "Chair : Table",
+        "c": "Oar : Row",
+        "d": "Worker : Factory"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Book : Chapter",
+      "choices": {
+        "a": "Pen : Pencil",
+        "b": "Computer : Calculator",
+        "c": "Mobile : Landline",
+        "d": "House : Room"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Chair : Wood :: ?",
+      "choices": {
+        "a": "Book : Print",
+        "b": "Mirror : Glass",
+        "c": "Plate : Food",
+        "d": "Purse : Money"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Agra : Taj Mahal",
+      "choices": {
+        "a": "Delhi : Hawa Mahal",
+        "b": "Patna : Red Fort",
+        "c": "Gaya : Golghar",
+        "d": "Amritsar : Golden Temple"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Animal : Zoology",
+      "choices": {
+        "a": "Body : Physiology",
+        "b": "Disease : Bacteriology",
+        "c": "Poems : Anthology",
+        "d": "Man : Philanthropy"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Spider : Web",
+      "choices": {
+        "a": "Ink : Pen",
+        "b": "Cock : Hen",
+        "c": "Teacher : Student",
+        "d": "Poet : Poetry"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Medicine : Pills",
+      "choices": {
+        "a": "Spices : Food",
+        "b": "Knowledge : Books",
+        "c": "Watch : Time",
+        "d": "Radio : Sound"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Horse : Hoof",
+      "choices": {
+        "a": "Man : Foot",
+        "b": "Dog : Black",
+        "c": "Paise : Rupee",
+        "d": "Pen : Pencil"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Tagore : Geetanjali",
+      "choices": {
+        "a": "Madame Curie : Radium",
+        "b": "Shakespeare : Skylark",
+        "c": "Dickens : Oliver Twist",
+        "d": "Nobel : Dynamite"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Bud : Flower :: ?",
+      "choices": {
+        "a": "Clay : Mud",
+        "b": "Sapling : Tree",
+        "c": "River : Glacier",
+        "d": "Bird : Tree",
+        "e": "Paper : Book"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Ideas : Brain",
+      "choices": {
+        "a": "Literature : Author",
+        "b": "Clouds : Ocean",
+        "c": "Money : Bank",
+        "d": "Planets : Earth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Frankness : Blunt",
+      "choices": {
+        "a": "Rise : Awake",
+        "b": "Weep : Laugh",
+        "c": "Sickness : Death",
+        "d": "Rest : Activity"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Love : Hate",
+      "choices": {
+        "a": "Go : Do",
+        "b": "Near : Where",
+        "c": "Up : Down",
+        "d": "Come : Soon"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Mendacity : Honesty",
+      "choices": {
+        "a": "Truth : Beauty",
+        "b": "Sportsmanship : Fortitude",
+        "c": "Courageous : Craven",
+        "d": "Turpitude : Depravity"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Run : Race",
+      "choices": {
+        "a": "Enjoy : Journey",
+        "b": "Lecture : Study",
+        "c": "Study : Book",
+        "d": "Party : Dance"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Capricious : Reliability",
+      "choices": {
+        "a": "Extemporaneous : Predictability",
+        "b": "Unreliable : Inhuman",
+        "c": "Tenacious : Practicality",
+        "d": "Arbitrary : Whimsical"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Water : Oxygen",
+      "choices": {
+        "a": "Helium : Nitrogen",
+        "b": "Salt : Sodium",
+        "c": "Tree : Plant",
+        "d": "Food : Hunger"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Geeta : Quran",
+      "choices": {
+        "a": "Orange : Mango",
+        "b": "Temple : Worship",
+        "c": "Good : Man",
+        "d": "Army : Defence"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Sin : Crime",
+      "choices": {
+        "a": "Man : Animal",
+        "b": "Home : Court",
+        "c": "Morality : Legality",
+        "d": "Jury : Priest"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 20,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Milk : Cream",
+      "choices": {
+        "a": "College : Students",
+        "b": "Sugar : Sweet",
+        "c": "Clay : Pottery",
+        "d": "Fruit : Glucose"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 21,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Loathe : Coercion",
+      "choices": {
+        "a": "Detest : Caressing",
+        "b": "Irritate : Caressing",
+        "c": "Irate : Antagonism",
+        "d": "Reluctant : Persuasion"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 22,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Straws : Nest",
+      "choices": {
+        "a": "Water : Stream",
+        "b": "Animals : Zoo",
+        "c": "Threads : Cloth",
+        "d": "Wood : Paper"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 23,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Umpire : Game",
+      "choices": {
+        "a": "Foreplay : Wonder",
+        "b": "Chef : Banquet",
+        "c": "Legislator : Election",
+        "d": "Moderator : Debate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 24,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Fly : Walk",
+      "choices": {
+        "a": "Sit : Sleep",
+        "b": "Roast : Bake",
+        "c": "Sky : Earth",
+        "d": "Pilot : Captain"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 25
+}

@@ -1,0 +1,80 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "balancing_equation",
+      "subtopic_name": "Balancing the Equation",
+      "body": "If the following equations has to be balance, then the signs of which of the following options will be used? 24 ÷ 12 × 16 = 0",
+      "choices": {
+        "a": "-, + and +",
+        "b": "+, + and +",
+        "c": "-, - and -",
+        "d": "+, + and -"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "interchange_signs_numbers",
+      "subtopic_name": "Interchange of Signs and Numbers",
+      "body": "Which one of the given interchanges in signs would make the given equation correct? 10 - 2 + 9 × 2 + 4 = 19",
+      "choices": {
+        "a": "- and +",
+        "b": "- and +",
+        "c": "+ and ×",
+        "d": "× and +"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "interchange_signs_numbers",
+      "subtopic_name": "Interchange of Signs and Numbers",
+      "body": "Which one of the given interchanges in signs and numbers would make the given equation correct? 16 - 8 × 16 - 2 + 4 + 3 = 15",
+      "choices": {
+        "a": "+ and + and 3 and 4",
+        "b": "× and - and 16 and 4",
+        "c": "- and + and 8 and 2",
+        "d": "× and - and 16 and 2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "Let us check all the options one-by-one. From option (a), 24 - 6 + 12 + 16 = 0 ⇒ (24 + 12 + 16) - 6 = 0 ⇒ 52 - 6 = 0 ⇒ 46 = 0 ⇒ LHS ≠ RHS Hence, option (a) is incorrect. From option (b), 24 + 6 + 12 + 16 = 0 ⇒ 4 + 0.75 = 0 ⇒ 4.75 = 0 ⇒ LHS ≠ RHS Hence, option (b) is incorrect. From option (c), 24 - 6 - 12 - 16 = 0 ⇒ 18 - 12 - 16 = 0 ⇒ 6 - 16 = 0 ⇒ -10 = 0 ⇒ LHS ≠ RHS Hence, option (c) is incorrect. From option (d), 24 ÷ 6 + 12 - 16 = 0 ⇒ 24/6 + 12 - 16 = 0 ⇒ 4 + 12 - 16 = 0 ⇒ 16 - 16 = 0 ⇒ 0 = 0 ⇒ LHS = RHS Hence, option (d) is correct."
+    },
+    {
+      "number": 6,
+      "solution": "Let us check the options one-by-one. From option (a), 10 - 2 + 9 × 2 + 4 = 19 ⇒ 10 + 2 + 9 × 2 - 4 = 19 ⇒ 5 + 9 × 2 - 4 = 19 ⇒ 5 + 18 - 4 = 19 ⇒ 23 - 4 = 19 ∴ 19 = 19 As option (a) gives us the correct answer. Hence, there is no need to check other options."
+    }
+  ],
+  "answers": [],
+  "_page": 317
+}

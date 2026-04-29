@@ -1,0 +1,37 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Decision Making",
+  "passages": [],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "travel_optimization",
+      "subtopic_name": "Travel Time Optimization",
+      "body": "Tina gets a message that her work has to be completed between 9:00 h and 17:00 h. If she wants minimize the total time of Jamshedpur, the best option, from the options given below, for her among the following is to go by",
+      "choices": {
+        "a": "train 12443 and returns by train 12444",
+        "b": "train 12801 and return by train 12802",
+        "c": "AI 9810 and return by AI 9809",
+        "d": "AI 810 and return by AI 9809",
+        "e": "IT 3348 and return by IT 3347"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 16,
+      "solution": "Option (a): Since, she travels by flight in both cases, total travelling time = 435 × 2 = 870 min. Work time = 360 min. Now, if she goes by AI 9810, she arrives at the site 90 min after 9:45 i.e., at 11:15 am and completes the work at 17:15. Because IT-3347 departs at 17:10 h, she will have to wait till 14:40 h on the next day i.e., wait time of 1285 min. So, total time = 870 + 360 + 1285 = 2515 min. Option (b): She goes by flight and returns by train. Travel time = Flight time + Time from work site to Delhi railway station + Actual train travel + Time from Jamshedpur railway station to home = 435 + 35 + 1305 + 10 = 1785 min. Work time = 360 min. Now, if she goes by AI 9810, she arrives at the site 90 min after 9:45 i.e., at 11:15 am and completes the work at 17:15 h. Because train 18602 departs at 22:20 h, she will have to wait till 21:45 h on the same day i.e., wait time of 270 min. So, total time = 1785 + 360 + 270 = 2415 min. Hence, option (b) can be eliminated. Option (c): Again, because she travels by flight both ways, travel time = 870 min. Work time = 360 min. Now, if she goes by IT-3348, she arrives at the site 90 min after 21:05 i.e., at 22:35 h and completes the work at 04:35 h. Because AI 9809 departs at 05:50 h, she will have to wait till 03:20 h on the next day i.e., wait time of 1365 min. So, total time = 870 + 360 + 1365 = 2595 min. Hence, option (c) can be eliminated. Option (d): She travels both ways by train. So, the travelling hours between her house and Jamshedpur railway station will be counted twice and Delhi railway station will be counted twice. Also, the actual train time will be counted once each for the two journeys. Travel time = (10 × 2) + (35 × 2) + 1120 + 1035 = 2245 min. Work time = 360 min. Now, consider that work time and travel time together are 2245 + 360 = 2605 min which is greater than the least time obtained for option (b). So, there is no point in calculating the waiting time which will only enlarge this value. Hence, option (d) can be eliminated. Option (e): She goes by flight and comes back by train. Travel time = Flight time + Time from work site to Delhi railway station + Actual train travel + Time from Jamshedpur railway station to home = 435 + 35 + 1305 + 10 = 1515 min. Work time = 360 min. Now, if she goes by AI-9810, she gets to the site 90 min after 9:45 i.e., at 11:15 am and finishes the work at 17:15h. Because train 12444 departs at 17:20 h, she will have to wait till 16:45 h on the next day i.e., wait time of 1405 min. So, total time = 1515 + 360 + 1405 = 3280 min. Hence, option (e) can be eliminated."
+    }
+  ],
+  "answers": [],
+  "_page": 536
+}

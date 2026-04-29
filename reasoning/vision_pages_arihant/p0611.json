@@ -1,0 +1,150 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information to answer the questions given below. From a group of six boys M, N, O, P, Q and R and five girls G, H, I, J and K a team of six is to be selected. Some of the criteria of selection are as follows I. M and J go together. II. O cannot be placed with N. III. I cannot go with J. IV. N goes with H. V. P and Q have to be together. VI. K and R go together. VII. Unless otherwise stated these criteria are applicable to all the following questions.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If the team consists of two girls and I is one of them, the other members are",
+      "choices": {
+        "a": "GMRPQ",
+        "b": "KQPQR",
+        "c": "HNOPQ",
+        "d": "KRMNP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If the team has four boys including O and R, the members of the team other than O and R are",
+      "choices": {
+        "a": "HIPQ",
+        "b": "GJPQ",
+        "c": "GKPQ",
+        "d": "GJMP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If four members are boys, which of the following cannot constitute the team?",
+      "choices": {
+        "a": "GJMOPQ",
+        "b": "JKMNOR",
+        "c": "HJMNPQ",
+        "d": "JKMPQR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If both K and P are members of the team and three boys in all are included in the team, the members of the team other than K and P are",
+      "choices": {
+        "a": "GJRQ",
+        "b": "HJRQ",
+        "c": "GJRM",
+        "d": "IJRQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_selection",
+      "subtopic_name": "Team Selection",
+      "body": "If the team has three girls including J and K, the members of the team other than J and K are",
+      "choices": {
+        "a": "GHNR",
+        "b": "MQRG",
+        "c": "MNQG",
+        "d": "NHQR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 10,
+      "solution": "In this question, option (a) violates condition (i), option (b) violates condition (i), option (c) violates condition (i), option (d) complies with all the conditions."
+    },
+    {
+      "number": 11,
+      "solution": "If D is chosen, C cannot be chosen. So, alternatives (c) and (d) are rejected. If A is chosen, B has to be chosen, so alternative (b) is rejected. Option (a) complies with all the conditions."
+    },
+    {
+      "number": 12,
+      "solution": "Alternatives (a), (b) and (c) violate condition (i). Option (d) complies with all the conditions."
+    },
+    {
+      "number": 13,
+      "solution": "With M, J is necessary i.e., (a) is not possible. Either N or O is selected. Hence, (c) is not possible. With N, H is necessary. Hence, (d) is not possible. Only option (b) complies with all the conditions."
+    },
+    {
+      "number": 14,
+      "solution": "With R, K is necessary. Hence, (a), (b) and (d) are not possible."
+    },
+    {
+      "number": 15,
+      "solution": "O cannot be with N. Hence, (b) is not possible."
+    },
+    {
+      "number": 16,
+      "solution": "Since, H and N must be together, so (b) is not possible. P and Q must be together. Hence, (c) is not possible. Since, I cannot go with J, hence (d) is not possible. Only option (a) complies with all the conditions."
+    },
+    {
+      "number": 17,
+      "solution": "G, H, J and K are four girls, so (a) is not possible. O and N do not want to be together. So, (c) and (d) are not possible. Only option (b) complies with all the conditions."
+    }
+  ],
+  "answers": [],
+  "_page": 611
+}

@@ -1,0 +1,63 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "(d) Let us see\nOriginal number 8 3 1 4 6 7 5 9\nNew arrangement 6 7 5 9 8 3 1 4\nFrom 3rd right\nSo, the required digit is 3."
+    },
+    {
+      "number": 10,
+      "solution": "(c) Let us see\nOriginal number 3 8 5 6 4 9 0 2 7 1\nNew arrangement 8 3 6 5 9 4 2 0 1 7\nFrom left 5th\nSo, the required digit is 9."
+    },
+    {
+      "number": 11,
+      "solution": "(d) Let us see\nOriginal number 8 1 9 4 3 2 7 5\nNew arrangement 3 2 7 5 8 1 9 4\nFrom right 3rd\nSo, the required digit is 1."
+    },
+    {
+      "number": 12,
+      "solution": "(d) Let us see\nOriginal number 7 6 5 3 4 2 1 8\nStep I Arrangement 8 7 6 4 5 3 2 9\nStep II Arrangement 2 3 4 5 6 7 8 9\nFrom left 5th\nHence, the required digit is 6"
+    },
+    {
+      "number": 13,
+      "solution": "(b) Let us see\nOriginal number 5 2 6 3 1 8 7\nStep I Arrangement 6 1 5 4 2 7 8\nStep II Arrangement 1 2 4 5 6 7 8\nFrom left 3rd\nSo, the required digit is 4."
+    },
+    {
+      "number": 14,
+      "solution": "(a) Let us see\n7 6 4 8 3 9 1 2\n2nd 6th 7th\nPerfect square numbers to be formed are as follows\n169, 196, 361\n(13)² (14)² (31)²\n∴ Number of perfect square numbers = 3\nSo, the required answer is 5."
+    },
+    {
+      "number": 15,
+      "solution": "(b) Let us see\n5 3 2 7 8 4 6 9 1\n3rd 5th 8th\nThe three-digit numbers to be formed with 2, 8, and 9 are\n289, 298, 829, 892, 928, 982\n1+2\n(17)²\n∴ Required two digit odd number = 17\n∴ 2nd digit of 1(7) = 7"
+    },
+    {
+      "number": 16,
+      "solution": "(d) Let us see\n3 1 7 9 2 0 5 6\n2nd 4th 8th\nPerfect squares to be formed with 1, 9, and 6 are as follows\n169, 196, 961\n(13)² (14)² (31)²\n∴ Number of perfect square numbers = 3\nSo, the required answer is X."
+    },
+    {
+      "number": 17,
+      "solution": "(d) According to the question,\nOriginal numbers 4 3 5 8 5 1 3 1 1 2 8 9 8 0\nNew arrangement 5 3 4 1 5 8 1 1 3 6 2 1 0 8 9\nNow, largest number = 821\nand smallest number = 089\n∴ Required sum = 821 + 089 = 910"
+    },
+    {
+      "number": 18,
+      "solution": "(d) According to the question,\nGiven numbers 315 117 472 301 137\nAscending order 117 137 301 315 472\nFrom left 2nd\nDigits sum of the 2nd number from left = 1 + 3 + 7 = 11\n∴ Square of the digits sum = (11)² = 121"
+    },
+    {
+      "number": 19,
+      "solution": "(c) Highest number = 846\n∴ Sum of the first two digits of 846 = 8 + 4 = 12"
+    },
+    {
+      "number": 20,
+      "solution": "(b) According to the question,\nOriginal number 5 2 8 7 3 9 8 4 6 4 9 2 3 7 5\nRearrangement 2 3 4 5 6 7 8 9 4 8 6 9 4 2 7 3 5\n2nd lowest\n∴ Third digit of 37(9) = 9"
+    },
+    {
+      "number": 21,
+      "solution": "(c) According to the question,\nOriginal numbers 5 2 8 7 3 9 8 4 6 4 9 2 3 7 5\nNew arrangement 8 2 5 9 3 7 6 8 8 2 9 4 5 7 3\nAfter new arrangement, third highest number is 648.\n∴ Middle digit of 648 = 4"
+    }
+  ],
+  "answers": [],
+  "_page": 121
+}

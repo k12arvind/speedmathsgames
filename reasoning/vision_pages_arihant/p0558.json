@@ -1,0 +1,106 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Decision Making",
+  "passages": [
+    {
+      "passage_text": "Name\tAge\tEducational qualification\tExperience\tExpected salary (in ₹)\tRemarks\nSunder\t32\tPost-graduate\tSeven years of driving experience\t18000 per month\tEx-employers are highly satisfied. Their only concern is about his tendency to switch jobs after every six months. Enjoys the new news in every job but tends to lose interest after six months. Not willing to come for any more than six months.\nMani\t23\tStudied up to standard IX\t1 yr\t8000 per month\tClaims to have more than one year of experience. But cannot provide any certificate or substantial if he has received a ₹ 20000 per month on account of his good performance as driver.\nChintan\t44\tGraduate\t20 yr\t20000 per month\tWorking as driver for the last one year after losing his previous job of a stenographer. He has been forced to take up the job of a driver.\nBal Singh\t40\tLiterate\tMore than 20 yr\t15000 per month\tCousin of Ram Singh, substituted Ram as Dev's driver whenever Ram was on leave. Currently working as a driver with Dev's in-laws. Strongly recommended by Ram. His knowledge and contacts in the firm is as good as Ram's.\nChetan\t38\tStandard XII\t10 yr\t12000 per month\tWorking as a temporary driver with Dev's major competitor for the last three years. The competitor has offered Chetan's service to Dev as a temporary basis. Chetan has also expressed his willingness to work on a long term basis, provided he is given an annual increment of ₹ 500, which is reasonable as per the market condition.",
+      "has_figure": false,
+      "topic_code": "decision_making"
+    },
+    {
+      "passage_text": "To the Chairman\nDear Mr Sailesh,\nAt the December 3, 2011 meeting, it was decided that no two officers would hold positions on the same committee. It has recently come to my attention that both Chaitanya Rao and Ajit Singh will be serving in some capacity on the Cultural Committee, and both have been nominated for officer status. As you know, this is indirect disregard for the rules as voted by the Members Council last December 3, 2011. I would hope that sufficient action be taken by the Disciplinary Committee (on which committee both of the above are members) so that this problem will be remedied.\nSincerely,\nArvind Singh",
+      "has_figure": false,
+      "topic_code": "decision_making"
+    }
+  ],
+  "questions": [
+    {
+      "number": 52,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "candidate_selection",
+      "subtopic_name": "Candidate Selection",
+      "body": "From his perspective and taking into account the family's concerns, Mr Dev would like to have\n(a) Chetan\t(b) Chintan\t(c) Bal Singh\t(d) Mani\n(e) Sunder",
+      "choices": {
+        "a": "Chetan",
+        "b": "Chintan",
+        "c": "Bal Singh",
+        "d": "Mani",
+        "e": "Sunder"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "stakeholder_analysis",
+      "subtopic_name": "Stakeholder Analysis",
+      "body": "In order to resolve the conflicting preferences, one of Dev's friends suggested Dev, his family members and the HR manager to identify their most and the least preferred candidates without considering the concerns of other stakeholders.\nI. Dev's most and least preferred candidates : Bal Singh and Chetan, respectively.\nII. Family members most and least preferred candidates : Bal Singh and Chintan, respectively.\nIII. HR Manager's most and least preferred candidates : Chetan and Bal Singh, respectively.\n\nWhich of the above three statements is/are in conformity with the information provided in the passage?",
+      "choices": {
+        "a": "Only I",
+        "b": "Only II",
+        "c": "I and II",
+        "d": "II and III",
+        "e": "I, II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "rejection_criteria",
+      "subtopic_name": "Rejection Criteria",
+      "body": "Who among the following five candidates is most likely to be rejected by the GM (HR)?",
+      "choices": {
+        "a": "Chetan",
+        "b": "Chintan",
+        "c": "Bal Singh",
+        "d": "Mani",
+        "e": "Sunder"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "identifying_flaws",
+      "subtopic_name": "Identifying Flaws",
+      "body": "Which of the following is an essential flaw that the writer of the letter overlooked?",
+      "choices": {
+        "a": "Rao and Ajit are already serving together on the disciplinary committee",
+        "b": "The chairman has no power in the matter",
+        "c": "The members council cannot pass rules limiting members",
+        "d": "Rao and Ajit are yet to be confirmed as officers",
+        "e": "Cultural committee is only active during the annual festival"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 558
+}

@@ -1,0 +1,90 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Selecting Folded and Punched Pattern Based on Unfolded Pattern",
+  "passages": [
+    {
+      "passage_text": "A paper sheet is folded in a particular manner and several punches (cuts) are made. When unfolded the paper sheet looks like the question figure (X). From the given options select the one that follows the manner in which the paper is folded and punched.",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Paper Folding and Cutting",
+      "subtopic_code": "folded_punched_pattern",
+      "subtopic_name": "Selecting Folded and Punched Pattern",
+      "body": "Question Figure X with Answer Figures (a), (b), (c), (d)",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Paper Folding and Cutting",
+      "subtopic_code": "folded_punched_pattern",
+      "subtopic_name": "Selecting Folded and Punched Pattern",
+      "body": "Question Figure X with Answer Figures (a), (b), (c), (d)",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Paper Folding and Cutting",
+      "subtopic_code": "folded_punched_pattern",
+      "subtopic_name": "Selecting Folded and Punched Pattern",
+      "body": "Question Figure X with Answer Figures (a), (b), (c), (d)",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "When we fold figure (X), then it looks like answer figure (d)."
+    },
+    {
+      "number": 6,
+      "solution": "When we fold question figure (X), then it looks like answer figure (a)."
+    },
+    {
+      "number": 7,
+      "solution": "When we fold the question figure, then it looks like as answer figure (d)."
+    }
+  ],
+  "answers": [],
+  "_page": 938
+}

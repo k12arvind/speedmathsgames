@@ -1,0 +1,114 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions based on them. In the Venn diagram given below, the square represents women, the triangle represents persons who are in Government services, the circle represents educated persons and the rectangle represents persons working in private sector. Each section of the diagram is numbered. Your task is to study the diagram and answer the questions that follow.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "language_survey",
+      "subtopic_name": "Language Survey Analysis",
+      "body": "A result of a survey of 1000 persons with respect to their knowledge of Hindi (H), English (E) and Sanskrit (S) is given below. What is the ratio of those who know all the three languages to those who do not know Sanskrit?",
+      "choices": {
+        "a": "5/27",
+        "b": "10/17",
+        "c": "1/10",
+        "d": "1/9"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "employment_education",
+      "subtopic_name": "Employment and Education Analysis",
+      "body": "Which number represents educated women, who are in Government jobs?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "6",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "employment_education",
+      "subtopic_name": "Employment and Education Analysis",
+      "body": "Which number represents the uneducated women, who have Government jobs as well as jobs in private sectors?",
+      "choices": {
+        "a": "6",
+        "b": "4",
+        "c": "12",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "employment_education",
+      "subtopic_name": "Employment and Education Analysis",
+      "body": "Number 10 represents",
+      "choices": {
+        "a": "educated women in private jobs",
+        "b": "uneducated men in Government jobs",
+        "c": "educated men working in private sectors",
+        "d": "educated men having private as well as Government jobs"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 23,
+      "solution": "The persons knowing all the three languages are represented by the region which is common to all the three circles. Hence, number of such persons = 100. The persons who do not know Sanskrit are represented by the region outside circle S. So, number of such persons = (200 + 120 + 220) = 540. Required ratio = 100/540 = 5/27"
+    },
+    {
+      "number": 24,
+      "solution": "Educated women in Government jobs are represented by number 3 as it occupies the space common to circle, square and triangle."
+    },
+    {
+      "number": 25,
+      "solution": "Number 9 represents uneducated women who have Government jobs as well as jobs in private sectors because it lies in the space which is common to square, triangle and rectangle."
+    },
+    {
+      "number": 26,
+      "solution": "Number 10 represents educated men having private jobs as well as Government jobs because it lies in the space which is common to circle, triangle and rectangle."
+    }
+  ],
+  "answers": [],
+  "_page": 369
+}

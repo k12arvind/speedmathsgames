@@ -1,0 +1,36 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Clocks",
+  "passages": [],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Clock Problems",
+      "subtopic_code": "hands_coincide",
+      "subtopic_name": "When Clock Hands Meet",
+      "body": "At what time between 1 O'clock and 2 O'clock will the hands of the clock be together?",
+      "choices": {
+        "a": "4 5/11 min past 1",
+        "b": "5 5/11 min past 1",
+        "c": "3 4/11 min past 1",
+        "d": "6 5/11 min past 1"
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "Method I\nAt 1 O'clock, hour hand is at 1 while minute hand is at 12. It means, the two hands are 5 min spaces apart.\nTo be together, minute hand will have to gain 5 min over the hour hand.\nSince 55 min are gained in 60 min\n∴ 5 min will be gained in 60/55 × 5 = 60/11 min or 5 5/11 min\nHence, the two hands will coincide at 5 5/11 min past 1.\n\nMethod II\nIn the given question, x = t, (x + 1) = 2\n∴ Required answer = 60x/11 min past 1\n= 60 × 1/11 min past 1\n= 5 5/11 min past 1"
+    }
+  ],
+  "answers": [],
+  "_page": 416
+}

@@ -1,0 +1,80 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Study the following information to answer the given question: A word arrangement machine, when given an input line of words, rearranges them following a particular rule at each step. The following is an illustration of input and the steps of rearrangement: Input: fire it on zoo figure of in at Step I: an as if it on zoo figure of in at Step II: an as at it on zoo figure of in at Step III: an as at figure if it in zoo of Step IV: an as at figure if it in zoo of at Step V: an as at figure in it of zoo at (and Step VI is the last step of this input.) As per the rules followed in the above steps, find out in the given questions the appropriate step for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Input: we were over with counting at noon. Which of the following will be the penultimate step for the input? 1) Step IV 2) Step V 3) None of these 4) Can't say 5) Step VI",
+      "choices": {
+        "a": "Step IV",
+        "b": "Step V",
+        "c": "None of these",
+        "d": "Can't say",
+        "e": "Step VI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Input: how much can we check and prune. What will be the fifth step for the above input? 1) and much can we check how prune 2) and can check how much we prune 3) and can check how much we prune 4) and can much we check how prune we 5) None of these",
+      "choices": {
+        "a": "and much can we check how prune",
+        "b": "and can check how much we prune",
+        "c": "and can check how much we prune",
+        "d": "and can much we check how prune we",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "What will be the second step for the following input: Input: he has been wearing a loose shirt 1) a has been seen wearing he loose shirt 2) a been has seen wearing he loose shirt 3) a been has he wearing seen loose shirt 4) a been has he been wearing shirt loose 5) None of these",
+      "choices": {
+        "a": "a has been seen wearing he loose shirt",
+        "b": "a been has seen wearing he loose shirt",
+        "c": "a been has he wearing seen loose shirt",
+        "d": "a been has he been wearing shirt loose",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 254
+}

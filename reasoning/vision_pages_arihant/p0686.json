@@ -1,0 +1,50 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Completion of Series",
+  "passages": [
+    {
+      "passage_text": "Each of the following questions consists of five problem figures marked 1, 2, 3, 4 and 5 followed by five answer figures (a), (b), (c), (d) and (e). Find out the figure from the answer figures which will continue the given series.",
+      "has_figure": false,
+      "topic_code": "series"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 12,
+      "solution": "The inner figure is rotating and making an angle of 135° anti-clockwise in each subsequent block."
+    },
+    {
+      "number": 13,
+      "solution": "Here, deletion of design in the figure takes place with the change in the figures. An arrow is deleted in each alternate block with the re-reversal in design. Similarly, base is also reversed with alternate shifting of shaded portion."
+    },
+    {
+      "number": 14,
+      "solution": "Figure △ moves 1, 1, 1/2 and 2 sides in anti-clockwise direction making an angle of 90° anti-clockwise and figure ↑ makes an angle of 45° in clockwise direction and shifts to middle, top and bottom positions in straight line."
+    },
+    {
+      "number": 15,
+      "solution": "In every successive figure, there is an addition of 1, 2, 3, 4, 5, ... lines, respectively."
+    }
+  ],
+  "answers": [
+    {
+      "number": 12,
+      "correct": "c"
+    },
+    {
+      "number": 13,
+      "correct": "e"
+    },
+    {
+      "number": 14,
+      "correct": "e"
+    },
+    {
+      "number": 15,
+      "correct": "b"
+    }
+  ],
+  "_page": 686
+}

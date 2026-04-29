@@ -1,0 +1,28 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 100,
+      "solution": "3: Start by assuming that F is the lowest note on the scale and that I is, therefore, the third. On that assumption there are two positions for G:\n6    H    H\n5    G    G\n4    I    G\n3    I    I\n2    F    F\n1\nJ and K must be placed in the other two positions, with K higher than J:\n6    H    H\n5    G    K\n4    K    G\n3    I    I\n2    J    J\n1    F    F\n\nNow, assume that F is the second note on the scale and that I is, therefore, the fourth:\n6    H\n5    \n4    I\n3    \n2    F\n1\nG must be higher than I:\n6    H\n5    G\n4    J\n3    \n2    F\n1\nK and J must be entered as follows:\n6    H\n5    G\n4    I\n3    K\n2    F\n1    J\n\nNow, try assuming that F is the third note on the scale, which would mean that I is the fifth. That is not possible, however, for G would then have to be higher than the fifth. Thus, we have accounted for all the possibilities:\n   H    H    H\n5  G    G    K\n4  I    K    G\n3  K    I    I\n2  F    J    J\n1  J    F    F\nOnly (3) is necessarily true. The other choices are only possibly true."
+    }
+  ],
+  "answers": [
+    {
+      "number": 13,
+      "correct": null
+    },
+    {
+      "number": 14,
+      "correct": null
+    },
+    {
+      "number": 15,
+      "correct": null
+    }
+  ],
+  "_page": 353
+}

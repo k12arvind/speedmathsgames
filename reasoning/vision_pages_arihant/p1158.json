@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1151,
+      "solution": "Let us find the total valid conclusions from pair of statements given below\nStatements: I. Some dogs are pens. II. All pens are pots.\nConclusions: I. Some pens are dogs. II. Some pens are pots. III. Some pots are pens. IV. Some dogs are pots. V. Some pots are dogs.\n\nExplanations:\n• Conclusion I is the conversion of Statement I.\n• Conclusion II is the implication of Statement II.\n• Conclusion III is the conversion of Statement II.\n• Conclusion IV is the mediate inference of Statements I and II.\n• Conclusion V is the conversion of Conclusion IV.\n\nIn the actual question, the conclusion part may include all/some/none of the valid conclusions.\n\nComplimentary Pair of Conclusions ('Either-or' Situation)\nIn drawing mediate inference from given statements, students are required to be more attentive to select complementary pair of conclusions where neither of the conclusions is definitely true but a combination of both makes a complementary pair.\n\nLet us consider the example\nStatements: Some cars are scooters. Some scooters are buses.\nConclusions: I. Some cars are buses. II. No cars are buses.\n\nSol. Both the statements are properly aligned, therefore fulfil the first requirement but both the statements are of I-type and as per table for mediate inference, a combination I + I does not produce any valid mediate inference. Hence, no mediate inference can be drawn.\n\nIt is important to note here, that Conclusion I \"Some cars are buses\" is not valid because there is a possibility of \"No cars are buses\". Likewise, Conclusion II \"No cars are buses\" is invalid because there is a possibility of \"Some cars are buses\".\n\nIn other words, both the conclusions are invalid individually. However, we can say that either of Conclusion I or II is true. Hence, here, both the conclusions make a complementary pair of conclusions.\n\nA complementary pair of conclusions must follow the following two conditions:\nI. Both of them must have the same subject and the same predicate.\nII. They are any one of three types of pairs.\n(a) I-O type (b) A-O type (c) I-E type\n\nThe following examples show the complementary pairs.\ne.g., 1. (i) All trees are green. (A-type)\n(ii) Some trees are not green. (O-type)\n2. (i) Some trees are green. (I-type)\n(ii) Some trees are not green. (O-type)\n3. (i) Some trees are green. (I-type)\n(ii) No trees are green. (E-type)\n\nAll the three pairs of conclusions comply with the two conditions given above to form a complementary pair, hence form a complementary pair.\n\nThe following examples show the pairs which do not form a complementary pair.\ne.g., 1. (i) All trees are green. (A-type)\n(ii) Some green are not trees. (O-type)"
+    }
+  ],
+  "answers": [],
+  "_page": 1158
+}

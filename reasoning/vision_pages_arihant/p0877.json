@@ -1,0 +1,357 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 13-19) Read the following information carefully to answer the questions that follow. A cube of 3 cm side is divided into smaller cubes of side 1 cm.",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "hidden_corners",
+      "subtopic_name": "Hidden corners in cube",
+      "body": "How many hidden corners are there in a cube?",
+      "choices": {
+        "a": "3",
+        "b": "6",
+        "c": "1",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "cube_properties",
+      "subtopic_name": "Cube properties",
+      "body": "Which of the following statements is true?",
+      "choices": {
+        "a": "length, breadth and height of a cube are equal",
+        "b": "A cube is a three dimensional body",
+        "c": "A cube has 12 edges out of which only 9 are visible at a time",
+        "d": "All of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "smaller_cubes",
+      "subtopic_name": "Formation of smaller cubes",
+      "body": "How many smaller cubes of 1 cm side can be formed with a solid cube of 3 cm side?",
+      "choices": {
+        "a": "3",
+        "b": "6",
+        "c": "9",
+        "d": "27"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "cube_cutting",
+      "subtopic_name": "Cube cutting",
+      "body": "How many times will a solid cube of 4 cm side be cut to obtain smaller cubes of 2 cm side?",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "5",
+        "d": "7"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "small_cubes_visibility",
+      "subtopic_name": "Small cubes visibility",
+      "body": "A solid cube is made using 64 small cubes. In how many small cubes two sides are seen?",
+      "choices": {
+        "a": "24",
+        "b": "32",
+        "c": "40",
+        "d": "42"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "cube_division",
+      "subtopic_name": "Cube division",
+      "body": "A cube of 25 cm side is divided into 125 smaller cubes of equal volume. Find the side of smaller cubes.",
+      "choices": {
+        "a": "2 cm",
+        "b": "3 cm",
+        "c": "5 cm",
+        "d": "6 cm"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "cube_cutting",
+      "subtopic_name": "Cube cutting",
+      "body": "How many times will it be cut to obtain smaller cubes?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "smaller_cubes",
+      "subtopic_name": "Total number of smaller cubes",
+      "body": "Find the total number of smaller cubes.",
+      "choices": {
+        "a": "3",
+        "b": "9",
+        "c": "27",
+        "d": "81"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "corner_cubes",
+      "subtopic_name": "Corner cubes",
+      "body": "Find the total number of corner (vertex) cubes.",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "8",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "middle_cubes",
+      "subtopic_name": "Middle cubes",
+      "body": "What will be the total number of middle cubes?",
+      "choices": {
+        "a": "6",
+        "b": "12",
+        "c": "18",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "central_cubes",
+      "subtopic_name": "Central cubes",
+      "body": "Find the total number of central cubes.",
+      "choices": {
+        "a": "3",
+        "b": "6",
+        "c": "8",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "inner_central_cubes",
+      "subtopic_name": "Inner central cubes",
+      "body": "What is the total number of inner central cubes?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "edge_division",
+      "subtopic_name": "Edge division",
+      "body": "In how many parts will each edge (side) of bigger cube be divided?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "counting_blocks",
+      "subtopic_name": "Counting blocks in figure",
+      "body": "Count the number of blocks in the given figure.",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "counting_cubes",
+      "subtopic_name": "Counting cubes in diagram",
+      "body": "How many cubes are there in this diagram?",
+      "choices": {
+        "a": "16",
+        "b": "12",
+        "c": "10",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "counting_cubes",
+      "subtopic_name": "Counting cubes in figure",
+      "body": "Count the number of cubes in the given figure.",
+      "choices": {
+        "a": "8",
+        "b": "9",
+        "c": "12",
+        "d": "15"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cube",
+      "subtopic_code": "counting_cubes",
+      "subtopic_name": "Counting cubes in figure",
+      "body": "Count the number of cubes in the given figure.",
+      "choices": {
+        "a": "25",
+        "b": "30",
+        "c": "35",
+        "d": "40"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 877
+}

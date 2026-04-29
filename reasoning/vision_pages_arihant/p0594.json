@@ -1,0 +1,71 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "(a) Step II car down table pen jug water fall sign\nStep III car down fall table pen jug water sign\nStep IV car down fall jug table pen water sign\nStep V car down fall jug pen table water sign\nStep VI car down fall jug pen sign table water (final step)\nFour more steps are required to reach the final step"
+    },
+    {
+      "number": 4,
+      "solution": "(c) In the arrangement problem input/previous steps can never be determined."
+    },
+    {
+      "number": 5,
+      "solution": "(b) Step II crown divine victory sky force take lane honey\nStep III crown divine force victory sky take lane honey\nStep IV crown divine force honey victory sky take lane\nStep V crown divine force honey lane victory sky take\nShortcut\nJust take five words alphabetically and put them before the rest of the words. (See 'Rule D' under the section arrangement)"
+    },
+    {
+      "number": 6,
+      "solution": "(c) Input carry over there untill you are held down\nStep I are carry over there untill you held down\nStep II are carry down over there untill you held\nStep III are carry down held over there untill you\nAs Step III is the last step of the given input, hence step IV is not possible"
+    },
+    {
+      "number": 7,
+      "solution": "(c) Input he was getting ready to start for office\nStep I for he was getting ready to start office\nStep II for getting he was ready to start office\nStep III for getting he office was ready to start\nStep IV for getting he office ready was to start\nStep V for getting he office ready start was to\nStep VI for getting he office ready start to was\n∴ Step VI is the last step.\nHence, required number of steps = 6"
+    },
+    {
+      "number": 8,
+      "solution": "(e) Step II 21 win tyre 46 39 case file 51\nStep III 21 win 39 tyre 46 case file 51\nStep IV 21 win 39 tyre 46 file case 51\nStep V 21 win 39 tyre 46 file 51 case.\nThis is the last step. Hence, there will be no VI step."
+    },
+    {
+      "number": 9,
+      "solution": "(c) Input 83 42 bench lower 13 upper floor 37\nStep I 13 83 42 bench lower upper floor 37\nStep II 13 upper 83 42 bench lower floor 37\nStep III 13 upper 37 83 42 bench lower floor."
+    },
+    {
+      "number": 10,
+      "solution": "(d) Input cannot be determined."
+    },
+    {
+      "number": 11,
+      "solution": "(e) Input case over 12 36 49 long ago 42\nStep I 2 case over 36 49 long ago 42\nStep II 12 over case 36 49 long ago 42\nStep III 12 over 36 case 49 long ago 42\nStep IV 12 over 36 long case 49 ago 42\nStep V 12 over 36 long 42 case 49 ago\nThus, Vth step is the last step.\n∴ Last but one step is IV."
+    },
+    {
+      "number": 12,
+      "solution": "(a) Input Judge retire home 62 53 41 34 task\nStep I 34 Judge retire home 62 53 41 task\nStep II 34 task judge retire home 62 53 41\nStep III 34 task 41 judge retire home 62 53\nStep IV 34 task 41 retire judge home 62 53\nStep V 34 task 41 retire 53 judge home 62\nStep VI 34 task 41 retire 53 judge 62 home\nHence, VI steps are required."
+    },
+    {
+      "number": 13,
+      "solution": "(c) Step IV 24 stop 27 pick 94 85 76 bring down\nStep V 24 stop 27 pick 76 94 85 bring down\nStep VI 24 stop 27 pick 76 down 94 85 bring\nStep VII 24 stop 27 pick 76 down 85 94 bring\nStep VIII 24 stop 27 pick 76 down 85 bring 94\nThis is the last step. Hence, four more steps will be required to complete the rearrangement."
+    },
+    {
+      "number": 14,
+      "solution": "(a) Step II 17 vice 22 85 and car oil 42\nStep IV 17 vice 22 oil 85 and car 42\nStep V 17 vice 22 oil 42 85 and car\nStep VI 17 vice 22 oil 42 car 85 and\nThis is the last step. Hence, three more steps will be required to complete the rearrangement."
+    },
+    {
+      "number": 15,
+      "solution": "(e)"
+    },
+    {
+      "number": 16,
+      "solution": "(d)"
+    },
+    {
+      "number": 17,
+      "solution": "(b) 27, 14 and best are the three elements between 'feet' and '32' in the last step which is step VII."
+    }
+  ],
+  "answers": [],
+  "_page": 594
+}

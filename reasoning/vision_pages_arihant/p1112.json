@@ -1,0 +1,118 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Passage and Conclusions",
+  "passages": [
+    {
+      "passage_text": "In an era of globalisation, we need to find appropriate tools to confront the challenges facing agriculture. Commodity future markets can play a major role in addressing some of these challenges. In order to improve agricultural productivity, we need to encourage private investment including that from individual farmers and reasonable returns for agriculture produce is a prerequisite for this. The price appreciation in agriculture commodities has failed to match the increase in price of inputs of the price rise of other commodities, indicating deteriorating terms of trade for agriculture. Our spot markets are fragmented and being dominated by a large chain of intermediaries can hardly ensure a fair return for the farmers. Spot transactions, being mostly offline, lack audit trail. Different prices for the same commodity in different parts of the country give rise to arbitrage opportunities for traders. Further, driven by the need for immediate cash, most farmers engage in distress sale after harvest when supply exceeds demand and price is at its lowest.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Urban lifestyles, fast foods, changing diet patterns, lack of exercise, obesity and smoking are responsible for increase in the incidence of diabetes, heart attacks and cancer. Research has also shown, that modern cooking oils have an unhealthy ratio of harmful fatty acids to essential fatty acids, which contribute to free radical attacks and increase insulin resistance. Ghee, coconut oil and mustard oil have a healthy ratio of fatty acids. Their use in rural India, coupled with a traditional high fiber diet and physical exercise, probably account for the lower incidence of diabetes and heart attacks in the rural population, the study reveals.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Private funding in agricultural activity will significantly improve productivity.",
+      "choices": {},
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Traders are largely benefited due to distress sale of agriculture produces.",
+      "choices": {},
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Prices of agricultural produces are comparable throughout the country.",
+      "choices": {},
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The prices of agricultural produce do not generate expected return at present.",
+      "choices": {},
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Traders are at a disadvantage for lack of organised trade practices of agricultural produces.",
+      "choices": {},
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(b) A measure suggested is likely to be true."
+    },
+    {
+      "number": 2,
+      "solution": "(a) If farmers stand to lose in distress sale, then traders are obviously the gainers."
+    },
+    {
+      "number": 3,
+      "solution": "(d) The passage says that there are different prices for the same commodity in different parts of the country."
+    },
+    {
+      "number": 4,
+      "solution": "(a) It is obvious from the third sentence."
+    },
+    {
+      "number": 5,
+      "solution": "(d) It is the farmers who are being hurt; traders are benefiting from the lack of organised trade practices."
+    }
+  ],
+  "answers": [],
+  "_page": 1112
+}

@@ -1,0 +1,91 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 7,
+  "chapter_title": "Response & Interpretations",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(D) Moving anti-clockwise, the pattern is as follows\n15 + 1 = 16\n16 + 2 = 18\n18 + 3 = 21\nand 21 + 4 = 25\nSo, missing number 25 + 5 = 30\nHence, the answer is option (b)."
+    },
+    {
+      "number": 2,
+      "solution": "(D) The pattern in clockwise direction\n2 ×2→ 4 ×4→ 16 ×16→ 256\n∴ ? = 4"
+    },
+    {
+      "number": 3,
+      "solution": "(D) As, 2² → 4, 3² → 9, 5² → 25\nSimilarly, 9² → 81\n∴ ? = 81"
+    },
+    {
+      "number": 4,
+      "solution": "(D) The pattern in clockwise direction is\n(7 × 2) + 1 = 15\n(15 × 2) + 1 = 31\n(31 × 2) + 1 = 63\n(63 × 2) + 1 = 127\n∴ ? = (127 × 2) + 1 = 255"
+    },
+    {
+      "number": 5,
+      "solution": "(D) Here, the pattern is as follows\n14 + 6 = 20\nSimilarly, 18 + 7 = 25\nHence, the answer is option (b)."
+    },
+    {
+      "number": 6,
+      "solution": "(D) Here, the pattern is as follows\n6 + 1 = 7\nSimilarly, 3 + ? = 6\n⇒ ? = 6 - 3\nor ? = 3\nHence, the answer is option (d)."
+    },
+    {
+      "number": 7,
+      "solution": "(C) As, 7 × 9 = 63 and 5 × 6 = 30\nSimilarly, 4 × ? = 20 ⇒ ? = 20/4 = 5"
+    },
+    {
+      "number": 8,
+      "solution": "(C) As, (24 + 24) ÷ 12 = 4\nand (25 + 20) ÷ 5 = 9\nSimilarly, (50 + 10) ÷ ? = 3\n60 ÷ ? = 3\n? = 60/3 = 20"
+    },
+    {
+      "number": 9,
+      "solution": "(D) As, 7 + 2 = 9, 9 × 4 = 36\n6 + 8 = 14, 14 × 3 = 42\nSimilarly, 9 + 4 = 13 and 13 × 2 = 26\nHence, number 2 will come in place of question mark."
+    },
+    {
+      "number": 10,
+      "solution": "(C) As, 92 + 64 + 52 = 208 = -40\nand 70 + 53 + 45 = 168 = -40\nSimilarly, 48 + 42 + 38 = 128 = -40"
+    },
+    {
+      "number": 11,
+      "solution": "(D) Pattern given in figure is as follows\n5 × 2 + 2 = 12, 12 × 2 + 2 = 26\n26 × 2 + 2 = 54, 54 × 2 + 2 = 110"
+    },
+    {
+      "number": 12,
+      "solution": "(D) The pattern is as follows\n9 × 5 × 3 = 135\n5 × 7 × 4 = 140\nSimilarly, 6 × 5 × 5 = 150\nHence, number 5 will come in place of question mark."
+    },
+    {
+      "number": 13,
+      "solution": "(C) As, (4 + 1/5) = 21/5\nand (1 + 1/2) = 3/2\nSimilarly, 2 + (2/3) = 8/3\nHence, 2/3 will come in place of question mark."
+    },
+    {
+      "number": 14,
+      "solution": "(D) The pattern in clockwise direction is\n2³, 3³, 4³, 5³, 6³ and 7³.\n∴ ? = 7³ = 343"
+    },
+    {
+      "number": 15,
+      "solution": "(C) As, (6 × 8) + 3 = 51\n(15 × 4) + 5 = 65\nSimilarly, (20 × 5) + 20 = 120\nHence, option (c) is the correct answer."
+    },
+    {
+      "number": 16,
+      "solution": "(D) As, (14 × 4 - 20) ÷ 12 = 3\n(9 × 9 - 42) ÷ 13 = 3\nand (12 × 8 - 19) ÷ 7 = 11\nSimilarly, (20 × 10 - 40) ÷ 20 = 8"
+    },
+    {
+      "number": 17,
+      "solution": "(D) Here, In Row 1: (17 + 8)/5 = 5\nIn Row 2: (13 + 7)/5 = 4\nIn Row 3: (6 + 12)/6 = 3\nIn Row 4: (10 + 6)/4 = 4"
+    },
+    {
+      "number": 18,
+      "solution": "(D) As, (3 × 2) + 1 = 7\n(5 × 2) + 1 = 11\nand (7 × 2) + 1 = 15\nSimilarly, ? = 2 × 2 + 1 = 5"
+    },
+    {
+      "number": 19,
+      "solution": "(C) The pattern in the question is\n4² + 5² = 16 + 25 = 41, 2² + 1² = 4 + 1 = 5.\n7² + 6² = 49 + 36 = 85\nHence option (c) is the correct answer."
+    },
+    {
+      "number": 20,
+      "solution": "(D) Starting from 27 and moving clockwise, the number in alternate segments form the series, 27, 30, 33, 36. The numbers in the remaining segments moving anti-clockwise, form the series as shown below.\n?, 21, 23, 25 or 21, 23, 25, ?"
+    }
+  ],
+  "answers": [],
+  "_page": 272
+}

@@ -1,0 +1,76 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 31,
+      "solution": "From Statements 1, 2 and 3, (I + I) + A = Not a valid conclusion Invalid Hence, Conclusion II does not follow. From Statements 3 and 4, A + A = A-type conclusion All desks are mountains --Conversion--> Some mountains are desks. Conclusion III follows. From Statements 2 and 3, I + A = I-type conclusion Some kits are jungles = Conclusion IV So, Conclusions III and IV follow."
+    },
+    {
+      "number": 32,
+      "solution": "Diagram shows relationships between Horses, Lions, Birds, Monkeys, Tigers. Conclusions: I. Some tigers are horses. (✓) II. Some monkeys are birds. (✗) III. Some tigers are birds. (✓) IV. Some monkeys are horses. (✗)"
+    },
+    {
+      "number": 33,
+      "solution": "Diagram shows relationships between Walls, Roads, Benches, Jungles, Houses. Conclusions: I. Some roads are benches. (✗) II. Some jungles are walls. (✗) III. Some houses are benches. (✓) IV. Some roads are houses. (✓)"
+    },
+    {
+      "number": 34,
+      "solution": "Diagram shows relationships between Flowers, Sticks, Dresses, Lamps, Shirts. Conclusions: I. Some shirts are sticks. (✗) II. Some shirts are flowers. (✗) III. Some flowers are sticks. (✗) IV. Some dresses are sticks. (✗)"
+    },
+    {
+      "number": 35,
+      "solution": "Diagram shows relationships between Cups, Glasses, Baskets, Plates, Pots. Conclusions: I. No glasses are pots. (✗) II. All glasses are baskets. (✗) III. Atleast some pots are baskets. (✓) IV. Some plates being glasses is a possibility. (✓)"
+    },
+    {
+      "number": 36,
+      "solution": "Diagram shows relationships between Onions, Mangoes, Potatos, Grapes, Brinjals. Conclusions: I. Potatos are grapes. (✓) II. Some brinjals being potatos is a possibility. (✓) III. Each potato is grape. (✓) IV. Some potatos are definitely onions. (✓)"
+    },
+    {
+      "number": 37,
+      "solution": "Diagram shows relationships between Cats, Rats, Bats, Fighters, Tigers. Conclusions: I. Some tigers are cats. (✗) II. Atleast some fighters being rats is a possibility. (✓) III. Atleast some cats are definitely bats. (✓) IV. None of the fighters is rat. (✗)"
+    },
+    {
+      "number": 38,
+      "solution": "Diagram shows relationships between Snakes, Rabbits, Animals, Eagles, Birds. Conclusions: I. Some animals are snakes. (✗) II. Some birds are snakes. (✗) III. Some birds are eagles. (✓) IV. All birds are rabbits. (✗)"
+    }
+  ],
+  "answers": [
+    {
+      "number": 31,
+      "correct": "e"
+    },
+    {
+      "number": 32,
+      "correct": "d"
+    },
+    {
+      "number": 33,
+      "correct": "c"
+    },
+    {
+      "number": 34,
+      "correct": "d"
+    },
+    {
+      "number": 35,
+      "correct": "c"
+    },
+    {
+      "number": 36,
+      "correct": "c"
+    },
+    {
+      "number": 37,
+      "correct": "e"
+    },
+    {
+      "number": 38,
+      "correct": "c"
+    }
+  ],
+  "_page": 1195
+}

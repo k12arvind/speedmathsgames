@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "(d) Each letter is coded with its left and right letters in English alphabet.\n\nAs, F I C K → 15 17 8 10 2 4 10 12\n                O G H J B D J L\n\nSimilarly, F L A T → 8 7 14 13 26 2 19 21\n                     E G K M Z B S U\n\n∴ FLAT ⇒ EGKMZBSU"
+    },
+    {
+      "number": 8,
+      "solution": "(d) Starting from right end, each letter is coded with its left and right letters in English alphabet.\n\nAs, C H A T → 3 8 1 20 → 19 21 26 2 7 9 2 4\n                        S U Z B G I B D\n\nSimilarly, A P T → 1 16 20 → 19 21 15 17 26 2\n                             S U O Q Z B\n\n∴ APT ⇒ SUOQZB"
+    },
+    {
+      "number": 9,
+      "solution": "(c) Starting from right end, each letter is coded with its left and right letters in English alphabet.\n\nAs, P I N K Y → 16 9 14 11 25 → 24 26 10 12 13 15 8 10 15 17\n                                  X Z J L M O H J O Q\n\nSimilarly, V A N D Y → 22 1 4 14 25 → 24 26 3 5 13 15 26 2 21 23\n                                       X Z C E M O Z B U W\n\n∴ VANDY ⇒ XZCEMOZUW"
+    },
+    {
+      "number": 10,
+      "solution": "(c) Each letter is coded with its right and left letters respectively in English alphabet.\n\nAs, T R U E → 20 18 21 5 → 21 19 19 17 22 20 6 4\n                            U S S Q V T F D\n\nSimilarly, P R A Y → 16 18 1 25 → 17 15 19 17 2 26 26 24\n                                   Q O S Q B Z Z X\n\n∴ PRAY ⇒ QOSQBZZX"
+    }
+  ],
+  "answers": [],
+  "_page": 163
+}

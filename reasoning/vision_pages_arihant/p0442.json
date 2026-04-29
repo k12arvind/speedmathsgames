@@ -1,0 +1,172 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 13,
+  "chapter_title": "Calendar",
+  "passages": [],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "Sudha went to watch movie 9 days ago. She goes to watch movies only on Thursday. What is the day of the week today?",
+      "choices": {
+        "a": "Thursday",
+        "b": "Saturday",
+        "c": "Sunday",
+        "d": "Monday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "Anil reaches at a certain place on Friday and found he reaches the place 3 days before. If he had reached the place on coming Sunday, then how many days before or after he would have reached the place?",
+      "choices": {
+        "a": "One day before",
+        "b": "One day after",
+        "c": "2 days after",
+        "d": "2 days before"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "The day before the day before yesterday is three days after Saturday. What day is it today?",
+      "choices": {
+        "a": "Tuesday",
+        "b": "Wednesday",
+        "c": "Thursday",
+        "d": "Friday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "If the day before yesterday was Wednesday, when will Sunday be?",
+      "choices": {
+        "a": "Today",
+        "b": "Tomorrow",
+        "c": "Day after tomorrow",
+        "d": "Two days after tomorrow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "leap_year",
+      "subtopic_name": "Leap Year Calculation",
+      "body": "If January 1 is a Friday, then what is the first day of the month of March in a leap year?",
+      "choices": {
+        "a": "Tuesday",
+        "b": "Wednesday",
+        "c": "Thursday",
+        "d": "Friday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) 2 days before yesterday = Friday\n∴ Yesterday = Friday + 2 = Sunday\n∴ Today = Sunday + 1 = Monday\n∴ Day after tomorrow = Monday + 2 = Wednesday"
+    },
+    {
+      "number": 2,
+      "solution": "(c) A day before yesterday = Thursday\nYesterday = Thursday + 1 = Friday\nToday = Friday + 1 = Saturday\n∴ Sunday = Saturday + 1 = Tomorrow"
+    },
+    {
+      "number": 3,
+      "solution": "(d) A day after tomorrow = Tuesday\n∴ Two days after the day after tomorrow\n= Tuesday + 2 = Thursday"
+    },
+    {
+      "number": 4,
+      "solution": "(d) Day before yesterday = Thursday\n∴ Today = Thursday + 2 = Saturday\n∴ Monday = Saturday + 2 = Day after tomorrow"
+    },
+    {
+      "number": 5,
+      "solution": "(d) A day before yesterday = Wednesday\nYesterday = Wednesday + 1 = Thursday\nToday = Thursday + 1 = Friday\n∴ Sunday = Friday + 2 = Day after tomorrow."
+    },
+    {
+      "number": 6,
+      "solution": "(d) Three days after today = Tuesday\nToday = Tuesday - 3 = Saturday\nYesterday = Saturday - 1 = Friday\n∴ 4 days before yesterday = Friday - 4 = Monday"
+    },
+    {
+      "number": 7,
+      "solution": "(c) Two days after tomorrow = Thursday\nTomorrow = Thursday - 2 = Tuesday\nToday = Tuesday - 1 = Monday\nYesterday = Monday - 1 = Sunday\n∴ 3 days before yesterday = Sunday - 3 = Thursday"
+    },
+    {
+      "number": 8,
+      "solution": "(d) Day after tomorrow = Sunday\nTomorrow = Sunday - 1 = Saturday\nToday = Saturday - 1 = Friday\nYesterday = Friday - 1 = Thursday\n∴ Day before yesterday = Thursday - 1 = Wednesday"
+    },
+    {
+      "number": 9,
+      "solution": "(d) A day before yesterday = Tuesday\nYesterday = Tuesday + 1\n= Wednesday\nToday = Wednesday + 1\n= Thursday\nTomorrow = Thursday + 1 = Friday\n∴ Day after tomorrow = Friday + 1\n= Saturday"
+    },
+    {
+      "number": 10,
+      "solution": "(c) Day before yesterday = Saturday\nToday = Saturday + 2 = Monday\n∴ Tomorrow = Monday + 1 = Tuesday\n∴ Day after Tomorrow = Tuesday + 1\n= Wednesday"
+    },
+    {
+      "number": 11,
+      "solution": "(b) Day 9 days ago = Thursday\n∴ Today = Thursday + 9 = Thursday + 7 + 2\n= Thursday + 2\n= Saturday"
+    },
+    {
+      "number": 12,
+      "solution": "(c) The correct day on which Anil has to reach the place\n= Friday + 3 = Monday. Therefore, if Anil reaches on\nSunday, then he reaches there on the day which is (Monday\n- 1) or 1 day before the correct day."
+    },
+    {
+      "number": 13,
+      "solution": "(d) Three days after Saturday is Tuesday\nand Tuesday is a day before the day before yesterday\nSo, yesterday is Thursday and today is Friday."
+    },
+    {
+      "number": 14,
+      "solution": "(c) If the day before yesterday was Wednesday, then today will\nbe Friday and the day after tomorrow will be Sunday."
+    },
+    {
+      "number": 15,
+      "solution": "(c) Total number of days from January 1 to March 1\n= 30 + 29 + 1\n= 60 days\n(February in a leap years = 29 days)\n60 ÷ 7 = 8 weeks and 4 odd days\nSo, the fourth day from Friday = Tuesday"
+    }
+  ],
+  "answers": [],
+  "_page": 442
+}

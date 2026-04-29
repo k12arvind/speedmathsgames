@@ -1,0 +1,290 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Read the following informations to answer the questions that follow. Seven people A, B, C, D, E, F and G are planning to enjoy boating. There are only two boats and the following conditions are to be kept in mind. I. A will go in the same boat in which E is to go. II. F cannot go in the boat in which C unless D is also accompanying. III. Neither B nor C can be given the boat in which G is. IV. The maximum number of persons in one boat can be four only.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and then answer the questions based on that. From amongst five doctors A, B, C, D and E, four engineers G, H, K and L and six teachers M, N, O, P, Q and R, some teams are to be selected. Of these A, B, C, H, O, P and Q are females and the rest are males. The formation of teams is subject to the following conditions. I. Whenever there is a male doctor, there will be no female teacher. II. Whenever there is a male engineer, there will be no female doctor. III. There shall not be more than two male teachers in any team.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the following information carefully and answer the questions given below. P, Q, R, S, T, V, W and Z are going to three destinations Delhi, Chennai and Hyderabad in three different vehicles - Honda City, Swift D'Zire and Ford Ikon. There are three females among them-one in each car. There are atleast two persons in each car. R is not travelling with Q and W. T, a male, is travelling with only Z and they are not going to Chennai. P is travelling in Honda City and is going to Hyderabad. S is the sister of P and is travelling by Ford Ikon. V and R are travelling together. W is not going to Chennai.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping Arrangement",
+      "body": "The 3rd panel could consist of all the following except",
+      "choices": {
+        "a": "K, L, O",
+        "b": "K, L, J",
+        "c": "G, H, J",
+        "d": "G, I, J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping Arrangement",
+      "body": "All the following could be on the same panel as K, except",
+      "choices": {
+        "a": "G",
+        "b": "I",
+        "c": "J",
+        "d": "M"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "grouping",
+      "subtopic_name": "Grouping Arrangement",
+      "body": "If J and K appear on the 3rd panel, which of the following professors must appear on 2nd?",
+      "choices": {
+        "a": "G",
+        "b": "H",
+        "c": "I",
+        "d": "L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "boat_arrangement",
+      "subtopic_name": "Boat Arrangement",
+      "body": "If F and B are in one boat, which of the following statements is true?",
+      "choices": {
+        "a": "G is in the other boat",
+        "b": "D is in the other boat",
+        "c": "C is in the other boat",
+        "d": "E is with F and B in one boat"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "boat_arrangement",
+      "subtopic_name": "Boat Arrangement",
+      "body": "If E gets boat with F, which of the following is the complete and accurate list of the people who must be sitting in other boat?",
+      "choices": {
+        "a": "F and E",
+        "b": "G and A",
+        "c": "D and A",
+        "d": "C, D and B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_formation",
+      "subtopic_name": "Team Formation",
+      "body": "If the team consists of two doctors, two female teachers and two engineers, all the following teams are possible except",
+      "choices": {
+        "a": "OPGHAB",
+        "b": "ABGHPQ",
+        "c": "ABGHQQ",
+        "d": "ARKLPQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_formation",
+      "subtopic_name": "Team Formation",
+      "body": "If the team consists of two doctors, three female teachers and two engineers, the members of the team are",
+      "choices": {
+        "a": "CDOPQGH",
+        "b": "ABOPQGH",
+        "c": "CDKLOPQ",
+        "d": "DEGHOPQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_formation",
+      "subtopic_name": "Team Formation",
+      "body": "If the team consists of three doctors, two male engineers and two teachers, the members of the team could be",
+      "choices": {
+        "a": "CDEKLMN",
+        "b": "ABCKLMR",
+        "c": "CDEKLPR",
+        "d": "BCDKLNR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_formation",
+      "subtopic_name": "Team Formation",
+      "body": "If the team consists of two doctors, one engineer and four teachers, all the following teams are possible except",
+      "choices": {
+        "a": "ABGMNOP",
+        "b": "ABKNRPQ",
+        "c": "ABHMOPQ",
+        "d": "ABHMPRQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "team_formation",
+      "subtopic_name": "Team Formation",
+      "body": "If the team consists of two doctors, two engineers and two teachers, all the following teams are possible except",
+      "choices": {
+        "a": "CEKLMN",
+        "b": "ABGHMN",
+        "c": "CDKLOP",
+        "d": "ABGHOP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "vehicle_arrangement",
+      "subtopic_name": "Vehicle Arrangement",
+      "body": "Members of which of the following cars are going to Chennai?",
+      "choices": {
+        "a": "Honda City",
+        "b": "Swift D'Zire",
+        "c": "Ford Ikon",
+        "d": "Either Swift D'Zire or Ford Ikon",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "vehicle_arrangement",
+      "subtopic_name": "Vehicle Arrangement",
+      "body": "In which car are four members travelling?",
+      "choices": {
+        "a": "None",
+        "b": "Honda City",
+        "c": "Swift D'Zire",
+        "d": "Ford Ikon",
+        "e": "Either Honda City or Ford Ikon"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "vehicle_arrangement",
+      "subtopic_name": "Vehicle Arrangement",
+      "body": "Which of the following combinations represents the three female members?",
+      "choices": {
+        "a": "QSZ",
+        "b": "WSZ",
+        "c": "PSZ",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 613
+}

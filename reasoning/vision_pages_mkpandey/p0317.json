@@ -1,0 +1,117 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: Study the following information carefully and answer the questions given below it:\nSix members A, B, C, D, E and F and five girls P, Q, R, S and T, a team of six is to be selected under the following conditions:\n(1) A and D have to be together.\n(2) C cannot go with S.\n(3) S and T have to be together.\n(4) B cannot be teamed with E.\n(5) D cannot go with P.\n(6) B and R have to be together.\n(7) C and Q have to be together.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "conditional_selection",
+      "subtopic_name": "Conditional Selection",
+      "body": "If there are five boys in the team, the only girl member is\n(a) P    (b) Q    (c) R    (d) S",
+      "choices": {
+        "a": "P",
+        "b": "Q",
+        "c": "R",
+        "d": "S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "conditional_selection",
+      "subtopic_name": "Conditional Selection",
+      "body": "If, including P, the team has three girls, the members other than P are\n(a) ADEQST    (b) ADEST    (c) ABEST    (d) BFQST",
+      "choices": {
+        "a": "ADEQST",
+        "b": "ADEST",
+        "c": "ABEST",
+        "d": "BFQST"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "conditional_selection",
+      "subtopic_name": "Conditional Selection",
+      "body": "If the team including C consists of four boys, the members of the team other than C are\n(a) ABFQR    (b) AAROQR    (c) DEFAQ    (d) BERQ",
+      "choices": {
+        "a": "ABFQR",
+        "b": "AAROQR",
+        "c": "DEFAQ",
+        "d": "BERQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "conditional_selection",
+      "subtopic_name": "Conditional Selection",
+      "body": "If four members including E have to be boys, the members other than E are\n(a) ACDPQ    (b) ABCDST    (c) ACDPQ    (d) ACDPQ",
+      "choices": {
+        "a": "ACDPQ",
+        "b": "ABCDST",
+        "c": "ACDPQ",
+        "d": "ACDPQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "conditional_selection",
+      "subtopic_name": "Conditional Selection",
+      "body": "If four members have to be girls, the members of the team are\n(a) BFPRST    (b) BFPRST    (c) BECQRST    (d) BECPQRT",
+      "choices": {
+        "a": "BFPRST",
+        "b": "BFPRST",
+        "c": "BECQRST",
+        "d": "BECPQRT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 317
+}

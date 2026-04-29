@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "Method I\n∴ Angle traced by the hour hand in 12 h = 360°\n\nSo, angle traced by the hour hand in 8 h 50 min i.e., 53/6 h = (360/12 × 53/6) = 265°\n\n∴ Angle traced by the minute hand in 60 min = 360°\n∴ Angle traced by minute hand in 50 min = 360°/60 × 50 = 300°\n\n∴ Required angle = (300° – 265°) = 35°\nMethod II\nIn the given question, hour hand is behind the minute hand. Also, given, n = 8, x = 50\nThen, according to the formula,\n∴ Required angle = |30(x/5 - n) - x/2| ⇒ |30(50/5 - 8) - 50/2| ⇒ (30 × 2 - 25)° = 35°"
+    }
+  ],
+  "answers": [],
+  "_page": 415
+}

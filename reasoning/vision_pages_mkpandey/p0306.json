@@ -1,0 +1,117 @@
+{
+  "page_type": "questions",
+  "chapter_number": 20,
+  "chapter_title": "Problem-Solving",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. There are six cities A, B, C, D, E and F. A is not a hill-station. B and E are not historical places. D is not an industrial city. A and D are not historical places. A and D are not alike. Which two cities are industrial centres?",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Which two cities are industrial centres?",
+      "choices": {
+        "a": "A and B",
+        "b": "E and F",
+        "c": "C and D",
+        "d": "A and D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Which cities are historical places?",
+      "choices": {
+        "a": "A and B",
+        "b": "B and F",
+        "c": "C and F",
+        "d": "A and D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Which cities are hill stations?",
+      "choices": {
+        "a": "A and B",
+        "b": "C and A",
+        "c": "B and D",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Which city is a hill station and an industrial centre but not a historical place?",
+      "choices": {
+        "a": "A",
+        "b": "F",
+        "c": "C",
+        "d": "B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Which two cities are historical places nor industrial centres?",
+      "choices": {
+        "a": "A and B",
+        "b": "D and E",
+        "c": "F and C",
+        "d": "B and D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 306
+}

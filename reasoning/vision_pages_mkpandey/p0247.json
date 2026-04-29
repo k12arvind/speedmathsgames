@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 16,
+      "solution": "Batch III: night succeed day and have to for Batch VI: work hard for in succeed night and day. 17.4; Batch V: we go should first we time day Batch III: zoo we she should visit day ding in Batch IV: to fast rush avoid dot do very run Batch II: much crow avoid do run very fast"
+    },
+    {
+      "number": 17,
+      "solution": "For the sake of convenience, assign numbers to each word of the input. over your put me crow easy to 1 2 3 4 5 6 7 8 Now, in Step I, the third word comes at the beginning and the first and second words are pushed rightwards. Also the fourth word moves to the end and the remaining words are pushed leftwards. In Step II, the fourth word from the first step comes at the beginning and the first, second and third words of Step I are pushed rightwards, the fifth word of Step II goes at the end and the remaining words are pushed leftwards. These steps are repeated thereafter. For convenience, we plot the movement of each word in each step by the numbers assigned to them in the input."
+    },
+    {
+      "number": 18,
+      "solution": "The answer is 'much down in put as col sa'. From Input to Step I: The second and sixth words are interchanged, and the first and third. From Step I to Step II: The second and third words are interchanged, and the first and sixth. For convenience, we plot the movement of each word in each step by the numbers assigned to them in the input."
+    },
+    {
+      "number": 19,
+      "solution": "Step IV is the same as input, step V would be the same as step I, and so on. Thus the arrangement gets repeated every four steps."
+    },
+    {
+      "number": 20,
+      "solution": "Since the arrangement is repeated every four steps, step VII would be the same as step III. Hence, Now step V would be the same as step III. Hence, Now step VI could be the same as step I, i.e 1654327. From Input to Step I: The third and fifth words come in place of first and second respectively and the rest get shifted rightward. From step I to step III: The third and fifth words are interchanged. These steps are repeated thereafter. For convenience, we plot the movement of each word in each step by the numbers assigned to them in the input, i.e. cr-1, cat-2, yam-3, are4, choc-5."
+    },
+    {
+      "number": 21,
+      "solution": "From the table, the numbers in Step II are 5 3 1 2 7 4 6 so but he for game free In Step VI, we have the numbers arranged as 6 5 7 1 4 3 2 free go for but game su he"
+    }
+  ],
+  "answers": [],
+  "_page": 247
+}

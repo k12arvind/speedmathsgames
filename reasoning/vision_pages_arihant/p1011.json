@@ -1,0 +1,50 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Technical Aspect of an Argument",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "argument_assumptions",
+      "subtopic_name": "Argument Assumptions",
+      "body": "Does an argument always has an assumption?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_argument",
+      "topic_name": "Statement and Argument",
+      "subtopic_code": "argument_premises",
+      "subtopic_name": "Argument Premises",
+      "body": "Does an argument has only one premise always?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "A point to be noted here is that it is not necessary that every argument has an assumption. Keep in mind, an assumption is the hidden premise (statement/sentence). It is not explicitly said because it is supposed to be communicated without saying in another words. Assumption is a missing link in the chain of logic and if an argument is complete in itself and does not have missing links, then it does not have any assumption. Let us see the following argument having no assumption India needs 26 runs in 6 balls to win the match, only a big blaster like Dhoni can do it. Dhoni is at the crease. So, India will win the match. In the above argument, all the things have been said clearly and explicitly. There is no hidden premise and hence it can be said that an argument can be without any assumption. Further, the reply for the Q. 2 also exists in the same argument as it has four premises. Let us see Premise 1 India needs 26 runs to win the match. Premise 2 Only a big blaster like Dhoni can do it. Premise 3 Dhoni is at the crease. Premise 4 So, India will win the match Now, we can firmly say that it is not necessary for an argument to have only one premise always but an argument can have more than one premise. The answer for both the questions is 'No'."
+    },
+    {
+      "number": 2,
+      "solution": "A point to be noted here is that it is not necessary that every argument has an assumption. Keep in mind, an assumption is the hidden premise (statement/sentence). It is not explicitly said because it is supposed to be communicated without saying in another words. Assumption is a missing link in the chain of logic and if an argument is complete in itself and does not have missing links, then it does not have any assumption. Let us see the following argument having no assumption India needs 26 runs in 6 balls to win the match, only a big blaster like Dhoni can do it. Dhoni is at the crease. So, India will win the match. In the above argument, all the things have been said clearly and explicitly. There is no hidden premise and hence it can be said that an argument can be without any assumption. Further, the reply for the Q. 2 also exists in the same argument as it has four premises. Let us see Premise 1 India needs 26 runs to win the match. Premise 2 Only a big blaster like Dhoni can do it. Premise 3 Dhoni is at the crease. Premise 4 So, India will win the match Now, we can firmly say that it is not necessary for an argument to have only one premise always but an argument can have more than one premise. The answer for both the questions is 'No'."
+    }
+  ],
+  "answers": [],
+  "_page": 1011
+}

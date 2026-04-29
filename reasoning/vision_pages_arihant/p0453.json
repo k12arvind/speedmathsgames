@@ -1,0 +1,173 @@
+{
+  "page_type": "questions",
+  "chapter_number": 14,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "basic_directions",
+      "subtopic_name": "Basic Directions",
+      "body": "Rashmi goes towards East from a point P and then turns left. She walks some distance and then turns her right. Which direction is she going now?",
+      "choices": {
+        "a": "North",
+        "b": "East",
+        "c": "West",
+        "d": "South"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "basic_directions",
+      "subtopic_name": "Basic Directions",
+      "body": "A man goes 5 km East, then he turns right and goes 4 km, then he turns left and goes 5 km. Which direction is he facing now?",
+      "choices": {
+        "a": "North",
+        "b": "South",
+        "c": "East",
+        "d": "West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "City C is to the South of city B and city A is to the North of city C. In which direction city A is located in respect of city B?",
+      "choices": {
+        "a": "North",
+        "b": "South",
+        "c": "East",
+        "d": "Cannot be determined",
+        "e": "West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "City D is to the West of city M. City R is to the South of city D. If city K is to the East of city R, then in which direction is city K located in respect of city D?",
+      "choices": {
+        "a": "North",
+        "b": "East",
+        "c": "North-East",
+        "d": "South-East",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "clockwise_turns",
+      "subtopic_name": "Clockwise Turns",
+      "body": "Kamal is facing South. He turns 135° in the anti-clockwise direction and then 180° in the clockwise direction. What direction is he facing now?",
+      "choices": {
+        "a": "North",
+        "b": "South-West",
+        "c": "East",
+        "d": "North-West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "clockwise_turns",
+      "subtopic_name": "Clockwise Turns",
+      "body": "Surbhi is facing East. She turns 100° in the clockwise direction and then 145° in the anti-clockwise direction. Which direction is she facing now?",
+      "choices": {
+        "a": "West",
+        "b": "North-East",
+        "c": "North",
+        "d": "South-West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "complex_movement",
+      "subtopic_name": "Complex Movement",
+      "body": "A person walks 1 mile to West, turns left and walks 1 mile and turns left and walks 1 mile and again turns left and walks 1 mile. What is the direction he is facing now?",
+      "choices": {
+        "a": "North",
+        "b": "South",
+        "c": "East",
+        "d": "West"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "complex_movement",
+      "subtopic_name": "Complex Movement",
+      "body": "I was facing East from where I turned to my left and walked 12 ft, then I turned towards right and walked 6 ft. After that I walked 6 ft in South direction and at last I walked 6 ft in the West. Then, in which direction am I standing from the original point?",
+      "choices": {
+        "a": "West",
+        "b": "East",
+        "c": "South",
+        "d": "North"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 453
+}

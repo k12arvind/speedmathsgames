@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Decision Making",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 17,
+      "solution": "Tina cannot leave before 16:00 h on 8th January. So, if any of the travel modes necessitate departure before 16:00 h, she will have to begin the journey on 9th January. However, consider that the 'time out of Jamshedpur' is to be minimized. So, the time that she spends in Jamshedpur till her departure on 9th January cannot be considered 'waiting time'.\n\nNow, let us consider each option one-by-one.\n\nOption (a)\nSince, there are 2 train journeys.\nTravel time = (2 × 10) + (2 × 35) + Actual travel time in 12443 + Actual travel time in 12444\n= 20 + 70 + 1120 + 1035 = 2245 min\nWork time = 360 min\nIf she goes by train 12443, she will leave on 9th January, reach the work site at 11 : 10 h on 10th and finish the work at 17 : 10 h. Because train 12444 departs at 17 : 20 h, she will miss it and will have to catch it on 11th January. It means a waiting time till 16 : 45 h of 11th January i.e., 1415 min.\nSo, total time = 2245 + 360 + 1415 = 4020 min\nHence, option (a) can be rejected.\n\nOption (b)\nShe goes by train and comes back by flight.\nTravel time = Time from home to Jamshedpur station + Actual time in train travel + Time from Delhi railway station to work site + Flight time = 10 + 1120 + 35 + 435 = 1600 min\nWork time = 360 min\nIf she goes by train 12443, she will leave on 9th January, reach the work site at 11 : 10 h on 10th and finish the work at 17 : 10 h. Flight AI 9809 departs at 05 : 50 h on 11th January. So, she will have to wait till 03 : 20 h of 11th January i.e., a waiting time of 610 min.\nSo, total time = 1600 + 360 + 610 = 2570 min\nHence, option (a) can be rejected.\n\nObserve that options (c) and (d) can straightaway be rejected as they mention a return journey by train 12801, which is not feasible as that train travels from Jamshedpur to Delhi and not the other way round.\nHence, options (c) and (d) can be rejected."
+    }
+  ],
+  "answers": [],
+  "_page": 538
+}

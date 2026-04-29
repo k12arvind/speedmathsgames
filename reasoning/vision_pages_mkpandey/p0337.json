@@ -1,0 +1,292 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "There are six persons A, B, C, D, E and F in a family. C is the sister of E. E is the brother of E's husband. D is the father of A and grandfather of E. There are 2 fathers, 2 brothers and a mother in the group.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "A blacksmith has five iron articles A, B, C, D, and E, each having a different weight.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    },
+    {
+      "passage_text": "Five persons are sitting in a row. One of the two persons at the extreme ends is Intelligent and the other one is Fair. A fat person is sitting on the right of the Intelligent one and on the left of the fair person and the weak person is sitting between the Intelligent and the fat person.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 109,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "general",
+      "topic_name": "General Reasoning",
+      "subtopic_code": "position",
+      "subtopic_name": "Position and Direction",
+      "body": "Who is on the right of C?",
+      "choices": {
+        "1": "A",
+        "2": "B",
+        "3": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 110,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "general",
+      "topic_name": "General Reasoning",
+      "subtopic_code": "statements",
+      "subtopic_name": "Statement Analysis",
+      "body": "Which of the above given statements is superfluous?",
+      "choices": {
+        "1": "1",
+        "2": "2",
+        "3": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 111,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_group",
+      "subtopic_name": "Family Group Analysis",
+      "body": "Which of the following is a group of brothers?",
+      "choices": {
+        "1": "ABC",
+        "2": "ABD",
+        "3": "ABF"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 112,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is E's husband?",
+      "choices": {
+        "1": "B",
+        "2": "C",
+        "3": "D",
+        "4": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 113,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is the mother?",
+      "choices": {
+        "1": "A",
+        "2": "B",
+        "3": "E",
+        "4": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 114,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "counting",
+      "subtopic_name": "Counting Relations",
+      "body": "How many male members are there in the group?",
+      "choices": {
+        "1": "Two",
+        "2": "Four",
+        "3": "One",
+        "4": "Three",
+        "5": "Five"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 115,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is F related to E?",
+      "choices": {
+        "1": "Son",
+        "2": "Daughter",
+        "3": "Husband",
+        "4": "Uncle",
+        "5": "Father-in-law"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 116,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time",
+      "subtopic_code": "weight_comparison",
+      "subtopic_name": "Weight Comparison",
+      "body": "Which of the following is the lightest in weight?",
+      "choices": {
+        "1": "A",
+        "2": "B",
+        "3": "C",
+        "4": "D",
+        "5": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 122,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "The tall person is at which place, counting from right?",
+      "choices": {
+        "1": "First",
+        "2": "Second",
+        "3": "Third",
+        "4": "Fourth",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 123,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "Which of the following describes the person on the left of the weak person?",
+      "choices": {
+        "1": "Intelligent",
+        "2": "Fat",
+        "3": "Fair",
+        "4": "Tall",
+        "5": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 124,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "Which of the following persons is sitting at the centre?",
+      "choices": {
+        "1": "Fair",
+        "2": "Weak",
+        "3": "Intelligent",
+        "4": "Tall",
+        "5": "Fat"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 125,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "On whose left is the fat person sitting?",
+      "choices": {
+        "1": "Fair",
+        "2": "Intelligent",
+        "3": "Tall",
+        "4": "Weak",
+        "5": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 126,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "position_exchange",
+      "subtopic_name": "Position Exchange",
+      "body": "If the fat person and the fair person exchange their positions, and so also do the intelligent and the weak one, then who will be sitting on the left of the weak person?",
+      "choices": {
+        "1": "Fair",
+        "2": "Fair",
+        "3": "Fat",
+        "4": "Intelligent",
+        "5": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 337
+}

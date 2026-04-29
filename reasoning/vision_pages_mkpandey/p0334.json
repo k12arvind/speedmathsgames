@@ -1,0 +1,389 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 60-64): Read the following information carefully and answer the questions given below: i) Six persons A, B, C, D, E and F are sitting in two rows, three in each. ii) F is not at the end of any row. iii) D is second to the left of E. iv) C, the neighbour of E, is sitting diagonally opposite to D. v) B is the neighbour of F.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Directions (Q. 65-69): Read the following information carefully and answer the questions given below: i) There are five friends - Shailendra, Keshav, Madhav, Ashish and Rakesh. ii) Shailendra is shorter than Keshav but taller than Rakesh. iii) Madhav is the tallest. iv) Ashish is a little shorter than Keshav and a little taller than Shailendra. v) Who is the shortest?",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    },
+    {
+      "passage_text": "Directions (Q. 70-73): Read the following information carefully and answer the questions given below: In the branch of X, Z is the son of X, K the daughter of K, is married to G and X are sisters.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. 74-77): Read the following information carefully and answer the questions given below: In a car rally, cars of seven different companies, viz. Cardillac, Ambassador, Fiat, Maruti, Mercedes, Bedford and Fargo were displayed in a row, parked one behind the other in immediate right of Fargo.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 59,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "general",
+      "topic_name": "General Reasoning",
+      "subtopic_code": "group_members",
+      "subtopic_name": "Group Member Selection",
+      "body": "Which of the following is definitely a group of male members? 1) QU 2) QUT 3) None of these 4) UT 5) QUP",
+      "choices": {
+        "a": "QU",
+        "b": "QUT",
+        "c": "None of these",
+        "d": "UT",
+        "e": "QUP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_seating",
+      "subtopic_name": "Linear Seating",
+      "body": "Which of the following are sitting diagonally opposite to each other? 1) F and C 2) D and A 3) A and C 4) A and B 5) A and B",
+      "choices": {
+        "a": "F and C",
+        "b": "D and A",
+        "c": "A and C",
+        "d": "A and B",
+        "e": "A and B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_seating",
+      "subtopic_name": "Linear Seating",
+      "body": "Who is facing B? 1) A 2) C 3) D 4) E 5) F",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "D",
+        "d": "E",
+        "e": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_seating",
+      "subtopic_name": "Linear Seating",
+      "body": "Which of the following are in the same row? 1) A and E 2) E and F 3) C and B 4) A and B 5) C and E",
+      "choices": {
+        "a": "A and E",
+        "b": "E and F",
+        "c": "C and B",
+        "d": "A and B",
+        "e": "C and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_seating",
+      "subtopic_name": "Linear Seating",
+      "body": "Which of the following are in the same row? 1) FBC 2) CEB 3) DBF 4) AEF 5) DCE",
+      "choices": {
+        "a": "FBC",
+        "b": "CEB",
+        "c": "DBF",
+        "d": "AEF",
+        "e": "DCE"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_seating",
+      "subtopic_name": "Linear Seating",
+      "body": "After interchanging seat with F, who will be the neighbour of D in the new position? 1) C and A 2) E and B 3) Only B 4) Only A 5) Only C",
+      "choices": {
+        "a": "C and A",
+        "b": "E and B",
+        "c": "Only B",
+        "d": "Only A",
+        "e": "Only C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_ranking",
+      "subtopic_name": "Height Ranking",
+      "body": "Who is the shortest? 1) Rakesh 2) Shailendra 3) Ashish 4) Keshav 5) None of these",
+      "choices": {
+        "a": "Rakesh",
+        "b": "Shailendra",
+        "c": "Ashish",
+        "d": "Keshav",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_ranking",
+      "subtopic_name": "Height Ranking",
+      "body": "If they stand in order of their heights, who will be in the middle? 1) Keshav 2) Rakesh 3) Shailendra 4) Ashish 5) None of these",
+      "choices": {
+        "a": "Keshav",
+        "b": "Rakesh",
+        "c": "Shailendra",
+        "d": "Ashish",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_ranking",
+      "subtopic_name": "Height Ranking",
+      "body": "If they stand in order of increasing heights, who will be the second? 1) Ashish 2) Shailendra 3) Rakesh 2) Keshav 5) None of these",
+      "choices": {
+        "a": "Ashish",
+        "b": "Shailendra",
+        "c": "Rakesh",
+        "d": "Keshav",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 68,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is the second tallest? 1) Shailendra 2) Keshav 3) Ashish 4) Rakesh 5) None of these",
+      "choices": {
+        "a": "Shailendra",
+        "b": "Keshav",
+        "c": "Ashish",
+        "d": "Rakesh",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Who is taller than Ashish but shorter than Madhav? 1) Madhav 2) Keshav 3) Rakesh 4) Ashish 5) Shailendra",
+      "choices": {
+        "a": "Madhav",
+        "b": "Keshav",
+        "c": "Rakesh",
+        "d": "Ashish",
+        "e": "Shailendra"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is P related to G? 1) Niece 2) Daughter 3) Daughter-in-law 4) Cousin 5) Sister",
+      "choices": {
+        "a": "Niece",
+        "b": "Daughter",
+        "c": "Daughter-in-law",
+        "d": "Cousin",
+        "e": "Sister"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 71,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is Z related to P? 1) Maternal uncle 2) Uncle 3) Cousin 4) Brother-in-law 5) None of these",
+      "choices": {
+        "a": "Maternal uncle",
+        "b": "Uncle",
+        "c": "Cousin",
+        "d": "Brother-in-law",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 72,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is N related to K? 1) Son 2) Nephew 3) Father-in-law 4) Son-in-law 5) None of these",
+      "choices": {
+        "a": "Son",
+        "b": "Nephew",
+        "c": "Father-in-law",
+        "d": "Son-in-law",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "passage_index": 2,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is G related to Z? 1) Sister 2) Wife 3) Aunt 4) Mother-in-law 5) Daughter-in-law",
+      "choices": {
+        "a": "Sister",
+        "b": "Wife",
+        "c": "Aunt",
+        "d": "Mother-in-law",
+        "e": "Daughter-in-law"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Cardillac car is in the 1) Cardillac car is to the immediate right of Fiat. 2) Fargo was fourth to the right of Fiat and Bedford. 3) Maruti car was placed in the left of Ambassador car, was at one of the ends. 4) Fiat, which was the immediate neighbour of the Mercedes?",
+      "choices": {
+        "a": "Immediate left of Bedford",
+        "b": "Fourth to the right of Maruti",
+        "c": "None of these",
+        "d": "Immediate left of Bedford and Fargo",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 75,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following cars was the ambassador and Fiat. 1) Fargo car is to the immediate right of Mercedes. 2) Cardillac car is to the immediate left of Mercedes. 3) Fargo car is placed to the immediate right of Cardillac. 4) Maruti car 5) None of these",
+      "choices": {
+        "a": "Fargo car is to the immediate right of Mercedes",
+        "b": "Cardillac car is to the immediate left of Mercedes",
+        "c": "Fargo car is placed to the immediate right of Cardillac",
+        "d": "Maruti car",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 334
+}

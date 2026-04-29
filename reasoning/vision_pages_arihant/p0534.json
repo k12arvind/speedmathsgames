@@ -1,0 +1,75 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Decision Making",
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 15-18) On the basis of the information given in the following case, answer the questions that follow.\n\nTina, a blast furnace expert, who works as a technology trouble shooter stays in Jamshedpur. She has got an important assignment in Delhi, which requires six hours to complete. The work is so critical that she has to start working the moment she reaches the client's premises.\n\nShe is considering various options for her onward and return journey between Jamshedpur to Delhi:\nA quick search revealed that ticket from Jamshedpur to Delhi is available in two trains. Trains 12801 and 12443 depart from Jamshedpur station at 06 : 45 h and 15 : 55 h and reach Delhi next day at 04 : 50 h and 10 : 35 h, respectively. Trains 12444 and 12802 start from Delhi at 17 : 20 h and 22 : 20 h and reach Jamshedpur next day at 10 : 35 h and 20 : 05 h, respectively.\nAnother option is to reach Ranchi by a three hour road trip and take a flight to Delhi from Ranchi. The distance between Ranchi and Delhi is covered in 105 min both ways by any of the scheduled flights. Air India operates two flights, AI 9810 and AI 810, which depart Ranchi at 8 : 00 h and 15 : 25 h respectively. Flight number IT-3348 operated by Kingfisher Airlines departs Ranchi at 19 : 20 h. Return flights operated by Air India, AI 9809 and AI 809, depart Delhi at 5 : 50 h and 11 : 00 h respectively. Flight number IT-3347 operated by Kingfisher Airlines departs Delhi at 17 : 10 h.\nFrom Tina's home, Jamshedpur railway station is five minutes drive and her destination at Delhi is 90 min and 30 min, drive from airport and railway station, respectively. One has to reach the airport atleast one hour before the scheduled departure to complete the boarding procedure. At every railway station she loses five minutes in navigating through the crowd.",
+      "has_figure": false,
+      "topic_code": "decision_making"
+    }
+  ],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "decision_making",
+      "topic_name": "Decision Making",
+      "subtopic_code": "passage_based",
+      "subtopic_name": "Passage Based Decision Making",
+      "body": "If Tina wants to minimize the total time out of Jamshedpur, the best option for her. From the options given below, is",
+      "choices": {
+        "a": "AI 9810 and return by IT 3347",
+        "b": "AI 9810 and return by train number 12802",
+        "c": "IT 3348 and return by AI 9809",
+        "d": "train number 12643 and return by train number 12644",
+        "e": "AI 9810 and return by train number 12644"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [
+    {
+      "number": 39,
+      "correct": "b"
+    },
+    {
+      "number": 40,
+      "correct": "e"
+    },
+    {
+      "number": 41,
+      "correct": "d"
+    },
+    {
+      "number": 42,
+      "correct": "c"
+    },
+    {
+      "number": 43,
+      "correct": "c"
+    },
+    {
+      "number": 44,
+      "correct": "b"
+    },
+    {
+      "number": 45,
+      "correct": "b"
+    },
+    {
+      "number": 46,
+      "correct": "a"
+    },
+    {
+      "number": 47,
+      "correct": "e"
+    }
+  ],
+  "_page": 534
+}

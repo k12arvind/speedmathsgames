@@ -1,0 +1,252 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Three persons A, B and C wore shirts of black, blue and orange colours (not necessarily in that order) and pants of green yellow and orange colours (not necessarily in that order). No person wore shirt and pants of the same colour. Further, it is given that\nI. A did not wear shirt of black colour.\nII. B did not wear shirt of blue colour.\nIII. C did not wear shirt of orange colour.\nIV. A did not wear pant of green colour.\nV. B wore pants of orange colour.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Four youngmen namely Rajesh, Pran, Vinod and Arun are in love with four girls namely Shobhita, Kamla, Vimla and Promila. Shobhita and Vimla are good friends. Vinod's girlfriend does not like Shobhita and Vimla. Kamla does not care for Vinod. Pran's girlfriend is friendly with Shobhita. Shobhita does not like Rajesh.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Out of four friends A, B, C and D\nI. A and B play football and cricket.\nII. B and C play cricket and hockey.\nIII. A and D play basketball and football.\nIV. C and D play hockey and basketball.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Four youngmen Anil, Mukesh, Piyush and Yogesh are lovingly called Munna, Babboo, Prince and Pappoo by everyone. They are married to Madhu, Sunanda, Jyoti and Arti.\nI. Arti and Madhu are neither married to Piyush or Anil nor their husband is called Babboo.\nII. Babboo is not married to Sunanda and his name is not Piyush.\nIII. Sunanda is not married to Munna.\nIV. Mukesh is neither Munna nor Prince and is not married to Madhu.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "color_matching",
+      "subtopic_name": "Color Matching",
+      "body": "What were the colours of the pant and shirt worn by C, respectively?",
+      "choices": {
+        "a": "Orange and black",
+        "b": "Green and blue",
+        "c": "Yellow and blue",
+        "d": "Yellow and black"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "relationship_matching",
+      "subtopic_name": "Relationship Matching",
+      "body": "Who is Rajesh's girlfriend?",
+      "choices": {
+        "a": "Shobhita",
+        "b": "Kamla",
+        "c": "Vimla",
+        "d": "Promila"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "relationship_matching",
+      "subtopic_name": "Relationship Matching",
+      "body": "Who is Promila's boyfriend?",
+      "choices": {
+        "a": "Arun",
+        "b": "Pran",
+        "c": "Vinod",
+        "d": "Rajesh"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "relationship_matching",
+      "subtopic_name": "Relationship Matching",
+      "body": "Who is Arun's girlfriend?",
+      "choices": {
+        "a": "Promila",
+        "b": "Vimla",
+        "c": "Shobhita",
+        "d": "Kamla"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "activity_matching",
+      "subtopic_name": "Activity Matching",
+      "body": "Who does not play hockey?",
+      "choices": {
+        "a": "D",
+        "b": "C",
+        "c": "B",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "activity_matching",
+      "subtopic_name": "Activity Matching",
+      "body": "Who plays football, basketball and hockey?",
+      "choices": {
+        "a": "D",
+        "b": "C",
+        "c": "B",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "activity_matching",
+      "subtopic_name": "Activity Matching",
+      "body": "Which game do B, C and D play?",
+      "choices": {
+        "a": "Basketball",
+        "b": "Hockey",
+        "c": "Cricket",
+        "d": "Football"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "name_matching",
+      "subtopic_name": "Name Matching",
+      "body": "Which of the following pair of husband-wife is not correct?",
+      "choices": {
+        "a": "Munna, Madhu",
+        "b": "Babboo, Jyoti",
+        "c": "Pappoo, Jyoti",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "name_matching",
+      "subtopic_name": "Name Matching",
+      "body": "What is the nick name of Mukesh?",
+      "choices": {
+        "a": "Babboo",
+        "b": "Pappoo",
+        "c": "Munna",
+        "d": "Prince"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 3,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "name_matching",
+      "subtopic_name": "Name Matching",
+      "body": "Who is the husband of Sunanda?",
+      "choices": {
+        "a": "Anil",
+        "b": "Mukesh",
+        "c": "Piyush",
+        "d": "Yogesh"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 3,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "name_matching",
+      "subtopic_name": "Name Matching",
+      "body": "Yogesh is married to whom?",
+      "choices": {
+        "a": "Sunanda",
+        "b": "Arti",
+        "c": "Madhu",
+        "d": "Jyoti"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 601
+}

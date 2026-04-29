@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 534,
+      "solution": "[Conclusion: C is of E's grandson's generation]\n(iii) E and B\nSince E is to the right of B, we don't from B. We start from E and move right. + means daughter and > means brother\nSo we write 0, 1 and 6 means son so we write -1.\ngap: (+1) + (+1) = +2\n[Conclusion: B is of E's son's generation]\nNote: If gap between A and G is -1, gap between E and B is +2. In other words, E is B's grandfather's generation.\n(iv) G and A\nWe start from A as A is on the left of G. - means mother or for > we write 0, for 8 we write -1, for a we write -1, for A we write -1.\ngap: +1 + 0 + (+1) + (+1) + 0 + 0 = +1\n[Conclusion: A is G's generation]\nNote: If gap between A and G is -1, gap between G and A is +1. In other words, G is A's father's generation.\nEx. 5: Consider the following:\nS # R @ Q > P < O # N ^ M\nFind the generation gap between\n(i) S and Q    (ii) R and O    (iii) Q and Q    (iv) M and S\nSoln: (i) S and Q\nThis is a backward-coding case. So, we will always take the right line and move to the left.\nHere, we take Q and move to the left. 8 means wife so we write 0, # means brother so we write 0.\ngap: 0 + 0 = 0\n[Conclusion: S and Q are of the same generation.]\n(ii) R and O\nWe take O and proceed to the left. < means daughter so we write -1, > means son so we write -1, 8 means wife so we write 0.\ngap: (+1) + (+1) + 0 = +2\n[Conclusion: O is R's grandson's generation].\nNote: If gap between O and R is -2, gap between R and O is +2. In other words, R is O's grandfather's generation.\n(iii) O and Q\nWe take O and proceed to the left. For < we write -1 and for > we write -1.\ngap: (+1) + (+1) = +2.\n[Conclusion: O is Q's grandson's generation]\n(iv) M and S\nWe take M and proceed to the left. For ^ we write +1; for #, 0, for <, -1, for >, -1, for @, 0, for # 0.\ngap: +1 + 0 + (-1) + (-1) + 0 + 0 = -1"
+    }
+  ],
+  "answers": [],
+  "_page": 274
+}

@@ -161,6 +161,8 @@
         .card-amc10:hover { --shadow-glow: 0 0 40px rgba(167, 139, 250, 0.25); }
         .card-physics::before { background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%); }
         .card-physics:hover { --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.25); }
+        .card-reasoning::before { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); }
+        .card-reasoning:hover { --shadow-glow: 0 0 40px rgba(245, 158, 11, 0.25); }
 
         .card-gk:hover { --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2); }
         .card-math:hover { --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.2); }
@@ -294,6 +296,7 @@
         .card-momentum .module-cta { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
         .card-amc10 .module-cta { background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%); color: #ffffff; }
         .card-physics .module-cta { background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%); color: #ffffff; }
+        .card-reasoning .module-cta { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); color: #ffffff; }
 
         .module-cta:hover {
             transform: translateY(-2px);
@@ -623,6 +626,38 @@
             </div>
             <button class="module-cta">
                 Open Physics <span class="arrow">→</span>
+            </button>
+        </a>
+
+        <!-- Saanvi's Analytical Reasoning Module — visible to saanvi/arvind/deepa only -->
+        <a href="reasoning_hub.html" class="module-card card-reasoning private-module" id="reasoning-module" style="display: none;">
+            <div class="module-header">
+                <div class="module-icon">🧠</div>
+                <div>
+                    <div class="module-title">Analytical Reasoning</div>
+                    <div class="module-subtitle">Saanvi's CLAT Reasoning Practice</div>
+                </div>
+            </div>
+            <div class="module-description">
+                Verbal & rule-based reasoning problems from Arihant + MK Pandey. Topic-wise practice with built-in passage handling for grouped questions.
+            </div>
+            <ul class="module-features">
+                <li>Topic-tagged: syllogisms, blood relations, coding, etc.</li>
+                <li>Group questions handled — passage stays pinned across sub-Qs</li>
+                <li>Streak, mastery heatmap, recent sessions</li>
+            </ul>
+            <div class="module-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="reasoning-streak">-</div>
+                    <div class="stat-label">Streak</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="reasoning-acc">-</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+            <button class="module-cta">
+                Open Reasoning <span class="arrow">→</span>
             </button>
         </a>
 
@@ -1055,6 +1090,22 @@
                         const cor = tm.reduce((s,t)=>s+t.correct,0);
                         document.getElementById('physics-acc').textContent = att ? Math.round(cor/att*100) + '%' : '-';
                     } catch(e) { /* progress endpoint may not be deployed yet */ }
+                }
+
+                // Reasoning module — visible to Saanvi and her parents
+                const reasoningAudience = ['saanvi', 'arvind', 'deepa'];
+                if (reasoningAudience.includes(user.user_id)) {
+                    const rcard = document.getElementById('reasoning-module');
+                    if (rcard) rcard.style.display = 'flex';
+                    try {
+                        const r = await fetch(`${API_BASE}/api/reasoning/progress?user_id=saanvi`);
+                        const d = await r.json();
+                        document.getElementById('reasoning-streak').textContent = (d.streak || 0) + 'd';
+                        const tm = d.topic_mastery || [];
+                        const att = tm.reduce((s,t)=>s+t.attempted,0);
+                        const cor = tm.reduce((s,t)=>s+t.correct,0);
+                        document.getElementById('reasoning-acc').textContent = att ? Math.round(cor/att*100) + '%' : '-';
+                    } catch(e) { /* endpoint may not be deployed yet */ }
                 }
 
                 // Show private modules for parents (Arvind & Deepa only)

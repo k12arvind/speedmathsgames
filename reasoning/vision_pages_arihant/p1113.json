@@ -1,0 +1,118 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "A passage is given followed by some inferences. You have to examine each inference separately in the context of the passage and decide upon its degree of truth or falsity. Give answer (a) if you think the inference is 'definitely true' (b) if you think the inference is 'probably true' (c) if the data given is inadequate (d) if you think the inference is 'probably false' (e) if the inference is 'definitely false'",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "The water resources of our country are very much underutilised. The main reason of this underutilisation is the lack of capital and technology. A large portion of our water resources is wasted due to floods and unwise use of water for irrigation as well as domestic purposes. We can make full use of our water resources by building dams on river and by adopting policy of awareness among people not to waste water.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "statement_inference",
+      "subtopic_name": "Statement and Inference",
+      "body": "Rural people should not migrate to urban cities, if they value their health.",
+      "choices": {},
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "statement_inference",
+      "subtopic_name": "Statement and Inference",
+      "body": "Most of the rural population is healthy and free of diseases.",
+      "choices": {},
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "statement_inference",
+      "subtopic_name": "Statement and Inference",
+      "body": "The increase in diseases like diabetes, heart attacks etc is controllable by taking proper measures.",
+      "choices": {},
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "statement_inference",
+      "subtopic_name": "Statement and Inference",
+      "body": "Conservation of water resources is possible through wise use of water.",
+      "choices": {},
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "statement_inference",
+      "subtopic_name": "Statement and Inference",
+      "body": "Technology does not have any effect on uses of water utilisation.",
+      "choices": {},
+      "correct": "e",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "From the above facts, it is probably true, that rural people should not migrate to urban cities, as there the way and standard of living is different from that of rural areas, so it will be hard for them to adjust but it is not definitely true as with time they can adjust."
+    },
+    {
+      "number": 7,
+      "solution": "It is definitely true that most of the people from rural areas are healthy because of their diet and regular exercise, it properly follows from the facts of paragraph given."
+    },
+    {
+      "number": 8,
+      "solution": "The statement is probably true but from the facts given in paragraph, it cannot be deduced that it is definitely true."
+    },
+    {
+      "number": 9,
+      "solution": "It has been reported in the passage that conservation of water resources is possible through wise use of water, so the inference is definitely true."
+    },
+    {
+      "number": 10,
+      "solution": "In the given passage, technology, is considered crucial for water utilization. So, the inference technology does not have any effect on uses of water utilization is definitely false."
+    }
+  ],
+  "answers": [],
+  "_page": 1113
+}

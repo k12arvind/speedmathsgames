@@ -1,0 +1,171 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. Only stars are moons.\n                b. No cosmos is a star.\n                c. No planets are moons.\nConclusions: I. Some moons are not planets.\n            II. No moon is a cosmos.\n            III. No cosmos are moons.\n            IV. No star is a planet.",
+      "choices": {
+        "a": "I, II and IV follow",
+        "b": "III and IV follow",
+        "c": "II, III and IV follow",
+        "d": "III and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. Some bunkers are arms.\n                b. No gun is a dagger.\n                c. All arms are daggers.\nConclusions: I. No arm is a gun.\n            II. Some bunkers are not guns.\n            III. Some daggers are bunkers.\n            IV. Some daggers are not bunkers.",
+      "choices": {
+        "a": "Only I and II follow",
+        "b": "Either III or IV follows",
+        "c": "II and III follow",
+        "d": "I, II and either III or IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. No minister is honest.\n                b. Some politicians are females.\n                c. All politicians are ministers.\nConclusions: I. Some honest are not females.\n            II. No honest person is a politician.\n            III. Some females are ministers.\n            IV. Some females are not honest.",
+      "choices": {
+        "a": "I, II and III follow",
+        "b": "II and III follow",
+        "c": "I and II follow",
+        "d": "II, III and IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. Some blondes are stupid.\n                b. Some trees are blondes.\n                c. All stupid are girls.\nConclusions: I. Some stupid are blondes.\n            II. Some stupid are not blondes.\n            III. Some girls are blondes.\n            IV. Some trees are stupid.",
+      "choices": {
+        "a": "I, II and III follow",
+        "b": "II and IV follow",
+        "c": "Either I or II and III follow",
+        "d": "I and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. Some doctors are treatments.\n                b. All treatments are Indians.\n                c. No Indian is a star.\nConclusions: I. Some treatments are Indians.\n            II. Some doctors are Indians.\n            III. Some doctors are stars.\n            IV. Some doctors are not stars.",
+      "choices": {
+        "a": "I, II and IV follow",
+        "b": "II and either III or IV follow",
+        "c": "I, II and either III or IV follow",
+        "d": "I and either III or IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. No kite is a slate.\n                b. No jug is a slate.\n                c. Some jugs are ropes.\nConclusions: I. Some ropes are slates.\n            II. Some ropes are not slates.\n            III. No kite is a jug.\n            IV. Some jugs are kites.",
+      "choices": {
+        "a": "Either I or II and III follow",
+        "b": "Either III or IV and II follow",
+        "c": "Either I or II follow",
+        "d": "Either III or IV follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. All blanks are beamers.\n                b. All bridges are beamers.\n                c. All bridges are cows.\nConclusions: I. Some cows are beamers.\n            II. Some blanks are cows.\n            III. Some blanks are not cows.\n            IV. Some bridges are not cows.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Either II or III follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: a. Some bags are charts.\n                b. Some trees are docks.\n                c. No bag is a dock.\nConclusions: I. Some charts are docks.\n            II. Some charts are not docks.\n            III. Some trees are bags.\n            IV. Some trees are not bags.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Either I or II and either III or IV follow",
+        "c": "II and IV follow",
+        "d": "Any three of I, II, III and IV are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 195
+}

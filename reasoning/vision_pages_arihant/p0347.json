@@ -1,0 +1,408 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 32-35) In each of the following questions, all the equations except one have been solved according to a certain rule. You are required to solve the unsolved equation following the same rule and to choose the correct answer out of the given options.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 37-38) In the following questions, the symbols @, #, $, %, * are used with the meanings as given below:\n• 'P @ Q' means 'P is not greater than Q'.\n• 'P # Q' means 'P is greater than or equal to Q'.\n• 'P $ Q' means 'P is neither greater than nor less than Q'.\n• 'P % Q' means 'P is less than Q'.\n• 'P * Q' means 'P is neither less than nor equal to Q'.\nNow, in each of the following questions, assuming the given statements to be true, find which of the three Conclusions I, II and III given below them is/are definitely true?",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 41-45) If '+' is '×', '−' is '+', '×' is '÷' and '÷' is '−', then answer the following questions based on this information.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "pattern_equations",
+      "subtopic_name": "Pattern-based Equations",
+      "body": "If 8 × 6 × 1 = 168 and 5 × 2 × 1 = 125, then 4 × 5 × 7 = ?",
+      "choices": {
+        "a": "754",
+        "b": "457",
+        "c": "547",
+        "d": "475"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "pattern_equations",
+      "subtopic_name": "Pattern-based Equations",
+      "body": "If 3 * 8 * 6 = 497 and 8 * 4 * 2 = 953, then 6 * 5 * 1 = ?",
+      "choices": {
+        "a": "386",
+        "b": "726",
+        "c": "863",
+        "d": "762"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "pattern_equations",
+      "subtopic_name": "Pattern-based Equations",
+      "body": "If 16 (55) 3 and 30 (157) 5, then 9 (?) 25",
+      "choices": {
+        "a": "335",
+        "b": "125",
+        "c": "232",
+        "d": "342"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "pattern_equations",
+      "subtopic_name": "Pattern-based Equations",
+      "body": "If 4 × 4 = 6, 8 × 8 = 54 and 9 × 9 = 71, then 2 × 3 = ?",
+      "choices": {
+        "a": "4",
+        "b": "−6",
+        "c": "−4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "If '+' denotes ÷, '−' denotes ×, '×' denotes − and '÷' denotes +, then 35 + 7 − 5 + 5 × 6 = ?[SSC (10 + 2) 2013]",
+      "choices": {
+        "a": "36",
+        "b": "24",
+        "c": "20",
+        "d": "14"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements B $ R, R * N, K @ N\nConclusions I. B * K    II. K % R    III. B # N",
+      "choices": {
+        "a": "All are true",
+        "b": "Only I is true",
+        "c": "I and II are true",
+        "d": "I and III are true",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements M % R, R # T, T * N\nConclusions I. N % R    II. M % T    III. M * N",
+      "choices": {
+        "a": "None is true",
+        "b": "Only I is true",
+        "c": "Only II is true",
+        "d": "I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Select the correct combination of mathematical signs to replace * signs and to balance the given equation.\n5 * 5 * 5 * 3 * 10                [SSC (CGL) 2013]",
+      "choices": {
+        "a": "× + = ×",
+        "b": "+ − × =",
+        "c": "+ + = ×",
+        "d": "+ + = ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "pattern_equations",
+      "subtopic_name": "Pattern-based Equations",
+      "body": "Some equations are solved by special method. On the basis of it, find the right answer of equation from the given options which is not solved?\n6 × 4 × 3 = 436\n8 × 4 × ? = 468\n6 × 9 × 8 = 986                [SSC (CGL) 2012]",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "21 + 8 + 2 − 12 × 3 = ?",
+      "choices": {
+        "a": "14",
+        "b": "9",
+        "c": "13.5",
+        "d": "11"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "6 + 7 × 3 − 8 + 20 = ?",
+      "choices": {
+        "a": "−3",
+        "b": "7",
+        "c": "2",
+        "d": "1"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "15 × 5 + 3 + 1 − 1 = ?",
+      "choices": {
+        "a": "−1",
+        "b": "−2",
+        "c": "3",
+        "d": "1"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "9 − 3 + 2 + 16 × 2 = ?",
+      "choices": {
+        "a": "7",
+        "b": "5",
+        "c": "9",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "6 − 9 + 8 × 3 + 20 = ?",
+      "choices": {
+        "a": "−2",
+        "b": "6",
+        "c": "10",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "If 'P' means '+', 'Q' means '×', 'R' means '÷' and 'S' means '−', then 44 Q 9 R 12 S 6 Q 4 P 16 = ?    [SSC (CGL) 2013]",
+      "choices": {
+        "a": "36",
+        "b": "124",
+        "c": "25",
+        "d": "112"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Which of the following interchange of signs would make the given equation correct?    [SSC (CGL) 2013]\n5 + 3 × 8 − 12 ÷ 4 = 3",
+      "choices": {
+        "a": "+ and +",
+        "b": "+ and −",
+        "c": "− and +",
+        "d": "+ and ×"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "If '+' means '×', '×' means '+', '÷' means '×' and '+' means '÷', then which of the following equation is correct?    [SSC (Multitasking) 2013]",
+      "choices": {
+        "a": "36 + 6 − 3 × 2 = 20",
+        "b": "36 × 6 + 3 − 2 < 20",
+        "c": "36 × 6 + 3 × 2 > 20",
+        "d": "36 + 6 × 3 + 2 = 20"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "If 1 + 4 = 9, 2 + 8 = 18 and 3 + 6 = 15, then 7 + 8 = ?    [SSC (CGL) April 2014]",
+      "choices": {
+        "a": "32",
+        "b": "41",
+        "c": "23",
+        "d": "30"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Select the correct combination of mathematical signs to replace * signs and to balance the given equation.\n2 * 4 * 3 * 4 * 9    [SSC (CGL) April 2014]",
+      "choices": {
+        "a": "+ − = +",
+        "b": "+ × = −",
+        "c": "× ÷ = =",
+        "d": "× − + ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 347
+}

@@ -1,0 +1,66 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Analysis Based Venn Diagram",
+  "passages": [
+    {
+      "passage_text": "In this type of questions, generally a Venn diagram comprising of different geometrical figures is given. Each geometrical figure in the diagram represents a certain class. The candidate is required to study and analyse the figure carefully and then answer the given questions based on it. Let's take an example\n\nThis diagram consists of three groups—Actors, Directors and Producers, represented by a triangle, a rectangle and a circle, respectively.\n\nThere are seven regions represented by numbers from 1 to 7 where each region represents the following\nRegion 1 Represents only Actors.\nRegion 2 Represents only Directors.\nRegion 3 Represents only Producers.\nRegion 4 Represents those Actors who are also Directors but not Producers.\nRegion 5 Represents those Directors who are also Producers but not Actors.\nRegion 6 Represents those Producers who are also Actors but not Directors\nRegion 7 Represents those Actors who are Directors as well as Producers.\n\nIn some other questions, the candidate is required to find out the correct shaded Venn diagram which correctly depicts the situation given in the question.\n\nSome solved examples given below will give you a better idea about both the types of questions asked",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "analysis_based",
+      "subtopic_name": "Analysis Based Venn Diagram",
+      "body": "In the given diagram, square represents doctors, triangle represents lady and circle represents surgeon. Which of the following letters represents those ladies who are doctors and surgeon both?",
+      "choices": {
+        "a": "M",
+        "b": "G",
+        "c": "Q",
+        "d": "P"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "analysis_based",
+      "subtopic_name": "Analysis Based Venn Diagram",
+      "body": "The given diagram represents those people who play hockey, cricket and badminton. See the diagram and find out those people who play all the three games.",
+      "choices": {
+        "a": "T + U",
+        "b": "Q + R",
+        "c": "P + Q + R",
+        "d": "S"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 21,
+      "solution": "It is clear from the diagram that M is common in all the three figures i.e., square, triangle and circle. It means that required letter is M."
+    },
+    {
+      "number": 22,
+      "solution": "S is that part which is common to all the three squares. It means that S represents those people who play all the three games."
+    }
+  ],
+  "answers": [],
+  "_page": 368
+}

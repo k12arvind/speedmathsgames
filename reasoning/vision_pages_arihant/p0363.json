@@ -1,0 +1,521 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Each of the questions given below contains three items. These items may or may not have some relation with one another. Each group of the items may fit into one of the diagrams (a), (b), (c), (d) and (e). You have to indicate that the group of items in each of these questions correctly fits into which of the diagrams.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Each of the questions given below contains three groups of items. You have to choose from the following five numbered diagrams (a), (b), (c), (d) and (e), the diagram that depicts the correct relationship among the three groups of items in each of the question.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Universe, Earth, Europe",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Picture, TV, Radio",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Living beings, Animals, Men",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Radio, TV, Cinema hall",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Residence, Resident, Road",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Copy, Stationery, Car",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Coal mines, Factory, Field",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Clothes, Sari, Dhoti",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Chapter, Book, Topic",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Boys, Class, Girls",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Identify the diagram that best represents the relationship among the classes given below. Tea, Coffee, Drink",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Which of the following diagrams best represents a relationship among Criminal, Thief and Pick pocket?",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Which of the following diagrams best represents the relationship among Uttar Pradesh, Kanpur, Jaipur?",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Identify the diagram that best represents the relationship among classes given below. Sportsmen, Cricketers, Batsman",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Pop, Songs, Classical",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Maize, Sugarcane, Crops",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Birds, Owls, Elephants",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Asia, Delhi, India",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Lawyers, Women, Doctors",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 1,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Brinjal, Glass, Spoon",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 1,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Pen, Stationery, Powder",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 1,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Vehicle, Car, Jeep",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Year, Month, Day",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)",
+        "e": "(e)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "set_relations",
+      "subtopic_name": "Set Relations",
+      "body": "Identify the diagram that best represents the relationship among the classes given below. Liquids, Milk, River, Water",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 363
+}

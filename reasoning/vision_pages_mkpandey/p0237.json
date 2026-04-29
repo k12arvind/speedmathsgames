@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 14,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Now, in our given question She = P1, was = P2, playing = P3. So, step VII will be P1+P2+P3 and then solved the problem using the combined technique of chain-splitting, reducing by golden rule and combining. What we did actually is analogous to our Fig. III a.\n\na) We find step V from step II i.e. 2 to 5.\nb) We assume that we have reached 1 not 5.\nc) From this 1, we find 3.\nd) We thus reach 2 to 7.\n(Compare with Fig.[I])\n\nThe advantage of this method lies two fold:\na) you don't have to draw any reference-charts, only the steps give it.\nb) you don't have to replace given words by digits 1, 2, 3, 4, 5.\nThese two facts make this method fast reliable and efficient. You may feel that it is a very complex method. Relax. In fact it is, but you are smart!\n\nThe method\nWe hope that the definitions and terminology used in the previous section are clear to you. We are now in a position to tell you the special BSC method. Suppose that you are given a step number and a content and you are asked to find the content of a subsequent step number. For example, suppose you are told that step III is \"gone are the days\" and you are asked to find Step VII. Since 7 is after (or subsequent to) 3, this qualifies for a discussion. Let us see how to solve such questions.\n\nStep A: First, find out if it is a 1-step or 2-step or a 3-step case.\nNote: The method of determining this has already been discussed.\n\nStep B: Next, use the golden rule of reduction and simplify the question if possible.\nEx 13: For example, consider Q3 of Ex. 1. Here you are asked to find Step 12. Thus you have: 12 → 17"
+    }
+  ],
+  "answers": [],
+  "_page": 237
+}

@@ -1,0 +1,185 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "In each of the questions below are given four statements followed by four conclusions numbered I, II, III and IV. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusion (s) logically follow (s) from the given statements disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some trains are cars. All cars are branches. All branches are nets. Some nets are dresses. Conclusions: I. Some dresses are cats. II. Some nets are trains. III. Some branches are trains. IV. Some dresses are trains.",
+      "choices": {
+        "a": "I and III follow",
+        "b": "II and III follow",
+        "c": "I and IV follow",
+        "d": "II, III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some pencils are kites. Some kites are desks. All desks are jungles. All jungles are mountains. Conclusions: I. Some mountains are pencils. II. Some jungles are pencils. III. Some mountains are desks. IV. Some jungles are kites.",
+      "choices": {
+        "a": "I and III follow",
+        "b": "I, II and III follow",
+        "c": "III and IV follow",
+        "d": "II, III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All papers are clips. Some clips are boards. Some boards are lanes. All lanes are roads. Conclusions: I. Some roads are boards. II. Some lanes are clips. III. Some boards are papers. IV. Some roads are clips.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "II and III follow",
+        "c": "I, II and III follow",
+        "d": "II, III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All birds are horses. All horses are tigers. Some tigers are lions. Some lions are monkeys. Conclusions: I. Some tigers are horses. II. Some monkeys are birds. III. Some tigers are birds. IV. Some monkeys are horses.",
+      "choices": {
+        "a": "I and III follow",
+        "b": "I, II and III follow",
+        "c": "II, III and IV follow",
+        "d": "All I, II, III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some benches are walls. All walls are houses. Some houses are jungles. All jungles are roads. Conclusions: I. Some roads are benches. II. Some jungles are walls. III. Some houses are benches. IV. Some roads are houses.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "I and III follow",
+        "c": "II and V follow",
+        "d": "II, III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some sticks are lamps. Some flowers are lamps. Some lamps are dresses. All dresses are shirts. Conclusions: I. Some shirts are sticks. II. Some shirts are flowers. III. Some flowers are sticks. IV. Some dresses are sticks.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "Only IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some baskets are glasses. All glasses are pots. Some pots are plates. All plates are cups. Conclusions: I. No glasses are pots. II. All glasses are baskets. III. Atleast some pots are baskets. IV. Some plates being glasses is a possibility.",
+      "choices": {
+        "a": "III and IV follow",
+        "b": "Only IV follows",
+        "c": "I and II follow",
+        "d": "None follows",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All potatos are onions. All onions are grapes. Some grapes are mangoes. All mangoes are brinjals. Conclusions: I. Potatos are grapes. II. Some brinjals being potatos is a possibility. III. Each potato is grape. IV. Some potatos are definitely onions.",
+      "choices": {
+        "a": "All follow",
+        "b": "None follows",
+        "c": "Only IV follows",
+        "d": "Follow II, III and IV",
+        "e": "Only I follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1189
+}

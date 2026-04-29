@@ -1,0 +1,98 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Ranking and Time Sequence Test",
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. Six students A, B, C, D, E and F participated in a dancing competition wherein they won prizes 12000, 10000, 8000, 6000, 4000, 2000 according to the position secured. The following information is known to us: I. A won less money than B. II. The difference between the winning of C and F was ₹ 2000. III. The difference between the winning of D and F was at least ₹ 4000. IV. E won the ₹ 8000 prize.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "weight_ranking",
+      "subtopic_name": "Weight-based Ranking",
+      "body": "Among P, Q, R, S and T each having a different weight, R is heavier than S but lighter than T. P is lighter than S. Who among them is the heaviest?",
+      "choices": {
+        "a": "T",
+        "b": "Q",
+        "c": "Either T or Q",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "position_ranking",
+      "subtopic_name": "Position-based Ranking",
+      "body": "Which of the following could be the ranking from first place to sixth place of students?",
+      "choices": {
+        "a": "A, D, E, B, F, C",
+        "b": "B, A, E, C, F, D",
+        "c": "F, B, E, A, C, D",
+        "d": "B, A, E, D, C, F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "prize_calculation",
+      "subtopic_name": "Prize Money Calculation",
+      "body": "If A won ₹ 4000, how much in total did C and F win?",
+      "choices": {
+        "a": "₹ 6000",
+        "b": "₹ 10000",
+        "c": "₹ 22000",
+        "d": "₹ 18000"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_comparison",
+      "subtopic_name": "Score Comparison",
+      "body": "Examine the following statements: I. Rama scored more than Rani. II. Rani scored less than Ratna. III. Ratna scored more than Rama. IV. Padma scored more than Rama but less than Ratna. Who scored the highest?",
+      "choices": {
+        "a": "Rama",
+        "b": "Padma",
+        "c": "Rani",
+        "d": "Ratna"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 308
+}

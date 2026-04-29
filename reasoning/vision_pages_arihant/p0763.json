@@ -1,0 +1,121 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 25-27) In each of the following questions, a related pair of figures (original pair) is followed by five numbered pairs of figures. Out of these five, four have relationship similar to that in the original pair. Only one pair of figures does not have similar relationship. Select that pair of figures which does not have a relationship similar to that in the original pair. The number of that pair is your answer.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair [figures shown] Answer Pairs [five options with figures shown]",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair [figures shown] Answer Pairs [five options with figures shown]",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "e",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair [figures shown] Answer Pairs [five options with figures shown]",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 18,
+      "solution": "The figure gets laterally inverted from section (i) to section (ii) of the original pair."
+    },
+    {
+      "number": 19,
+      "solution": "One line segment is added to the existing figure from section (i) to section (ii) of the original pair."
+    },
+    {
+      "number": 20,
+      "solution": "The main figure rotates through 90° anti-clockwise and a new white leaf is added in the clockwise direction."
+    },
+    {
+      "number": 21,
+      "solution": "The existing figure gets enlarged and inverted and the original figure get inserted into it from section (i) to (ii)."
+    },
+    {
+      "number": 22,
+      "solution": "The lower figure rotates through 90° anti-clockwise and the upper figure rotates through 90° clockwise."
+    },
+    {
+      "number": 23,
+      "solution": "The upper left, the upper right and the lower right rotate by 90° anti-clockwise. The shading in lower left square rotates by 45° anti-clockwise while the shading of upper right triangle gets changed."
+    },
+    {
+      "number": 24,
+      "solution": "The whole figure rotates by 90° clockwise. The lower most remains static while the remaining three shift one step upwards."
+    },
+    {
+      "number": 25,
+      "solution": "The innermost figure becomes the outermost figure, the outermost figure comes in the middle and the figure in the middle becomes the innermost figure."
+    },
+    {
+      "number": 26,
+      "solution": "The figure gets inverted."
+    },
+    {
+      "number": 27,
+      "solution": "The main figure is changed into the new figure and lines inside the figure remain perpendicular to each other. In answer figure (c) lines inside the figure do not remain perpendicular to each other and does not follow this rule."
+    }
+  ],
+  "answers": [],
+  "_page": 763
+}

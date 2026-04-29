@@ -1,0 +1,126 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Manu goes 40 km North, turns right and goes 80 km, turns right again and goes 30 km. in the end, he turns right again and goes 80 km. How far is he from his starting point if he goes straight ahead another 50 km and turns left to go his last 10 km?",
+      "choices": {
+        "a": "30 km",
+        "b": "30 km",
+        "c": "40 km",
+        "d": "50 km"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Immediately after leaving his house, Ritvik turned right and walked for 40 m. Then, he turned left and walked for 20 m. Then, he again took a left turn and walked for 30 m. There he met a friend and turned right to go to the coffee shop 20 m away. After having coffee, he walked back straight for 40 m in the direction he had come from. How far is he from his house?",
+      "choices": {
+        "a": "20 m",
+        "b": "0 m",
+        "c": "10 m",
+        "d": "40 m"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Mr Raghav went in his car to meet his friend John. He drove 30 km towards North and then 40 km towards West. He then turned to South and covered 5 km. Further he turned to East and moved 26 km. Finally he turned right and drove 10 km and then turned left to travel 19 km. How far and in which direction is he from the starting point?",
+      "choices": {
+        "a": "East of starting point, 5 km",
+        "b": "East of starting point, 13 km",
+        "c": "North East of starting point, 13 km",
+        "d": "North East of starting point, 5 km"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "Rahul started from point A and travelled 8 km towards the North to point B, he then turned right and travelled 7 km to point C, from point C he took the first right and drove 5 km to point D, he took another right and travelled 7 km to point E and finally turned right and travelled for another 3 km to point F. What is the distance between point F and B?",
+      "choices": {
+        "a": "1 km",
+        "b": "2 km",
+        "c": "3 km",
+        "d": "4 km",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "distance_calculation",
+      "subtopic_name": "Distance Calculation",
+      "body": "'K' walked 5 m towards North, took a left turn and walked for 10 m. He then took a right turn and walked for 20 m and again took right turn and walked 10 m. How far he is from the starting point?",
+      "choices": {
+        "a": "20 m",
+        "b": "15 m",
+        "c": "25 m",
+        "d": "30 m",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(Q) According to the question, the direction diagram is as follows: [Diagram showing direction movements with points A, B, C and compass directions]. It is clear from the diagram that both starting and finishing point are same i.e., the man is at starting point 'A'."
+    },
+    {
+      "number": 2,
+      "solution": "(Q) According to the question, the direction diagram is as follows: [Diagram with points D, C, A, B and compass directions]. Required distance = AD = BC = 20 m. So, Nikhil is 20 m North from his stating point"
+    },
+    {
+      "number": 3,
+      "solution": "(D) According to the question, The direction diagram is as follows: [Complex diagram with multiple points and measurements]. From diagram, AB = 20 m BC = HD = 10 m ED = 5 m CD = 35 m HE = AF ∴ Required distance, AF = HE = HD – ED = 10 – 5 = 5 m"
+    }
+  ],
+  "answers": [],
+  "_page": 479
+}

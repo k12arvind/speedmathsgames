@@ -1,0 +1,58 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 4,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Out of the same above Matrices I and II, two cells numbers are given in the following two examples. You have to find out the words formed by the cell numbers from amongst the choices of the words given in each example.",
+      "has_figure": true,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_word",
+      "subtopic_name": "Matrix Word Formation",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The set of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column, e.g., 'A' can be represented by 55, 67, 86 etc., and R can be represented by 04, 23, 30 etc. Identify the set for the word 'POOR'.",
+      "choices": {
+        "a": "69, 44, 20, 43",
+        "b": "76, 01, 44, 24",
+        "c": "95, 20, 44, 12",
+        "d": "57, 13, 32, 23"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 33,
+      "solution": "Here, R can be denoted by 59, 68, 77, 86, 95; U can be denoted by 56, 65, 78, 87, 99; D can be denoted by 01, 10, 23, 34, 42; E can be denoted by 02, 11, 20, 33, 44. So, the word RUDE can be denoted by the number group 95, 87, 42, 11."
+    },
+    {
+      "number": 34,
+      "solution": "Here, T can be denoted by 03, 12, 24, 30, 41; R can be denoted by 59, 68, 77, 86, 95; U can be denoted by 56, 65, 78, 87, 99; E can be denoted by 02, 11, 20, 33, 44. So, the word TRUE can be denoted by the number group 30, 95, 87, 20."
+    },
+    {
+      "number": 35,
+      "solution": "Here, L can be denoted by 58, 76, 79, 85, 97; I can be denoted by 57, 69, 75, 88, 96; M can be denoted by 55, 67, 76, 89, 98; E can be denoted by 02, 11, 20, 33, 44. So, the word LIME can be denoted by the number group 66, 96, 89, 02."
+    },
+    {
+      "number": 36,
+      "solution": "Word formed by the cell numbers 43, 96, 30, 11 is BITE."
+    },
+    {
+      "number": 37,
+      "solution": "Word formed by the cell numbers 86, 75, 34, 02 is RIDE."
+    }
+  ],
+  "answers": [],
+  "_page": 197
+}

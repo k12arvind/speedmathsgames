@@ -1,0 +1,177 @@
+{
+  "page_type": "questions",
+  "chapter_number": 11,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In each of the following questions, five figures are given. Out of them, find the three figures that can be joined to form an equilateral triangle.",
+      "has_figure": false,
+      "topic_code": "general"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "BCD",
+        "b": "ABC",
+        "c": "CDE",
+        "d": "BCE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "BCD",
+        "b": "ACD",
+        "c": "CDE",
+        "d": "BDE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "ABC",
+        "b": "BCD",
+        "c": "CDE",
+        "d": "BDE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "ABC",
+        "b": "ACE",
+        "c": "BDE",
+        "d": "CDE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "ABE",
+        "b": "BCE",
+        "c": "ADE",
+        "d": "BDE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "ACE",
+        "b": "ABD",
+        "c": "BDE",
+        "d": "CDE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "ABC",
+        "b": "ACE",
+        "c": "BCD",
+        "d": "BCE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Formation",
+      "subtopic_code": "triangle_formation",
+      "subtopic_name": "Triangle Formation",
+      "body": "",
+      "choices": {
+        "a": "ABC",
+        "b": "BED",
+        "c": "CDE",
+        "d": "ADE"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 953
+}

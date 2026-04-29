@@ -1,0 +1,36 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Series",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 38,
+      "solution": "The first part of the series (R, A, M, E, S, H) is written in reverse order (H, S, E, M, A, R) in the second part. Required letter = R"
+    },
+    {
+      "number": 39,
+      "solution": "In every next term, the last letter is the first letter of its previous term, middle letter is the last letter of its previous term and first letter is the middle letter of its previous term. Required letter = LDP"
+    },
+    {
+      "number": 40,
+      "solution": "In every next term first letter goes one letter forward, second letter goes two letters backward and third letter goes three letters forward. Required element = OGM"
+    }
+  ],
+  "answers": [
+    {
+      "number": 38,
+      "correct": "c"
+    },
+    {
+      "number": 39,
+      "correct": "d"
+    },
+    {
+      "number": 40,
+      "correct": "d"
+    }
+  ],
+  "_page": 238
+}

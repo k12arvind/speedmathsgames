@@ -1,0 +1,132 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Practice Exercises",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-60): In all the questions that follow different symbols are used with different meanings. For each set of questions, you have to assume given statements to be true and then decide which of the two given conclusions are definitely true. Give answer: 1) if only I is true 2) if only conclusion II is true 3) if either conclusion I or II is true 4) if neither I nor II is true 5) if both are true",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    },
+    {
+      "passage_text": "Directions (Q. 1-5): In the following questions, the symbols @, ≥, =, ©, are used with the following meaning: P @ Q means P is greater than Q, P ≥ Q means P is either greater than or equal to Q, P = Q means P is equal to Q, P © Q means P is smaller than Q, P ≥ Q means P is either smaller than or equal to Q.",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    },
+    {
+      "passage_text": "Questions (Q. 6-10): In the following questions, the symbols @, ≥, =, ©, @ are used with the following meaning: P @ Q means P is greater than Q, P ≥ Q means P is either greater than or equal to Q, P = Q means P is equal to Q, P © Q means P is smaller than Q, P @ Q means P is either smaller than or equal to Q.",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: A @ B, B ≥ C, C © D\nConclusions: I. A @ D    II. C © D",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: L ≥ K, M © N, K = M\nConclusions: L N @ P    II. K ≥ N",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: X @ Y, Z © R, Y = Z\nConclusions: I. X @ R    II. Y = R",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: G @ F, D ≥ E, E = F\nConclusions: I. E © G    II. E = G",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: I ≥ J, K = J@L, H @ J\nConclusions: I. J = L    II. I @ H",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: R @ W, T ≥ N, K = L, W = D\nConclusions: I. L T @ S @ A = S, G © U    II. D @ N",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inequalities",
+      "topic_name": "Inequalities",
+      "subtopic_code": "coded_inequalities",
+      "subtopic_name": "Coded Inequalities",
+      "body": "Statements: L © A ≥ B F\nConclusions: I. A @ B    II. G @ A",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 300
+}

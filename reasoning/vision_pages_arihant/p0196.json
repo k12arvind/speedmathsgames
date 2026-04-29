@@ -1,0 +1,131 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [
+    {
+      "passage_text": "In this type of matrix, columns and rows of matrix are numbered from 0 to 4 in Matrix I and A to E in Matrix II and accordingly letter, number or symbol are to be selected from the given matrices to find the assigned number and select the group of numbers/letters which accompanies letter, number and symbol in the right format.",
+      "has_figure": true,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "Given below are two matrices of 25 cells each containing two classes of letters. The columns and rows of Matrix I are numbered from 0 to 4 and those of Matrix II from 5 to 9. A letter from these matrices can be represented first by its row number and next by its column number. e.g., 'B' can be represented as 00, 14 etc. Similarly, M can be represented by 55, 67, etc. In each of the following examples (33-35) identify one set of number pair out of A, B, C and D which represents the given word.",
+      "has_figure": true,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "symbol_group",
+      "subtopic_name": "Symbol Group Coding",
+      "body": "Determine the correct number group from the given alternatives which denotes the symbol group ★ℤ@¥$.",
+      "choices": {
+        "a": "04, 76, 43, 59, 44",
+        "b": "22, 67, 40, 75, 11",
+        "c": "10, 98, 40, 23, 58",
+        "d": "44, 99, 40, 98, 43"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "jumbled_matrix",
+      "subtopic_name": "Jumbled Matrix",
+      "body": "Determine the jumbled letter/number group in the given alternatives which correctly denotes 9¥$★M.",
+      "choices": {
+        "a": "24, CA, 13, 14, 04",
+        "b": "24, 14, BE, 01, 04",
+        "c": "11, DC, 20, 22, 10",
+        "d": "42, 43, 41, EB, 40"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_word",
+      "subtopic_name": "Matrix Word Coding",
+      "body": "RUDE",
+      "choices": {
+        "a": "56, 65, 10, 33",
+        "b": "59, 99, 34, 11",
+        "c": "77, 56, 02, 01",
+        "d": "95, 87, 42, 11"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_word",
+      "subtopic_name": "Matrix Word Coding",
+      "body": "TRUE",
+      "choices": {
+        "a": "24, 77, 56, 03",
+        "b": "41, 86, 99, 23",
+        "c": "30, 95, 87, 20",
+        "d": "03, 58, 78, 11"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_word",
+      "subtopic_name": "Matrix Word Coding",
+      "body": "LIME",
+      "choices": {
+        "a": "58, 69, 76, 03",
+        "b": "79, 88, 98, 10",
+        "c": "97, 75, 56, 33",
+        "d": "66, 96, 89, 02"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 31,
+      "solution": "★ can be denoted by 04, 10, 22, 31, 43. ℤ can be denoted by 57, 67, 76, 85, 98. @ can be denoted by 03, 12, 21, 33, 40. ¥ can be denoted by 58, 69, 75, 86, 99. $ can be denoted by 00, 11, 23, 32, 44. So, the symbol group ★ℤ@¥$ can be denoted by the number group 22, 67, 40, 75, 11."
+    },
+    {
+      "number": 32,
+      "solution": "9 can be denoted by 02, 11, 24, 33, 40. ¥ can be denoted by AD, BE, CA, DC, EB. $ can be denoted by 03, 14, 20, 32, 41. ★ can be denoted by 01, 13, 22, 30, 43. M can be denoted by 04, 10, 21, 34, 42. So, the correct letter/number group is 11, DC, 20, 22, 10 which represents 9¥$★M."
+    }
+  ],
+  "answers": [],
+  "_page": 196
+}

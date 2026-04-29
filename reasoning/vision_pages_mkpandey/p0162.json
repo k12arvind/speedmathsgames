@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 310,
+      "solution": "Syllogism\na) Almost all the books have not been sold.\n(Some books have not been sold.)\nb) Most of the paper is not handmade.\n(Most of the paper is not handmade.)\nc) Negative propositions with beginning words such as 'not', 'seldom', 'hardly', 'scarcely', 'rarely', 'little' etc. are to be reduced to the O-type.\n\nExamples:\na) Few men are corruptible.\n(Some men are not corruptible.)\nb) Seldom are people jealous.\n(Some people are not jealous.)\nc) Rarely is a rich man worried.\n(Some rich men are not worried.)\nd) A negative sentence with an exception, which is not definite, is to be reduced to the O-type.\n\nExamples:\na) All students except two have passed.\n(Some students have not passed.)\nb) All students except a few are absent.\n(Some students are not absent.)\n\nExclusive Propositions\nPropositions beginning with 'only', 'alone', 'none but', 'none else but' are called exclusive propositions. Such propositions can be reduced to A or E form. Consider, for example, the sentence:\n\"Only educated are IAS officers.\"\nThis sentence implies that \"No uneducated is IAS officer\" and therefore, it is a negative proposition. In general, an exclusive proposition is reduced in the following way:\n\nRules: Reduction of an exclusive proposition\nLet the given exclusive proposition be:\nOnly S is P\nor\nS alone is P\nor\nNone but S is P\nor\nNo one else but S is P\n\nthen it is reduced to a proposition of the type\nA        I\nin the following way\n\nNo non-S is P\nor\nAll P are S\nor\nNo P is non-S\nor\nSome S are P"
+    }
+  ],
+  "answers": [],
+  "_page": 162
+}

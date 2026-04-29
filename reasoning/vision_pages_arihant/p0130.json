@@ -1,0 +1,371 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [
+    {
+      "passage_text": "Following questions are based on the five three-digit numbers given below. [BOI (PO) 2010] 813 479 564 385 792",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    },
+    {
+      "passage_text": "In the following word 'ELECTROCARDIOGRAPH', the first half of the letters are reversed, but one letter 'P', then prefixed and finally letter 'S' is suffixed.",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    },
+    {
+      "passage_text": "Following questions are based on the five three-digit numbers given below. [OBC (PO) 2008] 519 378 436 624 893",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "series_pattern",
+      "subtopic_name": "Series Pattern",
+      "body": "What should come in place of the question mark (?) in the following series based on the above arrangement? CMA NFE 2Y3 (?) 3?*",
+      "choices": {
+        "a": "Sf6",
+        "b": "SfZ",
+        "c": "Sf#",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "vowel_consonant",
+      "subtopic_name": "Vowel and Consonant Operations",
+      "body": "If all the vowels are dropped from the above series, which of the following would be the 8th element to the right of the 13th element from the left end?",
+      "choices": {
+        "a": "4",
+        "b": "%",
+        "c": "8",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "position_comparison",
+      "subtopic_name": "Position Comparison",
+      "body": "Three of the following four are alike in a certain way with respect to their positions in the above arrangement. Which is one that is different from the other four?",
+      "choices": {
+        "a": "E3#",
+        "b": "O7W",
+        "c": "L62",
+        "d": "1MN"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "reverse_order",
+      "subtopic_name": "Reverse Order Operations",
+      "body": "If the last four letters of the word 'TABULATION' are written in reverse order followed by next two in reverse order and next three in the reverse order, counting from the end, which letter would be eighth in the new arrangement?",
+      "choices": {
+        "a": "N",
+        "b": "T",
+        "c": "E",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_pairs",
+      "subtopic_name": "Letter Pairs",
+      "body": "How many such pairs of letters are there in the word 'KINDNESS' each of which have as many letters between them in word as in the alphabets?",
+      "choices": {
+        "a": "Nil",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Which letters will be exactly in the middle?",
+      "choices": {
+        "a": "L and E",
+        "b": "R and D",
+        "c": "D and I",
+        "d": "E and R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "vowel_position",
+      "subtopic_name": "Vowel Position",
+      "body": "How many vowels will be to the left of the middle letter?",
+      "choices": {
+        "a": "2",
+        "b": "1",
+        "c": "4",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "vowel_position",
+      "subtopic_name": "Vowel Position",
+      "body": "Which of the two vowels will be adjoining each other?",
+      "choices": {
+        "a": "IE",
+        "b": "IO",
+        "c": "AE",
+        "d": "AO"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "vowel_consonant",
+      "subtopic_name": "Vowel and Consonant Operations",
+      "body": "Which vowel will have a consonant to the left but a vowel to the right of it?",
+      "choices": {
+        "a": "I",
+        "b": "O",
+        "c": "A",
+        "d": "E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_position",
+      "subtopic_name": "Letter Position",
+      "body": "Name the letter sandwiched between two vowels?",
+      "choices": {
+        "a": "R and T",
+        "b": "C and L",
+        "c": "R and L",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "number_pattern",
+      "subtopic_name": "Number Pattern",
+      "body": "How many 9's in the following sequence of the numbers are immediately preceded by 8 but not immediately followed by 4? 986279628948894984889498494849",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_interchange",
+      "subtopic_name": "Digit Interchange",
+      "body": "If the positions of the 1st and the 2nd digits within each number are interchanged, which of the following will be the lowest number?",
+      "choices": {
+        "a": "813",
+        "b": "479",
+        "c": "564",
+        "d": "385",
+        "e": "792"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_position",
+      "subtopic_name": "Digit Position",
+      "body": "Which of the following is the 2nd digit of the 2nd lowest number?",
+      "choices": {
+        "a": "7",
+        "b": "7",
+        "c": "6",
+        "d": "8",
+        "e": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_sum",
+      "subtopic_name": "Digit Sum",
+      "body": "Which of the following is the sum of the 1st and the 3rd digits of the 2nd highest number?",
+      "choices": {
+        "a": "11",
+        "b": "13",
+        "c": "9",
+        "d": "8",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "word_formation",
+      "subtopic_name": "Word Formation",
+      "body": "If the following scrambled letters are rearranged to form the name of a city, the city, so formed is famous for its 'WILLOW BATS'. (a) Locks (b) Steel Plant (c) Temples (d) Pottery",
+      "choices": {
+        "a": "Locks",
+        "b": "Steel Plant",
+        "c": "Temples",
+        "d": "Pottery"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "letter_pairs",
+      "subtopic_name": "Letter Pairs",
+      "body": "How many such pairs of letters are there in the word 'HOCKEY' each of which have as many letters between them in word as in the alphabets?",
+      "choices": {
+        "a": "Nil",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "digit_interchange",
+      "subtopic_name": "Digit Interchange",
+      "body": "If the positions of the 1st and the 3rd digits within each number are interchanged, which of the following will be the 2nd smallest number?",
+      "choices": {
+        "a": "519",
+        "b": "378",
+        "c": "436",
+        "d": "624",
+        "e": "893"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 130
+}

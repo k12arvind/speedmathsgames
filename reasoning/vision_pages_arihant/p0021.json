@@ -1,0 +1,515 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-57) In each of the following questions, there is a certain relationship between two given words on one side of (:) and one word is given on another side (::) while another word is to be found from the given alternatives, having the same relation with this word as the words of the given pair bear. Choose the correct alternative.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "King : Throne :: Judge : ?",
+      "choices": {
+        "a": "Lawyer",
+        "b": "Bench",
+        "c": "Court",
+        "d": "Trial"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Lion : Roar : : Ass : ?",
+      "choices": {
+        "a": "Bark",
+        "b": "Trumpet",
+        "c": "Howl",
+        "d": "Bray"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Lamb : Frisk : : Mouse : ?",
+      "choices": {
+        "a": "Trot",
+        "b": "Scamper",
+        "c": "Gallop",
+        "d": "Flit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Circle: Arc : : Square : ?",
+      "choices": {
+        "a": "Line",
+        "b": "Triangle",
+        "c": "Sphere",
+        "d": "Rectangle"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Brinjal : Vegetable : : Orange : ?",
+      "choices": {
+        "a": "Fruit",
+        "b": "Stem",
+        "c": "Leaf",
+        "d": "Root"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Contamination : Food : : Infection : ?",
+      "choices": {
+        "a": "Germs",
+        "b": "Disease",
+        "c": "Body",
+        "d": "Microbes"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Pleasure : Sorrow :: Right : ?",
+      "choices": {
+        "a": "Wrong",
+        "b": "Wonderful",
+        "c": "Happy",
+        "d": "Sure"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Aluminium : Bauxite : : Iron : ?",
+      "choices": {
+        "a": "Pyrite",
+        "b": "Magnetite",
+        "c": "Pyrodosie",
+        "d": "Haematite"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Truthfulness : Liar : : Loyalty : ?",
+      "choices": {
+        "a": "Worker",
+        "b": "Traitor",
+        "c": "Insurgent",
+        "d": "Faithful"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "House : Door :: Compound : ?",
+      "choices": {
+        "a": "Gate",
+        "b": "Fence",
+        "c": "Foundation",
+        "d": "Wall"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Hongkong : China :: Vatican : ?",
+      "choices": {
+        "a": "France",
+        "b": "Mexico",
+        "c": "Canada",
+        "d": "Rome"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Giant : Dwarf : : Genius : ?",
+      "choices": {
+        "a": "Wicked",
+        "b": "Gentle",
+        "c": "Idiot",
+        "d": "Tiny"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Aryabhatta : Mathematician : : Varahamihira : ?",
+      "choices": {
+        "a": "Physician",
+        "b": "Astronomer",
+        "c": "Scientist",
+        "d": "Architect"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Peat : Lignite : : Bituminous : ?",
+      "choices": {
+        "a": "Granite",
+        "b": "Basalt",
+        "c": "Anthracite",
+        "d": "Coke"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Cougar : South America : : Okapi : ?",
+      "choices": {
+        "a": "India",
+        "b": "Central Africa",
+        "c": "North America",
+        "d": "Pakistan"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Love : Friend : : Hate : ?",
+      "choices": {
+        "a": "Hatred",
+        "b": "Brother",
+        "c": "Enemy",
+        "d": "Companion"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Sheep : Mutton : : Deer : ?",
+      "choices": {
+        "a": "Veal",
+        "b": "Meat",
+        "c": "Flesh",
+        "d": "Venison"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Tea : Leaves : : Coffee : ?",
+      "choices": {
+        "a": "Plant",
+        "b": "Leaves",
+        "c": "Seeds",
+        "d": "Stimulant"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Deep : Shallow : : Sharp : ?",
+      "choices": {
+        "a": "Knife",
+        "b": "Blade",
+        "c": "Blunt",
+        "d": "Ocean"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 20,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Horse : Stable : : Man : ?",
+      "choices": {
+        "a": "Woman",
+        "b": "Den",
+        "c": "Clothes",
+        "d": "House"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 21,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Mason : Wall : : Carpenter : ?",
+      "choices": {
+        "a": "Glass",
+        "b": "Chair",
+        "c": "Pen",
+        "d": "Book"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 22,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Knife : Cut : : ? : Guard",
+      "choices": {
+        "a": "Dig",
+        "b": "Shield",
+        "c": "Oar",
+        "d": "Bore"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 23,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Cobbler : Leather : : Tailor : ?",
+      "choices": {
+        "a": "Thread",
+        "b": "Cloth",
+        "c": "Shirt",
+        "d": "Draper"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 24,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "College : Dean : : Museum : ?",
+      "choices": {
+        "a": "Supervisor",
+        "b": "Custodian",
+        "c": "Warden",
+        "d": "Curator"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 25,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Moth : Insect : : Mouse : ?",
+      "choices": {
+        "a": "Cat",
+        "b": "Mole"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 21
+}

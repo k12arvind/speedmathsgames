@@ -1,0 +1,333 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following arrangement carefully and answer the questions given below.\nF 4 © T 2 E % M P 5 W 9 @ L Q R 6 U H 3 Z 7 ★ A T B 8 V # G $ Y D",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    },
+    {
+      "passage_text": "Study the following arrangement carefully and answer the questions given below.\nC E B A C D B C D A C E B E D C A B A D A C E D U B A U B D B U",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "What should come in place of question mark (?) in the following series based on the above arrangement?\nF4© T2E ?",
+      "choices": {
+        "a": "7A8",
+        "b": "7AT",
+        "c": "*78",
+        "d": "A8V",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "counting_elements",
+      "subtopic_name": "Counting Elements",
+      "body": "How many such consonants are there in the above arrangement, each of which is immediately preceded by a number but not immediately followed by a number?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "position_from_end",
+      "subtopic_name": "Position From End",
+      "body": "Which of the following is the 10th to the right of the 19th from the right end of the above arrangement?",
+      "choices": {
+        "a": "M",
+        "b": "T",
+        "c": "#",
+        "d": "2",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "counting_elements",
+      "subtopic_name": "Counting Elements",
+      "body": "How many such symbols are there in the above arrangement, each of which is immediately preceded by a number and immediately followed by a letter?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three",
+        "e": "More then three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "grouping_patterns",
+      "subtopic_name": "Grouping Patterns",
+      "body": "Four of the following five are alike in a certain way based on their positions in the above arrangement and so form a group. Which is the one that does not belong to that group?",
+      "choices": {
+        "a": "M24",
+        "b": "PWM",
+        "c": "Q6L",
+        "d": "RUQ",
+        "e": "VG8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "If all the symbols are dropped from the above arrangement, which of the following will be the fourteenth from the left end?",
+      "choices": {
+        "a": "R",
+        "b": "Q",
+        "c": "U",
+        "d": "3",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "counting_elements",
+      "subtopic_name": "Counting Elements",
+      "body": "In the given number series, how many 9s are there which are immediately followed by 1 but not immediately preceded by 8?\n18 91 35 79 13 91 57 98 69 14 20 86 49 12",
+      "choices": {
+        "a": "3",
+        "b": "6",
+        "c": "4",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "counting_elements",
+      "subtopic_name": "Counting Elements",
+      "body": "How many N's are there in the following series which are immediately preceded by M and also immediately followed by M?\nM N M N M N M E N M N F P N M N N N N N M",
+      "choices": {
+        "a": "3",
+        "b": "5",
+        "c": "2",
+        "d": "None of these above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "counting_elements",
+      "subtopic_name": "Counting Elements",
+      "body": "How many such pairs of alphabets are there in the series of alphabets given in BOLD (D to U) in the given arrangement each of which has as many letters between them (in both forward and backward directions) as they have between them in the English alphabetical series?",
+      "choices": {
+        "a": "Three",
+        "b": "One",
+        "c": "Two",
+        "d": "None",
+        "e": "More than three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "Which of the following is the ninth to the right of the twenty-second from the right end of the given arrangement?",
+      "choices": {
+        "a": "D",
+        "b": "E",
+        "c": "B",
+        "d": "C",
+        "e": "U"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "position_finding",
+      "subtopic_name": "Position Finding",
+      "body": "If all the alphabets of the series are written in reverse order, then which of the following will be 8th to the right of the 7th from the left end of the series?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "counting_elements",
+      "subtopic_name": "Counting Elements",
+      "body": "How many such A's are there in the given arrangement each of which is immediately preceded by a 'B' and also immediately followed by a consonant?",
+      "choices": {
+        "a": "One",
+        "b": "None",
+        "c": "More than three",
+        "d": "Two",
+        "e": "Three"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "counting_elements",
+      "subtopic_name": "Counting Elements",
+      "body": "How many such D's are there in the given arrangement each of which is immediately preceded by a consonant and also immediately followed by a vowel?",
+      "choices": {
+        "a": "More than four",
+        "b": "Four",
+        "c": "Two",
+        "d": "Three",
+        "e": "One"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "In the following series of numbers, find out how many times 1, 3 and 7 have appeared together, 7 being in the middle and 1 and 3 on either side of 7?\n2931737713317357137717390 6",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "number_series",
+      "subtopic_name": "Number Series",
+      "body": "How many even numbers are there in the following sequence of numbers each of which is immediately followed by an odd number as well as immediately preceded by an even number?\n86768932753422355228119",
+      "choices": {
+        "a": "One",
+        "b": "Three",
+        "c": "Five",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 125
+}

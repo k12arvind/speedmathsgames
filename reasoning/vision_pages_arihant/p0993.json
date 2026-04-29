@@ -1,0 +1,148 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Grouping",
+      "subtopic_code": "figure_grouping",
+      "subtopic_name": "Figure Grouping",
+      "body": "Figure grouping question with 9 geometric figures arranged in a 3x3 grid",
+      "choices": {
+        "a": "(2, 4, 7), (1, 8, 9), (3, 5, 6)",
+        "b": "(2, 6, 9), (1, 5, 7), (3, 4, 8)",
+        "c": "(2, 7), (1, 5, 8), (3, 4, 9)",
+        "d": "(2, 7, 8), (1, 5, 6), (3, 4, 9)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Grouping",
+      "subtopic_code": "figure_grouping",
+      "subtopic_name": "Figure Grouping",
+      "body": "Figure grouping question with 9 geometric figures arranged in a 3x3 grid",
+      "choices": {
+        "a": "(1, 4, 7), (3, 6, 9), (2, 5, 8)",
+        "b": "(1, 4, 7), (2, 6, 9), (3, 5, 8)",
+        "c": "(1, 6, 9), (2, 4, 7), (3, 5, 8)",
+        "d": "(1, 5, 7), (2, 6, 9), (3, 4, 8)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Grouping",
+      "subtopic_code": "figure_grouping",
+      "subtopic_name": "Figure Grouping",
+      "body": "Figure grouping question with 9 geometric figures arranged in a 3x3 grid",
+      "choices": {
+        "a": "(1, 5, 7), (2, 3, 9), (4, 6, 8)",
+        "b": "(1, 3, 9), (2, 4, 6), (5, 7, 8)",
+        "c": "(3, 4, 7), (2, 4, 9), (1, 6, 8)",
+        "d": "(6, 7, 9), (1, 3, 4), (2, 4, 8)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Figure Grouping",
+      "subtopic_code": "figure_grouping",
+      "subtopic_name": "Figure Grouping",
+      "body": "Figure grouping question with 9 geometric figures arranged in a 3x3 grid",
+      "choices": {
+        "a": "(1, 4, 6), (2, 3, 8), (5, 7, 9)",
+        "b": "(2, 3, 8), (4, 5, 7), (1, 6, 9)",
+        "c": "(5, 7, 9), (3, 4, 8), (1, 6, 2)",
+        "d": "(1, 4, 9), (2, 3, 5), (6, 7, 8)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) 2 and 5 form a pair of identical figures."
+    },
+    {
+      "number": 2,
+      "solution": "(c) 3 and 5 form a pair of identical figures."
+    },
+    {
+      "number": 3,
+      "solution": "(c) 2 and 4 form a pair of identical figures."
+    },
+    {
+      "number": 4,
+      "solution": "(c) 3 and 7 form a pair of identical figures."
+    },
+    {
+      "number": 5,
+      "solution": "(c) 1, 3 and 8 form a group of figures which contain one geometrical shape."
+    },
+    {
+      "number": 6,
+      "solution": "(c) 2, 5 and 8 form a group of figures which are composed of two dissimilar figures, one inside the other."
+    },
+    {
+      "number": 7,
+      "solution": "(d) 1, 4), (2, 5) and (5, 6) are a group of three figures."
+    },
+    {
+      "number": 8,
+      "solution": "(b) (2, 6, 8), (1, 5, 9) and (3, 4, 7) are a group of similar shape figures."
+    },
+    {
+      "number": 9,
+      "solution": "(b) (1, 4), (2, 7), (3, 5) and (6, 8) are group of identical figures."
+    },
+    {
+      "number": 10,
+      "solution": "(d) 1 and 3 contain a V-shaped figure inside another figure. 2, 4 and 5 contain one figure placed inside a similar figure. 6 and 7 are divided into four equal parts by mutually perpendicular lines."
+    },
+    {
+      "number": 11,
+      "solution": "(b) 1, 3 and 8 form a group of figures which contain one geometrical shape. 2, 4 and 6 form a group of figures in which one figure is enclosed inside another figure. 5, 7 and 9 form a group of figures in which two figures are attached with one another."
+    },
+    {
+      "number": 12,
+      "solution": "(d) 1, 5 and 9 consist of cup-shaped figures. 3, 6 and 7 contain straight lines dividing the figure into four parts. 2, 4 and 8 are simple geometrical figures."
+    },
+    {
+      "number": 13,
+      "solution": "(b) 1, 4 and 6 contain two identical figures which intersect each other. 2, 5 and 8 contain figures in which curves are present. 3, 7 and 9 contain figures which represent circular design patterns."
+    },
+    {
+      "number": 14,
+      "solution": "(c) 1, 3 and 5 are figures having partially or completely curved boundaries. 2, 6 and 8 are triangles. 4, 7 and 9 are quadrilaterals."
+    }
+  ],
+  "answers": [],
+  "_page": 993
+}

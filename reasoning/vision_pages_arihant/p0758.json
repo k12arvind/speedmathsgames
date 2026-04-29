@@ -1,0 +1,118 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 8 Finding a Pair of Similar Figures in Pattern to Original Pair",
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 19-24) In each of the following questions, a related pair of figures is followed by five numbered pairs of figures. Select the pair that has a relationship similar to that in the original pair. The best possible answer is to be selected from a group of fairly close choices.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "e",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "Original Pair",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 19,
+      "solution": "In the original pair, each of the square loses one of its side sequentially starting from anyone of the squares."
+    },
+    {
+      "number": 20,
+      "solution": "In the original pair, the symbols at the centre and bottom right positions rotate through 90° anti-clockwise, the symbols at top right and bottom left positions rotate through 90° clockwise and the symbol at the top left position rotates through 135° clockwise."
+    },
+    {
+      "number": 21,
+      "solution": "In the original pair, symbols on the left side move one side clockwise and are increased by two in number. The symbols at top positions move one side anti-clockwise after rotating through 90° clockwise and are increased in number by two. The symbols at bottom rotate through 90° anti-clockwise and are arranged in a line on right side."
+    },
+    {
+      "number": 22,
+      "solution": "In the original pair, the innermost figure rotates through 90° anti-clockwise and comes in the middle, the outermost figure comes inside the main figure and the figure in the middle becomes the outermost figure."
+    }
+  ],
+  "answers": [],
+  "_page": 758
+}

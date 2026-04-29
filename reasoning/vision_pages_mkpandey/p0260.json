@@ -1,0 +1,248 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 33-37): A word arrangement machine, when given a particular input, rearranges it following a particular rule. The following is an illustration of the input and the steps of rearrangement:",
+      "has_figure": true,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "step_coding",
+      "subtopic_name": "Step by Step Coding",
+      "body": "Which of the following will be step III of the given input? Input: 48, 31, 17, 67, 29, 89, 26, 101",
+      "choices": {
+        "a": "17, 31, 48, 67, 29, 89, 26, 101",
+        "b": "17 29, 48, 67, 31, 89, 26, 101",
+        "c": "17, 26, 48, 67, 31, 89, 101, 29",
+        "d": "17, 29, 48, 67, 89, 101, 31, 26",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "step_coding",
+      "subtopic_name": "Step by Step Coding",
+      "body": "Which of the following will be the second step for the given input? Input: 21, 6, 72, 67, 39, 54, 17",
+      "choices": {
+        "a": "6, 21, 72, 67, 39, 54, 17",
+        "b": "6, 17, 72, 67, 39, 54, 21",
+        "c": "6, 17, 21, 72, 67, 39, 54",
+        "d": "6, 21, 54, 67, 72, 39, 17",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "step_coding",
+      "subtopic_name": "Step by Step Coding",
+      "body": "In how many steps will the following input be fully arranged? Input: 21, 5, 37, 62, 28, 76, 54",
+      "choices": {
+        "a": "Step IV",
+        "b": "Step II",
+        "c": "Step III",
+        "d": "Step I",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "step_coding",
+      "subtopic_name": "Step by Step Coding",
+      "body": "Which of the following will be the given input? Input: 4, 47, 97, 60, 50, 102, 11, 60",
+      "choices": {
+        "a": "4, 47, 97, 60, 11, 50, 60, 102",
+        "b": "4, 11, 97, 60, 50, 60, 102, 47",
+        "c": "11, 50, 60, 97, 102, 60, 47, 4",
+        "d": "4, 11, 50, 60, 97, 102, 47, 9",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "step_coding",
+      "subtopic_name": "Step by Step Coding",
+      "body": "Which of the following will be the last step for the given input? Input: 79, 57, 81, 6, 5, 94",
+      "choices": {
+        "a": "5, 57, 81, 6, 79, 94",
+        "b": "5, 57, 81, 6, 79, 94",
+        "c": "5, 57, 81, 94, 79, 6",
+        "d": "5, 6, 57, 81, 79, 94",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "If the code for the third lot is \"con fro gim hur nhi toe tur\", what would be the code for the fifth lot?",
+      "choices": {
+        "a": "con fro gim hur nhi tur toe",
+        "b": "con fro gim hur nhi toe tur",
+        "c": "con fro gim tur nhi tur nhi toe",
+        "d": "con fro gim tur nhi toe",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement Machine",
+      "body": "If the code for the second lot is \"amb dek dah poi con sem nef\", what would be the code for the sixth lot?",
+      "choices": {
+        "a": "amb con dah dek poi sem nef",
+        "b": "amb con dek dah poi sem nef",
+        "c": "amb con dah dek nef poi sem",
+        "d": "There would be no sixth lot",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "What will be the code for the first lot if the code word of the following is the final arrangement step \"ato fir har woj neh ris moc\"?",
+      "choices": {
+        "a": "neh ris moc har woj ato fir",
+        "b": "har woj moc ris fir ato neh",
+        "c": "ato fir har neh moc ris woj",
+        "d": "Can't be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "What will be the fourth step?",
+      "choices": {
+        "a": "ide lux tod rex fil nol ros",
+        "b": "ide lux tod rex fil nol ros",
+        "c": "ide lux nol ros rex fil",
+        "d": "ide lux nol ros rex fil",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "If following is the second step for an input, what will be the fourth step?",
+      "choices": {
+        "a": "Step I: 89 54 36 12 415",
+        "b": "46 122 212 48 56 343 415",
+        "c": "346 434 351 122 56 343 415",
+        "d": "46 122 212 48 56 343 415",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "Which of the following is the last step for the following input?",
+      "choices": {
+        "a": "Input: 26 12 68 36 46 87 9",
+        "b": "9 12 26 36 46 68 87",
+        "c": "9 12 36 46 68 87",
+        "d": "9 12 26 46 36 68 87",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 260
+}

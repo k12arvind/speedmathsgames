@@ -1,0 +1,255 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Gita is older than her cousin Mita. Mita's brother Bhanu is older than Gita. When Mita and Bhanu are visiting Gita, all three like to play a game of Monopoly. Mita wins more often than Gita does.\nWhich of the following can be concluded from the above?",
+      "choices": {
+        "a": "When he plays Monopoly with Mita and Gita, Bhanu often loses.",
+        "b": "Of the three, Gita is the oldest",
+        "c": "Gita hates to lose at Monopoly",
+        "d": "Of the three, Mita is the youngest"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Priya is taller than Tiya and shorter than Siya. Riya is shorter than Siya and taller than Priya. Riya is taller than Diya, who is shorter than Tiya. Arrange them in order of descending heights.",
+      "choices": {
+        "a": "Priya—Siya—Riya—Tiya—Diya",
+        "b": "Riya—Siya—Priya—Diya—Tiya",
+        "c": "Siya—Riya—Priya—Tiya—Diya",
+        "d": "Siya—Priya—Riya—Diya—Tiya"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "physical_comparison",
+      "subtopic_name": "Physical Comparison",
+      "body": "Among Anil, Bibek, Charu, Debu and Eswar, Eswar is taller than Debu but not as fat as Debu. Charu is taller than Anil but shorter than Bibek. Anil is fatter than Debu but not as fat as Bibek. Eswar is thinner than Charu who is thinner than Debu. Eswar is shorter than Anil. Who is the thinnest person?",
+      "choices": {
+        "a": "Bibek",
+        "b": "Charu",
+        "c": "Debu",
+        "d": "Eswar"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score Ranking",
+      "body": "Five students participated in the scholarship examination. Sudha scored higher than Puja. Kavita scored lower than Suma but higher than Sudha. Mamta scored between Puja and Sudha. Who scored lowest in the examination?",
+      "choices": {
+        "a": "Kavita",
+        "b": "Puja",
+        "c": "Mamta",
+        "d": "Sudha"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "vertical_arrangement",
+      "subtopic_name": "Vertical Arrangement",
+      "body": "There are five books A, B, C, D and E. Book C lies above D, book E is below A. D is above A and B is below E. Which book is at the bottom?",
+      "choices": {
+        "a": "E",
+        "b": "B",
+        "c": "A",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "rank_analysis",
+      "subtopic_name": "Rank Analysis",
+      "body": "In a class of students, Sairam's rank is 23rd from top in Mathematics, whereas his rank is 27th from below in Physics. How many students are there in the class?",
+      "choices": {
+        "a": "50",
+        "b": "40",
+        "c": "48",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "date_determination",
+      "subtopic_name": "Date Determination",
+      "body": "Mohit correctly remembers that his father's birthday is not after 19th of April. His sister correctly remembers that their father's birthday is before 20th but after 17th of April. On which day in April was definitely their father's birthday?",
+      "choices": {
+        "a": "17th",
+        "b": "19th",
+        "c": "18th",
+        "d": "17th or 18th",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "position_interchange",
+      "subtopic_name": "Position Interchange",
+      "body": "Dilip's position from the left in a row of students is 10th and Jagdish's position is 20th from the right. Both of them interchange their positions and Jagdish becomes 23rd from the right. How many students are there in the row?",
+      "choices": {
+        "a": "33",
+        "b": "44",
+        "c": "42",
+        "d": "32"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "position_interchange",
+      "subtopic_name": "Position Interchange",
+      "body": "Jaya's position from the left in a row of students is 12th and Rekha's position from the right is 20th. After interchanging their position, Jaya becomes 22nd from the left. How many students are there in the row?",
+      "choices": {
+        "a": "30",
+        "b": "31",
+        "c": "41",
+        "d": "34"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "date_determination",
+      "subtopic_name": "Date Determination",
+      "body": "Samant remembers that his brother's birthday is after 15th but before 18th of February while his sister remembers that her brother's birthday is after 16th but before 19th of February. On which date in February is Samant's brother's birthday?",
+      "choices": {
+        "a": "16th",
+        "b": "18th",
+        "c": "19th",
+        "d": "17th"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "class_analysis",
+      "subtopic_name": "Class Analysis",
+      "body": "In a class among the passed students Neeta is 22nd from the top and Kalyan, who is 5 ranks below Neeta is 34th from the bottom. All the students from the class appeared for an examination. If the ratio of the students who passed in the examination to those who failed is 4 : 1 for the class, how many students were there in the class?",
+      "choices": {
+        "a": "90",
+        "b": "60",
+        "c": "75",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "date_determination",
+      "subtopic_name": "Date Determination",
+      "body": "Seema correctly remembers that she took leave after 21st October and before 27th October. Her colleague Rita took leave on 23rd October but Seema was present on that day. If 24th October was a public holiday and 26th October was Sunday, on which day in October did Seema take leave?",
+      "choices": {
+        "a": "22nd October",
+        "b": "25th October",
+        "c": "22nd or 25th October",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 307
+}

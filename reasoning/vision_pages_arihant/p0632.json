@@ -1,0 +1,242 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "During the cultural week of an institute six competitions were conducted. The cultural week was inaugurated in the morning of 19th October, Wednesday and continued till 26th October. In the span of 8 days six competitions namely debate, folk dance, fash-p, street play, rock band and group song, were organised along with various other cultural programmes. The information available from the institute is\nI. Only one competition was held in a day.\nII. Rock band competition was not conducted on the closing day.\nIII. Fash-p was conducted on the day prior to debate competition.\nIV. Group song competition was conducted neither on Wednesday nor on Saturday.\nV. None of the competition was conducted on Thursday and Sunday.\nVI. Street play competition was held on Monday.\nVII. There was gap of two days between debate competition and group song competition.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Guest lectures on five subjects viz. Economics, History, Statistics, English and Mathematics have to be arranged in a week from Monday to Friday. Only one lecture can be arranged on each day. Economics cannot be scheduled on Tuesday. Guest faculty for History is available only on Tuesday. Mathematics lecture has to be scheduled immediately after the day of Economics lecture. English lecture has to be scheduled immediately before the day of Economics lecture.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "The cultural week started with which competition?",
+      "choices": {
+        "a": "Fash-p competition",
+        "b": "Debate competition",
+        "c": "Street play competition",
+        "d": "Rock band competition"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "How many days gap is there between Rock band competition and group song competition?",
+      "choices": {
+        "a": "Two",
+        "b": "Three",
+        "c": "Four",
+        "d": "Five"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which pair of competition was conducted on Wednesday?",
+      "choices": {
+        "a": "Rock band competition and debate competition",
+        "b": "Debate competition and fash-p competition",
+        "c": "Rock band competition and folk dance competition",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which competition exactly precedes the street play competition?",
+      "choices": {
+        "a": "Rock band competition",
+        "b": "Group song competition",
+        "c": "Debate competition",
+        "d": "Fash-p competition"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Fash-p competition follows which competition?",
+      "choices": {
+        "a": "Debate competition",
+        "b": "Street play competition",
+        "c": "Rock band competition",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which lecture is scheduled on Monday?",
+      "choices": {
+        "a": "History",
+        "b": "Economics",
+        "c": "Mathematics",
+        "d": "Statistics"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which lecture is scheduled between Statistics and English?",
+      "choices": {
+        "a": "Economics",
+        "b": "History",
+        "c": "Mathematics",
+        "d": "No lecture"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which lecture is the last one in the week?",
+      "choices": {
+        "a": "History",
+        "b": "English",
+        "c": "Mathematics",
+        "d": "Economics"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which lecture is scheduled on Wednesday?",
+      "choices": {
+        "a": "Statistics",
+        "b": "Economics",
+        "c": "English",
+        "d": "History"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which lecture is scheduled before the Mathematics lecture?",
+      "choices": {
+        "a": "Economics",
+        "b": "History",
+        "c": "Statistics",
+        "d": "English"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement",
+      "body": "Seven men, A, B, C, D, E, F and G are standing in a queue in that order. Each one is wearing a cap of a different colour like violet, indigo, blue, green, yellow, orange and red. D is able to see in front of him green and blue, but not violet. E can see violet and yellow, but not red. G can see caps of all colours other than orange. If F is wearing an indigo coloured cap, then the colour of the cap worn by F is",
+      "choices": {
+        "a": "Blue",
+        "b": "Violet",
+        "c": "Red",
+        "d": "Orange"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 632
+}

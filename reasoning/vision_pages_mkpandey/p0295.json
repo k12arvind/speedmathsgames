@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 576,
+      "solution": "It is simple.... To decide which statements are relevant for a conclusion, we put terms of a given conclusion and see if each of them appear separately or not as a single common term in the given statements. If the statement in the question does not will be our \"relevant statements\". To understand the above let us take conclusion I: (M $ K). This has two terms M and K. Now, we look at the given statements (M ∧ N, Y M, O ∧ N and L ∧ K) and find that M and K appear separately with a common term in the following two statements: L Y M, L ∧ K. Hence, the above two statements are the relevant statements for taking our conclusion."
+    },
+    {
+      "number": 577,
+      "solution": "Learner's Exercise III. In our sample problem given in section 19.2, find out the relevant statements for conclusions in Q1, Q2 and Q3. Soln: (1) Q.1: Given Statements: M ∧ N, L > M, O ∧ N, L ∧ K (i) Conclusion I: M $ K. It has two terms M and K. Now, out of the four statements given, M ∧ N and K appear separately with a common term L in these two statements: L > M, L ∧ K. Hence, these are our relevant statements. (ii) Conclusion II: L ∧ N. It has two terms L and N. Now, L and N appear separately with a common term M in the following statements: L > M, L > M. Hence, these two are our relevant statements. (2) Q. 2: Given Statements: E > F, C ∈ D, F ∧ G, D ∧ E (i) Conclusion I: E ∧ G. It has two terms E and G. Now, E and G appear separately with a common term F in the following statements: E > F, F ∧ G. Hence, these two are our relevant statements. (ii) Conclusion II: C > E. It has two terms C and E. Now, C and E appear separately with a common term D in the following statements: C ∈ D, D ∧ E. Hence, these two are our relevant statements. (3) Q. 3: Given Statements: J ∧ M, O > N, L $ H, M > O (i) Conclusion I: L > N. It has two terms L and N. Here, we see that L and N do not appear in any common term in any pair of statements. This means that in this case more and different statements may be relevant for us. Here, we see that N appears only in one statement. Now, O appears with M (in M > O) and M appears with L (in J ∧ M). Hence, in fact the relevant statements are: O > N, M > O, J ∧ M. After conclusion H: L ∧ N. According to our understanding of method, the conclusion in logical process 1, if the conclusion drawn from the relevant statements is in right step. (And check if it matches with the conclusion we wish to establish.) It is: For example, consider Q 1 of Ex 1. The Given Statements: M ∧ N, L > M, O ∧ N, L ∧ K Conclusions: L M $ K. We first decode these: (First step) Given Statements: M > N, L > M, O > N, L > K Conclusion: L M < K. From this, we find that the relevant statements are: L > M, L > K. We combine them and get M < K. (Third step) Now, M < K does not imply that M < K because M ≤ K allows for M to be equal to K which is not true in case of M < K. Hence, conclusion I does not follow. Now, the relevant statements are: M > N, L > M. Combining, we get L > N. Hence conclusion II follows. Correct answer: 2 (Only conclusion II follows). We are now fully conversant with our method. There are some minor details that we need to look into. We will do this now and after that we will go over to our complete solution-strategy."
+    }
+  ],
+  "answers": [],
+  "_page": 295
+}

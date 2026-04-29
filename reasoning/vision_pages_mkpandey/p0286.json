@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 18,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 558,
+      "solution": "Step I: In questions where you have to give the symbols for a decimal number, (a) first convert that decimal number to binary (use concepts of Section 18.3.2 and Table 2), (b) and then, replace 0 and 1 by appropriate symbols. Step II: In questions where symbols are given and you have to find what decimal value, (a) first replace symbols by 0 and 1 to get the binary form, (b) and then, convert the binary numbers to decimal (use concepts of Section 18.3.1 and Table 2)."
+    },
+    {
+      "number": 559,
+      "solution": "Some Tips for quick answers. Tip 1: (A) The binary form of an odd number will always have a 1 on the end and the binary form of an even number will always have a 0 in the end. (B) Conversely, if the binary form has a 0 in the end, it must be an even number and if it has a 1 in the end, it must be an odd number. Tip 2: (A) The binary form of 4, 5, 6 and 7 has three digits; that of 8, 9, 10, 11 has four digits and that of 16, 17, 18, 19, 20, 21 has five digits. (B) Conversely, if the binary form has two digits, it must be one of 4, 5, 6, 7, 8; if it has four digits, it must be one of 8, 9, ...., 15; if it has five digits, it must be one of 16, 17, .... 31. Tip 3: Just as a zero at the leftmost place has no value for a decimal number, it has no value for a binary number also. (For example, 0110 is the same as 110 in binary system and 01 equals 2 in the decimal and not 80). Obviously 010 is not a 3-digit number but a 2-digit number.)"
+    }
+  ],
+  "answers": [],
+  "_page": 286
+}

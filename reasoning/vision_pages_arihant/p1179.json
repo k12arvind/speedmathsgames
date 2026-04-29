@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "(c) Method I\nBenches Roads Benches Woods\nDesks Chairs Desks Chairs\nBenches Chairs\nDesks Roads\nI. Some roads are chairs. (✓)\nII. No chair is a desk. (✓)\nMethod II\nAll desks are benches. (A-type)\nNo bench is a chair. (E-type)\nAll chairs are roads. (A-type)\nFrom Statement 3,\nAll chairs are roads → Conversion → Some roads are chairs\n= Conclusion I\nFrom Statements 1 and 2,\nA + E = E-type conclusion\nNo desk is a chair → Conversion → No chair is desk\n= Conclusion II\nHence, both Conclusions I and II follow."
+    },
+    {
+      "number": 8,
+      "solution": "(d) Jungles Pens Boys Needles\nI. Some needles are pens. (✗)\nII. Some boys are pens. (✗)"
+    },
+    {
+      "number": 9,
+      "solution": "(e) Stones Tents Stones Walls\nWalls Tents\nI. Some walls are stones. (✓)\nII. Some walls are tents. (✓)"
+    },
+    {
+      "number": 10,
+      "solution": "(b) Tables Chairs Woods Tables\nWoods Stones Stones\nChairs\nI. No stone is table. (✗)\nII. Some stones are woods (✓)"
+    },
+    {
+      "number": 11,
+      "solution": "(c) Fruits Red Fruits Red\nMangoes Vegetables Mangoes\nI. No fruit is red. (✗)\nII. Some fruits are red. (✗)\nComplementary pair (E-I)"
+    },
+    {
+      "number": 12,
+      "solution": "(b) Enterances Doors Gate Windows\nI. Atleast some windows are gates. (✗)\nII. No gate is an entrance. (✓)"
+    },
+    {
+      "number": 13,
+      "solution": "(b) Green Blue Letters Black\nI. No letter is green. (✗)\nII. Most blue are blacks. (✓)"
+    },
+    {
+      "number": 14,
+      "solution": "(d) Method I\nPens Buttons Books Pencils\nI. Some buttons are pens. (✗)\nII. Some pencils are books. (✗)\nMethod II\nSome books are pens. (I-type)\nSome pens are pencils. (I-type)\nSome pencils are buttons. (I-type)\nFrom Statements 2 and 3,\nI + I = Not a valid statement"
+    }
+  ],
+  "answers": [],
+  "_page": 1179
+}

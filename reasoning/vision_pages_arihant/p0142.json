@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "(d) As, 1 V → V 1, Similarly, 1 M → M 1, 2 E → E 2, 2 O → O 2, 3 H → H 3, 3 U → U 3, 4 E → E 4, 4 R → R 4, 5 M → T 8, 5 N → L 8, 6 E → N T 7, 6 F → U 7, 7 N → E 6, 7 U → F 6, 8 T → M 5, 8 L → N 5. ∴ MOURNFUL ⟹ MOURLUFN"
+    },
+    {
+      "number": 15,
+      "solution": "(d) As, 1 C → P 4, Similarly, 1 A → A 4, 2 O → M 3, 2 D → V 3, 3 M → O 2, 3 V → D 2, 4 P → C 1, 4 A → A 1, 5 U → T 6, 5 N → T 6, 6 T → U 5, 6 T → N 5, 7 R → E 10, 7 A → S 10, 8 O → N 9, 8 G → E 9, 9 N → O 8, 9 E → G 8, 10 E → R 7, 10 S → A 7. ∴ ADVANTAGES ⟹ AVDATNSEGA"
+    },
+    {
+      "number": 16,
+      "solution": "(c) As, E X E C U T I V E → T C I E U X V E E (1 2 3 4 5 6 7 8 9 → 6 4 7 3 5 2 8 1 9). Similarly, M A U S O L E U M → L S E U O A U M M (1 2 3 4 5 6 7 8 9 → 6 4 7 3 5 2 8 1 9). ∴ MAUSOLEUM ⟹ LSEUOAUMM"
+    },
+    {
+      "number": 17,
+      "solution": "(c) Letters of the basic word are written in the coded word in such a way that last and first letters, second last and second letters, third last and third letters and so on are written together in the coded word. ∴ NATIONAL ⟹ LNAANTOI"
+    },
+    {
+      "number": 18,
+      "solution": "(c) As, N E U R O T I C with diagram showing T I C C H O P S Y. Similarly P S Y C H O T I C with diagram showing T I C C H O P S Y. ∴ PSYCHOTIC ⟹ TICCHOPSY"
+    }
+  ],
+  "answers": [],
+  "_page": 142
+}

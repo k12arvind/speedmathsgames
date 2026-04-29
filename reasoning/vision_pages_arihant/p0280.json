@@ -1,0 +1,55 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Inserting the Missing Character",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 28,
+      "solution": "(D) As, ? = X\n16 - 3 = 13\nP C M\nand 26 - 12 = 14\nZ L N\n20 - 17 = 3\nT O C\n∴ ? = C (letter at 3rd position in the English alphabet)."
+    },
+    {
+      "number": 29,
+      "solution": "(C) Sum of the letter positions is multiplied by 5.\nAs, (20 + 6) × 5 = 130\nT F\nSimilarly, (12 + 2) × 5 = 70\nL B\n∴ ? = 70"
+    },
+    {
+      "number": 30,
+      "solution": "(C) Letter position of 1st letter is divided by letter position of 2nd letter.\n12 ÷ 4 = 3    9 ÷ 3 = 3    15 ÷ 5 = 3\nL D           I C         O E\nSimilarly, 26 ÷ 2 = 13\nZ B\n∴ ? = 13"
+    },
+    {
+      "number": 31,
+      "solution": "(C) Number = Product of letter positions / 2\nAs, (3 × 14) ÷ 2 = 21    (20 × 22) ÷ 2 = 220\nC N                      T V\nand (6 × 11) ÷ 2 = 33\nF K\nSimilarly, (12 × 9) ÷ 2 = 54\nL I\n∴ ? = 54"
+    },
+    {
+      "number": 32,
+      "solution": "(C) In each row, each of the letters A, B, C must appear once. In each column, the product of the first and third number is equal to the second number.\n∴ Missing number = (8 × 2) = 16\nand missing letter = C\n∴ ? = 16 C\nHence, option (a) is the correct answer."
+    },
+    {
+      "number": 33,
+      "solution": "(C) Given numbers are sum of the given letters' positions.\nAs, 2 + 3 = 5\nB C\n20 + 18 = 38\nT R\nand 12 + 7 = 19"
+    },
+    {
+      "number": 34,
+      "solution": "Similarly, L G\n24 + 14 = 38\nX N\nHence, option (c) is the correct answer.\n(C) As, 3 × 6 × 14 × 20 = 5040\nC F N T\nSimilarly, 7 × 11 × 4 × 16 = 4928\nG K D P\nHence, 4928 will come in place of question mark."
+    },
+    {
+      "number": 35,
+      "solution": "(D) The positional values of the letters in each row are incremented by 2 to get the next letter.\nHence, missing letter = I → K\nIn each row, 1st number + 2nd number = 3rd number\n∴ Missing number = 3 + 5 = 8\n∴ ? = K 8\nHence, option (b) is the correct answer."
+    },
+    {
+      "number": 36,
+      "solution": "(D) Starting from letter A in clockwise direction,\nA +2→ C +2→ E +2→ G +2→ I +2→ K\n+2→ M +2→ O\nStarting from number 8 in anti-clockwise direction (prime number addition sequence)\n8 +3→ 11 +5→ 16 +7→ 23 +11→ 34 +13→\n47 +17→ 64 +19→ 83\n∴ ? = O and 83\nHence, option (b) is the correct answer."
+    },
+    {
+      "number": 37,
+      "solution": "(D) Starting from letter A in anti-clockwise direction,\nA +2→ C +3→ F +4→ J +5→ O +6→ U\nStarting from number 4 in anti-clockwise direction\n22 = 4, 32 = 9, 42 = 16, 52 = 25, 62 = 36\n∴ ? = U and 36\nHence, option (b) is the correct answer."
+    },
+    {
+      "number": 38,
+      "solution": "(C) The letters form a repetitive sequence of vowels.\nA, E, I, O, U, A, E (outer side)\nOn the inner side, (right half part)\n(7 - 3)3 = 64 and (8 - 2)3 = 216\nOn inner side (left half part) (5 - 4)3 = 1\nand (11 - 8)3 = 27\n∴ ? = E and 27\nHence, option (c) is the correct answer."
+    }
+  ],
+  "answers": [],
+  "_page": 280
+}

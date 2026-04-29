@@ -1,0 +1,227 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 16-21) Read the following information carefully and answer the questions given below. A famous museum issues entry passes to all its visitors for security reasons. Visitors are allowed in batches after every one hour. In a day there are six batches. A code is printed on entry pass which keeps on changing for every batch. Following is an illustration of passcodes issued for each batch.\n\nBatch I houses neat and clean liked are all by\nBatch II by houses neat all are and clean liked\nBatch III liked by houses clean and neat all are and so on",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If Step I read \"it was the name bestowed upon him\", then what would be the arrangement for Step VII?",
+      "choices": {
+        "a": "bestowed it was the name upon him",
+        "b": "him it name bestowed the was upon",
+        "c": "it was him the name bestowed upon",
+        "d": "upon the him was it bestowed name",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If Step VI reads \"workers must take a stand against working\", then what will be the last word of step III?",
+      "choices": {
+        "a": "workers",
+        "b": "must",
+        "c": "take",
+        "d": "a",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If Step III reads \"the best way of promoting our sports\", then what will be the arrangement of the input?",
+      "choices": {
+        "a": "best the sports way of our promoting",
+        "b": "our promoting the best sports way of",
+        "c": "sports best the of way our promoting",
+        "d": "of our best the way sports promoting",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If the given input is \"it is good approach with care\", then what will be Step IV?",
+      "choices": {
+        "a": "with approach it is a good care",
+        "b": "approach is a care good it with",
+        "c": "a good approach it is with care",
+        "d": "care with a good approach is it",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "coding_pattern",
+      "subtopic_name": "Coding Pattern",
+      "body": "If passcode for the third batch is 'you succeed day and hard work to for', then what will be the passcode for the sixth batch?",
+      "choices": {
+        "a": "work hard to for succeed you and day",
+        "b": "hard work for and succeed you to day",
+        "c": "work hard for to succeed you and day",
+        "d": "hard work for to succeed you and day",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "coding_pattern",
+      "subtopic_name": "Coding Pattern",
+      "body": "If 'visit in 15 should the we time 40' is the passcode for the fifth batch, '15 we the should visit 40 time in' will be the passcode for which of the following batches?",
+      "choices": {
+        "a": "II",
+        "b": "IV",
+        "c": "I",
+        "d": "III",
+        "e": "VI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "coding_pattern",
+      "subtopic_name": "Coding Pattern",
+      "body": "Naman visited the museum in the fourth batch and was issued a passcode 'to one rush avoid not do very run'. What would have been the passcode for him had he visited the museum in the second batch?",
+      "choices": {
+        "a": "rush do not avoid to run very one",
+        "b": "rush not do avoid to run very one",
+        "c": "avoid rush not do to run very one",
+        "d": "Data inadequate",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "coding_pattern",
+      "subtopic_name": "Coding Pattern",
+      "body": "Kamal went to visit the museum in the second batch. He was issued a passcode 'length the day equal of an night are'. However, he could not visit the museum in the second batch as he was a little late. He, then preferred to visit in the fourth batch. What will be the new passcode issued to him?",
+      "choices": {
+        "a": "and of are night the length equal day",
+        "b": "and are of night the length equal day",
+        "c": "and of are night the equal day length",
+        "d": "and of are the night length day equal",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "coding_pattern",
+      "subtopic_name": "Coding Pattern",
+      "body": "If passcode for the second batch is 'to come hard you did work and success', then what will be the passcode for the fourth batch?",
+      "choices": {
+        "a": "did success to you hard come and work",
+        "b": "did success you to hard come and work",
+        "c": "did success to you hard come work and",
+        "d": "did to success you hard come and work",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "coding_pattern",
+      "subtopic_name": "Coding Pattern",
+      "body": "If the passcode issued for the last (sixth) batch is 'the pencil by all boys used are pen', then what will be the passcode for the first batch?",
+      "choices": {
+        "a": "pencil the pen are used by all boys",
+        "b": "pen the pencil used are by all boys",
+        "c": "pen the pencil are used by all boys",
+        "d": "pencil the pen are used all by boys",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 568
+}

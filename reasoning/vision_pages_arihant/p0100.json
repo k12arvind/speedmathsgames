@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "(d) Let us see there are 13 such letters\n\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\nFrom left: 13 letters between 8th and 22nd positions\n\nAlternate Method:\n22nd letter from left = (27 - 22) = 5th letter from right. Clearly, we have to find the number of letters between 8th letter from left and 5th letter from right.\n∴ Required number of letters = 26 - (8 + 5) = 26 - 13 = 13"
+    },
+    {
+      "number": 8,
+      "solution": "(a) Let us see\n\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\n9 letters between 20th from right and 10th from right\n\n∴ There are 9 such letters.\n\nAlternate Method:\n20th letter from right = (27 - 7) = 20th letter from left\nClearly, we have to find the number of letters between 7th letter from left and 10th letter from right.\n∴ Required number of letters = 26 - (7 + 10) = 26 - 17 = 9"
+    },
+    {
+      "number": 9,
+      "solution": "(c) Let us see\n\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\n10 letters between 20th from left and 18th from right\n\n∴ There are 10 such letters.\n\nAlternate Method:\n18th letter from right = (27 - 18) = 9th letter from left. And 20th letter from left = (27 - 20) = 7th letter from right.\nClearly, we have to find the number of letters between 9th letter from left and 7th letter from right.\n∴ Required number of letters = 26 - (9 + 7) = 26 - 16 = 10"
+    }
+  ],
+  "answers": [],
+  "_page": 100
+}

@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 25,
+      "solution": "(a) Let us check all the options one by one for the required relationship. From option (a), J + P % H × T % L = selected. [Family tree diagram showing Son, Brother, Sister, Mother relationships] J is the brother of T. Clearly, from option (a) it is established that J is the brother of T. So, there is no need to check other options."
+    },
+    {
+      "number": 26,
+      "solution": "(b) Let us check all the options one by one for the required relationship. From option (a), L % R $ D + T × M = Rejected. [Family tree diagram showing Mother, Married couple, Father, Sister relationships] As gender of M is not Known, so M can either be daughter or son of D. From option (b), L + R $ D + M × T = Selected. [Family tree diagram] It is clear from option (b) that M is the daughter of D. So, there is no need to check other options."
+    },
+    {
+      "number": 27,
+      "solution": "(b) I + T % J × L + K = K is the son-in-law of I. [Family tree diagram showing Father, Married couple, Mother, Sister relationships] Clearly, K is the son-in-law of I."
+    },
+    {
+      "number": 28,
+      "solution": "(d) Let us check all the options one by one for the required relationship. From option (a), W % L × T × Y + X = Rejected. [Multiple family tree diagrams for each option] Option (a) is rejected, as it is given that Y cannot be the son of X. From option (b), W + L × T × Y + X = Rejected. Option (b) is rejected, as it is given that Y cannot be the son of X. From option (c), X + L × T × Y + W = Rejected. Option (c) is rejected, as it is given that Y cannot be the son of X. From option (d), W $ X + L + Y + T = Selected. [Final family tree diagram] Y is the grandson of X. Option (d) is selected as it holds that Y is not the son of X but he is the grandson of X. Hence, there is no need to check other options."
+    },
+    {
+      "number": 29,
+      "solution": "(c) Let us check all the options one by one for the required relationship. From option (a), R % T × P + Q + V = Rejected. [Family tree diagram showing Mother, Sister, aunt relationships] T is the aunt of Q."
+    }
+  ],
+  "answers": [],
+  "_page": 409
+}

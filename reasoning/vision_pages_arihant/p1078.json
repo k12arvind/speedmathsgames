@@ -1,0 +1,90 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Statement and Conclusions",
+  "passages": [
+    {
+      "passage_text": "Directions (Examples Nos. 14-16) In the following questions, two statements are given followed by two Conclusions I and II. You have to consider the statements to be true even if they seem to be at variance from commonly known facts. You have to decide which of the given conclusions, if any, follow from the given statements. Indicate your answer.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction from Statements",
+      "body": "Statements A. AIDS is a killer disease. B. It is easy to prevent AIDS than to treat it. Conclusions I. AIDS prevention is very expensive. II. People will not cooperate for AIDS prevention.",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Neither Conclusion I nor II follows",
+        "d": "Both Conclusions I and II follow"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction from Statements",
+      "body": "Statements A. Teaching is an art. B. Drawing is also an art. Conclusions I. All artists are teachers. II. All artists know to draw pictures.",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Neither Conclusion I nor II follows",
+        "d": "Both Conclusions I and II follow"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction from Statements",
+      "body": "Statements A. People who live in the big city crowd into jammed trains or buses. B. They cross the street in competition with high powered motorcars. Conclusions I. Travelling is very difficult for city people II. Traffic jam is inevitable in big cities",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Neither Conclusion I nor II follows",
+        "d": "Both Conclusions I and II follow"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "None of the conclusions follows. If one takes precaution he/she may prevent it. It does not imply that AIDS prevention is very expensive."
+    },
+    {
+      "number": 15,
+      "solution": "None of the conclusions follows."
+    },
+    {
+      "number": 16,
+      "solution": "From both the statements, it is clear that people who live in city face problems in travelling. Therefore, only Conclusion I follows."
+    }
+  ],
+  "answers": [],
+  "_page": 1078
+}

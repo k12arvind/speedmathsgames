@@ -1,0 +1,196 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully to answer the questions that follow. Six couples have been invited to a dinner party. They are Niti, Geeta, Lata, Rakhi, Sita, Champa and Farookh, Hari, Amit, Tilak, Ram, Ali. They are seated on a circular table, facing each other. I. Geeta refuses to sit next to Ali. II. Lata wants to be between Amit and Hari. III. Champa refuses to sit next to Farookh. IV. Niti is seated on Ali's right hand side. V. Farookh and Tilak are seated exactly opposite to each other. VI. Ram and Sita are seated to the left of Champa. VII. Amit and Rakhi want to enjoy the company of Lata and Tilak respectively and are seated closest to them. VIII. The seating arrangement is such that minimum one woman is always between two men.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer the given questions. V, U and T are sitting around a circle. A, B and C are sitting around the same circle but two of them are not facing centre (they are facing the direction opposite to centre). V is second to the left of C. U is second to the right of A. B is third to the left of T. C is second to the right of T. A and C are not sitting together.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following statements is correct?",
+      "choices": {
+        "a": "Lata is on Tilak's right",
+        "b": "Ali is on Champa's right",
+        "c": "Geeta is on Hari's right",
+        "d": "Geeta is on Farookh's left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "If looked in an anti-clockwise manner, who are seated between Tilak and Farookh?",
+      "choices": {
+        "a": "Sita, Ram, Champa, Ali and Niti",
+        "b": "Sita, Ram, Rakhi, Amit and Lata",
+        "c": "Sita, Ram, Geeta, Hari and Lata",
+        "d": "Sita, Ram, Lata, Amit and Hari"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following close neighbouring arrangements is correct?",
+      "choices": {
+        "a": "Ali, Champa and Ram",
+        "b": "Tilak, Ram and Ali",
+        "c": "Niti, Farookh and Lata",
+        "d": "Hari, Geeta and Amit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following is not facing centre?",
+      "choices": {
+        "a": "BA",
+        "b": "CA",
+        "c": "BC",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following is the position of T in respect of B?",
+      "choices": {
+        "a": "Third to the right",
+        "b": "Second to the right",
+        "c": "Third to the left",
+        "d": "Third to the left or right",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "What is the position of V in respect of C?",
+      "choices": {
+        "a": "Second to the right",
+        "b": "Third to the left",
+        "c": "Fourth to the right",
+        "d": "Fourth to the left",
+        "e": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following statement is correct?",
+      "choices": {
+        "a": "A, B and C are sitting together",
+        "b": "V, U and T are sitting together",
+        "c": "Sitting arrangement of two persons cannot be determined",
+        "d": "Those who are not facing centre are sitting together",
+        "e": "Only two people are sitting between V and T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "What is the position of A in respect of U?",
+      "choices": {
+        "a": "Second to the left",
+        "b": "Second to the right",
+        "c": "Third to the right",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) Following sitting arrangement is formed from the given information\n\nBrojesh\nRanjan\nPromod ← → Raju\nLeft ← → Naveen\n\nClearly, Pramod is to the left of Naveen."
+    },
+    {
+      "number": 2,
+      "solution": "(c) Following sitting arrangement is formed from the given information\n\nAsha\nChitra ← → Pankaj\nBabita ← → Narendra\nRight ← → Farikh\n\nClearly, Parikh is to the immediate right of Babita."
+    }
+  ],
+  "answers": [],
+  "_page": 495
+}

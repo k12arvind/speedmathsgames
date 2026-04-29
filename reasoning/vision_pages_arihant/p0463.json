@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Finding both the Distance and Direction",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 17,
+      "solution": "(a) According to the question, we have the following direction diagram [with diagram showing path from original position O through points A, B, C with measurements]. Here, AB = 6 km, BC = 3 km, AO = 10 km and OB = AO - AB = (10 - 6) = 4 km ∴ OC = √(OB)² + (BC)² = √4² + 3² = √16 + 9 = √25 = 5 km Hence, Mahima is at a distance of 5 km in the North-East direction in respect of original position."
+    },
+    {
+      "number": 18,
+      "solution": "(d) According to the question, we have the following direction diagram. Hence, town B is 12 km South of town C."
+    },
+    {
+      "number": 19,
+      "solution": "(c) According to the question, the direction diagram is as follows [with diagram showing path from point A through points E, C, B, D with measurements]. By Pythagoras theorem, (AD)² = (AE)² + (DE)² = (4)² + (3)² = 16 + 9 ⇒ (AD)² = 25 ⇒ AD = 5 km Clearly, Raghu should walk 5 km in North-East direction to reach the point A again."
+    }
+  ],
+  "answers": [],
+  "_page": 463
+}

@@ -1,0 +1,31 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4.2,
+      "solution": "Suresh is older than Ramesh, so Suresh can't be the youngest. Mohan is younger than Surender, so Surender can't be the youngest. Murari is older than Suresh, so Murari can't be the youngest. Murari is older so Ramesh must be the youngest."
+    },
+    {
+      "number": 5.2,
+      "solution": "Let us arrange the facts. (i) Satyendra is to the left of Khalid ⇒ Sa — Kh. (ii) Madhukar is to the left of Balan and to the right of Khalid ⇒ Kh — Ma — Ba. (iii) Rehman is between Satyendra and Ahmed ⇒ (a) Sa — Re — Ahmed ⇒ Re — Ahmed (iv) Kutty is on the extreme right. Now, the configuration 'Sa — Re — Ahmed — Kh — Ma — Ba. shows Rehman on the right of Satyendra but to the left of Ahmed whereas Khalid is on the right of Satyendra, if we combine (i), (ii), (iii)(iv) and the arrangement is: Ku — Ah — Re — Sa — Kh — Ma — Ba. Correct answer: Satyendra. Q.6-12:"
+    },
+    {
+      "number": 6.4,
+      "solution": "Screen each choice using the initial conditions. First, all of the sequences meet the minimum length requirement. Next, we eliminate (1) because T cannot be on the end. Then we eliminate (3) and (5) because if W appears in a chain it must appear more than once. After this we look at (2) and (4) to determine whether or not X is next to Y, and we learn that (2) and (4) both pass this test. Now, we see whether W is on the end of a sequence and, if so, whether Z also appears in the chain. W does not appear in (2), so (2) passes this test. Although W is on the end of the chain in (4), Z also appears, so (4) passes this test. Finally, however, we eliminate (2) because Y appears in (2) without Z and (4) passes this test because no Y appears in (4) and."
+    },
+    {
+      "number": 7.5,
+      "solution": "This is the mirror image of the problem above. Four of the five sequences are acceptable chains—one is not. Just screen each choice with the initial conditions. The one sequence that is not acceptable is (5), because W appears only once."
+    },
+    {
+      "number": 8.3,
+      "solution": "Substitute each letter for the dash and test each result. I. Z X W Z. This is consistent with all of the initial conditions, so this is a possible chain. II. W W W Z. This is consistent with all of the initial conditions, so this is a possible chain. III. T W W Z. This violates the condition that T may not be on the end of a chain, so this is not a possible chain."
+    }
+  ],
+  "answers": [],
+  "_page": 354
+}

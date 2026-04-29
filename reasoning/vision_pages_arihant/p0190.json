@@ -1,0 +1,232 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [
+    {
+      "passage_text": "In each question below, is given a group of letters followed by four combinations of digits/symbols numbered (a), (b), (c) and (d). You have to find out which of the four combinations correctly represents the group of letters based on the following coding system and the conditions that follow and mark the number of that combination as your answer. If none of the combinations correctly represents the group of letters, mark (e), i.e., 'None of these', as your answer.\n\nLetter: W P J Q E T I A U F D B V M H\nDigit/Symbol code: 5 6 8 1 2 3 @ 4 c δ % * 7 # $\n\n(i) If the first letter is a consonant and the fourth letter is a vowel, both are to be coded as the codes for the vowel.\n(ii) If the second letter is a vowel and the last letter is a consonant, both are to be coded as δ.\n(iii) If both the first and the last letter are consonants, both their codes are to be interchanged.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    },
+    {
+      "passage_text": "In each of the questions below, a group of numerals is given followed by four groups of symbol/letter combinations labelled (a), (b), (c) and (d). Numerals are to be coded as per the codes and conditions given below. You have to find out which of the combinations (a), (b), (c) and (d) is correct and indicate your answer accordingly. If none of the four combinations represents the correct code, mark (e) as your answer.\n\nDigit: 7 3 5 0 2 1 6 4 9 8\nCode: N H L T F D R Q G P\n\n(i) If the first digit is even and the last digit is odd, they are to be coded as $ and @, respectively.\n(ii) If the first digit is odd and the last digit is even, they are to be coded as # and £, respectively.\n(iii) If 0 is preceded as well as followed by an odd digit, then 0 is to be coded as ¥.\n(iv) If 0 is preceded as well as followed by an even digit, then 0 is to be coded as ↓.\n(v) 0 is not considered as either even or odd.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "546839",
+      "choices": {
+        "a": "XAF&*M",
+        "b": "BAF&*M",
+        "c": "XAF&*X",
+        "d": "BAF&*X",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "713540",
+      "choices": {
+        "a": "E%*BA#",
+        "b": "X%*BA#",
+        "c": "X%*BAR",
+        "d": "E%*BAR",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "765082",
+      "choices": {
+        "a": "XFBRk@",
+        "b": "EFB#k@",
+        "c": "EFB#K",
+        "d": "EFB#k@",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "487692",
+      "choices": {
+        "a": "AKFM@",
+        "b": "$KFMØ",
+        "c": "AKFM$",
+        "d": "$KFMS",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "364819",
+      "choices": {
+        "a": "XFAK@M",
+        "b": "*FAK%X",
+        "c": "*FAK%M",
+        "d": "*EAK%X",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "MBUTWE",
+      "choices": {
+        "a": "#*©#52",
+        "b": "7*©#52",
+        "c": "#©*752",
+        "d": "#©*7528",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "AJBMTU",
+      "choices": {
+        "a": "49*48©",
+        "b": "#9*48©",
+        "c": "49*48©",
+        "d": "©9©#84",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "AEIMVH",
+      "choices": {
+        "a": "42@#7$",
+        "b": "42@47$",
+        "c": "#2@47$",
+        "d": "48@#78",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "THAFIQ",
+      "choices": {
+        "a": "3$48@3",
+        "b": "1$48@3",
+        "c": "1$48@1",
+        "d": "3$48@1",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter to Symbol Coding",
+      "body": "WMEIJU",
+      "choices": {
+        "a": "@#2@9©",
+        "b": "5#2@9©",
+        "c": "@#259©",
+        "d": "5#259©",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 190
+}

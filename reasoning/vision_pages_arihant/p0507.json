@@ -1,0 +1,347 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the information given below to answer the questions. A, B, C, D, E, F, G and H want to have a dinner on a round table and they have worked out the following seating arrangements. I. A will sit beside C. II. H will sit beside A. III. C will sit beside E. IV. F will sit beside H. V. E will sit beside G. VI. D will sit beside F. VII. G will sit beside B. VIII. B will sit beside D.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the following information carefully to answer the questions below. Eight friends A, B, C, D, E, F, G and H are sitting around a circle facing the centre. D is between A and E only. F is second to the left of E. B is between C and G only. F is between G and H only.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the following information carefully to answer the questions below. Six persons P, Q, R, S, T and V are sitting in a circle facing one another front to front. P is sitting in front of Q. Q is sitting to the right of T and left of R. P is to the left of U and right of S.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_seating",
+      "subtopic_name": "Linear Seating",
+      "body": "At a birthday party, 5 friends are sitting in a row. 'M' is to the left of 'O' and to the right of 'P'. 'S' is sitting to the right of 'T', but to the left of 'P'. Who is sitting in the middle?",
+      "choices": {
+        "a": "M",
+        "b": "O",
+        "c": "P",
+        "d": "S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_seating",
+      "subtopic_name": "Linear Seating",
+      "body": "A, B, C, D, E and F are sitting in a row. 'E' and 'F' are in the centre and 'A' and 'B' are at the ends. 'C' is sitting on the left of 'A'. Then who is sitting on the right of 'B'?",
+      "choices": {
+        "a": "A",
+        "b": "D",
+        "c": "E",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following is wrong?",
+      "choices": {
+        "a": "A will be to the immediate right of C",
+        "b": "D will be to the immediate left of B",
+        "c": "E will be to the immediate right of A",
+        "d": "F will be to the immediate left of D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following is correct?",
+      "choices": {
+        "a": "B will be to the immediate right of C",
+        "b": "H will be to the immediate right of A",
+        "c": "C will be to the immediate right of F",
+        "d": "B will be to the immediate left of H"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "A and F will become neighbours, if",
+      "choices": {
+        "a": "B agrees to change her sitting position",
+        "b": "C agrees to change her sitting position",
+        "c": "G agrees to change her sitting position",
+        "d": "H agrees to change her sitting position"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "During sitting",
+      "choices": {
+        "a": "A will be directly facing C",
+        "b": "B will be directly facing C",
+        "c": "A will be directly facing B",
+        "d": "B will be directly facing D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "H will be sitting between",
+      "choices": {
+        "a": "C and B",
+        "b": "A and F",
+        "c": "D and G",
+        "d": "E and G"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is 'FOURTH' to the right of B?",
+      "choices": {
+        "a": "H",
+        "b": "D",
+        "c": "A",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "In which of the following pairs, second person is to the immediate left of the first person?",
+      "choices": {
+        "a": "H, E",
+        "b": "D, A",
+        "c": "B, G",
+        "d": "B, C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Which of the following is definitely true?",
+      "choices": {
+        "a": "D is second to the left of H",
+        "b": "A is second to the right of E",
+        "c": "C is to the immediate right of B",
+        "d": "E is to the immediate left of C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is the immediate left of E?",
+      "choices": {
+        "a": "D",
+        "b": "A",
+        "c": "H",
+        "d": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is third to the right of G?",
+      "choices": {
+        "a": "E",
+        "b": "A",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is sitting opposite to R?",
+      "choices": {
+        "a": "P",
+        "b": "Q",
+        "c": "S",
+        "d": "U"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is sitting opposite to S?",
+      "choices": {
+        "a": "U",
+        "b": "T",
+        "c": "R",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is sitting between P and R?",
+      "choices": {
+        "a": "S",
+        "b": "T",
+        "c": "U",
+        "d": "Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_seating",
+      "subtopic_name": "Circular Seating",
+      "body": "If the positions of P and R are changed, who will be sitting between S and U?",
+      "choices": {
+        "a": "P",
+        "b": "R",
+        "c": "Q",
+        "d": "T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 507
+}

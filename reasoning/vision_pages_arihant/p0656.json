@@ -1,0 +1,67 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Data Sufficiency",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 37,
+      "solution": "(b) From Statement II, So, E is sitting second to the left of D. Hence, data in Statement II alone is sufficient to answer the question."
+    },
+    {
+      "number": 38,
+      "solution": "(c) From Statement I, A is the daughter of B. Clearly, A is the daughter of B. From Statement II, A's gender is unknown. Hence, relation cannot be established. So, Statement I alone is sufficient to answer the question."
+    },
+    {
+      "number": 39,
+      "solution": "(c) From Statement I, N > M > K From Statement II, L > N From both the Statements, L > N > M > K But height of J is not clear. Thus, second tallest friend cannot be determined. Hence, data neither in Statement I nor in Statement II are sufficient to answer the question."
+    },
+    {
+      "number": 40,
+      "solution": "(b) Statement I is insufficient as no direction is mentioned in it. From Statement II, Hence, X is to the North of Y. So, Statement II alone is sufficient to answer the question."
+    },
+    {
+      "number": 41,
+      "solution": "(e) From Statement I, Number of students in class = 21 or 22 or 23 or 24 or 25 or 26 From Statement II, Number of students in class = 25 or 26 or 27 or 28 or 29 or 30 Since, number of students can be divided into groups of 5 students, therefore number of students must be a multiple of 5. ∴ Number of students in the class = 25 or 30 On combining Statements I and II, Number of students in the class = 25 Hence, the data in both the Statements I and II together are necessary to answer the question."
+    },
+    {
+      "number": 42,
+      "solution": "(e) As given in the question, M + N + O = 50 yr On combining Statements I and II, we get N = 15 yr So, both statements are required to answer the question."
+    },
+    {
+      "number": 43,
+      "solution": "(b) As given in the question, the salaries of Satish, Anoop and Sandeep are 4x, 5x and 7x, respectively. From Statement II, 7x – 5x = 4000 and x = 2000 ∴ Anoop's salary = 5 x 2000 = 10000 So, Statement II alone is sufficient to answer the question."
+    },
+    {
+      "number": 44,
+      "solution": "(c) Relation between P and K cannot be established with the help of both Statements I and II. So, both the statements are not sufficient to answer the question."
+    },
+    {
+      "number": 45,
+      "solution": "(c) Both Statements I and II are not sufficient to answer the question."
+    },
+    {
+      "number": 46,
+      "solution": "(b) From Statement II, b/a = 20 ⇒ b = 20a ∴ Required percentage = a/(a+b) × 100 = a/(a+20a) × 100 = 5% So, Statement II alone is sufficient to answer the question but Statement I alone is not sufficient."
+    },
+    {
+      "number": 47,
+      "solution": "(b) From Statement I, Let number of male officers = x Then, number of female officers = x/2 - 250 Now, ratio cannot be exactly calculated. So, Statement I is insufficient. From Statement II, Let number of male officers = y Then, number of female officers = 1/7 y ∴ Required ratio = y/(1/7 y) = 7 = 7 : 1 So, Statement II alone is sufficient to answer the question but Statement I alone is not sufficient."
+    },
+    {
+      "number": 48,
+      "solution": "(b) From Statement I, 3n + 2m = 18 From Statement II, n – m = 2n – (4 + m) ⇒ n – m = 2n – 4 – m ⇒ 2n – n = 4 + m – m ⇒ n = 4 So, the value of n can be calculated using Statement II alone but Statement I alone is not sufficient."
+    },
+    {
+      "number": 49,
+      "solution": "(c) From Statement I, x + y = 20 From Statement II, x = y² On putting x = y² in Statement I, we get y² + y = 20 ⇒ y² + y – 20 = 0 ⇒ y² + 5y – 4y – 20 = 0 ⇒ y(y + 5) – 4(y + 5) = 0 ⇒ (y – 4)(y + 5) = 0 ∴ y = 4, – 5 (since, x and y are the positive integers, so we cannot take y = – 5) Taking y = 4 and putting in Statement I, x + 4 = 20 ∴ x = 20 – 4 = 16 Now, x = 16 – 4 = 12 Hence, x is greater than y by 12. So, both statements are required to answer the question."
+    },
+    {
+      "number": 50,
+      "solution": "(c) When taking both statements I and II together 3w = odd number 2w = even number It is possible only when w is an integer. So, both statements are required to answer the question."
+    }
+  ],
+  "answers": [],
+  "_page": 656
+}

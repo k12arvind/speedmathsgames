@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 682,
+      "solution": "Now, the intelligence-tree could be drawn as shown below: (+) Psychologist (c) Doctor (-) Engineer Student (+) D Architect P Teacher Fig 1 Note: (a) The negative sign before C and the positive sign before doctor means female and male respectively. This follows from the fact that the doctor is the husband of C. (b) Look at statement (v). Here, 'he' and not 'she' is used for D, so architect. So he must be a male. Hence, a positive sign is placed before D. Also, it is given that the psychologist is a female. Let us now make a seating-wise analysis. We have: a) D is sitting on the leftmost corner. b) The student is on the rightmost corner. c) D is followed by the least intelligent (it is P, the teacher) who is followed by the most intelligent (it is the psychologist.) Further, see (x) - there are three females followed by D on the bench. It means, that P, the psychologist, and then C are followed by him because C is the only female in addition to P and the psychologist. Hence, we obtain the following seating-outline: D(+) P(-) (-) C(-) (+) (+) (-) Arch Tea Psy Fig 2 Note: a) The student must be a male and so are others because there are only three females in the group. b) Look at Fig 1, it is obvious that C must be the businessman because it is the only profession left. c) There are only two couples. We know that English teacher and D (businessman)-doctor are two couples. This means that all others are unmarried. Hence, the architect (D), the psychologist and the student are unmarried."
+    },
+    {
+      "number": 683,
+      "solution": "Problem-Solving are unmarried. Further, B is unmarried. So B could either be the student or the psychologist. But statement (v) clearly says that the psychologist is 'another person'. Hence, B must be the student. Now, who is the psychologist? The psychologist can't be D, P, C or B because their professions are known. It leaves A, E and G. But A and G are not females - see statement (xiii) - and the psychologist is a female. Hence, E must be the psychologist. d) Who is the doctor? And who is the engineer? We can see that we have exhausted all information and nothing more could be established. Either A or G are the doctor and the engineer, both are males. This is all that can be known. Thus we have fig 1 and fig 2 redrawn as: (-) E Psychologist (-) C Businessman (-) (?) Doctor (A or G) (-) (?) Engineer (A or G) Fig 1: Intelligence tree (+) B Student (+) D Architect (-) F Teacher G(+) C(-) Fig 2: Two couples Doctor ⟷ Businessman (?) (F)(-) Engineer ⟷ Teacher D(+) F(-) E(-) C(-) (+) *(+) B(+) ⟷ ⟷ ⟷ ⟷ (?) ⟷ (-) ⟷ Ar Te Ps Bu (or Eng. or Doc.) Fig 3: Seating arrangement Now, read the question and check your answers: 62.1 63.4 64.4 65.4 67.4 68.5: [None of the choices is impossible.] 69.4 70.1 71.4: It is not necessary that the psychologist is a female. This can be inferred with the help of (v), (x), and (xii). (v) tells us that the psychologist is the most intelligent, (x) tells us that the most intelligent (and hence the psychologist) is sitting third from the left, beginning with D, (xiii) tells us"
+    }
+  ],
+  "answers": [],
+  "_page": 348
+}

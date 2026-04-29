@@ -1,0 +1,117 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Direction (Q. No. 22) Read the following information carefully to answer the question that follows. 'P -Q' means 'Q is father of P'. 'P * Q' means 'Q is brother of P'. 'P + Q' means 'Q is wife of P'. 'P × Q' means 'Q is sister of P'.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coding_symbols",
+      "subtopic_name": "Coding with Symbols",
+      "body": "If it is given 'P × R – Q', then which of the following is true?",
+      "choices": {
+        "a": "P is the brother-in-law of Q",
+        "b": "P is the brother of Q",
+        "c": "P is the uncle of Q",
+        "d": "P is the father of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coding_symbols",
+      "subtopic_name": "Coding with Symbols",
+      "body": "If 'P + R × Q', then which of the following is true?",
+      "choices": {
+        "a": "P is the husband of Q",
+        "b": "P is the brother of Q",
+        "c": "P is the son of Q",
+        "d": "P is the father of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coding_symbols",
+      "subtopic_name": "Coding with Symbols",
+      "body": "If 'P – R × Q', then which of the following is true?",
+      "choices": {
+        "a": "P is the sister of Q",
+        "b": "Q is the son of P",
+        "c": "Q is the husband of P",
+        "d": "P is the sister-in-law of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coding_symbols",
+      "subtopic_name": "Coding with Symbols",
+      "body": "If 'P – Q', means Q is son of P, 'P × Q' means P is brother of Q, 'P + Q' means Q is sister of P and 'P + Q' means P is mother of Q, then which of the following is definitely true about 'N × K – M + L'? [SNAP 2013]",
+      "choices": {
+        "a": "K is father of L and M",
+        "b": "L is daughter of K and niece of uncle N",
+        "c": "K is father of L and M, his son and daughter respectively",
+        "d": "M is uncle of K's brother N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coding_symbols",
+      "subtopic_name": "Coding with Symbols",
+      "body": "Which of the following means M is the grandfather of T?",
+      "choices": {
+        "a": "T – C + L + N * M",
+        "b": "T – R + Z + L * M",
+        "c": "T + Z * L + F – M",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 399
+}

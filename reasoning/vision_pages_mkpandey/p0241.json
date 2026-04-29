@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 6-10): A word arrangement machine, when given an input of words, rearranges them following a particular rule in each step. The following is the illustration of the input and the steps of arrangement: Input: one cannot but feel sorry for him Step I: but cannot one sorry feel him for Step II: cannot but feel sorry one for him Step III: but cannot sorry feel him for one Step IV: sorry cannot but him feel one for And so on for subsequent steps. You have to find out the logic and answer the questions that follow.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "step_analysis",
+      "subtopic_name": "Step Analysis",
+      "body": "If Step III reads \"old streets of Calcutta attract me less\", what will be the arrangement for Step VII?",
+      "choices": {
+        "a": "me of old attract less streets Calcutta",
+        "b": "less attract me of Calcutta streets old",
+        "c": "streets old Calcutta of me less attract",
+        "d": "Calcutta of streets old attract less me",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "step_analysis",
+      "subtopic_name": "Step Analysis",
+      "body": "If Step IV reads \"everyone were aware about their intimate things\", what will be the middle three words of Step II?",
+      "choices": {
+        "a": "their intimate aware",
+        "b": "aware intimate their",
+        "c": "everyone were friendship",
+        "d": "aware were intimate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "step_analysis",
+      "subtopic_name": "Step Analysis",
+      "body": "If the given input is \"he has learnt a lot from Krishna\", what will be Step VI?",
+      "choices": {
+        "a": "he has from learnt lot Krishna",
+        "b": "has from he a Krishna lot learnt",
+        "c": "lot learnt Krishna a he has from",
+        "d": "Krishna a lot learnt from has he",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "step_analysis",
+      "subtopic_name": "Step Analysis",
+      "body": "Input: he is member of the dancing club. For the above input, which step will be the following arrangement? Arrangement: he club the dancing member of is",
+      "choices": {
+        "a": "Step IV",
+        "b": "Step V",
+        "c": "Step VI",
+        "d": "Step III",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If Step V read \"weeks of tepid slothful and weak performance\", what would be Step VI?",
+      "choices": {
+        "a": "performance weeks and tepid of weak slothful",
+        "b": "of weeks and slothful tepid performance weak",
+        "c": "of tepid slothful performance weak and weeks",
+        "d": "performance and tepid weeks of weak slothful",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 241
+}

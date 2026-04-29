@@ -1,0 +1,225 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 36-41) A word and number arrangement machine when given an input line of words and numbers rearranges them following a particular rule in each step. The following is an illustration of input and rearrangement. [Syndicate Bank (PO) 2009]\n\nInput 'go now 52 38 17 for again 65'\nStep I 65 go now 52 38 17 for again\nStep II 65 again go now 52 38 17 for\nStep III 65 again 52 go now 38 17 for\nStep IV 65 again 52 for go now 38 17\nStep V 65 again 52 for 38 go 17 now\nStep VI 65 again 52 for 38 go 17 now\n\nStep VI is the last step of the rearrangement.\nAs per the rules followed in the above steps, find out in each of the following questions the appropriate step for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "If the Step IV is as given below, which of the following will be the input?\nStep IV '48 03 22 7 12 25'",
+      "choices": {
+        "a": "03 25 12 48 22 07",
+        "b": "03 25 48 12 22 07",
+        "c": "03 48 25 12 22 07",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "Which will be the IIIrd step for the following input?\nInput '03 25 12 48 22 07'",
+      "choices": {
+        "a": "48 03 22 25 12 07",
+        "b": "48 03 25 12 22 07",
+        "c": "48 03 22 07 12 25",
+        "d": "48 03 22 07 25 12"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "Which of the following will be the last step for the following input?\nInput '05 27 50 14 24 9'",
+      "choices": {
+        "a": "III",
+        "b": "IV",
+        "c": "VI",
+        "d": "VII",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "Which of the following will be the Step III for the following input ?\nInput '25 08 35 11 88 67 24 78'",
+      "choices": {
+        "a": "88 11 78 25 24 08 35 67",
+        "b": "88 11 78 25 08 35 67 24",
+        "c": "88 25 08 35 11 67 24 78",
+        "d": "88 11 25 08 35 67 24 78",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "Input 'show 51 36 new far 81 46 goal'\nWhich of the following steps will be the last but one?",
+      "choices": {
+        "a": "VII",
+        "b": "VIII",
+        "c": "VI",
+        "d": "V",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "Input 'home turf 39 24 86 44 joli over'\nWhich of the following steps will be the last?",
+      "choices": {
+        "a": "X",
+        "b": "IX",
+        "c": "VIII",
+        "d": "VII",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_count",
+      "subtopic_name": "Step Count",
+      "body": "Step II of an inputs is 76 ask 12 32 begin over join 42.\nHow many more steps will be required to complete the rearrangement?",
+      "choices": {
+        "a": "Four",
+        "b": "Five",
+        "c": "Six",
+        "d": "Three",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "Step IV of an input is 58 box 47 dew 15 21 town pot.\nWhich of the following steps will be the last?",
+      "choices": {
+        "a": "VII",
+        "b": "VI",
+        "c": "VIII",
+        "d": "IX",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "input_identification",
+      "subtopic_name": "Input Identification",
+      "body": "Step III of an input is 94 cat 86 window shut 52 31 house.\nWhich of the following is definitely the input?",
+      "choices": {
+        "a": "94 cat window 86 shut 52 31 house",
+        "b": "80 window 94 cat shut 52 31 house",
+        "c": "cat shut window 86 52 31 house 94",
+        "d": "cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_identification",
+      "subtopic_name": "Step Identification",
+      "body": "Input 'buy win task 52 38 43 door 12'. Which of the following will be Step IV?",
+      "choices": {
+        "a": "52 buy 43 door 38 task 12 win",
+        "b": "52 buy 43 door 38 task win 12",
+        "c": "52 buy 43 door task win 38 12",
+        "d": "There will be no such step",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 592
+}

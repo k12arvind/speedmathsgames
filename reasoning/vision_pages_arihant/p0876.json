@@ -1,0 +1,131 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_properties",
+      "subtopic_name": "Cube Properties",
+      "body": "How many edges a cube/cuboid has?",
+      "choices": {
+        "a": "4",
+        "b": "12",
+        "c": "16",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_properties",
+      "subtopic_name": "Cube Properties",
+      "body": "A cube/cuboid has always",
+      "choices": {
+        "a": "8 corners",
+        "b": "6 faces",
+        "c": "12 edges",
+        "d": "All of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_properties",
+      "subtopic_name": "Cube Properties",
+      "body": "How many pair of opposite faces a cube/cuboid has?",
+      "choices": {
+        "a": "4",
+        "b": "2",
+        "c": "5",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_properties",
+      "subtopic_name": "Cube Properties",
+      "body": "How many adjacent faces, each face of a cube has?",
+      "choices": {
+        "a": "2",
+        "b": "4",
+        "c": "6",
+        "d": "8"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_properties",
+      "subtopic_name": "Cube Properties",
+      "body": "How many faces are hidden in a cube?",
+      "choices": {
+        "a": "4",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "cube_properties",
+      "subtopic_name": "Cube Properties",
+      "body": "How many edges are invisible in a cube?",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "2",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 876
+}

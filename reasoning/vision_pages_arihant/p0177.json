@@ -1,0 +1,66 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Type 7 Coding by Substitution/Word Replacement\n\nIn substitution or word replacement, a confusing code is provided by giving a different name for the word. Under this pattern, a series of words is given and each word of this series is coded with another word. Candidates are required to find out the code for a word in the given series and then provide the right information regarding the word.\n\nFollowing examples will give you a better idea about the type of questions asked",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "substitution_word_replacement",
+      "subtopic_name": "Substitution/Word Replacement",
+      "body": "If 'green' is called 'red', 'red' is called 'blue', 'blue' is called 'white', 'white' is called 'yellow', 'yellow' is called 'violet', then what is the colour of grass?",
+      "choices": {
+        "a": "Blue",
+        "b": "Yellow",
+        "c": "Violet",
+        "d": "Red"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "substitution_word_replacement",
+      "subtopic_name": "Substitution/Word Replacement",
+      "body": "If 'blue' means 'green', 'green' means 'white', 'white' means 'yellow', 'yellow' means 'black', 'black' means 'red' and 'red' means 'brown', then what is the colour of 'milk'?",
+      "choices": {
+        "a": "Black",
+        "b": "White",
+        "c": "Yellow",
+        "d": "Green"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 20,
+      "solution": "As, colour of grass is 'green' but here 'green' is called 'red' and hence according to the given information colour of grass must be 'red'."
+    },
+    {
+      "number": 21,
+      "solution": "Colour of 'milk' is 'white' but here 'white' means 'yellow'. Hence, colour of 'milk' is yellow."
+    }
+  ],
+  "answers": [],
+  "_page": 177
+}

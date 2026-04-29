@@ -1,0 +1,332 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. I. A, B, C, D, E, F, G and H are sitting in a row facing North. II. A is fourth to the right of E. III. H is fourth to the left of D. IV. C and F, who are not at the ends, are neighbours of B and E, respectively. V. B is not to the left of A and A is the neighbour of B.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the following information carefully and answer the questions below. Five persons are standing in a queue. One of the two persons at the extreme ends is a professor and the other is a businessman. An advocate is standing to the right of a student. An author is to the left of the businessman. The student is between the professor and the advocate.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Read the following information carefully and answer the questions that follow. I. Six flats on a floor in two rows facing North and South are allotted to P, Q, R, S, T and U. II. Q gets a North facing flat and is not next to S. III. S and U get diagonally opposite flats. IV. R next to U, gets a South facing flat and T gets a North facing flat.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Answer the following questions based on the information given below. A leading socialite decided to organize a dinner and invited a few of her friends. Only the host and hostess were sitting at the opposite ends of a rectangular table, with three persons on each side. The prerequisite of the sitting arrangement was that each person must be seated such that atleast on one side he/she has a person of the opposite sex. Maqbool is opposite to Sobha, who is not the hostess. Ratan has a woman on his right and is sitting opposite of a woman. Manisha is sitting to the hostess's right, next to Dhirubhai. One person is seated between Madhuri and Urmila, who is not the hostess. The men were Maqbool, Ratan, Dhirubhai and Jackie, while the woman were Madhuri, Urmila, Sobha and Manisha.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is sitting at the centre?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "What is the position of B?",
+      "choices": {
+        "a": "Second from right",
+        "b": "Centre",
+        "c": "Extreme left",
+        "d": "Second from left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "What is the position of D?",
+      "choices": {
+        "a": "Extreme left",
+        "b": "Extreme right",
+        "c": "Third from left",
+        "d": "Second from left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "What is the position of F?",
+      "choices": {
+        "a": "Next to the right of E",
+        "b": "Next to the right of G",
+        "c": "Sixth to the right of D",
+        "d": "Between G and H"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following statements is not true?",
+      "choices": {
+        "a": "G is the neighbour of H and F",
+        "b": "B is next to the right of A",
+        "c": "E is at left end",
+        "d": "D is next to the right of B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is/are the neighbour(s) of D?",
+      "choices": {
+        "a": "F alone",
+        "b": "C alone",
+        "c": "B and C",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following statements is not true?",
+      "choices": {
+        "a": "H is second to the right of E",
+        "b": "E is fourth to the left of A",
+        "c": "D is fourth to the right of H",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who are sitting at the ends?",
+      "choices": {
+        "a": "E and C",
+        "b": "F and D",
+        "c": "G and B",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Counting from the left, the author is at which place?",
+      "choices": {
+        "a": "First",
+        "b": "Second",
+        "c": "Third",
+        "d": "Fourth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following is in the middle of the queue?",
+      "choices": {
+        "a": "Professor",
+        "b": "Advocate",
+        "c": "Student",
+        "d": "Businessman"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "If advocate and the businessman exchange their positions, and also the author and the student, then who will be standing to the left of student?",
+      "choices": {
+        "a": "Author",
+        "b": "Businessman",
+        "c": "Professor",
+        "d": "Advocate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Whose flat is between Q and S?",
+      "choices": {
+        "a": "T",
+        "b": "U",
+        "c": "R",
+        "d": "P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "The flats of which of the pair, other than SU, are diagonally opposite to each other?",
+      "choices": {
+        "a": "PT",
+        "b": "QP",
+        "c": "QR",
+        "d": "TS"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "The eighth person present, Jackie must be I. the host II. seated to Sobha's right III. seated opposite of Urmila.",
+      "choices": {
+        "a": "Only I",
+        "b": "Only III",
+        "c": "I and II",
+        "d": "II and III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "complex_arrangement",
+      "subtopic_name": "Complex Arrangement",
+      "body": "Which of the following persons is definitely not seated next to a person of the same sex?",
+      "choices": {
+        "a": "Maqbool",
+        "b": "Madhuri",
+        "c": "Jackie",
+        "d": "Sobha"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 505
+}

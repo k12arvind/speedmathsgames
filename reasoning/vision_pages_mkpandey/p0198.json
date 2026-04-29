@@ -1,0 +1,59 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "E + A = O reversed. Hence, 'Some books are not systematic' = A + I and are a complementary pair."
+    },
+    {
+      "number": 10,
+      "solution": "I follows from the given statements. While II follows from 'No cats are elephants', III follows from the rule 'A + A = I = logical conclusion', and 'Some bolts are cast' follows on conversion from 'All bolts' if it and III make it (E-type) complementary."
+    },
+    {
+      "number": 11,
+      "solution": "Rewrite the sentences in this order: Some books → Some books + conversion → Some best follows."
+    },
+    {
+      "number": 12,
+      "solution": "Some Non Some coins. Hence, II follows."
+    },
+    {
+      "number": 13,
+      "solution": "From the statement, 'No elephants' are stars (converted to) → 'Some stars are not elephants' follows. Again, III and IV make a complementary pair, Rule of A-type II hence, one of them must be true."
+    },
+    {
+      "number": 14,
+      "solution": "No book is a hook + All books are birds = E + A = O reversed. Some birds are not books' follows. Again, III and IV are complementary pair, hence one of them must be true."
+    },
+    {
+      "number": 15,
+      "solution": "Some blankets are pillows + All pillows are books = I + A + Some blankets are books' follows. This may be converted as 'Some are blankets'. Hence, I follows. Also, 'All pillows are books' can be converted to 'Some books are pillows'. Hence, II follows."
+    },
+    {
+      "number": 16,
+      "solution": "E + E = No conclusion. Hence, no definite conclusion can be drawn between 'girls' and 'Americans'. But if we re-establish combination as one of them will always be true. Note that the choice is obvious that complementary but no such choice is given."
+    },
+    {
+      "number": 17,
+      "solution": "All classes are glasses → on conversion → Some glasses are classes. Now, All brasses are glasses + All classes are glasses → All brasses + Some glasses are brasses = A + I = No conclusion. Hence, the conclusion can be established between 'brasses' and 'classes' but classes are glasses → obviously → Some classes are glasses. Similarly classes are brasses → Some brasses are glasses."
+    },
+    {
+      "number": 18,
+      "solution": "Some Americans are Indians + No Indian is an Asian = I + E = O on American are not Asians. Hence, III follows. Again, No Indian is Asian → obviously → Some Indians are not Asians."
+    },
+    {
+      "number": 19,
+      "solution": "We know that, Only reds are blues → on conversion (on conversion becomes A-type) → All blues are reds. Hence, Only reds are blues + All reds are yellows = All blues are yellow (A = A) → obviously → Some blues are yellows. Hence, I follows. Also, All reds are yellows → on conversion → Some yellows are reds."
+    },
+    {
+      "number": 20,
+      "solution": "I + I = No conclusion. Hence, no conclusion can be established between 'longs' and 'longs'. But we see that I and II form a complementary pair. One of them must be true. Hence, either of them follows."
+    }
+  ],
+  "answers": [],
+  "_page": 198
+}

@@ -1,0 +1,143 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-15) In each of the questions below is given a statement followed by two courses of action numbered I and II. A course of action is a step or an administrative decision to be taken for improvement, follow-up or further action in regard to the problem, policy etc. On the basis of the information given in the statement, you have to assume everything in the statement to be true, then decide which of the suggested courses of action logically follow(s) worth pursuing.\n\nGive answer\n(a) if only I follows\n(b) if only II follows\n(c) if either I or II follows\n(d) if neither I nor II follows\n(e) if both I and II follow",
+      "has_figure": false,
+      "topic_code": "course_of_action"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "policy_action",
+      "subtopic_name": "Policy and Administrative Action",
+      "body": "Statement While laying pipelines by one of the utility companies a huge fire broke out due to damage done to the pipeline.\n\nCourses of Action\nI. All the licences of the utility company should immediately be suspended pending enquiry into the incident.\nII. People residing in the area should be advised to stay indoors to avoid burn injuries.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "security_action",
+      "subtopic_name": "Security and Safety Action",
+      "body": "Statement There has been large number of internet hacking in the recent months creating panic among the internet users.\n\nCourses of Action\nI. The Government machinery should make an all out effort to check those who are responsible and put them behind bars.\nII. The internet users should be advised to stay away from using internet till the culprits are caught.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "education_action",
+      "subtopic_name": "Educational Action",
+      "body": "Statement There is an unprecedented increase in the number of successful students in this year's school leaving certificate examination.\n\nCourses of Action\nI. The Government should make arrangements to increase number of seats in intermediate courses in the existing colleges.\nII. The Government should take active steps to open new colleges to accommodate all these successful students.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "resource_management",
+      "subtopic_name": "Resource Management",
+      "body": "Statement There has been a significant drop in the water level of all the lakes supplying water to the city.\n\nCourses of Action\nI. The water supply authority should impose a partial cut in supply to tackle the situation.\nII. The Government should appeal to all the residents through mass media for minimal use of water.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "education_action",
+      "subtopic_name": "Educational Action",
+      "body": "Statement A very large number of students have failed in the final high school examinations due to wrong questions in one of the subjects.\n\nCourses of Action\nI. All the students who have failed in that subject should be allowed to take supplementary examination.\nII. All those who are responsible for the error should be suspended and an enquiry should be initiated to find out the facts.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "course_of_action",
+      "topic_name": "Course of Action",
+      "subtopic_code": "economic_action",
+      "subtopic_name": "Economic Action",
+      "body": "Statement The prices of foodgrains and vegetables have substantially increased due to prolonged strike call given by the truck owners association.\n\nCourses of Action\nI. The Government should immediately make alternative arrangements to ensure adequate supply of foodgrains and vegetables in the market.\nII. The Government should take steps to cancel the licence of all the vehicles belonging to the association.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1102
+}

@@ -1,0 +1,357 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Sitting Arrangement",
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully to answer the questions given below. I. L, M, N, P, Q, R and S are sitting in a circle and playing cards. II. N, who is the neighbour of P, is not the neighbour of R. III. Q is the second to the left of R. IV. N is second to the left of S, who is the neighbour of M.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the following information carefully to answer the given questions. Eight friends A, B, C, D, E, F, G and H are sitting around a circle facing the centre but not necessarily in the same order. Only one person sits between D and F. B sits second to right of H. H is not an immediate neighbour of D. C is not an immediate neighbour of D. E is an immediate neighbour of H.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Study the following information carefully to answer the questions given below. P, T, V, R, M, D, K and W are sitting around a circular table facing the centre. V is second to the left of T. T is fourth to the right of M. D and P are not immediate neighbours of T. D is third to the right of P. W is not an immediate neighbour of P. P is to the immediate left of K.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following is true?",
+      "choices": {
+        "a": "Q is the neighbour of S and L",
+        "b": "M is the neighbour of S and L",
+        "c": "R is the neighbour of P and M",
+        "d": "L is the neighbour of P and Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following pairs has the second person sitting second to the right of the first person?",
+      "choices": {
+        "a": "PM",
+        "b": "NQ",
+        "c": "QS",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following pairs has the first person sitting third to the left of the second person?",
+      "choices": {
+        "a": "RN",
+        "b": "SL",
+        "c": "SM",
+        "d": "NL"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is to the immediate right of S?",
+      "choices": {
+        "a": "M",
+        "b": "R",
+        "c": "Q",
+        "d": "L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "What is the position of L?",
+      "choices": {
+        "a": "To the immediate right of R",
+        "b": "Second to the left of M",
+        "c": "To the immediate right of Q",
+        "d": "Between M and R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following is not true?",
+      "choices": {
+        "a": "R is to the immediate left of Q",
+        "b": "P is to the immediate right of R",
+        "c": "N is to the immediate right of P",
+        "d": "L is to the immediate left of M"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "What is the position of E with respect to the position of C?",
+      "choices": {
+        "a": "Third to the left",
+        "b": "Second to the left",
+        "c": "Immediate right",
+        "d": "Third to the right",
+        "e": "Second to the right"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who amongst the following sits exactly between A and G?",
+      "choices": {
+        "a": "B",
+        "b": "C",
+        "c": "E",
+        "d": "F",
+        "e": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Four of the following five are alike in a certain way and thus form a group. Which is the one that does not belong to that group?",
+      "choices": {
+        "a": "CG",
+        "b": "AE",
+        "c": "HD",
+        "d": "EC",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Which of the following is true with respect to given seating arrangement?",
+      "choices": {
+        "a": "Both A and D are immediate neighbours of E",
+        "b": "C sits exactly between H and F",
+        "c": "Only three people sit between C and E",
+        "d": "H is to the immediate left of B",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who amongst the following sits third to the left of F?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "G",
+        "e": "H"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is second to the left of K?",
+      "choices": {
+        "a": "P",
+        "b": "R",
+        "c": "M",
+        "d": "W",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is to the immediate left of V?",
+      "choices": {
+        "a": "D",
+        "b": "M",
+        "c": "W",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Who is the third to the right of V?",
+      "choices": {
+        "a": "T",
+        "b": "K",
+        "c": "P",
+        "d": "M",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "What is R's position with respect to V?",
+      "choices": {
+        "a": "Third to the right",
+        "b": "Fifth to the right",
+        "c": "Third to the left",
+        "d": "Second to the left",
+        "e": "Fourth to the left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Four of the following five are alike in a certain way based on their positions in the above sitting arrangement and so form a group. Which of the following does not belong to that group?",
+      "choices": {
+        "a": "DW",
+        "b": "TP",
+        "c": "VM",
+        "d": "RD",
+        "e": "KR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 494
+}

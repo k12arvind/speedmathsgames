@@ -1,0 +1,269 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: A statement is given followed by several assumptions. An assumption is something assumed or taken for granted. Read the statement carefully and decide which of the assumptions is implicit in the statement.",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 75,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"Join X coaching classes - we guarantee you success.\" - an advertisement\nAssumptions: I. Such coaching classes are well-equipped.\nII. Students joining coaching classes expect success.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "I and III are implicit",
+        "4": "Only I is implicit",
+        "5": "Only III is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"If he not mend his ways, I will call the police\".\nAssumptions: I. He may mend his ways.\nII. The police may help me.\nIII. He has been making hoax calls to me.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "I and III are implicit",
+        "4": "All are implicit",
+        "5": "Only II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"Do not touch stray objects. They may be bombs.\" - a notice by City Police\nAssumptions: I. Stray objects are harmless.\nII. Stray objects may be touched by people.\nIII. People will take notice of the warning.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "I and III are implicit",
+        "3": "II and III are implicit",
+        "4": "I and either II or III are implicit",
+        "5": "At least one of the above is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"Medu, is a Head of A dog.\" - A tells B about Madhu.\nAssumptions: I. B knows Madhu.\nII. Some people do not bark like dogs.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "I and III are implicit",
+        "4": "All are implicit",
+        "5": "Either I or II and III are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"The prices should fall after May. By that time the demand of foodgrains starts dropping.\" - an economist\nAssumptions: I. Prices will fall after May.\nII. The economist is in line with farmers of the country.\nIII. A drop in demand (of foodgrains) will result in a drop in supply (of foodgrains).",
+      "choices": {
+        "1": "Only I is implicit",
+        "2": "I and III are implicit",
+        "3": "Only II is implicit",
+        "4": "None is implicit",
+        "5": "Only III is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"The Finance Commission must grant more funds to our state. After all, we are the biggest suppliers of ores to the rest of India.\" - the CM of a state",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "I and III are implicit",
+        "4": "Only III is implicit",
+        "5": "Only II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Assumptions: I. The Finance Commission is not in a mood to grant more funds to the state.\nII. More funds should be given to states that supply ores.\nIII. The Chief Minister has already written to the Finance Commission asking for more funds.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "I and III are implicit",
+        "4": "Only III is implicit",
+        "5": "Only II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"I do not like consumer goods as a wedding gift. I prefer to give cash.\" - A tells B.\nAssumptions: A is invited at weddings.\nII. Some people give consumer goods as wedding gifts.\nIII. Some people give useless things as wedding gifts.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "I and III are implicit",
+        "4": "All are implicit",
+        "5": "None is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"The newspaper is expected to announce an expansion in its ministry shortly.\" - a newspaper report\nAssumptions: I. The newspaper has reliable sources for the news.\nII. The Prime Minister has the power to expand the cabinet.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "I and III are implicit",
+        "4": "All are implicit",
+        "5": "Only I is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"You cannot solve such questions without consulting a diagram. Difficult questions need diagrams for solving.\" - A teacher tells his students\nAssumptions: I. The students are not intelligent.\nII. The problem cannot be solved.\nIII. Such questions are difficult.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "II and III are implicit",
+        "3": "Only III is implicit",
+        "4": "Only III is implicit",
+        "5": "None is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"You should not drink whisky. You must take care of your health.\" - A tells his friend.\nAssumptions: I. A knows about the ill-effects of whisky.\nII. Whisky is intoxicating.\nIII. Whisky is not good for health.",
+      "choices": {
+        "1": "Only III is implicit",
+        "2": "I and II are implicit",
+        "3": "II and III are implicit",
+        "4": "I and III are implicit",
+        "5": "All are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumptions",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Identifying Implicit Assumptions",
+      "body": "Statement: \"I have decided to cut down on coffee. People tell me that caffeine is not good for health.\" - A tells B.\nAssumptions: I. Coffee contains caffeine.\nII. People are correct in their views about coffee.\nIII. B may also cut down on coffee.",
+      "choices": {
+        "1": "I and II are implicit",
+        "2": "All are implicit",
+        "3": "Only I is implicit",
+        "4": "Only II is implicit",
+        "5": "Only III is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 28
+}

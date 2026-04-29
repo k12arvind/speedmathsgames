@@ -1,0 +1,232 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 56-57)\nStatements Some squares are circles.\nNo circle is a triangle.\nNo line is a square.\nGive answer\n(a) if only Conclusion I follows\n(b) if only Conclusion II follows\n(c) if either I or II follows\n(d) if neither I nor II follows\n(e) if both I and II follow",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 58-59)\nStatements All songs are poems.\nAll poems are rhymes.\nNo rhyme is a paragraph.\nGive answer\n(a) if only Conclusion I follows\n(b) if only Conclusion II follows\n(c) if either I or II follows\n(d) if neither I nor II follows\n(e) if both I and II follow",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All glasses are frames. Some frames are metals. All blocks are glasses.\nConclusions: I. All blocks are either metals or glasses. II. Some blocks are metals. III. Some farmers are blocks.",
+      "choices": {
+        "a": "Only II follows",
+        "b": "Only I follows",
+        "c": "Only I follows",
+        "d": "I and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some dews are drops. All drops are stones.\nConclusions: I. Atleast some dews are stones. II. Atleast some stones are drops.",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Either I or II follows",
+        "d": "Neither I nor II follows",
+        "e": "Both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: I. All Philosophers are fools. II. All fools are illiterate.\nConclusions: I. All Philosophers are illiterate. II. All illiterates are Philosopher. III. All illiterates are fools. IV. Some illiterates would by Philosopher",
+      "choices": {
+        "a": "Only IV follows",
+        "b": "I and IV follow",
+        "c": "Only II follows",
+        "d": "III and IV follow",
+        "e": "No solution"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Some beads are rings. Some rings are bangles. All bangles are clothes. All clothes are boxes.\nConclusions: I. Some boxes are bangles. II. Some clothes are rings. III. Some bangles are beads.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only II follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All chairs are fires. Some fires are winds. All winds are nets. Some nets are clocks.\nConclusions: I. Some clocks are winds. II. Some nets are fires. III. Some winds are chairs.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All desks are pillars. All pillars are circles. Some circles are squares. Some squares are rectangles.\nConclusions: I. Some rectangles are pillars. II. Some circles are desks. III. Some squares are desks.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Conclusions: I. All squares can never be triangles. II. Some lines are circles.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Conclusions: I. No triangle is a square. II. No line is a circle.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Conclusions: I. No song is a paragraph. II. No poem is a paragraph.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Conclusions: I. All rhymes are poems. II. All songs are rhymes.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1203
+}

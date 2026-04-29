@@ -1,0 +1,60 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Dice",
+  "passages": [],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_positions",
+      "subtopic_name": "Dice Face Identification",
+      "body": "In the following question the two positions of a single dice are given. Find the digit on the face which is opposite to the face having digit 2.",
+      "choices": {
+        "a": "6",
+        "b": "4",
+        "c": "3",
+        "d": "1"
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_positions",
+      "subtopic_name": "Dice Face Identification",
+      "body": "In the following question, three positions of the same dice are given. What will be the digit on the face opposite to the face having digit 1?",
+      "choices": {
+        "a": "6",
+        "b": "5",
+        "c": "4",
+        "d": "3"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "As in this case, 5 and 6 are common digits while 4 and 2 are uncommon. As the rule given in case IV, here uncommon digits will be opposite to each other. Hence, 4 will definitely be opposite to digit 2."
+    },
+    {
+      "number": 7,
+      "solution": "In the given question, the correct solution can be found out by two methods. Method I: Taking dice I and III, 2 and 3 are common. So, 4 will be opposite to 1. Method II: Taking dice II and III, in II and III only one digit 2 is common. Now, writing digits of dice II (clockwise) writing digits of dice III. Clearly, 4 will opposite to 1."
+    }
+  ],
+  "answers": [],
+  "_page": 900
+}

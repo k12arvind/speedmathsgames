@@ -1,0 +1,337 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Blood Relations",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 4-5) Read the following information carefully and answer the questions that follow.\nI. P + Q means P is the father of Q.\nII. P – Q means P is the wife of Q.\nIII. P × Q means P is the brother of Q.\nIV. P ÷ Q means P is the daughter of Q.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 6-8) Read the following information carefully and answer the questions given below.\n[Corporation Bank (PO) 2006]\nI. 'P × Q' means 'P is the father of Q'.\nII. 'P – Q' means 'P is the sister of Q'.\nIII. 'P + Q' means 'P is the mother of Q'.\nIV. 'P ÷ Q' means 'P is the brother of Q'.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 9-12) Study the following information carefully to answer these questions.\n[SBI (PO) 2005]\nI. 'A $ B' means 'A is mother of B'.\nII. 'A # B' means 'A is the father of B'.\nIII. 'A @ B' means 'A is the husband of B'.\nIV. 'A % B' means 'A is daughter of B'.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 13-14) Read the following information carefully to answer the questions that follow.\n[IIBRS (Clerk) 2011]\nI. 'P + Q' means 'P is the father of Q'.\nII. 'P – Q' means 'P is the mother of Q'.\nIII. 'P × Q' means 'P is brother of Q'.\nIV. 'P ÷ Q' means 'P is the sister of Q'.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 15-20) Read the following information carefully to answer the questions given below it.\nI. 'A + B' means that 'A is the father of B'.\nII. 'A – B' means that 'A is the wife of B'.\nIII. 'A × B' means that 'A is the brother of B'.\nIV. 'A ÷ B' means that 'A is the daughter of B'.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "symbolic_relations",
+      "subtopic_name": "Symbolic Relations",
+      "body": "What does 'P = R ÷ Q' mean?",
+      "choices": {
+        "a": "P is the aunt of Q",
+        "b": "Q is the daughter of P",
+        "c": "P is the sister of Q",
+        "d": "Q is the niece of P"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "If A + C + D ÷ B, then which of the following statement is true?",
+      "choices": {
+        "a": "A is the daughter of B",
+        "b": "B is the aunt of A",
+        "c": "A is the son of B",
+        "d": "B is the brother of B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "If A – C + B, then which of the following statements is true?",
+      "choices": {
+        "a": "A is the daughter of B",
+        "b": "B is the aunt of A",
+        "c": "A is the mother of B",
+        "d": "A is the aunt of B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "In the expression B + D × M ÷ N, how is M related to B?",
+      "choices": {
+        "a": "Granddaughter",
+        "b": "Son",
+        "c": "Grandson",
+        "d": "Granddaughter or Grandson"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "Which of the following represent 'J is the son of F'?",
+      "choices": {
+        "a": "J + R – T × F",
+        "b": "J + R – T × F",
+        "c": "J + M – N × F",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "Which of the following represents 'R is the niece of M'?",
+      "choices": {
+        "a": "M + K × T – R",
+        "b": "M – J + R – N",
+        "c": "R – M × T + W",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "P@Q$M#T indicates what relationship of P with T?",
+      "choices": {
+        "a": "Maternal grandfather",
+        "b": "Paternal grandfather",
+        "c": "Maternal grandmother",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "Which of the following expressions indicates 'R is the sister of H'?",
+      "choices": {
+        "a": "R$D@F#H",
+        "b": "H%D@F$R",
+        "c": "R%D@F$H",
+        "d": "H$D@F#R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "If F@D%K#H, then how is F related to H?",
+      "choices": {
+        "a": "Brother-in-law",
+        "b": "Sister",
+        "c": "Sister-in-law",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "Which of the following expressions indicates 'H is the brother of N'?",
+      "choices": {
+        "a": "N%F@D$H",
+        "b": "N%F@D%H",
+        "c": "N%F@D$H#R",
+        "d": "H#R$D$N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "Which of the following means 'H' is paternal grandfather of T?",
+      "choices": {
+        "a": "H + J + T",
+        "b": "T × K + H",
+        "c": "H + J × T",
+        "d": "H – J + T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "Which of the following means 'M is maternal uncle of T'?",
+      "choices": {
+        "a": "M + K – T",
+        "b": "M × K – T",
+        "c": "M × K + T",
+        "d": "M + K + T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 4,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "If it is given 'P + R + S ÷ Q', then which of the following is true?",
+      "choices": {
+        "a": "P is the daughter of Q",
+        "b": "Q is the aunt of P",
+        "c": "P is the aunt of Q",
+        "d": "P is the mother of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 4,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "If it is given 'P – R + Q', then which of the following statements is true?",
+      "choices": {
+        "a": "P is the mother of Q",
+        "b": "Q is the daughter of P",
+        "c": "P is the aunt of Q",
+        "d": "P is the sister of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 4,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "coded_relations",
+      "subtopic_name": "Coded Relations",
+      "body": "If it is given P × R ÷ Q, then which of the following is true?",
+      "choices": {
+        "a": "P is the uncle of Q",
+        "b": "P is the father of Q",
+        "c": "P is the brother of Q",
+        "d": "P is the son of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 398
+}

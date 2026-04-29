@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 21,
+      "solution": "According to the question, B % J ⇒ B≡ J, J @ K ⇒ J> K, K © T ⇒ K< T, T $ F ⇒ T≤ F. On combining the statements (i), (ii), (iii) and (iv), we get B≡ J> K< T≤ F. Conclusions I. F @ K ⇒ F> K (true), II. B @ K ⇒ B> K (true), III. B © F ⇒ B< F (false). So, it is clear that both Conclusions I and II are true."
+    },
+    {
+      "number": 22,
+      "solution": "According to the question, F # B ⇒ F≥ B, B $ M ⇒ B≡ M, M @ K ⇒ M> K, K © N ⇒ K< N. On combining the statements (i), (ii), (iii) and (iv), we get F≥ B≡ M> K< N. Conclusions I. N @ M ⇒ N> M (false), II. F $ M ⇒ F≡ M (false), III. K © B ⇒ K< B (false). So, it is clear that none of the conclusions is true."
+    },
+    {
+      "number": 23,
+      "solution": "According to the question, H % J ⇒ H< J, J © N ⇒ J≡ N, N @ R ⇒ N> R. On combining the statements (i), (ii) and (iii), we get H< J≡ N> R. Conclusions I. R % J ⇒ R< J (true), II. H @ J ⇒ H> J (false), III. N @ H ⇒ N> H (true). So, it is clear that both Conclusions I and III are true."
+    },
+    {
+      "number": 24,
+      "solution": "According to the question, M @ J ⇒ M> J, J $ T ⇒ J≥ T, T © N ⇒ T≡ N. On combining the statements (i), (ii) and (iii), we get M> J≥ T≡ N. Conclusions I. N # J ⇒ N≤ J (true), II. T % M ⇒ T< M (true), III. M @ N ⇒ M> N (true). So, it is clear that all the Conclusions I, II and III are true."
+    },
+    {
+      "number": 25,
+      "solution": "According to the question, D © K ⇒ D≡ K, K # F ⇒ K≤ F, F @ P ⇒ F> P. On combining the statements (i), (ii) and (iii), we get D≡ K≤ F> P. Conclusions I. P @ D ⇒ P> D (false), II. K # P ⇒ K≤ P (false), III. F $ D ⇒ F≥ D (true). So, it is clear that only Conclusion III is true."
+    },
+    {
+      "number": 26,
+      "solution": "According to the question, R # D ⇒ R≤ D, D $ M ⇒ D≡ M, M © N ⇒ M≡ N. On combining the statements (i), (ii) and (iii), we get R≤ D≡ M≡ N. Conclusions I. R # M ⇒ R≤ M (false), II. N # D ⇒ N≤ D (true), III. N $ R ⇒ N≥ R (false). So, it is clear that only Conclusion II is true."
+    },
+    {
+      "number": 27,
+      "solution": "According to the question, K © P ⇒ K≡ P, P @ Q ⇒ P> Q, Q $ R ⇒ Q≥ R. On combining the statements (i), (ii) and (iii), we get K≡ P> Q≥ R. Conclusions I. K @ R ⇒ K> R (true), II. R % P ⇒ R< P (true), III. Q % K ⇒ Q< K (true). So, it is clear that all the Conclusions I, II and III are true."
+    },
+    {
+      "number": 28,
+      "solution": "According to the question, B @ K ⇒ B< K, K @ M ⇒ K< M, M @ Z ⇒ M< Z. On combining the statements (i), (ii) and (iii), we get B< K< M< Z. Conclusions I. B @ Z ⇒ B< Z (true), II. B ≡ Z ⇒ B≡ Z (false). So, it is clear that only Conclusion I is true."
+    }
+  ],
+  "answers": [],
+  "_page": 342
+}

@@ -1,0 +1,222 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 8-9) Read the following information carefully and then answer the questions given below. Seven boys A, B, C, D, E, F and G are standing in a line. I. G is between A and E. II. F and A have one boy between them. III. E and C have two boys between them. IV. D is to the immediate right of F. V. C and B have three boys between them.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 10-13) Read the following information carefully and then answer the questions given below it. Five friends A, B, C, D and E are sitting on a bench. I. A is sitting next to B. II. C is sitting next to D. III. D is not sitting next to E. IV. E is on the left end of the bench. V. C is on second position from right. VI. A is on the right side of B and to the right side of E. VII. A and C are sitting together.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "There are six houses in a row. Mr Lal has Mr Bhasin and Mr Sachdeva as neighbours. Mr Bhatia has Mr Gupta and Mr Sharma as neighbours. Mr Gupta's house is not next to Mr Bhasin or Mr Sachdeva and Mr Sharma does not live next to Mr Sachdeva. Who are Mr Bhasin's next door neighbours?",
+      "choices": {
+        "a": "Mr Lal and Mr Bhasin",
+        "b": "Mr Lal and Mr Sachdeva",
+        "c": "Mr Sharma and Mr Lal",
+        "d": "Only Mr Lal"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Six friends A, B, C, D, E and F are sitting in a row facing towards North. C is sitting between A and E. D is not at the end, B is sitting at immediate right of E, F is not at the right end, but D is sitting at 3rd left of E. Which of the following is sitting to the left of D?",
+      "choices": {
+        "a": "A",
+        "b": "F",
+        "c": "E",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Five girls are sitting in a row. Kalpita is to the left of Mridula. Megha is to the right of Arpana. Sangeeta is in the middle of Megha and Kalpita. Who among the following is to the extreme right of the row?",
+      "choices": {
+        "a": "Mridula",
+        "b": "Arpana",
+        "c": "Kalpita",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "There are five books A, B, C, D and E. Book C lies above D. Book E is below A. D is above A and B is below E. Which book is at the bottom?",
+      "choices": {
+        "a": "E",
+        "b": "B",
+        "c": "A",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Six friends A, B, C, D, E and F are sitting in a row facing East. 'C' is between 'A' and 'E'. 'B' is just to the right of 'E' but left of 'D'. 'F' is not at the right end. How many persons are to the right of 'E'?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Seven children A, B, C, D, E, F and G are standing in a row. G is to the right of D and to the left of B. A is on the right of C, A and D have one child between them. E and B have two children between them. D and F have also two children between them. Who is exactly in the middle?",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "D",
+        "d": "G"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "circular_arrangement",
+      "subtopic_name": "Circular Arrangement",
+      "body": "Six persons are playing a card game. Suresh is facing Raghubir who is to the left of Ajay and to the right of Pramod. Ajay is to the left of Dhiraj. Yogendra is to the left of Pramod. If Dhiraj exchanges his seat with Yogendra and Pramod exchanges with Raghubir, who will be sitting to the left of Dhiraj?",
+      "choices": {
+        "a": "Yogendra",
+        "b": "Raghubir",
+        "c": "Suresh",
+        "d": "Ajay"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Who is second from left?",
+      "choices": {
+        "a": "C",
+        "b": "G",
+        "c": "E",
+        "d": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "C is standing between",
+      "choices": {
+        "a": "A and F",
+        "b": "D and G",
+        "c": "A and D",
+        "d": "F and G"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "At what position is A sitting?",
+      "choices": {
+        "a": "Between B and C",
+        "b": "Between D and C",
+        "c": "Between E and D",
+        "d": "Between C and E"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 504
+}

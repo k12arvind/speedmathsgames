@@ -1,0 +1,290 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Mathematical Operation",
+  "passages": [
+    {
+      "passage_text": "In the following questions, the symbols ©, ©, @, @ are used as follows.\nA © B means A > B\nA © B means A ≥ B\nA = B means A = B\nA © B means A ≤ B\nA © B means A < B\nNow, in each of the following questions, assuming the given statements to be true, find which of the two Conclusions I and II given below them is/are definitely true.\nGive answer\n(a) if only Conclusion I is true\n(b) if only Conclusion II is true\n(c) if either Conclusion I or II is true\n(d) if neither Conclusion I nor II is true\n(e) if both Conclusions I and II are true",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    },
+    {
+      "passage_text": "In the following questions, the symbol @, @, =, © and © are used with following meanings.\nP @ Q ⇒ P is greater than Q.\nP © Q ⇒ P is smaller than Q.\nP = Q ⇒ P is equal to Q.\nP @ Q ⇒ P is either greater than or equal to Q.\nP © Q ⇒ P is either smaller than or equal to Q.\nGive answer\n(a) if only Conclusion I is true\n(b) if only Conclusion II is true\n(c) if either Conclusion I or II is true\n(d) if neither Conclusion I nor II is true\n(e) if both Conclusions I and II are true",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements H % J, J © N, N @ R\nConclusions I. R % J    II. H @ J    III. N @ H",
+      "choices": {
+        "a": "Only II and true",
+        "b": "I and III are true",
+        "c": "Only I is true",
+        "d": "Only III is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements M @ J, J $ T, T © N\nConclusions I. N # J    II. T % M    III. M @ N",
+      "choices": {
+        "a": "I and II are true",
+        "b": "II and III are true",
+        "c": "I and II are true",
+        "d": "Only III is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements D © K, K # F, F @ P\nConclusions I. P @ D    II. K # P    III. F $ D",
+      "choices": {
+        "a": "Only II is true",
+        "b": "I and II are true",
+        "c": "Only III is true",
+        "d": "II and III are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements R # D, D $ M, M © N\nConclusions I. R # M    II. N # D    III. N $ R",
+      "choices": {
+        "a": "Only I is true",
+        "b": "Only II is true",
+        "c": "Only III is true",
+        "d": "None is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements K © P, P @ Q, Q $ R\nConclusions I. K @ R    II. R % P    III. Q % K",
+      "choices": {
+        "a": "I and II are true",
+        "b": "II and III are true",
+        "c": "Only III is true",
+        "d": "All are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements B @ K, K @ M, M @ Z\nConclusions I. B @ Z    II. B = Z",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements R © B, B © M\nConclusions I. R © M    II. R @ M",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements M @ R, Q © P, P = R\nConclusions I. M @ P    II. M = P",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements M @ N, N @ R\nConclusions I. R © M    II. R © M",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements P @ Q, Q © M, M @ T\nConclusions I. P @ T    II. P © T",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements B @ V, K © C, C © B\nConclusions I. V @ C    II. B @ K",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements K @ T, S = K, T © R\nConclusions I. S @ T    II. T = R",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_substitution",
+      "subtopic_name": "Symbol Substitution",
+      "body": "Statements U = M, P @ U, M @ B\nConclusions I. P = B    II. P @ B",
+      "choices": {
+        "a": "if only Conclusion I is true",
+        "b": "if only Conclusion II is true",
+        "c": "if either Conclusion I or II is true",
+        "d": "if neither Conclusion I nor II is true",
+        "e": "if both Conclusions I and II are true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 338
+}

@@ -1,0 +1,27 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Here, conclusion I is G n F or G ∩ F and it is identical to premise. Hence, it directly follows from one single statement. (All three Practice Exercises)"
+    },
+    {
+      "number": 2,
+      "solution": "Check 2: The conclusions you reach after the Third Step (Section 19.3) will be identical to the given conclusion although it may not give the first glance. Check. For Example, if you arrive at a conclusion- inequality A ≤ B immediately after, conclusion B ≥ A is obviously true."
+    },
+    {
+      "number": 3,
+      "solution": "After the third step you get a conclusion that has a '≤' sign and the two given conclusions have a '>' or '<' sign between the same terms; the choice either 1 or II follows is correct. (Very Imp.) For example, suppose you reach A ≥ B after performing the third step of the conclusions are: I. A > B and II. A = B. Then the choice 'either I or II follows' is correct and correct answer is conclusion that W >Y and the given conclusions are: I. M < N and II. M = N has again the same answer follows."
+    },
+    {
+      "number": 4,
+      "solution": "If the new given conclusions have a (i) '≤' and '≥' signs, or (ii) '=' and '≤' signs, or (iii) '>' and '<' signs, or (iv) '≤' and '<' signs between the same terms; and if neither of the conclusion has been accepted in any of the steps above; the choice 'either of the two follows' is correct. (Important) [Note: Also see, Q 50, Practice Exercise]"
+    }
+  ],
+  "answers": [],
+  "_page": 296
+}

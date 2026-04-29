@@ -1,0 +1,21 @@
+{
+  "page_type": "solutions",
+  "chapter_number": 19,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-5): In the following questions, the symbol ⊙, Δ, ⊗ and @ are used with the following meanings: P ⊙ Q means P is greater than Q. P Δ Q means P is either greater than or equal to Q. P = Q means P is equal to Q. P ⊗ Q means P is smaller than Q. P @ Q means P is either smaller than or equal to Q. Now, in each of the following questions assuming the given statements be true, find which of the two conclusions I and II given below them are definitely true. Give answer 1) if only conclusion I is true; 2) if only conclusion II is true; 3) if either I or II is true; 4) if neither I nor II is true; and 5) if both I and II are true.",
+      "has_figure": false,
+      "topic_code": "inequalities"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Statements: A ⊙ N, J @ U, S ⊗ A, J = N Conclusions: I. J @ S     II. U ⊗ N\n\nSolution:\nWe first decode entire questionnaire. We have\nΔ→ ≥, ⊙→ >, =→ =, @→ ≤, ⊗→ <\n\nStatements: I. J < S\nConclusions: I. J < U, A, T > U, G ≥ A\nStatements: I. I ≥ U\nConclusions: I. A = M\nStatements: N > A, H, C, A = H, N @ D\nConclusions: I. D ≥ N\nStatements: I. D ≥ N\nConclusions: N > A, R @ T, M @ A\nConclusions: I. M < N, T @ N, A = Y, I ≥ A, T\nConclusions: I. I = Y\n\nPart of the steps:\n\n1. (i) Conclusion I: Given conclusion A < S. Relevant statements J = N and A ⊙ N, J @ U, Combining A × J and J < U which is true.\n   (ii) Conclusion II: < U. Relevant statements are J = U and J = N. Combining J < U by check A × N it can be true because A is not equal to any term in the given statements. (Note that by virtue of\n\n2. (i) Conclusion I: O ≥ M. Not given statements. [Note that by virtue of conclusion it is true in doing step III, etc.]\n   (ii) Conclusion II: O ≤ F. Relevant statements are: G ≥ A, U < A. (Combining step of O ≥ F which towards common term is A in G ≥ A and U < A) by check ∀ G ≥ A ≥ U which gives way from H ≥ R (i.e. A). Combining, we have G ≥ A ≥ U which gives G > U, So, it follows.\n\nCorrect answer: 2\n\n3. (i) Conclusion I: P = N.\n   (ii) Conclusion II: D > N. So follow from N ≤ D which is already given.\n   By check S, either of them\n   Correct answer: 4\n\n4. (i) Given: I. M < T. Relevant statements are: M ≤ A, N > A. Combining step: M ≤ A < N. So, conclusion I follows.\n   (ii) Conclusion I: 7 ≥ N. Not possible because T is not equal to any other term in the four given statements (by virtue of Tip 7).\n   \nCorrect answer: 1"
+    }
+  ],
+  "answers": [],
+  "_page": 299
+}

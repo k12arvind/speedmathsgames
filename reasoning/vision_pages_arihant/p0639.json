@@ -1,0 +1,202 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the following questions. Six friends Abhishek, Deepak, Mridul, Pritam, Ranjan and Salil married within a year in the months of February, April, July, September, November and December and in the cities of Ahmedabad, Bengaluru, Chennai, Delhi, Mumbai and Kolkata but not necessarily following the above order. The bride's names were Geetika, Jasmine, Hema, Brinda, Ipsita and Veena, once again not following any order. The following are some facts about their weddings. I. Mridul's wedding took place in Chennai, however he was not married to Geetika or Veena. II. Abhishek's wedding took place in Ahmedabad and Ranjan's in Delhi, however neither of them was married to Jasmine or Brinda. III. Salil's wedding in Kolkata took place in February. IV. Hema's wedding took place in April but not in Ahmedabad. V. Geetika and Ipsita got married in February and November and in Chennai and Kolkata but not following the above order. VI. Pritam visited Bengaluru and Kolkata only after his marriage in December. VII. Salil was married to Jasmine in September.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Study the following information carefully and answer the given questions. Eight persons from different banks viz. UCO Bank, Syndicate Bank, Canara Bank, PNB, Dena Bank, Oriental Bank of Commerce, Indian Bank and Bank of Maharashtra are sitting in two parallel rows containing four people each, in such a way that there is an equal distance between adjacent persons. In row 1, A, B, C and D are seated and all of them are facing South. In row 2, P, Q, R and S are seated and all of them are facing North. Therefore, in the given sitting arrangement each member seated in row faces another member of the other row. (All the information given above does not necessarily represent the order of seating as in the final arrangement.) I. C sits second to right of the person from Bank of Maharashtra. R is an immediate neighbour of the person who faces the person from Bank of Maharashtra. II. Only one person sits between R and the person from PNB. The immediate neighbour of the person from PNB faces the person from Canara Bank. III. The person from UCO Bank faces the person from Oriental Bank of Commerce. R is not from Oriental Bank of Commerce. P is not from PNB. P does not face the person from Bank of Maharashtra. IV. Q faces the person from Dena Bank. The one who faces S sits to the immediate left of A. V. B does not sit at any of the extreme ends of the line. The person from Bank of Maharashtra does not face the person from Syndicate Bank.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 97,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "group_analysis",
+      "subtopic_name": "Group Analysis",
+      "body": "Which of the following groups represents all the male members?",
+      "choices": {
+        "a": "HDE",
+        "b": "GFD",
+        "c": "EFC",
+        "d": "ABD"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 98,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "group_analysis",
+      "subtopic_name": "Group Analysis",
+      "body": "Which of the following group of persons travel in the same car?",
+      "choices": {
+        "a": "ADG",
+        "b": "ABJ",
+        "c": "GHI",
+        "d": "GFI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 99,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "relationship_analysis",
+      "subtopic_name": "Relationship Analysis",
+      "body": "Who is husband of 'C'?",
+      "choices": {
+        "a": "A",
+        "b": "D",
+        "c": "B",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 100,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Arrangement",
+      "body": "J travels in which car?",
+      "choices": {
+        "a": "X",
+        "b": "Y",
+        "c": "Z",
+        "d": "X or Z"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 101,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "marriage_arrangement",
+      "subtopic_name": "Marriage Arrangement",
+      "body": "Hema's husband is",
+      "choices": {
+        "a": "Abhishek",
+        "b": "Deepak",
+        "c": "Ranjan",
+        "d": "Pritam"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 102,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "marriage_arrangement",
+      "subtopic_name": "Marriage Arrangement",
+      "body": "Deepak's wedding took place in",
+      "choices": {
+        "a": "Bengaluru",
+        "b": "Mumbai",
+        "c": "Kolkata",
+        "d": "Delhi"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 103,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "marriage_arrangement",
+      "subtopic_name": "Marriage Arrangement",
+      "body": "In Mumbai, the wedding of one of the friends took place in the month of",
+      "choices": {
+        "a": "April",
+        "b": "September",
+        "c": "November",
+        "d": "December"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 104,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "marriage_arrangement",
+      "subtopic_name": "Marriage Arrangement",
+      "body": "Salil's wedding was held in",
+      "choices": {
+        "a": "Bengaluru",
+        "b": "Chennai",
+        "c": "Kolkata",
+        "d": "Delhi"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 105,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "marriage_arrangement",
+      "subtopic_name": "Marriage Arrangement",
+      "body": "Ipsita's wedding took place in",
+      "choices": {
+        "a": "Ahmedabad",
+        "b": "Bengaluru",
+        "c": "Mumbai",
+        "d": "Chennai"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 639
+}

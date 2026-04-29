@@ -1,0 +1,267 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "A teacher's training institute has to conduct a refresher course for teachers of seven different subjects. History, Geography, Political Science, Hindi, Sanskrit, Music and English from 12th December to 19th, December.\nI. The course should start with Geography.\nII. 13th December being a Sunday, should be a holiday.\nIII. Music should be on the day previous to English.\nIV. The course should end with History.\nV. Political Science should be immediately after the holiday. Sanskrit follows Political Science.\nVI. There should be a gap of one day between Sanskrit and English and between Music and Hindi.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    },
+    {
+      "passage_text": "There are six soccer teams A, B, C, D, E and F in the soccer league game. All the six teams play each Saturday during the season. Each team must play against each of the other teams once and only once during the seasons.\nI. Team A plays against team D 1st and team F 2nd.\nII. Team B plays against team E 1st and team C 3rd.\nIII. Team C plays against team F 1st.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    },
+    {
+      "passage_text": "A sales representative plans to visit each of six companies - M, N, P, Q, R and S exactly once during the course of one day. She is setting up her schedule for the day according to the following conditions.\nI. She must visit M before N and before R.\nII. She must visit N before Q.\nIII. The 3rd company she visits must be P.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "What day does Rakesh make his presentation on?",
+      "choices": {
+        "a": "Monday",
+        "b": "Tuesday",
+        "c": "Wednesday",
+        "d": "Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which subject is followed by Music?",
+      "choices": {
+        "a": "English",
+        "b": "Geography",
+        "c": "Political Science",
+        "d": "Sanskrit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "How many days gap is there between Music and Political Science?",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which subject precedes History?",
+      "choices": {
+        "a": "Sanskrit",
+        "b": "English",
+        "c": "Political Science",
+        "d": "Hindi"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which subject will be on Tuesday?",
+      "choices": {
+        "a": "History",
+        "b": "English",
+        "c": "Sanskrit",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which refresher course will start three days before English subject?",
+      "choices": {
+        "a": "Geography",
+        "b": "History",
+        "c": "Political Science",
+        "d": "Sanskrit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "tournament",
+      "subtopic_name": "Tournament Scheduling",
+      "body": "On 1st Saturday, which of the following pairs of teams play against each other?",
+      "choices": {
+        "a": "A and B, C and F, D and E",
+        "b": "A and B, C and E, D and F",
+        "c": "A and C, B and E, D and F",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "tournament",
+      "subtopic_name": "Tournament Scheduling",
+      "body": "Which of the following team must B play second with?",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "D",
+        "d": "Either A or D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "tournament",
+      "subtopic_name": "Tournament Scheduling",
+      "body": "What is the total number of games that each team must play during the season?",
+      "choices": {
+        "a": "2",
+        "b": "5",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "tournament",
+      "subtopic_name": "Tournament Scheduling",
+      "body": "If D wins 5 games, which of the following must be true?",
+      "choices": {
+        "a": "A loses 5 games",
+        "b": "A wins 4 games",
+        "c": "A wins its first game",
+        "d": "B loses atleast 1 game"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "tournament",
+      "subtopic_name": "Tournament Scheduling",
+      "body": "The last set of games could be between",
+      "choices": {
+        "a": "A and B, C and F, D and E",
+        "b": "A and C, B and F, D and E",
+        "c": "A and D, B and C, E and F",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "scheduling",
+      "subtopic_name": "Scheduling",
+      "body": "Which of the following could be the order in which sales representative visits the six companies?",
+      "choices": {
+        "a": "M, R, N, Q, P, S",
+        "b": "M, S, P, N, R, Q",
+        "c": "P, R, M, N, Q, S",
+        "d": "P, S, M, R, Q, N"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 621
+}

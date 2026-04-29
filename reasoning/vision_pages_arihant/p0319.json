@@ -1,0 +1,278 @@
+{
+  "page_type": "questions",
+  "chapter_number": 9,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 5-16) In each of the following questions, all the equations except one have been solved according to a certain rule. You are required to solve the unsolved equation following the same rule and to choose the correct answer out of the given options.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_replacement",
+      "subtopic_name": "Symbol Replacement",
+      "body": "Which of the following sets of operation with the usual notations replacing the stars in the order given makes the statements valid? √100*√16*√225*√1",
+      "choices": {
+        "a": "×, +",
+        "b": "+, =, −",
+        "c": "+, =, ×",
+        "d": "−, ×, ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_replacement",
+      "subtopic_name": "Symbol Replacement",
+      "body": "Select the correct combination of mathematical signs to replace * signs and to balance the following equation 8 * 8 * 1 * 7 = 8",
+      "choices": {
+        "a": "× + +",
+        "b": "+ + ×",
+        "c": "+ × +",
+        "d": "+ × ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_replacement",
+      "subtopic_name": "Symbol Replacement",
+      "body": "Select the correct combination of mathematical signs to replace '*' signs and to balance the given equation. 24 * 34 * 2 * 5 * 12",
+      "choices": {
+        "a": "+ × =",
+        "b": "+ + −",
+        "c": "= − +",
+        "d": "+ = ×"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "symbol_replacement",
+      "subtopic_name": "Symbol Replacement",
+      "body": "Select the correct combination of mathematical signs to replace the * signs and to balance the given equation 40 * 2 * 4 * 3 * 8",
+      "choices": {
+        "a": "+ − =",
+        "b": "+ + = ×",
+        "c": "+ × =",
+        "d": "+ × − ="
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "If 2463 = 36 and 5552 = 30, then 6732 = ?",
+      "choices": {
+        "a": "32",
+        "b": "36",
+        "c": "38",
+        "d": "39"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "2 + 6 + 9 = 926, 1 + 8 + 2 = 218, 4 + 3 + 1 = ?",
+      "choices": {
+        "a": "314",
+        "b": "341",
+        "c": "143",
+        "d": "431"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "7 − 4 − 1 = 714, 9 − 2 − 3 = 932, 8 − 0 − 4 = ?",
+      "choices": {
+        "a": "804",
+        "b": "840",
+        "c": "408",
+        "d": "480"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "4 − 4 = 17, 6 − 6 = 37, 2 − 2 = 5, 5 − 5 = ?",
+      "choices": {
+        "a": "27",
+        "b": "26",
+        "c": "20",
+        "d": "24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "4 − 4 = 12, 6 − 6 = 30, 2 − 2 = 2, 8 − 8 = ?",
+      "choices": {
+        "a": "8",
+        "b": "38",
+        "c": "56",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "4 × 6 × 2 = 351, 3 × 9 × 8 = 287, 9 × 5 × 6 = ?",
+      "choices": {
+        "a": "270",
+        "b": "845",
+        "c": "596",
+        "d": "659"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "5 × 3 × 9 = 395, 9 × 7 × 5 = 759, 7 × 6 × 4 = ?",
+      "choices": {
+        "a": "676",
+        "b": "476",
+        "c": "647",
+        "d": "764",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "4 × 6 × 9 = 694, 5 × 3 × 2 = 325, 7 × 8 × 2 = ?",
+      "choices": {
+        "a": "729",
+        "b": "872",
+        "c": "827",
+        "d": "279"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operation",
+      "subtopic_code": "pattern_recognition",
+      "subtopic_name": "Pattern Recognition",
+      "body": "9 * 7 = 32, 13 * 7 = 120, 17 * 9 = 208, 19 * 11 = ?",
+      "choices": {
+        "a": "64",
+        "b": "160",
+        "c": "240",
+        "d": "210"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 319
+}

@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "This is a deceptive problem. You should notice that there are two unknowns in this case: 'Father' and 'Son'. But how many informations are there? Two? No. There is only one information. Both statements I and II only state that the father is older than the son by 20 years (although the language of I and II are different). So, here, we have repetition of data. Since there is one information (one equation) for two unknowns, data are insufficient and the answer is E."
+    },
+    {
+      "number": 15,
+      "solution": "No. of unknowns = 2 (Shubham, Shyam) No. of information = 1 (A similar deception as in the above example) Hence, data are insufficient. Answer is E."
+    },
+    {
+      "number": 16,
+      "solution": "Take statement I. Here, No. of unknowns = 2 (Shubham, Shyam) and No. of informations = one. In statement II, however, there is only one unknown (Shubham) and one information. Therefore, statement II alone is sufficient although statement I is not sufficient. Answer is B."
+    }
+  ],
+  "answers": [],
+  "_page": 112
+}

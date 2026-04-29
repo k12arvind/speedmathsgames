@@ -1,0 +1,151 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Dice",
+  "passages": [],
+  "questions": [
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "cube_faces",
+      "subtopic_name": "Cube Faces",
+      "body": "A cube has six numbers marked 1, 2, 3, 4, 5 and 6 on its faces. Three views of the cube are shown below. What possible numbers can exist on the two faces marked A and B, respectively?",
+      "choices": {
+        "a": "2 and 3",
+        "b": "6 and 1",
+        "c": "1 and 4",
+        "d": "3 and 1"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "opposite_faces",
+      "subtopic_name": "Opposite Faces",
+      "body": "From the given two positions of a single dice, find the letter at the face opposite to the face having letter V.",
+      "choices": {
+        "a": "S",
+        "b": "U",
+        "c": "J",
+        "d": "I"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "opposite_faces",
+      "subtopic_name": "Opposite Faces",
+      "body": "From the given three positions of a single dice, find the letter at the face opposite to the face having letter L.",
+      "choices": {
+        "a": "A",
+        "b": "M",
+        "c": "X",
+        "d": "Y"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "opposite_faces",
+      "subtopic_name": "Opposite Faces",
+      "body": "Three views of a cube following a particular motion are given below. What is the letter opposite to A?",
+      "choices": {
+        "a": "H",
+        "b": "P",
+        "c": "B",
+        "d": "M"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "opposite_faces",
+      "subtopic_name": "Opposite Faces",
+      "body": "From the given four positions of a single dice, find the letter at the face opposite to the face having letter D.",
+      "choices": {
+        "a": "M",
+        "b": "S",
+        "c": "W",
+        "d": "U"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "colored_faces",
+      "subtopic_name": "Colored Faces",
+      "body": "Six faces of a block have been painted with green, blue, white, yellow, black and pink. Two positions of this block is given below. If the black colour be at top, then which colour will be at the bottom?",
+      "choices": {
+        "a": "Green",
+        "b": "Blue",
+        "c": "Yellow",
+        "d": "White"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "colored_faces",
+      "subtopic_name": "Colored Faces",
+      "body": "From the given four positions of a single dice, find the colour at the face opposite to the face having green colour.",
+      "choices": {
+        "a": "Orange",
+        "b": "Red",
+        "c": "Silver",
+        "d": "Violet"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 908
+}

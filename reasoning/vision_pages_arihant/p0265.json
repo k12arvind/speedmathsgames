@@ -1,0 +1,323 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Which one of the given responses would be a meaningful order of the following words in ascending/order?",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    },
+    {
+      "passage_text": "Arrange the following words as per order in the dictionary.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "word_formation",
+      "subtopic_name": "Word Formation Sequence",
+      "body": "1. Weaving\n2. Cotton\n3. Cloth\n4. Thread",
+      "choices": {
+        "a": "2, 4, 1, 3",
+        "b": "2, 4, 3, 1",
+        "c": "4, 2, 1, 3",
+        "d": "3, 1, 4, 2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "word_formation",
+      "subtopic_name": "Word Formation Sequence",
+      "body": "1. Farmer\n2. Seed\n3. Food\n4. Cultivation",
+      "choices": {
+        "a": "1, 2, 4, 3",
+        "b": "2, 1, 3, 4",
+        "c": "4, 2, 3, 1",
+        "d": "3, 1, 4, 2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "word_formation",
+      "subtopic_name": "Word Formation Sequence",
+      "body": "1. Compose\n2. Appreciation\n3. Money\n4. Think\n5. Sing",
+      "choices": {
+        "a": "4, 2, 5, 3",
+        "b": "4, 1, 5, 2, 3",
+        "c": "2, 4, 3, 5, 1",
+        "d": "5, 4, 2, 1, 3",
+        "e": "3, 2, 4, 1, 5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 38,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "time_sequence",
+      "subtopic_name": "Time Sequence",
+      "body": "1. Twilight\n2. Dawn\n3. Noon\n4. Night",
+      "choices": {
+        "a": "2, 1, 3, 4",
+        "b": "2, 3, 1, 4",
+        "c": "1, 2, 3, 4",
+        "d": "1, 3, 2, 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 39,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "process_sequence",
+      "subtopic_name": "Process Sequence",
+      "body": "1. Sending\n2. Encoding\n3. Receiving\n4. Decoding",
+      "choices": {
+        "a": "2, 4, 3, 1",
+        "b": "4, 2, 1, 3",
+        "c": "1, 2, 3, 4",
+        "d": "2, 1, 3, 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 40,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "process_sequence",
+      "subtopic_name": "Process Sequence",
+      "body": "1. Implementation\n2. Conceptual Modelling\n3. Requirements Analysis\n4. Logical Modelling\n5. Physical Model\n6. Schema Refinement",
+      "choices": {
+        "a": "3, 2, 4, 6, 5, 1",
+        "b": "1, 3, 2, 6, 5, 4",
+        "c": "3, 2, 5, 4, 6, 1",
+        "d": "3, 2, 1, 4, 6, 5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "size_sequence",
+      "subtopic_name": "Size Sequence",
+      "body": "Which one of the given responses would be a meaningful order of the following continents in descending order of area?\n1. South America\n2. Africa\n3. Europe\n4. Australia\n5. North America",
+      "choices": {
+        "a": "2, 1, 5, 3, 4",
+        "b": "2, 5, 1, 3, 4",
+        "c": "2, 5, 1, 4, 3",
+        "d": "2, 1, 5, 4, 3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "hierarchy_sequence",
+      "subtopic_name": "Hierarchy Sequence",
+      "body": "1. Collector\n2. Governor\n3. Chief Secretary\n4. President\n5. Clerk",
+      "choices": {
+        "a": "1, 2, 3, 4, 5",
+        "b": "5, 1, 3, 2, 4",
+        "c": "5, 1, 3, 4, 2",
+        "d": "5, 1, 4, 3, 2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "time_sequence",
+      "subtopic_name": "Time Sequence",
+      "body": "1. Weekly\n2. Daily\n3. Monthly\n4. Fortnightly\n5. Bimonthly",
+      "choices": {
+        "a": "1, 4, 3, 2, 5",
+        "b": "2, 1, 4, 3, 5",
+        "c": "4, 1, 2, 3, 5",
+        "d": "5, 1, 2, 3, 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "body_parts",
+      "subtopic_name": "Body Parts Sequence",
+      "body": "1. Shoulder\n2. Wrist\n3. Elbow\n4. Palm\n5. Finger",
+      "choices": {
+        "a": "5, 4, 2, 3, 1",
+        "b": "3, 4, 5, 2, 1",
+        "c": "3, 1, 4, 2, 5",
+        "d": "2, 4, 5, 3, 1"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 45,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "hierarchy_sequence",
+      "subtopic_name": "Hierarchy Sequence",
+      "body": "1. Income\n2. Status\n3. Education\n4. Well-being\n5. Job",
+      "choices": {
+        "a": "1, 3, 2, 5, 4",
+        "b": "1, 2, 5, 3, 4",
+        "c": "3, 1, 5, 2, 4",
+        "d": "3, 5, 1, 2, 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "age_sequence",
+      "subtopic_name": "Age Sequence",
+      "body": "1. Foetus\n2. Child\n3. Baby\n4. Adult\n5. Youth",
+      "choices": {
+        "a": "1, 2, 4, 3, 5",
+        "b": "1, 3, 2, 5, 4",
+        "c": "2, 3, 5, 4, 1",
+        "d": "5, 4, 2, 3, 1"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "measurement_sequence",
+      "subtopic_name": "Measurement Sequence",
+      "body": "1. Hecto\n2. Centi\n3. Deca\n4. Kilo\n5. Deci",
+      "choices": {
+        "a": "2, 5, 3, 1, 4",
+        "b": "1, 3, 4, 5, 2",
+        "c": "1, 5, 3, 4, 2",
+        "d": "5, 2, 1, 4, 3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "alphabetical_order",
+      "subtopic_name": "Alphabetical Order",
+      "body": "1. Divide\n2. Divisions\n3. Devine\n4. Divest\n5. Direct",
+      "choices": {
+        "a": "5, 4, 3, 1, 2",
+        "b": "5, 4, 1, 3, 2",
+        "c": "1, 2, 3, 4, 5",
+        "d": "3, 5, 4, 1, 2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "alphabetical_order",
+      "subtopic_name": "Alphabetical Order",
+      "body": "1. Hair\n2. Heena\n3. Harmonium\n4. Host",
+      "choices": {
+        "a": "2, 3, 4, 1",
+        "b": "1, 3, 4, 2",
+        "c": "1, 3, 2, 4",
+        "d": "3, 1, 2, 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 265
+}

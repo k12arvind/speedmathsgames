@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "Coming back to Ex. 3, it is obvious that the two statements together are not sufficient (it is not sure whether P is a son or a daughter). Hence, E is the answer. But the answer would be C if statement (2) alone is replaced by any of the statements (a), (b) or (c), as above."
+    },
+    {
+      "number": 4,
+      "solution": "Let us consider another example. Ex. 4. X is the brother of Y and X is the brother of Z. How are Y and Z related? 1) Sex of Y 2) Sex of Z Soln: Since X is the brother of both Y and Z, it means that Y and Z are brothers or sisters. So, we must know their sex to know whether they are brother and who is the sister or both are brothers or both sisters. Hence, E is the answer."
+    },
+    {
+      "number": 2,
+      "solution": "Another very typical question is asked on 'dates'. The wording of the question goes like this: 'On which day of the week did X reach (on) April?' or 'What is the date of birth of X?' In such questions, you have to determine 'a day' or 'a date'. Usually, the data will provide you with the knowledge of some previous 'day' or 'date' and from this you can derive the required day or date. Hence, you should note that a date can exclusively be established if and only if: A. The 'day' or the 'date' of some earlier incident is mentioned, and B. The number of days between that incident and the required day is given. If any of the above information is not given, data will be insufficient. If both are given, data will be sufficient. Consider this example. Ex.5: 'On which day of the week did Atul reach Bombay?' (1) Atul's brother reached Bombay one day earlier than Atul. (2) Atul's mother reached Bombay on Thursday, which was two days later than the arrival of his brother. Soln: Statement (1) satisfies condition (B) above because there the number of days between an earlier incident (Atul's brother's reaching Bombay) and the required day has been given. Now, we need to know the day when that earlier incident took place [as in (A)]. In other words, we need to know on which day Atul's brother reached Bombay. For this, we turn to the second statement. It says that Atul's mother reached Bombay on Thursday, which was two days later than the arrival of his brother. Hence, the number of days between 'Atul's mother's reaching Bombay' and 'Atul's brother's reaching Bombay' is given. Also, the exact day of type (A) and (B) — are given. Thus, we can find out the day of 'Atul's brother's reaching Bombay'."
+    }
+  ],
+  "answers": [],
+  "_page": 110
+}

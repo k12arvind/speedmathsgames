@@ -1,0 +1,400 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 31-33) Study the following information carefully to answer the given questions that follow. Each of the six friends A, B, C, D, E and F scored different marks in an examination. C scored more than only A and E. D scored more than only B. E did not score the least. The one who scored the third highest marks scored 81 marks. E scored 67 marks.",
+      "has_figure": false,
+      "topic_code": "ranking_time"
+    }
+  ],
+  "questions": [
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Who is the youngest?",
+      "choices": {
+        "a": "Deepti",
+        "b": "Rajan",
+        "c": "Lata",
+        "d": "Anita"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Who is the eldest?",
+      "choices": {
+        "a": "Deepti",
+        "b": "Lata",
+        "c": "Anita",
+        "d": "Rajan"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Which of the following pairs of persons are of the same age?",
+      "choices": {
+        "a": "Mahima and Lata",
+        "b": "Anita and Mahima",
+        "c": "Mahima and Rajan",
+        "d": "There is no person"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Anita is younger than whom?",
+      "choices": {
+        "a": "Rajan",
+        "b": "Mahima",
+        "c": "Deepti",
+        "d": "Lata"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "If Mahima is 16 yr old, then what is the age of Lata?",
+      "choices": {
+        "a": "4 yr",
+        "b": "5 yr",
+        "c": "7 yr",
+        "d": "14 yr"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Shailendra is shorter than Keshav but taller than Rakesh, Madhav is the tallest. Aashish is a little shorter than Keshav and little taller than Shailendra. If they stand in the order of increasing heights, who will be the second?",
+      "choices": {
+        "a": "Aashish",
+        "b": "Shailendra",
+        "c": "Rakesh",
+        "d": "Madhav"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "The age of Amit is same as Sumit because they are twins, Richa is younger than Sumit, Richa is younger than Jyotsana but elder than Saurabh, Sumit is younger than Jyotsana. Who is the eldest among them?",
+      "choices": {
+        "a": "Amit",
+        "b": "Jyotsana",
+        "c": "Richa",
+        "d": "Saurabh"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "The age of Ram is twice the age of Shyam and half the age of Sohan, Shyam is elder than Mohan. Who is the eldest?",
+      "choices": {
+        "a": "Mohan",
+        "b": "Ram",
+        "c": "Sohan",
+        "d": "Shyam"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "P, Q, R and S are four males. P is the eldest in the group but he is not the richest but not the richest but not the eldest, Q is elder than S but he is not elder than P or R, P is richer than Q but he is not richer than S. How the four persons can be arranged in decreasing order of their age and money?",
+      "choices": {
+        "a": "PQRS, RPSQ",
+        "b": "PRQS, RSPQ",
+        "c": "PRQS, RSQP",
+        "d": "PRSQ, RSPQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "In a cricket team, Dhoni is taller than Virat but not as tall as Raina, Rohit is shorter than Dhoni but taller than Shikhar. Who among them is the shortest?",
+      "choices": {
+        "a": "Dhoni",
+        "b": "Virat",
+        "c": "Shikhar",
+        "d": "Cannot be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Lakshmi is elder than Meenu, Leela is elder than Meenu but younger than Lakshmi, Latha is younger than both Meenu and Hari but Hari is younger than Meenu. Who is the youngest?",
+      "choices": {
+        "a": "Lakshmi",
+        "b": "Meenu",
+        "c": "Leela",
+        "d": "Latha"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Sati is elder than Renu, Geeta is younger than Renu while Priya is elder than Sati. Who is the eldest?",
+      "choices": {
+        "a": "Priya",
+        "b": "Sati",
+        "c": "Renu",
+        "d": "Geeta"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Sashi is 2 yr elder than Sunita, Sunita is 3 yr elder than Bindu, Shekhar is 1 yr elder than Bindu. Who is the youngest in the group?",
+      "choices": {
+        "a": "Sashi",
+        "b": "Shekhar",
+        "c": "Bindu",
+        "d": "Sunita"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_comparison",
+      "subtopic_name": "Score Comparison",
+      "body": "Priti scored more than Rahul, Yamuna scored as much as Divya, Lokita scored less than Manju, Rahul scored more than Yamuna, Manju scored less than Divya. Who scored the lowest?",
+      "choices": {
+        "a": "Manju",
+        "b": "Yamuna",
+        "c": "Lokita",
+        "d": "Rahul"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "In P, Q, R, S, T and U, R is taller than only P and U. S is shorter than only T and Q. If each has different heights, then who will be the third place when they are standing in descending order of their height and the counting is done in the same order (tallest to shortest)?",
+      "choices": {
+        "a": "R",
+        "b": "P",
+        "c": "S",
+        "d": "Q",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Sita is older than Kanika, Ila is older than Kanika but younger than Sita, Shempa is younger than both Manas and Kanika, Kanika is older than Manas. Who is the youngest?",
+      "choices": {
+        "a": "Shempa",
+        "b": "Manas",
+        "c": "Ila",
+        "d": "Kanika"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Umesh is taller than Satish, Suresh is shorter than Neeraj but taller than Umesh. Who is the tallest among them?",
+      "choices": {
+        "a": "Umesh",
+        "b": "Suresh",
+        "c": "Satish",
+        "d": "Neeraj"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score Ranking",
+      "body": "Which of the following could possibly be C's score?",
+      "choices": {
+        "a": "70",
+        "b": "94",
+        "c": "86",
+        "d": "61",
+        "e": "81"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "score_ranking",
+      "subtopic_name": "Score Ranking",
+      "body": "Which of the following is true with respect to the given information?",
+      "choices": {
+        "a": "D's score was definitely less than 60",
+        "b": "F scored the maximum marks",
+        "c": "Only two people scored more than C",
+        "d": "There is a possibility that B scored 79 marks",
+        "e": "None of the above is true"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 293
+}

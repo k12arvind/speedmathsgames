@@ -1,0 +1,84 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Direction and Distance",
+  "passages": [],
+  "questions": [
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "finding_direction_only",
+      "subtopic_name": "Finding the Direction Only",
+      "body": "Vandana is going Northwards. She turns right, moves some distance and again turns to her right. After moving some distance she turns to her left, goes forward and again turns to her left. In which direction now is Vandana going?",
+      "choices": {
+        "a": "North",
+        "b": "South-West",
+        "c": "South",
+        "d": "West"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "finding_direction_only",
+      "subtopic_name": "Finding the Direction Only",
+      "body": "A man walks 6 km South, turns left and walks 4 km, again turns left and walks 5 km. Which direction is he facing now?",
+      "choices": {
+        "a": "South",
+        "b": "North",
+        "c": "East",
+        "d": "West"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "finding_direction_only",
+      "subtopic_name": "Finding the Direction Only",
+      "body": "A man started walking West. He turned right, then right again and finally turned left. Towards which direction was he walking now?",
+      "choices": {
+        "a": "North",
+        "b": "South",
+        "c": "West",
+        "d": "East"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 2,
+      "solution": "According to the question, the direction diagram can be drawn as shown. Clearly, Vandana is going towards North."
+    },
+    {
+      "number": 3,
+      "solution": "Let the man starts from the point A and passing through B and C, he reaches D. Clearly, he is now facing North."
+    },
+    {
+      "number": 4,
+      "solution": "According to the question, the direction diagram can be drawn as shown. Now, he is walking towards North."
+    }
+  ],
+  "answers": [],
+  "_page": 450
+}

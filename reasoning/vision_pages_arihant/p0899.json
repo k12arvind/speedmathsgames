@@ -1,0 +1,56 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_faces",
+      "subtopic_name": "Dice Face Identification",
+      "body": "What digit will be on the face opposite to face having digit 1 in the two positions of a single dice given below?",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "3",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_faces",
+      "subtopic_name": "Dice Face Identification",
+      "body": "In the following question, two positions of a single dice are given. Find the face which is opposite to the face having digit 6.",
+      "choices": {
+        "a": "1",
+        "b": "5",
+        "c": "3",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "In both the positions of dice, common digit 2 is on the same face. In position I, right face has digit 1 while in position II, right face has digit 3. Therefore, 1 and 3 are on opposite faces."
+    }
+  ],
+  "answers": [],
+  "_page": 899
+}

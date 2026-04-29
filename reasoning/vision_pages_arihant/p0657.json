@@ -1,0 +1,98 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 2 Problems Based on Three Statements",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-10) In each question below, three Statements I, II and III are given. You are required to find out which of the given statement (s) is/are sufficient to answer the question. Mark your answer accordingly.",
+      "has_figure": false,
+      "topic_code": "data_sufficiency"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "day_determination",
+      "subtopic_name": "Day Determination",
+      "body": "On Which day Suresh went to Chennai, if week starts on Monday?\nI. Suresh took leave on Wednesday.\nII. Suresh went to Chennai the next day of the day his mother came to his house.\nIII. Suresh's mother came to his house neither on Monday nor Friday.",
+      "choices": {
+        "a": "II and III",
+        "b": "I and II",
+        "c": "All I, II and III",
+        "d": "I and II",
+        "e": "Even I, II and III together are not sufficient"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "age_calculation",
+      "subtopic_name": "Age Calculation",
+      "body": "In which year was Tarun born?\nI. Tarun is 6 yr older than Rabin.\nII. Rabin's brother was born in 1982.\nIII. Tarun's brother is 2 yr younger than Rabin's brother who was 8 yr younger than him.",
+      "choices": {
+        "a": "I and III",
+        "b": "II and III",
+        "c": "All I, II and III",
+        "d": "I and II"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "age_comparison",
+      "subtopic_name": "Age Comparison",
+      "body": "Who among Girish, Prashant, Kamlesh and Jayesh is the youngest?\nI. Kamlesh is younger than Jayesh but older than Girish and Prashant.\nII. Jayesh is the oldest.\nIII. Girish is older than Prashant.",
+      "choices": {
+        "a": "I and II",
+        "b": "I and III",
+        "c": "II and III",
+        "d": "Only I"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "position_arrangement",
+      "subtopic_name": "Position Arrangement",
+      "body": "Who among P, Q, R, S and T is in the middle while standing in a line?\nI. Q is to the right of T.\nII. S is between P and T.\nIII. Q is between T and R.",
+      "choices": {
+        "a": "I and II",
+        "b": "II and III",
+        "c": "I and III",
+        "d": "All I, II, III"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 657
+}

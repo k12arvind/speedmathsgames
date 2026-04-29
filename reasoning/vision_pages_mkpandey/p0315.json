@@ -1,0 +1,187 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: Read the following information carefully and answer the questions given below it: In a group of six persons A, B, C, D, E and F is a family. They are Psychologist, Manager, Lawyer, Jeweller, Doctor and Engineer. The doctor is the grandfather of F who is a Psychologist. The Manager D is married to A. C, the Jeweller, is married to the Lawyer. B is the mother of F and E. There are two married couples in the family.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Directions: Read the following information carefully and answer the questions given below it: In a family there are two married couples. P, Q, R, S, T and X are members of the family. R is the grandfather of R and is a lawyer. S is an engineer and the father of T, X is the grandfather. There is one engineer, one lawyer, one teacher, one housewife and one student in the family.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "What is the profession of E?",
+      "choices": {
+        "a": "Doctor",
+        "b": "Jeweller",
+        "c": "Manager",
+        "d": "Psychologist",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "Who is related to E?",
+      "choices": {
+        "a": "Brother",
+        "b": "Uncle",
+        "c": "Father",
+        "d": "Grandfather",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "How many male members are there in the family?",
+      "choices": {
+        "a": "One",
+        "b": "Three",
+        "c": "Four",
+        "d": "Two",
+        "e": "Can't be determined"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "What is the profession of A?",
+      "choices": {
+        "a": "Doctor",
+        "b": "Lawyer",
+        "c": "Jeweller",
+        "d": "Manager",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "Which of the following is one of the pairs of couples in the family?",
+      "choices": {
+        "a": "AB",
+        "b": "AC",
+        "c": "AD",
+        "d": "Can't be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "Who is the husband of P?",
+      "choices": {
+        "a": "R",
+        "b": "S",
+        "c": "T",
+        "d": "X",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "Which of the following are two married couples?",
+      "choices": {
+        "a": "XS, RP",
+        "b": "TS, RX",
+        "c": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_professions",
+      "subtopic_name": "Family Relations with Professions",
+      "body": "Which of the following is definitely a group of male members?",
+      "choices": {
+        "a": "XS, SP",
+        "b": "Q, X, P",
+        "c": "Q, Q, X",
+        "d": "Q, X, T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 315
+}

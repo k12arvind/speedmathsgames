@@ -1,0 +1,102 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-62) Questions in the form of inferences/ conclusions are based on the passages given below. Each passage is followed by five inferences. You are required to examine each inference separately in the context of the passage and decide upon its degree of truth or falsity.\nGive answer\n(a) if the inference is definitely true, i.e., it properly follows from the statement of facts given\n(b) if the inference is probably true though not definitely true in the light of the facts given\n(c) if the data are inadequate; e., from the facts given you cannot say whether the inference is likely to be true or false\n(d) if the inference is probably false though not definitely false in the light of the facts given\n(e) if the inference is definitely false; e., it cannot possibly be drawn from the facts given or it contradicts the given facts",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Asia has become the growth centre of the world economy in recent years. Within the region, India and South Korea are the third and fourth largest economies after China and Japan. Though the Asian growth stories mainly revolve around India and China, South Korea has remained a key player for these countries as one of their major trading and investment partners. South Korea adopted outward oriented economic policies with the beginning of its first five-year economic development plan in 1962, which resulted in high growth and the integration of the Korean economy with the rest of the world.\nSubsequently, high and consistent economic growth made South Korea one of the high-income economies in Asia. South Korea is still growing at a faster rate compared to other developed economies. India on the other hand adopted an import substitution policy, since its independence until the early 1990. Since, then India has introduced wide ranging economic policy reforms and is moving towards market driven economy. This has resulted in consistent high economic growth over the last one and half a decades.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "The first time I saw The Wizard of Oz, the story bewitched me. The second time I saw the Wizard of Oz, the special effects amazed me. The third time I saw The Wizard of Oz, the photography dazzled me. Have you ever seen a movie twice, three times? You notice subtleties and hear sounds you completely missed the first time around.\nIt's the same on the phone. Because your business conversations are more consequential than movies, you should listen to them two, may be three times, often we have no clear idea of what really happened in our phone conversation until we hear it again. You'll find shadings more significant than the colour of toto's collar and more scare crows than you imagined who 'haven't got a brain!'\nHow do you listen to your important business conversation again? Simply legally and ethically tape record them. I call the technique of recording and analysing your business conversations for subtleties.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage-based Inference",
+      "body": "Only Korean economy is considered as robust by the international community.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage-based Inference",
+      "body": "Japan's economic growth over the last decade is the highest in Asia.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage-based Inference",
+      "body": "The Korean economy is traditionally different than the Indian economy in its approach.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage-based Inference",
+      "body": "The economic growth of India prior to 1990s was much higher than the present growth rate.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage-based Inference",
+      "body": "India and China together are considered to be the driving force of the Asian economy.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1114
+}

@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 7,
+      "solution": "A cube of side 4 cm is painted black on all of its surfaces and then divided into various smaller cubes of side 1 cm each. The smaller cubes so obtained are separated.\n\nTotal number of cubes so obtained = (4 × 4 × 4)/(1 × 1 × 1) = 64\n\nHere, n = Side of bigger cube/Side of a smaller cube = 4/1 = 4\n\n(i) Number of smaller cubes with three surfaces painted = 8\n(ii) Number of smaller cubes with two surfaces painted = (n - 2) × 12 = (4 - 2) × 12 = 24\n(iii) Number of smaller cubes with one surface painted = (n - 2)² × 6 = (4 - 2)² × 6 = 4 × 6 = 24\n(iv) Number of smaller cubes with no surface painted = (n - 2)³ = (4 - 2)³ = (2)³ = 8"
+    }
+  ],
+  "answers": [],
+  "_page": 880
+}

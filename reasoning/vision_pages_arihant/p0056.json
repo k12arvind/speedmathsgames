@@ -1,0 +1,472 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "In each of the following questions, there is a certain relationship between two given numbers/ group of letters on one side of (: :) and one number/groups of letters is given on another side of (: :) while another number/ group of letters is to be found from given options, having the same relationship with this number/group of letters as the numbers/groups of letters of the given pair bear. Choose the best option.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "The pair of words in capitals is followed by four pairs of related words/phrases, which best expresses a relationship similar to that expressed in the original pair.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "In each of the following questions, choose that set of numbers from the four alternative sets, which is similar to the given set.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "For each of the following questions select the answer pair that expresses a relationship most similar to that expressed in the given pair.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "WRITE : JGVQR : : WRONG : ?",
+      "choices": {
+        "a": "JEBAT",
+        "b": "JECA",
+        "c": "JEDAT",
+        "d": "JEDAD"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "TNGP : 2014716 : : LPDT : ?",
+      "choices": {
+        "a": "2041612",
+        "b": "1216204",
+        "c": "2116420",
+        "d": "1216420"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "PST : 01 : : NPR : ?",
+      "choices": {
+        "a": "3",
+        "b": "4",
+        "c": "1",
+        "d": "7"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "212 : 436 : : 560 : ?",
+      "choices": {
+        "a": "786",
+        "b": "682",
+        "c": "784",
+        "d": "688"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "63 : 9 : : ? : 14",
+      "choices": {
+        "a": "68",
+        "b": "42",
+        "c": "96",
+        "d": "56"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "432 : 24 : : 735 : ?",
+      "choices": {
+        "a": "105",
+        "b": "25",
+        "c": "73",
+        "d": "81"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "DARE : ADER : : REEK : ?",
+      "choices": {
+        "a": "EEKR",
+        "b": "EKER",
+        "c": "ERKE",
+        "d": "ERRE"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Silkworm : Silk : : Snake : ?",
+      "choices": {
+        "a": "Poisonless",
+        "b": "Poison",
+        "c": "Death",
+        "d": "Fear"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "L × M : 12 × 13 : : U × W : ?",
+      "choices": {
+        "a": "21×31",
+        "b": "21×22",
+        "c": "21×23",
+        "d": "21×25"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "a : One : : f : ?",
+      "choices": {
+        "a": "Property",
+        "b": "Fail",
+        "c": "E",
+        "d": "Six"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "CEGI : RTVX : : IKMO : ?",
+      "choices": {
+        "a": "JKNO",
+        "b": "MNOP",
+        "c": "LNPR",
+        "d": "DFHI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Stygian : Dark",
+      "choices": {
+        "a": "Abysmal : Low",
+        "b": "Cogent : Contentious",
+        "c": "Fortuitous : Accidental",
+        "d": "Cataclysmic : Doomed"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Contiguous : Abut",
+      "choices": {
+        "a": "Possible : Occur",
+        "b": "Synthetic : Create",
+        "c": "Simultaneous : Coincide",
+        "d": "Constant : Stabilise"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_set_analogy",
+      "subtopic_name": "Number Set Analogy",
+      "body": "(15, 27, 39)",
+      "choices": {
+        "a": "(75, 27, 81)",
+        "b": "(105, 125, 145)",
+        "c": "(77, 78, 85)",
+        "d": "(57, 35, 65)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_set_analogy",
+      "subtopic_name": "Number Set Analogy",
+      "body": "(49, 81, 25)",
+      "choices": {
+        "a": "(25, 45, 27)",
+        "b": "(22, 37, 41)",
+        "c": "(17, 12, 9)",
+        "d": "(100, 289, 4)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 61,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_set_analogy",
+      "subtopic_name": "Number Set Analogy",
+      "body": "(12, 5, 7)",
+      "choices": {
+        "a": "(7, 4, 3)",
+        "b": "(8, 12, 16)",
+        "c": "(9, 18, 22)",
+        "d": "(5, 12, 16)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 62,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_set_analogy",
+      "subtopic_name": "Number Set Analogy",
+      "body": "(23 : 30 : 37)",
+      "choices": {
+        "a": "(6 : 13 : 20)",
+        "b": "(7 : 15 : 22)",
+        "c": "(21 : 28 : 34)",
+        "d": "(12 : 19 : 25)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Omniscient : Knowledge",
+      "choices": {
+        "a": "Saturnine : Energy",
+        "b": "Boundless : Expanse",
+        "c": "Inquisitive : Science",
+        "d": "Complete : Retraction"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 64,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Nebulous : Form",
+      "choices": {
+        "a": "Insincere : Misanthrope",
+        "b": "Benevolent : Excellence",
+        "c": "Insipid : Taste",
+        "d": "Composed : Innocence"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 65,
+      "passage_index": 3,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Errors : Inexperience",
+      "choices": {
+        "a": "Skill : Mistake",
+        "b": "Training : Economy",
+        "c": "Losses : Carelessness",
+        "d": "News : Publication"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 66,
+      "passage_index": 3,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Brain : Neurology",
+      "choices": {
+        "a": "Biology : Physic",
+        "b": "Hydrology : Water",
+        "c": "Body : Physiology",
+        "d": "Entomology : Plants"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 67,
+      "passage_index": 3,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Duck : Quack",
+      "choices": {
+        "a": "Dog : Growl",
+        "b": "Sparrow : Peck",
+        "c": "Snake : Creep",
+        "d": "Camel : Desert"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 56
+}

@@ -1,0 +1,60 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Which of the following diagrams best depicts the relationship between Males, Husbands and Doctors?",
+      "choices": {
+        "a": "[Venn diagram option a]",
+        "b": "[Venn diagram option b]",
+        "c": "[Venn diagram option c]",
+        "d": "[Venn diagram option d]"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_diagram",
+      "subtopic_name": "Relationship Diagrams",
+      "body": "Which of the following diagram best depicts the relationship between Females, Mothers and Infants?",
+      "choices": {
+        "a": "[Venn diagram option a]",
+        "b": "[Venn diagram option b]",
+        "c": "[Venn diagram option c]",
+        "d": "[Venn diagram option d]"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 11,
+      "solution": "All husbands are males. Also, some husbands and some males can be doctors. This relationship can be expressed as given in option (a)."
+    },
+    {
+      "number": 12,
+      "solution": "All mothers are females. Also, some infants are females but infants can not be mothers. This can be expressed as given in option (c)."
+    }
+  ],
+  "answers": [],
+  "_page": 359
+}

@@ -1,0 +1,143 @@
+{
+  "page_type": "questions",
+  "chapter_number": 9,
+  "chapter_title": "Mathematical Operation",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-5) In each of the following questions two rows of numbers are given. The resultant number in each row is to be worked out separately based on the following rules and the questions below the rows of numbers are to be answered. The operations of numbers progress from left to right.\n\nRules\n(i) If a two-digit odd number is followed by a two-digit odd number, they are to be added.\n(ii) If a two-digit even number is followed by a two digit odd number which is a perfect square, the even number is to be subtracted from the odd number.\n(iii) If a three-digit number is followed by a two-digit number, the first number is to be divided by the second number.\n(iv) If a prime number is followed by an even number, the two are to be added.\n(v) If an even number is followed by another even number, the two are to be multiplied.",
+      "has_figure": false,
+      "topic_code": "mathematical_operation"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "rule_based_operations",
+      "subtopic_name": "Rule-based Mathematical Operations",
+      "body": "23  15  12\nX   24  49\nIf 'X' is the resultant of the first row, what is the resultant of the second row?",
+      "choices": {
+        "a": "192",
+        "b": "128",
+        "c": "132",
+        "d": "144",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "rule_based_operations",
+      "subtopic_name": "Rule-based Mathematical Operations",
+      "body": "37  12  21\n38  81  14\nWhat is the difference between the resultants of the two rows?",
+      "choices": {
+        "a": "23",
+        "b": "32",
+        "c": "13",
+        "d": "18",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "rule_based_operations",
+      "subtopic_name": "Rule-based Mathematical Operations",
+      "body": "16   8  32\n132  11  X²\nIf X is the resultant of the first row, what is the resultant of the second row?",
+      "choices": {
+        "a": "24",
+        "b": "25",
+        "c": "28",
+        "d": "22",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "rule_based_operations",
+      "subtopic_name": "Rule-based Mathematical Operations",
+      "body": "345  23  X\n45   17  81\nIf 'X' is the resultant of the second row, what is the resultant of the first row?",
+      "choices": {
+        "a": "285",
+        "b": "33",
+        "c": "135",
+        "d": "34",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "mathematical_operation",
+      "topic_name": "Mathematical Operations",
+      "subtopic_code": "rule_based_operations",
+      "subtopic_name": "Rule-based Mathematical Operations",
+      "body": "12  28  84\n37  22  18\nWhat is the sum of the resultants of the two rows?",
+      "choices": {
+        "a": "77",
+        "b": "87",
+        "c": "84",
+        "d": "72",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 13,
+      "solution": "(a) 1st Row  84  21  13 ⇒ 84 + 21 = 4 [rule (v)]\n⇒ 4 × 13 = 52 [rule (ii)]\n2nd Row 15  11  44 ⇒ 15² = 136 [rule (v)]\n⇒ 136 + 44 = 180 [rule (i)]\n∴ Required answer = (180 + 52)/2 = 232/2 = 116"
+    },
+    {
+      "number": 14,
+      "solution": "(d) 1st Row 45  18  12 ⇒ 45 + 18 = 27 [rule (iii)]\n⇒ 27 - 12 = 15 [rule (ii)]\n2nd Row 22  14  9 ⇒ 22 + 14 = 36 [rule (v)]\n⇒ 36 - 9 = 4 [rule (v)]\n∴ Required answer = 15 × 4 = 60"
+    },
+    {
+      "number": 15,
+      "solution": "(b) 1st Row 12  7  16 ⇒ 12 × 7 = 84 [rule (i)]\n⇒ 84 + 16 = 100 [rule (ii)]\n2nd Row 79  28  15 ⇒ 79 - 28 = 51 [rule (iii)]"
+    },
+    {
+      "number": 16,
+      "solution": "(c) 1st Row 36  13  39 ⇒ 36 × 13 = 468 [rule (ii)]\n⇒ 468 + 39 = 12 [rule (v)]\n2nd Row 77  30  7 ⇒ 77 - 30 = 47 [rule (iii)]\n⇒ 47 + 7² = 96 [rule (v)]\n∴ Required answer = 96/12 = 8"
+    },
+    {
+      "number": 17,
+      "solution": "(d) 1 st Row  65 11 12 ⇒ 65 + 11² = 186 [rule (v)]\n⇒ 186 + 12 = 198 [rule (i)]\n2nd Row 15 3 11 ⇒ 15 + 3² = 24 [rule (v)]\n⇒ 24 × 11 = 264 [rule (ii)]\n∴ Required answer = 198 + 264 = 462"
+    }
+  ],
+  "answers": [],
+  "_page": 324
+}

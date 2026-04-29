@@ -1,0 +1,172 @@
+{
+  "page_type": "questions",
+  "chapter_number": 2,
+  "chapter_title": "Practice Corner 2.2",
+  "passages": [
+    {
+      "passage_text": "In each of the questions below, is given a statement followed by three assumptions numbered I, II and III. An assumption is something supposed or taken for granted, you have to consider the statement and the assumptions and decide which of the assumption(s) is/are implicit in the statement.",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: Fast Track Objective Arithmetic published by 'Arihant Publication' can do wonders for those preparing for objective competitive exams, an advertisement in newspaper 'X'.\nAssumptions\nI. Arithmetic is asked in objective competitive exams.\nII. Fast Track Objective Arithmetic is the only book on Arithmetic published by Arihant Publication.\nIII. People read newspaper 'X'.",
+      "choices": {
+        "a": "Only Assumption III is implicit",
+        "b": "Only Assumption I is implicit",
+        "c": "Only Assumption II is implicit",
+        "d": "I and III are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: Congress has crossed all the limits of corruption and this is the reason why people vote out congress and bring back BJP into power, Lal Krishna Advani tells in a press conference.\nAssumptions\nI. An honest Government is needed.\nII. BJP is honest.\nIII. No any other party should fight in upcoming election.",
+      "choices": {
+        "a": "II and III are implicit",
+        "b": "Only III is implicit",
+        "c": "Only I is implicit",
+        "d": "I and II are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: \"If Mr 'X' does not mend his ways, I will call the police\".\nAssumptions\nI. Mr. 'X' may mend his ways.\nII. The police may help me.\nIII. Mr 'X' was my friend in past.",
+      "choices": {
+        "a": "I and II are implicit",
+        "b": "II and III are implicit",
+        "c": "I and III are implicit",
+        "d": "All are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: You should not drink. You must take care of your health, Ramesh tells his friend Ravi.\nAssumptions\nI. Ravi will heed to Ramesh's advice.\nII. Ramesh knows the ill effects of drinking.\nIII. Drinking is not good for health.",
+      "choices": {
+        "a": "II and III are implicit",
+        "b": "None is implicit",
+        "c": "All are implicit",
+        "d": "I and II are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: 'Smoking is injurious to health', A warning printed on the cigarette packets.\nAssumptions\nI. People read printed matter on a cigarette packet.\nII. People take careful note of a warning.\nIII. Non-smoking promotes health.",
+      "choices": {
+        "a": "Only I is implicit",
+        "b": "I and II are implicit",
+        "c": "Only II is implicit",
+        "d": "All are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: The company has decided to increase the price of all its products to tackle the precarious financial position.\nAssumptions\nI. The company may be able to wipe out the entire losses incurred earlier by this decision.\nII. The buyer may continue to buy its products even after the increase.\nIII. The company has adequate resources to continue production for few more months.",
+      "choices": {
+        "a": "None is implicit",
+        "b": "II and III are implicit",
+        "c": "I and III are implicit",
+        "d": "Only II is implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: The State Government has unilaterally increased octroi by 5% on all commodities entering into the State without seeking approval of the Central Government.\nAssumptions\nI. The State Government may be able to implement its decision.\nII. The Central Government may agree to support the State Government's decision.\nIII. The State Government may be able to earn considerable amount through the additional octroi.",
+      "choices": {
+        "a": "All are implicit",
+        "b": "I and II are implicit",
+        "c": "None is implicit",
+        "d": "II and III are implicit"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumptions",
+      "subtopic_name": "Implicit Assumptions",
+      "body": "Statement: The Central Government has directed the State Government to reduce the Government expenditure in view of the serious resource crunch and it may not be able to sanction every additional grant to the states for the next six months.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1052
+}

@@ -1,0 +1,84 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Each of the following questions consists of seven figures, out of which two figures at the ends are unmarked. One of the five marked figures (a), (b), (c), (d) and (e) does not fit into the series and is your answers.",
+      "has_figure": false,
+      "topic_code": "figure_series"
+    }
+  ],
+  "questions": [
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "figure_series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "wrong_figure_detection",
+      "subtopic_name": "Detection of Wrong Figure in the Series",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 37,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "figure_series",
+      "topic_name": "Figure Series",
+      "subtopic_code": "wrong_figure_detection",
+      "subtopic_name": "Detection of Wrong Figure in the Series",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "",
+        "e": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 30,
+      "solution": "The first arrow gets inverted in first, second, third...steps while the last arrows gets inverted in second, third, fourth and fifth steps. Also in first step (a), the third and fourth arrows interchange positions and get inverted and the second arrow gets inverted. In the next (b), the second and third arrows interchange positions and get inverted and the fourth arrow gets inverted. In order to establish this series, we should interchange figures (b) and (c)."
+    },
+    {
+      "number": 31,
+      "solution": "The RHS component moves to the LHS position in each step, the LHS component moves to middle position and middle component moves to the RHS position. The component reaching the middle and the RHS positions gets inverted."
+    },
+    {
+      "number": 32,
+      "solution": "The central symbol changes into an arrow and a pin alternately. Also all the remaining six letters moves in the sequences [...] and [...] alternately."
+    },
+    {
+      "number": 33,
+      "solution": "The symbols move in the sequences [...] and [...] alternately. Also, in all steps, the symbol that reaches the encircled position gets changed by a new symbol/ component. Figure (c) and (d) have to interchanged to establish the series."
+    },
+    {
+      "number": 36,
+      "solution": "The figure rotates one step anti-clockwise and one step clockwise alternatively in each of the successive figures."
+    },
+    {
+      "number": 37,
+      "solution": "In first step, the two symbols move one step in anti-clock wise direction and symbol at end gets replaced by new element. Next the first symbol does not move and second symbol moves two steps and gets replaced by new element and this process is repeated again."
+    }
+  ],
+  "answers": [],
+  "_page": 713
+}

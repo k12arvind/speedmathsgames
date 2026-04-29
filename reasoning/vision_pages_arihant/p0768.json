@@ -1,0 +1,94 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "In this type of questions, two pairs of figures mentioned as problem figures, are followed by four figures mentioned as answer figures. Figure (2) of the first pair of problem figure is related with figure (1) of the same pair in some way. The same relationship is to be established between figures (3) and (4) of the second pair. If figure (4) is to be replaced by any one of the figures from the answer figures, then the figure which replaces figure (4) to establish the correct relationship is your answer.\n\nDirections (Example Nos. 28-32) In each of the following questions, two pairs of figures 1, 2 and 3, 4 are given as problem figures, followed by four answer figures as (a), (b), (c) and (d). Select the answer figure that will replace figure (4) of problem figures, so that relation is established between figure (3) and (4) similar to the relation that figure (1) holds with figure (2).",
+      "has_figure": true,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "figure_analogy",
+      "subtopic_name": "Figure Analogy",
+      "body": "",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 15,
+      "solution": "(d) Both the figures rotate through 90° clockwise and appear on the straight lines adjacent to each other."
+    },
+    {
+      "number": 16,
+      "solution": "(b) The main figure rotates through 135° clockwise in such a way that all the cups get reversed at the new positions."
+    },
+    {
+      "number": 17,
+      "solution": "(d) The symbols in the first and third rows interchange positions and get rearranged at the new positions, symbols in the middle row also get rearranged in a particular way."
+    },
+    {
+      "number": 18,
+      "solution": "(c) The white leaf rotates through 135° anti-clockwise and half shaded leaf rotates through 90° anti-clockwise."
+    },
+    {
+      "number": 19,
+      "solution": "(d) The figure rotates through 180° and the shaded portion shifts to other side and an identical figure is attached to the pre-existing figure."
+    },
+    {
+      "number": 20,
+      "solution": "(e) From section (i) to section (ii), the small figure in between two figures gets enlarged and becomes the outer figure. The two similar figures get attached together and rotate through 90° anti-clockwise and come inside the outer figure."
+    },
+    {
+      "number": 21,
+      "solution": "(d) From section (i) to section (ii), the main figure rotates through 90° anti-clockwise and one leaf is added to the existing figure in the clockwise direction such that if the leaf already present on the clockwise side is black then it must be white in colour or vice-versa."
+    },
+    {
+      "number": 22,
+      "solution": "(c) The innermost figure comes in the middle position, the figure in the middle gets inverted and becomes the outermost figure and the outermost figure becomes the innermost figure."
+    },
+    {
+      "number": 23,
+      "solution": "(d) The figure at the bottom left position gets inverted and appears at the top right position, the figure in the middle rotates through 135° clockwise and occupies the bottom left position and the figure at the top right position rotates through 90° anti-clockwise and appears in the central position."
+    },
+    {
+      "number": 24,
+      "solution": "(d) The figure rotates through 135° clockwise in such a way that the circle at the back of it gets shaded and one line segment appearing on the arrow is deleted."
+    },
+    {
+      "number": 25,
+      "solution": "(d) The main figure rotates through 135° anti-clockwise, whereas in answer figure (d), the figure rotates through 180°."
+    },
+    {
+      "number": 26,
+      "solution": "(e) All the signs change position in all the answer figures except figure (e), as shown in the diagram."
+    },
+    {
+      "number": 27,
+      "solution": "(e) One line is added to the pre-existing design on the boundary of the square."
+    },
+    {
+      "number": 28,
+      "solution": "(a) From problem figure (1) to (2), the arrow at top left position rotates 180° and get reversed, the figure in the middle rotates 90° clockwise and the figure at the bottom right position rotates 90° anti-clockwise. On the basis of this rule problem figure (4) should be replaced by answer figure (a) to match it with problem figure (3)."
+    }
+  ],
+  "answers": [],
+  "_page": 768
+}

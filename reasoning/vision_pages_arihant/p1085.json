@@ -1,0 +1,171 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement Computer advertisements now fill magazine pages but the real computer revolution in India is taking place quietly and is a likely organisation of Government.\nConclusions I. Both the Central and State Governments are computerising rapidly.\nII. The Government does not fill the magazine pages with its computer advertisements.",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Either Conclusion I or II follows",
+        "d": "Neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement Cases of bride-burning for dowry are not uncommon.\nConclusions I. Inspite of anti-dowry law, the ill practice still continues.\nII. The punishment inflicted on the party concerned is not hard enough.",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Either Conclusion I or II follows",
+        "d": "Neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "A Statement is given followed by three Conclusions I, II and III. You have to consider the statement to be true even if it seems to be at variance from commonly known facts. You have to decide which of the given conclusions, if any, follows from the given statement.\n\nStatement Comic books contain pictures.\nConclusions I. All books contain pictures.\nII. Books may or may not contain pictures.\nIII. Books other than the comic books do not contain pictures.",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Only Conclusion III follows",
+        "d": "Neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "What do you conclude from the following two statements?\nI. Hybrid plants are resistant to fungus.\nII. Fungal infection reduces the life of plants",
+      "choices": {
+        "a": "For a long life-span grow hybrid plants",
+        "b": "Fungus attacks hybrid plants",
+        "c": "Yield is more in hybrid plants",
+        "d": "All plants are hybrid plants"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Only six roads A, B, C, P, Q and R connect a military camp to the rest of the country. Only one out of A, P and R is open at any one time. If B is closed, so is Q. Only one of A and B is open during storms. P is closed during floods. In this context, which one of the following statements is correct?",
+      "choices": {
+        "a": "Under normal conditions only three roads are open",
+        "b": "During storms at least one road is open",
+        "c": "During floods only three roads are open",
+        "d": "During calamities all roads are closed"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_arrangement",
+      "subtopic_name": "Logical Arrangement",
+      "body": "Four political parties W, X,Y and Z decided to set up a joint candidate for the coming parliamentary elections. The formula agreed by them was the acceptance of a candidate by most of the parties. Four aspiring candidate A, B, C and D approached the parties for their tickets.\nA was acceptable to W but not to Z.\nB was acceptable to Y but not to X.\nC was acceptable to W and Y.\nD was acceptable to W and X.\n\nWhen candidate B was preferred by W and Z, candidate C was preferred by X and Z and candidate A was acceptable to X but not to Y, who got the ticket?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Consider the following statements\nI. All X-brand cars parked here are white.\nII. Some of them have radial tyres.\nIII. All X-brand cars manufactured after 1986 have radial tyres.\nIV. All cars are not X-brand.\n\nWhich one of the following conclusions can be drawn from the above statements?",
+      "choices": {
+        "a": "Only white cars are parked here",
+        "b": "Some white X-brand cars with radial tyres are parked here",
+        "c": "Cars other than X-brand cannot have radial tyres",
+        "d": "Most of the X-brand cars are manufactured before 1986"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "logical_inference",
+      "subtopic_name": "Logical Inference",
+      "body": "Consider the following statements\nI. The Third World War, if it ever starts, will end very quickly with the possible end of civilisation. It is only the misuse of nuclear power which will trigger it.\nII. Based on the above statement, which one of the following inferences is correct?",
+      "choices": {
+        "a": "Nuclear power will be used in the Third World War",
+        "b": "There will be no civilisation left after the Third World War",
+        "c": "The growth of nuclear power will destroy civilisation in the long run",
+        "d": "The Third World War will not take place"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1085
+}

@@ -1,0 +1,515 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING - Evaluating Inferences",
+  "passages": [
+    {
+      "passage_text": "When a mixed economy with a dominant public sector and extensive development control begins to liberalise at a rapid pace, it imposes special responsibility on the private sector. It is no longer subject to control of its activities but at the same time it no longer benefits from protection from internal and external competitions. For the private sector in India, therefore, the rules of the game have changed dramatically. In the new environment, private enterprise is required to think globally. This implies not only that the market for Indian manufacturers and traders is now global, but also that the Indian market is now part of a global market and, therefore, open to manufacturers and traders from all over the world. Technological changes can no longer be ignored by the public sector used to play a dominant role in India. Private enterprise in India used to be quick to adopt technological changes. In the new environment, many private sector industries may suffer.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "The completion of the world economy has changed beyond recognition. A few years ago, the Soviet Union and its friends used to accuse the World Bank, IMF and other international institutions as the promoters of economic imperialism with old is that and the same breath as the bloodsuckers of the poorer member-countries. GATT, for them, was a rich man's club. In fact these corporations worked extensively for the benefit of parent countries and exploited the host countries thoroughly. Economic relations of communist countries remained chiefly confined within the four walls of communism. However, it crossed over to some third world countries as well.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "The South Asian region has its own regional identity. The common issues shared by the South Asian nations are colonial rule, underdevelopment, unemployment, illiteracy, poverty, gender inequality and relatively vulnerable political system, as compared to the developed nations. All these countries have been ruled by Western powers for quite some time. The social, political, and economic structure has been ruled by them at a developing stage. Almost half of the population is illiterate. Massive unemployment has resulted in immense poverty. There have been frequent cases of physical and mental oppression.",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Ever allowing for the inclusion of the unavoidable chillies, on the whole the Indian diet seems to be more protective than carcinogenic. The per capita incidence is only 14-20 a daily, far below even the per capita consumption of 35 daily recommended by the Indian Council of Medical Research. In most cases, only about 40% of the population is essentially vegetarian, as even the so-called non-vegetarians eat meat only once or twice a week, meat being expensive. The incidence of cancer in India, with the age standardized rate of 115 per 100,000, is only about 40% of what one-third the incidence in the West. The Indian diet may be one of the factors responsible. Chillies make a diet carcinogenic. Indians are likely to be more overweight than others. Consumption of meat would go up if meat becomes cheaper. The percentage of people suffering from cancer is the lowest in the case of Indian diet is the main reason behind the low incidence of cancer.",
+      "has_figure": false,
+      "topic_code": "inference"
+    }
+  ],
+  "questions": [
+    {
+      "number": 77,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "probability_inference",
+      "subtopic_name": "Probability Based Inference",
+      "body": "The finance minister is not consistent in his thought.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "probability_inference",
+      "subtopic_name": "Probability Based Inference",
+      "body": "The fiscal imbalances have not been controlled yet.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "probability_inference",
+      "subtopic_name": "Probability Based Inference",
+      "body": "Economic growth is being given greater priority over social welfare by the government.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "probability_inference",
+      "subtopic_name": "Probability Based Inference",
+      "body": "Economic growth will pick up momentum quickly.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 81,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The public sector used to play a dominant role in India.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Private enterprise in India used to be quick to adopt technological changes.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "In the new environment, many private sector industries may suffer.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 84,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Among private sector industries, those catering to domestic demand are at a comparative disadvantage when compared to those in export business.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 85,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Foreign-made consumer durables will not be accepted by the Indian masses.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The Soviet Union was not a member of GATT.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The IMF has been accused of being a promoter of economic imperialism of USA anymore.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 88,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The Soviet Union had economic relations with the USA.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 89,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The world's economic scenario has changed rapidly because of a change in the attitude of the Communist nations.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "GATT has stopped exploiting its host countries.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Facilities have not seen any improvements than India.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 92,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The condition of women is better in the developed nations than in South Asian countries.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 93,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The focus is on South Asian Product of most of the South Asian countries is below the world average.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 94,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The number of female entrepreneurs is more in South Asian nations than that of other ones.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 95,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Chillies make a diet carcinogenic.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 96,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Indians are likely to be more overweight than others.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 97,
+      "passage_index": 3,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Consumption of meat would go up if meat becomes cheaper.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 98,
+      "passage_index": 3,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "The percentage of people suffering from cancer is the lowest in the case of India.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 100,
+      "passage_index": 3,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Evaluating Inferences",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Based Inference",
+      "body": "Indian diet is the main reason behind the low incidence of cancer.",
+      "choices": {
+        "a": "Probably true",
+        "b": "Definitely true",
+        "c": "Probably false",
+        "d": "Definitely false",
+        "e": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 74
+}

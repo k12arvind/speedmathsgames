@@ -1,0 +1,227 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Each of the following questions is based on the diagram given below. Study the diagram carefully and answer the questions.\n\nIn the above diagram, rectangle represents 'artists', circle represents 'players' and triangle represents 'doctors'.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Below is given a figure made of three circles intersecting one another. These circles represents graduates, typists and Government employees. The intersecting regions have been denoted by a, b, c, e, f, g and h, respectively. Study the diagram carefully and answer the questions that follow.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "How many players are neither artists nor doctors?",
+      "choices": {
+        "a": "25",
+        "b": "22",
+        "c": "4",
+        "d": "29",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "How many artists are players?",
+      "choices": {
+        "a": "22",
+        "b": "3",
+        "c": "25",
+        "d": "8",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "How many artists are neither doctors nor players?",
+      "choices": {
+        "a": "22",
+        "b": "8",
+        "c": "25",
+        "d": "30",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "How many doctors are neither players nor artists?",
+      "choices": {
+        "a": "4",
+        "b": "25",
+        "c": "8",
+        "d": "17",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "How many doctors are players and artists both?",
+      "choices": {
+        "a": "4",
+        "b": "7",
+        "c": "3",
+        "d": "8",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "Given below are three figures which represent Graduates, Post-graduates, Officers. Which part represents all the Officers who are graduates and post-graduates?",
+      "choices": {
+        "a": "G",
+        "b": "D",
+        "c": "B",
+        "d": "C"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "The diagram represents the students who are singers, dancers and poets. Study the above diagram and identify the region which represents the students who are both poets and singers but not dancers",
+      "choices": {
+        "a": "P + I + S",
+        "b": "T",
+        "c": "I + U + R + S",
+        "d": "P + T + U + S"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "In the following diagram, identify the region that represents appointed educated persons whose job is not permanent.",
+      "choices": {
+        "a": "b and g",
+        "b": "a and d",
+        "c": "a and c",
+        "d": "b and d"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "Which of the following letters represents the typists who are only graduates?",
+      "choices": {
+        "a": "e",
+        "b": "h",
+        "c": "g",
+        "d": "a"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_set_venn",
+      "subtopic_name": "Three Set Venn Diagram",
+      "body": "Which of the following letters represents the typists who are Government employees but not graduates?",
+      "choices": {
+        "a": "e",
+        "b": "g",
+        "c": "f",
+        "d": "h"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 371
+}

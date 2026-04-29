@@ -1,0 +1,39 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Direction and Distance",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 25,
+      "solution": "According to the question, the direction diagram is as follows:\n\nB ---10 m--- C\n|Right    Right|\n12 m         12 m    [compass rose showing N/S/E/W]\nNorth              \nA ---10 m--- D\nStarting     |---5 m---|\npoint\n           Left Finishing\n                point\n                 *E\n\nAB = CD = 12 m\nBC = AD = 10 m\nDE = 5 m\n∴ Required distance, AE = AD + DE = 10 + 5 = 15 m\nHence, at finishing point E, Raju is 15 m East from starting point A."
+    },
+    {
+      "number": 26,
+      "solution": "According to the question, figure is drawn as\n\nRam     Shyam\n10 m     7 m\n  |        |\n  |  20 m  |\n25 m      25 m\n  |        |\nStarting point\n\n∴ The distance between Ram and Shyam at the end = 10 + 7 = 17 m"
+    },
+    {
+      "number": 27,
+      "solution": "Distance between the starting point and end point is AD.\nIn △ADE, AD² = AE² + DE² (by Pythagoras theorem)\n⇒ AD² = (6)² + (8)²\n∴ AD = √36 + 64 = √100 = 10 km"
+    },
+    {
+      "number": 28,
+      "solution": "According to the question, figure is drawn as\n\nE  15 km  D -------  Starting\nEnd point         |       point\n                 10 km  10 km\n                   |       |\n                   C---6 km---B\n\nNow, to go back home Ram has to cycle = ED + DA = 15 + 6 = 21 km"
+    },
+    {
+      "number": 29,
+      "solution": "According to the question, the direction diagram will be as follows\n\nFinal    Starting point\nposition      D\n    E  5 km    A\n    |         |\n  10 km     10 km\n    |         |\n    C  Right Right  B\n      ---6 km---\n\nNow, CD = AB = 10 km\nBC = AD = 6 km\nED = 5 km\n∴ Required distance, AE = AD - ED = 6 - 5 = 1 km"
+    },
+    {
+      "number": 30,
+      "solution": "According to the question, the direction diagram will be as follows\n\nB  14 km  A Starting point\n |        |\nLeft      |\n |     6 km\n |        |\nC ----E----26 km----D\n   Left\n\nNow, AB = CE = 14 km\nBC = AE = 6 km\nCD = 26 km\nED = CD - CE = 26 - 14 = 12 km\n∴ Required distance, AD = √(AE)² + (ED)²\n                        (by Pythagoras theorem)\n                      = √6² + 12² = √180 km"
+    },
+    {
+      "number": 31,
+      "solution": "According to the question, the direction diagram will be as follows\n\nB ----40 km----H----C\n|             Right  Right|\nFinal                  20 km\nposition                Right\n30 km E ----40 km----D\n     |\n     A\n  Starting\n   point\n\nNow, AB = 30 km\nBC = ED = 40 km\nBE = CD = 20 km\n∴ Required distance, AE = AB - BE = 30 - 20 = 10 km"
+    }
+  ],
+  "answers": [],
+  "_page": 472
+}

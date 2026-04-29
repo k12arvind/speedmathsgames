@@ -1,0 +1,277 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Blood Relations",
+  "passages": [
+    {
+      "passage_text": "There are six children taking part in an essay competition, namely A, B, C, D, E and F. A and E are brothers. F and D are the sisters of E. C is the only son of A's uncle. B and D are the daughters of the brother of C's father.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 48,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_structure",
+      "subtopic_name": "Family Structure",
+      "body": "There are six members in a family. A is the father of D, E is the grandfather of D. B is the daughter-in-law of C. F is the uncle of D. what is the relationship of C with F?",
+      "choices": {
+        "a": "Sister",
+        "b": "Mother-in-law",
+        "c": "Mother",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "complex_relationships",
+      "subtopic_name": "Complex Relationships",
+      "body": "T, S and R are three brothers. T's son Q is married to K and they have one child Rahul blessed to them. M the son of S is married to H and this couple is blessed with a daughter Madhvi. R has a daughter N who is married to P. This couple has one daughter Karuna born to them. How is Madhvi related to S ?",
+      "choices": {
+        "a": "Daughter",
+        "b": "Niece",
+        "c": "Granddaughter",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "identifying_relationships",
+      "subtopic_name": "Identifying Relationships",
+      "body": "Pointing to a man on the stage, Rita said, \"He is the brother of the daughter of the wife of my husband\". How is the man on the stage related to Rita?",
+      "choices": {
+        "a": "Son",
+        "b": "Husband",
+        "c": "Cousin",
+        "d": "Nephew"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 51,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "indirect_relationships",
+      "subtopic_name": "Indirect Relationships",
+      "body": "Deepak said to Nitin, \"That boy playing with the football is the younger of the two brothers of the daughter of my father's wife\". How is the boy playing football related to Deepak?",
+      "choices": {
+        "a": "Son",
+        "b": "Brother",
+        "c": "Cousin",
+        "d": "Brother-in-law"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 52,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "identifying_relationships",
+      "subtopic_name": "Identifying Relationships",
+      "body": "Anil introduced Rohit as the son of the only brother of his father's wife. How is Rohit related to Anil?",
+      "choices": {
+        "a": "Cousin",
+        "b": "Son",
+        "c": "Uncle",
+        "d": "Son-in-law"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 53,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "essay_competition",
+      "subtopic_name": "Essay Competition Relationships",
+      "body": "How is D related to A?",
+      "choices": {
+        "a": "Uncle",
+        "b": "Sister",
+        "c": "Niece",
+        "d": "Cousin"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 54,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "essay_competition",
+      "subtopic_name": "Essay Competition Relationships",
+      "body": "How many male competitors are there?",
+      "choices": {
+        "a": "6",
+        "b": "5",
+        "c": "4",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 55,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "essay_competition",
+      "subtopic_name": "Essay Competition Relationships",
+      "body": "How many female competitors are there?",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "3",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 56,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "essay_competition",
+      "subtopic_name": "Essay Competition Relationships",
+      "body": "How is C related to F?",
+      "choices": {
+        "a": "Cousin",
+        "b": "Brother",
+        "c": "Son",
+        "d": "Uncle"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "identifying_relationships",
+      "subtopic_name": "Identifying Relationships",
+      "body": "Introducing Amrita, Raj said, \"Her mother is the only daughter of my mother-in law\". How is Raj related to Amrita?",
+      "choices": {
+        "a": "Husband",
+        "b": "Father",
+        "c": "Wife",
+        "d": "Uncle"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "maternal_relationships",
+      "subtopic_name": "Maternal Relationships",
+      "body": "Z is maternal uncle of Y, X is maternal grandfather of Z. S is grandson of X. How is S related to Y?",
+      "choices": {
+        "a": "Maternal brother",
+        "b": "Maternal uncle",
+        "c": "Cousin brother",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "complex_family_structure",
+      "subtopic_name": "Complex Family Structure",
+      "body": "Arti and Saurabh are the children of Mr and Mrs Shah. Ritu and Shaki are the children of Mr and Mrs Mehra. Saurabh and Ritu are married to each other and two daughters Mukti and Shruti are born to them. Shakti is married to Rina and two children Subhash and Reshma are born to them. How is Arti related to Shruti?",
+      "choices": {
+        "a": "Mother",
+        "b": "Mother-in-law",
+        "c": "Sister",
+        "d": "Aunt"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 60,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "complex_relationships",
+      "subtopic_name": "Complex Relationships",
+      "body": "In a family, there are seven persons, comprising two married couples. T is the son of M and the grandson of K. M is a widower. M and R are brothers and W is the daughter-in-law of J, who is the mother of M and R and the grandmother of T. How is D related to M?",
+      "choices": {
+        "a": "Son",
+        "b": "Son-in-law",
+        "c": "Nephew or niece",
+        "d": "Brother"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 406
+}

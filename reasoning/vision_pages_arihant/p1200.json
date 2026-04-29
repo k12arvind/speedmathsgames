@@ -1,0 +1,167 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [
+    {
+      "passage_text": "In each question below are three statements followed by two Conclusions I and II. You have to take the statements to be true even if they seem to be at variance from commonly known facts and then decide which of the given conclusions logically follows from the given statements.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    },
+    {
+      "passage_text": "In each of the questions below are given four statements followed by four Conclusions numbered I, II, III and IV. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All dials are mirrors. All mirrors are spoons. Some spoons are decks. Some decks are chairs. Conclusions: I. Some decks are mirrors. II. Some spoons are dials. III. Some decks are dials. IV. Some chairs are spoons.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "Only IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some charts are darts. All darts are carts. Some carts are smarts. Conclusions: I. Some charts are carts. II. Some carts are darts. III. Some darts are smarts. IV. Some smarts are charts.",
+      "choices": {
+        "a": "I and III follow",
+        "b": "II and III follow",
+        "c": "I and IV follow",
+        "d": "I, III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Two statements are given followed by two Conclusions I and II. You have to consider the statements to be true, even if they seem to be at variance from commonly known facts. You are to decide which of the given conclusions definitely follows from the given statements. Indicate you answer. Statements: All crows are birds. All peacocks are crows. Conclusions: I. All peacocks are birds. II. All birds are peacocks.",
+      "choices": {
+        "a": "Both Conclusions I and II follow",
+        "b": "Neither Conclusion I nor II follows",
+        "c": "Only Conclusion I follows",
+        "d": "Only Conclusion II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: No shoe is glove. All gloves are caps. All caps are jackets. Conclusions: I. Atleast some shoes are caps. II. Atleast some jackets are gloves.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Conclusions: I. No shoe is a jacket. II. All gloves are jackets.",
+      "choices": {
+        "a": "if only I follows",
+        "b": "if only II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some houses are forests. All forests are trees. Some trees are hills. All hills are buses. Conclusions: I. Some buses are trees. II. Some trees are houses. III. Some hills are houses. IV. Some buses are forests.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "I, II and IV follow",
+        "c": "I, II and III follow",
+        "d": "All I, II, III and IV follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogism",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some lakes are rivers. Some rivers are mountains. Some mountains are books. Some books are papers. Conclusions: I. Some books are rivers. II. Some papers are lakes. III. Some mountains are lakes. IV. No paper is lake.",
+      "choices": {
+        "a": "None follows",
+        "b": "Either II or IV follows",
+        "c": "Only II follows",
+        "d": "Only IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1200
+}

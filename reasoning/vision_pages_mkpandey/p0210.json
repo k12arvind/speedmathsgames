@@ -1,0 +1,127 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Decision-Making",
+  "passages": [
+    {
+      "passage_text": "III. The candidate must possess a work experience of at least 3 years in a publishing house.\nIV. The candidate must not be suffering from colour blindness.\nIf a candidate fulfils all these criteria, he or she will be selected as an Officer. However, if a candidate fulfils all these criteria except:\n(a) I above, but possesses a work experience of more than seven years in a publishing house, he or she may be selected as a Probation Officer.\n(b) II above, but has done 10+2 (or Intermediate) followed by graduation or at least two years, he or she may be selected as an Officer on Probation.\n(c) III above, but is a post-graduate with at least 35% marks, he or she may be referred to the Proprietor of the publishing house.\nOn the basis of the criteria as laid above, decide the course of action for each of the candidates below. Give answer:\n1) if the candidate is to be selected for the post of Desk Officer.\n2) if the candidate is to be selected for the post of Chief Officer.\n3) if the case of the candidate is to be referred to the Proprietor.\n4) if the data are inadequate, i.e. if, on the basis of the given facts, it is not possible to decide the exact course of action that should be taken for the case of the candidate.\n5) if the candidate is not to be selected.\nNow, read the information below and give appropriate answer.",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    },
+    {
+      "passage_text": "(Q. 56-60): The following are the criteria laid down by Shayya Management Services Company Limited for the selection of Marine Engineers:\nI. The candidate must be between 21 and 30 years of age as on 1.1.95.\nII. The candidate must possess a passport.\nIII. The candidate must have an eyesight of ± 2.5 with no colour blindness.\nIV. The candidate must be a B.E. or a B. Tech. in Mechanical Engineering.\nV. The candidate must possess a work experience of 3 years in an industry in the capacity of a Mechanical Engineer.\nIf a candidate fulfils all these criteria, he or she will be selected for the post. However, if a candidate fulfils all other criteria except:\na) II above, he or she may be provisionally selected.\nb) I above, but is less than 35 years of age and has a working experience of at least 5 years as marine engineer, he or she may be selected.\nc) V above, the case may be referred to the chairman of the company.\nRead the information given about a candidate and decide the course of action that should be taken in his or her case. Give answer\n1) if the candidate is to be selected.\n2) if the candidate is to be selected provisionally.\n3) if the candidate is to be referred to the Chairman.",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    }
+  ],
+  "questions": [
+    {
+      "number": 46,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "criteria_based",
+      "subtopic_name": "Criteria-based Decision Making",
+      "body": "Rajat Kapoor is a graduate with 60% marks. He was born on 17.10.98. He has done a two year computer course as well. He does not suffer from colour blindness.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 47,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "criteria_based",
+      "subtopic_name": "Criteria-based Decision Making",
+      "body": "Shalini Bhadrasayyas does not suffer from colour blindness. She is a graduate with 62% marks. She has a work experience of about 29 months in a publishing house. She was born on 25th of July, 1967.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 48,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "criteria_based",
+      "subtopic_name": "Criteria-based Decision Making",
+      "body": "Mr. Jagdeep Mohanthi is a graduate with 62% marks. He is older than 30 but younger than Shalini. He does not suffer from colour blindness. He has a work experience of 5 years.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 49,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "criteria_based",
+      "subtopic_name": "Criteria-based Decision Making",
+      "body": "Sudeep Singh Bhemde is a graduate with 73% marks. He was born on the 3rd December, 1971. He has a work experience of about seven-and-a-half years and does not suffer from colour blindness.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 50,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "criteria_based",
+      "subtopic_name": "Criteria-based Decision Making",
+      "body": "Abhinav Chattoulla was 16 years old on 1st Dec, 1982. He does not suffer from colour blindness. He has been working in a publishing house for the past five years. He is not a graduate but has done Advanced Diploma in Computer Applications.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4",
+        "e": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 210
+}

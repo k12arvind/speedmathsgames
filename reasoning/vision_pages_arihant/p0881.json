@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Non-Verbal Reasoning",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 8,
+      "solution": "Sol. (i) (d) n = Side of bigger cube / Side of smaller cube = 15/3 = 5\n∴ Required number of smaller cubes = 6(n - 2)² = 6(5 - 2)² = 6 x 9 = 54\n(ii) (c) Required number of cubes = 12(5 - 2) = 12 x 3 = 36\n(iii) (a) As cubes with three faces painted are always 8.\n(iv) (a) As number of cubes with four or more faces painted is 0.\n(v) (c) Required number of cubes = (n - 2)² = (5 - 2)² = (3)² = 27\n(vi) (d) Total number of smaller cubes = (n)³ = (5)³ = 125"
+    },
+    {
+      "number": 9,
+      "solution": "Sol. (c) A smaller cube with two sides painted is present on each of the 12 edges of the cube. Therefore, total number of cubes having paint on two sides = 12"
+    }
+  ],
+  "answers": [],
+  "_page": 881
+}

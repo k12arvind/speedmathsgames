@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-5) Study the following information carefully and answer the questions given below.\n\nFollowing are the conditions for selection Systems Manager in an organisation.\nThe candidate must\n(i) be a graduate engineer in IT, Computer Science or Electronics with atleast 60% marks.\n(ii) be atleast 30 yr and not more than 40 yr as on 1st September, 2009.\n(iii) have secured atleast 40% marks in the written examination.\n(iv) have secured atleast 50% marks in the selection interview.\n(v) have post qualification work experience of atleast 10 yr in the systems department of an organisation.\nIn the case of candidate who satisfied all the conditions except\n(a) at (i) above but has secured atleast 60 % marks in MEIT or Computer Science, the case is to be referred to DGM systems.\n(b) at (v) above but has post qualification experience of atleast five years as deputy systems manager, the case is to be referred to the GM systems.\nIn each questions below, details of one candidate are given. You have to take one of the following courses of action bases on the information provided and the conditions and subconditions gives above and mark the number of that course of action as your answer. You are not to assume anything other than the information provided for each candidate. All these cases are given to you as on 1st September, 2009.\n\nGive answer\n(a) if the candidate is to be selected\n(b) if the candidate is not to be selected\n(c) if the case is to be referred to DGM systems\n(d) if the case is to be referred to GM systems\n(e) if the data provided are not adequate to take a decision",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "selection_criteria",
+      "subtopic_name": "Selection Criteria Application",
+      "body": "Samir Ghosh was born on 25th May, 1978. He secured 65 % marks in BEIT in the year 1999. Since, then he has been working in the systems department of an organisation. He has secured 50% marks in both written examination and selection interview.",
+      "choices": {
+        "a": "if the candidate is to be selected",
+        "b": "if the candidate is not to be selected",
+        "c": "if the case is to be referred to DGM systems",
+        "d": "if the case is to be referred to GM systems",
+        "e": "if the data provided are not adequate to take a decision"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "selection_criteria",
+      "subtopic_name": "Selection Criteria Application",
+      "body": "Navin Prakash has secured 62% marks in BE Computer Science. He has been working in the systems department of an organisation since July 1999, after completion of BE. He was born on 4th April, 1974. He has secured 55% marks in selection interview and 45% marks in the written examination.",
+      "choices": {
+        "a": "if the candidate is to be selected",
+        "b": "if the candidate is not to be selected",
+        "c": "if the case is to be referred to DGM systems",
+        "d": "if the case is to be referred to GM systems",
+        "e": "if the data provided are not adequate to take a decision"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "selection_criteria",
+      "subtopic_name": "Selection Criteria Application",
+      "body": "Neeta Pathak has been working as deputy systems manager in an organisation for the past 7 yr after completing her BE in IT with 70% marks. She has secured 45% marks in selection interview and 55% marks in the written examination. She was born on 12th November, 1978.",
+      "choices": {
+        "a": "if the candidate is to be selected",
+        "b": "if the candidate is not to be selected",
+        "c": "if the case is to be referred to DGM systems",
+        "d": "if the case is to be referred to GM systems",
+        "e": "if the data provided are not adequate to take a decision"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "selection_criteria",
+      "subtopic_name": "Selection Criteria Application",
+      "body": "Ashok Malhotra was born on 19th March, 1977. He has secured 56% marks in both selection interview and written examination. He has secured 58% marks in BEIT and 72% marks in MEIT. He has been working in the systems department of an organisation for the past 11 yr after completing MEIT.",
+      "choices": {
+        "a": "if the candidate is to be selected",
+        "b": "if the candidate is not to be selected",
+        "c": "if the case is to be referred to DGM systems",
+        "d": "if the case is to be referred to GM systems",
+        "e": "if the data provided are not adequate to take a decision"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "selection_criteria",
+      "subtopic_name": "Selection Criteria Application",
+      "body": "Gemma D' Souza was born on 15th December, 1972. She has secured 60% marks in both written examination and selection interview. She has been working as deputy systems manager for the last 6 yr in an organisation after completing her BE Electronics with 75% marks.",
+      "choices": {
+        "a": "if the candidate is to be selected",
+        "b": "if the candidate is not to be selected",
+        "c": "if the case is to be referred to DGM systems",
+        "d": "if the case is to be referred to GM systems",
+        "e": "if the data provided are not adequate to take a decision"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 551
+}

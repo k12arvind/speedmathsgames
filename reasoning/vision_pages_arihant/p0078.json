@@ -1,0 +1,111 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Classification",
+  "passages": [],
+  "questions": [
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "two_letters_sum",
+      "subtopic_name": "Two Letters Classification Based on Sum of Places",
+      "body": "Find out the odd pair.",
+      "choices": {
+        "a": "AZ",
+        "b": "BY",
+        "c": "CX",
+        "d": "DV"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "two_letters_difference",
+      "subtopic_name": "Two Letters Classification Based on Difference",
+      "body": "Find the odd one.",
+      "choices": {
+        "a": "CD",
+        "b": "DF",
+        "c": "HJ",
+        "d": "KM"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "three_letters_first_second",
+      "subtopic_name": "Three Letters Classification Based on Similarity of First and Second Letter",
+      "body": "Find the odd group of letters.",
+      "choices": {
+        "a": "HJA",
+        "b": "NFE",
+        "c": "OQU",
+        "d": "XYZ"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "three_letters_second_third",
+      "subtopic_name": "Three Letters Classification Based on Similarity of Second and Third Letter",
+      "body": "Which of the following letters group is an odd one?",
+      "choices": {
+        "a": "BJN",
+        "b": "FPT",
+        "c": "LOU",
+        "d": "JTV"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "three_letters_first_third",
+      "subtopic_name": "Three Letters Classification Based on Similarity of First and Third Letter",
+      "body": "Find the odd group of letters.",
+      "choices": {
+        "a": "AOE",
+        "b": "EUI",
+        "c": "OUT",
+        "d": "IEM"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 78
+}

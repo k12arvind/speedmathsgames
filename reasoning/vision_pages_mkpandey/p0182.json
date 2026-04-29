@@ -1,0 +1,416 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning",
+  "passages": [
+    {
+      "passage_text": "Directions: In each question below are given two statements followed by two conclusions numbered I and II. You have to take the two given statements to be true even if they seem to be at variance with the commonly known facts, and then decide which of the given conclusions logically follows from the given statements, disregarding commonly known facts. Give answer: (a) if only conclusion I follows; (b) if only conclusion II follows; (c) if either I or II follows; (d) if neither I nor II follows; and (e) if both I and II follow.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All cakes are ice-creams. All ice-creams are toffees. Conclusions: I. All cakes are toffees. II. All toffees are ice-creams.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All tigers are ships. Some ships are cupboards. Conclusions: I. Some tigers are cupboards. II. Some cupboards are tigers.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Some pearls are gems. Some gems are ornaments. Conclusions: I. Some gems are pearls. II. Some ornaments are gems.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Some sticks are bolts. Kite is a stick. Conclusions: I. Some bolts are sticks. II. Some bolts are kite.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Some teachers are adults. Some adults are poets. Conclusions: I. Some teachers are poets. II. Some poets are teachers.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Lawyers marry only fair girls. Shobha is very fair. Conclusions: I. Shobha was married to a lawyer. II. Shobha was not married to a lawyer.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All coats are bags. Some bags are toys. Conclusions: I. Some bags are coats. II. Some toys are coats.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All pencils are bricks. All bricks are bottles. Conclusions: I. All pencils are bottles. II. All bricks are pencils.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All men are prisoners. No prisoners are educated. Conclusions: I. All prisoners are educated. II. No men are educated.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Some children are educated. Some women are adults and are not old. Conclusions: I. Some children are not old. II. Some adults are not old.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All birds are trees. Some trees are hens. Conclusions: I. Some birds are hens. II. Some hens are trees.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Some snakes are birds. All cats are birds. Conclusions: I. Some cats are snakes. II. Some birds are snakes.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All shawls are carpets. No carpet is a pullover. Conclusions: I. No shawls are pullovers. II. All carpets are shawls.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All pilots are brave men. All astronauts are pilots. Conclusions: I. All astronauts are brave men. II. Some pilots are astronauts.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All teachers are good. Some women are teachers. Conclusions: I. All good teachers are women. II. Some women are good.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 16,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Sohan is a good sportsman. All sportsmen are healthy. Conclusions: I. All healthy persons are sportsmen. II. Sohan is healthy.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 17,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All students in my class are intelligent. Rohit is intelligent. Conclusions: I. Rohit is not a student of my class. II. Rohit must work hard.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 18,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: All boys are honest. Sachin is honest. Conclusions: I. Sachin is a boy. II. All honest persons are boys.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 19,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogisms",
+      "subtopic_name": "Basic Syllogisms",
+      "body": "Statements: Many books are rocks. All rocks are clips. Conclusions: I. Many books are clips. II. All clips are books.",
+      "choices": {
+        "a": "if only conclusion I follows",
+        "b": "if only conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 182
+}

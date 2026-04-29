@@ -1,0 +1,95 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 41,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All studs are girly. Some girly are turks. Conclusions: I. Some studs are turks. II. Some girly are studs.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only I, II and III follow",
+        "c": "All follow",
+        "d": "Only II and III follow",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 42,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: All bricks are tricks. Some tricks are bricks. Conclusions: I. No brick is a brick. II. Some bricks are bricks. III. Some bicks are tricks. IV. Some tricks are not bricks.",
+      "choices": {
+        "a": "Only II follows",
+        "b": "Only II and IV follow",
+        "c": "Only II and III follow",
+        "d": "Either I or II follows",
+        "e": "Either or II, and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 43,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: No gardens are wardens. All gardens are locks. Conclusions: I. Some locks are wardens. II. Some locks are wardens. III. No lock is a warden. IV. Some locks are gardens.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II and IV follow",
+        "c": "Either I or II follows",
+        "d": "Either I or II and IV follow",
+        "e": "Either I or II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 44,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "categorical_syllogism",
+      "subtopic_name": "Categorical Syllogism",
+      "body": "Statements: Only books are readable. Only eatables are books. Conclusions: I. All readables are books. II. Some readables are books. III. All readables are eatables. IV. All eatables are readables.",
+      "choices": {
+        "a": "Only I and III follow",
+        "b": "Only I and IV follow",
+        "c": "Either I or II and III follow",
+        "d": "Either I or II and IV follow",
+        "e": "I, II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 191
+}

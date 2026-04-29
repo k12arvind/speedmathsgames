@@ -1,0 +1,248 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-39) Each of the questions below consists of a question and two statements numbered I and II given below. You have to decide whether the data provided in the statements are sufficient to answer the question. Read both the statements.\nGive answer\n(a) if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question\n(b) if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question\n(c) if the data either in Statement I alone or in Statement II alone are sufficient to answer the question\n(d) if the data given in both the Statements I and II together are not sufficient to answer the question\n(e) if the data in both the Statements I and II together are necessary to answer the question",
+      "has_figure": false,
+      "topic_code": "data_sufficiency"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "ranking",
+      "subtopic_name": "Ranking and Position",
+      "body": "What is Sudhir's rank from top in the class of 40 students?\nI. Sudhir's rank is 10 rank below Nandini who is 35th from the bottom.\nII. Sudhir's rank is 10 rank above Samir who is 24th from the top.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How many children does Sheela have?\nI. Ramila is the only sister of Shyam who is the only son of Sheela.\nII. Shyam and Ramila have no more siblings.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "seating_arrangement",
+      "subtopic_name": "Seating Arrangement",
+      "body": "All the four friends, viz. Ali, Kate, Rohan and Sonam who are sitting at the corners of a square table facing the centre. Find Kate's position with respect to Sonam.\nI. Ali sits second to the right of Sonam. Rohan sits to immediate left of Ali.\nII. Kate sits second to the right of Rohan. Ali sits to immediate right of Kate.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Five letter A, E, G, N and R are arranged left to right according to certain conditions. Which letter is placed third?\nI. G is placed second to the right of A. E is to the immediate right of G. There are only two letter between R and G.\nII. N is exactly between A and G. Neither A nor G is at the extreme end of the arrangement.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "number_properties",
+      "subtopic_name": "Number Properties",
+      "body": "Is X an odd number?\nI. X is multiplied by an odd number then result is an odd number.\nII. X is not divisible by 2.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "marks_scores",
+      "subtopic_name": "Marks and Scores",
+      "body": "How many marks has Suman scored in the test? (maximum marks 20)\nI. Suman scored two digit marks. Her marks were not in decimals.\nII. Suman scored more than 9 marks in the test.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "calendar_time",
+      "subtopic_name": "Calendar and Time",
+      "body": "In which month of the year did Rahul go abroad for a vacation?\nI. Rahul correctly remembers that he went for a vacation in the first half of the year.\nII. Rahul's son correctly remembers that they went for vacation after 31st March but before 1st May.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "coding_decoding",
+      "subtopic_name": "Coding Decoding",
+      "body": "How is 'over' written in a code language?\nI. 'Over and again' is written as 'ka ja ha' in that code language.\nII. 'Came and go' is written as 'ja pa na' in that code language.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "seating_arrangement",
+      "subtopic_name": "Circular Seating",
+      "body": "Who is to the immediate right of Mohan when Mohan, Salil, Bhusan, Suresh and Jayesh are sitting around a circle facing at the centre?\nI. Salil is 3rd to the left of Mohan.\nII. Bhusan is between Salil and Jayesh.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "blood_relations",
+      "subtopic_name": "Blood Relations",
+      "body": "How is N related to K?\nI. N's brother is married to D.\nII. D's sister is married to K.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "data_sufficiency",
+      "topic_name": "Data Sufficiency",
+      "subtopic_code": "comparison",
+      "subtopic_name": "Height and Weight Comparison",
+      "body": "Who among M, T, K, J and R is the shortest but one?\nI. T is taller than J and R.\nII. K is shorter than R and M.",
+      "choices": {
+        "a": "if the data in Statement I alone are sufficient to answer the question, while the data in Statement II alone are not sufficient to answer the question",
+        "b": "if the data in Statement II alone are sufficient to answer the question, while the data in Statement I alone are not sufficient to answer the question",
+        "c": "if the data either in Statement I alone or in Statement II alone are sufficient to answer the question",
+        "d": "if the data given in both the Statements I and II together are not sufficient to answer the question",
+        "e": "if the data in both the Statements I and II together are necessary to answer the question"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 660
+}

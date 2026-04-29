@@ -1,0 +1,80 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_analysis",
+      "subtopic_name": "Relationship Analysis",
+      "body": "Which of the following diagrams best depicts the relationship between Dogs, Pets and Cats?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_analysis",
+      "subtopic_name": "Relationship Analysis",
+      "body": "Which of the following diagrams best depicts the relationship between Married, Women and Teachers?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relationship_analysis",
+      "subtopic_name": "Relationship Analysis",
+      "body": "Which of the following diagrams best depicts the relationship between Doctors, Human beings and Cats?",
+      "choices": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "Some dogs are pets and some cats are pets. But all pets are not dogs or cats. Also, dogs and cats are completely different groups and are not related to each other. This can be expressed as given in option (b)."
+    },
+    {
+      "number": 7,
+      "solution": "Some women are teachers. Some women are married. Some teachers are married. Some married women are teachers. This can be expressed as given in option (c)."
+    }
+  ],
+  "answers": [],
+  "_page": 357
+}

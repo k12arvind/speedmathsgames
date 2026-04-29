@@ -1,0 +1,86 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column, e.g., 'A' can be represented by 01, 13, etc., and 'E' can be represented by 56, 67, etc. Similarly, you have to identify the set for the word 'BOTH'.",
+      "choices": {
+        "a": "68, 33, 65, 58",
+        "b": "56, 44, 67, 40",
+        "c": "97, 21, 66, 29",
+        "d": "75, 00, 10, 92"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers given in anyone of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column, e.g., 'N' can be represented by 42, 31, etc. Similarly, you have to identify the set for the word given 'ROST'.",
+      "choices": {
+        "a": "88, 30, 85, 86",
+        "b": "58, 02, 68, 65",
+        "c": "69, 67, 68, 59",
+        "d": "75, 22, 76, 79"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column, e.g., 'E' can be represented by 00, 13, 32, etc., and 'S' can be represented by 55, 76, 87, etc. Similarly, you have to identify the set for the word given CART.",
+      "choices": {
+        "a": "65, 33, 40, 86",
+        "b": "66, 12, 40, 58",
+        "c": "88, 44, 31, 89",
+        "d": "59, 20, 32, 89"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "matrix_coding",
+      "subtopic_name": "Matrix Coding",
+      "body": "A word is represented by only one set of numbers as given in anyone of the alternatives. The sets of numbers given in the alternatives are represented by two classes of alphabets as in two matrices given below. The columns and rows of Matrix I are numbered from 0 to 4 and that of Matrix II are numbered from 5 to 9. A letter from these matrices can be represented first by its row and next by its column, e.g., 'H' can be represented by 02, 20, 43 etc., and 'V' can be represented by 58, 79, 95 etc. Similarly, you have to identify the set for the word given SOFT.",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 200
+}

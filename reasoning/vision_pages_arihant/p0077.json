@@ -1,0 +1,60 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Choosing the Odd Letter/Group",
+  "passages": [],
+  "questions": [
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "vowel_consonant",
+      "subtopic_name": "Vowel and Consonant Classification",
+      "body": "Find the odd letter.",
+      "choices": {
+        "a": "Y",
+        "b": "L",
+        "c": "A",
+        "d": "M"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "letter_shapes",
+      "subtopic_name": "Letter Shape Classification",
+      "body": "Find the odd letter.",
+      "choices": {
+        "a": "T",
+        "b": "D",
+        "c": "R",
+        "d": "J"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 22,
+      "solution": "(c) All except 'A' are consonants."
+    },
+    {
+      "number": 23,
+      "solution": "(a) All except 'T' are made with the combination of straight and curved lines."
+    }
+  ],
+  "answers": [],
+  "_page": 77
+}

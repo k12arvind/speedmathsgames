@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 16,
+      "solution": "Solve Q3 of Ex 1. Soln: By Step B, find that it is a 2-step case. By Step B, we reduce 12→II to 0→9 and by step C, we break it as (0→4, 0→1). Now, look at the answer choices. We see that 'ii' is at three different places in the four choices. So, it is consider 'ii'. (See, quicker method for step 12). We see that ii is P1 in step 12. But we are taking step 12 at 0. So, ii is P1 in 0. Now, we have (0→4, 0→1). Where does P1 of 0 go to P1 in the contour of 5-6 or even 7 would not flow. So ii will be P1 in step IV. Now, we will assume step 4 to be step I and next I→3. So, ii will be P1 in step I. Now, we see that P1 of step I is right and goes to P1. So, we see that P1 of step I is right and reply becomes P1 in step I. ∴ Net result is P1 remains P1. This eliminates choices (1) and (4). Now, we are left with choices (2) and (3). We notice that the word 'me' at different places in these choices. So, we pick right for our step I→3. We see that right is P1 in our step 12. But step 12 is assumed step I→3."
+    }
+  ],
+  "answers": [],
+  "_page": 238
+}

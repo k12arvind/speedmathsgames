@@ -1,0 +1,67 @@
+{
+  "page_type": "questions",
+  "chapter_number": 11,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 2-3) Read the following information carefully to answer the questions that follow. I. 'A + B' means 'A is the son of B'. II. 'A - B' means 'A is the wife of B'. III. 'A × B' means 'A is the brother of B'. IV. 'A ÷ B' means 'A is the mother of B'. V. 'A = B' means 'A is the sister of B'.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "blood_relations_coding",
+      "subtopic_name": "Blood Relations in Coded Form",
+      "body": "If 'A × D' means 'A is sister of D', 'A + D' means 'D is the daughter of A' and 'A ÷ D' means 'A is the mother of D', then how will 'A is the aunt of M' be denoted?",
+      "choices": {
+        "a": "M + L × N",
+        "b": "M + L + N",
+        "c": "L × N + M",
+        "d": "N × L + M",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "blood_relations_coding",
+      "subtopic_name": "Blood Relations in Coded Form",
+      "body": "What does 'P × R + Q' mean?",
+      "choices": {
+        "a": "P is the nephew of Q",
+        "b": "P is the uncle of Q",
+        "c": "P is the brother of Q",
+        "d": "P is the father of Q"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 14,
+      "solution": "(a) By applying above decoding method, we can check all the options for the required relationship. (a) (M + T – R) = Rejected [diagrams showing family trees] Here, gender of M is not known. So, M is either niece or nephew of R. (c) (R × T + M × J) = Rejected [diagram] M is the niece of R (d) (R + T – M + J) = Selected [diagram] M is the nephew of R Hence, only option (d) satisfies the given relation between M and R."
+    },
+    {
+      "number": 15,
+      "solution": "(e) By applying above decoding method, we can check all the options for the required relationship. (a) (W + T – H) = Rejected [diagrams showing family trees] W is grandmother of H (b) (W + T – H) = Rejected [diagram] W is the uncle of H (c) (W × T + H) = Rejected [diagram] W is the aunt of H (d) (W + T + H) = Rejected [diagram] W is uncle of H There is no option which satisfies the required relationship between W and H. So, option (e) is correct to answer."
+    }
+  ],
+  "answers": [],
+  "_page": 397
+}

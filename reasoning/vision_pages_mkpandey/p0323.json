@@ -1,0 +1,121 @@
+{
+  "page_type": "questions",
+  "chapter_number": 20,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 1-5): Read the following set of informations and then answer the questions that follow. (i) There is a group of six persons living in a four-storey building. The persons are A, B, C, D, E and F. Each of them lives on different floors of the building. The building has eight flats in all, two on each floor while the top floor is also vacant. The heaviest of the group lives on the top floor while the lightest lives on the ground floor. (ii) C is heavier than B, who, in turn, is heavier than F. (iii) E is lighter than D. (iv) One of the flats on the first floor is also vacant while one on the second floor is also vacant. (v) A is neither the heaviest nor the lightest. (vi) There are only two people heavier than C. A is not one of them. (vii) B shares the floor with the heaviest of the group while C shares it with the lightest.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    },
+    {
+      "passage_text": "Directions (Q. 6-11): J, L, M, N, O and P are members of a spy network. For security reasons, only certain spies are able to contact other spies. The only contacts allowed are: J can contact both L and N. O can be contacted by L, M and P. N can contact M.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "Who among the following is the heaviest of the group?",
+      "choices": {
+        "a": "Can't say",
+        "b": "C",
+        "c": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "Who does C share the floor with?",
+      "choices": {
+        "a": "F",
+        "b": "E",
+        "c": "A"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "On which floor does A live?",
+      "choices": {
+        "a": "Ground floor",
+        "b": "First floor",
+        "c": "Can't say"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "F and A live",
+      "choices": {
+        "a": "on the same floor",
+        "b": "on two continuous floors",
+        "c": "with one floor between their floors",
+        "d": "with two floors between their floors",
+        "e": "Can't say"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "floor_arrangement",
+      "subtopic_name": "Floor Arrangement",
+      "body": "Starting from the heaviest of the group, what is the rank of A in order of weight?",
+      "choices": {
+        "a": "fourth",
+        "b": "fifth",
+        "c": "sixth",
+        "d": "fourth or fifth",
+        "e": "fifth or sixth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 323
+}

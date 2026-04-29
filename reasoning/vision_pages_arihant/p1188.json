@@ -1,0 +1,179 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some books are files. All files are balls. All balls are plates. No plate is glass.\n\nConclusions: I. No glass is plate. II. Some balls are books. III. All plates are balls.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I and III follow",
+        "c": "I and II follow",
+        "d": "Only II follows",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All pens are cats. All cats are rats. All rats are snakes. All snakes are foxes.\n\nConclusions: I. Some snakes are cats. II. All snakes are rats. III. Some cats are pens.",
+      "choices": {
+        "a": "None follows",
+        "b": "All follow",
+        "c": "Only II follows",
+        "d": "I and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some shirts are pants. All pants are caps. All caps are ties. No tie is socks.\n\nConclusions: I. No cap is socks. II. Some pants are shirts. III. All caps are pants.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "None follows",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All boxes are foxes. All foxes are schools. No school is college. All colleges are markets.\n\nConclusions: I. No fox is college. II. No college is school. III. No box is fox.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only III follows",
+        "c": "I and II follow",
+        "d": "None follows",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some leaves are flowers. No flower is fruit. Some fruits are branches. Some branches are stems.\n\nConclusions: I. Some leaves are stems. II. All leaves are either stems or fruits. III. All stems are either branches or fruits.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "II and III follow",
+        "c": "Only III follows",
+        "d": "All follow",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some caps are umbrellas. Some umbrellas are raincoats. All raincoats are trousers. All trousers are jackets.\n\nConclusions: I. Some raincoats are caps. II. Some trousers are umbrellas. III. All raincoats are jackets.",
+      "choices": {
+        "a": "None follows",
+        "b": "I and II follow",
+        "c": "II and III follow",
+        "d": "I and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some fans are coolers. Some coolers are machines. Some machines are computers. All computers are televisions.\n\nConclusions: I. Some televisions are machines. II. Some machines are fans. III. No machine is a fan.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only either II or III follows",
+        "d": "Only I and either II or III follow",
+        "e": "All follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All keys are staplers. All staplers are blades. Some blades are erasers. Some erasers are sharpeners.\n\nConclusions: I. Some sharpeners are keys. II. All keys are blades. III. Some erasers are keys.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "All follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1188
+}

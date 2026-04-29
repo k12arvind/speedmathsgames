@@ -1,0 +1,60 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relation_objects",
+      "subtopic_name": "Relation between Two Objects/Things/Places/Persons",
+      "body": "Which one of the following diagrams best depicts the relationship between Meerut and Uttar Pradesh?",
+      "choices": {
+        "a": "[Two separate circles]",
+        "b": "[Two overlapping circles]",
+        "c": "[One circle inside another circle]",
+        "d": "None of these"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "relation_objects",
+      "subtopic_name": "Relation between Two Objects/Things/Places/Persons",
+      "body": "Which one of the following diagrams best depicts the relationship between Female and Teacher?",
+      "choices": {
+        "a": "[Two separate circles]",
+        "b": "[Two overlapping circles]",
+        "c": "[One circle inside another circle]",
+        "d": "None of these"
+      },
+      "correct": "b",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "Meerut is a city of Uttar Pradesh. It means Meerut exists completely in Uttar Pradesh. This relation can be expressed as given in option (c)."
+    },
+    {
+      "number": 2,
+      "solution": "By profession, some females can be teachers, but there can also be some females who are not teachers. Also there can be some male teachers. So, this relation can be best expressed as given in option (b)."
+    }
+  ],
+  "answers": [],
+  "_page": 355
+}

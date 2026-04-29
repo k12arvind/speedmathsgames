@@ -1,0 +1,58 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions: Read the following information carefully and answer the questions that follow: In a family, there are six members - A, B, C, D, E and F. A and B are a married couple, A being the male member. D is the only son of C, who is the daughter-in-law of A. E is the sister of D. B is the daughter-in-law of G, whose husband has died.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "We see that the two additional informations (4) and (6) are sufficient to reach a definite conclusion. Hence, keeping these in mind, we proceed. Q is ranked sixth and Q is fifth. This means that S can assume the possibilities (6) and (5). S is ruled out since (a) is false. Hence (a) must be true. Hence, we have: R _ _ _ Q _ S _ T. Also, by virtue of (3) and (4) we can have only one arrangement for the first 5 places, which is V P Q. According to these are two possibilities: R V P U Q S T, R U V P Q S T. Correct answer: (a) or R U V P Q S T (a)"
+    },
+    {
+      "number": 2,
+      "solution": "Look at the analysis of Q.1. Correct answer: (c)"
+    },
+    {
+      "number": 3,
+      "solution": "R is ranked second means possibility (2) is false. Hence, the possibilities (b) and (c) remain. Now U is ranked fifth means possibility (5) of (b) is false. Hence, possibility (b) remains. S _ _ _ Q _ T _ U. Now, by virtue of (3) and (4), we must have V P before Q in that order. Consequently the sixth place would go to the only letter remaining, i.e., R. Hence, S R V P Q T _ U. Correct answer: (b)"
+    },
+    {
+      "number": 4,
+      "solution": "S is ranked second means possibilities (b) and (c) are false. Hence possibility (a) is true. Now, look at the analysis of Q.1. Correct answer: (a)"
+    },
+    {
+      "number": 5,
+      "solution": "If V is ranked fifth we can not definitely say which among the three possibilities (a), (b) and (c) are true. But sentences (3) and (4) definitely imply that the position of P will be sixth and not first. Now, if Q is seventh, it means that possibility (c) is true. And consequently we have S ? ? ? V P Q. Correct answer: (a)"
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "correct": "a"
+    },
+    {
+      "number": 2,
+      "correct": "c"
+    },
+    {
+      "number": 3,
+      "correct": "b"
+    },
+    {
+      "number": 4,
+      "correct": "a"
+    },
+    {
+      "number": 5,
+      "correct": "a"
+    }
+  ],
+  "_page": 312
+}

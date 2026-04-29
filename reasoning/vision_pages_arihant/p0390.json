@@ -1,0 +1,275 @@
+{
+  "page_type": "questions",
+  "chapter_number": 11,
+  "chapter_title": "Blood Relations",
+  "passages": [
+    {
+      "passage_text": "There are six children playing football, namely P, Q, R, S, T and U. P and T are brothers, U is the sister of T, R is the only son of P's uncle, Q and S are the daughters of the only brother of R's father.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_tree",
+      "subtopic_name": "Family Tree Analysis",
+      "body": "How is R related to U?",
+      "choices": {
+        "a": "Cousin",
+        "b": "Brother",
+        "c": "Son",
+        "d": "Uncle"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "counting_members",
+      "subtopic_name": "Counting Family Members",
+      "body": "How many male players are there?",
+      "choices": {
+        "a": "One",
+        "b": "Three",
+        "c": "Four",
+        "d": "Five"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "counting_members",
+      "subtopic_name": "Counting Family Members",
+      "body": "How many female players are there?",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "How is S related to P?",
+      "choices": {
+        "a": "Uncle",
+        "b": "Sister",
+        "c": "Niece",
+        "d": "Cousin"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "Introducing Alka to guests, Brijesh said, \"Her father is the only son of my father\". How is Alka related to Brijesh?",
+      "choices": {
+        "a": "Daughter",
+        "b": "Mother",
+        "c": "Sister",
+        "d": "Niece"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "Neelam, who is Rohit's daughter, says to Indu, Your mother Reeta is the younger sister of my father, who is third child of Sohanji\". How is Sohanji related to Indu?",
+      "choices": {
+        "a": "Maternal uncle",
+        "b": "Father",
+        "c": "Grandfather",
+        "d": "Father-in-law"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "C is the mother of A and B. If D is the husband of B, then what is C to D?",
+      "choices": {
+        "a": "Mother",
+        "b": "Aunt",
+        "c": "Mother-in-law",
+        "d": "Sister"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "Pointing towards a woman, Suresh said, \"She is the daughter of my father's sister\". How is the woman related to Suresh?",
+      "choices": {
+        "a": "Brother",
+        "b": "Cousin",
+        "c": "Uncle",
+        "d": "Sister",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "Moni is daughter of Sheela. Sheela is wife of my wife's brother. How Moni is related to my wife?",
+      "choices": {
+        "a": "Cousin",
+        "b": "Niece",
+        "c": "Sister",
+        "d": "Sister-in-law"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "If Neena says, \"Anita's father Raman is the only son of my father-in-law, Mahipal\", then how is Bindu, who is the sister of Anita, related to Mahipal?",
+      "choices": {
+        "a": "Niece",
+        "b": "Daughter",
+        "c": "Wife",
+        "d": "Granddaughter"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "Q is the son of P. X is the daughter of Q. R is the aunt (bua) of X and L is the son of R, then what is L's relation with P?",
+      "choices": {
+        "a": "Grandson",
+        "b": "Granddaughter",
+        "c": "Daughter",
+        "d": "Nephew"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "relationship_identification",
+      "subtopic_name": "Relationship Identification",
+      "body": "Markandey is Rajiv's mother's father. Markandey has three brothers. One of them has grandson Abhi. Rajan is son of Abhi. Rajan is related to Rajiv as",
+      "choices": {
+        "a": "brother",
+        "b": "nephew",
+        "c": "cousin",
+        "d": "uncle"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 9,
+      "solution": "(a) R is the cousin of U."
+    },
+    {
+      "number": 10,
+      "solution": "(b) Clearly, there are three male players among them."
+    },
+    {
+      "number": 11,
+      "solution": "(c) Number of female players is 3."
+    },
+    {
+      "number": 12,
+      "solution": "(b) S is the sister of P."
+    }
+  ],
+  "answers": [],
+  "_page": 390
+}

@@ -1,0 +1,137 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Each of the following, if true, could help explain the apparent contradiction in the statements above EXCEPT:\nA) There was a sharp drop in the number of persons who attended religious services at an occasional basis.\nB) Attendance statistics compiled by the religious denominations are highly inaccurate.\nC) As older churchgoers died, they were not replaced by an equal number of younger churchgoers.\nD) There was no significant increase in attendance among religious groups outside the major denominations.\nE) Those responding to the surveys were not representative of the population as a whole.\n\n9. Stronger patent laws are needed to protect inventions from being pirated. With that protection manufacturers would be encouraged to invest in the development of new technologies. Such investment frequently results in an increase in manufacturer's productivity. Which of the following conclusions can most properly be drawn from the information above?\nA) Strong patent laws tend to benefit financial institutions as well as manufacturers.\nB) Increased productivity in manufacturing is likely to be accompanied by the creation of more manufacturing jobs.\nC) Manufacturers will decrease investment in the development of new products and technologies unless there are stronger patent laws.\nD) The weakness of current patent laws has been a cause of economic recession.\nE) Stronger patent laws would stimulate improvements in productivity for many manufacturers.\n\n10. Peru because of bad weather, but also partly because some major pepper growers have switched to high-priced cocoa, world production of pepper has been running well below worldwide sales for three years. Pepper has consequently risen in price. The price of pepper has soared. Which of the following can be inferred from the passage?\nA) Pepper is a profitable crop only if it is grown on a large scale.\nB) World consumption of pepper has been unusually high for three years.\nC) World production of pepper will return to previous levels once poor weather returns.\nD) Surplus stocks of pepper have been reduced in the last three years.\nE) The profits that the growers of pepper have made in the past few years have been unprecedented.\n\n11. Technological education is worsening. People between eighteen and twenty-four, who are just emerging from their formal education, are more likely to be technologically illiterate than somewhat older adults. And yet, today's young adults will increasingly involve aspects of technology. Which of the following conclusions can be properly drawn from the statements above?\nA) If young people are to make informed decisions on public references, many of them must learn more about technology.\nB) Through studies of technological issues and innovations should be made a required part of the public and private school curriculum.\nC) It should be suggested that prospective voters attend applied science courses in order to acquire a minimal competency in technical matters.\nD) If young people are not to be overly influenced by famous technologists, they must increase their knowledge of pure science.\nE) On public referenda issues, young people tend to confuse real or probable technologies with impossible ideals.\n\n12. Political system with only two major parties, the entrance of a third-party candidate into an election race damages the chances of only one of the two major candidates. This is why candidates always attracts some of the voters who might otherwise have voted for one of the two major candidates, but not voters who support the other candidate. Since a third-party candidacy affects the two major candidates unequally, for reasons neither of them has any control over, the practice is unfair and should not be allowed.\n\nThe factual information in the passage above is true, which of the following can be most reliably inferred from it?\nA) If the political platform of the third party is a compromise position between that of the two major parties, the third party will draw its support equally from the two major parties.\nB) If, before the emergence of a third party, voters were divided equally between the two major parties, neither of the major parties is likely to capture much more than one-half of the votes.\nC) A third-party candidate will not capture the votes of new voters who have never voted for candidates of either of the two major parties.\nD) The political stance of a third party will be more radical than that of either of the two major parties.\nE) The founders of a third party are likely to be a coalition consisting of former leaders of the two major parties.\n\n13. Thirty years after African colonies began emerging as nations, modern hatred has often left the tribe. From Angola to Ethiopia, ethnic groups making Africa cursed hundreds of thousands of people to flee their homes, leaving Africa the continent with the world's largest number of refugees. Which of the following statements best summarizes the above?",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "contradiction_explanation",
+      "subtopic_name": "Contradiction Explanation",
+      "body": "Each of the following, if true, could help explain the apparent contradiction in the statements above EXCEPT:",
+      "choices": {
+        "a": "There was a sharp drop in the number of persons who attended religious services at an occasional basis.",
+        "b": "Attendance statistics compiled by the religious denominations are highly inaccurate.",
+        "c": "As older churchgoers died, they were not replaced by an equal number of younger churchgoers.",
+        "d": "There was no significant increase in attendance among religious groups outside the major denominations.",
+        "e": "Those responding to the surveys were not representative of the population as a whole."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Stronger patent laws are needed to protect inventions from being pirated. With that protection manufacturers would be encouraged to invest in the development of new technologies. Such investment frequently results in an increase in manufacturer's productivity. Which of the following conclusions can most properly be drawn from the information above?",
+      "choices": {
+        "a": "Strong patent laws tend to benefit financial institutions as well as manufacturers.",
+        "b": "Increased productivity in manufacturing is likely to be accompanied by the creation of more manufacturing jobs.",
+        "c": "Manufacturers will decrease investment in the development of new products and technologies unless there are stronger patent laws.",
+        "d": "The weakness of current patent laws has been a cause of economic recession.",
+        "e": "Stronger patent laws would stimulate improvements in productivity for many manufacturers."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "passage_inference",
+      "subtopic_name": "Passage Inference",
+      "body": "Peru because of bad weather, but also partly because some major pepper growers have switched to high-priced cocoa, world production of pepper has been running well below worldwide sales for three years. Pepper has consequently risen in price. The price of pepper has soared. Which of the following can be inferred from the passage?",
+      "choices": {
+        "a": "Pepper is a profitable crop only if it is grown on a large scale.",
+        "b": "World consumption of pepper has been unusually high for three years.",
+        "c": "World production of pepper will return to previous levels once poor weather returns.",
+        "d": "Surplus stocks of pepper have been reduced in the last three years.",
+        "e": "The profits that the growers of pepper have made in the past few years have been unprecedented."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_conclusion",
+      "subtopic_name": "Logical Conclusion",
+      "body": "Technological education is worsening. People between eighteen and twenty-four, who are just emerging from their formal education, are more likely to be technologically illiterate than somewhat older adults. And yet, today's young adults will increasingly involve aspects of technology. Which of the following conclusions can be properly drawn from the statements above?",
+      "choices": {
+        "a": "If young people are to make informed decisions on public references, many of them must learn more about technology.",
+        "b": "Through studies of technological issues and innovations should be made a required part of the public and private school curriculum.",
+        "c": "It should be suggested that prospective voters attend applied science courses in order to acquire a minimal competency in technical matters.",
+        "d": "If young people are not to be overly influenced by famous technologists, they must increase their knowledge of pure science.",
+        "e": "On public referenda issues, young people tend to confuse real or probable technologies with impossible ideals."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "factual_inference",
+      "subtopic_name": "Factual Inference",
+      "body": "Political system with only two major parties, the entrance of a third-party candidate into an election race damages the chances of only one of the two major candidates. This is why candidates always attracts some of the voters who might otherwise have voted for one of the two major candidates, but not voters who support the other candidate. Since a third-party candidacy affects the two major candidates unequally, for reasons neither of them has any control over, the practice is unfair and should not be allowed. The factual information in the passage above is true, which of the following can be most reliably inferred from it?",
+      "choices": {
+        "a": "If the political platform of the third party is a compromise position between that of the two major parties, the third party will draw its support equally from the two major parties.",
+        "b": "If, before the emergence of a third party, voters were divided equally between the two major parties, neither of the major parties is likely to capture much more than one-half of the votes.",
+        "c": "A third-party candidate will not capture the votes of new voters who have never voted for candidates of either of the two major parties.",
+        "d": "The political stance of a third party will be more radical than that of either of the two major parties.",
+        "e": "The founders of a third party are likely to be a coalition consisting of former leaders of the two major parties."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "summary_statement",
+      "subtopic_name": "Summary Statement",
+      "body": "Thirty years after African colonies began emerging as nations, modern hatred has often left the tribe. From Angola to Ethiopia, ethnic groups making Africa cursed hundreds of thousands of people to flee their homes, leaving Africa the continent with the world's largest number of refugees. Which of the following statements best summarizes the above?",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 77
+}

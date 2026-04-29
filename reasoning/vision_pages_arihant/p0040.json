@@ -1,0 +1,358 @@
+{
+  "page_type": "questions",
+  "chapter_number": 1,
+  "chapter_title": "Practice Corner 1.7",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-15) In each of the following questions, some words are given which are related in some way. The same relationship exists among the words in one of the four alternatives given under it. Find the correct alternatives.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Correspondent : News : Newspaper [RRB (ASM) 2006]",
+      "choices": {
+        "a": "Road : Vehicle : Destination",
+        "b": "Cloud : Water : Ponds",
+        "c": "Farmer : Crops : Food",
+        "d": "Mason : Cement : Construction"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Iron : Silver : Gold",
+      "choices": {
+        "a": "Parents : Father : Mother",
+        "b": "Wheat : Barley : Cereal",
+        "c": "Tree : Brench : Fruit",
+        "d": "Deer : Lion : Wolf"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Road : Bus : Driver",
+      "choices": {
+        "a": "Track : Train : Passenger",
+        "b": "Watch : Ship : Diver",
+        "c": "Sky : Aeroplane : Pilot",
+        "d": "Paper : Letters : Reader"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Hand : Wrist : Bangle",
+      "choices": {
+        "a": "Neck : Head : Collar",
+        "b": "Foot : Ankle : Anklet",
+        "c": "Foot : Socks : Toes",
+        "d": "Toe : Foot : Knee"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Music : Guitar : Performer",
+      "choices": {
+        "a": "Trick : Rope : Acrobat",
+        "b": "Dance : Tune : Instrument",
+        "c": "Food : Recipe : Cook",
+        "d": "Patient : Medicine : Doctor"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Tragedy : Sadness : Tears",
+      "choices": {
+        "a": "Fear : Emotion : Tune",
+        "b": "Game : Sound : Match",
+        "c": "Comedy : Humour : Laughter",
+        "d": "Dance : Rhythm : Grace"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Ink : Pen : Paper",
+      "choices": {
+        "a": "Watch : Dial : Strip",
+        "b": "Book : Paper : Words",
+        "c": "Farmer : Plough : Field",
+        "d": "Colour : Brush : Canvas"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Class : School : Student",
+      "choices": {
+        "a": "Ball : Bat : Pitch",
+        "b": "Sister : Family : Brother",
+        "c": "Hand : Body : Finger",
+        "d": "Leaf : Tree : Root"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Bone : Skeleton : Nerve",
+      "choices": {
+        "a": "House : Door : Window",
+        "b": "Spoke : Wheel : Handle",
+        "c": "Retina : Eye : Pupil",
+        "d": "Snow : Cloud : Ice"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Lion : Cow : Land",
+      "choices": {
+        "a": "Water : Land : Air",
+        "b": "Whale : Hippopotamus : Water",
+        "c": "Chair : Table : Stool",
+        "d": "England : Germany : USA"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Stump : Cricket : Point",
+      "choices": {
+        "a": "Duck : Dribble : Racket",
+        "b": "Diamond : Pitcher : Hit",
+        "c": "Dribble : Hockey : Corner",
+        "d": "Penalty : Shoot : Boxing"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 12,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Complexion : White : Black",
+      "choices": {
+        "a": "Alert : Intelligent : Babies",
+        "b": "Health : Disease : Hospital",
+        "c": "Train : Bus : Journey",
+        "d": "Officer : Honest : Corrupt"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 13,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Talk : Whisper : Shout",
+      "choices": {
+        "a": "Boredom : Tiredness : Rest",
+        "b": "Touch : Hold : Embrace",
+        "c": "See : Look : Watch",
+        "d": "Create : Form : Make"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 14,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Play : Win : Lose",
+      "choices": {
+        "a": "Accident : Death : Survive",
+        "b": "Examination : Success : Determination",
+        "c": "Read : Book : Magazine",
+        "d": "Music : Dance : Art"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 15,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Clay : Potter : Pots",
+      "choices": {
+        "a": "Doctor : Injection : Pills",
+        "b": "Cloth : Tailor : Clothes",
+        "c": "Blackboard : Chalk : Teacher",
+        "d": "Electricity : Bulb : Light"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(C) A 'Correspondent' gathers and formats 'News' for 'Newspaper' and similarly a 'Farmer' grows and reaps 'Crops' for 'Food'."
+    },
+    {
+      "number": 2,
+      "solution": "(d) All the three belong to the same class. 'Iron', 'Silver' and 'Gold' are all metals and similarly 'Dear', 'Lion' and 'Wolf' are all wild animals."
+    },
+    {
+      "number": 3,
+      "solution": "(c) 'Bus' moves on 'Road' and is driven by 'Driver'. Likewise 'Aeroplane' flies in the 'Sky' and is driven by 'Pilot'."
+    },
+    {
+      "number": 4,
+      "solution": "(b) 'Bangle' is meant for 'Wrist' which is a part of 'Hand'. Similarly, anklet is meant for 'Ankle' which is a part of 'Foot'."
+    },
+    {
+      "number": 5,
+      "solution": "(c) Music is performed with Guitar by the 'Performer'. Likewise, 'Trick' is performed with 'Rope' by the 'Acrobat'."
+    },
+    {
+      "number": 6,
+      "solution": "(c) 'Tragedy' has 'Sadness' and brings 'Tears'. Likewise 'Comedy' has 'Humour' and brings 'Laughter'."
+    },
+    {
+      "number": 7,
+      "solution": "(d) First is required to work with the second on the third."
+    },
+    {
+      "number": 8,
+      "solution": "(c) Third is a part of the first which, in turn, is a part of the second."
+    },
+    {
+      "number": 9,
+      "solution": "(c) First and third are both parts of the second."
+    },
+    {
+      "number": 10,
+      "solution": "(b) 'Lion' and 'Cow' are 'land' animals and similarly 'Whale' and 'Hippopotamus' are 'water' animals."
+    }
+  ],
+  "answers": [],
+  "_page": 40
+}

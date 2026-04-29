@@ -1,0 +1,389 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar and Clock",
+      "subtopic_code": "day_scheduling",
+      "subtopic_name": "Day Scheduling",
+      "body": "On which day of the same week is Ramesh's exam scheduled (Monday being the first day of the week)?",
+      "choices": {
+        "a": "Ramesh correctly remembers that his exam is scheduled on a day after Tuesday but before Thursday of the same week.",
+        "b": "Ramesh's friend correctly remembers that Ramesh's exam is scheduled on the third day of the week."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is M related to F?",
+      "choices": {
+        "a": "F is the sister of N who is the mother of R.",
+        "b": "M has two brothers, R is one of them."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is Nalini related to Sameer?",
+      "choices": {
+        "a": "Brother of Nalini is the only grandson of Sameer's father.",
+        "b": "Nalini has only one brother."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is Sheela related to Ninad?",
+      "choices": {
+        "a": "Father of Ninad is the grandfather of Sheela's son.",
+        "b": "Sheela has only one brother."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is Nikhil related to Rama?",
+      "choices": {
+        "a": "Nikhil is the only grandson of Rama's father-in-law.",
+        "b": "Rama has no brother-sister."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is Nisha related to Nidhi?",
+      "choices": {
+        "a": "Mother of Nisha is the sister of Nidhi's father.",
+        "b": "Nidhi is the daughter of only son of Nisha's grandfather."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How is D related to M?",
+      "choices": {
+        "a": "D has two brothers and one sister.",
+        "b": "Brother of M is married to D's sister."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How many sisters does P have?",
+      "choices": {
+        "a": "M and T are sisters of K.",
+        "b": "D is husband of B who is mother of K and P."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "How many sisters does P have?",
+      "choices": {
+        "a": "T and V are only sisters of D.",
+        "b": "D is brother of P."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations",
+      "body": "Among P, K, D and R, who is the son of M?",
+      "choices": {
+        "a": "P and K are sisters of R.",
+        "b": "D is the mother of K and wife of M."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "H is in which direction in respect of L?",
+      "choices": {
+        "a": "L is to the East of M which is to the North of H.",
+        "b": "L is to the North of J which is to the East of H."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "Point X is in which direction in respect of point Y?",
+      "choices": {
+        "a": "Point Z is at equal distance from point X and point Y.",
+        "b": "Point X is at a distance of 5 km from point Y."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "Tower Q is in which direction of tower P?",
+      "choices": {
+        "a": "P is to the West of H, which is to the South of Q.",
+        "b": "P is to the West of Q and to the North of F."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "Village D is in which direction in respect of village H?",
+      "choices": {
+        "a": "Village H is to the South of village A, which is to the South-East of Village D.",
+        "b": "Village M is to the East of village D and to the North-East of Village H."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "facing_direction",
+      "subtopic_name": "Facing Direction",
+      "body": "Kumud is facing which direction?",
+      "choices": {
+        "a": "Nikhil is facing North and if he turns to his left he faces opposite direction as that of Kumud.",
+        "b": "Saroj who is facing East is to the right of Kumud."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "relative_position",
+      "subtopic_name": "Relative Position",
+      "body": "In which direction is point E, with reference to point S?",
+      "choices": {
+        "a": "Point D is to the East of point E and point E is to the South of point F.",
+        "b": "Point F is to the North-West of point S. Point D is to the North of point S."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Who amongst P, Q, R, S and T is the tallest?",
+      "choices": {
+        "a": "P is taller than Q. T is not the tallest.",
+        "b": "R is taller than P. S is not the tallest."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "height_comparison",
+      "subtopic_name": "Height Comparison",
+      "body": "Who is shortest among T, F, L, Q and R?",
+      "choices": {
+        "a": "F is shorter than L and Q, but not as short as T and R.",
+        "b": "T is shorter than F, but is not the shortest."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Seventeen people are standing in a straight line facing South. What is Bhavna's position from the left end of the line?",
+      "choices": {
+        "a": "Sandeep is standing second to the left of Sheetal. Only five people stand between Sheetal and the one who is standing at the extreme right end of the line. Four people stand between Sandeep and Bhavan.",
+        "b": "Anita is standing fourth to the left of Sheeta. Less than three people are standing between Bhavna and Anita."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "performance_ranking",
+      "subtopic_name": "Performance Ranking",
+      "body": "Among Sanjay, Suresh, Navin, Prakash and Karan, who has secured maximum marks in Mathematics?",
+      "choices": {
+        "a": "Karan has secured more marks in Mathematics than Suresh and Navin.",
+        "b": "Sanjay and Prakash have secured less marks in Mathematics than Navin."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding Decoding",
+      "subtopic_code": "coded_language",
+      "subtopic_name": "Coded Language",
+      "body": "How is 'cost' written in the given code language?",
+      "choices": {
+        "a": "In the code language 'tell me the cost' is coded as '@0#9' and 'cost was very high' is coded as '&6#1'.",
+        "b": "In the code language 'some cost was discount' is coded as '187#' and 'some people like discount' is coded as '875%'."
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 651
+}

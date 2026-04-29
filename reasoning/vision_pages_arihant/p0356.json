@@ -1,0 +1,84 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Venn Diagram",
+  "passages": [],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "two_objects_relation",
+      "subtopic_name": "Relations between Two Objects",
+      "body": "Which one of the following diagrams best depicts the relationship between Males and Females?",
+      "choices": {
+        "a": "[Two separate circles]",
+        "b": "[Two overlapping circles]",
+        "c": "[One circle inside another]",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_objects_relation",
+      "subtopic_name": "Relations between Three Objects",
+      "body": "Which one of the following diagrams best depicts the relationship between Seconds, Minutes and Hours?",
+      "choices": {
+        "a": "[Three separate circles]",
+        "b": "[Three overlapping circles]",
+        "c": "[Two circles with one separate]",
+        "d": "[Three concentric circles]"
+      },
+      "correct": "d",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "three_objects_relation",
+      "subtopic_name": "Relations between Three Objects",
+      "body": "Which one of the following diagrams best depicts the relationship between Kanpur, Varanasi and Meerut?",
+      "choices": {
+        "a": "[Three separate circles]",
+        "b": "[Three overlapping circles]",
+        "c": "[Two circles with one separate]",
+        "d": "[Three concentric circles]"
+      },
+      "correct": "a",
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "Males and females represents two different genders which are not related to each other in any manner. This can be expressed as given in option (a)."
+    },
+    {
+      "number": 4,
+      "solution": "Seconds are the part of minute and minutes are the part of hour. This relation can be expressed by option (d)."
+    },
+    {
+      "number": 5,
+      "solution": "Kanpur, Varanasi and Meerut all are cities of Uttar Pradesh but they are entirely different from one another. This can be expressed by option (a)."
+    }
+  ],
+  "answers": [],
+  "_page": 356
+}

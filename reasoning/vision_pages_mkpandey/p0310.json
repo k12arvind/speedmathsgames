@@ -1,0 +1,74 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which cars are on the immediate either sides of Cadillac car?\n(a) Ambassador and Maruti\n(b) Maruti and Fiat\n(c) Fiat and Mercedes\n(d) Ambassador and Fargo\n(e) None of these",
+      "choices": {
+        "a": "Ambassador and Maruti",
+        "b": "Maruti and Fiat",
+        "c": "Fiat and Mercedes",
+        "d": "Ambassador and Fargo",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following is definitely true?\n(a) Maruti is to the immediate left of Ambassador.\n(b) Bedford is to the immediate left of Fiat.\n(c) Bedford is at one of the ends.\n(d) Fiat is second to the right of Maruti.\n(e) None of these",
+      "choices": {
+        "a": "Maruti is to the immediate left of Ambassador",
+        "b": "Bedford is to the immediate left of Fiat",
+        "c": "Bedford is at one of the ends",
+        "d": "Fiat is second to the right of Maruti",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Arrangement",
+      "body": "Which of the following groups of cars is to the right of the Ambassador car?\n(a) Cadillac, Fargo & Maruti\n(b) Maruti, Bedford and Fiat\n(c) Mercedes, Cadillac and Fargo\n(d) Bedford, Cadillac and Fargo\n(e) None of these",
+      "choices": {
+        "a": "Cadillac, Fargo & Maruti",
+        "b": "Maruti, Bedford and Fiat",
+        "c": "Mercedes, Cadillac and Fargo",
+        "d": "Bedford, Cadillac and Fargo",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 310
+}

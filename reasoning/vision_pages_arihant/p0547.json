@@ -1,0 +1,111 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Verbal Reasoning",
+  "passages": [
+    {
+      "passage_text": "Read the following caselet carefully and answer the questions that follow.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    },
+    {
+      "passage_text": "Read the following newspaper report\nIn a new study by Harvard School of Public Health (HSPH), researchers explored how caffeine can serve us a \"mild anti-depressant\". They concluded that \"drinking several cups of coffee daily appears to reduce the risk of suicide\". Data pulled in from three large studies in the US showed that the suicide risk of those who drank two to four cups of caffeinated coffee a day was about half of those who drank decaffeinated coffee or very little or no coffee.\nIn the studies, a respondent's caffeine consumption was assessed every four years through a questionnaire. The respondents were all adults and the study was published online. The authors, however, cautioned the public from increasing coffee intake as it could result in 'unpleasant side effects'. 'Overall, our results suggest that there is little further benefit for consumption above two to three cups/day or 400 mg of caffeine/day' wrote the researchers. The authors observed that there was no major difference in suicide risk for adults who drank two to three cups a day from those who drank four cups or more.\nWhich of the following shaped graph would best capture the above paragraph (X-axis represents 'coffee intake' and Y-axis represents 'coffee intake' and Y-axis represents 'suicidal tendency')?",
+      "has_figure": false,
+      "topic_code": "inference"
+    },
+    {
+      "passage_text": "Read the following caselet carefully and answer the questions that follow.\nIntercontinental Business Manufacturing (IBM) was doing a roaring business. Demand of the products was high and supply of raw-material was abundant. IBM was manufacturing three different products. Some customers bought two types of products and some bought only one. The three products were 'quickie-quick', 'run-of-the-mill' and 'maxi-max'. Customers were not complaining loudly.\nRam, the product manager, was confused! Demand for 'quickie-quick' was increasing. Raw material suppliers wanted to supply lower quality at cheaper price. It was profitable for the company to increase production. Quality department was not happy with the product. Ram meet Rahim, the CEO, who, as always, wanted higher profits. He said that IBM will set-up a committee for improving the quality.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 33,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "analogy",
+      "subtopic_name": "Analogy",
+      "body": "The main issues of interpretation arising from the work of professionally trained anthropologists are that they are late in colonial/post-colonial trajectories, because professional training shapes their interpretations. However, within field of interest and training, their works are most thorough and systematic. The best, conclusion drawn from the above paragraph is analogous to",
+      "choices": {
+        "a": "Heisenberg uncertainty principle, which states that speed and position cannot be determined simultaneously",
+        "b": "cultural relativism, which states that two or more than two cultures cannot be compared",
+        "c": "personal relativism, which states that one should not study anthropological phenomenon for personal gains",
+        "d": "deductive relativism, which states that anthropologists should not knowingly colour their findings",
+        "e": "communicative relativism, which states that Anthropologists should not be selective in communicating their findings"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "merit_pay",
+      "subtopic_name": "Merit Pay Analysis",
+      "body": "Consider merit pay for. teachers. Schools face constant pressure to change their management approaches to improve performance, which is usually assessed by standardised reading, Maths and Science scores. In most schools, teachers' pay is determined by seniority, years of total teaching experience and credentials. Pay is rarely based on performance, which is contrary to the belief among parents and private sector. Parents and business leaders lament that there are no carrots/sticks used to motivate teachers. Consequently, there has been greater push to implement some form of merit pay to improve motivation.\nWhich of the following statements will disprove the claim of the parents and business leaders?",
+      "choices": {
+        "a": "A recent study suggested that teachers are self- motivated,",
+        "b": "Teachers are largely motivated by financial incentives; so pay for performance will induce, greater and more effective effort",
+        "c": "Learning cannot be measured reliably and accurately by a test given once a year",
+        "d": "Teaching is a solo-activity, there is a little interdependence with other co-curricular and extra curricular activities in school",
+        "e": "To error is human and hence stick should be used to reduce errors"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 35,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "inference",
+      "topic_name": "Inference",
+      "subtopic_code": "graph_interpretation",
+      "subtopic_name": "Graph Interpretation",
+      "body": "Which of the following shaped graph would best capture the above paragraph (X-axis represents 'coffee intake' and Y-axis represents 'suicidal tendency')?",
+      "choices": {
+        "a": "A straight line",
+        "b": "Saw tooth curve",
+        "c": "S shaped curve",
+        "d": "U shaped curve",
+        "e": "L shaped curve"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 36,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "ranking_time",
+      "topic_name": "Ranking and Time Sequence",
+      "subtopic_code": "ranking_order",
+      "subtopic_name": "Ranking Order",
+      "body": "A group of nine runners will finish the 400 m race in a certain order. The runners are Ashok, Benjamin, Chetan, Divya, Eshant, Faneesh, Girish, Himani, Irravaty. They all finish at different times and their finishing order is as follow.\nI. Faneesh finishes before Ashok.\nII. Divya finishes before Benjamin and Eshant.\nIII. Irravaty finishes after Chetan.\nIV. Girish finishes after Ashok.\nWhich is the best position Grish can finish?",
+      "choices": {
+        "a": "First",
+        "b": "Second",
+        "c": "Third",
+        "d": "Fourth",
+        "e": "Fifth"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 547
+}

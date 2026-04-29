@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "Statements: All students like excursions. Some students go for higher education.\nConclusions: I. Students who go for higher education also like excursions. II. Some students do not go for higher education, but like excursions.\n\nVenn diagram shows: S = Students, E = People who like excursions, HE = People who go for higher education.\n\nConclusions: I. Students who go for higher education also like excursions. (✓) II. Some students do not go for higher educations but like excursions. (✓)"
+    },
+    {
+      "number": 5,
+      "solution": "Statements: Some keys are locks, some locks are numbers. All numbers are letters, all letters are words.\nConclusions: I. Some words are numbers. II. Some locks are letters.\n\n[SSC (CGL) 2013]\n\nVenn diagram shows: Keys, Lock, Number within Words and Letters circles.\n\nConclusions: I. Some words are numbers. (✓) II. Some locks are letters. (✓)"
+    }
+  ],
+  "answers": [],
+  "_page": 1162
+}

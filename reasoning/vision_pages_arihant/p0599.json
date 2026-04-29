@@ -1,0 +1,90 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Four youngmen Raj, Sunder, Tarun and Upal are married to Rekha, Sunita, Tara and Uma and the couples live in Rampur, Sanchi, Tirupati and Udhampur:\nI. The 1st letter of names of men, their wives and cities is not the same.\nII. Sunita is not Raj's wife.\nIII. Sunder does not live in Rampur or Udhampur and is not Rekha's husband.\nIV. Upal and Tara do not live in Sanchi.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "matching",
+      "subtopic_name": "Matching Puzzles",
+      "body": "Which pair given below is the right combination of wife and city for Tarun?",
+      "choices": {
+        "a": "Sunita, Tirupati",
+        "b": "Tara, Sanchi",
+        "c": "Uma, Rampur",
+        "d": "Rekha, Sanchi"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "matching",
+      "subtopic_name": "Matching Puzzles",
+      "body": "Who among the following is the wife of Upal?",
+      "choices": {
+        "a": "Rekha",
+        "b": "Sunita",
+        "c": "Tara",
+        "d": "Uma"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "matching",
+      "subtopic_name": "Matching Puzzles",
+      "body": "Which of the following is the correct pair of husband and wife?",
+      "choices": {
+        "a": "Upal, Sunita",
+        "b": "Raj, Tara",
+        "c": "Sunder, Uma",
+        "d": "All of these"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 4,
+      "solution": "The correct matching pair is Rekha and Sanchi."
+    },
+    {
+      "number": 5,
+      "solution": "The wife of Upal is Sunita."
+    },
+    {
+      "number": 6,
+      "solution": "All the combinations given in the alternatives are correct."
+    }
+  ],
+  "answers": [],
+  "_page": 599
+}

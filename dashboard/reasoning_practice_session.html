@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reasoning Practice Session</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:920px; margin:0 auto; padding:20px 18px 40px; }
+    .head { display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+            background: var(--bg-card); border:1px solid var(--border-color);
+            padding:12px 16px; border-radius:12px; margin-bottom:14px;
+            position:sticky; top:0; z-index:5; backdrop-filter: blur(8px); }
+    .head .meta { font-size:0.85rem; color: var(--text-muted); }
+    .head .timer {
+      margin-left:auto; font-family:'JetBrains Mono',monospace;
+      font-size:1.1rem; font-weight:700; padding:6px 12px; border-radius:8px;
+      background: var(--bg-input); border:1px solid var(--border-color);
+    }
+    .timer.warn { color:#f59e0b; border-color:#f59e0b; }
+    .timer.danger { color:#f87171; border-color:#f87171; }
+
+    .dots { display:flex; gap:5px; flex-wrap:wrap; }
+    .dot { width:24px; height:24px; border-radius:50%; cursor:pointer;
+           background: var(--bg-input); border:1px solid var(--border-color);
+           font-size:11px; line-height:22px; text-align:center; color:var(--text-muted);
+           transition: transform .1s; }
+    .dot.current { border-color:#f59e0b; color:#f59e0b; transform: scale(1.15); }
+    .dot.answered { background: rgba(74,222,128,0.15); border-color: rgba(74,222,128,0.4);
+                    color: var(--accent-success); }
+    .dot.flagged { background: rgba(245,158,11,0.15); border-color: rgba(245,158,11,0.5); color:#f59e0b; }
+    .dot.passage-mate { box-shadow: inset 0 -3px 0 rgba(245,158,11,0.4); }
+
+    .qcard { background: var(--bg-card); border:1px solid var(--border-color);
+             border-radius:12px; padding:24px; margin-bottom:14px; }
+    .qmeta { font-size:0.78rem; color: var(--text-muted); margin-bottom:10px;
+             letter-spacing:0.04em; text-transform:uppercase; }
+
+    .passage {
+      background: rgba(245,158,11,0.06);
+      border:1px solid rgba(245,158,11,0.30);
+      border-left:4px solid #f59e0b;
+      padding:14px 16px; border-radius:8px; margin-bottom:18px;
+      font-size:0.95rem; line-height:1.6; white-space:pre-wrap;
+    }
+    .passage .label {
+      font-size:0.7rem; color:#f59e0b; text-transform:uppercase;
+      letter-spacing:0.06em; font-weight:700; margin-bottom:6px;
+    }
+    .passage img { display:block; max-width:100%; height:auto; margin-top:10px;
+                   background:#fff; border-radius:6px; padding:6px; }
+
+    .qtext { font-size:1.04rem; line-height:1.65; color: var(--text-primary);
+             margin-bottom:18px; white-space:pre-wrap; word-wrap:break-word; }
+    .qfigure { background:#fff; border-radius:8px; padding:8px;
+               margin: 0 0 18px; max-width:100%;
+               box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+    .qfigure img { display:block; max-width:100%; height:auto; }
+    .ai-badge { display:inline-block; margin-left:10px;
+                background: rgba(245,158,11,0.10); color:#fbbf24;
+                border:1px solid rgba(245,158,11,0.35);
+                padding:1px 8px; border-radius:6px; font-size:0.65rem;
+                letter-spacing:0.04em; text-transform:uppercase; font-weight:600; }
+    .passage-tag { display:inline-block; margin-left:10px;
+                   background: rgba(96,165,250,0.10); color:#60a5fa;
+                   border:1px solid rgba(96,165,250,0.35);
+                   padding:1px 8px; border-radius:6px; font-size:0.65rem;
+                   letter-spacing:0.04em; text-transform:uppercase; font-weight:600; }
+
+    .choices { display:flex; flex-direction:column; gap:10px; }
+    .choice { display:flex; gap:14px; align-items:flex-start;
+              padding:14px 18px; background: var(--bg-input);
+              border:1px solid var(--border-color); border-radius:10px;
+              cursor:pointer; user-select:none; transition: all .12s;
+              font-size:0.95rem; line-height:1.55; }
+    .choice:hover { border-color:#f59e0b; }
+    .choice .letter { width:30px; min-width:30px; height:30px; border-radius:50%;
+                      background: var(--bg-card); border:1px solid var(--border-color);
+                      display:flex; align-items:center; justify-content:center;
+                      font-weight:700; font-size:0.85rem; }
+    .choice.selected { background: rgba(245,158,11,0.10); border-color:#f59e0b; }
+    .choice.selected .letter { background:#f59e0b; color:#0a0a0c; border-color:#f59e0b; }
+
+    .actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .btn { padding:10px 18px; border-radius:8px; font-size:14px; font-weight:600;
+           cursor:pointer; border:1px solid var(--border-color);
+           background: var(--bg-input); color: var(--text-primary); }
+    .btn:hover { border-color:#f59e0b; }
+    .btn.primary { background: linear-gradient(135deg,#f59e0b 0%,#ef4444 100%);
+                   color:#0a0a0c; border:none; }
+    .btn.primary:hover { transform: translateY(-1px); }
+    .btn.danger { color:#f87171; border-color:#f87171; }
+    .btn.flag.on { color:#f59e0b; border-color:#f59e0b; }
+    .empty { padding:50px 20px; text-align:center; color:var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <div style="font-weight:600;font-size:0.92rem;">Reasoning Practice</div>
+        <div class="meta" id="position">Loading…</div>
+      </div>
+      <div class="dots" id="dots"></div>
+      <div class="timer" id="timer">--:--</div>
+    </div>
+
+    <div id="card"><div class="empty">Loading question…</div></div>
+
+    <div class="actions">
+      <button class="btn flag" id="flag">⚐ Flag</button>
+      <button class="btn" id="prev">← Prev</button>
+      <button class="btn primary" id="next">Next →</button>
+      <span style="flex:1"></span>
+      <button class="btn danger" id="finish">Finish session</button>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    const sid = new URLSearchParams(location.search).get('sid');
+    if (!sid) { document.body.innerHTML = '<div style="padding:30px;color:#888;">No session id.</div>'; }
+
+    function userId() {
+      try {
+        const u = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser')||'{}');
+        return u.user_id || 'saanvi';
+      } catch(e){ return 'saanvi'; }
+    }
+
+    let session = null, attempts = [], local = [], currentIdx = 0;
+    let lastTickAt = Date.now(), elapsedSeconds = 0, timerLimit = 0, timerInterval = null;
+
+    async function loadSession(){
+      const r = await fetch(API + '/api/reasoning/session/' + encodeURIComponent(sid) +
+                            '?user_id=' + encodeURIComponent(userId()));
+      session = await r.json();
+      if (session.error) { alert('Could not load session: ' + session.error); return; }
+      attempts = session.attempts || [];
+      local = attempts.map(a => ({
+        choice: a.user_choice || null,
+        time_spent: a.time_spent_seconds || 0,
+        flagged: !!a.flagged,
+        synced: !!a.user_choice,
+      }));
+      timerLimit = session.time_limit_seconds || 0;
+      currentIdx = local.findIndex(x => !x.choice);
+      if (currentIdx < 0) currentIdx = 0;
+      renderDots();
+      renderQuestion();
+      startTimer();
+    }
+
+    function startTimer(){
+      lastTickAt = Date.now();
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(updateTimer, 1000);
+      updateTimer();
+    }
+    function updateTimer(){
+      const now = Date.now();
+      const tickDelta = Math.round((now - lastTickAt) / 1000);
+      if (tickDelta > 0) {
+        elapsedSeconds += tickDelta;
+        local[currentIdx].time_spent += tickDelta;
+        lastTickAt = now;
+      }
+      const el = document.getElementById('timer');
+      if (timerLimit > 0) {
+        const remaining = Math.max(0, timerLimit - elapsedSeconds);
+        const m = Math.floor(remaining / 60), s = remaining % 60;
+        el.textContent = `${m}:${String(s).padStart(2,'0')}`;
+        el.classList.toggle('warn', remaining < timerLimit * 0.25);
+        el.classList.toggle('danger', remaining < 60);
+        if (remaining === 0) finishSession(true);
+      } else {
+        const m = Math.floor(elapsedSeconds / 60), s = elapsedSeconds % 60;
+        el.textContent = `${m}:${String(s).padStart(2,'0')}`;
+      }
+    }
+
+    function renderDots(){
+      const root = document.getElementById('dots');
+      root.innerHTML = local.map((s, i) => {
+        const cls = ['dot'];
+        if (i === currentIdx) cls.push('current');
+        if (s.choice) cls.push('answered');
+        if (s.flagged) cls.push('flagged');
+        if (attempts[i].passage_id) cls.push('passage-mate');
+        return `<div class="${cls.join(' ')}" onclick="jumpTo(${i})">${i+1}</div>`;
+      }).join('');
+    }
+    window.jumpTo = (i) => { saveCurrentTime(); currentIdx = i; renderQuestion(); renderDots(); startTimer(); };
+
+    function saveCurrentTime() {
+      const now = Date.now();
+      const delta = Math.round((now - lastTickAt) / 1000);
+      if (delta > 0) {
+        elapsedSeconds += delta;
+        local[currentIdx].time_spent += delta;
+        lastTickAt = now;
+      }
+    }
+
+    function passageMatesCount(currentAttempt) {
+      if (!currentAttempt.passage_id) return null;
+      const same = attempts.filter(a => a.passage_id === currentAttempt.passage_id);
+      const idx = same.findIndex(a => a.question_id === currentAttempt.question_id) + 1;
+      return `${idx}/${same.length}`;
+    }
+
+    function renderQuestion(){
+      const a = attempts[currentIdx]; const s = local[currentIdx];
+      const passInfo = passageMatesCount(a);
+      const passTag = passInfo ? `<span class="passage-tag">Passage Q${passInfo}</span>` : '';
+      const aiBadge = (a.correct_source && a.correct_source.startsWith('ai_'))
+        ? `<span class="ai-badge" title="AI-derived answer; flag if wrong">AI-derived</span>`
+        : '';
+      const src = [a.source_book && a.source_book.toUpperCase(),
+                   a.chapter_title || (a.chapter_number ? 'Ch '+a.chapter_number : null),
+                   a.problem_number ? 'Q'+a.problem_number : null].filter(Boolean).join(' · ');
+      document.getElementById('position').textContent =
+        `Question ${currentIdx+1} of ${attempts.length}` + (src ? '  ·  ' + src : '') +
+        (a.topic_name ? '  ·  ' + a.topic_name : '');
+
+      const passageBlock = a.passage_text ? `
+        <div class="passage">
+          <div class="label">Passage / Setup</div>
+          ${escapeHtml(a.passage_text)}
+          ${a.passage_figure_path ? `<img src="${a.passage_figure_path}" alt="Passage figure" loading="lazy">` : ''}
+        </div>` : '';
+      const figureHtml = a.figure_image_path
+        ? `<div class="qfigure"><img src="${a.figure_image_path}" alt="Question figure" loading="lazy"></div>` : '';
+
+      const choices = ['A','B','C','D','E'].map(L => {
+        const text = a['choice_' + L.toLowerCase()];
+        if (!text) return '';
+        return `<div class="choice ${s.choice===L?'selected':''}" onclick="selectChoice('${L}')">
+                  <span class="letter">${L}</span>
+                  <span>${escapeHtml(text)}</span>
+                </div>`;
+      }).join('');
+
+      const flag = document.getElementById('flag');
+      flag.classList.toggle('on', s.flagged);
+      flag.textContent = s.flagged ? '⚐ Flagged' : '⚐ Flag';
+      document.getElementById('card').innerHTML = `
+        <div class="qcard">
+          <div class="qmeta">${a.subtopic_name || ''} ${passTag} ${aiBadge}</div>
+          ${passageBlock}
+          <div class="qtext">${escapeHtml(a.question_text)}</div>
+          ${figureHtml}
+          <div class="choices">${choices}</div>
+        </div>`;
+    }
+
+    function escapeHtml(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    window.selectChoice = (L) => {
+      saveCurrentTime();
+      local[currentIdx].choice = L;
+      submitCurrent();
+      renderQuestion(); renderDots();
+    };
+
+    async function submitCurrent(){
+      const a = attempts[currentIdx]; const s = local[currentIdx];
+      try {
+        await fetch(API + '/api/reasoning/session/' + encodeURIComponent(sid) + '/attempt', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({
+            user_id: userId(), question_id: a.question_id, choice: s.choice,
+            time_spent_seconds: s.time_spent, flagged: s.flagged,
+          })
+        });
+        s.synced = true;
+      } catch(e){ console.warn('Sync failed:', e); }
+    }
+
+    document.getElementById('flag').addEventListener('click', () => {
+      local[currentIdx].flagged = !local[currentIdx].flagged;
+      submitCurrent();
+      renderQuestion(); renderDots();
+    });
+    document.getElementById('prev').addEventListener('click', () => {
+      if (currentIdx > 0) jumpTo(currentIdx - 1);
+    });
+    document.getElementById('next').addEventListener('click', () => {
+      saveCurrentTime();
+      if (currentIdx < attempts.length - 1) jumpTo(currentIdx + 1);
+      else if (confirm('This is the last question. Finish session?')) finishSession();
+    });
+    document.getElementById('finish').addEventListener('click', () => {
+      if (confirm('Finish the session and reveal solutions?')) finishSession();
+    });
+
+    async function finishSession(autoTimeout=false){
+      saveCurrentTime();
+      await submitCurrent();
+      try {
+        await fetch(API + '/api/reasoning/session/' + encodeURIComponent(sid) + '/finish', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({user_id: userId()})
+        });
+      } catch(e){}
+      location.href = 'reasoning_practice_results.html?sid=' + encodeURIComponent(sid);
+    }
+
+    loadSession();
+    window.addEventListener('beforeunload', () => { saveCurrentTime(); submitCurrent(); });
+  </script>
+</body>
+</html>

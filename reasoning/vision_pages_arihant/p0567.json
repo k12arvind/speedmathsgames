@@ -1,0 +1,211 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q.Nos. 6-10) Read the information carefully and answer the questions given below. A word and number arrangement machine when given a particular input, rearranges it following a particular rule. The following is the illustration of input and the steps of arrangement.\n\nInput    15 give not hot 45 33 for\nStep  I  for give not hot 45 33 15\nStep  II  for not give hot 33 45 15\nStep III 15 not give hot 33 45 for\nStep IV 15 give not hot 45 33 for\nStep  V  for give not hot 45 33 15",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 11-15) Read the information carefully and answer the questions given below. A word arrangement machine, when given an input line of words, rearranges them following a particular rule in each step. The following is the illustration of the input and the steps of arrangement.\n\nInput   Dhoni cannot but feel sorry for him\nStep  I  but cannot Dhoni sorry feel him for\nStep  II  cannot but feel sorry Dhoni for him\nStep III but cannot sorry feel him for Dhoni\nStep IV sorry cannot but him feel Dhoni for\n\nand so on for subsequent steps. You have to find out the logic and answer the questions given below.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Input 'Most of the politicians were given ultimatum'. Which of the following will be the Step IV for the given input?",
+      "choices": {
+        "a": "ultimatum were given the most politicians of",
+        "b": "the politicians of most were given ultimatum",
+        "c": "ultimatum given were the politicians most of",
+        "d": "given ultimatum politicians were of the most",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "If Step V of an input is 'no of the has happy at all', then which of the following will definitely be the input?",
+      "choices": {
+        "a": "happy all at of no has the",
+        "b": "all at happy no of has the",
+        "c": "the has no of at all happy",
+        "d": "cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "If Step I of an input is 'in the four of three be serious', find out the VII step of that input.",
+      "choices": {
+        "a": "serious in three be four of the",
+        "b": "in the three be four of serious",
+        "c": "serious in most be the of four",
+        "d": "cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "If '19 36 43 50 31 22 25' is the input, then find out the Step IV.",
+      "choices": {
+        "a": "43 19 36 50 31 22 25",
+        "b": "25 22 31 50 43 36 19",
+        "c": "50 31 22 25 43 36 19",
+        "d": "19 36 43 50 31 22 25",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "If 'rat cat fat chat that hat mat' is the Step II, then what would be the input?",
+      "choices": {
+        "a": "mat fat cat chat hat that rat",
+        "b": "chat mat fat cat rat that hat",
+        "c": "fat mat chat cat rat hat that",
+        "d": "that hat rat cat chat mat fat",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "If input is '16 nine 32 ten two five six', then find Step V.",
+      "choices": {
+        "a": "32 ten two five 16 nine six",
+        "b": "32 six ten two five 16 nine",
+        "c": "six nine 32 ten two five 16",
+        "d": "16 five two ten 32 nine six",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "We have Step V as '24 99 100 121 fine wine dine', then what would be the Step II?",
+      "choices": {
+        "a": "24 100 99 121 wine fine dine",
+        "b": "dine fine wine 24 100 99 121",
+        "c": "wine fine dine 24 100 99 121",
+        "d": "121 99 100 24 dine fine wine",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_number_arrangement",
+      "subtopic_name": "Word and Number Arrangement",
+      "body": "Step III '39 40 41 59 35 tap map'. Find the input.",
+      "choices": {
+        "a": "map 41 40 59 tap 35 39",
+        "b": "39 35 tap 59 40 41 map",
+        "c": "tap 41 40 59 map 35 39",
+        "d": "tap map 39 35 59 40 41",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If Step V read \"weeks of tepid slothful and weak ideas\", then what would Step IV read?",
+      "choices": {
+        "a": "ideas weeks and tepid of weak slothful",
+        "b": "of weeks and slothful tepid ideas weak",
+        "c": "of tepid slothful ideas weak and weeks",
+        "d": "ideas and tepid weeks of weak slothful",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 567
+}

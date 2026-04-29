@@ -1,0 +1,227 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Directions (Q.Nos. 19-24) Study the following information to answer the questions given below it. A number sorting machine, when given an input of numbers, rearranges the numbers in a particular manner step by step as indicated below—till all the numbers are arranged in a particular order.\n\nInput: 29 2 15 5 20 11 50 105 28 19 30 140\nStep I: 2 29 15 5 20 11 50 105 28 19 30 140\nStep II: 2 140 15 5 20 11 50 105 28 19 30 29\nStep III: 2 140 5 15 20 11 50 105 28 19 30 29\nStep IV: 2 140 5 105 20 11 50 15 28 19 30 29\nStep V: 2 140 5 105 11 20 50 15 28 19 30 29\nStep VI: 2 140 5 105 11 50 20 15 28 19 30 29\nStep VII: 2 140 5 105 11 50 15 20 28 19 30 29\nStep VIII: 2 140 5 105 11 50 15 30 28 19 20 29\nStep IX: 2 140 5 105 11 50 15 30 19 28 20 29\nStep X: 2 140 5 105 11 50 15 30 19 29 20 28",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which step number is the following output?\n32 27 14 84 with sit 51 vain 92 68 feet best ink",
+      "choices": {
+        "a": "Step V",
+        "b": "Step VI",
+        "c": "Step IV",
+        "d": "Step III",
+        "e": "There is no such step"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which word/number would be at 5th position from the right in Step V?",
+      "choices": {
+        "a": "14",
+        "b": "92",
+        "c": "feet",
+        "d": "best",
+        "e": "why"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "How many elements (words or numbers) are there between 'feet' and '32' as they appear in the last step of the output?",
+      "choices": {
+        "a": "One",
+        "b": "Three",
+        "c": "Four",
+        "d": "Five",
+        "e": "Seven"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which of the following represents the position of 'why' in the fourth step?",
+      "choices": {
+        "a": "Eighth from the left",
+        "b": "Fifth from the right",
+        "c": "Sixth from the left",
+        "d": "Fifth from the left",
+        "e": "Seventh from the left"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which of the following is the input of the following final output?\nFinal output '16 159 19 160 40 161 80 162'",
+      "choices": {
+        "a": "19 16 159 40 162 80 160 161",
+        "b": "162 16 40 19 161 159 80 160",
+        "c": "80 159 19 16 40 160 162 161",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which of the following will be the Step II for the following input?\nInput '16 13 400 26 150 200 19.'",
+      "choices": {
+        "a": "13 16 400 26 150 200 19",
+        "b": "13 400 19 26 150 200 16",
+        "c": "13 400 16 26 150 200 19",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which of the following will be the first step for the following input?\nInput '100, 500, 2, 400, 20, 3, 800, 1, 999, 666'",
+      "choices": {
+        "a": "1, 500, 2, 400, 20, 3, 800, 100, 999, 666",
+        "b": "2, 500, 100, 400, 20, 3, 800, 1, 999, 666",
+        "c": "999, 500, 2, 400, 20, 3, 800, 1, 100, 666",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "How many steps would be required in getting the final output for the following input?\nInput '10, 4, 1, 9, & 12'.",
+      "choices": {
+        "a": "One",
+        "b": "Two",
+        "c": "Three",
+        "d": "Four",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which of the following will be the Vth step for the following input?\nInput '15, 19, 90, 3, 50, 16, 4, 99, 91'",
+      "choices": {
+        "a": "3, 99, 4, 91, 50, 16, 90, 19, 15",
+        "b": "3, 99, 4, 91, 15, 16, 90, 19, 50",
+        "c": "3, 99, 4, 91, 15, 90, 16, 19, 50",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "number_sorting",
+      "subtopic_name": "Number Sorting Machine",
+      "body": "Which of the following will be the IIIrd step for the following input?\nInput '20, 10, 50, 55, 40, 19, 12'",
+      "choices": {
+        "a": "10 55 50 20 40 19 12",
+        "b": "10 20 50 55 40 19 12",
+        "c": "10 55 12 40 20 19 50",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 590
+}

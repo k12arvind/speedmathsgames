@@ -1,0 +1,59 @@
+{
+  "page_type": "questions",
+  "chapter_number": 18,
+  "chapter_title": "Input-Output",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-5) Read the information carefully and answer the questions given below. A word rearrangement machine when given an input line of words, rearranges them following a particular rule in every step. The following is an illustration of input and the steps of rearrangement.\nInput   Sachin's shots are really hot in cricket\nStep I   Sachin's in are really hot shots cricket\nStep II  Really are in Sachin's cricket shots hot\nStep III in are really hot shots cricket Sachin's\nStep IV in cricket really hot shots are Sachin's\nStep V  hot really cricket in Sachin's are shots.\nThe further steps go on in the same manner.\nAs per the pattern followed in the above steps. Find the appropriate step for the given input or vice-versa in questions given below",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "Input 'team sudden now to act notice staff'. Which of the following steps would be 'notice staff to act sudden now team'?",
+      "choices": {
+        "a": "Step I",
+        "b": "Step II",
+        "c": "Step III",
+        "d": "Step IV",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_rearrangement",
+      "subtopic_name": "Word Rearrangement",
+      "body": "If Step IV of an input is 'none of the politicians have toured India', find the Step VI.",
+      "choices": {
+        "a": "have politicians none the toured India of",
+        "b": "India politicians have toured the none of",
+        "c": "have the none politicians toured India of",
+        "d": "India have politicians none of the toured",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 566
+}

@@ -1,0 +1,140 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Cubes",
+  "passages": [],
+  "questions": [
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "counting_cubes",
+      "subtopic_name": "Counting Cubes",
+      "body": "How many cubes are there in the group?",
+      "choices": {
+        "a": "10",
+        "b": "16",
+        "c": "18",
+        "d": "20"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Cubes",
+      "subtopic_code": "counting_cubes",
+      "subtopic_name": "Counting Cubes",
+      "body": "How many cubes are there in this figure?",
+      "choices": {
+        "a": "69",
+        "b": "180",
+        "c": "144",
+        "d": "84"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(b) There are only 12 edges in a cube/cuboid."
+    },
+    {
+      "number": 2,
+      "solution": "(d) All options are correct."
+    },
+    {
+      "number": 3,
+      "solution": "(d) A cube has 3 pair of opposite faces as it has 6 faces in total and each face has one opposite face."
+    },
+    {
+      "number": 4,
+      "solution": "(b) There are only 4 adjacent faces for each face of a cube."
+    },
+    {
+      "number": 5,
+      "solution": "(d) Hidden faces = 3"
+    },
+    {
+      "number": 6,
+      "solution": "(d) A cube has 12 edges out of which 9 are visible ∴ Invisible edges = 12 - 9 = 3"
+    },
+    {
+      "number": 7,
+      "solution": "(c) When a cube is seen from any direction, then at a time a maximum of only 7 corners are visible out of 8. Hence, only 1 corner is hidden."
+    },
+    {
+      "number": 8,
+      "solution": "(d) All of the above"
+    },
+    {
+      "number": 9,
+      "solution": "(d) Required number of smaller cubes Volume of bigger cube / Volume of smaller cube = (3)³ / 1³ = (3)³ = 27"
+    },
+    {
+      "number": 10,
+      "solution": "(b) Required number of times = (Side of bigger cube / Side of smaller cube) × 3 = (4/2 - 1) × 3 = (2 - 1) × 3 = 3"
+    },
+    {
+      "number": 11,
+      "solution": "(d) In 24 small cubes two sides would be seen."
+    },
+    {
+      "number": 12,
+      "solution": "(c) Volume of bigger cube / Volume of smaller cube = Number of smaller cubes ⇒ 25 × 25 × 25 / Volume of smaller cube = 125 ⇒ Volume of smaller cube = 25 × 25 × 25 / 125 = 125 ∴ Side of smaller cube = ∛125 = 5 cm"
+    },
+    {
+      "number": 13,
+      "solution": "(c) Required number of cuts = (Side of bigger cube / Side of smaller cube - 1) × 3 = (3/1 - 1) × 3 = 2 × 3 = 6"
+    },
+    {
+      "number": 14,
+      "solution": "(c) Number of smaller cubes = Volume of bigger cube / Volume of smaller cube = (3)³ / (1)³ = (3)³ = 27"
+    },
+    {
+      "number": 15,
+      "solution": "(c) Corner cubes are always 8."
+    },
+    {
+      "number": 16,
+      "solution": "(b) Number of middle cubes = 12(n - 2) = 12(3 - 2) = 12 × 1 = 12"
+    },
+    {
+      "number": 17,
+      "solution": "(b) Number of central cubes = 6(n - 2)² = 6 × (3 - 2)² = 6 × 1 = 6"
+    },
+    {
+      "number": 18,
+      "solution": "(a) Number of inner central cubes = (3 - 2)³ = (3 - 2)³ = 1"
+    },
+    {
+      "number": 19,
+      "solution": "(c) Required parts = Side of bigger cube / Side of smaller cube = 3/1 = 3"
+    },
+    {
+      "number": 20,
+      "solution": "(b) It is clear from the figure, that there are four blocks in the lower part close to the ground. Also, there are 3 blocks standing over the lower layer of blocks. Thus, there are 4 + 3 = 7 blocks in the given figure"
+    },
+    {
+      "number": 21,
+      "solution": "(b) [Figure with numbered grid] So, there are 12 cubes in the given figure, which are illustrated above."
+    },
+    {
+      "number": 22,
+      "solution": "(c) From the given question figure, it is clear that 4 columns containing 1 cube each 1 column containing 3 cubes 4 columns containing 2 cubes each ∴ Total cubes = (4 × 1) + (1 × 3) + (4 × 2) = 4 + 3 + 8 = 15"
+    }
+  ],
+  "answers": [],
+  "_page": 878
+}

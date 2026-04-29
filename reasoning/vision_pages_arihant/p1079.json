@@ -1,0 +1,162 @@
+{
+  "page_type": "questions",
+  "chapter_number": 3,
+  "chapter_title": "Practice Corner 3.2",
+  "passages": [
+    {
+      "passage_text": "In the following questions, one or more statements are given followed by four conclusions (a), (b), (c) and (d). You have to consider the statements to be true even if they seem to be at variance from commonly known facts. You have to decide which of the given conclusions, if any, follow from the given statements.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    },
+    {
+      "passage_text": "In each of the following questions, two statements are given followed by two Conclusions I and II. You have to consider the two statements to be true even if they seem to be at variance from commonly known facts. You have to decide which of the given conclusions, if any follow from the given statements.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statements: I. Ravi has five pens. II. No one else in the class has five pens.\nConclusions:\n(a) All students in the class have pens\n(b) All students in the class have five pens each\n(c) Some of the students have more than five pens\n(d) Only one student in the class has exactly five pens",
+      "choices": {
+        "a": "All students in the class have pens",
+        "b": "All students in the class have five pens each",
+        "c": "Some of the students have more than five pens",
+        "d": "Only one student in the class has exactly five pens"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement: To pass the examination one must work hard.\nConclusions:\n(a) Examination is related with hard work\n(b) All those who work hard pass\n(c) Examination causes some anxiety and those who work hard overcome it\n(d) Without hard work, one does not pass",
+      "choices": {
+        "a": "Examination is related with hard work",
+        "b": "All those who work hard pass",
+        "c": "Examination causes some anxiety and those who work hard overcome it",
+        "d": "Without hard work, one does not pass"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statement: This book can help because all good books help.\nConclusions:\n(a) This is not a good book\n(b) This is a good book\n(c) No good book help\n(d) Some good books help",
+      "choices": {
+        "a": "This is not a good book",
+        "b": "This is a good book",
+        "c": "No good book help",
+        "d": "Some good books help"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statements: I. Education is a process of lighting. II. Mind requires light to enlighten the core of cognitive aspect.\nConclusions: I. Education is a light which removes the darkness of mind. II. Education is a static process for mind.\n(a) Only Conclusion I follows\n(b) Only Conclusion II follows\n(c) Both Conclusions I and II follow\n(d) Neither Conclusion I nor II follows",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Both Conclusions I and II follow",
+        "d": "Neither Conclusion I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statements: I. Best performance in Olympics fetches a gold medal. II. Player 'X' got gold medal but later was found to be using a prohibited drug.\nConclusions: I. 'X' should be allowed to keep the gold medal. II. Gold medal should be withdrawn and given to the next person.\n(a) Only Conclusion II follows\n(b) Neither Conclusion I nor II follow\n(c) Both Conclusions I and II follow\n(d) Only Conclusion I follows",
+      "choices": {
+        "a": "Only Conclusion II follows",
+        "b": "Neither Conclusion I nor II follow",
+        "c": "Both Conclusions I and II follow",
+        "d": "Only Conclusion I follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statements: I. There are monks among those who are felicitated for remarkable social service. II. Jitananda and Vidyananda are among those felicitated.\nConclusions:\n(a) Jitananda and Vidyananda did remarkable social service\n(b) All monks do social service\n(c) Jitananda and Vidyananda are not monks\n(d) All monks are felicitated",
+      "choices": {
+        "a": "Jitananda and Vidyananda did remarkable social service",
+        "b": "All monks do social service",
+        "c": "Jitananda and Vidyananda are not monks",
+        "d": "All monks are felicitated"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "logical_deduction",
+      "subtopic_name": "Logical Deduction",
+      "body": "Statements: I. Science has brought the gadgets of happiness, prosperity and wealth. II. Science has not solved the problems of overpopulation.\nConclusions: I. Overpopulation is due to unscientific thinking. II. Science has not helped world peace.\n(a) Only Conclusion I follows\n(b) Only Conclusion II follows\n(c) Both Conclusions I and II follow\n(d) Neither Conclusions I and II do not follow",
+      "choices": {
+        "a": "Only Conclusion I follows",
+        "b": "Only Conclusion II follows",
+        "c": "Both Conclusions I and II follow",
+        "d": "Neither Conclusions I and II do not follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1079
+}

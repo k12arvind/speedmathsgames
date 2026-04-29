@@ -1,0 +1,143 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 24-30): Study the following information carefully and then answer the questions given below. A spying organisation receives messages from its spies via a computerised fax machine which generates different rearrangements of words to maintain secrecy of the transmitted messages. The following is an illustration of input and steps of rearrangement. Input: Anis goes to the bar after dinner everyday Step I: After Anis goes to the bar dinner everyday Step II: Anis after goes to the bar dinner everyday Step III: everyday Anis after goes to the bar dinner",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "For the following input, some steps are given below (not necessarily in the same order). One of them may be wrong or there may be more than one step. You have to find correct then choose the right answer. Input: 82, 74, 53, 22, 40, 64 1) 98, 12, 10, 56, 111, 88 2) 100, 16, 16, 64, 121, 100 3) 64, 40, 53, 22, 74, 82 4) 88, 12, 10, 56, 111, 88",
+      "choices": {
+        "a": "1) Sixth step",
+        "b": "2) Xth step",
+        "c": "3) YIIth step",
+        "d": "4) Can't be determined",
+        "e": "5) None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "In how many steps will the following input be fully arranged? Input: 15, 38, 24, 26, 42, 68, 53, 85",
+      "choices": {
+        "a": "1) IXth step",
+        "b": "2) Xth step",
+        "c": "3) YIIth step",
+        "d": "4) Can't be determined",
+        "e": "5) None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "If following is the step IV of the input then what will be step I of the input? Step IV: 17, 22, 41, 34, 48, 73, 62, 58 1) 17, 22, 73, 48, 34, 41, 62, 58 2) 17, 62, 73, 48, 34, 41, 22, 58 3) 58, 62, 73, 48, 34, 41, 22, 17 4) Can't be determined 5) None of these",
+      "choices": {
+        "a": "1)",
+        "b": "2)",
+        "c": "3)",
+        "d": "4)",
+        "e": "5)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "step_arrangement",
+      "subtopic_name": "Step Arrangement",
+      "body": "Which number will not appear for the given input in any step before VII, during arrangement process by the machine? Input: 73, 84, 62, 52, 29, 63, 14, 40 1) 14 2) 29 3) 84 4) 52 5) Any one",
+      "choices": {
+        "a": "1)",
+        "b": "2)",
+        "c": "3)",
+        "d": "4)",
+        "e": "5)"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "If 631, 29, 520, 474, 48, 312, 502, 36, 68 is the third step of an input, what will be the following for the last step which is step V?",
+      "choices": {
+        "a": "1) Sixth",
+        "b": "2) Fifth",
+        "c": "3) Seventh",
+        "d": "4) Cannot be determined",
+        "e": "5) None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Which of the following is the last step for the following input? Input: 47, 432, 127, 52, 309, 87, 28",
+      "choices": {
+        "a": "1) 432, 28, 309, 52, 127, 47, 116, 87",
+        "b": "2) 432, 28, 309, 47, 127, 52, 116, 87",
+        "c": "3) 432, 28, 309, 47, 127, 116, 52, 87",
+        "d": "4) Cannot be determined",
+        "e": "5) None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 268
+}

@@ -1,0 +1,37 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 4-5) Each of the questions below consists of a question and two statements numbered I and II given below. You have to decide whether the data provided in the statements are sufficient to answer the question. [CMAT 2014]\n\nGiven answer\n(a) if Statement I alone is sufficient but Statement II alone is not sufficient\n(b) if Statement II alone is sufficient but Statement I alone is not sufficient\n(c) if both Statements I and II together are sufficient but neither of Statement alone is sufficient\n(d) if each statement alone is sufficient",
+      "has_figure": false,
+      "topic_code": "data_sufficiency"
+    }
+  ],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(c) On the basis of Statement I, we can be certain that Situ is younger than Ritu's brother but we cannot find the age relationship between Ritu and Situ. Therefore, Statement I alone is not sufficient to answer the question. Statement II alone is not sufficient to answer the question as from this also we cannot establish age relationship between Situ and Ritu. From Statement I, we find that Ritu's brother is older than Situ and from Statement II, we find that Ritu is older than her brother. From both the statements, we can conclude that Ritu is older than Situ."
+    },
+    {
+      "number": 2,
+      "solution": "(b) On the basis of the statements given in the question we can arrange the persons in a row in the following way\nA___B___C or E___D___C or E___F\n1   2   3       4       5   6\nSo, the position of C and E can be either 3rd or 5th.\nFrom the Statement I, we get that E is to the right of A and hence, position of E can be either 3rd or 5th.\nTherefore, Statement I alone is not sufficient to answer the question. Statement II fixes the position of C at 5th and E at 3rd place, respectively. Therefore, we get our answer from Statement II alone. To be precise think about absence of Statement I, Statement II is sufficient to fix the position of C and E."
+    },
+    {
+      "number": 3,
+      "solution": "(c) From Statement II, the five numbers are consecutive even numbers.\nFrom Statement I, second number is double of first number. On combining both Statements I and II, we get\nFirst number = 2 and second number = 4\n(since, this is the only possibility in case of consecutive even numbers, where second number is double of first number)\n∴ Sum of first two numbers = 2 + 4 = 6\nSo, both Statements I and II are required to answer the question."
+    },
+    {
+      "number": 4,
+      "solution": "(a) From Statement I, 144 $ 16 ★ 7 # 9 ⇒ 144 ÷ 16 × 7 + 9 ⇒ 144/16 × 7 + 9 ⇒ 63 + 9 ⇒ 72\nHence, Statement I alone is sufficient to answer the question."
+    },
+    {
+      "number": 5,
+      "solution": "(d) From Statement I, Total number of students = 12 + 8 + 5 – 1 = 24\nFrom Statement II, Total number of students = 18 + 7 – 1 = 24\nTherefore, both the statements are individually sufficient to answer the question."
+    }
+  ],
+  "answers": [],
+  "_page": 649
+}

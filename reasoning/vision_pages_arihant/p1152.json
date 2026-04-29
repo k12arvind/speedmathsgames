@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 3,
+      "solution": "I-Type—Some S are P\nThis proposition gives rise to many possible representations of Venn diagrams and hence most of the inferences drawn therefrom are invalid and doubtful. This relationship can be shown by following sets and respective Venn diagrams.\n(i) S = {1, 2, 3, 4}, P = {3, 4, 5, 6}\n\nSet {3, 4} is the part of set S as well as set P, hence some S are P.\n(ii) S = {1, 2, 3, 4}, P = {1, 2}\n\nSet {1, 2} is the part of set S as well as set P, hence some S are P.\n(iii) S = {1, 2}, P = {1, 2, 3, 4}\n\nSet {2} is the part of set S as well as set P, hence some S are P.\n(iv) S = {1, 2, 3}, P = {1, 2, 3}\n\nSet {1, 2} is the part of set S as well as set P, hence some S are P.\nThe above four combinations of sets and respective diagrams show the relationship between S and P as represented by I-type proposition. From all the possible combinations, it is clear that inference (Some P are S) is true. Inference (Some S are not P) is true from combinations (i) and (ii) but it is not true from combinations (iii) and (iv). Therefore, inference (Some S are not P) is not a valid inference drawn from the above proposition."
+    },
+    {
+      "number": 4,
+      "solution": "O-Type—Some S are not P\nFrom this proposition, no immediate inference can be drawn. Let us discuss this proposition in the light of Venn-diagram representation."
+    }
+  ],
+  "answers": [],
+  "_page": 1152
+}

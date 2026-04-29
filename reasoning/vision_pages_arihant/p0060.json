@@ -1,0 +1,367 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "Each of these questions, consists of a pair of words bearing a certain relationship. From amongst the alternative, pick up the pair that best illustrates a similar relationship.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "In each of the following questions there are two blanks marked I and II. The words to fill in these blanks are given against I as (A,B,C,D) and II as (P,Q,R,S) respectively. The right words to fill in these blanks are given as four alternatives. The words on either side of the sign (: :) have a similar relationship. The alternative which signifies this relationship is your answer.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "There are two pairs, the first pair follows some relationship. Use this relationship to find the analogy of the second pair.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 133,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Sunrise : Sunset",
+      "choices": {
+        "a": "Dawn : Twilight",
+        "b": "Noon : Midnight",
+        "c": "Morning : Night",
+        "d": "Energetic : Lazy"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 134,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "River : Ocean",
+      "choices": {
+        "a": "Child : School",
+        "b": "Book : Library",
+        "c": "Lane : Road",
+        "d": "Cloth : Body"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 135,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Glove : Hand",
+      "choices": {
+        "a": "Neck : Collar",
+        "b": "Tie : Shirt",
+        "c": "Socks : Feet",
+        "d": "Coat : Pocket"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 136,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Sound : Muffled",
+      "choices": {
+        "a": "Moisture : Humid",
+        "b": "Colour : Faded",
+        "c": "Despair : Anger",
+        "d": "Odour : Pungent"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 137,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "ACAZX : DFDWU : : GIGTR : ?",
+      "choices": {
+        "a": "JKJQO",
+        "b": "JLJQO",
+        "c": "KJJQQ",
+        "d": "JLJOP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 138,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "123 : 132 : : 235 : ?",
+      "choices": {
+        "a": "253",
+        "b": "253",
+        "c": "352",
+        "d": "252"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 139,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "LOM : NMK : : PKI : ?",
+      "choices": {
+        "a": "RIH",
+        "b": "SHG",
+        "c": "RIG",
+        "d": "RHG"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 140,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "'Carnivorous is related to 'Panther' in the same way as 'Herbivorous' is related to",
+      "choices": {
+        "a": "Tiger",
+        "b": "Lion",
+        "c": "Leopard",
+        "d": "Buffalo"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 141,
+      "passage_index": 0,
+      "seq_in_passage": 9,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "ABCD is related to OPQR in the same way as WXYZ is related to",
+      "choices": {
+        "a": "EFGH",
+        "b": "STUV",
+        "c": "KLMN",
+        "d": "QRST"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 142,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "double_analogy",
+      "subtopic_name": "Double Analogy",
+      "body": "I : Increase : : Descend : II",
+      "choices": {
+        "a": "AR",
+        "b": "RB",
+        "c": "CP",
+        "d": "DQ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 143,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "double_analogy",
+      "subtopic_name": "Double Analogy",
+      "body": "Modern : I : : II : Old",
+      "choices": {
+        "a": "AQ",
+        "b": "AS",
+        "c": "BP",
+        "d": "CR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 144,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "double_analogy",
+      "subtopic_name": "Double Analogy",
+      "body": "Part : I : : Class : II",
+      "choices": {
+        "a": "AR",
+        "b": "BQ",
+        "c": "CP",
+        "d": "DS"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 145,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "double_analogy",
+      "subtopic_name": "Double Analogy",
+      "body": "Summit : Apex : : I : II",
+      "choices": {
+        "a": "AQ",
+        "b": "BP",
+        "c": "DS",
+        "d": "CR"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 146,
+      "passage_index": 0,
+      "seq_in_passage": 10,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "'Jackal' is related to 'Carnivorous in the same way as 'Goat' is related to",
+      "choices": {
+        "a": "Omnivorous",
+        "b": "Carnivorous",
+        "c": "Herbivorous",
+        "d": "Multivorous"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 147,
+      "passage_index": 0,
+      "seq_in_passage": 11,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "RADIO : UCHKT : : AUDIO : ?",
+      "choices": {
+        "a": "CVHKT",
+        "b": "BWHKT",
+        "c": "DXHKT",
+        "d": "DWHKT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 148,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Rectangle : Pentagon",
+      "choices": {
+        "a": "Triangle : Rectangle",
+        "b": "Diagonal : Perimeter",
+        "c": "Side : Angle",
+        "d": "Circle : Square"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 149,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_relationship",
+      "subtopic_name": "Word Relationship",
+      "body": "Simmer : Boil",
+      "choices": {
+        "a": "Glide : Drift",
+        "b": "Drizzle : Downpour",
+        "c": "Gambol : Play",
+        "d": "Stagnate : Flow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 60
+}

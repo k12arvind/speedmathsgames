@@ -1,0 +1,68 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 15,
+      "solution": "Method I: Some folders are boxes. Some boxes are bags. All bags are containers. Some bags are sacks. Conclusion I is invalid. From Statements 2 and 3, I + A = I-type conclusion ∴ Some boxes are containers = Conclusion II from Statements 3 and 4 are arranging them, Some sacks are bags. All bags are containers. ∴ I + A = I-type containers = Conclusion III Hence, Conclusions II and III follow"
+    },
+    {
+      "number": 16,
+      "solution": "Some insects are pests. All pests are birds. No bird is amphibian. All amphibians are animals. From Statements 3 and 4, E + A = OR type conclusion Some animals are not birds. So, Conclusion I does not follow. From Statements 1 and 2, I + A = I-type conclusion ∴ Some insects are birds = Conclusion II From Statements 2 and 3, A + E = E-type conclusion No pests are amphibians = Conclusion III Hence, Conclusion II and III follow"
+    },
+    {
+      "number": 17,
+      "solution": "Conclusions: I. No plant is bud. II. Some plants are flowers. III. Some buds are fruits."
+    },
+    {
+      "number": 18,
+      "solution": "Conclusions: I. Some bangles are rings. II. All rings are diamonds. III. All diamonds are bangles."
+    },
+    {
+      "number": 19,
+      "solution": "Conclusions: I. All cell phones are tables. II. Some chairs are computers. III. No chair is computer."
+    },
+    {
+      "number": 20,
+      "solution": "Conclusions: I. All rocks are rivers. II. Some hills are canals. III. Some rivers are canals."
+    },
+    {
+      "number": 21,
+      "solution": "Conclusions: I. No glass is plate. II. Some balls are books. III. All plates are balls."
+    }
+  ],
+  "answers": [
+    {
+      "number": 15,
+      "correct": "c"
+    },
+    {
+      "number": 16,
+      "correct": "d"
+    },
+    {
+      "number": 17,
+      "correct": "c"
+    },
+    {
+      "number": 18,
+      "correct": "c"
+    },
+    {
+      "number": 19,
+      "correct": "c"
+    },
+    {
+      "number": 20,
+      "correct": "e"
+    },
+    {
+      "number": 21,
+      "correct": "c"
+    }
+  ],
+  "_page": 1193
+}

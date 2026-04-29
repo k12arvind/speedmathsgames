@@ -1,0 +1,93 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Example Nos. 1-4) In each of the following questions, a statement is followed by two Conclusions I and II. Give answer (a) if only Conclusion I follows (b) if only Conclusion II follows (c) if either I or II follows (d) if neither I nor II follows (e) if both I and II follow",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "one_statement_two_conclusions",
+      "subtopic_name": "One Statement with Two Conclusions",
+      "body": "Statement: Parents are prepared to pay any price for an elite education to their children. Conclusions: I. All parents these days are very well off. II. Parents have an obsessive passion for perfect development of their children through good schooling.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "one_statement_two_conclusions",
+      "subtopic_name": "One Statement with Two Conclusions",
+      "body": "Statement: Interview panel may select a student who is neither possessing the abilities of desired level nor any value and assumptions. Conclusions: I. Inclusion of experts in interview panel does not ensure that the selection will be made properly. II. Interview procedure of admission has some limitations.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": "e",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "one_statement_two_conclusions",
+      "subtopic_name": "One Statement with Two Conclusions",
+      "body": "Statement: The constitutional amendment carried out just last month prohibits the employment of child labour in any organisation. Conclusions: I. The employees must now abide by this amendment to the constitution. II. Children below 14 yr of age will now be engaged in acquiring education.",
+      "choices": {
+        "a": "if only Conclusion I follows",
+        "b": "if only Conclusion II follows",
+        "c": "if either I or II follows",
+        "d": "if neither I nor II follows",
+        "e": "if both I and II follow"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "It may be concluded from the statement that since parents want a perfect development of their children through good schooling, therefore they are prepared to pay any price for a good education but the statement does not give sense of the parents being very well off. Hence, only Conclusion II follows."
+    },
+    {
+      "number": 2,
+      "solution": "The statement clearly means that inclusion of experts does not ensure proper selection. It also indicates limitation of interview procedure for admission. Hence, both the conclusions follow."
+    },
+    {
+      "number": 3,
+      "solution": "It is clearly deduced from the statement that consequent upon the amendment prohibiting the child labour, the employees must abide by the amendment but it is not mentioned that the amendment gives any provision for acquiring education. Hence, only Conclusion I follows."
+    }
+  ],
+  "answers": [],
+  "_page": 1071
+}

@@ -1,0 +1,220 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [],
+  "questions": [
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All keys are locks. All locks are bangles. All bangles are cars. [Dena Bank (PO) 2010]\nConclusions: I. Some cars are locks. II. Some bangles are keys. III. Some cars are keys.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I and II follow",
+        "c": "I and III follow",
+        "d": "II and III follow",
+        "e": "All I, II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All fruits are leaves. Some leaves are trees. No tree is house. [Dena Bank (PO) 2010]\nConclusions: I. Some houses are fruits. II. Some trees are fruits. III. No house is a fruit.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Either I or III follows",
+        "e": "None follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All tables are mirrors. Some mirrors are chairs. All chairs are glasses. [Dena Bank (PO) 2010]\nConclusions: I. Some glasses are mirrors. II. Some chairs are tables. III. Some mirrors are tables.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "II and III follow",
+        "c": "I and III follow",
+        "d": "All I, II and III follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All calculators are boxes. All boxes are taps. Some taps are machines. [Dena Bank (PO) 2010]\nConclusions: I. Some machines are boxes. II. Some taps are calculators. III. Some boxes are calculators.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "I and III follow",
+        "c": "II and III follow",
+        "d": "All I, II and III follow",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some books are papers. Some papers are desks. Some desks are chairs. [UCO Bank (PO) 2008]\nConclusions: I. Some books are desks. II. Some papers are chairs. III. Some books are chairs.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "I and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some pots are buckets. All buckets are tubs. All tubs are drums. [UCO Bank (PO) 2008]\nConclusions: I. Some drums are pots. II. All tubs are buckets. III. Some drums are buckets.",
+      "choices": {
+        "a": "I and II follows",
+        "b": "I and III follow",
+        "c": "II and III follow",
+        "d": "All follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All pins are bags. All chalks are bags. All needles are bags. [UCO Bank (PO) 2008]\nConclusions: I. Some needles are pins. II. Some chalks are needles. III. No needle is pin.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only III follows",
+        "c": "Either I or III follows",
+        "d": "Either I or III and II follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some buses are trucks. Some trucks are boats. No boat is jeep. [UCO Bank (PO) 2008]\nConclusions: I. Some jeeps are buses. II. Some boats are buses. III. Some jeeps are trucks.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All flowers are trees. All trees are jungles. No jungle is hill. [Andhra Bank (PO) 2008]\nConclusions: I. No flower is hill. II. No tree is hill. III. Some jungles are flowers.",
+      "choices": {
+        "a": "None follows",
+        "b": "I and II follow",
+        "c": "I and III follow",
+        "d": "II and III follow",
+        "e": "All I, II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some uniforms are covers. All covers are papers. All papers are bags. [CMAT 2013]\nConclusions: I. All covers are bags. II. Some bags are covers, papers and uniforms. III. Some uniforms are not papers.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "I and II follow",
+        "c": "Only III follow",
+        "d": "All I, II and III follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1174
+}

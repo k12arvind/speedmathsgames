@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [
+    {
+      "passage_text": "Under this pattern, letters/numbers are given and their codes are given right under them. Candidates are required to find out code for a particular letter group/word/number according to the given conditions.",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "(d) We have, DOCTOR ⇒ okjakv",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "(b) We have, WOOD ⇒ gkko",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "(d) We have, TODAY ⇒ akoli",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "(c) We have, ROSE ⇒ vkpb",
+      "choices": {},
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "In the question below, is given a group of letters followed by four combinations of digits/symbols. You have to find out which of the combinations correctly represents the group of letters based on the following coding system and the conditions that follow and mark your answer accordingly. Letter: M J R A D B W Z P E I H G U K Digits/Symbol code: 8 4 @ 9 c 1 2 $ 3 # 5 6 % 7 ★ Conditions (i) If both first and last letters are vowels, their codes are to be interchanged. (ii) If the first letter is a consonant and the last letter is a vowel, both are to be coded as the code for the vowel. (iii) If the first letter is a vowel and the last letter is a consonant, both are to be coded as the code for the consonant. Find the code for 'IBHURE'.",
+      "choices": {
+        "a": "#614@5",
+        "b": "5164@%",
+        "c": "%164@#",
+        "d": "#164@5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "conditional_coding",
+      "subtopic_name": "Conditional Coding",
+      "body": "In the question below, is given a group of numbers followed by four combinations of letters/symbols. You have to find out which of the combinations correctly represents the group of numbers based on the following coding system and the conditions that follow and mark your answer accordingly. Digit: 3 8 0 7 4 6 9 2 5 1 Code: H S R A M % L K E @ Conditions (i) If a number begins and ends with a non-zero odd digit, then the first and the last digits are to be coded as Y and #, respectively. (ii) If a number begins and ends with an even digit (including zero), then the first and the last digits are to be coded as B and X, respectively. What will be the code for 764981?",
+      "choices": {
+        "a": "A % M L $ @",
+        "b": "Y % M L $ @",
+        "c": "Y % M L $ #",
+        "d": "A % M L $ #"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 27,
+      "solution": "When condition is not applied, the coding is done as follows. I B H U R E 5 1 6 4 @ # But here the 1st letter (I) and the last letter (E) are vowels and therefore condition (i) is applied here. As condition (i) is applied here, I and E will interchange their codes. ∴ Code for IBHURE ⇒ #164@5"
+    }
+  ],
+  "answers": [],
+  "_page": 188
+}

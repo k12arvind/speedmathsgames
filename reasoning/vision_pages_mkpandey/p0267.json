@@ -1,0 +1,117 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 13-17): Study the following information to answer the given questions. A word arrangement machine when given an input line of words, rearranges them following a particular rule in each step. The following is an illustration of the input and the steps of rearrangement. Input: going but for crept te light sir Step I: crept going but for te light sir Step II: crept going light but for te sir Step III: crept going light but for sir te (Step III is the last step for this input) As per the rules followed in the above steps, find out in the given question the appropriate step for the given input.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "sequence_steps",
+      "subtopic_name": "Sequence Steps",
+      "body": "If following is the second step for an input, what will be the fourth step? Step II: 620, 415, 344, 537, 787, 577",
+      "choices": {
+        "a": "620, 415, 344, 537, 634, 787, 977",
+        "b": "620, 415, 344, 634, 537, 787, 977",
+        "c": "620, 415, 344, 634, 787, 537, 977",
+        "d": "Can't be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "sequence_steps",
+      "subtopic_name": "Sequence Steps",
+      "body": "Following is the step III for an input. What will be the first step for this input? Step III: 432, 433, 542, 633, 542, 574",
+      "choices": {
+        "a": "666, 542, 432, 734, 433, 574, 335",
+        "b": "542, 666, 734, 433, 432, 574, 335",
+        "c": "355, 574, 433, 432, 734, 666, 542",
+        "d": "Can't be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "sequence_steps",
+      "subtopic_name": "Sequence Steps",
+      "body": "Which of the following is the last step for the following input? Input: 473, 442, 735, 542, 367, 248, 549",
+      "choices": {
+        "a": "234, 442, 542, 735, 367, 549, 234, 442, 542, 735, 473, 367, 248",
+        "b": "234, 442, 542, 473, 735, 367, 549, 234, 442, 542, 735, 367, 248",
+        "c": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "sequence_steps",
+      "subtopic_name": "Sequence Steps",
+      "body": "What will be the third step for the following input? Input: 653, 963, 754, 345, 364, 861, 541",
+      "choices": {
+        "a": "541, 345, 754, 963, 364, 816, 653",
+        "b": "541, 345, 364, 963, 754, 861, 653",
+        "c": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "word_arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Input: the in car as he may me Which of the following will be the third step for this input?",
+      "choices": {
+        "a": "car the in as he may me",
+        "b": "car as may he the in me",
+        "c": "car may the as in he me",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 267
+}

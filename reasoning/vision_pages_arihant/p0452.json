@@ -1,0 +1,104 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Direction and Distance",
+  "passages": [],
+  "questions": [
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "shadow_direction",
+      "subtopic_name": "Shadow Direction",
+      "body": "One evening before sunset, two friends Raman and Arjun were talking to each other face to face. If Raman's shadow was exactly to his left side, which direction was Arjun facing?",
+      "choices": {
+        "a": "West",
+        "b": "East",
+        "c": "North",
+        "d": "South"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "clock_based_directions",
+      "subtopic_name": "Clock Based Directions",
+      "body": "The time on the watch is 9:15 and the hour hand points towards West. The direction of the minute hand is",
+      "choices": {
+        "a": "North",
+        "b": "South",
+        "c": "East",
+        "d": "West"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "clock_based_directions",
+      "subtopic_name": "Clock Based Directions",
+      "body": "A clock is so placed that at 12 noon its minute hand points towards North-East. In which direction does its hour hand point at 1:30 pm?",
+      "choices": {
+        "a": "North",
+        "b": "South",
+        "c": "East",
+        "d": "West"
+      },
+      "correct": "c",
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction and Distance",
+      "subtopic_code": "finding_relative_directions",
+      "subtopic_name": "Finding Relative Directions",
+      "body": "Samar wants to go college which is situated in a direction opposite to that of a mall. He starts from his house, which is in the East and comes at a four way place (chauraha). His left side road goes to the mall and straight in front is the railway station. In which direction is the college located?",
+      "choices": {
+        "a": "North",
+        "b": "North-East",
+        "c": "South",
+        "d": "East"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 8,
+      "solution": "According to the question, Raman → Raman's Shadow (left side). So, Arjun was facing North."
+    },
+    {
+      "number": 9,
+      "solution": "According to the question, the direction diagram will be as follows. So, when hour hand is pointing towards West, then the minute hand will be pointing towards East at 9:15."
+    },
+    {
+      "number": 10,
+      "solution": "In this question, the clock is placed, so that at 12 noon its minute hand point towards North-East. We know that, minute and hour hand point in the same direction at 12 noon. Therefore, the clock will look some what like this. At 1:30 pm, the hour hand will point in the East direction."
+    }
+  ],
+  "answers": [],
+  "_page": 452
+}

@@ -1,0 +1,15 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 338,
+      "solution": "Performing Step I: An illustration\n\nConsider Ex. 1. Here, we take all the four conclusions one by one.\nConclusion I. We first take conclusion I. Here, the subject is 'cars' and the predicate is 'boxes'. Now, we see that 'cars' is in premise A and 'boxes' is in statement A. Now, look at premise B. Here, we see that 'cars' appears in premise A and B.\nDo they have a common term? Yes, the common term is 'cars'. Therefore, A and B are our two relevant statements for conclusion I.\n\nConclusion II. Now, we take conclusion II. Here, the subject is 'chocolates' and the predicate 'docks'. Now, we see that 'chocolates' appears in statement 'C'. But 'docks' appears in both A and B. So, which of the two should we take? We should take B because (i) there is a term common between A and C, when B and C.\n\nConclusion III. Now, we take conclusion III. Here, the subject is 'cars' and the predicate 'chocolates'. We see that 'cars' appears in 'B' and 'chocolates' appears in 'C'. Now, is there any common term between 'B'and 'C'? We see that there is no term common between 'B' and 'C'. So, we will have to use a chain. As formulae for case 6 because all the three statements are relevant here.\n\nConclusion IV. Same as in conclusion III.\nNote: It is very important that you understand this first step. If necessary re-read the entire matter once again before going further.\n\nStep II:\nIn syllogism, there are four types of statements, viz. A, E, I and O. When two statements are given and they are arranged in such a way that the predicate of the first sentence and the subject of the second sentence is the same then the following six formulae are applicable.\nA+A=A    A+E=E    I+I=O\nA+E=E    E+A=O+    E+I=O+\n\nNote: O+ means \"O reversed.\" In this case, the predicate and the subject of the conclusion appear in reverse order. For example, \"No bomb is cook\" = \"Some cooks are bullets\" is of the form E + I and it will give a conclusion \"O reversed\" i.e. \"Some bullets are not bombs\". It will not be \"Some bombs are not bullets\".\n\nThus, in the second step, you should apply the formulae to get conclusions. The second step should be performed in the following order.\n(i) Take a given conclusion. See its subject and predicate. Now, by using the first step, find out how many and which statements are relevant for this conclusion.\n(ii) If two statements are relevant for a given conclusion, write them in such an order that the predicate of the first sentence and the subject of the second sentence are the same."
+    }
+  ],
+  "answers": [],
+  "_page": 176
+}

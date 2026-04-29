@@ -1,0 +1,122 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following information carefully and answer the questions given below.\nSix persons A, B, C, D, E and F are sitting in two rows, three in each.\nE is not at the end of any row.\nD is second to the left of F.\nC, the neighbour of E, is sitting diagonally opposite to D.\nB is the neighbour of F.",
+      "has_figure": false,
+      "topic_code": "seating_arrangement"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Seating Arrangement",
+      "body": "Which of the following are sitting diagonally opposite to each other?\n(a) F and C    (b) D and A    (c) A and C\n(d) A and F    (e) A and B",
+      "choices": {
+        "a": "F and C",
+        "b": "D and A",
+        "c": "A and C",
+        "d": "A and F",
+        "e": "A and B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Seating Arrangement",
+      "body": "Who is facing B?\n(a) A    (b) C    (c) D\n(d) E    (e) F",
+      "choices": {
+        "a": "A",
+        "b": "C",
+        "c": "D",
+        "d": "E",
+        "e": "F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Seating Arrangement",
+      "body": "Which of the following are in the same row?\n(a) A and E    (b) E and D    (c) C and B\n(d) A and B    (e) C and F",
+      "choices": {
+        "a": "A and E",
+        "b": "E and D",
+        "c": "C and B",
+        "d": "A and B",
+        "e": "C and F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Seating Arrangement",
+      "body": "Which of the following are in one of the two rows?\n(a) FBC    (b) CEB    (c) DBF\n(d) AEF    (e) ABE",
+      "choices": {
+        "a": "FBC",
+        "b": "CEB",
+        "c": "DBF",
+        "d": "AEF",
+        "e": "ABE"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "seating_arrangement",
+      "topic_name": "Seating Arrangement",
+      "subtopic_code": "linear_arrangement",
+      "subtopic_name": "Linear Seating Arrangement",
+      "body": "After interchanging seat with F, who will be the neighbours of D in the new positions?\n(a) C and A    (b) E and B    (c) Only B\n(d) Only A    (e) Only C",
+      "choices": {
+        "a": "C and A",
+        "b": "E and B",
+        "c": "Only B",
+        "d": "Only A",
+        "e": "Only C"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 307
+}

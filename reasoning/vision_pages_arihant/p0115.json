@@ -1,0 +1,217 @@
+{
+  "page_type": "questions",
+  "chapter_number": 3,
+  "chapter_title": "Rule Detection",
+  "passages": [
+    {
+      "passage_text": "In this type of questions of alphabets, four options are given as the group of letters.Out of these four groups, candidates have to choose that one which follows a certain pattern in a particular manner. That pattern could be in increasing/decreasing order of same/different number.",
+      "has_figure": false,
+      "topic_code": "alphabet_number_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "The letters skipped in between the adjacent letters in the series are followed by equal space. Which of the following series observes this rule?",
+      "choices": {
+        "a": "HKNGSW",
+        "b": "RYZDFG",
+        "c": "RYZDHL",
+        "d": "SUXADF"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Number of letters skipped in between adjacent letters in the series is two. Which one of the following alternatives observes this rule?",
+      "choices": {
+        "a": "SPMU",
+        "b": "TSPNKH",
+        "c": "URQLIF",
+        "d": "WTQNKJ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Select that series in which letters are not according to a general rule.",
+      "choices": {
+        "a": "CEGJKM",
+        "b": "MORTYX",
+        "c": "PRTVXZ",
+        "d": "ZBDFHJ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Number of the letters skipped in between adjacent letters of the series are increased by one. Which of the following series observes this rule?",
+      "choices": {
+        "a": "OKQDC",
+        "b": "OMJFA",
+        "c": "OMQKG",
+        "d": "OMLKJ"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Select the series in which the letters skipped in between adjacent letters decrease in order.",
+      "choices": {
+        "a": "AGMRV",
+        "b": "HNSWA",
+        "c": "NSXCH",
+        "d": "SYDHK"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Number of letters skipped in between adjacent letters in the series starting from behind decreases by one. Which of the following series observes this rule?",
+      "choices": {
+        "a": "DBPUY",
+        "b": "DBUYP",
+        "c": "DBYUP",
+        "d": "DBYUP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Number of letters skipped in between adjacent letters in the series is increased by one. Which of the following alternatives observes this rule?",
+      "choices": {
+        "a": "KMPTY",
+        "b": "IJKOT",
+        "c": "HJMQT",
+        "d": "DFIJK"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "In which of the following letters sequences, there is a letter leaving three letters of the alphabet in between after the letters placed at odd-numbered positions and leaving two letters of the alphabet in order after the letters placed at even-numbered positions?",
+      "choices": {
+        "a": "ADFIKN",
+        "b": "BEGJLN",
+        "c": "CFHKLO",
+        "d": "DFIKNP"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Select that series in which letters are according to a general rule.",
+      "choices": {
+        "a": "NQUXBE",
+        "b": "NQUXAE",
+        "c": "NRUXBE",
+        "d": "NQUYBE"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet Number Sequence",
+      "subtopic_code": "rule_detection",
+      "subtopic_name": "Rule Detection",
+      "body": "Which of the following series observes the rule, \"Skip in between adjacent letters, increasing one letter more each time to build a set of letters\"?",
+      "choices": {
+        "a": "SUXBGN",
+        "b": "SUXBGM",
+        "c": "SUYBGM",
+        "d": "SVXBGN"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 115
+}

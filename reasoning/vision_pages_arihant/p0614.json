@@ -1,0 +1,232 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Puzzles",
+  "passages": [
+    {
+      "passage_text": "In a local pet store, seven puppies wait to be introduced to their new owners. The puppies named as Ashlen, Blackley, Custard, Daffy, Earl, Fala and Gabino are all kept in two available pen. Pen 1, holds three puppies and pen 2 holds four puppies.\nI. If Gabino is kept in pen 1, then Daffy is not kept in pen 2.\nII. If Daffy is not kept in pen 2, then Gabino is kept in pen 1.\nIII. If Ashlen is kept in pen 2, then Blackley is not kept in pen 2.\nIV. If Blackley is kept in pen 1, then Ashlen is not kept in pen 1.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "At an electronic data processing unit, five out of the eight programme sets P, Q, R, S, T, U, V and W are to be operated daily. On anyone day, except for 1st day of the month, only three of the programme sets must be the ones that were operated on the previous day. The programme operation must also satisfy the following conditions.\nI. If programme P is to be operated on a day, V cannot be operated on that day.\nII. If Q is to be operated on a day, T must be one of the programmes to be operated after Q.\nIII. If R is to be operated on a day, V must be one of the programmes to be operated after R.\nIV. The last programme to be operated on any day must be either S or U.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 25,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "general_puzzle",
+      "subtopic_name": "General Puzzle",
+      "body": "Who is travelling with W?",
+      "choices": {
+        "a": "Only Q",
+        "b": "Only P",
+        "c": "Both P and Q",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "general_puzzle",
+      "subtopic_name": "General Puzzle",
+      "body": "Members of which of the following combinations are travelling in Honda City?",
+      "choices": {
+        "a": "PRS",
+        "b": "PQW",
+        "c": "PWS",
+        "d": "Data inadequate",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "seating_arrangement",
+      "subtopic_name": "Seating Arrangement",
+      "body": "Which of the following group of puppies could be in pen 2?",
+      "choices": {
+        "a": "Gabino, Ashlen, Custard, Earl",
+        "b": "Blackley, Gabino, Ashlen, Daffy",
+        "c": "Ashlen, Gabino, Earl, Custard",
+        "d": "Blackley, Custard, Earl, Fala",
+        "e": "Gabino, Ashlen, Fala, Earl"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "seating_arrangement",
+      "subtopic_name": "Seating Arrangement",
+      "body": "If Earl shares a pen with Fala, then which of the following must be true?",
+      "choices": {
+        "a": "Gabino is in pen 1 with Daffy",
+        "b": "Custard is in pen 2",
+        "c": "Blackley is in pen 2 and Fala is in pen 1",
+        "d": "Earl is in pen 1",
+        "e": "Gabino shares a pen with Blackley"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 29,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "seating_arrangement",
+      "subtopic_name": "Seating Arrangement",
+      "body": "If Earl and Fala are in different pens, then which of the following must not be true?",
+      "choices": {
+        "a": "Fala shares a pen with Custard",
+        "b": "Gabino shares a pen with Ashlen",
+        "c": "Earl is in a higher numbered pen than Blackley",
+        "d": "Blackley shares pen 2 with Earl and Daffy",
+        "e": "Custard is in a higher numbered pen with Blackley"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 30,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_sequence",
+      "subtopic_name": "Logical Sequence",
+      "body": "Which of the following is true of any day's valid programme set operation?",
+      "choices": {
+        "a": "P cannot be operated at 3rd place",
+        "b": "Q cannot be operated at 3rd place",
+        "c": "T cannot be operated at 3rd place",
+        "d": "R cannot be operated at 4th place",
+        "e": "U cannot be operated at 4th place"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 31,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_sequence",
+      "subtopic_name": "Logical Sequence",
+      "body": "If the programme sets R and W are to be operated on 1st day, which of the following could be the other programmes on that day?",
+      "choices": {
+        "a": "P, T, U",
+        "b": "Q, S, V",
+        "c": "Q, T, V",
+        "d": "T, S, U",
+        "e": "V, S, U"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 32,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_sequence",
+      "subtopic_name": "Logical Sequence",
+      "body": "If the programme sets operated on a day are P, Q, W, T and U, then each of the following could be the next day's programme set except",
+      "choices": {
+        "a": "Q, R, V, T, U",
+        "b": "Q, T, V, W, S",
+        "c": "W, T, U, V, S",
+        "d": "W, R, V, T, U",
+        "e": "W, T, S, P, U"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 33,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_sequence",
+      "subtopic_name": "Logical Sequence",
+      "body": "Which of the following could be the set of programme to be operated on 1st day of a month?",
+      "choices": {
+        "a": "P, R, V, S, U",
+        "b": "Q, S, R, V, U",
+        "c": "T, U, R, V, S",
+        "d": "U, Q, S, T, W",
+        "e": "V, Q, R, T, S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 34,
+      "passage_index": 1,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "logical_sequence",
+      "subtopic_name": "Logical Sequence",
+      "body": "If R is operated at 3rd place in a sequence, which of the following cannot be 2nd programme in that sequence?",
+      "choices": {
+        "a": "Q",
+        "b": "S",
+        "c": "T",
+        "d": "U",
+        "e": "W"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 614
+}

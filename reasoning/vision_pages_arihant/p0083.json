@@ -1,0 +1,183 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos 62-63) Choose the odd letter pair/group in each of the following questions.",
+      "has_figure": false,
+      "topic_code": "classification"
+    }
+  ],
+  "questions": [
+    {
+      "number": 62,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_one_out",
+      "subtopic_name": "Odd One Out",
+      "body": "",
+      "choices": {
+        "a": "B-F",
+        "b": "J-N",
+        "c": "M-Q",
+        "d": "T-U"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 63,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "classification",
+      "topic_name": "Classification",
+      "subtopic_code": "odd_one_out",
+      "subtopic_name": "Odd One Out",
+      "body": "",
+      "choices": {
+        "a": "E-J-O-T",
+        "b": "C-F-I-L",
+        "c": "B-D-F-H",
+        "d": "A-B-E-F"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(a) All others are consonants."
+    },
+    {
+      "number": 2,
+      "solution": "(c) All others are vowels."
+    },
+    {
+      "number": 3,
+      "solution": "(b) All others are made of curved lines."
+    },
+    {
+      "number": 4,
+      "solution": "(d) Except B, all are the vowels."
+    },
+    {
+      "number": 5,
+      "solution": "(c) All except 'KLN' have a difference of two positions between first and second; second and third."
+    },
+    {
+      "number": 6,
+      "solution": "(c) Clearly, 'EJU' is different from the other options because the second difference is twice the first difference."
+    },
+    {
+      "number": 7,
+      "solution": "(a) All others have two vowels."
+    },
+    {
+      "number": 8,
+      "solution": "(b) The pattern used for classification is placement of alphabets in the order (- 3 - 3 - 3). Since, option (b) does not follow the pattern, it is odd in the group."
+    },
+    {
+      "number": 9,
+      "solution": "(b) Except QRQP all others have the same gap between the adjacent letters. Clearly, QRQP is different from other options."
+    },
+    {
+      "number": 10,
+      "solution": "(d) In all other groups, there is a gap of one letter between first and third letters."
+    },
+    {
+      "number": 11,
+      "solution": "(c) In all other groups, there is a gap of two letters as in alphabet between the second and the third letters."
+    },
+    {
+      "number": 12,
+      "solution": "(b) Clearly, 'JKLM' is different from the others."
+    },
+    {
+      "number": 13,
+      "solution": "(b) In all other groups, there is a gap of one letter as in the alphabet between second and third letters."
+    },
+    {
+      "number": 14,
+      "solution": "(b) In all other groups, there is a gap of one letter as in the alphabet between first and second letters."
+    },
+    {
+      "number": 15,
+      "solution": "(c) In all other groups, there is a gap of two letters as in the alphabet between third and fourth letters."
+    },
+    {
+      "number": 16,
+      "solution": "(c) Therefore, STVU is different because other options have consecutive letters."
+    },
+    {
+      "number": 17,
+      "solution": "(c) In all other groups, number in between is the sum of positions of both letters in the alphabet."
+    },
+    {
+      "number": 18,
+      "solution": "(a) In all other groups, there is a gap of two letters as in the alphabet between second and third letters."
+    }
+  ],
+  "answers": [
+    {
+      "number": 49,
+      "correct": "a"
+    },
+    {
+      "number": 50,
+      "correct": "a"
+    },
+    {
+      "number": 51,
+      "correct": "a"
+    },
+    {
+      "number": 52,
+      "correct": "a"
+    },
+    {
+      "number": 53,
+      "correct": "a"
+    },
+    {
+      "number": 54,
+      "correct": "a"
+    },
+    {
+      "number": 55,
+      "correct": "a"
+    },
+    {
+      "number": 56,
+      "correct": "a"
+    },
+    {
+      "number": 57,
+      "correct": "a"
+    },
+    {
+      "number": 58,
+      "correct": "a"
+    },
+    {
+      "number": 59,
+      "correct": "a"
+    },
+    {
+      "number": 60,
+      "correct": "a"
+    },
+    {
+      "number": 61,
+      "correct": "a"
+    }
+  ],
+  "_page": 83
+}

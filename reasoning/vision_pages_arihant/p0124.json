@@ -1,0 +1,266 @@
+{
+  "page_type": "questions",
+  "chapter_number": 3,
+  "chapter_title": "Logical Alphabet and Number Sequence Test",
+  "passages": [],
+  "questions": [
+    {
+      "number": 26,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "position_based",
+      "subtopic_name": "Position Based Questions",
+      "body": "Which of the following is exactly in the middle between D and U in the given arrangement?",
+      "choices": {
+        "a": "%",
+        "b": "H",
+        "c": "9",
+        "d": "3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 27,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "grouping_pattern",
+      "subtopic_name": "Grouping Pattern",
+      "body": "Four of the following, three are alike in a certain way based on their position in the given arrangement and so form a group. Which is the one that does not belong to that group?",
+      "choices": {
+        "a": "P M 3",
+        "b": "K F E",
+        "c": "6 3 *",
+        "d": "7 D 4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 28,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "conditional_counting",
+      "subtopic_name": "Conditional Counting",
+      "body": "How many such symbols are there in the given arrangement each of which is immediately preceded by a number but not immediately followed by a consonant?",
+      "choices": {
+        "a": "None",
+        "b": "One",
+        "c": "Two",
+        "d": "Three"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "frequency_count",
+      "subtopic_name": "Frequency Count",
+      "body": "Which number has come maximum time in the following number series?\n5 4 3 3 5 4 8 8 3 2 5 3 6 5 5",
+      "choices": {
+        "a": "5",
+        "b": "4",
+        "c": "3",
+        "d": "2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "frequency_count",
+      "subtopic_name": "Frequency Count",
+      "body": "Which number comes least in the given series?\n8 4 6 7 3 4 3 7 8 3 4 4 5 6 3 4 6 4 3 4 8 [SSC (CGL) 2008]",
+      "choices": {
+        "a": "8",
+        "b": "7",
+        "c": "5",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "conditional_counting",
+      "subtopic_name": "Conditional Counting",
+      "body": "How many 4's are there in the series which comes between two 5's?\n3 4 4 5 4 5 4 2 1 4 5 4 5 7 4 5 4 5 [CBI (PO) 2011]",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "3",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "conditional_counting",
+      "subtopic_name": "Conditional Counting",
+      "body": "How many 7's are there in the given series which are immediately preceded by 6 but not immediately followed by 8?\n3 4 8 7 6 1 5 6 7 8 4 9 6 7 5 [SSC (CPO) 2008]",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "position_based",
+      "subtopic_name": "Position Based Questions",
+      "body": "Which digit comes in the middle of the given series?\n2 4 3 5 4 4 5 6 7 8 8 9 5 6 7 1 7",
+      "choices": {
+        "a": "5",
+        "b": "7",
+        "c": "6",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "series",
+      "topic_name": "Series",
+      "subtopic_code": "conditional_counting",
+      "subtopic_name": "Conditional Counting",
+      "body": "In the given number series, how many 4's are there which are immediately preceded by a prime number but not immediately followed by a prime number? [RBI Grade 'B' 2011]\n41 41 54 26 41 83 49 24 83 48 28 45 48 74 64 54",
+      "choices": {
+        "a": "6",
+        "b": "4",
+        "c": "3",
+        "d": "5",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "conditional_counting",
+      "subtopic_name": "Conditional Counting",
+      "body": "How many letters are immediately followed by L in the given letter series? [UP B.Ed. 2011]\nC P M L M M B L T L D E S L",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "3",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "conditional_counting",
+      "subtopic_name": "Conditional Counting",
+      "body": "How many times n comes before p in the given series? [RRB (ALP) 2010]\nm s t n p z x n p n p q y n p r a n p s t",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "alphabet_number_sequence",
+      "topic_name": "Alphabet and Number Sequence",
+      "subtopic_code": "conditional_counting",
+      "subtopic_name": "Conditional Counting",
+      "body": "In the following series, how many Ks are there which are immediately preceded by N and immediately followed by U? [SSC (CGL) 2011]\nA B C D K N L J M N K S T R Z N K U A N K U B W X N K L S",
+      "choices": {
+        "a": "6",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 26,
+      "solution": "Let us see\nD = 12th from the left\nU = 26th from the left\n∴ Middle letter between D and U = (12 + 26)/2 = 19th from left = 9"
+    },
+    {
+      "number": 27,
+      "solution": "As in all others the first and the third elements are consecutive ones in the given arrangement."
+    },
+    {
+      "number": 28,
+      "solution": "Let us see\nB 5 R 1 @ E K 4 F 7 © D A M 2 P 3 $ 9 H I W 8 % 6 U J $ V Q #\n✓ = Condition fulfilled    × = Condition not fulfilled\nClearly, there are three such symbols."
+    }
+  ],
+  "answers": [],
+  "_page": 124
+}

@@ -1,0 +1,23 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "The diagram shows no arrow leading to J. Which means that J cannot be contacted by anyone (though he can contact others). Every other spy can be contacted by at least one other spy."
+    },
+    {
+      "number": 7,
+      "solution": "The diagram shows that N can contact M, who in turn can contact P and O. Next, N can contact M: Then, O can contact both L and N: Finally, P can be contacted by M: With a 'network' set, any further conclusions that you might need to draw are already implicit in the diagram. For Example, J can have N relay a message to M, who in turn can relay the message to O. So, there is no need to look for further conclusions. Go to the questions. So, using just one intermediate contact, N can contact those two spies. O can contact only L and N, and N is the only one who can contact M: The modified diagram looks like this: On the actual test, you would black out O in your mind's eye. Our modified diagram shows that J is still able to get a message to P. The diagram shows that some of the other communications is possible. Trace with your finger if necessary. (a) J to N to M to P (no intermediaries) (b) L to O to N to M (no intermediaries) (c) M (to O) to N (one intermediary) (d) N (to M) to O (one intermediary) (e) O to N to M (one intermediary) Note: A communication from one spy to another can theoretically take two intermediaries, but the logic here stipulates that the message takes the shortest route. Part Q. is a bit tricky."
+    },
+    {
+      "number": 11,
+      "solution": "The modified diagram looks like this:"
+    }
+  ],
+  "answers": [],
+  "_page": 341
+}

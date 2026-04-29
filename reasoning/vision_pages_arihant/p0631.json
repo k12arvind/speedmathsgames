@@ -1,0 +1,267 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Study the following information carefully to answer the given questions. I. In a family of six persons, there are two couples. II. The lawyer is the head of the family and has only two sons Mukesh and Rakesh both teachers. III. Mrs Reena and her mother-in-law both are lawyers. IV. Mukesh's wife is a doctor and they have a son Ajay.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    },
+    {
+      "passage_text": "Read the following information carefully to answer these questions. Three friends Surinder, Varinder and Joginder wore shirts of black, blue and orange colours (not necessarily in that order) and pants of green, yellow and orange colours (not necessarily in that order). No person wore pant and shirt of the same colour. Further, it is given that • Surinder did not wear shirt of black colour. • Varinder did not wear shirt of blue colour. • Joginder did not wear shirt of orange colour. • Surinder did not wear pant of green colour. • Varinder wore pant of orange colour.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "general",
+      "topic_name": "General Reasoning",
+      "subtopic_code": "language_selection",
+      "subtopic_name": "Language Selection",
+      "body": "Choose the language that is least commonly used at the meeting.",
+      "choices": {
+        "a": "English",
+        "b": "French",
+        "c": "Japanese",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "general",
+      "topic_name": "General Reasoning",
+      "subtopic_code": "interpreter_selection",
+      "subtopic_name": "Interpreter Selection",
+      "body": "Which of the following can act as an interpreter when R3 and R4 wish to discuss?",
+      "choices": {
+        "a": "Only R1",
+        "b": "Only R2",
+        "c": "Only R5",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "general",
+      "topic_name": "General Reasoning",
+      "subtopic_code": "language_requirements",
+      "subtopic_name": "Language Requirements",
+      "body": "Suppose a sixth expert R6 joins into the session, so that maximum number of the earlier five is able to understand him, he should be fluent in",
+      "choices": {
+        "a": "English and French",
+        "b": "Japanese and Hindi",
+        "c": "English and Hindi",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "selection_grouping",
+      "subtopic_name": "Selection and Grouping",
+      "body": "The music director of a film wants to select four persons to work on 'different aspects of the composition of a piece of music. Seven persons are available for this work; they are Rohit, Tanya, Shobha, Kausha1, Kunal, Mukesh and Jaswant. Rohit and Tanya will not work together. Kunal and Shobha will not work together. Mukesh and Kunal want to work together. Which of the following is the most acceptable group of people that can be selected by the music director?",
+      "choices": {
+        "a": "Rohit, Shobha, Kunal and Kaushal",
+        "b": "Tanya, Kaushal, Shobha and Rohit",
+        "c": "Tanya, Mukesh, Kunal and Jaswant",
+        "d": "Shobha, Tanya, Rohit and Mukesh"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relationships",
+      "subtopic_name": "Family Relationships",
+      "body": "Which of the following is definitely a couple?",
+      "choices": {
+        "a": "Lawyer-Teacher",
+        "b": "Doctor-Lawyer",
+        "c": "Teacher-Teacher",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relationships",
+      "subtopic_name": "Family Relationships",
+      "body": "What is the profession of Rakesh's wife?",
+      "choices": {
+        "a": "Teacher",
+        "b": "Doctor",
+        "c": "Lawyer",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relationships",
+      "subtopic_name": "Family Relationships",
+      "body": "How many male members are there in the family?",
+      "choices": {
+        "a": "Two",
+        "b": "Three",
+        "c": "Four",
+        "d": "Cannot be determined",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relationships",
+      "subtopic_name": "Family Relationships",
+      "body": "What is/was Ajay's grandfather's occupation?",
+      "choices": {
+        "a": "Teacher",
+        "b": "Lawyer",
+        "c": "Doctor",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "family_relationships",
+      "subtopic_name": "Family Relationships",
+      "body": "What is the profession of Ajay?",
+      "choices": {
+        "a": "Teacher",
+        "b": "Lawyer",
+        "c": "Doctor",
+        "d": "Cannot be determined",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "color_matching",
+      "subtopic_name": "Color Matching",
+      "body": "What were the colours of pant and shirt wore by Joginder, respectively?",
+      "choices": {
+        "a": "Orange and black",
+        "b": "Yellow and black",
+        "c": "Green and blue",
+        "d": "Yellow and blue"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "color_matching",
+      "subtopic_name": "Color Matching",
+      "body": "What was the colour of the shirt wore by Varinder?",
+      "choices": {
+        "a": "Blue",
+        "b": "Orange",
+        "c": "Black",
+        "d": "Green"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Puzzles",
+      "subtopic_code": "color_matching",
+      "subtopic_name": "Color Matching",
+      "body": "What was the colour of the pant wore by Surinder?",
+      "choices": {
+        "a": "Orange",
+        "b": "Green",
+        "c": "Yellow",
+        "d": "Blue"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 631
+}

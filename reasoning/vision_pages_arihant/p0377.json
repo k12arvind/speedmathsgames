@@ -1,0 +1,171 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "relationship_representation",
+      "subtopic_name": "Relationship Representation",
+      "body": "Which of the following diagrams represents the correct relationship between Books, Novels and Dictionaries?",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "combination_representation",
+      "subtopic_name": "Combination Representation",
+      "body": "Which of the following combinations of circles best represents Athletes, Sprinters and Marathon runners? [NIFT (PG) 2013]",
+      "choices": {
+        "a": "(a)",
+        "b": "(b)",
+        "c": "(c)",
+        "d": "(d)"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "region_identification",
+      "subtopic_name": "Region Identification",
+      "body": "Find the region that represents those rural students who are not intelligent? [UP B.Ed. 2010]",
+      "choices": {
+        "a": "D",
+        "b": "A",
+        "c": "B",
+        "d": "G"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "intersection_analysis",
+      "subtopic_name": "Intersection Analysis",
+      "body": "In the following diagram, there are three circles intersecting one another. Each intersecting region represents a class of people. Each intersecting region has been denoted by a digit. Study the diagram carefully and answer the given question. [SSC (Multitasking) 2008] Find out those Engineers who are neither Indian nor Teacher.",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "6",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "region_identification",
+      "subtopic_name": "Region Identification",
+      "body": "In the given diagram, circle represents professionals, square represents dancers, triangle represents musicians and rectangle represents Europeans. Different regions in the diagram are numbered 1 to 11. Who among the following is neither a dancer nor a musician but is professional and not a European? [SSC (CGL) 2013]",
+      "choices": {
+        "a": "8",
+        "b": "11",
+        "c": "1",
+        "d": "10"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "number_analysis",
+      "subtopic_name": "Number Analysis",
+      "body": "In the diagram given below, N represents non-degree holders, D represents degree holders and C represents the computer programmers. Among these, which number indicates the programmers, who are neither degree holders nor non-degree holders?",
+      "choices": {
+        "a": "30",
+        "b": "5",
+        "c": "25",
+        "d": "12"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "number_analysis",
+      "subtopic_name": "Number Analysis",
+      "body": "How many educated people are employed? [SSC (10+2) 2012]",
+      "choices": {
+        "a": "18",
+        "b": "26",
+        "c": "24",
+        "d": "16"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagrams",
+      "subtopic_code": "region_identification",
+      "subtopic_name": "Region Identification",
+      "body": "In the above diagram, circle P represents hardworking people, circle Q represents intelligent people, circle R represents truthful people and circle S represents honest people. Which region represents the people who are intelligent, honest and truthful but not hardworking? [UPSC (CSAT) 2012]",
+      "choices": {
+        "a": "6",
+        "b": "7",
+        "c": "8",
+        "d": "11"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 377
+}

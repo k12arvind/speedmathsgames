@@ -1,0 +1,172 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "From the given three positions of a single dice, find the letter at the face opposite to the face having letter Q.",
+      "choices": {
+        "a": "P",
+        "b": "R",
+        "c": "S",
+        "d": "T"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "From the given three positions of a single dice, find the number of dots at the face opposite to the face having 5 dots.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "4",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "From the given three positions of a single dice, find the digit at the face opposite to the face having digit 4.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "A die has numbers 1, 2, 3, 4, 5 and 6 on its faces. Four positions of die are shown below. The number on the face opposite to the number 3, is",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "1",
+        "e": "2"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "From the given four positions of a single dice, find the digit at the face opposite to the face having digit 4.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "5"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "From the given four positions of a single dice, find the number of dots at the face opposite to the face having 6 dots.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "From the given four positions of a single dice, find the digit at the face opposite to the face having digit 4.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "5",
+        "d": "6"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "non_verbal",
+      "topic_code": "general",
+      "topic_name": "Dice",
+      "subtopic_code": "dice_opposite_faces",
+      "subtopic_name": "Dice Opposite Faces",
+      "body": "From the given four positions of a single dice, find the number of dots at the face opposite to the face having 4 dots.",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 922
+}

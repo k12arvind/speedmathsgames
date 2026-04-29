@@ -1,0 +1,35 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Clocks",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "Angle traced by hour hand per minute = (1/2)°. Time = 4:10. Angle traced by hour hand in 4 h 10 min = [(4 × 60) + 10] × (1°/2) = 250 × (1°/2) = 125°. Angle traced by minute hand per minute = 6°. Angle traced by minute hand in 10 min = 10 × 6° = 60°. Required angle = 125° - 60° = 65°"
+    },
+    {
+      "number": 7,
+      "solution": "Angle traced by hour hand in 35 min after 8 = 35 × (1°/2) = 17.5°. At 8:35, min hand is at 7, and angle between 8 and 7 = 30°. Required angle between two hands at 8:35 = 30° + 17.5° = 47.5°"
+    },
+    {
+      "number": 8,
+      "solution": "Angle traced by hour hand per minute = (1/2)°. Time = 12:55. Angle traced by hour hand in 12 h 55 min (i.e., at 0:55) = 55 × (1°/2) = 27(1/2)°. Angle traced by minute hand per minute = 6°. Angle traced by minute hand in 55 min = 55 × 6° = 330°. Required angle = 360° - [330° - 27(1/2)°] = 360° + 27(1/2)° - 330° = 387(1/2)° - 330° = 57(1/2)°"
+    },
+    {
+      "number": 9,
+      "solution": "Angle traced by hour hand per minute = (1/2)°. Time = 7:35. Angle traced by hour hand in 7 h 35 min = [(7 × 60) + 35] × (1°/2) = (420 + 35) × (1°/2) = 455 × (1°/2) = 227(1/2)°. Angle traced by minute hand per minute = 6°. Angle traced by minute hand in 35 min = 35 × 6° = 210°. Required angle = 227(1/2)° - 210° = 17(1/2)°"
+    },
+    {
+      "number": 10,
+      "solution": "Angle traced by hour hand per minute = (1/2)°. Time = 3:30. Angle traced by hour hand in 3 h 30 min = [(3 × 60) + 30] × (1°/2) = (180 + 30) × (1°/2) = 210 × (1°/2) = 105°. Angle traced by minute hand per minute = 6°. Angle traced by minute hand in 30 min = 30 × 6° = 180°. Required angle = 180° - 105° = 75°"
+    },
+    {
+      "number": 11,
+      "solution": "Angle traced by hour hand per minute = (1/2)°. Time = 8:30"
+    }
+  ],
+  "answers": [],
+  "_page": 420
+}

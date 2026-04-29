@@ -1,0 +1,427 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Analogy",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 89-93) In each of the following questions, a related pairs of words is linked by a colon, followed by four pair of words. Choose the pair, which is most like the relationship expressed in the original pair in capital letters.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 101-104) Select the option which is having similar analogy vis-a-vis the analogy given in the question.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Directions (Q. Nos. 105-108) In the following questions their words are given, first two words bear a certain relationship between them, based on that find a word from the option that will bear the same relation with the third word.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 89,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Impecunious : Mendicant",
+      "choices": {
+        "a": "Prodigal : Philanthropist",
+        "b": "Petulant : Complainer",
+        "c": "Quizzical : Critic",
+        "d": "Compulsive : Liar"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Error : Infallible",
+      "choices": {
+        "a": "Emotion : Invulnerable",
+        "b": "Defect : Intolerable",
+        "c": "Flaw : Impeccable",
+        "d": "Cure : Irreversible"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Tears : Lachrymose",
+      "choices": {
+        "a": "Words : Verbose",
+        "b": "Speeches : Morose",
+        "c": "Jests : Ironic",
+        "d": "Requests : Effusive"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 92,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Authenticity : Apocryphal",
+      "choices": {
+        "a": "Wickedness : Nefarious",
+        "b": "Artifice : Deceptive",
+        "c": "Assertiveness : Dogmatic",
+        "d": "Integrity : Hypocritical"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 93,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Servility : Grovel",
+      "choices": {
+        "a": "Arrogance : Titter",
+        "b": "Modesty : Preen",
+        "c": "Hypocrisy : Snivel",
+        "d": "Anger : Fume"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 94,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "41537 is related to 4 in the same way as 421 is related to",
+      "choices": {
+        "a": "50",
+        "b": "137",
+        "c": "2",
+        "d": "49"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 95,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "12 : 30 : : 18 : ?",
+      "choices": {
+        "a": "36",
+        "b": "42",
+        "c": "44",
+        "d": "45"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 96,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "A : Transaction : : Language : B",
+      "choices": {
+        "a": "A. Agreement, B. Communication",
+        "b": "A. Business, B. Media",
+        "c": "A. Money, B. Conversation",
+        "d": "A. Contract, B. Scholar"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 97,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "A : Inert : : Active : B",
+      "choices": {
+        "a": "A. Statics, B. Gymnast",
+        "b": "A. Helium, B. Participation",
+        "c": "A. Air, B. Smart",
+        "d": "A. Static, B. Dynamic"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 98,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "A : Gum : : Worm : B",
+      "choices": {
+        "a": "A. Tree, B. Silk",
+        "b": "A. Loaf, B. Tread",
+        "c": "A. Bottle, B. Insect",
+        "d": "A. Brand, B. Cocoon"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 99,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Lightning : A : : B : Sky",
+      "choices": {
+        "a": "A. Rain, B. Thunder",
+        "b": "A. Rainbow, B. Wind",
+        "c": "A. Cloud, B. Rainbow",
+        "d": "A. Sky, B. Rain"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 100,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "A : Ocean : : Stone : B",
+      "choices": {
+        "a": "A. Glacier, B. Granite",
+        "b": "A. River, B. Pebble",
+        "c": "A. Lake, B. Rock",
+        "d": "A. Continent, B. Mountain"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 101,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Communication : Message : :",
+      "choices": {
+        "a": "Humor : Delight",
+        "b": "Expression : Words",
+        "c": "Clarification : Doubt",
+        "d": "Emission : Cosmic"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 102,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Activate : Detonate : :",
+      "choices": {
+        "a": "Deaden : Defuse",
+        "b": "Expression : Words",
+        "c": "Connect : Detach",
+        "d": "Inform : Deform"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 103,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "If 'Asinine' is for 'Donkey', then",
+      "choices": {
+        "a": "'Vulpine' is for 'fox'",
+        "b": "'Vulpine is for 'Vulture'",
+        "c": "'Avian' is for cow",
+        "d": "'Avian' is for 'Dove'"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 104,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "If 'Stallion' is for 'More', than",
+      "choices": {
+        "a": "'Ewe' is for 'Ram'",
+        "b": "'Ram' is for 'Ewe'",
+        "c": "'Goose' is for 'Gander'",
+        "d": "'Sow' is for 'Bear'"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 105,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Mycology : Fungi : : Pedology : ?",
+      "choices": {
+        "a": "Moon",
+        "b": "Kidney",
+        "c": "Child",
+        "d": "Soil"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 106,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Alleviate : Aggravate :: Elastic : ?",
+      "choices": {
+        "a": "Rigid",
+        "b": "Flexible",
+        "c": "Malleable",
+        "d": "Strong"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 107,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Stag : Fawn : : Cockroach : ?",
+      "choices": {
+        "a": "Nymph",
+        "b": "Cub",
+        "c": "Larva",
+        "d": "Colt"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 108,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Benevolent : Kind : : Unclear :",
+      "choices": {
+        "a": "Bright",
+        "b": "Thick",
+        "c": "Luminous",
+        "d": "Muddy"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 58
+}

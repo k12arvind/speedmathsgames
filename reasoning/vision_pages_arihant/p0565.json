@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "In this question the code for batch I is given and it is asked to find the batch number with which the other password belongs or the password is of which batch. Now, we should first mark each word with a number then we can easily find the batch for the given password. ∴ Batch I: rate(1), go(2), long(3), top(4), we(5), let(6), have(7). Now, given password is go(2), rate(1), top(4), long(3), have(7), let(6), we(5). Therefore, required password is for batch IV."
+    },
+    {
+      "number": 2,
+      "solution": "Again, the password for first batch is given and it is asked to calculate the password for batch IV. So, we first mark each word with a number then we can easily find the code for batch IV. Batch I (9 am to 10 am): camel(1), road(2), no(3), toy(4), say(5), me(6), not(7). So, Batch IV (12 noon to 1 pm): road(2), camel(1), toy(4), no(3), not(7), me(6), say(5)."
+    }
+  ],
+  "answers": [],
+  "_page": 565
+}

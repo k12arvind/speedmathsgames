@@ -1,0 +1,79 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 20,
+      "solution": "(e) In the arrangement problem, previous steps cannot be determined."
+    },
+    {
+      "number": 21,
+      "solution": "(d) Input 101, 85, 66, 49, 73, 39, 142, 25, 115, 74\nStep I 25, 101, 85, 66, 49, 73, 39, 142, 115, 74\nStep II 25, 39, 101, 85, 66, 49, 73, 142, 115, 74\nStep III 25, 39, 49, 101, 85, 66, 73, 142, 115, 74\nStep IV 25, 39, 49, 66, 101, 85, 73, 142, 115, 74\nStep V 25, 39, 49, 66, 73, 101, 85, 142, 115, 74\nStep VI 25, 39, 49, 66, 73, 74, 101, 85, 142, 115\nStep VII 25, 39, 49, 66, 73, 74, 85, 101, 142, 115\nStep VIII 25, 39, 49, 66, 73, 74, 85, 101, 115, 142\n∴ Final output = Step VIII\n∴ Required steps = 8"
+    },
+    {
+      "number": 22,
+      "solution": "(e) Input 45, 78, 97, 132, 28, 16, 146, 54, 99, 112\nStep I 16, 45, 78, 97, 132, 28, 146, 54, 99, 112\nStep II 16, 28, 45, 78, 97, 132, 146, 54, 99, 112\nStep III 16, 28, 45, 54, 78, 97, 132, 146, 99, 112"
+    },
+    {
+      "number": 23,
+      "solution": "(e) Step II 22, 49, 32, 88, 69, 132, 101, 185\nStep III 22, 32, 49, 88, 69, 132, 101, 185\nStep IV 22, 32, 49, 69, 88, 132, 101, 185\nStep V 22, 32, 49, 69, 88, 101, 132, 185"
+    },
+    {
+      "number": 24,
+      "solution": "(c) Input 47, 62, 17, 92, 86, 42, 24, 79\nStep I 17, 47, 62, 92, 86, 42, 24, 79\nStep II 17, 24, 47, 62, 92, 86, 42, 79"
+    },
+    {
+      "number": 25,
+      "solution": "(c) Last step will be the one in which all the numbers get arranged in ascending order."
+    },
+    {
+      "number": 26,
+      "solution": "(e) Input 68, 182, 39, 93, 129, 46, 21, 58\nStep I 21, 68, 182, 39, 93, 129, 46, 58\nStep II 21, 39, 68, 182, 93, 129, 46, 58\nStep III 21, 39, 46, 68, 182, 93, 129, 58"
+    },
+    {
+      "number": 27,
+      "solution": "(c) Input 88 172 15 105 412 25\nStep I 412 172 15 105 88 25\nStep II 412 172 105 15 88 25\nStep III 412 172 105 88 15 25"
+    },
+    {
+      "number": 28,
+      "solution": "(d) In an arrangement problem, input/previous steps cannot be determined."
+    },
+    {
+      "number": 29,
+      "solution": "(d) Input 177 390 85 188 522 765\nStep I 765 390 85 188 522 177"
+    },
+    {
+      "number": 30,
+      "solution": "(e) In an arrangement problem, input/previous steps cannot be determined."
+    },
+    {
+      "number": 31,
+      "solution": "(c) The last step will the one in which all the numbers get arranged in descending order."
+    },
+    {
+      "number": 32,
+      "solution": "(c)"
+    },
+    {
+      "number": 33,
+      "solution": "(d)"
+    },
+    {
+      "number": 34,
+      "solution": "(c)"
+    },
+    {
+      "number": 35,
+      "solution": "(a)"
+    },
+    {
+      "number": 36,
+      "solution": "(b)"
+    }
+  ],
+  "answers": [],
+  "_page": 581
+}

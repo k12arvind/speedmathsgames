@@ -1,0 +1,59 @@
+{
+  "page_type": "questions",
+  "chapter_number": 15,
+  "chapter_title": "Input-Output (...contd.): Arrangement",
+  "passages": [
+    {
+      "passage_text": "An input-output arrangement machine, when given an input line of words/numbers rearranges them following a particular rule in each step. The following is an illustration of the input and the steps of arrangement: Input: gone was the excitement of Friday polls Step I: excitement was the gone of Friday polls Step II: excitement Friday the gone of was polls Step III: excitement Friday gone of the was polls Step IV: excitement Friday gone of the was polls Step V: excitement Friday gone of polls was the Step VI: excitement Friday gone of polls the was Since the words are already arranged, the machine stops after this step. Observe the machine may carry on its logic until the words get fully arranged. Study the logic and answer the questions that follow.",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "What will be the step III for the following input? Input: it had swept the four seats last year",
+      "choices": {
+        "a": "four had it last seats swept the year",
+        "b": "four had last swept seats the year",
+        "c": "four had it the swept seats last year",
+        "d": "four had swept it seats the last year",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "arrangement",
+      "subtopic_name": "Word Arrangement",
+      "body": "Input: for some this loss is a message For the above input, which step will the following arrangement be? Arrangement: a for is loss message some this",
+      "choices": {
+        "a": "Step IV",
+        "b": "Step V",
+        "c": "Step I",
+        "d": "Can't say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 253
+}

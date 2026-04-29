@@ -1,0 +1,144 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Since the words are already arranged, the machine will be still working. Otherwise the machine may carry on its logic until the numbers get fully arranged. Study the logic and answer the questions that follow:",
+      "has_figure": false,
+      "topic_code": "input_output"
+    },
+    {
+      "passage_text": "Directions (Q. 22-26): An arrangement machine, when given any line of numbers, rearranges them following a particular rule in each step. The following is the illustration of the input and the steps of arrangement:",
+      "has_figure": false,
+      "topic_code": "input_output"
+    }
+  ],
+  "questions": [
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "arrangement_machine",
+      "subtopic_name": "Arrangement Machine",
+      "body": "Input: this was to prepare the domestic was to the industry\nWhich of the following will be the Step III for the given input?\n1) domestic was to prepare the this industry\n2) prepare industry was to the domestic was\n3) domestic industry to prepare the this was\n4) domestic industry prepare to the this was\n5) None of these",
+      "choices": {
+        "1": "domestic was to prepare the this industry",
+        "2": "prepare industry was to the domestic was",
+        "3": "domestic industry to prepare the this was",
+        "4": "domestic industry prepare to the this was",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "arrangement_machine",
+      "subtopic_name": "Arrangement Machine",
+      "body": "Input: there were several reports from the country\nFor the above input, which step will be the following one?\nArrangement: areas country for other the from reports several the were\n1) Step IV  2) Step V  3) Step II  4) Step III  5) None",
+      "choices": {
+        "1": "Step IV",
+        "2": "Step V",
+        "3": "Step II",
+        "4": "Step III",
+        "5": "None"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "arrangement_machine",
+      "subtopic_name": "Arrangement Machine",
+      "body": "Input: reviewing commitments already made by various processes\nWhich of the following will be the last step for the above input?\n1) Step IV  2) Step IV  3) Step III  4) Step II  5) None of these",
+      "choices": {
+        "1": "Step IV",
+        "2": "Step IV",
+        "3": "Step III",
+        "4": "Step II",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "arrangement_machine",
+      "subtopic_name": "Arrangement Machine",
+      "body": "Which of the following will be the penultimate step for the following input?\nInput: products include milk powder grape wheat\n1) Step I  2) Step II  3) Step III  4) Step IV  5) None of these",
+      "choices": {
+        "1": "Step I",
+        "2": "Step II",
+        "3": "Step III",
+        "4": "Step IV",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "arrangement_machine",
+      "subtopic_name": "Arrangement Machine",
+      "body": "Which of the following will be the step IV for the following input?\nInput: Samsung proposal to take stake in the Indian venture\n1) take proposal to Samsung stake the Indian venture\n2) like in India proposal take Samsung the to venture\n3) homes of the Samsung stake proposal the to venture\n4) like in to Samsung arrange proposal the Indian venture\n5) None of these",
+      "choices": {
+        "1": "take proposal to Samsung stake the Indian venture",
+        "2": "like in India proposal take Samsung the to venture",
+        "3": "homes of the Samsung stake proposal the to venture",
+        "4": "like in to Samsung arrange proposal the Indian venture",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input Output",
+      "subtopic_code": "number_arrangement",
+      "subtopic_name": "Number Arrangement",
+      "body": "What will be the 3rd step?\n1) 71, 59, 23, 36, 60, 75, 19",
+      "choices": {
+        "1": "71, 59, 23, 36, 60, 75, 19"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 259
+}

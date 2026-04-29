@@ -1,0 +1,295 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. 91-95): Read the information given below and answer the questions that follow: (i) There are six friends — A, B, C, D, E and F. Together they start a business by investing Rs. 60,000 in total. (ii) A invested twice as much as B while D invested half as much as C. E invested as much as F.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "A certain musical scale consist of exactly six notes: F, G, H, I, J and K. The notes are arranged from the lowest note (the first note of the scale) to the highest (the sixth note of the scale). Each note appears once and only once in the scale, and the intervals between the notes are all equal.",
+      "has_figure": false,
+      "topic_code": "logical_sequence"
+    }
+  ],
+  "questions": [
+    {
+      "number": 85,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "course_selection",
+      "subtopic_name": "Course Selection",
+      "body": "Which of the following is NOT an acceptable schedule?",
+      "choices": {
+        "a": "Two Maths and one Science course",
+        "b": "Two Science courses and one Maths course",
+        "c": "Two Fine Arts courses and one Maths course",
+        "d": "Two Social Studies courses and one Fine Arts course",
+        "e": "One Social Studies course and two Fine Arts courses"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "course_selection",
+      "subtopic_name": "Course Selection",
+      "body": "Which of the following courses, when taken with Social Studies, is an acceptable schedule?",
+      "choices": {
+        "a": "One course in Maths and one course in Science",
+        "b": "One course in Fine Arts and one course in English",
+        "c": "Two courses in Fine Arts",
+        "d": "Two courses in Maths",
+        "e": "Two courses in English"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "course_selection",
+      "subtopic_name": "Course Selection",
+      "body": "If the student wishes to take a course in Maths and a course in English, then he must select his third course in the area of",
+      "choices": {
+        "a": "English",
+        "b": "Fine Arts",
+        "c": "Maths",
+        "d": "Science",
+        "e": "Social Studies"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 88,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "course_selection",
+      "subtopic_name": "Course Selection",
+      "body": "Which of the following pairs of courses CANNOT be combined in an acceptable schedule?",
+      "choices": {
+        "a": "A course in Maths and a course in Fine Arts",
+        "b": "A course in Science and a course in Fine Arts",
+        "c": "A course in Maths and a course in English",
+        "d": "A course in Social Studies and a course in Science",
+        "e": "A course in Science and a course in English"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 89,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "course_selection",
+      "subtopic_name": "Course Selection",
+      "body": "If the student wished to take a course in Science, then which of the following pairs of courses would complete an acceptable schedule?",
+      "choices": {
+        "a": "Two Maths courses",
+        "b": "Two Science courses",
+        "c": "Two English courses",
+        "d": "One Science course and one English course",
+        "e": "One Maths course and one Social Studies course"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 90,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "course_selection",
+      "subtopic_name": "Course Selection",
+      "body": "An acceptable schedule CANNOT include two courses in",
+      "choices": {
+        "a": "English",
+        "b": "Fine Arts",
+        "c": "Maths",
+        "d": "Science",
+        "e": "Social Studies"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 91,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Analytical Puzzles",
+      "subtopic_code": "investment_problem",
+      "subtopic_name": "Investment Problem",
+      "body": "If B is not the tallest while F is not the shortest among them, then who invested the most?",
+      "choices": {
+        "a": "B is not the tallest while F is not the shortest among them",
+        "b": "the second tallest person. The man who invested the least stands fourth",
+        "c": "B invested more than E; D invested less than F",
+        "d": "the third in order of height",
+        "e": "How much did B invest?"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 92,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Analytical Puzzles",
+      "subtopic_code": "investment_problem",
+      "subtopic_name": "Investment Problem",
+      "body": "How much did B invest?",
+      "choices": {
+        "a": "Rs. 7500",
+        "b": "Rs. 6500",
+        "c": "Rs. 4500",
+        "d": "Can't say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 93,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Analytical Puzzles",
+      "subtopic_code": "investment_problem",
+      "subtopic_name": "Investment Problem",
+      "body": "Who invested the most?",
+      "choices": {
+        "a": "D",
+        "b": "A",
+        "c": "C",
+        "d": "Can't say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 94,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Analytical Puzzles",
+      "subtopic_code": "investment_problem",
+      "subtopic_name": "Investment Problem",
+      "body": "Who is the tallest?",
+      "choices": {
+        "a": "E",
+        "b": "F",
+        "c": "C",
+        "d": "Can't say",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 95,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Analytical Puzzles",
+      "subtopic_code": "investment_problem",
+      "subtopic_name": "Investment Problem",
+      "body": "What is the rank of F in terms of height?",
+      "choices": {
+        "a": "1st",
+        "b": "4th",
+        "c": "3rd",
+        "d": "1st or 5th",
+        "e": "Can't say"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 96,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "musical_scale",
+      "subtopic_name": "Musical Scale Arrangement",
+      "body": "What is the rank of B in order of investment?",
+      "choices": {
+        "a": "First",
+        "b": "Second",
+        "c": "Third",
+        "d": "Fourth",
+        "e": "Can't say"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 97,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "musical_scale",
+      "subtopic_name": "Musical Scale Arrangement",
+      "body": "Which of the following CANNOT be true of the scale?",
+      "choices": {
+        "a": "G is the second note",
+        "b": "I is the third note",
+        "c": "I is the second note",
+        "d": "I is the fourth note",
+        "e": "G is the fourth note"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 329
+}

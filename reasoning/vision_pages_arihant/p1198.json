@@ -1,0 +1,182 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Syllogism",
+  "passages": [
+    {
+      "passage_text": "Each questions comprises two statements (numbered as I and II). You have to take the statements as true even, if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follow from the given statements, disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    },
+    {
+      "passage_text": "In each of the questions below are given some statements followed by some conclusions. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+      "has_figure": false,
+      "topic_code": "syllogisms"
+    }
+  ],
+  "questions": [
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some beds are mirrors. Some mirrors are dolls. Some dolls are cheques. Some cheques are pins. Conclusions: I. Some pins are dolls. II. Some cheques are beds. III. Some cheques are mirrors. IV. Some dolls are beds.",
+      "choices": {
+        "a": "None follows",
+        "b": "Only I follows",
+        "c": "Only II follows",
+        "d": "Only III follows",
+        "e": "Only IV follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All chocolates are holders. No holder is a lamp. Some lamps are desks. All desks are pens. Conclusions: I. Some pens are holders. II. Some desks are lamps. III. No pen is a holder. IV. Some pens are chocolates.",
+      "choices": {
+        "a": "Only I follows",
+        "b": "Only II follows",
+        "c": "Only III follows",
+        "d": "Either I or III follows",
+        "e": "Either I or III and II follow"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: All glasses are rooms. Some rooms are planes. All planes are ducks. Some ducks are lanterns. Conclusions: I. Some lanterns are planes. II. Some ducks are rooms. III. Some rooms are glasses. IV. Some ducks are glasses.",
+      "choices": {
+        "a": "I and II follow",
+        "b": "II and III follow",
+        "c": "I, II and III follo",
+        "d": "All I, II, III and IV follow",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some sweets are almonds. Some almonds are cashews. All cashews are pistachios. Conclusions: I. All almonds are pistachios. II. Some pistachios are sweets. III. Some sweets are cashews. IV. All almonds are either sweets or cashews.",
+      "choices": {
+        "a": "None follows",
+        "b": "I and III follow",
+        "c": "Only IV follows",
+        "d": "Either I or IV follows",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some fruits are seeds. All seeds are trees. All plants are trees. Conclusions: I. Some plants are seeds. II. Some plants are fruits. III. Some trees are fruits. IV. No plant is a seed.",
+      "choices": {
+        "a": "Only III follows",
+        "b": "III and either I or IV follow",
+        "c": "II and either I or IV follow",
+        "d": "I or IV follows",
+        "e": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: I. All contracts are agreements. II. All agreements are accepted offers. Which of the following derivations is correct?",
+      "choices": {
+        "a": "All accepted offers are contracts",
+        "b": "All agreements are contracts",
+        "c": "All contracts are accepted offers",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: I. Some beautiful women are actresses. II. All actresses are good dancers. Which of the following derivations is correct?",
+      "choices": {
+        "a": "Some beautiful women are good dancers.",
+        "b": "All good dancers are actresses.",
+        "c": "Both (a) and (b)",
+        "d": "None of the above"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "syllogisms",
+      "topic_name": "Syllogisms",
+      "subtopic_code": "basic_syllogism",
+      "subtopic_name": "Basic Syllogism",
+      "body": "Statements: Some animals are fighters. All fighters are tigers. No tiger is lighter. Conclusions: I. None of the lighters is tiger. II. Some tigers are definitely not lighters. III. Most of the fighters are animals.",
+      "choices": {},
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 1198
+}

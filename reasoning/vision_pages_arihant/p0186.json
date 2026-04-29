@@ -1,0 +1,182 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Coding-Decoding",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 12-19) Read the following information to answer the questions that follow. According to a code language, words in capital letters in Column I are written in small letters in Column II. The letters in Column II are jumbled up. Decode the language and choose the correct code for the word given in each question.\n\nColumn I          Column II\n(1) CROWDY       (A) bloopv\n(2) CRONY        (B) jkgotv\n(3) NET          (C) ijktv\n(4) CRUX         (D) ikmop\n(5) ADDRESS      (E) cjmv\n(6) SOUND        (F) abi",
+      "has_figure": false,
+      "topic_code": "coding_decoding"
+    }
+  ],
+  "questions": [
+    {
+      "number": 12,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "Find the code for 'TRUE'.",
+      "choices": {
+        "a": "mvba",
+        "b": "vbam",
+        "c": "avmb",
+        "d": "ambv"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "What is the code for 'NATURE'?",
+      "choices": {
+        "a": "ilamvb",
+        "b": "ilambv",
+        "c": "ilmabv",
+        "d": "limabv"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "Find the code for 'SECTOR'.",
+      "choices": {
+        "a": "bpajkv",
+        "b": "pbjakv",
+        "c": "pbjavk",
+        "d": "bpjakv"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "The code for 'TRUCE' is",
+      "choices": {
+        "a": "avmjb",
+        "b": "avmbj",
+        "c": "avjmb",
+        "d": "vajmb"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "Which one of the following options is the code for 'DOCTOR'?",
+      "choices": {
+        "a": "jkoavk",
+        "b": "okjavk",
+        "c": "kojatv",
+        "d": "okjakv"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "Find the code for 'WOOD'.",
+      "choices": {
+        "a": "kogk",
+        "b": "gkko",
+        "c": "gokk",
+        "d": "kgok"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "Which of the following options stands for 'TODAY'?",
+      "choices": {
+        "a": "altko",
+        "b": "aoktl",
+        "c": "akotl",
+        "d": "akolt"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 8,
+      "subject": "verbal",
+      "topic_code": "coding_decoding",
+      "topic_name": "Coding-Decoding",
+      "subtopic_code": "letter_coding",
+      "subtopic_name": "Letter Coding",
+      "body": "... stands for 'ROSE'.",
+      "choices": {
+        "a": "vkpb",
+        "b": "bpkv",
+        "c": "kpvb",
+        "d": "vkbp"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "(d) According to given letters codes\n1 6 3 5 1 4 9 7 8 4 2\nF L O U R = x n c a p\nA N I M A L W O R L D\n\nSolutions (Q. Nos. 2-6)\nGiven that, F L O U R = x n c a p ...(i)\nT A P = k s d ...(ii)\nR O S E = c m r n ...(iii)\nL O T U S = s m c p x ...(iv)\nS A I L = k p t m ...(v)\n\nFrom Eqs. (ii) and (v),\nT A P = k s d\nS A I L = c p t m\n∴ A = k\nFrom Eqs. (ii) and (iv),\nT A P = k s d\nL O T U S = s m c p x\n∴ T = s ⇒ P = d\nFrom (iii) and (v),\nR O S E = c m r n\nS A I L = k p t m\n∴ S = m\n\nFrom Eqs. (iv) and (v),\nL O T U S = s m c p x\nS A I L = k p t m\n∴ L = P ⇒ l = t\nFrom Eqs. (iii) and (iv),\nR O S E = c m r n\nL O T U S = s m c p x\n∴ O = c, U = x\nFrom Eqs. (i) and (iii),\nF L O U R = x n t a p\nR O S E = c m r n\n∴ R = n, E = r, F = a\nNow, as per the given information, code of each letter is as below\n\n2. (c) Clearly, the code for F is a.\n3. (d) Clearly, the code for P is d.\n4. (d) Clearly, the code for L is p."
+    }
+  ],
+  "answers": [],
+  "_page": 186
+}

@@ -1,0 +1,101 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "Read the following caselet and choose the best alternative for the questions that follow. Ajay was thinking deeply about a problem that his organisation a business consulting company, faced. Globalisation had affected his company like many other companies. Despite the downturn, the current revenues remained healthy. However, Ajay knew it was inevitable that the company could not do business the same way. The complexity of managing the business had increased with time. Consultant were under pressure to deliver good and innovative solutions. The organisation had consultants from different age groups having a good mix of domain and industry expertise. It was a flat organisation with three levels. The biggest challenge for Ajay was to have consultants with latest knowledge who would also earn revenues. Getting additional business was a challenge as all the consultants were busy and it was very difficult to hire new consultants.",
+      "has_figure": false,
+      "topic_code": "analytical_decision"
+    }
+  ],
+  "questions": [
+    {
+      "number": 56,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "conditional_statement",
+      "subtopic_name": "Conditional Statement Analysis",
+      "body": "If both the nominations are confirmed, which of the following exhaustively and reasonably, describes actions that may occur in the near future?",
+      "choices": {
+        "a": "Arvind resigns his membership",
+        "b": "Either Rao or Ajit resigns his membership",
+        "c": "Ajit resigns his committee post on the cultural committee",
+        "d": "Rao resigns his position on the cultural committee",
+        "e": "Either Rao or Ajit resigns his position from the cultural committee and the other resigns his position on the disciplinary committee"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 57,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "business_strategy",
+      "subtopic_name": "Business Strategy Analysis",
+      "body": "Some of the consultants were adept at applying old solutions to new problems. Ajay was not very sure, if this would work for longs. Some of the clients had complained about the performance of old and reputed consultants Ajay was mulling over the following five solutions to tackle this problem. 1. Decrease time spent on client interaction and increase time spent for generating solutions. 2. Increase support staff to help consultants to remain updated 3. Decrease the number of simultaneous projects handled by consultants. 4. Make it compulsory for consultants to work on inter-industry and inter-domain problems. 5. Recruit more consultants. Which of the following would be the best sequence of decisions taken by Ajay (starting from immediate to distant)?",
+      "choices": {
+        "a": "3, 2, 1, 5, 4",
+        "b": "4, 3, 2, 1, 5",
+        "c": "5, 4, 3, 2, 1",
+        "d": "2, 4, 5, 1, 3",
+        "e": "1, 5, 4, 3, 2"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 58,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analytical_decision",
+      "topic_name": "Analytical Decision Making",
+      "subtopic_code": "organizational_behavior",
+      "subtopic_name": "Organizational Behavior",
+      "body": "After Ajay implemented some of the steps mentioned above, consultants wanted to renegotiate their contract with the organisation. It seems that the organisation had never mentioned that consultants have to work across industries and domains. Some of the old consultants were reluctant to change their ways, while many of the younger consultants were willing to follow Ajay's advice. Which of the following decision can be taken by Ajay to handle this situation?",
+      "choices": {
+        "a": "Retrench old consultants and recruit young consultants",
+        "b": "Pressurise non-conformists by giving preferential treatment to the conformists",
+        "c": "Negotiate with the old consultants and communicate that the new rules would apply to the new consultants only",
+        "d": "Do nothing and wait for a right solution to emerge, as with time resistance would lie down",
+        "e": "Discuss the issue in an open house and let solutions emerge democratically"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 59,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "logical_sequence",
+      "topic_name": "Logical Sequence",
+      "subtopic_code": "priority_ordering",
+      "subtopic_name": "Priority Ordering",
+      "body": "Ajay was to retire in 5 yr and he wanted to leave behind a legacy. Order the following activities, from the most important to the least important, that Ajay should undertake in next five years. 1. Do nothing. 2. Set a future direction for the organisation in these challenging times. 3. Benchmark performance with respect to the best consulting company in industry. 4. Empower senior consultants and at the same time seek opinion of all others for handling future challenges outsiders. 5. Infuse fresh thinking by hiring outsides. Choose the best option from the following sequences",
+      "choices": {
+        "a": "1, 2, 3, 4",
+        "b": "2, 3, 4, 5",
+        "c": "3, 4, 2, 1",
+        "d": "2, 5, 3, 1",
+        "e": "2, 5, 4, 3"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 559
+}

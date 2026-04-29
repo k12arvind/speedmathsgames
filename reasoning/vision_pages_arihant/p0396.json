@@ -1,0 +1,92 @@
+{
+  "page_type": "questions",
+  "chapter_number": 3,
+  "chapter_title": "Symbolically Coded Blood Relationship",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 14-15) Read the following information carefully and answer the questions given below. [PNB (PO) 2010]\nI. 'P × Q' means 'P is sister of Q'.\nII. 'P + Q' means 'P is mother of Q'.\nIII. 'P - Q' means 'P is father of Q'.\nIV. 'P ÷ Q' means 'P is brother of Q'.",
+      "has_figure": false,
+      "topic_code": "blood_relations"
+    }
+  ],
+  "questions": [
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "symbolic_coding",
+      "subtopic_name": "Symbolically Coded Blood Relations",
+      "body": "If P $ Q means 'P is the father of Q, P # Q means 'P is the mother of Q, P * Q means P is the sister of Q. Then, how is Q related to N in N # L $ P * Q?",
+      "choices": {
+        "a": "Grandson",
+        "b": "Granddaughter",
+        "c": "Nephew",
+        "d": "Data inadequate"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "symbolic_coding",
+      "subtopic_name": "Symbolically Coded Blood Relations",
+      "body": "Which of the following represents 'M is the nephew of R'?",
+      "choices": {
+        "a": "M = T - R",
+        "b": "R = T - M",
+        "c": "R × T + M × J",
+        "d": "R + T - M + J",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "blood_relations",
+      "topic_name": "Blood Relations",
+      "subtopic_code": "symbolic_coding",
+      "subtopic_name": "Symbolically Coded Blood Relations",
+      "body": "Which of the following represents 'W is grandfather of H'?",
+      "choices": {
+        "a": "W + T - H",
+        "b": "W × T - H",
+        "c": "W × T + H",
+        "d": "W - T + H",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 13,
+      "solution": "By decoding given information with symbols of family diagram, we get family diagrams showing (P $ Q) = Father relationship, (P # Q) = Mother relationship, (P * Q) = Sister relationship. Now, by applying above decoding method, We draw the following family diagram (N # L $ P * Q). The diagram shows N as Mother, then Father relationship, then P and Q as sisters. Clearly, the gender of Q cannot be determined from the given information and hence, Q can either be grandson or granddaughter of N. Therefore, we can say that data is inadequate to establish a relationship between N and Q."
+    },
+    {
+      "number": 14,
+      "solution": "By decoding given information with symbols of family diagram, we get family relationship symbols showing (P × Q) = Sister relationship, (P + Q) = Mother relationship, (P - Q) = Father relationship, (P ÷ Q) = Brother relationship."
+    },
+    {
+      "number": 15,
+      "solution": "By decoding given information with symbols of family diagram, we get family relationship symbols showing (P × Q) = Sister relationship, (P + Q) = Mother relationship, (P - Q) = Father relationship, (P ÷ Q) = Brother relationship."
+    }
+  ],
+  "answers": [],
+  "_page": 396
+}

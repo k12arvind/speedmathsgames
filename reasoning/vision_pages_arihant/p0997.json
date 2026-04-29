@@ -1,0 +1,157 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-36) In each of the following questions, find out the answer figure which completes the problem figure matrix.",
+      "has_figure": false,
+      "topic_code": "missing_character"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figure [matrix with triangular patterns]",
+      "choices": {
+        "a": "matrix option",
+        "b": "matrix option",
+        "c": "matrix option",
+        "d": "matrix option"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figure [matrix with geometric shapes]",
+      "choices": {
+        "a": "circle",
+        "b": "house shape",
+        "c": "square",
+        "d": "triangle"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figure [matrix with hourglass and circle patterns]",
+      "choices": {
+        "a": "hexagon",
+        "b": "pentagon",
+        "c": "triangle",
+        "d": "crossed square"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figure [matrix with line patterns]",
+      "choices": {
+        "a": "diagonal line",
+        "b": "diamond",
+        "c": "arrow",
+        "d": "chevron"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figure [matrix with arrow patterns]",
+      "choices": {
+        "a": "vertical arrows",
+        "b": "vertical arrows",
+        "c": "vertical arrows",
+        "d": "horizontal arrow"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 6,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figure [matrix with black and striped squares]",
+      "choices": {
+        "a": "pattern option",
+        "b": "pattern option",
+        "c": "pattern option",
+        "d": "pattern option"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 7,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "matrix_completion",
+      "subtopic_name": "Matrix Completion",
+      "body": "Problem Figure [matrix with circles, squares and patterns]",
+      "choices": {
+        "a": "pattern option",
+        "b": "pattern option",
+        "c": "pattern option",
+        "d": "pattern option"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 997
+}

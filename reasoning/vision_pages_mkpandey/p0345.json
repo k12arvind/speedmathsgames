@@ -1,0 +1,19 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 37,
+      "solution": "In each choice, the Blue Team and the Green Team have exactly one captain. In no choice are B and C together on either the Blue or the Green Team. In each choice, L is on the Blue Team with E. This suggests that all are possible assignments, but we know that one of them must violate some restriction. Now, let's see who else is in each team choice. The effect of the assignments to the Blue and Green Teams on the third member of the Red Team! The person not assigned to either the Blue Team or the Green Team must be assigned to the Red Team: (1) K (OK) (2) K (OK) (3) M (OK) (4) K (OK) (5) ! (No! John cannot be assigned to the Red Team because F is assigned to that team.) This question calls your attention to a constraint on the overall distribution of individuals. First, as a matter of test-taking strategy, given the extreme flexibility of the situation here, neither (1) nor (2) would be the correct choice. I would not study them too seriously. As for (3), this too seems unlikely. Make sure you don't make the mistake of assuming that just because either E or F must be on the Blue Team (with L), neither can be on a team other than the Blue Team. (4) and (5) seem more promising, and here is where you should concentrate your attack. You can test (4) by trying to find a possible distribution in which B is not on a team with either B or C: Red Team Blue Team Green Team L, B C Distribute the rest of the individuals: Red Team Blue Team Green Team J, E, K L, B, F C, D, M This counter-example proves that (4) is not necessarily true. Finally, we turn to (5). There are three teams with a total of nine positions to be filled. We know that each team has at least one male as its captain. This leaves only two other males, B and C, who cannot both be assigned to the same team. So, B will be assigned to one team and C to another. Their teams will be completed by two of the females, which means that the other two females will be assigned to the remaining team. So one team will consist of a male (its captain) and two females."
+    },
+    {
+      "number": 38,
+      "solution": "This question seems to be fairly difficult (as we might expect). The Blue Team and the Green Team will both need a captain, so E and F must be assigned, one to one of those teams and the other to the other team."
+    }
+  ],
+  "answers": [],
+  "_page": 345
+}

@@ -1,0 +1,258 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [
+    {
+      "passage_text": "Directions: Study the following information and answer the questions given below it: There are five persons P, Q, R, S and T. One is a football player, one is a chess player and one is a hockey player. P and S are unmarried ladies and one of them is not participate in any game. None of the ladies plays chess or football. S is a married couple in which T is the husband. Q is the brother of R and is not a chess player nor a hockey player.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    },
+    {
+      "passage_text": "Directions: Study the following information carefully and answer the questions given below it: All the roads of a city are either perpendicular or parallel to one another. The roads are all straight. Roads A, B, C, D and E are parallel to one another. Roads G, H, I, J, K, L and M are parallel to one another. (1) Road A is 1 km east of road H. (2) Road D is 1/2 km west of road C. (3) Road D is 1 km west of road E. (4) Road G is 1/2 km south of road H. (5) Road I is 1 km north of road J. (6) Road K is 1/2 km north of road L. (7) Road K is 1 km south of road M.",
+      "has_figure": false,
+      "topic_code": "direction_sense"
+    },
+    {
+      "passage_text": "Directions: Read the following information and answer the questions that follow: Two and two towns out of which two are hill-stations and the rest are in the plain. Two towns, which are in the plain, are harbours. Four towns out of five are capitals and two are industrial towns. The population of two towns is less than 3 lakh. It is 20 lakh of one town and more than 50 lakh of two towns. Two towns are at the same latitude and other two are on the same longitude. Latitudes and longitudes of one industrial town are same as those of the hill-station and one of the hill-station is in the same latitude. The population of both industrial towns is more than 50 lakh. The population and one of the industrial towns with the same latitudes and longitudes of the other hill-station and the harbour. One of the harbours are at same latitudes. One industrial town is neither a hill-station nor a harbour. None of the hill-stations, is an industrial town. The hill-station of the harbour. None of the hill-stations, is at the same latitudes as that of a harbour, is a capital. B is a hillstation while the latitudes of A and E are the same. E is a harbour. The population of C is 20 lakh. Each one of D and G is more than 50 lakh. Both the latitudes are capitals and one of them is an industrial town.",
+      "has_figure": false,
+      "topic_code": "puzzles"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations and Games",
+      "body": "Who is the football player?",
+      "choices": {
+        "a": "P",
+        "b": "Q",
+        "c": "R",
+        "d": "S",
+        "e": "T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations and Games",
+      "body": "Who is the hockey player?",
+      "choices": {
+        "a": "T",
+        "b": "S",
+        "c": "Q",
+        "d": "P",
+        "e": "R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations and Games",
+      "body": "Who is the chess player?",
+      "choices": {
+        "a": "S",
+        "b": "P",
+        "c": "R",
+        "d": "Q",
+        "e": "T"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations and Games",
+      "body": "Who is the wife of T?",
+      "choices": {
+        "a": "P",
+        "b": "Q",
+        "c": "S",
+        "d": "Data inadequate",
+        "e": "R"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "family_relations",
+      "subtopic_name": "Family Relations and Games",
+      "body": "The three ladies are",
+      "choices": {
+        "a": "Q and R",
+        "b": "Q, R and S",
+        "c": "P and R",
+        "d": "None of these",
+        "e": "P, Q and S"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "direction_sense",
+      "topic_name": "Direction Sense",
+      "subtopic_code": "road_directions",
+      "subtopic_name": "Road Directions",
+      "body": "Which is necessarily true?",
+      "choices": {
+        "a": "E and B intersect",
+        "b": "D is 2 km west of B",
+        "c": "D is at least 2 km west of A",
+        "d": "M is 1.5 km north of L",
+        "e": "E is 1 km north of L"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "town_analysis",
+      "subtopic_name": "Town and Population Analysis",
+      "body": "If E is between B and C, which of the following is false?",
+      "choices": {
+        "a": "D is 2 km west of A",
+        "b": "C is less than 1.5 km from D",
+        "c": "Distance from E to B added to distance from E to C is 1/2 km",
+        "d": "E is less than 1 km from A",
+        "e": "E is less than 1 km from B"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "town_analysis",
+      "subtopic_name": "Town and Population Analysis",
+      "body": "If road E is between B and C then the distance between A and D is",
+      "choices": {
+        "a": "1 km",
+        "b": "1 km",
+        "c": "1.5 km",
+        "d": "1.5-2 km",
+        "e": "2-2.5 km"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "town_analysis",
+      "subtopic_name": "Town and Population Analysis",
+      "body": "Which of the following possibilities would make two roads coincide?",
+      "choices": {
+        "a": "B is 1/2 km north of I",
+        "b": "C is 1 km west of D",
+        "c": "I is 1/2 km north of K",
+        "d": "D is 1/2 km east of A",
+        "e": "E and B are 1/2 km apart"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "town_analysis",
+      "subtopic_name": "Town and Population Analysis",
+      "body": "If X is parallel to I and X is 1/2 km south of J and 1 km north of G, which two roads would be 1/2 km apart?",
+      "choices": {
+        "a": "I and X",
+        "b": "J and G",
+        "c": "I and G",
+        "d": "J and H",
+        "e": "X and J"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 1,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "puzzles",
+      "topic_name": "Logical Puzzles",
+      "subtopic_code": "town_analysis",
+      "subtopic_name": "Town and Population Analysis",
+      "body": "Which of the following two towns are those whose population is less than 3 lakh?",
+      "choices": {
+        "a": "A and C",
+        "b": "B and C",
+        "c": "A and B",
+        "d": "P and A",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 319
+}

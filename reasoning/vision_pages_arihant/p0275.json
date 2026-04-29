@@ -1,0 +1,97 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Type 3 Alpha-Numeric Puzzles",
+  "passages": [
+    {
+      "passage_text": "Directions (Q. Nos. 1-36) In each of the following questions, which character when placed at the sign of interrogation (?) shall complete the given pattern.",
+      "has_figure": false,
+      "topic_code": "missing_character"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "alpha_numeric_pattern",
+      "subtopic_name": "Alpha-Numeric Pattern",
+      "body": "Which character when placed at the sign of interrogation (?) shall complete the given pattern?",
+      "choices": {
+        "a": "H",
+        "b": "J",
+        "c": "I",
+        "d": "M"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "alpha_numeric_pattern",
+      "subtopic_name": "Alpha-Numeric Pattern",
+      "body": "Which character when placed at the sign of interrogation (?) shall complete the given pattern?",
+      "choices": {
+        "a": "U",
+        "b": "V",
+        "c": "T",
+        "d": "X"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "alpha_numeric_pattern",
+      "subtopic_name": "Alpha-Numeric Pattern",
+      "body": "Which character when placed at the sign of interrogation (?) shall complete the given pattern?",
+      "choices": {
+        "a": "S",
+        "b": "K",
+        "c": "T",
+        "d": "Y"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "non_verbal",
+      "topic_code": "missing_character",
+      "topic_name": "Missing Character",
+      "subtopic_code": "alpha_numeric_pattern",
+      "subtopic_name": "Alpha-Numeric Pattern",
+      "body": "Which character when placed at the sign of interrogation (?) shall complete the given pattern?",
+      "choices": {
+        "a": "B",
+        "b": "W",
+        "c": "O",
+        "d": "V"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 275
+}

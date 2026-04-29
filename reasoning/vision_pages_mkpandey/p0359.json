@@ -1,0 +1,67 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "ANALYTICAL REASONING",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 46,
+      "solution": "If L is a committee then M is also on that committee. This means that two members of the committee have already been assigned. O cannot be either K or Q or both. This one you may want to diagram: E FS G, Q NR O. L and M must be appointed either to the Entertainment Committee or to the Food Services Committee. Take the first alternative: E FS G, QLM N R. So, Q must be assigned to the Games Committee: E FS G, QLM KPQ. But now we cannot separate N and R. So we try the second alternative: E FS G, Q LM KPQ. N and R cannot serve on the same committee: E FS G, Q N/R LM N/R KPQ. So, J must be assigned to Entertainment Committee: J E FS G, Q N/R LM N/R KPQ. Again, we will use a diagram: E FS G, QL Q. Of course, M must serve with L, which means that K must serve with Q: E FS G, QLM QK JP. This means J must serve on the Games Committee; N and R must be appointed one to the Food services Committee and one to the Games Committee; and P is appointed to the Games Committee: E FS G, QLM QK JP, G N/R N/R. So, statements I and II are necessarily true, while III is only possibly true."
+    },
+    {
+      "number": 47,
+      "solution": "Enter the information on a diagram: E FS G, QL JP. QL can also be appointed to Entertainment (filling up that committee). So, M must be appointed to Games (J and K cannot be together): and K must be appointed to Games (to be with K), and N and R must be appointed to Games and the other to Food Services, with P being appointed to Food Services: E FS G, QLM JP KQ, G N/R N/R. So, only statement I is necessarily true."
+    },
+    {
+      "number": 48,
+      "solution": "Enter the information on a diagram: E FS G, QL JP. QL can also be appointed to Entertainment (filling up that committee). So, M must be appointed to Games (J and K cannot be together): and K must be appointed to Games (to be with K), and N and R must be appointed one to Games and the other to Food Services, with P being appointed to Food Services: E FS G, QLM JP KQ, G N/R N/R. So, only statement I is necessarily true."
+    },
+    {
+      "number": 49,
+      "solution": "Enter the information on a diagram: E FS G, QL JP. Q: 50-54: E is the unmarried C is the daughter-in-law of A, who is the grandmother of F, means C is the wife of F's father. But F is the son of B. So, B is C's husband. But C, the Lawyer, is the Doctor. Thus, C, the Doctor, is married to the Doctor. So, the Accountant, will be the son of the Lawyer, is the wife of B, the Doctor-Accountant. So, the other married couple can be H and G. If the unmarried person. So, the Salesman, is married to that of grandmother of F, Let the Salesman be the grandfather of F. This makes the Lady Teacher is the grandmother of F, father of B and husband of A, the Lady Teacher. So, the relation between E and F cannot be determined."
+    },
+    {
+      "number": 50,
+      "solution": "Clearly, B is the doctor."
+    },
+    {
+      "number": 51,
+      "solution": "A is the Lady Teacher."
+    },
+    {
+      "number": 52,
+      "solution": "The two married couples are and B and D and A, none of which is among the choices."
+    },
+    {
+      "number": 53,
+      "solution": "The two married couples are"
+    },
+    {
+      "number": 54,
+      "solution": "D is the grandfather of F. S, the Housewife, is the grandmother of Q. 55-59: Q, the Doctor, grandfather of S and F. There are only two married couples - one being the wife of Q and she must be the mother of Q and these must be the students. Thus, P who has a wife must be other wife of Q and she alone can be the nurse. Thus, P will be the same parents. So, R will be the sister of Q."
+    },
+    {
+      "number": 55,
+      "solution": "Clearly, R and T are children of the same parents. So, R will be the sister of clearly, is T."
+    },
+    {
+      "number": 56,
+      "solution": "T"
+    },
+    {
+      "number": 57,
+      "solution": "The two married couples are Q, P and U, S."
+    },
+    {
+      "number": 58,
+      "solution": "Clearly, for this question the males are Q, the father, and U, the grandfather."
+    },
+    {
+      "number": 59,
+      "solution": "Clearly, is T."
+    }
+  ],
+  "answers": [],
+  "_page": 359
+}

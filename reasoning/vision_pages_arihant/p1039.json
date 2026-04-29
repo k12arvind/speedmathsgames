@@ -1,0 +1,138 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Type 1 One Statement and Two Assumptions Based Problems",
+  "passages": [
+    {
+      "passage_text": "In each of the questions below is given a statement followed by assumptions numbered I and II. Consider the statement and decide which of the given assumptions is implicit. Give answer (a) if only Assumption I is implicit (b) if only Assumption II is implicit (c) if both I and II are implicit (d) if neither I nor II is implicit",
+      "has_figure": false,
+      "topic_code": "statement_assumption"
+    }
+  ],
+  "questions": [
+    {
+      "number": 5,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption Analysis",
+      "body": "Statement: The book published by Arihant Publication is intended to guide the layman to study reasoning in the absence of a teacher.\nAssumptions: I. Reasoning can be learnt with the help of a book.\nII. A teacher of reasoning may not be available to everyone.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if only Assumption II is implicit",
+        "c": "if both I and II are implicit",
+        "d": "if neither I nor II is implicit"
+      },
+      "correct": "c",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption Analysis",
+      "body": "Statement: Get your child examined by a specialist doctor, X tells Y.\nAssumptions: I. Y will not listen what X tells to him.\nII. Y will hear X's advice.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if only Assumption II is implicit",
+        "c": "if both I and II are implicit",
+        "d": "if neither I nor II is implicit"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption Analysis",
+      "body": "Statement: Patient's condition would improve after this operation.\nAssumptions: I. The patient can be operated upon in this condition.\nII. The patient cannot be operated upon in this condition.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if only Assumption II is implicit",
+        "c": "if both I and II are implicit",
+        "d": "if neither I nor II is implicit"
+      },
+      "correct": "a",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption Analysis",
+      "body": "Statement: The best evidence of India's glorious past is the growing popularity of Ayurvedic medicines in West.\nAssumptions: I. Ayurvedic medicines are not popular in India.\nII. Allopathic medicines are more popular in India.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if only Assumption II is implicit",
+        "c": "if both I and II are implicit",
+        "d": "if neither I nor II is implicit"
+      },
+      "correct": "d",
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": 0,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "statement_assumption",
+      "topic_name": "Statement and Assumption",
+      "subtopic_code": "implicit_assumption",
+      "subtopic_name": "Implicit Assumption Analysis",
+      "body": "Statement: The boy is too clever to fail in the examination.\nAssumptions: I. The boy is appearing in a competitive examination.\nII. Very clever boys do not fail in the examination.",
+      "choices": {
+        "a": "if only Assumption I is implicit",
+        "b": "if only Assumption II is implicit",
+        "c": "if both I and II are implicit",
+        "d": "if neither I nor II is implicit"
+      },
+      "correct": "b",
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [
+    {
+      "number": 5,
+      "solution": "It is given in the statement that the book intends to teach reasoning which implies that I is a valid assumption. Further, the statement says that the book is intended to teach reasoning in the absence of a teacher. This means that the absence of a teacher is a possibility. Hence, II is also valid."
+    },
+    {
+      "number": 6,
+      "solution": "We advice anybody with the assumption that our advice will be listened to. Why will we advice someone with a thinking that our advice will not be heard? While saying something, we go with a positive frame of mind that the targeted people will hear and pay attention towards our point of view. Hence, II is a valid assumption but I is not."
+    },
+    {
+      "number": 7,
+      "solution": "It is very much implied in the statement that the patient is in a position to be operated upon. Therefore, Assumption I is implicit."
+    },
+    {
+      "number": 8,
+      "solution": "The statement given in the question states only about the place which Ayurvedic medicine had occupied in the past on account of its increasing popularity in West and this signifies neither non-popularity of Ayurvedic medicines in India nor speaks of popularity of Allopathic medicines. Hence, none of the assumptions is implicit in the statement."
+    },
+    {
+      "number": 9,
+      "solution": "Assumption I is not valid as it has no connection at all with the given statement. Statement does not specifically say about competitive examination. But II is valid because the statement says that the boy would not fail (effect) because he is very clever (cause). Obviously, it is assumed that very clever boys do not fail."
+    }
+  ],
+  "answers": [],
+  "_page": 1039
+}

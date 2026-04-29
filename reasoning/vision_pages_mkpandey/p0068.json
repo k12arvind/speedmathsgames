@@ -1,0 +1,38 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Analytical Reasoning - Evaluating Inferences",
+  "passages": [
+    {
+      "passage_text": "Directions: In each of the following questions, a statement or two statements are followed by two conclusions. Give answer (a) if conclusion I follows; (b) if conclusion II follows; (c) if both I and II follow; (d) if either I or II follows; (e) if neither I nor II follows.",
+      "has_figure": false,
+      "topic_code": "statement_conclusion"
+    }
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "statement_conclusion",
+      "topic_name": "Statement and Conclusion",
+      "subtopic_code": "evaluating_inferences",
+      "subtopic_name": "Evaluating Inferences",
+      "body": "Statement: Ten persons who were on the waiting list could finally get berth reservation in the Frontier Mail. Conclusions: I. Wait-listed passengers generally find it difficult to get berth reservation in the Frontier Mail. II. The number of berths available in the Frontier Mail is less.",
+      "choices": {
+        "a": "if conclusion I follows",
+        "b": "if conclusion II follows",
+        "c": "if both I and II follow",
+        "d": "if either I or II follows",
+        "e": "if neither I nor II follows"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 68
+}

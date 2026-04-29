@@ -1,0 +1,55 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Data Sufficiency",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 28,
+      "solution": "(b) Statement I is insufficient as total number of either boys or girls is missing. From Statement II, initial number was 2000, then percentage increase is 4% and 5% per year consecutively. Number of students = 2000(1 + 4/100)(1 + 5/100) = 2000 × 26/25 × 21/20 = 2184. Hence, Statement II alone is sufficient. So, Statement II alone is sufficient to answer the question."
+    },
+    {
+      "number": 29,
+      "solution": "(d) Given that, Geeta > Shilpa and Deepa > Meeta. Other two are Sunita and Sadhana. From Statement I, Geeta > Shilpa, Deepa > Meeta and Sadhana > Sunita. So, tallest cannot be determined. Hence, Statement I alone is insufficient. From Statement II, Sadhana > Shilpa/Meeta/Deepa. So, Sadhana > Shilpa/Deepa > Meeta/Sunita but nothing can be said about Geeta with respect to Sadhana. Hence, either Sadhna or Geeta may be the tallest person. So, both the statements are insufficient to answer the question."
+    },
+    {
+      "number": 30,
+      "solution": "(b) From Statement I, position to T with respect to X cannot be found out using the data provided in Statement I alone. From Statement II, Here it is clear that T is second to the left of X. Hence, the data is Statement II alone are sufficient to answer the question."
+    },
+    {
+      "number": 31,
+      "solution": "(b) Statement I alone is not sufficient as it is very obvious. From question and Statement II, Let Aashima's age = 9x and Apsara's age = 8x. According to the Statement II, 9x + 6 = 11, 8x + 6 = 10. ⇒ 90x + 60 = 88x + 66. ⇒ 2x = 6 ⇒ x = 3. ∴ Aashima's age = 9x = 9 × 3 = 27 yr. Hence, Statement II alone is sufficient."
+    },
+    {
+      "number": 32,
+      "solution": "(e) Statement I is insufficient as relation link between B, C and D is missing. Statement II is insufficient as A is not available in it. From Statements I and II, both Statements I and II are needed to answer the question."
+    },
+    {
+      "number": 33,
+      "solution": "(d) From Statement I, she walks 'East' = ka 're' pa. From Statement II, do it 'East' = jo ka 're'. ∴ she = ka/pa. So, Statements I and II together are not sufficient to answer the question."
+    },
+    {
+      "number": 34,
+      "solution": "(e) From Statements I and II, Hence, Statements I and II alone are insufficient. From Statements I and II, Clearly, A is to the East of D. So, both Statements I and II are required to answer the question."
+    },
+    {
+      "number": 35,
+      "solution": "(e) From Statement I, 'more' light than 'dark' = 3 2 1 7, no 'more' 'dark' here = 9 1 4 3. ∴ light = 2/7. Hence, Statement I alone is insufficient. Statement II alone is insufficient as light is not mentioned in it. From Statements I and II, 'more' light 'than' 'dark' = 3 2 1 7, no 'more' 'dark' here = 9 4 3, no 'more' 'than' that = 3 0 4 7, no 'than' and that = 4 5 0 7. ∴ light = 2. So, both statements are required to answer the question."
+    },
+    {
+      "number": 36,
+      "solution": "(d) Data inadequate both Statements I and II are not sufficient to answer the question."
+    },
+    {
+      "number": 37,
+      "solution": "(a) Since, Rohit has sold the maximum number of items, hence he is the best salesman. So, Statement I alone is sufficient to answer the question."
+    },
+    {
+      "number": 38,
+      "solution": "(d) Data inadequate both Statements I and II are not sufficient to answer the question."
+    }
+  ],
+  "answers": [],
+  "_page": 666
+}

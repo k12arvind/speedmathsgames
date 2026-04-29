@@ -1,0 +1,43 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Analytical Decision-Making",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 1,
+      "solution": "First of all, we read the question and find that there are two basic conditions (a, b, c, d) and two additional conditions (g, f). We also see that there are exceptions as 'p' is in 1994, and 'P' is an exception etc. Therefore, we start by looking the top list of the first question and find that we are supposing the actual statement being violated and hence we are writing on the assumptions of our actual condition."
+    },
+    {
+      "number": 2,
+      "solution": "Next, we look at the answer choices and accordingly prepare our combinations. This will be: a = b + c / d ⇒ 2, b + c + d ⇒ 3, c + d + a + b ⇒ 4"
+    },
+    {
+      "number": 3,
+      "solution": "Now, we read each question carefully and compare the facts presented with the various conditions. A detailed analysis of each question is being presented below to advise the reader to take a pencil and follow this line by line."
+    },
+    {
+      "number": 1,
+      "solution": "Question 1: Manisha is an M.Sc. (Comp Sc) with 65% marks. This fulfils condition c. Hence, we put a (✓) mark below c. Next, Manisha's date of birth is 2nd May, 1970. This violates the critical calculation that a=1 is fulfilled, so we put a (✗) mark. Since, we look at the additional condition such as restriction at which a is 1, she turned 28, so on 1st Nov. 1995 she is more than 23 years but, as we see, she is below 25 years as her birth is in 1970. This is fulfilled, so we put a ✓ mark here. Lastly, Manisha is having programming experience of more than 2 years. So, we put a (✓) mark here. At last, we see that the space below condition d is vacant. We refer to condition d in the question. We see that d is about marks received in an interview. Since no information is given about Manisha's marks in the interview, so we put a ? mark below d."
+    },
+    {
+      "number": 2,
+      "solution": "Question 2: Kishore Garg is an M.C.A. with 61% marks. This fulfils condition a and so we put a (✓) mark below a. His date of birth is 1st Aug. 1970; so he has definitely lived for more than 23 years. This fulfils a, so we put a ✓ mark below a. He has worked as a computer teacher for 3 years. This fulfils condition g and hence fulfils condition b. He obtained more than 55% marks but less than 60% marks in the interview. This is more than the required 50% (25 out of 50) marks. Hence, it also fulfils condition d."
+    },
+    {
+      "number": 3,
+      "solution": "Question 3: Babita is an M.Tech. with 58% marks. This violates the condition of M.Sc. as an additional condition is attached i.e. c which is fulfilled. However, this only meets b and we put a (✓) mark over there. Her date of birth is sometime in 1971, so she is certainly below 23 yrs in 1993. This violates condition a. We see that there is an additional condition attached to a, which is g. We also see that g is also violated. So, we put a (✗) mark. Now, because some mark has been obtained, we need not go any further (see Step III c). So, we move on to the next question."
+    },
+    {
+      "number": 4,
+      "solution": "Now, let us select the answer choices. Question 1: No cross mark and a question mark. Hence, data inadequate. Answer choice: 4. Question 2: All checks ⇒ ⇒ ⇒ (arg.III). Question 3: At least all close. Hence, 'not to be selected.' Answer: choice 1. Question 4: Answer: choice: 5 (for the same reason that a cross-mark exists)."
+    },
+    {
+      "number": 5,
+      "solution": "For the method: practical and full understanding of the method we are presenting are example with solutions. But this time we are omitting the necessary details."
+    }
+  ],
+  "answers": [],
+  "_page": 204
+}

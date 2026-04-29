@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Analytical Reasoning · Saanvi</title>
+  <link rel="stylesheet" href="shared-styles.css">
+  <style>
+    body { background: var(--bg-primary); color: var(--text-primary); min-height:100vh; }
+    .wrap { max-width:1180px; margin:0 auto; padding:24px 18px 60px; }
+    .head { display:flex; align-items:center; justify-content:space-between;
+            flex-wrap:wrap; gap:14px; margin-bottom:24px; }
+    .title h1 {
+      font-family:'Playfair Display',serif; font-weight:700;
+      font-size:clamp(1.5rem,4vw,2.1rem); margin:0;
+      background: linear-gradient(135deg,#f59e0b 0%,#ef4444 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .title small { color: var(--text-muted); font-size:0.85rem; }
+    .nav { display:flex; gap:8px; flex-wrap:wrap; }
+    .nav a {
+      padding:8px 14px; background: var(--bg-input); color: var(--text-secondary);
+      border:1px solid var(--border-color); border-radius:8px; font-size:13px;
+      font-weight:600; text-decoration:none;
+    }
+    .nav a:hover { color:#f59e0b; border-color:#f59e0b; }
+
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+             gap:12px; margin-bottom:24px; }
+    .stat { background: var(--bg-card); border:1px solid var(--border-color);
+            border-radius:12px; padding:16px; text-align:center; }
+    .stat-val { font-size:1.6rem; font-weight:700; }
+    .stat-lbl { font-size:0.75rem; color: var(--text-muted); text-transform:uppercase;
+                letter-spacing:0.05em; margin-top:4px; }
+
+    .quick { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:24px; }
+    @media (max-width:780px) { .quick { grid-template-columns:1fr; } }
+    .qaction {
+      display:flex; gap:14px; align-items:center;
+      background: var(--bg-card); border:1px solid var(--border-color);
+      border-radius:12px; padding:16px 20px; text-decoration:none; color:inherit;
+      transition: transform .12s, border-color .12s;
+    }
+    .qaction:hover { transform: translateY(-1px); border-color: var(--border-accent); }
+    .qaction.practice { border-left: 4px solid #f59e0b; }
+    .qaction.progress { border-left: 4px solid #ef4444; }
+    .qaction .icon { font-size:1.8rem; line-height:1; }
+    .qaction h3 { margin:0 0 2px; font-size:1rem; font-weight:600; }
+    .qaction p { margin:0; font-size:0.82rem; color: var(--text-muted); }
+    .qaction .arrow { margin-left:auto; color: var(--text-muted); font-size:1.4rem; }
+
+    .topic-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; }
+    .topic-card {
+      background: var(--bg-card); border:1px solid var(--border-color);
+      border-radius:10px; padding:14px 16px; cursor:pointer;
+      transition: border-color .12s, transform .12s;
+    }
+    .topic-card:hover { border-color:#f59e0b; transform: translateY(-1px); }
+    .topic-card h4 { margin:0 0 6px; font-size:0.95rem; font-weight:600; }
+    .topic-card .ct { color: var(--text-muted); font-size:0.8rem; }
+    .topic-card .ct strong { color:#f59e0b; }
+
+    .empty { padding:30px 20px; text-align:center; color:var(--text-muted);
+             border:1px dashed var(--border-color); border-radius:10px; }
+
+    .section-head { display:flex; justify-content:space-between; align-items:center;
+                    margin-bottom:14px; padding-bottom:6px;
+                    border-bottom:1px solid var(--border-color); }
+    .section-head h2 { margin:0; font-size:1.05rem; font-weight:600;
+                       display:flex; align-items:center; gap:8px; }
+    .section-head h2 .count {
+      background: rgba(245,158,11,0.12); color:#f59e0b;
+      padding:2px 9px; border-radius:999px; font-size:0.75rem; font-weight:700;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <div class="title">
+        <h1>🧠 Analytical Reasoning — Saanvi</h1>
+        <small id="user-line">Loading…</small>
+      </div>
+      <div class="nav">
+        <a href="index.html">← Hub</a>
+        <a href="reasoning_progress.html">📈 Progress</a>
+        <a href="reasoning_parent_dashboard.html" id="parent-link" style="display:none;">👪 Parent view</a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-val" id="streak"     style="color:#fb923c;">—</div><div class="stat-lbl">Day streak</div></div>
+      <div class="stat"><div class="stat-val" id="today-q"    style="color:#f59e0b;">—</div><div class="stat-lbl">Today's questions</div></div>
+      <div class="stat"><div class="stat-val" id="today-acc"  style="color:#4ade80;">—</div><div class="stat-lbl">Today's accuracy</div></div>
+      <div class="stat"><div class="stat-val" id="total-bank" style="color:#ef4444;">—</div><div class="stat-lbl">Question bank</div></div>
+    </div>
+
+    <div class="quick">
+      <a class="qaction practice" href="reasoning_practice_setup.html">
+        <div class="icon">✏️</div>
+        <div>
+          <h3>Practice Questions</h3>
+          <p id="practice-meta">Topic-tagged reasoning problems · pick topics, count, and timer</p>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+      <a class="qaction progress" href="reasoning_progress.html">
+        <div class="icon">📊</div>
+        <div>
+          <h3>My Progress</h3>
+          <p id="progress-meta">Streak, mastery heatmap, recent sessions</p>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+
+    <div class="section-head">
+      <h2>📂 Topics <span class="count" id="topic-count">…</span></h2>
+    </div>
+    <div class="topic-grid" id="topics"><div class="empty">Loading topics…</div></div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    const API = window.location.origin;
+    function jget(p){ return fetch(API+p).then(r => { if(!r.ok) throw new Error(r.statusText); return r.json(); }); }
+
+    async function init(){
+      let userId = 'saanvi', name = 'Saanvi', role = 'child';
+      try {
+        const u = window.__currentUser || JSON.parse(localStorage.getItem('cachedUser')||'{}');
+        if (u.user_id) { userId = u.user_id; name = u.name || name; role = u.role || role; }
+      } catch(e){}
+      document.getElementById('user-line').textContent = `${name}'s reasoning practice`;
+      if (role === 'admin' || role === 'parent') {
+        document.getElementById('parent-link').style.display = '';
+      }
+
+      try {
+        const [topics, prog] = await Promise.all([
+          jget('/api/reasoning/topics'),
+          jget('/api/reasoning/progress?user_id=' + encodeURIComponent(userId)),
+        ]);
+        const totalQ = prog.total_questions || topics.topics.reduce((s,t)=>s+t.count,0);
+        document.getElementById('total-bank').textContent = totalQ.toLocaleString();
+        document.getElementById('topic-count').textContent = (topics.topics || []).length;
+
+        if (totalQ === 0) {
+          document.getElementById('practice-meta').textContent =
+            'Question bank is being built — practice will be ready once questions are loaded.';
+        } else {
+          document.getElementById('practice-meta').textContent =
+            `${totalQ.toLocaleString()} reasoning problems · ${topics.topics.length} topics`;
+        }
+
+        document.getElementById('streak').textContent = (prog.streak || 0) + 'd';
+        const today = (prog.daily_summary||[]).find(d => d.day === new Date().toISOString().slice(0,10));
+        document.getElementById('today-q').textContent = today ? (today.attempted || 0) : 0;
+        document.getElementById('today-acc').textContent = today && today.attempted
+          ? Math.round((today.correct/today.attempted)*100)+'%' : '—';
+
+        const att = (prog.topic_mastery||[]).reduce((s,t)=>s+t.attempted,0);
+        const cor = (prog.topic_mastery||[]).reduce((s,t)=>s+t.correct,0);
+        document.getElementById('progress-meta').textContent = att
+          ? `Overall ${Math.round(cor/att*100)}% · ${(prog.recent_sessions||[]).length} sessions · ${(prog.streak||0)} day streak`
+          : 'No sessions yet — pick a topic and start small';
+
+        renderTopics(topics.topics || []);
+      } catch(e){ console.error(e); }
+    }
+
+    function renderTopics(topics) {
+      const root = document.getElementById('topics');
+      if (!topics.length) {
+        root.innerHTML = '<div class="empty">No topics in the bank yet.</div>';
+        return;
+      }
+      topics.sort((a,b) => b.count - a.count);
+      root.innerHTML = topics.map(t => `
+        <a class="topic-card" href="reasoning_practice_setup.html?topics=${encodeURIComponent(t.code)}">
+          <h4>${escapeHtml(t.name)}</h4>
+          <div class="ct"><strong>${t.count}</strong> question${t.count===1?'':'s'} · ${t.subtopics.length} subtopic${t.subtopics.length===1?'':'s'}</div>
+        </a>`).join('');
+    }
+
+    function escapeHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+    init();
+  </script>
+</body>
+</html>

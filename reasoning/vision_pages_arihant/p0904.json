@@ -1,0 +1,44 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Dice",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 13,
+      "solution": "From all the three positions of the dice, adjacent faces of 4 = 1, 2, 3 and 5. It is clear that, the digit opposite to 4 = 6"
+    },
+    {
+      "number": 14,
+      "solution": "From positions I and II, common dots = 2 and 4 (at the common right face). So, the face opposite to face having 3 dots will be the face having 6 dots."
+    },
+    {
+      "number": 15,
+      "solution": "From positions II and III, Common letters = d and e. Clearly, f is opposite to a"
+    },
+    {
+      "number": 16,
+      "solution": "Dice can be shown as [diagram showing unfolded dice with B at top, D-C-A in middle row, E below, and ? at bottom]. So, from the unfolded dice, it is clear that the letter opposite to D is A."
+    }
+  ],
+  "answers": [
+    {
+      "number": 13,
+      "correct": "d"
+    },
+    {
+      "number": 14,
+      "correct": "d"
+    },
+    {
+      "number": 15,
+      "correct": "d"
+    },
+    {
+      "number": 16,
+      "correct": "b"
+    }
+  ],
+  "_page": 904
+}

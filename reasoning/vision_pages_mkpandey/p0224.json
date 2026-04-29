@@ -1,0 +1,71 @@
+{
+  "page_type": "questions",
+  "chapter_number": 14,
+  "chapter_title": "Input-Output(...contd.): Shifting",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "shifting",
+      "subtopic_name": "Shifting",
+      "body": "A word rearrangement machine, when given a particular input, rearranges it following a particular rule. The following is the illustration of the input and the steps of rearrangement:\nInput: I have long awaited for your reply\nStep I: reply long have awaited for your I\nStep II: long reply awaited have for I your\nStep III: your awaited reply have for long I and so on till step VII.\nQuestion:\nGiven the following\nInput: I know you will not reply back\nWhat step will be the following arrangement?\nArrangement: You back I reply not will know",
+      "choices": {
+        "1": "IX",
+        "2": "XI",
+        "3": "IX",
+        "4": "VIII",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "shifting",
+      "subtopic_name": "Shifting",
+      "body": "If step VI of a given input be 'have I done anything wrong with you', what would be the input?",
+      "choices": {
+        "1": "you done with have wrong I anything",
+        "2": "you done with have wrong anything I",
+        "3": "does you have with wrong anything I",
+        "4": "I have you with wrong anything done",
+        "5": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "input_output",
+      "topic_name": "Input-Output",
+      "subtopic_code": "shifting",
+      "subtopic_name": "Shifting",
+      "body": "If step XII of a given input be 'it is impossible to do everything right' what is the 1? step of that input?",
+      "choices": {
+        "1": "it everything right do impossible to",
+        "2": "it is right everything do to impossible"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 224
+}

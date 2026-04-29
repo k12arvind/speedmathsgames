@@ -1,0 +1,457 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": null,
+  "passages": [
+    {
+      "passage_text": "In the following questions, select the related word/letters/number from the given alternatives.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "In each of the following questions, two words are paired which a have a certain relation. Select a correct option to substitute question mark, so as to make a similar relational pair with the word given after double colon (: :).",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "In the following questions, select the related word/letters/number from the given alternative.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Indicate the answer choice to the question mark(?).",
+      "has_figure": false,
+      "topic_code": "analogy"
+    },
+    {
+      "passage_text": "Choose the option that best completes the relationship indicated in capitalized pair.",
+      "has_figure": false,
+      "topic_code": "analogy"
+    }
+  ],
+  "questions": [
+    {
+      "number": 68,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Picture : See : : Book : ?",
+      "choices": {
+        "a": "Buy",
+        "b": "Read",
+        "c": "Listen",
+        "d": "Library"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 69,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Dark : Light : : Hot : ?",
+      "choices": {
+        "a": "Contaminated",
+        "b": "Accrued",
+        "c": "Diseased",
+        "d": "Cold"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 70,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Swimming : River : : Hiking : ?",
+      "choices": {
+        "a": "Road",
+        "b": "Pond",
+        "c": "Mountain",
+        "d": "Sea"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 71,
+      "passage_index": 0,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "HOPEFUL : LUFEPOH : : ETHNICITY : ?",
+      "choices": {
+        "a": "YTICINHTE",
+        "b": "TICINHTY",
+        "c": "ICINHTEYT",
+        "d": "CINHTEYT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 72,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Right : duty : : Power : ?",
+      "choices": {
+        "a": "Wrong",
+        "b": "Weak",
+        "c": "Powerless",
+        "d": "Liability"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 73,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Elephant : Calf : : Tiger : ?",
+      "choices": {
+        "a": "Pup",
+        "b": "Tigress",
+        "c": "Cub",
+        "d": "Baby Tiger"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 74,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Patient : Doctor : : Litigant : ?",
+      "choices": {
+        "a": "Advisor",
+        "b": "Help",
+        "c": "Legal aid",
+        "d": "Lawyer"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 75,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "World War II : United Nations : : World War I : ?",
+      "choices": {
+        "a": "Treaty of Versailles",
+        "b": "International Commission of Jurists",
+        "c": "League of Nations",
+        "d": "International Court of Justice"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 76,
+      "passage_index": 2,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "841 : 29 : : 289 : ?",
+      "choices": {
+        "a": "23",
+        "b": "21",
+        "c": "17",
+        "d": "13"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 77,
+      "passage_index": 2,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "8 : 28 : : 27 : ?",
+      "choices": {
+        "a": "85",
+        "b": "28",
+        "c": "8",
+        "d": "64"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 78,
+      "passage_index": 2,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Tanning : Leather : : Pyrotechnics : ?",
+      "choices": {
+        "a": "Bombs",
+        "b": "Fireworks",
+        "c": "Wool",
+        "d": "Machinery"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 79,
+      "passage_index": 2,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "F : 216 : : L : ?",
+      "choices": {
+        "a": "1728",
+        "b": "1700",
+        "c": "1600",
+        "d": "1723"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 80,
+      "passage_index": 2,
+      "seq_in_passage": 5,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "MOUSE : KFSTC : : LIGHT : ?",
+      "choices": {
+        "a": "MGHFTU",
+        "b": "JGEFR",
+        "c": "JEIR",
+        "d": "MJHIU"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 81,
+      "passage_index": 2,
+      "seq_in_passage": 6,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "584 : 488 : : 294 : ?",
+      "choices": {
+        "a": "581",
+        "b": "291",
+        "c": "378",
+        "d": "487"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 82,
+      "passage_index": 2,
+      "seq_in_passage": 7,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "AHOP : CKSU : : BJMF : ?",
+      "choices": {
+        "a": "EZUQ",
+        "b": "DMQK",
+        "c": "DQKM",
+        "d": "CJWM"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 83,
+      "passage_index": 3,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "EDUCATION : NOITACUDE :: INTELLIGENCE : ?",
+      "choices": {
+        "a": "ECENGILLETNI",
+        "b": "ECNEGILLITENI",
+        "c": "ECNEGILLIETNI",
+        "d": "ECNEGILLITENI"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 84,
+      "passage_index": 3,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "letter_analogy",
+      "subtopic_name": "Letter Analogy",
+      "body": "BUCKET : ACTVBDJLDFSU : : BONUS : ?",
+      "choices": {
+        "a": "ACMNMOTVRT",
+        "b": "SUNQB",
+        "c": "ACNPMOTVRT",
+        "d": "ACMNMOTURFT"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 85,
+      "passage_index": 3,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "Australia : Continent",
+      "choices": {
+        "a": "Engine : Train",
+        "b": "River : Coast",
+        "c": "Vikrant : Ship",
+        "d": "Yuri Gagarin : Space"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 86,
+      "passage_index": 4,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "CRITICISE : FULMINATE",
+      "choices": {
+        "a": "Tense : Assuage",
+        "b": "Flail : Control",
+        "c": "Hurt : Torture",
+        "d": "Land : Prevaricate"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 87,
+      "passage_index": 4,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "word_analogy",
+      "subtopic_name": "Word Analogy",
+      "body": "POETRY : BALLAD",
+      "choices": {
+        "a": "Reptile : Snake",
+        "b": "Bulb : Tube light",
+        "c": "Snake : Reptile",
+        "d": "Life : Death"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 88,
+      "passage_index": 4,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "analogy",
+      "topic_name": "Analogy",
+      "subtopic_code": "number_analogy",
+      "subtopic_name": "Number Analogy",
+      "body": "5 : 35",
+      "choices": {
+        "a": "7 : 77",
+        "b": "9 : 45",
+        "c": "11 : 55",
+        "d": "3 : 24"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 57
+}

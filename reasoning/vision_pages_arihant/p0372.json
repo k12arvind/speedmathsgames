@@ -1,0 +1,206 @@
+{
+  "page_type": "questions",
+  "chapter_number": null,
+  "chapter_title": "Venn Diagram",
+  "passages": [
+    {
+      "passage_text": "Read the following information and then answer the questions that follow. In the figure the rectangle stands for philosophers, circle for historians and triangle for magicians.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    },
+    {
+      "passage_text": "Below is given a figure with four intersecting circles, each representing a group of persons having the quality written against it. Study the figure carefully and answer the questions that follow.",
+      "has_figure": true,
+      "topic_code": "venn_diagram"
+    }
+  ],
+  "questions": [
+    {
+      "number": 17,
+      "passage_index": 0,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "According to the above diagram, which one of the following statements is true?",
+      "choices": {
+        "a": "All philosophers are magicians but no magician is a historian",
+        "b": "All magicians are either historians or philosophers",
+        "c": "Some philosophers are historians and some magicians are philosophers",
+        "d": "Some historians, who are philosophers, are magicians too"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": 0,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "According to the above diagram, which one of the following statements is true?",
+      "choices": {
+        "a": "All historians are magicians",
+        "b": "Some magicians are philosophers as well as historians",
+        "c": "All historians are either philosophers or magicians",
+        "d": "Some historians are philosophers"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": 0,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "According to the above diagram, which one of the following statements is not true?",
+      "choices": {
+        "a": "Some magicians are philosophers",
+        "b": "No magician is historian",
+        "c": "Magicians, who are philosophers are historians also",
+        "d": "Some philosophers are magicians"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "In the following diagram, the triangle represents doctors, the circle represents players and the rectangle represents singers. Which region represents doctors who are singers but not players?",
+      "choices": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 21,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "The diagram below represents the students who study Physics, Chemistry and Mathematics. Study the diagram and identify the region which represents students who study both Physics and Chemistry but not Mathematics.",
+      "choices": {
+        "a": "T + S + U + P",
+        "b": "C",
+        "c": "R + T + A + U + P + S",
+        "d": "T"
+      },
+      "correct": null,
+      "has_figure": true,
+      "skip_reason": null
+    },
+    {
+      "number": 22,
+      "passage_index": 1,
+      "seq_in_passage": 1,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "People who are not laborious, enterprising and disciplined are represented by",
+      "choices": {
+        "a": "Q",
+        "b": "T",
+        "c": "U",
+        "d": "V",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 23,
+      "passage_index": 1,
+      "seq_in_passage": 2,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "The region which represents people who are not studious, but possess other three qualities, is denoted by",
+      "choices": {
+        "a": "M",
+        "b": "N",
+        "c": "O",
+        "d": "W",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 24,
+      "passage_index": 1,
+      "seq_in_passage": 3,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "The region which represents the people who are enterprising, studious and disciplined but not laborious, is denoted by",
+      "choices": {
+        "a": "Q",
+        "b": "P",
+        "c": "S",
+        "d": "T",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 25,
+      "passage_index": 1,
+      "seq_in_passage": 4,
+      "subject": "verbal",
+      "topic_code": "venn_diagram",
+      "topic_name": "Venn Diagram",
+      "subtopic_code": "interpretation",
+      "subtopic_name": "Diagram Interpretation",
+      "body": "People who are not studious and disciplined but are laborious and enterprising both, are represented by",
+      "choices": {
+        "a": "M",
+        "b": "N",
+        "c": "P",
+        "d": "K",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 372
+}

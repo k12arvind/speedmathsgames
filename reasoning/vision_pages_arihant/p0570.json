@@ -1,0 +1,51 @@
+{
+  "page_type": "solutions",
+  "chapter_number": null,
+  "chapter_title": "Input-Output",
+  "passages": [],
+  "questions": [],
+  "solutions": [
+    {
+      "number": 6,
+      "solution": "(d) Given, Input 19 36 43 50 31 22 25. Now, from reference chart, taking the digits for Step IV and replacing them with numbers. Step IV: 1 2 3 4 5 6 7 → 19 36 43 50 31 22 25"
+    },
+    {
+      "number": 7,
+      "solution": "(d) Given, Step II rat cat fat chat that hat mat. Input: 1 2 3 4 5 6 7 → mat fat cat chat hat that rat"
+    },
+    {
+      "number": 8,
+      "solution": "(c) Given, Input 16 nine 32 ten two five six"
+    },
+    {
+      "number": 9,
+      "solution": "(c) Given, Step V 24 99 100 121 fine wine dine. Step II: 7 3 2 4 6 5 1 → 24 100 99 121 wine fine dine"
+    },
+    {
+      "number": 10,
+      "solution": "(e) Given, Step III 39 40 41 59 35 tab map. Input: 1 2 3 4 5 6 7 → 39 41 40 59 tap 35 map"
+    },
+    {
+      "number": 11,
+      "solution": "(b) Given, Step V weaks of tepid slothful and weak ideas workers must take a stand against working. Step IV: 5 2 3 7 4 1 6 → of weaks and slothful tepid ideas weak"
+    },
+    {
+      "number": 12,
+      "solution": "(e) Given, Step I it was the name bestowed upon him. Step VII: 7 2 5 1 4 3 6 → upon it name the bestowed it him"
+    },
+    {
+      "number": 13,
+      "solution": "(e) Given, Step VI. Step III: 3 2 5 4 7 6 1 → working must workers a take against stand Last word"
+    },
+    {
+      "number": 14,
+      "solution": "(c) Given, Step III the best way of promoting our sports. Input: 1 2 3 4 5 6 7 → sports best the of way our promoting"
+    },
+    {
+      "number": 15,
+      "solution": "(b) Given, Input it is a good approach with care. Step IV: 5 2 3 7 4 1 6 → approach is a care good it with"
+    }
+  ],
+  "answers": [],
+  "_page": 570
+}

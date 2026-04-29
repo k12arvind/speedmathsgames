@@ -1,0 +1,413 @@
+{
+  "page_type": "exercises",
+  "chapter_number": null,
+  "chapter_title": "Master Exercise",
+  "passages": [],
+  "questions": [
+    {
+      "number": 1,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "If day before yesterday was Saturday, then what day of the week will it be on day after tomorrow?",
+      "choices": {
+        "a": "Friday",
+        "b": "Thursday",
+        "c": "Wednesday",
+        "d": "Tuesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 2,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "Today is Monday, it will be ...... after 61 days.",
+      "choices": {
+        "a": "Wednesday",
+        "b": "Saturday",
+        "c": "Tuesday",
+        "d": "Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 3,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "Today is Thursday. The day after 59 days will be",
+      "choices": {
+        "a": "Sunday",
+        "b": "Monday",
+        "c": "Tuesday",
+        "d": "Wednesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 4,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "If today is Friday, then the day after 63 days will be",
+      "choices": {
+        "a": "Friday",
+        "b": "Thursday",
+        "c": "Saturday",
+        "d": "Monday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 5,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "leap_year",
+      "subtopic_name": "Leap Year",
+      "body": "Which of the following is a leap year? [CG PSC 2013]",
+      "choices": {
+        "a": "2800",
+        "b": "1800",
+        "c": "2600",
+        "d": "3000",
+        "e": "All of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 6,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "monthly_calculation",
+      "subtopic_name": "Monthly Calculation",
+      "body": "How many Monday's are there in a particular month of a particular year, if the month ends on Wednesday [SNAP 2012]",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "3",
+        "d": "Cannot be specified"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 7,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "calendar_repeat",
+      "subtopic_name": "Calendar Repetition",
+      "body": "The year next to 1990 which have the same calendar as that of the year 1990 is",
+      "choices": {
+        "a": "1995",
+        "b": "1997",
+        "c": "1996",
+        "d": "1992"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 8,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "birthday_calculation",
+      "subtopic_name": "Birthday Calculation",
+      "body": "A girl was born on September 6, 1970 which happened to be a Sunday. Her birthday would have fallen again on Sunday in [UP PSC 2012]",
+      "choices": {
+        "a": "1975",
+        "b": "1977",
+        "c": "1981",
+        "d": "1982"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 9,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "If Monday falls on the first of October which day will fall three days after the 20th in that month? [UP PSC 2013]",
+      "choices": {
+        "a": "Monday",
+        "b": "Tuesday",
+        "c": "Wednesday",
+        "d": "Sunday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 10,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "century_calculation",
+      "subtopic_name": "Century Calculation",
+      "body": "The last day of a century cannot be either. [MAT 2013] I. Tuesday II. Thursday III. Saturday IV. Sunday",
+      "choices": {
+        "a": "Monday",
+        "b": "Wednesday",
+        "c": "Tuesday",
+        "d": "Friday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 11,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "monthly_calculation",
+      "subtopic_name": "Monthly Calculation",
+      "body": "In a month of 31 days, third Thursday falls on 16th, then what will be the last day of the month? [CG PSC 2013]",
+      "choices": {
+        "a": "5th Friday",
+        "b": "4th Saturday",
+        "c": "5th Wednesday",
+        "d": "5th Thursday",
+        "e": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 12,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "day_calculation",
+      "subtopic_name": "Day Calculation",
+      "body": "On 6th March, 2005 Monday falls. What day of the week was it on 6th March, 2004?",
+      "choices": {
+        "a": "Sunday",
+        "b": "Thursday",
+        "c": "Tuesday",
+        "d": "Saturday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 13,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "birthday_calculation",
+      "subtopic_name": "Birthday Calculation",
+      "body": "If the Republic day of India in 1980, falls on Saturday, X was born on March 3,1980 and Y is older to X by 3 days, then Y's birthday fell on [IB ACIO 2013]",
+      "choices": {
+        "a": "Thursday",
+        "b": "Friday",
+        "c": "Wednesday",
+        "d": "None of these"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 14,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "historical_date",
+      "subtopic_name": "Historical Date",
+      "body": "What was the day on 1st January, 1901?",
+      "choices": {
+        "a": "Monday",
+        "b": "Wednesday",
+        "c": "Sunday",
+        "d": "Tuesday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 15,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "historical_date",
+      "subtopic_name": "Historical Date",
+      "body": "What was the day on 31st October, 1984?",
+      "choices": {
+        "a": "Friday",
+        "b": "Sunday",
+        "c": "Wednesday",
+        "d": "Monday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 16,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "historical_date",
+      "subtopic_name": "Historical Date",
+      "body": "What was the day on 14th March, 1993?",
+      "choices": {
+        "a": "Friday",
+        "b": "Thursday",
+        "c": "Sunday",
+        "d": "Saturday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 17,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "historical_date",
+      "subtopic_name": "Historical Date",
+      "body": "What was the day of the week on 2nd July, 1984?",
+      "choices": {
+        "a": "Wednesday",
+        "b": "Tuesday",
+        "c": "Monday",
+        "d": "Thursday"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 18,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "monthly_calculation",
+      "subtopic_name": "Monthly Calculation",
+      "body": "On what dates of August, 1980 did Monday fall?",
+      "choices": {
+        "a": "4th, 11th, 18th and 25th",
+        "b": "3th, 10th, 17th and 24th",
+        "c": "5th, 12th, 20th and 27th",
+        "d": "9th, 16th, 23rd and 30th"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 19,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "monthly_calculation",
+      "subtopic_name": "Monthly Calculation",
+      "body": "On what dates of December,1984 did Sunday fall?",
+      "choices": {
+        "a": "6th , 13th, 20th and 27th",
+        "b": "7th , 14th, 21st and 28th",
+        "c": "2nd , 9th, 16th, 23rd and 30th",
+        "d": "1st , 8th, 15th and 22nd"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    },
+    {
+      "number": 20,
+      "passage_index": null,
+      "seq_in_passage": null,
+      "subject": "verbal",
+      "topic_code": "calendar_clock",
+      "topic_name": "Calendar",
+      "subtopic_code": "marriage_calculation",
+      "subtopic_name": "Marriage Anniversary Calculation",
+      "body": "The day on 18.09.1977 was Sunday A couple was married on this date.How many marriage anniversaries would fall on Sunday in the next 15 yr? [UP PSC 2013]",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "5",
+        "d": "9"
+      },
+      "correct": null,
+      "has_figure": false,
+      "skip_reason": null
+    }
+  ],
+  "solutions": [],
+  "answers": [],
+  "_page": 443
+}
