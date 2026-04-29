@@ -1,0 +1,1491 @@
+{
+  "paper": "NSEJS 2019-20",
+  "paper_code": "52",
+  "source_pdf": "nsejs_2006_2019.pdf",
+  "questions": [
+    {
+      "number": 1,
+      "body": "Apples dropping from apple trees were observed by many people before Newton. But why they fall, was explained by Isaac Newton postulating the law of universal gravitation. Which of the following statements best describes the situation?",
+      "choices": {
+        "a": "The force of gravity acts only on the apple",
+        "b": "The apple is attracted towards the\nsurface of the earth",
+        "c": "Both earth and apple experience the same\nforce of attraction towards each other",
+        "d": "Apple falls due to earth’s gravity and\nhence only (a) is true and (c) is absurd"
+      },
+      "correct": "c",
+      "solution": "According to Newton's law of gravitation,\nforce of gravitation acts on both interacting\nobject having same magnitude of force and\nthis force is attractive in nature.",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "gravitation",
+      "subtopic_name": "Universal Gravitation",
+      "difficulty": "easy"
+    },
+    {
+      "number": 2,
+      "body": "A rectangular metal plate, shown in the adjacent figure has a charge of 420 C assumed to be uniformly distributed over it. Then how much is the charge over the shaded area? No part of metal plate is cut. (Circles and the diagonal are shown for clarity only. = 22/7) 28 cm 14 cm",
+      "choices": {
+        "a": "45 C",
+        "b": "450 C",
+        "c": "15 C",
+        "d": "150 C"
+      },
+      "correct": "a",
+      "solution": "Charge per unit area Q\nA\nArea of shaded portion  \n\n\n\n\n\n\n\n\n\n\n\n2\n1\n22\n28 14\n2\n7\n2\n7\n= 42 cm2\nCharge on shaded portion \n\n\n420\n42\n28 14\n= 45 C\nONLY ONE OUT OF FOUR OPTIONS IS CORRECT",
+      "has_figure": true,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "charge_distribution",
+      "subtopic_name": "Charge Distribution",
+      "difficulty": "medium",
+      "skip_reason": "Question references a figure showing shaded area that we cannot see"
+    },
+    {
+      "number": 3,
+      "body": "In the adjacent circuit, the voltages across AD, BD and CD are 2 V, 6 V and 8 V respectively. If resistance RA = 1 k, then the values of resistances RB and RC are _______ and ______ respectively. B RB RA A C RC D",
+      "choices": {
+        "a": "4 kand 6 k",
+        "b": "2 kand 1 k",
+        "c": "1 k and 2 k",
+        "d": "Data insufficient as battery voltages is not\ngiven"
+      },
+      "correct": "b",
+      "solution": "Current flowing through circuit \n3\n2V\n1 10\n\n\n\n = 2 × 10–3 A\nB\n4 V\n2 V\n2 V\nA\nC\nD\n\n\n\n\n\nB\n3\n4\nR\n2 k\n2 10\n\n\n\n\n\nC\n3\n2\nR\n1k\n2 10",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "circuits",
+      "subtopic_name": "Circuit Analysis",
+      "difficulty": "medium"
+    },
+    {
+      "number": 4,
+      "body": "A new linear scale of temperature measurement is to be designed. It is called a ‘Z scale’ on which the freezing and boiling points of water are 20 Z and 220 Z respectively. What will be the temperature shown on the ‘Z scale’ corresponding to a temperature of 20°C on the Celsius scale?",
+      "choices": {
+        "a": "10 Z",
+        "b": "20 Z",
+        "c": "40 Z",
+        "d": "60 Z"
+      },
+      "correct": "d",
+      "solution": "T\n20\n20\n0\n220\n20\n100\n\n\n\n\n\nT = 60 Z",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "temperature_scales",
+      "subtopic_name": "Temperature Scales",
+      "difficulty": "medium"
+    },
+    {
+      "number": 5,
+      "body": "Some waveforms among I, II, III and IV superpose (add graphically) to produce the waveforms P, Q, R and S. Among the following, match the pairs that give the correct combinations: P Q R S t t t t t t t t I II III IV 0 0 0 0 Resultant Superposition of P (K) III and IV Q (L) II and IV R (M) I, II and III S (N) I and IV (O) II and III",
+      "choices": {
+        "a": "PO, QN, RL, SM",
+        "b": "PM, QN, RL, SK",
+        "c": "PM, QN, RK, SL",
+        "d": "PO, QM, RL, SK"
+      },
+      "correct": "b",
+      "solution": "III + IV\nS\nII + IV\nR\nI + II + III\nP\nII + III\nI + IV\nQ",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "superposition",
+      "subtopic_name": "Wave Superposition",
+      "difficulty": "hard",
+      "skip_reason": "Question references waveform figures that we cannot see"
+    },
+    {
+      "number": 6,
+      "body": "A rigid body of mass m is suspended from point O using an inextensible string of length L. When it is displaced through an angle , what is the change in the potential energy of the mass? (Refer adjacent figure.) X O L m Y ",
+      "choices": {
+        "a": "mgL(1 – cos)",
+        "b": "mgL(cos – 1)",
+        "c": "mgLcos",
+        "d": "mgL(1 – sin)"
+      },
+      "correct": "a",
+      "solution": "h\nL\nO\n\nm\nh = L – Lcos\nSo PE = mgh = mg (L – Lcos)\n= mgL (1 – cos)",
+      "has_figure": true,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "energy",
+      "subtopic_name": "Potential Energy",
+      "difficulty": "medium"
+    },
+    {
+      "number": 7,
+      "body": "A piece of wire P and three identical cells are connected in series. An amount of heat is generated in a certain time interval in the wire due to passage of current. Now the circuit is modified by replacing P with another wire Q and N identical cells, all connected in series. Q is four times longer in length than P. The wire P and Q are of same material and have the same diameter. If the heat generated in second situation is also same as before in the same time interval, then find N.",
+      "choices": {
+        "a": "4",
+        "b": "6",
+        "c": "16",
+        "d": "36"
+      },
+      "correct": "b",
+      "solution": "\n\nP\nl\nR\nA\n\n\nQ\n4 l\nR\nA\n\n\n2\n1\n(3V)\nH\nt\nl\nA\n\n\n2\n2\n(nV)\nH\nt\nl\n4 A\nH1 = H2\n\nn = 6",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "heating_effect",
+      "subtopic_name": "Heating Effect of Current",
+      "difficulty": "hard"
+    },
+    {
+      "number": 8,
+      "body": "4 3 2 1 0 –1 –2 0 2 4 6 8 10 x (m) F (N) Refer to the adjacent figure. A variable force F is applied to a body of mass 6 kg at rest. The body moves along x- axis as shown. The speed of the body at x = 5 m and x = 6 m is ____ and ____ respectively.",
+      "choices": {
+        "a": "0 m/s, 0 m/s",
+        "b": "0 m/s, 2 m/s",
+        "c": "2 m/s, 2 m/s",
+        "d": "2 m/s, 4 m/s"
+      },
+      "correct": "c",
+      "solution": "\nW = F × x\nFor x = 0  to x = 5\n\n\n\n\n\n\n1 \nW\n4\n5\n1\n2\nW = 12 J\nFrom work-energy theorem\nW = KE\nv = 2 m/s\nFrom x = 5 m to x = 6 m\n∵ F = 0\n v = constant = 2 m/s",
+      "has_figure": true,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "work_energy",
+      "subtopic_name": "Work-Energy Theorem",
+      "difficulty": "hard"
+    },
+    {
+      "number": 9,
+      "body": "Consider the motion of a small spherical steel body of mass m, falling freely through a long column of a fluid that opposes its motion with a force proportional to its speed. Initially the body moves down fast, but after some time attains a constant velocity known as terminal velocity. If weight mg, opposing force (Fv) and buoyant force (Fb) act on the body, then the correct equation relating these forces, after the terminal velocity is reached, is:",
+      "choices": {
+        "a": "mg + Fv = Fb",
+        "b": "mg = Fv – Fb",
+        "c": "mg = Fv + Fb",
+        "d": "None"
+      },
+      "correct": "c",
+      "solution": "After the terminal velocity reached\nFv Fb\nmg\nFnet = 0\nmg – Fv – Fb = 0\nmg = Fv + Fb",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "terminal_velocity",
+      "subtopic_name": "Terminal Velocity",
+      "difficulty": "medium"
+    },
+    {
+      "number": 10,
+      "body": "At any instant of time, the total energy (E) of a simple pendulum is equal to the sum of its kinetic energy       2 1mv 2 and potential energy       2 1kx 2 , where, m is the mass, v is the velocity, x is the displacement of the bob and k is a constant for the pendulum. The amplitude of oscillation of the pendulum is 10 cm and its total energy is 4 mJ. Find k.",
+      "choices": {
+        "a": "1.8 Nm–1",
+        "b": "0.8 Nm–1",
+        "c": "0.5 Nm–1",
+        "d": "Data insufficient"
+      },
+      "correct": "b",
+      "solution": "\nPotential energy PE = \n2\n1kx\n2\nAt maximum height, potential energy = Total\nenergy\n4 × 10–3 = \n2\n1xk(0.1)\n2\nk = \n\n\n–3\n2\n4 10\n2\n(0.1)\nk = 0.8 Nm–1",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "oscillations",
+      "subtopic_name": "Simple Harmonic Motion",
+      "difficulty": "medium"
+    },
+    {
+      "number": 11,
+      "body": "When a charged particle with charge q and mass m enters uniform magnetic field B with velocity v at right angles to B, the force on the moving particle is given by qvB. This force acts as the centripetal force making the charged particle go in a uniform circular motion with radius mv r . Bq Now if a hydrogen ion and a deuterium ion enter the magnetic field with velocities in the ratio 2:1 respectively, then the ratio of their radii will be _______.",
+      "choices": {
+        "a": "1 : 2",
+        "b": "2 : 1",
+        "c": "1 : 4",
+        "d": "1 : 1"
+      },
+      "correct": "d",
+      "solution": "\nmv\nr\nBq\nHydrogen ion  1H1\nDeuterium ion  1H2\n\n\np\np\np\nd\nd\np\nd\nd\nr\nm v\nBq\nr\nBq\nm v\n\n\n\np\np\np\nd\nd\nd\nd\np\nr\nm\nv\nq\nr\nm\nv\nq\n\n\n\n\np\nd\nr\n1\n2\n1\n1\nr\n2\n1\n1\n1\nrp : rd = 1 : 1",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "charged_particle_motion",
+      "subtopic_name": "Charged Particle in Magnetic Field",
+      "difficulty": "medium"
+    },
+    {
+      "number": 12,
+      "body": "In a screw-nut assembly (shown below) the nut is held fixed in its position and the screw is allowed to rotate inside it. A convex lens (L) of focal length 6.0 cm is fixed on the nut. An object pin (P) is attached to the screw head. The image of the object is observed on a screen Y. When the screw head is rotated through one rotation, the linear distance moved by the screw tip is 1.0 mm. The observations are made only when the image is obtained in the same orientation on the screen. At a certain position of P, the image formed is three times magnified as that of the pin height. Through how many turns should the screw head be rotated so that the image is two times magnified? P L Y O Screen nut X1 screw head X",
+      "choices": {
+        "a": "8",
+        "b": "10",
+        "c": "12",
+        "d": "14"
+      },
+      "correct": "b",
+      "solution": "f\nm\nf\nu\n\n\n\n6\n3\n6\n4\n\n\n\n (first condition)\n\nu = –8 cm\n6\n2\n6\n(u\nx)\n\n\n\n\n (second condition)\n\n6\n2\n6\n( 8\nx)\n\n\n\n\nx = 1 cm\nNumber of turns = 1\n10\n0.1 ",
+      "has_figure": true,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "lenses",
+      "subtopic_name": "Lens Formula and Magnification",
+      "difficulty": "hard"
+    },
+    {
+      "number": 13,
+      "body": "The triangular face of a crown glass prism ABC is isosceles. Length AB = length AC and the rectangular face with edge AC is silvered. A ray of light it incident normally on rectangular face with edge AB. It undergoes reflections at AC and AB internally and it emerges normally through the rectangular base with edge BC. Then angle BAC of the prism is _________.",
+      "choices": {
+        "a": "24°",
+        "b": "30°",
+        "c": "36°",
+        "d": "42°"
+      },
+      "correct": "c",
+      "solution": "When we tracing the path of light ray, we get\nA\nB\nC\n2\n\n2\n2\n2\n\n\n\n + 2 + 2 = 180°\n5 = 180°\n = 180\n5\n\n = 36°",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "prisms",
+      "subtopic_name": "Prism Optics",
+      "difficulty": "hard"
+    },
+    {
+      "number": 14,
+      "body": "A Physics teacher and his family are travelling in a car on a highway during a severe lightning storm. Choose the correct option:",
+      "choices": {
+        "a": "Safest place will be inside the car as the\ncharges due to lightning tend to remain on\nthe metal sheet / skin of the vehicle if\nstruck by lightning.",
+        "b": "It's too dangerous to be inside the car. As\nthe car has a metal body the charges tend\nto accumulate on the surface and will\ngenerate a strong electric field inside the\ncar.",
+        "c": "Safest place is under a tree. It's better to\nget drenched under a tree as the wet tree\nwill provide a path to the charges for\nearthing.",
+        "d": "It is safer to exit the car and stand on\nopen ground"
+      },
+      "correct": "a",
+      "solution": "By the concept of electrostatic shielding",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "electricity",
+      "topic_name": "Electricity",
+      "subtopic_code": "electrostatics",
+      "subtopic_name": "Electrostatic Shielding",
+      "difficulty": "easy"
+    },
+    {
+      "number": 15,
+      "body": "A conductor in the form of a circular loop is carrying current I. The direction of the current is as shown. Then which figure represents the correct direction of magnetic field lines on the surfaces of the planes XY and XZ. (Consider those surfaces of the XY and XZ planes which are seen in the figure.)",
+      "choices": {
+        "a": "0\nI\ny\nx\nz",
+        "b": "0\nI\ny\nx\nz",
+        "c": "0\nI\ny\nx\nz",
+        "d": "0\nI\ny\nx\nz"
+      },
+      "correct": "a",
+      "solution": "",
+      "has_figure": true,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "magnetism",
+      "topic_name": "Magnetism",
+      "subtopic_code": "magnetic_fields",
+      "subtopic_name": "Magnetic Field Lines",
+      "difficulty": "medium",
+      "skip_reason": "Question references figure showing field directions that we cannot see"
+    },
+    {
+      "number": 16,
+      "body": "A school is located between two cliffs. When the metal bell is struck by school attendant, first echo is heard by him after 2.4 s and second echo follows after 2.0 s for him at the same position near the bell. If the velocity of sound in air is 340 ms–1 at the temperature of the surroundings, then the distance between the cliffs is approximately _____.",
+      "choices": {
+        "a": "0.488 km",
+        "b": "0.751 km",
+        "c": "1.16 km",
+        "d": "1.41 km"
+      },
+      "correct": "c",
+      "solution": "\nv = 2d\nt\n\n\n\n\n\n1\n1\nv\nt\n340 2.4\nd\n408 m\n2\n2\n\n\n\n\n\n\n2\n2\nv\nt\n340 (2.4\n2)\nd\n748\n2\n2\nd = d1 + d2 = 408 + 748\nd = 1156 m\nd  1.16 km",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "sound",
+      "subtopic_name": "Sound Waves and Echo",
+      "difficulty": "medium"
+    },
+    {
+      "number": 17,
+      "body": "The radius of curvature of a convex mirror is ‘x’. The distance of an object from focus of this mirror is ‘y’. Then what is the distance of image from the focus?",
+      "choices": {
+        "a": "2\ny\n4x",
+        "b": "2\nx\ny",
+        "c": "2\nx\n4y",
+        "d": "2\n4y\nx"
+      },
+      "correct": "c",
+      "solution": "x\n2\ny\nx\ny – 2\n1\n1\n1\nf\nv\nu\n\n\n2\n1\n2\nx\nv\n2y\nx\n\n\n\n\n1\n2\n2\nv\nx\n2y\nx\n\n\n\n\nx(2y\nx)\nv\n4y\n\n\nDistance between image and focus\nx\nx(2y\nx)\n2\n4y\n\n\n\n2\nx\n4y\n",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "optics",
+      "topic_name": "Optics",
+      "subtopic_code": "mirrors",
+      "subtopic_name": "Spherical Mirrors",
+      "difficulty": "hard"
+    },
+    {
+      "number": 18,
+      "body": "A piece of ice is floating in water at 4°C in a beaker. When the ice melts completely, the water level in the beaker will",
+      "choices": {
+        "a": "Rise",
+        "b": "Fall",
+        "c": "Remains unchanged",
+        "d": "Unpredictable"
+      },
+      "correct": "a",
+      "solution": "Immersed Volume \n\n\n\nice\ni\ntotal\nw4 C\nV\nV\nAfter melting Vformed \nice\nice\ntotal\nw 0 C\nw 0 c\nm\nV\n(\n)\n(\n)\n\n\n\n\n\n\n\nVformed > Vi\n(As 4°C > 0°C)\n\nLevel should increase",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "thermal",
+      "topic_name": "Thermal Physics",
+      "subtopic_code": "states_of_matter",
+      "subtopic_name": "States of Matter and Density",
+      "difficulty": "medium"
+    },
+    {
+      "number": 19,
+      "body": "A particle experiences constant acceleration for 20 s after starting from rest. If it travels a distance S1 in the first 10 s and distance S2 in the next 10 s, the relation between S1 and S2 is:",
+      "choices": {
+        "a": "S2 = 3S1",
+        "b": "S1 = 3S2",
+        "c": "S2 = 2S1",
+        "d": "S1 = 10S2"
+      },
+      "correct": "a",
+      "solution": "\n\n2\n1\n1\nS\na\nt\n2\n\n\n\n2\n1\na 10\n2\n= 50a\nv1 = u + at\n= 10a\n2\n2\n1\n1\nS\nv t\nat\n2\n\n\n= 150a\nS2 = 3S1",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "mechanics",
+      "topic_name": "Mechanics",
+      "subtopic_code": "kinematics",
+      "subtopic_name": "Kinematics",
+      "difficulty": "medium"
+    },
+    {
+      "number": 20,
+      "body": "A sound wave is produced by a vibrating metallic string stretched between its ends. Four statements are given below. Some of them are correct. (P) Sound wave is produced inside the string (Q) Sound wave in the string is transverse (R) Wavelength of the sound wave in surrounding air is equal to the wavelength of the transverse wave on the string (S) Loudness of sound is proportional to the square of the amplitude of the vibrating string Choose the correct option.",
+      "choices": {
+        "a": "P",
+        "b": "R and S",
+        "c": "P and Q",
+        "d": "S"
+      },
+      "correct": "d",
+      "solution": "\nLoudness  (Amplitude)2",
+      "has_figure": false,
+      "subject": "physics",
+      "subject_confidence": "high",
+      "topic_code": "waves",
+      "topic_name": "Waves",
+      "subtopic_code": "sound",
+      "subtopic_name": "Sound Properties",
+      "difficulty": "medium"
+    },
+    {
+      "number": 21,
+      "body": "How many positive integers N give a remainder 8 when 2008 is divided by N?",
+      "choices": {
+        "a": "12",
+        "b": "13",
+        "c": "14",
+        "d": "15"
+      },
+      "correct": "d",
+      "solution": "Here, remainder is 8\n\nN must be greater than 8\nN must be factors of = 2008 – 8 = 2000\n    = 24 × 53\nTotal number of factors = 5 × 4 = 20\n\nFactors greater than 8 are 10, 16, 20, 25,\n40, 50, 80, 100, 125, 200, 250, 400, 500,\n1000, 2000.\nSo, total number of solutions = 15\nHence, option (d) is correct",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "number_theory",
+      "subtopic_name": "Divisibility and Remainders",
+      "difficulty": "medium"
+    },
+    {
+      "number": 22,
+      "body": "What is the product of all the roots of the equation   2 5 | x | 8 x – 16 ?",
+      "choices": {
+        "a": "–64",
+        "b": "–24",
+        "c": "576",
+        "d": "24"
+      },
+      "correct": "a",
+      "solution": "\n\n2\n5 | x | + 8\nx\n16\nOn squaring,\n\n5|x| + 8 = x2 – 16\n\nx2 – 5|x| – 24 = 0\n\n(|x| – 8)(|x| + 3) = 0\n\n|x| = 8\n|x| = –3\nx\n8\n\nProduct of roots = (+8) × (–8) = –64\nOption (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "quadratic_equations",
+      "subtopic_name": "Quadratic Equations",
+      "difficulty": "medium"
+    },
+    {
+      "number": 23,
+      "body": "LCM of two numbers is 5775. Which of the following cannot be their HCF?",
+      "choices": {
+        "a": "175",
+        "b": "231",
+        "c": "385",
+        "d": "455"
+      },
+      "correct": "d",
+      "solution": "5775 = 3 × 5 × 5 × 7 × 11\n175 = 5 × 5 × 7\n231 = 7 × 3 × 11\n385 = 7 × 5 × 11\n455 = 13 × 7 × 5\nHence, 455 cannot be HCF.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "number_theory",
+      "subtopic_name": "HCF and LCM",
+      "difficulty": "easy"
+    },
+    {
+      "number": 24,
+      "body": "Let  and  be the roots of x2 – 5x + 3 = 0 with  > . If an = n – n for n  1 then the value of  6 8 7 3a a a is",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct": "d",
+      "solution": "6\n6\n8\n8\n6\n8\n7\n7\n7\n3a\na\n3(\n)\n(\n)\na\n\n\n\n\n\n6\n2\n6\n2\n7\n7\n3\n3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n7\n7\n7\n5(\n)\n5\n(\n)\n\n\n\n\n2\n2\n3\n5\nand\n3\n5\n\n\n\n\n\n\n\n\n\n\n\n∵",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "sequences_series",
+      "subtopic_name": "Recurrence Relations",
+      "difficulty": "hard"
+    },
+    {
+      "number": 25,
+      "body": "The number of triples (x, y, z) such that any one of these numbers is added to the product of the other two, the result is 2, is",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "4",
+        "d": "Infinitely many"
+      },
+      "correct": "b",
+      "solution": "x + yz = 2\n...(i)\ny + zx = 2\n...(ii)\nz + xy = 2\n...(iii)\nSubtracting (ii) from (i),\n(x – y) = z(x – y)\n\nEither x = y or z = 1\nCase I :\nIf z = 1\n\nx + y = 2 and xy = 1\n\n\n\n1\nx\n2\nx\n\nx2 – 2x + 1 = 0\n\nx = 1\n\ny = 1\n\n(1, 1, 1) is one of the triplet\nCase II :\nIf x = y\n\nx(1 + z) = 2 and z + x2 = 2\n\nx + zx = z + x2\n\nx – z = x(x – z)\n\nEither x = z or x = 1\n(i) If x = z  x = y = z\n\nx + x2 = 2\n\nx = 1 or – 2\n\n(–2, –2, –2) is second triplet\n\n(ii) If x = 1  y = 1\n\nz = 1\n\n(1, 1, 1) is repeated triplet.\nSo only two triplets (1, 1, 1) and (–2, –2, –2)\nare possible.\nHence, option (b) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "system_equations",
+      "subtopic_name": "System of Equations",
+      "difficulty": "hard"
+    },
+    {
+      "number": 26,
+      "body": "In rectangle ABCD, AB = 5 and BC = 3. Points F and G are on the line segment CD so that DF = 1 and GC = 2. Lines AF and BG intersect at E. What is the area of AEB?",
+      "choices": {
+        "a": "10 sq. units",
+        "b": "15/2 sq. units",
+        "c": "25/2 sq. units",
+        "d": "20 sq. units"
+      },
+      "correct": "c",
+      "solution": "B\nA\nD\nC\nE\nF\nG\n5\n2\n3\n\n2\n1\nArea of (AFGB) = \n\n\n\n1(2\n5) 3\n10.5\n2\nCD\nCG\nGF\nFD\n5\n2\nGF\n1\nGF\n5\n3\n2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n∵\nNow EFG ~ EAB\n\n\n\n\nar( AEB)\n25\nar( EFG)\n4\n\n\n\n\nar( EFG)\n4\nar( AEB)\n25\n\n\n\n\n\n\nar( EFG)\n4\n1\n1\nar( AEB)\n25\n\n\n\nar(AFGB)\n21\nar( AEB)\n25\n\n\n\n\n\n\n10.5 25\n25\nar( AEB)\n12.5\n sq. units\n21\n2\nHence, option (c) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "coordinate_geometry",
+      "subtopic_name": "Coordinate Geometry",
+      "difficulty": "hard"
+    },
+    {
+      "number": 27,
+      "body": "In the given figure, two concentric circles are shown with centre O. PQRS is a square inscribed in the outer circle. It also circumscribes the inner circle, touching it at points B, C, D and A. What is the ratio of the perimeter of the outer circle to that of quadrilateral ABCD? P Q S R D B A C O",
+      "choices": {
+        "a": "\n4",
+        "b": "\n3\n2",
+        "c": "\n2",
+        "d": ""
+      },
+      "correct": "c",
+      "solution": "P\nQ\nS\nR\nD\nB\nA\nC\nO\nLet radius of outer circle be r.\n\nPR = 2r\nand PQ\n2r\n\nRadius of inner circle = OA = \nPQ\nr\n2\n2\n\n2\n2\n2\n2\nr\nr\nAB\nOA\nOB\nr\n2\n2\n\n\n\n\n\n\nCircumference of outer circle\n2 r\nPerimeter of ABCD\n4 r\n2\n\n\n\n\n\nOption (c) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "circles",
+      "subtopic_name": "Circles and Polygons",
+      "difficulty": "hard"
+    },
+    {
+      "number": 28,
+      "body": "If a, b, c are distinct real numbers such that      1 1 1 a b c b c a evaluate abc.",
+      "choices": {
+        "a": "2",
+        "b": "\n2\n1",
+        "c": "3",
+        "d": "1"
+      },
+      "correct": "d",
+      "solution": "\n\n\n\n\n1\n1\n1\na\nb\nc\nb\nc\na\n\n\n\n\n1\n1\na\nb\nc\nb\n\n\nb\nc\na\nb\nbc\n\n\n\nb\nc\nbc\na\nb\n...(i)\n\n\n\n\n1\n1\nb\nc\nc\na\n\n\nc\na\nb\nc\nac\n\n\n\nc\na\nac\nb\nc\n...(ii)\n\n\n\n\n1\n1\na\nc\nb\na\n\n\n\n\n\n1\n1\nb\na\na\nc\na\nb\nab\n\n\n\nb\na\nab\na\nc\n...(iii)\nFrom (i), (ii) & (iii), we get\n\n\n\n\n\n\n\n\n\nb\nc\nc\na\nb\na\n(ab)(ac)(bc)\na\nb\nb\nc\na\nc\na2b2c2 = 1\n\nabc\n1\n\nOption (d) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "algebra",
+      "subtopic_name": "Algebraic Identities",
+      "difficulty": "hard"
+    },
+    {
+      "number": 29,
+      "body": "If the equation (2 – 5 + 6)x2 + (2 – 3 + 2)x + (2 – 4) = 0 has more than two roots, then the value of  is",
+      "choices": {
+        "a": "2",
+        "b": "3",
+        "c": "1",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "solution": "If (2 – 5 + 6)x2 + (2 – 3 + 2)x + (2 – 4) = 0\nhas more than two roots, then this equation is\nan identity.\n\n2 – 5 + 6 = 0, 2 – 3 + 2 = 0 and\n2 = 4\n\n = 2, 3 and  = 1, 2 and  = –2, 2\n\nCommon value of  is 2.\nOption (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "quadratic_equations",
+      "subtopic_name": "Conditions for Multiple Roots",
+      "difficulty": "hard"
+    },
+    {
+      "number": 30,
+      "body": "Mr. X with his eight children of different ages is on a family trip. His oldest child, who is 9 years old saw a license plate with a 4-digit number in which each of two digits appear two times. “Look daddy!” she exclaims. “That number is evenly divisible by the age of each of us kids!”. “That’s right,” replies Mr. X, “and the last two digits just happen to be my age”. Which of the following is not the age of one of Mr. X’s children?",
+      "choices": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "7"
+      },
+      "correct": "b",
+      "solution": "Possible ages of children can be 1, 2, 3, 4, 5,\n6, 7, 8, 9.\n∵\nThere are 8 children and oldest child is 9\nyears old.\n\nSum of four digits must be divisible by 9.\nIf four digit number is divisible by 9 then\npossible combinations of digits must be\n(0, 9), (1, 8), (2, 7), (3, 6), (4, 5)\nAlso the number should be even because\nif number is not divisible by 2 then it\ncannot be divisible by 4 and 8.\nHence age of the child cannot be 5\n∵ Even number is not divisible by 5 if last\n    digit is non-zero.\nIf last digit is zero then only two\npossibilities can occur.\n99 00  is not possible because last two\ndigits are the age of his father.\n99 90  is not divisible by 4 and 8 both\nhence it is also not possible.\n Option (b) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "number_theory",
+      "subtopic_name": "Divisibility Rules",
+      "difficulty": "medium"
+    },
+    {
+      "number": 31,
+      "body": "How many number lie between 11 and 1111 which divided by 9 leave a remainder 6 and when divided by 21 leave a remainder 12?",
+      "choices": {
+        "a": "18",
+        "b": "28",
+        "c": "8",
+        "d": "None of these"
+      },
+      "correct": "a",
+      "solution": "Numbers which are divided by 9 leave a\nremainder 6 are 24, 33, 42, 51,...,1104 ...(i)\nNumbers which are divided by 21 leaves a\nremainder 12 are 33, 54, ...,1104\n...(ii)\n\nTotal numbers are the common number of\nterms of sequence (i) and (ii).\n\nNow let there are 'n' common terms of (i) and\n(ii)  have a common difference of 63 starting\nfrom number 33 (∵ L.C.M. of 9 and 21 is 63)\n 33 + (n –1) × 63 = 1104\n\n18\n\nn\n Option (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "number_theory",
+      "subtopic_name": "Modular Arithmetic",
+      "difficulty": "medium"
+    },
+    {
+      "number": 32,
+      "body": "Two unbiased dice are rolled. What is the probability of getting a sum which is neither 7 nor 11?",
+      "choices": {
+        "a": "7\n9",
+        "b": "7\n18",
+        "c": "2\n9",
+        "d": "11\n18"
+      },
+      "correct": "a",
+      "solution": "Total number of outcomes = 6 × 6 = 36\nOutcomes whose sum is either 7 or 11 =\n(1, 6) (2, 5), (3, 4), (4, 3), (5, 2), (6,1), (5, 6),\n(6, 5)\nNumber of outcomes whose sum is neither\n7 nor 11 = 36 – 8 = 28\n Required probability = 28\n7\n36\n9\n\nHence, option (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "probability",
+      "subtopic_name": "Basic Probability",
+      "difficulty": "easy"
+    },
+    {
+      "number": 33,
+      "body": "The solution of the equation 1 + 4 + 7 + ..... + x = 925 is",
+      "choices": {
+        "a": "73",
+        "b": "76",
+        "c": "70",
+        "d": "74"
+      },
+      "correct": "a",
+      "solution": "Let x be the nth term.\n\nx = 1 + (n – 1) × 3\n\nx = 1 + 3n – 3\n\nx = (3n – 2)\n\n\n\n\n\nn\nn\nS\n925\n(1 (3n\n2))\n2\n\n\n\nn\n925\n(3n\n1)\n2\n\n1850 = 3n2 – n\n\n3n2 – n – 1850 = 0\n\n3n2 – 75n + 74n – 1850 = 0\n\n3n(n – 25) + 74(n – 25) = 0\n\n(n – 25)(3n + 74) = 0\n\nn = 25\n\n\n\n\n\n\n\n\n∵\n74\nn\n3\n\nx = 3 × 25 – 2 = 73\nHence, option (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "sequences_series",
+      "subtopic_name": "Arithmetic Progression",
+      "difficulty": "medium"
+    },
+    {
+      "number": 34,
+      "body": "An observer standing at the top of a tower, finds that the angle of elevation of a red bulb on the top of a light house of height H is . Further, he finds that the angle of depression of reflection of the bulb in the ocean is . Therefore, the height of the tower is",
+      "choices": {
+        "a": "\n\n\n\nH(tan\ntan )\n(tan\ntan )",
+        "b": "\n\nHsin(\n)\ncos(\n)",
+        "c": "\n\n\n\nH(cos\ncos )\n(cot\ncot )",
+        "d": "H"
+      },
+      "correct": "a",
+      "solution": "Let AB = h be the height of tower.\nAlso, F be the point of reflection of D (red\nbulb).\nh\nH\nH\nD\nA\nE\nC\nB\nF\nG\n\n\n\nIn AED,\n\n\n\nDE\nH\nh\ntan\nAE\nAE\n\nAE = (H – h)cot\n...(i)\nIn AGF,\nAG\ntan\nFG\n\n\n\n\n\nh\nH\ntan\n(H\nh)cot\n[∵ FG = AE] [From (i)]\n\ntan(H – h) cot = (h + H)\n\ntan(H – h) = (h + H)tan\n\nHtan – htan = htan + Htan\n\n\n\n\n\n\nH(tan\ntan )\nh\n(tan\ntan )\nHence, option (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "trigonometry",
+      "subtopic_name": "Heights and Distances",
+      "difficulty": "hard"
+    },
+    {
+      "number": 35,
+      "body": "The sum of the roots of     1 1 1 x a x b c is zero. The product of roots is",
+      "choices": {
+        "a": "0",
+        "b": "\na\nb\n2",
+        "c": "\n\n2\n2\n1(a\nb )\n2",
+        "d": "2(a2 + b2)"
+      },
+      "correct": "c",
+      "solution": "\n\n\n\n1\n1\n1\nx\na\nx\nb\nc\n\n\n\n\n\n\n\n\n2\nx\nb\nx\na\n1\nc\nx\n(a\nb)x\nab\n\n(2x + a + b) × c = x2 + (a + b)x + ab\n\nx2 + x(a + b – 2c) + ab – ac – bc = 0\n\nSum of roots = \n\n\n\n(a\nb\n2c)\n1\n = 0\n\na + b = 2c\n\n\n(a\nb)\nc\n2\n...(i)\nProduct of roots = ab – ac – bc\n= ab – c(a + b)\n= \n\n\n2\n(a\nb)\nab\n2\n[From (i)]\n= \n\n2\n2\n1(a\nb )\n2\nHence, option (c) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "quadratic_equations",
+      "subtopic_name": "Sum and Product of Roots",
+      "difficulty": "hard"
+    },
+    {
+      "number": 36,
+      "body": "In the convex quadrilateral ABCD, the diagonals AC and BD meet at O and the measure of angle AOB is 30°. If the areas of triangle AOB, BOC, COD and AOD are 1, 2, 8 and 4 square units respectively, what is the product of the lengths of the diagonals AC and DB in sq. units?",
+      "choices": {
+        "a": "60",
+        "b": "56",
+        "c": "54",
+        "d": "64"
+      },
+      "correct": "a",
+      "solution": "C\nD\nA\nB\n150°\n30°\n30°\n150° O\nArea of triangle OAB = 1\n\n\n\n\n1 OA OB sin30\n1\n2\n\nOA × OB = 4\n...(i)\nSimilarly,\nOB × OC = 8\n...(ii)\nOC × OD = 32\n...(iii)\nOA × OD = 16\n...(iv)\nFrom (i) and (ii),\nOC = 2(OA)\n\nAC = 3 × OA\n...(v)\nNow, OA × OB = 4\n[From (i)]\n2(OA) × OD = 32\n[From (iii)]\n\nOD = 4 × OB\n\nBD = 5 × OB\n\nAC × BD = 3 × 5 × (OA × OB)\n= 15 × 4\n[From (i)]\n= 60\n\nOption (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "coordinate_geometry",
+      "subtopic_name": "Areas of Triangles",
+      "difficulty": "hard"
+    },
+    {
+      "number": 37,
+      "body": "If tan + sec = 1.5, then value of sin is",
+      "choices": {
+        "a": "5\n13",
+        "b": "12\n13",
+        "c": "3\n5",
+        "d": "2\n3"
+      },
+      "correct": "a",
+      "solution": "We have\nsec2 – tan2 = 1\n(sec – tan) =\n\n\n1\nsec + tan\n=\n1\n2\n=\n1.5\n3\n...(i)\nand sec + tan = 1.5 = 3\n2\n...(ii)\nOn solving equation (i) and (ii), we get\n\n13\nsec = 12\nIn ABC\nAB2 = AC2 – BC2\nA\nC\nB\n13\n5\n12\n\nAB2 = 132 – 122\nAB = 5\n\n\nAB\n5\nsin =\n=\nAC\n13\nOption (a) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "trigonometry",
+      "subtopic_name": "Trigonometric Identities",
+      "difficulty": "medium"
+    },
+    {
+      "number": 38,
+      "body": "If sin2x + sin2y + sin2z = 0, then which of the following is NOT a possible value of cosx + cosy + cosz?",
+      "choices": {
+        "a": "3",
+        "b": "–3",
+        "c": "–1",
+        "d": "–2"
+      },
+      "correct": "d",
+      "solution": "∵\nsin2x + sin2y + sin2z = 0\n\nsinx = siny = sinz = 0\n\ncosx = ± 1; cosy = ± 1; cosz = ± 1\n\ncosx + cosy + cosz can be either 1 + 1 + 1\n= 3\nor 1 + 1 –1 = 1 or –1 –1 + 1 = –1\nor –1 –1 –1 = –3\n\ncosx + cosy + cosz  –2\n\nOption (d) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "trigonometry",
+      "subtopic_name": "Trigonometric Functions",
+      "difficulty": "medium"
+    },
+    {
+      "number": 39,
+      "body": "Find the remainder when x51 is divided by x2 – 3x + 2.",
+      "choices": {
+        "a": "x",
+        "b": "(251 – 2)x + 2 – 251",
+        "c": "(251 – 1)x + 2 – 251",
+        "d": "0"
+      },
+      "correct": "c",
+      "solution": "x2 – 3x + 2 = (x – 1)(x – 2)\n\nx51 = (x – 1)(x – 2) Q(x) + (px + q)\nPut x = 1  1 = (p + q)\n...(i)\nPut x = 2  251 = (2p + q)\n...(ii)\nSolving equation (i) and (ii), we get\np = (251 – 1) and q = 2 – 251\n\nRemainder = (px + q)\n= (251 – 1)x + (2 – 251)\nOption (c) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "polynomials",
+      "subtopic_name": "Polynomial Division",
+      "difficulty": "hard"
+    },
+    {
+      "number": 40,
+      "body": "In an equilateral triangle, three coins of radii 1 unit each are kept so that they touch each other and also sides of the triangle. The area of triangle ABC (in sq. units) is",
+      "choices": {
+        "a": "4 + 2 3",
+        "b": "4 3 + 6",
+        "c": "7 3\n12 +\n4",
+        "d": "7 3\n3 +\n4"
+      },
+      "correct": "b",
+      "solution": "In AEO,\n30°\n30°\nE\nO\nO’\nD\nA\nB\nC\nOE\ntan30° = AE\n\nAE =\n3\n[∵ OE = 1]\nSimilarly, DC =\n3\n\nAC = AE + DC + DE\n=\n3 + 2 +\n3\n=\n\n\n2 1+\n3\n...(i)\nRequired area (ABC) =\n2\n3 ×(AC)\n4\n=\n\n\n\n\n3 4 ×(3 + 1+ 2 3)\n4\n[from (i)]\n= \n\n4 3 + 6  sq. units\nHence, option (b) is correct.",
+      "has_figure": false,
+      "subject": "maths",
+      "subject_confidence": "high",
+      "subtopic_code": "triangles",
+      "subtopic_name": "Equilateral Triangles and Circles",
+      "difficulty": "hard"
+    },
+    {
+      "number": 41,
+      "body": "In case of mice coat colour, two genes are responsible for colour of the hair. Gene ‘A’ is responsible for distribution of pigments on shaft of hair. Wild type allele of ‘A’ produces a yellow band on dark hair shaft (agouti), whereas recessive allele produces no yellow band. There is another allele of A, known as AY, which is embryonic lethal in homozygous condition only. In an experiment, two yellow mice were crossed to obtain a progeny of 6 pups. What would be the most probable number of agouti mice among them?",
+      "choices": {
+        "a": "0",
+        "b": "2",
+        "c": "4",
+        "d": "None of the above"
+      },
+      "correct": "b",
+      "solution": "In this experiment, three cases are possible\n(i) Agouti × Agouti = All Agouti\n(ii) Yellow × Yellow = 2\n3 Yellow, 1\n3 Agouti\n(iii) Agouti × Yellow = 1\n2 Yellow, 1\n2 Agouti\nAccording to the given statement in question,\ni.e.,Yellow × Yellow\nthat mean 2\n3 Yellow and 1\n3 Agouti\nSo, most probable number of agouti mice\nwould be = \n1\n6\n2\n3\n\n",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "genetics",
+      "subtopic_name": "Mendelian Genetics",
+      "difficulty": "hard"
+    },
+    {
+      "number": 42,
+      "body": "A stain was developed by a group of scientists to stain a particular cell organelle. The stain was tested on various tissues derived from an autopsy sample from a mammal. The organelles were counted. The results showed maximum number of the organelles in cells of brain, lesser in cells of heart, least in mature sperms and absent in erythrocytes. Identify the organelles from following options.",
+      "choices": {
+        "a": "Nissl bodies",
+        "b": "Mitochondria",
+        "c": "Golgi bodies",
+        "d": "Endoplasmic reticulum"
+      },
+      "correct": "a",
+      "solution": "Mitochondria, Golgi bodies and Endoplasmic\nreticulum are the organelles absent in\nenucleated \nerythrocytes \nof \nmammals\nwhereas Nissl's bodies are present in neural\ntissue which is maximally concentrated in\nbrain.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "cell_biology",
+      "subtopic_name": "Cell Organelles",
+      "difficulty": "medium"
+    },
+    {
+      "number": 43,
+      "body": "Pinus sylvestris grows at low temperatures in Russia. The plant survives under such freezing conditions due to the presence of :",
+      "choices": {
+        "a": "Saturated lipids in plasma membrane",
+        "b": "Glycoproteins in plasma membrane",
+        "c": "Glycolipids in plasma membrane",
+        "d": "Polyunsaturated \nlipids \nin \nplasma\nmembrane"
+      },
+      "correct": "d",
+      "solution": "Pinus sylvestris grows at low temperatures in\nRussia. The plant survives under such freezing\nconditions \ndue \nto \nthe \npresence \nof\npolyunsaturated lipids in plasma membrane\nas these lipids have a lower melting point and\nmore flexibility than the phospholipids with\nsaturated acyl chains.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "cell_biology",
+      "subtopic_name": "Cell Membrane",
+      "difficulty": "medium"
+    },
+    {
+      "number": 44,
+      "body": "In an experimental setup, certain pathogen caused a disease in primates with nasal congestion, sore throat and fever being the common symptoms. The scientists injected an extract from blue-green mold as the first line of action. However, the symptoms did not subside. The possible causative agents of the disease were listed out as follows. i. A virus ii. A fungus iii. A conjugation deficient bacterium iv. A tapeworm Choose the correct option from the following that indicate the pathogen.",
+      "choices": {
+        "a": "i, ii",
+        "b": "i, iii",
+        "c": "ii, iv",
+        "d": "iii only"
+      },
+      "correct": "b",
+      "solution": "Administration of extract from blue-green\nmold (fungi) did not subside the symptoms\npossibly because the causative agents of the\ndisease may be virus, bacteria or helminth but\nnot fungus. So, the most appropriate answer\nis option (b).",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "microbiology",
+      "subtopic_name": "Pathogens and Antibiotics",
+      "difficulty": "medium"
+    },
+    {
+      "number": 45,
+      "body": "A group of students was studying development of an organism under controlled laboratory conditions. Following observations were made by them. i. The larvae had a rod-like supporting structure that separated the nervous system and the gut. ii. A prominent central cavity was present in the transverse section of the part of the nervous system of the larvae; while the adults had cerebral ganglia as the main component of the nervous system. iii. The eyes were prominently seen in larvae. iv. The tails were absent in the adults, which the larvae had. v. A lot of phagocytic activity was observed before conversion of larvae into adults. vi. The adults had a cuticular exoskeleton. The organism under study must be belonging to:",
+      "choices": {
+        "a": "Amphibia",
+        "b": "Pisces",
+        "c": "Protochordata",
+        "d": "Arthropoda"
+      },
+      "correct": "c",
+      "solution": "“Arthropods are non-chordates i.e. lack\nnotochord which is a rod-like supporting\nstructure that separates nervous system and\ngut as in case of chordates such as\nAmphibians, fishes and Protochordates. Adult\nAmphibians and fishes have a well developed\nnervous system while adult protochordates\nhad cerebral ganglia as nervous system.\nAlthough both amphibians and protochordates\nexhibit ‘tadpole’ larval stage with prominent\neyes and tails but exoskeleton is present only\nis protochordates (tunicates). Therefore,\nanswer is protochordates.”",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "classification",
+      "subtopic_name": "Animal Classification",
+      "difficulty": "hard"
+    },
+    {
+      "number": 46,
+      "body": "A process is represented in the adjacent figure. The arrows indicate the flow of a biochemical reaction. The arrowhead points to the product, while the base of the arrow indicates the template biomolecule. What do P, Q, R, and S represent? X Y Z Q P S R",
+      "choices": {
+        "a": "P \n: \nReplication, \nQ \n: \nTranslation,\nR : Transcription, S : Reverse Transcription",
+        "b": "P : Transcription, Q : Replication,\nR : Reverse Transcription, S : Translation",
+        "c": "P : Reverse Transcription, Q : Replication,\nR : Translation, S : Transcription",
+        "d": "P : Reverse Transcription, Q : Replication,\nR : Transcription, S : Translation"
+      },
+      "correct": "d",
+      "solution": "RNA (X)\nDNA (Y)\nTranslation\n(S)\nReplication\n(Q)\nProteins (Z)\nTranscription (R)\nReverse (P)\nTranscription\nHere, ‘Y’ represents DNA which produces its\nnew copies by the process of ‘Replication’\nrepresented by ‘Q’. RNA is formed from DNA\nby the process called ‘Transcription’ which is\nhere represented by ‘R’. RNA are translated\ninto proteins by the process called\n‘Translation’, represented by ‘S’ here.\nIn certain viruses, DNA can be synthesize\nfrom RNA by the process of ‘Reverse\ntranscription’, represented by ‘S’.\nTherefore, P is reverse transcription\nQ is replication\nR is transcription\nand\nS is translation",
+      "has_figure": true,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "molecular_biology",
+      "subtopic_name": "Central Dogma",
+      "difficulty": "medium"
+    },
+    {
+      "number": 47,
+      "body": "The whooping cranes were on the verge of extinction with only 21 individuals in wild in 1941. After conservation measures, the cranes are now included in the endangered category by IUCN. The highlight of the conservation efforts is the reintroduction of the whooping cranes in wild. This was possible due to raising of the young cranes in absence of their parents by biologists dressed in crane costumes. Aircraft Guided bird migration technique was used for teaching the captive-bred cranes to follow the scientists to learn the migratory route. What type of animal behaviour might be responsible for these captive-bred cranes to follow the crane costume dressed scientists?",
+      "choices": {
+        "a": "Cognitive learning",
+        "b": "Habituation",
+        "c": "Operant conditioning",
+        "d": "Genetic Imprinting"
+      },
+      "correct": "d",
+      "solution": "The type of animal behaviour responsible for\nthese captive–bred cranes to the crane\ncostume dressed scientists is genetic\nimprinting which is a rapid learning process\nthat takes place early in the life of a social\nanimal and establishes a behaviour pattern\nsuch as recognition of and attraction to its\nown kind or a substitute.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "animal_behavior",
+      "subtopic_name": "Learning and Behavior",
+      "difficulty": "medium"
+    },
+    {
+      "number": 48,
+      "body": "In the baking industry, when the dough is prepared, various ingredients are mixed together with the flour. At one instance, the dough was fermented, but failed to rise sufficiently during the baking process. Choose the correct cause(s) from following possibilities. i. The salt was mixed before the fermentation process was completed ii. The sugar was added in excess iii. Yeast granules were not activated prior to mixing with the flour.",
+      "choices": {
+        "a": "i, iii",
+        "b": "iii only",
+        "c": "i, ii, iii",
+        "d": "i, ii"
+      },
+      "correct": "c",
+      "solution": "Addition of salt in the dough slows down\nfermentation and enzyme activity in dough.\nExcess sugar in dough can slow down or even\ninhibit yeast activity. As sugar level increases,\nyeast becomes stressed as less water is\navailable for it to function. Inactivated yeast\ngranules consist of yeast cells that are no\nlonger living or active and reduces mix time\nand creates a more extensible dough once\nthey are activated.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "microbiology",
+      "subtopic_name": "Fermentation",
+      "difficulty": "medium"
+    },
+    {
+      "number": 49,
+      "body": "Given below are four statements. I. Prokaryotic cells are unicellular while eukaryotes are multicellular. II. Histones are present in eukaryotes and absent in prokaryotes. III. The nucleoid contains the genetic material in prokaryotes and eukaryotes. IV. Prokaryotic flagellum is composed of flagellin while eukaryotic flagellum is composed of tubulin. Identify which amongst these are false.",
+      "choices": {
+        "a": "I and II",
+        "b": "III and IV",
+        "c": "II and III",
+        "d": "I and III"
+      },
+      "correct": "d",
+      "solution": "All eukaryotes are not multicellular. For\nexample, \nprotistans \nare \nunicellular\neukaryotes. The region that contains genetic\nmaterial in prokaryotes is called nucleoid\nwhereas in eukaryotes it is called nucleus.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "cell_biology",
+      "subtopic_name": "Prokaryotes vs Eukaryotes",
+      "difficulty": "easy"
+    },
+    {
+      "number": 50,
+      "body": "The students of a college were working on regeneration using Planaria (Platyhelminthes) and Asterias (Echinodermata). Planaria was cut in three pieces, namely, a piece with head, with tail and the middle piece. Asterias (bearing five arms) was cut in such a way that after separation, six pieces were obtained, namely, an arm with a portion of the central disc, four pieces cut from tips of each of the remaining arms and the remaining body. The animals were allowed to regenerate completely. How many Planaria and Asterias respectively will be obtained after the completion of regeneration in both?",
+      "choices": {
+        "a": "1, 1",
+        "b": "3, 2",
+        "c": "3, 6",
+        "d": "1, 2"
+      },
+      "correct": "b",
+      "solution": "Planarians possess a tremendous power of\nregeneration. If cut across into three parts,\neach part regenerates into a complete normal\nindividual.\nIn case of Asterias, body part with the portion\nof central disc can regenerate an entire\nanimal four pieces cut from tips of each of the\nremaining arms are devoid of central disc,\nhence, cannot regenerate while the remaining\nbody with remaining central disc can\nregenerate an entire animal.\nTherefore, \nafter \nthe \ncompletion \nof\nregeneration in Asterias total two organisms\nwill be obtained.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "reproduction",
+      "subtopic_name": "Regeneration",
+      "difficulty": "medium"
+    },
+    {
+      "number": 51,
+      "body": "Fecundity in animal world is the maximum possible ability of an individual to produce offsprings during its entire lifetime. Following factors were checked for their effect on fecundity of different animal models. i. Availability of food during breeding season ii. Mode of fertilization iii. Population density Which of these factors(s) can regulate fecundity?",
+      "choices": {
+        "a": "i, ii",
+        "b": "ii, iii",
+        "c": "i, ii, iii",
+        "d": "None of the above"
+      },
+      "correct": "c",
+      "solution": "All the given factors i.e. the availability of food\nduring breeding season, mode of fertilization\nand population density affect the fecundity of\nanimals.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "ecology",
+      "subtopic_name": "Population Ecology",
+      "difficulty": "medium"
+    },
+    {
+      "number": 52,
+      "body": "An organism has 27 pairs of homologous chromosomes. In each daughter cell after completion of mitosis and in each gamete after completion of meiosis II, ________ and _________ chromosomes would be present respectively.",
+      "choices": {
+        "a": "27 and 27",
+        "b": "54 and 27",
+        "c": "108 and 54",
+        "d": "54 and 108"
+      },
+      "correct": "b",
+      "solution": "In mitosis, mother cell divides to form two\nidentical daughter cells which have the same\nnumber of chromosomes as mother cell.\nHence, each daughter cell would have\n27 pairs or 54 chromosomes.\nMeiosis is a reductional division which\ninvolves two consecutive divisions. The\ndaughter cells have half the number of\nchromosomes than that of mother cell.\nHence, in each gamete, after completion of\nmeiosis-II, 27 chromosomes would be present.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "cell_division",
+      "subtopic_name": "Mitosis and Meiosis",
+      "difficulty": "easy"
+    },
+    {
+      "number": 53,
+      "body": "Rahul sprayed a chemical ‘X’ on a plant with rosette habit. After few days, he found the internodal distances to have increased suddenly. The chemical ‘X’ might be:",
+      "choices": {
+        "a": "Ethylene",
+        "b": "Abscisic acid",
+        "c": "Auxin",
+        "d": "Gibberellic acid"
+      },
+      "correct": "d",
+      "solution": "The sprayed chemical 'X' is Gibberellic acid\nwhich induces internodal and stem elongation\nin rosette plants.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "plant_physiology",
+      "subtopic_name": "Plant Growth Regulators",
+      "difficulty": "easy"
+    },
+    {
+      "number": 54,
+      "body": "In case of peppered moths, pale and dark moths are observed. Pale variety is known to be the wild type variety. During industrial revolution, industrial melanism led to prevalence of dark variety around the cities and pale variety continued to be in majority in areas away from the industries. After enforcement of regulations for controlling pollution, reappearance of pale moths in majority was observed around cities again. Driving force(s) for these adaptive changes is/ are: i. Increased pollution around industries ii. A stable transposition of a gene in moths iii. Limitations of the vision of birds to differentiate dark moths on darkened barks and pale moths in presence of lichens iv. Ability of lichens to grow on barks in less polluted areas only.",
+      "choices": {
+        "a": "i, iv",
+        "b": "i, iii, iv",
+        "c": "i, ii",
+        "d": "i, ii, iii and iv"
+      },
+      "correct": "b",
+      "solution": "Pre-Industrial Period\nPost-Industrial Period\n•\n•\nNo air pollution\nPollution increased\n•\n•\nTree trunk lighter\nin colour\nTree trunk darken\n•\n•\nNo smoke deposition\nand thick growth of\nwhite coloured\nlichens on tree trunk\nSmoke and soot deposition\non trunk preventing lichens\ngrowth\n•\n•\nLess predation of\npale moth\nDark moths are not visible\nwhile pale moths cannot\ncamouflage causing\nlimitations of vision of birds\nleading more predation of\npale moths",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "evolution",
+      "subtopic_name": "Natural Selection",
+      "difficulty": "medium"
+    },
+    {
+      "number": 55,
+      "body": "A 4 m long bacterial cell was magnified and drawn to a dimension of 6 cm. How many times has it been magnified?",
+      "choices": {
+        "a": "1.5 × 103",
+        "b": "15 × 104",
+        "c": "1.5 × 104",
+        "d": "1.5"
+      },
+      "correct": "c",
+      "solution": "Size of bacterial cell = 4 m = 4 × 10–6 m\nSize of drawn cell = 6 cm = 6 × 10–2 m\nSo, bacterial cell magnification = \n\n\n\n2\n6\n6 10\n4 10\n= 1.5 × 104",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "microscopy",
+      "subtopic_name": "Magnification",
+      "difficulty": "easy"
+    },
+    {
+      "number": 56,
+      "body": "Gymnosperms are called ‘naked seed bearing plants’ because they lack:",
+      "choices": {
+        "a": "Male gamete",
+        "b": "Ovule",
+        "c": "Ovary",
+        "d": "Seeds"
+      },
+      "correct": "c",
+      "solution": "Gymnosperms are called ‘naked seeds\nbearing plants’ because they lack ovary. The\nseeds are not enclosed within the fruit.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "plant_reproduction",
+      "subtopic_name": "Gymnosperms",
+      "difficulty": "easy"
+    },
+    {
+      "number": 57,
+      "body": "Any damage or injury to a particular area causes nociceptors to release some chemicals, which carry the signal to the higher centres in the nervous system for the processing and a subsequent action. However, there is a difference in the way in which the stimulus is received which is related to the acuity of the detection. Fingertips are more sensitive as compared to the forearm. Following reasons for the observed phenomenon were suggested. i. The receptive fields in the fingertip are smaller ii. The number of nociceptors per receptive field in the forearm is lesser iii. The amount of prostaglandins released by the nociceptors per receptive field is more in fingertips The most probable reason(s) for this may be:",
+      "choices": {
+        "a": "i",
+        "b": "i, iii",
+        "c": "ii, iii",
+        "d": "i, ii, iii"
+      },
+      "correct": "d",
+      "solution": "In fingertips, the receptive fields are smaller\nand densely packed with nociceptors or pain\nreceptors. The number of nociceptors and\namount of prostaglandins released by these\nreceptors per receptive field is also more in\nfingertips in comparison to forearm.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "nervous_system",
+      "subtopic_name": "Sensory Reception",
+      "difficulty": "hard"
+    },
+    {
+      "number": 58,
+      "body": "Rate of Photosynthesys Parameter Rate of photosynthesis in hydrophytes depends on various parameters. The adjacent graph shows the effect of one parameter (while keeping all the others constant) on the rate of photosynthesis. Rate of photosynthesis is plotted on Y axis. Identify the parameter which is plotted along X axis:",
+      "choices": {
+        "a": "Light intensity",
+        "b": "Wavelength",
+        "c": "Temperature",
+        "d": "CO2 concentration"
+      },
+      "correct": "b",
+      "solution": "Light between 400-700 nm wavelength\nconstitute the photosynthetically active\nradiation. Maximum photosynthesis takes\nplace in red and blue light of the visible\nspectrum and minimum photosynthesis takes\nplace in green light.\nRate of Photosynthesys\n400\n500\n600\n700\nV I B G Y O R",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "photosynthesis",
+      "subtopic_name": "Photosynthesis",
+      "difficulty": "medium",
+      "skip_reason": "Question references a graph that we cannot see"
+    },
+    {
+      "number": 59,
+      "body": "On a study tour, plants with leathery leaves with thick cuticle, vivipary, salt glands, apogeotropic roots and stomata limited to abaxial surface were observed. The plants might be:",
+      "choices": {
+        "a": "Bromeliads",
+        "b": "Cycads",
+        "c": "Mangroves",
+        "d": "None of the above"
+      },
+      "correct": "c",
+      "solution": "Mangroves are adapted to grow in a wet and\nsalty place. They have leathery leaves with\nthick cuticle, show vivipary (the young plant\nwithin the seed), have salt glands, have\napogeotropic roots (roots that grow away\nfrom the ground) and have stomata limited to\nabaxial surface.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "plant_adaptations",
+      "subtopic_name": "Mangrove Adaptations",
+      "difficulty": "medium"
+    },
+    {
+      "number": 60,
+      "body": "Four different human body fluid samples were subjected to quantification of hydrogen ion concentration. mEq/L is the unit of measurement for hydrogen ion concentration. The results of the experiment were as follows: Sample A: 1.6 × 102 units Sample B: 4.5 × 10–5 units Sample C: 1 × 10–3 units Sample D: 3 × 10–2 units Identify the samples in sequence from A to D.",
+      "choices": {
+        "a": "Gastric HCI, Venous blood, Intracellular\nFluid, Urine",
+        "b": "Venous blood, Intracellular Fluid, Gastric\nHCI, Urine",
+        "c": "Urine, Gastric HCI, Venous blood,\nIntracellular Fluid",
+        "d": "Intracellular Fluid, Urine, Gastric HCI,\nVenous blood"
+      },
+      "correct": "a",
+      "solution": "Higher the amount of hydrogen ions, lower\nwill be the pH of body fluid.\nOn this basis we can conclude that\nSample A with maximum hydrogen ions\nconcentration facilitate lowest pH among the\ngiven samples indicating that sample A is\ngastric HCl.\nSamples\nHuman \nBody Fluids\nA\n1.6 × 10\n= 160\n2 \nH  ion \nconcentration\n(m Eq/L)\n+\nGastic\nHCl\nB\n4.5 × 10\n= 0.000045\n–5 \nVenous\nblood\nC\n1 × 10\n= 0.001\n–3\nIntracellular\nfluid\nD\n3 × 10\n= 0.03\n–2\nUrine\nSequence of sample = Gastric HCl, Venous\nblood, Intracellular fluid, Urine.",
+      "has_figure": false,
+      "subject": "biology",
+      "subject_confidence": "high",
+      "subtopic_code": "human_physiology",
+      "subtopic_name": "Body Fluids and pH",
+      "difficulty": "medium"
+    },
+    {
+      "number": 61,
+      "body": "Four gram of mixture of calcium carbonate and sand is treated with excess of HCl and 0.880 g of carbon-di-oxide is produced. What is the percentage of calcium carbonate in original mixture?",
+      "choices": {
+        "a": "40%",
+        "b": "50%",
+        "c": "55%",
+        "d": "45%"
+      },
+      "correct": "b",
+      "solution": "4 g mixture of CaCO3 + sand\nCaCO3 + 2HCl  CaCl2 + CO2 + H2O\nNumber of moles of CO2 produced\n= 0.88\n44\n= 0.02 moles\n∵\n1 mol of CaCO3 produces 1 mol of CO2\n\nNumber of moles of CaCO3 reacted\n= 0.02 moles\n\nMass of CaCO3 reacted = 0.02 × 100 = 2 g\n\n% of CaCO3 in the mixture = \n\n\n2\n100\n50%\n4",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "stoichiometry",
+      "subtopic_name": "Stoichiometry",
+      "difficulty": "medium"
+    },
+    {
+      "number": 62,
+      "body": "Benzene Gammaxene + 3 Cl2 UV Cl Cl Cl Cl Cl Cl H H H H H H Gammaxene insecticide powder is prepared by the reaction given in the adjacent box. If 78 g of benzene when reacted with 106.5 g of chlorine, how much Gammaxene would be formed?",
+      "choices": {
+        "a": "140 g",
+        "b": "154.5 g",
+        "c": "145.5 g",
+        "d": "160 g"
+      },
+      "correct": "c",
+      "solution": "+ 3 Cl2\nUV\nH\nCl\nH\nCl\nH\nCl\nCl\nCl\nH\nCl\nH\nH\n78g\n106.5g\nGiven mass\nNo. of moles 78\n1 mole\n78\n\n106.5\n1.5 mole\n71\n\nCl2 is the limiting reagent\n∵\n3 moles of Cl2 produce 1 mole of\ngammaxene\n\n1.5 moles of Cl2 produce 0.5 mole of\ngammaxene\nMass of 1 mole of gammaxene = 291 g\n\nMass of 0.5 moles of gammaxene\n= 291 × 0.5 = 145.5 g",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "stoichiometry",
+      "subtopic_name": "Limiting Reagent",
+      "difficulty": "medium"
+    },
+    {
+      "number": 63,
+      "body": "Which of the following polymeric material will be ideal for remoulding?",
+      "choices": {
+        "a": "Polythene and Melamine",
+        "b": "Polyvinyl chloride and Polythene",
+        "c": "Melamine and Bakelite",
+        "d": "Bakelite and Polyvinyl chloride"
+      },
+      "correct": "b",
+      "solution": "Polyvinyl chloride and polythene are\nthermoplastics and therefore they are ideal\nfor remoulding.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "polymers",
+      "subtopic_name": "Polymers",
+      "difficulty": "easy"
+    },
+    {
+      "number": 64,
+      "body": "An element Y is a white translucent solid at room temperature and exhibits various allotropic forms. Some compounds of element Y find application in agricultural industry. Y forms two solid oxides which dissolve in water to form comparatively weak acids. The element Y is:",
+      "choices": {
+        "a": "Sulphur",
+        "b": "Nitrogen",
+        "c": "Phosphorous",
+        "d": "Carbon"
+      },
+      "correct": "c",
+      "solution": "Oxides of carbon, sulphur and nitrogen are\ngases, whereas oxides of phosphorus i.e. P4O6\nand P4O10 are solids and react with water to\ngive weak acids.\nTherefore, element ‘Y’ is phosphorus.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "inorganic",
+      "subtopic_name": "Non-metals and their Compounds",
+      "difficulty": "medium"
+    },
+    {
+      "number": 65,
+      "body": "How many sigma bonds are present between any two carbon atoms in fullerenes?",
+      "choices": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct": "a",
+      "solution": "In fullerenes, one sigma bond is present\nbetween any two carbon atoms.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "carbon",
+      "subtopic_name": "Allotropes of Carbon",
+      "difficulty": "easy"
+    },
+    {
+      "number": 66,
+      "body": "A student was studying reactions of metals with dilute NaOH at room temperature. The student took dilute NaOH in four different test tubes and added copper powder to test tube A, zinc dust to test tube B, aluminium powder to test tube C and iron powder to test tube D and observed effervescence in _______.",
+      "choices": {
+        "a": "Test tubes A & B",
+        "b": "Test tubes B & C",
+        "c": "Test tubes C & D",
+        "d": "Test tubes A & D"
+      },
+      "correct": "b",
+      "solution": "In test tube 'B' and 'C' effervescence will be\nobserved due to the evolution of hydrogen\ngas, whereas in test tube 'A' and 'D', no such\neffervescence will be observed.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "metals",
+      "subtopic_name": "Reactions of Metals",
+      "difficulty": "medium"
+    },
+    {
+      "number": 67,
+      "body": "A magician performed following act: He dipped Rs. 50 note in a 50% solution of alcohol in water and held it on the burning flame, but the note did not burn. The reason behind this is",
+      "choices": {
+        "a": "The alcohol kept on dousing the fire",
+        "b": "Air required for burning was not available",
+        "c": "The Rs. 50 note failed to reach ignition\ntemperature",
+        "d": "The Rs. 50 note is fire proof"
+      },
+      "correct": "c",
+      "solution": "The heat supplied to the Rs. 50 note is\ntransferred to water by conduction. So, in the\npresence of 50% solution of alcohol in water,\nthe ignition temperature of paper is not\nreached. Hence, it does not burn.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "combustion",
+      "subtopic_name": "Combustion",
+      "difficulty": "medium"
+    },
+    {
+      "number": 68,
+      "body": "Substance X is white crystalline solid which melts after 10 seconds on burner flame. It is soluble in water and insoluble in CCl4. It is a poor conductor of electricity in molten state as well as in the form of aqueous solution, hence we coclude that substance X is",
+      "choices": {
+        "a": "An ionic compound",
+        "b": "A non-polar covalent compound",
+        "c": "A polar covalent compound",
+        "d": "A pure element"
+      },
+      "correct": "c",
+      "solution": "Since substance X melts after 10 seconds on\nburner flame and is a poor conductor of\nelectricity in molten state as well as in the\nform of aqueous solution, this means 'X' is a\ncovalent compound. Its solubility in water\nindicates that it is polar in nature.\n\n'X' is a polar covalent compound.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "bonding",
+      "subtopic_name": "Chemical Bonding",
+      "difficulty": "medium"
+    },
+    {
+      "number": 69,
+      "body": "In a beaker 50 ml of a normal HCl solution was taken and NH3 gas was passed through it for some time. The contents of the beaker were then titrated, which required 60 ml of semi normal NaOH solution. How much ammonia was passed through the beaker?",
+      "choices": {
+        "a": "0.85 g",
+        "b": "0.34 g",
+        "c": "0.51 g",
+        "d": "0.4 g"
+      },
+      "correct": "b",
+      "solution": "Milliequivalent of NaOH = NVml\n= 0.5 × 60\n= 30\nMilliequivalent of HCl = NVml = 1 × 50 = 50\nIn neutralisation reaction;\nTotal milliequivalent of HCl = Milliequilvalent\nof NH3 +\nMilliequivalent of\nNaOH\n50 = Milliequivalent of NH3 + 30\nMilliequivalent of NH3 = 50 – 30 = 20\nMoles of NH3 = 20 × 10–3 moles\nMass of NH3 = 20 × 10–3 × 17 = 0.34 g",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "acid_base",
+      "subtopic_name": "Acid-Base Titration",
+      "difficulty": "hard"
+    },
+    {
+      "number": 70,
+      "body": "Which is the correct order of metals with reference to their melting point in increasing order?",
+      "choices": {
+        "a": "Hg, Ga, Li, Ca",
+        "b": "Ca, Li, Ga, Hg",
+        "c": "Hg, Li, Ga, Ca",
+        "d": "Hg, Ga, Ca, Li"
+      },
+      "correct": "a",
+      "solution": "Metal                Melting point\nHg\n234 K\nGa\n303 K\nLi\n454 K\nCa\n1124 K\nTherefore, the correct arrangement of metals\nin the increasing order of their melting point\nis\nHg < Ga < Li < Ca",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "periodic_table",
+      "subtopic_name": "Periodic Properties",
+      "difficulty": "easy"
+    },
+    {
+      "number": 71,
+      "body": "Which of the following is iso-structural with CO2?",
+      "choices": {
+        "a": "NO2",
+        "b": "N2O4",
+        "c": "NO",
+        "d": "N2O"
+      },
+      "correct": "d",
+      "solution": "NO    \n2 \n:\nN\nO\nO\n:\n:\n:\n:\nN O    \n2\n4 \nN — N\nO:\n:\n:\nO\n:\n:\nO\n:\n:\n:O\n:\n:\nNO     \nN     O\n:\n:\n:\nN O    \n2\n\nN     \n:\nO\n:\n:\n:\nN     \nCO     \n2\n\nO     \n:\nO:\n:\nC     \n:\n\nN2O is iso-structural with CO2.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "molecular_structure",
+      "subtopic_name": "Molecular Structure",
+      "difficulty": "medium"
+    },
+    {
+      "number": 72,
+      "body": "Sodium tungstate has formula Na2WO4, lead phosphate has formula Pb3(PO4)2, formula for lead tungstate should be:",
+      "choices": {
+        "a": "PbWO4",
+        "b": "Pb2(WO4)3",
+        "c": "Pb3(WO4)2",
+        "d": "Pb3(WO4)4"
+      },
+      "correct": "a",
+      "solution": "Na2WO4 indicates, valency of WO4 = –2\nPb3(PO4)2 indicates, valency of Pb = +2\n\nChemical formula of lead tungstate\n= PbWO4",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "formula_writing",
+      "subtopic_name": "Chemical Formula Writing",
+      "difficulty": "easy"
+    },
+    {
+      "number": 73,
+      "body": "What is the ratio of reducing agent to oxidizing agent, if the following reaction is correctly balanced? NH3 + O2  NO + H2O",
+      "choices": {
+        "a": "4 : 5",
+        "b": "5 : 4",
+        "c": "5 : 3",
+        "d": "3 : 5"
+      },
+      "correct": "a",
+      "solution": "In the balanced reaction,\nOxidation\n–3\n+2\n4NH  + 5O\n3\n2\n4NO + 6H O\n2\n(O.A.)\nReduction\n0\n–2\n(R.A.)\n\nReducing agent : Oxidizing agent\n4 : 5",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "redox",
+      "subtopic_name": "Redox Reactions",
+      "difficulty": "medium"
+    },
+    {
+      "number": 74,
+      "body": "Arrange following solutions in increasing hydronium ion concentration. The solutions are: (P) 0.1 M HCl (Q) 0.1 M H2SO4 (R) 0.001 M NH4OH (S) 0.001 M Ca(OH)2 The correct order will be",
+      "choices": {
+        "a": "P > Q > R > S",
+        "b": "Q > P > S > R",
+        "c": "S > R > Q > P",
+        "d": "S > R > P > Q"
+      },
+      "correct": null,
+      "solution": "",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "acid_base",
+      "subtopic_name": "pH and Acid-Base Strength",
+      "difficulty": "medium"
+    },
+    {
+      "number": 75,
+      "body": "A zinc rod was dipped in 100 cm3 of 1M copper chloride solution. After certain time the molarity of Cu2+ ions in the solution was found to be 0.8 M. If the weight of zinc rod is 20 g, then the molarity of chloride ions is ______.",
+      "choices": {
+        "a": "2 M",
+        "b": "1.5 M",
+        "c": "1 M",
+        "d": "0.5 M"
+      },
+      "correct": "a",
+      "solution": "When Zn rod is dipped in copper chloride\nsolution, following reaction takes place:\nCuCl2 + Zn  Cu + ZnCl2\nAll the chloride ions will remain in solution.\n\nMolarity of Cl– ions = 2 × 1 = 2 M.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "stoichiometry",
+      "subtopic_name": "Solution Stoichiometry",
+      "difficulty": "medium"
+    },
+    {
+      "number": 76,
+      "body": "When four dilute solutions of (I) vinegar, (II) common salt, (III) caustic soda and (IV) baking soda are tested with universal indicator which will be the correct observation",
+      "choices": {
+        "a": "I - Green, II - Violet, III - Blue, IV - Red",
+        "b": "I - Green, II - Blue, III - Violet, IV - Red",
+        "c": "I - Red, II - Green, III - Violet, IV - Blue",
+        "d": "I - Red, II - Violet, III - Green, IV - Blue"
+      },
+      "correct": "c",
+      "solution": "Dilute\nsolution\nNature\nof solution\nVinegar (I)\nCommon salt (II)\nCaustic soda (III)\nBaking soda (IV)\nAcidic\nNeutral\nStrongly basic\nMildly basic\nRed\nGreen\nViolet\nBlue\nColour shown with\nuniversal indicator",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "acid_base",
+      "subtopic_name": "Indicators and pH",
+      "difficulty": "easy"
+    },
+    {
+      "number": 77,
+      "body": "In one litre of pure water, 44.4 g of calcium chloride is dissolved. The number of ions in one mL of the resultant solution is:",
+      "choices": {
+        "a": "7.23 × 1023",
+        "b": "7.23 × 1020",
+        "c": "4.82 × 1023",
+        "d": "4.82 × 1020"
+      },
+      "correct": "b",
+      "solution": "Number of moles of CaCl2 = \nGiven mass\nMolecular mass\n= 44.4\n0.4 mole\n111 \n∵\n1 litre solution contain 0.4 mole of CaCl2\n\n1 mL solution contain 0.0004 mole of\nCaCl2\n∵\nOne CaCl2 ionized into one Ca2+ anc 2Cl–\nions.\nSo, the total number of ions = 3\n\nTotal ions in 1 mL\n= 3 × 0.0004 × 6.022 × 1023\n= 7.23 × 1020",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "solutions",
+      "subtopic_name": "Molarity and Ions",
+      "difficulty": "medium"
+    },
+    {
+      "number": 78,
+      "body": "Which of the following species is/are isoelectronic with Neon? (i) N3– (ii) Mg2+ (iii) K+ (iv) Ca2+",
+      "choices": {
+        "a": "Only (iv)",
+        "b": "Only (ii)",
+        "c": "Both (i) & (ii)",
+        "d": "Both (i) & (iii)"
+      },
+      "correct": "c",
+      "solution": "Element/\nion\nAtomic Number\n( )\nZ\nNe\nN\n3–\nMg\n2+\nK\n+\n10\n7\n12\n19\nElectronic\nonfiguration\nc\nK\nL\nM\nN\n2\n8\n2\n8\n2\n8\n2\n8\n8\n8\n2\n8\nCa\n2+\n20\nAs Ne, N3– and Mg2+ have same number of\nelectrons i.e., 10 electrons. So Ne, N3– and\nMg2+ are isoelectronic species.",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "atomic_structure",
+      "subtopic_name": "Electronic Configuration",
+      "difficulty": "easy"
+    },
+    {
+      "number": 79,
+      "body": "Which of the following gases will have equal volume at STP, if the weight of gases is 14.0 g? (i) N2O (ii) NO2 (iii) N2 (iv) CO",
+      "choices": {
+        "a": "(i) & (ii)",
+        "b": "(ii) & (iii)",
+        "c": "(i) & (iii)",
+        "d": "(iii) & (iv)"
+      },
+      "correct": "d",
+      "solution": "Gas\nMolecular mass\n(u)\nNumber of\nMoles\nN O\n2\nNO2\nN2\nCO\n44\n46\n28\n28\n14\n0.32\n44\n\n14\n0.30\n46 \n14\n0.5\n28 \n14\n0.5\n28 \nAs N2 and CO have same number of moles\ni.e., 0.5 mole.\n\nN2 and CO will have equal volume at STP\ni.e., 22.4 L\n11.2 L\n2\n",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "mole_concept",
+      "subtopic_name": "Mole Concept",
+      "difficulty": "easy"
+    },
+    {
+      "number": 80,
+      "body": "Which of the following are not ionic? (i) AlCl3 (ii) CaCl2 (iii) MgCl2 (iv) LiCl",
+      "choices": {
+        "a": "(i) & (iv)",
+        "b": "(i) & (ii)",
+        "c": "(ii) & (iii)",
+        "d": "(iii) & (iv)"
+      },
+      "correct": "a",
+      "solution": "Chlorides of aluminium and lithium are\npredominantely covalent in nature.\n\u0002\u0003 \u0002\u0003 \u0002\n\n1\nTime : 120 Minutes\nMarks : 240\nINSTRUCTIONS TO CANDIDATES - READ CAREFULLY AND STRICTLY FOLLOW EACH OF THEM",
+      "has_figure": false,
+      "subject": "chemistry",
+      "subject_confidence": "high",
+      "subtopic_code": "bonding",
+      "subtopic_name": "Ionic vs Covalent Character",
+      "difficulty": "medium"
+    }
+  ]
+}
