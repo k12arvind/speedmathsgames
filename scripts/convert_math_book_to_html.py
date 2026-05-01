@@ -223,59 +223,91 @@ CHAPTER_HTML_TEMPLATE = """<!DOCTYPE html>
   <div class="progress-bar"><span id="prog"></span></div>
 
   <script>
-    // Reading-time tracking. Posts seconds-on-page back to the parent app
-    // every time a page enters/leaves the viewport. The parent
-    // (amc10_book_reader.html) listens for these messages.
+    // Reading-time tracking — tick-based, GK-module style.
+    // Counts 1s for each currently-visible page while the tab is foreground;
+    // flushes via fetch every 30s and via sendBeacon on pagehide.
     const bookId = "{book_id}";
     const chapterNum = {chapter_num};
 
-    const state = new Map();   // pageNum -> {{enteredAt, totalSeconds}}
-    function reportPage(pageNum, addSeconds) {{
+    function readerUserId() {{
       try {{
-        window.parent.postMessage({{
-          type: 'math_book_page_view',
-          book_id: bookId, chapter_num: chapterNum,
-          page_num: pageNum, seconds: addSeconds,
-        }}, '*');
-      }} catch(e) {{}}
+        const u = JSON.parse((window.parent || window).localStorage.getItem('cachedUser') || '{{}}');
+        return u.user_id || 'navya';
+      }} catch (e) {{ return 'navya'; }}
     }}
 
+    const visiblePages = new Set();   // pageNum currently >=40% visible
+    const pending = new Map();        // pageNum -> seconds not yet flushed
+
     const observer = new IntersectionObserver(entries => {{
-      const now = Date.now();
       for (const e of entries) {{
         const num = parseInt(e.target.dataset.pageNum, 10);
-        const s = state.get(num) || {{enteredAt:0,totalSeconds:0}};
-        if (e.isIntersecting) {{
-          s.enteredAt = now;
-        }} else if (s.enteredAt) {{
-          const delta = Math.round((now - s.enteredAt) / 1000);
-          s.totalSeconds += delta;
-          s.enteredAt = 0;
-          if (delta > 0) reportPage(num, delta);
+        if (e.isIntersecting && e.intersectionRatio >= 0.4) {{
+          visiblePages.add(num);
+        }} else {{
+          visiblePages.delete(num);
         }}
-        state.set(num, s);
       }}
-    }}, {{ threshold: 0.4 }});
+    }}, {{ threshold: [0, 0.4] }});
     document.querySelectorAll('.page').forEach(el => observer.observe(el));
 
     // Update progress bar based on scroll position.
-    const pages = Array.from(document.querySelectorAll('.page'));
     document.addEventListener('scroll', () => {{
       const total = document.documentElement.scrollHeight - window.innerHeight;
       const pct = total > 0 ? Math.min(100, (window.scrollY / total) * 100) : 0;
-      document.getElementById('prog').style.width = pct + '%';
-    }}, {{passive:true}});
+      const bar = document.getElementById('prog');
+      if (bar) bar.style.width = pct + '%';
+    }}, {{passive: true}});
 
-    // Flush remaining time when the user leaves the page.
-    window.addEventListener('beforeunload', () => {{
-      const now = Date.now();
-      for (const [num, s] of state.entries()) {{
-        if (s.enteredAt) {{
-          const delta = Math.round((now - s.enteredAt) / 1000);
-          if (delta > 0) reportPage(num, delta);
-        }}
-      }}
+    let docVisible = document.visibilityState === 'visible';
+    document.addEventListener('visibilitychange', () => {{
+      const wasVisible = docVisible;
+      docVisible = document.visibilityState === 'visible';
+      if (wasVisible && !docVisible) flushPending(false);  // tab hidden -> flush
     }});
+
+    // 1s tick: add a second to every visible page while tab is foregrounded.
+    setInterval(() => {{
+      if (!docVisible || visiblePages.size === 0) return;
+      for (const num of visiblePages) {{
+        pending.set(num, (pending.get(num) || 0) + 1);
+      }}
+    }}, 1000);
+
+    // Flush pending counts every 30s.
+    setInterval(() => flushPending(false), 30000);
+
+    // On navigation/close, send remaining counts via sendBeacon (survives unload).
+    window.addEventListener('pagehide', () => flushPending(true));
+
+    function flushPending(useBeacon) {{
+      if (pending.size === 0) return;
+      const userId = readerUserId();
+      for (const [num, secs] of pending.entries()) {{
+        if (!secs || secs <= 0) continue;
+        const payload = JSON.stringify({{
+          user_id: userId,
+          book_id: bookId,
+          chapter_number: chapterNum,
+          page_number: num,
+          seconds: secs,
+        }});
+        if (useBeacon && navigator.sendBeacon) {{
+          navigator.sendBeacon(
+            '/api/physics/book-view',
+            new Blob([payload], {{ type: 'application/json' }})
+          );
+        }} else {{
+          fetch('/api/physics/book-view', {{
+            method: 'POST',
+            headers: {{ 'Content-Type': 'application/json' }},
+            body: payload,
+            keepalive: true,
+          }}).catch(() => {{}});
+        }}
+        pending.set(num, 0);
+      }}
+    }}
   </script>
 </body>
 </html>
