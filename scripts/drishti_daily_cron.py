@@ -26,9 +26,12 @@ from __future__ import annotations
 import datetime as dt
 import json
 import logging
+import re
 import sys
 import time
 import urllib.request
+from pathlib import Path
+from typing import Optional
 from urllib.error import HTTPError, URLError
 
 
@@ -41,6 +44,11 @@ IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 # on the small VM running Claude assessments serially.
 POLL_TIMEOUT_SEC = 900
 POLL_INTERVAL_SEC = 30
+
+# Hard cap on auto-backfill so a broken upstream can't drag the cron through
+# weeks of dates. If the DB hasn't seen a PDF in this many days, we treat that
+# as a manual-intervention case and only retry the most recent two days.
+MAX_AUTO_BACKFILL_DAYS = 14
 
 
 def setup_logging():
@@ -83,8 +91,87 @@ def get_json(path: str, timeout: int = 60) -> dict:
         return {'error': str(e)}
 
 
+# Match a date triplet at the end of a PDF filename:
+#   current_affairs_2026_april_30.pdf            → (2026, april, 30)
+#   drishti_current_affairs_2026_april_30.pdf    → (2026, april, 30)
+#   drishti_current_affairs_2026_april_30_part2.pdf → (2026, april, 30)
+PDF_DATE_RE = re.compile(
+    r'_(\d{4})_([a-zA-Z]+)_(\d{1,2})(?:_part\d+)?\.pdf$',
+)
+
+
+def latest_pdf_date(pdf_dir: Optional[str], filename_prefix: str) -> Optional[dt.date]:
+    """Walk the source's PDF directory and return the most recent date for
+    which a PDF was saved (parsing the date out of the filename).
+    Returns None if the dir is missing or nothing matches.
+    """
+    if not pdf_dir:
+        return None
+    p = Path(pdf_dir)
+    if not p.is_dir():
+        return None
+    months = {name: idx for idx, name in enumerate(DRISHTI_MONTHS) if name}
+    latest: Optional[dt.date] = None
+    for f in p.glob('*.pdf'):
+        if filename_prefix and not f.name.startswith(filename_prefix):
+            continue
+        m = PDF_DATE_RE.search(f.name)
+        if not m:
+            continue
+        try:
+            year = int(m.group(1))
+            month = months.get(m.group(2).lower())
+            day = int(m.group(3))
+            if not month:
+                continue
+            d = dt.date(year, month, day)
+        except (ValueError, KeyError):
+            continue
+        if latest is None or d > latest:
+            latest = d
+    return latest
+
+
+def candidate_dates_for(source: dict) -> list[dt.date]:
+    """Build the date window for ONE source: from the day AFTER the latest
+    PDF on disk for that source through today (IST), skipping Sundays.
+
+    If we can't find any prior PDF (fresh deploy / dir missing), default to
+    "yesterday + today" — same as the old behavior.
+
+    Capped at MAX_AUTO_BACKFILL_DAYS. If the latest PDF is older than the
+    cap, we trim the window to the cap rather than scanning weeks of dates.
+    """
+    today_ist = dt.datetime.now(IST).date()
+    last = latest_pdf_date(source.get('pdf_dir'), source.get('filename_prefix', ''))
+    if last is None:
+        start = today_ist - dt.timedelta(days=1)
+    else:
+        start = last + dt.timedelta(days=1)
+    # Cap how far back we'll go automatically.
+    cap = today_ist - dt.timedelta(days=MAX_AUTO_BACKFILL_DAYS)
+    if start < cap:
+        logging.warning(
+            f'[{source["label"]}] last saved PDF is {last} (>{MAX_AUTO_BACKFILL_DAYS}d old) '
+            f'— trimming window to {cap}. Backfill the gap manually.'
+        )
+        start = cap
+    # Ensure at least today + yesterday are tried, even if the source thinks
+    # it's already up-to-date (handles late-publication).
+    earliest_default = today_ist - dt.timedelta(days=1)
+    if start > earliest_default:
+        start = earliest_default
+    out: list[dt.date] = []
+    d = start
+    while d <= today_ist:
+        if d.weekday() != 6:  # skip Sundays
+            out.append(d)
+        d += dt.timedelta(days=1)
+    return out
+
+
 def candidate_dates() -> list[dt.date]:
-    """Yesterday + today (IST). Skip Sundays."""
+    """Backwards-compatible default: yesterday + today (IST). Skip Sundays."""
     today_ist = dt.datetime.now(IST).date()
     candidates = [today_ist - dt.timedelta(days=1), today_ist]
     return [d for d in candidates if d.weekday() != 6]
@@ -152,6 +239,8 @@ SOURCES = [
         'url_for': drishti_url,
         'week_for': drishti_week,
         'assessment_source': 'drishti',
+        'pdf_dir': '/var/www/saanvi/DrishtiDailyGK',
+        'filename_prefix': 'drishti_current_affairs_',
     },
     {
         'name': 'legaledge',
@@ -160,6 +249,8 @@ SOURCES = [
         'url_for': legaledge_url,
         'week_for': legaledge_week,
         'assessment_source': 'legaledge',
+        'pdf_dir': '/var/www/saanvi/Legaledgedailygk',
+        'filename_prefix': 'current_affairs_',
     },
 ]
 
@@ -242,11 +333,15 @@ def fetch_one(source: dict, date: dt.date) -> tuple[str, str]:
 def main():
     setup_logging()
     logging.info('=== Daily GK cron starting (Drishti + LegalEdge) ===')
-    dates = candidate_dates()
-    logging.info(f'Candidate dates (IST today + yesterday, excl. Sundays): {dates}')
 
     summary: dict[str, dict[str, int]] = {}
     for source in SOURCES:
+        dates = candidate_dates_for(source)
+        last = latest_pdf_date(source.get('pdf_dir'), source.get('filename_prefix', ''))
+        logging.info(
+            f'[{source["label"]}] last saved={last}; '
+            f'candidates (excl. Sundays): {dates}'
+        )
         summary[source['label']] = {'done': 0, 'no-publish': 0, 'failed': 0}
         for d in dates:
             status, _detail = fetch_one(source, d)

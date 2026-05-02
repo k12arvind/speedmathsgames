@@ -92,14 +92,24 @@
     window.addEventListener('message', ev => {
       const m = ev.data;
       if (!m || m.type !== 'math_book_page_view') return;
-      fetch(API + '/api/physics/book-view', {
-        method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({
-          user_id: userId(),
-          book_id: m.book_id, chapter_number: m.chapter_num,
-          page_number: m.page_num, seconds: m.seconds,
-        })
-      }).catch(()=>{});
+      const payload = JSON.stringify({
+        user_id: userId(),
+        book_id: m.book_id, chapter_number: m.chapter_num,
+        page_number: m.page_num, seconds: m.seconds,
+      });
+      try {
+        fetch(API + '/api/physics/book-view', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: payload, keepalive: true,
+        }).catch(()=>{});
+      } catch (e) {
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(
+            API + '/api/physics/book-view',
+            new Blob([payload], { type: 'application/json' })
+          );
+        }
+      }
     });
 
     load();

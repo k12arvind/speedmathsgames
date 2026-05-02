@@ -224,17 +224,13 @@ CHAPTER_HTML_TEMPLATE = """<!DOCTYPE html>
 
   <script>
     // Reading-time tracking — tick-based, GK-module style.
-    // Counts 1s for each currently-visible page while the tab is foreground;
-    // flushes via fetch every 30s and via sendBeacon on pagehide.
+    // Counts 1s for each currently-visible page while the tab is foregrounded;
+    // flushes via parent postMessage every 30s, on visibilitychange (tab hidden),
+    // and on pagehide. The parent reader (amc10_book_reader.html or
+    // physics_book_reader.html) routes the message to the correct API endpoint,
+    // so this template works for any embedding reader.
     const bookId = "{book_id}";
     const chapterNum = {chapter_num};
-
-    function readerUserId() {{
-      try {{
-        const u = JSON.parse((window.parent || window).localStorage.getItem('cachedUser') || '{{}}');
-        return u.user_id || 'navya';
-      }} catch (e) {{ return 'navya'; }}
-    }}
 
     const visiblePages = new Set();   // pageNum currently >=40% visible
     const pending = new Map();        // pageNum -> seconds not yet flushed
@@ -263,7 +259,7 @@ CHAPTER_HTML_TEMPLATE = """<!DOCTYPE html>
     document.addEventListener('visibilitychange', () => {{
       const wasVisible = docVisible;
       docVisible = document.visibilityState === 'visible';
-      if (wasVisible && !docVisible) flushPending(false);  // tab hidden -> flush
+      if (wasVisible && !docVisible) flushPending();  // tab hidden -> flush
     }});
 
     // 1s tick: add a second to every visible page while tab is foregrounded.
@@ -275,38 +271,27 @@ CHAPTER_HTML_TEMPLATE = """<!DOCTYPE html>
     }}, 1000);
 
     // Flush pending counts every 30s.
-    setInterval(() => flushPending(false), 30000);
+    setInterval(flushPending, 30000);
 
-    // On navigation/close, send remaining counts via sendBeacon (survives unload).
-    window.addEventListener('pagehide', () => flushPending(true));
+    // On navigation/close, flush whatever remains (parent posts via fetch
+    // with keepalive, so the request survives the iframe being torn down).
+    window.addEventListener('pagehide', flushPending);
 
-    function flushPending(useBeacon) {{
+    function flushPending() {{
       if (pending.size === 0) return;
-      const userId = readerUserId();
-      for (const [num, secs] of pending.entries()) {{
-        if (!secs || secs <= 0) continue;
-        const payload = JSON.stringify({{
-          user_id: userId,
-          book_id: bookId,
-          chapter_number: chapterNum,
-          page_number: num,
-          seconds: secs,
-        }});
-        if (useBeacon && navigator.sendBeacon) {{
-          navigator.sendBeacon(
-            '/api/physics/book-view',
-            new Blob([payload], {{ type: 'application/json' }})
-          );
-        }} else {{
-          fetch('/api/physics/book-view', {{
-            method: 'POST',
-            headers: {{ 'Content-Type': 'application/json' }},
-            body: payload,
-            keepalive: true,
-          }}).catch(() => {{}});
+      try {{
+        for (const [num, secs] of pending.entries()) {{
+          if (!secs || secs <= 0) continue;
+          window.parent.postMessage({{
+            type: 'math_book_page_view',
+            book_id: bookId,
+            chapter_num: chapterNum,
+            page_num: num,
+            seconds: secs,
+          }}, '*');
+          pending.set(num, 0);
         }}
-        pending.set(num, 0);
-      }}
+      }} catch (e) {{ /* parent gone — accept the loss */ }}
     }}
   </script>
 </body>
